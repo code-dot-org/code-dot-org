@@ -1,0 +1,313 @@
+{
+  "frames": {
+    "Bubbles10": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 28,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 21,
+        "w": 28,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles11": {
+      "frame": {
+        "x": 3,
+        "y": 48,
+        "w": 29,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 19,
+        "w": 29,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles12": {
+      "frame": {
+        "x": 37,
+        "y": 3,
+        "w": 26,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 15,
+        "w": 26,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles09": {
+      "frame": {
+        "x": 69,
+        "y": 3,
+        "w": 25,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 26,
+        "w": 25,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles08": {
+      "frame": {
+        "x": 69,
+        "y": 45,
+        "w": 27,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 29,
+        "w": 27,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles07": {
+      "frame": {
+        "x": 38,
+        "y": 45,
+        "w": 24,
+        "h": 30
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 32,
+        "w": 24,
+        "h": 30
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles06": {
+      "frame": {
+        "x": 100,
+        "y": 3,
+        "w": 20,
+        "h": 27
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 35,
+        "w": 20,
+        "h": 27
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles05": {
+      "frame": {
+        "x": 102,
+        "y": 36,
+        "w": 16,
+        "h": 24
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 38,
+        "w": 16,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles13": {
+      "frame": {
+        "x": 38,
+        "y": 81,
+        "w": 21,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 28,
+        "w": 21,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles14": {
+      "frame": {
+        "x": 3,
+        "y": 106,
+        "w": 21,
+        "h": 8
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 37,
+        "w": 21,
+        "h": 8
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles04": {
+      "frame": {
+        "x": 65,
+        "y": 84,
+        "w": 20,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 41,
+        "w": 20,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles03": {
+      "frame": {
+        "x": 91,
+        "y": 84,
+        "w": 20,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 44,
+        "w": 20,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles02": {
+      "frame": {
+        "x": 30,
+        "y": 106,
+        "w": 17,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 47,
+        "w": 17,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles01": {
+      "frame": {
+        "x": 102,
+        "y": 66,
+        "w": 13,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 50,
+        "w": 13,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubbles00": {
+      "frame": {
+        "x": 117,
+        "y": 84,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 58,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Bubbles_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 128
+    },
+    "scale": 1
+  }
+}

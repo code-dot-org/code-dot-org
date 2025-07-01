@@ -1,0 +1,73 @@
+{
+  "frames": {
+    "Shadow_Parts_Fade_top": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Shadow_Parts_Fade_base": {
+      "frame": {
+        "x": 3,
+        "y": 73,
+        "w": 12,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Shadow_Parts_Fade_overlap": {
+      "frame": {
+        "x": 21,
+        "y": 73,
+        "w": 10,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 2,
+        "w": 10,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Block_Shadows_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 128
+    },
+    "scale": 1
+  }
+}

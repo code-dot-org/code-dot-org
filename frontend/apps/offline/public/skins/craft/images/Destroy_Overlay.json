@@ -1,0 +1,253 @@
+{
+  "frames": {
+    "destroy10": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy11": {
+      "frame": {
+        "x": 49,
+        "y": 3,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy12": {
+      "frame": {
+        "x": 49,
+        "y": 69,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy9": {
+      "frame": {
+        "x": 3,
+        "y": 69,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy6": {
+      "frame": {
+        "x": 3,
+        "y": 135,
+        "w": 32,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 7,
+        "w": 32,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy8": {
+      "frame": {
+        "x": 3,
+        "y": 194,
+        "w": 32,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 7,
+        "w": 32,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy5": {
+      "frame": {
+        "x": 41,
+        "y": 194,
+        "w": 32,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 7,
+        "w": 32,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy7": {
+      "frame": {
+        "x": 41,
+        "y": 135,
+        "w": 32,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 7,
+        "w": 32,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy1": {
+      "frame": {
+        "x": 95,
+        "y": 69,
+        "w": 15,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 12,
+        "w": 15,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy2": {
+      "frame": {
+        "x": 95,
+        "y": 121,
+        "w": 15,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 12,
+        "w": 15,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy3": {
+      "frame": {
+        "x": 95,
+        "y": 3,
+        "w": 15,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 12,
+        "w": 15,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "destroy4": {
+      "frame": {
+        "x": 79,
+        "y": 173,
+        "w": 15,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 12,
+        "w": 15,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Destroy_Overlay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

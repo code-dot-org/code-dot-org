@@ -1,0 +1,193 @@
+{
+  "frames": {
+    "Leaves_Birch3": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 159,
+        "h": 142
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 80,
+        "w": 159,
+        "h": 142
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch0": {
+      "frame": {
+        "x": 168,
+        "y": 3,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch2": {
+      "frame": {
+        "x": 3,
+        "y": 151,
+        "w": 155,
+        "h": 152
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch1": {
+      "frame": {
+        "x": 329,
+        "y": 3,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch4": {
+      "frame": {
+        "x": 329,
+        "y": 159,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch5": {
+      "frame": {
+        "x": 164,
+        "y": 159,
+        "w": 115,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 80,
+        "w": 115,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch6": {
+      "frame": {
+        "x": 164,
+        "y": 295,
+        "w": 112,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 80,
+        "w": 112,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch7": {
+      "frame": {
+        "x": 3,
+        "y": 309,
+        "w": 116,
+        "h": 119
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 95,
+        "y": 90,
+        "w": 116,
+        "h": 119
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch8": {
+      "frame": {
+        "x": 282,
+        "y": 295,
+        "w": 114,
+        "h": 118
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 95,
+        "y": 90,
+        "w": 114,
+        "h": 118
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Leaves_Birch_Decay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

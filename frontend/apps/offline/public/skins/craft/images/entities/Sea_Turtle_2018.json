@@ -1,0 +1,933 @@
+{
+  "frames": {
+    "Sea_Turtle_Surface25": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface12": {
+      "frame": {
+        "x": 313,
+        "y": 2,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface13": {
+      "frame": {
+        "x": 624,
+        "y": 2,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface00": {
+      "frame": {
+        "x": 624,
+        "y": 313,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle11": {
+      "frame": {
+        "x": 2,
+        "y": 624,
+        "w": 97,
+        "h": 92
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 109,
+        "w": 97,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle12": {
+      "frame": {
+        "x": 2,
+        "y": 720,
+        "w": 97,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 107,
+        "w": 97,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle01": {
+      "frame": {
+        "x": 2,
+        "y": 818,
+        "w": 97,
+        "h": 96
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 113,
+        "w": 97,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle13": {
+      "frame": {
+        "x": 2,
+        "y": 918,
+        "w": 97,
+        "h": 92
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 109,
+        "w": 97,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle03": {
+      "frame": {
+        "x": 103,
+        "y": 918,
+        "w": 97,
+        "h": 96
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 113,
+        "w": 97,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle00": {
+      "frame": {
+        "x": 103,
+        "y": 624,
+        "w": 96,
+        "h": 96
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 113,
+        "w": 96,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle02": {
+      "frame": {
+        "x": 103,
+        "y": 724,
+        "w": 96,
+        "h": 96
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 113,
+        "w": 96,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle10": {
+      "frame": {
+        "x": 203,
+        "y": 724,
+        "w": 96,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 107,
+        "y": 107,
+        "w": 96,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle04": {
+      "frame": {
+        "x": 103,
+        "y": 824,
+        "w": 93,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 107,
+        "y": 109,
+        "w": 93,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle09": {
+      "frame": {
+        "x": 200,
+        "y": 824,
+        "w": 93,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 109,
+        "y": 110,
+        "w": 93,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle19": {
+      "frame": {
+        "x": 203,
+        "y": 624,
+        "w": 93,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 105,
+        "y": 110,
+        "w": 93,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle14": {
+      "frame": {
+        "x": 300,
+        "y": 624,
+        "w": 92,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 108,
+        "y": 111,
+        "w": 92,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle15": {
+      "frame": {
+        "x": 204,
+        "y": 916,
+        "w": 89,
+        "h": 89
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 109,
+        "w": 89,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle18": {
+      "frame": {
+        "x": 297,
+        "y": 916,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 109,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle07": {
+      "frame": {
+        "x": 297,
+        "y": 821,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 107,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle06": {
+      "frame": {
+        "x": 303,
+        "y": 716,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 107,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle17": {
+      "frame": {
+        "x": 390,
+        "y": 808,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 109,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle08": {
+      "frame": {
+        "x": 390,
+        "y": 900,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 107,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle16": {
+      "frame": {
+        "x": 483,
+        "y": 900,
+        "w": 89,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 109,
+        "w": 89,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle05": {
+      "frame": {
+        "x": 483,
+        "y": 313,
+        "w": 89,
+        "h": 89
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 104,
+        "y": 107,
+        "w": 89,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface04": {
+      "frame": {
+        "x": 396,
+        "y": 313,
+        "w": 76,
+        "h": 87
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 111,
+        "y": 110,
+        "w": 76,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface17": {
+      "frame": {
+        "x": 396,
+        "y": 404,
+        "w": 76,
+        "h": 87
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 110,
+        "w": 76,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface18": {
+      "frame": {
+        "x": 935,
+        "y": 313,
+        "w": 74,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 111,
+        "w": 74,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface05": {
+      "frame": {
+        "x": 935,
+        "y": 402,
+        "w": 74,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 113,
+        "y": 111,
+        "w": 74,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface15": {
+      "frame": {
+        "x": 935,
+        "y": 491,
+        "w": 79,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 118,
+        "y": 125,
+        "w": 79,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface02": {
+      "frame": {
+        "x": 935,
+        "y": 546,
+        "w": 79,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 110,
+        "y": 125,
+        "w": 79,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface03": {
+      "frame": {
+        "x": 935,
+        "y": 601,
+        "w": 77,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 111,
+        "y": 126,
+        "w": 77,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface16": {
+      "frame": {
+        "x": 935,
+        "y": 2,
+        "w": 77,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 119,
+        "y": 126,
+        "w": 77,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface19": {
+      "frame": {
+        "x": 935,
+        "y": 56,
+        "w": 72,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 110,
+        "y": 115,
+        "w": 72,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface06": {
+      "frame": {
+        "x": 935,
+        "y": 126,
+        "w": 72,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 125,
+        "y": 115,
+        "w": 72,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface21": {
+      "frame": {
+        "x": 576,
+        "y": 313,
+        "w": 39,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 132,
+        "y": 109,
+        "w": 39,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface08": {
+      "frame": {
+        "x": 576,
+        "y": 384,
+        "w": 39,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 109,
+        "w": 39,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface07": {
+      "frame": {
+        "x": 935,
+        "y": 196,
+        "w": 57,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 112,
+        "w": 57,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface20": {
+      "frame": {
+        "x": 483,
+        "y": 406,
+        "w": 57,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 112,
+        "w": 57,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface01": {
+      "frame": {
+        "x": 544,
+        "y": 455,
+        "w": 60,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 128,
+        "y": 128,
+        "w": 60,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface14": {
+      "frame": {
+        "x": 476,
+        "y": 476,
+        "w": 60,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 119,
+        "y": 128,
+        "w": 60,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface09": {
+      "frame": {
+        "x": 297,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 163,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface10": {
+      "frame": {
+        "x": 311,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 162,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface23": {
+      "frame": {
+        "x": 325,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 161,
+        "y": 162,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface22": {
+      "frame": {
+        "x": 339,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 161,
+        "y": 163,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface24": {
+      "frame": {
+        "x": 353,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 161,
+        "y": 161,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Sea_Turtle_Surface11": {
+      "frame": {
+        "x": 367,
+        "y": 1008,
+        "w": 10,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 136,
+        "y": 161,
+        "w": 10,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Sea_Turtle_2018_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

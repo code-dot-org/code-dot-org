@@ -1,0 +1,193 @@
+{
+  "frames": {
+    "Wheat2": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 45,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 0,
+        "w": 45,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots2": {
+      "frame": {
+        "x": 54,
+        "y": 3,
+        "w": 45,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 0,
+        "w": 45,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots1": {
+      "frame": {
+        "x": 54,
+        "y": 71,
+        "w": 42,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 2,
+        "w": 42,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes2": {
+      "frame": {
+        "x": 3,
+        "y": 136,
+        "w": 46,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 4,
+        "w": 46,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes1": {
+      "frame": {
+        "x": 3,
+        "y": 71,
+        "w": 42,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 7,
+        "w": 42,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wheat1": {
+      "frame": {
+        "x": 55,
+        "y": 136,
+        "w": 39,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 9,
+        "w": 39,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes0": {
+      "frame": {
+        "x": 3,
+        "y": 200,
+        "w": 39,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 16,
+        "w": 39,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots0": {
+      "frame": {
+        "x": 48,
+        "y": 200,
+        "w": 39,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 17,
+        "w": 39,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wheat0": {
+      "frame": {
+        "x": 93,
+        "y": 195,
+        "w": 39,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 19,
+        "w": 39,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Crops_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 256,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

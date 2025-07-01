@@ -1,0 +1,313 @@
+{
+  "frames": {
+    "FogOfWar_InCorner_TopLeft": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Bottom_Left": {
+      "frame": {
+        "x": 3,
+        "y": 49,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Bottom_Right": {
+      "frame": {
+        "x": 49,
+        "y": 49,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Left": {
+      "frame": {
+        "x": 49,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Center": {
+      "frame": {
+        "x": 95,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Top": {
+      "frame": {
+        "x": 95,
+        "y": 49,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_TopLeftBottomRight": {
+      "frame": {
+        "x": 141,
+        "y": 49,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_InCorner_TopRight": {
+      "frame": {
+        "x": 141,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_InCorner_BottomLeft": {
+      "frame": {
+        "x": 187,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Right": {
+      "frame": {
+        "x": 187,
+        "y": 49,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Bottom": {
+      "frame": {
+        "x": 3,
+        "y": 95,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Top_Right": {
+      "frame": {
+        "x": 3,
+        "y": 141,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_BottomLeftTopRight": {
+      "frame": {
+        "x": 3,
+        "y": 187,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_Top_Left": {
+      "frame": {
+        "x": 49,
+        "y": 187,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    },
+    "FogOfWar_InCorner_BottomRight": {
+      "frame": {
+        "x": 49,
+        "y": 95,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 40,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 120,
+        "h": 120
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/UndergroundFoW_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 256,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

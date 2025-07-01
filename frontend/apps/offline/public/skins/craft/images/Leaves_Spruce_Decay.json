@@ -1,0 +1,193 @@
+{
+  "frames": {
+    "Leaves_Spruce3": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 155,
+        "h": 162
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 162
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce0": {
+      "frame": {
+        "x": 3,
+        "y": 171,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce5": {
+      "frame": {
+        "x": 3,
+        "y": 327,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce4": {
+      "frame": {
+        "x": 164,
+        "y": 327,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce1": {
+      "frame": {
+        "x": 325,
+        "y": 3,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce2": {
+      "frame": {
+        "x": 164,
+        "y": 3,
+        "w": 155,
+        "h": 152
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce7": {
+      "frame": {
+        "x": 164,
+        "y": 161,
+        "w": 111,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 60,
+        "w": 111,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce6": {
+      "frame": {
+        "x": 281,
+        "y": 161,
+        "w": 111,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 60,
+        "w": 111,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce8": {
+      "frame": {
+        "x": 398,
+        "y": 159,
+        "w": 105,
+        "h": 128
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 60,
+        "y": 60,
+        "w": 105,
+        "h": 128
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Leaves_Spruce_Decay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

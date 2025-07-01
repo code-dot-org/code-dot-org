@@ -1,0 +1,613 @@
+{
+  "frames": {
+    "LavaPop13": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop01": {
+      "frame": {
+        "x": 3,
+        "y": 89,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop25": {
+      "frame": {
+        "x": 73,
+        "y": 3,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop19": {
+      "frame": {
+        "x": 143,
+        "y": 3,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop07": {
+      "frame": {
+        "x": 143,
+        "y": 89,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop11": {
+      "frame": {
+        "x": 213,
+        "y": 89,
+        "w": 6,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 35,
+        "w": 6,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop29": {
+      "frame": {
+        "x": 225,
+        "y": 3,
+        "w": 8,
+        "h": 27
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 23,
+        "w": 8,
+        "h": 27
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop23": {
+      "frame": {
+        "x": 225,
+        "y": 36,
+        "w": 16,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 15,
+        "w": 16,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop05": {
+      "frame": {
+        "x": 225,
+        "y": 63,
+        "w": 18,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 35,
+        "w": 18,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop10": {
+      "frame": {
+        "x": 239,
+        "y": 3,
+        "w": 8,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 34,
+        "w": 8,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop28": {
+      "frame": {
+        "x": 225,
+        "y": 90,
+        "w": 10,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 22,
+        "w": 10,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop12": {
+      "frame": {
+        "x": 247,
+        "y": 27,
+        "w": 2,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 46,
+        "w": 2,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop04": {
+      "frame": {
+        "x": 225,
+        "y": 114,
+        "w": 16,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 34,
+        "w": 16,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop22": {
+      "frame": {
+        "x": 213,
+        "y": 132,
+        "w": 16,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 14,
+        "w": 16,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop16": {
+      "frame": {
+        "x": 235,
+        "y": 132,
+        "w": 10,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 1,
+        "w": 10,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop17": {
+      "frame": {
+        "x": 213,
+        "y": 150,
+        "w": 10,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 10,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop30": {
+      "frame": {
+        "x": 247,
+        "y": 90,
+        "w": 2,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 2,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop24": {
+      "frame": {
+        "x": 213,
+        "y": 63,
+        "w": 3,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 20,
+        "w": 3,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop06": {
+      "frame": {
+        "x": 213,
+        "y": 3,
+        "w": 6,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 40,
+        "w": 6,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop15": {
+      "frame": {
+        "x": 229,
+        "y": 152,
+        "w": 8,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 8,
+        "w": 8,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop21": {
+      "frame": {
+        "x": 229,
+        "y": 168,
+        "w": 8,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 12,
+        "w": 8,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop27": {
+      "frame": {
+        "x": 213,
+        "y": 169,
+        "w": 8,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 20,
+        "w": 8,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop09": {
+      "frame": {
+        "x": 227,
+        "y": 184,
+        "w": 8,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 32,
+        "w": 8,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop03": {
+      "frame": {
+        "x": 241,
+        "y": 184,
+        "w": 8,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 32,
+        "w": 8,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop18": {
+      "frame": {
+        "x": 243,
+        "y": 152,
+        "w": 4,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 4,
+        "w": 4,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop02": {
+      "frame": {
+        "x": 243,
+        "y": 165,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 48,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop20": {
+      "frame": {
+        "x": 213,
+        "y": 20,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 28,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop26": {
+      "frame": {
+        "x": 213,
+        "y": 30,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 38,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop14": {
+      "frame": {
+        "x": 213,
+        "y": 40,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 28,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "LavaPop08": {
+      "frame": {
+        "x": 213,
+        "y": 50,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 48,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/LavaPop_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 256,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

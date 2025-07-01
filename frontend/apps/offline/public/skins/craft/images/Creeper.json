@@ -1,0 +1,1333 @@
+{
+  "frames": {
+    "Creeper_029": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 45,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 0,
+        "w": 45,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_031": {
+      "frame": {
+        "x": 3,
+        "y": 73,
+        "w": 45,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 0,
+        "w": 45,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_030": {
+      "frame": {
+        "x": 3,
+        "y": 143,
+        "w": 45,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 0,
+        "w": 45,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_032": {
+      "frame": {
+        "x": 3,
+        "y": 213,
+        "w": 45,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 0,
+        "w": 45,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_028": {
+      "frame": {
+        "x": 3,
+        "y": 283,
+        "w": 45,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 0,
+        "w": 45,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_033": {
+      "frame": {
+        "x": 3,
+        "y": 353,
+        "w": 45,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 1,
+        "w": 45,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_027": {
+      "frame": {
+        "x": 3,
+        "y": 422,
+        "w": 45,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 1,
+        "w": 45,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_034": {
+      "frame": {
+        "x": 54,
+        "y": 422,
+        "w": 45,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 5,
+        "w": 45,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_026": {
+      "frame": {
+        "x": 54,
+        "y": 3,
+        "w": 45,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 5,
+        "w": 45,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_047": {
+      "frame": {
+        "x": 54,
+        "y": 68,
+        "w": 45,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 6,
+        "w": 45,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_043": {
+      "frame": {
+        "x": 54,
+        "y": 132,
+        "w": 45,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 6,
+        "w": 45,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_051": {
+      "frame": {
+        "x": 54,
+        "y": 196,
+        "w": 45,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 6,
+        "w": 45,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_050": {
+      "frame": {
+        "x": 54,
+        "y": 260,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_042": {
+      "frame": {
+        "x": 54,
+        "y": 323,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_048": {
+      "frame": {
+        "x": 105,
+        "y": 323,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_044": {
+      "frame": {
+        "x": 105,
+        "y": 386,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_046": {
+      "frame": {
+        "x": 156,
+        "y": 386,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_045": {
+      "frame": {
+        "x": 207,
+        "y": 3,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_049": {
+      "frame": {
+        "x": 156,
+        "y": 3,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_041": {
+      "frame": {
+        "x": 156,
+        "y": 66,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_245": {
+      "frame": {
+        "x": 105,
+        "y": 66,
+        "w": 45,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 7,
+        "w": 45,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_035": {
+      "frame": {
+        "x": 105,
+        "y": 129,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_017": {
+      "frame": {
+        "x": 105,
+        "y": 3,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_025": {
+      "frame": {
+        "x": 156,
+        "y": 449,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_008": {
+      "frame": {
+        "x": 207,
+        "y": 449,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_019": {
+      "frame": {
+        "x": 105,
+        "y": 449,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_040": {
+      "frame": {
+        "x": 105,
+        "y": 191,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_020": {
+      "frame": {
+        "x": 105,
+        "y": 253,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_022": {
+      "frame": {
+        "x": 156,
+        "y": 253,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_246": {
+      "frame": {
+        "x": 156,
+        "y": 315,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_005": {
+      "frame": {
+        "x": 207,
+        "y": 315,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_021": {
+      "frame": {
+        "x": 207,
+        "y": 377,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_018": {
+      "frame": {
+        "x": 258,
+        "y": 377,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_010": {
+      "frame": {
+        "x": 258,
+        "y": 439,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_009": {
+      "frame": {
+        "x": 309,
+        "y": 439,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_244": {
+      "frame": {
+        "x": 156,
+        "y": 129,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_007": {
+      "frame": {
+        "x": 156,
+        "y": 191,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_006": {
+      "frame": {
+        "x": 207,
+        "y": 191,
+        "w": 45,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 8,
+        "w": 45,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_013": {
+      "frame": {
+        "x": 207,
+        "y": 253,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_052": {
+      "frame": {
+        "x": 258,
+        "y": 253,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_001": {
+      "frame": {
+        "x": 258,
+        "y": 314,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_053": {
+      "frame": {
+        "x": 309,
+        "y": 314,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_016": {
+      "frame": {
+        "x": 309,
+        "y": 375,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_014": {
+      "frame": {
+        "x": 360,
+        "y": 375,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_023": {
+      "frame": {
+        "x": 360,
+        "y": 436,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_011": {
+      "frame": {
+        "x": 411,
+        "y": 436,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_015": {
+      "frame": {
+        "x": 411,
+        "y": 3,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_002": {
+      "frame": {
+        "x": 360,
+        "y": 3,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_037": {
+      "frame": {
+        "x": 360,
+        "y": 64,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_036": {
+      "frame": {
+        "x": 309,
+        "y": 64,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_003": {
+      "frame": {
+        "x": 309,
+        "y": 125,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_024": {
+      "frame": {
+        "x": 258,
+        "y": 125,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_060": {
+      "frame": {
+        "x": 258,
+        "y": 186,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_039": {
+      "frame": {
+        "x": 207,
+        "y": 66,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_004": {
+      "frame": {
+        "x": 207,
+        "y": 127,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_012": {
+      "frame": {
+        "x": 258,
+        "y": 3,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_038": {
+      "frame": {
+        "x": 258,
+        "y": 64,
+        "w": 45,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 9,
+        "w": 45,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_059": {
+      "frame": {
+        "x": 309,
+        "y": 3,
+        "w": 45,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 10,
+        "w": 45,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_242": {
+      "frame": {
+        "x": 309,
+        "y": 186,
+        "w": 45,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 10,
+        "w": 45,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_241": {
+      "frame": {
+        "x": 309,
+        "y": 246,
+        "w": 45,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 10,
+        "w": 45,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_243": {
+      "frame": {
+        "x": 360,
+        "y": 246,
+        "w": 45,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 10,
+        "w": 45,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_054": {
+      "frame": {
+        "x": 360,
+        "y": 306,
+        "w": 45,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 12,
+        "w": 45,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_058": {
+      "frame": {
+        "x": 411,
+        "y": 306,
+        "w": 45,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 12,
+        "w": 45,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_057": {
+      "frame": {
+        "x": 411,
+        "y": 364,
+        "w": 45,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 14,
+        "w": 45,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_055": {
+      "frame": {
+        "x": 411,
+        "y": 64,
+        "w": 45,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 15,
+        "w": 45,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Creeper_056": {
+      "frame": {
+        "x": 411,
+        "y": 119,
+        "w": 45,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 15,
+        "w": 45,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 54,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Creeper_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

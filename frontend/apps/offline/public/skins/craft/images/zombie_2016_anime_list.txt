@@ -1,0 +1,53 @@
+Zombie
+
+	Facing Front: 
+		Still Frame:001
+		Look Left: 002-004 pause,reverse
+		Look Right: 006-008 pause,reverse
+		Look Down: 010-012 pause,reverse
+		Look Up: 014-016 pause,reverse
+		Idle: 018-024
+		Walk: 025-033
+		Attack: 034-036 pause,reverse
+		Take Damage: 038-046
+		Die: 047-055
+		Bump: 221-228
+              
+	Facing Back: 
+		Still Frame:056
+		Look Left: 057-059 pause,reverse
+		Look Right: 061-063 pause,reverse
+		Look Down: 065-067 pause,reverse
+		Look Up: 069-071 pause,reverse
+		Idle: 073-079
+		Walk: 080-088
+		Attack: 089-091 pause,reverse
+		Take Damage: 093-101
+		Die: 102-110
+		Bump: 229-236
+
+	Facing Left: 
+		Still Frame:111
+		Look Left: 112-114 pause,reverse
+		Look Right: 116-118 pause,reverse
+		Look Down: 120-122 pause,reverse
+		Look Up: 124-126 pause,reverse
+		Idle: 128-134
+		Walk: 135-143
+		Attack: 144-146 pause,reverse
+		Take Damage: 148-156
+		Die: 175-165
+		Bump: 237-244
+
+	Facing Right:
+		Still Frame:166
+		Look Left: 167-169 pause,reverse
+		Look Right: 171-173 pause,reverse
+		Look Down: 175-177 pause,reverse
+		Look Up: 179-181 pause,reverse
+		Idle: 183-189
+		Walk: 190-198
+		Attack: 199-201 pause,reverse
+		Take Damage: 203-211
+		Die: 212-220
+		Bump: 245-252

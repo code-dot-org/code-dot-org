@@ -51,10 +51,14 @@ test-results
 # Generated Icons
 /src/icons
 
+
 # Blockly media found elsewhere
 /public/blockly
-/public/skins
+/public/skins/*
 /public/common_images
+/public/craft
+# Allow Minecraft skins
+!/public/skins/craft
 
 # Assets found in buckets
 /public/animations

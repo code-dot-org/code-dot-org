@@ -1,0 +1,9533 @@
+{
+  "frames": {
+    "chicken0466": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 56,
+        "h": 73
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 56,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0464": {
+      "frame": {
+        "x": 65,
+        "y": 3,
+        "w": 56,
+        "h": 73
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 56,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0462": {
+      "frame": {
+        "x": 127,
+        "y": 3,
+        "w": 56,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 56,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0470": {
+      "frame": {
+        "x": 189,
+        "y": 3,
+        "w": 61,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 40,
+        "w": 61,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0472": {
+      "frame": {
+        "x": 256,
+        "y": 3,
+        "w": 64,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 40,
+        "w": 64,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0474": {
+      "frame": {
+        "x": 326,
+        "y": 3,
+        "w": 64,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 40,
+        "w": 64,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0313": {
+      "frame": {
+        "x": 396,
+        "y": 3,
+        "w": 56,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 42,
+        "w": 56,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0229": {
+      "frame": {
+        "x": 458,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0228": {
+      "frame": {
+        "x": 520,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0235": {
+      "frame": {
+        "x": 582,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0225": {
+      "frame": {
+        "x": 644,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0226": {
+      "frame": {
+        "x": 706,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0234": {
+      "frame": {
+        "x": 768,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0236": {
+      "frame": {
+        "x": 830,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0238": {
+      "frame": {
+        "x": 892,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0227": {
+      "frame": {
+        "x": 954,
+        "y": 3,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0237": {
+      "frame": {
+        "x": 954,
+        "y": 72,
+        "w": 56,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 43,
+        "w": 56,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0312": {
+      "frame": {
+        "x": 458,
+        "y": 72,
+        "w": 52,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 41,
+        "w": 52,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0454": {
+      "frame": {
+        "x": 396,
+        "y": 73,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0289": {
+      "frame": {
+        "x": 189,
+        "y": 75,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0230": {
+      "frame": {
+        "x": 127,
+        "y": 78,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0291": {
+      "frame": {
+        "x": 3,
+        "y": 82,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0280": {
+      "frame": {
+        "x": 65,
+        "y": 82,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0261": {
+      "frame": {
+        "x": 251,
+        "y": 75,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0302": {
+      "frame": {
+        "x": 313,
+        "y": 75,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0223": {
+      "frame": {
+        "x": 516,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0231": {
+      "frame": {
+        "x": 578,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0272": {
+      "frame": {
+        "x": 640,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0326": {
+      "frame": {
+        "x": 702,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0264": {
+      "frame": {
+        "x": 764,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0233": {
+      "frame": {
+        "x": 826,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0461": {
+      "frame": {
+        "x": 888,
+        "y": 72,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 42,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0298": {
+      "frame": {
+        "x": 888,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0279": {
+      "frame": {
+        "x": 950,
+        "y": 141,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0456": {
+      "frame": {
+        "x": 516,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0325": {
+      "frame": {
+        "x": 375,
+        "y": 141,
+        "w": 52,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 42,
+        "w": 52,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0285": {
+      "frame": {
+        "x": 433,
+        "y": 141,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0295": {
+      "frame": {
+        "x": 189,
+        "y": 143,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0262": {
+      "frame": {
+        "x": 127,
+        "y": 146,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0297": {
+      "frame": {
+        "x": 3,
+        "y": 150,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0460": {
+      "frame": {
+        "x": 65,
+        "y": 150,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0266": {
+      "frame": {
+        "x": 251,
+        "y": 143,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0277": {
+      "frame": {
+        "x": 313,
+        "y": 143,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0303": {
+      "frame": {
+        "x": 578,
+        "y": 140,
+        "w": 52,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 42,
+        "w": 52,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0300": {
+      "frame": {
+        "x": 636,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0224": {
+      "frame": {
+        "x": 698,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0257": {
+      "frame": {
+        "x": 760,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0260": {
+      "frame": {
+        "x": 822,
+        "y": 140,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0271": {
+      "frame": {
+        "x": 822,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0267": {
+      "frame": {
+        "x": 884,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0263": {
+      "frame": {
+        "x": 946,
+        "y": 209,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0465": {
+      "frame": {
+        "x": 495,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 46,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0270": {
+      "frame": {
+        "x": 375,
+        "y": 209,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0269": {
+      "frame": {
+        "x": 189,
+        "y": 211,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0275": {
+      "frame": {
+        "x": 127,
+        "y": 214,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0296": {
+      "frame": {
+        "x": 3,
+        "y": 218,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0292": {
+      "frame": {
+        "x": 65,
+        "y": 218,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0259": {
+      "frame": {
+        "x": 251,
+        "y": 211,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0232": {
+      "frame": {
+        "x": 313,
+        "y": 211,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0222": {
+      "frame": {
+        "x": 557,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0301": {
+      "frame": {
+        "x": 619,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0281": {
+      "frame": {
+        "x": 681,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0273": {
+      "frame": {
+        "x": 743,
+        "y": 208,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0276": {
+      "frame": {
+        "x": 743,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0290": {
+      "frame": {
+        "x": 805,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0284": {
+      "frame": {
+        "x": 867,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0278": {
+      "frame": {
+        "x": 929,
+        "y": 277,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0299": {
+      "frame": {
+        "x": 437,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0258": {
+      "frame": {
+        "x": 375,
+        "y": 277,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0463": {
+      "frame": {
+        "x": 189,
+        "y": 279,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 42,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0268": {
+      "frame": {
+        "x": 127,
+        "y": 282,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0283": {
+      "frame": {
+        "x": 3,
+        "y": 286,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0294": {
+      "frame": {
+        "x": 65,
+        "y": 286,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0239": {
+      "frame": {
+        "x": 251,
+        "y": 279,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0293": {
+      "frame": {
+        "x": 313,
+        "y": 279,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0282": {
+      "frame": {
+        "x": 499,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0265": {
+      "frame": {
+        "x": 561,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0458": {
+      "frame": {
+        "x": 623,
+        "y": 276,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0274": {
+      "frame": {
+        "x": 623,
+        "y": 344,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0467": {
+      "frame": {
+        "x": 437,
+        "y": 344,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 44,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0287": {
+      "frame": {
+        "x": 375,
+        "y": 345,
+        "w": 56,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 45,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0327": {
+      "frame": {
+        "x": 499,
+        "y": 344,
+        "w": 56,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 45,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0315": {
+      "frame": {
+        "x": 685,
+        "y": 276,
+        "w": 49,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 42,
+        "w": 49,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0286": {
+      "frame": {
+        "x": 561,
+        "y": 344,
+        "w": 56,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 45,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0288": {
+      "frame": {
+        "x": 561,
+        "y": 411,
+        "w": 56,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 45,
+        "w": 56,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0240": {
+      "frame": {
+        "x": 499,
+        "y": 411,
+        "w": 56,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 46,
+        "w": 56,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0314": {
+      "frame": {
+        "x": 685,
+        "y": 343,
+        "w": 52,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 44,
+        "w": 52,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0256": {
+      "frame": {
+        "x": 743,
+        "y": 344,
+        "w": 56,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 46,
+        "w": 56,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0374": {
+      "frame": {
+        "x": 805,
+        "y": 344,
+        "w": 56,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 47,
+        "w": 56,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0160": {
+      "frame": {
+        "x": 867,
+        "y": 344,
+        "w": 56,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 47,
+        "w": 56,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0152": {
+      "frame": {
+        "x": 929,
+        "y": 345,
+        "w": 56,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 47,
+        "w": 56,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0382": {
+      "frame": {
+        "x": 805,
+        "y": 409,
+        "w": 56,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 47,
+        "w": 56,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0201": {
+      "frame": {
+        "x": 685,
+        "y": 409,
+        "w": 52,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 46,
+        "w": 52,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0218": {
+      "frame": {
+        "x": 437,
+        "y": 209,
+        "w": 52,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 37,
+        "w": 52,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0423": {
+      "frame": {
+        "x": 743,
+        "y": 410,
+        "w": 52,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 46,
+        "w": 52,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0255": {
+      "frame": {
+        "x": 623,
+        "y": 412,
+        "w": 56,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 48,
+        "w": 56,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0241": {
+      "frame": {
+        "x": 867,
+        "y": 409,
+        "w": 56,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 48,
+        "w": 56,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0219": {
+      "frame": {
+        "x": 685,
+        "y": 473,
+        "w": 49,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 34,
+        "w": 49,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0398": {
+      "frame": {
+        "x": 623,
+        "y": 476,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0161": {
+      "frame": {
+        "x": 929,
+        "y": 410,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0383": {
+      "frame": {
+        "x": 929,
+        "y": 473,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0375": {
+      "frame": {
+        "x": 867,
+        "y": 473,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0381": {
+      "frame": {
+        "x": 740,
+        "y": 474,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0202": {
+      "frame": {
+        "x": 802,
+        "y": 474,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0125": {
+      "frame": {
+        "x": 864,
+        "y": 536,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0328": {
+      "frame": {
+        "x": 926,
+        "y": 536,
+        "w": 52,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 47,
+        "w": 52,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0373": {
+      "frame": {
+        "x": 926,
+        "y": 599,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0153": {
+      "frame": {
+        "x": 685,
+        "y": 537,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0151": {
+      "frame": {
+        "x": 747,
+        "y": 537,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0338": {
+      "frame": {
+        "x": 809,
+        "y": 599,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0216": {
+      "frame": {
+        "x": 189,
+        "y": 347,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 46,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0424": {
+      "frame": {
+        "x": 127,
+        "y": 350,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0217": {
+      "frame": {
+        "x": 3,
+        "y": 354,
+        "w": 52,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 41,
+        "w": 52,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0159": {
+      "frame": {
+        "x": 61,
+        "y": 354,
+        "w": 56,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0115": {
+      "frame": {
+        "x": 251,
+        "y": 347,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0246": {
+      "frame": {
+        "x": 313,
+        "y": 347,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0354": {
+      "frame": {
+        "x": 313,
+        "y": 409,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0172": {
+      "frame": {
+        "x": 251,
+        "y": 409,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0052": {
+      "frame": {
+        "x": 189,
+        "y": 410,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0370": {
+      "frame": {
+        "x": 123,
+        "y": 413,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0346": {
+      "frame": {
+        "x": 3,
+        "y": 417,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0126": {
+      "frame": {
+        "x": 375,
+        "y": 412,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0245": {
+      "frame": {
+        "x": 437,
+        "y": 412,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0455": {
+      "frame": {
+        "x": 437,
+        "y": 474,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0058": {
+      "frame": {
+        "x": 499,
+        "y": 477,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0187": {
+      "frame": {
+        "x": 561,
+        "y": 478,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0185": {
+      "frame": {
+        "x": 623,
+        "y": 539,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0407": {
+      "frame": {
+        "x": 685,
+        "y": 600,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0406": {
+      "frame": {
+        "x": 747,
+        "y": 600,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0035": {
+      "frame": {
+        "x": 747,
+        "y": 662,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0184": {
+      "frame": {
+        "x": 251,
+        "y": 471,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0244": {
+      "frame": {
+        "x": 313,
+        "y": 471,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0342": {
+      "frame": {
+        "x": 375,
+        "y": 474,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0447": {
+      "frame": {
+        "x": 185,
+        "y": 472,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 51,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0339": {
+      "frame": {
+        "x": 65,
+        "y": 475,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0137": {
+      "frame": {
+        "x": 3,
+        "y": 479,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0248": {
+      "frame": {
+        "x": 247,
+        "y": 533,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0043": {
+      "frame": {
+        "x": 309,
+        "y": 533,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0064": {
+      "frame": {
+        "x": 127,
+        "y": 534,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0075": {
+      "frame": {
+        "x": 65,
+        "y": 537,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0181": {
+      "frame": {
+        "x": 3,
+        "y": 541,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0362": {
+      "frame": {
+        "x": 371,
+        "y": 536,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0249": {
+      "frame": {
+        "x": 433,
+        "y": 536,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0387": {
+      "frame": {
+        "x": 495,
+        "y": 539,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0047": {
+      "frame": {
+        "x": 557,
+        "y": 540,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0469": {
+      "frame": {
+        "x": 619,
+        "y": 601,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0080": {
+      "frame": {
+        "x": 681,
+        "y": 662,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0377": {
+      "frame": {
+        "x": 189,
+        "y": 595,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0144": {
+      "frame": {
+        "x": 127,
+        "y": 596,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0000": {
+      "frame": {
+        "x": 65,
+        "y": 599,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0367": {
+      "frame": {
+        "x": 3,
+        "y": 603,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0029": {
+      "frame": {
+        "x": 251,
+        "y": 595,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0182": {
+      "frame": {
+        "x": 313,
+        "y": 598,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0164": {
+      "frame": {
+        "x": 375,
+        "y": 598,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0183": {
+      "frame": {
+        "x": 437,
+        "y": 601,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0371": {
+      "frame": {
+        "x": 499,
+        "y": 602,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0329": {
+      "frame": {
+        "x": 561,
+        "y": 602,
+        "w": 52,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 52,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0066": {
+      "frame": {
+        "x": 619,
+        "y": 663,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0397": {
+      "frame": {
+        "x": 189,
+        "y": 657,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0050": {
+      "frame": {
+        "x": 127,
+        "y": 658,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0010": {
+      "frame": {
+        "x": 65,
+        "y": 661,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0145": {
+      "frame": {
+        "x": 3,
+        "y": 665,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0024": {
+      "frame": {
+        "x": 251,
+        "y": 657,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0041": {
+      "frame": {
+        "x": 313,
+        "y": 660,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0390": {
+      "frame": {
+        "x": 375,
+        "y": 660,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0061": {
+      "frame": {
+        "x": 437,
+        "y": 663,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0070": {
+      "frame": {
+        "x": 499,
+        "y": 664,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0368": {
+      "frame": {
+        "x": 189,
+        "y": 719,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0251": {
+      "frame": {
+        "x": 127,
+        "y": 720,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0072": {
+      "frame": {
+        "x": 65,
+        "y": 723,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0356": {
+      "frame": {
+        "x": 3,
+        "y": 727,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0091": {
+      "frame": {
+        "x": 251,
+        "y": 719,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0448": {
+      "frame": {
+        "x": 313,
+        "y": 722,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0170": {
+      "frame": {
+        "x": 375,
+        "y": 722,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0450": {
+      "frame": {
+        "x": 437,
+        "y": 725,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0146": {
+      "frame": {
+        "x": 189,
+        "y": 781,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0044": {
+      "frame": {
+        "x": 127,
+        "y": 782,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0347": {
+      "frame": {
+        "x": 65,
+        "y": 785,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0068": {
+      "frame": {
+        "x": 3,
+        "y": 789,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0459": {
+      "frame": {
+        "x": 251,
+        "y": 781,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0062": {
+      "frame": {
+        "x": 313,
+        "y": 784,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0034": {
+      "frame": {
+        "x": 375,
+        "y": 784,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0025": {
+      "frame": {
+        "x": 189,
+        "y": 843,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0156": {
+      "frame": {
+        "x": 127,
+        "y": 844,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0111": {
+      "frame": {
+        "x": 65,
+        "y": 847,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0008": {
+      "frame": {
+        "x": 3,
+        "y": 851,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0343": {
+      "frame": {
+        "x": 251,
+        "y": 843,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0122": {
+      "frame": {
+        "x": 809,
+        "y": 662,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0452": {
+      "frame": {
+        "x": 871,
+        "y": 662,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0401": {
+      "frame": {
+        "x": 933,
+        "y": 662,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0051": {
+      "frame": {
+        "x": 933,
+        "y": 724,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0017": {
+      "frame": {
+        "x": 681,
+        "y": 724,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0366": {
+      "frame": {
+        "x": 561,
+        "y": 725,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0453": {
+      "frame": {
+        "x": 499,
+        "y": 726,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0189": {
+      "frame": {
+        "x": 437,
+        "y": 787,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0191": {
+      "frame": {
+        "x": 313,
+        "y": 846,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0065": {
+      "frame": {
+        "x": 375,
+        "y": 846,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0148": {
+      "frame": {
+        "x": 189,
+        "y": 905,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0071": {
+      "frame": {
+        "x": 127,
+        "y": 906,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0394": {
+      "frame": {
+        "x": 65,
+        "y": 909,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0174": {
+      "frame": {
+        "x": 3,
+        "y": 913,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0402": {
+      "frame": {
+        "x": 251,
+        "y": 905,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0253": {
+      "frame": {
+        "x": 743,
+        "y": 724,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0358": {
+      "frame": {
+        "x": 805,
+        "y": 724,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0405": {
+      "frame": {
+        "x": 867,
+        "y": 724,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0046": {
+      "frame": {
+        "x": 867,
+        "y": 786,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0143": {
+      "frame": {
+        "x": 929,
+        "y": 786,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0341": {
+      "frame": {
+        "x": 929,
+        "y": 848,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0018": {
+      "frame": {
+        "x": 623,
+        "y": 786,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0348": {
+      "frame": {
+        "x": 561,
+        "y": 787,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0178": {
+      "frame": {
+        "x": 499,
+        "y": 788,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0353": {
+      "frame": {
+        "x": 437,
+        "y": 849,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0055": {
+      "frame": {
+        "x": 313,
+        "y": 908,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0176": {
+      "frame": {
+        "x": 375,
+        "y": 908,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0252": {
+      "frame": {
+        "x": 189,
+        "y": 967,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0352": {
+      "frame": {
+        "x": 127,
+        "y": 968,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0344": {
+      "frame": {
+        "x": 65,
+        "y": 971,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0054": {
+      "frame": {
+        "x": 3,
+        "y": 975,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0020": {
+      "frame": {
+        "x": 251,
+        "y": 967,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0078": {
+      "frame": {
+        "x": 685,
+        "y": 786,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0384": {
+      "frame": {
+        "x": 747,
+        "y": 786,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0355": {
+      "frame": {
+        "x": 747,
+        "y": 848,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0395": {
+      "frame": {
+        "x": 809,
+        "y": 848,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0391": {
+      "frame": {
+        "x": 809,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0334": {
+      "frame": {
+        "x": 623,
+        "y": 848,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0104": {
+      "frame": {
+        "x": 561,
+        "y": 849,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0393": {
+      "frame": {
+        "x": 499,
+        "y": 850,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0410": {
+      "frame": {
+        "x": 437,
+        "y": 911,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0040": {
+      "frame": {
+        "x": 685,
+        "y": 848,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0028": {
+      "frame": {
+        "x": 685,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0186": {
+      "frame": {
+        "x": 623,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0119": {
+      "frame": {
+        "x": 561,
+        "y": 911,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0444": {
+      "frame": {
+        "x": 499,
+        "y": 912,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0026": {
+      "frame": {
+        "x": 747,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0357": {
+      "frame": {
+        "x": 747,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0139": {
+      "frame": {
+        "x": 623,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0149": {
+      "frame": {
+        "x": 561,
+        "y": 973,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0471": {
+      "frame": {
+        "x": 685,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0124": {
+      "frame": {
+        "x": 685,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0021": {
+      "frame": {
+        "x": 623,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0118": {
+      "frame": {
+        "x": 313,
+        "y": 970,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0473": {
+      "frame": {
+        "x": 375,
+        "y": 970,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0140": {
+      "frame": {
+        "x": 437,
+        "y": 973,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0409": {
+      "frame": {
+        "x": 499,
+        "y": 974,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0179": {
+      "frame": {
+        "x": 561,
+        "y": 1035,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0392": {
+      "frame": {
+        "x": 189,
+        "y": 1029,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0399": {
+      "frame": {
+        "x": 127,
+        "y": 1030,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0003": {
+      "frame": {
+        "x": 65,
+        "y": 1033,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0167": {
+      "frame": {
+        "x": 3,
+        "y": 1037,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0155": {
+      "frame": {
+        "x": 251,
+        "y": 1029,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0031": {
+      "frame": {
+        "x": 313,
+        "y": 1032,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0163": {
+      "frame": {
+        "x": 375,
+        "y": 1032,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0121": {
+      "frame": {
+        "x": 437,
+        "y": 1035,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0027": {
+      "frame": {
+        "x": 499,
+        "y": 1036,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0016": {
+      "frame": {
+        "x": 189,
+        "y": 1091,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0250": {
+      "frame": {
+        "x": 127,
+        "y": 1092,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0364": {
+      "frame": {
+        "x": 65,
+        "y": 1095,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0157": {
+      "frame": {
+        "x": 3,
+        "y": 1099,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0049": {
+      "frame": {
+        "x": 251,
+        "y": 1091,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0038": {
+      "frame": {
+        "x": 313,
+        "y": 1094,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0335": {
+      "frame": {
+        "x": 375,
+        "y": 1094,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0116": {
+      "frame": {
+        "x": 437,
+        "y": 1097,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0120": {
+      "frame": {
+        "x": 189,
+        "y": 1153,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0376": {
+      "frame": {
+        "x": 127,
+        "y": 1154,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0131": {
+      "frame": {
+        "x": 65,
+        "y": 1157,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0168": {
+      "frame": {
+        "x": 3,
+        "y": 1161,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0349": {
+      "frame": {
+        "x": 251,
+        "y": 1153,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0243": {
+      "frame": {
+        "x": 313,
+        "y": 1156,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0351": {
+      "frame": {
+        "x": 375,
+        "y": 1156,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0413": {
+      "frame": {
+        "x": 189,
+        "y": 1215,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0177": {
+      "frame": {
+        "x": 127,
+        "y": 1216,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0060": {
+      "frame": {
+        "x": 65,
+        "y": 1219,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0389": {
+      "frame": {
+        "x": 3,
+        "y": 1223,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0079": {
+      "frame": {
+        "x": 251,
+        "y": 1215,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0129": {
+      "frame": {
+        "x": 871,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0437": {
+      "frame": {
+        "x": 933,
+        "y": 910,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0074": {
+      "frame": {
+        "x": 933,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0063": {
+      "frame": {
+        "x": 809,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0408": {
+      "frame": {
+        "x": 871,
+        "y": 972,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0105": {
+      "frame": {
+        "x": 871,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0013": {
+      "frame": {
+        "x": 933,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0400": {
+      "frame": {
+        "x": 933,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0053": {
+      "frame": {
+        "x": 747,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0380": {
+      "frame": {
+        "x": 809,
+        "y": 1034,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0141": {
+      "frame": {
+        "x": 809,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0173": {
+      "frame": {
+        "x": 871,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0067": {
+      "frame": {
+        "x": 871,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0333": {
+      "frame": {
+        "x": 933,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0076": {
+      "frame": {
+        "x": 933,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0006": {
+      "frame": {
+        "x": 623,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0372": {
+      "frame": {
+        "x": 561,
+        "y": 1097,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0445": {
+      "frame": {
+        "x": 499,
+        "y": 1098,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 51,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0023": {
+      "frame": {
+        "x": 437,
+        "y": 1159,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0117": {
+      "frame": {
+        "x": 313,
+        "y": 1218,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0468": {
+      "frame": {
+        "x": 375,
+        "y": 1218,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0002": {
+      "frame": {
+        "x": 189,
+        "y": 1277,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0127": {
+      "frame": {
+        "x": 127,
+        "y": 1278,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0188": {
+      "frame": {
+        "x": 65,
+        "y": 1281,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0220": {
+      "frame": {
+        "x": 871,
+        "y": 599,
+        "w": 46,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 31,
+        "w": 46,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0363": {
+      "frame": {
+        "x": 3,
+        "y": 1285,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0242": {
+      "frame": {
+        "x": 251,
+        "y": 1277,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0150": {
+      "frame": {
+        "x": 685,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0350": {
+      "frame": {
+        "x": 747,
+        "y": 1096,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0132": {
+      "frame": {
+        "x": 747,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0007": {
+      "frame": {
+        "x": 809,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0336": {
+      "frame": {
+        "x": 809,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0451": {
+      "frame": {
+        "x": 871,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0130": {
+      "frame": {
+        "x": 871,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0042": {
+      "frame": {
+        "x": 933,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0142": {
+      "frame": {
+        "x": 933,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0048": {
+      "frame": {
+        "x": 623,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0247": {
+      "frame": {
+        "x": 561,
+        "y": 1159,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0449": {
+      "frame": {
+        "x": 499,
+        "y": 1160,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 49,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0036": {
+      "frame": {
+        "x": 437,
+        "y": 1221,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0138": {
+      "frame": {
+        "x": 685,
+        "y": 1158,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0059": {
+      "frame": {
+        "x": 685,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0001": {
+      "frame": {
+        "x": 623,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0379": {
+      "frame": {
+        "x": 561,
+        "y": 1221,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0033": {
+      "frame": {
+        "x": 499,
+        "y": 1222,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0169": {
+      "frame": {
+        "x": 747,
+        "y": 1220,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0337": {
+      "frame": {
+        "x": 747,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0340": {
+      "frame": {
+        "x": 809,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0166": {
+      "frame": {
+        "x": 809,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0386": {
+      "frame": {
+        "x": 871,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0361": {
+      "frame": {
+        "x": 871,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0019": {
+      "frame": {
+        "x": 933,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0123": {
+      "frame": {
+        "x": 933,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0056": {
+      "frame": {
+        "x": 623,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0365": {
+      "frame": {
+        "x": 561,
+        "y": 1283,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0446": {
+      "frame": {
+        "x": 685,
+        "y": 1282,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 52,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0134": {
+      "frame": {
+        "x": 685,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0069": {
+      "frame": {
+        "x": 623,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0030": {
+      "frame": {
+        "x": 747,
+        "y": 1344,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0165": {
+      "frame": {
+        "x": 747,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0012": {
+      "frame": {
+        "x": 809,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0037": {
+      "frame": {
+        "x": 809,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0175": {
+      "frame": {
+        "x": 871,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0128": {
+      "frame": {
+        "x": 871,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0412": {
+      "frame": {
+        "x": 933,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0004": {
+      "frame": {
+        "x": 933,
+        "y": 1592,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0438": {
+      "frame": {
+        "x": 313,
+        "y": 1280,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 53,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0057": {
+      "frame": {
+        "x": 375,
+        "y": 1280,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0154": {
+      "frame": {
+        "x": 437,
+        "y": 1283,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0113": {
+      "frame": {
+        "x": 499,
+        "y": 1284,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0133": {
+      "frame": {
+        "x": 561,
+        "y": 1345,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0378": {
+      "frame": {
+        "x": 623,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0114": {
+      "frame": {
+        "x": 685,
+        "y": 1406,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0254": {
+      "frame": {
+        "x": 685,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0171": {
+      "frame": {
+        "x": 747,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0009": {
+      "frame": {
+        "x": 747,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0396": {
+      "frame": {
+        "x": 809,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0475": {
+      "frame": {
+        "x": 809,
+        "y": 1592,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0180": {
+      "frame": {
+        "x": 871,
+        "y": 1592,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0039": {
+      "frame": {
+        "x": 871,
+        "y": 1654,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0388": {
+      "frame": {
+        "x": 933,
+        "y": 1654,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0112": {
+      "frame": {
+        "x": 933,
+        "y": 1716,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0162": {
+      "frame": {
+        "x": 189,
+        "y": 1339,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0359": {
+      "frame": {
+        "x": 127,
+        "y": 1340,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0190": {
+      "frame": {
+        "x": 65,
+        "y": 1343,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0403": {
+      "frame": {
+        "x": 3,
+        "y": 1347,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0360": {
+      "frame": {
+        "x": 251,
+        "y": 1339,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0014": {
+      "frame": {
+        "x": 313,
+        "y": 1342,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0404": {
+      "frame": {
+        "x": 375,
+        "y": 1342,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0045": {
+      "frame": {
+        "x": 437,
+        "y": 1345,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0073": {
+      "frame": {
+        "x": 499,
+        "y": 1346,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0032": {
+      "frame": {
+        "x": 561,
+        "y": 1407,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0136": {
+      "frame": {
+        "x": 623,
+        "y": 1468,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0345": {
+      "frame": {
+        "x": 189,
+        "y": 1401,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0411": {
+      "frame": {
+        "x": 127,
+        "y": 1402,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0011": {
+      "frame": {
+        "x": 65,
+        "y": 1405,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0457": {
+      "frame": {
+        "x": 3,
+        "y": 1409,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0158": {
+      "frame": {
+        "x": 251,
+        "y": 1401,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0369": {
+      "frame": {
+        "x": 313,
+        "y": 1404,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0385": {
+      "frame": {
+        "x": 375,
+        "y": 1404,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0077": {
+      "frame": {
+        "x": 437,
+        "y": 1407,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0015": {
+      "frame": {
+        "x": 499,
+        "y": 1408,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0147": {
+      "frame": {
+        "x": 561,
+        "y": 1469,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0135": {
+      "frame": {
+        "x": 623,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0022": {
+      "frame": {
+        "x": 685,
+        "y": 1530,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0005": {
+      "frame": {
+        "x": 685,
+        "y": 1592,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0215": {
+      "frame": {
+        "x": 747,
+        "y": 1592,
+        "w": 56,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 50,
+        "w": 56,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0414": {
+      "frame": {
+        "x": 871,
+        "y": 848,
+        "w": 52,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 49,
+        "w": 52,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0436": {
+      "frame": {
+        "x": 809,
+        "y": 786,
+        "w": 52,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 49,
+        "w": 52,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0192": {
+      "frame": {
+        "x": 623,
+        "y": 725,
+        "w": 52,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 49,
+        "w": 52,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0214": {
+      "frame": {
+        "x": 561,
+        "y": 664,
+        "w": 52,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 49,
+        "w": 52,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0331": {
+      "frame": {
+        "x": 747,
+        "y": 1654,
+        "w": 55,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 53,
+        "w": 55,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0426": {
+      "frame": {
+        "x": 809,
+        "y": 537,
+        "w": 49,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 49,
+        "w": 49,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0204": {
+      "frame": {
+        "x": 189,
+        "y": 534,
+        "w": 49,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 49,
+        "w": 49,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0425": {
+      "frame": {
+        "x": 127,
+        "y": 475,
+        "w": 52,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 51,
+        "w": 52,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0330": {
+      "frame": {
+        "x": 808,
+        "y": 1654,
+        "w": 52,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 51,
+        "w": 52,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0203": {
+      "frame": {
+        "x": 189,
+        "y": 1463,
+        "w": 52,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 51,
+        "w": 52,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0106": {
+      "frame": {
+        "x": 65,
+        "y": 417,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 53,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0439": {
+      "frame": {
+        "x": 127,
+        "y": 1464,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 59,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0441": {
+      "frame": {
+        "x": 65,
+        "y": 1467,
+        "w": 49,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 65,
+        "w": 49,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0109": {
+      "frame": {
+        "x": 3,
+        "y": 1471,
+        "w": 52,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 60,
+        "y": 58,
+        "w": 52,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0081": {
+      "frame": {
+        "x": 3,
+        "y": 1523,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 52,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0092": {
+      "frame": {
+        "x": 247,
+        "y": 1463,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 52,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0090": {
+      "frame": {
+        "x": 305,
+        "y": 1466,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 52,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0107": {
+      "frame": {
+        "x": 247,
+        "y": 1521,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 54,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0103": {
+      "frame": {
+        "x": 363,
+        "y": 1466,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 52,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0440": {
+      "frame": {
+        "x": 421,
+        "y": 1469,
+        "w": 52,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 63,
+        "w": 52,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0093": {
+      "frame": {
+        "x": 479,
+        "y": 1470,
+        "w": 49,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 53,
+        "w": 49,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0108": {
+      "frame": {
+        "x": 479,
+        "y": 1526,
+        "w": 50,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 55,
+        "w": 50,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0442": {
+      "frame": {
+        "x": 535,
+        "y": 1531,
+        "w": 46,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 69,
+        "w": 46,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0332": {
+      "frame": {
+        "x": 305,
+        "y": 1524,
+        "w": 45,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 56,
+        "w": 45,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0221": {
+      "frame": {
+        "x": 356,
+        "y": 1524,
+        "w": 34,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 29,
+        "w": 34,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0110": {
+      "frame": {
+        "x": 305,
+        "y": 1569,
+        "w": 44,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 74,
+        "y": 64,
+        "w": 44,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0428": {
+      "frame": {
+        "x": 396,
+        "y": 1527,
+        "w": 35,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 41,
+        "w": 35,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0212": {
+      "frame": {
+        "x": 437,
+        "y": 1527,
+        "w": 35,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 41,
+        "w": 35,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0416": {
+      "frame": {
+        "x": 437,
+        "y": 1575,
+        "w": 35,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 41,
+        "w": 35,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0200": {
+      "frame": {
+        "x": 478,
+        "y": 1582,
+        "w": 35,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 41,
+        "w": 35,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0422": {
+      "frame": {
+        "x": 355,
+        "y": 1575,
+        "w": 35,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 41,
+        "w": 35,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0434": {
+      "frame": {
+        "x": 396,
+        "y": 1575,
+        "w": 35,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 41,
+        "w": 35,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0310": {
+      "frame": {
+        "x": 519,
+        "y": 1587,
+        "w": 37,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 37,
+        "w": 37,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0319": {
+      "frame": {
+        "x": 988,
+        "y": 536,
+        "w": 29,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 35,
+        "w": 29,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0322": {
+      "frame": {
+        "x": 562,
+        "y": 1587,
+        "w": 37,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 37,
+        "w": 37,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0323": {
+      "frame": {
+        "x": 605,
+        "y": 1592,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0101": {
+      "frame": {
+        "x": 120,
+        "y": 1522,
+        "w": 40,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 50,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0311": {
+      "frame": {
+        "x": 61,
+        "y": 1525,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0206": {
+      "frame": {
+        "x": 396,
+        "y": 1622,
+        "w": 35,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 41,
+        "w": 35,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0321": {
+      "frame": {
+        "x": 988,
+        "y": 582,
+        "w": 29,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 35,
+        "w": 29,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0083": {
+      "frame": {
+        "x": 166,
+        "y": 1522,
+        "w": 40,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 50,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0307": {
+      "frame": {
+        "x": 212,
+        "y": 1522,
+        "w": 29,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 35,
+        "w": 29,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0095": {
+      "frame": {
+        "x": 437,
+        "y": 1630,
+        "w": 40,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 50,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0305": {
+      "frame": {
+        "x": 107,
+        "y": 1562,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0306": {
+      "frame": {
+        "x": 61,
+        "y": 1571,
+        "w": 37,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 37,
+        "w": 37,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0317": {
+      "frame": {
+        "x": 3,
+        "y": 1581,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0318": {
+      "frame": {
+        "x": 153,
+        "y": 1562,
+        "w": 37,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 37,
+        "w": 37,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0309": {
+      "frame": {
+        "x": 483,
+        "y": 1630,
+        "w": 29,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 35,
+        "w": 29,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0089": {
+      "frame": {
+        "x": 196,
+        "y": 1568,
+        "w": 40,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 50,
+        "w": 40,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0194": {
+      "frame": {
+        "x": 242,
+        "y": 1579,
+        "w": 35,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 41,
+        "w": 35,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0324": {
+      "frame": {
+        "x": 283,
+        "y": 1609,
+        "w": 37,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 37,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0427": {
+      "frame": {
+        "x": 326,
+        "y": 1622,
+        "w": 35,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 46,
+        "w": 35,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0304": {
+      "frame": {
+        "x": 518,
+        "y": 1633,
+        "w": 37,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 37,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0316": {
+      "frame": {
+        "x": 561,
+        "y": 1633,
+        "w": 37,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 37,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0213": {
+      "frame": {
+        "x": 604,
+        "y": 1638,
+        "w": 35,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 46,
+        "w": 35,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0320": {
+      "frame": {
+        "x": 367,
+        "y": 1622,
+        "w": 23,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 23,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0308": {
+      "frame": {
+        "x": 367,
+        "y": 1667,
+        "w": 23,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 23,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0415": {
+      "frame": {
+        "x": 396,
+        "y": 1668,
+        "w": 35,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 46,
+        "w": 35,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0197": {
+      "frame": {
+        "x": 437,
+        "y": 1670,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 38,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0207": {
+      "frame": {
+        "x": 645,
+        "y": 1654,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0429": {
+      "frame": {
+        "x": 686,
+        "y": 1654,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0209": {
+      "frame": {
+        "x": 686,
+        "y": 1698,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 38,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0210": {
+      "frame": {
+        "x": 727,
+        "y": 1709,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0195": {
+      "frame": {
+        "x": 768,
+        "y": 1713,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0420": {
+      "frame": {
+        "x": 809,
+        "y": 1713,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0205": {
+      "frame": {
+        "x": 850,
+        "y": 1716,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 46,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0419": {
+      "frame": {
+        "x": 891,
+        "y": 1716,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 38,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0430": {
+      "frame": {
+        "x": 891,
+        "y": 1760,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0431": {
+      "frame": {
+        "x": 932,
+        "y": 1778,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 38,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0196": {
+      "frame": {
+        "x": 973,
+        "y": 1778,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0211": {
+      "frame": {
+        "x": 973,
+        "y": 1822,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0198": {
+      "frame": {
+        "x": 478,
+        "y": 1678,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0435": {
+      "frame": {
+        "x": 519,
+        "y": 1678,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 46,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0193": {
+      "frame": {
+        "x": 560,
+        "y": 1678,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 46,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0432": {
+      "frame": {
+        "x": 601,
+        "y": 1683,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0433": {
+      "frame": {
+        "x": 642,
+        "y": 1698,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0418": {
+      "frame": {
+        "x": 104,
+        "y": 1608,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0417": {
+      "frame": {
+        "x": 49,
+        "y": 1617,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0199": {
+      "frame": {
+        "x": 3,
+        "y": 1627,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0208": {
+      "frame": {
+        "x": 145,
+        "y": 1608,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 40,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0421": {
+      "frame": {
+        "x": 186,
+        "y": 1608,
+        "w": 35,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 42,
+        "w": 35,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0094": {
+      "frame": {
+        "x": 227,
+        "y": 1625,
+        "w": 37,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 52,
+        "w": 37,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0084": {
+      "frame": {
+        "x": 270,
+        "y": 1654,
+        "w": 37,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0082": {
+      "frame": {
+        "x": 313,
+        "y": 1667,
+        "w": 37,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 52,
+        "w": 37,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0102": {
+      "frame": {
+        "x": 90,
+        "y": 1652,
+        "w": 37,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 52,
+        "w": 37,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0096": {
+      "frame": {
+        "x": 44,
+        "y": 1661,
+        "w": 37,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0100": {
+      "frame": {
+        "x": 133,
+        "y": 1652,
+        "w": 37,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0088": {
+      "frame": {
+        "x": 176,
+        "y": 1652,
+        "w": 37,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0443": {
+      "frame": {
+        "x": 3,
+        "y": 1671,
+        "w": 35,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 91,
+        "w": 35,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0085": {
+      "frame": {
+        "x": 587,
+        "y": 1531,
+        "w": 29,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 47,
+        "w": 29,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0099": {
+      "frame": {
+        "x": 219,
+        "y": 1665,
+        "w": 29,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 47,
+        "w": 29,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0087": {
+      "frame": {
+        "x": 254,
+        "y": 1693,
+        "w": 29,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 47,
+        "w": 29,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0097": {
+      "frame": {
+        "x": 289,
+        "y": 1707,
+        "w": 29,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 47,
+        "w": 29,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0086": {
+      "frame": {
+        "x": 991,
+        "y": 277,
+        "w": 23,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 23,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "chicken0098": {
+      "frame": {
+        "x": 991,
+        "y": 315,
+        "w": 23,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 23,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Chicken_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

@@ -1,0 +1,113 @@
+Sheep
+	Facing Down:
+		Still Frame:	001
+		Look Left:	003-006 pause, reverse	
+		Look Right:	012-015 pause, reverse
+		Look Down:	054-059
+		Look Up:	060-063 pause, reverse
+		Eat:		018-027 reverse
+		Idle:		036-045 reverse
+		Walk:		066-077
+		Attack:		078-089
+		Take Damage:	090-101
+		Die:		102-108
+		Bump:		864-871
+
+	Facing Right:
+		Still Frame:	109
+		Look Left:	112-114 pause, reverse	
+		Look Right:	120-123 pause, reverse
+		Look Down:	162-167
+		Look Up:	168-171 pause, reverse
+		Eat:		126-135 reverse
+		Idle:		144-153 reverse
+		Walk:		174-185
+		Attack:		186-197
+		Take Damage:	198-209
+		Die:		210-216
+		Bump:		862-879
+
+	Facing Up:
+		Still Frame:	217
+		Look Left:	220-222 pause, reverse	
+		Look Right:	228-231 pause, reverse
+		Look Down:	270-275
+		Look Up:	276-279 pause, reverse
+		Eat:		234-243 reverse
+		Idle:		252-261 reverse
+		Walk:		282-293
+		Attack:		294-305
+		Take Damage:	306-317
+		Die:		318-324
+		Bump:		880-887
+
+	Facing Left:
+		Still Frame:	325
+		Look Left:	328-330 pause, reverse	
+		Look Right:	336-339 pause, reverse
+		Look Down:	378-383
+		Look Up:	384-387 pause, reverse
+		Eat:		342-351 reverse
+		Idle:		360-369 reverse
+		Walk:		390-401
+		Attack:		402-413
+		Take Damage:	414-425
+		Die:		426-432
+		Bump:		888-895
+
+Naked Sheep
+	Facing Down:
+		Still Frame:	433
+		Look Left:	436-438 pause, reverse	
+		Look Right:	444-447 pause, reverse
+		Look Down:	486-491
+		Look Up:	492-495 pause, reverse
+		Eat:		450-459 reverse
+		Idle:		468-477 reverse
+		Walk:		498-509
+		Attack:		510-521
+		Take Damage:	522-533
+		Die:		534-540
+		Bump:		896-903
+
+	Facing Right:
+		Still Frame:	541
+		Look Left:	544-546 pause, reverse	
+		Look Right:	552-555 pause, reverse
+		Look Down:	594-599
+		Look Up:	600-603 pause, reverse
+		Eat:		558-567 reverse
+		Idle:		576-585 reverse
+		Walk:		606-617
+		Attack:		618-629
+		Take Damage:	630-641
+		Die:		642-648
+		Bump:		904-911
+
+	Facing Up:
+		Still Frame:	649
+		Look Left:	652-654 pause, reverse	
+		Look Right:	660-663 pause, reverse
+		Look Down:	702-707
+		Look Up:	708-711 pause, reverse
+		Eat:		666-675 reverse
+		Idle:		684-693 reverse
+		Walk:		714-725
+		Attack:		726-737
+		Take Damage:	738-749
+		Die:		750-756
+		Bump:		912-919
+
+	Facing Left:
+		Still Frame:	757
+		Look Left:	760-762 pause, reverse	
+		Look Right:	768-771 pause, reverse
+		Look Down:	810-815
+		Look Up:	816-819 pause, reverse
+		Eat:		774-783 reverse
+		Idle:		792-801 reverse
+		Walk:		822-833
+		Attack:		834-845
+		Take Damage:	846-857
+		Die:		858-864
+		Bump:		920-927

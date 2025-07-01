@@ -1,0 +1,5773 @@
+{
+  "frames": {
+    "ShadowCreeper_2016_190": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 69,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 60,
+        "w": 69,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_124": {
+      "frame": {
+        "x": 78,
+        "y": 3,
+        "w": 40,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 26,
+        "w": 40,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_258": {
+      "frame": {
+        "x": 3,
+        "y": 46,
+        "w": 39,
+        "h": 66
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 34,
+        "w": 39,
+        "h": 66
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_189": {
+      "frame": {
+        "x": 124,
+        "y": 3,
+        "w": 65,
+        "h": 38
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 59,
+        "w": 65,
+        "h": 38
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_125": {
+      "frame": {
+        "x": 195,
+        "y": 3,
+        "w": 39,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 26,
+        "w": 39,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_126": {
+      "frame": {
+        "x": 124,
+        "y": 47,
+        "w": 37,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 26,
+        "w": 37,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_260": {
+      "frame": {
+        "x": 48,
+        "y": 75,
+        "w": 39,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 34,
+        "w": 39,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_262": {
+      "frame": {
+        "x": 3,
+        "y": 118,
+        "w": 39,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 34,
+        "w": 39,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_123": {
+      "frame": {
+        "x": 240,
+        "y": 3,
+        "w": 40,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 31,
+        "w": 40,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_268": {
+      "frame": {
+        "x": 286,
+        "y": 3,
+        "w": 46,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 33,
+        "w": 46,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_270": {
+      "frame": {
+        "x": 338,
+        "y": 3,
+        "w": 46,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 33,
+        "w": 46,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_062": {
+      "frame": {
+        "x": 390,
+        "y": 3,
+        "w": 61,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 57,
+        "w": 61,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_266": {
+      "frame": {
+        "x": 457,
+        "y": 3,
+        "w": 55,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 33,
+        "w": 55,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_284": {
+      "frame": {
+        "x": 390,
+        "y": 49,
+        "w": 42,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 32,
+        "w": 42,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_286": {
+      "frame": {
+        "x": 286,
+        "y": 70,
+        "w": 42,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 32,
+        "w": 42,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_282": {
+      "frame": {
+        "x": 334,
+        "y": 70,
+        "w": 45,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 32,
+        "w": 45,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_278": {
+      "frame": {
+        "x": 240,
+        "y": 71,
+        "w": 39,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 39,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_060": {
+      "frame": {
+        "x": 167,
+        "y": 73,
+        "w": 58,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 58,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_188": {
+      "frame": {
+        "x": 93,
+        "y": 117,
+        "w": 58,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 54,
+        "w": 58,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_063": {
+      "frame": {
+        "x": 157,
+        "y": 128,
+        "w": 58,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 59,
+        "w": 58,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_127": {
+      "frame": {
+        "x": 48,
+        "y": 144,
+        "w": 26,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 27,
+        "w": 26,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_191": {
+      "frame": {
+        "x": 221,
+        "y": 135,
+        "w": 58,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 11,
+        "y": 63,
+        "w": 58,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_276": {
+      "frame": {
+        "x": 3,
+        "y": 187,
+        "w": 39,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 39,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_245": {
+      "frame": {
+        "x": 80,
+        "y": 166,
+        "w": 41,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 36,
+        "w": 41,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_061": {
+      "frame": {
+        "x": 127,
+        "y": 170,
+        "w": 57,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 52,
+        "w": 57,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_117": {
+      "frame": {
+        "x": 518,
+        "y": 3,
+        "w": 41,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 37,
+        "w": 41,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_247": {
+      "frame": {
+        "x": 565,
+        "y": 3,
+        "w": 40,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 36,
+        "w": 40,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_119": {
+      "frame": {
+        "x": 611,
+        "y": 3,
+        "w": 39,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 37,
+        "w": 39,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_053": {
+      "frame": {
+        "x": 656,
+        "y": 3,
+        "w": 34,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 34,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_274": {
+      "frame": {
+        "x": 696,
+        "y": 3,
+        "w": 39,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 39,
+        "w": 39,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_183": {
+      "frame": {
+        "x": 741,
+        "y": 3,
+        "w": 34,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 34,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_055": {
+      "frame": {
+        "x": 781,
+        "y": 3,
+        "w": 34,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 34,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_181": {
+      "frame": {
+        "x": 821,
+        "y": 3,
+        "w": 34,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 34,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_046": {
+      "frame": {
+        "x": 861,
+        "y": 3,
+        "w": 39,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 39,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_047": {
+      "frame": {
+        "x": 906,
+        "y": 3,
+        "w": 38,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 38,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_014": {
+      "frame": {
+        "x": 950,
+        "y": 3,
+        "w": 37,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 37,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_043": {
+      "frame": {
+        "x": 950,
+        "y": 64,
+        "w": 38,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 38,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_042": {
+      "frame": {
+        "x": 861,
+        "y": 64,
+        "w": 39,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 39,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_110": {
+      "frame": {
+        "x": 656,
+        "y": 65,
+        "w": 41,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 39,
+        "w": 41,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_016": {
+      "frame": {
+        "x": 906,
+        "y": 64,
+        "w": 37,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 37,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_122": {
+      "frame": {
+        "x": 518,
+        "y": 66,
+        "w": 39,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 39,
+        "w": 39,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_050": {
+      "frame": {
+        "x": 438,
+        "y": 70,
+        "w": 39,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 39,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_114": {
+      "frame": {
+        "x": 385,
+        "y": 116,
+        "w": 41,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 39,
+        "w": 41,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_045": {
+      "frame": {
+        "x": 906,
+        "y": 125,
+        "w": 38,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 38,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_041": {
+      "frame": {
+        "x": 950,
+        "y": 125,
+        "w": 39,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 39,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_049": {
+      "frame": {
+        "x": 950,
+        "y": 186,
+        "w": 38,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 38,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_106": {
+      "frame": {
+        "x": 563,
+        "y": 66,
+        "w": 41,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 39,
+        "w": 41,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_105": {
+      "frame": {
+        "x": 285,
+        "y": 137,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_112": {
+      "frame": {
+        "x": 610,
+        "y": 66,
+        "w": 40,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 40,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_013": {
+      "frame": {
+        "x": 610,
+        "y": 126,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_017": {
+      "frame": {
+        "x": 332,
+        "y": 137,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_116": {
+      "frame": {
+        "x": 190,
+        "y": 173,
+        "w": 40,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 40,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_108": {
+      "frame": {
+        "x": 236,
+        "y": 173,
+        "w": 40,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 40,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_002": {
+      "frame": {
+        "x": 127,
+        "y": 221,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_234": {
+      "frame": {
+        "x": 48,
+        "y": 229,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_109": {
+      "frame": {
+        "x": 483,
+        "y": 127,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_003": {
+      "frame": {
+        "x": 3,
+        "y": 251,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_238": {
+      "frame": {
+        "x": 432,
+        "y": 131,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_107": {
+      "frame": {
+        "x": 375,
+        "y": 177,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_048": {
+      "frame": {
+        "x": 530,
+        "y": 127,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_015": {
+      "frame": {
+        "x": 282,
+        "y": 197,
+        "w": 38,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 43,
+        "w": 38,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_113": {
+      "frame": {
+        "x": 326,
+        "y": 197,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_044": {
+      "frame": {
+        "x": 170,
+        "y": 233,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_104": {
+      "frame": {
+        "x": 213,
+        "y": 233,
+        "w": 40,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 40,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_120": {
+      "frame": {
+        "x": 95,
+        "y": 281,
+        "w": 39,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 39,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_009": {
+      "frame": {
+        "x": 46,
+        "y": 289,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_010": {
+      "frame": {
+        "x": 3,
+        "y": 311,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_052": {
+      "frame": {
+        "x": 703,
+        "y": 65,
+        "w": 36,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 36,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_040": {
+      "frame": {
+        "x": 745,
+        "y": 65,
+        "w": 38,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 38,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_008": {
+      "frame": {
+        "x": 789,
+        "y": 65,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_056": {
+      "frame": {
+        "x": 789,
+        "y": 125,
+        "w": 36,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 36,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_004": {
+      "frame": {
+        "x": 831,
+        "y": 125,
+        "w": 37,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 37,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_111": {
+      "frame": {
+        "x": 831,
+        "y": 185,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 40,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_242": {
+      "frame": {
+        "x": 878,
+        "y": 186,
+        "w": 41,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 41,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_244": {
+      "frame": {
+        "x": 703,
+        "y": 125,
+        "w": 42,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 42,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_039": {
+      "frame": {
+        "x": 653,
+        "y": 126,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_103": {
+      "frame": {
+        "x": 696,
+        "y": 184,
+        "w": 40,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 41,
+        "w": 40,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_248": {
+      "frame": {
+        "x": 742,
+        "y": 184,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_232": {
+      "frame": {
+        "x": 742,
+        "y": 243,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_239": {
+      "frame": {
+        "x": 789,
+        "y": 245,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_001": {
+      "frame": {
+        "x": 653,
+        "y": 185,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_005": {
+      "frame": {
+        "x": 696,
+        "y": 243,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_011": {
+      "frame": {
+        "x": 573,
+        "y": 186,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_038": {
+      "frame": {
+        "x": 616,
+        "y": 244,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_235": {
+      "frame": {
+        "x": 479,
+        "y": 187,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_241": {
+      "frame": {
+        "x": 526,
+        "y": 187,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_233": {
+      "frame": {
+        "x": 422,
+        "y": 191,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_237": {
+      "frame": {
+        "x": 373,
+        "y": 237,
+        "w": 41,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 40,
+        "w": 41,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_058": {
+      "frame": {
+        "x": 573,
+        "y": 245,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_007": {
+      "frame": {
+        "x": 469,
+        "y": 246,
+        "w": 37,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_208": {
+      "frame": {
+        "x": 420,
+        "y": 250,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_082": {
+      "frame": {
+        "x": 512,
+        "y": 246,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_037": {
+      "frame": {
+        "x": 512,
+        "y": 304,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_096": {
+      "frame": {
+        "x": 259,
+        "y": 257,
+        "w": 44,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 44,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_256": {
+      "frame": {
+        "x": 467,
+        "y": 305,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_029": {
+      "frame": {
+        "x": 309,
+        "y": 257,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_085": {
+      "frame": {
+        "x": 352,
+        "y": 296,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_263": {
+      "frame": {
+        "x": 397,
+        "y": 308,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_059": {
+      "frame": {
+        "x": 836,
+        "y": 246,
+        "w": 45,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 45,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_264": {
+      "frame": {
+        "x": 887,
+        "y": 246,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_102": {
+      "frame": {
+        "x": 932,
+        "y": 247,
+        "w": 40,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 40,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_271": {
+      "frame": {
+        "x": 978,
+        "y": 247,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_071": {
+      "frame": {
+        "x": 978,
+        "y": 305,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_025": {
+      "frame": {
+        "x": 140,
+        "y": 293,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_148": {
+      "frame": {
+        "x": 89,
+        "y": 341,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_100": {
+      "frame": {
+        "x": 183,
+        "y": 293,
+        "w": 40,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 40,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_093": {
+      "frame": {
+        "x": 3,
+        "y": 371,
+        "w": 42,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 42,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_033": {
+      "frame": {
+        "x": 229,
+        "y": 315,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_091": {
+      "frame": {
+        "x": 272,
+        "y": 315,
+        "w": 46,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 46,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_121": {
+      "frame": {
+        "x": 324,
+        "y": 354,
+        "w": 40,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 40,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_090": {
+      "frame": {
+        "x": 132,
+        "y": 351,
+        "w": 44,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 44,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_269": {
+      "frame": {
+        "x": 51,
+        "y": 399,
+        "w": 42,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 42,
+        "w": 42,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_051": {
+      "frame": {
+        "x": 182,
+        "y": 351,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_035": {
+      "frame": {
+        "x": 3,
+        "y": 429,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_240": {
+      "frame": {
+        "x": 225,
+        "y": 373,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_094": {
+      "frame": {
+        "x": 272,
+        "y": 373,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_231": {
+      "frame": {
+        "x": 99,
+        "y": 409,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_074": {
+      "frame": {
+        "x": 46,
+        "y": 457,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_092": {
+      "frame": {
+        "x": 146,
+        "y": 409,
+        "w": 44,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 44,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_089": {
+      "frame": {
+        "x": 659,
+        "y": 302,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_057": {
+      "frame": {
+        "x": 616,
+        "y": 303,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_070": {
+      "frame": {
+        "x": 555,
+        "y": 304,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_012": {
+      "frame": {
+        "x": 3,
+        "y": 487,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_255": {
+      "frame": {
+        "x": 874,
+        "y": 125,
+        "w": 26,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 71,
+        "w": 26,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_006": {
+      "frame": {
+        "x": 706,
+        "y": 302,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_265": {
+      "frame": {
+        "x": 749,
+        "y": 304,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 42,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_018": {
+      "frame": {
+        "x": 659,
+        "y": 360,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_099": {
+      "frame": {
+        "x": 702,
+        "y": 360,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_064": {
+      "frame": {
+        "x": 600,
+        "y": 361,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_030": {
+      "frame": {
+        "x": 510,
+        "y": 362,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_034": {
+      "frame": {
+        "x": 553,
+        "y": 362,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_031": {
+      "frame": {
+        "x": 440,
+        "y": 363,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_072": {
+      "frame": {
+        "x": 370,
+        "y": 366,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_076": {
+      "frame": {
+        "x": 319,
+        "y": 412,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_081": {
+      "frame": {
+        "x": 196,
+        "y": 431,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_097": {
+      "frame": {
+        "x": 241,
+        "y": 431,
+        "w": 46,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 46,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_095": {
+      "frame": {
+        "x": 91,
+        "y": 467,
+        "w": 42,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 42,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_206": {
+      "frame": {
+        "x": 139,
+        "y": 467,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_069": {
+      "frame": {
+        "x": 46,
+        "y": 515,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_267": {
+      "frame": {
+        "x": 796,
+        "y": 304,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 42,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_065": {
+      "frame": {
+        "x": 843,
+        "y": 304,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_149": {
+      "frame": {
+        "x": 3,
+        "y": 545,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_254": {
+      "frame": {
+        "x": 888,
+        "y": 304,
+        "w": 38,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 67,
+        "w": 38,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_073": {
+      "frame": {
+        "x": 932,
+        "y": 305,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_257": {
+      "frame": {
+        "x": 749,
+        "y": 362,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_207": {
+      "frame": {
+        "x": 645,
+        "y": 418,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_024": {
+      "frame": {
+        "x": 596,
+        "y": 419,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_077": {
+      "frame": {
+        "x": 692,
+        "y": 418,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_028": {
+      "frame": {
+        "x": 483,
+        "y": 420,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_115": {
+      "frame": {
+        "x": 415,
+        "y": 421,
+        "w": 40,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 40,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_259": {
+      "frame": {
+        "x": 364,
+        "y": 424,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_032": {
+      "frame": {
+        "x": 526,
+        "y": 420,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_036": {
+      "frame": {
+        "x": 293,
+        "y": 470,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_027": {
+      "frame": {
+        "x": 186,
+        "y": 489,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_261": {
+      "frame": {
+        "x": 229,
+        "y": 489,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 44,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_088": {
+      "frame": {
+        "x": 91,
+        "y": 525,
+        "w": 39,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 39,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_098": {
+      "frame": {
+        "x": 136,
+        "y": 525,
+        "w": 44,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 44,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_236": {
+      "frame": {
+        "x": 792,
+        "y": 362,
+        "w": 41,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 41,
+        "w": 41,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_000": {
+      "frame": {
+        "x": 46,
+        "y": 573,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_026": {
+      "frame": {
+        "x": 3,
+        "y": 603,
+        "w": 37,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 45,
+        "w": 37,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_101": {
+      "frame": {
+        "x": 839,
+        "y": 362,
+        "w": 40,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 42,
+        "w": 40,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_019": {
+      "frame": {
+        "x": 885,
+        "y": 362,
+        "w": 37,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 46,
+        "w": 37,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_222": {
+      "frame": {
+        "x": 928,
+        "y": 363,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 42,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_249": {
+      "frame": {
+        "x": 976,
+        "y": 363,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_194": {
+      "frame": {
+        "x": 976,
+        "y": 420,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_216": {
+      "frame": {
+        "x": 737,
+        "y": 420,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_228": {
+      "frame": {
+        "x": 639,
+        "y": 476,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_220": {
+      "frame": {
+        "x": 686,
+        "y": 476,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 45,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_221": {
+      "frame": {
+        "x": 569,
+        "y": 477,
+        "w": 43,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 43,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_280": {
+      "frame": {
+        "x": 461,
+        "y": 478,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_224": {
+      "frame": {
+        "x": 407,
+        "y": 479,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 45,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_086": {
+      "frame": {
+        "x": 508,
+        "y": 478,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_285": {
+      "frame": {
+        "x": 336,
+        "y": 482,
+        "w": 43,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 42,
+        "w": 43,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_204": {
+      "frame": {
+        "x": 272,
+        "y": 528,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_075": {
+      "frame": {
+        "x": 186,
+        "y": 547,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_066": {
+      "frame": {
+        "x": 89,
+        "y": 583,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_217": {
+      "frame": {
+        "x": 134,
+        "y": 583,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 42,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_229": {
+      "frame": {
+        "x": 784,
+        "y": 420,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_281": {
+      "frame": {
+        "x": 831,
+        "y": 420,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 42,
+        "w": 42,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_223": {
+      "frame": {
+        "x": 879,
+        "y": 420,
+        "w": 43,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 43,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_087": {
+      "frame": {
+        "x": 928,
+        "y": 420,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_225": {
+      "frame": {
+        "x": 879,
+        "y": 477,
+        "w": 46,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 46,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_068": {
+      "frame": {
+        "x": 931,
+        "y": 477,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_193": {
+      "frame": {
+        "x": 976,
+        "y": 477,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_219": {
+      "frame": {
+        "x": 931,
+        "y": 534,
+        "w": 46,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 46,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_210": {
+      "frame": {
+        "x": 737,
+        "y": 477,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_067": {
+      "frame": {
+        "x": 784,
+        "y": 477,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_023": {
+      "frame": {
+        "x": 46,
+        "y": 631,
+        "w": 37,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 46,
+        "w": 37,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_226": {
+      "frame": {
+        "x": 784,
+        "y": 534,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 45,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_197": {
+      "frame": {
+        "x": 829,
+        "y": 477,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_196": {
+      "frame": {
+        "x": 835,
+        "y": 534,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_283": {
+      "frame": {
+        "x": 882,
+        "y": 534,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 42,
+        "w": 42,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_213": {
+      "frame": {
+        "x": 882,
+        "y": 591,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_195": {
+      "frame": {
+        "x": 929,
+        "y": 591,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_083": {
+      "frame": {
+        "x": 976,
+        "y": 591,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_198": {
+      "frame": {
+        "x": 976,
+        "y": 648,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_230": {
+      "frame": {
+        "x": 618,
+        "y": 533,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_218": {
+      "frame": {
+        "x": 553,
+        "y": 534,
+        "w": 45,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 45,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_203": {
+      "frame": {
+        "x": 665,
+        "y": 533,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_287": {
+      "frame": {
+        "x": 712,
+        "y": 534,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_150": {
+      "frame": {
+        "x": 3,
+        "y": 661,
+        "w": 37,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 46,
+        "w": 37,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_192": {
+      "frame": {
+        "x": 458,
+        "y": 535,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_227": {
+      "frame": {
+        "x": 505,
+        "y": 535,
+        "w": 42,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 42,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_243": {
+      "frame": {
+        "x": 385,
+        "y": 536,
+        "w": 41,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 42,
+        "w": 41,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_084": {
+      "frame": {
+        "x": 319,
+        "y": 539,
+        "w": 39,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 43,
+        "w": 39,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_205": {
+      "frame": {
+        "x": 231,
+        "y": 585,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_202": {
+      "frame": {
+        "x": 182,
+        "y": 604,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_199": {
+      "frame": {
+        "x": 89,
+        "y": 640,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_147": {
+      "frame": {
+        "x": 46,
+        "y": 688,
+        "w": 37,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 37,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_184": {
+      "frame": {
+        "x": 789,
+        "y": 185,
+        "w": 36,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 36,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_215": {
+      "frame": {
+        "x": 604,
+        "y": 590,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_209": {
+      "frame": {
+        "x": 553,
+        "y": 591,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_180": {
+      "frame": {
+        "x": 3,
+        "y": 718,
+        "w": 36,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 36,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_212": {
+      "frame": {
+        "x": 651,
+        "y": 590,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_201": {
+      "frame": {
+        "x": 432,
+        "y": 592,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_214": {
+      "frame": {
+        "x": 364,
+        "y": 593,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_211": {
+      "frame": {
+        "x": 479,
+        "y": 592,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_200": {
+      "frame": {
+        "x": 278,
+        "y": 596,
+        "w": 41,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 43,
+        "w": 41,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_169": {
+      "frame": {
+        "x": 136,
+        "y": 640,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_078": {
+      "frame": {
+        "x": 229,
+        "y": 641,
+        "w": 41,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 45,
+        "w": 41,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_177": {
+      "frame": {
+        "x": 181,
+        "y": 660,
+        "w": 38,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 38,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_171": {
+      "frame": {
+        "x": 136,
+        "y": 695,
+        "w": 38,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 38,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_175": {
+      "frame": {
+        "x": 89,
+        "y": 696,
+        "w": 38,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 38,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_178": {
+      "frame": {
+        "x": 698,
+        "y": 591,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_151": {
+      "frame": {
+        "x": 45,
+        "y": 744,
+        "w": 37,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 37,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_170": {
+      "frame": {
+        "x": 743,
+        "y": 591,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_080": {
+      "frame": {
+        "x": 788,
+        "y": 591,
+        "w": 41,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 45,
+        "w": 41,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_022": {
+      "frame": {
+        "x": 835,
+        "y": 591,
+        "w": 37,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 37,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_173": {
+      "frame": {
+        "x": 835,
+        "y": 646,
+        "w": 38,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 38,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_174": {
+      "frame": {
+        "x": 879,
+        "y": 648,
+        "w": 39,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 48,
+        "w": 39,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_131": {
+      "frame": {
+        "x": 924,
+        "y": 648,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_132": {
+      "frame": {
+        "x": 924,
+        "y": 702,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_020": {
+      "frame": {
+        "x": 967,
+        "y": 705,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_172": {
+      "frame": {
+        "x": 3,
+        "y": 799,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_139": {
+      "frame": {
+        "x": 3,
+        "y": 853,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_138": {
+      "frame": {
+        "x": 3,
+        "y": 907,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_137": {
+      "frame": {
+        "x": 3,
+        "y": 961,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_168": {
+      "frame": {
+        "x": 46,
+        "y": 961,
+        "w": 38,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 38,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_176": {
+      "frame": {
+        "x": 46,
+        "y": 799,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_136": {
+      "frame": {
+        "x": 46,
+        "y": 853,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_167": {
+      "frame": {
+        "x": 46,
+        "y": 907,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_130": {
+      "frame": {
+        "x": 89,
+        "y": 907,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_165": {
+      "frame": {
+        "x": 90,
+        "y": 961,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_154": {
+      "frame": {
+        "x": 89,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_164": {
+      "frame": {
+        "x": 89,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_159": {
+      "frame": {
+        "x": 132,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_186": {
+      "frame": {
+        "x": 132,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_146": {
+      "frame": {
+        "x": 175,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_275": {
+      "frame": {
+        "x": 132,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_166": {
+      "frame": {
+        "x": 133,
+        "y": 918,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_160": {
+      "frame": {
+        "x": 175,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_273": {
+      "frame": {
+        "x": 175,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 49,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_161": {
+      "frame": {
+        "x": 176,
+        "y": 918,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_155": {
+      "frame": {
+        "x": 218,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_134": {
+      "frame": {
+        "x": 225,
+        "y": 703,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_143": {
+      "frame": {
+        "x": 218,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_128": {
+      "frame": {
+        "x": 218,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_158": {
+      "frame": {
+        "x": 219,
+        "y": 918,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_277": {
+      "frame": {
+        "x": 261,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 51,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_153": {
+      "frame": {
+        "x": 268,
+        "y": 703,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_152": {
+      "frame": {
+        "x": 261,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_162": {
+      "frame": {
+        "x": 261,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_279": {
+      "frame": {
+        "x": 262,
+        "y": 918,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_179": {
+      "frame": {
+        "x": 304,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_140": {
+      "frame": {
+        "x": 311,
+        "y": 703,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_157": {
+      "frame": {
+        "x": 325,
+        "y": 649,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_185": {
+      "frame": {
+        "x": 304,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_156": {
+      "frame": {
+        "x": 304,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_129": {
+      "frame": {
+        "x": 305,
+        "y": 918,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_133": {
+      "frame": {
+        "x": 347,
+        "y": 759,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_021": {
+      "frame": {
+        "x": 354,
+        "y": 703,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_163": {
+      "frame": {
+        "x": 368,
+        "y": 649,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_272": {
+      "frame": {
+        "x": 347,
+        "y": 812,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_135": {
+      "frame": {
+        "x": 347,
+        "y": 865,
+        "w": 37,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 50,
+        "w": 37,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_187": {
+      "frame": {
+        "x": 305,
+        "y": 971,
+        "w": 46,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 51,
+        "w": 46,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_079": {
+      "frame": {
+        "x": 133,
+        "y": 971,
+        "w": 41,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 48,
+        "w": 41,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_250": {
+      "frame": {
+        "x": 180,
+        "y": 971,
+        "w": 41,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 47,
+        "w": 41,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_145": {
+      "frame": {
+        "x": 227,
+        "y": 971,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 51,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_182": {
+      "frame": {
+        "x": 348,
+        "y": 918,
+        "w": 18,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 38,
+        "w": 18,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_142": {
+      "frame": {
+        "x": 357,
+        "y": 970,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 51,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_144": {
+      "frame": {
+        "x": 372,
+        "y": 918,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 51,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_141": {
+      "frame": {
+        "x": 400,
+        "y": 970,
+        "w": 37,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 51,
+        "w": 37,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_246": {
+      "frame": {
+        "x": 270,
+        "y": 971,
+        "w": 27,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 34,
+        "w": 27,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_118": {
+      "frame": {
+        "x": 483,
+        "y": 70,
+        "w": 27,
+        "h": 44
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 34,
+        "w": 27,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_253": {
+      "frame": {
+        "x": 276,
+        "y": 652,
+        "w": 40,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 66,
+        "w": 40,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_054": {
+      "frame": {
+        "x": 759,
+        "y": 534,
+        "w": 18,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 40,
+        "w": 18,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_252": {
+      "frame": {
+        "x": 390,
+        "y": 759,
+        "w": 41,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 61,
+        "w": 41,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "ShadowCreeper_2016_251": {
+      "frame": {
+        "x": 397,
+        "y": 703,
+        "w": 41,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 59,
+        "w": 41,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Creeper_2016_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

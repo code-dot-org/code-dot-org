@@ -1,0 +1,9533 @@
+{
+  "frames": {
+    "Cow0466": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 55,
+        "h": 87
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 26,
+        "w": 55,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0464": {
+      "frame": {
+        "x": 64,
+        "y": 3,
+        "w": 55,
+        "h": 87
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 26,
+        "w": 55,
+        "h": 87
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0462": {
+      "frame": {
+        "x": 125,
+        "y": 3,
+        "w": 55,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 26,
+        "w": 55,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0472": {
+      "frame": {
+        "x": 186,
+        "y": 3,
+        "w": 80,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 39,
+        "w": 80,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0474": {
+      "frame": {
+        "x": 272,
+        "y": 3,
+        "w": 80,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 39,
+        "w": 80,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0227": {
+      "frame": {
+        "x": 358,
+        "y": 3,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0226": {
+      "frame": {
+        "x": 186,
+        "y": 79,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0235": {
+      "frame": {
+        "x": 125,
+        "y": 92,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0236": {
+      "frame": {
+        "x": 247,
+        "y": 79,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0237": {
+      "frame": {
+        "x": 3,
+        "y": 96,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0287": {
+      "frame": {
+        "x": 64,
+        "y": 96,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0228": {
+      "frame": {
+        "x": 419,
+        "y": 3,
+        "w": 55,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 36,
+        "w": 55,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0240": {
+      "frame": {
+        "x": 480,
+        "y": 3,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0253": {
+      "frame": {
+        "x": 541,
+        "y": 3,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0168": {
+      "frame": {
+        "x": 602,
+        "y": 3,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0132": {
+      "frame": {
+        "x": 684,
+        "y": 3,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0170": {
+      "frame": {
+        "x": 766,
+        "y": 3,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0035": {
+      "frame": {
+        "x": 684,
+        "y": 68,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0260": {
+      "frame": {
+        "x": 602,
+        "y": 70,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0219": {
+      "frame": {
+        "x": 480,
+        "y": 85,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 40,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0261": {
+      "frame": {
+        "x": 308,
+        "y": 86,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0036": {
+      "frame": {
+        "x": 369,
+        "y": 86,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0121": {
+      "frame": {
+        "x": 186,
+        "y": 162,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0125": {
+      "frame": {
+        "x": 848,
+        "y": 3,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0124": {
+      "frame": {
+        "x": 930,
+        "y": 3,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0328": {
+      "frame": {
+        "x": 125,
+        "y": 175,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0292": {
+      "frame": {
+        "x": 930,
+        "y": 71,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0071": {
+      "frame": {
+        "x": 745,
+        "y": 70,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0363": {
+      "frame": {
+        "x": 663,
+        "y": 150,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0255": {
+      "frame": {
+        "x": 3,
+        "y": 179,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0215": {
+      "frame": {
+        "x": 806,
+        "y": 71,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0250": {
+      "frame": {
+        "x": 64,
+        "y": 179,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0284": {
+      "frame": {
+        "x": 806,
+        "y": 138,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0398": {
+      "frame": {
+        "x": 867,
+        "y": 153,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0016": {
+      "frame": {
+        "x": 745,
+        "y": 152,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0062": {
+      "frame": {
+        "x": 949,
+        "y": 153,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0146": {
+      "frame": {
+        "x": 867,
+        "y": 219,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0127": {
+      "frame": {
+        "x": 430,
+        "y": 152,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0364": {
+      "frame": {
+        "x": 512,
+        "y": 152,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0460": {
+      "frame": {
+        "x": 806,
+        "y": 220,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0439": {
+      "frame": {
+        "x": 594,
+        "y": 215,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0050": {
+      "frame": {
+        "x": 676,
+        "y": 215,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0327": {
+      "frame": {
+        "x": 737,
+        "y": 234,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0294": {
+      "frame": {
+        "x": 949,
+        "y": 235,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0283": {
+      "frame": {
+        "x": 867,
+        "y": 286,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0041": {
+      "frame": {
+        "x": 798,
+        "y": 302,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0379": {
+      "frame": {
+        "x": 512,
+        "y": 217,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0264": {
+      "frame": {
+        "x": 594,
+        "y": 276,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0265": {
+      "frame": {
+        "x": 655,
+        "y": 297,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0443": {
+      "frame": {
+        "x": 716,
+        "y": 316,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0143": {
+      "frame": {
+        "x": 716,
+        "y": 377,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0214": {
+      "frame": {
+        "x": 928,
+        "y": 317,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0391": {
+      "frame": {
+        "x": 798,
+        "y": 384,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0314": {
+      "frame": {
+        "x": 880,
+        "y": 385,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0117": {
+      "frame": {
+        "x": 941,
+        "y": 385,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0382": {
+      "frame": {
+        "x": 941,
+        "y": 450,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0163": {
+      "frame": {
+        "x": 268,
+        "y": 168,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0232": {
+      "frame": {
+        "x": 350,
+        "y": 168,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0463": {
+      "frame": {
+        "x": 186,
+        "y": 229,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0024": {
+      "frame": {
+        "x": 125,
+        "y": 257,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0140": {
+      "frame": {
+        "x": 411,
+        "y": 219,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0149": {
+      "frame": {
+        "x": 493,
+        "y": 283,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0404": {
+      "frame": {
+        "x": 247,
+        "y": 235,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0122": {
+      "frame": {
+        "x": 329,
+        "y": 250,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0176": {
+      "frame": {
+        "x": 411,
+        "y": 284,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0230": {
+      "frame": {
+        "x": 247,
+        "y": 302,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0241": {
+      "frame": {
+        "x": 186,
+        "y": 311,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0023": {
+      "frame": {
+        "x": 493,
+        "y": 349,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0349": {
+      "frame": {
+        "x": 554,
+        "y": 358,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0273": {
+      "frame": {
+        "x": 636,
+        "y": 379,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0468": {
+      "frame": {
+        "x": 554,
+        "y": 424,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0174": {
+      "frame": {
+        "x": 697,
+        "y": 442,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0465": {
+      "frame": {
+        "x": 636,
+        "y": 461,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 39,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0192": {
+      "frame": {
+        "x": 779,
+        "y": 451,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0243": {
+      "frame": {
+        "x": 861,
+        "y": 467,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0157": {
+      "frame": {
+        "x": 697,
+        "y": 510,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0139": {
+      "frame": {
+        "x": 779,
+        "y": 519,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0020": {
+      "frame": {
+        "x": 922,
+        "y": 517,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0119": {
+      "frame": {
+        "x": 308,
+        "y": 317,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0134": {
+      "frame": {
+        "x": 390,
+        "y": 351,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0375": {
+      "frame": {
+        "x": 3,
+        "y": 261,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0338": {
+      "frame": {
+        "x": 3,
+        "y": 327,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0003": {
+      "frame": {
+        "x": 861,
+        "y": 549,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0173": {
+      "frame": {
+        "x": 922,
+        "y": 599,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0045": {
+      "frame": {
+        "x": 85,
+        "y": 339,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0461": {
+      "frame": {
+        "x": 3,
+        "y": 395,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0329": {
+      "frame": {
+        "x": 247,
+        "y": 384,
+        "w": 58,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 37,
+        "w": 58,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0409": {
+      "frame": {
+        "x": 146,
+        "y": 393,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0339": {
+      "frame": {
+        "x": 64,
+        "y": 421,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0469": {
+      "frame": {
+        "x": 146,
+        "y": 460,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0131": {
+      "frame": {
+        "x": 3,
+        "y": 489,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0007": {
+      "frame": {
+        "x": 85,
+        "y": 489,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0470": {
+      "frame": {
+        "x": 3,
+        "y": 554,
+        "w": 76,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 22,
+        "y": 39,
+        "w": 76,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0289": {
+      "frame": {
+        "x": 311,
+        "y": 384,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0295": {
+      "frame": {
+        "x": 372,
+        "y": 416,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0358": {
+      "frame": {
+        "x": 433,
+        "y": 431,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0394": {
+      "frame": {
+        "x": 515,
+        "y": 491,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0032": {
+      "frame": {
+        "x": 433,
+        "y": 496,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0042": {
+      "frame": {
+        "x": 597,
+        "y": 543,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0072": {
+      "frame": {
+        "x": 494,
+        "y": 558,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0256": {
+      "frame": {
+        "x": 658,
+        "y": 576,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0361": {
+      "frame": {
+        "x": 555,
+        "y": 625,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0018": {
+      "frame": {
+        "x": 719,
+        "y": 584,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0164": {
+      "frame": {
+        "x": 637,
+        "y": 658,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0064": {
+      "frame": {
+        "x": 780,
+        "y": 584,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0191": {
+      "frame": {
+        "x": 780,
+        "y": 666,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0156": {
+      "frame": {
+        "x": 228,
+        "y": 466,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0006": {
+      "frame": {
+        "x": 719,
+        "y": 666,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0052": {
+      "frame": {
+        "x": 310,
+        "y": 466,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0380": {
+      "frame": {
+        "x": 146,
+        "y": 527,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0288": {
+      "frame": {
+        "x": 85,
+        "y": 571,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0438": {
+      "frame": {
+        "x": 3,
+        "y": 630,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0447": {
+      "frame": {
+        "x": 371,
+        "y": 498,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 39,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0362": {
+      "frame": {
+        "x": 228,
+        "y": 532,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0104": {
+      "frame": {
+        "x": 310,
+        "y": 548,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0126": {
+      "frame": {
+        "x": 146,
+        "y": 593,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0155": {
+      "frame": {
+        "x": 228,
+        "y": 597,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0202": {
+      "frame": {
+        "x": 371,
+        "y": 580,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0459": {
+      "frame": {
+        "x": 453,
+        "y": 640,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0271": {
+      "frame": {
+        "x": 310,
+        "y": 630,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0076": {
+      "frame": {
+        "x": 85,
+        "y": 653,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0063": {
+      "frame": {
+        "x": 3,
+        "y": 691,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0171": {
+      "frame": {
+        "x": 146,
+        "y": 661,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0367": {
+      "frame": {
+        "x": 228,
+        "y": 663,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0113": {
+      "frame": {
+        "x": 371,
+        "y": 648,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0268": {
+      "frame": {
+        "x": 310,
+        "y": 712,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0080": {
+      "frame": {
+        "x": 535,
+        "y": 690,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0044": {
+      "frame": {
+        "x": 453,
+        "y": 707,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0449": {
+      "frame": {
+        "x": 371,
+        "y": 715,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0402": {
+      "frame": {
+        "x": 596,
+        "y": 725,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0286": {
+      "frame": {
+        "x": 514,
+        "y": 772,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0275": {
+      "frame": {
+        "x": 432,
+        "y": 789,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0351": {
+      "frame": {
+        "x": 862,
+        "y": 666,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0148": {
+      "frame": {
+        "x": 862,
+        "y": 731,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0395": {
+      "frame": {
+        "x": 780,
+        "y": 733,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0252": {
+      "frame": {
+        "x": 944,
+        "y": 731,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0116": {
+      "frame": {
+        "x": 862,
+        "y": 797,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0374": {
+      "frame": {
+        "x": 678,
+        "y": 748,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0065": {
+      "frame": {
+        "x": 944,
+        "y": 813,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0147": {
+      "frame": {
+        "x": 760,
+        "y": 800,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0393": {
+      "frame": {
+        "x": 842,
+        "y": 862,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0263": {
+      "frame": {
+        "x": 924,
+        "y": 895,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0070": {
+      "frame": {
+        "x": 575,
+        "y": 792,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0137": {
+      "frame": {
+        "x": 493,
+        "y": 854,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0160": {
+      "frame": {
+        "x": 636,
+        "y": 814,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0425": {
+      "frame": {
+        "x": 718,
+        "y": 867,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0368": {
+      "frame": {
+        "x": 800,
+        "y": 929,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0369": {
+      "frame": {
+        "x": 882,
+        "y": 977,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0352": {
+      "frame": {
+        "x": 575,
+        "y": 881,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0158": {
+      "frame": {
+        "x": 657,
+        "y": 934,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0383": {
+      "frame": {
+        "x": 739,
+        "y": 996,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0414": {
+      "frame": {
+        "x": 146,
+        "y": 728,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0040": {
+      "frame": {
+        "x": 821,
+        "y": 996,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0014": {
+      "frame": {
+        "x": 228,
+        "y": 728,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0333": {
+      "frame": {
+        "x": 289,
+        "y": 794,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0397": {
+      "frame": {
+        "x": 64,
+        "y": 735,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0000": {
+      "frame": {
+        "x": 3,
+        "y": 773,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0279": {
+      "frame": {
+        "x": 371,
+        "y": 797,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0033": {
+      "frame": {
+        "x": 432,
+        "y": 871,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0203": {
+      "frame": {
+        "x": 493,
+        "y": 919,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0251": {
+      "frame": {
+        "x": 575,
+        "y": 946,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0336": {
+      "frame": {
+        "x": 146,
+        "y": 796,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0301": {
+      "frame": {
+        "x": 228,
+        "y": 810,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0225": {
+      "frame": {
+        "x": 289,
+        "y": 861,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0133": {
+      "frame": {
+        "x": 350,
+        "y": 879,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0066": {
+      "frame": {
+        "x": 64,
+        "y": 801,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0406": {
+      "frame": {
+        "x": 125,
+        "y": 863,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0142": {
+      "frame": {
+        "x": 207,
+        "y": 892,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0107": {
+      "frame": {
+        "x": 289,
+        "y": 943,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0110": {
+      "frame": {
+        "x": 3,
+        "y": 855,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0166": {
+      "frame": {
+        "x": 350,
+        "y": 944,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0291": {
+      "frame": {
+        "x": 432,
+        "y": 953,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0013": {
+      "frame": {
+        "x": 64,
+        "y": 883,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0274": {
+      "frame": {
+        "x": 3,
+        "y": 937,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0222": {
+      "frame": {
+        "x": 125,
+        "y": 930,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0162": {
+      "frame": {
+        "x": 493,
+        "y": 986,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0075": {
+      "frame": {
+        "x": 64,
+        "y": 965,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0473": {
+      "frame": {
+        "x": 350,
+        "y": 1011,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0451": {
+      "frame": {
+        "x": 432,
+        "y": 1035,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0408": {
+      "frame": {
+        "x": 186,
+        "y": 957,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0145": {
+      "frame": {
+        "x": 636,
+        "y": 1000,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0249": {
+      "frame": {
+        "x": 575,
+        "y": 1028,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0372": {
+      "frame": {
+        "x": 493,
+        "y": 1053,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0123": {
+      "frame": {
+        "x": 718,
+        "y": 1063,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0008": {
+      "frame": {
+        "x": 125,
+        "y": 1012,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0181": {
+      "frame": {
+        "x": 636,
+        "y": 1065,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0188": {
+      "frame": {
+        "x": 186,
+        "y": 1024,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0450": {
+      "frame": {
+        "x": 575,
+        "y": 1110,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0302": {
+      "frame": {
+        "x": 3,
+        "y": 1019,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0112": {
+      "frame": {
+        "x": 268,
+        "y": 1025,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0313": {
+      "frame": {
+        "x": 64,
+        "y": 1047,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0017": {
+      "frame": {
+        "x": 3,
+        "y": 1101,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0054": {
+      "frame": {
+        "x": 350,
+        "y": 1078,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0068": {
+      "frame": {
+        "x": 411,
+        "y": 1117,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0022": {
+      "frame": {
+        "x": 186,
+        "y": 1091,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0403": {
+      "frame": {
+        "x": 247,
+        "y": 1092,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0030": {
+      "frame": {
+        "x": 124,
+        "y": 1094,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0106": {
+      "frame": {
+        "x": 247,
+        "y": 1159,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0276": {
+      "frame": {
+        "x": 185,
+        "y": 1173,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0280": {
+      "frame": {
+        "x": 308,
+        "y": 1160,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0377": {
+      "frame": {
+        "x": 472,
+        "y": 1119,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0183": {
+      "frame": {
+        "x": 472,
+        "y": 1185,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0118": {
+      "frame": {
+        "x": 369,
+        "y": 1199,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0290": {
+      "frame": {
+        "x": 246,
+        "y": 1241,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0011": {
+      "frame": {
+        "x": 307,
+        "y": 1242,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0332": {
+      "frame": {
+        "x": 64,
+        "y": 1176,
+        "w": 56,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 37,
+        "w": 56,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0453": {
+      "frame": {
+        "x": 126,
+        "y": 1255,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0373": {
+      "frame": {
+        "x": 3,
+        "y": 1258,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0366": {
+      "frame": {
+        "x": 882,
+        "y": 1044,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0272": {
+      "frame": {
+        "x": 800,
+        "y": 1078,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0153": {
+      "frame": {
+        "x": 718,
+        "y": 1130,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0058": {
+      "frame": {
+        "x": 636,
+        "y": 1132,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0350": {
+      "frame": {
+        "x": 554,
+        "y": 1192,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0293": {
+      "frame": {
+        "x": 451,
+        "y": 1252,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0452": {
+      "frame": {
+        "x": 368,
+        "y": 1265,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0407": {
+      "frame": {
+        "x": 85,
+        "y": 1322,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0347": {
+      "frame": {
+        "x": 3,
+        "y": 1324,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0254": {
+      "frame": {
+        "x": 167,
+        "y": 1322,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0426": {
+      "frame": {
+        "x": 3,
+        "y": 1389,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0262": {
+      "frame": {
+        "x": 228,
+        "y": 1323,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0388": {
+      "frame": {
+        "x": 85,
+        "y": 1389,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0043": {
+      "frame": {
+        "x": 167,
+        "y": 1404,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0277": {
+      "frame": {
+        "x": 289,
+        "y": 1324,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0229": {
+      "frame": {
+        "x": 228,
+        "y": 1405,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0454": {
+      "frame": {
+        "x": 85,
+        "y": 1456,
+        "w": 76,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 39,
+        "w": 76,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0285": {
+      "frame": {
+        "x": 167,
+        "y": 1486,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0167": {
+      "frame": {
+        "x": 3,
+        "y": 1457,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0055": {
+      "frame": {
+        "x": 3,
+        "y": 1524,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0233": {
+      "frame": {
+        "x": 350,
+        "y": 1332,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0242": {
+      "frame": {
+        "x": 289,
+        "y": 1406,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0381": {
+      "frame": {
+        "x": 64,
+        "y": 1532,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0384": {
+      "frame": {
+        "x": 861,
+        "y": 1109,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0299": {
+      "frame": {
+        "x": 800,
+        "y": 1160,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0390": {
+      "frame": {
+        "x": 697,
+        "y": 1196,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0177": {
+      "frame": {
+        "x": 861,
+        "y": 1176,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0204": {
+      "frame": {
+        "x": 779,
+        "y": 1242,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0103": {
+      "frame": {
+        "x": 636,
+        "y": 1214,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0034": {
+      "frame": {
+        "x": 228,
+        "y": 1487,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0239": {
+      "frame": {
+        "x": 943,
+        "y": 1176,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0012": {
+      "frame": {
+        "x": 861,
+        "y": 1243,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0346": {
+      "frame": {
+        "x": 146,
+        "y": 1568,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0270": {
+      "frame": {
+        "x": 64,
+        "y": 1598,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0150": {
+      "frame": {
+        "x": 696,
+        "y": 1263,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0303": {
+      "frame": {
+        "x": 3,
+        "y": 1606,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0356": {
+      "frame": {
+        "x": 778,
+        "y": 1310,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0010": {
+      "frame": {
+        "x": 922,
+        "y": 1258,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0105": {
+      "frame": {
+        "x": 860,
+        "y": 1325,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0081": {
+      "frame": {
+        "x": 921,
+        "y": 1340,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0360": {
+      "frame": {
+        "x": 512,
+        "y": 1259,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0223": {
+      "frame": {
+        "x": 594,
+        "y": 1296,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0057": {
+      "frame": {
+        "x": 512,
+        "y": 1324,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0436": {
+      "frame": {
+        "x": 411,
+        "y": 1334,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0021": {
+      "frame": {
+        "x": 411,
+        "y": 1402,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0151": {
+      "frame": {
+        "x": 655,
+        "y": 1329,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0189": {
+      "frame": {
+        "x": 573,
+        "y": 1378,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0111": {
+      "frame": {
+        "x": 472,
+        "y": 1406,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0386": {
+      "frame": {
+        "x": 737,
+        "y": 1375,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0114": {
+      "frame": {
+        "x": 655,
+        "y": 1395,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0475": {
+      "frame": {
+        "x": 554,
+        "y": 1445,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0389": {
+      "frame": {
+        "x": 472,
+        "y": 1473,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0348": {
+      "frame": {
+        "x": 819,
+        "y": 1407,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0282": {
+      "frame": {
+        "x": 350,
+        "y": 1414,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0218": {
+      "frame": {
+        "x": 737,
+        "y": 1442,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 41,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0455": {
+      "frame": {
+        "x": 636,
+        "y": 1461,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0047": {
+      "frame": {
+        "x": 411,
+        "y": 1484,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0331": {
+      "frame": {
+        "x": 554,
+        "y": 1512,
+        "w": 59,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 37,
+        "w": 59,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0457": {
+      "frame": {
+        "x": 472,
+        "y": 1540,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0400": {
+      "frame": {
+        "x": 289,
+        "y": 1496,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0257": {
+      "frame": {
+        "x": 289,
+        "y": 1562,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0371": {
+      "frame": {
+        "x": 350,
+        "y": 1566,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0325": {
+      "frame": {
+        "x": 228,
+        "y": 1569,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0471": {
+      "frame": {
+        "x": 125,
+        "y": 1633,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0281": {
+      "frame": {
+        "x": 63,
+        "y": 1680,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0053": {
+      "frame": {
+        "x": 901,
+        "y": 1422,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0340": {
+      "frame": {
+        "x": 819,
+        "y": 1472,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0161": {
+      "frame": {
+        "x": 718,
+        "y": 1510,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0178": {
+      "frame": {
+        "x": 619,
+        "y": 1528,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0326": {
+      "frame": {
+        "x": 962,
+        "y": 1422,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0002": {
+      "frame": {
+        "x": 962,
+        "y": 1504,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0298": {
+      "frame": {
+        "x": 901,
+        "y": 1504,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0405": {
+      "frame": {
+        "x": 800,
+        "y": 1539,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0138": {
+      "frame": {
+        "x": 701,
+        "y": 1577,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0019": {
+      "frame": {
+        "x": 554,
+        "y": 1594,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0005": {
+      "frame": {
+        "x": 615,
+        "y": 1596,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0448": {
+      "frame": {
+        "x": 432,
+        "y": 1607,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0244": {
+      "frame": {
+        "x": 493,
+        "y": 1607,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0059": {
+      "frame": {
+        "x": 554,
+        "y": 1676,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0337": {
+      "frame": {
+        "x": 350,
+        "y": 1632,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0186": {
+      "frame": {
+        "x": 432,
+        "y": 1689,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0051": {
+      "frame": {
+        "x": 288,
+        "y": 1644,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0341": {
+      "frame": {
+        "x": 349,
+        "y": 1700,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0038": {
+      "frame": {
+        "x": 207,
+        "y": 1651,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0048": {
+      "frame": {
+        "x": 268,
+        "y": 1726,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0152": {
+      "frame": {
+        "x": 124,
+        "y": 1700,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0220": {
+      "frame": {
+        "x": 3,
+        "y": 1762,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 39,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0392": {
+      "frame": {
+        "x": 431,
+        "y": 1756,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0078": {
+      "frame": {
+        "x": 206,
+        "y": 1733,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0182": {
+      "frame": {
+        "x": 329,
+        "y": 1767,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0401": {
+      "frame": {
+        "x": 85,
+        "y": 1766,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0028": {
+      "frame": {
+        "x": 267,
+        "y": 1808,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0026": {
+      "frame": {
+        "x": 3,
+        "y": 1828,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0269": {
+      "frame": {
+        "x": 167,
+        "y": 1815,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0056": {
+      "frame": {
+        "x": 64,
+        "y": 1833,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0073": {
+      "frame": {
+        "x": 3,
+        "y": 1910,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0108": {
+      "frame": {
+        "x": 64,
+        "y": 1915,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0315": {
+      "frame": {
+        "x": 125,
+        "y": 1915,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0424": {
+      "frame": {
+        "x": 882,
+        "y": 1586,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 47,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0231": {
+      "frame": {
+        "x": 783,
+        "y": 1606,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0300": {
+      "frame": {
+        "x": 676,
+        "y": 1642,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0247": {
+      "frame": {
+        "x": 615,
+        "y": 1678,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0144": {
+      "frame": {
+        "x": 513,
+        "y": 1758,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0246": {
+      "frame": {
+        "x": 185,
+        "y": 1897,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0267": {
+      "frame": {
+        "x": 246,
+        "y": 1890,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0238": {
+      "frame": {
+        "x": 307,
+        "y": 1890,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0224": {
+      "frame": {
+        "x": 844,
+        "y": 1654,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0025": {
+      "frame": {
+        "x": 737,
+        "y": 1688,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0248": {
+      "frame": {
+        "x": 676,
+        "y": 1724,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0456": {
+      "frame": {
+        "x": 905,
+        "y": 1654,
+        "w": 76,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 39,
+        "w": 76,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0004": {
+      "frame": {
+        "x": 595,
+        "y": 1760,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0458": {
+      "frame": {
+        "x": 905,
+        "y": 1730,
+        "w": 76,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 39,
+        "w": 76,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0179": {
+      "frame": {
+        "x": 185,
+        "y": 1979,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0258": {
+      "frame": {
+        "x": 798,
+        "y": 1736,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0092": {
+      "frame": {
+        "x": 737,
+        "y": 1770,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0387": {
+      "frame": {
+        "x": 267,
+        "y": 1972,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0135": {
+      "frame": {
+        "x": 349,
+        "y": 1972,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0190": {
+      "frame": {
+        "x": 368,
+        "y": 1852,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0049": {
+      "frame": {
+        "x": 656,
+        "y": 1806,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0334": {
+      "frame": {
+        "x": 431,
+        "y": 1919,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0467": {
+      "frame": {
+        "x": 450,
+        "y": 1823,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0154": {
+      "frame": {
+        "x": 513,
+        "y": 1823,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0129": {
+      "frame": {
+        "x": 859,
+        "y": 1806,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0169": {
+      "frame": {
+        "x": 941,
+        "y": 1806,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0175": {
+      "frame": {
+        "x": 717,
+        "y": 1852,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0359": {
+      "frame": {
+        "x": 595,
+        "y": 1888,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0444": {
+      "frame": {
+        "x": 513,
+        "y": 1953,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0184": {
+      "frame": {
+        "x": 574,
+        "y": 1953,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0130": {
+      "frame": {
+        "x": 656,
+        "y": 1953,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0136": {
+      "frame": {
+        "x": 799,
+        "y": 1871,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0221": {
+      "frame": {
+        "x": 738,
+        "y": 1936,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 38,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0365": {
+      "frame": {
+        "x": 820,
+        "y": 1936,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0378": {
+      "frame": {
+        "x": 902,
+        "y": 1873,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0001": {
+      "frame": {
+        "x": 902,
+        "y": 1939,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0216": {
+      "frame": {
+        "x": 964,
+        "y": 1586,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 45,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0266": {
+      "frame": {
+        "x": 981,
+        "y": 1340,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0067": {
+      "frame": {
+        "x": 983,
+        "y": 1258,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0343": {
+      "frame": {
+        "x": 943,
+        "y": 1109,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0187": {
+      "frame": {
+        "x": 1004,
+        "y": 1176,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0015": {
+      "frame": {
+        "x": 983,
+        "y": 517,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0353": {
+      "frame": {
+        "x": 944,
+        "y": 666,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0413": {
+      "frame": {
+        "x": 1004,
+        "y": 599,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0079": {
+      "frame": {
+        "x": 991,
+        "y": 71,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0093": {
+      "frame": {
+        "x": 963,
+        "y": 1939,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0046": {
+      "frame": {
+        "x": 964,
+        "y": 977,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0437": {
+      "frame": {
+        "x": 1012,
+        "y": 3,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0060": {
+      "frame": {
+        "x": 985,
+        "y": 895,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0411": {
+      "frame": {
+        "x": 987,
+        "y": 1654,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0091": {
+      "frame": {
+        "x": 987,
+        "y": 1721,
+        "w": 54,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 37,
+        "w": 54,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0355": {
+      "frame": {
+        "x": 984,
+        "y": 1873,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0165": {
+      "frame": {
+        "x": 1023,
+        "y": 1803,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0185": {
+      "frame": {
+        "x": 1047,
+        "y": 1721,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0354": {
+      "frame": {
+        "x": 1023,
+        "y": 1938,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0109": {
+      "frame": {
+        "x": 1005,
+        "y": 731,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0217": {
+      "frame": {
+        "x": 1066,
+        "y": 1870,
+        "w": 76,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 43,
+        "w": 76,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0412": {
+      "frame": {
+        "x": 1105,
+        "y": 1788,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0278": {
+      "frame": {
+        "x": 1005,
+        "y": 813,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0039": {
+      "frame": {
+        "x": 1105,
+        "y": 1938,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0031": {
+      "frame": {
+        "x": 1148,
+        "y": 1855,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0069": {
+      "frame": {
+        "x": 1166,
+        "y": 1937,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0245": {
+      "frame": {
+        "x": 1023,
+        "y": 1422,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0335": {
+      "frame": {
+        "x": 1042,
+        "y": 1340,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0172": {
+      "frame": {
+        "x": 1023,
+        "y": 1504,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0297": {
+      "frame": {
+        "x": 1046,
+        "y": 1571,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0344": {
+      "frame": {
+        "x": 1069,
+        "y": 1653,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0141": {
+      "frame": {
+        "x": 1026,
+        "y": 666,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0342": {
+      "frame": {
+        "x": 1129,
+        "y": 1720,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0120": {
+      "frame": {
+        "x": 1187,
+        "y": 1787,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0370": {
+      "frame": {
+        "x": 1209,
+        "y": 1854,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0061": {
+      "frame": {
+        "x": 1084,
+        "y": 1407,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0410": {
+      "frame": {
+        "x": 1105,
+        "y": 1489,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0446": {
+      "frame": {
+        "x": 1107,
+        "y": 1556,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 42,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0330": {
+      "frame": {
+        "x": 1151,
+        "y": 1638,
+        "w": 59,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 37,
+        "w": 59,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0234": {
+      "frame": {
+        "x": 1168,
+        "y": 1556,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0115": {
+      "frame": {
+        "x": 1211,
+        "y": 1720,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0159": {
+      "frame": {
+        "x": 1269,
+        "y": 1785,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0442": {
+      "frame": {
+        "x": 431,
+        "y": 1986,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0009": {
+      "frame": {
+        "x": 1216,
+        "y": 1638,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0037": {
+      "frame": {
+        "x": 1044,
+        "y": 1243,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0027": {
+      "frame": {
+        "x": 1227,
+        "y": 1920,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0074": {
+      "frame": {
+        "x": 1288,
+        "y": 1920,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0296": {
+      "frame": {
+        "x": 1349,
+        "y": 1851,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0441": {
+      "frame": {
+        "x": 513,
+        "y": 1889,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0357": {
+      "frame": {
+        "x": 1349,
+        "y": 1933,
+        "w": 76,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 50,
+        "w": 76,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0440": {
+      "frame": {
+        "x": 1025,
+        "y": 977,
+        "w": 76,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 54,
+        "w": 76,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0376": {
+      "frame": {
+        "x": 1046,
+        "y": 895,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0259": {
+      "frame": {
+        "x": 1025,
+        "y": 1038,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0399": {
+      "frame": {
+        "x": 1086,
+        "y": 1038,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0345": {
+      "frame": {
+        "x": 1107,
+        "y": 961,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0077": {
+      "frame": {
+        "x": 1086,
+        "y": 1104,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0180": {
+      "frame": {
+        "x": 1105,
+        "y": 1186,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0385": {
+      "frame": {
+        "x": 1147,
+        "y": 1104,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0396": {
+      "frame": {
+        "x": 1168,
+        "y": 1027,
+        "w": 76,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 49,
+        "w": 76,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0445": {
+      "frame": {
+        "x": 1105,
+        "y": 1253,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 39,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0029": {
+      "frame": {
+        "x": 1145,
+        "y": 1335,
+        "w": 55,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 37,
+        "w": 55,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0128": {
+      "frame": {
+        "x": 1145,
+        "y": 1417,
+        "w": 76,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 27,
+        "y": 48,
+        "w": 76,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0311": {
+      "frame": {
+        "x": 1187,
+        "y": 1484,
+        "w": 22,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 35,
+        "w": 22,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0323": {
+      "frame": {
+        "x": 1215,
+        "y": 1484,
+        "w": 22,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 35,
+        "w": 22,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0317": {
+      "frame": {
+        "x": 208,
+        "y": 1255,
+        "w": 22,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 35,
+        "w": 22,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0305": {
+      "frame": {
+        "x": 228,
+        "y": 1815,
+        "w": 22,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 35,
+        "w": 22,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0316": {
+      "frame": {
+        "x": 677,
+        "y": 1888,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 36,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0310": {
+      "frame": {
+        "x": 514,
+        "y": 1689,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0304": {
+      "frame": {
+        "x": 371,
+        "y": 1496,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 36,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0306": {
+      "frame": {
+        "x": 85,
+        "y": 261,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0318": {
+      "frame": {
+        "x": 562,
+        "y": 85,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0312": {
+      "frame": {
+        "x": 85,
+        "y": 1258,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 36,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0324": {
+      "frame": {
+        "x": 125,
+        "y": 1833,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 36,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0322": {
+      "frame": {
+        "x": 555,
+        "y": 558,
+        "w": 22,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 34,
+        "w": 22,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0319": {
+      "frame": {
+        "x": 594,
+        "y": 152,
+        "w": 22,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 32,
+        "w": 22,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0321": {
+      "frame": {
+        "x": 622,
+        "y": 152,
+        "w": 22,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 32,
+        "w": 22,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0307": {
+      "frame": {
+        "x": 888,
+        "y": 71,
+        "w": 22,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 32,
+        "w": 22,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0309": {
+      "frame": {
+        "x": 859,
+        "y": 1736,
+        "w": 22,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 32,
+        "w": 22,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0320": {
+      "frame": {
+        "x": 453,
+        "y": 578,
+        "w": 22,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 31,
+        "w": 22,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0308": {
+      "frame": {
+        "x": 800,
+        "y": 867,
+        "w": 22,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 31,
+        "w": 22,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0095": {
+      "frame": {
+        "x": 515,
+        "y": 431,
+        "w": 22,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 22,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0101": {
+      "frame": {
+        "x": 430,
+        "y": 86,
+        "w": 22,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 22,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0083": {
+      "frame": {
+        "x": 1166,
+        "y": 1253,
+        "w": 22,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 22,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0089": {
+      "frame": {
+        "x": 1187,
+        "y": 1171,
+        "w": 22,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 45,
+        "w": 22,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0100": {
+      "frame": {
+        "x": 3,
+        "y": 1992,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 44,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0200": {
+      "frame": {
+        "x": 64,
+        "y": 1129,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0094": {
+      "frame": {
+        "x": 1025,
+        "y": 1120,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 46,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0102": {
+      "frame": {
+        "x": 1053,
+        "y": 1120,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 46,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0084": {
+      "frame": {
+        "x": 31,
+        "y": 1992,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 44,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0090": {
+      "frame": {
+        "x": 328,
+        "y": 1834,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 46,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0422": {
+      "frame": {
+        "x": 1349,
+        "y": 1998,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0194": {
+      "frame": {
+        "x": 1404,
+        "y": 1998,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0434": {
+      "frame": {
+        "x": 59,
+        "y": 1997,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0088": {
+      "frame": {
+        "x": 1291,
+        "y": 1851,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 44,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0096": {
+      "frame": {
+        "x": 1319,
+        "y": 1851,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 44,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0428": {
+      "frame": {
+        "x": 114,
+        "y": 1997,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0416": {
+      "frame": {
+        "x": 964,
+        "y": 1059,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0082": {
+      "frame": {
+        "x": 126,
+        "y": 1176,
+        "w": 22,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 46,
+        "w": 22,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0206": {
+      "frame": {
+        "x": 3,
+        "y": 1688,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0212": {
+      "frame": {
+        "x": 799,
+        "y": 1818,
+        "w": 49,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 44,
+        "w": 49,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0195": {
+      "frame": {
+        "x": 368,
+        "y": 1919,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0433": {
+      "frame": {
+        "x": 657,
+        "y": 881,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0207": {
+      "frame": {
+        "x": 3,
+        "y": 1183,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0199": {
+      "frame": {
+        "x": 739,
+        "y": 934,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0099": {
+      "frame": {
+        "x": 154,
+        "y": 1176,
+        "w": 22,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 43,
+        "w": 22,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0213": {
+      "frame": {
+        "x": 738,
+        "y": 2001,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0211": {
+      "frame": {
+        "x": 1229,
+        "y": 1549,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0085": {
+      "frame": {
+        "x": 146,
+        "y": 339,
+        "w": 22,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 43,
+        "w": 22,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0415": {
+      "frame": {
+        "x": 791,
+        "y": 2001,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0087": {
+      "frame": {
+        "x": 718,
+        "y": 814,
+        "w": 22,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 43,
+        "w": 22,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0435": {
+      "frame": {
+        "x": 844,
+        "y": 2001,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0417": {
+      "frame": {
+        "x": 1194,
+        "y": 1228,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0423": {
+      "frame": {
+        "x": 595,
+        "y": 1842,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0421": {
+      "frame": {
+        "x": 1215,
+        "y": 1171,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0201": {
+      "frame": {
+        "x": 1194,
+        "y": 1275,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0097": {
+      "frame": {
+        "x": 1229,
+        "y": 1093,
+        "w": 22,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 43,
+        "w": 22,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0193": {
+      "frame": {
+        "x": 1206,
+        "y": 1321,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0429": {
+      "frame": {
+        "x": 1206,
+        "y": 1367,
+        "w": 47,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 43,
+        "w": 47,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0427": {
+      "frame": {
+        "x": 1227,
+        "y": 1414,
+        "w": 47,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 46,
+        "w": 47,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0205": {
+      "frame": {
+        "x": 1243,
+        "y": 1460,
+        "w": 46,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 46,
+        "w": 46,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0086": {
+      "frame": {
+        "x": 597,
+        "y": 491,
+        "w": 22,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 42,
+        "w": 22,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0098": {
+      "frame": {
+        "x": 1247,
+        "y": 1218,
+        "w": 22,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 42,
+        "w": 22,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0420": {
+      "frame": {
+        "x": 1247,
+        "y": 1270,
+        "w": 45,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 42,
+        "w": 45,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0418": {
+      "frame": {
+        "x": 1259,
+        "y": 1317,
+        "w": 45,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 42,
+        "w": 45,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0430": {
+      "frame": {
+        "x": 1259,
+        "y": 1364,
+        "w": 45,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 42,
+        "w": 45,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0432": {
+      "frame": {
+        "x": 1280,
+        "y": 1411,
+        "w": 45,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 42,
+        "w": 45,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0209": {
+      "frame": {
+        "x": 1277,
+        "y": 1596,
+        "w": 44,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 44,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0210": {
+      "frame": {
+        "x": 1277,
+        "y": 1642,
+        "w": 44,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 42,
+        "w": 44,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0197": {
+      "frame": {
+        "x": 1282,
+        "y": 1506,
+        "w": 44,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 41,
+        "w": 44,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0419": {
+      "frame": {
+        "x": 1295,
+        "y": 1458,
+        "w": 44,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 41,
+        "w": 44,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0196": {
+      "frame": {
+        "x": 1293,
+        "y": 1689,
+        "w": 44,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 42,
+        "w": 44,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0198": {
+      "frame": {
+        "x": 1293,
+        "y": 1736,
+        "w": 44,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 42,
+        "w": 44,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0431": {
+      "frame": {
+        "x": 1343,
+        "y": 1736,
+        "w": 44,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 41,
+        "w": 44,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    },
+    "Cow0208": {
+      "frame": {
+        "x": 1351,
+        "y": 1782,
+        "w": 44,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 42,
+        "w": 44,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 128,
+        "h": 128
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Cow_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 2048
+    },
+    "scale": 1
+  }
+}

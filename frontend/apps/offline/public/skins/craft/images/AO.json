@@ -1,0 +1,173 @@
+{
+  "frames": {
+    "AOeffect_Right": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 14,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 14,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 40
+      },
+      "trimmed": true
+    },
+    "AOeffect_Bottom": {
+      "frame": {
+        "x": 23,
+        "y": 3,
+        "w": 40,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 15
+      },
+      "trimmed": true
+    },
+    "AOeffect_Left": {
+      "frame": {
+        "x": 69,
+        "y": 3,
+        "w": 15,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 40
+      },
+      "trimmed": true
+    },
+    "AOeffect_Top": {
+      "frame": {
+        "x": 23,
+        "y": 23,
+        "w": 40,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 15
+      },
+      "trimmed": true
+    },
+    "AOeffect_TopRight": {
+      "frame": {
+        "x": 90,
+        "y": 3,
+        "w": 15,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 15
+      },
+      "trimmed": true
+    },
+    "AOeffect_BottomLeft": {
+      "frame": {
+        "x": 90,
+        "y": 24,
+        "w": 15,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 15
+      },
+      "trimmed": true
+    },
+    "AOeffect_TopLeft": {
+      "frame": {
+        "x": 90,
+        "y": 45,
+        "w": 15,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 15,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 15
+      },
+      "trimmed": true
+    },
+    "AOeffect_BottomRight": {
+      "frame": {
+        "x": 23,
+        "y": 44,
+        "w": 14,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 14,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 15,
+        "h": 15
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/AO_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 128
+    },
+    "scale": 1
+  }
+}

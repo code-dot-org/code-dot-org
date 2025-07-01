@@ -1,0 +1,1153 @@
+{
+  "frames": {
+    "Pufferfish_Surface12": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface00": {
+      "frame": {
+        "x": 313,
+        "y": 2,
+        "w": 307,
+        "h": 307
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 307
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish43": {
+      "frame": {
+        "x": 313,
+        "y": 313,
+        "w": 42,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 130,
+        "y": 137,
+        "w": 42,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish29": {
+      "frame": {
+        "x": 2,
+        "y": 360,
+        "w": 38,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 138,
+        "w": 38,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish38": {
+      "frame": {
+        "x": 2,
+        "y": 313,
+        "w": 38,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 138,
+        "w": 38,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish28": {
+      "frame": {
+        "x": 44,
+        "y": 313,
+        "w": 38,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 138,
+        "w": 38,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish33": {
+      "frame": {
+        "x": 2,
+        "y": 406,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish31": {
+      "frame": {
+        "x": 2,
+        "y": 451,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish40": {
+      "frame": {
+        "x": 44,
+        "y": 451,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface04": {
+      "frame": {
+        "x": 44,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface05": {
+      "frame": {
+        "x": 44,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface07": {
+      "frame": {
+        "x": 86,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish27": {
+      "frame": {
+        "x": 86,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface09": {
+      "frame": {
+        "x": 128,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface08": {
+      "frame": {
+        "x": 128,
+        "y": 313,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish25": {
+      "frame": {
+        "x": 86,
+        "y": 313,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish41": {
+      "frame": {
+        "x": 170,
+        "y": 313,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface02": {
+      "frame": {
+        "x": 86,
+        "y": 450,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface03": {
+      "frame": {
+        "x": 128,
+        "y": 450,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish24": {
+      "frame": {
+        "x": 128,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish36": {
+      "frame": {
+        "x": 170,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish42": {
+      "frame": {
+        "x": 170,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish37": {
+      "frame": {
+        "x": 212,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish39": {
+      "frame": {
+        "x": 212,
+        "y": 313,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish32": {
+      "frame": {
+        "x": 254,
+        "y": 313,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish35": {
+      "frame": {
+        "x": 170,
+        "y": 450,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish30": {
+      "frame": {
+        "x": 212,
+        "y": 450,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface06": {
+      "frame": {
+        "x": 212,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish26": {
+      "frame": {
+        "x": 254,
+        "y": 405,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish34": {
+      "frame": {
+        "x": 254,
+        "y": 360,
+        "w": 38,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 135,
+        "y": 139,
+        "w": 38,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish23": {
+      "frame": {
+        "x": 296,
+        "y": 360,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 138,
+        "y": 145,
+        "w": 31,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish22": {
+      "frame": {
+        "x": 254,
+        "y": 450,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 138,
+        "y": 145,
+        "w": 31,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish21": {
+      "frame": {
+        "x": 289,
+        "y": 450,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 138,
+        "y": 145,
+        "w": 31,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish20": {
+      "frame": {
+        "x": 296,
+        "y": 395,
+        "w": 31,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 138,
+        "y": 145,
+        "w": 31,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface10": {
+      "frame": {
+        "x": 296,
+        "y": 430,
+        "w": 19,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 142,
+        "y": 158,
+        "w": 19,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish14": {
+      "frame": {
+        "x": 289,
+        "y": 485,
+        "w": 15,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 146,
+        "w": 15,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish03": {
+      "frame": {
+        "x": 308,
+        "y": 485,
+        "w": 14,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 147,
+        "y": 146,
+        "w": 14,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish00": {
+      "frame": {
+        "x": 254,
+        "y": 485,
+        "w": 14,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 147,
+        "y": 146,
+        "w": 14,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish04": {
+      "frame": {
+        "x": 324,
+        "y": 430,
+        "w": 15,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 147,
+        "y": 148,
+        "w": 15,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish09": {
+      "frame": {
+        "x": 324,
+        "y": 452,
+        "w": 18,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 145,
+        "y": 148,
+        "w": 18,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish01": {
+      "frame": {
+        "x": 326,
+        "y": 473,
+        "w": 14,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 147,
+        "y": 146,
+        "w": 14,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish02": {
+      "frame": {
+        "x": 344,
+        "y": 473,
+        "w": 14,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 147,
+        "y": 146,
+        "w": 14,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish19": {
+      "frame": {
+        "x": 331,
+        "y": 360,
+        "w": 17,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 144,
+        "y": 148,
+        "w": 17,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish08": {
+      "frame": {
+        "x": 331,
+        "y": 380,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish16": {
+      "frame": {
+        "x": 331,
+        "y": 399,
+        "w": 16,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 144,
+        "y": 148,
+        "w": 16,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish18": {
+      "frame": {
+        "x": 343,
+        "y": 417,
+        "w": 16,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 144,
+        "y": 148,
+        "w": 16,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish11": {
+      "frame": {
+        "x": 351,
+        "y": 380,
+        "w": 14,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 14,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish13": {
+      "frame": {
+        "x": 352,
+        "y": 360,
+        "w": 14,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 14,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish17": {
+      "frame": {
+        "x": 346,
+        "y": 435,
+        "w": 16,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 144,
+        "y": 148,
+        "w": 16,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish10": {
+      "frame": {
+        "x": 346,
+        "y": 453,
+        "w": 14,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 14,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish05": {
+      "frame": {
+        "x": 363,
+        "y": 400,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish15": {
+      "frame": {
+        "x": 369,
+        "y": 380,
+        "w": 16,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 144,
+        "y": 148,
+        "w": 16,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish12": {
+      "frame": {
+        "x": 362,
+        "y": 473,
+        "w": 14,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 14,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish06": {
+      "frame": {
+        "x": 364,
+        "y": 453,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish07": {
+      "frame": {
+        "x": 366,
+        "y": 419,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 148,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface01": {
+      "frame": {
+        "x": 2,
+        "y": 496,
+        "w": 15,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 146,
+        "y": 158,
+        "w": 15,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Pufferfish_Surface11": {
+      "frame": {
+        "x": 351,
+        "y": 400,
+        "w": 8,
+        "h": 8
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 151,
+        "y": 162,
+        "w": 8,
+        "h": 8
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Pufferfish_2018_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

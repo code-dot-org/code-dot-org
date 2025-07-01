@@ -1,0 +1,113 @@
+{
+  "frames": {
+    "Door3": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 12,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 12,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "Door4": {
+      "frame": {
+        "x": 21,
+        "y": 3,
+        "w": 12,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 3,
+        "w": 12,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "Door2": {
+      "frame": {
+        "x": 39,
+        "y": 3,
+        "w": 30,
+        "h": 74
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 3,
+        "w": 30,
+        "h": 74
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "Door1": {
+      "frame": {
+        "x": 75,
+        "y": 3,
+        "w": 40,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 18,
+        "w": 40,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "Door0": {
+      "frame": {
+        "x": 75,
+        "y": 68,
+        "w": 40,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 34,
+        "w": 40,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Door_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 128
+    },
+    "scale": 1
+  }
+}

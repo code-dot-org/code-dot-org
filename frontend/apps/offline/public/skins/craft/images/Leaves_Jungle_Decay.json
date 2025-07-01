@@ -1,0 +1,213 @@
+{
+  "frames": {
+    "Leaves_Jungle5": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 162,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 80,
+        "w": 162,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle3": {
+      "frame": {
+        "x": 171,
+        "y": 3,
+        "w": 157,
+        "h": 144
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 68,
+        "w": 157,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle2": {
+      "frame": {
+        "x": 3,
+        "y": 139,
+        "w": 157,
+        "h": 152
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 60,
+        "w": 157,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle0": {
+      "frame": {
+        "x": 334,
+        "y": 3,
+        "w": 157,
+        "h": 152
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 60,
+        "w": 157,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle4": {
+      "frame": {
+        "x": 166,
+        "y": 153,
+        "w": 157,
+        "h": 132
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 80,
+        "w": 157,
+        "h": 132
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle1": {
+      "frame": {
+        "x": 329,
+        "y": 161,
+        "w": 157,
+        "h": 152
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 60,
+        "w": 157,
+        "h": 152
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle7": {
+      "frame": {
+        "x": 166,
+        "y": 291,
+        "w": 113,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 97,
+        "y": 80,
+        "w": 113,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle6": {
+      "frame": {
+        "x": 3,
+        "y": 297,
+        "w": 113,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 97,
+        "y": 80,
+        "w": 113,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle8": {
+      "frame": {
+        "x": 285,
+        "y": 319,
+        "w": 117,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 92,
+        "y": 80,
+        "w": 117,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle9": {
+      "frame": {
+        "x": 285,
+        "y": 413,
+        "w": 113,
+        "h": 86
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 93,
+        "y": 79,
+        "w": 113,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Leaves_Jungle_Decay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

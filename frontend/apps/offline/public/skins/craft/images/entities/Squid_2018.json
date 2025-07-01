@@ -1,0 +1,1293 @@
+{
+  "frames": {
+    "Squid02": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 78,
+        "h": 105
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 91,
+        "w": 78,
+        "h": 105
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid10": {
+      "frame": {
+        "x": 84,
+        "y": 2,
+        "w": 93,
+        "h": 101
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 95,
+        "w": 93,
+        "h": 101
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid50": {
+      "frame": {
+        "x": 181,
+        "y": 2,
+        "w": 101,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 87,
+        "y": 124,
+        "w": 101,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid42": {
+      "frame": {
+        "x": 286,
+        "y": 2,
+        "w": 100,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 86,
+        "y": 126,
+        "w": 100,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid26": {
+      "frame": {
+        "x": 181,
+        "y": 90,
+        "w": 99,
+        "h": 96
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 125,
+        "w": 99,
+        "h": 96
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid58": {
+      "frame": {
+        "x": 390,
+        "y": 2,
+        "w": 99,
+        "h": 97
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 89,
+        "y": 99,
+        "w": 99,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid18": {
+      "frame": {
+        "x": 284,
+        "y": 100,
+        "w": 98,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 98,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid01": {
+      "frame": {
+        "x": 84,
+        "y": 107,
+        "w": 57,
+        "h": 97
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 125,
+        "y": 99,
+        "w": 57,
+        "h": 97
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid41": {
+      "frame": {
+        "x": 386,
+        "y": 103,
+        "w": 96,
+        "h": 89
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 90,
+        "y": 126,
+        "w": 96,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid49": {
+      "frame": {
+        "x": 145,
+        "y": 190,
+        "w": 96,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 92,
+        "y": 127,
+        "w": 96,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid25": {
+      "frame": {
+        "x": 245,
+        "y": 192,
+        "w": 95,
+        "h": 92
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 125,
+        "w": 95,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid17": {
+      "frame": {
+        "x": 2,
+        "y": 208,
+        "w": 94,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 94,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid34": {
+      "frame": {
+        "x": 100,
+        "y": 265,
+        "w": 79,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 114,
+        "y": 125,
+        "w": 79,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid36": {
+      "frame": {
+        "x": 183,
+        "y": 265,
+        "w": 52,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 124,
+        "w": 52,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid35": {
+      "frame": {
+        "x": 2,
+        "y": 291,
+        "w": 52,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 124,
+        "w": 52,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid38": {
+      "frame": {
+        "x": 344,
+        "y": 196,
+        "w": 52,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 124,
+        "w": 52,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid33": {
+      "frame": {
+        "x": 239,
+        "y": 288,
+        "w": 57,
+        "h": 94
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 125,
+        "y": 125,
+        "w": 57,
+        "h": 94
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid57": {
+      "frame": {
+        "x": 400,
+        "y": 196,
+        "w": 93,
+        "h": 86
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 95,
+        "y": 110,
+        "w": 93,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid32": {
+      "frame": {
+        "x": 2,
+        "y": 111,
+        "w": 52,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 125,
+        "w": 52,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid39": {
+      "frame": {
+        "x": 400,
+        "y": 286,
+        "w": 52,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 125,
+        "w": 52,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid37": {
+      "frame": {
+        "x": 300,
+        "y": 294,
+        "w": 52,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 125,
+        "w": 52,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid09": {
+      "frame": {
+        "x": 356,
+        "y": 383,
+        "w": 86,
+        "h": 92
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 104,
+        "w": 86,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid51": {
+      "frame": {
+        "x": 58,
+        "y": 363,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid52": {
+      "frame": {
+        "x": 152,
+        "y": 386,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid55": {
+      "frame": {
+        "x": 246,
+        "y": 391,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid53": {
+      "frame": {
+        "x": 2,
+        "y": 436,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid54": {
+      "frame": {
+        "x": 96,
+        "y": 459,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid48": {
+      "frame": {
+        "x": 2,
+        "y": 509,
+        "w": 90,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 98,
+        "y": 127,
+        "w": 90,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid00": {
+      "frame": {
+        "x": 190,
+        "y": 459,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid06": {
+      "frame": {
+        "x": 446,
+        "y": 383,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid04": {
+      "frame": {
+        "x": 446,
+        "y": 475,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid03": {
+      "frame": {
+        "x": 96,
+        "y": 532,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid20": {
+      "frame": {
+        "x": 2,
+        "y": 582,
+        "w": 88,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 126,
+        "w": 88,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid05": {
+      "frame": {
+        "x": 246,
+        "y": 464,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid07": {
+      "frame": {
+        "x": 152,
+        "y": 551,
+        "w": 52,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 127,
+        "y": 108,
+        "w": 52,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid47": {
+      "frame": {
+        "x": 302,
+        "y": 479,
+        "w": 87,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 126,
+        "w": 87,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid22": {
+      "frame": {
+        "x": 208,
+        "y": 556,
+        "w": 87,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 126,
+        "w": 87,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid23": {
+      "frame": {
+        "x": 299,
+        "y": 565,
+        "w": 87,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 87,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid45": {
+      "frame": {
+        "x": 208,
+        "y": 630,
+        "w": 87,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 126,
+        "w": 87,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid21": {
+      "frame": {
+        "x": 94,
+        "y": 643,
+        "w": 87,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 87,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid19": {
+      "frame": {
+        "x": 2,
+        "y": 656,
+        "w": 87,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 87,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid40": {
+      "frame": {
+        "x": 390,
+        "y": 567,
+        "w": 87,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 126,
+        "w": 87,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid16": {
+      "frame": {
+        "x": 299,
+        "y": 638,
+        "w": 87,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 127,
+        "w": 87,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid43": {
+      "frame": {
+        "x": 390,
+        "y": 653,
+        "w": 86,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 122,
+        "w": 86,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid30": {
+      "frame": {
+        "x": 299,
+        "y": 711,
+        "w": 84,
+        "h": 86
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 123,
+        "w": 84,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid28": {
+      "frame": {
+        "x": 387,
+        "y": 742,
+        "w": 84,
+        "h": 86
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 123,
+        "w": 84,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid27": {
+      "frame": {
+        "x": 2,
+        "y": 832,
+        "w": 82,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 122,
+        "y": 125,
+        "w": 82,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid44": {
+      "frame": {
+        "x": 2,
+        "y": 921,
+        "w": 85,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 123,
+        "w": 85,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid31": {
+      "frame": {
+        "x": 88,
+        "y": 832,
+        "w": 85,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 125,
+        "w": 85,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid46": {
+      "frame": {
+        "x": 91,
+        "y": 921,
+        "w": 85,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 124,
+        "w": 85,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid29": {
+      "frame": {
+        "x": 177,
+        "y": 832,
+        "w": 85,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 125,
+        "w": 85,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid24": {
+      "frame": {
+        "x": 180,
+        "y": 921,
+        "w": 85,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 125,
+        "w": 85,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid56": {
+      "frame": {
+        "x": 266,
+        "y": 832,
+        "w": 82,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 125,
+        "w": 82,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid63": {
+      "frame": {
+        "x": 88,
+        "y": 729,
+        "w": 82,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 125,
+        "w": 82,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid62": {
+      "frame": {
+        "x": 2,
+        "y": 729,
+        "w": 82,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 125,
+        "w": 82,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid61": {
+      "frame": {
+        "x": 269,
+        "y": 907,
+        "w": 82,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 125,
+        "w": 82,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid60": {
+      "frame": {
+        "x": 352,
+        "y": 832,
+        "w": 81,
+        "h": 71
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 125,
+        "w": 81,
+        "h": 71
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid13": {
+      "frame": {
+        "x": 355,
+        "y": 907,
+        "w": 75,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 118,
+        "w": 75,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid15": {
+      "frame": {
+        "x": 174,
+        "y": 716,
+        "w": 75,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 118,
+        "w": 75,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid08": {
+      "frame": {
+        "x": 486,
+        "y": 103,
+        "w": 75,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 118,
+        "w": 75,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid14": {
+      "frame": {
+        "x": 456,
+        "y": 286,
+        "w": 74,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 122,
+        "y": 118,
+        "w": 74,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid59": {
+      "frame": {
+        "x": 497,
+        "y": 185,
+        "w": 78,
+        "h": 72
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 106,
+        "y": 124,
+        "w": 78,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid11": {
+      "frame": {
+        "x": 493,
+        "y": 2,
+        "w": 77,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 119,
+        "y": 118,
+        "w": 77,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    },
+    "Squid12": {
+      "frame": {
+        "x": 565,
+        "y": 84,
+        "w": 75,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 122,
+        "y": 118,
+        "w": 75,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 307
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Squid_2018_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

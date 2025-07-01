@@ -1,0 +1,173 @@
+{
+  "frames": {
+    "Leaves_Acacia3": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 159,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 54,
+        "y": 80,
+        "w": 159,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia0": {
+      "frame": {
+        "x": 168,
+        "y": 3,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia4": {
+      "frame": {
+        "x": 329,
+        "y": 3,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia1": {
+      "frame": {
+        "x": 329,
+        "y": 139,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia2": {
+      "frame": {
+        "x": 3,
+        "y": 275,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia5": {
+      "frame": {
+        "x": 3,
+        "y": 139,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia6": {
+      "frame": {
+        "x": 164,
+        "y": 139,
+        "w": 151,
+        "h": 129
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 59,
+        "y": 80,
+        "w": 151,
+        "h": 129
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia7": {
+      "frame": {
+        "x": 3,
+        "y": 411,
+        "w": 71,
+        "h": 89
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 139,
+        "y": 80,
+        "w": 71,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Leaves_Acacia_Decay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

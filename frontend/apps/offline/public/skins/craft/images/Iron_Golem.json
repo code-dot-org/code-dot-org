@@ -1,0 +1,4153 @@
+{
+  "frames": {
+    "Iron_Golem_Anims118": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 65,
+        "h": 104
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 0,
+        "w": 65,
+        "h": 104
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims174": {
+      "frame": {
+        "x": 3,
+        "y": 113,
+        "w": 28,
+        "h": 102
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 1,
+        "w": 28,
+        "h": 102
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims162": {
+      "frame": {
+        "x": 3,
+        "y": 221,
+        "w": 40,
+        "h": 100
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 4,
+        "w": 40,
+        "h": 100
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims173": {
+      "frame": {
+        "x": 37,
+        "y": 113,
+        "w": 32,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 4,
+        "w": 32,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims074": {
+      "frame": {
+        "x": 74,
+        "y": 3,
+        "w": 58,
+        "h": 93
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 2,
+        "w": 58,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims086": {
+      "frame": {
+        "x": 3,
+        "y": 327,
+        "w": 92,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 41,
+        "w": 92,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims163": {
+      "frame": {
+        "x": 49,
+        "y": 212,
+        "w": 69,
+        "h": 92
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 12,
+        "w": 69,
+        "h": 92
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims075": {
+      "frame": {
+        "x": 75,
+        "y": 102,
+        "w": 58,
+        "h": 91
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 4,
+        "w": 58,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims073": {
+      "frame": {
+        "x": 138,
+        "y": 3,
+        "w": 58,
+        "h": 91
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 4,
+        "w": 58,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims085": {
+      "frame": {
+        "x": 3,
+        "y": 386,
+        "w": 90,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 39,
+        "w": 90,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims119": {
+      "frame": {
+        "x": 3,
+        "y": 448,
+        "w": 79,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 14,
+        "w": 79,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims175": {
+      "frame": {
+        "x": 3,
+        "y": 544,
+        "w": 28,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 1,
+        "w": 28,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims197": {
+      "frame": {
+        "x": 3,
+        "y": 640,
+        "w": 44,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 14,
+        "w": 44,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims195": {
+      "frame": {
+        "x": 37,
+        "y": 544,
+        "w": 48,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 14,
+        "w": 48,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims117": {
+      "frame": {
+        "x": 88,
+        "y": 448,
+        "w": 79,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 14,
+        "w": 79,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims176": {
+      "frame": {
+        "x": 101,
+        "y": 310,
+        "w": 28,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 1,
+        "w": 28,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims199": {
+      "frame": {
+        "x": 124,
+        "y": 199,
+        "w": 44,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 14,
+        "w": 44,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims122": {
+      "frame": {
+        "x": 139,
+        "y": 100,
+        "w": 38,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 16,
+        "w": 38,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims124": {
+      "frame": {
+        "x": 135,
+        "y": 295,
+        "w": 34,
+        "h": 88
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 16,
+        "w": 34,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims172": {
+      "frame": {
+        "x": 174,
+        "y": 194,
+        "w": 32,
+        "h": 86
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 14,
+        "w": 32,
+        "h": 86
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims108": {
+      "frame": {
+        "x": 183,
+        "y": 100,
+        "w": 48,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 19,
+        "w": 48,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims109": {
+      "frame": {
+        "x": 202,
+        "y": 3,
+        "w": 41,
+        "h": 85
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 19,
+        "w": 41,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims107": {
+      "frame": {
+        "x": 3,
+        "y": 736,
+        "w": 37,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 20,
+        "w": 37,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims194": {
+      "frame": {
+        "x": 3,
+        "y": 826,
+        "w": 37,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 20,
+        "w": 37,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims120": {
+      "frame": {
+        "x": 3,
+        "y": 916,
+        "w": 59,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 20,
+        "w": 59,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims116": {
+      "frame": {
+        "x": 46,
+        "y": 736,
+        "w": 66,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 20,
+        "w": 66,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims171": {
+      "frame": {
+        "x": 46,
+        "y": 826,
+        "w": 32,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 21,
+        "w": 32,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims196": {
+      "frame": {
+        "x": 53,
+        "y": 640,
+        "w": 37,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 20,
+        "w": 37,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims096": {
+      "frame": {
+        "x": 91,
+        "y": 544,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims089": {
+      "frame": {
+        "x": 96,
+        "y": 633,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims101": {
+      "frame": {
+        "x": 131,
+        "y": 544,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims110": {
+      "frame": {
+        "x": 68,
+        "y": 916,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims126": {
+      "frame": {
+        "x": 84,
+        "y": 826,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims115": {
+      "frame": {
+        "x": 118,
+        "y": 722,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims200": {
+      "frame": {
+        "x": 136,
+        "y": 633,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims121": {
+      "frame": {
+        "x": 171,
+        "y": 544,
+        "w": 35,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 35,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims100": {
+      "frame": {
+        "x": 108,
+        "y": 915,
+        "w": 35,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 21,
+        "w": 35,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims125": {
+      "frame": {
+        "x": 124,
+        "y": 811,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims105": {
+      "frame": {
+        "x": 158,
+        "y": 722,
+        "w": 33,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 21,
+        "w": 33,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims092": {
+      "frame": {
+        "x": 176,
+        "y": 633,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims097": {
+      "frame": {
+        "x": 149,
+        "y": 900,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims093": {
+      "frame": {
+        "x": 164,
+        "y": 811,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims168": {
+      "frame": {
+        "x": 197,
+        "y": 722,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims104": {
+      "frame": {
+        "x": 189,
+        "y": 900,
+        "w": 31,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 52,
+        "y": 21,
+        "w": 31,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims090": {
+      "frame": {
+        "x": 204,
+        "y": 811,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims193": {
+      "frame": {
+        "x": 226,
+        "y": 900,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims103": {
+      "frame": {
+        "x": 173,
+        "y": 389,
+        "w": 33,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 21,
+        "w": 33,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims114": {
+      "frame": {
+        "x": 175,
+        "y": 286,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims091": {
+      "frame": {
+        "x": 212,
+        "y": 191,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims095": {
+      "frame": {
+        "x": 237,
+        "y": 94,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims094": {
+      "frame": {
+        "x": 249,
+        "y": 3,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims102": {
+      "frame": {
+        "x": 212,
+        "y": 375,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims166": {
+      "frame": {
+        "x": 215,
+        "y": 280,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims106": {
+      "frame": {
+        "x": 252,
+        "y": 183,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims099": {
+      "frame": {
+        "x": 277,
+        "y": 92,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims098": {
+      "frame": {
+        "x": 289,
+        "y": 3,
+        "w": 34,
+        "h": 83
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 21,
+        "w": 34,
+        "h": 83
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims111": {
+      "frame": {
+        "x": 212,
+        "y": 464,
+        "w": 33,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 22,
+        "w": 33,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims112": {
+      "frame": {
+        "x": 216,
+        "y": 552,
+        "w": 51,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 22,
+        "w": 51,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims113": {
+      "frame": {
+        "x": 251,
+        "y": 464,
+        "w": 30,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 22,
+        "w": 30,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims198": {
+      "frame": {
+        "x": 252,
+        "y": 369,
+        "w": 33,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 55,
+        "y": 22,
+        "w": 33,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims156": {
+      "frame": {
+        "x": 255,
+        "y": 272,
+        "w": 51,
+        "h": 82
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 22,
+        "w": 51,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims042": {
+      "frame": {
+        "x": 216,
+        "y": 640,
+        "w": 81,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 81,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims044": {
+      "frame": {
+        "x": 273,
+        "y": 552,
+        "w": 81,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 81,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims164": {
+      "frame": {
+        "x": 292,
+        "y": 181,
+        "w": 57,
+        "h": 81
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 23,
+        "w": 57,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims043": {
+      "frame": {
+        "x": 317,
+        "y": 92,
+        "w": 81,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 81,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims088": {
+      "frame": {
+        "x": 329,
+        "y": 3,
+        "w": 81,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 41,
+        "w": 81,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims087": {
+      "frame": {
+        "x": 287,
+        "y": 457,
+        "w": 81,
+        "h": 51
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 41,
+        "w": 81,
+        "h": 51
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims206": {
+      "frame": {
+        "x": 291,
+        "y": 360,
+        "w": 33,
+        "h": 81
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 23,
+        "w": 33,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims155": {
+      "frame": {
+        "x": 312,
+        "y": 268,
+        "w": 33,
+        "h": 81
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 23,
+        "w": 33,
+        "h": 81
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims161": {
+      "frame": {
+        "x": 330,
+        "y": 355,
+        "w": 72,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 24,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims160": {
+      "frame": {
+        "x": 351,
+        "y": 268,
+        "w": 47,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 24,
+        "w": 47,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims041": {
+      "frame": {
+        "x": 237,
+        "y": 700,
+        "w": 80,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 36,
+        "w": 80,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims157": {
+      "frame": {
+        "x": 303,
+        "y": 611,
+        "w": 29,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 24,
+        "w": 29,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims141": {
+      "frame": {
+        "x": 355,
+        "y": 151,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims140": {
+      "frame": {
+        "x": 393,
+        "y": 151,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims084": {
+      "frame": {
+        "x": 404,
+        "y": 60,
+        "w": 79,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 35,
+        "w": 79,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims138": {
+      "frame": {
+        "x": 404,
+        "y": 236,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims205": {
+      "frame": {
+        "x": 431,
+        "y": 126,
+        "w": 39,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 25,
+        "w": 39,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims170": {
+      "frame": {
+        "x": 244,
+        "y": 764,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims165": {
+      "frame": {
+        "x": 266,
+        "y": 849,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims158": {
+      "frame": {
+        "x": 282,
+        "y": 764,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims201": {
+      "frame": {
+        "x": 266,
+        "y": 934,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims159": {
+      "frame": {
+        "x": 304,
+        "y": 934,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims169": {
+      "frame": {
+        "x": 304,
+        "y": 849,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims123": {
+      "frame": {
+        "x": 320,
+        "y": 764,
+        "w": 34,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 11,
+        "w": 34,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims135": {
+      "frame": {
+        "x": 338,
+        "y": 611,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims148": {
+      "frame": {
+        "x": 360,
+        "y": 514,
+        "w": 37,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 25,
+        "w": 37,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims149": {
+      "frame": {
+        "x": 342,
+        "y": 849,
+        "w": 36,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 25,
+        "w": 36,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims142": {
+      "frame": {
+        "x": 342,
+        "y": 934,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims136": {
+      "frame": {
+        "x": 380,
+        "y": 934,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims137": {
+      "frame": {
+        "x": 360,
+        "y": 696,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims144": {
+      "frame": {
+        "x": 376,
+        "y": 599,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims133": {
+      "frame": {
+        "x": 384,
+        "y": 781,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims147": {
+      "frame": {
+        "x": 398,
+        "y": 684,
+        "w": 36,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 25,
+        "w": 36,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims146": {
+      "frame": {
+        "x": 418,
+        "y": 866,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims150": {
+      "frame": {
+        "x": 422,
+        "y": 769,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims127": {
+      "frame": {
+        "x": 403,
+        "y": 441,
+        "w": 34,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 26,
+        "w": 34,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims207": {
+      "frame": {
+        "x": 408,
+        "y": 321,
+        "w": 39,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 25,
+        "w": 39,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims143": {
+      "frame": {
+        "x": 442,
+        "y": 211,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims139": {
+      "frame": {
+        "x": 476,
+        "y": 126,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims134": {
+      "frame": {
+        "x": 489,
+        "y": 3,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims154": {
+      "frame": {
+        "x": 414,
+        "y": 526,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims203": {
+      "frame": {
+        "x": 443,
+        "y": 406,
+        "w": 54,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 25,
+        "w": 54,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims145": {
+      "frame": {
+        "x": 453,
+        "y": 296,
+        "w": 32,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 51,
+        "y": 25,
+        "w": 32,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims028": {
+      "frame": {
+        "x": 480,
+        "y": 211,
+        "w": 55,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims202": {
+      "frame": {
+        "x": 491,
+        "y": 295,
+        "w": 36,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 26,
+        "w": 36,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims151": {
+      "frame": {
+        "x": 514,
+        "y": 88,
+        "w": 36,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 50,
+        "y": 26,
+        "w": 36,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims153": {
+      "frame": {
+        "x": 527,
+        "y": 3,
+        "w": 41,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 26,
+        "w": 41,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims204": {
+      "frame": {
+        "x": 440,
+        "y": 611,
+        "w": 36,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 26,
+        "w": 36,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims152": {
+      "frame": {
+        "x": 452,
+        "y": 491,
+        "w": 48,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 26,
+        "w": 48,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims179": {
+      "frame": {
+        "x": 503,
+        "y": 379,
+        "w": 57,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 24,
+        "w": 57,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims167": {
+      "frame": {
+        "x": 533,
+        "y": 295,
+        "w": 34,
+        "h": 76
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 17,
+        "w": 34,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims191": {
+      "frame": {
+        "x": 541,
+        "y": 172,
+        "w": 57,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 20,
+        "w": 57,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims032": {
+      "frame": {
+        "x": 556,
+        "y": 87,
+        "w": 55,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims189": {
+      "frame": {
+        "x": 574,
+        "y": 3,
+        "w": 57,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 20,
+        "w": 57,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims040": {
+      "frame": {
+        "x": 418,
+        "y": 951,
+        "w": 73,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 33,
+        "w": 73,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims035": {
+      "frame": {
+        "x": 456,
+        "y": 854,
+        "w": 56,
+        "h": 72
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 22,
+        "w": 56,
+        "h": 72
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims031": {
+      "frame": {
+        "x": 497,
+        "y": 932,
+        "w": 56,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 32,
+        "w": 56,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims187": {
+      "frame": {
+        "x": 460,
+        "y": 695,
+        "w": 57,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 20,
+        "w": 57,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims183": {
+      "frame": {
+        "x": 460,
+        "y": 771,
+        "w": 55,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 24,
+        "w": 55,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims029": {
+      "frame": {
+        "x": 518,
+        "y": 847,
+        "w": 56,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 32,
+        "w": 56,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims181": {
+      "frame": {
+        "x": 521,
+        "y": 771,
+        "w": 55,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 24,
+        "w": 55,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims079": {
+      "frame": {
+        "x": 559,
+        "y": 923,
+        "w": 58,
+        "h": 68
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 27,
+        "w": 58,
+        "h": 68
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims034": {
+      "frame": {
+        "x": 580,
+        "y": 847,
+        "w": 56,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 27,
+        "w": 56,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims036": {
+      "frame": {
+        "x": 623,
+        "y": 920,
+        "w": 56,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 27,
+        "w": 56,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims056": {
+      "frame": {
+        "x": 482,
+        "y": 575,
+        "w": 57,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 28,
+        "w": 57,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims128": {
+      "frame": {
+        "x": 506,
+        "y": 463,
+        "w": 34,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 39,
+        "w": 34,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims015": {
+      "frame": {
+        "x": 523,
+        "y": 648,
+        "w": 55,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 29,
+        "w": 55,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims017": {
+      "frame": {
+        "x": 545,
+        "y": 536,
+        "w": 55,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 29,
+        "w": 55,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims083": {
+      "frame": {
+        "x": 546,
+        "y": 463,
+        "w": 65,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 34,
+        "w": 65,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims078": {
+      "frame": {
+        "x": 566,
+        "y": 377,
+        "w": 58,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 30,
+        "w": 58,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims080": {
+      "frame": {
+        "x": 573,
+        "y": 253,
+        "w": 58,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 30,
+        "w": 58,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims076": {
+      "frame": {
+        "x": 604,
+        "y": 168,
+        "w": 57,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 57,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims057": {
+      "frame": {
+        "x": 617,
+        "y": 84,
+        "w": 57,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 57,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims131": {
+      "frame": {
+        "x": 637,
+        "y": 3,
+        "w": 28,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 53,
+        "w": 28,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims132": {
+      "frame": {
+        "x": 671,
+        "y": 3,
+        "w": 28,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 53,
+        "w": 28,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims130": {
+      "frame": {
+        "x": 582,
+        "y": 719,
+        "w": 29,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 53,
+        "w": 29,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims055": {
+      "frame": {
+        "x": 584,
+        "y": 607,
+        "w": 57,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 57,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims016": {
+      "frame": {
+        "x": 606,
+        "y": 530,
+        "w": 55,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 30,
+        "w": 55,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims009": {
+      "frame": {
+        "x": 617,
+        "y": 448,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims008": {
+      "frame": {
+        "x": 630,
+        "y": 324,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims003": {
+      "frame": {
+        "x": 637,
+        "y": 238,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims024": {
+      "frame": {
+        "x": 667,
+        "y": 154,
+        "w": 58,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 58,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims005": {
+      "frame": {
+        "x": 680,
+        "y": 73,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims007": {
+      "frame": {
+        "x": 705,
+        "y": 3,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims020": {
+      "frame": {
+        "x": 617,
+        "y": 677,
+        "w": 57,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 32,
+        "w": 57,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims004": {
+      "frame": {
+        "x": 647,
+        "y": 600,
+        "w": 55,
+        "h": 63
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 55,
+        "h": 63
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims019": {
+      "frame": {
+        "x": 667,
+        "y": 517,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 32,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims018": {
+      "frame": {
+        "x": 617,
+        "y": 746,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims048": {
+      "frame": {
+        "x": 642,
+        "y": 814,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims006": {
+      "frame": {
+        "x": 678,
+        "y": 746,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims068": {
+      "frame": {
+        "x": 680,
+        "y": 669,
+        "w": 60,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 34,
+        "w": 60,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims026": {
+      "frame": {
+        "x": 708,
+        "y": 585,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims049": {
+      "frame": {
+        "x": 678,
+        "y": 393,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims002": {
+      "frame": {
+        "x": 691,
+        "y": 307,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims180": {
+      "frame": {
+        "x": 698,
+        "y": 223,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 35,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims178": {
+      "frame": {
+        "x": 731,
+        "y": 142,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 35,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims069": {
+      "frame": {
+        "x": 741,
+        "y": 72,
+        "w": 59,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 33,
+        "w": 59,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims021": {
+      "frame": {
+        "x": 766,
+        "y": 3,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 32,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims182": {
+      "frame": {
+        "x": 729,
+        "y": 461,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 27,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims027": {
+      "frame": {
+        "x": 741,
+        "y": 375,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims047": {
+      "frame": {
+        "x": 752,
+        "y": 291,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims030": {
+      "frame": {
+        "x": 760,
+        "y": 210,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 32,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims051": {
+      "frame": {
+        "x": 793,
+        "y": 140,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims033": {
+      "frame": {
+        "x": 806,
+        "y": 71,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims177": {
+      "frame": {
+        "x": 828,
+        "y": 3,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims038": {
+      "frame": {
+        "x": 889,
+        "y": 3,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims039": {
+      "frame": {
+        "x": 950,
+        "y": 3,
+        "w": 61,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 32,
+        "w": 61,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims064": {
+      "frame": {
+        "x": 950,
+        "y": 71,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 34,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims022": {
+      "frame": {
+        "x": 867,
+        "y": 71,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims010": {
+      "frame": {
+        "x": 867,
+        "y": 139,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims025": {
+      "frame": {
+        "x": 928,
+        "y": 139,
+        "w": 56,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 56,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims037": {
+      "frame": {
+        "x": 928,
+        "y": 207,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims052": {
+      "frame": {
+        "x": 856,
+        "y": 207,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims065": {
+      "frame": {
+        "x": 822,
+        "y": 275,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims023": {
+      "frame": {
+        "x": 685,
+        "y": 882,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims053": {
+      "frame": {
+        "x": 705,
+        "y": 814,
+        "w": 57,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 33,
+        "w": 57,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims014": {
+      "frame": {
+        "x": 685,
+        "y": 950,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims184": {
+      "frame": {
+        "x": 746,
+        "y": 950,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims001": {
+      "frame": {
+        "x": 748,
+        "y": 882,
+        "w": 55,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 32,
+        "w": 55,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims054": {
+      "frame": {
+        "x": 807,
+        "y": 950,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims081": {
+      "frame": {
+        "x": 739,
+        "y": 737,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims063": {
+      "frame": {
+        "x": 768,
+        "y": 804,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims046": {
+      "frame": {
+        "x": 809,
+        "y": 871,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims066": {
+      "frame": {
+        "x": 746,
+        "y": 653,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims050": {
+      "frame": {
+        "x": 802,
+        "y": 720,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims190": {
+      "frame": {
+        "x": 831,
+        "y": 787,
+        "w": 59,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 39,
+        "w": 59,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims058": {
+      "frame": {
+        "x": 870,
+        "y": 938,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims070": {
+      "frame": {
+        "x": 872,
+        "y": 854,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims192": {
+      "frame": {
+        "x": 935,
+        "y": 275,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims188": {
+      "frame": {
+        "x": 935,
+        "y": 342,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims072": {
+      "frame": {
+        "x": 865,
+        "y": 343,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims077": {
+      "frame": {
+        "x": 802,
+        "y": 359,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims062": {
+      "frame": {
+        "x": 935,
+        "y": 409,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims045": {
+      "frame": {
+        "x": 865,
+        "y": 410,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims186": {
+      "frame": {
+        "x": 802,
+        "y": 426,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 31,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims071": {
+      "frame": {
+        "x": 935,
+        "y": 476,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims067": {
+      "frame": {
+        "x": 865,
+        "y": 477,
+        "w": 59,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 34,
+        "w": 59,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims082": {
+      "frame": {
+        "x": 792,
+        "y": 493,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims185": {
+      "frame": {
+        "x": 935,
+        "y": 543,
+        "w": 57,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 34,
+        "w": 57,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims059": {
+      "frame": {
+        "x": 865,
+        "y": 544,
+        "w": 57,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 57,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims061": {
+      "frame": {
+        "x": 865,
+        "y": 610,
+        "w": 57,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 57,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims060": {
+      "frame": {
+        "x": 935,
+        "y": 610,
+        "w": 57,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 57,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims011": {
+      "frame": {
+        "x": 935,
+        "y": 676,
+        "w": 55,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 55,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims013": {
+      "frame": {
+        "x": 865,
+        "y": 676,
+        "w": 55,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 35,
+        "w": 55,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims129": {
+      "frame": {
+        "x": 885,
+        "y": 275,
+        "w": 34,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 53,
+        "w": 34,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    },
+    "Iron_Golem_Anims012": {
+      "frame": {
+        "x": 935,
+        "y": 741,
+        "w": 55,
+        "h": 56
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 38,
+        "w": 55,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 127,
+        "h": 117
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Iron_Golem_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

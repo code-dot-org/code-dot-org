@@ -1,0 +1,713 @@
+{
+  "frames": {
+    "Tropical_Fish_Surface07": {
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 512,
+        "h": 512
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface14": {
+      "frame": {
+        "x": 518,
+        "y": 2,
+        "w": 512,
+        "h": 512
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface00": {
+      "frame": {
+        "x": 1034,
+        "y": 2,
+        "w": 512,
+        "h": 512
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface10": {
+      "frame": {
+        "x": 1550,
+        "y": 2,
+        "w": 29,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 241,
+        "w": 29,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface04": {
+      "frame": {
+        "x": 1583,
+        "y": 2,
+        "w": 29,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 246,
+        "y": 247,
+        "w": 29,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface11": {
+      "frame": {
+        "x": 1616,
+        "y": 2,
+        "w": 27,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 252,
+        "w": 27,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface05": {
+      "frame": {
+        "x": 1647,
+        "y": 2,
+        "w": 27,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 250,
+        "w": 27,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface08": {
+      "frame": {
+        "x": 1616,
+        "y": 17,
+        "w": 26,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 249,
+        "y": 250,
+        "w": 26,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface12": {
+      "frame": {
+        "x": 1583,
+        "y": 22,
+        "w": 26,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 250,
+        "w": 26,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface03": {
+      "frame": {
+        "x": 1550,
+        "y": 25,
+        "w": 25,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 246,
+        "y": 238,
+        "w": 25,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface09": {
+      "frame": {
+        "x": 1678,
+        "y": 2,
+        "w": 24,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 240,
+        "w": 24,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish10": {
+      "frame": {
+        "x": 1646,
+        "y": 23,
+        "w": 13,
+        "h": 23
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 244,
+        "w": 13,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish11": {
+      "frame": {
+        "x": 1613,
+        "y": 34,
+        "w": 12,
+        "h": 23
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 244,
+        "w": 12,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface01": {
+      "frame": {
+        "x": 1579,
+        "y": 43,
+        "w": 22,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 247,
+        "y": 249,
+        "w": 22,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface02": {
+      "frame": {
+        "x": 1550,
+        "y": 50,
+        "w": 21,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 246,
+        "y": 243,
+        "w": 21,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish01": {
+      "frame": {
+        "x": 1629,
+        "y": 34,
+        "w": 12,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 250,
+        "w": 12,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish16": {
+      "frame": {
+        "x": 1706,
+        "y": 2,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish02": {
+      "frame": {
+        "x": 1730,
+        "y": 2,
+        "w": 12,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 250,
+        "w": 12,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish05": {
+      "frame": {
+        "x": 1706,
+        "y": 18,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish00": {
+      "frame": {
+        "x": 1663,
+        "y": 26,
+        "w": 13,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 250,
+        "w": 13,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish09": {
+      "frame": {
+        "x": 1680,
+        "y": 26,
+        "w": 17,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 247,
+        "y": 247,
+        "w": 17,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish13": {
+      "frame": {
+        "x": 1746,
+        "y": 2,
+        "w": 12,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 247,
+        "w": 12,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish08": {
+      "frame": {
+        "x": 1762,
+        "y": 2,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface06": {
+      "frame": {
+        "x": 1786,
+        "y": 2,
+        "w": 20,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 251,
+        "w": 20,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish15": {
+      "frame": {
+        "x": 1810,
+        "y": 2,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish07": {
+      "frame": {
+        "x": 1786,
+        "y": 17,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish06": {
+      "frame": {
+        "x": 1762,
+        "y": 18,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 244,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish17": {
+      "frame": {
+        "x": 1730,
+        "y": 26,
+        "w": 20,
+        "h": 12
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 252,
+        "w": 20,
+        "h": 12
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish03": {
+      "frame": {
+        "x": 1701,
+        "y": 34,
+        "w": 12,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 250,
+        "w": 12,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish_Surface13": {
+      "frame": {
+        "x": 1645,
+        "y": 50,
+        "w": 20,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 253,
+        "y": 251,
+        "w": 20,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish18": {
+      "frame": {
+        "x": 1669,
+        "y": 50,
+        "w": 20,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 251,
+        "w": 20,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish12": {
+      "frame": {
+        "x": 1629,
+        "y": 58,
+        "w": 12,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 251,
+        "y": 248,
+        "w": 12,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish14": {
+      "frame": {
+        "x": 1645,
+        "y": 65,
+        "w": 17,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 247,
+        "w": 17,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish19": {
+      "frame": {
+        "x": 1575,
+        "y": 61,
+        "w": 17,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 250,
+        "y": 250,
+        "w": 17,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    },
+    "Tropical_Fish04": {
+      "frame": {
+        "x": 1550,
+        "y": 70,
+        "w": 17,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 247,
+        "y": 250,
+        "w": 17,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Tropical_Fish_2018_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 2048,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

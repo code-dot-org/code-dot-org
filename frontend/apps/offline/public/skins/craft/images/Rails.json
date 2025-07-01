@@ -1,0 +1,233 @@
+{
+  "frames": {
+    "Rails_RedstoneTorch": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 30,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 0,
+        "w": 30,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_UnpoweredVertical": {
+      "frame": {
+        "x": 39,
+        "y": 3,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_TopLeft": {
+      "frame": {
+        "x": 39,
+        "y": 49,
+        "w": 40,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 21,
+        "w": 40,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_TopRight": {
+      "frame": {
+        "x": 3,
+        "y": 96,
+        "w": 41,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 21,
+        "w": 41,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_UnpoweredHorizontal": {
+      "frame": {
+        "x": 50,
+        "y": 96,
+        "w": 40,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 21,
+        "w": 40,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_PoweredHorizontal": {
+      "frame": {
+        "x": 50,
+        "y": 143,
+        "w": 40,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 21,
+        "w": 40,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_BottomRight": {
+      "frame": {
+        "x": 3,
+        "y": 143,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_PoweredVertical": {
+      "frame": {
+        "x": 3,
+        "y": 189,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_Vertical": {
+      "frame": {
+        "x": 50,
+        "y": 190,
+        "w": 41,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 41,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_Horizontal": {
+      "frame": {
+        "x": 85,
+        "y": 49,
+        "w": 40,
+        "h": 41
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 21,
+        "w": 40,
+        "h": 41
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_BottomLeft": {
+      "frame": {
+        "x": 86,
+        "y": 3,
+        "w": 40,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 40,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Rails_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 256,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

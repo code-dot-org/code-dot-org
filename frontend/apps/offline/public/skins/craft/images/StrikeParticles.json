@@ -1,0 +1,273 @@
+{
+  "frames": {
+    "BreakParticles12": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles11": {
+      "frame": {
+        "x": 25,
+        "y": 3,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles10": {
+      "frame": {
+        "x": 25,
+        "y": 24,
+        "w": 16,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 2,
+        "w": 16,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles03": {
+      "frame": {
+        "x": 3,
+        "y": 24,
+        "w": 15,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 15,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles06": {
+      "frame": {
+        "x": 3,
+        "y": 37,
+        "w": 15,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 15,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles08": {
+      "frame": {
+        "x": 3,
+        "y": 50,
+        "w": 15,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 15,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles09": {
+      "frame": {
+        "x": 24,
+        "y": 43,
+        "w": 15,
+        "h": 9
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 4,
+        "w": 15,
+        "h": 9
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles02": {
+      "frame": {
+        "x": 45,
+        "y": 43,
+        "w": 15,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 15,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles05": {
+      "frame": {
+        "x": 47,
+        "y": 3,
+        "w": 15,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 6,
+        "w": 15,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles04": {
+      "frame": {
+        "x": 47,
+        "y": 16,
+        "w": 10,
+        "h": 6
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 4,
+        "w": 10,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles07": {
+      "frame": {
+        "x": 47,
+        "y": 28,
+        "w": 10,
+        "h": 6
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 4,
+        "w": 10,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles01": {
+      "frame": {
+        "x": 63,
+        "y": 28,
+        "w": 10,
+        "h": 6
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 4,
+        "w": 10,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    },
+    "BreakParticles00": {
+      "frame": {
+        "x": 63,
+        "y": 16,
+        "w": 4,
+        "h": 5
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 6,
+        "y": 6,
+        "w": 4,
+        "h": 5
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 16
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/StrikeParticles_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 128,
+      "h": 64
+    },
+    "scale": 1
+  }
+}

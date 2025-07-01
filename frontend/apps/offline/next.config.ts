@@ -48,6 +48,29 @@ const copySkinAssets = async () => {
 };
 copySkinAssets(); // This runs when Next.js starts (dev or build)
 
+// Copy over craft support images
+const copyCraftAssets = async () => {
+  const source = path.resolve(__dirname, '../../../apps/static/craft');
+  const target = path.resolve(__dirname, 'public/craft');
+
+  // Cancel it if there is already the target path
+  try {
+    await fs.access(target);
+    return;
+  } catch (_) {
+    // If this fails, then the directory doesn't exist.
+    // Continue to copy it.
+  }
+
+  try {
+    await fs.cp(source, target, {recursive: true, force: true});
+    console.log('[next.config.js] Copied Craft skin assets.');
+  } catch (err) {
+    console.warn('Failed to copy Craft skin assets:', err);
+  }
+};
+copyCraftAssets(); // This runs when Next.js starts (dev or build)
+
 // Copy over common images
 const copyCommonImageAssets = async () => {
   const source = path.resolve(__dirname, '../../../apps/static/common_images');
@@ -77,6 +100,17 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname, '../../'),
   serverExternalPackages: [],
   cacheMaxMemorySize: 0, // disable default in-memory caching
+  experimental: {
+    turbo: {
+      rules: {
+        // Support loading GLSL shaders
+        '*.{glsl,vs,fs,vert,frag}': {
+          loaders: ['raw-loader'],
+          as: '*.js',
+        },
+      },
+    },
+  },
 };
 
 export default nextConfig;

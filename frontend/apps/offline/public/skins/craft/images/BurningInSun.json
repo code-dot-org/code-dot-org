@@ -1,0 +1,613 @@
+{
+  "frames": {
+    "BurningFront_012": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_011": {
+      "frame": {
+        "x": 41,
+        "y": 3,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_003": {
+      "frame": {
+        "x": 79,
+        "y": 3,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_002": {
+      "frame": {
+        "x": 79,
+        "y": 48,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_001": {
+      "frame": {
+        "x": 3,
+        "y": 48,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_013": {
+      "frame": {
+        "x": 41,
+        "y": 48,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 10,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_014": {
+      "frame": {
+        "x": 41,
+        "y": 93,
+        "w": 32,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 32,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_015": {
+      "frame": {
+        "x": 3,
+        "y": 93,
+        "w": 32,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 32,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_009": {
+      "frame": {
+        "x": 3,
+        "y": 136,
+        "w": 32,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 32,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_010": {
+      "frame": {
+        "x": 79,
+        "y": 93,
+        "w": 32,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 12,
+        "w": 32,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_007": {
+      "frame": {
+        "x": 79,
+        "y": 136,
+        "w": 32,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 32,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_006": {
+      "frame": {
+        "x": 41,
+        "y": 136,
+        "w": 32,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 32,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_008": {
+      "frame": {
+        "x": 41,
+        "y": 177,
+        "w": 32,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 14,
+        "w": 32,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_005": {
+      "frame": {
+        "x": 3,
+        "y": 179,
+        "w": 32,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 15,
+        "w": 32,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningFront_004": {
+      "frame": {
+        "x": 79,
+        "y": 177,
+        "w": 32,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 15,
+        "w": 32,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_015": {
+      "frame": {
+        "x": 3,
+        "y": 219,
+        "w": 24,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 1,
+        "w": 24,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_004": {
+      "frame": {
+        "x": 33,
+        "y": 219,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_006": {
+      "frame": {
+        "x": 63,
+        "y": 218,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_007": {
+      "frame": {
+        "x": 93,
+        "y": 217,
+        "w": 24,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 3,
+        "w": 24,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_005": {
+      "frame": {
+        "x": 123,
+        "y": 3,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_009": {
+      "frame": {
+        "x": 153,
+        "y": 3,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_008": {
+      "frame": {
+        "x": 183,
+        "y": 3,
+        "w": 24,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 1,
+        "w": 24,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_003": {
+      "frame": {
+        "x": 213,
+        "y": 3,
+        "w": 24,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 1,
+        "w": 24,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_011": {
+      "frame": {
+        "x": 213,
+        "y": 27,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_013": {
+      "frame": {
+        "x": 183,
+        "y": 27,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_001": {
+      "frame": {
+        "x": 123,
+        "y": 28,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_002": {
+      "frame": {
+        "x": 153,
+        "y": 28,
+        "w": 24,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 1,
+        "w": 24,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_010": {
+      "frame": {
+        "x": 153,
+        "y": 52,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_012": {
+      "frame": {
+        "x": 123,
+        "y": 53,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    },
+    "BurningBehind_014": {
+      "frame": {
+        "x": 183,
+        "y": 52,
+        "w": 24,
+        "h": 19
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 4,
+        "y": 0,
+        "w": 24,
+        "h": 19
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 49
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/BurningInSun_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 256,
+      "h": 256
+    },
+    "scale": 1
+  }
+}

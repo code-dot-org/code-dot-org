@@ -1,0 +1,1013 @@
+{
+  "frames": {
+    "Minecart_06": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 72,
+        "h": 91
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 72,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_12": {
+      "frame": {
+        "x": 81,
+        "y": 3,
+        "w": 76,
+        "h": 91
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 76,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_30": {
+      "frame": {
+        "x": 163,
+        "y": 3,
+        "w": 72,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 72,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_36": {
+      "frame": {
+        "x": 241,
+        "y": 3,
+        "w": 76,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 1,
+        "w": 76,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_42": {
+      "frame": {
+        "x": 323,
+        "y": 3,
+        "w": 72,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 11,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_24": {
+      "frame": {
+        "x": 401,
+        "y": 3,
+        "w": 76,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 11,
+        "w": 76,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_18": {
+      "frame": {
+        "x": 401,
+        "y": 89,
+        "w": 72,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 11,
+        "w": 72,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_48": {
+      "frame": {
+        "x": 163,
+        "y": 99,
+        "w": 76,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 11,
+        "w": 76,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_08": {
+      "frame": {
+        "x": 323,
+        "y": 89,
+        "w": 63,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 63,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_11": {
+      "frame": {
+        "x": 245,
+        "y": 99,
+        "w": 63,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 63,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_07": {
+      "frame": {
+        "x": 314,
+        "y": 174,
+        "w": 63,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 63,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_10": {
+      "frame": {
+        "x": 245,
+        "y": 184,
+        "w": 63,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 63,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_09": {
+      "frame": {
+        "x": 383,
+        "y": 175,
+        "w": 63,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 0,
+        "w": 63,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_38": {
+      "frame": {
+        "x": 3,
+        "y": 100,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_39": {
+      "frame": {
+        "x": 73,
+        "y": 100,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_40": {
+      "frame": {
+        "x": 73,
+        "y": 184,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_35": {
+      "frame": {
+        "x": 314,
+        "y": 259,
+        "w": 61,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 1,
+        "w": 61,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_32": {
+      "frame": {
+        "x": 3,
+        "y": 184,
+        "w": 61,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 1,
+        "w": 61,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_34": {
+      "frame": {
+        "x": 3,
+        "y": 268,
+        "w": 61,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 1,
+        "w": 61,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_28": {
+      "frame": {
+        "x": 143,
+        "y": 185,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_41": {
+      "frame": {
+        "x": 70,
+        "y": 268,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_29": {
+      "frame": {
+        "x": 381,
+        "y": 260,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_27": {
+      "frame": {
+        "x": 140,
+        "y": 269,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_26": {
+      "frame": {
+        "x": 210,
+        "y": 269,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_31": {
+      "frame": {
+        "x": 280,
+        "y": 343,
+        "w": 61,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 1,
+        "w": 61,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_37": {
+      "frame": {
+        "x": 3,
+        "y": 352,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_25": {
+      "frame": {
+        "x": 347,
+        "y": 344,
+        "w": 64,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 1,
+        "w": 64,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_33": {
+      "frame": {
+        "x": 73,
+        "y": 352,
+        "w": 61,
+        "h": 78
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 1,
+        "w": 61,
+        "h": 78
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_04": {
+      "frame": {
+        "x": 417,
+        "y": 344,
+        "w": 64,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_03": {
+      "frame": {
+        "x": 417,
+        "y": 427,
+        "w": 64,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_01": {
+      "frame": {
+        "x": 140,
+        "y": 353,
+        "w": 64,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_02": {
+      "frame": {
+        "x": 210,
+        "y": 353,
+        "w": 64,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_05": {
+      "frame": {
+        "x": 280,
+        "y": 428,
+        "w": 64,
+        "h": 77
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 2,
+        "w": 64,
+        "h": 77
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_14": {
+      "frame": {
+        "x": 350,
+        "y": 510,
+        "w": 64,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 4,
+        "w": 64,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_15": {
+      "frame": {
+        "x": 420,
+        "y": 510,
+        "w": 64,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 4,
+        "w": 64,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_16": {
+      "frame": {
+        "x": 420,
+        "y": 591,
+        "w": 64,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 4,
+        "w": 64,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_17": {
+      "frame": {
+        "x": 3,
+        "y": 436,
+        "w": 64,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 4,
+        "w": 64,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_13": {
+      "frame": {
+        "x": 73,
+        "y": 436,
+        "w": 64,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 4,
+        "w": 64,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_49": {
+      "frame": {
+        "x": 143,
+        "y": 436,
+        "w": 64,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 2,
+        "y": 27,
+        "w": 64,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_21": {
+      "frame": {
+        "x": 143,
+        "y": 494,
+        "w": 63,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 18,
+        "w": 63,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_19": {
+      "frame": {
+        "x": 212,
+        "y": 511,
+        "w": 63,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 18,
+        "w": 63,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_23": {
+      "frame": {
+        "x": 281,
+        "y": 511,
+        "w": 63,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 18,
+        "w": 63,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_20": {
+      "frame": {
+        "x": 281,
+        "y": 578,
+        "w": 63,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 18,
+        "w": 63,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_22": {
+      "frame": {
+        "x": 350,
+        "y": 591,
+        "w": 63,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 3,
+        "y": 18,
+        "w": 63,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_43": {
+      "frame": {
+        "x": 213,
+        "y": 436,
+        "w": 61,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_46": {
+      "frame": {
+        "x": 350,
+        "y": 428,
+        "w": 61,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_50": {
+      "frame": {
+        "x": 3,
+        "y": 517,
+        "w": 61,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 21,
+        "w": 61,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_47": {
+      "frame": {
+        "x": 70,
+        "y": 517,
+        "w": 61,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_44": {
+      "frame": {
+        "x": 3,
+        "y": 581,
+        "w": 61,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    },
+    "Minecart_45": {
+      "frame": {
+        "x": 137,
+        "y": 561,
+        "w": 61,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 5,
+        "y": 19,
+        "w": 61,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 76,
+        "h": 91
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Minecart_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

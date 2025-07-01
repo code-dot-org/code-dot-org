@@ -10,6 +10,7 @@ import type {LevelData} from '@/app/models/level';
 import type {ActivitySectionData} from '@/app/models/unit';
 
 import ArtistLevel from '../artist';
+import CraftLevel from '../craft';
 import KarelLevel from '../karel';
 import MazeLevel from '../maze';
 import PanelsLevel from '../panels';
@@ -49,6 +50,7 @@ const Level: React.FunctionComponent<LevelProps> = ({
     {level?.type === 'Maze' && <MazeLevel level={level} />}
     {level?.type === 'Karel' && <KarelLevel level={level} />}
     {level?.type === 'Artist' && <ArtistLevel level={level} />}
+    {level?.type === 'Craft' && <CraftLevel level={level} />}
     {level?.type === 'GamelabJr' && <SpriteLabLevel level={level} />}
     {level?.type === 'StarWarsGrid' && <StarWarsLevel level={level} />}
     {level?.type === 'StandaloneVideo' && (

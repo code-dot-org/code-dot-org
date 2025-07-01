@@ -1,0 +1,6813 @@
+{
+  "frames": {
+    "NetherPortal6": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 159,
+        "h": 137
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 159,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    },
+    "NetherPortal2": {
+      "frame": {
+        "x": 168,
+        "y": 3,
+        "w": 159,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 137,
+        "w": 159,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    },
+    "NetherPortal1": {
+      "frame": {
+        "x": 333,
+        "y": 3,
+        "w": 159,
+        "h": 137
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 159,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    },
+    "NetherPortal4": {
+      "frame": {
+        "x": 168,
+        "y": 10,
+        "w": 159,
+        "h": 137
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 159,
+        "h": 137
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    },
+    "NetherPortal3": {
+      "frame": {
+        "x": 3,
+        "y": 146,
+        "w": 1,
+        "h": 119
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 159,
+        "y": 0,
+        "w": 1,
+        "h": 119
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    },
+    "piston_arm_right": {
+      "frame": {
+        "x": 10,
+        "y": 146,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_base_up": {
+      "frame": {
+        "x": 498,
+        "y": 3,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_base_down": {
+      "frame": {
+        "x": 594,
+        "y": 3,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_arm_left": {
+      "frame": {
+        "x": 690,
+        "y": 3,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_base_right": {
+      "frame": {
+        "x": 786,
+        "y": 3,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_arm_down": {
+      "frame": {
+        "x": 882,
+        "y": 3,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_arm_up": {
+      "frame": {
+        "x": 882,
+        "y": 99,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_base_left": {
+      "frame": {
+        "x": 498,
+        "y": 99,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_base_down_sticky": {
+      "frame": {
+        "x": 333,
+        "y": 146,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "piston_arm_down_sticky": {
+      "frame": {
+        "x": 106,
+        "y": 153,
+        "w": 90,
+        "h": 90
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 90,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 90,
+        "h": 90
+      },
+      "trimmed": true
+    },
+    "Chest1": {
+      "frame": {
+        "x": 10,
+        "y": 242,
+        "w": 64,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 84
+      },
+      "trimmed": true
+    },
+    "Chest0": {
+      "frame": {
+        "x": 202,
+        "y": 153,
+        "w": 64,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 84
+      },
+      "trimmed": true
+    },
+    "Chest2": {
+      "frame": {
+        "x": 594,
+        "y": 99,
+        "w": 64,
+        "h": 84
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 84
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 84
+      },
+      "trimmed": true
+    },
+    "Blocks": {
+      "frame": {
+        "x": 272,
+        "y": 153,
+        "w": 40,
+        "h": 80
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 40,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 80
+      },
+      "trimmed": true
+    },
+    "Reeds": {
+      "frame": {
+        "x": 664,
+        "y": 99,
+        "w": 64,
+        "h": 79
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 79
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 79
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Dead_Blue": {
+      "frame": {
+        "x": 734,
+        "y": 99,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Yellow_Left": {
+      "frame": {
+        "x": 804,
+        "y": 99,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel3": {
+      "frame": {
+        "x": 804,
+        "y": 169,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_line_h_off": {
+      "frame": {
+        "x": 734,
+        "y": 169,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel2": {
+      "frame": {
+        "x": 664,
+        "y": 184,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "TallGrass": {
+      "frame": {
+        "x": 594,
+        "y": 189,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wheat2": {
+      "frame": {
+        "x": 874,
+        "y": 195,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lapis_Ore": {
+      "frame": {
+        "x": 944,
+        "y": 195,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Yellow_Bottom": {
+      "frame": {
+        "x": 944,
+        "y": 265,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Silver": {
+      "frame": {
+        "x": 734,
+        "y": 239,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_dot_off": {
+      "frame": {
+        "x": 664,
+        "y": 254,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_White": {
+      "frame": {
+        "x": 804,
+        "y": 239,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel5": {
+      "frame": {
+        "x": 874,
+        "y": 265,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_2": {
+      "frame": {
+        "x": 734,
+        "y": 309,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Magenta": {
+      "frame": {
+        "x": 804,
+        "y": 309,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stripped_Dark_Oak": {
+      "frame": {
+        "x": 874,
+        "y": 335,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Yellow_Right": {
+      "frame": {
+        "x": 944,
+        "y": 335,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Yellow": {
+      "frame": {
+        "x": 944,
+        "y": 405,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Magenta_Bottom": {
+      "frame": {
+        "x": 429,
+        "y": 195,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Concrete_Black": {
+      "frame": {
+        "x": 499,
+        "y": 195,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column1": {
+      "frame": {
+        "x": 569,
+        "y": 259,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Cyan": {
+      "frame": {
+        "x": 639,
+        "y": 324,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Blue": {
+      "frame": {
+        "x": 272,
+        "y": 242,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_4": {
+      "frame": {
+        "x": 202,
+        "y": 243,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Leaves_Acacia": {
+      "frame": {
+        "x": 342,
+        "y": 242,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Red": {
+      "frame": {
+        "x": 80,
+        "y": 249,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Dead_Pink": {
+      "frame": {
+        "x": 412,
+        "y": 265,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_0": {
+      "frame": {
+        "x": 482,
+        "y": 265,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_1": {
+      "frame": {
+        "x": 552,
+        "y": 329,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots2": {
+      "frame": {
+        "x": 272,
+        "y": 312,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Blue_Top": {
+      "frame": {
+        "x": 342,
+        "y": 312,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_BottomLeft_off": {
+      "frame": {
+        "x": 150,
+        "y": 313,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_3": {
+      "frame": {
+        "x": 80,
+        "y": 319,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_BottomLeft": {
+      "frame": {
+        "x": 3,
+        "y": 332,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Blue_Bottom": {
+      "frame": {
+        "x": 412,
+        "y": 335,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_TopRight": {
+      "frame": {
+        "x": 482,
+        "y": 335,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel1": {
+      "frame": {
+        "x": 709,
+        "y": 379,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem0": {
+      "frame": {
+        "x": 622,
+        "y": 394,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_BottomRight": {
+      "frame": {
+        "x": 552,
+        "y": 399,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Dead_Yellow": {
+      "frame": {
+        "x": 779,
+        "y": 379,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Yellow": {
+      "frame": {
+        "x": 849,
+        "y": 405,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_down": {
+      "frame": {
+        "x": 692,
+        "y": 449,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_5": {
+      "frame": {
+        "x": 622,
+        "y": 464,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Red_Top": {
+      "frame": {
+        "x": 762,
+        "y": 449,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Log_Spruce": {
+      "frame": {
+        "x": 832,
+        "y": 475,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel1": {
+      "frame": {
+        "x": 902,
+        "y": 475,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes2": {
+      "frame": {
+        "x": 902,
+        "y": 545,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_off": {
+      "frame": {
+        "x": 692,
+        "y": 519,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Pink": {
+      "frame": {
+        "x": 762,
+        "y": 519,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit01": {
+      "frame": {
+        "x": 832,
+        "y": 545,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Red": {
+      "frame": {
+        "x": 220,
+        "y": 382,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Yellow_Top": {
+      "frame": {
+        "x": 150,
+        "y": 383,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Dead_Red": {
+      "frame": {
+        "x": 73,
+        "y": 389,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_BottomRight_off": {
+      "frame": {
+        "x": 3,
+        "y": 402,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_up_off": {
+      "frame": {
+        "x": 290,
+        "y": 382,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Brown": {
+      "frame": {
+        "x": 360,
+        "y": 405,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Magenta": {
+      "frame": {
+        "x": 430,
+        "y": 405,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Lime": {
+      "frame": {
+        "x": 500,
+        "y": 469,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_LightBlue": {
+      "frame": {
+        "x": 570,
+        "y": 534,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Brown": {
+      "frame": {
+        "x": 220,
+        "y": 452,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "top_snow": {
+      "frame": {
+        "x": 290,
+        "y": 452,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_0": {
+      "frame": {
+        "x": 143,
+        "y": 453,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bed_Head": {
+      "frame": {
+        "x": 73,
+        "y": 459,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaPickleDead": {
+      "frame": {
+        "x": 3,
+        "y": 472,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "PressurePlate_Up": {
+      "frame": {
+        "x": 360,
+        "y": 475,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass1": {
+      "frame": {
+        "x": 430,
+        "y": 475,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit09": {
+      "frame": {
+        "x": 500,
+        "y": 539,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_line_h": {
+      "frame": {
+        "x": 213,
+        "y": 522,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column3": {
+      "frame": {
+        "x": 143,
+        "y": 523,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit08": {
+      "frame": {
+        "x": 73,
+        "y": 529,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Pink": {
+      "frame": {
+        "x": 3,
+        "y": 542,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Pink": {
+      "frame": {
+        "x": 283,
+        "y": 522,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_up": {
+      "frame": {
+        "x": 353,
+        "y": 545,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Cobblestone": {
+      "frame": {
+        "x": 423,
+        "y": 545,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Pink": {
+      "frame": {
+        "x": 213,
+        "y": 592,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem4": {
+      "frame": {
+        "x": 143,
+        "y": 593,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Dead_Magenta": {
+      "frame": {
+        "x": 73,
+        "y": 599,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_2": {
+      "frame": {
+        "x": 3,
+        "y": 612,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit03": {
+      "frame": {
+        "x": 283,
+        "y": 592,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stripped_Oak": {
+      "frame": {
+        "x": 640,
+        "y": 589,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass4": {
+      "frame": {
+        "x": 972,
+        "y": 545,
+        "w": 42,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 0,
+        "w": 42,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_4": {
+      "frame": {
+        "x": 570,
+        "y": 604,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wheat0": {
+      "frame": {
+        "x": 493,
+        "y": 609,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_RedstoneTorch": {
+      "frame": {
+        "x": 710,
+        "y": 589,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_TopRight_off": {
+      "frame": {
+        "x": 353,
+        "y": 615,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Magenta_Left": {
+      "frame": {
+        "x": 423,
+        "y": 615,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Yellow": {
+      "frame": {
+        "x": 213,
+        "y": 662,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel0": {
+      "frame": {
+        "x": 143,
+        "y": 663,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem5": {
+      "frame": {
+        "x": 73,
+        "y": 669,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Yellow_Sand": {
+      "frame": {
+        "x": 3,
+        "y": 682,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_5": {
+      "frame": {
+        "x": 283,
+        "y": 662,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Black": {
+      "frame": {
+        "x": 780,
+        "y": 615,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Red": {
+      "frame": {
+        "x": 640,
+        "y": 659,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Pink_Right": {
+      "frame": {
+        "x": 710,
+        "y": 659,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Purple": {
+      "frame": {
+        "x": 563,
+        "y": 674,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Cyan": {
+      "frame": {
+        "x": 493,
+        "y": 679,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Pink": {
+      "frame": {
+        "x": 353,
+        "y": 685,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_line_v": {
+      "frame": {
+        "x": 423,
+        "y": 685,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Pink_Top": {
+      "frame": {
+        "x": 213,
+        "y": 732,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coarse_Dirt": {
+      "frame": {
+        "x": 143,
+        "y": 733,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_BottomRight": {
+      "frame": {
+        "x": 73,
+        "y": 739,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_down_off": {
+      "frame": {
+        "x": 3,
+        "y": 752,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_TopRight": {
+      "frame": {
+        "x": 283,
+        "y": 732,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "ice": {
+      "frame": {
+        "x": 850,
+        "y": 615,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Red_Right": {
+      "frame": {
+        "x": 920,
+        "y": 615,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel5": {
+      "frame": {
+        "x": 920,
+        "y": 685,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Clay": {
+      "frame": {
+        "x": 780,
+        "y": 685,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "PressurePlate_Down": {
+      "frame": {
+        "x": 850,
+        "y": 685,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "piston_down_sticky": {
+      "frame": {
+        "x": 850,
+        "y": 755,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Magenta_Top": {
+      "frame": {
+        "x": 920,
+        "y": 755,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wheat1": {
+      "frame": {
+        "x": 920,
+        "y": 825,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_dot": {
+      "frame": {
+        "x": 3,
+        "y": 895,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Black": {
+      "frame": {
+        "x": 3,
+        "y": 825,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit00": {
+      "frame": {
+        "x": 73,
+        "y": 825,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Block_Blue": {
+      "frame": {
+        "x": 73,
+        "y": 895,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Orange": {
+      "frame": {
+        "x": 143,
+        "y": 895,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sea_Lantern4": {
+      "frame": {
+        "x": 143,
+        "y": 825,
+        "w": 64,
+        "h": 64
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 64
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Red_Sand": {
+      "frame": {
+        "x": 213,
+        "y": 825,
+        "w": 43,
+        "h": 62
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 0,
+        "w": 43,
+        "h": 62
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Red": {
+      "frame": {
+        "x": 972,
+        "y": 475,
+        "w": 44,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 0,
+        "w": 44,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem_Gravel4": {
+      "frame": {
+        "x": 978,
+        "y": 3,
+        "w": 33,
+        "h": 61
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 1,
+        "w": 33,
+        "h": 61
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bedrock": {
+      "frame": {
+        "x": 978,
+        "y": 70,
+        "w": 34,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 19,
+        "y": 2,
+        "w": 34,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_LightBlue": {
+      "frame": {
+        "x": 220,
+        "y": 313,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass2": {
+      "frame": {
+        "x": 990,
+        "y": 825,
+        "w": 23,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 23,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Blue": {
+      "frame": {
+        "x": 213,
+        "y": 895,
+        "w": 44,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 44,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Grass": {
+      "frame": {
+        "x": 262,
+        "y": 825,
+        "w": 40,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Blue_Left": {
+      "frame": {
+        "x": 570,
+        "y": 469,
+        "w": 31,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 3,
+        "w": 31,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand5": {
+      "frame": {
+        "x": 919,
+        "y": 405,
+        "w": 13,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 3,
+        "w": 13,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Magenta_Right": {
+      "frame": {
+        "x": 990,
+        "y": 891,
+        "w": 25,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 3,
+        "w": 25,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots1": {
+      "frame": {
+        "x": 263,
+        "y": 956,
+        "w": 21,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 2,
+        "w": 21,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Blue_Right": {
+      "frame": {
+        "x": 263,
+        "y": 891,
+        "w": 40,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 3,
+        "w": 40,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_0": {
+      "frame": {
+        "x": 308,
+        "y": 825,
+        "w": 13,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 6,
+        "w": 13,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand3": {
+      "frame": {
+        "x": 639,
+        "y": 259,
+        "w": 17,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 3,
+        "w": 17,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Pink_Sand": {
+      "frame": {
+        "x": 290,
+        "y": 956,
+        "w": 40,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 4,
+        "w": 40,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Magenta_Sand": {
+      "frame": {
+        "x": 309,
+        "y": 889,
+        "w": 23,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 4,
+        "w": 23,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel0": {
+      "frame": {
+        "x": 327,
+        "y": 825,
+        "w": 21,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 21,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand2": {
+      "frame": {
+        "x": 336,
+        "y": 956,
+        "w": 42,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 42,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand6": {
+      "frame": {
+        "x": 338,
+        "y": 889,
+        "w": 23,
+        "h": 58
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 4,
+        "w": 23,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Magenta": {
+      "frame": {
+        "x": 354,
+        "y": 825,
+        "w": 21,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 21,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat4": {
+      "frame": {
+        "x": 384,
+        "y": 956,
+        "w": 4,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 5,
+        "w": 4,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_Warm_1": {
+      "frame": {
+        "x": 394,
+        "y": 956,
+        "w": 40,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 6,
+        "w": 40,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "grass_path": {
+      "frame": {
+        "x": 607,
+        "y": 469,
+        "w": 6,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 7,
+        "w": 6,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_1": {
+      "frame": {
+        "x": 440,
+        "y": 956,
+        "w": 34,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 7,
+        "w": 34,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat5": {
+      "frame": {
+        "x": 480,
+        "y": 956,
+        "w": 36,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 5,
+        "w": 36,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Yellow": {
+      "frame": {
+        "x": 522,
+        "y": 956,
+        "w": 34,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 5,
+        "w": 34,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_White": {
+      "frame": {
+        "x": 318,
+        "y": 153,
+        "w": 6,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 5,
+        "w": 6,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bed_Foot": {
+      "frame": {
+        "x": 562,
+        "y": 956,
+        "w": 31,
+        "h": 57
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 4,
+        "w": 31,
+        "h": 57
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_2": {
+      "frame": {
+        "x": 562,
+        "y": 895,
+        "w": 6,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 9,
+        "w": 6,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Planks_Spruce": {
+      "frame": {
+        "x": 574,
+        "y": 895,
+        "w": 33,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 7,
+        "w": 33,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Obsidian": {
+      "frame": {
+        "x": 599,
+        "y": 956,
+        "w": 4,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 7,
+        "w": 4,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine0": {
+      "frame": {
+        "x": 622,
+        "y": 329,
+        "w": 10,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 7,
+        "w": 10,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_3": {
+      "frame": {
+        "x": 609,
+        "y": 956,
+        "w": 34,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 9,
+        "w": 34,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand4": {
+      "frame": {
+        "x": 613,
+        "y": 895,
+        "w": 27,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 6,
+        "w": 27,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "piston_down": {
+      "frame": {
+        "x": 646,
+        "y": 895,
+        "w": 6,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 8,
+        "w": 6,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "netherrack": {
+      "frame": {
+        "x": 649,
+        "y": 956,
+        "w": 34,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 8,
+        "w": 34,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Pink_Left": {
+      "frame": {
+        "x": 658,
+        "y": 895,
+        "w": 30,
+        "h": 54
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 8,
+        "w": 30,
+        "h": 54
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Silver": {
+      "frame": {
+        "x": 978,
+        "y": 136,
+        "w": 32,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 21,
+        "y": 9,
+        "w": 32,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Iron_Ore": {
+      "frame": {
+        "x": 552,
+        "y": 265,
+        "w": 4,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 9,
+        "w": 4,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stone_Bricks": {
+      "frame": {
+        "x": 569,
+        "y": 195,
+        "w": 12,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 40,
+        "y": 4,
+        "w": 12,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass3": {
+      "frame": {
+        "x": 689,
+        "y": 956,
+        "w": 13,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 11,
+        "w": 13,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_White": {
+      "frame": {
+        "x": 694,
+        "y": 895,
+        "w": 22,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 9,
+        "w": 22,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stone_Bricks_Chisled": {
+      "frame": {
+        "x": 990,
+        "y": 615,
+        "w": 26,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 8,
+        "w": 26,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass5": {
+      "frame": {
+        "x": 708,
+        "y": 956,
+        "w": 13,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 11,
+        "w": 13,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Leaves_Spruce": {
+      "frame": {
+        "x": 722,
+        "y": 895,
+        "w": 36,
+        "h": 53
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 9,
+        "w": 36,
+        "h": 53
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Planks_Birch": {
+      "frame": {
+        "x": 3,
+        "y": 965,
+        "w": 4,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 10,
+        "w": 4,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stone": {
+      "frame": {
+        "x": 13,
+        "y": 965,
+        "w": 18,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 4,
+        "w": 18,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Planks_Jungle": {
+      "frame": {
+        "x": 37,
+        "y": 965,
+        "w": 36,
+        "h": 52
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 10,
+        "w": 36,
+        "h": 52
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Planks_Acacia": {
+      "frame": {
+        "x": 79,
+        "y": 965,
+        "w": 36,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 12,
+        "w": 36,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Redstone_Ore": {
+      "frame": {
+        "x": 121,
+        "y": 965,
+        "w": 40,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 13,
+        "w": 40,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem2": {
+      "frame": {
+        "x": 167,
+        "y": 965,
+        "w": 37,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 10,
+        "w": 37,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_LightBlue": {
+      "frame": {
+        "x": 213,
+        "y": 961,
+        "w": 40,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel2": {
+      "frame": {
+        "x": 640,
+        "y": 534,
+        "w": 42,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 14,
+        "w": 42,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Lava_1": {
+      "frame": {
+        "x": 709,
+        "y": 324,
+        "w": 12,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 16,
+        "w": 12,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem3": {
+      "frame": {
+        "x": 500,
+        "y": 405,
+        "w": 36,
+        "h": 47
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 11,
+        "w": 36,
+        "h": 47
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine2": {
+      "frame": {
+        "x": 1014,
+        "y": 195,
+        "w": 3,
+        "h": 46
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 3,
+        "h": 46
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_4": {
+      "frame": {
+        "x": 990,
+        "y": 674,
+        "w": 16,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 6,
+        "w": 16,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_2": {
+      "frame": {
+        "x": 1014,
+        "y": 247,
+        "w": 3,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 13,
+        "w": 3,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "snowy_grass": {
+      "frame": {
+        "x": 990,
+        "y": 725,
+        "w": 24,
+        "h": 45
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 24,
+        "h": 45
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel3": {
+      "frame": {
+        "x": 150,
+        "y": 249,
+        "w": 42,
+        "h": 44
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 0,
+        "w": 42,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_Warm_4": {
+      "frame": {
+        "x": 727,
+        "y": 956,
+        "w": 24,
+        "h": 44
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 6,
+        "w": 24,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "quartz_ore": {
+      "frame": {
+        "x": 757,
+        "y": 956,
+        "w": 24,
+        "h": 44
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 24,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "snow": {
+      "frame": {
+        "x": 764,
+        "y": 895,
+        "w": 16,
+        "h": 44
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 2,
+        "w": 16,
+        "h": 44
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "piston_up": {
+      "frame": {
+        "x": 429,
+        "y": 146,
+        "w": 16,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 2,
+        "w": 16,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stone_Bricks_Mossy": {
+      "frame": {
+        "x": 990,
+        "y": 776,
+        "w": 24,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 24,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Brown": {
+      "frame": {
+        "x": 786,
+        "y": 895,
+        "w": 15,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 2,
+        "w": 15,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Purple": {
+      "frame": {
+        "x": 451,
+        "y": 146,
+        "w": 40,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 20,
+        "w": 40,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Stone_Bricks_Cracked": {
+      "frame": {
+        "x": 787,
+        "y": 956,
+        "w": 16,
+        "h": 42
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 2,
+        "w": 16,
+        "h": 42
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Farmland_Wet": {
+      "frame": {
+        "x": 722,
+        "y": 729,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 33,
+        "w": 40,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross": {
+      "frame": {
+        "x": 809,
+        "y": 755,
+        "w": 33,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 22,
+        "w": 33,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Log_Acacia": {
+      "frame": {
+        "x": 73,
+        "y": 809,
+        "w": 40,
+        "h": 9
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 9
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_right": {
+      "frame": {
+        "x": 1016,
+        "y": 136,
+        "w": 1,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 22,
+        "w": 1,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Cyan": {
+      "frame": {
+        "x": 493,
+        "y": 749,
+        "w": 40,
+        "h": 23
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Gravel": {
+      "frame": {
+        "x": 143,
+        "y": 803,
+        "w": 40,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_TopLeft": {
+      "frame": {
+        "x": 353,
+        "y": 778,
+        "w": 7,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 22,
+        "w": 7,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block1": {
+      "frame": {
+        "x": 366,
+        "y": 778,
+        "w": 38,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 13,
+        "w": 38,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Green": {
+      "frame": {
+        "x": 807,
+        "y": 895,
+        "w": 40,
+        "h": 26
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 36,
+        "w": 40,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Magenta": {
+      "frame": {
+        "x": 649,
+        "y": 1016,
+        "w": 40,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_PoweredVertical": {
+      "frame": {
+        "x": 768,
+        "y": 755,
+        "w": 29,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 22,
+        "w": 29,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Gray": {
+      "frame": {
+        "x": 853,
+        "y": 825,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Blue": {
+      "frame": {
+        "x": 381,
+        "y": 862,
+        "w": 40,
+        "h": 26
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column2": {
+      "frame": {
+        "x": 381,
+        "y": 824,
+        "w": 40,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Purple": {
+      "frame": {
+        "x": 764,
+        "y": 945,
+        "w": 40,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass": {
+      "frame": {
+        "x": 427,
+        "y": 825,
+        "w": 40,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Magenta": {
+      "frame": {
+        "x": 410,
+        "y": 778,
+        "w": 40,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 40,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column0": {
+      "frame": {
+        "x": 456,
+        "y": 778,
+        "w": 40,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 40,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaGrass_Gravel4": {
+      "frame": {
+        "x": 807,
+        "y": 801,
+        "w": 21,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 0,
+        "w": 21,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_left": {
+      "frame": {
+        "x": 473,
+        "y": 846,
+        "w": 29,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 22,
+        "w": 29,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass0": {
+      "frame": {
+        "x": 427,
+        "y": 860,
+        "w": 39,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 4,
+        "w": 39,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block2": {
+      "frame": {
+        "x": 502,
+        "y": 801,
+        "w": 3,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 17,
+        "w": 3,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Granite_Polished": {
+      "frame": {
+        "x": 508,
+        "y": 846,
+        "w": 32,
+        "h": 39
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 2,
+        "w": 32,
+        "h": 39
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep3": {
+      "frame": {
+        "x": 427,
+        "y": 816,
+        "w": 37,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 20,
+        "w": 37,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Gravel_Deep": {
+      "frame": {
+        "x": 500,
+        "y": 458,
+        "w": 37,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 22,
+        "w": 37,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Pink_Bottom": {
+      "frame": {
+        "x": 511,
+        "y": 801,
+        "w": 29,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 3,
+        "w": 29,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Red_Bottom": {
+      "frame": {
+        "x": 546,
+        "y": 801,
+        "w": 26,
+        "h": 37
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 3,
+        "w": 26,
+        "h": 37
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Tnt": {
+      "frame": {
+        "x": 546,
+        "y": 846,
+        "w": 17,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 21,
+        "w": 17,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Log_Jungle": {
+      "frame": {
+        "x": 546,
+        "y": 766,
+        "w": 36,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 36,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_5": {
+      "frame": {
+        "x": 569,
+        "y": 846,
+        "w": 19,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 25,
+        "w": 19,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Carrots0": {
+      "frame": {
+        "x": 150,
+        "y": 299,
+        "w": 36,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 17,
+        "w": 36,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block0": {
+      "frame": {
+        "x": 578,
+        "y": 801,
+        "w": 36,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 33,
+        "w": 36,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat3": {
+      "frame": {
+        "x": 594,
+        "y": 862,
+        "w": 36,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 37,
+        "w": 36,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_Vertical": {
+      "frame": {
+        "x": 578,
+        "y": 836,
+        "w": 36,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 36,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_Warm_0": {
+      "frame": {
+        "x": 636,
+        "y": 846,
+        "w": 25,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 27,
+        "w": 25,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sand_Deep": {
+      "frame": {
+        "x": 367,
+        "y": 888,
+        "w": 7,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 22,
+        "w": 7,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaPickle_Sand": {
+      "frame": {
+        "x": 620,
+        "y": 801,
+        "w": 16,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 36,
+        "y": 32,
+        "w": 16,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 82
+      },
+      "trimmed": true
+    },
+    "Wool_Black": {
+      "frame": {
+        "x": 620,
+        "y": 766,
+        "w": 35,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 33,
+        "w": 35,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaPickleDead_Sand": {
+      "frame": {
+        "x": 642,
+        "y": 801,
+        "w": 33,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 40,
+        "w": 33,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 82
+      },
+      "trimmed": true
+    },
+    "Water_Warm_2": {
+      "frame": {
+        "x": 681,
+        "y": 729,
+        "w": 35,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 6,
+        "w": 35,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes0": {
+      "frame": {
+        "x": 681,
+        "y": 766,
+        "w": 35,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 14,
+        "y": 16,
+        "w": 35,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "dead_bush": {
+      "frame": {
+        "x": 588,
+        "y": 744,
+        "w": 24,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 16,
+        "w": 24,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block3": {
+      "frame": {
+        "x": 636,
+        "y": 888,
+        "w": 35,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 2,
+        "w": 35,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Flower_Oxeeye": {
+      "frame": {
+        "x": 692,
+        "y": 394,
+        "w": 11,
+        "h": 35
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 43,
+        "y": 0,
+        "w": 11,
+        "h": 35
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Seagrass_Sand1": {
+      "frame": {
+        "x": 1012,
+        "y": 674,
+        "w": 5,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 5,
+        "w": 5,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Lime": {
+      "frame": {
+        "x": 633,
+        "y": 729,
+        "w": 34,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 33,
+        "w": 34,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coal_Ore": {
+      "frame": {
+        "x": 667,
+        "y": 846,
+        "w": 34,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 34,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep5": {
+      "frame": {
+        "x": 707,
+        "y": 862,
+        "w": 34,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 39,
+        "w": 34,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Red": {
+      "frame": {
+        "x": 747,
+        "y": 862,
+        "w": 34,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 34,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sea_Lantern2": {
+      "frame": {
+        "x": 681,
+        "y": 803,
+        "w": 17,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 2,
+        "w": 17,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sea_Lantern1": {
+      "frame": {
+        "x": 704,
+        "y": 803,
+        "w": 17,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 17,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sea_Lantern3": {
+      "frame": {
+        "x": 787,
+        "y": 846,
+        "w": 23,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 23,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Planks_Oak": {
+      "frame": {
+        "x": 542,
+        "y": 405,
+        "w": 4,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 14,
+        "w": 4,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sea_Lantern0": {
+      "frame": {
+        "x": 816,
+        "y": 846,
+        "w": 29,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 2,
+        "w": 29,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak": {
+      "frame": {
+        "x": 727,
+        "y": 801,
+        "w": 16,
+        "h": 33
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 29,
+        "w": 16,
+        "h": 33
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "SeaPickle": {
+      "frame": {
+        "x": 834,
+        "y": 801,
+        "w": 8,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 39,
+        "w": 8,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 82
+      },
+      "trimmed": true
+    },
+    "Gold_Ore": {
+      "frame": {
+        "x": 749,
+        "y": 766,
+        "w": 11,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 2,
+        "w": 11,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Leaves_Jungle": {
+      "frame": {
+        "x": 749,
+        "y": 804,
+        "w": 24,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 30,
+        "w": 24,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "nether_brick": {
+      "frame": {
+        "x": 539,
+        "y": 749,
+        "w": 32,
+        "h": 7
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 32,
+        "h": 7
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Blue_Sand": {
+      "frame": {
+        "x": 899,
+        "y": 825,
+        "w": 13,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 10,
+        "y": 4,
+        "w": 13,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Flower_Dandelion": {
+      "frame": {
+        "x": 853,
+        "y": 862,
+        "w": 32,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 12,
+        "w": 32,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sandstone": {
+      "frame": {
+        "x": 661,
+        "y": 764,
+        "w": 14,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 14,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Blue": {
+      "frame": {
+        "x": 380,
+        "y": 894,
+        "w": 28,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 31,
+        "w": 28,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Gray": {
+      "frame": {
+        "x": 779,
+        "y": 801,
+        "w": 22,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 31,
+        "w": 22,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Sand": {
+      "frame": {
+        "x": 891,
+        "y": 863,
+        "w": 23,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 2,
+        "w": 23,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_Warm_3": {
+      "frame": {
+        "x": 414,
+        "y": 894,
+        "w": 5,
+        "h": 31
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 6,
+        "w": 5,
+        "h": 31
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_3": {
+      "frame": {
+        "x": 853,
+        "y": 899,
+        "w": 30,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 16,
+        "y": 30,
+        "w": 30,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Green": {
+      "frame": {
+        "x": 546,
+        "y": 888,
+        "w": 6,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 33,
+        "w": 6,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Wool_Orange": {
+      "frame": {
+        "x": 722,
+        "y": 766,
+        "w": 6,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 33,
+        "w": 6,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Log_Birch": {
+      "frame": {
+        "x": 734,
+        "y": 766,
+        "w": 4,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 2,
+        "w": 4,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Dirt": {
+      "frame": {
+        "x": 425,
+        "y": 902,
+        "w": 8,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 2,
+        "w": 8,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Green": {
+      "frame": {
+        "x": 810,
+        "y": 927,
+        "w": 20,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 20,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_BottomLeft": {
+      "frame": {
+        "x": 439,
+        "y": 923,
+        "w": 29,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 22,
+        "w": 29,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat2": {
+      "frame": {
+        "x": 836,
+        "y": 927,
+        "w": 4,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 33,
+        "w": 4,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Granite": {
+      "frame": {
+        "x": 727,
+        "y": 842,
+        "w": 29,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 48,
+        "w": 29,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Log_Oak": {
+      "frame": {
+        "x": 836,
+        "y": 962,
+        "w": 4,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 33,
+        "w": 4,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine4": {
+      "frame": {
+        "x": 809,
+        "y": 962,
+        "w": 13,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 33,
+        "w": 13,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Ice_Blue": {
+      "frame": {
+        "x": 472,
+        "y": 891,
+        "w": 28,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 2,
+        "w": 28,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine3": {
+      "frame": {
+        "x": 474,
+        "y": 918,
+        "w": 24,
+        "h": 28
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 34,
+        "w": 24,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine5": {
+      "frame": {
+        "x": 504,
+        "y": 923,
+        "w": 28,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 37,
+        "w": 28,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_Horizontal": {
+      "frame": {
+        "x": 809,
+        "y": 997,
+        "w": 28,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 24,
+        "y": 42,
+        "w": 28,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep1": {
+      "frame": {
+        "x": 846,
+        "y": 962,
+        "w": 10,
+        "h": 28
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 42,
+        "y": 36,
+        "w": 10,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_UnpoweredHorizontal": {
+      "frame": {
+        "x": 843,
+        "y": 997,
+        "w": 27,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 25,
+        "y": 42,
+        "w": 27,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay": {
+      "frame": {
+        "x": 189,
+        "y": 803,
+        "w": 27,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 27,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Emerald_Ore": {
+      "frame": {
+        "x": 506,
+        "y": 891,
+        "w": 27,
+        "h": 23
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 2,
+        "w": 27,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpStem1": {
+      "frame": {
+        "x": 787,
+        "y": 885,
+        "w": 26,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 1,
+        "w": 26,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_4": {
+      "frame": {
+        "x": 695,
+        "y": 1015,
+        "w": 26,
+        "h": 2
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 58,
+        "w": 26,
+        "h": 2
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Gray": {
+      "frame": {
+        "x": 538,
+        "y": 923,
+        "w": 12,
+        "h": 26
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 41,
+        "y": 36,
+        "w": 12,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Ice_Packed": {
+      "frame": {
+        "x": 846,
+        "y": 934,
+        "w": 26,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 26,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_TopLeft_off": {
+      "frame": {
+        "x": 588,
+        "y": 785,
+        "w": 25,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 52,
+        "w": 25,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep2": {
+      "frame": {
+        "x": 862,
+        "y": 961,
+        "w": 6,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 46,
+        "y": 39,
+        "w": 6,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Water_Warm_5": {
+      "frame": {
+        "x": 874,
+        "y": 961,
+        "w": 23,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 30,
+        "y": 39,
+        "w": 23,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bricks": {
+      "frame": {
+        "x": 222,
+        "y": 802,
+        "w": 25,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 2,
+        "w": 25,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Diamond_Ore": {
+      "frame": {
+        "x": 876,
+        "y": 992,
+        "w": 6,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 37,
+        "w": 6,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "cactus": {
+      "frame": {
+        "x": 888,
+        "y": 992,
+        "w": 17,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 37,
+        "w": 17,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit07": {
+      "frame": {
+        "x": 253,
+        "y": 802,
+        "w": 25,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 47,
+        "w": 25,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine_Dark": {
+      "frame": {
+        "x": 903,
+        "y": 956,
+        "w": 18,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 34,
+        "y": 37,
+        "w": 18,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine_Bricks": {
+      "frame": {
+        "x": 911,
+        "y": 987,
+        "w": 14,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 37,
+        "w": 14,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Plant_Yellow": {
+      "frame": {
+        "x": 439,
+        "y": 902,
+        "w": 23,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 29,
+        "y": 42,
+        "w": 23,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit05": {
+      "frame": {
+        "x": 473,
+        "y": 816,
+        "w": 23,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 49,
+        "w": 23,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_right_off": {
+      "frame": {
+        "x": 927,
+        "y": 956,
+        "w": 23,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 23,
+        "y": 41,
+        "w": 23,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column4": {
+      "frame": {
+        "x": 558,
+        "y": 888,
+        "w": 21,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 7,
+        "w": 21,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit06": {
+      "frame": {
+        "x": 878,
+        "y": 934,
+        "w": 21,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 48,
+        "w": 21,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Coral_Fan_Red_Left": {
+      "frame": {
+        "x": 889,
+        "y": 900,
+        "w": 14,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 36,
+        "w": 14,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_PoweredHorizontal": {
+      "frame": {
+        "x": 780,
+        "y": 589,
+        "w": 12,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 42,
+        "w": 12,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Glass_Silver": {
+      "frame": {
+        "x": 798,
+        "y": 589,
+        "w": 1,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 1,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Leaves_Birch": {
+      "frame": {
+        "x": 805,
+        "y": 589,
+        "w": 19,
+        "h": 20
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 17,
+        "y": 29,
+        "w": 19,
+        "h": 20
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit04": {
+      "frame": {
+        "x": 849,
+        "y": 379,
+        "w": 19,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 35,
+        "y": 48,
+        "w": 19,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Potatoes1": {
+      "frame": {
+        "x": 727,
+        "y": 1015,
+        "w": 19,
+        "h": 2
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 37,
+        "y": 7,
+        "w": 19,
+        "h": 2
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_cross_left_off": {
+      "frame": {
+        "x": 543,
+        "y": 444,
+        "w": 3,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 44,
+        "w": 3,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit10": {
+      "frame": {
+        "x": 367,
+        "y": 931,
+        "w": 15,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 39,
+        "y": 46,
+        "w": 15,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpCap_3": {
+      "frame": {
+        "x": 119,
+        "y": 809,
+        "w": 17,
+        "h": 9
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 28,
+        "y": 43,
+        "w": 17,
+        "h": 9
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_0": {
+      "frame": {
+        "x": 284,
+        "y": 802,
+        "w": 17,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 44,
+        "w": 17,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Conduit02": {
+      "frame": {
+        "x": 307,
+        "y": 802,
+        "w": 1,
+        "h": 17
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 22,
+        "w": 1,
+        "h": 17
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_1": {
+      "frame": {
+        "x": 314,
+        "y": 802,
+        "w": 17,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 45,
+        "w": 17,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Prismarine1": {
+      "frame": {
+        "x": 828,
+        "y": 962,
+        "w": 2,
+        "h": 16
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 46,
+        "w": 2,
+        "h": 16
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_corner_TopLeft": {
+      "frame": {
+        "x": 752,
+        "y": 1006,
+        "w": 15,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 38,
+        "y": 52,
+        "w": 15,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "KelpSingle_5": {
+      "frame": {
+        "x": 1014,
+        "y": 298,
+        "w": 3,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 15,
+        "w": 3,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Orange": {
+      "frame": {
+        "x": 889,
+        "y": 927,
+        "w": 12,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 12,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "glowstone": {
+      "frame": {
+        "x": 819,
+        "y": 885,
+        "w": 12,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 13,
+        "y": 2,
+        "w": 12,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Flower_Rose": {
+      "frame": {
+        "x": 727,
+        "y": 1006,
+        "w": 12,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 15,
+        "y": 4,
+        "w": 12,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "redstone_dust_line_v_off": {
+      "frame": {
+        "x": 577,
+        "y": 744,
+        "w": 5,
+        "h": 10
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 52,
+        "w": 5,
+        "h": 10
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "piston_left": {
+      "frame": {
+        "x": 337,
+        "y": 802,
+        "w": 10,
+        "h": 2
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 33,
+        "y": 2,
+        "w": 10,
+        "h": 2
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block5": {
+      "frame": {
+        "x": 779,
+        "y": 838,
+        "w": 10,
+        "h": 2
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 26,
+        "y": 2,
+        "w": 10,
+        "h": 2
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Hardened_Clay_Lime": {
+      "frame": {
+        "x": 834,
+        "y": 839,
+        "w": 8,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 2,
+        "w": 8,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Block4": {
+      "frame": {
+        "x": 80,
+        "y": 242,
+        "w": 7,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 7,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat1": {
+      "frame": {
+        "x": 93,
+        "y": 242,
+        "w": 7,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 12,
+        "y": 2,
+        "w": 7,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "piston_right": {
+      "frame": {
+        "x": 837,
+        "y": 885,
+        "w": 6,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 47,
+        "y": 2,
+        "w": 6,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep4": {
+      "frame": {
+        "x": 1014,
+        "y": 319,
+        "w": 3,
+        "h": 6
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 20,
+        "w": 3,
+        "h": 6
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Rails_UnpoweredVertical": {
+      "frame": {
+        "x": 473,
+        "y": 837,
+        "w": 4,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 22,
+        "w": 4,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Bubble_Column5": {
+      "frame": {
+        "x": 483,
+        "y": 837,
+        "w": 4,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 15,
+        "w": 4,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Boat0": {
+      "frame": {
+        "x": 1014,
+        "y": 331,
+        "w": 3,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 2,
+        "w": 3,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "Magma_Bubble_Deep0": {
+      "frame": {
+        "x": 1014,
+        "y": 338,
+        "w": 3,
+        "h": 3
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 20,
+        "w": 3,
+        "h": 3
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 64
+      },
+      "trimmed": true
+    },
+    "NetherPortal5": {
+      "frame": {
+        "x": 745,
+        "y": 1006,
+        "w": 1,
+        "h": 1
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 159,
+        "y": 137,
+        "w": 1,
+        "h": 1
+      },
+      "sourceSize": {
+        "w": 160,
+        "h": 140
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Blocks_new_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 1024
+    },
+    "scale": 1
+  }
+}

@@ -1,0 +1,973 @@
+{
+  "frames": {
+    "MiningParticles24": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 200,
+        "h": 200
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles36": {
+      "frame": {
+        "x": 3,
+        "y": 209,
+        "w": 200,
+        "h": 200
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles12": {
+      "frame": {
+        "x": 209,
+        "y": 209,
+        "w": 200,
+        "h": 200
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles0": {
+      "frame": {
+        "x": 209,
+        "y": 3,
+        "w": 200,
+        "h": 200
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 200,
+        "h": 200
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles47": {
+      "frame": {
+        "x": 209,
+        "y": 415,
+        "w": 95,
+        "h": 75
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 18,
+        "w": 95,
+        "h": 75
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles46": {
+      "frame": {
+        "x": 310,
+        "y": 415,
+        "w": 86,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 49,
+        "y": 20,
+        "w": 86,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles22": {
+      "frame": {
+        "x": 402,
+        "y": 415,
+        "w": 86,
+        "h": 70
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 48,
+        "y": 130,
+        "w": 86,
+        "h": 70
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles21": {
+      "frame": {
+        "x": 3,
+        "y": 415,
+        "w": 83,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 126,
+        "w": 83,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles45": {
+      "frame": {
+        "x": 92,
+        "y": 415,
+        "w": 82,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 53,
+        "y": 23,
+        "w": 82,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles23": {
+      "frame": {
+        "x": 415,
+        "y": 3,
+        "w": 79,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 44,
+        "y": 135,
+        "w": 79,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles7": {
+      "frame": {
+        "x": 415,
+        "y": 74,
+        "w": 79,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 90,
+        "w": 79,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles32": {
+      "frame": {
+        "x": 415,
+        "y": 129,
+        "w": 75,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 90,
+        "w": 75,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles34": {
+      "frame": {
+        "x": 415,
+        "y": 194,
+        "w": 75,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 123,
+        "y": 90,
+        "w": 75,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles20": {
+      "frame": {
+        "x": 415,
+        "y": 255,
+        "w": 73,
+        "h": 73
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 122,
+        "w": 73,
+        "h": 73
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles9": {
+      "frame": {
+        "x": 415,
+        "y": 334,
+        "w": 73,
+        "h": 69
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 90,
+        "w": 73,
+        "h": 69
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles44": {
+      "frame": {
+        "x": 494,
+        "y": 334,
+        "w": 73,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 27,
+        "w": 73,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles6": {
+      "frame": {
+        "x": 494,
+        "y": 255,
+        "w": 72,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 90,
+        "w": 72,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles10": {
+      "frame": {
+        "x": 494,
+        "y": 400,
+        "w": 71,
+        "h": 55
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 1,
+        "y": 90,
+        "w": 71,
+        "h": 55
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles8": {
+      "frame": {
+        "x": 571,
+        "y": 400,
+        "w": 69,
+        "h": 59
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 9,
+        "y": 90,
+        "w": 69,
+        "h": 59
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles33": {
+      "frame": {
+        "x": 496,
+        "y": 129,
+        "w": 65,
+        "h": 67
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 92,
+        "w": 65,
+        "h": 67
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles11": {
+      "frame": {
+        "x": 500,
+        "y": 3,
+        "w": 51,
+        "h": 65
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 18,
+        "y": 89,
+        "w": 51,
+        "h": 65
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles31": {
+      "frame": {
+        "x": 557,
+        "y": 3,
+        "w": 64,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 89,
+        "w": 64,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles43": {
+      "frame": {
+        "x": 500,
+        "y": 74,
+        "w": 63,
+        "h": 48
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 32,
+        "w": 63,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles19": {
+      "frame": {
+        "x": 567,
+        "y": 128,
+        "w": 63,
+        "h": 60
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 63,
+        "y": 120,
+        "w": 63,
+        "h": 60
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles5": {
+      "frame": {
+        "x": 494,
+        "y": 465,
+        "w": 60,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 20,
+        "y": 90,
+        "w": 60,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles35": {
+      "frame": {
+        "x": 567,
+        "y": 194,
+        "w": 56,
+        "h": 49
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 125,
+        "y": 89,
+        "w": 56,
+        "h": 49
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles42": {
+      "frame": {
+        "x": 496,
+        "y": 202,
+        "w": 54,
+        "h": 43
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 37,
+        "w": 54,
+        "h": 43
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles18": {
+      "frame": {
+        "x": 569,
+        "y": 59,
+        "w": 54,
+        "h": 50
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 120,
+        "w": 54,
+        "h": 50
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles30": {
+      "frame": {
+        "x": 560,
+        "y": 465,
+        "w": 52,
+        "h": 40
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 90,
+        "w": 52,
+        "h": 40
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles4": {
+      "frame": {
+        "x": 494,
+        "y": 301,
+        "w": 48,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 91,
+        "w": 48,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles41": {
+      "frame": {
+        "x": 618,
+        "y": 465,
+        "w": 45,
+        "h": 36
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 44,
+        "w": 45,
+        "h": 36
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles17": {
+      "frame": {
+        "x": 627,
+        "y": 3,
+        "w": 45,
+        "h": 34
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 73,
+        "y": 122,
+        "w": 45,
+        "h": 34
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles29": {
+      "frame": {
+        "x": 629,
+        "y": 43,
+        "w": 40,
+        "h": 32
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 90,
+        "w": 40,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles16": {
+      "frame": {
+        "x": 3,
+        "y": 481,
+        "w": 35,
+        "h": 22
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 79,
+        "y": 121,
+        "w": 35,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles3": {
+      "frame": {
+        "x": 44,
+        "y": 486,
+        "w": 35,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 45,
+        "y": 92,
+        "w": 35,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles40": {
+      "frame": {
+        "x": 629,
+        "y": 81,
+        "w": 34,
+        "h": 29
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 79,
+        "y": 51,
+        "w": 34,
+        "h": 29
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles28": {
+      "frame": {
+        "x": 548,
+        "y": 301,
+        "w": 29,
+        "h": 25
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 121,
+        "y": 91,
+        "w": 29,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles39": {
+      "frame": {
+        "x": 572,
+        "y": 249,
+        "w": 25,
+        "h": 21
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 84,
+        "y": 58,
+        "w": 25,
+        "h": 21
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles15": {
+      "frame": {
+        "x": 573,
+        "y": 332,
+        "w": 25,
+        "h": 23
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 84,
+        "y": 120,
+        "w": 25,
+        "h": 23
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles2": {
+      "frame": {
+        "x": 310,
+        "y": 491,
+        "w": 24,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 56,
+        "y": 95,
+        "w": 24,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles27": {
+      "frame": {
+        "x": 572,
+        "y": 276,
+        "w": 20,
+        "h": 18
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 92,
+        "w": 20,
+        "h": 18
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles14": {
+      "frame": {
+        "x": 85,
+        "y": 486,
+        "w": 16,
+        "h": 15
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 89,
+        "y": 120,
+        "w": 16,
+        "h": 15
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles38": {
+      "frame": {
+        "x": 340,
+        "y": 491,
+        "w": 14,
+        "h": 13
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 89,
+        "y": 67,
+        "w": 14,
+        "h": 13
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles26": {
+      "frame": {
+        "x": 360,
+        "y": 491,
+        "w": 14,
+        "h": 14
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 95,
+        "w": 14,
+        "h": 14
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles1": {
+      "frame": {
+        "x": 380,
+        "y": 491,
+        "w": 12,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 68,
+        "y": 97,
+        "w": 12,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles13": {
+      "frame": {
+        "x": 107,
+        "y": 496,
+        "w": 11,
+        "h": 8
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 93,
+        "y": 120,
+        "w": 11,
+        "h": 8
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles25": {
+      "frame": {
+        "x": 398,
+        "y": 491,
+        "w": 7,
+        "h": 11
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 120,
+        "y": 97,
+        "w": 7,
+        "h": 11
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    },
+    "MiningParticles37": {
+      "frame": {
+        "x": 107,
+        "y": 486,
+        "w": 8,
+        "h": 4
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 93,
+        "y": 76,
+        "w": 8,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 200,
+        "h": 200
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/MiningParticles_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1024,
+      "h": 512
+    },
+    "scale": 1
+  }
+}

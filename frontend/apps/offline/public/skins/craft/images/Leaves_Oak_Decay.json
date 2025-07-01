@@ -1,0 +1,153 @@
+{
+  "frames": {
+    "Leaves_Oak0": {
+      "frame": {
+        "x": 3,
+        "y": 3,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak4": {
+      "frame": {
+        "x": 164,
+        "y": 3,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak2": {
+      "frame": {
+        "x": 325,
+        "y": 3,
+        "w": 155,
+        "h": 138
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 72,
+        "w": 155,
+        "h": 138
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak5": {
+      "frame": {
+        "x": 164,
+        "y": 139,
+        "w": 155,
+        "h": 130
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 80,
+        "w": 155,
+        "h": 130
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak3": {
+      "frame": {
+        "x": 3,
+        "y": 159,
+        "w": 155,
+        "h": 138
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 57,
+        "y": 72,
+        "w": 155,
+        "h": 138
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak1": {
+      "frame": {
+        "x": 325,
+        "y": 147,
+        "w": 155,
+        "h": 150
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 58,
+        "y": 60,
+        "w": 155,
+        "h": 150
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    },
+    "Leaves_Oak6": {
+      "frame": {
+        "x": 164,
+        "y": 275,
+        "w": 114,
+        "h": 89
+      },
+      "rotated": false,
+      "spriteSourceSize": {
+        "x": 95,
+        "y": 120,
+        "w": 114,
+        "h": 89
+      },
+      "sourceSize": {
+        "w": 240,
+        "h": 240
+      },
+      "trimmed": true
+    }
+  },
+  "meta": {
+    "image": "raw/Leaves_Oak_Decay_raw.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 512,
+      "h": 512
+    },
+    "scale": 1
+  }
+}
