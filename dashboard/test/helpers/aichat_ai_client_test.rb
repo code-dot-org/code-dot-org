@@ -1,3 +1,6 @@
+require 'test_helper'
+require 'webmock/minitest'
+
 class AichatAiClientTest < ActionView::TestCase
   setup do
     @stored_messages = [

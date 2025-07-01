@@ -1,3 +1,5 @@
+require_relative './aichat_ai_client_test'
+
 class AichatGeminiClientTest < AichatAiClientTest
   let(:internal_model_id) {'gemini-2.0-flash'}
   let(:endpoint_model_id) {internal_model_id}

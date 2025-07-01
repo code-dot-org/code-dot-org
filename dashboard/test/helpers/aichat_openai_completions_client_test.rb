@@ -1,3 +1,5 @@
+require_relative './aichat_ai_client_test'
+
 class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   let(:internal_model_id) {'gpt-4o-mini'}
   let(:endpoint_model_id) {'gpt-4o-mini-2024-07-18'}
