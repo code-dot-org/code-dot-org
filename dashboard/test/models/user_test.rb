@@ -3193,18 +3193,6 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
-  # test "section_scripts returns assigned scripts and default scripts in assigned courses" do
-  #   student = create :student
-  #   single_script = create :script
-  #   (create :section, script: single_script).students << student
-  #   unit_group_unit = create :script
-  #   course_with_script = create :unit_group
-  #   create :unit_group_unit, unit_group: course_with_script, script: unit_group_unit, position: 1
-  #   (create :section, unit_group: course_with_script).students << student
-
-  #   assert_equal [single_script, unit_group_unit], student.section_scripts
-  # end
-
   test 'from_omniauth: creates new user if user with matching credentials does not exist' do
     auth = OmniAuth::AuthHash.new(
       provider: 'google_oauth2',
