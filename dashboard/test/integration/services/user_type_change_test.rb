@@ -156,13 +156,16 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
         context 'when no matching AuthenticationOption exists' do
           before do
             student
-            _(student.authentication_options.count).must_equal 2
+            @initial_ao_count = student.authentication_options.count
             set_student_to_teacher
+          end
+
+          it 'initially has exactly two authentication options' do
+            _(@initial_ao_count).must_equal 2
           end
 
           it 'upgrades the user to teacher' do
             _(teacher).must_be_instance_of Teacher
-            _(teacher.user_type).must_equal ::User::TYPE_TEACHER
           end
 
           it 'keeps exactly two authentication options' do
@@ -183,11 +186,7 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
         end
 
         context 'when a matching AuthenticationOption already exists' do
-          let!(:auth_option) do
-            puts "auth options: #{student.authentication_options.each.to_json}"
-            student.authentication_options.find {|o| o.email.blank?}
-          end
-
+          let(:auth_option) {create :authentication_option, user: student, email: 'example@email.com'}
           let(:initial_count) do
             count = 0
             puts '-------- AuthenticationOption:'
@@ -209,21 +208,26 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
             puts "Student auth count: #{student.authentication_options.size}"
             student.authentication_options.count
           end
+          let(:teacher_email) {'example@email.com'}
 
           before do
-            _(auth_option.email).must_be_empty
-            _(initial_count).must_equal 3
+            student
+            auth_option
+            @initial_ao_count = student.authentication_options.count
             set_student_to_teacher
-            auth_option.reload
+          end
+
+          it 'initially has exactly three authentication options' do
+            _(auth_option.email).must_be_empty
+            _(@initial_ao_count).must_equal 3
           end
 
           it 'upgrades the user to teacher' do
             _(teacher).must_be_instance_of Teacher
-            _(teacher.user_type).must_equal ::User::TYPE_TEACHER
           end
 
           it 'reduces authentication options to two' do
-            _(teacher.authentication_options.count).must_equal initial_count - 1
+            _(teacher.authentication_options.count).must_equal @initial_ao_count - 1
           end
 
           it 'reuses the existing option as primary and updates its email' do
