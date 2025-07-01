@@ -31,9 +31,16 @@ class AichatAiClientTest < ActionView::TestCase
     @level_with_level_system_prompt = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
     @level_without_level_system_prompt = Level.create({name: 'Aichat level without level system prompt', properties: {aichat_settings: {}}})
 
-    @image_uri = "data:image/png;base64,12345"
-    @pdf_uri = "data:application/pdf;base64,12345"
+    @image_mime_type = "image/png"
+    @image_data = "12345"
+    @image_uri = "data:#{@image_mime_type};base64,#{@image_data}"
+
+    @pdf_mime_type = "application/pdf"
+    @pdf_data = "45678"
+    @pdf_uri = "data:#{@pdf_mime_type};base64,#{@pdf_data}"
+
     AichatAssetHelper.stubs(:get_asset_data_uri).returns(@image_uri, @pdf_uri)
+    AichatAssetHelper.stubs(:get_asset_base64_string).returns(@image_data, @pdf_data)
   end
 
   private def call_get_response_text(model_id, level, new_message)

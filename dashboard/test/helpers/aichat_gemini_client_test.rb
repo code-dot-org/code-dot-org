@@ -85,6 +85,55 @@ class AichatGeminiClientTest < AichatAiClientTest
       ]
     end
 
+    let(:contents_without_level_system_prompt) do
+      [
+        {role: 'user', parts: [{text: 'hello from user'}]},
+        {role: 'model', parts: [{text: 'assistant response'}]},
+        {role: 'user', parts: [{text: 'new message from user'}]}
+      ]
+    end
+
+    let(:contents_with_hidden_context_and_level_system_prompt) do
+      [
+        {role: 'user', parts: [{text: 'hello from user'}]},
+        {role: 'model', parts: [{text: 'assistant response'}]},
+        {role: 'user', parts: [{text: "new message from user\nextra text"}]}
+      ]
+    end
+
+    let(:contents_with_assets_and_without_level_system_prompt) do
+      [
+        {role: 'user', parts: [{text: 'hello from user'}]},
+        {role: 'model', parts: [{text: 'assistant response'}]},
+        {
+          role: 'user',
+          parts: [
+            {text: 'message with assets'},
+            {inline_data: {mime_type: @image_mime_type, data: @image_data}},
+            {inline_data: {mime_type: @pdf_mime_type, data: @pdf_data}}
+          ]
+        }
+      ]
+    end
+
+    let(:system_instruction_without_level_system_prompt) do
+      {
+        parts: [{text: "test prompt test retrieval"}]
+      }
+    end
+
+    let(:system_instruction_with_hidden_context_and_level_system_prompt) do
+      {
+        parts: [{text: "Be safe. test prompt test retrieval"}]
+      }
+    end
+
+    let(:system_instruction_with_assets_and_without_level_system_prompt) do
+      {
+        parts: [{text: "test prompt test retrieval"}]
+      }
+    end
+
     context 'with level system prompt' do
       let(:level) {@level_with_level_system_prompt}
 
@@ -117,10 +166,66 @@ class AichatGeminiClientTest < AichatAiClientTest
           assert_equal subject, @response_text
         end
       end
+
+      context 'when body is well formed with hidden context and request succeeds' do
+        let(:new_message) {@new_message_with_hidden_context}
+        let(:level) {@level_with_level_system_prompt}
+
+        let(:request_body) do
+          request_body_without_contents.merge(
+            {
+              contents: contents_with_hidden_context_and_level_system_prompt,
+              system_instruction: system_instruction_with_hidden_context_and_level_system_prompt
+            }.deep_stringify_keys
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
+      end
     end
 
     context 'without level system prompt' do
       let(:level) {@level_without_level_system_prompt}
+
+      context 'when body is well formed and request succeeds' do
+        let(:new_message) {@new_message}
+        let(:request_body) do
+          request_body_without_contents.merge(
+            {
+              contents: contents_without_level_system_prompt,
+              system_instruction: system_instruction_without_level_system_prompt
+            }
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
+      end
+
+      context 'when body is well formed and with assets and request succeeds' do
+        let(:new_message) {@new_message_with_assets}
+        let(:request_body) do
+          request_body_without_contents.merge(
+            {
+              contents: contents_with_assets_and_without_level_system_prompt,
+              system_instruction: system_instruction_with_assets_and_without_level_system_prompt
+            }.deep_stringify_keys
+          )
+        end
+
+        let(:stubbed_response_body) {stubbed_success_response_body}
+        it 'successfully makes request and is returned the correct response' do
+          # Check that we're returned the correct response.
+          assert_equal subject, @response_text
+        end
+      end
     end
   end
 end
