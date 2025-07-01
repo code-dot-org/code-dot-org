@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::TestCase
-  freeze_time
-
   EXPECTED_COMMON_FIELDS = %w(
     teacher_first_name
     teacher_last_name
@@ -26,6 +24,11 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
   ).freeze
 
   self.use_transactional_test_case = true
+
+  setup_all do
+    travel_to Time.zone.parse('2025-01-15 12:00:00')
+  end
+
   setup do
     @workshop_admin = create :workshop_admin
     @organizer = create :workshop_organizer
@@ -208,7 +211,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     assert_equal EXPECTED_COMMON_FIELDS.count, response.first.count
 
     # Check that column 11 in the header row is workshop id
-    puts response.first.to_json
     assert_equal 'Workshop Id', response.first[11]
 
     # Check expected row counts for our test workshops
