@@ -16,14 +16,18 @@ import {
   Background,
   type Edge,
   type OnConnect,
+  ReactFlowProvider,
+  useReactFlow,
 } from '@xyflow/react';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, DragEvent, useRef} from 'react';
 
 import '@xyflow/react/dist/style.css';
 
 import AskChat from './AskChat';
+import {DnDProvider, useDnD} from './DnDContext';
 import {type MyNode} from './initialElements';
 import ResultNode from './ResultNode';
+import Sidebar from './Sidebar';
 import TextNode from './TextNode';
 import UppercaseNode from './UppercaseNode';
 import WebNode from './WebNode';
@@ -157,29 +161,135 @@ const initEdges: Edge[] = [
   },
 ];
 
+let id = 0;
+const getId = () => `dndnode_${id++}`;
+
 const GraphLab: React.FunctionComponent = () => {
-  const [nodes, , onNodesChange] = useNodesState(initNodes);
+  const [nodes, setNodes, onNodesChange] = useNodesState(initNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initEdges);
+  const reactFlowWrapper = useRef(null);
+  const {screenToFlowPosition} = useReactFlow();
+  const [type] = useDnD();
 
   const onConnect: OnConnect = useCallback(
     connection => setEdges(eds => addEdge(connection, eds)),
     [setEdges]
   );
 
+  const onDragOver = useCallback((event: DragEvent) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'move';
+  }, []);
+
+  const onDrop = useCallback(
+    (event: DragEvent) => {
+      event.preventDefault();
+
+      // check if the dropped element is valid
+      if (!type) {
+        return;
+      }
+
+      // project was renamed to screenToFlowPosition
+      // and you don't need to subtract the reactFlowBounds.left/top anymore
+      // details: https://reactflow.dev/whats-new/2023-11-10
+      const position = screenToFlowPosition({
+        x: event.clientX,
+        y: event.clientY,
+      });
+      let newNode: MyNode;
+      switch (type) {
+        case 'text':
+          newNode = {
+            id: getId(),
+            type: 'text',
+            position,
+            data: {text: 'hi'},
+          };
+          break;
+        case 'result':
+          newNode = {
+            id: getId(),
+            type: 'result',
+            position,
+            data: {},
+          };
+          break;
+        case 'uppercase':
+          newNode = {
+            id: getId(),
+            type: 'uppercase',
+            position,
+            data: {text: 'hi'},
+          };
+          break;
+        case 'askchat':
+          newNode = {
+            id: getId(),
+            type: 'askchat',
+            position,
+            data: {text: 'hi'},
+          };
+          break;
+        case 'web':
+          newNode = {
+            id: getId(),
+            type: 'web',
+            position,
+            data: {text: 'hi'},
+          };
+          break;
+        default:
+          // fallback for unknown types
+          newNode = {
+            id: getId(),
+            type: 'text',
+            position,
+            data: {text: 'hi'},
+          };
+      }
+
+      setNodes(nds => nds.concat(newNode));
+    },
+    [screenToFlowPosition, setNodes, type]
+  );
+
+  /*
+  const onDragStart = (event: DragEvent, nodeType: string) => {
+    setType(nodeType);
+    event.dataTransfer.setData('text/plain', nodeType);
+    event.dataTransfer.effectAllowed = 'move';
+  };
+  */
+
   return (
-    <ReactFlow
-      nodes={nodes}
-      edges={edges}
-      onNodesChange={onNodesChange}
-      onEdgesChange={onEdgesChange}
-      onConnect={onConnect}
-      nodeTypes={nodeTypes}
-      fitView
-    >
-      <Controls />
-      <Background />
-    </ReactFlow>
+    <div className="graphlab">
+      <div className="reactflow-wrapper" ref={reactFlowWrapper}>
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          onNodesChange={onNodesChange}
+          onEdgesChange={onEdgesChange}
+          onConnect={onConnect}
+          nodeTypes={nodeTypes}
+          onDrop={onDrop}
+          //onDragStart={onDragStart}
+          onDragOver={onDragOver}
+          fitView
+        >
+          <Controls />
+          <Background />
+        </ReactFlow>
+      </div>
+      <Sidebar />
+    </div>
   );
 };
 
-export default GraphLab;
+export default () => (
+  <ReactFlowProvider>
+    <DnDProvider>
+      <GraphLab />
+    </DnDProvider>
+  </ReactFlowProvider>
+);
