@@ -1,3 +1,6 @@
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
@@ -75,29 +78,36 @@ const ProcessModal = ({useFilesApi}) => {
       <h3>Code Changes</h3>
       {versions.length === 0 && <p>No versions available.</p>}
       {versions.length > 0 && (
-        <ul>
+        <List style={{maxHeight: '400px', overflow: 'auto'}}>
           {versions.map(version => (
-            <li key={version.versionId}>
-              <strong>Version ID:</strong> {version.versionId}{' '}
-              <strong>Last Modified:</strong>{' '}
-              {version.lastModified instanceof Date
-                ? version.lastModified.toLocaleString()
-                : new Date(version.lastModified).toLocaleString()}
-              <br />
-              <strong>Code:</strong>
-              {pending ? (
-                <span>Loading...</span>
-              ) : (
-                <span>{codeByVersion[version.versionId]}</span>
-              )}
-              <br />
-            </li>
+            <ListItem key={version.versionId} alignItems="flex-start">
+              <ListItemText
+                primary={
+                  <>
+                    <strong>Version ID:</strong> {version.versionId}
+                    <br />
+                    <strong>Last Modified:</strong>{' '}
+                    {version.lastModified instanceof Date
+                      ? version.lastModified.toLocaleString()
+                      : new Date(version.lastModified).toLocaleString()}
+                    <br />
+                    <strong>Code:</strong>{' '}
+                    {pending ? (
+                      <span>Loading...</span>
+                    ) : (
+                      <span>{codeByVersion[version.versionId]}</span>
+                    )}
+                  </>
+                }
+              />
+            </ListItem>
           ))}
-        </ul>
+        </List>
       )}
     </div>
   );
 };
+
 ProcessModal.propTypes = {
   useFilesApi: PropTypes.bool.isRequired,
 };
