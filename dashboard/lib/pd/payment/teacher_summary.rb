@@ -1,36 +1,22 @@
 module Pd::Payment
   class TeacherSummary
-    def initialize(
-      workshop_summary:,
-      teacher:,
-      enrollment: nil,
-      raw_days:,
-      raw_hours:,
-      days:,
-      hours:
-    )
-      @workshop_summary = workshop_summary
-      @teacher = teacher
+    TeacherAttendanceTotal = Struct.new(:days, :hours) do
+      def initialize(days = 0, hours = 0)
+        super(days, hours)
+      end
+
+      def add_session(hours)
+        self.days += 1
+        self.hours += hours
+      end
+    end
+
+    def initialize(enrollment:)
+      @teacher = enrollment&.user
       @enrollment = enrollment
-      @raw_days = raw_days
-      @raw_hours = raw_hours
-      @days = days
-      @hours = hours
     end
 
-    attr_reader(
-      :workshop_summary,
-      :teacher, :enrollment,
-      :raw_days, :raw_hours,
-      :days, :hours
-    )
-
-    # @return [TeacherPayment] payment information for this teacher in this workshop
-    attr_accessor :payment
-
-    def qualified?
-      !payment.nil?
-    end
+    attr_reader(:enrollment, :teacher)
 
     def school_district
       enrollment.try(&:school_info).try(&:school_district)
@@ -44,15 +30,29 @@ module Pd::Payment
       enrollment.try(&:school_name)
     end
 
-    delegate :workshop, to: :workshop_summary
+    delegate :workshop, to: :enrollment
 
-    def generate_teacher_progress_report_line_item(with_payment: false)
+    def calculate_teacher_attendance
+      teacher_attendance = TeacherAttendanceTotal.new
+      session_ids = workshop.sessions.pluck(:id)
+      attendances = Pd::Attendance.where(pd_session_id: session_ids, teacher_id: teacher.id)
+
+      attendances.each do |attendance|
+        session = workshop.sessions.find {|s| s.id == attendance.pd_session_id}
+        teacher_attendance.add_session(session.hours) if session
+      end
+
+      teacher_attendance
+    end
+
+    def generate_teacher_summary_line_item
+      attendance = calculate_teacher_attendance
       line_item = {
         teacher_first_name: enrollment.first_name,
         teacher_last_name: enrollment.last_name,
         teacher_id: teacher.try(&:id),
         teacher_email: enrollment.email,
-        plp_name: workshop_summary.plp.try(&:name),
+        plp_name: workshop.regional_partner.try(&:name),
         state: state,
         district_name: school_district.try(&:name),
         district_id: school_district.try(&:id),
@@ -62,27 +62,12 @@ module Pd::Payment
         workshop_id: workshop.id,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         workshop_name: workshop.friendly_name,
-        on_map: workshop.on_map,
-        funded: workshop.funding_summary,
         organizer_name: workshop.organizer.name,
         organizer_email: workshop.organizer.email,
         year: workshop.year,
-        hours: hours,
-        days: days
+        hours: attendance.hours,
+        days: attendance.days,
       }
-
-      if with_payment
-        line_item.merge!(
-          {
-            pay_period: workshop_summary.pay_period,
-            payment_type: payment.try(&:type),
-            payment_rate: payment.try(&:rate),
-            qualified: qualified?,
-            payment_amount: payment.try(&:amount)
-          }
-        )
-      end
-
       line_item
     end
   end

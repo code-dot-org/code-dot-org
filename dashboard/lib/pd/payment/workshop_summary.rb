@@ -8,43 +8,19 @@ module Pd::Payment
     # e.g. attendance_day_1
     REPORT_ATTENDANCE_DAY_COUNT = 5
 
-    def initialize(
-      workshop:,
-      pay_period:,
-      num_days:,
-      num_hours:,
-      min_attendance_days:,
-      calculator_class:,
-      attendance_count_per_session:
-    )
+    def initialize(workshop:)
       @workshop = workshop
-      @pay_period = pay_period
-      @num_days = num_days
-      @num_hours = num_hours
-      @min_attendance_days = min_attendance_days
-      @calculator_class = calculator_class
-      @attendance_count_per_session = attendance_count_per_session
-      @teacher_summaries = []
+      @num_days = workshop.sessions.count
+      @attendance_count_per_session = workshop.sessions.map {|s| s.attendances.count}
     end
 
-    attr_reader :workshop, :pay_period, :num_days, :num_hours, :min_attendance_days
-
-    # @return [Class] calculator class that was used to calculate this payment.
-    attr_reader :calculator_class
+    attr_reader :workshop, :num_days
 
     # @return [Array<Integer>] Number of teachers marked attended for each session.
-    # This does not take into account min attendance or max sessions.
     attr_reader :attendance_count_per_session
 
     # @return [Array<TeacherSummary>] teacher summaries for this workshop.
     attr_accessor :teacher_summaries
-
-    # @return [WorkshopPayment] payment information for this workshop.
-    attr_accessor :payment
-
-    def qualified?
-      !payment.nil?
-    end
 
     def attendance_url
       return nil if workshop.sessions.empty?
@@ -56,20 +32,15 @@ module Pd::Payment
     end
 
     def num_teachers
-      teacher_summaries.count
-    end
-
-    def num_qualified_teachers
-      teacher_summaries.count(&:qualified?)
+      session_ids = workshop.sessions.pluck(:id)
+      Pd::Attendance.where(pd_session_id: session_ids).
+        pluck(:teacher_id).
+        uniq.
+        count
     end
 
     def plp
       workshop.regional_partner
-    end
-
-    # @return [Integer] Total adjusted days attended by all qualified teachers (one per teacher per day).
-    def total_teacher_attendance_days
-      teacher_summaries.select(&:qualified?).sum(&:days)
     end
 
     # Get number of teachers attending all sessions, except for admin and counselor PD where logging in
@@ -78,14 +49,13 @@ module Pd::Payment
       workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count : nil
     end
 
-    def generate_organizer_report_line_item(with_payment: false)
+    def generate_workshop_summary_line_item
       line_item = {
         organizer_name: workshop.organizer&.name,
         organizer_email: workshop.organizer&.email,
         regional_partner_name: workshop.regional_partner.try(:name),
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
-        num_hours: num_hours,
-        funded: workshop.funding_summary,
+        num_hours: workshop.sessions.sum(&:hours),
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
@@ -102,13 +72,12 @@ module Pd::Payment
       line_item.merge!(
         {
           organizer_id: workshop.organizer&.id,
-          on_map: workshop.on_map,
           facilitators: workshop.facilitators.pluck(:name).join(', '),
           workshop_id: workshop.id,
           workshop_name: workshop.friendly_name,
           course: workshop.course,
           subject: workshop.subject,
-          num_qualified_teachers: num_qualified_teachers,
+          num_qualified_teachers: num_teachers,
           days: num_days,
         }
       )
@@ -117,22 +86,6 @@ module Pd::Payment
       (1..REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
         line_item[:"facilitator_name_#{n}"] = workshop.facilitators[n - 1].try(&:name)
         line_item[:"facilitator_email_#{n}"] = workshop.facilitators[n - 1].try(&:email)
-      end
-
-      if with_payment
-        line_item.merge!(
-          {
-            pay_period: pay_period,
-            payment_type: payment.try(&:type),
-            qualified: qualified?,
-            teacher_attendance_days: total_teacher_attendance_days,
-            food_payment: payment.try {|p| p.amounts[:food]},
-            facilitator_payment: payment.try {|p| p.amounts[:facilitator]},
-            staffer_payment: payment.try {|p| p.amounts[:staffer]},
-            venue_payment: payment.try {|p| p.amounts[:venue]},
-            payment_total: payment.try(&:total)
-          }
-        )
       end
 
       line_item
