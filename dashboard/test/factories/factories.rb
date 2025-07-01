@@ -1267,7 +1267,7 @@ FactoryBot.define do
 
   factory :script_level do
     script do |script_level|
-      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script)
+      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script, :in_single_unit_course)
     end
 
     trait :assessment do
@@ -1358,7 +1358,7 @@ FactoryBot.define do
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     has_lesson_plan {false}
     script do |lesson|
-      lesson.lesson_group&.script || create(:script)
+      lesson.lesson_group&.script || create(:script, :in_single_unit_course)
     end
 
     absolute_position do |lesson|
