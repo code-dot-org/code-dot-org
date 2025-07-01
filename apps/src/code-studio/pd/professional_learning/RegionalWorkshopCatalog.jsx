@@ -100,13 +100,16 @@ export default function RegionalWorkshopCatalog({
       setIsSubmitting(true);
       try {
         updateQueryParam('zip', submittedZip, true);
-        const response = await fetch(`regional_workshop_data/${submittedZip}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': await getAuthenticityToken(),
-          },
-        });
+        const response = await fetch(
+          `/professional-learning/regional_workshop_data/${submittedZip}`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': await getAuthenticityToken(),
+            },
+          }
+        );
 
         if (response.ok) {
           const jsonData = await response.json();

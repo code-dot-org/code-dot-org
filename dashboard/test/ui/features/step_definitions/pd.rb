@@ -302,8 +302,8 @@ end
 Given 'I start a self-paced PL course' do
   steps <<~GHERKIN
     Given I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/1"
-    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
-    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    And I wait until element "a[title='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[title='Level 3 Lesson Instructor In Training Levels']"
     When I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
     Then I wait until element "a:contains(Submit)" is visible
     When I click selector "a:contains(Submit)"

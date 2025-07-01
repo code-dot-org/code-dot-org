@@ -7,7 +7,7 @@
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Genre Mashup Example 6",
+    "long_instructions": "#### Paris\r\nThis remix of Paris builds a calm, steady groove using simple loops and clear layers. Listen to how the beats and bass repeat in patterns, while the vocals and effects add detail without taking over. The project is broken into functions like vocals, beat, bass, and effect to keep everything organized and easy to adjust.\r\n\r\n> I wanted this remix to feel smooth and really put together. I used functions to keep everything organized, like `bass`, `beat`, and `effect`, so I could layer sounds without it getting messy. I brought in the background vocals more often than in the original to give it a fuller sound without making it too loud. It ended up sounding kind of clean and balanced, which is what I was going for.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -672,7 +672,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_paris/chainsmokers_paris.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-06-04T12:36:51.576+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-5\\\"\"],\"cloned_from\":\"music-lab-genre-example-5\"},{\"changed_at\":\"2025-06-04 12:37:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 12:40:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:25:57 +0000\",\"changed\":[\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-04T12:36:51.576+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-5\\\"\"],\"cloned_from\":\"music-lab-genre-example-5\"},{\"changed_at\":\"2025-06-04 12:37:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 12:40:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:25:57 +0000\",\"changed\":[\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:45:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
