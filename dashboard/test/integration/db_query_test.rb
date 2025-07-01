@@ -10,7 +10,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     setup_script_cache
   end
 
-  # TODO: TEACH-1788: This will need to be updated when we change the test fixtures
   test "script level show" do
     student = create :student
     sign_in student
@@ -26,8 +25,9 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level_source: create(:level_source, level: level)
 
     assert_cached_queries(17) do
-      get script_lesson_script_level_path(
-        script_id: script.name,
+      get course_unit_lesson_script_level_path(
+        course_course_name: script.original_unit_group.name,
+        unit_position: 1,
         lesson_position: 1,
         id: 1
       )

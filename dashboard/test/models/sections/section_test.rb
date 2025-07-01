@@ -909,7 +909,6 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    # TODO: TEACH-1788 This test will need to be updated when we update fixtures
     script = Unit.find_by_name('jigsaw')
 
     Timecop.freeze(Time.zone.now) do
@@ -923,7 +922,7 @@ class SectionTest < ActiveSupport::TestCase
         assignedTitle: 'Jigsaw',
         linkToAssigned: '/courses/jigsaw',
         currentUnitTitle: 'Jigsaw',
-        linkToCurrentUnit: '/s/jigsaw',
+        linkToCurrentUnit: '/courses/jigsaw/units/1',
         courseVersionName: 'jigsaw',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
