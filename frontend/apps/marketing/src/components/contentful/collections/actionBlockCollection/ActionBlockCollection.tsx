@@ -44,7 +44,8 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    '& div': {
+    height: '100%',
+    '& .actionBlockWrapper': {
       height: '100%',
     },
   },
@@ -59,7 +60,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   blocks,
   background,
   hideImages = false,
-  sortOrder = 'manual',
+  sortOrder = 'alphabetical',
 }) => {
   const CONTENT_TYPES_WITH_OVERLINE = [
     'curriculum',
@@ -118,6 +119,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
             sx={[{...styles.gridItem}, hideImages && {...styles.hideImages}]}
           >
             <ActionBlock
+              className="actionBlockWrapper"
               overline={
                 CONTENT_TYPES_WITH_OVERLINE.includes(contentType)
                   ? actionBlockOverline
@@ -149,7 +151,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   }, [blocks, hideImages, sortOrder]);
 
   return (
-    <Grid container spacing={3} sx={{alignItems: 'stretch'}}>
+    <Grid container spacing={3}>
       {blocksData.map(block => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

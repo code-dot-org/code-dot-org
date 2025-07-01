@@ -107,7 +107,7 @@ export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
     hideImages: {
       displayName: 'Hide images',
       type: 'Boolean',
-      defaultValue: true,
+      defaultValue: false,
       group: 'style',
     },
   };
