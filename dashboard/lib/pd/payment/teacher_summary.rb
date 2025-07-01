@@ -18,6 +18,8 @@ module Pd::Payment
 
     attr_reader(:enrollment, :teacher)
 
+    delegate :workshop, to: :enrollment
+
     def school_district
       enrollment.try(&:school_info).try(&:school_district)
     end
@@ -29,8 +31,6 @@ module Pd::Payment
     def school
       enrollment.try(&:school_name)
     end
-
-    delegate :workshop, to: :enrollment
 
     def calculate_teacher_attendance
       teacher_attendance = TeacherAttendanceTotal.new
@@ -62,8 +62,8 @@ module Pd::Payment
         workshop_id: workshop.id,
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         workshop_name: workshop.friendly_name,
-        organizer_name: workshop.organizer.name,
-        organizer_email: workshop.organizer.email,
+        organizer_name: workshop.organizer.try(&:name),
+        organizer_email: workshop.organizer.try(&:email),
         year: workshop.year,
         hours: attendance.hours,
         days: attendance.days,
