@@ -197,7 +197,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div className={moduleStyles.scrollingContent}>
+              <div
+                className={
+                  offerBrowserTts
+                    ? moduleStyles.scrollingContentWithTTS
+                    : moduleStyles.scrollingContentWithoutTTS
+                }
+              >
                 <MainInstructionsContent
                   instructionsText={levelProperties.longInstructions}
                   handleInstructionsTextClick={handleInstructionsTextClick}
@@ -234,7 +240,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <div ref={validationScrollRef} />
             <div className={moduleStyles.bubble}>
               <div className={moduleStyles.textContent}>
-                <div className={moduleStyles.scrollingContent}>
+                <div className={moduleStyles.scrollingContentWithoutTTS}>
                   <ValidationResults />
                 </div>
               </div>

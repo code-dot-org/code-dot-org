@@ -82,7 +82,6 @@
 
 .textContent {
   height: 100%;
-  padding: 15px 0 5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -216,11 +215,19 @@
   }
 }
 
-.scrollingContent {
+%scrolling-content {
   flex: 1;
   overflow-y: auto;
   min-height: 70px;
-  padding: 0 10px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 15px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
 }
 
 .bottomComponent {
