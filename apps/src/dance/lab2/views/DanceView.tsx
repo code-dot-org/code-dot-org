@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
@@ -107,7 +107,7 @@ const DanceView: React.FunctionComponent<
           headerContent={commonI18n.instructions()}
           className={moduleStyles.instructionsArea}
         >
-          <Instructions
+          <InstructionsV2
             layout="horizontal"
             isRunning={isRunning}
             // Always passing true for now; update when resuming work on Lab2 Dance.

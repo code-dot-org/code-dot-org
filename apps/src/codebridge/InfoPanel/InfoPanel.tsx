@@ -9,7 +9,7 @@ import {
   setHasValidated,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
@@ -205,7 +205,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           </form>
         )}
         {currentPanel === Panels.Instructions ? (
-          <Instructions
+          <InstructionsV2
             isRunning={isRunning}
             hasRun={hasRun}
             hasEdited={hasEdited}

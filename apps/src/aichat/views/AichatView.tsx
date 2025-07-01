@@ -10,7 +10,7 @@ import React, {useCallback, useEffect} from 'react';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -250,7 +250,7 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
                   }
                 )}
               >
-                <Instructions
+                <InstructionsV2
                   className={moduleStyles.instructions}
                   /** AI Chat doesn't have a traditional "run" state, so this is always false. */
                   isRunning={false}
