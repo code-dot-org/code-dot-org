@@ -221,22 +221,6 @@
   overflow-y: auto;
   min-height: 70px;
   padding: 0 10px;
-  // Style the scrollbar so it uses the same background as the rest of the bubble.
-  scrollbar-color: var(--text-neutral-quaternary) var(--background-neutral-secondary);
-
-  // webkit-scrollbar is used by Safari. 
-  ::-webkit-scrollbar {
-    background: var(--background-neutral-secondary);
-    width: 10px;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: var(--text-neutral-quaternary);
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-corner {
-    background: var(--background-neutral-secondary);
-  }
 }
 
 .bottomComponent {
