@@ -81,7 +81,7 @@ export const videoRelatedDefinitions: Record<
   },
 };
 
-// Used in the Action Block, Logo, and People Collections components.
+// Used in the Action Block Collection, Logo Collection, and People Collection components.
 export const collectionsSortOrderDefinition: Record<
   string,
   ComponentDefinitionVariable
@@ -100,8 +100,8 @@ export const collectionsSortOrderDefinition: Record<
   },
 };
 
-// Used in the Action Block, Logo, and People Collections components,
-// but could be used in other components.
+// Used in the Action Block Collection, Logo Collection, and People Collection components,
+// and could be used in other components.
 export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
   {
     hideImages: {

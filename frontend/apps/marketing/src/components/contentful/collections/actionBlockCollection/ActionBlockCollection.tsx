@@ -30,20 +30,16 @@ type ItemEntry = Entry<ItemFields>;
 export type ActionBlockCollectionProps = {
   /** Collection content w/ fields from Contentful */
   blocks: ItemEntry[];
-  /** Sort order */
-  sortOrder: 'alphabetical' | 'manual';
   /** Background color of the Action Blocks */
   background: Extract<ActionBlockProps['background'], string>;
+  /** Sort order */
+  sortOrder: 'alphabetical' | 'manual';
   /** Hide images */
   hideImages: boolean;
 };
 
 const styles = {
   gridItem: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
     height: '100%',
     '& .actionBlockWrapper': {
       height: '100%',
