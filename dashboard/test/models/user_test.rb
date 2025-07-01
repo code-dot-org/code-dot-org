@@ -2991,6 +2991,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+<<<<<<< HEAD
   class AssignedCoursesAndScripts < ActiveSupport::TestCase
     setup do
       @student = create :student
@@ -3057,6 +3058,8 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+=======
+>>>>>>> 9230af8b713 (Move more methods to concern, add unit tests)
   class RecentCoursesAndScripts < ActiveSupport::TestCase
     setup do
       test_locale = :'te-ST'
