@@ -331,6 +331,7 @@ const marketingPaths = {
   "/about/leadership": true,
   // CSAIF
   "/csaif": true,
+  "/about/team-pets": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
