@@ -26,23 +26,23 @@ Resources:
   # permissions needed to create/update/delete a marketing sites CloudFormation Stack.
   # ------------------------------------------------------------
 <%
-    marketing_sites_environment_type_configuration = {
-      development: {
-         base_domain_name: 'marketing-sites.dev-code.org'
-      },
-      test: {
-        base_domain_name: 'marketing-sites.test-code.org'
-      },
-      production: {
-        base_domain_name: 'code.org'
-      }
+  marketing_sites_environment_type_configuration = {
+    development: {
+       base_domain_name: 'marketing-sites.dev-code.org'
+    },
+    test: {
+      base_domain_name: 'marketing-sites.test-code.org'
+    },
+    production: {
+      base_domain_name: 'code.org'
     }
-    marketing_sites_environment_type_configuration.each do |env_type, configuration|
-      environment_type = env_type.to_s
-      hyphenated_base_domain = configuration[:base_domain_name].tr('.', '-')
+  }
+  marketing_sites_environment_type_configuration.each do |env_type, configuration|
+    environment_type = env_type.to_s
+    hyphenated_base_domain = configuration[:base_domain_name].tr('.', '-')
 %>
-<%    # We only trust GitHub Actions to trigger Stack creation/updates for GitHub test and production Environments
-      if %w[test production].include?(environment_type) %>
+<%  # We only trust GitHub Actions to trigger Stack creation/updates for GitHub test and production Environments
+    if %w[test production].include?(environment_type)%>
   GitHubActions<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
     Properties:
@@ -107,9 +107,7 @@ Resources:
                 Resource:
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets'
-<%    end %>
-
-
+<%  end %>
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
     Type: AWS::IAM::ManagedPolicy
@@ -164,7 +162,7 @@ Resources:
             Resource:
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*"
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*"
-<% if environment_type == 'test' %>
+<% if environment_type != 'production' %>
           - Sid: AllowSSMMessagesForECSExec
             Effect: Allow
             Action:
@@ -340,6 +338,34 @@ Resources:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
+              - Sid: AllowCloudFrontActionsNonTaggableResources
+                Effect: Allow
+                Action:
+                  - cloudfront:CreateCachePolicy
+                  - cloudfront:UpdateCachePolicy
+                  - cloudfront:DeleteCachePolicy
+                  - cloudfront:GetCachePolicy
+                  - cloudfront:ListCachePolicies
+                  - cloudfront:CreateOriginAccessControl
+                  - cloudfront:UpdateOriginAccessControl
+                  - cloudfront:DeleteOriginAccessControl
+                  - cloudfront:GetOriginAccessControl
+                  - cloudfront:ListOriginAccessControls
+                  - cloudfront:CreateResponseHeadersPolicy
+                  - cloudfront:UpdateResponseHeadersPolicy
+                  - cloudfront:DeleteResponseHeadersPolicy
+                  - cloudfront:GetResponseHeadersPolicy
+                  - cloudfront:ListResponseHeadersPolicies
+                  - cloudfront:CreateFunction
+                  - cloudfront:UpdateFunction
+                  - cloudfront:DeleteFunction
+                  - cloudfront:DescribeFunction
+                  - cloudfront:GetFunction
+                  - cloudfront:ListFunctions
+                  - cloudfront:PublishFunction
+                  - cloudfront:TestFunction
+                Resource: '*'
+
               - Sid: AllowCloudFrontDescribeActions
                 Effect: Allow
                 Action:
@@ -455,4 +481,22 @@ Resources:
                   - elasticache:Describe*
                   - elasticache:List*
                 Resource: '*'
+<% end %>
+
+Outputs:
+<%
+  marketing_sites_environment_type_configuration.each do |env_type, configuration|
+    environment_type = env_type.to_s
+%>
+  CloudFormationServiceMarketingSites<%=environment_type.capitalize%>RoleArn:
+    Description: ARN of the CloudFormation service role for <%=environment_type%> environment
+    Value: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
+  MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn:
+    Description: ARN of the permissions boundary policy for <%=environment_type%> environment roles
+    Value: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
+    Export:
+      Name: !Sub "${AWS::StackName}-MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn"
+  GitHubActions<%=environment_type.capitalize%>RoleArn:
+    Description: ARN of the GitHub Actions role for <%=environment_type%> environment
+    Value: !GetAtt GitHubActions<%=environment_type.capitalize%>Role.Arn
 <% end %>
