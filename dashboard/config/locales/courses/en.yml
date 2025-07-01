@@ -6209,6 +6209,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ui-test-versioned-script-2017:
+          title: ui-test-versioned-script-2017
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
         facilitator-onboarding-2025:
           title: Facilitator Onboarding
           description_short: ''
