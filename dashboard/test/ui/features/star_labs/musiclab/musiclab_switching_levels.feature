@@ -10,7 +10,7 @@ Scenario: Load a level and load the next
 
   # Click on next level via progress bubble so we are not doing a hard refresh
   And I click selector "[title='Level 5 Lesson Music']"
-  And I wait for the lab page to fully load
+  And I wait to see "#run-button"
 
   And I see no difference for "new level loading"
   And I close my eyes
