@@ -139,7 +139,8 @@ class AichatGeminiClientTest < AichatAiClientTest
 
       context 'when body is well formed and request fails with error JSON' do
         let(:new_message) {@new_message}
-        # Don't expect any particular fields in body, we're just testing that we
+        # Don't expect any particular fields in body, we're just testing that we've
+        # raised StandardError and don't want WebMock to fail before that
         let(:request_body) {{}}
 
         let(:stubbed_response_body) {stubbed_fail_response_body}
@@ -162,7 +163,7 @@ class AichatGeminiClientTest < AichatAiClientTest
 
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'successfully makes request and is returned the correct response' do
-          # Check that we're returned the correct response.
+          # Check that we've returned the correct response.
           assert_equal subject, @response_text
         end
       end
@@ -182,7 +183,7 @@ class AichatGeminiClientTest < AichatAiClientTest
 
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'successfully makes request and is returned the correct response' do
-          # Check that we're returned the correct response.
+          # Check that we've returned the correct response.
           assert_equal subject, @response_text
         end
       end
@@ -204,7 +205,7 @@ class AichatGeminiClientTest < AichatAiClientTest
 
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'successfully makes request and is returned the correct response' do
-          # Check that we're returned the correct response.
+          # Check that we've returned the correct response.
           assert_equal subject, @response_text
         end
       end
@@ -222,7 +223,7 @@ class AichatGeminiClientTest < AichatAiClientTest
 
         let(:stubbed_response_body) {stubbed_success_response_body}
         it 'successfully makes request and is returned the correct response' do
-          # Check that we're returned the correct response.
+          # Check that we've returned the correct response.
           assert_equal subject, @response_text
         end
       end
