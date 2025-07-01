@@ -26,6 +26,8 @@ export interface AccountInformationProps {
   userAge?: string;
   userUsername?: string;
   userDisplayName?: string;
+  userGivenName?: string;
+  userFamilyName?: string;
   userEmail?: string;
   userProperties?: UserProperties;
 }

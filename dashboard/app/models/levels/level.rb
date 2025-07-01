@@ -833,6 +833,10 @@ class Level < ApplicationRecord
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
+  def grade_levels
+    script_levels.map {|script_level| script_level.script&.get_course_version&.course_offering&.grade_levels}.flatten.compact.uniq.join(', ')
+  end
+
   # Define search filter fields
   def self.search_options
     {

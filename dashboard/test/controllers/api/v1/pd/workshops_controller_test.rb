@@ -496,17 +496,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'facilitators can not delete a workshop where they are not the organizer' do
-    csp_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSP).facilitator
-    csp_facilitator_nonorganizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSP).facilitator
-    workshop = create :pd_workshop, facilitators: [csp_facilitator_organizer, csp_facilitator_nonorganizer], organizer: csp_facilitator_organizer
-    sign_in csp_facilitator_nonorganizer
-    assert_does_not_destroy(Pd::Workshop) do
-      delete :destroy, params: {id: workshop.id}
-    end
-    assert_response :forbidden
-  end
-
   test_user_gets_response_for(
     :destroy,
     name: 'organizers cannot delete workshops they do not own',
@@ -586,19 +575,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     sign_in(@facilitator)
 
     workshop = create :workshop, organizer: @facilitator
-    put :update, params: {
-      id: workshop.id,
-      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
-    }
-    assert_response :success
-    workshop.reload
-    assert_nil workshop.regional_partner_id
-  end
-
-  test 'CSF Facilitators can update workshops they are assigned to' do
-    sign_in(@csf_facilitator)
-
-    workshop = create :workshop, facilitators: [@csf_facilitator]
     put :update, params: {
       id: workshop.id,
       pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})

@@ -8,7 +8,11 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(function () {
   const data = getScriptData('skillevaluationdata');
   ReactDOM.render(
-    <SkillEvaluationSettings skills={data} />,
+    <SkillEvaluationSettings
+      skills={data.skills}
+      levelId={data.levelId}
+      systemPrompt={data.systemPrompt}
+    />,
     document.getElementById('skill-evaluation-settings-editor')
   );
 });

@@ -1160,19 +1160,11 @@ Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |script_name, teacher_name|
-  browser_request(
-    url: '/api/test/assign_script_as_student',
-    method: 'POST',
-    body: {script_name: script_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
-  )
-end
-
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |course_name, script_name, teacher_name|
+Given(/^I am assigned to course "([^"]*)" unit (\d+)(?: with teacher "([^"]*)")?$/) do |course_name, unit_position, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+    body: {course_name: course_name, unit_position: unit_position, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
@@ -1591,7 +1583,7 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
     And I sign in as "#{teacher_name}" and go home
     And I save the student section url
     And I save the section id from row 0 of the section table
@@ -1612,7 +1604,7 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   steps <<~GHERKIN
     Given I create a teacher named "Dumbledore"
     And I give user "Dumbledore" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
     And I sign in as "Dumbledore" and go home
     And I save the student section url
     And I save the section id from row 0 of the section table

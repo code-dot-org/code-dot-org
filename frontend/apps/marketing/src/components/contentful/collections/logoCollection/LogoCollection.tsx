@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import {EntryFields} from 'contentful';
-import {useMemo} from 'react';
+import {useId, useMemo} from 'react';
 
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
@@ -23,7 +23,7 @@ export type LogoCollectionProps = {
 };
 
 const logoStyles = {
-  container: {
+  gridItem: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -62,42 +62,52 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
 
   const logosData = useMemo(
     () =>
-      logos.filter(Boolean).map(({fields}) => {
-        const {title, logoImage, primaryLinkRef} = fields;
-
-        return {
-          id: title,
-          item: (
+      logos
+        .filter(Boolean)
+        .map(({fields}) => {
+          const {title, logoImage, primaryLinkRef} = fields;
+          const url = primaryLinkRef?.fields?.primaryTarget || '';
+          const getImage = () => (
             <img
               src={getAbsoluteImageUrl(logoImage)}
               alt={logoImage?.fields?.title || title || 'Logo'}
               loading="lazy"
             />
-          ),
-          url: primaryLinkRef?.fields?.primaryTarget || '',
-        };
-      }),
+          );
+
+          return {
+            id: title,
+            item: (
+              <Box component="figure" sx={logoStyles.gridItem}>
+                {url ? (
+                  <Link
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={logoStyles.link}
+                  >
+                    {getImage()}
+                  </Link>
+                ) : (
+                  getImage()
+                )}
+              </Box>
+            ),
+            url: url,
+          };
+        })
+        .sort((a, b) => a?.id?.localeCompare(b?.id)), // Sort alphabetically
     [logos],
   );
 
   return (
     <Grid container spacing={7.5}>
       {logosData.map(logo => (
-        <Grid key={logo.id} size={{xs: 12, sm: 4, md: 3}}>
-          <Box key={logo.id} component="figure" sx={logoStyles.container}>
-            {logo.url ? (
-              <Link
-                href={logo.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={logoStyles.link}
-              >
-                {logo.item}
-              </Link>
-            ) : (
-              logo.item
-            )}
-          </Box>
+        <Grid
+          key={`id-${useId().replaceAll(':', '')}`}
+          size={{xs: 12, sm: 4, md: 3}}
+        >
+          {logo.item}
         </Grid>
       ))}
     </Grid>

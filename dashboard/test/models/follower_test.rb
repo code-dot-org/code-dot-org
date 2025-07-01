@@ -75,17 +75,20 @@ class FollowerTest < ActiveSupport::TestCase
     refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
   end
 
-  test 'deleting a follower removes the associated student family name' do
+  test 'deleting a follower removes the associated student given and family name' do
     student = @follower.student_user
-    student.family_name = 'test'
+    student.given_name = 'TestGivenName'
+    student.family_name = 'TestFamilyName'
     student.save!
     student.reload
 
-    assert_equal 'test', student.family_name
+    assert_equal 'TestGivenName', student.given_name
+    assert_equal 'TestFamilyName', student.family_name
 
     @follower.destroy
     student.reload
 
+    assert_nil student.given_name
     assert_nil student.family_name
   end
 
