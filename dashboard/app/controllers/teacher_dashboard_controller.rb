@@ -18,7 +18,7 @@ class TeacherDashboardController < ApplicationController
   end
 
   def show
-    @sections = current_user.sections_instructed.map(&:summarize)
+    @sections = current_user.sections_instructed.map(&:concise_summarize)
     unless @sections.empty?
       if @section.nil?
         @section = Section.find(@sections.first[:id])
