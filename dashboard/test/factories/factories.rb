@@ -1041,7 +1041,7 @@ FactoryBot.define do
 
     trait :with_example_solutions do
       after(:create) do |level|
-        level.examples = ['https://studio.code.org/s/csa-examples/lessons/1/levels/1/']
+        level.examples = ['https://studio.code.org/courses/csa-examples/units/1/lessons/1/levels/1/']
         level.save!
       end
     end
