@@ -21,12 +21,12 @@ def execute_system_command(command)
   stdout
 end
 
-CDO.log.info 'Terminating currently executing build (aws/ci_build) including its child processes ...'
-ChatClient.log "A user has invoked bin/terminate_build on this environment's daemon server ...", color: 'red'
-
 raise "#{$0} does not work in development mode." if rack_env?(:development)
 raise "#{$0} only works in Linux operating systems." unless OS.linux?
 raise "#{$0} must be run on a daemon server." unless CDO.daemon
+
+CDO.log.info 'Terminating currently executing build (aws/ci_build) including its child processes ...'
+ChatClient.log "A user has invoked bin/terminate_build on this environment's daemon server ...", color: 'red'
 
 # Use `ps` to find all processes where the executable was `sh` and output the Process ID, Process Group ID, and the
 # arguments the command was invoked with. Due to how the aws/ci_build script is invoked via cron, we can only identify
