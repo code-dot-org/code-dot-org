@@ -181,32 +181,37 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        <div className={moduleStyles.scrollingContent}>
-          {levelProperties.longInstructions && (
+        {levelProperties.longInstructions && (
+          <div
+            key={levelProperties.longInstructions}
+            id="instructions-text"
+            className={classNames(moduleStyles.bubble)}
+          >
+            {offerBrowserTts && (
+              <TextToSpeech
+                text={levelProperties.longInstructions}
+                higherPosition={!!bottomComponent}
+              />
+            )}
             <div
-              key={levelProperties.longInstructions}
-              id="instructions-text"
-              className={classNames(moduleStyles.bubble)}
+              id="instructions-text-content"
+              className={moduleStyles.textContent}
             >
-              {offerBrowserTts && (
-                <TextToSpeech
-                  text={levelProperties.longInstructions}
-                  higherPosition={!!bottomComponent}
+              <div className={moduleStyles.scrollingContent}>
+                <MainInstructionsContent
+                  instructionsText={levelProperties.longInstructions}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
                 />
-              )}
-              <MainInstructionsContent
-                instructionsText={levelProperties.longInstructions}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={response =>
-                  dispatch(setPredictResponse(response))
-                }
-                predictAnswerLocked={predictAnswerLocked}
-                className={moduleStyles.predictQuestion}
-              />
+                <PredictQuestion
+                  predictSettings={predictSettings}
+                  predictResponse={predictResponse}
+                  setPredictResponse={response =>
+                    dispatch(setPredictResponse(response))
+                  }
+                  predictAnswerLocked={predictAnswerLocked}
+                  className={moduleStyles.predictQuestion}
+                />
+              </div>
               {validationSettings && (
                 <ValidationButton
                   onValidate={validationSettings.onValidate}
@@ -222,31 +227,35 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 </div>
               )}
             </div>
-          )}
-          {validationState?.validationResults && (
-            <>
-              <div ref={validationScrollRef} />
-              <div className={moduleStyles.bubble}>
-                <ValidationResults />
-              </div>
-            </>
-          )}
-          {AiTutor2ResponseView && AiTutor2ResponseView}
-          {predictSettings?.isPredictLevel && (
-            <>
-              <InstructorsOnly>
-                <div className={moduleStyles.bubble}>
-                  <PredictSummary />
+          </div>
+        )}
+        {validationState?.validationResults && (
+          <>
+            <div ref={validationScrollRef} />
+            <div className={moduleStyles.bubble}>
+              <div className={moduleStyles.textContent}>
+                <div className={moduleStyles.scrollingContent}>
+                  <ValidationResults />
                 </div>
-              </InstructorsOnly>
+              </div>
+            </div>
+          </>
+        )}
+        {AiTutor2ResponseView && AiTutor2ResponseView}
+        {predictSettings?.isPredictLevel && (
+          <>
+            <InstructorsOnly>
+              <div className={moduleStyles.bubble}>
+                <PredictSummary />
+              </div>
+            </InstructorsOnly>
 
-              <PredictQuestionRunPrompt
-                hasSelected={!!predictResponse}
-                hasSubmitted={predictAnswerLocked}
-              />
-            </>
-          )}
-        </div>
+            <PredictQuestionRunPrompt
+              hasSelected={!!predictResponse}
+              hasSubmitted={predictAnswerLocked}
+            />
+          </>
+        )}
         {(useMessage || canShowNextButton) && (
           <div
             key={useMessageIndex + ' - ' + useMessage}

@@ -59,7 +59,9 @@
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 
   h1, h2, h3, h4 {
     color: var(--text-brand-teal-primary);
@@ -76,6 +78,14 @@
       color: var(--text-brand-purple-secondary);
     }
   }
+}
+
+.textContent {
+  height: 100%;
+  padding: 15px 0 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .bubbleNoSlide {
@@ -207,7 +217,15 @@
 }
 
 .scrollingContent {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  // overflow-y: auto;
+  flex: 1;
   overflow-y: auto;
+  min-height: 70px;
+  padding: 0 10px;
+}
+
+.bottomComponent {
+  overflow: hidden;
 }

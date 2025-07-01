@@ -18,10 +18,12 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {BlocklySource} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -143,6 +145,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const useNewInstructions = experiments.isEnabled(
+    experiments.LAB2_INSTRUCTIONS_V2
+  );
 
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   // Pass music validator to Progress Manager
@@ -321,22 +326,39 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             headerContent={musicI18n.panelHeaderInstructions()}
             hideHeaders={hideHeaders}
           >
-            <InstructionsV2
-              isRunning={isPlaying}
-              layout={
-                position !== InstructionsPosition.TOP
-                  ? 'vertical'
-                  : 'horizontal'
-              }
-              handleInstructionsTextClick={onInstructionsTextClick}
-              bottomComponent={
-                exemplarPlayerInsideInstructions && exemplarPlayer
-              }
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-              fixedDarkBackground={true}
-              overrideTheme={'Light'}
-            />
+            {useNewInstructions ? (
+              <InstructionsV2
+                isRunning={isPlaying}
+                layout={
+                  position !== InstructionsPosition.TOP
+                    ? 'vertical'
+                    : 'horizontal'
+                }
+                handleInstructionsTextClick={onInstructionsTextClick}
+                bottomComponent={
+                  exemplarPlayerInsideInstructions && exemplarPlayer
+                }
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                fixedDarkBackground={true}
+                overrideTheme={'Light'}
+              />
+            ) : (
+              <Instructions
+                isRunning={isPlaying}
+                layout={
+                  position !== InstructionsPosition.TOP
+                    ? 'vertical'
+                    : 'horizontal'
+                }
+                handleInstructionsTextClick={onInstructionsTextClick}
+                bottomComponent={
+                  exemplarPlayerInsideInstructions && exemplarPlayer
+                }
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+              />
+            )}
             {!exemplarPlayerInsideInstructions && exemplarPlayer}
           </PanelContainer>
         </div>
@@ -353,6 +375,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       exemplarPlaybackEvents,
       player,
       isPlaying,
+      useNewInstructions,
     ]
   );
 
