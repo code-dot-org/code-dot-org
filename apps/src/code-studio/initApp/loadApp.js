@@ -92,6 +92,7 @@ export function setupApp(appOptions) {
           (teacherViewingStudentWork && appOptions.level.isStarted)
         ) {
           $('#versions-header').show();
+          $('#process-header').show();
         }
       }
       $(document).trigger('appInitialized');

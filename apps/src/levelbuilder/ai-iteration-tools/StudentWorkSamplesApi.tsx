@@ -5,6 +5,7 @@ interface StudentWorkRequest {
   unitId: number;
   levelId: number;
   studentIds?: string[];
+  codeVersion?: string;
 }
 
 export async function fetchStudentCodeSamples(

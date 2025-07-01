@@ -227,11 +227,20 @@ class CodeWorkspace extends React.Component {
                 isMinecraft={props.isMinecraft}
               />
             )}
+
             <PaneButton
               id="versions-header"
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
               label={i18n.showVersionsHeader()}
+              isRtl={isRtl}
+              isMinecraft={props.isMinecraft}
+            />
+            <PaneButton
+              id="process-header"
+              headerHasFocus={hasFocus}
+              iconClass="fa fa-puzzle-piece"
+              label="Show Process"
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
