@@ -447,7 +447,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
   test 'move' do
     origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
-      enrolled_unattending_users: 1
+      enrolled_absent_users: 1
     attendance = Pd::Attendance.for_workshop(origin_workshop).first
     attendance.update(pd_enrollment_id: origin_workshop.enrollments.first.id)
     destination_workshop = create :pd_workshop
