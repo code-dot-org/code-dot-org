@@ -10,7 +10,7 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
-import placeholderImage from '@public/images/person-placeholder.avif';
+import placeholderImage from '@public/images/person-placeholder.png';
 
 import {CollectionProps} from '../types';
 
@@ -69,6 +69,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
   people,
   sortOrder,
   hideImages = false,
+  className,
 }) => {
   if (!people) {
     return (
@@ -146,7 +147,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
   }, [people, hideImages, sortOrder]);
 
   return (
-    <Grid container spacing={7.5} sx={styles.container}>
+    <Grid container spacing={7.5} sx={styles.container} className={className}>
       {peopleData.map(person => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

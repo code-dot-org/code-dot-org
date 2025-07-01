@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
 import {useId, useMemo} from 'react';
 
@@ -19,7 +20,7 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type LogoCollectionProps = Pick<CollectionProps, 'sortOrder'> & {
+export type LogoCollectionProps = Omit<CollectionProps, 'hideImages'> & {
   /** Collection content w/ fields from Contentful */
   logos: ItemEntry[];
 };
@@ -50,15 +51,19 @@ const logoStyles = {
   },
 };
 
-const LogoCollection: React.FC<LogoCollectionProps> = ({logos, sortOrder}) => {
+const LogoCollection: React.FC<LogoCollectionProps> = ({
+  logos,
+  sortOrder,
+  className,
+}) => {
   if (!logos) {
     return (
-      <div style={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Logo Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
         </em>
-      </div>
+      </Typography>
     );
   }
 
@@ -103,7 +108,7 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({logos, sortOrder}) => {
   }, [logos, sortOrder]);
 
   return (
-    <Grid container spacing={7.5}>
+    <Grid container spacing={7.5} className={className}>
       {logosData.map(logo => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

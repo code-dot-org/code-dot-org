@@ -55,6 +55,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   background,
   hideImages = false,
   sortOrder = 'alphabetical',
+  className,
 }) => {
   const CONTENT_TYPES_WITH_OVERLINE = [
     'curriculum',
@@ -145,7 +146,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   }, [blocks, hideImages, sortOrder]);
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} className={className}>
       {blocksData.map(block => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

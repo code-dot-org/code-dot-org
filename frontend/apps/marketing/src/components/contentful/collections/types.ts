@@ -3,4 +3,6 @@ export type CollectionProps = {
   sortOrder: 'alphabetical' | 'manual';
   /** Hide images */
   hideImages: boolean;
+  /** Custom classname */
+  className?: string;
 };
