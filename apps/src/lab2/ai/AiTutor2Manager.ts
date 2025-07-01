@@ -6,20 +6,18 @@ import {
   FeedbackData,
   logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
+
+import {AiChatModelIdType} from './AiTutorModelId';
 
 const systemPrompts = {
   hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one statement (not expressed as a question) that helps the student to make progress.",
 };
 
 export type AiTutor2MessageType = 'hint';
-
-// This type is the union of all the valid AI Model IDs.
-export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 
 export default class AiTutor2Manager {
   private currentLevelId: string | null;
