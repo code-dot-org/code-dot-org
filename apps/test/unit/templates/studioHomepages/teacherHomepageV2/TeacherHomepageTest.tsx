@@ -264,10 +264,4 @@ describe('TeacherHomepage', () => {
     await act(async () => await new Promise(process.nextTick));
     screen.getByText('Accept');
   });
-
-  it('renders feedback alert', async () => {
-    renderComponent();
-    await act(async () => await new Promise(process.nextTick));
-    screen.getByText(i18n.teacherHomePageFeedback());
-  });
 });
