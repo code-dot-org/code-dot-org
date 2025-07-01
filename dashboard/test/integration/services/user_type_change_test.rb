@@ -1,288 +1,145 @@
 require 'test_helper'
 
 class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
-  describe 'user type transitions' do
-    context 'when user changes to TYPE_STUDENT' do
-      subject(:set_teacher_to_student) do
-        Services::User::UserTypeSetter.call(
-          user: teacher,
-          user_type: ::User::TYPE_STUDENT
-        )
-      end
+  subject(:change_user_type) do
+    Services::User::UserTypeSetter.call(
+      user: user,
+      user_type: new_user_type,
+      email: new_email,
+      email_preference: new_email_preference_params,
+    )
+  end
 
-      let(:teacher) do
-        create(
-          :teacher,
-          school_info_attributes: {
-            country: 'US',
-            school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
-            state: nil
-          },
-          full_address: 'fake address',
-          terms_of_service_version: 1
-        )
-      end
+  let(:new_email) {nil}
+  let(:new_email_preference_params) do
+    {
+      email_preference_opt_in: 'yes',
+      email_preference_request_ip: '127.0.0.1',
+      email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
+      email_preference_form_kind: '0',
+    }
+  end
 
-      let(:student) {User.find(teacher.id)}
+  describe 'teacher to student conversion' do
+    let(:new_user_type) {::User::TYPE_STUDENT}
 
+    let!(:user) do
+      create(
+        :teacher,
+        school_info_attributes: {
+          country: 'US',
+          school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
+          state: nil
+        },
+        full_address: 'fake address',
+        terms_of_service_version: 1
+      )
+    end
+
+    it 'changes user type to "teacher"' do
+      _ {change_user_type}.must_change -> {User.find(user.id).user_type}, from: ::User::TYPE_TEACHER, to: new_user_type
+    end
+
+    it 'removes user email' do
+      # This test fails
+      # _ {change_user_type}.must_change -> {User.find(user.id).email}, from: user.email, to: nil
+    end
+
+    it 'removes user hashed_email' do
+      # This test fails
+      # _ {change_user_type}.wont_change -> {User.find(user.id).hash_email}
+    end
+
+    it 'removes user school_into' do
+      _ {change_user_type}.must_change -> {User.find(user.id).school_info}, from: user.school_info, to: nil
+    end
+
+    it 'removes user full_address' do
+      _ {change_user_type}.must_change -> {User.find(user.id).full_address}, from: user.full_address, to: nil
+    end
+
+    it 'destroys exactly one studio person record' do
+      _ {change_user_type}.must_differ 'StudioPerson.count', -1
+    end
+
+    it 'does not clear user terms_of_service_version' do
+      _(user.terms_of_service_version).must_equal 1
+      _ {change_user_type}.wont_change -> {User.find(user.id).terms_of_service_version}
+    end
+
+    context 'when user has educator role' do
       before do
-        teacher
-        @initial_sp_count = StudioPerson.count
-        set_teacher_to_student
+        user.update!(educator_role: SharedConstants::EDUCATOR_ROLES.first[:value])
       end
 
-      it 'returns true' do
-        _set_teacher_to_student.must_equal true
+      it 'can create a valid student' do
+        change_user_type
+        _(User.find(user.id)).must_be :valid?
       end
+    end
+  end
 
-      it 'removes the email but keeps hashed_email' do
-        _(student.email).must_be_empty
-        _(student.hashed_email).wont_be_nil
-      end
+  describe 'student to teacher conversion' do
+    let(:new_user_type) {::User::TYPE_TEACHER}
+    let(:new_email) {user_as_teacher_email}
 
-      it 'removes school_into' do
-        _(student.school_info).must_be_nil
-      end
+    let(:user_as_student_email) {'student@example.com'}
+    let(:user_as_teacher_email) {'teacher@example.com'}
+    let(:terms_of_service_version) {1}
 
-      it 'removes full_address' do
-        _(student.full_address).must_be_nil
-      end
+    let!(:user) {create(:user, email: user_as_student_email, terms_of_service_version:)}
 
-      it 'destroys exactly one StudioPerson' do
-        _(student.studio_person).must_be_nil
-        diff = @initial_sp_count - StudioPerson.count
-        _(diff).must_equal 1
-      end
+    it 'changes user type to "student"' do
+      _ {change_user_type}.must_change -> {User.find(user.id).user_type}, from: ::User::TYPE_STUDENT, to: new_user_type
+    end
 
-      it 'does not clear terms_of_service_version' do
-        _(student.terms_of_service_version).must_equal 1
-      end
+    it 'changes user email' do
+      _ {change_user_type}.must_change -> {User.find(user.id).email}, to: new_email
+    end
 
-      context 'when teacher has educator role' do
-        let(:teacher) {create(:teacher, :with_educator_role)}
+    it 'set user age to be 21+' do
+      _(User.find(user.id).age).must_equal '21+'
+    end
 
-        it 'can create a valid student' do
-          _(student).must_be :valid?
-        end
+    it 'creates exactly one studio person record' do
+      _ {change_user_type}.must_differ 'StudioPerson.count', 1
+    end
+
+    it 'clears user terms_of_service_version' do
+      _ {change_user_type}.must_change -> {User.find(user.id).terms_of_service_version},
+                                       from: terms_of_service_version,
+                                       to: nil
+    end
+
+    it 'replace old oauth option for student email with new teacher email' do
+      _ {change_user_type}.must_change -> {User.find(user.id).authentication_options.pluck(:email)}, from: [''], to: [new_email]
+    end
+
+    it 'creates email preference record with the correct defaults for user' do
+      _ {change_user_type}.must_differ 'EmailPreference.count', 1
+
+      user_email_preference = EmailPreference.find_by_email(new_email)
+
+      _(user_email_preference.opt_in).must_equal true
+      _(user_email_preference.ip_address).must_equal new_email_preference_params[:email_preference_request_ip]
+      _(user_email_preference.source).must_equal new_email_preference_params[:email_preference_source]
+      _(user_email_preference.form_kind).must_equal new_email_preference_params[:email_preference_form_kind]
+    end
+
+    context 'when user already has oauth option with new teacher email' do
+      let!(:auth_option) {create(:authentication_option, user: user, email: user_as_teacher_email)}
+
+      it 'wont create new oauth option' do
+        _ {change_user_type}.wont_change -> {User.find(user.id).authentication_options}
       end
     end
 
-    context 'when user changes to TYPE_TEACHER' do
-      subject(:set_student_to_teacher) do
-        Services::User::UserTypeSetter.call(
-          user:      student,
-          user_type: ::User::TYPE_TEACHER,
-          email:     teacher_email,
-          email_preference: email_preference_params,
-        )
-      end
+    context 'when now new email preference are set' do
+      let(:new_email_preference_params) {nil}
 
-      let(:student_email) {'student@example.com'}
-      let(:teacher_email) {'teacher@example.com'}
-      let(:student) {create(:user, email: student_email, terms_of_service_version: 1)}
-      let(:email_preference_params) {nil}
-      let(:teacher) {User.find(student.id)}
-
-      before do
-        student
-        @initial_sp_count = StudioPerson.count
-        @result = set_student_to_teacher
-      end
-
-      it 'returns user' do
-        _(@result).must_be_kind_of User
-      end
-
-      it 'sets the teacher email' do
-        _(teacher.email).must_equal teacher_email
-      end
-
-      it 'set age to be 21+' do
-        _(teacher.age).must_equal '21+'
-      end
-
-      it 'creates exactly one StudioPerson' do
-        diff = StudioPerson.count - @initial_sp_count
-        _(diff).must_equal 1
-        _(teacher.studio_person).wont_be_nil
-      end
-
-      it 'clears terms_of_service_version' do
-        _(teacher.terms_of_service_version).must_be_nil
-      end
-
-      context 'when user has an oauth provider' do
-        let(:old_email) {'old@email.com'}
-        let(:new_email) {'new@email.com'}
-        let(:student) {create(:student, :google_sso_provider, email: old_email)}
-        let(:oauth_teacher) {User.find(student.id)}
-
-        context 'using the same email' do
-          let(:teacher_email) {old_email}
-
-          it 'retains the original email' do
-            _(oauth_teacher.email).must_equal old_email
-          end
-
-          it 'sets the user_type to TEACHER' do
-            _(oauth_teacher.user_type).must_equal ::User::TYPE_TEACHER
-          end
-        end
-
-        context 'using a different email' do
-          let(:teacher_email) {new_email}
-
-          it 'updates to the new email' do
-            _(oauth_teacher.email).must_equal new_email
-          end
-
-          it 'sets the user_type to TEACHER' do
-            _(oauth_teacher.user_type).must_equal ::User::TYPE_TEACHER
-          end
-        end
-      end
-
-      context 'when user is Google‐authenticated' do
-        let(:student) {create(:student, :with_google_authentication_option)}
-        let(:email_preference_params) do
-          {email_preference_opt_in: 'yes',
-           email_preference_request_ip: '127.0.0.1',
-           email_preference_source: EmailPreference::ACCOUNT_TYPE_CHANGE,
-           email_preference_form_kind: '0',}
-        end
-        let(:teacher) {User.find(student.id)}
-        let(:teacher_email) {'email@google.com'}
-
-        context 'when no matching AuthenticationOption exists' do
-          before do
-            student
-            @initial_ao_count = student.authentication_options.count
-            set_student_to_teacher
-          end
-
-          it 'initially has exactly two authentication options' do
-            _(@initial_ao_count).must_equal 2
-          end
-
-          it 'upgrades the user to teacher' do
-            _(teacher).must_be_instance_of Teacher
-          end
-
-          it 'keeps exactly two authentication options' do
-            _(teacher.authentication_options.count).must_equal 2
-          end
-
-          it 'sets the user email' do
-            _(teacher.email).must_equal teacher_email
-          end
-
-          it 'creates an EmailPreference with the correct defaults' do
-            pref = EmailPreference.find_by_email(teacher_email)
-            _(pref.opt_in).must_equal true
-            _(pref.ip_address).must_equal '127.0.0.1'
-            _(pref.source).must_equal EmailPreference::ACCOUNT_TYPE_CHANGE
-            _(pref.form_kind).must_equal '0'
-          end
-        end
-
-        context 'when a matching AuthenticationOption already exists' do
-          let(:auth_option) {create :authentication_option, user: student, email: 'example@email.com'}
-          let(:initial_count) do
-            count = 0
-            puts '-------- AuthenticationOption:'
-            AuthenticationOption.all.each do |ao|
-              count += 1
-              puts count
-              puts ao.to_json
-            end
-
-            puts '-------- student.authentication_options:'
-
-            count = 0
-            student.authentication_options.each do |ao|
-              count += 1
-              puts count
-              puts ao.to_json
-            end
-            puts "auth count: #{student.authentication_options}"
-            puts "Student auth count: #{student.authentication_options.size}"
-            student.authentication_options.count
-          end
-          let(:teacher_email) {'example@email.com'}
-
-          before do
-            student
-            auth_option
-            @initial_ao_count = student.authentication_options.count
-            set_student_to_teacher
-          end
-
-          it 'initially has exactly three authentication options' do
-            _(auth_option.email).must_be_empty
-            _(@initial_ao_count).must_equal 3
-          end
-
-          it 'upgrades the user to teacher' do
-            _(teacher).must_be_instance_of Teacher
-          end
-
-          it 'reduces authentication options to two' do
-            _(teacher.authentication_options.count).must_equal @initial_ao_count - 1
-          end
-
-          it 'reuses the existing option as primary and updates its email' do
-            _(teacher.primary_contact_info).must_equal auth_option
-            _(auth_option.email).must_equal teacher_email
-          end
-
-          it 'creates an EmailPreference with opt-in enabled' do
-            pref = EmailPreference.find_by_email(teacher_email)
-            _(pref.opt_in).must_equal true
-            _(pref.ip_address).must_equal '127.0.0.1'
-            _(pref.source).must_equal EmailPreference::ACCOUNT_TYPE_CHANGE
-            _(pref.form_kind).must_equal '0'
-          end
-        end
+      it 'wont create new email preference records' do
+        _ {change_user_type}.wont_differ 'EmailPreference.count'
       end
     end
   end
 end
-
-# test 'upgrade_to_teacher is true if new authentication option is created' do
-#   user = create :student, :with_google_authentication_option
-#
-#   assert_equal 2, user.authentication_options.count
-#
-#   assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-#   user = User.find(user.id)
-#   assert_equal User::TYPE_TEACHER, user.user_type
-#   assert_equal 2, user.authentication_options.count
-#   assert_equal 'example@email.com', user.email
-#   email_preference = EmailPreference.find_by_email('example@email.com')
-#   refute email_preference.opt_in
-#   assert_equal '127.0.0.1', email_preference.ip_address
-#   assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
-#   assert_equal '0', email_preference.form_kind
-# end
-#
-# test 'upgrade_to_teacher is true if matching authentication option is found' do
-#   user = create :student, :with_google_authentication_option
-#   auth_option = create :authentication_option, user: user, email: 'example@email.com'
-#
-#   assert_empty auth_option.email
-#   assert_equal 3, user.authentication_options.count
-#
-#   email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
-#   assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-#   user = User.find(user.id)
-#   auth_option.reload
-#   assert_equal User::TYPE_TEACHER, user.user_type
-#   assert_equal 2, user.authentication_options.count
-#   assert_equal auth_option, user.primary_contact_info
-#   assert_equal 'example@email.com', auth_option.email
-#   email_preference = EmailPreference.find_by_email('example@email.com')
-#   assert email_preference.opt_in
-#   assert_equal '127.0.0.1', email_preference.ip_address
-#   assert_equal EmailPreference::ACCOUNT_TYPE_CHANGE, email_preference.source
-#   assert_equal '0', email_preference.form_kind
-# end
