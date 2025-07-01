@@ -1,12 +1,11 @@
 name 'music-lab-612-post-q3'
 
-question '**Which code could replace Sam\'s shadow code to create the same sound and timeline?**'
-height '210'
-width '200'
-wrong 'https://images.code.org/957c8160ad253afef78feb21c978092b-image-1750273441612.png'
-wrong 'https://images.code.org/047773f78a58e023eb660d75342e279c-image-1750273445338.png'
-wrong 'https://images.code.org/3bec11e0fa3019d6ab95192eab2d8391-image-1750273449479.png'
-right 'https://images.code.org/b9edad2edada02dae49694732bff7215-image-1750273436722.png'
+question '**Why is a nested loop a good choice in this situation?**'
+
+wrong 'Because both sounds are the same length, and we want them to play at the same time'
+right 'Because we want both sounds to start and end together, even though they are different lengths.'
+wrong 'Because we want to hear both sounds once, and nested loops make that possible.'
+wrong 'Because it is the only way to play music with more than one sound.'
 
 allow_multiple_attempts true
 
@@ -26,7 +25,10 @@ Posttest Modality: Given starting code / shadow blocks, refactor
 MARKDOWN
 
 markdown <<MARKDOWN
-Sam is remixing some background beats and vocals. They just discovered that a loop using a repeat block could make this code more efficient. This is the code they have so far:
+Avery is making some music for a video game level.
+She wants the `Bass Float` and `Main Loop` to play together in the background but the sounds are different lengths. Here is the code she used to line up the two sounds and repeat over and over. Avery needed to use a nested loop to make this happen.
 
-<img src="https://images.code.org/ab3bcc06560956ac8967edca1899aa83-image-1750273275289.png" width="200">
+<img src="https://images.code.org/903d9f15dc1b49733e07c39b4ca413dd-image-1751307769273.png" height="200">
+
+
 MARKDOWN

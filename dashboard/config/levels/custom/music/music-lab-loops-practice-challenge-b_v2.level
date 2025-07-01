@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:49.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Single Backing Track\r\n\r\nIn this [Diary of a Song video](https://youtu.be/ZpMNJbt3QDE?t=320), Ed Sheeran describes how they created the song Shape Of You. He points out how the song has a single track that loops throughout the entire song - \r\n\r\n> This song is just one loop the whole way through... so everything else is a surprise. Every time you start getting bored of it, something new comes in or drops out.\r\n\r\nApply this idea to a song of your own using tracks from I Need a Dollar by Aloe Blacc. The workspace has been setup so a single track loops 15 times - you get to pick the track, then decide how you can layer other tracks on top of it.\r\n\r\n1) Pick your underlying track to loop the entire song [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n2) Use loops and rests to create small moments that appear every once in a while in the song\r\n\r\nListen to the example for what this could sound like, or look at the timeline below for one possible way to create this song\r\n\r\n![](https://images.code.org/018f90620e474059e6ba1288615cdeed-image-1744342208400.png)",
+    "long_instructions": "#### Single Backing Track\r\n\r\nIn this [Diary of a Song video](https://youtu.be/ZpMNJbt3QDE?t=320), Ed Sheeran describes how they created the song Shape Of You. He points out how the song has a single track that loops throughout the entire song - \r\n\r\n> This song is just one loop the whole way through... so everything else is a surprise. Every time you start getting bored of it, something new comes in or drops out.\r\n\r\nApply this idea to a song of your own using tracks from I Need a Dollar by Aloe Blacc. The workspace has been setup so a single track loops 15 times - you get to pick the track, then decide how you can layer other tracks on top of it.\r\n\r\n1) Pick your underlying track to loop the entire song [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n2) Use loops and rests to create small moments that appear every once in a while in the song\r\n\r\nListen to the example for what this could sound like, or look at the timeline below for one possible way to create this song\r\n\r\n![](https://images.code.org/018f90620e474059e6ba1288615cdeed-image-1744342208400.png)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -575,8 +576,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/i_need_a_dollar_aloe_blacc/i_need_a_dollar_aloe_blacc.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.842+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-b\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-b\"},{\"changed_at\":\"2025-06-12 20:33:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.842+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-b\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-b\"},{\"changed_at\":\"2025-06-12 20:33:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:52:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

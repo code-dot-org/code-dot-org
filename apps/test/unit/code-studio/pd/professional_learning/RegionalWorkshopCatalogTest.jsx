@@ -137,13 +137,16 @@ describe('RegionalWorkshopCatalog', () => {
         '/professional-learning/contact-regional-partner?zip=11111'
       );
 
-      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': 'authToken',
-        },
-        method: 'GET',
-      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/professional-learning/regional_workshop_data/${zip}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': 'authToken',
+          },
+          method: 'GET',
+        }
+      );
 
       // Still shows National workshops
       expect(screen.getAllByText('National workshops').length).toBe(2);
@@ -196,13 +199,16 @@ describe('RegionalWorkshopCatalog', () => {
       );
       TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
-      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': 'authToken',
-        },
-        method: 'GET',
-      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/professional-learning/regional_workshop_data/${zip}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': 'authToken',
+          },
+          method: 'GET',
+        }
+      );
 
       // Still shows National workshops
       expect(screen.getAllByText('National workshops').length).toBe(2);
@@ -296,13 +302,16 @@ describe('RegionalWorkshopCatalog', () => {
       // Regional workshop content is displayed
       TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
-      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': 'authToken',
-        },
-        method: 'GET',
-      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/professional-learning/regional_workshop_data/${zip}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': 'authToken',
+          },
+          method: 'GET',
+        }
+      );
 
       // Still shows National workshops
       expect(screen.getAllByText('National workshops').length).toBe(2);
@@ -343,13 +352,16 @@ describe('RegionalWorkshopCatalog', () => {
       // Regional workshop content is displayed
       TEST_REGIONAL_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
 
-      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': 'authToken',
-        },
-        method: 'GET',
-      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/professional-learning/regional_workshop_data/${zip}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': 'authToken',
+          },
+          method: 'GET',
+        }
+      );
 
       // Still shows National workshops
       expect(screen.getAllByText('National workshops').length).toBe(2);

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:49.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Feather with Drums\r\n\r\nThere is a video series on Youtube from **Drumeo** where drummers from famous bands re-create the drum section for songs they've never heard before. For example, [this video](https://www.youtube.com/watch?v=tbUYVcaF_l0) features Dirk Verbeuren hearing the song Mr Brightside for the first time and creating a new drum track. Dirk uses **decomposition** and **pattern recognition** to create his track:\r\n\r\n> When you listen to a song the first time, just count, you know, name the parts, count the bars, and then at least if anything you have a structure\r\n\r\n**You Try:** Create your own drum track to the song Feather by Sabrina Carpenter. The rest of the song is already in the workspace - you only need to provide the drum track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:rest_workspace)\r\n\r\nTo pass this level, you must have at least 2 different Beat tracks that loop throughout the entire song.",
+    "long_instructions": "#### Feather with Drums\r\n\r\nThere is a video series on Youtube from **Drumeo** where drummers from famous bands re-create the drum section for songs they've never heard before. For example, [this video](https://www.youtube.com/watch?v=tbUYVcaF_l0) features Dirk Verbeuren hearing the song Mr Brightside for the first time and creating a new drum track. Dirk uses **decomposition** and **pattern recognition** to create his track:\r\n\r\n> When you listen to a song the first time, just count, you know, name the parts, count the bars, and then at least if anything you have a structure\r\n\r\n**You Try:** Create your own drum track to the song Feather by Sabrina Carpenter. The rest of the song is already in the workspace - you only need to provide the drum track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:rest_workspace)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\nTo pass this level, you must have at least 2 different Beat tracks that loop throughout the entire song.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -596,8 +597,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_feather/sabrina_carpenter_feather.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.564+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a\"},{\"changed_at\":\"2025-06-12 20:32:37 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.564+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-a\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-a\"},{\"changed_at\":\"2025-06-12 20:32:37 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:50:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -331,6 +331,11 @@ const marketingPaths = {
   "/about/leadership": true,
   // CSAIF
   "/csaif": true,
+  // Post Launch 4
+  "/your-school": true,
+  "/yourschool": true,
+  "/yourschool/thankyou": true,
+  "/about/team-pets": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
