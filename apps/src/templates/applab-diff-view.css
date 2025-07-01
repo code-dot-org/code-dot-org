@@ -1,0 +1,7 @@
+/* Custom styles to make ReactDiffViewer elements and text smaller */
+
+.applab-small-diff * {
+  font-size: 12px !important;
+  padding: 2px !important;
+  line-height: 1.2 !important;
+}

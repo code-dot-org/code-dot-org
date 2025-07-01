@@ -1,8 +1,10 @@
+import './applab-diff-view.css';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
+import ReactDiffViewer, {DiffMethod} from 'react-diff-viewer';
 
 import {fetchStudentCodeSamples} from '@cdo/apps/levelbuilder/ai-iteration-tools/StudentWorkSamplesApi';
 
@@ -73,17 +75,41 @@ const ProcessModal = ({useFilesApi}) => {
     fetchAllVersions();
   }, [useFilesApi]);
 
+  // Sort versions by lastModified (descending, newest first)
+  const sortedVersions = [...versions].sort((a, b) => {
+    const aTime = new Date(a.lastModified).getTime();
+    const bTime = new Date(b.lastModified).getTime();
+    return bTime - aTime;
+  });
+
   return (
     <div className="version-history-details">
       <h3>Code Changes</h3>
       {versions.length === 0 && <p>No versions available.</p>}
       {versions.length > 0 && (
         <List style={{maxHeight: '400px', overflow: 'auto'}}>
-          {versions.map(version => (
+          {sortedVersions.map((version, index) => (
             <ListItem key={version.versionId} alignItems="flex-start">
               <ListItemText
                 primary={
                   <>
+                    {index > 0 && (
+                      <div className="applab-small-diff">
+                        <ReactDiffViewer
+                          oldValue={
+                            codeByVersion[sortedVersions[index].versionId]
+                          }
+                          newValue={
+                            codeByVersion[sortedVersions[index - 1].versionId]
+                          }
+                          splitView={true}
+                          showDiffOnly={true}
+                          extraLinesSurroundingDiff={0}
+                          hideLineNumbers={false}
+                          compareMethod={DiffMethod.WORDS}
+                        />
+                      </div>
+                    )}
                     <strong>Version ID:</strong> {version.versionId}
                     <br />
                     <strong>Last Modified:</strong>{' '}
