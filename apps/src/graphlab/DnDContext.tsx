@@ -1,5 +1,8 @@
 import React, {createContext, useContext, useState} from 'react';
 
+// Is this needed?  Dragging is much simpler in this older example:
+// https://v9.reactflow.dev/examples/drag-and-drop/
+
 interface DnDContextType {
   type: string | null;
   setType: React.Dispatch<React.SetStateAction<string | null>>;
