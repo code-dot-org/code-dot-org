@@ -15,6 +15,8 @@ import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
+import {CollectionProps} from '../types';
+
 type ItemFields = {
   actionBlockOverline: EntryFields.Text;
   title: EntryFields.Text;
@@ -27,15 +29,11 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type ActionBlockCollectionProps = {
+export type ActionBlockCollectionProps = CollectionProps & {
   /** Collection content w/ fields from Contentful */
   blocks: ItemEntry[];
   /** Background color of the Action Blocks */
   background: Extract<ActionBlockProps['background'], string>;
-  /** Sort order */
-  sortOrder: 'alphabetical' | 'manual';
-  /** Hide images */
-  hideImages: boolean;
 };
 
 const styles = {
