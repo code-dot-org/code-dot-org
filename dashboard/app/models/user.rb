@@ -1106,26 +1106,6 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
-  # def visible_scripts
-  #   scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
-  # end
-
-  # # Figures out the unique set of scripts assigned to sections that this user
-  # # is a part of. Includes default scripts for any assigned courses as well.
-  # # @return [Array<Unit>]
-  # def section_scripts
-  #   all_scripts = []
-  #   all_sections.each do |section|
-  #     if section.script.present?
-  #       all_scripts << section.script
-  #     elsif section.unit_group.present?
-  #       all_scripts.concat(section.unit_group.default_units)
-  #     end
-  #   end
-
-  #   all_scripts
-  # end
-
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i
