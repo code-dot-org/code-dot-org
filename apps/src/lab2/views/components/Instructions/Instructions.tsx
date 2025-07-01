@@ -277,6 +277,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 hasRun={hasRun}
                 hasEdited={hasEdited}
                 className={moduleStyles.buttonInstruction}
+                size={'s'}
               />
             </div>
           </div>
