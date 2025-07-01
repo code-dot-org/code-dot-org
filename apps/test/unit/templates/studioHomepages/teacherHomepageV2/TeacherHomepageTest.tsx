@@ -27,7 +27,6 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
