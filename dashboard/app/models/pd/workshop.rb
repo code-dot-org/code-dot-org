@@ -793,14 +793,6 @@ class Pd::Workshop < ApplicationRecord
       state != Pd::Workshop::STATE_ENDED
   end
 
-  # deprecated
-  def funding_summary
-    # funded is no longer a required field
-    # new workshops will not have a funding_summary
-    return '' if funded.nil?
-    (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
-  end
-
   # Get all enrollments for this workshop with no associated attendances
   def unattended_enrollments
     enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
