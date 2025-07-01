@@ -1187,12 +1187,13 @@ __metadata:
     "@applitools/eyes-playwright": "npm:^1.36.3"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^1.40.2"
+    "@contentful/experiences-sdk-react": "npm:^1.42.0"
     "@contentful/rich-text-html-renderer": "npm:^17.0.0"
     "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
+    "@mui/icons-material": "npm:^7.1.2"
     "@mui/material": "npm:^7.1.2"
     "@mui/material-nextjs": "npm:^7.1.1"
     "@newrelic/browser-agent": "npm:^1.290.0"
@@ -1212,6 +1213,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.2.0"
     "@testing-library/user-event": "npm:14.5.2"
+    "@trieb.work/nextjs-turbo-redis-cache": "npm:^1.8.1"
     "@types/fs-extra": "npm:^11.0.4"
     "@types/jest": "npm:^29.5.14"
     "@types/localizejs-library": "npm:^1.0.6"
@@ -1220,7 +1222,8 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     "@vercel/otel": "npm:^1.12.0"
-    contentful: "npm:^11.2.5"
+    axios: "npm:^1.10.0"
+    contentful: "npm:^11.7.3"
     contentful-management: "npm:^11.52.1"
     cookies-next: "npm:^5.1.0"
     cross-fetch: "npm:^4.1.0"
@@ -1241,6 +1244,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     react-map-gl: "npm:^8.0.4"
     react-schemaorg: "npm:^2.0.0"
+    redis: "npm:^4.7.1"
     schema-dts: "npm:^1.1.5"
     stylelint: "npm:^16.14.1"
     ts-node: "npm:^10.9.2"
@@ -1250,7 +1254,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@contentful/content-source-maps@npm:^0.11.0, @contentful/content-source-maps@npm:^0.11.6":
+"@contentful/content-source-maps@npm:^0.11.0":
   version: 0.11.6
   resolution: "@contentful/content-source-maps@npm:0.11.6"
   dependencies:
@@ -1260,41 +1264,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentful/experiences-components-react@npm:1.40.2":
-  version: 1.40.2
-  resolution: "@contentful/experiences-components-react@npm:1.40.2"
+"@contentful/content-source-maps@npm:^0.11.8":
+  version: 0.11.21
+  resolution: "@contentful/content-source-maps@npm:0.11.21"
   dependencies:
-    "@contentful/experiences-core": "npm:1.40.2"
+    "@vercel/stega": "npm:^0.1.2"
+    json-pointer: "npm:^0.6.2"
+  checksum: 10c0/9c042ee664c3e636755986b8fbb37ae0635149ee155a60b7ad16807ee05128dd2ee553e930c3a3420af04936b45cb116a36b94c79d0a4b2248430178c2bbba9f
+  languageName: node
+  linkType: hard
+
+"@contentful/experiences-components-react@npm:1.42.0":
+  version: 1.42.0
+  resolution: "@contentful/experiences-components-react@npm:1.42.0"
+  dependencies:
+    "@contentful/experiences-core": "npm:1.42.0"
     "@contentful/rich-text-react-renderer": "npm:^16.0.1"
     postcss-import: "npm:^16.0.1"
     style-inject: "npm:^0.3.0"
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/6b4229c582703d12bf21309d19344c7bc4c297d1b292b1b5bacc44c2cffb7ea36d3ac0f327cec4194dc1b96879c3154ea7637780647d1cfb5b2d2e3f679a6644
+  checksum: 10c0/c496226562ba86088160158eba45f04a066a4a8180f6495458be1aac65c42355fdc7735a969494789979c66a59844de5a3446eda0baad4d6222d415ce95bc494
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@npm:1.40.2":
-  version: 1.40.2
-  resolution: "@contentful/experiences-core@npm:1.40.2"
+"@contentful/experiences-core@npm:1.42.0":
+  version: 1.42.0
+  resolution: "@contentful/experiences-core@npm:1.42.0"
   dependencies:
-    "@contentful/experiences-validators": "npm:1.40.2"
+    "@contentful/experiences-validators": "npm:1.42.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
   peerDependencies:
     contentful: ">=10.6.0"
-  checksum: 10c0/25caef31ef3953600b3b2cb90b94bdf3bcc717a4d0344700fdac7f422bc448acfedb13ef95c4f05f64364116b07818cadccc3e7d0dbe8cf65e51ac66ccc117a4
+  checksum: 10c0/76995083e1aa6ce1ee7b8b444ea6b6bd37328905ce0ff0520a6af938c4a0a639d26e758a8bf9dd13501e89fd00e78134fbe5b3d078ae7bea30d100f979e34da7
   languageName: node
   linkType: hard
 
-"@contentful/experiences-sdk-react@npm:^1.40.2":
-  version: 1.40.2
-  resolution: "@contentful/experiences-sdk-react@npm:1.40.2"
+"@contentful/experiences-sdk-react@npm:^1.42.0":
+  version: 1.42.0
+  resolution: "@contentful/experiences-sdk-react@npm:1.42.0"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.40.2"
-    "@contentful/experiences-core": "npm:1.40.2"
-    "@contentful/experiences-validators": "npm:1.40.2"
-    "@contentful/experiences-visual-editor-react": "npm:1.40.2"
+    "@contentful/experiences-components-react": "npm:1.42.0"
+    "@contentful/experiences-core": "npm:1.42.0"
+    "@contentful/experiences-validators": "npm:1.42.0"
+    "@contentful/experiences-visual-editor-react": "npm:1.42.0"
     "@contentful/rich-text-types": "npm:^17.0.0"
     classnames: "npm:^2.3.2"
     csstype: "npm:^3.1.2"
@@ -1306,25 +1320,25 @@ __metadata:
     contentful: ">=10.6.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 10c0/660a1a08eb7750353b7e5e6e1f0e5856af14cad699d67e5388d0372fc99b0e02d621fbae8d3b0f23198850d091c39ab3db2e1480b0dbdc56373a10108ae07ff9
+  checksum: 10c0/4d94bea62a94f86db051a631b764eb98bc43d64527d9110a125062bb8f72efa22b2f5aae50c4dbd5345aed094dd3c13e5d7923d1fe955f8a24a40122e06c2a13
   languageName: node
   linkType: hard
 
-"@contentful/experiences-validators@npm:1.40.2":
-  version: 1.40.2
-  resolution: "@contentful/experiences-validators@npm:1.40.2"
+"@contentful/experiences-validators@npm:1.42.0":
+  version: 1.42.0
+  resolution: "@contentful/experiences-validators@npm:1.42.0"
   dependencies:
     zod: "npm:^3.22.4"
-  checksum: 10c0/8086b9f25227534b13e6f9cfedf0a3f26fde729ac62ddc845512f0f4170ed6fb2ae049f5b24595ff71f52f2f092fe408202b563d1bc4d74ef40af23a3444e907
+  checksum: 10c0/73328ff53408b3ed46db461542faebca4496158b90a366ceee595efe55c45efc8e977653adb7d9839aee7d3dbaf3649517f5996b01cbfa297e98631c550b6cd8
   languageName: node
   linkType: hard
 
-"@contentful/experiences-visual-editor-react@npm:1.40.2":
-  version: 1.40.2
-  resolution: "@contentful/experiences-visual-editor-react@npm:1.40.2"
+"@contentful/experiences-visual-editor-react@npm:1.42.0":
+  version: 1.42.0
+  resolution: "@contentful/experiences-visual-editor-react@npm:1.42.0"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.40.2"
-    "@contentful/experiences-core": "npm:1.40.2"
+    "@contentful/experiences-components-react": "npm:1.42.0"
+    "@contentful/experiences-core": "npm:1.42.0"
     "@hello-pangea/dnd": "npm:^16.3.0"
     classnames: "npm:^2.3.2"
     contentful: "npm:^10.6.14"
@@ -1338,7 +1352,7 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/8ff5a4cf45730338f6f075b646ac877f0cc1cf409bf068a417d1bcc811d4b84da32b2ff0ef12c70c2fa9b4946580342ff2cd80a88491399b0b93cd6fc0c38557
+  checksum: 10c0/fc6aff07a80fd877a0549f8304a16ecb9618bf2a4648688213dfd0424172e4894c0d0f469f1ae7bc37c389743ad51b19d188a17d327e7679729e7da79cf1d282
   languageName: node
   linkType: hard
 
@@ -3778,6 +3792,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mui/icons-material@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "@mui/icons-material@npm:7.1.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.1"
+  peerDependencies:
+    "@mui/material": ^7.1.2
+    "@types/react": ^17.0.0 || ^18.0.0 || ^19.0.0
+    react: ^17.0.0 || ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 10c0/c049dcca971dbcb9b227bad6964d03e4f204daaedd4e18f9a0b0aade6da06a5b5ee787e55b6d5330e9243b01f8409a5db1da0482b3cc9e8f6a1e94cb8f3bdc65
+  languageName: node
+  linkType: hard
+
 "@mui/material-nextjs@npm:^7.1.1":
   version: 7.1.1
   resolution: "@mui/material-nextjs@npm:7.1.1"
@@ -5646,6 +5676,62 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redis/bloom@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@redis/bloom@npm:1.2.0"
+  peerDependencies:
+    "@redis/client": ^1.0.0
+  checksum: 10c0/7dde8e67188164e96226c8a5c78ebd2801f1662947371e78fb95fb180c1e9ddff8d237012eb5e9182775be61cb546f67f759927cdaee0d178d863ee290e1fb27
+  languageName: node
+  linkType: hard
+
+"@redis/client@npm:1.6.1":
+  version: 1.6.1
+  resolution: "@redis/client@npm:1.6.1"
+  dependencies:
+    cluster-key-slot: "npm:1.1.2"
+    generic-pool: "npm:3.9.0"
+    yallist: "npm:4.0.0"
+  checksum: 10c0/216c61f5aa2fef212386c2ef5b5f6d10f44244f6928682f370e190402d23338e11260377c08e87dd6d678408fa7c0a6b7bb5571ecadb830abfa3d7355b9eff1e
+  languageName: node
+  linkType: hard
+
+"@redis/graph@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@redis/graph@npm:1.1.1"
+  peerDependencies:
+    "@redis/client": ^1.0.0
+  checksum: 10c0/64199db2cb3669c4911af8aba3b7116c4c2c1df37ca74b2a65555e62c863935a0cea74bc41bd92acf2e551074eb2a30c75f54a9f439b40e0f9bb67fc5fb66614
+  languageName: node
+  linkType: hard
+
+"@redis/json@npm:1.0.7":
+  version: 1.0.7
+  resolution: "@redis/json@npm:1.0.7"
+  peerDependencies:
+    "@redis/client": ^1.0.0
+  checksum: 10c0/cef473711d66f7568a16edbd728acca7d237cfeaa15e0326b5b628dfab4afc0c76c7354e7f8efad6ecc64a1cb774e4aa060ee46497b633e18ba0a2f0aace1cc4
+  languageName: node
+  linkType: hard
+
+"@redis/search@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@redis/search@npm:1.2.0"
+  peerDependencies:
+    "@redis/client": ^1.0.0
+  checksum: 10c0/01d57ac10d2c5698e04e4a2f945440db3087e8834643ca950c099879dbcd77526604ca6f5c2ee883dfd4b337b0a24cb7d81ac56845aa83f89a4f161362a08dc6
+  languageName: node
+  linkType: hard
+
+"@redis/time-series@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@redis/time-series@npm:1.1.0"
+  peerDependencies:
+    "@redis/client": ^1.0.0
+  checksum: 10c0/503d0d5cbc9113d26666bb7b4dea57619badbcdfeee0369abf647250f26c5482ed5827c83f88f9f0cf22e021e3e7cb562459669d733fac05652972e208d6ba0f
+  languageName: node
+  linkType: hard
+
 "@release-it/conventional-changelog@npm:^10.0.0":
   version: 10.0.0
   resolution: "@release-it/conventional-changelog@npm:10.0.0"
@@ -7160,6 +7246,16 @@ __metadata:
   version: 0.23.0
   resolution: "@tootallnate/quickjs-emscripten@npm:0.23.0"
   checksum: 10c0/2a939b781826fb5fd3edd0f2ec3b321d259d760464cf20611c9877205aaca3ccc0b7304dea68416baa0d568e82cd86b17d29548d1e5139fa3155a4a86a2b4b49
+  languageName: node
+  linkType: hard
+
+"@trieb.work/nextjs-turbo-redis-cache@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "@trieb.work/nextjs-turbo-redis-cache@npm:1.8.1"
+  peerDependencies:
+    next: ">=15.0.3 <= 15.3.2"
+    redis: 4.7.0
+  checksum: 10c0/cfa1700768eb4ae3da7e17ce05352261669fd72974645817b059a7c40da0a1342aaf3820bff31c86f4f913db7e76a57ef30ec2024e1e13f38eb4a21f57445ab9
   languageName: node
   linkType: hard
 
@@ -9048,6 +9144,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"axios@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "axios@npm:1.10.0"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/2239cb269cc789eac22f5d1aabd58e1a83f8f364c92c2caa97b6f5cbb4ab2903d2e557d9dc670b5813e9bcdebfb149e783fb8ab3e45098635cd2f559b06bd5d8
+  languageName: node
+  linkType: hard
+
 "axios@npm:^1.6.1, axios@npm:^1.7.4, axios@npm:^1.7.7":
   version: 1.8.4
   resolution: "axios@npm:1.8.4"
@@ -9998,6 +10105,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cluster-key-slot@npm:1.1.2":
+  version: 1.1.2
+  resolution: "cluster-key-slot@npm:1.1.2"
+  checksum: 10c0/d7d39ca28a8786e9e801eeb8c770e3c3236a566625d7299a47bb71113fb2298ce1039596acb82590e598c52dbc9b1f088c8f587803e697cb58e1867a95ff94d3
+  languageName: node
+  linkType: hard
+
 "co@npm:^4.6.0":
   version: 4.6.0
   resolution: "co@npm:4.6.0"
@@ -10293,18 +10407,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contentful@npm:^11.2.5":
-  version: 11.2.5
-  resolution: "contentful@npm:11.2.5"
+"contentful@npm:^11.7.3":
+  version: 11.7.3
+  resolution: "contentful@npm:11.7.3"
   dependencies:
-    "@contentful/content-source-maps": "npm:^0.11.6"
+    "@contentful/content-source-maps": "npm:^0.11.8"
     "@contentful/rich-text-types": "npm:^16.6.1"
-    axios: "npm:^1.7.4"
+    axios: "npm:^1.8.4"
     contentful-resolve-response: "npm:^1.9.0"
     contentful-sdk-core: "npm:^9.0.1"
     json-stringify-safe: "npm:^5.0.1"
     type-fest: "npm:^4.0.0"
-  checksum: 10c0/467fad1610f1f6de8acb61e9aa5d6efedfe1232c98d2d60e56f4e44e49a0e28be51ad3028cb02a5d4345b764ad997bdf6a17d82118cb2036f4c70051e2d271f5
+  checksum: 10c0/469c8fe593233331d6683ea531dc99c9ddb4634625965ede6591a72e5387d7d1afbc6b2e7157b13d17f76a9ad9eac711357902eb633872802f0a47059484be25
   languageName: node
   linkType: hard
 
@@ -13265,6 +13379,13 @@ __metadata:
   dependencies:
     loader-utils: "npm:^3.2.0"
   checksum: 10c0/4e2be864535fadceed4e803fefc1df7f85447d9479d51e611a8a43a2c96533422b62c8fae84d9eb10cc21ee3de569a8c29d5ba68978ae930cccc9cb43b9a36d1
+  languageName: node
+  linkType: hard
+
+"generic-pool@npm:3.9.0":
+  version: 3.9.0
+  resolution: "generic-pool@npm:3.9.0"
+  checksum: 10c0/6b314d0d71170d5cbaf7162c423f53f8d6556b2135626a65bcdc03c089840b0a2f59eeb2d907939b8200e945eaf71ceb6630426f22d2128a1d242aec4b232aa7
   languageName: node
   linkType: hard
 
@@ -18986,6 +19107,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redis@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "redis@npm:4.7.1"
+  dependencies:
+    "@redis/bloom": "npm:1.2.0"
+    "@redis/client": "npm:1.6.1"
+    "@redis/graph": "npm:1.1.1"
+    "@redis/json": "npm:1.0.7"
+    "@redis/search": "npm:1.2.0"
+    "@redis/time-series": "npm:1.1.0"
+  checksum: 10c0/36fc11b7b305e73cafd0a32c5e7070aef72d3a33f2b34f609a1c295afb7d1a022d74eeda96e8d887ef596bbe8ce10811450d02b63175a338d2ff258ff34bd237
+  languageName: node
+  linkType: hard
+
 "redux@npm:^4.2.1":
   version: 4.2.1
   resolution: "redux@npm:4.2.1"
@@ -22680,17 +22815,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yallist@npm:4.0.0, yallist@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "yallist@npm:4.0.0"
+  checksum: 10c0/2286b5e8dbfe22204ab66e2ef5cc9bbb1e55dfc873bbe0d568aa943eb255d131890dfd5bf243637273d31119b870f49c18fcde2c6ffbb7a7a092b870dc90625a
+  languageName: node
+  linkType: hard
+
 "yallist@npm:^3.0.2":
   version: 3.1.1
   resolution: "yallist@npm:3.1.1"
   checksum: 10c0/c66a5c46bc89af1625476f7f0f2ec3653c1a1791d2f9407cfb4c2ba812a1e1c9941416d71ba9719876530e3340a99925f697142989371b72d93b9ee628afd8c1
-  languageName: node
-  linkType: hard
-
-"yallist@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "yallist@npm:4.0.0"
-  checksum: 10c0/2286b5e8dbfe22204ab66e2ef5cc9bbb1e55dfc873bbe0d568aa943eb255d131890dfd5bf243637273d31119b870f49c18fcde2c6ffbb7a7a092b870dc90625a
   languageName: node
   linkType: hard
 

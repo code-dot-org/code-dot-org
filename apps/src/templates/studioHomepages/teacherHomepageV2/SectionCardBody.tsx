@@ -20,16 +20,18 @@ interface SectionCardBodyProps {
 const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
   return (
     <div className={styles.sectionCardBody}>
-      {section.courseId ? (
-        <CourseContentDropdown section={section} />
-      ) : (
-        <EmptyStateButton
-          buttonText={i18n.assignACourseButton()}
-          icon={'book-open-cover'}
-          sectionId={section.id}
-          path={'/catalog'}
-        />
-      )}
+      <div className={styles.sectionCardBodyLeft}>
+        {section.courseId ? (
+          <CourseContentDropdown section={section} />
+        ) : (
+          <EmptyStateButton
+            buttonText={i18n.assignACourseButton()}
+            icon={'book-open-cover'}
+            sectionId={section.id}
+            path={'/catalog'}
+          />
+        )}
+      </div>
       <div className={styles.sectionCardBodyRight}>
         {section.studentCount > 0 && section.courseId ? (
           <TaskButton

@@ -1,83 +1,126 @@
 import {render, screen} from '@testing-library/react';
 
-import LogoCollection from '../LogoCollection';
+import LogoCollection, {LogoCollectionProps} from '../LogoCollection';
 
 jest.mock('@/selectors/contentful/getImage', () => ({
   getAbsoluteImageUrl: jest.fn(() => 'https://example.com/logo.png'),
 }));
 
-const mockLogo = (overrides = {}) => ({
-  fields: {
-    title: 'First Logo',
-    logoImage: {
-      fields: {
-        title: 'First Brand',
+const mockLogos: LogoCollectionProps['logos'] = [
+  {
+    fields: {
+      title: 'Microsoft',
+      logoImage: {
+        fields: {
+          title: 'Microsoft Logo',
+        },
+      },
+      primaryLinkRef: {
+        fields: {
+          primaryTarget: 'https://microsoft.com',
+        },
       },
     },
-    primaryLinkRef: {
-      fields: {
-        primaryTarget: 'https://first.com',
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
+  {
+    fields: {
+      title: 'Amazon',
+      logoImage: {
+        fields: {
+          title: 'Amazon Logo',
+        },
+      },
+      primaryLinkRef: {
+        fields: {
+          primaryTarget: 'https://amazon.com',
+        },
       },
     },
-    ...overrides,
-  },
-});
-
-const mockLogos = [
-  mockLogo(),
-  mockLogo({
-    title: 'Second Logo',
-    logoImage: {fields: {title: 'Second Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: 'https://second.com'}},
-  }),
-  mockLogo({
-    title: 'Third Logo',
-    logoImage: {fields: {title: 'Third Brand'}},
-    primaryLinkRef: {fields: {primaryTarget: ''}},
-  }),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
+  {
+    fields: {
+      title: 'Google',
+      logoImage: {
+        fields: {
+          title: 'Google Logo',
+        },
+      },
+      primaryLinkRef: {
+        fields: {
+          primaryTarget: '',
+        },
+      },
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } as any,
 ];
 
 describe('LogoCollection', () => {
   it('renders logos', () => {
-    const logos = mockLogos;
-    render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
-      />,
-    );
+    render(<LogoCollection logos={mockLogos} />);
     expect(screen.getAllByRole('img')).toHaveLength(3);
   });
 
   it('renders logos with correct alt text', () => {
-    const logos = mockLogos;
-    render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
-      />,
-    );
-    expect(screen.getAllByAltText('First Brand')[0]).toBeInTheDocument();
+    render(<LogoCollection logos={mockLogos} />);
+    expect(screen.getByAltText('Microsoft Logo')).toBeInTheDocument();
+    expect(screen.getByAltText('Amazon Logo')).toBeInTheDocument();
+    expect(screen.getByAltText('Google Logo')).toBeInTheDocument();
   });
 
   it('renders links for logos with URLs', () => {
-    const logos = mockLogos;
-    render(
-      <LogoCollection
-        logos={logos as Parameters<typeof LogoCollection>[0]['logos']}
-      />,
-    );
+    render(<LogoCollection logos={mockLogos} />);
     const images = screen.getAllByRole('figure');
 
     // check that images with URLs have links
     expect(images[0].firstElementChild).toHaveAttribute(
       'href',
-      'https://first.com',
+      'https://amazon.com',
     );
-    expect(images[1].firstElementChild).toHaveAttribute(
-      'href',
-      'https://second.com',
-    );
+    expect(images[1].firstElementChild).not.toHaveAttribute('href');
 
     // check that images without URLs do not have links
-    expect(images[2].firstElementChild).not.toHaveAttribute('href');
+    expect(images[2].firstElementChild).toHaveAttribute(
+      'href',
+      'https://microsoft.com',
+    );
+  });
+
+  it('sorts logos alphabetically by brand title', () => {
+    render(<LogoCollection logos={mockLogos} />);
+    const images = screen.getAllByRole('img');
+    expect(images[0]).toHaveAttribute('alt', 'Amazon Logo');
+    expect(images[1]).toHaveAttribute('alt', 'Google Logo');
+    expect(images[2]).toHaveAttribute('alt', 'Microsoft Logo');
+  });
+
+  it('handles logos with missing or undefined fields when sorting', () => {
+    const logos = mockLogos;
+    const logosWithMissingFields: LogoCollectionProps['logos'] = [
+      {
+        fields: {
+          title: null,
+          logoImage: null,
+          primaryLinkRef: null,
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
+      {
+        fields: {
+          title: undefined,
+          logoImage: undefined,
+          primaryLinkRef: undefined,
+        },
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } as any,
+    ];
+
+    render(<LogoCollection logos={[...logos, ...logosWithMissingFields]} />);
+    const images = screen.getAllByRole('img');
+    expect(images[0]).toHaveAttribute('alt', 'Amazon Logo');
+    expect(images[1]).toHaveAttribute('alt', 'Google Logo');
+    expect(images[2]).toHaveAttribute('alt', 'Microsoft Logo');
   });
 });

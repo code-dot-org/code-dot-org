@@ -41,10 +41,6 @@
   gap: 6px;
 }
 
-.feedbackAlert {
-  margin-bottom: 20px;
-}
-
 // SectionList
 .sectionList {
   display: flex;
@@ -177,6 +173,15 @@
   }
 }
 
+.sectionCardBodyLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
@@ -242,8 +247,6 @@
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
-  flex: 1 1 0;
-  min-width: 0;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
@@ -252,20 +255,21 @@
   height: 100%;
 }
 
-.courseTitleText {
-  margin: 0 !important;
+.courseContentDropdownContainer .courseTitleText {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  min-width: 0;
+  margin-bottom: 0;
 }
 
-.courseContentDropdown {
+.courseContentDropdownContainer .courseContentDropdown {
   width: 100%;
   button {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 

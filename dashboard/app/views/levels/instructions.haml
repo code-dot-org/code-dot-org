@@ -21,7 +21,12 @@
       .script_level
         = link_to "Level #{script_level.position}: #{script_level.level.name}", build_script_level_path(script_level, unit_group_unit: @unit_group_unit)
         %div= "type: #{script_level.level.class}"
-        - levels = level.is_a?(LevelGroup) ? level.levels : [level]
+        - if level.is_a?(LevelGroup)
+          - levels = level.levels
+        - elsif level.is_a?(BubbleChoice)
+          - levels = level.sublevels
+        - else
+          - levels = [level]
         - levels.each do |level|
           - if level.try(:contained_levels).present?
             - level.try(:contained_levels).each do |contained|

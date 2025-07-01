@@ -2,10 +2,11 @@ import Negotiator from 'negotiator';
 import {NextFetchEvent, NextRequest} from 'next/server';
 
 import {
-  getLocalizeJsLocale,
-  getPegasusLocale,
+  getLocalizeJsLocaleFromDashboardLocale,
+  getDashboardLocale,
   SUPPORTED_LOCALE_CODES,
   SUPPORTED_LOCALES_SET,
+  SupportedLocale,
 } from '@/config/locale';
 import {getStage} from '@/config/stage';
 import {getStudioBaseUrl} from '@/config/studio';
@@ -15,7 +16,7 @@ import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectRes
 import {MiddlewareFactory} from './types';
 
 function getLanguageFromCookie(request: NextRequest) {
-  const cookieLocale = getLocalizeJsLocale(
+  const cookieLocale = getLocalizeJsLocaleFromDashboardLocale(
     request.cookies.get('language_')?.value,
   );
   return cookieLocale !== undefined && SUPPORTED_LOCALES_SET.has(cookieLocale)
@@ -48,13 +49,13 @@ export const withLocale: MiddlewareFactory = next => {
     const {pathname} = request.nextUrl;
     const pathParts = pathname.split('/').filter(Boolean);
 
-    const maybeLocale = pathParts[0];
+    const maybeLocale = pathParts[0] as SupportedLocale;
 
     if (SUPPORTED_LOCALES_SET.has(maybeLocale)) {
       // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
       const response = await next(request, event);
 
-      response.cookies.set('language_', getPegasusLocale(maybeLocale), {
+      response.cookies.set('language_', getDashboardLocale(maybeLocale), {
         path: '/',
         domain: getStage() === 'production' ? '.code.org' : undefined,
       });
@@ -95,7 +96,7 @@ export const withLocale: MiddlewareFactory = next => {
     const response = getCachedRedirectResponse(redirectUrl);
 
     // Set the language cookie if discovered via Accept-Language header
-    response.cookies.set('language_', getPegasusLocale(locale), {
+    response.cookies.set('language_', getDashboardLocale(locale), {
       path: '/',
       domain: getStage() === 'production' ? '.code.org' : undefined,
     });

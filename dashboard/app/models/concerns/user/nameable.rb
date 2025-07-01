@@ -1,21 +1,19 @@
 # Provides name-related validations, sanitization, and helper methods for User models.
 # Ensures presence and length constraints on `name`, strips unwanted characters,
-# prevents `family_name` for certain roles (teachers and PL participants),
 # and adds utility methods like `short_name`, `initial`, and sorting flags.
 module User::Nameable
   extend ActiveSupport::Concern
 
   included do
     ## Validation Macros
-    validates :name, presence: true, unless: -> {purged_at}
+    validates :name, presence: true, unless: -> {purged_at || pii_scrubbed_at}
     validates :name, length: {within: 1..70}, allow_blank: true
-    validate :no_family_name_for_teachers
 
     ## Callback Macros
     before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
       self.name = name.sanitize_utf8mb4
     end
-    before_save :strip_display_family_names
+    before_save :strip_display_given_family_names
   end
 
   def short_name
@@ -31,15 +29,10 @@ module User::Nameable
     UserHelpers.initial(name)
   end
 
-  def strip_display_family_names
+  def strip_display_given_family_names
     self.name = name.strip if name && will_save_change_to_name?
+    self.given_name = given_name.strip if given_name && will_save_change_to_properties?
     self.family_name = family_name.strip if family_name && will_save_change_to_properties?
-  end
-
-  def no_family_name_for_teachers
-    if family_name && (teacher? || sections_as_pl_participant.any?)
-      errors.add(:family_name, "can't be set for teachers or PL participants")
-    end
   end
 
   def sort_by_family_name?

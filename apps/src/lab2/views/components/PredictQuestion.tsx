@@ -58,7 +58,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 predictSettings.freeResponseHeight ||
                 PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT,
             }}
-            className={moduleStyles.freeResponse}
+            className={moduleStyles.freeResponseTextArea}
             readOnly={predictAnswerLocked}
           />
         ) : (
