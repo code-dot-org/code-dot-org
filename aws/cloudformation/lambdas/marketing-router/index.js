@@ -329,6 +329,8 @@ const marketingPaths = {
   "/privacy/cookies": true,
   "/about/team": true,
   "/about/leadership": true,
+  // CSAIF
+  "/csaif": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

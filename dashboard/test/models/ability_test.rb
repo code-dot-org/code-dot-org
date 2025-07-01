@@ -302,6 +302,10 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
 
+    refute ability.can?(:create, Pd::Workshop)
+    refute ability.can?(:destroy, Pd::Workshop)
+    assert ability.can?(:read, Pd::Workshop)
+
     assert ability.can?(:read, Section)
 
     assert ability.can?(:read, Unit.find_by_name('ECSPD'))

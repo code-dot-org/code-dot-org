@@ -215,6 +215,8 @@ Resources:
         # Delete the load balancer if the CloudFormation stack is deleted
         - Key: deletion_protection.enabled
           Value: "false"
+        # Note for idle_timeout.timeout_seconds: The default is 60 seconds, which is is appropriate for this application.
+        # If changing from the default, the KEEP_ALIVE_TIMEOUT in the Dockerfile must also be updated to be greater than this value.
       Scheme: internet-facing
       SecurityGroups:
         - !GetAtt FargateServiceLBSecurityGroup.GroupId

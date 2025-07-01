@@ -22,8 +22,8 @@ const endOfYearFakeToday = new Date(2016, 12, 30); // December 30th, 2016
  */
 Factory.define('workshop')
   .sequence('id', n => n)
-  .attr('course', 'CS Fundamentals')
-  .attr('subject', 'Intro')
+  .attr('course', 'CS Principles')
+  .attr('subject', 'Academic Year Workshop 1')
   .attr('sessions', () => Factory.buildList('session', 1))
   .attr('state', States[0])
   .attr('account_required_for_attendance?', false)
