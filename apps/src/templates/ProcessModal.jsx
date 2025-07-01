@@ -93,14 +93,27 @@ const ProcessModal = ({useFilesApi}) => {
               <ListItemText
                 primary={
                   <>
-                    {index > 0 && (
+                    <strong>Version ID:</strong> {version.versionId}
+                    <br />
+                    <strong>Last Modified:</strong>{' '}
+                    {version.lastModified instanceof Date
+                      ? version.lastModified.toLocaleString()
+                      : new Date(version.lastModified).toLocaleString()}
+                    <br />
+                    <strong>Code Changes:</strong>{' '}
+                    {/* {pending ? (
+                      <span>Loading...</span>
+                    ) : (
+                      // <span>{codeByVersion[version.versionId]}</span>
+                    )} */}
+                    {index < versions.length - 1 && (
                       <div className="applab-small-diff">
                         <ReactDiffViewer
                           oldValue={
-                            codeByVersion[sortedVersions[index].versionId]
+                            codeByVersion[sortedVersions[index + 1].versionId]
                           }
                           newValue={
-                            codeByVersion[sortedVersions[index - 1].versionId]
+                            codeByVersion[sortedVersions[index].versionId]
                           }
                           splitView={true}
                           showDiffOnly={true}
@@ -109,19 +122,6 @@ const ProcessModal = ({useFilesApi}) => {
                           compareMethod={DiffMethod.WORDS}
                         />
                       </div>
-                    )}
-                    <strong>Version ID:</strong> {version.versionId}
-                    <br />
-                    <strong>Last Modified:</strong>{' '}
-                    {version.lastModified instanceof Date
-                      ? version.lastModified.toLocaleString()
-                      : new Date(version.lastModified).toLocaleString()}
-                    <br />
-                    <strong>Code:</strong>{' '}
-                    {pending ? (
-                      <span>Loading...</span>
-                    ) : (
-                      <span>{codeByVersion[version.versionId]}</span>
                     )}
                   </>
                 }
