@@ -245,7 +245,12 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         {predictSettings?.isPredictLevel && (
           <>
             <InstructorsOnly>
-              <div className={moduleStyles.bubble}>
+              <div
+                className={classNames(
+                  moduleStyles.bubble,
+                  moduleStyles.predictSummaryBubble
+                )}
+              >
                 <PredictSummary />
               </div>
             </InstructorsOnly>
