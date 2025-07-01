@@ -97,14 +97,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
-  test 'for_school_district' do
-    school_info = create :school_info
-    enrollment_in_district = create :pd_enrollment, school_info: school_info
-    _enrollment_out_of_district = create :pd_enrollment
-
-    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
-  end
-
   test 'pre_workshop_survey_url' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
@@ -485,31 +477,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment = build :pd_enrollment
     enrollment.school_info.expects(:effective_school_district_name).returns('effective school district name')
     assert_equal 'effective school district name', enrollment.school_district_name
-  end
-
-  test 'school is forbidden' do
-    enrollment = build :pd_enrollment, school: 'a school'
-    refute enrollment.valid?
-    assert_equal ['School is forbidden'], enrollment.errors.full_messages
-  end
-
-  test 'old enrollments with school are grandfathered in' do
-    old_enrollment = create :pd_enrollment
-    assert old_enrollment.valid?
-
-    # Enrollments that already have a school are allowed to do so,
-    old_enrollment.school = 'a school'
-    old_enrollment.save(validate: false)
-    assert old_enrollment.valid?
-
-    # but they can't be changed
-    old_enrollment.school = 'another school'
-    refute old_enrollment.valid?
-
-    # and new enrollments cannot be so created.
-    assert_raises ActiveRecord::RecordInvalid do
-      create :pd_enrollment, school: 'a school'
-    end
   end
 
   test 'enrollment is deleted after clear_data for deleted owner' do

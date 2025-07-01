@@ -93,6 +93,8 @@ namespace :ci do
       next
     end
 
+    check_for_new_file_changes
+
     if CI::Utils.tagged?(SKIP_UI_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
       next
@@ -145,8 +147,6 @@ namespace :ci do
     end
     close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
-
-    check_for_new_file_changes
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
@@ -248,5 +248,7 @@ def check_for_new_file_changes
   if GitUtils.changed_in_branch_or_local?(GitUtils.current_branch, ['dashboard/db/schema.rb'])
     RakeUtils.system_stream_output('git diff -- dashboard/db/schema.rb | cat')
     raise 'Unexpected change to schema.rb - Make sure you run your migration locally and push those changes into your branch.'
+  else
+    ChatClient.log 'No changes to schema.rb detected.'
   end
 end

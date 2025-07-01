@@ -11,6 +11,8 @@ import {
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import {AiChatModelIdType} from './AiTutorModelId';
+
 const systemPrompts = {
   hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one statement (not expressed as a question) that helps the student to make progress.",
 };
@@ -21,12 +23,15 @@ export default class AiTutor2Manager {
   private currentLevelId: string | null;
   private scriptId: number | undefined;
   private channelId: string | undefined;
+  private modelId: AiChatModelIdType;
 
   constructor(
+    modelId: AiChatModelIdType = AiChatModelIds.GEMINI_2_0_FLASH,
     currentLevelId: string | null,
     scriptId: number | undefined,
     channelId: string | undefined
   ) {
+    this.modelId = modelId;
     this.currentLevelId = currentLevelId;
     this.scriptId = scriptId;
     this.channelId = channelId;
@@ -56,7 +61,7 @@ export default class AiTutor2Manager {
 
     const aiCustomizations = {
       ...EMPTY_AI_CUSTOMIZATIONS,
-      selectedModelId: AiChatModelIds.CHATGPT,
+      selectedModelId: this.modelId,
       systemPrompt: systemPrompts[type],
     };
 
@@ -75,7 +80,7 @@ export default class AiTutor2Manager {
       scriptId: this.scriptId,
       metadata: {
         channelId: this.channelId || '',
-        modelId: AiChatModelIds.CHATGPT,
+        modelId: this.modelId,
         systemPrompt: systemPrompts[type],
         type,
         userMessage: message,

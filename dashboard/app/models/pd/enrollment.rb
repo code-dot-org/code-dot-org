@@ -60,8 +60,6 @@ class Pd::Enrollment < ApplicationRecord
   validates_email_format_of :email, allow_blank: true
   validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
-  validate :school_forbidden, if: -> {new_record? || school_changed?}
-
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
@@ -104,18 +102,6 @@ class Pd::Enrollment < ApplicationRecord
   # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
   def created_before_school_info?
     persisted? && created_at < '2016-08-30'
-  end
-
-  def school_forbidden
-    errors.add(:school, 'is forbidden') if read_attribute(:school)
-  end
-
-  def school_info_country_required
-    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
-  end
-
-  def self.for_school_district(school_district)
-    joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
   scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}

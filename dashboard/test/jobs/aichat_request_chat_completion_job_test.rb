@@ -63,7 +63,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'execution status is set to SUCCESS if no profanity is detected using gpt-4o-mini' do
     model_response = 'response'
-    AichatOpenaiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
+    AichatAiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
     chatgpt_model_customizations = @model_customizations.merge({selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]})
 
     request = create :aichat_request, user_id: @student.id, model_customizations: chatgpt_model_customizations

@@ -53,7 +53,7 @@ export async function postAichatCompletionMessage(
   storedMessages: CompletedChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
-  // Configurable for testing
+  // Configurable for testing.
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
   const aichatModelCustomizations: AichatModelCustomizations = {
@@ -232,7 +232,7 @@ async function postChatCompletionAsyncPolling(
   }
 
   if (executionStatus < AiRequestExecutionStatus.SUCCESS) {
-    // Timed out
+    // Timed out.
     throw new Error('Chat completion request timed out (client side)');
   }
 
