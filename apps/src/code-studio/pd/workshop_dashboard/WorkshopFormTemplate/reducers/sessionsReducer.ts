@@ -14,19 +14,6 @@ export const sessionsReducer = (
         session.id === action.id ? {...session, ...action.payload} : session
       );
 
-    case 'UPDATE_SESSION_SAME_AS_PREVIOUS':
-      return state.map((session, i) =>
-        session.id === action.id && state[i - 1]
-          ? {
-              ...session,
-              sameAsPrevious: true,
-              meetingLink: state[i - 1].meetingLink,
-              locationName: state[i - 1].locationName,
-              locationAddress: state[i - 1].locationAddress,
-            }
-          : session
-      );
-
     case 'DELETE_SESSION':
       return state.filter(session => session.id !== action.id);
 

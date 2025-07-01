@@ -42,7 +42,7 @@ export default function initPage(unitEditorData) {
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.coursePublishedState}
-        initialUnitPublishedState={scriptData.unitPublishedState}
+        initialHideWithinCourse={scriptData.hide_within_course}
         initialInstructionType={scriptData.instructionType}
         initialInstructorAudience={scriptData.instructorAudience}
         initialParticipantAudience={scriptData.participantAudience}
@@ -102,6 +102,10 @@ export default function initPage(unitEditorData) {
         isCSDCourseOffering={scriptData.isCSDCourseOffering}
         isMissingRequiredDeviceCompatibilities={
           scriptData.missingRequiredDeviceCompatibilities
+        }
+        allowMajorCurriculumChanges={scriptData.allowMajorCurriculumChanges}
+        initialEnableBlocklyKeyboardNavigation={
+          scriptData.enableBlocklyKeyboardNavigation
         }
       />
     </Provider>,

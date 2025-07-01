@@ -10,6 +10,16 @@
     "csd7-2022",
     "csd-post-survey-2022"
   ],
+  "original_script_names": [
+    "csd1-2022",
+    "csd2-2022",
+    "csd3-2022",
+    "csd4-2022",
+    "csd5-2022",
+    "csd7-2022",
+    "csd6-2022",
+    "csd-post-survey-2022"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

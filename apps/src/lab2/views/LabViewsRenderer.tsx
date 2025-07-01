@@ -3,21 +3,21 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
+import React, {Suspense} from 'react';
 
-import React, {Suspense, useContext, useEffect} from 'react';
-
+import {getCurrentScriptLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
+import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
-import {PERMISSIONS} from '../constants';
-import ProgressContainer from '../progress/ProgressContainer';
-import {getAppOptionsViewingExemplar} from '../projects/utils';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
 import Loading from './Loading';
-import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
 
 import moduleStyles from './lab-views-renderer.module.scss';
 
@@ -30,25 +30,27 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = levelProperties?.appName;
   const exemplarSources = levelProperties?.exemplarSources;
   const levelId = levelProperties?.id;
+  const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
-  const isBlocked = useAppSelector(state => state.lab.isBlocked);
+  const {isBlockedAbuse, projectSharingDisabled} = useAppSelector(
+    state => state.lab
+  );
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
-  // Set the theme for the current app.
-  const {setTheme} = useContext(ThemeContext);
-  useEffect(() => {
-    if (currentAppName) {
-      const theme = lab2EntryPoints[currentAppName]?.theme || DEFAULT_THEME;
-      setTheme(theme);
-    }
-  }, [currentAppName, setTheme]);
+  useInitialLabTheme({
+    currentAppName,
+    levelProperties,
+  });
 
   // Do not render lab view if project is blocked and user is not a project validator.
-  if (!currentAppName || (isBlocked && !isProjectValidator)) {
+  if (
+    !currentAppName ||
+    ((isBlockedAbuse || projectSharingDisabled) && !isProjectValidator)
+  ) {
     return null;
   }
 
@@ -81,6 +83,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
         {!hideExtraLinks && levelId && (
           <ExtraLinks
             levelId={levelId}
+            scriptLevelId={scriptLevelId}
             positionRightOfFooter={extraLinksButtonRightOfFooter}
           />
         )}

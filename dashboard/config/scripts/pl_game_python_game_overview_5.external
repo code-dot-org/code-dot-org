@@ -1,0 +1,75 @@
+name 'pl-game-python-game-overview-5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+#### This professional learning module is made up of **five gamified lessons:**
+
+
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
+
+  
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/b38802839319e7f95b6c395c31bbed6e-image-1749147096070.png" alt="Lesson 1 image: teacher looking out to city road" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+        <div style="flex: 1; background: #dccbea; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+            <h3><b>👟Lesson 1 - Hitting the Road</b></h3>
+            <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
+           Get ready to embark on your Python journey and learn about what is in this module and how earn badges and get a completion certificate.<br><br> <em>5 minutes</em></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/ceb107a987181d2739fab9efca028d6e-image-1749147204435.png" alt="Lesson 2 image: exterior of a coffee cafe" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #B2dee3; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
+            <h3> <b>☕Lesson 2 - Fueling up at the Coffee Shop</b></h3>
+            <p style = "font-size: 14pt";>Kickstart  your foundational Python skills while completing challenges at the Neighborhood Cafe. Learn about variables, print statements, conditionals and more as you discover the basics of Python. <br><br> <em>45 minutes</em></p>
+        </div>
+    </div>
+
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/04c1d2996d491a262ba90583d6b84977-image-1749147234035.png" alt="Lesson 3 Image- exterior of library with steps and columns" style="width: 20%; max-width: 120px; height: auto;border-radius: 12px;">
+        <div style="flex: 1; background: #f9cfcf; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>📖Lesson 3 - Explore the Library of Learning</b></h3>
+            <p style = "font-size: 14pt";>Understand pedagogical best practices as you role play through different scenarios in the Library of Learning. <br><br> <em>25 minutes</em></p>
+        </div>
+    </div>
+
+   
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/8c8230b007247e6538b02cf465b161bb-image-1749147254827.png" alt="Lesson 4 Image - city park gates with trees and flowers" style="width: 20%; max-width: 120px; height: auto; border-radius: 12px;">
+        <div style="flex: 1; background: #d4f4a1; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>🌳Lesson 4 - Unlocking Project Park</b></h3>
+            <p style = "font-size: 14pt";>Pave the pathway for student success as you discover different way to support students through learning development culminating in final projects.<br><br> <em>20 minutes</em></p>
+        </div>
+    </div>
+
+    
+<div style="display: flex; align-items: center; gap: 15px;">
+        <img src="https://images.code.org/3eee714adf6adb165ef4fda7ce20f6e5-image-1749147273550.png" alt="Lesson 5 Image- exterior of a school house with bell and steps" style="width: 20%; max-width: 120px; height: auto;">
+        <div style="flex: 1; background: #B2dee3; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3><b>🏫Lesson 5 - Stepping into the Classroom</b></h3>
+            <p style = "font-size: 14pt";>Plan for the future as you step into the classroom and find concrete ways to apply what you have learned. <br><br> <em>10 minutes</em></p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+---
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! 
+
+#### Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
+
+#### You'll be able to give Code.org your feedback on the last level of this module.
+
+
+MARKDOWN

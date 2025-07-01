@@ -18,6 +18,7 @@ describe('TeacherPromo', () => {
     image: '/image1.png',
     isClosable: true,
     partnerLogo: '/partner_logo.png',
+    isExternal: false,
   };
 
   const onCloseMock = jest.fn();
@@ -61,5 +62,23 @@ describe('TeacherPromo', () => {
     const nonClosablePromo = {...mockPromo, isClosable: false};
     render(<TeacherPromo {...nonClosablePromo} onClose={onCloseMock} />);
     expect(screen.queryByLabelText('Close dialog')).toBeNull();
+  });
+
+  it('renders external icon when isExternal is true', () => {
+    render(
+      <TeacherPromo {...mockPromo} isExternal={true} onClose={onCloseMock} />
+    );
+
+    const linkElement = screen.getByRole('link', {name: 'Learn More'});
+    expect(linkElement.querySelector('i')).toBeInTheDocument();
+  });
+
+  it('does not render external icon when isExternal is false', () => {
+    render(
+      <TeacherPromo {...mockPromo} isExternal={false} onClose={onCloseMock} />
+    );
+
+    const linkElement = screen.getByRole('link', {name: 'Learn More'});
+    expect(linkElement.querySelector('i')).toBeNull();
   });
 });

@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 # 🎧 Lesson 5: Mini Project – Walk-Up Songs
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
-<a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/5" target="blank" rel="noopener noreferrer">Access Lesson 5: Mini Project - Walk-Up Songs Lesson Plan</a></p>
+<a href="https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/5" target="blank" rel="noopener noreferrer">Access Lesson 5: Mini Project - Walk-Up Songs Lesson Plan</a></p>
 
 #### In this culminating project for the sequencing chunk, students create personalized "walk-up" songs for characters using everything they've learned so far. This lesson emphasizes creativity, musical structure, and the introduction of a new Music Lab feature: **triggers**.
 
@@ -29,8 +29,8 @@ markdown <<MARKDOWN
 
 ### 🧰 **Tips for Teaching**
 
-* ####  **Let students explore!** This is their first time using triggers — give them space to play and hear how timing changes the feel of their songs.
-* ####  **Focus on alignment with user needs.** Ask students how their musical choices reflect the personality of their chosen character. This is a great opportunity to connect back to the activity from Lesson 1.
+* ####  **Let students explore!** This is their first time using triggers, so give them space to play and hear how timing changes the feel of their songs.
+* ####  **Focus on alignment with user needs.** Ask students how their musical choices reflect the personality of their chosen character. This is a great opportunity to connect back to the song-matching activity from Lesson 1.
 * ####  **Manage time flexibly.** If students don't finish their final song in one session, they can revisit it later. This project works well as a checkpoint or launchpad for future work.
 
 ### 🔄 **Assessment Opportunity**
@@ -40,4 +40,11 @@ markdown <<MARKDOWN
 * ####  Clear alignment between character and musical choices
 * ####  Use of sequencing and triggers
 * ####  Willingness to iterate and reflect
+
+## Up Next
+
+#### In the next level, you'll see an example of a completed Walk-Up Songs project. Consider opening up the rubric (linked above) and comparing it with the exemplar:
+
+* #### How might you score the exemplar? 
+* #### What evidence (or non-evidence) do you see of rubric criteria?
 MARKDOWN

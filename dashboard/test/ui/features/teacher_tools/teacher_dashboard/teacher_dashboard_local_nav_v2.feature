@@ -2,13 +2,12 @@
 Feature: Using the V2 teacher dashboard local navigation
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 
   Scenario: Modifying settings on the teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -43,7 +42,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
   Scenario: Single-unit course overview
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "ui-test-single-unit-course-2025" and unit "ui-test-single-unit-2025" with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
 
@@ -52,7 +51,7 @@ Feature: Using the V2 teacher dashboard local navigation
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
-    Then check that the URL contains "/unit/ui-test-single-unit-2025"
+    Then check that the URL contains "/courses/ui-test-single-unit-course-2025/units/1"
     And I wait until element "h1:contains('Single Unit 2025')" is visible
     And I wait until element "#assignment-version-year" contains text "2025"
     And I wait until I don't see selector ".unit-breadcrumb"

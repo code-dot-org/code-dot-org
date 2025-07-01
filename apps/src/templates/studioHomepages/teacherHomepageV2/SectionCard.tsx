@@ -8,7 +8,7 @@ import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSection
 import i18n from '@cdo/locale';
 
 import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
-import SectionAvatar from './SectionAvatar';
+import SectionAvatar from './sectionAvatars/SectionAvatar';
 import SectionCardBody from './SectionCardBody';
 import SectionOptionsDropdown from './SectionOptionsDropdown';
 
@@ -40,7 +40,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <li
       className={styles.sectionCardWrapper}
       ref={setNodeRef}
-      style={style}
+      style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${section.id}`}
     >
       <div className={styles.sectionCardHeader}>
@@ -56,17 +56,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               size="s"
               aria-label={i18n.dragSection()}
               type="tertiary"
-              style={{
-                cursor: isDragging ? 'grabbing' : 'grab',
-              }}
             />
           )}
-          {section.avatar_color && (
-            <SectionAvatar
-              color={section.avatar_color || 0}
-              emoji={section.avatar_emoji || 0}
-            />
-          )}
+          <SectionAvatar
+            color={section.avatar_color || 0}
+            emoji={section.avatar_emoji || 0}
+            size={'s'}
+          />
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}
@@ -76,6 +72,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               sectionCode={section.code}
               sectionId={section.id}
               studioUrlPrefix={studioUrlPrefix}
+              hidden={section.hidden}
             />
           </div>
         </div>

@@ -3,6 +3,9 @@
   "script_names": [
     "ml-playground"
   ],
+  "original_script_names": [
+    "ml-playground"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

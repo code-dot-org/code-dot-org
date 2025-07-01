@@ -1,0 +1,98 @@
+{
+  "title": "Teaching {module}: Pre-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "variable_panel",
+          "title": "Panel to hold variables for foorm. HIDE AFTER TESTING",
+          "visible": "false",
+          "elements": [
+            {
+              "type": "text",
+              "name": "module",
+              "startWithNewLine": false,
+              "defaultValueExpression": "{module_name}",
+              "readOnly": true
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "intro",
+          "html": "<h1>Teaching {module} Self-paced Online Professional Learning</h1><h3><strong>Pre-Module Survey</strong></h3>\n\n<p>Code.org relies on surveys as a crucial tool to stay connected to teachers, gather feedback about our curriculum and your teaching experience, and to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Teaching {module} - Pre-Module Survey</h2>"
+        },
+        {
+          "type": "html",
+          "name": "section1_goals",
+          "html": "\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your goals for engaging with the {module} self-paced professional learning module.</span></p>\n"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "first_self_paced_pl"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "main_goal",
+          "natalia_comment": "COPY-PASTE AND UPDATE WITH ANY CONTENT-SPECIFIC GOALS IF NEEDED"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "plan_to_teach",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "current_level_cs_knowledge",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT CS CURRICULUM"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "familiarity_ai",
+          "natalia_comment": "INCLUDE ONLY IF MODULE IS ABOUT AI SKILLS"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "html",
+          "name": "section2_demographics",
+          "html": "<h2>Teaching Context</h2>\n<p><span style='font-size: 12pt;'>The questions in this section aim to understand your context as an educator. <p>As a reminder this survey is confidential. We collect this information for program improvement. None of your responses will ever be tied back to you personally.</span></p>\n"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "teacher_role"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "gender"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/self_paced_pl_standards",
+          "library_version": 0,
+          "name": "race_eth"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

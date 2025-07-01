@@ -1,0 +1,574 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:36.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false,
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "shadow": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "shadow": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "M(K=,68lZtce!:*ETL-6",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "aloe_blacc_wake_me_up/tambourine"
+                              },
+                              "next": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "PJZ4s_0@C(Gq~|x14mA/",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "aloe_blacc_wake_me_up/tambourine"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "ZowGDl}[gbd535d$;]jS",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "aloe_blacc_wake_me_up/tambourine"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "pbSw=mr%zjOm_b0Ba=Kn",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "aloe_blacc_wake_me_up/tambourine"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "shadow": {
+                            "type": "play_sounds_sequential",
+                            "id": "o5X_nGAx*tWWZvJZuDZp",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "shadow": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "IZKMUBri+UwjYmSmp5$2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "aloe_blacc_wake_me_up/shaker"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "3:Lul6tK:V$ifm#,?@I}",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "aloe_blacc_wake_me_up/shaker"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "aDjxgm49PN=cE)f9(7,2",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "aloe_blacc_wake_me_up/shaker"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "*1jY(yMxIJHQl{WdDv[7",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "aloe_blacc_wake_me_up/shaker"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "shadow": {
+                                "type": "play_sounds_sequential",
+                                "id": "N?PV83rDf_;mK;~%BHi_",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "6IkU7!+f3B1CG[UTd6Y#",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "aloe_blacc_wake_me_up/bass_intro"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "Pdr5@*|EIKLwRlimqSIt",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "aloe_blacc_wake_me_up/bass_intro"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "neRdq+VQ):OgJ!hzkX=Z",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "shadow": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "O~tGw!BwJfx/=9Cg1r!F",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "aloe_blacc_wake_me_up/piano_intro"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "b=b)TS=%-V4Lpqic@Aio",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "aloe_blacc_wake_me_up/piano_intro"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": ".rzG1b`:n={){`A`yCNX",
+              "x": 330,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 330,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "kETS]chg)gQ*QjWL?U6M",
+              "x": 330,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "/dhk:2Gx:m8a(@K]_YN^",
+              "x": 510,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "%(sz==Q:r:$QJ8,E6k3}",
+              "x": 510,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 510,
+              "y": 250,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "aloe_blacc_wake_me_up/tambourine"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "_]fM*[|U!hq=/]]@u+aj",
+              "x": 710,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "aloe_blacc_wake_me_up/shaker"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": ",;Gr*pABN$p;O$%#5RY.",
+              "x": 710,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "aloe_blacc_wake_me_up/bass_intro"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Pax*M!Co2Y3KCF5|FPt2",
+              "x": 710,
+              "y": 210,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "aloe_blacc_wake_me_up/piano_intro"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "aloe_blacc_wake_me_up",
+      "sounds": {
+        "aloe_blacc_wake_me_up": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_mmm_1",
+          "vocals_mmm_2",
+          "vocals_mmm_3",
+          "vocals_ahh",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "main_beat",
+          "rim",
+          "tambourine",
+          "shaker",
+          "bass_intro",
+          "bass_verse",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "piano_intro",
+          "piano_verse",
+          "piano_chorus",
+          "piano_melody",
+          "guitar_intro",
+          "guitar_verse",
+          "guitar_chorus",
+          "strings_1",
+          "strings_2",
+          "strings_melody"
+        ]
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "validationMode": "default",
+      "playerTitle": "Alex's Version"
+    },
+    "long_instructions": "### Alex's Version\r\n\r\nAlex wants to recreate the intro to Wake Me Up by Aloe Blacc using the shadow blocks in the workspace:\r\n\r\n> I noticed that there are 4 tracks that all repeat, so I can use 4 separate loops to recreate this timeline.\r\n\r\n![](https://images.code.org/9140c454f9d4dd31fd4cfed90de2085c-image-1745259492284.png)\r\n\r\nTo make sense of the timeline, Alex broke it down into four separate track sequences and worked on each one individually.\r\n\r\n**Your task:** Use **decomposition** to break the remix into four smaller parts - one for each repeating track. For each part, build a loop that matches its pattern. Then combine them to reconstruct the full timeline. Your final version should look and sound like the original, just with cleaner code.\r\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practicev2A_5798ad52-15ca-48c5-b7e8-a5b571711ad9",
+        "message": "",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:5"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practicev2A_2e935fdd-798f-41f1-b457-cdec0fb7175b",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:4"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practicev2A_69b8997b-717e-44db-b7c3-a34a50c522d2",
+        "message": "It looks like your code is on the right track! Try to make it match the example!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:1"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practicev2A_c3512e03-0efc-487c-a92b-d91713ffdfd8",
+        "message": "It looks like you've added some tracks and a loop! Make sure everything plays together!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practicev2A_083809aa-846c-441f-a091-8fe03b13a066",
+        "message": "It looks like you've added some tracks to your song! Be sure to use loops too!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:1"
+          }
+        ]
+      }
+    ],
+    "display_name": "Alex's Wake Me Up",
+    "bubble_choice_description": "Alex and Izzy both have a strategy to use loops to recreate the intro to Wake Me Up by Aloe Blacc. Follow **Alex's** strategy in this level to recreate this song, then try Izzy's strategy in the next level!",
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/aloe_blacc_wake_me_up/aloe_blacc_wake_me_up.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.192+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practicev2A\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practicev2A\"},{\"changed_at\":\"2025-06-12 15:50:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 20:21:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

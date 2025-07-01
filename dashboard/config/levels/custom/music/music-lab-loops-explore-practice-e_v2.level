@@ -1,0 +1,541 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:39.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Halleluja Remix\r\nTom noticed that the vocals for Halleluja by Rosa Linn are pretty long and could be combined with lots of other sounds to make interesting remixes:\r\n\r\n> I like how haunting the vocals are, and I wanted to combine it with a bunch of different sounds to see if I could make it sound interesting.\r\n\r\nTom is using **abstraction** by focusing on the essential structure: vocals supported by a mix of beat, bass, and lead tracks.\r\n\r\n**Your task:** Use abstraction to organize your code into loops that back the vocals with rich, layered sounds. Your song should use at least 10 unique tracks, but focus only on the ones that best support the mood and pacing of the vocals. Use the example for inspiration!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "rosa_linn_hallelujah",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "_}(M|$sp#cUt5[{uR/VT",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": ")_o]vK?8C-P#3lnn}*R|",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">delay</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "*XBh($Kt=g?5y!]L6yc,",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                              "effects_value": "<field name=\"effects_value\">normal</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "rosa_linn_hallelujah/vocals_prechorus_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "set_effect_at_current_location_simple2",
+                                    "id": "flhXf%60t;n9v4X];{+C",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "fields": {
+                                      "effects_name": "<field name=\"effects_name\">delay</field>",
+                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "set_effect_at_current_location_simple2",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                                          "effects_value": "<field name=\"effects_value\">low</field>"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "vFB^.$|hZqQ*=*wkNbPV",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "D.[ml^qyx)/~2M}euDf:",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                              "effects_value": "<field name=\"effects_value\">low</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "4Cgw3;[.h{t`z)d9Slw3",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">volume</field>",
+                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "R.M@XK*?+6K]yWz?+wur",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "rosa_linn_hallelujah/vocals_prechorus_2"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_effect_at_current_location_simple2",
+                                        "id": "y94#6Qqqo}0a/H/Ebb0d",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "fields": {
+                                          "effects_name": "<field name=\"effects_name\">delay</field>",
+                                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "j2J6#$S?3+ltCf!06f1y",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                                              "effects_value": "<field name=\"effects_value\">low</field>"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": true,
+      "sounds": {
+        "rosa_linn_hallelujah": [
+          "vocals_prechorus_1",
+          "vocals_prechorus_2"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins"
+        ]
+      }
+    },
+    "display_name": "Hallelujah Vocals",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example Song"
+    },
+    "encrypted_exemplar_sources": "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\nqHrj9mi6qaoKXsp9wixn0e/0\n",
+    "bubble_choice_description": "Help Tim find backing tracks to the vocals from Hallelujah",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
+        "message": "You did it - you've played at least 10 different tracks!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_f8001f85-b5b3-4b9b-acbe-71ff0dc6c28e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 8 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-b_bb94584f-ed8d-4b7a-aeab-9df0cdadea5f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 5 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_fc36406a-2cf1-4583-ae97-d2352fe439e3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear **10 unique tracks**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_hallelujah/rosa_linn_hallelujah.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:39.261+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-06-12 16:06:17 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 20:56:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

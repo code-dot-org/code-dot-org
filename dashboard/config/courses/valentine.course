@@ -3,6 +3,9 @@
   "script_names": [
     "valentine"
   ],
+  "original_script_names": [
+    "valentine"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

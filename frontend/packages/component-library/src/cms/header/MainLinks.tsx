@@ -27,7 +27,7 @@ const MainLinks: React.FC<MainLinksProps> = ({
       {mainLinks?.map(({key, label, href, hasDisplayLogic, ...link}) => (
         <li
           key={key}
-          className={hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''}
+          className={hasDisplayLogic && moduleStyles.hasDisplayLogic}
         >
           <a href={href} {...link}>
             {label}

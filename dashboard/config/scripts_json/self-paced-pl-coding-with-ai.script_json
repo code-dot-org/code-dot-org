@@ -9,11 +9,13 @@
       "is_migrated": true,
       "topic_tags": [
         "ai"
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 19:00:16 UTC",
+    "serialized_at": "2025-05-23 19:39:01 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

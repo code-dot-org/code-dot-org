@@ -15,9 +15,6 @@ $(document).ready(() => {
     instructionsDialog,
   });
   const customBlocksConfig = getScriptData('customBlocksConfig');
-  if (customBlocksConfig) {
-    prepareBlocklyForEmbedding(customBlocksConfig);
-  }
 
   const store = getStore();
   const programmingExpression = getScriptData('programmingExpression');
@@ -33,6 +30,9 @@ $(document).ready(() => {
 
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
   const currentCategoryKey = getScriptData('currentCategoryKey');
+
+  prepareBlocklyForEmbedding(customBlocksConfig, programmingEnvironmentName);
+
   ReactDOM.render(
     <Provider store={store}>
       <>

@@ -1,0 +1,297 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Your Turn! \r\n\r\nLet's make the beats match up with the chorus:\r\n\r\n- Add a <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play sequential</code> block to the code. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sequential_toolbox---id:play_sequential_workspace)\r\n- Add enough <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span> tracks to accompany the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-microphone-stand\" style=\"color: #F99258; margin-right: 2px\"></i> Vocal </span> tracks. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox)\r\n\r\nPress <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> and listen to your song! You should hear backing beats underneath the lead vocals!\r\n\r\n![](https://images.code.org/4e1676aeb5e7c43541dcbd5937dafb24-image-1749830733511.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "vocals_chorus_1",
+          "vocals_chorus_2"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_plexi",
+          "drum_beat_patter",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_sequential_no_next",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sequential_workspace",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "MJaoAZ~V-8IcV^NQ9n3b",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_pause"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sequential_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"Something's not quite right - try reading the instructions again!\"",
+      "validationMode": "type",
+      "playerTitle": "Example"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-1_39c3684a-516f-4d7d-b4e5-cc7ea09aee67",
+        "message": "[Exemplar Validation]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_sequential:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-1_9672533d-ffff-4fc9-bfe9-674ef96688a6",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_sequential:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-1_a394f13b-4949-4cb9-914e-d2bdc9e202df",
+        "message": "Add your additional tracks inside the play sequential block! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_sequential:2"
+          }
+        ],
+        "callout": "flyout-id:play_toolbox"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-play-sequential-1_8eb7f42f-b5e8-4b06-803b-3adae3216126",
+        "message": "Make sure your code should has two play sequential blocks! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sequential_toolbox---id:play_sequential_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_sequential_toolbox---id:play_sequential_workspace"
+      }
+    ],
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499SbIuCEChopt2BUka5LPbQ7EPAyWey8kP658x9a9x\nprUVBsYlcjdpGvnm81/SqL3FgD2dEUvlojdJiKv7ByxN0hm0mENW/PkWa07n\n+5CG3HvQP70xry40Uu7iBgZepdLA70XIbIWYsi5DXGI49phd0M8uHFYmSlbN\nM6JqjgcDQaX9CoCUwFz2wCGiDIRpUqmOe9dHTVEeXieKBk/s4LNWMrFfGUjA\nitkyyyKwIxS34/RdKQGKOzGDjmP/ZexB0MyRam8lduLyvtnsrFu5T8GoBEct\naogIAWBJpXXRPtac8U0sPxhtNk3Wd1+Q5AbnautspQfN7VnA6RzlQSdZ1WfH\nb3d2cXIVRWKlGgNskzPqWvS90KdQAye5GybAdVommbyNvgOIAxNhKfrulOGZ\n6mAnoXhoc+U+MMxkGjybu6oow3DCCI/I8vP1Gd8YsAuXs1IF+caEGdOVEblu\na7G45pWO+r7z/7gDXJ66R2HicGKLb8gdQRvqZwRpXNFXlmmnvuHPQf4R2NRk\nAVMtA1pClhU18BSj+toDq0sLP0Ye9MgeSLRFQnK79L7/qFUQIfOPhWqVVls1\ntC39OH77MDRxNT4XnDowKVL1VCMM8SiswDnt5fA84IQyTQsIT50UkwHGY1b7\nA3TNX8fpnU1Dkr+rS05YJKB7M430NzMPXNXUzRk9U0Sf4qUIEOy7MeEXUBKg\ndx1L9WCPJ6JDE45ICdu5HOMswa/C4U9wuwd7IKtbhupR++OiUmgxvxXj6Kih\nlr1EhUr27ddmISLM9W+9BK5yYrIcewOnzZjHmlLMFj5hX/thLIsXw3DAB0sc\nc6JpaiuCs7S+h9h8RW3slkaXrDoJCeugkHRYgnJbyL+VlS03uCoDZ2jWHjQ8\nKlBYURAh1xK9Iv190JsTb0+vpZ68RpLBsEPXL59xnMmkLdKDEar0HtiVi2cz\nBKgunoE1ONfq8IA3X2UCIWVETinS5RuRE+UhhDVBr0UxOZrgo+Cwj6cQZyYk\nMRlBMo2G14TIlPfUqJtK8y0cLqdMengyIvIJUjEY8oIlpJzwmOMzPgUZneer\nyAjUIt9vRpUx4mEHetCRIGhkdJ/txEcTpGd8Ym9BugsTQwInhKKnEqvWoQDe\nhaX8/sv7UTjPaHSleI8dWmOqTKz2nYJfRFZBCujDNn8FYfoPAYlpmBfvHsVZ\nSe/H9avJYDqoeTpPzZ1FZs2DQN2yBCZ4GnfiYi+Hroudqpw6SEXPRaeMpdRZ\n48PmqSw+I1+u69trJBOurQVGMx1HzPfXocf72GnNOpDvV+b3uzhSXk3qMpf8\ndNW3SZ/4k4sVtzPO2GqRLnB9+SBh0aoNggX/PoqW0FIHZ5dzRq0p3pLeATFo\nVXbGQKzFwgSU3f5jXb0oKXi+cq+NWec3ULKLkFjZXqWES+NIrfvcYTyaP/tw\n7f/BxNKO+tzal2sxuJCPYSv1Yi04oSrfp+8AJdWfCcSHem4WycD0JwdPZXwo\n7Mz+Q64dPm/YtdgMzC/eK/+aYLI5akxnuic=\n",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:45.473+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-1\"},{\"changed_at\":\"2025-06-13 16:05:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:08:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:10:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:12:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

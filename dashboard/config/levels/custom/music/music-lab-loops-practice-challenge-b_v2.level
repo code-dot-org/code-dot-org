@@ -1,0 +1,582 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Single Backing Track\r\n\r\nIn this [Diary of a Song video](https://youtu.be/ZpMNJbt3QDE?t=320), Ed Sheeran describes how they created the song Shape Of You. He points out how the song has a single track that loops throughout the entire song - \r\n\r\n> This song is just one loop the whole way through... so everything else is a surprise. Every time you start getting bored of it, something new comes in or drops out.\r\n\r\nApply this idea to a song of your own using tracks from I Need a Dollar by Aloe Blacc. The workspace has been setup so a single track loops 15 times - you get to pick the track, then decide how you can layer other tracks on top of it.\r\n\r\n1) Pick your underlying track to loop the entire song [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n2) Use loops and rests to create small moments that appear every once in a while in the song\r\n\r\nListen to the example for what this could sound like, or look at the timeline below for one possible way to create this song\r\n\r\n![](https://images.code.org/018f90620e474059e6ba1288615cdeed-image-1744342208400.png)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "i_need_a_dollar_aloe_blacc",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 15
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_workspace",
+                              "deletable": false,
+                              "movable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "fields": {
+                                "sound": "i_need_a_dollar_aloe_blacc/piano_1"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "sounds": {
+        "i_need_a_dollar_aloe_blacc": [
+          "i_need_a_dollar_1",
+          "i_need_a_dollar_2",
+          "i_need_a_dollar_3",
+          "share_with_you",
+          "share_your_dollar",
+          "help_me",
+          "bass_1",
+          "bass_2",
+          "bass_3",
+          "bass_4",
+          "bass_5",
+          "organ_1",
+          "piano_1",
+          "horns_1",
+          "horns_3",
+          "horns_4",
+          "horns_5",
+          "horns_6",
+          "horns_7",
+          "horns_8",
+          "organ_2",
+          "piano_2",
+          "horns_2",
+          "hey_hey",
+          "horns_hit"
+        ],
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine",
+          "alien",
+          "boom_impact",
+          "crackle",
+          "spring_lift",
+          "whua",
+          "whua_short",
+          "wormhole"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings",
+          "strings_short"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme",
+          "crash_build",
+          "crunch",
+          "hey",
+          "hey_short",
+          "rustle",
+          "scratch",
+          "swipe",
+          "swipe_short"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run",
+          "blip",
+          "clap",
+          "clap_short",
+          "clunk",
+          "phase_elevator",
+          "rainstick",
+          "swoosh"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle",
+          "brass",
+          "brass_short",
+          "dark_sweep_crash",
+          "dive",
+          "kick_impact",
+          "bubble",
+          "vibraslap"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech",
+          "crash",
+          "feedback",
+          "gong",
+          "pick_scrape",
+          "stomp",
+          "stomp_short",
+          "trashy_crash"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      }
+    },
+    "display_name": "A Single Loop",
+    "encrypted_exemplar_sources": "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\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example",
+      "validationMode": "type",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Create a song with a single loop using tracks from \"I Need a Dollar\"",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-challenge-b_7ee381eb-7548-46c0-9a29-a96a3941fbd9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ✅ At least 6 unique sounds\n\nSo now <i class=\"fa-solid fa-robot\"></i> DJ Robot is dancing",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 6
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-b_aa57039c-eeb1-4ceb-9040-58abbf6989a3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n- ❌ At least 6 unique sounds",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-b_eae244ec-227f-4514-a570-a1ae70985118",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is inspecting your code for...\n- ❌ At least 2 rests\n- ✅ At least 2 loops",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-b_81523415-6a98-4b10-bc1e-875a9ac35155",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is inspecting your code for...\n- ✅ At least 2 rests\n- ❌ At least 2 loops",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-challenge-b_78ac20f1-9be2-486e-975f-16833f16716b",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is inspecting your code for...\n- ❌ At least 2 rests\n- ❌ At least 2 loops",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/i_need_a_dollar_aloe_blacc/i_need_a_dollar_aloe_blacc.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:49.842+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-b\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-b\"},{\"changed_at\":\"2025-06-12 20:33:40 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:52:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

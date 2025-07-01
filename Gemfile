@@ -72,7 +72,7 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', '~> 0.2.2'
+  gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
@@ -103,11 +103,11 @@ group :development, :test do
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'timecop'
+  gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'eyes_selenium', '~> 4.0'
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -189,7 +189,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -210,8 +210,13 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
+
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+# TODO: Either resume installing in all environments once Ubuntu and Mac OS
+# support the same version of mini_racer, or remove this dependency entirely
+# once node is installed in production. For more details, see
+# https://codedotorg.atlassian.net/browse/INF-708
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 
@@ -333,7 +338,8 @@ require_pg = lambda do
 end
 
 install_if require_pg do
-  gem 'pg', require: false
+  # v1.3.0 required to support Postgres 14
+  gem 'pg', '~> 1.3.0', require: false
 end
 
 gem 'activerecord-import', '~> 1.0.3'
@@ -379,6 +385,8 @@ gem "csv"
 gem "async", "~> 1.32"
 
 gem "webrick", "~> 1.9"
+
+gem 'rubyzip'
 
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|

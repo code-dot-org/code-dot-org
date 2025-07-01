@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
@@ -18,6 +19,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import '@xterm/xterm/css/xterm.css';
 
 import ConsoleManager from './ConsoleManager';
+import {darkTheme, lightTheme} from './consoleThemes';
 import ControlButtons from './ControlButtons';
 import RightButtons from './RightButtons';
 
@@ -27,6 +29,9 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
+  const [consoleManager, setConsoleManager] = useState<ConsoleManager | null>(
+    null
+  );
   const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
   const hasMiniApp = !!labConfig?.miniApp?.name;
@@ -35,6 +40,7 @@ const Console: React.FunctionComponent = () => {
   );
   const {signInState} = useAppSelector(state => state.currentUser);
   const dispatch = useAppDispatch();
+  const {theme} = useTheme();
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -125,14 +131,16 @@ const Console: React.FunctionComponent = () => {
     terminal.loadAddon(fitAddon);
     const imageAddon = new ImageAddon();
     terminal.loadAddon(imageAddon);
-    const consoleManager = new ConsoleManager(terminal, fitAddon);
-    CodebridgeRegistry.getInstance().setConsoleManager(consoleManager);
+    const newConsoleManager = new ConsoleManager(terminal, fitAddon);
+    CodebridgeRegistry.getInstance().setConsoleManager(newConsoleManager);
+    setConsoleManager(newConsoleManager);
     terminal.open(terminalRef.current);
     terminal.onData(onData);
     fitAddon.fit();
     window.addEventListener('resize', () => fitAddon.fit());
     terminal.options = {
       fontSize: FontSize[fontSizeKey],
+      theme: theme === 'Dark' ? darkTheme : lightTheme,
     };
 
     // Right now we are tracking lines from the previous console so we can replay them here.
@@ -142,14 +150,14 @@ const Console: React.FunctionComponent = () => {
     // and move it to the new container.
     if (existingTerminalLines.length > 0) {
       const lines = existingTerminalLines.join('\n');
-      consoleManager.writeConsoleMessage(lines);
+      newConsoleManager.writeConsoleMessage(lines);
     }
 
     // Prevent keyboard trap.
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
-  }, [didInit, terminalRef, onData, fontSizeKey]);
+  }, [didInit, terminalRef, onData, fontSizeKey, theme]);
 
   // Apply updated font size to console whenever fontSizeKey changes.
   useEffect(() => {
@@ -159,6 +167,14 @@ const Console: React.FunctionComponent = () => {
       terminal.options.fontSize = FontSize[fontSizeKey];
     }
   }, [fontSizeKey]);
+
+  useEffect(() => {
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const terminal = consoleManager?.getTerminal();
+    if (terminal) {
+      terminal.options.theme = theme === 'Dark' ? darkTheme : lightTheme;
+    }
+  }, [theme]);
 
   // Load the user's preferred console font size from the backend which is saved
   // per app type (currently in pythonlab) for signed-in users.
@@ -174,10 +190,13 @@ const Console: React.FunctionComponent = () => {
   return (
     <PanelContainer
       id="codebridge-console"
-      className={moduleStyles.consoleContainer}
+      className={moduleStyles[`consoleContainer${theme}`]}
       headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={
-        <RightButtons clearOutput={() => clearOutput(true)} />
+        <RightButtons
+          clearOutput={() => clearOutput(true)}
+          consoleManager={consoleManager}
+        />
       }
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}

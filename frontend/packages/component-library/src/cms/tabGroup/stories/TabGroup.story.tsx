@@ -13,7 +13,8 @@ export default {
   title: 'CMS/TabGroup',
   component: TabGroup,
   parameters: {
-    componentSubtitle: 'Renders a group of tabs with optional content',
+    componentSubtitle:
+      'Renders a group of tabs with TabGroup or regular Tab content',
     a11y: {
       config: {
         rules: [
@@ -61,64 +62,53 @@ const createTab = (
   image: ImageProps,
   title: string,
   description: string,
-) =>
-  ({
-    value,
-    text,
-    tabContent: {
-      image,
-      button: defaultButton,
-      title,
-      description,
-    },
-  }) as TabGroupTabModel;
+): TabGroupTabModel => ({
+  value,
+  text,
+  tabContent: {
+    image,
+    button: defaultButton,
+    title,
+    description,
+  },
+});
 
 export const Playground: Story = {
   args: {
     tabs: [
-      {
-        value: 'tab1',
-        text: 'Tab 1',
-        tabContent: {
-          image: defaultImage,
-          button: defaultButton,
-          title: 'Track Your Progress',
-          description: 'Monitor student work with real-time insights.',
-        },
-      },
-      {
-        value: 'tab2',
-        text: 'Tab 2',
-        tabContent: {
-          image: defaultImage2,
-          button: defaultButton,
-          title: 'Engage Students',
-          description: 'Make learning more interactive and fun!',
-        },
-      },
-    ] as TabGroupTabModel[],
+      createTab(
+        'tab1',
+        'Tab 1',
+        defaultImage,
+        'Track Your Progress',
+        'Monitor student work with real-time insights.',
+      ),
+      createTab(
+        'tab2',
+        'Tab 2',
+        defaultImage2,
+        'Engage Students',
+        'Make learning more interactive and fun!',
+      ),
+    ],
     defaultSelectedTabValue: 'tab1',
     onChange: value => console.log(`Selected Tab: ${value}`),
     name: 'custom-content-tabs',
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-
     const tab = await canvas.findByRole('tab', {name: 'Tab 1'});
     await expect(tab).toBeVisible();
-
-    // Test the content rendering inside the tab
     const tabPanel = canvas.getByRole('tabpanel');
-    const title = await within(tabPanel).findByText('Track Your Progress');
-    const description = await within(tabPanel).findByText(
-      'Monitor student work with real-time insights.',
-    );
-    await expect(title).toBeVisible();
-    await expect(description).toBeVisible();
-
-    // Test if the button works
-    const button = await within(tabPanel).findByText('Click me');
-    await expect(button).toBeVisible();
+    await expect(
+      within(tabPanel).getByText('Track Your Progress'),
+    ).toBeVisible();
+    await expect(
+      within(tabPanel).getByText(
+        'Monitor student work with real-time insights.',
+      ),
+    ).toBeVisible();
+    await expect(within(tabPanel).getByText('Click me')).toBeVisible();
   },
 };
 
@@ -236,25 +226,89 @@ export const FiveTabs: Story = {
   },
 };
 
-export const WithCustomContent: Story = {
+export const WithoutImageOrButton: Story = {
   args: {
     tabs: [
-      {value: 'tab1', text: 'Tab 1', tabContent: <div>Content for Tab 1</div>},
-      {value: 'tab2', text: 'Tab 2', tabContent: <div>Content for Tab 2</div>},
+      {
+        value: 'tab1',
+        text: 'No Image & Button',
+        tabContent: {
+          title: 'Text Only',
+          description: 'This tab has neither image nor button.',
+        },
+      },
+      {
+        value: 'tab2',
+        text: 'No Image',
+        tabContent: {
+          title: 'No Image',
+          description: 'This tab has no image.',
+          button: defaultButton,
+        },
+      },
+      {
+        value: 'tab3',
+        text: 'No Button',
+        tabContent: {
+          image: defaultImage3,
+          title: 'Image Only',
+          description: 'This tab has an image but no button.',
+        },
+      },
+      {
+        value: 'tab4',
+        text: 'With Image & Button',
+        tabContent: {
+          image: defaultImage,
+          button: defaultButton,
+          title: 'Image & Button',
+          description: 'This tab has both image and button.',
+        },
+      },
     ],
     defaultSelectedTabValue: 'tab1',
     onChange: value => console.log(`Selected Tab: ${value}`),
-    name: 'basic-tabs',
+    name: 'no-image-or-button',
   },
-  play: async ({canvasElement}) => {
-    const canvas = within(canvasElement);
-    const tab = await canvas.getByRole('tab', {name: 'Tab 1'});
+};
 
-    // Check if tab is visible
-    await expect(tab).toBeVisible();
+export const RegularTabModel: Story = {
+  args: {
+    tabs: [
+      {
+        value: 'tab1',
+        text: 'Tab 1',
+        tabContent: <div>Regular Tab Content 1</div>,
+      },
+      {
+        value: 'tab2',
+        text: 'Tab 2',
+        tabContent: <div>Regular Tab Content 2</div>,
+      },
+    ],
+    defaultSelectedTabValue: 'tab1',
+    onChange: value => console.log(`Selected Tab: ${value}`),
+    name: 'legacy-tabs',
+  },
+};
 
-    // Click on the tab and check if it's selected
-    await tab.click();
-    await expect(tab).toHaveAttribute('aria-selected');
+export const MixedTabTypes: Story = {
+  args: {
+    tabs: [
+      createTab(
+        'structured',
+        'Structured Tab',
+        defaultImage,
+        'Structured Title',
+        'Structured tab using TabGroupTabModel',
+      ),
+      {
+        value: 'regular',
+        text: 'Regular Tab',
+        tabContent: <div>This is Regular Tab content</div>,
+      },
+    ],
+    defaultSelectedTabValue: 'structured',
+    name: 'mixed-tabs',
   },
 };

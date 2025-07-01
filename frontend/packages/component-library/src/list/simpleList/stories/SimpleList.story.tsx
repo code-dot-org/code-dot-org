@@ -364,3 +364,18 @@ export const Weight: Story = {
     });
   },
 };
+
+export const WithMultilineItem: Story = {
+  args: {
+    style: {maxWidth: '20em'},
+    items: [
+      {key: 'item-a', label: 'Item A'},
+      {
+        key: 'item-b',
+        label:
+          'Extremely, exceptionally, extraordinarily, immensely prolonged Item B',
+      },
+      {key: 'item-c', label: 'Item C'},
+    ],
+  },
+};

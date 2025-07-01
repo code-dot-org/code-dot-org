@@ -1,13 +1,13 @@
-import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import {Heading6} from '@code-dot-org/component-library/typography';
-import {codebridgeLabsWithConsole} from '@codebridge/constants';
+import {codebridgeLabsWithConsole, LayoutKey} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import FocusTrap from 'focus-trap-react';
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -24,6 +24,7 @@ import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './settings-dropdown.module.scss';
@@ -69,24 +70,44 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     state => state.lab2View.consoleFontSizeKey
   );
   const {signInState} = useAppSelector(state => state.currentUser);
-  const {levelProperties} = useCodebridgeContext();
+  const {config, setConfig, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
+
+  // We need to set the theme here because the dropdown is rendered in a portal, outside of the
+  // main lab container.
+  const {theme, setTheme} = useTheme();
 
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
     useState(currentEditorFontSizeKey);
   const [selectedConsoleFontSizeValue, setSelectedConsoleFontSizeValue] =
     useState(currentConsoleFontSizeKey);
+  const [selectedLayout, setSelectedLayout] = useState(config.activeLayout);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
 
   const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
   const onTextEditorDropdownChange = (value: string) => {
-    setSelectedEditorFontSizeValue(getSelectedKey(value));
+    const selectedEditorKey = getSelectedKey(value);
+    setSelectedEditorFontSizeValue(selectedEditorKey);
+    handleFontSizeChange(
+      'CodeEditor',
+      selectedEditorKey,
+      currentEditorFontSizeKey,
+      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+    );
   };
+
   const onConsoleDropdownChange = (value: string) => {
-    setSelectedConsoleFontSizeValue(getSelectedKey(value));
+    const selectedConsoleKey = getSelectedKey(value);
+    setSelectedConsoleFontSizeValue(selectedConsoleKey);
+    handleFontSizeChange(
+      'Console',
+      selectedConsoleKey,
+      currentConsoleFontSizeKey,
+      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+    );
   };
 
   const handleFontSizeChange = (
@@ -96,6 +117,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     event: string
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
+      // We want the user preference for selected font size to persist for signed-in users
+      // per app type so we save on backend.
       if (signInState === SignInState.SignedIn) {
         const field = type === 'Console' ? 'consoleFontSize' : 'editorFontSize';
         new UserPreferences().setFontSize(selectedKey, appName, field);
@@ -104,33 +127,56 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
       dispatch(reduxAction(selectedKey));
       sendCodebridgeAnalyticsEvent(event, appName, {
-        levelPath: window.location.pathname,
         fontSize: selectedKey,
       });
     }
   };
 
-  const onSave = () => {
-    const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
-    const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
-
-    // We want the user preference for selected font size to persist for signed-in users
-    // per app type so we save on backend.
-    handleFontSizeChange(
-      'CodeEditor',
-      selectedEditorKey,
-      currentEditorFontSizeKey,
-      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
-    );
-    handleFontSizeChange(
-      'Console',
-      selectedConsoleKey,
-      currentConsoleFontSizeKey,
-      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
-    );
-
-    closeDropdown();
+  const handleThemeChange = (value: Theme) => {
+    setTheme(value);
+    if (signInState === SignInState.SignedIn) {
+      new UserPreferences().setGlobalTheme(value);
+    }
+    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_THEME_CHANGE, appName, {
+      theme: value,
+    });
   };
+
+  const handleLayoutChange = (value: string) => {
+    const newLayout = value as LayoutKey;
+    setSelectedLayout(newLayout);
+    setConfig({
+      ...config,
+      activeLayout: newLayout,
+    });
+  };
+
+  const availableThemes: string[] = useMemo(() => {
+    if (!appName || !lab2EntryPoints[appName]) {
+      return [];
+    }
+    return lab2EntryPoints[appName].themes;
+  }, [appName]);
+
+  const themeDropdownOptions = availableThemes.map(theme => ({
+    text:
+      theme === 'Dark'
+        ? codebridgeI18n.darkTheme()
+        : codebridgeI18n.lightTheme(),
+    value: theme,
+  }));
+
+  const layoutDropdownOptions: SimpleDropdownProps['items'] = [
+    {
+      value: 'horizontal',
+      text: codebridgeI18n.horizontal(),
+    },
+    {
+      value: 'vertical',
+      text: codebridgeI18n.vertical(),
+    },
+  ];
+  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
 
@@ -148,10 +194,12 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
-        data-theme="Dark"
+        data-theme={theme}
       >
         <div className={moduleStyles.header}>
-          <Heading6>{commonI18n.settings()}</Heading6>
+          <Heading6 className={moduleStyles.heading}>
+            {commonI18n.settings()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={codebridgeI18n.closeSettings()}
@@ -173,7 +221,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             selectedValue={selectedEditorFontSizeValue}
             name={'font-size'}
             size="s"
-            color="white"
+            color={dropdownColor}
           />
         </div>
         {hasConsole && (
@@ -192,23 +240,44 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
               selectedValue={selectedConsoleFontSizeValue}
               name={'font-size'}
               size="s"
-              color="white"
+              color={dropdownColor}
             />
           </div>
         )}
-        <div className={moduleStyles.footer}>
-          <Button
-            text={commonI18n.cancel()}
-            type="secondary"
+        <div className={moduleStyles.dropdownRow}>
+          <label
+            htmlFor={codebridgeI18n.theme()}
+            className={moduleStyles.dropdownLabel}
+          >
+            {codebridgeI18n.theme()}
+          </label>
+          <SimpleDropdown
+            labelText={codebridgeI18n.theme()}
+            isLabelVisible={false}
+            onChange={event => handleThemeChange(event.target.value as Theme)}
+            items={themeDropdownOptions}
+            selectedValue={theme}
+            name={'theme'}
             size="s"
-            onClick={closeDropdown}
-            color="black"
+            color={dropdownColor}
           />
-          <Button
-            text={commonI18n.save()}
-            type="primary"
+        </div>
+        <div className={moduleStyles.dropdownRow}>
+          <label
+            htmlFor={codebridgeI18n.layout()}
+            className={moduleStyles.dropdownLabel}
+          >
+            {codebridgeI18n.layout()}
+          </label>
+          <SimpleDropdown
+            labelText={codebridgeI18n.layout()}
+            isLabelVisible={false}
+            onChange={event => handleLayoutChange(event.target.value)}
+            items={layoutDropdownOptions}
+            selectedValue={selectedLayout}
+            name={'layout'}
             size="s"
-            onClick={onSave}
+            color={dropdownColor}
           />
         </div>
       </div>

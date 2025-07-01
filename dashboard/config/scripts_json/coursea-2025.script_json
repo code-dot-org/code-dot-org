@@ -16,11 +16,13 @@
       ],
       "project_widget_visible": true,
       "show_calendar": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 15:28:17 UTC",
+    "serialized_at": "2025-06-13 18:36:43 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3052,6 +3054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_safety_in_my_online_neighborhood2022_2025"
+        ],
         "progression": "My Online Neighborhood"
       },
       "bonus": false,
@@ -3074,6 +3079,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3096,6 +3104,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3118,6 +3129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3140,6 +3154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:4"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3162,6 +3179,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:5"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3184,6 +3204,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:6"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3206,6 +3229,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:7"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3228,6 +3254,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:8"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3250,6 +3279,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:9"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3272,6 +3304,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:10"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3294,6 +3329,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:11"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3316,6 +3354,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Jigsaw:12"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3338,6 +3379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyMaps-Unplugged2022_2025"
+        ],
         "progression": "Video: Happy Maps - Unplugged Activity"
       },
       "bonus": false,
@@ -3360,6 +3404,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_happy maps_markdown_2025"
+        ],
         "progression": "Happy Maps - Student Resources "
       },
       "bonus": false,
@@ -3382,6 +3429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_NewIntro_2025"
+        ],
         "progression": "Video: Programming with Blocks"
       },
       "bonus": false,
@@ -3404,6 +3454,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp12022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3426,6 +3479,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp22022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3448,6 +3504,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3a2022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3470,6 +3529,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp3b2022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3492,6 +3554,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp4a2022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3514,6 +3579,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_Scrat_ramp5a2022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3536,6 +3604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming_2025"
+        ],
         "progression": "Video: Pair Programming "
       },
       "bonus": false,
@@ -3558,6 +3629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3580,6 +3654,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3602,6 +3679,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq5_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3624,6 +3704,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3646,6 +3729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_debugging_2025"
+        ],
         "progression": "Video: Debugging with the Step Button"
       },
       "bonus": false,
@@ -3668,6 +3754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq7_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3690,6 +3779,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq8_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3713,6 +3805,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_maze_seq9_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3735,6 +3830,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq10_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3757,6 +3855,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq11_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3779,6 +3880,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq12_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3801,6 +3905,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge1_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3823,6 +3930,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_maze_seq_challenge2_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3845,6 +3955,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bb8_skinOverview_K-1_video2022_2025"
+        ],
         "progression": "Video: Programming with Rey and BB-8"
       },
       "bonus": false,
@@ -3867,6 +3980,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog12022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3889,6 +4005,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog22022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3911,6 +4030,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog32022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3933,6 +4055,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog42022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3955,6 +4080,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog52022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3977,6 +4105,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog62022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3999,6 +4130,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog72022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4022,6 +4156,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_starWars_prog82022_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4044,6 +4181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog92022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4066,6 +4206,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog102022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4088,6 +4231,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_starWars_prog112022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4110,6 +4256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_a_unplugged_happy_loops_markdown_2025"
+        ],
         "progression": "Happy Loops - Unplugged Activity"
       },
       "bonus": false,
@@ -4132,6 +4281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_happy loops_markdown_2025"
+        ],
         "progression": "Happy Loops - Student Resources"
       },
       "bonus": false,
@@ -4154,6 +4306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops12022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4176,6 +4331,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops22022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4198,6 +4356,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops_video2022_2025"
+        ],
         "progression": "Video: Ice Age Loops"
       },
       "bonus": false,
@@ -4220,6 +4381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops32022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4242,6 +4406,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops42022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4264,6 +4431,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops62022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4286,6 +4456,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops72022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4308,6 +4481,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops82022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4330,6 +4506,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops92022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4353,6 +4532,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_iceage_loops102022_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4375,6 +4557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops112022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4397,6 +4582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_iceage_loops122022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4419,6 +4607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_video_collector_2025"
+        ],
         "progression": "Video: The Collector"
       },
       "bonus": false,
@@ -4441,6 +4632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4463,6 +4657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4485,6 +4682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_Loops_2025"
+        ],
         "progression": "Video: Using the Repeat Block"
       },
       "bonus": false,
@@ -4507,6 +4707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops3_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4529,6 +4732,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4551,6 +4757,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops5_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4573,6 +4782,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4595,6 +4807,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops7_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4617,6 +4832,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops8_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4640,6 +4858,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseA_collector_loops9_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4662,6 +4883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops10_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4684,6 +4908,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops11_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4706,6 +4933,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops12_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4728,6 +4958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge2kp_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4750,6 +4983,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_collector_loops_challenge1_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -4772,6 +5008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_2025"
+        ],
         "progression": "Video: The Artist in Code Studio"
       },
       "bonus": false,
@@ -4794,6 +5033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops12022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4816,6 +5058,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops22022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4838,6 +5083,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops32022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4860,6 +5108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_loops12022_2025"
+        ],
         "progression": "Video: Loops in Artist"
       },
       "bonus": false,
@@ -4882,6 +5133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops42022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4904,6 +5158,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops52022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4926,6 +5183,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops62022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4948,6 +5208,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops72022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4970,6 +5233,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops82022_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4993,6 +5259,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseA_artist_loops92022_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5015,6 +5284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops102022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5037,6 +5309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops112022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5059,6 +5334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops122022_2025"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5081,6 +5359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge2a2022_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5103,6 +5384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_artist_loops_challenge12022_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5125,6 +5409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged2022_2025"
+        ],
         "progression": "The Big Event - Unplugged Activity"
       },
       "bonus": false,
@@ -5147,6 +5434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the big event jr._markdown_2025"
+        ],
         "progression": "The Big Event Jr. - Student Resources "
       },
       "bonus": false,
@@ -5169,6 +5459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_video_events_2025"
+        ],
         "progression": "Video: Introduction to Play Lab"
       },
       "bonus": false,
@@ -5191,6 +5484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events12022_2025"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5213,6 +5509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events22022_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5235,6 +5534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events32022_2025"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -5257,6 +5559,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events42022_2025"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -5279,6 +5584,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events52022_2025"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -5301,6 +5609,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events62022_2025"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -5323,6 +5634,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playLab_events72022_2025"
+        ],
         "progression": "Mini-project: Jorge the Dog"
       },
       "bonus": false,
@@ -5345,6 +5659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge22022_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5367,6 +5684,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_playlab_events_challenge12022_2025"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -5389,6 +5709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseAB_EOC2022_2025"
+        ],
         "progression": "Project"
       },
       "bonus": false,
@@ -6800,16 +7123,15 @@
       }
     },
     {
-      "name": "CSF Change Log 2024-25",
-      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
-      "key": "csf_change_log_2024-25",
+      "name": "CSF Change Log 2025-26",
+      "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
+      "key": "csf_change_log_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25"
+        "resource.key": "csf_change_log_2025-26"
       }
     },
     {
@@ -7680,7 +8002,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_change_log_2024-25",
+        "resource.key": "csf_change_log_2025-26",
         "script.name": "coursea-2025"
       }
     },

@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-13T00:40:35.000Z",
   "level_num": "custom",
@@ -17,14 +18,16 @@
         "tabOrder": 0
       }
     },
-    "contained_level_names": [
-      "CSA U5L2-L1 Contained_pilot_oo2025"
-    ],
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_pilot_oo2025",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ],
+    "contained_level_names": [
+      "CSA U5L2-L1 Contained_pilot_oo2025"
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:35.979+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L1_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-13T00:40:35.979+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L1_pilot-2025\"},{\"changed_at\":\"2025-05-22 18:01:29 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:01:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

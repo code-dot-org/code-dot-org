@@ -1,0 +1,32 @@
+{
+  "name": "virtual-pl-csa-summer-2025",
+  "script_names": [
+    "virtual-pl-csa-summer-day1-2025",
+    "virtual-pl-csa-summer-day2-2025",
+    "virtual-pl-csa-summer-day3-2025",
+    "virtual-pl-csa-summer-day4-2025",
+    "virtual-pl-csa-summer-day5-2025"
+  ],
+  "original_script_names": [
+    "virtual-pl-csa-summer-day1-2025",
+    "virtual-pl-csa-summer-day2-2025",
+    "virtual-pl-csa-summer-day3-2025",
+    "virtual-pl-csa-summer-day5-2025",
+    "virtual-pl-csa-summer-day4-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "virtual-pl-csa-summer",
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

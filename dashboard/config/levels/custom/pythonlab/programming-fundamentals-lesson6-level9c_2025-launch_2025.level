@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:36.000Z",
   "level_num": "custom",
@@ -26,16 +27,29 @@
           "language": "py",
           "contents": "# TODO - Write the function wake_up_response()\n\n\n\n# TODO - Call the wake_up_response() function three times\n\n\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nztnjo2+hVztBBALW8QjuTqx8BsElGjHi\nS/MTRmVsoQOIgAqD8Co1Qfm6AJYccpo5CjEiS8Baa/yG8nt2/1m9GlEsmHP+\nqYyWOfpcrdMwxsJ8VE6EZryU4WQmkHLfJbfhQkl1wr4FelelHz9PoLpVqZ5N\nYr2S706mq9KIX59ouPKI43muFGQZcPjsawCuYKCp7prDYm1/VtIviimx7aZr\n7YOz/8+CzHs1X5QXNX554IeE9jLiZyP40QpR134AnampCjbubo5jFOcgQk6l\nCyaOG1TMfsZbJo6CvWZQZ9bk6gLe2365QMRbndI7Hl/IUmkBVC0TTPgbKC+F\naeDlXH3W+vJKGYH/Tq/SxhrsYDrgMEIA4qdbIMfSdvcON7HqcWsY8dikmMZL\ngaUpoh1GWPcuXAU=\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nztnjo2+hVztBBALW8QjuTqx8BsElGjHi\nS/MTRmVsoQOIgAqD8Co1Qfm6AJYccpo5CjEiS8Baa/yG8nt2/1m9GlEsmHP+\nqYyWOfpcrdMwxsJ8VE6EZryU4WQmkHLfJbfhQkl1wr4FelelHz9PoLpVqZ5N\nYr2S706mq9KIX59ouPKI43muFGQZcPjsawCuYKCp7prDYm1/VtIviimx7aZr\n7YOz/8+CzHs1X5QXNX554IeE9jLiZyP40QpR134AnampCjbubo5jFOcgQk6l\nCyaOG1TMfsZbJo6CvWZQZ9bk6gLe2365QMRbndI7Hl/IUmkBVC0TTPgbKC+F\naeDlXH3W+vJKGYH/Tq/SxhrsYDrgMEIA4qdbIMfSdvcON7HqcWsY8dikmMZL\ngaUpoh1GWPcuXAU=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's function\ntry:\n    from main import wake_up_response\n    function_exists = True\nexcept ImportError:\n    function_exists = False\n\nclass TestWakeUpResponseFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_wake_up_response_function_exists(self):\n        \"\"\"wake_up_response() should exist and be callable\"\"\"\n        if not function_exists:\n            self.fail(\"Make sure you define a function called wake_up_response()!\")\n\n    def test_three_wake_up_messages_printed(self):\n        \"\"\"Three wake-up messages should be printed\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            3,\n            \"Make sure you call your wake_up_response() function three times to simulate the assistant being triggered three times!\"\n        )\n\n        all_contain_listening = all(\n            \"listen\" in line.lower() or \"ready\" in line.lower() for line in printed_messages\n        )\n\n        self.assertTrue(\n            all_contain_listening,\n            \"Each wake-up response should sound like the assistant is ready or listening! Make sure your wake_up_response() function prints a listening message.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.876+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9c_2025-launch\"},{\"changed_at\":\"2025-04-15 17:46:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:54:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:56:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.876+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9c_2025-launch\"},{\"changed_at\":\"2025-04-15 17:46:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:54:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:56:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:14:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-29 18:18:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:08:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:08:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-04 04:19:14 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-04 04:19:43 +0000\",\"changed\":[\"ai_tutor_available\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

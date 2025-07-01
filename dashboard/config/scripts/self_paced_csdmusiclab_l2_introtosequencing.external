@@ -29,8 +29,8 @@ markdown <<MARKDOWN
 
 #### Ready? Let's dive in to sequencing. You'll learn the following:
 
-* #### **From Lesson 2:** How to use the `play together` block to play music at the same time
-* #### **From Lesson 3:** How to use the `play sequential` block to play music sequentially and how to use the `rest` block to offset tracks
+* #### **From Lesson 2:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play together</code> block to play music at the same time
+* #### **From Lesson 3:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play sequential</code> block to play music sequentially and how to use the <code style="background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">rest</code> block to offset tracks
 * #### **From Lesson 4:** How to use effects to change up the sound of your music
 
 ### The next level you'll see will be in Music Lab. Make sure you read all the text in the instructions panel!

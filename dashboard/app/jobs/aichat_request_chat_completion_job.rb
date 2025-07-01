@@ -5,7 +5,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.2
   DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.6
-  MAX_REQUEST_LOG_LENGTH = 4 * 1024 * 1024
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
@@ -23,8 +22,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
     report_job_finish(request)
   end
 
-  # Catch any exceptions that occur during the job and update the request status accordingly
-  rescue_from Exception do |exception|
+  # Catch any exceptions that occur during the job and update the request status accordingly.
+  rescue_from StandardError do |exception|
     if rack_env?(:development)
       puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
     end
@@ -38,16 +37,25 @@ class AichatRequestChatCompletionJob < ApplicationJob
       }
     )
 
-    # Report metrics for the failed job (after_perform doesn't run on failure)
+    # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
 
-    # Raise an exception to notify our system of the failed job. Make sure not to exceed the delayed_jobs.last_error column size.
-    raise "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}. Context: #{request.to_json[0..MAX_REQUEST_LOG_LENGTH]}"
+    # Re-raise error to notify our system of the failed job.
+    raise exception
   end
 
   def perform(request:, locale:)
     status, response = get_execution_status_and_response(request, locale)
     request.update!(response: response, execution_status: status)
+  end
+
+  # Determine if one of the models handled by  `aichat_ai_client.rb`.
+  private def openai_or_gemini?(model_id)
+    [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+     SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO]].include? model_id
   end
 
   private def get_execution_status_and_response(request, locale)
@@ -59,28 +67,22 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
-    begin
-      response = request.model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ?
-        AichatOpenaiHelper.get_openai_assistant_response(
-          request.model_customizations,
-          request.stored_messages,
-          request.new_message,
-          request.level_id,
-          request.project_id,
-          request.user_id
-        ) :
-        AichatSagemakerHelper.get_sagemaker_assistant_response(
-          request.model_customizations,
-          request.stored_messages,
-          request.new_message,
-          request.level_id
-        )
-    rescue Aws::SageMakerRuntime::Errors::ModelError => exception
-      # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
-      if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")
-        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], exception.message]
-      else
-        raise exception
+    if openai_or_gemini?(request.model_customizations['selectedModelId'])
+      begin
+        response = make_openai_request(request)
+      rescue OpenaiUserInputResponseTimeout => exception
+        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
+      end
+    else
+      begin
+        response = make_sagemaker_request(request)
+      rescue Aws::SageMakerRuntime::Errors::ModelError => exception
+        # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
+        if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")
+          return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_INPUT_TOO_LARGE], exception.message]
+        else
+          raise exception
+        end
       end
     end
 
@@ -92,6 +94,26 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PII], "PII detected in model output: #{model_pii}"] if model_pii
 
     [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
+  end
+
+  private def make_openai_request(request)
+    AichatAiHelper.get_openai_assistant_response(
+      request.model_customizations,
+      request.stored_messages,
+      request.new_message,
+      request.level_id,
+      request.project_id,
+      request.user_id
+    )
+  end
+
+  private def make_sagemaker_request(request)
+    AichatSagemakerHelper.get_sagemaker_assistant_response(
+      request.model_customizations,
+      request.stored_messages,
+      request.new_message,
+      request.level_id
+    )
   end
 
   # Check the given text for PII.

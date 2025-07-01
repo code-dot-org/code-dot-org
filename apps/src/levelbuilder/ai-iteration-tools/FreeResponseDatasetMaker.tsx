@@ -1,5 +1,4 @@
 import Button from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
@@ -26,8 +25,6 @@ const FreeResponseDatasetMaker: React.FC = () => {
   const [levelId, setLevelId] = useState<string>('');
   const [unitId, setUnitId] = useState<string>('');
   const [numSamples, setNumSamples] = useState<string>('25');
-  const [includeAiEvaluations, setIncludeAiEvaluations] =
-    useState<boolean>(false);
   const [fetchPending, setFetchPending] = useState<boolean>(false);
   const [fetchedSamples, setFetchedSamples] = useState<
     StudentFreeResponseAnswer[]
@@ -50,7 +47,6 @@ const FreeResponseDatasetMaker: React.FC = () => {
   const getStudentFreeResponseAnswers = async () => {
     setFetchPending(true);
     const studentWorkRequest = {
-      includeAiEvaluations: includeAiEvaluations,
       numSamples: Number(numSamples),
       unitId: Number(unitId),
       levelId: Number(levelId),
@@ -105,12 +101,6 @@ const FreeResponseDatasetMaker: React.FC = () => {
         />
         <br />
         <br />
-        <Checkbox
-          name="include AI evaluations"
-          label="Include AI evaluations"
-          onChange={() => setIncludeAiEvaluations(!includeAiEvaluations)}
-          checked={includeAiEvaluations}
-        />
         <TextField
           name="Number of Samples"
           label="How many samples of student work do you want?"
@@ -143,7 +133,7 @@ const FreeResponseDatasetMaker: React.FC = () => {
           <Button
             text="Evaluate Free Responses"
             onClick={getAIEvaluations}
-            disabled={!includeAiEvaluations || fetchedSamples.length === 0}
+            disabled={fetchedSamples.length === 0}
             isPending={evaluationPending}
           />
         </div>
@@ -152,10 +142,7 @@ const FreeResponseDatasetMaker: React.FC = () => {
           <Button
             text="Download CSV"
             onClick={downloadCSV}
-            disabled={
-              evaluatedSamples.length === 0 ||
-              evaluatedSamples.length !== fetchedSamples.length
-            }
+            disabled={evaluatedSamples.length === 0}
           />
         </div>
       </div>

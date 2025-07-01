@@ -3,6 +3,9 @@
   "script_names": [
     "codebridge-ascii"
   ],
+  "original_script_names": [
+    "codebridge-ascii"
+  ],
   "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "student",

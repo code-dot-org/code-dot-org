@@ -16,7 +16,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     user = create :teacher
 
     enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :workshop, course: COURSE_CSD)
-    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
+    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSP)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
@@ -97,14 +97,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert Pd::Enrollment.with_deleted.exists? enrollment.id
   end
 
-  test 'for_school_district' do
-    school_info = create :school_info
-    enrollment_in_district = create :pd_enrollment, school_info: school_info
-    _enrollment_out_of_district = create :pd_enrollment
-
-    assert_equal [enrollment_in_district], Pd::Enrollment.for_school_district(school_info.school_district)
-  end
-
   test 'pre_workshop_survey_url' do
     csp_summer_workshop = build :csp_summer_workshop
     csp_summer_workshop_enrollment = build :pd_enrollment, workshop: csp_summer_workshop
@@ -127,35 +119,18 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'exit_survey_url' do
-    csf_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8)
-    csf_enrollment = create :pd_enrollment, workshop: csf_workshop
-
-    csf_district_workshop = create :csf_workshop, :ended, sessions_from: Date.new(2020, 5, 8), subject: SUBJECT_CSF_DISTRICT
-    csf_district_enrollment = create :pd_enrollment, workshop: csf_district_workshop
-
     csp_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_CSP
     csp_enrollment = create :pd_enrollment, workshop: csp_workshop
 
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
-    csp_wfrt = create :csp_wfrt, :ended
-    csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
-
-    byo_workshop = create :pd_workshop,
-      :ended,
-      funded: false,
-      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
-      subject: nil,
-      course_offerings: [] << (create :course_offering)
+    byo_workshop = create :byo_workshop, :ended
     byo_enrollment = create :pd_enrollment, workshop: byo_workshop
 
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
-    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{byo_enrollment.code}"], byo_enrollment.exit_survey_url
   end
 
@@ -165,7 +140,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert normal_enrollment.should_send_exit_survey?
 
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    fit_workshop.save(validate: false)
     fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
 
     refute fit_enrollment.should_send_exit_survey?
@@ -179,7 +156,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_survey does not send mail for FIT Weekend workshops' do
-    workshop = create :fit_workshop, :ended
+    workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
     Pd::WorkshopMailer.expects(:exit_survey).never
 
@@ -315,9 +294,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
+    workshop_1 = build :csf_intro_workshop
+    workshop_1.save(validate: false)
+    workshop_2 = build :csf_intro_workshop
+    workshop_2.save(validate: false)
     enrollments = [
-      enrollment_no_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, :from_user)
+      enrollment_no_survey = create(:pd_enrollment, workshop: workshop_1),
+      enrollment_with_processed_survey = create(:pd_enrollment, :from_user, workshop: workshop_2)
     ]
 
     existing_survey = create :csf_intro_post_foorm_submission,
@@ -380,60 +363,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal [enrollment], Pd::Enrollment.filter_for_survey_completion([enrollment], false)
   end
 
-  test 'enrolling in class automatically enrolls in online learning' do
-    Pd::Workshop::WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING.each do |course, plc_course_name|
-      workshop = create :workshop, course: course, subject: Pd::Workshop::SUBJECTS[course].first
-      plc_course = create :plc_course, name: plc_course_name
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: workshop
-
-      assert_equal 1, Plc::UserCourseEnrollment.where(user: teacher, plc_course: plc_course).size
-    end
-
-    workshop = create :workshop, course: 'Counselor'
-    teacher = create :teacher
-    assert_no_difference('Plc::UserCourseEnrollment.count') do
-      create :pd_enrollment, user: teacher, workshop: workshop
-    end
-  end
-
-  test 'enrolling in class, and then later having the user field updated enrolls in online learning' do
-    teacher = create :teacher
-    create :plc_course, name: 'ECS Support'
-    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
-    enrollment = create :pd_enrollment, user: nil, workshop: workshop
-
-    assert_creates Plc::UserCourseEnrollment do
-      enrollment.update(user: teacher)
-    end
-    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
-  end
-
-  test 'enrolling in class while not logged in still associates the user' do
-    teacher = create :teacher
-    create :plc_course, name: 'ECS Support'
-    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
-
-    assert_creates Plc::UserCourseEnrollment do
-      create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
-    end
-
-    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
-  end
-
-  test 'enrolling in class without an account creates enrollment when the user is created' do
-    create :plc_course, name: 'ECS Support'
-    workshop = create :workshop, course: Pd::Workshop::COURSE_ECS
-    user_email = "#{SecureRandom.hex}@code.org"
-    create :pd_enrollment, user: nil, email: user_email, workshop: workshop
-
-    teacher = assert_creates Plc::UserCourseEnrollment do
-      create(:teacher, email: user_email)
-    end
-
-    assert_equal 'ECS Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
-  end
-
   test 'attendance scopes' do
     workshop = create :workshop, num_sessions: 2
     teacher = create :teacher
@@ -465,7 +394,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Ended FiT workshop, with attendance
     # (Checks a special case: FiT workshops don't have exit surveys)
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    fit_workshop.save(validate: false)
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 
@@ -498,10 +429,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # professional learning landing page.
     # Root cause: WHERE subject != 'xyz' implicitly excludes rows where subject IS NULL too.
 
-    # Ended Admin workshop with attendance; Admin workshops have no subject.
-    admin_workshop = create :admin_workshop, :ended
-    expected_enrollment = create :pd_enrollment, workshop: admin_workshop
-    create :pd_attendance, session: admin_workshop.sessions.first, enrollment: expected_enrollment
+    # Ended byo workshop with attendance; byo workshops have no subject.
+    byo_workshop = create :byo_workshop, :ended
+    expected_enrollment = create :pd_enrollment, workshop: byo_workshop
+    create :pd_attendance, session: byo_workshop.sessions.first, enrollment: expected_enrollment
 
     assert_equal [expected_enrollment], Pd::Enrollment.with_surveys
   end
@@ -548,31 +479,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal 'effective school district name', enrollment.school_district_name
   end
 
-  test 'school is forbidden' do
-    enrollment = build :pd_enrollment, school: 'a school'
-    refute enrollment.valid?
-    assert_equal ['School is forbidden'], enrollment.errors.full_messages
-  end
-
-  test 'old enrollments with school are grandfathered in' do
-    old_enrollment = create :pd_enrollment
-    assert old_enrollment.valid?
-
-    # Enrollments that already have a school are allowed to do so,
-    old_enrollment.school = 'a school'
-    old_enrollment.save(validate: false)
-    assert old_enrollment.valid?
-
-    # but they can't be changed
-    old_enrollment.school = 'another school'
-    refute old_enrollment.valid?
-
-    # and new enrollments cannot be so created.
-    assert_raises ActiveRecord::RecordInvalid do
-      create :pd_enrollment, school: 'a school'
-    end
-  end
-
   test 'enrollment is deleted after clear_data for deleted owner' do
     enrollment = create :pd_enrollment, :from_user
     enrollment.user.destroy!
@@ -614,20 +520,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teacher = create :teacher
     assert_empty teacher.permissions
 
-    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_BUILD_YOUR_OWN
+    workshop = create :byo_workshop
     create :pd_enrollment, workshop: workshop, user: teacher
 
     assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
-  end
-
-  test 'Enrolling user in CSF course does not make them authorized teacher' do
-    teacher = create :teacher
-    assert_empty teacher.permissions
-
-    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    create :pd_enrollment, workshop: workshop, user: teacher
-
-    refute teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
   test 'Enrolling student user in CSD course does not make them authorized teacher' do
@@ -670,29 +566,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     # updating to a valid status should work
     enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
     assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
-  end
-
-  test 'update scholarship status for csf workshop' do
-    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
-    # initially creates scholarship info with YES_CDO status
-    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
-
-    # updating to invalid status should fail
-    refute enrollment.update_scholarship_status 'invalid status'
-    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
-
-    # updating to a valid status should work
-    enrollment.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
-    assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, enrollment.scholarship_status
-  end
-
-  test 'scholarship info automatically created when enrolling in csf workshop' do
-    workshop = create :workshop, sessions_from: Time.zone.today + 3.months, course: Pd::SharedWorkshopConstants::COURSE_CSF
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
-
-    # initially creates scholarship info with YES_CDO status
-    assert_equal enrollment.scholarship_status, Pd::ScholarshipInfoConstants::YES_CDO
   end
 
   test 'the application id exists when the course from their application matches the workshop course' do

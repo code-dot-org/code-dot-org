@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-04T20:16:11.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Finish the Sentence\r\n\r\nUse AI Chat to finish the sentence.\r\n\r\n### Do This:\r\n1. Think about how you would complete the following sentence with a single word: *\"The dog barked at the...\"*\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence with a single word: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
+    "long_instructions": "##  🔍Teacher Tip\r\nHave AI generate several outcomes to complete the sentence. You can keep prompting AI Chat using the same prompt or follow up by prompting it to \"generate three more answers\". Think about *How does AI's output compare to the word you predicted?*\r\n\r\n---\r\n\r\n## Finish the Sentence\r\n\r\nUse AI Chat to finish the sentence.\r\n\r\n### Do This:\r\n1. Think about how you would complete the following sentence with a single word: *\"The dog barked at the...\"*\r\n2. **Copy and paste** the following prompt: \r\n\r\n>Complete this sentence with a single word: The dog barked at the...\r\n3. Press **Send**.\r\n4. Then read **AI Chat's response** and compare it to your own.\r\n\r\n**Try it out!**\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -41,7 +42,6 @@
       ]
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-04T20:16:11.433+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level1_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-04T20:16:11.433+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson1-level1_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson1-level1_2024\"},{\"changed_at\":\"2025-04-23 17:27:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

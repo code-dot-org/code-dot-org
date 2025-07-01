@@ -1,7 +1,13 @@
+import {
+  BodyFourText,
+  Heading4,
+  Heading6,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -28,10 +34,27 @@ function getStatusForResult(result: ValidationResult) {
   }
 }
 
+function getTranslatedResult(result: ValidationResult) {
+  switch (result.result) {
+    case 'PASS':
+      return lab2I18n.pass();
+    case 'FAIL':
+      return lab2I18n.fail();
+    case 'SKIP':
+      return lab2I18n.skip();
+    case 'EXPECTED_FAILURE':
+      return lab2I18n.expectedFailure();
+    case 'UNEXPECTED_SUCCESS':
+      return lab2I18n.unexpectedSuccess();
+    case 'ERROR':
+      return lab2I18n.error();
+  }
+}
+
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
-  const {validationResults, satisfied} = useAppSelector(
+  const {validationResults} = useAppSelector(
     state => state.lab.validationState
   );
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
@@ -42,51 +65,42 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
-      <h4>{codebridgeI18n.validationResults()}</h4>
+      <Heading4>{lab2I18n.validationResults()}</Heading4>
       {isValidating && <i className="fa fa-spinner fa-spin" />}
       {!isValidating && (
         <div>
           <table className={moduleStyles.validationResultsTable}>
             <thead>
               <tr>
-                <td>{codebridgeI18n.testName()}</td>
-                <td>{codebridgeI18n.result()}</td>
+                <td>
+                  <Heading6>{lab2I18n.testName()}</Heading6>
+                </td>
+                <td>
+                  <Heading6>{lab2I18n.result()}</Heading6>
+                </td>
               </tr>
             </thead>
             <tbody>
               {validationResults.map((result, index) => (
                 <tr key={index}>
-                  <td>{result.message}</td>
                   <td>
-                    <ValidationStatusIcon
-                      status={getStatusForResult(result)}
-                      className={moduleStyles.icon}
-                    />
-                    {result.result}
+                    <BodyFourText>{result.message}</BodyFourText>
+                  </td>
+                  <td>
+                    <div className={moduleStyles.results}>
+                      <ValidationStatusIcon
+                        status={getStatusForResult(result)}
+                        className={moduleStyles.icon}
+                      />
+                      <BodyFourText>
+                        <StrongText>{getTranslatedResult(result)}</StrongText>
+                      </BodyFourText>
+                    </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <div className={moduleStyles.testSummary}>
-            {satisfied ? (
-              <>
-                <ValidationStatusIcon
-                  status="passed"
-                  className={moduleStyles.icon}
-                />{' '}
-                {codebridgeI18n.allTestsPassed()}
-              </>
-            ) : (
-              <>
-                <ValidationStatusIcon
-                  status="failed"
-                  className={moduleStyles.icon}
-                />{' '}
-                {codebridgeI18n.testsDidNotPass()}
-              </>
-            )}
-          </div>
         </div>
       )}
     </div>

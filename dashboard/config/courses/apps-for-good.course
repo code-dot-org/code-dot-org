@@ -3,6 +3,9 @@
   "script_names": [
     "apps-for-good"
   ],
+  "original_script_names": [
+    "apps-for-good"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

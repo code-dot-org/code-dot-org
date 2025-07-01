@@ -29,8 +29,8 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    Given I am assigned to course "allthethingscourse" unit 1
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -47,8 +47,8 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    Given I am assigned to course "allthethingscourse" unit 1
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -65,8 +65,8 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+    Given I am assigned to course "allthethingscourse" unit 1
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access

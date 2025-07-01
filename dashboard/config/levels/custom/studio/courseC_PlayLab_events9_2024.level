@@ -1,5 +1,6 @@
 <Studio>
   <config><![CDATA[{
+  "published": true,
   "game_id": 33,
   "created_at": "2024-04-03T21:25:08.000Z",
   "level_num": "custom",
@@ -39,8 +40,8 @@
     "soft_buttons": [
       "leftButton",
       "rightButton",
-      "downButton",
-      "upButton"
+      "upButton",
+      "downButton"
     ],
     "first_sprite_index": "0",
     "project_template_level_name": "grade2_playlab_project_template_2024",
@@ -51,11 +52,17 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 21280,
     "name_suffix": "_2024",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "hint_prompt_attempts_threshold": "1",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:25:08.665+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2023\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:25:08.665+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2023\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2023\"},{\"changed_at\":\"2025-05-07 16:01:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"soft_buttons\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -63,8 +70,9 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="studio_whenUp" deletable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
+        <block type="studio_whenUp" deletable="false" x="16" y="120">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -72,15 +80,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenDown" deletable="false">
-          <next>
-            <block type="studio_move">
-              <field name="SPRITE">0</field>
-              <field name="DIR">4</field>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenLeft" deletable="false">
+        <block type="studio_whenLeft" deletable="false" x="240" y="120">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -88,7 +88,15 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenRight" deletable="false">
+        <block type="studio_whenDown" deletable="false" x="16" y="200">
+          <next>
+            <block type="studio_move">
+              <field name="SPRITE">0</field>
+              <field name="DIR">4</field>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenRight" deletable="false" x="240" y="200">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -96,7 +104,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever">
+        <block type="studio_repeatForever" x="16" y="296">
           <statement name="DO">
             <block type="studio_moveDistance">
               <field name="SPRITE">1</field>
@@ -112,24 +120,20 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" x="16" y="420">
           <field name="SPRITE1">0</field>
           <field name="SPRITE2">1</field>
           <next>
-            <block type="studio_playSound">
-              <field name="SOUND">random</field>
+            <block type="studio_saySpriteChoices">
+              <field name="SPRITE">0</field>
+              <field name="VALUE">Ouch!</field>
               <next>
-                <block type="studio_saySpriteChoices">
-                  <field name="SPRITE">0</field>
-                  <field name="VALUE">Ouch!</field>
+                <block type="studio_playSound">
+                  <field name="SOUND">hit</field>
                 </block>
               </next>
             </block>
           </next>
-        </block>
-        <block type="studio_whenSpriteCollided">
-          <field name="SPRITE1">0</field>
-          <field name="SPRITE2">2</field>
         </block>
       </xml>
     </start_blocks>

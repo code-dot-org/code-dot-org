@@ -62,12 +62,16 @@ module Pd
     end
 
     test 'facilitator_specific? returns true if submission is facilitator specific' do
-      facilitator_form_submission_metadata = create :csf_intro_post_facilitator_workshop_submission, :answers_low
+      workshop = build :csf_101_workshop
+      workshop.save(validate: false)
+      facilitator_form_submission_metadata = create :csf_intro_post_facilitator_workshop_submission, :answers_low, pd_workshop: workshop
       assert facilitator_form_submission_metadata.facilitator_specific?
     end
 
     test 'facilitator_specific? returns false if submission is not facilitator specific' do
-      facilitator_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low
+      workshop = build :csf_101_workshop
+      workshop.save(validate: false)
+      facilitator_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop
       refute facilitator_form_submission_metadata.facilitator_specific?
     end
   end

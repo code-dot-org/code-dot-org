@@ -1,0 +1,109 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "project_template_level_name": "test-music-lab-loops-sythesize-skill-template_v2",
+    "long_instructions": "### Live Coding\r\n\r\nA backing track is a sound that plays in the background during a live performance. It adds extra parts like a beat, chords, or effects to make the music sound fuller. While the backing track plays, the musician performs live and adds new parts on top of it.\r\n\r\n**Do this:** \r\n- Create a simple backing track with at least one drum and one bass sound played together. \r\n- Loop that backing track so it plays for at least 30 measures. ",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-sythesize-skill-1_86bfb3d5-d76f-4b2d-8540-8d7306b44c2c",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-1_712894e4-f684-477e-9b9b-8d0d84d4b003",
+        "message": "Be sure to include a loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:0"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-1_f9a9c4b7-547a-4656-ab6f-a8916e3962fa",
+        "message": "Make sure your sounds play together!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:0"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-1_5df7117c-1cdf-4b8f-b123-4ceaa9167d0b",
+        "message": "Play at least 2 sounds!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:0"
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:03.296+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"},{\"changed_at\":\"2025-06-26 18:36:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

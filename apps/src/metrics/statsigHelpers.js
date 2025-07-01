@@ -1,6 +1,4 @@
-import cookies from 'js-cookie';
-
-import {getEnvironment, isProductionEnvironment, createUuid} from '../utils';
+import {getEnvironment, isProductionEnvironment} from '../utils';
 
 export function getUserID() {
   const user_id_element = document.querySelector('script[data-user-id]');
@@ -12,16 +10,9 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-export function findOrCreateStableId() {
-  const STABLE_ID_KEY = 'statsig_stable_id';
-  let stableId = cookies.get(STABLE_ID_KEY);
-  if (!stableId) {
-    stableId = createUuid();
-    cookies.set(STABLE_ID_KEY, stableId, {
-      path: '/',
-    });
-  }
-  return stableId;
+export function getStableId() {
+  const scriptTag = document.querySelector('script[data-statsig-stable-id]');
+  return scriptTag?.dataset?.statsigStableId || null;
 }
 
 export function formatUserId(userId) {

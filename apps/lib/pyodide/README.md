@@ -13,3 +13,12 @@ you can upload the wheel to this folder as well (for a package we did not author
 you have permission to do so from the author). You can then update [pyodideWebWorker](../../src/pythonlab/pyodideWebWorker.js#17)
 with the full wheel name, prefixed by `/blockly/js/pyodide/${version}/` (follow the pattern of the pythonlab_setup
 package). This will import the package from our server on page load.
+
+## Upgrading Pyodide
+To upgrade our pyodide version, do the following steps:
+- Upgrade the yarn version to whichever version you would like to upgrade to.
+- Go to [pyodide releases](https://github.com/pyodide/pyodide/releases), and find the version you are upgrading to.
+- From the pyodide release page, download `pyodide-<version-number>.tar.bz`.
+- Unzip the folder, and replace all the wheels in this folder that are not our custom packages with the versions from
+  the pyodide release.
+- Test that the new release works as expected. You will need to initialize a new `yarn start` to pull in the new packages.

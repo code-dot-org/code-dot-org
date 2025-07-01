@@ -1,12 +1,15 @@
 import {Experience} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 
+import {Brand} from '@/config/brand';
+import {BRAND_OPENGRAPH_DEFAULT_IMAGE_URL} from '@/config/metadata/opengraph';
 import {getSeoMetadataFromExperience} from '@/selectors/contentful/getExperienceEntryFields';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {SeoMetadata} from '@/types/contentful/entries/SeoMetadata';
 
 export function getSeoMetadata(
   experience: Experience | undefined,
+  brand: Brand | undefined,
   locale: string,
 ): Metadata | undefined {
   const seoMetadata = getSeoMetadataFromExperience(experience);
@@ -22,15 +25,17 @@ export function getSeoMetadata(
     alternates: {
       canonical: seoMetadata.canonicalUrl,
     },
-    openGraph: getOpenGraph(seoMetadata, locale),
+    openGraph: getOpenGraph(seoMetadata, brand, locale),
     robots: getRobots(seoMetadata),
   };
 }
 
-function getOpenGraph(seoMetadata: SeoMetadata, locale: string) {
+function getOpenGraph(
+  seoMetadata: SeoMetadata,
+  brand: Brand | undefined,
+  locale: string,
+) {
   const openGraphImage = seoMetadata.openGraphImage;
-  const openGraphAssetFile = openGraphImage?.fields?.file;
-  const openGraphImageDetails = openGraphAssetFile?.details?.image;
   const openGraphImageUrl = getAbsoluteImageUrl(openGraphImage);
 
   return {
@@ -41,14 +46,10 @@ function getOpenGraph(seoMetadata: SeoMetadata, locale: string) {
     url: './',
     images:
       openGraphImage && openGraphImageUrl
-        ? [
-            {
-              url: openGraphImageUrl,
-              width: openGraphImageDetails?.width,
-              height: openGraphImageDetails?.height,
-            },
-          ]
-        : undefined,
+        ? openGraphImageUrl
+        : brand
+          ? BRAND_OPENGRAPH_DEFAULT_IMAGE_URL[brand]
+          : undefined,
   };
 }
 

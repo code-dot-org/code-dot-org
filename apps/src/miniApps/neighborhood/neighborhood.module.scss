@@ -1,7 +1,5 @@
-@import 'color';
-
 .neighborhoodPreviewBackground {
-  background: $neutral_dark;
+  background: var(--background-neutral-black-fixed);
 }
 
 .sliderContainer {

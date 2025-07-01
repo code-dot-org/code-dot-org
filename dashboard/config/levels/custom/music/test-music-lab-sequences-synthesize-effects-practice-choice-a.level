@@ -362,7 +362,7 @@
       "allowChangeStartingPlayheadPosition": true,
       "showSoundFilters": true
     },
-    "long_instructions": "### Sound Design Challenge: Dynamic Volume Shifts\r\n\r\n🎧 **The Scenario:**\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement.\r\n\r\n🎼 **Your challenge:**\r\n- Control the Volume: Make some sections whisper quiet and others bold and loud for contrast.\r\n- Sequence the Shifts: Time your volume changes so they follow a pattern (e.g., after a certain number of measures).\r\n- Layer & Offset: Use rests and layering to emphasize the difference between soft and loud moments.\r\n- Use Effects: Try filters, delays, or fades to make the transitions smoother or more intense.",
+    "long_instructions": "### Loud & Quiet\r\n\r\n🎧 **The Scenario:**\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement.\r\n\r\n🎼 **Your challenge:**\r\n- Control the Volume: Make some sections whisper quiet and others bold and loud for contrast.\r\n- Sequence the Shifts: Time your volume changes so they follow a pattern (e.g., after a certain number of measures).\r\n- Layer & Offset: Use rests and layering to emphasize the difference between soft and loud moments.\r\n- Use Effects: Try filters, delays, or fades to make the transitions smoother or more intense.",
     "display_name": "Loud & Quiet",
     "bubble_choice_description": "Help an artist create a song that plays with extreme quiet and loud contrasts to build tension and excitement.",
     "predict_settings": {
@@ -375,8 +375,8 @@
     "validations": [
       {
         "key": "test-music-lab-sequences-synthesize-effects-practice-choice-a_0398a267-5b96-4aa2-9d19-bf963bcd008a",
-        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says “Sounds great! Keep working on it!”",
-        "next": false,
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says “Sounds great! You can continue to a new level, or keep working on this song!”",
+        "next": true,
         "conditions": [
           {
             "name": "played_different_sounds",
@@ -395,7 +395,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:25.361+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-b\"},{\"changed_at\":\"2025-03-12 16:20:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:24:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:25:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:26:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-09 04:46:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 04:52:41 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:20:25.361+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-b\"},{\"changed_at\":\"2025-03-12 16:20:27 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:11:39 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:24:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:25:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:26:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-09 04:46:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 04:52:41 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-25 00:10:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

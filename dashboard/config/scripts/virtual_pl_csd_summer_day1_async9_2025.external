@@ -48,7 +48,6 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-* #### The ETR Pair Programming Toolkit provides additional strategies for implementing Pair Programming in your classroom. Check it out at: <a href="http://bit.ly/pair-programming-toolkit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-toolkit</a>   
-* #### The National Center for Women & Information Technology (NCWIT) has a great resource about the benefits of pair programming. Check it out at: <a href="http://bit.ly/pair-programming-ncwit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-ncwit</a>     
+#### The ETR Pair Programming Toolkit provides additional strategies for implementing Pair Programming in your classroom. Check it out at: <a href="http://bit.ly/pair-programming-toolkit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-toolkit</a>       
 </p></div></details>
 MARKDOWN

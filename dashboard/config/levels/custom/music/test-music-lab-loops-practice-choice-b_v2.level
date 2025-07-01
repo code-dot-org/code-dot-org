@@ -1,0 +1,290 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:50.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "F9)^Vw`r|W]W[#GFN_|S",
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "DjPK(PHczTo=@k`*DcOY",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 10
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "O.L#?$AvJzoI)B1ZiiQf",
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "yrz:VLIhb|{6Uvh:Pqx/",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "groove/groovy_alternate_beat"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "o*J5],xh4#is_ti50:;4",
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "groove/reggaeton_beat"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "{c.g/Qf}]A|}XTbG.kaA",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "groove/groovy_alternate_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "(3}6z^-oSJg-Kr:#/In9",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "O.L#?$AvJzoI)B1ZiiQf",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": ",fL9|{ySopuld4n6#8aL",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "DjPK(PHczTo=@k`*DcOY",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "sounds": {
+        "groove": [
+          "reggaeton_beat",
+          "groovy_alternate_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings"
+        ]
+      },
+      "packId": "default"
+    },
+    "long_instructions": "### Ramona's Song\r\n\r\n**Define:** Ramona is in a groove and has already added the Reggaeton Beat and Groovy Beat 2 to her song. She's asked you to complete the remix by adding bass, leads, and effects that make the track come to life. Your remix should feel dynamic and layered while letting the beats shine.\r\n\r\n**Prepare:** Listen to how the two beats sound together. Plan what kind of bass, leads, and effects will support their rhythm and energy. Listen to the example below for what this could sound like!\r\n\r\n**Try:** Add a bass, lead, and effect track to Ramona's beats. Use at least two rests to add rhythm or surprise, and include one additional loop to create consistency in your remix.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- At least 2 rests\r\n- At least 1 additional loop\r\n- A bass, lead, and effect track",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Ramona's Drums "
+    },
+    "display_name": "Ramona's Song",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST9G\nggfxD7BQ98gFrJXBA67SOwtQWwRoiVLCqpE6+1x5F3wpCoip+cWdxu1G2lAQ\nOtF22TkJkr3CgCQgBPLYV0Lo8Q3ZBhb9mdXIUIsg5ELjxyfBz85JNpKXhXJT\n3jP+JFAm18KANqGzU/GQwtRUQvgcbi36oDpnLcKrQ4pmw9jhbelKCHvvfoqE\nnsH8tFg0rYax3xyHOXUbn5U5T4iSWBAcE/ru0XhIiuRWHr8S9ThIGpI/sqdc\nfrNRi4fxNljgWGWBOCfKYfdFiDsN12Yu6OypDWsNNcdqbfUq4AC6HGt0BnxQ\nCkkgdFl1c/yCs+XSs4jgn7fSDibBmZ6wCxlWGfoFKedAJLN6EM3R+C7EoE7m\n1mEXu4qgMEFEw5gJgdnXMt1HmH6j8C5F4/Nzes/MN6wIzIcpu6p+UiD9zMw0\nIvByUTrzvDPN+whAYsXPxpWzHcCfLreSsueZqAiB07I7Dyw/P8n5yXkKFqeQ\nmJNvG0xYx2lnjBuG7eEjn5SmLvRNL/79H7ipfe7RyrnbHVSQFH6Maf8r7g45\nj9lppxcNffm/99wqjVHO14iJ6IlPs6YP2j+2e+Z0UzXhvlXHXBjExfaarp/D\nkdDWwHEE5iEfEiY1//0l4egahPHd+yDoaK9PkVuf2ujE8NRAYyU4qEUGEoOA\nTW5NJXO8q7uivOP+cULy06VhPbPxNcJZ0coWHoE0LKgPTz/PbTll+h50U2bE\nXcOztyHKAeGvTEwElsnYLulXsgHSk/5gXWwzUDCWW2aBdhsMrXQou2P59wqE\noSzee8JD5et5rHMEHDUH+hFuSrPGDCaoOnupehY3PpyzDWmJorWdjy8zo54j\ngFna/wGJSe2kj2fPpFQMqB2w4kvrbQzGb2hbatOIdPngLm+7UB1YRGGz54DA\ncUSm0VVy93hVqVvqQKqCKHh1NdkUaofs0tL3Z5Om5+vl8JAZV2hYgjb1Czlc\njyaGLPTdZZzWBgTAyReMVmfnl+UYcpTXCocSFfclbKkDLHt/jOd149WVEW+n\njwCqzvCkIQwUYIu0odlM8bNPtTW4FErIYZ1u5uwjB+zoX5ATyWTLQ+M9iVvT\nyNsRb82pl9T3psZKz/s7un7CFjsedxWuqojboXkKVhVb+nTiwVWqdXo7JBxq\nemhxddoyqLJDxUK7/JSxuQzmCXpcSrhniRqvOlrEWMT6br3338vnJvrpdITx\n5CvJPuL0FUQmNtJAzwxsd8klkzV+eoGQD9QTkehjNfUh1tyap1OAjOa5q+nY\nvKi7o5KCX0jxBSsQ9ZQHtJq2oqTyUgnpudC+aTvfhVU/e4aZ+aUzSnrxMrmT\nDP99B9N00Yfqk6aWNMrTasSw62ZRqAcen8uGEKfN/N/E/93FFY1G8B3vRlRu\n4PLaBGCENnA8zm7NGBY5hZySUXp74dXPFEdDgiwT+lcTUr7rMyveCBrH/Mjt\neh7+ZYo0SRllTq2nFasbgH09YLEoiumRbjsqyp35HjlduFCFcGiEJyv+eyHO\nji/5w5diWqtBCQ/rwB9SD6w3s5c+kf5vEWdwPPyltXGoymsYGR6uAUqc8GKe\nWni1tB+hS3o8tBdw8JRCVeat8REOXbYcVxydXeEVBhkOBDJ5wkUr+Vt24cbR\nlyKO/7IhSZVY9UQZU8PzG6Nz+xPZLaPajZ89rEqbBNmf7VIHWN88xtCTTTc0\nglvjLObH/OQokTw94jo4sdsOc/SyjbL3i7busOAdONwz6NrCWBggT7OvUZ5H\niQRH45oe7bh+0iOH5Pzrn3oinchuypTbTBCVkvc8Z1oV4kJoHAx59TY7Zpku\nDlZHK7q8fagHMYzRF7PV35n3jrB1vs7V+qHgxURhCTh7xKTTS11HiBchumqh\nBMA3iv+J6rL8pNQeUi1ko3x5fev02Bqqbhfa3IroFeOaNM80zJC0qBOwosN4\n2ky27oF47EI9/VrSaVgGB75VPWLy9YYbpEEHBKiooRx8Pwaw3T8PO3N9RmIZ\nhoDL91xe14LOKYwpPArP7V1FTnvy+dsDQWV1tVcc8BLcPDaz7r9Bcdgwsknb\nRbL4fT08j2LJPEUyH3qsNFWp6Bmc28aYxQLpOms/lYo4WFFLakKm8LFmM2SO\n8g14mP7Gqd0=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-practice-choice-b_ae5a5a6a-ebb1-4b5a-98e5-b5afb0d2b174",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "fx"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-choice-b_77d3f054-7e43-4d0f-bb2a-c8d78ae7163a",
+        "message": "Your beat sounds good. Make sure you also have bass, leads, and effects.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-choice-b_0892bf6f-4611-4d11-97d4-5fa27bd714b9",
+        "message": "Your beats sound good! Let’s keep listening to the song…",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-choice-b_c5fc9b4b-1868-48cf-a2cf-a859d440850e",
+        "message": "Start by making sure \"Reggaeton Beat\" and \"Groovy Beat 2\" are played together in a loop.",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "bubble_choice_description": "Ramona is in a groove with two beat tracks. She wants you to add bass, leads, and effects to make her song come to life.\r\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/groove/groove.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:50.118+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-choice-b\"},{\"changed_at\":\"2025-06-12 20:34:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 17:49:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 17:49:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 17:55:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:53:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

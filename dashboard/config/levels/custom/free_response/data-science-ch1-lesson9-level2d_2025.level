@@ -7,10 +7,10 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "display_name": "Dataset #4",
-    "long_instructions": "## Dataset 4: Number of Times Micah’s Room Needed to be Cleaned Each Year\r\n\r\nThis dataset recorded the number of times Micah's room NEEDED to be cleaned each year.\r\n\r\n**Do This:**\r\n1. Click on the link below to open up the dataset.\r\n2. Follow the instructions in your activity guide.\r\n3. Discuss and answer the questions in your activity guide with your partner.\r\n\r\n\r\n[Dataset #4](https://docs.google.com/spreadsheets/d/1NMANXj87by_FNgs1OqzS_y-bEtfg-8ui83BFhIZ-Zfw/edit?usp=drive_link)\r\n",
+    "display_name": "Dataset #2",
+    "long_instructions": "## Dataset 2: Number of Times Micah’s Room Needed to be Cleaned Each Year\r\n\r\nThis dataset recorded the number of times Micah's room NEEDED to be cleaned each year.\r\n\r\n**Do This:**\r\n1. Click on the link below to open up the dataset.\r\n2. Follow the instructions in your activity guide.\r\n3. Discuss and answer the questions in your activity guide with your partner.\r\n\r\n\r\n[Dataset #2](https://docs.google.com/spreadsheets/d/1NMANXj87by_FNgs1OqzS_y-bEtfg-8ui83BFhIZ-Zfw/edit?usp=drive_link)\r\n",
     "bubble_choice_description": "How many times did Micah’s room NEED to be cleaned each year?",
-    "thumbnail_url": "https://images.code.org/7a4bd50577635bf876b4d1417e5219cf-number-4.png",
+    "thumbnail_url": "https://images.code.org/be04a6a0be4704e082654c89a37f076f-9d22e41908459442b5a9ec8972644623-number-2.png",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:27.879+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson9-level2d\\\"\"],\"cloned_from\":\"data-science-ch1-lesson9-level2d\"},{\"changed_at\":\"2025-04-16 21:53:28 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:55:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:27.879+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson9-level2d\\\"\"],\"cloned_from\":\"data-science-ch1-lesson9-level2d\"},{\"changed_at\":\"2025-04-16 21:53:28 +0000\",\"changed\":[\"title\",\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:55:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 19:24:21 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 19:27:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

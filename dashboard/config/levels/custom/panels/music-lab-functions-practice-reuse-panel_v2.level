@@ -1,0 +1,58 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T03:00:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Reusing Functions\n\nFunctions are also useful when you have the same chunk of code used in multiple places.\n",
+        "imageUrl": "https://images.code.org/157b8c7f3c2c30c9c458126c8ca901f5-reuse-1.png",
+        "key": "music-lab-functions-practice-abstract-panel-3b135fec-37b5-421c-a078-8aa602a6b152",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Reusing Functions\n\nYou can use **abstraction** to create a single function that represents this chunk of code...\n",
+        "imageUrl": "https://images.code.org/a934152a1d4592df307b73418f82eb48-reuse-2.png",
+        "key": "music-lab-functions-practice-reuse-panel-94194e51-0818-461e-a97a-d829f34bac3d",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Reusing Functions\n\nAnd then re-use that function every place the original code appeared\n",
+        "imageUrl": "https://images.code.org/89ecdd2d72e97474f6116b9e0e8375c2-reuse-3.png",
+        "key": "music-lab-functions-practice-reuse-panel-4e0427a6-39c1-44cc-9553-b64fb5fc48d8",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Reusing Functions\n\nThis makes it easier to keep building your song using these smaller pieces\n",
+        "imageUrl": "https://images.code.org/a742a2a8543d3e84044d16569dd036ff-reuse-4.png",
+        "key": "music-lab-functions-practice-reuse-panel-918f36ab-1956-40e4-a947-e11812153370",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: Use abstraction to notice places where you have the same code in multiple places...\n",
+        "imageUrl": "https://images.code.org/dee40cc0aad491d26002e08db021b143-reuse-6.png",
+        "key": "music-lab-functions-practice-reuse-panel-f578bb93-a196-4211-b83a-2095d6b1a050",
+        "typing": true,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "... and replace that code with functions that you can re-use in your song\n",
+        "imageUrl": "https://images.code.org/e32309c007316f678a24a68ba054b9a9-reuse-7.png",
+        "key": "music-lab-functions-practice-reuse-panel-db417716-9e76-4c29-81ab-04ad05d734e2",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      }
+    ],
+    "display_name": "Reusing Functions",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5eae9fd9cc2c8f31d93c1504b0b333be-Screenshot 2025-04-02 at 7.43.31 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:55.301+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-reuse-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-reuse-panel\"},{\"changed_at\":\"2025-06-21 23:44:35 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

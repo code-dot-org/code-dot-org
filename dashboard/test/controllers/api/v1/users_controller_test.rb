@@ -354,7 +354,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_nil teacher.seen_ta_scores_map
     sign_in(teacher)
 
-    unit = create :unit, :with_lessons
+    unit = create :unit, :with_lessons, :in_single_unit_course
     lesson = unit.lessons.first
     params = {lesson_id: lesson.id}
 
@@ -393,13 +393,26 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       _(json_response).must_equal({'is_signed_in' => true})
     end
 
-    it 'allows CDO CORS' do
+    it 'allows CDO CORS from code.org by default' do
       get :signed_in
 
       _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
       _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
       _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
       _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+    end
+
+    CDO.marketing_sites_hosts.each do |marketing_site_host|
+      it "allows CDO CORS from #{marketing_site_host}" do
+        request.headers['Origin'] = marketing_site_host
+
+        get :signed_in
+
+        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_site_host
+        _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+        _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+        _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+      end
     end
 
     context 'when no signed-in user' do

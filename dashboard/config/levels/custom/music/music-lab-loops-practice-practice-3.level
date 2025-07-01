@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-10T21:28:28.000Z",
   "level_num": "custom",
@@ -177,9 +178,59 @@
     "bubble_choice_description": "Recreate the verse to Wake Me Up by Aloe Blacc",
     "validations": [
       {
-        "key": "music-lab-loops-practice-practice-3_20ff3c19-7fb4-486b-85c4-dea4d5ec1f83",
-        "message": "[exemplar validation]",
+        "key": "music-lab-loops-practice-practice-3_c9ce2fce-3883-4768-b7ac-3dca1f33c20b",
+        "message": "exemplar",
         "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:2"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 6
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-3_eb762966-47f8-4f82-bd26-d6b589e79f71",
+        "message": "Sounds like you have your tracks! Now make sure they loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:2"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-3_c7794d5f-4b50-4a1b-a33b-f040ef779092",
+        "message": "Not sure where to start? Try adding your beat, bass, and lead tracks to play together!",
+        "next": false,
         "conditions": [
 
         ]
@@ -187,8 +238,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-10T21:28:28.106+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-04-10 21:28:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:46:55 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:48:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:49:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-10T21:28:28.106+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-04-10 21:28:58 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:46:55 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:48:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 21:49:09 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:10:17 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

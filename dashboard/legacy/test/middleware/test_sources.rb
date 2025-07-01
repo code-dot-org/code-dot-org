@@ -187,6 +187,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-normal-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -214,6 +215,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
 
@@ -260,6 +262,7 @@ class SourcesTest < FilesApiTestBase
     filename = MAIN_JSON
     file_data = File.read(File.expand_path('../../fixtures/privacy-profanity/playlab-privacy-violation-source.json', __FILE__))
     file_headers = {'CONTENT_TYPE' => 'application/json'}
+    Projects.any_instance.stubs(:get).returns({projectType: 'playlab'})
     @api.put_object(filename, file_data, file_headers)
     assert successful?
     policy_check_response = @api.channel_policy_violation

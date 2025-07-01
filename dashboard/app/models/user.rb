@@ -90,10 +90,22 @@ require 'services/user'
 class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
+  include EmailPreferences
+  include LevelProgressable
   include LocaleHelper
+  include Nameable
+  include Username
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PasswordValidations
+  include EmailValidations
+  include ProviderFlags
+  include Verifiable
+  include Age
+  include AiAccessible
+  include SectionParticipation
   include PartialRegistration
+  include Purgeable
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -136,12 +148,8 @@ class User < ApplicationRecord
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
-  # FND-1130: This field will no longer be required
-  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
     ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
@@ -151,27 +159,11 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
-  # Password Constants
-  PASSWORD_MAX_LENGTH = 128
-  PASSWORD_MIN_LENGTH = 6
-  PASSWORD_STRICT_MIN_LENGTH = 14
-  # Countries that require a 14 character password minimum
-  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
-
-  # Provider variables
-  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
-  PROVIDER_MIGRATED = 'migrated'.freeze
-
-  SYSTEM_DELETED_USERNAME = 'sys_deleted'
-
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
   ].freeze
-
-  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
 
   serialized_attrs %w(
     ops_first_name
@@ -205,14 +197,18 @@ class User < ApplicationRecord
     gender_third_party_input
     us_state
     country_code
+    given_name
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
+    ai_tutor_access_denied
+    ai_differentiation_toggled_off
+    has_seen_ai_assessments_announcement
+    has_completed_ai_differentiation_welcome
     sort_by_family_name
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
-    ai_tutor_access_denied
     progress_table_v2_timestamp
     progress_table_v1_timestamp
     has_seen_progress_table_v2_invitation
@@ -221,12 +217,9 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
-    has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
     educator_role
-    ai_differentiation_toggled_off
-    has_completed_ai_differentiation_welcome
   )
 
   attr_accessor(
@@ -318,10 +311,6 @@ class User < ApplicationRecord
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
   ## Validation Macros
-  defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
-  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
-
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
@@ -330,19 +319,8 @@ class User < ApplicationRecord
   validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
-  validates :email, no_utf8mb4: true
-  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :presence_of_email, if: :teacher_email_required?
-  validate :presence_of_email_or_hashed_email, if:
-      :email_or_hashed_email_required?, on: :create
-  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
-  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
-
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
-
-  validates :name, presence: true, unless: -> {purged_at}
-  validates :name, length: {within: 1..70}, allow_blank: true
 
   validates :terms_of_service_version,
   inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
@@ -357,8 +335,6 @@ class User < ApplicationRecord
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
   end
-
-  validate :no_family_name_for_teachers
 
   validate :validate_parent_email
 
@@ -389,33 +365,10 @@ class User < ApplicationRecord
     user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
   end
 
-  # Username validations
-  before_validation :generate_username, on: :create
-  validates_length_of :username, within: 5..20, allow_blank: true
-  validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
-  validates_presence_of :username, if: :username_required?
-
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
-
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
-
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
-
-  # Validations for adding parent email notifications
-  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
 
   ## Callback Macros
 
@@ -427,8 +380,6 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   before_create :save_show_progress_table_v2
-
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
@@ -445,13 +396,9 @@ class User < ApplicationRecord
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
 
-  before_validation on: [:create, :update], if: -> {name&.utf8mb4?} do
-    self.name = name.sanitize_utf8mb4
-  end
-
   before_validation :normalize_parent_email
 
-  before_validation :update_share_setting, unless: :under_13?
+  before_validation :update_share_setting
 
   # NOTE: Order is important here.
   before_save :make_teachers_21,
@@ -461,8 +408,6 @@ class User < ApplicationRecord
     :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
-
-  before_save :strip_display_family_names
 
   before_destroy :soft_delete_channels
 
@@ -478,12 +423,6 @@ class User < ApplicationRecord
     Services::ChildAccount.remove_compliance(self)
   end
 
-  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
-
-  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
-
-  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
-
   after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
 
   after_destroy :record_soft_delete
@@ -494,54 +433,13 @@ class User < ApplicationRecord
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
 
-  # Make sure to include this Concern after we include the default Devise
+  # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
+  include Devise::DatabaseAuthenticationOverrides
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  def password_min_length
-    self.class.password_min_length(user_type, country_code)
-  end
-
-  def password_max_length
-    PASSWORD_MAX_LENGTH
-  end
-
-  def save_email_preference
-    if teacher?
-      EmailPreference.upsert!(
-        email: email,
-        opt_in: email_preference_opt_in.casecmp?("yes"),
-        ip_address: email_preference_request_ip,
-        source: email_preference_source,
-        form_kind: email_preference_form_kind,
-      )
-    end
-  end
-
-  # Enables/disables email notifications for the parent.
-  def save_parent_email_preference
-    if student? && parent_email.present?
-      EmailPreference.upsert!(
-        email: parent_email,
-        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
-        ip_address: parent_email_preference_request_ip,
-        source: parent_email_preference_source,
-        form_kind: nil
-      )
-    end
-  end
-
-  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
-  def save_email_reg_partner_preference
-    user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
-      user.share_teacher_email_regional_partner_opt_in = DateTime.now
-      user.save!
-    end
-  end
 
   # Puts teachers directly into the progress table v2 view when new account is created.
   def save_show_progress_table_v2
@@ -635,33 +533,8 @@ class User < ApplicationRecord
     sections_instructed
   end
 
-  def parent_email_preference_opt_in_required?
-    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
-    # user_type 'student' is the only type which supports have a parent_email associated with it.
-    parent_email_preference_opt_in_required == '1' && user_type == 'student'
-  end
-
-  def parent_email_update_only?
-    parent_email_update_only == '1' && user_type == 'student'
-  end
-
-  def parent_email_preference_setup
-    self.parent_email = parent_email_preference_email
-  end
-
   def memoized_teachers
     @memoized_teachers ||= teachers.to_a
-  end
-
-  def strip_display_family_names
-    self.name = name.strip if name && will_save_change_to_name?
-    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
-  end
-
-  def no_family_name_for_teachers
-    if family_name && (teacher? || sections_as_pl_participant.any?)
-      errors.add(:family_name, "can't be set for teachers or PL participants")
-    end
   end
 
   def make_teachers_21
@@ -757,44 +630,6 @@ class User < ApplicationRecord
     end
   end
 
-  def requires_email?
-    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
-  end
-
-  def presence_of_hashed_email_or_parent_email
-    if hashed_email.blank? && parent_email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def presence_of_email
-    if email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def presence_of_email_or_hashed_email
-    if email.blank? && hashed_email.blank?
-      errors.add :email, I18n.t('activerecord.errors.messages.blank')
-    end
-  end
-
-  def email_and_hashed_email_must_be_unique
-    # skip the db lookup if we are already invalid
-    return if errors.present?
-
-    # allow duplicate accounts to be created for LMS users that are unlinked -- new user is lti
-    return if Policies::Lti.only_lti_auth?(self)
-    if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
-        other_user != self
-      # allow duplicate accounts to be created for LMS users that are unlinked
-      return if Policies::Lti.only_lti_auth?(other_user)
-
-      errors.add :email, I18n.t('errors.messages.taken')
-    end
-  end
-
   # For a user signing up with email/password, we require certain fields to be present and valid
   # before the user can move on to the "finish signup" step.
   def validate_for_finish_sign_up
@@ -825,85 +660,6 @@ class User < ApplicationRecord
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
-    end
-  end
-
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
-    else
-      false
-    end
-  end
-
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
-
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
-
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
-  end
-
-  # Determines if email is a required field for a teacher.
-  # Currently, we have some old teacher accounts which don't have an email
-  # address associated with them because it wasn't required when they were
-  # created. Those old accounts are allowed to skip the email validation.
-  def teacher_email_required?
-    return false if Policies::Lti.lti? self
-    # non-teachers are not relevant to this method.
-    return false unless teacher? && purged_at.nil?
-
-    # new teacher accounts should always require an email
-    return true if created_at.blank?
-
-    # existing accounts created after the email requirement must have an email.
-    # FND-1130: The created_at exception will no longer be required
-    # Remove the created_at > '2016-06-14 00:00:00' once all teachers have
-    # emails.
-    return created_at.to_datetime > DATE_TEACHER_EMAIL_REQUIREMENT_ADDED
-  end
-
-  def email_or_hashed_email_required?
-    return false if Policies::Lti.lti? self
-    return true if teacher?
-    return false if manual?
-    return false if sponsored?
-    return false if oauth?
-    return false if parent_managed_account?
-    true
-  end
-
-  def username_required?
-    manual? || username_changed?
-  end
-
-  def update_without_password(params, *options)
-    if params[:races]
-      self.races = params[:races].join ','
-    end
-    params.delete(:races)
-    super
-  end
-
-  def update_with_password(params, *options)
-    if encrypted_password.blank?
-      params.delete(:current_password) # user does not have password so current password is irrelevant
-      update(params, *options)
-    else
-      super
     end
   end
 
@@ -999,16 +755,12 @@ class User < ApplicationRecord
 
   def downgrade_to_student
     return true if student? # No-op if user is already a student
-    update(user_type: TYPE_STUDENT)
+    update(user_type: TYPE_STUDENT, given_name: nil, family_name: nil)
   end
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
-
-    # Remove family name, in case it was set on the student account.
-    # Must do this before updating user_type, to prevent validation failure.
-    self.family_name = nil
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1074,132 +826,6 @@ class User < ApplicationRecord
     user_levels.attempted.exists?
   end
 
-  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
-  # the user most recently submitted
-  def next_unpassed_visible_progression_level(script)
-    # If all levels in the script are complete, no need to find the next level,
-    # will be redirected to /congrats.
-    return nil if Policies::ScriptActivity.completed?(self, script)
-
-    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
-
-    sl_level_ids = visible_sls.map(&:level_ids).flatten
-
-    # Levels the user made progress in
-    ul_level_ids = user_levels_by_level(script).keys
-
-    visible_completed_level_ids = sl_level_ids & ul_level_ids
-    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
-
-    first_visible_level = visible_sls.min_by(&:chapter)
-
-    completed_all_visible_levels = visible_incomplete_level_ids.empty?
-
-    # Find the user_levels associated with visible script_levels
-    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
-
-    # The user has not made any visible progress or has completed all visible
-    # levels but not the entire script, return the first visible script_level
-    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
-
-    # Most recently completed user_level of the visible subset
-    most_recent_ul = visible_user_levels.max_by(&:created_at)
-
-    # Find the script_level that goes with the most recent user_level
-    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
-
-    last_visible_level = visible_sls.max_by(&:chapter)
-
-    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
-
-    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
-
-    # The user has completed the last level in the progression, but not all
-    # previous levels, return the first visible incomplete script_level
-    return first_visible_incomplete_level || first_visible_level if
-      (most_recent_sl == last_visible_level) || most_recent_sl.nil?
-
-    # Find the chapter for the script_level that goes with the most recent user_level
-    most_recent_completed_chapter = most_recent_sl.chapter
-
-    # Find the script_level that has the next highest chapter level from the one above and is not complete
-    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
-      sl.chapter > most_recent_completed_chapter
-    end
-
-    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
-
-    next_unpassed_visible_progression_sl
-  end
-
-  # Returns the next script_level for the next progression level in the given
-  # script that hasn't yet been passed, starting its search at the last level we submitted
-  def next_unpassed_progression_level(script)
-    # some of our user_levels may be for levels within level_groups, or for levels
-    # that are no longer in this script. we want to ignore those, and only look
-    # user_levels that have matching script_levels
-    # Worth noting in the case that we have the same level appear in
-    # the script in multiple places (i.e. via level swapping) there's some potential
-    # for strange behavior.
-    sl_level_ids = script.script_levels.map(&:level_ids).flatten
-    ul_with_sl = user_levels_by_level(script).select do |level_id, _ul|
-      sl_level_ids.include? level_id
-    end
-
-    # Find the user_level that we've most recently had progress on
-    user_level = ul_with_sl.values.max_by(&:updated_at)
-
-    script_level_index = 0
-    if user_level
-      last_script_level = user_level.script_level
-      script_level_index = last_script_level.chapter - 1 if last_script_level
-    end
-
-    next_unpassed = script.script_levels[script_level_index..].try(:detect) do |script_level|
-      user_levels = script_level.level_ids.map {|id| ul_with_sl[id]}
-      unpassed_progression_level?(script_level, user_levels)
-    end
-
-    # if we don't have any unpassed levels proceeding the one we've most recently
-    # submitted, just go to the one we've most recently submitted
-    next_unpassed || last_script_level
-  end
-
-  # Returns true if all progression levels in the provided script have a passing
-  # result
-  def completed_progression_levels?(script)
-    num_unpassed_progression_levels(script) == 0
-  end
-
-  def num_unpassed_progression_levels(script)
-    user_levels_by_level = user_levels_by_level(script)
-
-    script.script_levels.count do |script_level|
-      user_levels = []
-      script_level.levels.each do |level|
-        curr_user_level = user_levels_by_level[level.id]
-
-        # If level.id is not present in user_levels_by_level, check if level has contained_levels with present ids
-        if !curr_user_level && !level.contained_levels.empty? && level.type != "BubbleChoice"
-          level.contained_levels.each do |contained_level|
-            user_levels.push(user_levels_by_level[contained_level.id])
-          end
-        else
-          user_levels.push(curr_user_level)
-        end
-      end
-      unpassed_progression_level?(script_level, user_levels)
-    end
-  end
-
-  # Return true if script_level is a valid_progression_level and every
-  # user_level is either missing or not passing
-  def unpassed_progression_level?(script_level, user_levels)
-    script_level.valid_progression_level? && user_levels.all? do |user_level|
-      !(user_level && user_level.passing?)
-    end
-  end
-
   # Returns the most recent (via updated_at) user_level for the specified
   # level.
   def last_attempt(level, script = nil)
@@ -1225,33 +851,6 @@ class User < ApplicationRecord
   #sections owned by the user AND not deleted
   def owned_section_ids
     sections_instructed.select(:id).all
-  end
-
-  # Is the provided script_level hidden, on account of the section(s) that this
-  # user is enrolled in
-  def script_level_hidden?(script_level)
-    return false if script_level.script.can_be_instructor?(self)
-
-    sections = sections_as_student
-    return false if sections.empty?
-
-    script_sections = sections.select {|s| s.script.try(:id) == script_level.script.id}
-
-    if script_sections.empty?
-      # if we have no sections matching this script id, we consider a lesson hidden if any of the sections we're in
-      # hide it
-      sections.any? {|s| script_level.hidden_for_section?(s.id)}
-    else
-      # if we have one or more sections matching this script id, we consider a lesson hidden if all of those sections
-      # hides the lesson
-      script_sections.all? {|s| script_level.hidden_for_section?(s.id)}
-    end
-  end
-
-  def visible_script_levels(script)
-    script.script_levels.select do |sl|
-      !script_level_hidden?(sl)
-    end
   end
 
   # Is the given unit hidden for this user (based on the sections that they are in)
@@ -1298,21 +897,6 @@ class User < ApplicationRecord
     user_type == TYPE_TEACHER
   end
 
-  # Warning: Calling this method will trigger the sending of a verification email,
-  # as establish in the user_permission model
-  def verify_teacher!
-    self.permission = UserPermission::AUTHORIZED_TEACHER
-  end
-
-  # This method just checks if a user has the authorized teacher permission
-  # if you are hoping to know if someone can access content for verified instructors
-  # you should use the verified_instructor? method instead which includes checks for a
-  # couple different permissions that should have access instructor only content such
-  # as levelbuilders
-  def verified_teacher?
-    permission?(UserPermission::AUTHORIZED_TEACHER)
-  end
-
   def levelbuilder?
     permission?(UserPermission::LEVELBUILDER)
   end
@@ -1325,56 +909,9 @@ class User < ApplicationRecord
     permission?(UserPermission::STUDENT_WORK_ACCESS)
   end
 
-  # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
-  # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
-  # should be trusted with locked down instructor only content. It is important to use this
-  # method instead of verified_teacher? as teachers will not be instructors for all courses
-  def verified_instructor?
-    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
-      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
-      permission?(UserPermission::LEVELBUILDER)
-  end
-
   def can_view_all_facilitator_landing_pages?
     permission?(UserPermission::PROGRAM_MANAGER) || permission?(UserPermission::WORKSHOP_ORGANIZER) ||
       permission?(UserPermission::WORKSHOP_ADMIN)
-  end
-
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
-  end
-
-  def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
-  end
-
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
-  end
-
-  def teacher_can_access_ai_chat?
-    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
-  end
-
-  def student_can_access_ai_chat?
-    teachers.any?(&:teacher_can_access_ai_chat?) &&
-      sections_as_student.any?(&:assigned_ai_chat?)
-  end
-
-  def has_aichat_access?
-    teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
   def student_of_verified_instructor?
@@ -1393,75 +930,8 @@ class User < ApplicationRecord
     false
   end
 
-  # There are some shenanigans going on with this age stuff. The
-  # actual persisted column is birthday -- so we convert age to a
-  # birthday when writing and convert birthday to an age when
-  # reading. However -- when we are generating error messages for the
-  # user on an unsaved record, we actually 'read' and 'write' the
-  # attribute via these accessors. @age is a non-persisted member that
-  # we use to save the (possibly invalid) value that the user entered
-  # for age so we can generate the correct error message.
-
-  def age=(val)
-    @age = val
-    val = begin
-      val.to_i
-    rescue
-      0 # sometimes we get age: {"Pr" => nil}
-    end
-    return unless val > 0
-    return unless val < 200
-    return if birthday && val == age # don't change birthday if we want to stay the same age
-
-    self.birthday = val.years.ago
-  end
-
-  def age
-    return @age unless birthday
-    age = UserHelpers.age_from_birthday(birthday)
-    if age < 4
-      age = nil
-    elsif age >= 21
-      age = '21+'
-    end
-    age
-  end
-
-  # Duplicated by under_13? in auth_helpers.rb, which doesn't use the rails model.
-  def under_13?
-    age.nil? || age.to_i < 13
-  end
-
-  def over_21?
-    !age.nil? && age.to_i >= 21
-  end
-
   def mute_music?
     !!mute_music
-  end
-
-  def sort_by_family_name?
-    !!sort_by_family_name
-  end
-
-  def generate_username
-    # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
-    return if name.blank? || email&.utf8mb4?
-    self.username = UserHelpers.generate_username(User.with_deleted, name)
-  end
-
-  def short_name
-    return username if name.blank?
-
-    name.split.first # 'first name'
-  end
-
-  def second_name
-    name.split.second # 'second name'
-  end
-
-  def initial
-    UserHelpers.initial(name)
   end
 
   def valid_secret_words?(words)
@@ -1521,20 +991,6 @@ class User < ApplicationRecord
     end
   end
 
-  # Returns an array of experiment name strings
-  def get_active_experiment_names
-    Experiment.get_all_enabled(user: self).pluck(:name)
-  end
-
-  # Returns an array of experiment name strings that a student's teachers are enrolled in
-  def get_active_experiment_names_by_teachers
-    experiments = []
-    teachers.each do |teacher|
-      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
-    end
-    experiments.uniq
-  end
-
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
@@ -1574,6 +1030,16 @@ class User < ApplicationRecord
       where("assigned_at").
       order(assigned_at: :desc).
       first
+  end
+
+  # Get the UnitGroupUnit for the most recently assigned UserScript.
+  def most_recently_assigned_unit_group_unit
+    unit = most_recently_assigned_user_script&.script
+    return unless unit
+    # UserScript doesn't record the UnitGroup the user was in, so we will assume
+    # it is the most recently created section.
+    section = sections_as_student.select {|s| !s.hidden && s.script_id == unit.id}.last
+    Queries::Courses.unit_group_unit(unit, section&.unit_group)
   end
 
   # Get script object of the user_script the user was most recently
@@ -1687,13 +1153,16 @@ class User < ApplicationRecord
     end
 
     pl_scripts.map do |script|
+      # TODO: TEACH-1555 Get the UnitGroupUnit from the user's activity.
+      unit_group_unit = Queries::Courses.unit_group_unit(script)
       percent_completed = percent_completed_by_script[script.id] || 0
       {
         name: script.name,
         title: script.title_for_display,
         percent_completed: percent_completed,
         finish_url: percent_completed == 100 ? script.finish_url : nil,
-        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name,
+        path: script.link(unit_group_unit: unit_group_unit),
       }
     end
   end
@@ -1705,6 +1174,8 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
+  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
+  # on the student home page course tiles
   def recent_student_courses_and_units(exclude_primary_script)
     primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
 
@@ -1738,28 +1209,6 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
-  def sections_as_student_participant
-    sections_as_student.select {|s| !s.pl_section?}
-  end
-
-  def sections_as_pl_participant
-    sections_as_student.select(&:pl_section?)
-  end
-
-  def all_sections
-    sections_as_teacher = student? ? [] : sections_instructed.to_a
-    sections_as_teacher.concat(sections_as_student).uniq
-  end
-
-  # Figures out the unique set of courses assigned to sections that this user
-  # is a part of.
-  # @return [Array<Course>]
-  def section_courses
-    # In the future we may want to make it so that if assigned a script, but that
-    # script has a default course, it shows up as a course here
-    all_sections.filter_map(&:unit_group).uniq
-  end
-
   def visible_scripts
     scripts.map(&:cached).select {|s| [Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
@@ -1778,17 +1227,6 @@ class User < ApplicationRecord
     end
 
     all_scripts
-  end
-
-  # return the id of the most-recently-created section the user instructs.
-  def last_section_id
-    teacher? ? sections_instructed.where(hidden: false).last&.id : nil
-  end
-
-  # The section which the user most recently joined as a student, or nil if none exists.
-  # @return [Section|nil]
-  def last_joined_section
-    Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
   end
 
   # Returns integer days since account creation, rounded down
@@ -1836,6 +1274,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      given_name: given_name,
       family_name: family_name,
       email: email,
       hashed_email: hashed_email,
@@ -1858,28 +1297,22 @@ class User < ApplicationRecord
     }
   end
 
+  def summarize_for_workshop
+    {
+      id: id,
+      email: email,
+      is_student: user_type == TYPE_STUDENT,
+      first_name: name&.split&.first,
+      last_name: name&.split&.last,
+    }
+  end
+
   def at_risk_age_gated_date
     Policies::ChildAccount::StatePolicies.state_policy(self)&.dig(:lockout_date) unless Policies::ChildAccount.compliant?(self, future: true)
   end
 
   def has_ever_signed_in?
     current_sign_in_at.present?
-  end
-
-  def migrated?
-    provider == PROVIDER_MIGRATED
-  end
-
-  def manual?
-    provider == PROVIDER_MANUAL
-  end
-
-  def sponsored?
-    if migrated?
-      authentication_options.empty? && encrypted_password.blank?
-    else
-      provider == PROVIDER_SPONSORED
-    end
   end
 
   def should_see_edit_email_link?
@@ -2063,42 +1496,6 @@ class User < ApplicationRecord
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
-  # Removes PII and other information from the user and marks the user as having been purged.
-  # WARNING: This (permanently) destroys data and cannot be undone.
-  # WARNING: This does not purge the user, only marks them as such.
-  def clear_user_and_mark_purged
-    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
-
-    authentication_options.with_deleted.each(&:really_destroy!)
-    self.primary_contact_info = nil
-
-    self.studio_person_id = nil
-    self.name = nil
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
-    self.current_sign_in_ip = nil
-    self.last_sign_in_ip = nil
-    self.email = ''
-    self.hashed_email = ''
-    self.parent_email = nil
-    self.encrypted_password = nil
-    self.uid = nil
-    self.reset_password_token = nil
-    self.full_address = nil
-    self.secret_picture_id = nil
-    self.secret_words = nil
-    self.school = nil
-    self.school_info_id = nil
-    self.properties = {}
-    unless within_united_states?
-      self.urm = nil
-      self.races = nil
-    end
-
-    self.purged_at = Time.zone.now
-
-    save!
-  end
-
   def within_united_states?
     user_geos.first&.country == 'United States'
   end
@@ -2123,11 +1520,12 @@ class User < ApplicationRecord
     self.sharing_disabled = true if under_13?
   end
 
-  # If a user is now over age 13, we should update
-  # their share setting to enabled, if they are in no sections.
+  # If the user is not in any sections, set sharing based on age (disabled if under 13).
   def update_share_setting
-    self.sharing_disabled = false if sections_as_student.empty?
-    return true
+    if sections_as_student.empty?
+      self.sharing_disabled = under_13?
+    end
+    true
   end
 
   # When creating an account, we want to look for any channels that got created
@@ -2545,14 +1943,6 @@ class User < ApplicationRecord
     user
   end
 
-  def self.password_min_length(user_type, country_code)
-    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
-      PASSWORD_STRICT_MIN_LENGTH
-    else
-      PASSWORD_MIN_LENGTH
-    end
-  end
-
   # Override how devise tries to find users by email to reset password
   # to also look for the hashed email. For users who have their email
   # stored hashed (and not in plaintext), we can still allow them to
@@ -2872,19 +2262,6 @@ class User < ApplicationRecord
     unless teacher?
       errors.add(:educator_role, "can only be assigned to teachers")
     end
-  end
-
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
-    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   # Called before_destroy.

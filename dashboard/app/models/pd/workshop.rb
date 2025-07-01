@@ -36,10 +36,16 @@
 #  index_pd_workshops_on_regional_partner_id  (regional_partner_id)
 #
 
+# Deprecated
+#
+#  processed_location
+#
+
 class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
+  include Pd::UrlValidator
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -81,21 +87,14 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
-  validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
-  validates_inclusion_of :on_map, in: [true, false]
-  validates_inclusion_of :funded, in: [true, false]
-  validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :virtual_only_subjects_must_be_virtual
-  validate :not_funded_subjects_must_not_be_funded
+  validate :valid_registration_link_format, if: :registration_link
+  validate :valid_grades
+  validate :valid_facilitators_for_course_offerings, if: -> {course == COURSE_BUILD_YOUR_OWN}
+  validate :config_validation
 
-  validates :funding_type,
-    inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
-    absence: {unless: :funded_csf?}
-
-  before_save :process_location, if: -> {location_address_changed?}
-  auto_strip_attributes :location_name, :location_address
+  before_create :set_registration_link
 
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
@@ -103,30 +102,76 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def sessions_must_start_on_separate_days
-    if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
-        errors.add(:sessions, 'must start on separate days.')
-      end
-    else
-      errors.add(:sessions, "must each have a valid start and end.")
+    new_sessions = sessions.reject(&:marked_for_destruction?)
+    unless new_sessions.map {|session| session.start_time.to_date}.uniq.length == new_sessions.length
+      errors.add(:sessions, 'must start on separate days')
     end
   end
 
   def subject_must_be_valid_for_course
     unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
-      errors.add(:subject, 'must be a valid option for the course.')
+      errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
-  def not_funded_subjects_must_not_be_funded
-    if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
-      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
+  def config_validation
+    config = WORKSHOP_COURSE_CONFIGS.find do |c|
+      c[:label] == course
+    end
+
+    unless config
+      errors.add(:course, "#{course} is not a valid workshop course")
+      return
+    end
+
+    required_validation(config)
+  end
+
+  def required_validation(config)
+    config[:fields].each do |field_name, field_options|
+      next unless field_options[:required]
+      value = public_send(field_name)
+      is_invalid = value.nil? || (value.is_a?(String) && value.strip.empty?) || (value.is_a?(Array) && value.empty?)
+      if is_invalid
+        case field_name
+        when :course_offerings
+          errors.add(:base, "Please select at least one workshop topic")
+        when :grades
+          errors.add(:base, "Please select at least one grade level")
+        when :participant_group_type
+          errors.add(:base, "Cohort type is required")
+        else
+          errors.add(field_name, "is required")
+        end
+      end
     end
   end
 
-  def virtual_only_subjects_must_be_virtual
-    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
-      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
+  def valid_facilitators_for_course_offerings
+    permissions_arrays = course_offerings.map(&:facilitator_course_permissions)
+    # If any permissions array is nil or empty, any facilitator is allowed to facilitate
+    return if permissions_arrays.any?(&:blank?)
+
+    permitted_courses = permissions_arrays.compact.flatten.uniq
+    facilitators.each do |facilitator|
+      facilitator_courses = facilitator.courses_as_facilitator.pluck(:course)
+      if (facilitator_courses & permitted_courses).empty?
+        errors.add(:base, "Facilitator #{facilitator.name} does not have permission to facilitate the selected workshop topics.")
+      end
+    end
+  end
+
+  def valid_grades
+    return if grades.blank?
+    invalid_grades = Array(grades) - WORKSHOP_GRADE_LEVELS
+    if invalid_grades.any?
+      errors.add(:base, "Grade levels contains invalid grades: #{invalid_grades.join(', ')}")
+    end
+  end
+
+  def valid_registration_link_format
+    unless self.class.valid_url?(registration_link, true)
+      errors.add(:registration_link, "is not a valid URL")
     end
   end
 
@@ -137,14 +182,20 @@ class Pd::Workshop < ApplicationRecord
   def format
     has_in_person_session = sessions.any? {|session| session.session_format == "in_person"}
     if virtual?
-      has_in_person_session ? Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:hybrid] : Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:virtual]
+      has_in_person_session ? WORKSHOP_FORMATS[:hybrid] : WORKSHOP_FORMATS[:virtual]
     else
-      Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:in_person]
+      WORKSHOP_FORMATS[:in_person]
     end
   end
 
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
+  end
+
+  def set_registration_link
+    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
+      self.registration_link = "/pd/application/teacher"
+    end
   end
 
   # Whether enrollment in this workshop requires an application
@@ -356,12 +407,16 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def friendly_name
-    start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
+    first_session = sessions.first
+    start_time = first_session&.start&.strftime('%m/%d/%y')
+    session_location_name = first_session&.location_name
     course_title = name.presence || (subject ? "#{course} #{subject}" : course)
     course_title += ' workshop' unless course_title.downcase.end_with?('workshop')
 
     # Limit the friendly name to 255 chars
-    name = "#{course_title} on #{start_time} at #{location_name}"
+    name = course_title.to_s
+    name += " on #{start_time}" if start_time.present?
+    name += " at #{session_location_name}" if session_location_name.present?
     name += " in #{friendly_location}" if friendly_location.present?
     name[0...255]
   end
@@ -385,15 +440,14 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Friendly location string is determined by:
-  # 1. Known variant of virtual or workshop is marked as virtual: 'Virtual Workshop'
-  # 2. has processed_location: use city, state
-  # 3. known variant of TBA or no location address at all: 'Location TBA'
-  # 4. unprocessable location that is not TBA: use user-entered string
+  # 1. Any session has a session_format of 'virtual': 'Virtual Workshop'
+  # 2. No location info on the first session: 'Location TBA'
+  # 3. The first session's location_address
   def friendly_location
-    return 'Virtual Workshop' if location_address_virtual? || virtual?
-    return "#{location_city} #{location_state}" if processed_location
-    return 'Location TBA' if location_address_tba? || !location_address.presence
-    return location_address
+    return 'Virtual Workshop' if virtual?
+    first_session = sessions.first
+    return 'Location TBA' unless first_session&.location_address.presence
+    return first_session.location_address
   end
 
   # Returns date and location (only date if no location specified)
@@ -409,18 +463,19 @@ class Pd::Workshop < ApplicationRecord
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     sessions.each(&:assign_code)
-    update!(started_at: Time.zone.now)
+    # using update_attribute to skip validation
+    update_attribute(:started_at, Time.zone.now)
 
     # return nil in case any callers are still expecting a section
     nil
   end
 
   # Ends the workshop, or no-op if it's already ended.
-  # The return value is undefined.
+  # The return value is nil.
   def end!
     return unless ended_at.nil?
-    self.ended_at = Time.zone.now
-    save!
+    # using update_attribute to skip validation
+    update_attribute(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
     # production-daemon machine, so we'll let the process_pd_workshop_emails
@@ -441,7 +496,8 @@ class Pd::Workshop < ApplicationRecord
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
       workshop.send_facilitator_post_surveys
-      workshop.update!(processed_at: Time.zone.now)
+      # using update_attribute to skip validation
+      workshop.update_attribute(:processed_at, Time.zone.now)
     end
   end
 
@@ -510,7 +566,7 @@ class Pd::Workshop < ApplicationRecord
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
-      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA || workshop.course == COURSE_CSF)
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
         begin
@@ -533,32 +589,6 @@ class Pd::Workshop < ApplicationRecord
       errors << "organizer should close workshop #{workshop.id} - #{exception.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
-  end
-
-  # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
-  def self.send_follow_up_after_days(days)
-    # Collect errors, but do not stop batch. Rethrow all errors below.
-    errors = []
-
-    scheduled_end_in_days(-days).each do |workshop|
-      next unless workshop.course == COURSE_CSF && workshop.subject == SUBJECT_CSF_101
-      attended_teachers = workshop.attending_teachers
-
-      workshop.enrollments.each do |enrollment|
-        next unless attended_teachers.include?(enrollment.user)
-
-        email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
-        email.deliver_now
-      rescue => exception
-        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
-        Honeybadger.notify(exception,
-          error_message: 'Failed to send follow up email to teacher',
-          context: {pd_enrollment_id: enrollment.id}
-        )
-      end
-    end
-
-    raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
   def self.send_teacher_pre_work_csa
@@ -586,7 +616,6 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
-    send_follow_up_after_days(30)
     send_teacher_pre_work_csa
   end
 
@@ -627,68 +656,6 @@ class Pd::Workshop < ApplicationRecord
         Pd::WorkshopMailer.facilitator_post_workshop(facilitator, self).deliver_now
       end
     end
-  end
-
-  def location_address_tba?
-    %w(tba tbd n/a).include?(location_address.try(:downcase))
-  end
-
-  def location_address_virtual?
-    ['virtual', 'virtual workshop'].include? location_address.try(:downcase)
-  end
-
-  def process_location
-    result = nil
-
-    unless location_address.blank? || location_address_tba? || location_address_virtual?
-      begin
-        Geocoder.with_errors do
-          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
-          # See https://github.com/alexreisner/geocoder#error-handling
-          Retryable.retryable(on: StandardError) do
-            result = Geocoder.search(location_address).try(:first)
-          end
-        end
-      rescue StandardError => exception
-        # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(exception,
-          error_message: 'Error geocoding workshop location_address',
-          context: {
-            pd_workshop_id: id,
-            location_address: location_address
-          }
-        )
-      end
-    end
-
-    unless result
-      self.processed_location = nil
-      return
-    end
-
-    self.processed_location = {
-      latitude: result.latitude,
-      longitude: result.longitude,
-      city: result.city,
-      state: result.state,
-      formatted_address: result.formatted_address
-    }.to_json
-  end
-
-  # Retrieve a single location value (like city or state) from the processed
-  # location hash. Attribute can be passed as a string or symbol
-  def get_processed_location_value(key)
-    return unless processed_location
-    location_hash = JSON.parse processed_location
-    location_hash[key.to_s]
-  end
-
-  def location_city
-    get_processed_location_value('city')
-  end
-
-  def location_state
-    get_processed_location_value('state')
   end
 
   # Min number of days a teacher must attend for it to count.
@@ -736,10 +703,6 @@ class Pd::Workshop < ApplicationRecord
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
     Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
-  end
-
-  def associated_online_course
-    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
   end
 
   # Get all the teachers that have actually attended this workshop via the attendence.
@@ -806,6 +769,10 @@ class Pd::Workshop < ApplicationRecord
     course == COURSE_CSF
   end
 
+  def byo?
+    course == COURSE_BUILD_YOUR_OWN
+  end
+
   def csf_intro?
     course == Pd::Workshop::COURSE_CSF && subject == Pd::Workshop::SUBJECT_CSF_101
   end
@@ -818,10 +785,6 @@ class Pd::Workshop < ApplicationRecord
     course == COURSE_CSF && subject == SUBJECT_CSF_201
   end
 
-  def funded_csf?
-    course == COURSE_CSF && funded
-  end
-
   def future_or_current_teachercon_or_fit?
     [
       Pd::Workshop::SUBJECT_TEACHER_CON,
@@ -830,7 +793,11 @@ class Pd::Workshop < ApplicationRecord
       state != Pd::Workshop::STATE_ENDED
   end
 
+  # deprecated
   def funding_summary
+    # funded is no longer a required field
+    # new workshops will not have a funding_summary
+    return '' if funded.nil?
     (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
@@ -977,6 +944,64 @@ class Pd::Workshop < ApplicationRecord
       enrollment_code: enrollments&.first&.code,
       status: state,
       course_offerings: course_offerings,
+    }
+  end
+
+  def summarize_for_regional_workshop_page
+    {
+      id: id,
+      course: course_name,
+      subject: subject,
+      name: name,
+      capacity: capacity,
+      num_enrollments: enrollments ? enrollments.count : 0,
+      grade_levels: grades,
+      sessions: sessions&.map(&:session_info_for_calendar),
+      format: format,
+      location_name: location_name,
+      fee: fee,
+      has_prereq: prereq.present?,
+      description: description,
+      custom_registration_link: registration_link,
+      regional_partner_name: regional_partner&.name,
+    }
+  end
+
+  def summarize_for_marketing_page
+    facilitators_info = facilitators.map do |facilitator|
+      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
+
+      bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
+      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
+
+      {
+        name: facilitator.name,
+        email: facilitator.email,
+        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
+        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
+      }
+    end
+
+    {
+      id: id,
+      course: course_name,
+      subject: subject,
+      course_offerings: course_offerings&.map(&:display_name),
+      name: name,
+      capacity: capacity,
+      num_enrollments: enrollments ? enrollments.count : 0,
+      grade_levels: grades,
+      sessions: sessions&.map(&:session_info_for_calendar),
+      format: format,
+      location_name: location_name,
+      fee: fee,
+      prereq: prereq,
+      description: description,
+      notes: notes,
+      custom_registration_link: registration_link,
+      regional_partner_name: regional_partner&.name,
+      organizer: organizer&.slice(:name, :email),
+      facilitators: facilitators_info
     }
   end
 end

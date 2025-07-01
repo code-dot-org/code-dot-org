@@ -71,13 +71,15 @@ class TestController < ApplicationController
     )
   end
 
-  def create_student_section_assigned_to_script
+  def create_student_section_assigned_to_course_and_unit
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    unit_group = UnitGroup.find_by_name!(params.require(:course_name))
+    unit_position = params.require(:unit_position).to_i
+    unit_group_unit = unit_group.default_unit_group_units.where(position: unit_position).first
+    raise "Unit not found for course #{unit_group.name} at position #{unit_position}" unless unit_group_unit
+    unit = unit_group_unit.script
 
-    section = script.unit_group&.single_unit_course? ?
-                Section.create!(name: "New Section", user: user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-                Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create!(name: "New Section", user: user, script: unit, unit_group: unit_group, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
 
     render json: {section_code: section.code}
   end
@@ -90,7 +92,36 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
+    course = UnitGroup.find_by_name(params.require(:course_name))
+    unit_group_unit = course.default_unit_group_units.find_by!(position: params.require(:unit_position))
+    raise "Unit #{params[:unit_position].inspect} not found in course #{params[:course_name].inspect}" unless unit_group_unit
+    unit = unit_group_unit.script
+
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
+
+    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section.students << user
+    section.save!
+    head :ok
+  end
+
+  def assign_course_as_student
+    return unless (user = current_user)
     course = UnitGroup.find_by_name(params.require(:course_name))
 
     teacher_email = params[:teacher_email]
@@ -110,37 +141,8 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    section.students << user
-    section.save!
-    head :ok
-  end
-
-  def assign_script_as_student
-    return unless (user = current_user)
-    script = Unit.find_by_name(params.require(:script_name))
-
-    teacher_email = params[:teacher_email]
-    if teacher_email
-      teacher_user = User.find_by_email(teacher_email)
-    else
-      name = "Fake User"
-      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-      password = name + "password"
-      attributes = {
-        name: name,
-        email: email,
-        password: password,
-        user_type: "teacher",
-        age: "21+"
-      }
-      teacher_user = User.create!(attributes)
-    end
-
-    # Need to also assign the course if the script is a part of a single-unit course
-    section = script.unit_group&.single_unit_course? ?
-                Section.create(name: "New Section", user: teacher_user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
-                Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section_name = params[:section_name] || "New Section"
+    section = Section.create(name: section_name, user: teacher_user, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -201,6 +203,15 @@ class TestController < ApplicationController
     render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
   end
 
+  def create_course
+    course = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      course_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+      UnitGroup.create!(name: course_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    end
+    course.save!
+    render json: {course_name: course.name}
+  end
+
   # invalidate the specified script from the script cache, so that it will be
   # reloaded from the DB the next time it is requested.
   def invalidate_script
@@ -211,6 +222,12 @@ class TestController < ApplicationController
   def destroy_script
     script = Unit.find_by!(name: params[:script_name])
     script.destroy
+    head :ok
+  end
+
+  def destroy_course
+    course = UnitGroup.find_by!(name: params[:course_name])
+    course.destroy!
     head :ok
   end
 

@@ -2,14 +2,11 @@ import React from 'react';
 
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
-import ValidationStatusIcon from './ValidationStatusIcon';
-
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface MainInstructionsContentProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
-  hasPassed: boolean;
 }
 
 /**
@@ -19,13 +16,9 @@ interface MainInstructionsContentProps {
  */
 const MainInstructionsContent: React.FunctionComponent<
   MainInstructionsContentProps
-> = ({instructionsText, handleInstructionsTextClick, hasPassed}) => {
+> = ({instructionsText, handleInstructionsTextClick}) => {
   return (
     <div className={moduleStyles.mainInstructions}>
-      <ValidationStatusIcon
-        status={hasPassed ? 'passed' : 'pending'}
-        className={moduleStyles.validationIcon}
-      />
       <EnhancedSafeMarkdown
         markdown={instructionsText}
         className={moduleStyles.markdownText}

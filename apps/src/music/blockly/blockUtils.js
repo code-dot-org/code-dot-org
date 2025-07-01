@@ -240,3 +240,47 @@ export function applyBlockIdOverrides(workspaceJson, overrides) {
     workspaceJson.blocks.blocks.forEach(walkBlocks);
   }
 }
+
+/**
+ * Recursively collects block IDs starting from the given block, following
+ * both child connections and function calls/definitions. The result preserves traversal
+ * order and avoids revisiting blocks (e.g., in case of shared or recursive procedures).
+ *
+ * @param block - The starting block to traverse from.
+ * @param visited - Internal set to track visited block IDs and avoid cycles.
+ * @param ordered - Internal array accumulating block IDs in traversal order.
+ * @returns An array of block IDs representing execution order from the starting block.
+ */
+export function collectBlockIdsRecursively(
+  block,
+  visited = new Set(),
+  ordered = []
+) {
+  if (!block || visited.has(block.id)) {
+    return ordered;
+  }
+
+  visited.add(block.id);
+  ordered.push(block.id);
+
+  // Handle procedure calls by traversing blocks inside its definition
+  if (block.type === BlockTypes.PROCEDURE_CALL) {
+    const procModel = block.getProcedureModel?.();
+    if (procModel) {
+      const defBlock = Blockly.Procedures.getDefinition(
+        procModel.name,
+        block.workspace
+      );
+      if (defBlock) {
+        collectBlockIdsRecursively(defBlock, visited, ordered);
+      }
+    }
+  }
+
+  // Recurse through child blocks
+  for (const child of block.getChildren()) {
+    collectBlockIdsRecursively(child, visited, ordered);
+  }
+
+  return ordered;
+}

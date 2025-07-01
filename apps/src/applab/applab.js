@@ -11,7 +11,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
-import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
@@ -287,7 +286,22 @@ function queueOnTick() {
 function handleExecutionError(err, lineNumber, outputString, libraryName) {
   outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
-
+  const analyticsData = studioApp().analyticsData();
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.code_execution_error,
+      metadata: JSON.stringify({
+        error: err,
+        lineNumber: lineNumber,
+        outputString: outputString,
+        libraryName: libraryName,
+      }),
+    });
+  }
   // prevent further execution
   Applab.clearEventHandlersKillTickLoop();
 
@@ -1110,35 +1124,14 @@ Applab.runButtonClick = function () {
   }
   Applab.execute();
   const analyticsData = studioApp().analyticsData();
-  logUserLevelInteraction({
-    levelId: analyticsData.levelId,
-    scriptId: analyticsData.scriptId,
-    interaction: UserLevelInteractions.click_run,
-  });
-
-  const config = studioApp().config;
-  const levelUrl = config.currentScriptLevelUrl;
-  // These are the hand-selected levels that are eligible for AI code analysis
-  // as part of the initial Evaluate Student Learning pilot. We want to tightly
-  // scope which levels we run AI code analysis on in for early testing. If we
-  // gain confidence in the approach and accuracy of AI evaluations, we'll expand,
-  // and ultimately likely store this information as a property of the level itself.
-  const aiEvaluationLevels = [
-    '/s/csp4-2024/lessons/3/levels/2',
-    '/s/csp4-2024/lessons/3/levels/6',
-  ];
-  const shouldEvaluateStudentCode = aiEvaluationLevels.includes(levelUrl);
-  if (shouldEvaluateStudentCode) {
-    evaluateStudentWork(
-      {
-        studentId: config.userId,
-        studentDisplayName: config.codeOwnersName,
-        studentWork: config.getCode(),
-        codeVersion: project.getCurrentSourceVersionId(),
-      },
-      analyticsData.levelId,
-      analyticsData.scriptId
-    );
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_run,
+    });
   }
 
   // Enable the Finish button if is present:
@@ -1325,11 +1318,15 @@ function onInterfaceModeChange(mode) {
 
 Applab.onPuzzleFinish = function () {
   const analyticsData = studioApp().analyticsData();
-  logUserLevelInteraction({
-    levelId: analyticsData.levelId,
-    scriptId: analyticsData.scriptId,
-    interaction: UserLevelInteractions.click_finish,
-  });
+  // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case
+  // for users working on App Lab standalone projects outside of the curriculum.
+  if (analyticsData.scriptId) {
+    logUserLevelInteraction({
+      levelId: analyticsData.levelId,
+      scriptId: analyticsData.scriptId,
+      interaction: UserLevelInteractions.click_finish,
+    });
+  }
   Applab.onPuzzleComplete(false); // complete without submitting
 };
 

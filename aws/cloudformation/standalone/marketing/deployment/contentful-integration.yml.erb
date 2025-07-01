@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Description: Common resources for our Contentful integration
 
 <%
-validation_cname_records = [
+cname_records = [
   {
     name: "_093bc52dedbcf23cb32745d5ca3ce1f6.contentful-images.code.org.",
     resource_record: "_b1583cf73939fdb573d56981a8d9b041.xlfgrmvvlj.acm-validations.aws."
@@ -18,6 +18,22 @@ validation_cname_records = [
   {
     name: "_b4465755914b1d33ea68f251b4605a10.contentful-assets.code.org.",
     resource_record: "_c8d3b907a56cad556a1ab8cb462d70f2.xlfgrmvvlj.acm-validations.aws."
+  },
+  {
+    name: "contentful-images.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.images.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-downloads.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.downloads.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-videos.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.videos.enterprise.contentful.com"
+  },
+  {
+    name: "contentful-assets.code.org.",
+    resource_record: "2yiy0qEwjW5xQJ6poYTwaj.assets.enterprise.contentful.com"
   }
 ]
 %>
@@ -33,7 +49,7 @@ Resources:
     Properties:
       HostedZoneId: !Ref CodeDotOrgHostedZoneId
       RecordSets:
-        <%- validation_cname_records.each do |record| -%>
+        <%- cname_records.each do |record| -%>
         - Name: "<%= record[:name] %>"
           Type: CNAME
           TTL: 3600

@@ -19,6 +19,7 @@ import {
   selectMultimodalEnabled,
   setShowModalType,
 } from '../redux';
+import {ChatButton} from '../types';
 import {getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -30,6 +31,8 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  chatButtons?: ChatButton[];
+  hiddenContext?: string;
   onClear: () => void;
 }
 
@@ -46,6 +49,8 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  chatButtons,
+  hiddenContext,
   onClear,
 }) => {
   const [selectedTab, setSelectedTab] =
@@ -98,15 +103,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
-    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-      'teacherSawAichatOnboarding',
-      'no'
-    );
-    const modalToShow =
-      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
-        ? ModalTypes.TEACHER_ONBOARDING
-        : ModalTypes.WARNING;
-    dispatch(setShowModalType(modalToShow));
+    const modalToShow = () => {
+      if (!isUserTeacher) {
+        return ModalTypes.WARNING;
+      }
+
+      const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+        'teacherSawAichatOnboarding',
+        'no'
+      );
+
+      return teacherSawAichatOnboardingModal === 'yes'
+        ? undefined
+        : ModalTypes.TEACHER_ONBOARDING;
+    };
+
+    dispatch(setShowModalType(modalToShow()));
   }, [isUserTeacher, dispatch]);
 
   useEffect(() => {
@@ -178,8 +190,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const onCloseModal = useCallback(() => {
     // We only want to show the teacher onboarding modal the first time a teacher user
     // interacts with the aichat tool. Thus, we store a value in local storage when
-    // closing the modal. After the first time viewing the modal, the teacher user
-    // sees the warning modal on page load from then on.
+    // closing the modal.
     if (
       isUserTeacher &&
       showModalType === ModalTypes.TEACHER_ONBOARDING &&
@@ -206,6 +217,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContext={hiddenContext}
           />
         )}
         <div className={moduleStyles.buttonRow}>

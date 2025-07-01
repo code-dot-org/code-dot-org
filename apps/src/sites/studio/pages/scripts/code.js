@@ -5,21 +5,12 @@ import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import {prepareBlocklyForEmbeddingAllEnvironments} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 
 $(document).ready(() => {
-  prepareBlockly();
+  prepareBlocklyForEmbeddingAllEnvironments();
   initPage();
 });
-
-function prepareBlockly() {
-  const customBlocksConfig = getScriptData('customBlocksConfig');
-  if (!customBlocksConfig) {
-    return;
-  }
-  prepareBlocklyForEmbedding(customBlocksConfig);
-}
 
 function initPage() {
   const script = document.querySelector('script[data-unit-rollup]');

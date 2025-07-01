@@ -1,0 +1,83 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "display_name": "Choose a Song",
+    "thumbnail_url": "https://images.code.org/cc11d0d9910b9be176a0287cb43efc45-Screenshot 2025-03-07 at 3.11.36 PM.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_90876d3d-830b-4f7f-bea0-dda4927c0fcb",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_d110c82e-ee1d-4594-afb3-b5f212c4621c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "bubble_choice_description": "Choose a song to recreate using what you've learned so far!",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:49.690+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequences-practice-challenge-freeplay\\\"\"],\"cloned_from\":\"music-lab-sequences-practice-challenge-freeplay\"},{\"changed_at\":\"2025-06-30 17:05:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

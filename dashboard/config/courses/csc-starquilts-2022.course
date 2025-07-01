@@ -3,6 +3,9 @@
   "script_names": [
     "csc-starquilts-2022"
   ],
+  "original_script_names": [
+    "csc-starquilts-2022"
+  ],
   "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

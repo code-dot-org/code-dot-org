@@ -3,6 +3,9 @@
   "script_names": [
     "career-journey-pilot-b"
   ],
+  "original_script_names": [
+    "career-journey-pilot-b"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

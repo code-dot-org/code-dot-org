@@ -44,6 +44,51 @@ describe('Section Component', () => {
     );
   });
 
+  it('renders a divider based on the divider prop', () => {
+    const {rerender} = renderComponent({divider: 'primary'});
+
+    let section = screen
+      .getByText('This is content.')
+      .closest('.container')?.parentElement;
+
+    let divider = section?.querySelector('hr');
+    expect(divider).toBeInTheDocument();
+    expect(divider).toHaveStyle(
+      'border-top-color: var(--background-neutral-quaternary)',
+    );
+
+    // change divider prop to strong
+    rerender(
+      <Section divider="strong">
+        <div>This is content.</div>
+      </Section>,
+    );
+
+    section = screen
+      .getByText('This is content.')
+      .closest('.container')?.parentElement;
+
+    divider = section?.querySelector('hr');
+    expect(divider).toBeInTheDocument();
+    expect(divider).toHaveStyle(
+      'border-top-color: var(--background-neutral-senary)',
+    );
+
+    // change divider prop to none
+    rerender(
+      <Section divider="none">
+        <div>This is content.</div>
+      </Section>,
+    );
+
+    section = screen
+      .getByText('This is content.')
+      .closest('.container')?.parentElement;
+
+    divider = section?.querySelector('hr');
+    expect(divider).not.toBeInTheDocument();
+  });
+
   it('applies a custom ID to the section', () => {
     renderComponent({id: 'section-id'});
 

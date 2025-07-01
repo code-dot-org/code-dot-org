@@ -8,6 +8,10 @@ import {
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
@@ -36,21 +40,23 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   totalNumberOfStudents,
   openDetailedAnalysis,
 }) => {
-  const proficienceyThreshold = totalNumberOfStudents * 0.8;
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
+  const PROFICIENCY_PERCENT = 0.75;
+  const proficiencyStudentGoal = totalNumberOfStudents * PROFICIENCY_PERCENT;
   const aiSummaryTag = (proficiencyCount: number) => {
+    const sectionMeetsProficiencyThreshold =
+      proficiencyCount >= proficiencyStudentGoal;
     return (
       <Tags
         tagsList={[
           {
-            label:
-              proficiencyCount > proficienceyThreshold
-                ? FEEDBACK_TYPE.PROFICIENT.label
-                : FEEDBACK_TYPE.NEEDS_REVIEW.label,
+            label: sectionMeetsProficiencyThreshold
+              ? FEEDBACK_TYPE.PROFICIENT.label
+              : FEEDBACK_TYPE.NEEDS_REVIEW.label,
             icon: {
-              iconName:
-                proficiencyCount > proficienceyThreshold
-                  ? FEEDBACK_TYPE.PROFICIENT.icon
-                  : FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+              iconName: sectionMeetsProficiencyThreshold
+                ? FEEDBACK_TYPE.PROFICIENT.icon
+                : FEEDBACK_TYPE.NEEDS_REVIEW.icon,
               iconStyle: 'solid',
               title: 'check',
               placement: 'left',
@@ -59,7 +65,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         ]}
         size="l"
         className={
-          proficiencyCount > proficienceyThreshold
+          sectionMeetsProficiencyThreshold
             ? styles.proficientTag
             : styles.needsReviewTag
         }
@@ -70,10 +76,10 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
       <BodyTwoText>
-        <strong>{`${i18n.reasoning()}:`}</strong>
-        {proficiencyCount > proficienceyThreshold
-          ? 'More than 80% of the students demonstrated proficiency in their responses. '
-          : 'Less than 80% of the students demonstrated proficiency in their responses. '}
+        <strong>{`${i18n.reasoning()}: `}</strong>
+        {proficiencyCount >= proficiencyStudentGoal
+          ? '75% or more of the students demonstrated proficiency in their responses. '
+          : 'Less than 75% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
           size="m"
@@ -96,23 +102,41 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   };
 
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['great', 'ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.STUDENT_PII,
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY,
+      ])
     : 0;
 
   // A student can have "no response" if they have not started the level yet OR
   // if they have submitted a response but it is empty.
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt']) +
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.NO_ATTEMPT,
+      ]) +
       (totalNumberOfStudents - studentWorkEvaluations.length)
     : 0;
+
+  const handleIconClick = (thumbsUp: boolean) => {
+    if (!studentWorkEvaluations) {
+      return;
+    }
+    analyticsReporter.sendEvent(EVENTS.AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK, {
+      userId: currentUserId,
+      levelId: studentWorkEvaluations[0].levelId,
+      scriptId: studentWorkEvaluations[0].unitId,
+      aiInteractionType: 'ai_summary',
+      thumbsUp: thumbsUp,
+    });
+  };
 
   const showEvaluationSummary = studentWorkEvaluations && evaluationComplete;
 
@@ -126,8 +150,12 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
               {i18n.aiFeedbackQuestion()}
             </BodyThreeText>
             <FeedbackToggle
-              onThumbsUpClick={() => {}}
-              onThumbsDownClick={() => {}}
+              onThumbsUpClick={() => {
+                handleIconClick(true);
+              }}
+              onThumbsDownClick={() => {
+                handleIconClick(false);
+              }}
               size="xs"
               color="gray"
             />

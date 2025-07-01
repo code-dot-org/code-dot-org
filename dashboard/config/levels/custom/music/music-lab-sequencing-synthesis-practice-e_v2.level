@@ -1,0 +1,360 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:04.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "zJwvZgF9AVRpVgzY[gyE",
+                              "deletable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "shakira_whenever_wherever/vocals_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "-4;a_cto/{`ah*pB:ZtP",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "shakira_whenever_wherever/vocals_chorus_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "Iih/Xuwznn6a!FE!71U}",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "shakira_whenever_wherever/vocals_chorus_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "-z?ToY67$@C%[%_^+j3P",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_whenever_wherever/vocals_chorus_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "/`D2j*jd8]CZQ.H,,G[L",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "eq`}|f@tWbsu.FJ^i_A_",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "shakira_whenever_wherever/vocals_chorus_backups_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "(:$/FOe}21Jz9X{A;%Cb",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "shakira_whenever_wherever/vocals_chorus_backups_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "XZX;;!z;$,`*X+@ZIW15",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_whenever_wherever/vocals_chorus_backups_3"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "c)]P,RG59*Dz!jI`d]8M",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": true
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_whenever_wherever/vocals_chorus_backups_4"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "462eCI__-%m)5*e~1CNn",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "DWdNVL|G??lJ~-`S`(_`",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "shakira_whenever_wherever/acoustic_chorus_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "4hgE6FA9tF=OLwUw).5Q",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_whenever_wherever/acoustic_chorus_2"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "T==!wQQQI}b^cDY|.w?;",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_whenever_wherever/acoustic_chorus_3"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "~s*pe:3R*bAUR_GlT^Ak",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": true
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_whenever_wherever/acoustic_chorus_4"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "shakira_whenever_wherever",
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Wherever Whenever\r\n\r\n**Define:** You've been hired to add effects to this remix of Wherever Whenever by Shakira. Your requirements are:\r\n- No changes to the lead vocals\r\n- All backing vocals should have a delay\r\n- All acoustic guitar tracks should be at medium volume\r\n- Each acoustic guitar track should have a different effect\r\n\r\nYou will only need to add effect blocks to the code - the rest of the song is locked!\r\n\r\n**Prepare:** Plan where you will add your effects\r\n\r\n**Try:** Code your song! Listen to the example for an idea of what it could sound like!\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Make sure your code has:\r\n\r\n- At least 6 effect blocks",
+    "encrypted_exemplar_sources": "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\nbFK/uG23\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "display_name": "Whenever Wherever Remix",
+    "bubble_choice_description": "You've been hired to add effects to this remix of Wherever Whenever by Shakira",
+    "validations": [
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_89468262-3db1-4391-8cbd-712d91a40411",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot **breaks into a dance**! Nice job!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_64b030e2-b55f-47c8-8de5-967a0cce2625",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is **vibing** to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 7
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_3df0bf9c-134c-403f-a8ee-d2608a517daa",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is **grooving** to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_91cc81e6-ecb7-412d-b067-6ff6f96a620c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_134a6341-e0b4-43ff-9fcc-f899f0b92ce1",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for:\n- ❌ at least 6 effects",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_amarillo/shakira_amarillo.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:04.169+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesis-practice-e\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesis-practice-e\"},{\"changed_at\":\"2025-06-12 16:15:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:00:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

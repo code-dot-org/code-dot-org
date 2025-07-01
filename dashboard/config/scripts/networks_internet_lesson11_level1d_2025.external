@@ -1,6 +1,8 @@
 name 'networks-internet-lesson11-level1d_2025'
 title 'StreamView Entertainment'
-description 'description here'
+display_name 'StreamView Entertainment'
+bubble_choice_description 'StreamView Entertainment has noticed many users reuse passwords across multiple online services, making them vulnerable to exploitation from hackers.'
+thumbnail_url 'https://images.code.org/a73b746b1d5b38aaedd42496b2f00995-image-1740388493881.jpg'
 
 markdown <<MARKDOWN
 # StreamView Entertainment  

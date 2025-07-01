@@ -3,6 +3,9 @@
   "script_names": [
     "csa-draft-pl"
   ],
+  "original_script_names": [
+    "csa-draft-pl"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

@@ -22,10 +22,13 @@ import {
 import _ from 'lodash';
 import React, {useState} from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {AgeGatedSectionsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   removeSectionOrThrow,
   setSectionOrder,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -34,6 +37,7 @@ import {
   getFilteredSectionOrderIds,
   saveSectionOrder,
 } from '../../teacherDashboard/sectionOrderUtils';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -64,6 +68,18 @@ export const SectionList: React.FC<SectionListProps> = ({
   showHiddenOnly,
 }) => {
   const dispatch = useAppDispatch();
+
+  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
+  const toggleCAPModal = () => {
+    setCAPModalOpen(!CAPmodalOpen);
+  };
+
+  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
+
+  const shouldDisplayAtRiskAgeGatedWarning = () => {
+    return ageGatedSections?.length > 0;
+  };
+
   const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
   const sections: SectionMap = useAppSelector(
     state => state.teacherSections.sections
@@ -71,6 +87,10 @@ export const SectionList: React.FC<SectionListProps> = ({
 
   const reduxSectionOrder: number[] = useAppSelector(
     state => state.teacherSections.sectionOrder
+  );
+
+  const sectionsAreLoaded = useAppSelector(
+    state => state.teacherSections.asyncLoadComplete
   );
 
   const [sortableSectionIds, setSortableSectionIds] =
@@ -155,32 +175,46 @@ export const SectionList: React.FC<SectionListProps> = ({
     : sortableSectionIds;
 
   return (
-    <div>
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-        modifiers={[restrictToVerticalAxis, restrictToParentElement]}
-      >
-        <SortableContext
-          items={sortableSectionIds}
-          strategy={verticalListSortingStrategy}
-        >
-          <ol className={styles.sectionList}>
-            {sectionIdsToShow.map(id =>
-              sections[id] ? (
-                <SectionCard
-                  id={id}
-                  key={id}
-                  section={sections[id]}
-                  onDeleteClickCallback={onDeleteClickCallback}
-                  studioUrlPrefix={studioUrlPrefix}
-                />
-              ) : null
-            )}
-          </ol>
-        </SortableContext>
-      </DndContext>
+    <div id="ui-test-section-list">
+      {sectionsAreLoaded ? (
+        <>
+          {shouldDisplayAtRiskAgeGatedWarning() && (
+            <AgeGatedSectionsBanner
+              toggleModal={toggleCAPModal}
+              modalOpen={CAPmodalOpen}
+              ageGatedSections={ageGatedSections}
+            />
+          )}
+          <CoteacherInviteNotification isForPl={false} destructiveLoad={true} />
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToVerticalAxis, restrictToParentElement]}
+          >
+            <SortableContext
+              items={sortableSectionIds}
+              strategy={verticalListSortingStrategy}
+            >
+              <ol className={styles.sectionList}>
+                {sectionIdsToShow.map(id =>
+                  sections[id] ? (
+                    <SectionCard
+                      id={id}
+                      key={id}
+                      section={sections[id]}
+                      onDeleteClickCallback={onDeleteClickCallback}
+                      studioUrlPrefix={studioUrlPrefix}
+                    />
+                  ) : null
+                )}
+              </ol>
+            </SortableContext>
+          </DndContext>
+        </>
+      ) : (
+        <Spinner size="large" />
+      )}
       {sectionToDelete > NO_SECTION_ID && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}

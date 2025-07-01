@@ -3,6 +3,9 @@
   "script_names": [
     "virustest"
   ],
+  "original_script_names": [
+    "virustest"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

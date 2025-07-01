@@ -3,6 +3,9 @@
   "script_names": [
     "odometer"
   ],
+  "original_script_names": [
+    "odometer"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

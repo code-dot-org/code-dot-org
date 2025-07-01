@@ -1,20 +1,27 @@
 @import 'color.scss';
 
-.consoleContainer {
-  color: $white;
+%console-container {
   overflow: hidden;
   height: 100%;
   white-space: pre;
+}
+
+.consoleContainerDark {
+  @extend %console-container;
+  color: $white;
   background-color: $black;
+}
+
+.consoleContainerLight {
+  @extend %console-container;
+  color: $black;
+  background-color: $white;
 }
 
 .consoleV2 {
   flex-grow: 1;
   overflow: hidden;
-}
-
-.errorLine {
-  color: $lightest_red;
+  padding-left: 4px;
 }
 
 .popOutGraph {
@@ -27,7 +34,7 @@
 
 .disabledInfoIcon {
   padding: 12px;
-  color: $white;
+  color: var(--text-neutral-primary);
   font-size: 16px;
 }
 

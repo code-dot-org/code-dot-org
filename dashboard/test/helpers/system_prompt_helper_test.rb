@@ -6,37 +6,22 @@ class AiSystemPrompts::SystemPromptHelperTest < ActionView::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
-    @unit = create(:script, :with_levels)
+    @unit = create(:script, :in_single_unit_course, :with_levels)
     @level = @unit.levels.first
 
     # Sample Applab level
     @applab_level = create(:applab, :with_instructions)
-    @csp_unit = create(:csp_script)
+    @csp_unit = create(:csp_script, :in_single_unit_course)
     create(:csp_script_level, levels: [@applab_level])
 
     # Sample Javalab level
     @level_instructions = "Write a loop."
-    @csa_unit = create(:csa_script)
+    @csa_unit = create(:csa_script, :in_single_unit_course)
     @javalab_level = create(:javalab, :with_instructions)
     create(:csa_script_level, levels: [@javalab_level])
 
     # Creating a Pythonlab level with a validation_file
     @pythonlab_level = create(:pythonlab, :with_instructions)
-  end
-
-  test "get_programming_language_system_prompt includes Java for CSA level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@csa_unit)
-    assert_equal programming_language, 'Java'
-  end
-
-  test "get_programming_language_system_prompt includes JavaScript for CSP level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@csp_unit)
-    assert_equal programming_language, 'JavaScript'
-  end
-
-  test "get_programming_language_system_prompt includes Python for generic level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@unit)
-    assert_equal programming_language, 'Python'
   end
 
   test "get_level_instructions" do

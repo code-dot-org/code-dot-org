@@ -7,7 +7,7 @@ wrong 'AI handles all the work so humans can avoid thinking.'
 right 'AI brings speed and pattern recognition, while humans bring meaning and creativity.'
 wrong 'Humans only need AI to approve their ideas.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 10: Remixing, Creativity, and Originality

@@ -10,6 +10,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 const aiBotImages = [
   require(`@cdo/static/music/ai/ai-bot-0.png`),
@@ -549,162 +550,174 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   };
 
   const aiBotImage = getAiBotImage();
+  const showBotArea = [
+    'drawnDrums',
+    'changedTemperature',
+    'generated',
+  ].includes(userCompletedTask);
 
   return (
-    <div className={styles.patternPanel} dir="ltr">
-      <LoadingOverlay show={isLoading} />
+    <FocusLock className={styles.focusContainer}>
+      <div className={styles.patternPanel} dir="ltr">
+        <LoadingOverlay show={isLoading} />
 
-      <div
-        className={classNames(
-          styles.body,
-          generateState === 'generating' && styles.bodyGenerating
-        )}
-      >
-        <Help
-          userCompletedTask={userCompletedTask}
-          generateState={generateState}
-          generatingScanStep={generatingScanStep}
-          eventsLength={currentValue.events.length}
-          isPlaying={!!currentPreviewTick}
-          shouldShowGenerateAgainHelp={generateCount === 1}
-        />
+        <div
+          className={classNames(
+            styles.body,
+            generateState === 'generating' && styles.bodyGenerating
+          )}
+        >
+          <Help
+            userCompletedTask={userCompletedTask}
+            generateState={generateState}
+            generatingScanStep={generatingScanStep}
+            eventsLength={currentValue.events.length}
+            isPlaying={!!currentPreviewTick}
+            shouldShowGenerateAgainHelp={generateCount === 1}
+          />
 
-        <div className={styles.leftArea}>
-          <div className={styles.topRow}>
-            <SimpleDropdown
-              name="instrument-dropdown"
-              labelText=""
-              isLabelVisible={false}
-              selectedValue={currentValue.instrument}
-              onChange={handleFolderChange}
-              size="s"
-              items={availableKits.map(folder => ({
-                value: folder.id,
-                text: folder.name,
-              }))}
-            />
+          <div className={styles.leftArea}>
+            <div className={styles.topRow}>
+              <SimpleDropdown
+                name="instrument-dropdown"
+                labelText=""
+                isLabelVisible={false}
+                selectedValue={currentValue.instrument}
+                onChange={handleFolderChange}
+                size="s"
+                items={availableKits.map(folder => ({
+                  value: folder.id,
+                  text: folder.name,
+                }))}
+              />
 
-            <div className={styles.previewControls}>
-              <PreviewControls
-                enabled={currentValue.events.length > 0}
-                playPreview={playPreview}
-                onClickClear={onClear}
-                cancelPreviews={stopPreview}
-                isPlayingPreview={currentPreviewTick > 0}
+              <div className={styles.previewControls}>
+                <PreviewControls
+                  enabled={currentValue.events.length > 0}
+                  playPreview={playPreview}
+                  onClickClear={onClear}
+                  cancelPreviews={stopPreview}
+                  isPlayingPreview={currentPreviewTick > 0}
+                />
+              </div>
+            </div>
+
+            <div className={styles.editArea}>
+              <div className={styles.drumArea}>
+                {currentFolder.sounds.map(({name, note}, index) => {
+                  return (
+                    <div className={styles.row} key={note}>
+                      <div className={styles.nameContainer}>
+                        <span
+                          className={styles.name}
+                          onClick={() => previewNote(note || index)}
+                        >
+                          {name}
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className={styles.patternArea}>
+                {currentFolder.sounds.map(({name, note}, index) => {
+                  return (
+                    <div className={styles.row} key={note}>
+                      {arrayOfTicks
+                        .filter(
+                          tick =>
+                            (userCompletedTask === 'generated' &&
+                              generateState === 'none') ||
+                            tick <= PATTERN_AI_NUM_SEED_EVENTS
+                        )
+                        .map(tick => {
+                          return (
+                            <div
+                              className={getOuterCellClasses(tick)}
+                              onClick={() => toggleEvent(tick, index)}
+                              key={tick}
+                            >
+                              <div className={getInnerCellClasses(tick)}>
+                                <div
+                                  className={getCellClasses(
+                                    note || index,
+                                    tick
+                                  )}
+                                />
+                              </div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.rightArea}>
+            <div
+              className={classNames(
+                styles.botArea,
+                MusicRegistry.hideAiTemperature && styles.botAreaGap,
+                showBotArea && styles.botAreaVisible
+              )}
+            >
+              <img
+                src={aiBotImage}
+                className={classNames(
+                  styles.aiBot,
+                  generateState === 'generating' && styles.aiBotGenerating
+                )}
+                alt=""
+                draggable={false}
+              />
+              {!MusicRegistry.hideAiTemperature && (
+                <div>
+                  <div className={styles.temperatureRow}>
+                    <Slider
+                      name="temperature-slider"
+                      minValue={aiTemperatureMin}
+                      maxValue={aiTemperatureMax}
+                      step={1}
+                      value={aiTemperature}
+                      onChange={event => {
+                        setAiTemperature(+event.target.value);
+                      }}
+                      className={styles.temperatureInput}
+                      leftButtonProps={{
+                        icon: {iconName: 'minus', title: 'Decrease'},
+                        ['aria-label']: 'Decrease',
+                        tabIndex: showBotArea ? 0 : -1,
+                      }}
+                      rightButtonProps={{
+                        icon: {iconName: 'plus', title: 'Increase'},
+                        ['aria-label']: 'Increase',
+                        tabIndex: showBotArea ? 0 : -1,
+                      }}
+                      hideValue={true}
+                      color="aqua"
+                      tabIndex={showBotArea ? 0 : -1} // Only allow tabbing to the slider when the bot area is visible
+                    />
+                  </div>
+                </div>
+              )}
+              <Button
+                ariaLabel={musicI18n.generate()}
+                text={musicI18n.generate()}
+                onClick={handleAiClick}
+                disabled={generateState === 'generating'}
+                type="primary"
+                color="white"
+                size="s"
+                className={styles.button}
+                tabIndex={showBotArea ? 0 : -1} // Only allow tabbing to the button when the bot area is visible
               />
             </div>
           </div>
-
-          <div className={styles.editArea}>
-            <div className={styles.drumArea}>
-              {currentFolder.sounds.map(({name, note}, index) => {
-                return (
-                  <div className={styles.row} key={note}>
-                    <div className={styles.nameContainer}>
-                      <span
-                        className={styles.name}
-                        onClick={() => previewNote(note || index)}
-                      >
-                        {name}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className={styles.patternArea}>
-              {currentFolder.sounds.map(({name, note}, index) => {
-                return (
-                  <div className={styles.row} key={note}>
-                    {arrayOfTicks
-                      .filter(
-                        tick =>
-                          (userCompletedTask === 'generated' &&
-                            generateState === 'none') ||
-                          tick <= PATTERN_AI_NUM_SEED_EVENTS
-                      )
-                      .map(tick => {
-                        return (
-                          <div
-                            className={getOuterCellClasses(tick)}
-                            onClick={() => toggleEvent(tick, index)}
-                            key={tick}
-                          >
-                            <div className={getInnerCellClasses(tick)}>
-                              <div
-                                className={getCellClasses(note || index, tick)}
-                              />
-                            </div>
-                          </div>
-                        );
-                      })}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.rightArea}>
-          <div
-            className={classNames(
-              styles.botArea,
-              MusicRegistry.hideAiTemperature && styles.botAreaGap,
-              ['drawnDrums', 'changedTemperature', 'generated'].includes(
-                userCompletedTask
-              ) && styles.botAreaVisible
-            )}
-          >
-            <img
-              src={aiBotImage}
-              className={classNames(
-                styles.aiBot,
-                generateState === 'generating' && styles.aiBotGenerating
-              )}
-              alt=""
-              draggable={false}
-            />
-            {!MusicRegistry.hideAiTemperature && (
-              <div>
-                <div className={styles.temperatureRow}>
-                  <Slider
-                    name="temperature-slider"
-                    minValue={aiTemperatureMin}
-                    maxValue={aiTemperatureMax}
-                    step={1}
-                    value={aiTemperature}
-                    onChange={event => {
-                      setAiTemperature(+event.target.value);
-                    }}
-                    className={styles.temperatureInput}
-                    leftButtonProps={{
-                      icon: {iconName: 'minus', title: 'Decrease'},
-                      ['aria-label']: 'Decrease',
-                    }}
-                    rightButtonProps={{
-                      icon: {iconName: 'plus', title: 'Increase'},
-                      ['aria-label']: 'Increase',
-                    }}
-                    hideValue={true}
-                    color="aqua"
-                  />
-                </div>
-              </div>
-            )}
-            <Button
-              ariaLabel={musicI18n.generate()}
-              text={musicI18n.generate()}
-              onClick={handleAiClick}
-              disabled={generateState === 'generating'}
-              type="primary"
-              color="white"
-              size="s"
-              className={styles.button}
-            />
-          </div>
         </div>
       </div>
-    </div>
+    </FocusLock>
   );
 };
 

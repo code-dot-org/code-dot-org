@@ -52,16 +52,17 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     @program_manager = create :program_manager
 
     # CSF workshop for this regional partner
-    @workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop = build :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop.save(validate: false)
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     # CSF workshop for this organizer.
-    @organizer_workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop = build :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop.save(validate: false)
     create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
-    @other_workshop = create :workshop, :ended, course: Pd::Workshop::COURSE_ECS,
-      subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+    @other_workshop = create :byo_workshop, :ended
   end
 
   [:admin, :workshop_organizer, :program_manager].each do |user_type|

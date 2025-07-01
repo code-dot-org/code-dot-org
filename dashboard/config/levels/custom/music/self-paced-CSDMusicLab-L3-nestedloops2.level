@@ -505,14 +505,22 @@
         "conditions": [
           {
             "name": "played_anything_in_same_nested_loop",
-            "value": 3
+            "value": 1
           }
+        ]
+      },
+      {
+        "key": "self-paced-CSDMusicLab-L3-nestedloops2_81467dee-746e-41c8-b676-4537f59bb848",
+        "message": "You'll need a nested loop!",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:38.259+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-2\"},{\"changed_at\":\"2025-04-17 01:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:38.259+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-2\"},{\"changed_at\":\"2025-04-17 01:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:53:02 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

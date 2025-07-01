@@ -1,0 +1,181 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:38.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Match New Sound Lengths\r\n\r\nKaysha needs to make these three sounds match up in her timeline. However, they are all different measure lengths.\r\n\r\n- Main Beat = 4 measures\r\n- Piano Fill = 3 measures\r\n- Blip = 1 measure \r\n\r\nTo solve this, Kaysha needs to identify a common pattern where all tracks can loop and end at the same time.\r\n\r\n**Your task:** Use **pattern recognition** to figure out how often each sound needs to repeat so they all align, then use loops to build your code. Your final song should match the example exactly!\r\n\r\n![](https://images.code.org/11807806b213c8a710caceb0e699a406-image-1744235904248.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "sabrina_carpenter_feather": [
+          "drums_main_beat",
+          "piano_fill",
+          "blip"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout"
+      },
+      "packId": "sabrina_carpenter_feather",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  }
+                }
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "+VV;#21WIW9omZx:8`gU",
+              "x": 250,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "0:jYoAv2tN*gQY)IVT`N",
+              "x": 250,
+              "y": 270,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "play_sound_at_current_location_simple2",
+              "x": 470,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_feather/drums_main_beat"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 250,
+              "y": 70,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "}o5`Z,}zkEUK6$bbj^|z",
+              "x": 470,
+              "y": 190,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_feather/piano_fill"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Ui!dhS7k|S0@IA8=`3Po",
+              "x": 470,
+              "y": 290,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "sabrina_carpenter_feather/blip"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Sound Length Looping",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499SbIuCEChopt2BUka5LPbQ7EPAyWey8kP658x9a9x\nprUVBsYlcjdpGvnm81/SqL3FgD2dEUvlojdJiKv7ByxN0pLY6mxRQdAo+qGY\nYgfwe1sR3p0Dgnl6f5XAI7jcqtCeMBoGupFn3i5mNeaz9fShxHE7FVHo4muj\nzLvPoqmf5yNa0c2YoUOeiz+nXKb78gbKHDADTE7D7rIHavdBYSimKeZ4JMK5\n4Y5nh02f6R+zMG7tNtY7YKKvnnIilqgjWP97B+mxoRbFlnj4awLbarzXetH7\n+D15qsagB1Ol16sI+Suad5LWi9/T9oLCEzIjPsoqc+hsA7bn7Er6PknnQK/U\nD1zub6rRHlJ79dUWZiTp2DfF6uoBcY1Mc1APZHqyxsvkVCH+S9PyLD/IATqo\n7Xy1tUghQ2oeuyx0+WMh3P2gqYDTP+xEZ0WakIeuKqvhdPSlk2t0x2y8rdec\niMzMtPcTY0TVdrGyw+mRCF8Mu7J/eGqkLOEvPucsbvUhCea1/8Zy8FaoE/Bk\nl+eQWcKemzUi5/5C+7RHDC3V/HeYiM50BCf/D3I1xXT2LvR6ZVR9QI/xwIqD\nqRlErWNUy0UHWtN2o6CINkOGyI6y61sQqzRxARAy9XY2qgb4xW7/Dr2huewl\nqqRFe5mT5HZ7TsLCx2Ge5jzLyOT2tATGzYorvqGunmD68I4zinFBKTDr1JXr\nwKOoWaF4ZIgHOYxeeRr5PjjmL3HadzMdB+3r0oaCazNq5Bb/EffjVT7VFWCj\nSi4rFl5RAorOZZi/1SM1KuQFD53pFioarR2nt5NDD0cYsKQwUOpF2RkmAQCk\nGf6bcD6hwjgChZbAXmswAPes6g5TaXgH0Y5hB8cqOti2o5r/AVJBeZoQVBLZ\n/y8DvlY5uwLyRTqMTc8WiApxyye12gK/obZ+3XlwImeR+88uPzIpv+Q1GCQe\neQLLUCR1VloiXolV1fzVqqRrofVxjKmS1FK/a7rQeBRhdsEosn5WbDNQviPm\nQ9WxelUdof16oafdvOPBvxIovL4CcJNkU5zBPVL3wb+viXMRZof3eXujKRkr\nFQrHnCzFTBMjvtQRzmgVhRqPkwGQ\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Kaysha's Song",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-a_095b4b26-72e1-4623-a6b8-4da29f14be0e",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help create a backing track when the measure lengths aren't perfect matches!",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_feather/sabrina_carpenter_feather.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:38.778+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:05:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-14 00:06:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

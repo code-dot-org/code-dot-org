@@ -9,7 +9,11 @@ import {WorkshopCourseConfig} from '../../types';
 
 import styles from './styles.module.scss';
 
-const usTimeZones = moment.tz.zonesForCountry('US');
+const timeZonePlaceholder = 'Select a time zone';
+
+const usTimeZones = [timeZonePlaceholder].concat(
+  moment.tz.zonesForCountry('US')
+);
 
 export const TimeZoneEditor: FC<{
   timeZone: string;
@@ -23,7 +27,9 @@ export const TimeZoneEditor: FC<{
 
   return (
     <div className={styles.container}>
-      <BodyThreeText id="tz-label">{fields.time_zone.label}</BodyThreeText>
+      <BodyThreeText id="tz-label">
+        {timeZone ? fields.time_zone.label : 'Workshop times are local'}
+      </BodyThreeText>
       {editMode ? (
         <SimpleDropdown
           name={fields.time_zone.stateKey}
@@ -37,7 +43,10 @@ export const TimeZoneEditor: FC<{
             setTzChanged(true);
             handleChange(e.target.value);
           }}
-          items={usTimeZones.map(tz => ({value: tz, text: tz}))}
+          items={usTimeZones.map(tz => ({
+            value: tz === timeZonePlaceholder ? '' : tz,
+            text: tz,
+          }))}
         />
       ) : (
         <BodyThreeText>

@@ -3,10 +3,10 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# 🐱 Lesson 9: Mini Project – Cat GIF Loops
+# 🐱 Lesson 9: Mini Project - Cat GIF Loops
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
-<a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/9" target="blank" rel="noopener noreferrer">Access Lesson 9: Mini Project – Cat GIF Loops Lesson Plan</a></p>
+<a href="https://studio.code.org/courses/programming-with-music-lab-2025/units/1/lessons/9" target="blank" rel="noopener noreferrer">Access Lesson 9: Mini Project - Cat GIF Loops Lesson Plan</a></p>
 
 #### In this playful project, students choose a looping cat GIF and design a musical loop that matches its mood. They’ll combine visual and auditory patterns while exploring random blocks. This project reinforces looping structures while giving students space to experiment and have fun.
 
@@ -41,5 +41,11 @@ markdown <<MARKDOWN
 * #### Use of both repeat and random blocks
 * #### Willingness to experiment and iterate based on feedback
 
+## Up Next
+
+#### In the next level, you'll see an example of a completed Cat GIF Loops project. Consider opening up the rubric (linked above) and comparing it with the exemplar:
+
+* #### How might you score the exemplar? 
+* #### What evidence (or non-evidence) do you see of rubric criteria?
 
 MARKDOWN

@@ -3,6 +3,9 @@
   "script_names": [
     "pilot-pl-teaching-k5-music-lab"
   ],
+  "original_script_names": [
+    "pilot-pl-teaching-k5-music-lab"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

@@ -3,6 +3,9 @@
   "script_names": [
     "20-hour"
   ],
+  "original_script_names": [
+    "20-hour"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

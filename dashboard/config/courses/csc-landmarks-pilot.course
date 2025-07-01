@@ -3,6 +3,9 @@
   "script_names": [
     "csc-landmarks-pilot"
   ],
+  "original_script_names": [
+    "csc-landmarks-pilot"
+  ],
   "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

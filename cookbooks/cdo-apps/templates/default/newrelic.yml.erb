@@ -176,6 +176,21 @@ common: &default_settings
   # implications if your memcached keys are sensitive
   # capture_memcache_keys: true
 
+  # Override default instrumentation method for gems that need it. In v7, the
+  # NewRelic gem defaulted to Prepending rather than Method Chaining for
+  # instrumenting third-party gems. This unfortunately breaks on Sinatra 2.2.3,
+  # so we explicitly instruct it to use the old default instead.
+  # TODO infra: update our Sinatra gem and remove this configuration.
+  # See https://github.com/newrelic/newrelic-ruby-agent/pull/565
+  instrumentation:
+    sinatra: chain
+
+  # Distributed tracing is enabled by default as of version 8.0. Much as we'd
+  # like to benefit from this functionality, we are already over budget on our
+  # data ingestion; unfortunately, we need to turn this off for now.
+  distributed_tracing:
+    enabled: false
+
 # Application Environments
 # ------------------------------------------
 # Environment-specific settings are in this section.

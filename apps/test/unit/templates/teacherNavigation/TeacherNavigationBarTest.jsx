@@ -32,6 +32,12 @@ import i18n from '@cdo/locale';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   put: jest.fn(() => Promise.resolve({})),
+  post: jest.fn(() =>
+    Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({}),
+    })
+  ),
 }));
 
 const LocationElement = () => {
@@ -71,6 +77,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd3-2022',
+      unitPosition: 1,
       participantType: 'student',
     },
     {
@@ -79,6 +86,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csd-2022',
       unitName: 'csd6-2022',
+      unitPosition: 6,
       participantType: 'student',
     },
     {
@@ -95,6 +103,7 @@ describe('TeacherNavigationBar', () => {
       hidden: false,
       courseVersionName: 'csa-2022',
       unitName: 'csa1-2022',
+      unitPosition: 1,
       participantType: 'student',
     },
   ];

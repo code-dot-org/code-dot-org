@@ -14,9 +14,9 @@ export interface TabGroupTabModel extends Omit<TabModel, 'tabContent'> {
   /** Content of the Tab */
   tabContent: {
     /** Tab Image props */
-    image: ImageProps;
+    image?: ImageProps;
     /** Tab CTA Button props */
-    button: LinkButtonProps;
+    button?: LinkButtonProps;
     /** Tab Title */
     title: string;
     /** Tab Description */
@@ -49,22 +49,29 @@ export interface TabGroupProps
 const isTabGroupTabModel = (
   tab: TabModel | TabGroupTabModel,
 ): tab is TabGroupTabModel =>
-  (tab as TabGroupTabModel).tabContent?.image !== undefined;
+  typeof (tab as TabGroupTabModel).tabContent === 'object' &&
+  (tab as TabGroupTabModel).tabContent !== null &&
+  'title' in (tab as TabGroupTabModel).tabContent &&
+  'description' in (tab as TabGroupTabModel).tabContent;
 
 const parseTabsGroupTabToRegularTab = (tab: TabGroupTabModel | TabModel) => {
   if (isTabGroupTabModel(tab)) {
+    const {image, button, title, description} = tab.tabContent;
+
     return {
       ...tab,
       tabContent: (
         <div className={moduleStyles.tabGroupModelTabContainer}>
-          <Image
-            className={moduleStyles.tabGroupModelTabImageContainer}
-            {...tab.tabContent.image}
-          />
+          {image && (
+            <Image
+              className={moduleStyles.tabGroupModelTabImageContainer}
+              {...image}
+            />
+          )}
           <div className={moduleStyles.tabGroupModelTabContentContainer}>
-            <Heading3>{tab.tabContent.title}</Heading3>
-            <BodyThreeText>{tab.tabContent.description}</BodyThreeText>
-            <LinkButton {...tab.tabContent.button} />
+            <Heading3>{title}</Heading3>
+            <BodyThreeText>{description}</BodyThreeText>
+            {button && <LinkButton {...button} />}
           </div>
         </div>
       ),
@@ -78,20 +85,24 @@ const parseTabsGroupTabToAccordionItem = (
   tab: TabGroupTabModel | TabModel,
 ): AccordionItem => {
   if (isTabGroupTabModel(tab)) {
+    const {image, button, title, description} = tab.tabContent;
+
     return {
       id: tab.value,
       label: tab.text || tab.value,
       content: (
         <div className={moduleStyles.tabGroupAccordionItemContainer}>
           <div className={moduleStyles.tabGroupAccordionItemContentContainer}>
-            <Heading4>{tab.tabContent.title}</Heading4>
-            <BodyThreeText>{tab.tabContent.description}</BodyThreeText>
-            <LinkButton {...tab.tabContent.button} />
+            <Heading4>{title}</Heading4>
+            <BodyThreeText>{description}</BodyThreeText>
+            {button && <LinkButton {...button} />}
           </div>
-          <Image
-            className={moduleStyles.tabGroupAccordionItemImage}
-            {...tab.tabContent.image}
-          />
+          {image && (
+            <Image
+              className={moduleStyles.tabGroupAccordionItemImage}
+              {...image}
+            />
+          )}
         </div>
       ),
     };

@@ -1,0 +1,236 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:06.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "showSoundFilters": true
+    },
+    "long_instructions": "### Alternating Patterns\r\n\r\n**Define:** DJs often play one track while preparing the next one, switching smoothly between songs during a performance. In this challenge, you'll use nested loops to switch between two musical sections, giving you time to experiment and make live edits.\r\n\r\n**Prepare:** Plan two different musical sections. Each one should include a drum, bass, and lead part. Think about how they'll sound different from each other and how you want them to alternate. Decide how to layer each section using `play together`.\r\n\r\n**Try:**\r\n\r\n- Create your first loop to repeat 3 times with a drum, bass, and lead using `play together`.\r\n- Create your second loop the same way, using different tracks.\r\n- Nest both loops inside a larger loop that repeats 3 times.\r\n\r\nRun your code and experiment! While one loop plays, the other is silent so you can make live changes.\r\n\r\n![](https://images.code.org/d72b72550ef9788958d1e0a8449e8530-image-1745295546774.png)\r\n\r\n**Reflect:** Did switching between the loops feel smooth? Were you able to edit or tweak one loop while the other played? In order to complete this level, your remix must include:\r\n\r\n- Two different loops that each repeat 3 times\r\n- Each loop includes a drum, bass, and lead layered with `play together`\r\n- Both loops nested inside another loop that repeats at least 3 times",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Alternating Tracks",
+    "bubble_choice_description": "Use nested loops to alternate between two sets of beats, similar to how a DJ uses a turntable to play one record while they setup the next song.",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-d_218c77a0-6a87-415a-a5d0-ba5f231dcaa5",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds",
+            "value": 21
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-d_048c6f37-60f1-481e-8c9f-0b90ad7f7e0c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your track... after the first loop plays, **update the tracks** while the second loop plays!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-d_3e67dc2e-8dec-4be4-943a-685d2e82d480",
+        "message": "Looks like you have your loops - now be sure to nest them so they alternate and repeat!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_together:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-d_e6eb2bee-0b92-4f4d-8d22-884f35008d39",
+        "message": "Looks like you have your first loop - now setup your second one!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 3
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-d_49e9bd16-3d22-4e7e-9a02-3acfc5760e54",
+        "message": "Not sure where to start? Try setting up your first loop to play beat, bass, and lead tracks together!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB6wy6mE3doqs/iz0JJpyLA7h\ngOm7eOkLMm4SgUZYUKuIS0SkkVRKofktHV4WiOQz4SkIeJSWfTPgxY81915r\nNOHxKdubTaO2anZe+HETT/ouG3JLFgSppblPJ7sTPvWBROV0mvq/6LKoIXwV\nN3RzGZhcyCM7v/HE6oQMYZM1W9lWsePBl24dmZdmhwag0rWMzVXX88BmoFZ0\ngfa8OJ9vCLHMDT7XD74+BPADC8QU4WojQvf5Pq+KF9FITedbw6xqs7dtDiwy\n2whnb1LPYnzaENAdR4271nFYl6726lDTbpLyaMjKz/2PI0QE/uB1Jx4VBuiH\nG6kukzZdccuopjRY19oLcpsMkbXPqf7aBczNGB7vhOIZ2ErNzlgZwuojdnim\nCO8mEv3Ww/SWuJKej9hhA9+hVHL0tTJXll4HcEcHGI+yucozTC1SlH3LLgUx\nWvIkuxiaTrJbTiz+fhqvykm6CZpVgcfAFKvjZ/3dYio9DpKvrPeVUyF5IQXD\noquuwHziykHVygu/n1skq13LpXNyMBRVUi9Z4Arwl58OyKPjb/3xf+UWLT2e\nE1LNw6VGjRDK4wJnTL2k6lEZMQCJGXxnw3FRABS53h02NoC4TDKp+z1eQmbi\nxE+Qg3gMKnvdmp8N9oU7yiDh2u3XYTD/y3NUD3GR6N4XrY2v096p+hdZYIO1\n3vWmmGhQpiSva+zDWFweZeD74vRJOptwIaof5iN4FRUM53SM+9IewLMclOOI\nZvmYuTbanIlXPspMXYWeRUBzFnCwQTRAXPip1wS+NKgu/JZrnA20YzRTFeAX\nyryZOqrjfatW0eAXwE9Ikj8dAo81I++Gn2UuWycTFmOQLEyehT+JMYkkEVl0\npgVeEBeuAZKnEbZGI9VsSca6bm/ixQfk+g2g3+CT/3V72l2IMh6qZwH23hPn\ncBWMVoQKLL8eeabxjpKvUatGEp2znGc0PiY0QmDn//BDdonR1wW4FD7MH1Mo\niSuswtXevTC2X6b+ZZKYrlHuhp8XN9oCh3v1+BGkZUBAP9c19UpGCsfStu/6\nsYApEydpoaZnLSbhoZe3tVLhhCp0kGppsGMqcDIYKTktdKRgXY8FGrAQ3T3/\nCDa2pWJPaQjx2G7QYjsYCBzZrnp8tVbDi8KMSeJaE2N0s55Le1IAZ/6faRQ2\ndRgjAKFuY52MpWQs6lpX2Np2IT+wWSTIrUEoVepue4YnA64n8X0RC6LzKBvI\nls6TOgvD+GaB/zyCRpjwHRyzaDNk50ZaSYoqCjLdmJG+LtNORlo5QoL8kMOb\nFsXKpGa8o8xnCTNUWpFv7UkeBtkrhxygTKp9GMy6yx5Yp7hWr7L6/5kLIKY4\n4UGhGIKwo7e4keQZtoc8ZiSV2cIE4sN5Z2ix/ua33vvxSmrD7B1ndADTSVYc\nkckd1cbIXkgqfJwOhyPJ4scKm0ciPQWzrzkscs4pl5otzDWY5V+m1nJpGgdD\npaXH8xSLFAxapRTVuZSupxM5QI23ivGk5+SN2ZtSBzl1M7BM1xoiXT+d2cw0\nzY4ZkCS5MH0rIridc6jvJzrvyQXpOI1CpOiV74moJhlt0EE/2uWRleTj8/CG\nSCX1YVjilPVexrbCCw==\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/pop/pop.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:06.124+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-d\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-d\"},{\"changed_at\":\"2025-06-12 20:42:33 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:41:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

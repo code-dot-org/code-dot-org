@@ -1,8 +1,5 @@
-import moment from 'moment-timezone';
-
-import {DATETIME_FORMAT} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
+import {Option} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/MultiSelectInput';
 import {
-  Facilitator,
   Organizer,
   Session,
   SessionFormState,
@@ -10,6 +7,7 @@ import {
   WorkshopFormState,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {
+  emptyValue,
   sessionDataToState,
   sessionStateToApi,
   workshopDataToState,
@@ -17,12 +15,12 @@ import {
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/utils';
 
 describe('sessionDataToState', () => {
-  it('should convert session data to state', () => {
+  it('should convert session data to state with timezone', () => {
     const sessionData: Session[] = [
       {
         id: 1,
-        start: '2024-01-01T16:00:00Z',
-        end: '2024-01-02T00:00:00Z',
+        start: '2024-01-01T16:00:00.000Z',
+        end: '2024-01-02T00:00:00.000Z',
         location_address: '123 Main St',
         location_name: 'Test Location',
         session_format: 'in_person',
@@ -40,7 +38,35 @@ describe('sessionDataToState', () => {
         locationName: 'Test Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
+      },
+    ];
+    const state = sessionDataToState(sessionData, timeZone);
+    expect(state).toEqual(expectedState);
+  });
+
+  it('should convert session data to state without timezone', () => {
+    const sessionData: Session[] = [
+      {
+        id: 1,
+        start: '2024-01-01T09:00:00.000Z',
+        end: '2024-01-01T17:00:00.000Z',
+        location_address: '123 Main St',
+        location_name: 'Test Location',
+        session_format: 'in_person',
+        code: 'abc',
+      },
+    ];
+    const timeZone = null;
+    const expectedState = [
+      {
+        id: '1',
+        date: '2024-01-01',
+        start: '9:00am',
+        end: '5:00pm',
+        locationAddress: '123 Main St',
+        locationName: 'Test Location',
+        meetingLink: '',
+        format: 'in_person',
       },
     ];
     const state = sessionDataToState(sessionData, timeZone);
@@ -55,7 +81,18 @@ describe('workshopDataToState', () => {
       course: 'Test Course',
       capacity: 10,
       description: 'Test Description',
-      facilitators: [{id: 1} as Facilitator, {id: 2} as Facilitator],
+      facilitators: [
+        {
+          id: 1,
+          name: 'Facilitator 1',
+          email: 'facilitator1@mail.com',
+        },
+        {
+          id: 2,
+          name: 'Facilitator 2',
+          email: 'facilitator2@mail.com',
+        },
+      ],
       fee: '100',
       grades: ['K', '1'],
       hidden: true,
@@ -76,7 +113,20 @@ describe('workshopDataToState', () => {
       course: 'Test Course',
       capacity: '10',
       description: 'Test Description',
-      facilitators: [1, 2],
+      facilitators: [
+        {
+          id: 1,
+          label: 'Facilitator 1',
+          secondaryLabel: 'facilitator1@mail.com',
+          searchText: ['Facilitator 1', 'facilitator1@mail.com'],
+        },
+        {
+          id: 2,
+          label: 'Facilitator 2',
+          secondaryLabel: 'facilitator2@mail.com',
+          searchText: ['Facilitator 2', 'facilitator2@mail.com'],
+        },
+      ],
       fee: '100',
       grades: ['K', '1'],
       hidden: true,
@@ -111,7 +161,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-2',
@@ -122,7 +171,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -130,27 +178,18 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-16 1:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-16 4:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-16T19:00:00.000Z',
+        end: '2024-03-16T22:00:00.000Z',
+        meeting_link: null,
         location_address: '456 New St',
         location_name: 'New Location',
       },
@@ -172,7 +211,6 @@ describe('sessionStateToApi', () => {
         locationName: '',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -180,17 +218,42 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        location_address: undefined,
-        location_name: undefined,
-        meeting_link: undefined,
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
+        location_address: null,
+        location_name: null,
+        meeting_link: null,
+      },
+    ];
+
+    const apiFormat = sessionStateToApi(sessionState, timeZone);
+    expect(apiFormat).toEqual(expectedApiFormat);
+  });
+
+  it('should handle empty time zone correctly', () => {
+    const timeZone = '';
+    const sessionState: SessionFormState[] = [
+      {
+        id: '1',
+        date: '2024-03-15',
+        start: '9:00am',
+        end: '12:00pm',
+        locationAddress: '',
+        locationName: '',
+        meetingLink: '',
+        format: 'in_person',
+      },
+    ];
+
+    const expectedApiFormat = [
+      {
+        id: 1,
+        session_format: 'in_person',
+        start: '2024-03-15T09:00:00.000Z',
+        end: '2024-03-15T12:00:00.000Z',
+        location_address: null,
+        location_name: null,
+        meeting_link: null,
       },
     ];
 
@@ -210,7 +273,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-3',
@@ -221,7 +283,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -229,16 +290,16 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: '2024-03-15T16:00:00Z',
-        end: '2024-03-15T19:00:00Z',
+        start: '2024-03-15T16:00:00.000Z',
+        end: '2024-03-15T19:00:00.000Z',
         meeting_link: 'https://test.meeting',
         code: 'abc',
       },
       {
         id: 2,
         session_format: 'in_person',
-        start: '2024-03-16T17:00:00Z',
-        end: '2024-03-16T20:00:00Z',
+        start: '2024-03-16T17:00:00.000Z',
+        end: '2024-03-16T20:00:00.000Z',
         location_address: '456 Old St',
         location_name: 'Old Location',
         code: 'abc',
@@ -249,27 +310,18 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-17 1:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-17 4:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-17T19:00:00.000Z',
+        end: '2024-03-17T22:00:00.000Z',
+        meeting_link: null,
         location_address: '789 New St',
         location_name: 'New Location',
       },
@@ -294,7 +346,7 @@ describe('workshopStateToApi', () => {
       course: 'Test Course',
       capacity: '25',
       description: 'Test Description',
-      facilitators: [1, 2, 3],
+      facilitators: [{id: 1} as Option, {id: 2} as Option, {id: 3} as Option],
       fee: '100',
       grades: ['K', '1', '2'],
       hidden: true,
@@ -322,6 +374,7 @@ describe('workshopStateToApi', () => {
       hidden: true,
       name: 'Test Workshop',
       notes: 'Test Notes',
+      organizer_id: 123,
       prereq: 'Test Prereq',
       regional_partner_id: 456,
       registration_link: 'https://test.com',
@@ -360,22 +413,23 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      organizer_id: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
     };
 
@@ -407,26 +461,125 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      organizer_id: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
     };
 
     const apiFormat = workshopStateToApi(workshopState);
     expect(apiFormat).toEqual(expectedApiFormat);
+  });
+});
+
+describe('emptyValue', () => {
+  // null and undefined
+  it('should return true for null', () => {
+    expect(emptyValue(null)).toBe(true);
+  });
+
+  it('should return true for undefined', () => {
+    expect(emptyValue(undefined)).toBe(true);
+  });
+
+  // strings
+  it('should return true for an empty string', () => {
+    expect(emptyValue('')).toBe(true);
+  });
+
+  it('should return true for a string with only whitespace', () => {
+    expect(emptyValue('   ')).toBe(true);
+  });
+
+  it('should return false for a non-empty string', () => {
+    expect(emptyValue('hello')).toBe(false);
+  });
+
+  it('should return false for a string with whitespace and characters', () => {
+    expect(emptyValue('  hello  ')).toBe(false);
+  });
+
+  // arrays
+  it('should return true for an empty array', () => {
+    expect(emptyValue([])).toBe(true);
+  });
+
+  it('should return false for an array with elements', () => {
+    expect(emptyValue([1, 2, 3])).toBe(false);
+  });
+
+  it('should return true for an array with all empty elements', () => {
+    expect(emptyValue([null] as unknown as string[])).toBe(true);
+    expect(emptyValue([undefined] as unknown as string[])).toBe(true);
+    expect(emptyValue([''])).toBe(true);
+  });
+
+  // objects
+  it('should return true for an empty object', () => {
+    expect(emptyValue({})).toBe(true);
+  });
+
+  it('should return false for an object with properties', () => {
+    expect(emptyValue({a: 'error'})).toBe(false);
+  });
+
+  it('should return true for an object with all empty property values', () => {
+    expect(emptyValue({a: ''})).toBe(true);
+  });
+
+  // numbers
+  it('should return false for the integer 0', () => {
+    expect(emptyValue(0)).toBe(false);
+  });
+
+  it('should return false for positive integers', () => {
+    expect(emptyValue(123)).toBe(false);
+  });
+
+  it('should return true for negative integers', () => {
+    expect(emptyValue(-123)).toBe(true);
+  });
+
+  it('should return true for floating-point numbers', () => {
+    expect(emptyValue(1.23)).toBe(true);
+  });
+
+  it('should return true for NaN', () => {
+    expect(emptyValue(NaN)).toBe(true);
+    expect(emptyValue(Number('not a number'))).toBe(true);
+  });
+
+  // booleans
+  it('should return false for true', () => {
+    expect(emptyValue(true)).toBe(false);
+  });
+
+  it('should return false for false', () => {
+    expect(emptyValue(false)).toBe(false);
+  });
+
+  // Option
+  it('should return false for an option', () => {
+    expect(emptyValue({id: 1, label: 'option 1', searchText: []})).toBe(false);
+  });
+
+  it('should return false for an array of options', () => {
+    expect(emptyValue([{id: 1, label: 'option 1', searchText: []}])).toBe(
+      false
+    );
   });
 });

@@ -1,4 +1,3 @@
-import Alert from '@code-dot-org/component-library/alert';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
@@ -11,11 +10,11 @@ import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
 } from '../../teacherDashboard/teacherSectionsRedux';
-import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
+import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
@@ -74,30 +73,18 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>{i18n.welcome({teacherName: teacherName})}</Heading2>
-        <Alert
-          className={styles.feedbackAlert}
-          size={'s'}
-          text={i18n.teacherHomePageFeedback()}
-          type="primary"
-          showIcon={true}
-          icon={{iconName: 'hand-wave'}}
-          isImmediateImportance={false}
-          link={{
-            text: i18n.feedbackHeader(),
-            href: 'https://usabi.li/do/a9ksz7qfbspy/iwhhup',
-            openInNewTab: true,
-            external: true,
-          }}
-          onClose={() => {}}
-        />
+        <Heading2>
+          {teacherName
+            ? i18n.welcome({teacherName: teacherName})
+            : i18n.welcomeWithoutName()}
+        </Heading2>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-            <CoteacherInviteNotification isForPl={false} />
+
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
@@ -110,6 +97,9 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           <TeacherPromotions />
         </div>
       </div>
+      <TeacherHomepageDrawer />
     </div>
   );
 };
+
+export default TeacherHomepage;

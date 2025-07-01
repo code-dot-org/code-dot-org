@@ -7,7 +7,7 @@ right 'AI uses randomness and probability, which can lead to unexpected results.
 wrong 'The AI is always biased against certain topics.'
 wrong 'AI refuses to answer questions it doesn\'t like.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3: The AI's Brain

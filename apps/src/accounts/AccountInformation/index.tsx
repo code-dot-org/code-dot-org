@@ -8,7 +8,9 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import ChangeEmailModal from '../ChangeEmail/ChangeEmailModal';
@@ -33,6 +35,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   userAge,
   userUsername,
   userDisplayName,
+  userGivenName,
+  userFamilyName,
   userProperties,
   userEmail,
   hashedEmail,
@@ -48,6 +52,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 }) => {
   const [name, setName] = useState(userDisplayName ?? '');
   const [username, setUsername] = useState(userUsername ?? '');
+  const [givenName, setGivenName] = useState(userGivenName ?? '');
+  const [familyName, setFamilyName] = useState(userFamilyName ?? '');
   const [email, setEmail] = useState(userEmail ?? '');
   const [gender, setGender] = useState(
     userProperties?.gender_student_input ?? ''
@@ -105,6 +111,8 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
     const userUpdates = {
       name,
       username,
+      given_name: givenName,
+      family_name: familyName,
       password,
       password_confirmation: passwordConfirmation,
       current_password: currentPassword,
@@ -127,7 +135,14 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
     if (response.ok) {
       setShowAccountUpdateSuccess(true);
-      handleReload();
+      const returnToHref = queryParams('user_return_to') as string;
+      // If sent here with a user_return_to param, return the user upon submission,
+      // otherwise handle reload.
+      if (returnToHref) {
+        navigateToHref(returnToHref);
+      } else {
+        handleReload();
+      }
     } else {
       const validationErrors = await response.json();
       setErrors(validationErrors);
@@ -252,6 +267,44 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             helperMessage={displayNameHelperMessage}
             errorMessage={getError('name')}
           />
+
+          {!isStudent && (
+            <>
+              {/* given name */}
+              <TextField
+                id="given_name"
+                className={commonStyles.input}
+                label={i18n.firstName()}
+                onChange={e => {
+                  setGivenName(e.target.value);
+                  clearError('given_name');
+                }}
+                value={givenName}
+                name="user[given_name]"
+                maxLength={255}
+                errorMessage={getError('given_name')}
+              />
+            </>
+          )}
+
+          {!isStudent && (
+            <>
+              {/* family name */}
+              <TextField
+                id="family_name"
+                className={commonStyles.input}
+                label={i18n.lastName()}
+                onChange={e => {
+                  setFamilyName(e.target.value);
+                  clearError('family_name');
+                }}
+                value={familyName}
+                name="user[family_name]"
+                maxLength={255}
+                errorMessage={getError('family_name')}
+              />
+            </>
+          )}
 
           {/* username */}
           {userUsername && (

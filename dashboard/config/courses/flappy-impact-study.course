@@ -3,6 +3,9 @@
   "script_names": [
     "flappy-impact-study"
   ],
+  "original_script_names": [
+    "flappy-impact-study"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

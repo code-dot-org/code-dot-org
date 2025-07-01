@@ -3,6 +3,6 @@
   "name": "when left arrow",
   "category": "Events",
   "category_key": "events",
-  "block_name": "spritelab_whenLeftArrow",
+  "block_name": "gamelab_whenLeftArrow",
   "image_url": "https://images.code.org/db8f8189e27f30430e0c47f9da5fb160-Screenshot 2024-06-04 at 1.11.36 PM.png"
 }

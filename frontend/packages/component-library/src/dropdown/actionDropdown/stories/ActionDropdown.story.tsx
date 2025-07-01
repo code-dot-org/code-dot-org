@@ -4,7 +4,7 @@ import ActionDropdown, {ActionDropdownProps} from '../index';
 
 export default {
   title: 'DesignSystem/Dropdown/Action Dropdown',
-  component: ActionDropdown.type,
+  component: ActionDropdown,
 } as Meta;
 
 //

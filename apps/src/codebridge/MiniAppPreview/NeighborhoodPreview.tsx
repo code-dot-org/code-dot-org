@@ -80,7 +80,6 @@ const NeighborhoodPreview: React.FunctionComponent<
       onOutputMessage,
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]',
       onPartialLineMessage
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
@@ -102,9 +101,14 @@ const NeighborhoodPreview: React.FunctionComponent<
       return;
     }
 
-    const mazeContents = serializedMaze
-      ? (JSON.parse(serializedMaze) as MazeCell[][])
-      : undefined;
+    let mazeContents: MazeCell[][] | undefined;
+    if (serializedMaze) {
+      try {
+        mazeContents = JSON.parse(serializedMaze) as MazeCell[][];
+      } catch (error) {
+        console.error('Failed to parse serialized maze:', error);
+      }
+    }
 
     // Combine the serialized maze from the project with the level properties.
     const parsedLevelProperties = mazeContents

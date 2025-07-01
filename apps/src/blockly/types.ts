@@ -3,6 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
+import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -82,12 +83,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   selected: GoogleBlockly.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -97,8 +95,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     ObservableParameterModel
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
@@ -141,6 +137,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
   hasLoadedBlocks: boolean;
+  showBlockHelp: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -185,6 +182,10 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   ) => string;
   blockIdOverrides: {
     [originalBlockId: string]: string;
+  };
+  KeyboardNavigation?: typeof KeyboardNavigation;
+  shortcutBackups: {
+    [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
   };
 }
 
@@ -271,6 +272,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox: () => void;
   traceOn: () => void;
   isReadOnly: () => boolean;
+  cleanUp: (includeImmovableBlocks?: boolean) => void;
 }
 
 export interface EditorWorkspaceSvg extends ExtendedWorkspaceSvg {
@@ -298,6 +300,8 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   showUnusedBlocks: boolean | undefined;
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
+  enableKeyboardNavigation: boolean;
+  showBlockHelp: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

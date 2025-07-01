@@ -128,6 +128,33 @@ export const ImageWithShadow: Story = {
   },
 };
 
+export const ImageWithoutRoundedCorners: Story = {
+  ...SingleTemplate,
+  args: {
+    src: imageFile,
+    altText: 'Teacher helping student',
+    hasRoundedCorners: false,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Remove rounded corners on an image if needed, will most likely need to be set to `false` on logos.',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const image = await canvas.findByAltText('Teacher helping student');
+    const expectedRoundedCorners = '0';
+
+    // check if image has box shadow
+    await expect(image).toHaveStyle(
+      `border-radius: ${expectedRoundedCorners};`,
+    );
+  },
+};
+
 export const ImageWithError: Story = {
   ...SingleTemplate,
   args: {

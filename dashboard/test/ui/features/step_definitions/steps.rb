@@ -124,11 +124,14 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
+  updated_url = replace_hostname(url)
   begin
-    navigate_to replace_hostname(url)
+    navigate_to updated_url
   rescue Selenium::WebDriver::Error::TimeoutError => exception
-    puts "Timeout: I am not on #{url} like I want."
-    puts "         I am on #{@browser.current_url} instead."
+    if updated_url != @browser.current_url
+      puts "Timeout: I am not on #{updated_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+    end
     raise exception
   end
 end
@@ -262,9 +265,10 @@ Then /^I see "([.#])([^"]*)"$/ do |selector_symbol, name|
   @browser.find_element(selection_criteria)
 end
 
-When /^I wait until (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) (placeholder )?text "([^"]*)"$/ do |selector, is_placeholder, text|
   wait_for_jquery
-  wait_until {@browser.execute_script("return $(#{selector.dump}).text();").include? text}
+  getter = is_placeholder ? "attr('placeholder')" : "text()"
+  wait_until {@browser.execute_script("return $(#{selector.dump}).#{getter};")&.include?(text)}
 end
 
 When /^I wait until (?:element )?"([^"]*)" does not (?:have|contain) text "([^"]*)"$/ do |selector, text|
@@ -290,6 +294,10 @@ When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, neg
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
+def jquery_is_element_enabled(selector)
+  "return $(#{selector.dump}).is(':enabled') && $(#{selector.dump}).css('visibility') !== 'hidden';"
+end
+
 def jquery_is_element_visible(selector)
   "return $(#{selector.dump}).is(':visible') && $(#{selector.dump}).css('visibility') !== 'hidden';"
 end
@@ -310,6 +318,11 @@ end
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
   wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element "([^"]*)" is (not )?enabled using jQuery$/ do |selector, negation|
+  wait_for_jquery
+  wait_until {@browser.execute_script(jquery_is_element_enabled(selector)) == negation.nil?}
 end
 
 When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
@@ -506,6 +519,11 @@ When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new 
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
 
+When /^I select the "([^"]*)" option in the last dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
+  dropdowns = @browser.find_elements(:css, "select[name=#{element_name}]")
+  select_dropdown(dropdowns.last, option_text, load)
+end
+
 When /^I select the "([^"]*)" option withing the "([^"]*)" group in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, option_group, selector, load|
   select_element = @browser.find_element(:css, selector)
   expect(select_element).not_to be_nil
@@ -685,9 +703,9 @@ Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expre
   end
 end
 
-Then /^I navigate to the course page for "([^"]*)"$/ do |course|
+Then /^I navigate to the unit page for unit number "([^"]*)" in course "([^"]*)"$/ do |unit_position, course|
   steps %{
-    Then I am on "http://studio.code.org/s/#{course}"
+    Then I am on "http://studio.code.org/courses/#{course}/units/#{unit_position}"
     And I wait to see ".user-stats-block"
   }
 end
@@ -934,6 +952,14 @@ And(/^I see option "([^"]*)" or "([^"]*)" in the dropdown "([^"]*)"/) do |option
   expect((select_options_text.include? option_alpha) || (select_options_text.include? option_beta)).to eq(true)
 end
 
+And(/^I wait until the dropdown named "([^"]*)" has option "([^"]*)"$/) do |element_name, option|
+  dropdown_selector = "select[name='#{element_name}']"
+  wait_short_until do
+    select_options_text = @browser.execute_script("return $(arguments[0]).find('option').text();", dropdown_selector)
+    select_options_text.include? option
+  end
+end
+
 def has_class?(selector, class_name)
   @browser.execute_script("return $(#{selector.dump}).hasClass('#{class_name}')")
 end
@@ -1134,19 +1160,19 @@ Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |script_name, teacher_name|
-  browser_request(
-    url: '/api/test/assign_script_as_student',
-    method: 'POST',
-    body: {script_name: script_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
-  )
-end
-
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |course_name, script_name, teacher_name|
+Given(/^I am assigned to course "([^"]*)" unit (\d+)(?: with teacher "([^"]*)")?$/) do |course_name, unit_position, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+    body: {course_name: course_name, unit_position: unit_position, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+  )
+end
+
+Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a section named "([^"]*)")?$/) do |course_name, teacher_name, section_name|
+  browser_request(
+    url: '/api/test/assign_course_as_student',
+    method: 'POST',
+    body: {course_name: course_name, section_name: section_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
@@ -1159,9 +1185,10 @@ And /^I check the pegasus URL$/ do
   puts "Pegasus URL is #{pegasus_url}"
 end
 
-Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expected_num|
-  actual_num = @browser.execute_script("return $('.uitest-assign-button').length;")
-  expect(actual_num).to eq(expected_num.to_i)
+When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
+  unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
+  button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")
+  button.click
 end
 
 And /^I dismiss the language selector$/ do
@@ -1556,7 +1583,7 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   steps <<~GHERKIN
     Given I create a teacher named "#{teacher_name}"
     And I give user "#{teacher_name}" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
     And I sign in as "#{teacher_name}" and go home
     And I save the student section url
     And I save the section id from row 0 of the section table
@@ -1577,7 +1604,7 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   steps <<~GHERKIN
     Given I create a teacher named "Dumbledore"
     And I give user "Dumbledore" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to course "ui-test-csa-family-script" unit 1
     And I sign in as "Dumbledore" and go home
     And I save the student section url
     And I save the section id from row 0 of the section table
@@ -1620,4 +1647,8 @@ end
 And(/^I hover over selector "([^"]*)"$/) do |selector|
   element = @browser.find_element(:css, selector)
   @browser.action.move_to(element).perform
+end
+
+And(/^I clean up my records$/) do
+  clean_up_records
 end

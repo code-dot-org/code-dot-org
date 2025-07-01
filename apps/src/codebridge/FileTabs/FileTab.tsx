@@ -64,10 +64,7 @@ const FileTab = ({file}: FileTabProps) => {
         onClick={() => closeFile(file.id)}
         color={'light'}
         aria-label={codebridgeI18n.closeFile({filename: file.name})}
-        className={classNames(moduleStyles.closeButton, {
-          [moduleStyles.active]: isActive,
-          [moduleStyles.inactive]: !isActive,
-        })}
+        className={moduleStyles.closeButton}
       />
     </div>
   );

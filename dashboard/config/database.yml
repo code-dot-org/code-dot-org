@@ -42,7 +42,12 @@ mysql_defaults: &mysql_defaults
   # You can set the value so that a lost connection can be detected earlier than the TCP/IP Close_Wait_Timeout value of 10 minutes.
   #
   # NOTE: mysql2 reuses this variable as a query timeout without retry, so set it to the maximum query execution time.
-  read_timeout: 30
+  #
+  # Set the MySQL client timeout to 2 minutes for SQL statements that are not executing within a web application server
+  # such as queries executing in an ActiveJob worker, a cron job, or irb (dashboard-console). This is particularly
+  # important for database migrations (DDL) or database seeding SQL statements that can take longer than 30 seconds
+  # to complete and are executed by the aws/ci_build cron job.
+  read_timeout: <%= CDO.running_web_application? ? 30 : 120 %>
 
   # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
   # There is a retry if necessary, so the total effective timeout value is two times the option value.
@@ -66,6 +71,23 @@ environment_defaults: &environment_defaults
     port: <%= reader.port || 3306 %>
     username: <%= reader.user %>
   <% end %>
+  # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
+  # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
+  # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
+  # (typically 'localhost').
+  primary_reporting:
+    replica: true
+    <<: *mysql_defaults
+    <% unless CDO.running_web_application? %>
+    # Set the MySQL client timeout to 10 minutes for reporting queries that are not executing within a web application server
+    # such as queries executing in an ActiveJob worker, a cron job, or irb (dashboard-console).
+    read_timeout: 600
+    <% end %>
+    host: <%= CDO.db_endpoint_proxy_reporting %>
+    port: <%= CDO.db_endpoint_proxy_reporting_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
 
 development:
   <<: *environment_defaults

@@ -26,6 +26,8 @@ Feature: CourseOverview
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I select the "CSP Unit 1 - The Internet ('19-'20)" option in dropdown "uitest-secondary-assignment"
+    And I press the first "#uitest-save-section-changes" element to load a new page
+    
     Then I sign in as "Ron"
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait to see ".uitest-CourseScript"
@@ -34,4 +36,4 @@ Feature: CourseOverview
 
   Scenario: Viewing course overview for a single-unit course
     Given I am on "http://studio.code.org/courses/ui-test-single-unit-course-2026"
-    And I get redirected to "/s/ui-test-single-unit-2026" via "dashboard"
+    And I get redirected to "/courses/ui-test-single-unit-course-2026/units/1" via "dashboard"

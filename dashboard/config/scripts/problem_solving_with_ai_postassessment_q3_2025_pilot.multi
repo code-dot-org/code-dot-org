@@ -7,7 +7,7 @@ wrong 'AI understands language perfectly like a human.'
 right 'AI can still produce biased or inaccurate responses.'
 wrong 'AI has built-in rules to avoid all mistakes.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 3: The AI's Brain

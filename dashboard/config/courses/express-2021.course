@@ -3,6 +3,9 @@
   "script_names": [
     "express-2021"
   ],
+  "original_script_names": [
+    "express-2021"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

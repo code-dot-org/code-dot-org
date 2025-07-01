@@ -5,7 +5,7 @@ class CreateHeader
   PROJECT_INFO_OVERRIDES = {
     minecraft_designer: {
       id: "create_dropdown_minecraft",
-      image: "logo_minecraft.png",
+      image: "header-minecraft-icon.png",
     },
     minecraft_adventurer: {
       image: "logo_mc.png",
@@ -16,23 +16,33 @@ class CreateHeader
     minecraft_aquatic: {
       image: "logo_minecraft_aquatic_square.jpg"
     },
+    spritelab: {
+      image: "header-sprite-lab-icon.png"
+    },
+    artist: {
+      image: "header-artist-icon.png"
+    },
     applab: {
-      image: "logo_applab_square.png"
+      image: "header-app-lab-icon.png"
     },
     gamelab: {
-      image: "logo_gamelab_square.png"
+      image: "header-game-lab-icon.png"
     },
     playlab_k1: {
       image: "logo_playlab.png"
     },
     artist_k1: {
-      image: "logo_artist.png"
+      image: "header-artist-icon.png"
     },
     poetry_hoc: {
       image: "logo_poetry.png"
     },
     music: {
+      image: "header-music-lab-icon.png",
       url: CDO.code_org_url("/music")
+    },
+    dance: {
+      image: "header-dance-party-icon.png"
     },
   }.freeze
 
@@ -50,16 +60,14 @@ class CreateHeader
   end
 
   def self.get_create_dropdown_contents(options)
-    everyone_entries = %w(spritelab artist)
-
-    applab_gamelab = %w(applab gamelab)
-
     entries = options[:limit_project_types] == "true" ?
-      everyone_entries + ["minecraft_designer"] :
-      everyone_entries + applab_gamelab
+      %w(spritelab minecraft_designer) :
+      %w(spritelab applab gamelab)
 
-    entries << "dance"
     entries << "music"
+    entries += options[:limit_project_types] == "true" ?
+      %w(artist dance) :
+      %w(pythonlab artist dance)
 
     if options[:project_type] && !(entries.include? options[:project_type])
       entries.unshift(options[:project_type])

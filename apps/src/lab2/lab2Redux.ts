@@ -12,6 +12,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@cdo/apps/constants';
 import {
   getPublicCaching,
   getAppOptionsEditBlocks,
@@ -50,7 +51,6 @@ import {LevelPropertiesValidator} from './responseValidators';
 import {
   Channel,
   LevelProperties,
-  ProjectManagerStorageType,
   ProjectSources,
   PartialUserAppOptions,
   Validation,
@@ -81,6 +81,8 @@ export interface LabState {
   isLoadingProjectOrLevel: boolean;
   // If the lab is loading. Can be updated by lab-specific components.
   isLoading: boolean;
+  // If we are currently loading the theme
+  isLoadingTheme: boolean;
   // Error currently on the page, if present.
   pageError: PageError | undefined;
   // channel for the current project, or undefined if there is no current project.
@@ -98,7 +100,9 @@ export interface LabState {
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
-  isBlocked: boolean | undefined;
+  isBlockedAbuse: boolean | undefined;
+  // If this lab/project is blocked for project non-owners (excluding owner's teacher).
+  projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
   permissions: string[];
 }
@@ -106,6 +110,7 @@ export interface LabState {
 const initialState: LabState = {
   isLoadingProjectOrLevel: false,
   isLoading: false,
+  isLoadingTheme: false,
   pageError: undefined,
   channel: undefined,
   initialSources: undefined,
@@ -113,7 +118,8 @@ const initialState: LabState = {
   levelProperties: undefined,
   scriptId: undefined,
   isShareView: undefined,
-  isBlocked: undefined,
+  isBlockedAbuse: undefined,
+  projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
 };
@@ -228,11 +234,10 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager =
       payload.channelId && isProjectLevel
         ? ProjectManagerFactory.getProjectManager(
-            ProjectManagerStorageType.REMOTE,
-            payload.channelId
+            payload.channelId,
+            thunkAPI.getState().lab.isShareView
           )
         : await ProjectManagerFactory.getProjectManagerForLevel(
-            ProjectManagerStorageType.REMOTE,
             payload.levelId,
             payload.userId,
             payload.scriptId,
@@ -265,12 +270,16 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel, abuseScore} = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
+    const {sources, channel, abuseScore, sharingDisabled} =
+      await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties, abuseScore},
+      {
+        initialSources: sources,
+        channel,
+        levelProperties,
+        abuseScore,
+        sharingDisabled,
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -284,13 +293,16 @@ export const setUpWithLevel = createAsyncThunk<
 
 // If any load is currently in progress.
 export const isLabLoading = (state: {lab: LabState}) =>
-  state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
+  state.lab.isLoadingProjectOrLevel ||
+  state.lab.isLoading ||
+  state.lab.isLoadingTheme;
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();
+  const isWidgetView = !!state.lab.levelProperties?.widgetView;
 
   // Exemplar and block edit modes do not have a channel.
   if (isEditMode || isEditingExemplar) {
@@ -316,7 +328,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
     readonlyPredictLevel ||
     hasSubmitted ||
     isRunningAndReadonly ||
-    isViewingOldVersion
+    isViewingOldVersion ||
+    isWidgetView
   );
 };
 
@@ -343,6 +356,9 @@ const labSlice = createSlice({
   reducers: {
     setIsLoading(state, action: PayloadAction<boolean>) {
       state.isLoading = action.payload;
+    },
+    setIsLoadingTheme(state, action: PayloadAction<boolean>) {
+      state.isLoadingTheme = action.payload;
     },
     setPageError(
       state,
@@ -375,14 +391,19 @@ const labSlice = createSlice({
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
         abuseScore?: number;
+        sharingDisabled?: boolean;
       }>
     ) {
+      const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
-      state.levelProperties = action.payload.levelProperties;
+      state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
-        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+        state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
+      state.projectSharingDisabled =
+        action.payload.sharingDisabled &&
+        OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -514,6 +535,7 @@ function setProjectAndLevelData(
     channel?: Channel;
     initialSources?: ProjectSources;
     abuseScore?: number;
+    sharingDisabled?: boolean;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -534,7 +556,8 @@ function setProjectAndLevelData(
       data.channel,
       data.initialSources,
       data.abuseScore,
-      isReadOnlyWorkspace(getState())
+      isReadOnlyWorkspace(getState()),
+      data.sharingDisabled
     );
 }
 
@@ -599,6 +622,7 @@ export const setLoadedPredictResponse = createAction<string>(
 
 export const {
   setIsLoading,
+  setIsLoadingTheme,
   setPageError,
   clearPageError,
   setValidationState,

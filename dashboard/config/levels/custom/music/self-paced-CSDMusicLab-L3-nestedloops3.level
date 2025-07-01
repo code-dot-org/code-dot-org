@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "##### **Teacher Note**: This is Lesson 7, level 6 in the curriculum.\r\n___\r\n\r\n### Use Nested Loops\r\nYou created this song in the first level. Try using a nested loop for this code. Find the repeating chunk of code and use an outer loop to repeat that code twice.\r\n\r\n![](https://images.code.org/489b7ab984f3cc9b1e8937f924a69d72-image-1741991573177.32.50 PM.png)",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -331,13 +331,21 @@
     "validations": [
       {
         "key": "test-music-lab-loops-practice-nested-loops-1_bf771c9f-f1bf-4645-bf1f-074666bc20b5",
-        "message": "You used a nested loop!",
+        "message": "exemplar",
         "next": true,
         "conditions": [
           {
             "name": "played_anything_in_same_nested_loop",
-            "value": 2
+            "value": 1
           }
+        ]
+      },
+      {
+        "key": "self-paced-CSDMusicLab-L3-nestedloops3_0fe117d3-1735-4743-8ce1-4c051e34e302",
+        "message": "Make sure to use a nested loop!",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
@@ -346,7 +354,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:51.511+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"},{\"changed_at\":\"2025-04-17 01:46:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 01:46:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:51.511+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"},{\"changed_at\":\"2025-04-17 01:46:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 01:46:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:54:56 +0000\",\"changed\":[\"offer_browser_tts\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

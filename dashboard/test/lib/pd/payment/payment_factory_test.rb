@@ -3,36 +3,33 @@ require 'test_helper'
 module Pd::Payment
   class PaymentFactoryTest < ActiveSupport::TestCase
     test 'district calculator' do
-      workshop_cs_in_a = create :workshop, :ended, on_map: false, funded: false,
+      workshop_cs_in_a = build :workshop, :ended, on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+      workshop_cs_in_a.save(validate: false)
 
-      workshop_cs_in_s = create :workshop, :ended, on_map: false, funded: false,
+      workshop_cs_in_s = build :workshop, :ended, on_map: false, funded: false,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
+      workshop_cs_in_s.save(validate: false)
 
       assert_equal PaymentCalculatorDistrict, PaymentFactory.get_calculator_class(workshop_cs_in_a)
       assert_equal PaymentCalculatorDistrict, PaymentFactory.get_calculator_class(workshop_cs_in_s)
     end
 
-    test 'CSF calculator' do
-      workshop_csf_public = create :workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, on_map: true
-      workshop_csf_private = create :workshop, :ended, :funded, course: Pd::Workshop::COURSE_CSF, on_map: false
-
-      assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_public)
-      assert_equal PaymentCalculatorCSF, PaymentFactory.get_calculator_class(workshop_csf_private)
-    end
-
     test 'standard calculator' do
       # Mix of public and private types
-      workshop_ecs = create :workshop, :ended, on_map: false, funded: true,
+      workshop_ecs = build :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
+      workshop_ecs.save(validate: false)
 
       workshop_csp = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
-      workshop_cs_in_a = create :workshop, :ended, on_map: false, funded: true,
+      workshop_cs_in_a = build :workshop, :ended, on_map: false, funded: true,
         course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
+      workshop_cs_in_a.save(validate: false)
 
-      workshop_cs_in_s = create :workshop, :ended, on_map: true, funded: true,
+      workshop_cs_in_s = build :workshop, :ended, on_map: true, funded: true,
         course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_2
+      workshop_cs_in_s.save(validate: false)
 
       assert_equal PaymentCalculatorStandard, PaymentFactory.get_calculator_class(workshop_ecs)
       assert_equal PaymentCalculatorStandard, PaymentFactory.get_calculator_class(workshop_csp)
@@ -48,9 +45,7 @@ module Pd::Payment
     end
 
     test 'unpaid' do
-      workshop_district_wrong_type = create :workshop, :ended, on_map: false, funded: false,
-        course: Pd::Workshop::COURSE_CSF
-
+      workshop_district_wrong_type = create :workshop, :ended, on_map: false, funded: false
       workshop_csd = create :workshop, :ended, on_map: true, funded: true,
         course: Pd::Workshop::COURSE_CSD
 

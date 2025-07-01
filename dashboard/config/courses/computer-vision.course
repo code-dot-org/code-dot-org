@@ -3,6 +3,9 @@
   "script_names": [
     "computer-vision"
   ],
+  "original_script_names": [
+    "computer-vision"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

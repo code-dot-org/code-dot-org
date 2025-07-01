@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-09T15:21:39.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Try Your Own\r\n\r\nPractice asking the same question in different ways.\r\n\r\n### Do This:\r\n1. Reflect on these two questions.\r\n\t* How does the way we phrase a prompt influence AI contradictions?\r\n    * Why does AI provide inconsistent responses even when asked the same question differently?\r\n2. Now **try out your own example of a question**. Frame it in as many ways possible to see if you can produce contradictions in the AI responses.",
+    "long_instructions": "##  🔍Teacher Tip\r\nSee if you can produce AI contradictions and experience yourselves how your framing can alter the response an AI outputs. Your students will have more practice with contradictions before they get to this level. If you're struggling to think of questions to try, think of situations where the framing might significantly alter the answer to a question.\r\n\r\n---\r\n\r\n## Try Your Own\r\n\r\nPractice asking the same question in different ways.\r\n\r\n### Do This:\r\n1. Reflect on these two questions.\r\n\t* How does the way we phrase a prompt influence AI contradictions?\r\n    * Why does AI provide inconsistent responses even when asked the same question differently?\r\n2. Now **try out your own example of a question**. Frame it in as many ways possible to see if you can produce contradictions in the AI responses.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -44,7 +45,6 @@
     "bubble_choice_description": "Practice asking the same question in different ways about local community programs for youth.",
     "thumbnail_url": "https://images.code.org/27c36efae3ae585fc84645fc408704b0-Community Program Icon.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-09T15:21:39.946+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson5-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson5-level7_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-09T15:21:39.946+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson5-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson5-level7_2024\"},{\"changed_at\":\"2025-04-24 19:07:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

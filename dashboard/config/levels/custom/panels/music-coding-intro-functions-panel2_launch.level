@@ -15,34 +15,10 @@
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
         "layout": "text-top-center",
         "typing": true
-      },
-      {
-        "text": "First, drag `my function` into your workspace.",
-        "imageUrl": "https://images.code.org/715ccc6273f7942204425adfa800da9e-Lesson 2 Level 8a.png",
-        "key": "music-coding-intro-functions-panel-4e9d978e-62cf-45c0-a123-21e2c48cc3db",
-        "layout": "text-top-center"
-      },
-      {
-        "text": "Give your function a descriptive name.",
-        "imageUrl": "https://images.code.org/6c9d50a6001a43b3ba1dacc312f55ae7-Lesson 2 Level 8c.png",
-        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
-        "layout": "text-top-center"
-      },
-      {
-        "text": "Next, define the function by adding sounds into it.",
-        "imageUrl": "https://images.code.org/925505c7351e5904d7ffc07e5d390886-Lesson 2 Level 8b.png",
-        "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
-        "layout": "text-top-center"
-      },
-      {
-        "text": "Then, call the function in your program.\n\nPress Run to try it out!",
-        "imageUrl": "https://images.code.org/fc259e32d4a5250d1142164b5414c264-Lesson 2 Level 8d.png",
-        "key": "music-coding-intro-functions-panel2-1feec9a4-14ee-4b05-95eb-f9149395aa2f",
-        "layout": "text-top-center"
       }
     ],
     "name_suffix": "_launch"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.745+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2\"},{\"changed_at\":\"2025-04-16 22:01:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.745+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2\"},{\"changed_at\":\"2025-04-16 22:01:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 22:48:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,8 +1,9 @@
 import Button from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {SessionToken} from '@mapbox/search-js-core';
+import {useAddressAutofillCore} from '@mapbox/search-js-react';
 import classNames from 'classnames';
 import moment from 'moment-timezone';
 import React, {
@@ -12,7 +13,9 @@ import React, {
   memo,
   useCallback,
   useMemo,
+  useRef,
 } from 'react';
+import {useSelector} from 'react-redux';
 
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
@@ -23,6 +26,7 @@ import {
   SessionFields,
   Errors,
 } from '../../../types';
+import {AutocompleteInput} from '../../AutocompleteInput';
 
 import commonStyles from '../../../styles.module.scss';
 import styles from '../styles.module.scss';
@@ -36,8 +40,7 @@ export const SessionPart: FC<{
   locationName: SessionFormState['locationName'];
   locationAddress: SessionFormState['locationAddress'];
   meetingLink: SessionFormState['meetingLink'];
-  sameAsPrevious: SessionFormState['sameAsPrevious'];
-  showSameAsPrevious: boolean;
+  deleteDisabled: boolean;
   fields: SessionFields;
   errors?: Errors<keyof SessionFormState>;
   dispatchSessions: Dispatch<SessionAction>;
@@ -50,15 +53,22 @@ export const SessionPart: FC<{
   locationName,
   locationAddress,
   meetingLink,
-  sameAsPrevious,
-  showSameAsPrevious,
+  deleteDisabled,
   fields,
   errors,
   dispatchSessions,
 }) => {
+  const sessionToken = useRef<SessionToken>(new SessionToken());
+  const listboxId = sessionToken.current.id;
+  const accessToken = useSelector(
+    ({mapbox: {mapboxAccessToken}}: {mapbox: {mapboxAccessToken: string}}) =>
+      mapboxAccessToken
+  );
+  const autofill = useAddressAutofillCore({accessToken});
+
   const timeOptions = useMemo(() => {
     const startTime = moment().startOf('day').add(7, 'hours');
-    const endTime = moment().startOf('day').add(19, 'hours');
+    const endTime = moment().startOf('day').add(22, 'hours');
     const timeOptions: {value: string; text: string}[] = [];
 
     while (startTime.isSameOrBefore(endTime)) {
@@ -71,17 +81,6 @@ export const SessionPart: FC<{
     return timeOptions;
   }, []);
 
-  const sameAsPreviousLabel = useMemo(() => {
-    switch (format) {
-      case 'in_person':
-        return 'Location';
-      case 'virtual':
-        return 'Meeting link';
-      default:
-        return '';
-    }
-  }, [format]);
-
   const handleSession = useCallback(
     (update: Partial<SessionFormState>) => {
       dispatchSessions({type: 'UPDATE_SESSION', id, payload: update});
@@ -93,20 +92,6 @@ export const SessionPart: FC<{
     dispatchSessions({type: 'DELETE_SESSION', id});
   }, [dispatchSessions, id]);
 
-  const handleSameAsPrevious = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (event.target.checked) {
-        dispatchSessions({
-          type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
-          id,
-        });
-      } else {
-        handleSession({sameAsPrevious: false});
-      }
-    },
-    [dispatchSessions, handleSession, id]
-  );
-
   const updateSession = useCallback(
     (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const update = {
@@ -115,6 +100,20 @@ export const SessionPart: FC<{
       handleSession(update);
     },
     [handleSession]
+  );
+
+  const fetchOptions = useCallback(
+    async (searchText: string) => {
+      const {suggestions} = await autofill.suggest(searchText, {
+        sessionToken: sessionToken.current,
+      });
+      return suggestions
+        .map(suggestion => suggestion.full_address)
+        .filter(
+          (s?: string): s is string => typeof s === 'string' && s.length > 0
+        );
+    },
+    [autofill]
   );
 
   const showAdditionalFields = useMemo(
@@ -200,12 +199,14 @@ export const SessionPart: FC<{
           tooltipProps={{
             tooltipId: `delete-session-tooltip-${id}`,
             size: 'xs',
-            text: 'delete workshop session',
+            text: 'Delete workshop session',
           }}
         >
           <Button
             icon={{iconName: 'minus'}}
             onClick={deleteSession}
+            disabled={deleteDisabled}
+            size="s"
             isIconOnly={true}
             className={styles.deleteButton}
             type="secondary"
@@ -235,16 +236,18 @@ export const SessionPart: FC<{
                     value={locationName}
                     errorMessage={errors?.locationName}
                   />
-                  <TextField
+                  <AutocompleteInput
+                    id={listboxId}
                     label={fields.location_address.label}
                     name={fields.location_address.stateKey}
                     size="s"
+                    placeholder="Enter a location to see results"
                     className={classNames(
                       commonStyles.item,
-
                       commonStyles.textField
                     )}
                     onChange={updateSession}
+                    fetchOptions={fetchOptions}
                     value={locationAddress}
                     errorMessage={errors?.locationAddress}
                   />
@@ -269,17 +272,6 @@ export const SessionPart: FC<{
               </>
             )}
           </div>
-          {showSameAsPrevious && (
-            <div className={styles.copyPreviousCheckbox}>
-              <Checkbox
-                label={`${sameAsPreviousLabel} same as previous`}
-                name={`${sameAsPreviousLabel} same as previous`}
-                checked={sameAsPrevious}
-                size="s"
-                onChange={handleSameAsPrevious}
-              />
-            </div>
-          )}
         </div>
       )}
     </div>

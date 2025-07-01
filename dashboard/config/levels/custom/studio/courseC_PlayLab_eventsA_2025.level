@@ -54,7 +54,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:38:10.924+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsA_2024\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsA_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:38:10.924+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsA_2024\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsA_2024\"},{\"changed_at\":\"2025-04-28 17:40:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-28 17:42:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 2
@@ -62,77 +62,77 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run"/>
-        <block type="studio_whenUp">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
+        <block type="studio_whenUp" deletable="false" x="16" y="120">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">1</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">1</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenDown">
+        <block type="studio_whenLeft" deletable="false" x="240" y="120">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">4</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">8</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenLeft">
+        <block type="studio_whenDown" deletable="false" x="16" y="200">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">8</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">4</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenRight">
+        <block type="studio_whenRight" deletable="false" x="240" y="200">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">2</field>
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever">
+        <block type="studio_repeatForever" x="16" y="296">
           <statement name="DO">
             <block type="studio_moveDistance">
-              <title name="SPRITE">1</title>
-              <title name="DIR">1</title>
-              <title name="DISTANCE">400</title>
+              <field name="SPRITE">1</field>
+              <field name="DIR">1</field>
+              <field name="DISTANCE">400</field>
               <next>
                 <block type="studio_moveDistance">
-                  <title name="SPRITE">1</title>
-                  <title name="DIR">4</title>
-                  <title name="DISTANCE">400</title>
+                  <field name="SPRITE">1</field>
+                  <field name="DIR">4</field>
+                  <field name="DISTANCE">400</field>
                 </block>
               </next>
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
+        <block type="studio_whenSpriteCollided" x="16" y="420">
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">1</field>
           <next>
-            <block type="studio_playSound">
-              <title name="SOUND">random</title>
+            <block type="studio_saySpriteChoices">
+              <field name="SPRITE">0</field>
+              <field name="VALUE">Ouch!</field>
               <next>
-                <block type="studio_saySpriteChoices">
-                  <title name="SPRITE">0</title>
-                  <title name="VALUE">Ouch!</title>
+                <block type="studio_playSound">
+                  <field name="SOUND">hit</field>
                 </block>
               </next>
             </block>
           </next>
         </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">2</title>
+        <block type="studio_whenSpriteCollided" x="300" y="420">
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">2</field>
           <next>
             <block type="studio_changeScore">
-              <title name="VALUE">1</title>
+              <field name="VALUE">1</field>
             </block>
           </next>
         </block>
@@ -140,41 +140,40 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run" limit="1"/>
-        <block type="studio_setBackground">
-          <title name="VALUE">"cave"</title>
+        <block type="studio_setBackground" id="p6E(=[XIw(}cVOz/!#~o" x="0" y="0">
+          <field name="VALUE">"cave"</field>
         </block>
-        <block type="studio_move">
-          <title name="SPRITE">0</title>
-          <title name="DIR">1</title>
+        <block type="studio_move" id="$IeDS389q?pV}B|z-K;M" x="0" y="56">
+          <field name="SPRITE">0</field>
+          <field name="DIR">1</field>
         </block>
-        <block type="studio_moveDistance">
-          <title name="SPRITE">1</title>
-          <title name="DIR">1</title>
-          <title name="DISTANCE">400</title>
+        <block type="studio_moveDistance" id="?{@_brAEHK#A~}@XZX0W" x="0" y="112">
+          <field name="SPRITE">1</field>
+          <field name="DIR">1</field>
+          <field name="DISTANCE">400</field>
         </block>
-        <block type="studio_saySpriteChoices">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Ouch!</title>
+        <block type="studio_saySpriteChoices" id="|6(D(za3-I(OAm$4~=w6" x="0" y="168">
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Ouch!</field>
         </block>
-        <block type="studio_playSound">
-          <title name="SOUND">random</title>
+        <block type="studio_playSound" id="L,Z}PpC)JyxkxXeTE]f[" x="0" y="224">
+          <field name="SOUND">random</field>
         </block>
-        <block type="studio_changeScore">
-          <title name="VALUE">1</title>
+        <block type="studio_changeScore" id="J60]536d^:-mUa6e|u3-" x="0" y="280">
+          <field name="VALUE">1</field>
         </block>
-        <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+        <block type="studio_setSpriteSpeed" id="UZs!0Ak,MVH45_/Y?J)=" x="0" y="336">
+          <field name="SPRITE">0</field>
+          <field name="VALUE">Studio.SpriteSpeed.FAST</field>
         </block>
-        <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
+        <block type="studio_whenSpriteCollided" id="vy?ZJn|G!n3vFtcDZX|(" x="0" y="392">
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">1</field>
         </block>
-        <block type="studio_whenArrow">
-          <title name="VALUE">up</title>
+        <block type="studio_whenArrow" id="i^2HI8@@i*rO@n+IL1$+" x="0" y="448">
+          <field name="VALUE">up</field>
         </block>
-        <block type="studio_repeatForever"/>
+        <block type="studio_repeatForever" id="PB;DhF?f2t+[jYObd{bJ" x="0" y="504"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

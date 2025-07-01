@@ -1,6 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Heading1} from '@code-dot-org/component-library/typography';
-import {isEmpty} from 'lodash';
 import React, {
   FC,
   useCallback,
@@ -11,6 +10,7 @@ import React, {
 } from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
@@ -27,13 +27,12 @@ import Schedule from './sections/Schedule';
 import {
   Errors,
   FieldConfig,
-  Facilitator,
-  RegionalPartner,
   SessionErrors,
   SessionFormState,
   Workshop,
   WorkshopFormState,
   WorkshopFormTemplateProps,
+  WorkshopCourseConfig,
 } from './types';
 import {
   workshopDataToState,
@@ -41,6 +40,7 @@ import {
   workshopLabel,
   sessionStateToApi,
   workshopStateToApi,
+  emptyValue,
 } from './utils';
 
 import styles from './styles.module.scss';
@@ -55,21 +55,15 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
+  const [workshopConfig, setWorkshopConfig] = useState(config);
+  const [loading, setLoading] = useState(false);
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
   );
 
-  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
-    '/api/v1/regional_partners'
-  );
-
-  const {data: facilitatorData} = useFetch<Facilitator[]>(
-    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(config.label)}`
-  );
-
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
-    course: config.label,
+    course: workshopConfig?.label ?? '',
     capacity: '',
     description: '',
     facilitators: [],
@@ -103,6 +97,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const [responseErrors, setResponseErrors] = useState<string[]>([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     if (workshop) {
       dispatchWorkshop({
         type: 'SET_WORKSHOP',
@@ -110,42 +108,47 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       });
       dispatchSessions({
         type: 'SET_SESSIONS',
-        payload: sessionDataToState(
-          workshop.sessions,
-          workshop.time_zone ?? userTimeZone
-        ),
+        payload: sessionDataToState(workshop.sessions, workshop.time_zone),
       });
+      setWorkshopConfig(
+        (WorkshopCourseConfigs as WorkshopCourseConfig[]).find(
+          wsc => wsc.label === workshop.course
+        )
+      );
     }
   }, [workshop, userTimeZone]);
 
   const getWorkshopErrors = useCallback(
     () =>
-      Object.values(config.fields).reduce(
+      Object.values(workshopConfig?.fields ?? {}).reduce(
         (
           acc: Errors<keyof WorkshopFormState>,
           field: FieldConfig<WorkshopFormState>
         ) => {
           const {stateKey} = field;
-          const required =
-            field.required ||
-            (stateKey === 'prereq' && workshopFormState.hasPrereq);
-          if (required && isEmpty(workshopFormState[stateKey])) {
+          let {required} = field;
+          // prereq is not configured to be required
+          // only if user indicates prereq is required
+          if (stateKey === 'prereq' && workshopFormState.hasPrereq) {
+            required = true;
+          }
+          if (required && emptyValue(workshopFormState[stateKey])) {
             acc[stateKey] = REQUIRED_ERROR;
           }
           return acc;
         },
         {}
       ),
-    [config.fields, workshopFormState]
+    [workshopConfig?.fields, workshopFormState]
   );
 
   const getSessionErrors = useCallback(
     () =>
-      Object.values(config.session_fields).reduce(
+      Object.values(workshopConfig?.session_fields ?? {}).reduce(
         (acc: SessionErrors, field: FieldConfig<SessionFormState>) => {
           const {stateKey, required} = field;
           sessionFormState.forEach(session => {
-            if (required && isEmpty(session[stateKey])) {
+            if (required && emptyValue(session[stateKey])) {
               acc[session.id] = {
                 ...(acc[session.id] ?? {}),
                 [stateKey]: REQUIRED_ERROR,
@@ -157,11 +160,12 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         },
         {}
       ),
-    [config.session_fields, sessionFormState]
+    [workshopConfig?.session_fields, sessionFormState]
   );
 
   const publish = useCallback(async () => {
     try {
+      setLoading(true);
       setResponseErrors([]);
       const workshopValidationErrors = getWorkshopErrors();
       setWorkshopErrors(workshopValidationErrors);
@@ -212,6 +216,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       setResponseErrors([
         'There was a problem processing your request. Please try again or contact support@code.org',
       ]);
+    } finally {
+      setLoading(false);
     }
   }, [
     getSessionErrors,
@@ -222,25 +228,24 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     workshopFormState,
   ]);
 
-  const cancel = useCallback(() => navigate('/workshops'), [navigate]);
+  const cancel = useCallback(
+    () => (window.history.length > 1 ? navigate(-1) : navigate('/workshops')),
+    [navigate]
+  );
 
-  const heading = workshopLabel(`New ${config.label}`);
-
-  const sectionProps = useMemo(
-    () => ({
-      dispatchWorkshop,
-      config,
-    }),
-    [dispatchWorkshop, config]
+  const heading = workshopLabel(
+    `${workshop ? 'Edit' : 'New'} ${workshopConfig?.label}`
   );
 
   const allErrors = useMemo(
     () =>
-      isEmpty({...workshopErrors, ...sessionErrors})
+      emptyValue({...workshopErrors, ...sessionErrors})
         ? responseErrors
         : [VALIDATION_ERROR, ...responseErrors],
     [workshopErrors, sessionErrors, responseErrors]
   );
+
+  if (!workshopConfig) return null;
 
   return (
     <form id="workshop-form-template" className={styles.container}>
@@ -255,45 +260,55 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         courseOfferings={workshopFormState.courseOfferings}
         name={workshopFormState.name}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <Schedule
         timeZone={workshopFormState.timeZone}
         sessions={sessionFormState}
         dispatchSessions={dispatchSessions}
         errors={sessionErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <PartnerFacilitator
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
+        organizerId={workshopFormState.organizerId}
+        courseOfferings={workshopFormState.courseOfferings}
         errors={workshopErrors}
-        regionalPartnerData={regionalPartnerData}
-        facilitatorData={facilitatorData}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <EmailsReminders
         suppressEmail={workshopFormState.suppressEmail}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <AdditionalInfo
         fee={workshopFormState.fee}
         participantGroupType={workshopFormState.participantGroupType}
         notes={workshopFormState.notes}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       <PublishSettings
         registrationLink={workshopFormState.registrationLink}
         hidden={workshopFormState.hidden}
         errors={workshopErrors}
-        {...sectionProps}
+        dispatchWorkshop={dispatchWorkshop}
+        config={workshopConfig}
       />
       {allErrors.length > 0 &&
         allErrors.map(error => (
           <Alert key={error} type="danger" text={error} />
         ))}
-      <PublishCancelButtons publish={publish} cancel={cancel} />
+      <PublishCancelButtons
+        publish={publish}
+        cancel={cancel}
+        loading={loading}
+      />
     </form>
   );
 };

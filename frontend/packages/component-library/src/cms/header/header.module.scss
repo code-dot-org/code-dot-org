@@ -6,14 +6,19 @@
 $desktop-breakpoint: 1268px;
 $tablet-breakpoint: 1023px;
 $mobile-breakpoint: 425px;
-$box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+$box-shadow:
+  0px 4px 6px -1px rgb(0 0 0 / 0.1),
+  0px 2px 4px -1px rgb(0 0 0 / 0.06);
 
 // Header common styles
 .headerNavigation {
+  position: relative;
   background-color: var(--background-brand-teal-primary);
   padding: 0.375rem 0.875rem;
   display: flex;
   justify-content: space-between;
+  z-index: variables.$zindex-fixed;
+  box-shadow: $box-shadow;
 }
 
 // Main links styles
@@ -61,7 +66,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
       @include typography.body-three;
       color: var(--text-neutral-white-fixed);
       text-decoration: none;
-      padding: 1rem;
+      padding: 1rem 1rem 1.01rem;
       border-inline: 2px solid transparent;
 
       @include mixins.transition-all;
@@ -80,11 +85,20 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Button links styles
-.buttonLinks {
+header .buttonLinks {
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  .loading.mainMenu {
+    color: var(--text-brand-teal-primary-fixed) !important;
+    background-color: var(--background-neutral-white-fixed) !important;
+    border-color: var(--background-neutral-white-fixed) !important;
+    // Set the width to match sign in buttons to prevent layout shift
+    width: 13.713rem;
+    opacity: 0.8;
+  }
 
   .signIn.mainMenu,
   .newProject {
@@ -93,6 +107,10 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
     &:hover {
       background: var(--background-brand-teal-strong);
     }
+  }
+
+  .newProject i {
+    margin-inline-end: -3px;
   }
 
   .createAccount.mainMenu,
@@ -117,7 +135,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Icon button styles
-.buttonLinks .iconButton {
+header .buttonLinks .iconButton {
   padding: 0;
   background: transparent;
   min-width: unset;
@@ -136,7 +154,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   }
 
   &.helpButton {
-    margin-inline: 0.25rem -0.5rem;
+    margin-inline: 0 -0.75rem;
 
     [dir='rtl'] & {
       transform: scaleX(-1);
@@ -149,7 +167,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Menu styles
-.menu {
+header .menu {
   @include mixins.border-styles;
   list-style: none;
   position: absolute;
@@ -188,10 +206,10 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // New Project menu styles
-.newProjectMenu {
+header .newProjectMenu {
   a {
     margin: 0;
-    padding-inline: 0.375rem;
+    padding: 0.375rem;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -249,7 +267,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Large desktop
 @media (max-width: ($desktop-breakpoint - 1px)) {
   // Show Help menu
-  .helpButton {
+  header .helpButton {
     display: none;
   }
 }
@@ -257,7 +275,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Small desktop
 @media (min-width: $desktop-breakpoint) {
   // Show Hamburger menu
-  .hamburgerButton {
+  header .hamburgerButton {
     display: none;
   }
 }
@@ -272,8 +290,8 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
-  .mainLinksWrapper .mainLinks,
-  .newProject {
+  header .mainLinksWrapper .mainLinks,
+  header .newProject {
     display: none;
   }
 
@@ -285,7 +303,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Mobile
 @media (max-width: $mobile-breakpoint) {
   // Hide Account links
-  .accountLinks {
+  header .accountLinks {
     display: none;
   }
 

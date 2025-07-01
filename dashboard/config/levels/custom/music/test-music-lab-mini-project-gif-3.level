@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-20T17:23:59.000Z",
   "level_num": "custom",
@@ -7,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Create Version 3\r\n\r\n**First, organize your workspace:**\r\n- Move the `play random` block with both backtracks off to the side.\r\n\r\n**Then, code Version 3**:\r\n- Create a third looping backtrack for your GIF. \r\n- When you have something you like, take that code and add it inside the play random block. \r\n- Connect the `play random` block with all three sets of backtracks back under `when run`. \r\n- Create a third trigger with a new sound effect to go with your new backtrack. \r\n- Press \"Run\" and practice triggering your sound effect based on which backtrack was chosen. ",
-    "offer_browser_tts": "false",
+    "long_instructions": "### Create Version 3\r\n\r\n**Do This**:\r\n- Choose the third mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your second sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the third backtrack.\r\n- Create a third trigger with a new sound effect to go with your new backtrack. \r\n\r\nWhen you are finished, you should have three backtracks that play sequentially underneath the `when run` block and three `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/573b93648f84e994e2c52be69466e66a-image-1745528533261.png)",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
       "allowChangeStartingPlayheadPosition": true,
@@ -134,10 +135,59 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-mini-project-gif-template",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-3_e12245dc-9546-4044-ad42-aba23bf4ee3b",
+        "message": "Your code is on the right track - make sure it sounds good before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-3_919e56d4-c614-4914-93de-cbf43534731a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 9 sound blocks\n- ✅ Three trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-3_b13adcd8-3cc5-42d2-baa1-38f48483c34d",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ✅ at least 9 sound blocks\n- ❌ Three trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-3_29ec5135-b0f7-4ad8-924b-8d57602f26c3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 9 sound blocks\n- ❌ Three trigger blocks",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-20T17:23:59.630+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-2\"},{\"changed_at\":\"2025-03-20 17:25:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:29:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:23:59.630+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-2\"},{\"changed_at\":\"2025-03-20 17:25:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:29:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:02:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:43:22 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-25 15:47:26 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

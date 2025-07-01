@@ -1,0 +1,1079 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:58.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "shakira_amarillo/drums_verse_1"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "repeat_simple2",
+                                  "id": "repeat_simple2",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "times": 4
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "n63bECWmmTv(@A-99V7q",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "shakira_amarillo/drums_verse_1"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "W=y]L{cxtf%+xwaL9hjm",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 4
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "=Qg#U/^WRn7fPM0$e)g1",
+                                            "deletable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "shakira_amarillo/drums_verse_2"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "pwjX1yLwuvrdp{8_G@1S",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "times": 2
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "pCe0|fYFYogtN1Y@Z/eV",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "shakira_amarillo/bass_verse_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "JzJr@J(~B2{7Yf+^@t~Y",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_amarillo/bass_verse_2"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "(SJ3xAQPoYbh-4NvI_To",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_amarillo/bass_verse_3"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "(k8lL$ZSpv_xTZ~A:lO4",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/bass_verse_4"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "Nt-#.E]{`}W/3@pZ]sKT",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "KX#HCU+65e/8eRH-7lf.",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_amarillo/synth_verse_1"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "b:m9)P)YirP{Aqp@j_6~",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_amarillo/synth_verse_2"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "H5V{x#[8UhG?Kte!Bx6m",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/synth_verse_3"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "5hc~Y|r5LO++H(@$AE~s",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_amarillo/synth_verse_4"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sounds_sequential",
+                                        "id": "=Q9HBvBZi:8(/=Sy2=GR",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "ZunpQ|3S)foQrvNwNDUS",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_amarillo/vocals_verse_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "OTP)OSJ]cL+R=Dr@Y7Ht",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/vocals_verse_2"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "w]43-zaQ=BnXL[7SKb{:",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_amarillo/vocals_verse_3"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "*%DxR#bBI@fe^iNj:omq",
+                                                          "deletable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "shakira_amarillo/vocals_verse_4"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "ubH]MkoL0D)q{E6IRb3u",
+                                                              "deletable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "shakira_amarillo/vocals_verse_5"
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound_at_current_location_simple2",
+                                                                  "id": "j?sQD[C:2K4?f?TG7u42",
+                                                                  "deletable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "sound": "shakira_amarillo/vocals_verse_6"
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "bd78.}C;J}WSQ@`J|;1^",
+                                                                      "deletable": false,
+                                                                      "editable": false,
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "shakira_amarillo/vocals_verse_7"
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound_at_current_location_simple2",
+                                                                          "id": "89eS9E3a~uqVN88iB=*{",
+                                                                          "deletable": false,
+                                                                          "editable": false,
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "sound": "shakira_amarillo/vocals_verse_8"
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "1sS/]T:(lD)`sF`i6Q*s",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "h:5HP-D6KK{h2w35(0kd",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "repeat_simple2",
+                                      "id": "otnzNfW4%%DqeIo8^4-4",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "times": 3
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "qBvjKP#VvciZ%{/M;=I:",
+                                            "deletable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "shakira_amarillo/drums_prechorus_1"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "1m.ED6RfT$mG^OEudXVx",
+                                                "deletable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "shakira_amarillo/drums_prechorus_2"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "5wWZPzg5TZkAl.MP*gO4",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "shakira_amarillo/drums_prechorus_1"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "hk*Ym#zJBA|RC{a1@LHL",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_amarillo/drums_prechorus_build"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": "W:RyzOJXf-^zZo)stfm,",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "repeat_simple2",
+                                          "id": "ek:V,6R$QdOd0o(~*P66",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "times": 3
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "1`ptj_ky$//I#IEK=p!n",
+                                                "deletable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "shakira_amarillo/bass_prechorus_1"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "bj~/$9Dazd4kcsn+i_:f",
+                                                    "deletable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "shakira_amarillo/bass_prechorus_2"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "b3_LZqrNW4^3NNK-$fGE",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "shakira_amarillo/bass_prechorus_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "^G{Iz#!xx?|$ya$A~8qB",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/bass_prechorus_pause"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sounds_sequential",
+                                        "id": "sijm~)MIC/B`0-ul9lJm",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "repeat_simple2",
+                                              "id": "A[)mFaz(agj;`mGFpyec",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "times": 3
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "-j4xl;[Az*3]EX}@$SeY",
+                                                    "deletable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "shakira_amarillo/synth_prechorus_1"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "Pgy[{zO:Tnz.Vcao=%4!",
+                                                        "deletable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "shakira_amarillo/synth_prechorus_2"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "k6JOnF=4JZyxZ__G2@_m",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/synth_prechorus_1"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "p1?#HuT)8$aObMz.Irjf",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_amarillo/synth_prechorus_pause"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sounds_sequential",
+                                            "id": "jN~WvfZyLA34}/apl,,8",
+                                            "deletable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "VF#BvBGdUn~K$p9Y8Kuv",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "shakira_amarillo/vocals_prechorus_1"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "^|),}D}A|X9o*l~sN/Qu",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "shakira_amarillo/vocals_prechorus_2"
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound_at_current_location_simple2",
+                                                          "id": "/CS@XN7F8ajxyM^Bz3OH",
+                                                          "deletable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "sound": "shakira_amarillo/vocals_prechorus_3"
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "{H)}Q6AsF7QheF!9N4D~",
+                                                              "deletable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "shakira_amarillo/vocals_prechorus_4"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "$)W0!9a{zH~=P3I:qkG/",
+              "x": 590,
+              "y": 90,
+              "extraState": {
+                "procedureId": "0x9x3%CH8dEo^Sc*/VwD",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "bass_verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "ZjJrcfk%Q@P(;xd9/8E(",
+              "x": 750,
+              "y": 90,
+              "extraState": {
+                "procedureId": "t=rA6ym~|zutqSqe}!xL",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "synth_verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "uB[KH`xZK(stRP!q@u4;",
+              "x": 910,
+              "y": 90,
+              "extraState": {
+                "procedureId": "F#j;Kk{+$3:%sgS)a_O=",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "vocals_verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "rmfRx!mg3#tXdTm*VI]G",
+              "x": 590,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "bass_verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "uOI!:S[39|vCvG{y(1Xk",
+              "x": 758,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "synth_verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "ysPwrSfP1+k*-9H.6Hx7",
+              "x": 910,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "vocals_verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "d(p`L?QhastYIl^G%tJL",
+              "x": 370,
+              "y": 90,
+              "extraState": {
+                "procedureId": "j)bG=-p4n2yCTGsgu+|q",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "drums_verse"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "CN#N*[NF-*Y0C2Gd^F1M",
+              "x": 370,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "drums_verse"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "=8?B|1,`R0N*h,OHd`O/",
+              "x": 370,
+              "y": 390,
+              "extraState": {
+                "procedureId": "K^zUp8e0.Y.s8v(8j8@7",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "drums_prechorus"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Z^9#]9fwc,G8@T+{X.ZI",
+              "x": 610,
+              "y": 390,
+              "extraState": {
+                "procedureId": "x+xIl/7$|i*KuJ1)(Z^-",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "bass_prechorus"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "VkYP8s8P_;__zOI0c_+e",
+              "x": 790,
+              "y": 390,
+              "extraState": {
+                "procedureId": "PN]WrmNyhbD96;-f5~3Z",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "synth_prechorus"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "Oz+;s3@=2w;N{XBdbQj[",
+              "x": 970,
+              "y": 390,
+              "extraState": {
+                "procedureId": "-`dCdKP3am_bR:Nj+:lB",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "vocals_prechorus"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "zMw7,yR#48)A=|0_Bq8A",
+              "x": 370,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "drums_prechorus"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "U`^E$klU=Sk0?Uc~a=MP",
+              "x": 610,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "bass_prechorus"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "_!So5S{B/Itm?#)e-@}7",
+              "x": 770,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "synth_prechorus"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "eHC$ca*^1$UWw%DkRCAV",
+              "x": 970,
+              "y": 330,
+              "disabledReasons": [
+                "MANUALLY_DISABLED",
+                "ORPHANED"
+              ],
+              "extraState": {
+                "name": "vocals_prechorus"
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "0x9x3%CH8dEo^Sc*/VwD",
+            "name": "bass_verse",
+            "returnTypes": null
+          },
+          {
+            "id": "t=rA6ym~|zutqSqe}!xL",
+            "name": "synth_verse",
+            "returnTypes": null
+          },
+          {
+            "id": "F#j;Kk{+$3:%sgS)a_O=",
+            "name": "vocals_verse",
+            "returnTypes": null
+          },
+          {
+            "id": "j)bG=-p4n2yCTGsgu+|q",
+            "name": "drums_verse",
+            "returnTypes": null
+          },
+          {
+            "id": "K^zUp8e0.Y.s8v(8j8@7",
+            "name": "drums_prechorus",
+            "returnTypes": null
+          },
+          {
+            "id": "x+xIl/7$|i*KuJ1)(Z^-",
+            "name": "bass_prechorus",
+            "returnTypes": null
+          },
+          {
+            "id": "PN]WrmNyhbD96;-f5~3Z",
+            "name": "synth_prechorus",
+            "returnTypes": null
+          },
+          {
+            "id": "-`dCdKP3am_bR:Nj+:lB",
+            "name": "vocals_prechorus",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "shakira_amarillo"
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!"
+    },
+    "encrypted_exemplar_sources": "H+oUXYiIOIhlul2DSMMWrRA5tNRmQfWlki7tDNJx5FaXf7bYSE1w2YzW6+ld\nSYdfOXsfJbUjfu69Sv4Lbx2v8r/KF2lHOOEmRQEGRsPqhKUSJN95QlIAwOaS\nU1e046THGQ1c8N2dbxQPl9WWwVSf3Emyz885MslQYuSDq+sS2Fwtjlm6nVry\nmmDEPUSK+JVnTGa61CJwymK6a0WjDRTNsf/S19A9KqQHULqDmcug3sjMFosA\nAWnYDo6P9yZ+a/kC2FzvtLz6wrgR3oz846273igTMLSKxKdtcY1FEHqROrDz\n+isu85BmcFkRWLeTsdy3OJlnaFlNBL/FubE9ZTn3ys1wkrMxDr5ndEHb+hTn\noVCDJfAzGyfYykau0u1ZZDZi7UPi42R3+2JwHHgN7IfqbVB1QW9BFHwL22D1\nm46RPTGMALcn1xbSMDrGQsEjjYgoM/I9g8pgQvthIUZrNYMz2gCiKVCnSbgb\nRP/vHFLC4r/e8kg3NkJFIyn+3aXyv2Rt23+EaT9vjQfDpJa+emJJfwv87eG5\nLzp0EgCR0JrfmYNXOKWFHJCGD5qL61kVjiOI/dxAlqUaTcnbaaWvWSdH+/mB\naEvzDRKQMSEQxYNFvsvmDTpLMjnF7J4ERDY3v3IyoxhQrAq3enqi4Dse5Lhg\no+XTLsDeZasJ8dQIZ0aLzL4PRgRSkEmo1C9fOrdgOp3MMw1Ou4bcaKsdOJx0\nvtTPmpEsXdd3RqH1PnQw13MbMNdzqBwJTWfLY0sKT8HJ8akMWXzdv64JmAKI\nYaxmd02MKuI6y+r9omK+h94MOyaKLzRY/ZrtbmR46atqGN6EaL9jp+K++Oxb\n7XLkzXAuFh/NkEXAMC2aG3NVXm1UFaAW7AyAULPHUHaucEbfDduFJaWVCNgz\nAiCZqYKPD2UVjvoSbFNxoriTXsBntUt9BKDwp9d555dhBtXfB2uyJVrRLFRc\nur42OPSOuhydgd8RPaDG1Dz/pSQy4ZZUMAg2PN8FdI7+WaAVjkPrTlon2vwL\nTkT62p/Nxw+HjEAkEbxojYsvvs9C56cyWJpg8Or33yyi0Jw+sdo4b0l8Zmwf\npnzxG9KrHjnkOAQP1KNglbMbRIsyyXHFK/T3DVhs6P2uMhAVakh8I9o3gOdg\nCNg7KKnc7QMhC/mimFFjbYfldp4gzvW0wDsBluVBuKJzxhfZnbTRiYcl3EkN\n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\ng4KnQWWLbbgOdsLD/k8=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Amarillo",
+    "long_instructions": "### Amarillo\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Amarillo* by Shakira. Your job is to organize the code using functions so it's easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and identify which parts should be grouped into functions. Think about repeated patterns or sections that make sense to organize together. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/3a0b9af0999a1f13a3f6875de4162704-image-1750880745657.png)\r\n\r\n**Try:** Use the provided functions in the workspace. Move the correct code into each function, then replace the original code with a call to the function. Not all of the original code will go into functions!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Play your remix. Does it sound the same as the original? Are the functions clearly named and organized? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace original code\r\n- Code organized into the correct functions\r\n- A final song that sounds the same as before",
+    "bubble_choice_description": "A record producer has sent you the raw tracks for Amarillo by Shakira. They've asked you to organize it into functions to make the song easier to remix in the future.",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-practiceD_253cff24-420d-44cc-b4f0-4f5a63981347",
+        "message": "exemplar validation",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceD_4cd7b321-7aef-4e16-9d45-cf9a5f26cad6",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and checking that **each function plays a sound**",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:8"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceD_904bff7a-7daf-4064-8073-c9716bdf2ff2",
+        "message": "You need to call your functions!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.662+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceD\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceD\"},{\"changed_at\":\"2025-06-10 23:42:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:43:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-10 23:48:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:46:43 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:46:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:52 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

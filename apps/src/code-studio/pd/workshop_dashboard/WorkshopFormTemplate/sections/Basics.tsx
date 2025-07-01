@@ -9,8 +9,8 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
 
+import {WorkshopGradeLevels} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useFetch} from '@cdo/apps/util/useFetch';
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {BasicsProps, CourseOffering} from '../types';
 
@@ -158,7 +158,7 @@ export const Basics: FC<BasicsProps> = ({
               styleAsFormField={true}
               hideControls
               checkedOptions={grades}
-              allOptions={StudentGradeLevels.map(value => ({
+              allOptions={WorkshopGradeLevels.map((value: string) => ({
                 value,
                 label: value,
               }))}
@@ -234,6 +234,7 @@ export const Basics: FC<BasicsProps> = ({
                 [commonStyles.required]: fields.capacity.required,
               })}
               errorMessage={errors.capacity}
+              min={1}
             />
           )}
           {/* empty space aligns with optional subject */}
@@ -283,7 +284,12 @@ export const Basics: FC<BasicsProps> = ({
       )}
       {fields.course_offerings && (
         <div className={commonStyles.row}>
-          <div className={commonStyles.col}>
+          <div
+            className={classNames(
+              commonStyles.col,
+              commonStyles.plTopicsContainer
+            )}
+          >
             <CheckboxDropdown
               name={fields.course_offerings.stateKey}
               onChange={handleCourseOfferingsChange}
@@ -310,12 +316,14 @@ export const Basics: FC<BasicsProps> = ({
               )}
               errorMessage={errors.courseOfferings}
             />
-            {courseOfferingsById && (
+            {courseOfferingsById && courseOfferings.length > 0 && (
               <Tags
+                size="s"
                 className={commonStyles.wrapContainer}
                 tagsList={courseOfferings.map(offeringId => ({
                   type: 'closable',
                   onClose: handleRemoveCourseOffering(offeringId),
+                  key: offeringId,
                   label:
                     courseOfferingsById[Number(offeringId)]?.display_name ?? '',
                 }))}

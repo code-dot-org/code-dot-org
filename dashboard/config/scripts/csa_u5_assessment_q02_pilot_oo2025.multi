@@ -1,10 +1,10 @@
 name 'CSA U5 Assessment q02_pilot_oo2025'
 
-right 'The initial value of `max` should be set to `Integer.MIN_VALUE` instead of `0`.'
-wrong 'The loop condition for the outer loop should be `i < arr.length - 1`.'
-wrong 'The loop condition for the inner loop should be `j < arr.length - 1`.'
-wrong 'The condition `arr[i][j] > max` should be `arr[i][j] < max`.'
-wrong 'The return type of the method should be `void` instead of `int`.'
+right 'Initialize `max` to the first element in the array instead of 0.'
+wrong 'Change the return type of the method from `int` to `void`.'
+wrong 'Use a `while` loop instead of a `for` loop for better control.'
+wrong 'Change the condition to `arr[i][j] < max`.'
+wrong 'Set `max = -1` instead of `0` to handle negative numbers.'
 
 markdown <<MARKDOWN
 Consider the following code segment.
@@ -23,12 +23,12 @@ public static int findMaxValue(int[][] arr) {
 }
 ```
 
-Which of the following options identifies the error in the given code segment?
+Suppose the array `arr` contains only negative numbers. What is the best way to fix the bug in this code?
 MARKDOWN
 
 allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
-By initializing `max` to `Integer.MIN_VALUE`, the code ensures that any value encountered in the array will be greater than the initial value of `max`. This allows the code to correctly track and update the maximum value found.
+By initializing `max` to `arr[0][0]`, the code ensures that it starts with a value actually present in the array. This guarantees accurate results, even if all elements are negative or less than zero.
 
-If `max` were initialized to `0`, it would incorrectly assume that the maximum value in the array could be `0`. This would result in incorrect output if the array contains negative numbers or if the maximum value in the array is smaller than `0`.
+If `max` were initialized to `0`, it could lead to incorrect results in cases where all elements in the array are negative, since no value would satisfy the condition `arr[i][j] > max`.
 MARKDOWN

@@ -1,3 +1,4 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {autocompletion} from '@codemirror/autocomplete';
 import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
@@ -11,12 +12,14 @@ import {
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
-import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {editorConfig} from './editorConfig';
-import {darkMode as darkModeTheme} from './editorThemes';
+import {
+  darkMode as darkModeTheme,
+  lightMode as lightModeTheme,
+} from './editorThemes';
 
 import moduleStyles from './code-editor.module.scss';
 
@@ -25,7 +28,6 @@ interface CodeEditorProps {
   editorConfigExtensions: Extension[];
   startCode: string;
   appName: AppName;
-  darkMode?: boolean;
 }
 
 const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
@@ -33,7 +35,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   editorConfigExtensions,
   startCode,
   appName,
-  darkMode = true,
 }) => {
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
@@ -45,6 +46,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     state => state.lab2View
   );
   const {signInState} = useAppSelector(state => state.currentUser);
+  const {theme} = useTheme();
 
   // Load the user's preferred editor font size from the backend which is saved
   // per app type (currently either pythonlab or weblab) for signed-in users.
@@ -66,6 +68,9 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
 
   // This compartment controls font size settings for the editor.
   const fontSizeCompartment = useMemo(() => new Compartment(), []);
+
+  //This compartment controls the theme for the editor
+  const themeCompartment = useMemo(() => new Compartment(), []);
 
   const getFontSizeTheme = (fontSize: number) => {
     return EditorView.theme({
@@ -89,7 +94,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       ...editorConfig,
 
       onEditorUpdate,
-      autocompletion({defaultKeymap: false}),
+      autocompletion(),
       ...editorConfigExtensions,
     ];
 
@@ -98,8 +103,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
       fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
     );
-    if (darkMode) {
-      editorExtensions.push(darkModeTheme);
+    if (theme === 'Dark') {
+      editorExtensions.push(themeCompartment.of(darkModeTheme));
+    } else {
+      editorExtensions.push(themeCompartment.of(lightModeTheme));
     }
     setEditorView(
       new EditorView({
@@ -123,13 +130,14 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     onCodeChange,
     startCode,
     didInit,
-    darkMode,
+    theme,
     editorReadOnlyCompartment,
     isReadOnly,
     editorEditableCompartment,
     fontSizeCompartment,
     editorFontSizeKey,
     editorFontSizeLoaded,
+    themeCompartment,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
@@ -144,6 +152,19 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       });
     }
   }, [editorView, fontSizeCompartment, editorFontSizeKey]);
+
+  // When we have a new theme, reset the theme.
+  useEffect(() => {
+    if (editorView) {
+      editorView.dispatch({
+        effects: [
+          themeCompartment.reconfigure(
+            theme === 'Dark' ? darkModeTheme : lightModeTheme
+          ),
+        ],
+      });
+    }
+  }, [theme, editorView, themeCompartment]);
 
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
@@ -178,14 +199,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     editorEditableCompartment,
   ]);
-
-  // Sets aria-label on the input div once code mirror loads
-  useEffect(() => {
-    const cmContentDiv = editorRef.current?.querySelector('.cm-content');
-    if (cmContentDiv) {
-      cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
-    }
-  }, []);
 
   if (!editorFontSizeLoaded) {
     return null;

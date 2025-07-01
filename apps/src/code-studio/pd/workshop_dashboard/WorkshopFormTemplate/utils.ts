@@ -2,6 +2,7 @@ import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
+import {isOption, Option} from './components/MultiSelectInput';
 import {
   Workshop,
   WorkshopFormState,
@@ -19,7 +20,13 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
   capacity: data.capacity?.toString() ?? '',
   description: data.description ?? '',
-  facilitators: data.facilitators?.map(({id}) => id) ?? [],
+  facilitators:
+    data.facilitators?.map(({id, name, email}) => ({
+      id,
+      label: name,
+      secondaryLabel: email,
+      searchText: [name, email],
+    })) ?? [],
   fee: data.fee ?? '',
   grades: data.grades ?? [],
   hidden: data.hidden ?? false,
@@ -34,48 +41,57 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   suppressEmail: data.suppress_email ?? false,
   courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
   participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
+  timeZone: data.time_zone ?? '',
 });
 
 export const sessionDataToState = (
   data: Session[],
-  timeZone: string
+  timeZone: Workshop['time_zone']
 ): SessionFormState[] =>
   data.map(session => ({
     id: session.id.toString(),
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
+    date: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(DATE_FORMAT),
+    start: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
+    end: moment
+      .utc(session.end)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
     locationAddress: session.location_address ?? '',
     locationName: session.location_name ?? '',
     meetingLink: session.meeting_link ?? '',
     format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
   }));
 
 export const workshopStateToApi = (
   workshop: WorkshopFormState
 ): Omit<WorkshopRequest, 'sessions'> => ({
-  course: workshop.course || undefined,
+  course: workshop.course || null,
   capacity:
     workshop.capacity && !isNaN(Number(workshop.capacity))
       ? Number(workshop.capacity)
-      : undefined,
-  description: workshop.description || undefined,
-  facilitators: workshop.facilitators,
-  fee: workshop.fee || undefined,
+      : null,
+  description: workshop.description || null,
+  facilitators: workshop.facilitators.map(({id}) => Number(id)),
+  fee: workshop.fee || null,
   grades: workshop.grades,
   hidden: workshop.hidden,
-  name: workshop.name || undefined,
-  notes: workshop.notes || undefined,
-  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
-  regional_partner_id: workshop.regionalPartnerId ?? undefined,
-  registration_link: workshop.registrationLink || undefined,
-  subject: workshop.subject || undefined,
+  name: workshop.name || null,
+  notes: workshop.notes || null,
+  prereq: workshop.hasPrereq ? workshop.prereq : null,
+  regional_partner_id: workshop.regionalPartnerId,
+  organizer_id: workshop.organizerId,
+  registration_link: workshop.registrationLink || null,
+  subject: workshop.subject || null,
   suppress_email: workshop.suppressEmail,
   course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
-  participant_group_type: workshop.participantGroupType,
-  time_zone: workshop.timeZone,
+  participant_group_type: workshop.participantGroupType || null,
+  time_zone: workshop.timeZone || null,
 });
 
 export const sessionStateToApi = (
@@ -101,27 +117,68 @@ export const sessionStateToApi = (
       id: session.id.startsWith('new') ? undefined : Number(session.id),
       session_format: session.format,
       start: moment
-        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.start}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       end: moment
-        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.end}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       location_address:
-        session.format === 'in_person'
-          ? session.locationAddress || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationAddress || null : null,
       location_name:
-        session.format === 'in_person'
-          ? session.locationName || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationName || null : null,
       meeting_link:
-        session.format === 'virtual'
-          ? session.meetingLink || undefined
-          : undefined,
+        session.format === 'virtual' ? session.meetingLink || null : null,
     });
   });
 
   return newOrUpdatedSessions.concat(sessionsToDestroy);
+};
+
+export const emptyValue = (
+  value:
+    | null
+    | undefined
+    | string
+    | number
+    | Option
+    | string[]
+    | number[]
+    | Option[]
+    | boolean
+    | Record<string, string>
+): boolean => {
+  if (value === null) return true;
+  if (isOption(value)) {
+    return false;
+  }
+  switch (typeof value) {
+    case 'undefined':
+      return true;
+    case 'string':
+      return value.trim() === '';
+    case 'object':
+      if (Array.isArray(value)) {
+        return !value.length || value.every(emptyValue);
+      } else {
+        return (
+          !Object.keys(value).length || Object.values(value).every(emptyValue)
+        );
+      }
+    case 'number':
+      return !Number.isInteger(value) || value < 0;
+    case 'boolean':
+      return false;
+    default:
+      return true;
+  }
 };

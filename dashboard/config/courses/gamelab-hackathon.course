@@ -3,6 +3,9 @@
   "script_names": [
     "gamelab-hackathon"
   ],
+  "original_script_names": [
+    "gamelab-hackathon"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

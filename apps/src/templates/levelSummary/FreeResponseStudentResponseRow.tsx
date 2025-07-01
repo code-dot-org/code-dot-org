@@ -1,13 +1,15 @@
 import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
   FeedbackData,
-  logUserFeedbackOnStudentEvaluation,
+  logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
 
@@ -20,11 +22,14 @@ type FreeResponseStudentResponseRowProps = {
 const FreeResponseStudentResponseRow: React.FC<
   FreeResponseStudentResponseRowProps
 > = ({studentWorkEvaluation}) => {
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState<boolean>(false);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
+
   // used to create the tag for the response
   const analysisTag = () => {
     if (
-      studentWorkEvaluation?.aiEvaluation === 'great' ||
-      studentWorkEvaluation?.aiEvaluation === 'ok'
+      studentWorkEvaluation?.aiEvaluation === 'Great' ||
+      studentWorkEvaluation?.aiEvaluation === 'Ok'
     ) {
       return (
         <Tags
@@ -43,14 +48,14 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.proficientStudentTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'needs revision') {
+    } else if (studentWorkEvaluation?.aiEvaluation === 'Needs revision') {
       return (
         <Tags
           tagsList={[
             {
-              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
+              label: FEEDBACK_TYPE.NOT_PROFICIENT.label,
               icon: {
-                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+                iconName: FEEDBACK_TYPE.NOT_PROFICIENT.icon,
                 iconStyle: 'solid',
                 title: 'exclamation point',
                 placement: 'left',
@@ -61,7 +66,10 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.needsReviewStudentTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'No attempt') {
+    } else if (
+      studentWorkEvaluation?.aiEvaluation ===
+      StudentWorkEvaluationStatus.NO_ATTEMPT
+    ) {
       return (
         <Tags
           tagsList={[
@@ -79,7 +87,12 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.noAttemptTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'Profanity detected') {
+    } else if (
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY ||
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.STUDENT_PII
+    ) {
       return (
         <Tags
           tagsList={[
@@ -101,15 +114,20 @@ const FreeResponseStudentResponseRow: React.FC<
   };
 
   const handleFeedbackClick = async (thumbsUp: boolean) => {
-    const feedbackData: FeedbackData = {
+    const feedbackDataGenerated = {
       aiInteractionType: 'UserLevelEvaluation',
       aiInteractionId: studentWorkEvaluation.id,
       thumbsUp,
       levelId: studentWorkEvaluation.levelId,
       scriptId: studentWorkEvaluation.unitId,
     };
+    setFeedbackData(feedbackDataGenerated);
 
-    logUserFeedbackOnStudentEvaluation(feedbackData);
+    if (!thumbsUp) {
+      setFeedbackModalOpen(true);
+    } else {
+      logUserFeedbackOnStudentEvaluation(feedbackDataGenerated);
+    }
   };
 
   return (
@@ -121,9 +139,9 @@ const FreeResponseStudentResponseRow: React.FC<
         {studentWorkEvaluation?.studentWork}
       </BodyThreeText>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
-      <BodyThreeText
-        className={styles.aiAnalysisReasoningColumn}
-      >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
+      <BodyThreeText className={styles.aiAnalysisReasoningColumn}>
+        {studentWorkEvaluation?.aiReasoning}
+      </BodyThreeText>
       <div>
         <FeedbackToggle
           onThumbsUpClick={() => handleFeedbackClick(true)}
@@ -132,6 +150,15 @@ const FreeResponseStudentResponseRow: React.FC<
           color="gray"
         />
       </div>
+      {feedbackModalOpen && feedbackData && (
+        <AiEvaluationFeedbackModal
+          feedbackData={feedbackData}
+          forStudentAiInteractionFeedback={true}
+          closeModalHandler={() => {
+            setFeedbackModalOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };

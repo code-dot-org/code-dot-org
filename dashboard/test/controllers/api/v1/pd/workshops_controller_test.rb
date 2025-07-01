@@ -16,18 +16,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
     @workshop = create(
       :workshop,
-      :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner,
-      on_map: true
     )
     @organizer_workshop = create(
       :workshop,
-      :funded,
       organizer: @workshop_organizer,
       facilitators: [@facilitator],
-      on_map: true,
       num_sessions: 0
     )
 
@@ -147,17 +143,21 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create :workshop,
+    teachercon = build :workshop,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    # workshop subject is deprecated so validation must be skipped
+    teachercon.save(validate: false)
 
-    fit_weekend = create :fit_workshop,
+    fit_weekend = build :fit_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    # workshop subject is deprecated so validation must be skipped
+    fit_weekend.save(validate: false)
 
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -178,19 +178,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create :workshop,
+    teachercon = build :workshop,
       :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    # workshop subject is deprecated so validation must be skipped
+    teachercon.save(validate: false)
 
-    fit_weekend = create :fit_workshop,
+    fit_weekend = build :fit_workshop,
       :ended,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    # workshop subject is deprecated so validation must be skipped
+    fit_weekend.save(validate: false)
 
     teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -439,30 +443,14 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'cannot update a Build Your Own Workshop without pl topics' do
     sign_in create :admin
-    session_start = tomorrow_at 9
-    session_end = session_start + 8.hours
-    byo_params =
+    workshop = create :byo_workshop
+    byo_params_with_nil_course_offerings =
       {
-        location_address: 'Seattle, WA',
-        on_map: true,
-        funded: false,
-        course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
-        course_offerings: [] << (create :course_offering),
+        course_offerings: nil,
         subject: nil,
-        capacity: 10,
-        virtual: false,
-        suppress_email: false,
-        sessions_attributes: [
-          {
-            start: session_start,
-            end: session_end
-          }
-        ]
       }
 
-    workshop = create :pd_workshop, funded: false, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering)
-
-    put :update, params: {id: workshop.id, pd_workshop: byo_params.merge(course_offerings: nil)}
+    put :update, params: {id: workshop.id, pd_workshop: byo_params_with_nil_course_offerings}
     assert_response :bad_request
   end
 
@@ -474,36 +462,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     user: :facilitator,
     params: -> {{pd_workshop: workshop_params}}
   )
-
-  test 'csf facilitators can create csf workshops' do
-    sign_in(@csf_facilitator)
-
-    assert_creates(Pd::Workshop) do
-      post :create, params: {pd_workshop: workshop_params}
-      assert_response :success
-    end
-  end
-
-  test 'csf facilitators can not create non-csf workshops' do
-    sign_in(@csf_facilitator)
-
-    params = workshop_params.merge(
-      {course: Pd::Workshop::COURSE_CSD}
-    )
-
-    assert_does_not_create(Pd::Workshop) do
-      post :create, params: {pd_workshop: params}
-      assert_response :forbidden
-    end
-  end
-
-  test 'non-csf facilitators cannot create workshops' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    sign_in(facilitator)
-
-    post :create, params: {pd_workshop: workshop_params}
-    assert_response :forbidden
-  end
 
   test 'can create a workshop with suppressed email' do
     sign_in @organizer
@@ -536,27 +494,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
-  end
-
-  test 'CSF facilitator can delete a workshop where they are the organizer' do
-    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer], organizer: csf_facilitator_organizer
-    sign_in csf_facilitator_organizer
-    assert_destroys(Pd::Workshop) do
-      delete :destroy, params: {id: workshop.id}
-    end
-    assert_response :success
-  end
-
-  test 'CSF facilitator can not delete a workshop where they are not the organizer' do
-    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    csf_facilitator_nonorganizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer, csf_facilitator_nonorganizer], organizer: csf_facilitator_organizer
-    sign_in csf_facilitator_nonorganizer
-    assert_does_not_destroy(Pd::Workshop) do
-      delete :destroy, params: {id: workshop.id}
-    end
-    assert_response :forbidden
   end
 
   test_user_gets_response_for(
@@ -647,19 +584,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_nil workshop.regional_partner_id
   end
 
-  test 'CSF Facilitators can update workshops they are assigned to' do
-    sign_in(@csf_facilitator)
-
-    workshop = create :workshop, facilitators: [@csf_facilitator]
-    put :update, params: {
-      id: workshop.id,
-      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
-    }
-    assert_response :success
-    workshop.reload
-    assert_nil workshop.regional_partner_id
-  end
-
   test_user_gets_response_for(
     :update,
     name: 'facilitators cannot update workshops they did not organize',
@@ -735,63 +659,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       pd_workshop: workshop_params,
       notify: false
     }
-  end
-
-  test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-    workshop = create :csp_summer_workshop, organizer: @organizer
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :bad_request
-    assert_includes(response.body, 'non-workshop-admin cannot change CSP/CSA Summer Workshop virtual field within a month of it starting.')
-  end
-
-  test 'updating virtual field in CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @workshop_admin
-    workshop = create :csp_summer_workshop, organizer: @organizer
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :success
-  end
-
-  test 'updating virtual field in CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-
-    # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
-    session_start = (tomorrow_at 9) + 32.days
-    session_end = session_start + 8.hours
-    session = create :pd_session, start: session_start, end: session_end
-    workshop = create :workshop, workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, organizer: @organizer, funding_type: nil, sessions: [session])
-
-    put :update, params: {id: workshop.id, pd_workshop: {virtual: true}}
-
-    assert_response :success
-  end
-
-  test 'updating virtual field in CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-    workshop = create :csp_academic_year_workshop, organizer: @organizer
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
-    assert_response :success
-  end
-
-  test 'updating virtual field in non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-    workshop = create :csd_summer_workshop, organizer: @organizer
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :success
   end
 
   # Update sessions via embedded attributes
@@ -906,6 +773,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal 0, workshop.sessions.count
   end
 
+  # Add and remove facilitators
+
   test 'organizers can add and remove facilitators' do
     sign_in @workshop_organizer
     new_facilitator = create :facilitator
@@ -913,7 +782,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal @facilitator, @organizer_workshop.facilitators.first
 
     params = workshop_params.merge(
-      {facilitators: [new_facilitator.id]}
+      {facilitators: [new_facilitator.id, @facilitator.id]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.facilitators.length
+    assert_equal new_facilitator, @organizer_workshop.facilitators.last
+    assert_equal @facilitator, @organizer_workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [new_facilitator.id], sessions_attributes: []}
     )
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
     assert_response :success
@@ -929,13 +808,151 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal @facilitator, @workshop.facilitators.first
 
     params = workshop_params.merge(
-      {facilitators: [new_facilitator.id]}
+      {facilitators: [new_facilitator.id, @facilitator.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.facilitators.length
+    assert_equal new_facilitator, @workshop.facilitators.last
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [new_facilitator.id], sessions_attributes: []}
     )
     put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.facilitators.length
     assert_equal new_facilitator, @workshop.facilitators.first
+  end
+
+  test 'invalid facilitators cannot be added to a workshop' do
+    sign_in @organizer
+    invalid_facilitator = create :teacher
+    assert_equal 1, @workshop.facilitators.length
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [@facilitator.id, invalid_facilitator.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.facilitators.length
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [invalid_facilitator.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 0, @workshop.facilitators.length
+  end
+
+  # Add and remove course offerings
+
+  test 'organizers can add and remove course offerings' do
+    sign_in @workshop_organizer
+    course_offering_1 = create :course_offering
+    course_offering_2 = create :course_offering
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id, course_offering_2.id]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.course_offerings.length
+    assert_equal course_offering_1, @organizer_workshop.course_offerings.first
+    assert_equal course_offering_2, @organizer_workshop.course_offerings.last
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 1, @organizer_workshop.course_offerings.length
+    assert_equal course_offering_1, @organizer_workshop.course_offerings.first
+  end
+
+  test 'program manager organizers can add and remove course offerings' do
+    sign_in @organizer
+    course_offering_1 = create :course_offering
+    course_offering_2 = create :course_offering
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id, course_offering_2.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.course_offerings.length
+    assert_equal course_offering_1, @workshop.course_offerings.first
+    assert_equal course_offering_2, @workshop.course_offerings.last
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.course_offerings.length
+    assert_equal course_offering_1, @workshop.course_offerings.first
+  end
+
+  # Add and remove grade levels
+
+  test 'organizers can add and remove grade levels' do
+    sign_in @workshop_organizer
+    kindergarten = 'K'
+    first_grade = '1'
+
+    params = workshop_params.merge(
+      {grades: [kindergarten, first_grade]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.grades.length
+    assert_equal kindergarten, @organizer_workshop.grades.first
+    assert_equal first_grade, @organizer_workshop.grades.last
+
+    params = workshop_params.merge(
+      {grades: [kindergarten], sessions_attributes: []}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 1, @organizer_workshop.grades.length
+    assert_equal kindergarten, @organizer_workshop.grades.first
+  end
+
+  test 'program manager organizers can add and remove grade levels' do
+    sign_in @organizer
+    kindergarten = 'K'
+    first_grade = '1'
+
+    params = workshop_params.merge(
+      {grades: [kindergarten, first_grade]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.grades.length
+    assert_equal kindergarten, @workshop.grades.first
+    assert_equal first_grade, @workshop.grades.last
+
+    params = workshop_params.merge(
+      {grades: [kindergarten], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.grades.length
+    assert_equal kindergarten, @workshop.grades.first
   end
 
   # Actions: Start, End
@@ -1023,11 +1040,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   [:teacher, :user].each do |user_type|
     test_user_gets_response_for :index, response: :forbidden, user: user_type
     test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @organizer_workshop.id}}
-  end
-
-  test 'anyone can see the K5 public map index' do
-    get :k5_public_map_index
-    assert_response :success
   end
 
   test_user_gets_response_for(
@@ -1127,20 +1139,24 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'Admins can view all Teachercon workshops' do
-    phoenix = create(
+    phoenix = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Phoenix"
     )
-    atlanta = create(
+    # workshop subject is deprecated so validation must be skipped
+    phoenix.save(validate: false)
+    atlanta = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Atlanta"
     )
+    # workshop subject is deprecated so validation must be skipped
+    atlanta.save(validate: false)
 
     sign_in create :admin
 
@@ -1152,18 +1168,22 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'Teachercon workshops can be filtered by course' do
-    csd = create(
+    csd = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
-    csp = create(
+    # workshop subject is deprecated so validation must be skipped
+    csd.save(validate: false)
+    csp = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSP,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
+    # workshop subject is deprecated so validation must be skipped
+    csp.save(validate: false)
 
     sign_in create :admin
 
@@ -1223,18 +1243,19 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      on_map: true,
-      funded: true,
-      funding_type: Pd::Workshop::FUNDING_TYPE_PARTNER,
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101,
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
       capacity: 10,
       virtual: false,
       suppress_email: false,
+      name: 'Cool workshop',
+      description: 'This is a great workshop',
+      grades: ['K', '1'],
       sessions_attributes: [
         {
           start: session_start,
-          end: session_end
+          end: session_end,
+          session_format: 'in_person',
         }
       ]
     }

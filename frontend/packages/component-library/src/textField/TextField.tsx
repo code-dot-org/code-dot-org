@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ChangeEvent, HTMLAttributes} from 'react';
+import {ChangeEvent, InputHTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -7,7 +7,8 @@ import FormFieldWrapper from '@/formFieldWrapper';
 
 import moduleStyles from './textfield.module.scss';
 
-export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps
+  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   /** TextField id */
@@ -20,7 +21,7 @@ export interface TextFieldProps extends HTMLAttributes<HTMLInputElement> {
      Note: Only form elements with a name attribute will have their values passed when submitting a form. */
   name: string;
   /** The value attribute specifies the value of an input element. */
-  value?: string;
+  value?: string | number;
   /** TextField label */
   label?: string;
   /** TextField helper message */
@@ -81,6 +82,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
   autoComplete,
   color = 'black',
   size = 'm',
+  ['aria-describedby']: describedBy,
   ...HTMLAttributes
 }) => {
   return (
@@ -97,7 +99,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
         moduleStyles[`textField-size-${size}`],
         className,
       )}
-      aria-describedby={HTMLAttributes['aria-describedby']}
+      aria-describedby={describedBy}
     >
       <input
         id={id}

@@ -34,6 +34,7 @@ let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
+let isPyodideLoading = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -61,8 +62,8 @@ const getMessageHandlers = (
     };
   } else {
     return {
-      writeConsoleMessage: () => {},
-      writePartialLine: () => {},
+      writeConsoleMessage: (message: string) => console.log(message),
+      writePartialLine: (message: string) => console.log(message),
     };
   }
 };
@@ -95,6 +96,12 @@ const setUpPyodideWorker = () => {
     switch (type) {
       case 'sysout':
       case 'syserr':
+        // Write messages to the dev console if we are still loading pyodide.
+        // These messages are confusing to students, as they are part of the pyodide loading process.
+        if (isPyodideLoading) {
+          console.log(message);
+          break;
+        }
         // We currently treat sysout and syserr the same, but we may want to
         // change this in the future. Test output goes to syserr by default.
         if (message.startsWith(MessageTag.MATPLOTLIB_IMG)) {
@@ -119,9 +126,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(message);
         break;
       case 'run_complete': {
-        writeConsoleMessage(
-          getSystemMessage(pythonlabI18n.programCompleted(), appName)
-        );
+        // Write a blank line to the console if we are not on a neighborhood level (which handles
+        // this for us).
+        if (!outputToNeighborhood) {
+          writeConsoleMessage('');
+        }
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -156,9 +165,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
+        isPyodideLoading = true;
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
+        isPyodideLoading = false;
         getStore().dispatch(setLoadedCodeEnvironment(true));
         if (message && parseInt(message)) {
           Lab2Registry.getInstance()
@@ -187,7 +198,7 @@ const registerServiceWorker = async () => {
   if (canSupportInput()) {
     try {
       // Do not move the url into a variable, because webpack needs it to be passed as
-      // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      // a parameter to register() directly in order to set up inputServiceWorker as a service worker.
       // The service worker is versioned to ensure the correct version is loaded.
       // Update the version if you update the service worker.
       const registration = await navigator.serviceWorker.register(
@@ -285,15 +296,22 @@ const asyncRun = (() => {
 })();
 
 const restartPyodideIfProgramIsRunning = () => {
+  // Always send a stop message, as some programs will still
+  // look like they are "running" to the user even if they aren't truly running
+  // (for example, the neighborhood). We send via the console manager rather than
+  // the message handler because the neighborhood stops processing messages on stop,
+  // and we want to always show this to the user.
+  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+  consoleManager?.writeConsoleMessage(
+    getSystemMessage(pythonlabI18n.programStopped(), appName)
+  );
+  consoleManager?.writeConsoleMessage('');
+
   // Only restart if there are pending callbacks, as that means the worker is currently
   // running a program.
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
-
-    writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.programStopped(), appName)
-    );
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');

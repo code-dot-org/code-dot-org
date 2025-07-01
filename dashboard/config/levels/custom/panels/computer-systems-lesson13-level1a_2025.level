@@ -1,12 +1,13 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-22T01:25:41.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "## Target 1.3\nEnsure vulnerable populations receive support through social protection systems.\n\n---\n\n* Social protection includes programs like healthcare, food assistance, and unemployment benefits.\n* Vulnerable groups include elderly individuals, people with disabilities, low-income families, and refugees.\n* Many people face barriers to accessing these services due to lack of awareness, technology access, or complex application processes.\n* Governments and organizations use digital platforms, data systems, and AI tools to improve access to social protection.\n* Innovations in mobile apps, automated assistance, and real-time tracking can help ensure support reaches those in need.\n",
@@ -38,7 +39,6 @@
     "thumbnail_url": "https://images.code.org/52ef3204eda8b89d622f2a61e788e7af-Pasted Graphic 31.png",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:25:41.120+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1a-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1a-2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:25:41.120+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson13-level1a-2023\\\"\"],\"cloned_from\":\"computer-systems-lesson13-level1a-2023\"},{\"changed_at\":\"2025-04-25 17:14:23 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

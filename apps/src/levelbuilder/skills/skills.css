@@ -1,0 +1,96 @@
+/* Shared table styles for both SkillsTable and LevelsSkillsTable */
+.skills-table,
+.levels-skills-table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b0b0b0; /* color.border_gray */
+  width: 970px; /* styleConstants['content-width'] */
+  background-color: #f9f9f9; /* color.table_light_row */
+}
+
+.skills-table-header-cell,
+.levels-skills-table-header-cell {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.skills-table-header-cell-unset-maxwidth,
+.levels-skills-table-header-cell-unset-maxwidth {
+  max-width: unset;
+}
+
+.skills-table-cell-unset-maxwidth,
+.levels-skills-table-cell-unset-maxwidth {
+  max-width: unset;
+}
+
+.skill-trash-btn {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-trash-icon {
+  font-size: 12px;
+}
+
+.skills-table td,
+.skills-table th,
+.levels-skills-table td,
+.levels-skills-table th {
+  border: 1px solid #b0b0b0;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Styles for ViewSystemPrompt component */
+.view-system-prompt__toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.view-system-prompt__text {
+  margin-top: 8px;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* Styles for the modal container and dismiss button for SkillsEditDialog */
+.skills-modal {
+  min-width: 400px;
+  max-width: 90vw;
+  padding: 24px;
+  position: relative;
+}
+
+.skills-modal-dismiss {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.skills-modal-label {
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.skills-modal-input {
+  width: 600px;
+  height: 30px;
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

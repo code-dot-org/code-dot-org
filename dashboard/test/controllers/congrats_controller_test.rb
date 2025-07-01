@@ -2,8 +2,8 @@ require 'test_helper'
 
 class CongratsControllerTest < ActionController::TestCase
   test "shows congrats page for HoC course" do
-    hoc_unit = create(:hoc_script)
-    get :index, params: {s: Base64.urlsafe_encode64(hoc_unit.name)}
+    hoc_course = create(:hoc_course)
+    get :index, params: {s: Base64.urlsafe_encode64(hoc_course.name)}
     assert_response :success
 
     assert assigns(:is_hoc_tutorial)
@@ -11,7 +11,7 @@ class CongratsControllerTest < ActionController::TestCase
 
     certificate_data = assigns(:certificate_data)
     assert_equal 1, certificate_data.length
-    assert_equal hoc_unit.name, certificate_data[0][:courseName]
+    assert_equal hoc_course.name, certificate_data[0][:courseName]
   end
 
   test "shows congrats page for single-unit course if unit allows congrats page" do
@@ -26,12 +26,14 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "cached query test for hoc course" do
-    hoc_unit = create(:hoc_script)
+    hoc_course = create(:hoc_course)
 
     Unit.stubs(:should_cache?).returns(true)
 
     assert_cached_queries(0) do
-      get :index, params: {s: Base64.urlsafe_encode64(hoc_unit.name)}
+      # Reset @view_options before each request to avoid FrozenError on retries
+      @controller.instance_variable_set(:@view_options, nil)
+      get :index, params: {s: Base64.urlsafe_encode64(hoc_course.name)}
       assert_response :success
     end
   end
@@ -52,8 +54,9 @@ class CongratsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in teacher
 
-    pl_unit = create(:pl_unit, :is_course)
-    CourseOffering.add_course_offering(pl_unit)
+    pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
+    pl_unit = pl_course.default_units.first
+    CourseOffering.add_course_offering(pl_course)
     create :user_script, user: teacher, script: pl_unit, completed_at: Time.now
 
     get :index, params: {s: Base64.urlsafe_encode64(pl_unit.name)}
@@ -71,8 +74,9 @@ class CongratsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in teacher
 
-    pl_unit = create(:pl_unit, :is_course)
-    CourseOffering.add_course_offering(pl_unit)
+    pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
+    pl_unit = pl_course.default_units.first
+    CourseOffering.add_course_offering(pl_course)
     assert_nil UserScript.find_by(user: teacher, script: pl_unit)
 
     get :index, params: {s: Base64.urlsafe_encode64(pl_unit.name)}

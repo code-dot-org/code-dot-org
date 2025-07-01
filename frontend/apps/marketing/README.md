@@ -47,3 +47,22 @@ To build a docker image, run this command in the `frontend` directory:
 ```bash
 docker build -f apps/marketing/Dockerfile .
 ```
+
+## OpenTelemetry
+
+This application uses OpenTelemetry to collect telemetry, metrics, and logs.
+
+### Traces
+
+Trace instrumentations are provided from the following sources:
+
+- [Next.js OpenTelemetry integration](https://nextjs.org/docs/app/guides/open-telemetry).
+- [OpenTelemetry Node.js Auto Instrumentation](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node)
+
+### Logs
+
+Logs are first processed through [next-logger](https://www.npmjs.com/package/next-logger) which formats Next.js console output into structured JSON via [pino](https://www.npmjs.com/package/pino).
+
+Pino is instrumented via the [OpenTelemetry Pino Instrumentation](https://www.npmjs.com/package/@opentelemetry/instrumentation-pino) to add trace and span IDs to the logs. This allows for correlation of logs with traces.
+
+Finally, logs are collected using the [OpenTelemetry Node.js Auto Instrumentation](https://www.npmjs.com/package/@opentelemetry/auto-instrumentations-node) and are sent to the OpenTelemetry Collector via the [OpenTelemetry Exporter for Node.js](https://www.npmjs.com/package/@opentelemetry/exporter-trace-otlp-proto).

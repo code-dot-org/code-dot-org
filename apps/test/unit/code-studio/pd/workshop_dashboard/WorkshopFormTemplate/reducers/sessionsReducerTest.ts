@@ -15,7 +15,6 @@ describe('sessionsReducer', () => {
       locationName: '',
       meetingLink: '',
       format: 'in_person',
-      sameAsPrevious: false,
     },
   ];
 
@@ -35,42 +34,6 @@ describe('sessionsReducer', () => {
     expect(newState[0].locationName).toEqual('New Location');
   });
 
-  it('should handle UPDATE_SESSION_SAME_AS_PREVIOUS', () => {
-    const stateWithPrevious: SessionFormState[] = [
-      {
-        id: '0',
-        date: '2024-01-01',
-        start: '09:00',
-        end: '10:00',
-        locationAddress: '123 Main St',
-        locationName: 'Previous Location',
-        meetingLink: '',
-        format: 'in_person',
-        sameAsPrevious: false,
-      },
-      {
-        id: '1',
-        date: '2024-01-02',
-        start: '11:00',
-        end: '12:00',
-        locationAddress: '',
-        locationName: '',
-        meetingLink: '',
-        format: 'in_person',
-        sameAsPrevious: false,
-      },
-    ];
-    const action: SessionAction = {
-      type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
-      id: '1',
-    };
-    const newState = sessionsReducer(stateWithPrevious, action);
-    expect(newState[0].id).not.toEqual(newState[1].id);
-    expect(newState[1].locationAddress).toEqual('123 Main St');
-    expect(newState[1].locationName).toEqual('Previous Location');
-    expect(newState[1].sameAsPrevious).toEqual(true);
-  });
-
   it('should handle DELETE_SESSION', () => {
     const action: SessionAction = {type: 'DELETE_SESSION', id: '1'};
     const newState = sessionsReducer(initialState, action);
@@ -88,7 +51,6 @@ describe('sessionsReducer', () => {
         locationName: '',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
     const action: SessionAction = {type: 'SET_SESSIONS', payload: newSessions};

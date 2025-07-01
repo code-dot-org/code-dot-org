@@ -1,0 +1,10 @@
+name 'test-music-lab-sequences-practice-choice_v2'
+display_name 'Practice'
+description 'Choose at least 2 options below to try!'
+
+sublevels
+level 'test-music-lab-sequences-practice-choice-a_v2'
+level 'test-music-lab-sequences-practice-choice-c_v2'
+level 'music-lab-sequences-challenge-choice-c_v2'
+level 'music-lab-sequences-practice-challenge-freeplay_v2'
+uses_lab2

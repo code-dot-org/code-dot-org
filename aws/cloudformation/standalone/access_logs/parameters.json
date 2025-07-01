@@ -1,0 +1,14 @@
+[
+  {
+    "ParameterKey": "ShardCount",
+    "ParameterValue": "6"
+  },
+  {
+    "ParameterKey": "LogFields",
+    "ParameterValue": "timestamp,c-ip,time-to-first-byte,sc-status,sc-bytes,cs-method,cs-protocol,cs-host,cs-uri-stem,cs-bytes,x-edge-location,x-edge-request-id,x-host-header,time-taken,cs-protocol-version,c-ip-version,cs-user-agent,cs-referer,cs-uri-query,x-edge-response-result-type,x-forwarded-for,ssl-protocol,ssl-cipher,x-edge-result-type,fle-encrypted-fields,fle-status,sc-content-type,sc-content-len,sc-range-start,sc-range-end,c-port,x-edge-detailed-result-type,c-country,cs-accept-encoding,cs-accept,cache-behavior-path-pattern,cs-headers-count"
+  },
+  {
+    "ParameterKey": "OldLogFields",
+    "ParameterValue": "timestamp,c-ip,time-to-first-byte,sc-status,sc-bytes,cs-method,cs-protocol,cs-host,cs-uri-stem,cs-bytes,x-edge-location,x-edge-request-id,x-host-header,time-taken,cs-protocol-version,c-ip-version,cs-user-agent,cs-referer,cs-uri-query,x-edge-response-result-type,x-forwarded-for,ssl-protocol,ssl-cipher,x-edge-result-type,fle-encrypted-fields,fle-status,sc-content-type,sc-content-len,sc-range-start,sc-range-end,c-port,x-edge-detailed-result-type,c-country,cs-accept-encoding,cs-accept,cache-behavior-path-pattern,cs-headers-count"
+  }
+]

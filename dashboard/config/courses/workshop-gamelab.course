@@ -3,6 +3,9 @@
   "script_names": [
     "workshop-gamelab"
   ],
+  "original_script_names": [
+    "workshop-gamelab"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -1,0 +1,138 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:17.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "lady_gaga_born_this_way",
+      "sounds": {
+        "lady_gaga_born_this_way": [
+          "drums_chorus",
+          "drums_clap_beat",
+          "drums_clap_breakdown",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_small",
+          "drums_glitch_fill",
+          "drums_triplet_fill",
+          "drums_long_fill",
+          "synth_distorted",
+          "synth_main_chorus",
+          "synth_main_intro",
+          "synth_main_small",
+          "synth_saw",
+          "synth_big_chorus",
+          "synth_blocks",
+          "synth_choir",
+          "synth_delay",
+          "synth_plink",
+          "synth_bounce",
+          "crash",
+          "bell",
+          "riser",
+          "sweep",
+          "digital_toms"
+        ]
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "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\nTRvA8ePJrhY=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Born This Way",
+    "long_instructions": "### Born This Way\r\n\r\n**Define:** *Born This Way* by Lady Gaga is known for its pulsing synth leads and powerful drum beats. Your challenge is to create a remix that highlights these features using only the synth lead and beat tracks from the song.\r\n\r\n**Prepare:** Explore the synth lead and beat tracks from the song. Plan how you'll combine different beats and leads to create a strong, energetic sound. Listen to the example below to hear what this could sound like.\r\n\r\n**Try:** Use at least 3 different beat tracks and 2 different synth lead tracks. Organize your code using 2 functions. Add at least one effect to shape the sound and create energy in your remix.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your remix capture the pulse and power of the original song? How did your use of functions and effects help shape the final sound? In order to complete this level, your remix must include:\r\n\r\n- 3 different beat tracks\r\n- 2 different lead tracks\r\n- 2 functions\r\n- At least 1 effect",
+    "bubble_choice_description": "Born This Way by Lada Gaga is filled with pulsing synth leads and full drum beats. Create a remix of the song that emphasizes these qualities.",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/lady_gaga_born_this_way/lady_gaga_born_this_way.jpg",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-practiceB_223ded5e-3489-4dac-8a70-7302bcfae5ef",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:2"
+          },
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 2
+          },
+          {
+            "name": "used_effect"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-practiceB_281bc582-8193-4ece-8f20-c345995fb65f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n\n- **3 different beat tracks**,\n- **2 different lead tracks**\n- **2 functions**\n- **at least one effect.**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:17.407+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-practiceB\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-practiceB\"},{\"changed_at\":\"2025-06-25 20:35:55 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:42:43 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

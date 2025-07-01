@@ -5,6 +5,7 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {PYTHONLAB_VALID_FILE_TYPES} from '@cdo/apps/pythonlab/constants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 import {
@@ -22,7 +23,13 @@ export const FileBrowserHeaderPopUpButton = () => {
     config: {validMimeTypes},
     levelProperties,
   } = useCodebridgeContext();
-  const validationFile = levelProperties.validationFile;
+  const {appName, validationFile} = levelProperties;
+  const openNewFilePromptArgs = {
+    folderId: DEFAULT_FOLDER_ID,
+    ...(appName === 'pythonlab' && {
+      validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
+    }),
+  };
 
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(source.files);
@@ -32,6 +39,9 @@ export const FileBrowserHeaderPopUpButton = () => {
       callback: handleFileUpload,
       errorCallback: uploadErrorCallback,
       validMimeTypes,
+      ...(appName === 'pythonlab' && {
+        validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
+      }),
     },
     DEFAULT_FOLDER_ID
   );
@@ -56,7 +66,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         <PopUpButtonOption
           iconName="plus"
           labelText={codebridgeI18n.newFile()}
-          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
+          clickHandler={() => openNewFilePrompt(openNewFilePromptArgs)}
           id="uitest-new-file"
         />
         <PopUpButtonOption

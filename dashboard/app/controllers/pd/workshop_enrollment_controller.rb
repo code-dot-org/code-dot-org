@@ -31,15 +31,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      @script_data = {
-        props: {
-          new_account_url: "/users/sign_up/login_type?user_type=teacher&user_return_to=/pd/workshops/#{@workshop.id}/enroll",
-          existing_account_url: "/users/sign_in?user_return_to=/pd/workshops/#{@workshop.id}/enroll"
-        }.to_json
-      }
-      render :logged_out
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
     elsif current_user.user_type == 'student'
-      render :students_cannot_enroll
+      source_page = ERB::Util.url_encode('workshop enroll')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
+
+      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
@@ -56,7 +56,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO: Come up with more permanent solution that doesn't require cross-project file dependency.
+        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
         bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
@@ -96,7 +96,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_offerings: @workshop.course_offerings
             }
           ),
-          workshop_location_for_calendar: @workshop.location_address.presence || @workshop.location_name,
           session_dates: session_dates,
           session_info_for_calendar: session_info_for_calendar,
           enrollment: @enrollment,
@@ -105,6 +104,59 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics,
           school_info: Queries::SchoolInfo.current_school(current_user)
+        }.to_json
+      }
+    end
+  end
+
+  # GET /pd/workshops/1/join
+  # This is for users who have registered for an external workshop. They'll receive a link to complete their
+  # enrollment in our system via this join workshop page.
+  def join
+    @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
+
+    if !current_user || current_user.user_type == 'student'
+      source_page = ERB::Util.url_encode('workshop join')
+      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/join")
+      page_type = current_user ? "teacher_account_required" : "logged_out"
+
+      redirect_to "/#{page_type}?source_page=#{source_page}&return_to=#{return_to}"
+    else
+      enroll_status =
+        if @workshop.nil?
+          "not found"
+        elsif workshop_closed?
+          "closed"
+        elsif workshop_full?
+          "full"
+        elsif @workshop.organizer_or_facilitator? current_user
+          "own"
+        elsif @workshop.enrollments.any? {|enrollment| enrollment.user_id == current_user.id}
+          "duplicate"
+        else
+          "unsubmitted"
+        end
+
+      view_options(full_width: true, responsive_content: true, no_padding_container: true)
+      @script_data = {
+        props: {
+          workshop_enrollment_status: enroll_status,
+          workshop_info: {
+            id: @workshop.try(:id)&.to_s,
+            course: @workshop.try(:course),
+            subject: @workshop.try(:subject),
+            name: @workshop.try(:name),
+            format: @workshop.try(:format),
+            rp_name: @workshop.try(:regional_partner).try(:name),
+            session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
+          },
+          user_info: {
+            display_name: current_user.name,
+            given_name: current_user.try(:given_name),
+            family_name: current_user.try(:family_name),
+            email: current_user.email,
+            school_name: current_user.try(:school_info).try(:effective_school_name).try(:titleize)
+          }
         }.to_json
       }
     end

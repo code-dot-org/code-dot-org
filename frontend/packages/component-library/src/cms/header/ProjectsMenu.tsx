@@ -61,7 +61,7 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
         size="s"
         color="white"
         iconRight={{
-          iconName: isOpen ? 'minus' : 'plus',
+          iconName: 'plus',
           iconStyle: 'solid',
         }}
         onClick={() => {
@@ -78,7 +78,7 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
           )}
           aria-label={projectsButtonAriaLabel.menu || 'Projects menu'}
         >
-          {projectsLinks.map(
+          {projectsLinks?.map(
             ({key, href, label, image, description, ...link}) => (
               <li key={key}>
                 <a href={href} {...link}>

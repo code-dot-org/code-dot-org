@@ -191,6 +191,36 @@ describe('TabGroup', () => {
         within(accordion).queryByText('Track Your Progress'),
       ).not.toBeVisible();
     });
+
+    it('renders tab content without image or button', () => {
+      render(
+        <TabGroup
+          tabs={[
+            {
+              value: 'tab1',
+              text: 'Text Only Tab',
+              tabContent: {
+                title: 'Only Title',
+                description: 'No image or button provided.',
+              },
+            },
+          ]}
+          name="no-image-button"
+          defaultSelectedTabValue="tab1"
+        />,
+      );
+
+      const accordion = screen.getByRole('region');
+
+      expect(within(accordion).getByText('Only Title')).toBeInTheDocument();
+      expect(
+        within(accordion).getByText('No image or button provided.'),
+      ).toBeInTheDocument();
+
+      // Optional: ensure image and button are not rendered
+      expect(within(accordion).queryByRole('img')).not.toBeInTheDocument();
+      expect(within(accordion).queryByRole('link')).not.toBeInTheDocument();
+    });
   });
 
   // ✅ Desktop view testing
@@ -238,6 +268,36 @@ describe('TabGroup', () => {
       expect(
         within(tabPanel).queryByText('Track Your Progress'),
       ).not.toBeInTheDocument();
+    });
+
+    it('renders tab content without image or button', () => {
+      render(
+        <TabGroup
+          tabs={[
+            {
+              value: 'tab1',
+              text: 'Text Only Tab',
+              tabContent: {
+                title: 'Only Title',
+                description: 'No image or button provided.',
+              },
+            },
+          ]}
+          name="no-image-button"
+          defaultSelectedTabValue="tab1"
+        />,
+      );
+
+      const tabPanel = screen.getByRole('tabpanel', {
+        name: 'Text Only Tab',
+      });
+
+      expect(within(tabPanel).getByText('Only Title')).toBeInTheDocument();
+      expect(
+        within(tabPanel).getByText('No image or button provided.'),
+      ).toBeInTheDocument();
+      expect(within(tabPanel).queryByRole('img')).not.toBeInTheDocument();
+      expect(within(tabPanel).queryByRole('link')).not.toBeInTheDocument();
     });
   });
 });

@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson8-level9_2025-launch_2025'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Make It Last'
+description 'Choose **ONE** scenario and write your own function that uses `has_paint()` in a `while` loop.'
 
 sublevels
 level 'programming-fundamentals-lesson8-level9a_2025-launch_2025'

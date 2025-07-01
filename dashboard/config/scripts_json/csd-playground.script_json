@@ -6,11 +6,12 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:01 UTC",
+    "serialized_at": "2025-04-25 23:10:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -357,6 +358,36 @@
       },
       "seeding_key": {
         "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-21",
+      "name": "Script Experiment Lesson",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-22",
+      "name": "Script Experiment Paste",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1035,6 +1066,116 @@
       "seeding_key": {
         "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202",
         "lesson.key": "Sequences - Explore",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "75b72915-ac93-49b3-b8a5-26af24147aa1",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75b72915-ac93-49b3-b8a5-26af24147aa1",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "c09a1f04-e986-4301-b1d8-e029b4c0b975",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "0ef2540c-2256-4265-8918-cca448db77df",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1",
+        "lesson.key": "lesson-21",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "6bb6381c-622b-465a-b634-2afe798888e1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "619f2862-83c5-4b54-853a-125fa98172b7",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7",
+        "lesson.key": "lesson-22",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2952,6 +3093,327 @@
       "seeding_key": {
         "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786",
         "lesson_activity.key": "9995d5cb-11e1-41dd-979a-9c2865786202"
+      }
+    },
+    {
+      "key": "26323725-2e09-4bfc-93e6-ca81299797cb",
+      "position": 1,
+      "properties": {
+        "description": "Coolio!"
+      },
+      "seeding_key": {
+        "activity_section.key": "26323725-2e09-4bfc-93e6-ca81299797cb",
+        "lesson_activity.key": "75b72915-ac93-49b3-b8a5-26af24147aa1"
+      }
+    },
+    {
+      "key": "c48d7bb0-18c9-4f33-93c8-6235e68bf26e",
+      "position": 1,
+      "properties": {
+        "description": "found and replaced",
+        "name": "Activity Title",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "callout 2"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c48d7bb0-18c9-4f33-93c8-6235e68bf26e",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "8b9c7759-feba-4dd5-8033-01203261bafb",
+      "position": 2,
+      "properties": {
+        "description": "activity section 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b9c7759-feba-4dd5-8033-01203261bafb",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "dc38bbde-d7fe-4d03-bb4a-6d73d37fd65a",
+      "position": 3,
+      "properties": {
+        "description": "activity section with callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "teaching tip 1"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dc38bbde-d7fe-4d03-bb4a-6d73d37fd65a",
+        "lesson_activity.key": "c09a1f04-e986-4301-b1d8-e029b4c0b975"
+      }
+    },
+    {
+      "key": "c76389f1-69c7-4dc9-add6-8d86d565f519",
+      "position": 1,
+      "properties": {
+        "description": "activity section 4",
+        "name": "Activity Title"
+      },
+      "seeding_key": {
+        "activity_section.key": "c76389f1-69c7-4dc9-add6-8d86d565f519",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "9a05a6ad-2f43-48ad-99e8-693f7adcc042",
+      "position": 2,
+      "properties": {
+        "description": "activity section with assessment opportunity",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": ""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a05a6ad-2f43-48ad-99e8-693f7adcc042",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "060865be-4c40-49c3-a2f2-90eaa4bd01ea",
+      "position": 3,
+      "properties": {
+        "description": "activity section with another callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "teaching tip 2"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "060865be-4c40-49c3-a2f2-90eaa4bd01ea",
+        "lesson_activity.key": "0ef2540c-2256-4265-8918-cca448db77df"
+      }
+    },
+    {
+      "key": "19908ffe-fa93-42ad-9ff9-fe371a27bfdf",
+      "position": 1,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "19908ffe-fa93-42ad-9ff9-fe371a27bfdf",
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4"
+      }
+    },
+    {
+      "key": "27829f19-5a81-4e97-911b-ff34a0442f1f",
+      "position": 2,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "27829f19-5a81-4e97-911b-ff34a0442f1f",
+        "lesson_activity.key": "96b2b653-f8b2-4adb-9f01-98a4b0f570c4"
+      }
+    },
+    {
+      "key": "1e49b20f-e191-4ce1-9eb1-2dcd88e4541b",
+      "position": 1,
+      "properties": {
+        "description": "activity section"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e49b20f-e191-4ce1-9eb1-2dcd88e4541b",
+        "lesson_activity.key": "ef41ea0d-a5f0-479b-ac6d-9c771bb974c1"
+      }
+    },
+    {
+      "key": "f592636c-b34c-4af0-9a9c-8b2a597df071",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_0_16\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Group students in pairs or groups of three and read aloud the sentence on the board. Have students take turns one-by-one building on the conversation by starting their next sentence with \"Yes, and..\"\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "10",
+        "name": "Yes, and…",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - For example:\nOpening Statement: \"A mysterious talking cat started showing up to math class.\"\n- Student 1: \"Yes, and he said his name is Whiskers.\"\n- Student 2: \"Yes, and he happens to be very good at multiplication.\"\n- Student 1: \"Yes, and he has a sister who started showing up to English class.\"\n\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f592636c-b34c-4af0-9a9c-8b2a597df071",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "dc5003f8-5b1a-4365-846c-72a573e9360d",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Summarize the story you came up with. What were the last two sentences of your conversation?\n\t\t<br />Have several groups summarize where their conversation went. Then have them share out their last sentence or two that they came up with.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recognize that all groups started with the same sentence starter but may have ended up with very different conversations. Have students note any patterns between the stories as well as any differences. This game leads into the main activity by explaining how AI generates content.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_230\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_235\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc5003f8-5b1a-4365-846c-72a573e9360d",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "8a526eb5-f3b2-484e-93bd-c19ad67e2556",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a526eb5-f3b2-484e-93bd-c19ad67e2556",
+        "lesson_activity.key": "2aabad39-0459-4d84-a71f-eae8f8b2f40f"
+      }
+    },
+    {
+      "key": "ea940e90-dbf6-4289-ac23-c33905bf7a84",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g338b488f2e8_1_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Give each student a copy of the Problem Solving with AI Unit Guide.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea940e90-dbf6-4289-ac23-c33905bf7a84",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "61adc198-36b3-4a7f-9a44-14ddfea9c3a5",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_19\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define artificial intelligence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_55\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Predict the word that you think will probably come next in the following sentence: The dog barked at the...\n\t\t<br />Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Model the AI Chat in Lesson 1, Level 1 for students. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students experiment with using the AI Chat to complete the sentence.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n   ",
+        "duration": "10",
+        "name": "AI Predictions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Have AI generate several outcomes to complete the sentence. You can keep prompting AI Chat using the same prompt or follow up by prompting it to \"generate three more answers\". You may also want to have students try out the prompt on their devices and compare responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61adc198-36b3-4a7f-9a44-14ddfea9c3a5",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "309bd928-94be-4ee6-9659-7b373adfe305",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_64\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How does AI's output compare to the word you predicted?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should start to see how AI selects words based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_25\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define probability.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_332\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through this scenario of probability-driven predictions that make sense and are successful. Make sure students understand that the grey box represents the user input, and the blue box below represents the AI Chat response.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> AI uses the computational skill of pattern recognition to generate its most likely response. For example, it reads over thousands of sentences that contain the different phrases above (e.g. \"heard the knock at the…\") and starts to recognize a pattern.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_87\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Examine this scenario where probability-driven predictions fail because they don't rely on meaning.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341a65f858a_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Explain that AI focused on the words \"key\", \"on\", and \"table\" and abstracted away unnecessary details of the prompt.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Since AI doesn't understand meaning, it drew a single key resting on the table in an unrealistic way. It prioritized the literal meaning of the essential details of the sentence rather than considering the sentence as a whole.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341a65f858a_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define abstraction.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "309bd928-94be-4ee6-9659-7b373adfe305",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "29ade772-3584-4a8f-8e35-e6b74cd29e3c",
+      "position": 4,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_104\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Define prompt.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_111\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n\t\t<br />Level 2: Students input \"Give me 3 gift ideas\" into AI Chat.\n\t\t<br />Level 3: Students input a more specific prompt that defines the person who is getting the gift.\n\t\t<br />Level 4: Students upload an image to accompany the specific prompt that they reuse from Level 3.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_77\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Show the \"Plan a Perfect Trip with ChatGPT\" video.\n\t\t<br />\n\t\t<br />Questions to consider with the video:\n\t\t<br />What tips might you give to someone else who is looking to improve their prompts?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students might point out that they should include both information that they are interested in getting, but also information that they are not. They might also mention that including demographic information and specific numbers are helpful for more useful responses.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "20",
+        "name": "Prompting AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science. While interacting with the video, turn on closed captioning so students can also read along as they watch. To encourage active engagement and reflection, use one or more of the strategies discussed in the <a href=\"https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing\" target=\"_blank\">Guide to Curriculum Videos</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "29ade772-3584-4a8f-8e35-e6b74cd29e3c",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "7f08b56c-1054-4d1f-bd6d-a164b4ac67bf",
+      "position": 5,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g341232c2a83_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me plan a trip to Disney World\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - This is a choice level, so students only need to complete one of the levels. However, if students finish early or are looking for an additional challenge, they can choose Option D: Debate an AI Partner level. This option is more challenging because it requires students to engage in a back-and-forth exchange with AI, refine their arguments, and adapt their reasoning based on AI's responses. Unlike other choices that focus on planning tasks, this level encourages students to critically analyze AI-generated arguments and practice constructing persuasive responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7f08b56c-1054-4d1f-bd6d-a164b4ac67bf",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "3bf48bd9-292a-43e3-bc4a-7b09a9affeb2",
+      "position": 6,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g338936f2b73_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Direct students to Lesson 1, Level 6 to complete the formative assessment. Display students' anonymous responses.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bf48bd9-292a-43e3-bc4a-7b09a9affeb2",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "61fbfaf5-51c6-4f19-a74d-82223e563d0a",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity:** - This level can be used as a formative assessment to check student understanding of the lesson objectives. Here are things to look for and actions you can take:\n- If students are only describing what happened rather than why it happened, prompt them to revisit earlier lesson segments on probability-driven outputs. Consider a quick group discussion where students share examples of prompts that worked well and why those prompts influenced AI's response.\n- If students seem uncertain about constructing high-quality prompts, have them re-examine Level 5 where best prompting strategies are summarized. They can also do a brief pair activity—each student provides a vague prompt, then a specific prompt, and compares the results.\n- If many students need more help, provide short demos or additional videos showing how multimodal inputs can change the AI's outputs. Or point them to the optional video about planning a family trip to emphasize how refining prompts improves results. Encourage a follow-up activity where students generate multiple answers to the same prompt, then analyze and explain what changed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61fbfaf5-51c6-4f19-a74d-82223e563d0a",
+        "lesson_activity.key": "6bb6381c-622b-465a-b634-2afe798888e1"
+      }
+    },
+    {
+      "key": "57867549-3678-4a2e-96f4-2abda69bcab5",
+      "position": 1,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g111726a1132_0_199\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the lesson objectives.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Question of the Day.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "57867549-3678-4a2e-96f4-2abda69bcab5",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "3405d565-31e0-4c8c-98e2-4a566641ea88",
+      "position": 2,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_41\"></td>\n    <td style=\"width: 75%\">\n      <br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sit in a circle or small groups. Pose the Question of the Day to students. One by one, they quickly state their answer to the Question of the Day. Responses should be brief (one sentence or key phrase). They should see how many unique answers they can come up with. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n",
+        "duration": "5",
+        "name": "Rapid Roundtable",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip:** - If students are struggling to answer the Question of the Day, have them think about which prompting strategies got them the most helpful AI Chat outputs. For example, ask students what details they included in their prompts or how they selected an image to add to their prompt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3405d565-31e0-4c8c-98e2-4a566641ea88",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "6da81283-a763-4bd7-b8ea-f3b3b3e3f5c4",
+      "position": 3,
+      "properties": {
+        "description": "<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2694c47731d_3_56\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the Key Vocabulary.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY/export/png?id=1nH3S6JZvLmO76KznReflLKB-rjA2H9p1ld_ygulXnkY&pageid=g2669c93d226_0_77\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Direct students to Lesson 1, Level 7 to complete the End of Lesson Survey.\n    </td>\n  </tr>\n\n</table>"
+      },
+      "seeding_key": {
+        "activity_section.key": "6da81283-a763-4bd7-b8ea-f3b3b3e3f5c4",
+        "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
       }
     }
   ],

@@ -1,0 +1,246 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "aloe_blacc_wake_me_up/vocals_verse_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "DM5BH_a!%ZO_w06:eya=",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "aloe_blacc_wake_me_up/vocals_verse_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "81`}bjN{[.T}2{0NL(k@",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "aloe_blacc_wake_me_up/vocals_verse_3"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "/B98?~28)}PS^Y}4qn9M",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": true
+                                          },
+                                          "fields": {
+                                            "sound": "aloe_blacc_wake_me_up/vocals_verse_4"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false,
+      "packId": "aloe_blacc_wake_me_up",
+      "sounds": {
+        "aloe_blacc_wake_me_up": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "main_beat",
+          "rim",
+          "tambourine",
+          "shaker",
+          "bass_intro",
+          "bass_verse",
+          "piano_intro",
+          "piano_verse",
+          "piano_chorus",
+          "piano_melody",
+          "guitar_intro",
+          "guitar_verse",
+          "guitar_chorus"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "validationMode": "type"
+    },
+    "encrypted_exemplar_sources": "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\nRvHZsgog2Ww2V2bV4fuP0nkbXN+LreN+Zq4=\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Wake Me Up",
+    "long_instructions": "### Wake Me Up\r\n\r\n**Define:** You've been asked to recreate the verse of *Wake Me Up* by Aloe Blacc. The vocals are already provided, but it's up to you to choose the right instruments to support the lyrics. Your goal is to design a backing track that matches the tone and energy of the song.\r\n\r\n**Prepare:** Listen to the vocal track and think about what kind of beats, bass, and leads would sound good underneath. Should the mood be upbeat or mellow? Which instruments will bring out the feeling of the verse? Listen to the example below for what this could sound like!\r\n\r\n**Try:** Build your backing track by adding beat, bass, and lead blocks. Make sure the timing and layering work well with the vocals.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Listen to your song and iterate until it sounds the way you want it to. In order to complete this level, your remix must include:\r\n\r\n- 2 backing beats\r\n- 1 backing bass\r\n- 2 backing leads\r\n\r\n![](https://images.code.org/6da980b189007c9fef0f52c4be0067fa-image-1744321484407.png)",
+    "bubble_choice_description": "Recreate the verse to \"Wake Me Up\" by Aloe Blacc",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-practice-3_c9ce2fce-3883-4768-b7ac-3dca1f33c20b",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:2"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 6
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-3_eb762966-47f8-4f82-bd26-d6b589e79f71",
+        "message": "Sounds like you have your tracks! Now make sure they loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:1"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:2"
+          },
+          {
+            "name": "played_sounds_together",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-3_c7794d5f-4b50-4a1b-a33b-f040ef779092",
+        "message": "Not sure where to start? Try adding your beat, bass, and lead tracks to play together!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/aloe_blacc_wake_me_up/aloe_blacc_wake_me_up.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.005+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-3\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-3\"},{\"changed_at\":\"2025-06-12 16:08:58 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 16:10:24 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:17:56 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:57:06 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -6,9 +6,12 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
-    @unit = create(:csp_script, :with_levels, version_year: '2024', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@unit)
+    @unit = create(:csp_script, :with_levels)
+    @unit_group = create(:single_unit_course, name: 'csp-2024', family_name: 'csp', version_year: '2024', unit: @unit)
+    CourseOffering.add_course_offering(@unit_group)
     @level = @unit.levels.first
+    @skill = create(:skill)
+    create(:levels_skill, level: @level, skill: @skill)
     @ule_params = {
       type: 'UserLevelEvaluation',
       level_id: @level.id,
@@ -16,7 +19,7 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
       student_id: @student.id,
       evaluator: "AI",
       evaluation_criteria: 'Did the student answer the question?',
-      evaluation: 'great',
+      evaluation: 'Great',
       reasoning: 'The student answered all parts of the question correctly.',
       ai_model_version: 'robots-1.0',
     }
@@ -25,9 +28,10 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
       level_id: @level.id,
       unit_id: @unit.id,
       student_id: @student.id,
+      skill_id: @skill.id,
       evaluator: "AI",
       evaluation_criteria: 'Did the student declare a variable correctly?',
-      evaluation: 'needs revision',
+      evaluation: 'Needs revision',
       reasoning: 'The student declared a variable, but did not follow naming conventions.',
       ai_model_version: 'robots-1.0',
     }

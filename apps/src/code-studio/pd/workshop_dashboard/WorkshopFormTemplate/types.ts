@@ -1,6 +1,8 @@
 import {Dispatch} from 'react';
 
-export interface Option {
+import {Option} from './components/MultiSelectInput';
+
+export interface FieldOption {
   value: string;
   label: string;
 }
@@ -10,7 +12,7 @@ export interface FieldConfig<T extends WorkshopFormState | SessionFormState> {
   stateKey: keyof T;
   label: string;
   helperMessage?: string;
-  options?: Option[];
+  options?: FieldOption[];
 }
 export interface SessionFields {
   date: FieldConfig<SessionFormState>;
@@ -50,13 +52,19 @@ export interface WorkshopCourseConfig {
 }
 
 export interface WorkshopFormTemplateProps {
-  config: WorkshopCourseConfig;
+  config?: WorkshopCourseConfig;
+  regionalPartnerData?: RegionalPartner[];
 }
 
 export interface Organizer {
   id: number;
   name: string;
   email: string;
+}
+
+export interface PotentialOrganizer {
+  value: number;
+  label: string;
 }
 
 export type SessionFormat = 'virtual' | 'in_person';
@@ -66,9 +74,9 @@ export interface Session {
   start: string;
   end: string;
   code: string;
-  location_address?: string;
-  location_name?: string;
-  meeting_link?: string;
+  location_address?: string | null;
+  location_name?: string | null;
+  meeting_link?: string | null;
   session_format: SessionFormat;
 }
 
@@ -90,37 +98,36 @@ export interface SessionFormState {
   locationName: string;
   meetingLink: string;
   format: SessionFormat;
-  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
   id: number;
-  course?: string;
-  name?: string;
-  capacity?: number;
+  course?: string | null;
+  name?: string | null;
+  capacity?: number | null;
   grades?: string[];
-  description?: string;
-  notes?: string;
+  description?: string | null;
+  notes?: string | null;
   suppress_email?: boolean;
-  regional_partner_id?: number;
+  regional_partner_id?: number | null;
   organizer?: Organizer;
   facilitators?: Facilitator[];
-  subject?: string;
-  fee?: string;
-  prereq?: string;
+  subject?: string | null;
+  fee?: string | null;
+  prereq?: string | null;
   hidden?: boolean;
-  registration_link?: string;
+  registration_link?: string | null;
   sessions: Session[];
   course_offerings?: number[];
-  participant_group_type?: string;
-  time_zone?: string;
+  participant_group_type?: string | null;
+  time_zone?: string | null;
 }
 
 export interface WorkshopRequest
   extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
   id?: number;
   facilitators: number[];
-  organizer?: number;
+  organizer_id: number | null;
 }
 
 export interface CourseOffering {
@@ -140,11 +147,10 @@ export interface Facilitator {
 }
 
 export interface WorkshopFormState {
-  id?: number;
   course: string;
   capacity: string;
   description: string;
-  facilitators: number[];
+  facilitators: Option[];
   fee: string;
   grades: string[];
   hidden: boolean;
@@ -177,7 +183,11 @@ type BasicsKeys =
   | 'description'
   | 'courseOfferings';
 
-type PartnerFacilitatorKeys = 'facilitators' | 'regionalPartnerId';
+type PartnerFacilitatorKeys =
+  | 'facilitators'
+  | 'regionalPartnerId'
+  | 'organizerId'
+  | 'courseOfferings';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 
@@ -204,8 +214,6 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
-  regionalPartnerData: RegionalPartner[] | null;
-  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 
@@ -236,14 +244,14 @@ export interface ScheduleProps
 export interface PublishCancelButtonsProps {
   publish: () => void;
   cancel: () => void;
+  loading: boolean;
 }
 
 export type SessionAction =
   | {type: 'ADD_SESSION'}
   | {type: 'UPDATE_SESSION'; payload: Partial<SessionFormState>; id: string}
   | {type: 'SET_SESSIONS'; payload: SessionFormState[]}
-  | {type: 'DELETE_SESSION'; id: string}
-  | {type: 'UPDATE_SESSION_SAME_AS_PREVIOUS'; id: string};
+  | {type: 'DELETE_SESSION'; id: string};
 
 export type WorkshopAction =
   | {type: 'UPDATE_WORKSHOP'; payload: Partial<WorkshopFormState>}

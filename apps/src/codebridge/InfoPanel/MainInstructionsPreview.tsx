@@ -11,28 +11,25 @@ interface MainInstructionsPreviewProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
   theme: Theme;
-  hasPassed: boolean;
 }
 
 /**
  * Component for levelbuilder to preview the main instructions bubble (without predict answers or validation).
+ * This is rendered outside of the usual lab2 container, hence why we need to provide a data-theme.
  */
 const MainInstructionsPreview: React.FunctionComponent<
   MainInstructionsPreviewProps
-> = ({instructionsText, handleInstructionsTextClick, theme, hasPassed}) => {
+> = ({instructionsText, handleInstructionsTextClick, theme}) => {
   return (
     <div
       key={instructionsText}
       id="instructions-text"
-      className={classNames(
-        moduleStyles['bubble-' + theme],
-        moduleStyles.bubbleNoSlide
-      )}
+      className={classNames(moduleStyles.bubble, moduleStyles.bubbleNoSlide)}
+      data-theme={theme}
     >
       <MainInstructionsContent
         instructionsText={instructionsText}
         handleInstructionsTextClick={handleInstructionsTextClick}
-        hasPassed={hasPassed}
       />
     </div>
   );

@@ -4071,7 +4071,7 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
     },
     {
       id: 'playlab:hoc2015_blockly_15:categories',
-      element_id: '.blocklyTreeRoot:visible',
+      element_id: '.blocklyToolboxCategoryGroup:visible',
       qtip_config: {
         content: {
           text: msg.calloutBlocklyCategories(),

@@ -3,6 +3,9 @@
   "script_names": [
     "coursef-ramp"
   ],
+  "original_script_names": [
+    "coursef-ramp"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

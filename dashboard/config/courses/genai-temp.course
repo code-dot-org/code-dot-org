@@ -3,6 +3,9 @@
   "script_names": [
     "genai-temp"
   ],
+  "original_script_names": [
+    "genai-temp"
+  ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

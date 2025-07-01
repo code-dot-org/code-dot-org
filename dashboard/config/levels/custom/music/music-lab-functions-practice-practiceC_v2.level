@@ -1,0 +1,618 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:58.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "benson_boone_beautiful_things/electric_guitar_intro"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sounds_sequential",
+                            "id": "play_sounds_sequential",
+                            "deletable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": ",(a+Bxl.aaCQv^V3;KBj",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "benson_boone_beautiful_things/electric_guitar_verse_1A"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "U2A~UJ7@AE[erg#+Ip4*",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "benson_boone_beautiful_things/electric_guitar_intro"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_together",
+                                          "id": "%)VBnE9E4e=#4UZ}xac7",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "34~R/V5`2QmD8Tpe}/^m",
+                                                "deletable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "benson_boone_beautiful_things/bass_verse_1A"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "[*m!P69j1lNc8(4VF_n+",
+                                                    "deletable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "benson_boone_beautiful_things/electric_guitar_verse_1A"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "cX6iH3//C^Slr}A;?qRk",
+                                                        "deletable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "benson_boone_beautiful_things/acoustic_verse_1A"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sounds_together",
+                                              "id": "t*7{9~.pZ(H?DX@z:vWU",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "ne)?v~KRlx6{Y@2p~dF+",
+                                                    "deletable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "benson_boone_beautiful_things/bass_verse_1B"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "?:SB1w/KM%TmuX_z71gU",
+                                                        "deletable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "benson_boone_beautiful_things/electric_guitar_intro"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sound_at_current_location_simple2",
+                                                            "id": "DniV.!f;.MP|wH3XLfqO",
+                                                            "deletable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "sound": "benson_boone_beautiful_things/acoustic_verse_1B"
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_sequential",
+                                "id": "iEUsD9sfrJ4UwK*bM7ia",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "sg?4}!:s.sR@[(hLe~CJ",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "benson_boone_beautiful_things/vocals_verse_1A"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "ie7%xA]|6|oHHR;w$6Kg",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "benson_boone_beautiful_things/vocals_verse_1B"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "Wt26k5n!ERw}s{s8ZHVp",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "benson_boone_beautiful_things/vocals_verse_1C"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "Q4N8EFJU-J,A_3I@2xen",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "benson_boone_beautiful_things/vocals_verse_1D"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "=0*oJ8ug!aYu@$A0zSf?",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "MAv#dmSk0%ZMER0m1XQQ",
+                                "deletable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "benson_boone_beautiful_things/kick_drum"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_sequential",
+                                    "id": ")UYY[!:dR.T7#.sI1z`d",
+                                    "deletable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "I@DM,CdK+GlNp%LsP3|V",
+                                          "deletable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "benson_boone_beautiful_things/electric_guitar_chorus_small"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sounds_together",
+                                              "id": "u-1]Cr305cZ-35WnzG//",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "inputs": {
+                                                "code": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "/Oe)J@5b.[NqP@UuuvFX",
+                                                    "deletable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "benson_boone_beautiful_things/electric_guitar_chorus_build"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "]iC)TN3V*Fo1pSh,npE}",
+                                                        "deletable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "benson_boone_beautiful_things/bass_chorus_build"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_sound_at_current_location_simple2",
+                                                            "id": "7cW_!|wqycf@67Tf`8c1",
+                                                            "deletable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "sound": "benson_boone_beautiful_things/drums_chorus_build"
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sounds_sequential",
+                                        "id": "`m~.o%6LsL#eceUX2:s4",
+                                        "deletable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "inputs": {
+                                          "code": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "~?GYNPAl[@Rl2qw.FTeY",
+                                              "deletable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "benson_boone_beautiful_things/vocals_small_chorus_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "9.j9hT9!V:3jX]2[9;I3",
+                                                  "deletable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "benson_boone_beautiful_things/vocals_small_chorus_2"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "%iGa[3Dm)xg.oyuC_kEz",
+                                                      "deletable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "benson_boone_beautiful_things/vocals_small_chorus_3"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "((]Q_iy4wKh^K_D,e3F{",
+              "x": 410,
+              "y": 90,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "|ilu8:-T`A[pLU=xNEV@",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_instruments"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "DOz%rEaCSG.]wXD_;v[0",
+              "x": 650,
+              "y": 90,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "EU-+.#Ie?pb0U+`fx^r#",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "verse_vocals"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "dfex}erlitjM{v]R}4{h",
+              "x": 890,
+              "y": 90,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "+LVnI-*4i0nF[/3(,.*#",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "build"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "CFcD$oyAT%Yp0ABh:_nk",
+              "x": 910,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "name": "build"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": "#Et.ptCrERHu01~g:Pai",
+              "x": 410,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "name": "verse_instruments"
+              }
+            },
+            {
+              "type": "procedures_callnoreturn",
+              "id": ",|%bs?]*gO@S/bm=Ezyp",
+              "x": 650,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "name": "verse_vocals"
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "|ilu8:-T`A[pLU=xNEV@",
+            "name": "verse_instruments",
+            "returnTypes": null
+          },
+          {
+            "id": "EU-+.#Ie?pb0U+`fx^r#",
+            "name": "verse_vocals",
+            "returnTypes": null
+          },
+          {
+            "id": "+LVnI-*4i0nF[/3(,.*#",
+            "name": "build",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "benson_boone_beautiful_things"
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!"
+    },
+    "encrypted_exemplar_sources": "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\n4cH0X2z+Z0dd79U9\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Beautiful Things",
+    "long_instructions": "### Beautiful Things\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Beautiful Things* by Benson Boone. Your job is to organize the code using functions so the song is easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and think about which sections repeat or can be grouped together. Plan how to group the tracks into clear, reusable functions that make your code easier to read. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/bdc9749ee0667c6d12e24145ac97fbb6-image-1750879608502.png)\r\n\r\n**Try:** Use the functions already provided in the workspace. Move code into each function, then replace the original code with a call to that function. Be careful - your updated version should still sound exactly the same as before. Not all of the original code will go into functions!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your song still sound the same? Are your functions named clearly and grouped logically? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace repeated or grouped code\r\n- The same final sound as the original version",
+    "bubble_choice_description": "A record producer has sent you the raw tracks for Beautiful Things by Benson Boone. They've asked you to organize it into functions to make the song easier to remix in the future.",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-practiceC_04d93c5a-cc37-4adb-b3b1-4529e08d3a6b",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceC_11595506-b445-4a19-844d-a241ba3f1627",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and checking that **each function plays a sound**",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceC_3bcbde5e-0814-44d0-a2ad-04c42fdcc6eb",
+        "message": "You need to call your functions!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/benson_boone_beautiful_things/benson_boone_beautiful_things.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.374+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceC\"},{\"changed_at\":\"2025-06-25 19:25:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:27:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

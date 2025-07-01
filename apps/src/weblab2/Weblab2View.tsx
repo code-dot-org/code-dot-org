@@ -119,7 +119,7 @@ const Weblab2View: React.FC<
   );
 
   return (
-    <div data-theme="Dark" className="app-wrapper">
+    <div className="app-wrapper">
       <div className="app-ide">
         {source && (
           <Codebridge
