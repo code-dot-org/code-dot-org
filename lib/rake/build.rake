@@ -46,7 +46,9 @@ namespace :build do
       end
 
       ChatClient.log 'Installing <b>dashboard</b> bundle...'
-      RakeUtils.bundle_install
+      # TODO infra: remove deployment flag once the configuration setting has
+      # been persisted to all managed environments
+      RakeUtils.bundle_install('--deployment')
 
       ChatClient.log 'Installing <b>dashboard</b> python dependencies'
       RakeUtils.python_venv_install
