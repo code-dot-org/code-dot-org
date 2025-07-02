@@ -1352,7 +1352,10 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
+      assert.deepEqual(paths, [
+        '/courses/csa-2022',
+        '/courses/csa-2022/units/1',
+      ]);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1908,7 +1911,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],
-          assignmentPaths: ['/s/coursea-2017'],
+          assignmentPaths: ['/courses/coursea-2017'],
           isAssignedSingleUnitCourse: undefined,
         },
         {
