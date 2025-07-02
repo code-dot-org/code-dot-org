@@ -34,13 +34,6 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "2jh7UpvUMH5dYNR7dDZJdw"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
               "id": "2JLo5rz0ZXkscFjP0VOzJh"
             }
           },
@@ -49,6 +42,13 @@
               "type": "Link",
               "linkType": "Entry",
               "id": "pkTMkG4WCErv8JdPfJhar"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "2jh7UpvUMH5dYNR7dDZJdw"
             }
           }
         ]
