@@ -22,7 +22,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     report_job_finish(request)
   end
 
-  # Catch any exceptions that occur during the job and update the request status accordingly
+  # Catch any exceptions that occur during the job and update the request status accordingly.
   rescue_from StandardError do |exception|
     if rack_env?(:development)
       puts "AichatRequestChatCompletionJob Error: #{exception.full_message}"
@@ -37,7 +37,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
       }
     )
 
-    # Report metrics for the failed job (after_perform doesn't run on failure)
+    # Report metrics for the failed job (after_perform doesn't run on failure).
     report_job_finish(request)
 
     # Re-raise error to notify our system of the failed job.
@@ -49,6 +49,15 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  # Determine if one of the models handled by  `aichat_ai_client.rb`.
+  private def openai_or_gemini?(model_id)
+    [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+     SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO]].include? model_id
+  end
+
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity('user', request.new_message['chatMessageText'], locale, request.level_id)
@@ -58,7 +67,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
-    if request.model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
+    if openai_or_gemini?(request.model_customizations['selectedModelId'])
       begin
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
@@ -88,7 +97,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def make_openai_request(request)
-    AichatOpenaiHelper.get_openai_assistant_response(
+    AichatAiHelper.get_openai_assistant_response(
       request.model_customizations,
       request.stored_messages,
       request.new_message,

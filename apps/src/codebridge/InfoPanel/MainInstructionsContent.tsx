@@ -7,7 +7,6 @@ import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.mo
 interface MainInstructionsContentProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
-  hasPassed: boolean;
 }
 
 /**
@@ -17,7 +16,7 @@ interface MainInstructionsContentProps {
  */
 const MainInstructionsContent: React.FunctionComponent<
   MainInstructionsContentProps
-> = ({instructionsText, handleInstructionsTextClick, hasPassed}) => {
+> = ({instructionsText, handleInstructionsTextClick}) => {
   return (
     <div className={moduleStyles.mainInstructions}>
       <EnhancedSafeMarkdown

@@ -36,7 +36,11 @@ import {sendAnalytics} from './sendAnalytics';
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (
-    newUserMessageInput: {text: string; assets?: ChatAsset[]},
+    newUserMessageInput: {
+      text: string;
+      hiddenContext?: string;
+      assets?: ChatAsset[];
+    },
     thunkAPI
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
@@ -57,6 +61,7 @@ export const submitChatContents = createAsyncThunk(
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageInput.text,
+      hiddenContext: newUserMessageInput.hiddenContext,
       assets: newUserMessageInput.assets,
       timestamp: Date.now(),
     };

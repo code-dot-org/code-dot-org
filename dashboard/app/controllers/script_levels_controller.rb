@@ -93,6 +93,7 @@ class ScriptLevelsController < ApplicationController
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
+    # TODO: TEACH-2050 Modularity support for redirects. Currently doesn't redirect for courses/.../units/... urls.
     if @script.redirect_to?
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
@@ -102,8 +103,10 @@ class ScriptLevelsController < ApplicationController
       end
 
       # avoid a redirect loop if the string substitution failed
+      # TODO: TEACH-2050 Modularity support for redirects. This redirects to the current script. Redirect to the new script's
+      # original unit group for now.
       if new_path == request.fullpath
-        redirect_to build_script_level_path(new_script.starting_level, unit_group_unit: @unit_group_unit)
+        redirect_to build_script_level_path(new_script.starting_level, unit_group_unit: new_script.original_unit_group_unit)
         return
       end
 
@@ -671,6 +674,7 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound if is_id
   end
 
+  # TODO: TEACH-1557 Modularity support for version redirects. Currently redirects to /s/... missing course context
   private def redirect_script(script, locale)
     return nil unless script
 

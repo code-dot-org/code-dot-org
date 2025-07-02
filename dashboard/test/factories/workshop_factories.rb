@@ -30,8 +30,8 @@ FactoryBot.define do
     end
 
     association :organizer, factory: :workshop_organizer
-    course {Pd::Workshop::COURSES.first}
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    course {Pd::Workshop::COURSE_CSP}
+    subject {Pd::Workshop::SUBJECTS[course].try(&:second)}
     capacity {10}
     name {'Cool workshop'}
     description {'A really cool workshop'}

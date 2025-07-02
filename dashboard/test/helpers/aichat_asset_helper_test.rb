@@ -37,15 +37,35 @@ class AichatAssetHelperTest < ActionView::TestCase
     )
   end
 
-  describe '.get_asset_data_uri (unit)' do
-    subject {AichatAssetHelper.get_asset_data_uri(asset, channel_id, level_name)}
+  describe '.get_asset_base64_string (unit)' do
+    subject {AichatAssetHelper.get_asset_base64_string(filename, source, channel_id, level_name)}
 
-    context 'when fetch_asset returns FOUND' do
-      let(:asset) {project_asset}
+    context 'when fetch_asset succeeds' do
+      let(:filename) {project_asset["filename"]}
+      let(:source) {project_asset["source"]}
 
       before do
         AichatAssetHelper.stubs(:fetch_asset).with("project.png", "project", channel_id, level_name).returns(
-          {status: 'FOUND', body: StringIO.new("stubbed content")}
+          "stubbed content"
+        )
+      end
+
+      it 'returns a base64-encoded string' do
+        Base64.decode64(subject).must_equal "stubbed content"
+      end
+    end
+  end
+
+  describe '.get_asset_data_uri (unit)' do
+    subject {AichatAssetHelper.get_asset_data_uri(filename, source, channel_id, level_name)}
+
+    context 'when fetch_asset succeeds' do
+      let(:filename) {project_asset["filename"]}
+      let(:source) {project_asset["source"]}
+
+      before do
+        AichatAssetHelper.stubs(:fetch_asset).with("project.png", "project", channel_id, level_name).returns(
+          "stubbed content"
         )
       end
 
@@ -54,39 +74,21 @@ class AichatAssetHelperTest < ActionView::TestCase
         Base64.decode64(subject.split(',').last).must_equal "stubbed content"
       end
     end
-
-    context 'when fetch_asset returns NOT_FOUND' do
-      let(:asset) {missing_asset}
-
-      before do
-        AichatAssetHelper.stubs(:fetch_asset).with("missing.png", "level", channel_id, level_name).returns({status: 'NOT_FOUND'})
-      end
-
-      it 'raises an error' do
-        err = -> {subject}.must_raise(StandardError)
-        err.message.must_include "Error fetching asset"
-        err.message.must_include "missing.png"
-        err.message.must_include channel_id
-        err.message.must_include level_name
-        err.message.must_include "NOT_FOUND"
-      end
-    end
   end
 
   describe '.fetch_asset (unit)' do
     subject {AichatAssetHelper.fetch_asset(filename, source, channel_id, level_name)}
 
-    context 'when source is level and asset exists' do
+    context 'when source is level and file exists' do
       let(:filename) {level_asset["filename"]}
       let(:source)   {level_asset["source"]}
 
-      it 'returns FOUND with content' do
-        subject[:status].must_equal 'FOUND'
-        subject[:body].read.must_equal 'level content for uuid-123'
+      it 'returns level content' do
+        subject.must_equal 'level content for uuid-123'
       end
     end
 
-    context 'when source is level and asset is missing' do
+    context 'when source is level and file is missing' do
       let(:filename) {missing_asset["filename"]}
       let(:source)   {missing_asset["source"]}
 
@@ -96,37 +98,42 @@ class AichatAssetHelperTest < ActionView::TestCase
         )
       end
 
-      it 'returns NOT_FOUND' do
-        subject[:status].must_equal 'NOT_FOUND'
+      it 'raises an AichatLevelAssetFetchError' do
+        err = -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
+        err.message.must_include "missing.png"
+        err.message.must_include channel_id
+        err.message.must_include level_name
       end
     end
 
-    context 'when source is project and asset exists' do
+    context 'when source is project and file exists' do
       let(:filename) {project_asset["filename"]}
       let(:source)   {project_asset["source"]}
 
-      it 'returns FOUND with content' do
-        subject[:status].must_equal 'FOUND'
-        subject[:body].read.must_equal 'project content'
+      it 'returns project content' do
+        subject.must_equal 'project content'
       end
     end
 
-    context 'when source is project and asset is missing' do
+    context 'when source is project and file is missing' do
       let(:filename) {'nonexistent.png'}
       let(:source)   {'project'}
 
-      it 'returns NOT_FOUND response' do
-        result = AichatAssetHelper.fetch_asset(filename, source, channel_id, level_name)
-        result[:status].must_equal 'NOT_FOUND'
+      it 'raises an AichatProjectAssetFetchError' do
+        err = -> {subject}.must_raise(AichatAssetHelper::AichatProjectAssetFetchError)
+        err.message.must_include "nonexistent.png"
+        err.message.must_include channel_id
+        err.message.must_include level_name
       end
     end
   end
 
   describe '.get_asset_data_uri (integration)' do
-    subject {AichatAssetHelper.get_asset_data_uri(asset, channel_id, level_name)}
+    subject {AichatAssetHelper.get_asset_data_uri(filename, source, channel_id, level_name)}
 
-    context 'with a valid project asset' do
-      let(:asset) {project_asset}
+    context 'with a valid project filename' do
+      let(:filename) {project_asset["filename"]}
+      let(:source) {project_asset["source"]}
 
       it 'returns a base64-encoded data URI' do
         subject.must_match(/^data:image\/png;base64,/)
@@ -134,8 +141,9 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
     end
 
-    context 'with a valid level asset' do
-      let(:asset) {level_asset}
+    context 'with a valid level filename' do
+      let(:filename) {level_asset["filename"]}
+      let(:source) {level_asset["source"]}
 
       it 'returns a base64-encoded data URI' do
         subject.must_match(/^data:image\/png;base64,/)
@@ -143,8 +151,9 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
     end
 
-    context 'with a missing asset' do
-      let(:asset) {missing_asset}
+    context 'with a missing level file' do
+      let(:filename) {missing_asset["filename"]}
+      let(:source) {missing_asset["source"]}
 
       before do
         Level.stubs(:find_by).with(name: level_name).returns(
@@ -152,8 +161,8 @@ class AichatAssetHelperTest < ActionView::TestCase
         )
       end
 
-      it 'raises a StandardError' do
-        -> {subject}.must_raise(StandardError)
+      it 'raises an AichatLevelAssetFetchError' do
+        -> {subject}.must_raise(AichatAssetHelper::AichatLevelAssetFetchError)
       end
     end
   end
