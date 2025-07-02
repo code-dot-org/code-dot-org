@@ -6,7 +6,8 @@ import {
 } from '@cdo/apps/aichat/redux';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
+import {aiTutorModelId} from '../../ai/AiTutorModelId';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
@@ -34,7 +35,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
     dispatch(
       setSavedAiCustomizationProperty({
         property: 'selectedModelId',
-        value: AiChatModelIds.CHATGPT,
+        value: aiTutorModelId,
       })
     );
   }, [dispatch]);

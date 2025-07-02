@@ -1370,6 +1370,7 @@ module Services
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
         :script,
+        :in_unit_group,
         name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
         is_migrated: true

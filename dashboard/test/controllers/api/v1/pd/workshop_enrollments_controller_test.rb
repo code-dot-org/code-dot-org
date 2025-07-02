@@ -341,7 +341,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
         first_name: @enrollment.first_name,
         last_name: @enrollment.last_name,
         email: @enrollment.email,
-        confirmation_email: @enrollment.email,
       }
     )
     post :create, params: params.merge({workshop_id: @workshop.id})
@@ -355,7 +354,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
         user_id: @organizer.id,
         full_name: @organizer.name,
         email: @organizer.email,
-        confirmation_email: @organizer.email,
       }
     )
     post :create, params: params.merge({workshop_id: @organizer_workshop.id})
@@ -369,7 +367,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
         user_id: @program_manager.id,
         full_name: @program_manager.name,
         email: @program_manager.email,
-        confirmation_email: @program_manager.email,
       }
     )
     post :create, params: params.merge({workshop_id: @workshop.id})
@@ -383,7 +380,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
         user_id: @facilitator.id,
         full_name: @facilitator.name,
         email: @facilitator.email,
-        confirmation_email: @facilitator.email,
       }
     )
     post :create, params: params.merge({workshop_id: @workshop.id})
@@ -521,7 +517,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
       first_name: first_name,
       last_name: last_name,
       email: email,
-      email_confirmation: email
     }
   end
 

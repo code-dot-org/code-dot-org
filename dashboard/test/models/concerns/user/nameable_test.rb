@@ -43,40 +43,11 @@ class NameableTest < ActiveSupport::TestCase
     end
   end
 
-  describe 'family_name validation' do
-    let(:family_name) {'TestFamilyName'}
-
-    context 'when user is a PL participant' do
-      let(:user) {create :user}
-      let(:teacher) {create :teacher}
-      let(:pl_section) {create :section, :teacher_participants, user_id: teacher.id}
-
-      before do
-        Follower.create!(section_id: pl_section.id, student_user_id: user.id)
-      end
-
-      it 'does not allow setting family_name' do
-        _(user).must_be :valid?
-
-        user.family_name = family_name
-        _(user).wont_be :valid?
-      end
-    end
-
-    context 'when user is a teacher' do
-      let(:user) {create :teacher}
-
-      it 'does not allow setting family_name' do
-        user.family_name = family_name
-        _(user).wont_be :valid?
-      end
-    end
-  end
-
-  describe 'strip_display_family_names callback' do
-    subject(:user) {create :student, name: '  First  ', family_name: ' Last '}
-    it 'strips whitespace from name and family_name if changed' do
+  describe 'strip_display_given_family_names callback' do
+    subject(:user) {create :teacher, name: '  First  ', given_name: '   Given   ', family_name: ' Last '}
+    it 'strips whitespace from name, given_name, and family_name if changed' do
       _(user.name).must_equal 'First'
+      _(user.given_name).must_equal 'Given'
       _(user.family_name).must_equal 'Last'
     end
 
@@ -87,6 +58,12 @@ class NameableTest < ActiveSupport::TestCase
         user.update(name: '  UpdatedFirst  ')
         user.reload
         _(user.name).must_equal 'UpdatedFirst'
+      end
+
+      it 'strips whitespace when given_name is updated' do
+        user.update(given_name: '  UpdatedGiven  ')
+        user.reload
+        _(user.given_name).must_equal 'UpdatedGiven'
       end
 
       it 'strips whitespace when family_name is updated' do

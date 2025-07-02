@@ -2014,11 +2014,13 @@ class UserTest < ActiveSupport::TestCase
     assert student.valid_password?(params[:password])
   end
 
-  test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
-    user = create :teacher
+  test 'downgrade_to_student sets user_type to student and clears given name, display name, and cleartext emails' do
+    user = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
     assert user.downgrade_to_student
     user = User.find(user.id)
     assert_equal User::TYPE_STUDENT, user.user_type
+    assert_nil user.given_name
+    assert_nil user.family_name
     assert_empty user.email
   end
 
@@ -2107,19 +2109,6 @@ class UserTest < ActiveSupport::TestCase
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
     user = User.find(user.id)
     assert_nil user.parent_email
-  end
-
-  test 'upgrade_to_teacher given valid params should delete family_name property' do
-    family_name = 'TestFamName'
-    user = User.create(@good_data.merge({family_name: family_name}))
-    user.reload
-
-    assert_equal family_name, user.family_name
-
-    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-
-    user = User.find(user.id)
-    assert_nil user.family_name
   end
 
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
@@ -3030,7 +3019,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, :in_single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      visible_script = create(:single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3046,7 +3035,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, :in_single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      visible_script = create(:single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).first_unit
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3307,6 +3296,7 @@ class UserTest < ActiveSupport::TestCase
         id: @student.id,
         name: @student.name,
         username: @student.username,
+        given_name: nil,
         family_name: nil,
         email: @student.email,
         hashed_email: @student.hashed_email,
@@ -4394,6 +4384,15 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
+  end
+
+  test 'given name is added to summarize' do
+    user = create :user
+    given_name = 'TestGivenName'
+    user.given_name = given_name
+
+    assert(user.summarize.key?(:given_name))
+    assert_equal(given_name, user.summarize[:given_name])
   end
 
   test 'family name is added to summarize' do

@@ -48,7 +48,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       return;
     }
 
-    // Clear the alert, if any
+    // Clear the alert, if any.
     dispatch(clearStagedFilesAlert());
 
     const excessFileCount = files.length - numAllowedFiles;
@@ -83,7 +83,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
             status: 'sizeLimitExceeded',
           })
         );
-        continue; // Skip uploading this file if it exceeds the size limit
+        continue; // Skip uploading this file if it exceeds the size limit.
       }
 
       try {
@@ -102,7 +102,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         } else {
           uploadFailureCount += 1;
           status = 'uploadFailed';
-          // Only log if not a size limit exceeded error
+          // Only log if not a size limit exceeded error.
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Error uploading asset', error as Error, {

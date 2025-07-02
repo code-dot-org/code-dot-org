@@ -543,6 +543,8 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(
       :parent_email,
       :username,
+      :given_name,
+      :family_name,
       :password,
       :encrypted_password,
       :current_password,

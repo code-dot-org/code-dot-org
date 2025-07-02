@@ -492,6 +492,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -540,6 +542,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -593,6 +597,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -645,6 +651,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -689,6 +697,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         avatar_color: nil,
         avatar_emoji: nil,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
