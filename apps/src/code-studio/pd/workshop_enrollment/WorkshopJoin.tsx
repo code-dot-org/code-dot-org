@@ -9,6 +9,7 @@ import {
 import React, {useState} from 'react';
 
 import UserPassport from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
+import {useWorkshopEnrollmentApi} from '@cdo/apps/code-studio/pd/workshops/hooks/useWorkshopEnrollmentApi';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -31,7 +32,7 @@ interface SessionCalendarEvent {
 const WorkshopJoin: React.FunctionComponent<{
   workshop_enrollment_status: string;
   workshop_info: {
-    id: string;
+    id: number;
     course: string;
     subject?: string;
     name?: string;
@@ -40,11 +41,18 @@ const WorkshopJoin: React.FunctionComponent<{
     session_info_for_calendar?: SessionCalendarEvent[];
   };
   user_info: {
+    id: number;
     display_name: string;
     given_name?: string;
     family_name?: string;
     email: string;
-    school_name?: string;
+    school_info?: {
+      school_id?: number;
+      country?: string;
+      school_name?: string;
+      zip?: string;
+      school_type?: string;
+    };
   };
 }> = ({workshop_enrollment_status, workshop_info, user_info}) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState(
@@ -52,19 +60,40 @@ const WorkshopJoin: React.FunctionComponent<{
   );
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
   const hasMissingUserInfo =
-    !user_info.given_name || !user_info.family_name || !user_info.school_name;
+    !user_info.given_name ||
+    !user_info.family_name ||
+    !user_info.school_info?.school_name;
+  const {submitEnrollment, isSubmitting, error} = useWorkshopEnrollmentApi(
+    workshop_info.id
+  );
 
-  const submitEnrollment = async () => {
-    // TODO: This is filler behavior that will be actually implemented in followup.
-    setEnrollmentStatus(SUBMISSION_STATUSES.SUCCESS);
-    setSubmissionErrorMessage('');
-    navigateOnEnrollSuccess();
+  const handleSubmitEnrollment = async () => {
+    const result = await submitEnrollment(
+      user_info && {
+        user_id: user_info.id,
+        email: user_info.email,
+        first_name: user_info.given_name,
+        last_name: user_info.family_name,
+        school_info: user_info.school_info,
+      }
+    );
+
+    if (result?.workshop_enrollment_status === SUBMISSION_STATUSES.SUCCESS) {
+      navigateOnEnrollSuccess();
+    } else {
+      setEnrollmentStatus(SUBMISSION_STATUSES.UNKNOWN_ERROR);
+      setSubmissionErrorMessage(
+        result?.error_message ||
+          error ||
+          'An unknown error occurred while processing your enrollment.'
+      );
+    }
   };
 
   const navigateOnEnrollSuccess = () => {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
-    sessionStorage.setItem('workshopId', workshop_info.id);
+    sessionStorage.setItem('workshopId', `${workshop_info.id}`);
     sessionStorage.setItem('workshopCourse', workshop_info.course);
     sessionStorage.setItem('workshopSubject', workshop_info.subject || '');
     sessionStorage.setItem('workshopName', workshop_info.name || '');
@@ -96,8 +125,9 @@ const WorkshopJoin: React.FunctionComponent<{
             text="Join this workshop"
             color="purple"
             className={style.joinWorkshopButton}
-            onClick={submitEnrollment}
-            disabled={hasMissingUserInfo}
+            onClick={handleSubmitEnrollment}
+            isPending={isSubmitting}
+            disabled={hasMissingUserInfo || !!error}
           />
         </div>
         <UserPassport
@@ -105,7 +135,7 @@ const WorkshopJoin: React.FunctionComponent<{
           givenName={user_info.given_name}
           familyName={user_info.family_name}
           email={user_info.email}
-          schoolName={user_info.school_name}
+          schoolName={user_info.school_info?.school_name}
           returnToHref={`/pd/workshops/${workshop_info.id}/join`}
           className={style.userPassport}
         />

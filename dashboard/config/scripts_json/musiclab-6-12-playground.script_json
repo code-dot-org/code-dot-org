@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-05 18:29:04 UTC",
+    "serialized_at": "2025-07-01 19:42:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -414,6 +414,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Testing Rubrics",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -1348,6 +1363,18 @@
       "seeding_key": {
         "lesson_activity.key": "c393f18b-a966-4e83-9d12-915cb42a9da7",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -3943,6 +3970,17 @@
         "activity_section.key": "6df670ae-041c-48da-af9e-4d375082781d",
         "lesson_activity.key": "c393f18b-a966-4e83-9d12-915cb42a9da7"
       }
+    },
+    {
+      "key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Rubrics!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5",
+        "lesson_activity.key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938"
+      }
     }
   ],
   "script_levels": [
@@ -4777,6 +4815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-walkup-examples-choice"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5849,6 +5890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-cats-examples-choice"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -6871,6 +6915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
         "progression": "Examples"
       },
       "bonus": false,
@@ -8235,6 +8282,28 @@
       },
       "level_keys": [
         "music-lab-functions-synthesis-formative"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rubrics!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 7"
       ]
     }
   ],
@@ -10302,6 +10371,18 @@
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "7a392ec7-ebdb-4106-8160-346ae395da13"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 7",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5"
+      }
     }
   ],
   "resources": [
@@ -11150,12 +11231,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "Allthethings Python Lab 7",
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+      "position": 1,
+      "learning_goal": "Testing!",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "4",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "3",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "2",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "1",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "546a9d27-11b0-4ea6-b1c4-7b58162e9567",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ]
 }
