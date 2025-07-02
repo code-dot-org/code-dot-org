@@ -214,6 +214,16 @@ export default class MusicBlocklyWorkspace {
     this.headlessMode = true;
   }
 
+  setIsReadOnly(isReadOnlyWorkspace: boolean) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'setIsReadOnlyWorkspace called before workspace initialized.'
+      );
+      return;
+    }
+    this.workspace.setIsReadOnly(isReadOnlyWorkspace);
+  }
+
   /**
    * Set up the Blockly workspace for toolbox mode (levelbuilder).
    * Adds blocks to the workspace based on the level's toolbox configuration.

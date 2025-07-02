@@ -142,38 +142,19 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   end
 
   private def enrollment_params
-    {
-      user_id: params[:user_id],
-      first_name: params[:first_name]&.strip_utf8mb4,
-      last_name: params[:last_name]&.strip_utf8mb4,
-      email: params[:email]&.strip_utf8mb4,
-      role: params[:role],
-      grades_teaching: params[:grades_teaching],
-      attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
-      csf_course_experience: params[:csf_course_experience],
-      csf_courses_planned: params[:csf_courses_planned],
-      previous_courses: params[:previous_courses],
-      csf_intro_intent: params[:csf_intro_intent],
-      csf_intro_other_factors: params[:csf_intro_other_factors],
-      # params only collected in CSP returning teachers workshop
-      years_teaching: params[:years_teaching],
-      years_teaching_cs: params[:years_teaching_cs],
-      taught_ap_before: params[:taught_ap_before],
-      planning_to_teach_ap: params[:planning_to_teach_ap]
-    }
+    params.require(:user_id)
+    params.permit(:user_id, :first_name, :last_name, :email).to_h.tap do |p|
+      p[:first_name] = p[:first_name]&.strip_utf8mb4
+      p[:last_name] = p[:last_name]&.strip_utf8mb4
+      p[:email] = p[:email]&.strip_utf8mb4
+    end
   end
 
   private def school_info_params
-    {
-      school_type: params[:school_info][:school_type],
-      school_state: params[:school_info][:school_state],
-      school_zip: params[:school_info][:zip],
-      school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
-      school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
-      school_id: params[:school_info][:school_id],
-      school_name: params[:school_info][:school_name]&.strip_utf8mb4,
-      country: params[:school_info][:country]
-    }
+    params.require(:school_info).
+      permit(:school_type, :zip, :school_id, :school_name, :country).to_h.tap do |p|
+        p[:school_name] = p[:school_name]&.strip_utf8mb4
+      end
   end
 
   private def render_unsuccessful(error_message, options = {})

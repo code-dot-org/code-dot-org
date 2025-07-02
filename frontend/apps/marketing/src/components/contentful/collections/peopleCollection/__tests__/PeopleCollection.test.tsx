@@ -49,7 +49,13 @@ const mockPeople: PeopleCollectionProps['people'] = [
 
 describe('PeopleCollection', () => {
   it('renders people with all fields', () => {
-    render(<PeopleCollection people={mockPeople} />);
+    render(
+      <PeopleCollection
+        people={mockPeople}
+        sortOrder="alphabetical"
+        hideImages={false}
+      />,
+    );
     expect(screen.getByText('Alex')).toBeInTheDocument();
     expect(screen.getByText('Engineer')).toBeInTheDocument();
     expect(screen.getByText('Alex is an engineer.')).toBeInTheDocument();
@@ -60,7 +66,13 @@ describe('PeopleCollection', () => {
   });
 
   it('renders people without image and personalLink', () => {
-    render(<PeopleCollection people={mockPeople} />);
+    render(
+      <PeopleCollection
+        people={mockPeople}
+        sortOrder="alphabetical"
+        hideImages={false}
+      />,
+    );
     expect(screen.getByText('Bob')).toBeInTheDocument();
     expect(screen.getByText('Designer')).toBeInTheDocument();
     expect(screen.getByText('Bob is a designer.')).toBeInTheDocument();
@@ -80,13 +92,29 @@ describe('PeopleCollection', () => {
   it('sorts people alphabetically by name', () => {
     render(
       <PeopleCollection
-        people={[mockPeople[2], mockPeople[1], mockPeople[0]]}
+        people={mockPeople}
+        sortOrder="alphabetical"
+        hideImages={false}
       />,
     );
     const headings = screen.getAllByRole('heading', {level: 3});
     expect(headings[0]).toHaveTextContent('Alex');
     expect(headings[1]).toHaveTextContent('Bob');
     expect(headings[2]).toHaveTextContent('Clarissa');
+  });
+
+  it('sorts people manually by name', () => {
+    render(
+      <PeopleCollection
+        people={mockPeople}
+        sortOrder="manual"
+        hideImages={false}
+      />,
+    );
+    const headings = screen.getAllByRole('heading', {level: 3});
+    expect(headings[0]).toHaveTextContent('Clarissa');
+    expect(headings[1]).toHaveTextContent('Alex');
+    expect(headings[2]).toHaveTextContent('Bob');
   });
 
   it('handles people with missing or undefined name fields when sorting', () => {
@@ -110,7 +138,11 @@ describe('PeopleCollection', () => {
     ];
 
     render(
-      <PeopleCollection people={[...mockPeople, ...peopleWithMissingFields]} />,
+      <PeopleCollection
+        people={[...mockPeople, ...peopleWithMissingFields]}
+        sortOrder="alphabetical"
+        hideImages={false}
+      />,
     );
     const headings = screen.getAllByRole('heading', {level: 3});
     expect(headings[0]).toHaveTextContent('Alex');
@@ -118,8 +150,14 @@ describe('PeopleCollection', () => {
     expect(headings[2]).toHaveTextContent('Clarissa');
   });
 
-  it('does not render images when imageVisibility is "hide"', () => {
-    render(<PeopleCollection people={mockPeople} imageVisibility="hide" />);
+  it('does not render images when hideImages is true', () => {
+    render(
+      <PeopleCollection
+        people={mockPeople}
+        sortOrder="alphabetical"
+        hideImages={true}
+      />,
+    );
     expect(document.querySelector('img')).not.toBeInTheDocument();
   });
 });

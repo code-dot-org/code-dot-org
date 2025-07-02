@@ -1,8 +1,10 @@
 @use '@code-dot-org/component-library-styles/font.scss' as font;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 @use '@code-dot-org/component-library-styles/cms/variables.scss' as cmsVars;
 
 .yourSchool {
   width: 100%;
+  z-index: variables.$zindex-fixed;
 
   label {
     width: 100%;
@@ -110,7 +112,7 @@
           .yourSchoolMapPartnerImg {
             display: inline-block;
             vertical-align: top;
-            width: fit-content;
+            width: 4.5rem;
             height: 1.25rem;
           }
         }

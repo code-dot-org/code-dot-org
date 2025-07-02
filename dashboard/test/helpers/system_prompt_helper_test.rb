@@ -24,21 +24,6 @@ class AiSystemPrompts::SystemPromptHelperTest < ActionView::TestCase
     @pythonlab_level = create(:pythonlab, :with_instructions)
   end
 
-  test "get_programming_language_system_prompt includes Java for CSA level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@csa_unit)
-    assert_equal programming_language, 'Java'
-  end
-
-  test "get_programming_language_system_prompt includes JavaScript for CSP level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@csp_unit)
-    assert_equal programming_language, 'JavaScript'
-  end
-
-  test "get_programming_language_system_prompt includes Python for generic level" do
-    programming_language = AiSystemPrompts::SystemPromptHelper.get_programming_language(@unit)
-    assert_equal programming_language, 'Python'
-  end
-
   test "get_level_instructions" do
     level_instructions = AiSystemPrompts::SystemPromptHelper.get_level_instructions(@javalab_level)
     assert_includes level_instructions, 'Write a loop.'

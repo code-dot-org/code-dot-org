@@ -197,6 +197,7 @@ class User < ApplicationRecord
     gender_third_party_input
     us_state
     country_code
+    given_name
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
@@ -754,16 +755,12 @@ class User < ApplicationRecord
 
   def downgrade_to_student
     return true if student? # No-op if user is already a student
-    update(user_type: TYPE_STUDENT)
+    update(user_type: TYPE_STUDENT, given_name: nil, family_name: nil)
   end
 
   def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
-
-    # Remove family name, in case it was set on the student account.
-    # Must do this before updating user_type, to prevent validation failure.
-    self.family_name = nil
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
@@ -1277,6 +1274,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      given_name: given_name,
       family_name: family_name,
       email: email,
       hashed_email: hashed_email,
@@ -1304,8 +1302,9 @@ class User < ApplicationRecord
       id: id,
       email: email,
       is_student: user_type == TYPE_STUDENT,
-      first_name: name&.split&.first,
-      last_name: name&.split&.last,
+      first_name: given_name,
+      last_name: family_name,
+      school_info: Queries::SchoolInfo.current_school(self),
     }
   end
 

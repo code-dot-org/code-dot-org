@@ -62,16 +62,22 @@ class Follower < ApplicationRecord
     student_user.assign_script(section.script) if section.script
   end
 
-  after_destroy :remove_family_name
-  def remove_family_name
+  after_destroy :remove_given_and_family_name
+  def remove_given_and_family_name
     # Ignore a deleted student
     return unless student_user
 
-    # If the student is in zero sections, and has a family name set,
-    # remove the family name.
-    if student_user&.family_name && student_user.sections_as_student.empty?
-      # can't remove keys from properties directly, so just set it to nil.
-      student_user.family_name = nil
+    # If the student is in zero sections, and has a given and/or family name set,
+    # remove the given and/or family name.
+    if student_user.sections_as_student.empty?
+      if student_user&.given_name
+        # can't remove keys from properties directly, so just set it to nil.
+        student_user.given_name = nil
+      end
+      if student_user&.family_name
+        # can't remove keys from properties directly, so just set it to nil.
+        student_user.family_name = nil
+      end
       student_user.save!
     end
   end

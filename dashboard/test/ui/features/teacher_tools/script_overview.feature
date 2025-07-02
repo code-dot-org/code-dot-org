@@ -7,7 +7,7 @@ Feature: Unit overview page
   @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     # Make progress as student
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"

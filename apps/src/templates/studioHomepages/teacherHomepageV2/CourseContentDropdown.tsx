@@ -69,6 +69,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   return (
     <div className={styles.courseContentDropdownContainer}>
       <BodyThreeText
+        className={styles.courseTitleText}
         id={`course-content-dropdown-${section.name.replaceAll(' ', '-')}`}
       >
         <b>{`${i18n.course()}: `}</b>

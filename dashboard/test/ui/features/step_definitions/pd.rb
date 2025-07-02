@@ -130,10 +130,10 @@ Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
-    And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people
+    And I make the teacher named "#{random_name}" a facilitator for course "Build Your Own Workshop"
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "Build Your Own Workshop" facilitated by "#{random_name}" with 5 people
   GHERKIN
 end
 
@@ -142,9 +142,9 @@ Given(/^I am an organizer with started and completed courses$/) do
   steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and end it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people
   GHERKIN
 end
 
@@ -152,7 +152,7 @@ Given(/^I am a program manager with a started course$/) do
   random_name = "TestProgramManager" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I am a program manager named "#{random_name}" for regional partner "Test Partner"
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
+    And I create a workshop for course "Build Your Own Workshop" organized by "#{random_name}" with 5 people and start it
   GHERKIN
 end
 
@@ -162,7 +162,7 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
 
   steps <<~GHERKIN
     And I create a teacher named "#{test_teacher_name}"
-    And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
+    And I create a workshop for course "Build Your Own Workshop" attended by "#{test_teacher_name}" with 3 facilitators and end it
   GHERKIN
 
   enrollment = FactoryBot.create(
@@ -302,8 +302,8 @@ end
 Given 'I start a self-paced PL course' do
   steps <<~GHERKIN
     Given I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/1"
-    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
-    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    And I wait until element "a[title='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[title='Level 3 Lesson Instructor In Training Levels']"
     When I am on "http://studio.code.org/courses/alltheselfpacedplthings/units/1/lessons/1/levels/3"
     Then I wait until element "a:contains(Submit)" is visible
     When I click selector "a:contains(Submit)"
@@ -589,7 +589,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       session_location_name: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
-      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
+      enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0,
+      participant_group_type: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? 'Regional' : nil,
+      course_offerings: course == Pd::Workshop::COURSE_BUILD_YOUR_OWN ? [CourseOffering.first || FactoryBot.create(:course_offering)] : nil,
     )
   end
 

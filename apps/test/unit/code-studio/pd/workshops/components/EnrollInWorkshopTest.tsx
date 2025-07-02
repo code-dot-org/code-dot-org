@@ -9,8 +9,14 @@ const baseUserInfo = {
   is_student: false,
   id: 123,
   email: 'sample@google.com',
-  firstName: 'John',
-  lastName: 'Doe',
+  first_name: 'John',
+  last_name: 'Doe',
+  school_info: {
+    school_id: 1,
+    country: 'United States',
+    school_name: 'School Academy',
+    zip: '11111',
+  },
 };
 
 const baseProps = {

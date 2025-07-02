@@ -6,6 +6,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiTutor2Manager, {
   AiTutor2MessageType,
 } from '@cdo/apps/lab2/ai/AiTutor2Manager';
+import {aiTutorModelId} from '@cdo/apps/lab2/ai/AiTutorModelId';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStylesFixed from '../AiTutor2ResponseFixed.module.scss';
@@ -22,11 +23,13 @@ export function useAiTutor2(
   const [loading, setLoading] = useState<boolean>();
 
   const managerRef = useRef<AiTutor2Manager | null>(
-    isEnabled ? new AiTutor2Manager(currentLevelId, scriptId, channelId) : null
+    isEnabled
+      ? new AiTutor2Manager(aiTutorModelId, currentLevelId, scriptId, channelId)
+      : null
   );
 
   // This could also be lifecycle hook? or get passed as function arguments?
-  // Or return initialize(levelId, scriptId, channelId) and clearResponse() functions to the caller
+  // Or return initialize(levelId, scriptId, channelId) and clearResponse() functions to the caller.
   useEffect(() => {
     if (!isEnabled) {
       return;
@@ -36,9 +39,11 @@ export function useAiTutor2(
       '🤖: creating AiTutor2Manager',
       currentLevelId,
       scriptId,
-      channelId
+      channelId,
+      aiTutorModelId
     );
     managerRef.current = new AiTutor2Manager(
+      aiTutorModelId,
       currentLevelId,
       scriptId,
       channelId

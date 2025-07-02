@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Halleluja Remix\r\nTom noticed that the vocals for Halleluja by Rosa Linn are pretty long and could be combined with lots of other sounds to make interesting remixes:\r\n\r\n> I like how haunting the vocals are, and I wanted to combine it with a bunch of different sounds to see if I could make it sound interesting.\r\n\r\nTom is using **abstraction** by focusing on the essential structure: vocals supported by a mix of beat, bass, and lead tracks.\r\n\r\n**Your task:** Use abstraction to organize your code into loops that back the vocals with rich, layered sounds. Your song should use at least 10 unique tracks, but focus only on the ones that best support the mood and pacing of the vocals. Use the example for inspiration!",
+    "long_instructions": "#### I Like to Move It Remix\r\nZara was given the background music for \"I Like to Move It\" by will.i.am and noticed it already had a strong beat and energetic vibe. Now, it’s her job to decide how to bring the vocals in:\r\n\r\n> \"The music already gets you moving—I just had to figure out how to drop in the vocals in a way that keeps the energy up and makes the whole thing pop!\"\r\n\r\nZara is using **abstraction** by focusing on the essential structure of the remix: choosing where and when to place vocals on top of a steady beat, bass, and other background layers.\r\n\r\n**Your Task:**\r\nUse abstraction to organize your code and decide how to arrange the vocals over the background track. The music is already there—your job is to:\r\n\r\n- Add the vocals by choosing their order and timing.\r\n\r\n- Use loops to create structure and avoid repeating code.\r\n\r\n- Include at least 10 unique tracks (these can be different vocal clips or other sounds layered in).\r\n\r\nUse the example remix as inspiration, but make your version your own!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -25,7 +25,7 @@
         },
         "type": "flyout"
       },
-      "packId": "rosa_linn_hallelujah",
+      "packId": "will_i_am_i_like_to_move_it",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -37,74 +37,58 @@
               "y": 30,
               "deletable": false,
               "movable": false,
-              "editable": false,
               "next": {
                 "block": {
                   "type": "play_sounds_together",
-                  "id": "_}(M|$sp#cUt5[{uR/VT",
+                  "id": "play_sounds_together",
                   "deletable": false,
                   "movable": false,
-                  "editable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
                   "inputs": {
                     "code": {
                       "block": {
-                        "type": "set_effect_at_current_location_simple2",
-                        "id": ")_o]vK?8C-P#3lnn}*R|",
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
                         "deletable": false,
-                        "movable": false,
-                        "editable": false,
-                        "fields": {
-                          "effects_name": "<field name=\"effects_name\">delay</field>",
-                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        "extraState": {
+                          "disableNextConnection": false
                         },
-                        "next": {
-                          "block": {
-                            "type": "set_effect_at_current_location_simple2",
-                            "id": "*XBh($Kt=g?5y!]L6yc,",
-                            "deletable": false,
-                            "movable": false,
-                            "editable": false,
-                            "fields": {
-                              "effects_name": "<field name=\"effects_name\">volume</field>",
-                              "effects_value": "<field name=\"effects_value\">normal</field>"
-                            },
-                            "next": {
-                              "block": {
-                                "type": "play_sound_at_current_location_simple2",
-                                "id": "play_sound_at_current_location_simple2",
-                                "deletable": false,
-                                "movable": false,
-                                "editable": false,
-                                "extraState": {
-                                  "disableNextConnection": false
-                                },
-                                "fields": {
-                                  "sound": "rosa_linn_hallelujah/vocals_prechorus_1"
-                                },
-                                "next": {
+                        "fields": {
+                          "times": 2
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "+{l,kA=(_?6qxi.F8qDr",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
                                   "block": {
-                                    "type": "set_effect_at_current_location_simple2",
-                                    "id": "flhXf%60t;n9v4X];{+C",
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
                                     "deletable": false,
-                                    "movable": false,
-                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
                                     "fields": {
-                                      "effects_name": "<field name=\"effects_name\">delay</field>",
-                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                      "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
                                     },
                                     "next": {
                                       "block": {
-                                        "type": "set_effect_at_current_location_simple2",
-                                        "id": "set_effect_at_current_location_simple2",
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "UgM7jU=:.pf+|ows7Guq",
                                         "deletable": false,
-                                        "movable": false,
-                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
                                         "fields": {
-                                          "effects_name": "<field name=\"effects_name\">volume</field>",
-                                          "effects_value": "<field name=\"effects_value\">low</field>"
+                                          "sound": "will_i_am_i_like_to_move_it/bass_synth"
                                         }
                                       }
                                     }
@@ -120,70 +104,118 @@
                   "next": {
                     "block": {
                       "type": "play_sounds_together",
-                      "id": "vFB^.$|hZqQ*=*wkNbPV",
+                      "id": "1{Y1gSR-p}v8-2#}hL-m",
                       "deletable": false,
                       "movable": false,
-                      "editable": false,
                       "extraState": {
                         "disableNextConnection": false
                       },
                       "inputs": {
                         "code": {
                           "block": {
-                            "type": "set_effect_at_current_location_simple2",
-                            "id": "D.[ml^qyx)/~2M}euDf:",
+                            "type": "repeat_simple2",
+                            "id": "{_{H?oIViz[AF6Sk#SNI",
                             "deletable": false,
-                            "movable": false,
-                            "editable": false,
-                            "fields": {
-                              "effects_name": "<field name=\"effects_name\">delay</field>",
-                              "effects_value": "<field name=\"effects_value\">low</field>"
+                            "extraState": {
+                              "disableNextConnection": false
                             },
-                            "next": {
+                            "fields": {
+                              "times": 2
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "@_U61*P6+iAMwvL$V`p9",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "Jui=phGk/w5D;#j^:dUg",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "will_i_am_i_like_to_move_it/drums_kick_perc"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "B+B1t#$0~(S5O3D!|e;P",
+                                            "deletable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "will_i_am_i_like_to_move_it/bass_guitar"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "rh_Di7Fxmg5gdtf[dH#C",
+                          "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
                               "block": {
-                                "type": "set_effect_at_current_location_simple2",
-                                "id": "4Cgw3;[.h{t`z)d9Slw3",
-                                "deletable": false,
-                                "movable": false,
-                                "editable": false,
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": ")g7y-W;s%.QQ[Ful.tio",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
                                 "fields": {
-                                  "effects_name": "<field name=\"effects_name\">volume</field>",
-                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
                                 },
                                 "next": {
                                   "block": {
-                                    "type": "play_sound_at_current_location_simple2",
-                                    "id": "R.M@XK*?+6K]yWz?+wur",
+                                    "type": "repeat_simple2",
+                                    "id": "vTjcU66[XHyQ;;M8E~r-",
                                     "deletable": false,
-                                    "movable": false,
-                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
                                     "fields": {
-                                      "sound": "rosa_linn_hallelujah/vocals_prechorus_2"
+                                      "times": 2
                                     },
-                                    "next": {
-                                      "block": {
-                                        "type": "set_effect_at_current_location_simple2",
-                                        "id": "y94#6Qqqo}0a/H/Ebb0d",
-                                        "deletable": false,
-                                        "movable": false,
-                                        "editable": false,
-                                        "fields": {
-                                          "effects_name": "<field name=\"effects_name\">delay</field>",
-                                          "effects_value": "<field name=\"effects_value\">normal</field>"
-                                        },
-                                        "next": {
-                                          "block": {
-                                            "type": "set_effect_at_current_location_simple2",
-                                            "id": "j2J6#$S?3+ltCf!06f1y",
-                                            "deletable": false,
-                                            "movable": false,
-                                            "editable": false,
-                                            "fields": {
-                                              "effects_name": "<field name=\"effects_name\">volume</field>",
-                                              "effects_value": "<field name=\"effects_value\">low</field>"
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sounds_together",
+                                          "id": "VaA6P#3h+*?zz$KdT$Wm",
+                                          "deletable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "C/JG@zMuMpp,~ink31s#",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "will_i_am_i_like_to_move_it/bass_guitar_slap"
+                                                }
+                                              }
                                             }
                                           }
                                         }
@@ -209,10 +241,6 @@
       "showSoundsPanelInSoundsMode": false,
       "sortUnrestrictedPacksByType": true,
       "sounds": {
-        "rosa_linn_hallelujah": [
-          "vocals_prechorus_1",
-          "vocals_prechorus_2"
-        ],
         "electro": [
           "drum_beat_cowbell",
           "drum_beat_club",
@@ -471,10 +499,34 @@
           "lead_zaps",
           "lead_swoop",
           "lead_violins"
+        ],
+        "will_i_am_i_like_to_move_it": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_move_it",
+          "vocals_little_dance",
+          "vocals_ants_pants",
+          "drums_kick_perc_snare",
+          "drums_kick_perc",
+          "drums_kick",
+          "drums_main_beat",
+          "bass_guitar_slap",
+          "bass_guitar_stutter",
+          "bass_guitar",
+          "bass_synth",
+          "guitar_delay",
+          "guitar_upbeats",
+          "synth_stutter",
+          "camera",
+          "laser"
         ]
       }
     },
-    "display_name": "Hallelujah Vocals",
+    "display_name": "I Like to Move It",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": false,
@@ -482,8 +534,8 @@
       "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
       "playerTitle": "Example Song"
     },
-    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pJnTipMV140jy9LGzW8DGjmF\nQA+/SNP2X4CXswB4zClYPwvQ7N5Vv9iTEhaz686dFDlmlLBGrvXeHdA0/Er2\npKi3lQ2ZFqGvyCuX7NZ/uwhcosLCY+2BNEMNZFNSmYrar4DcpNsicPdwx0Aj\n9wJO5cJ88XnPdtKAyOfFEvbcnvZby1rGoX2QieF9eZNtu5NVC/uDd9qAfCZF\nO9a3ZQzyvVrXJiRkUssu3gWvnBftrddlMqZZbox7CMXCZmrvDtLNMt3yUEsc\nE5hrndWEKG916rh7NxmPulKwO/Gkn2+4iqVzKnzGtFBVGq//JtcV4v8Oil70\nT9WhQMbPaGo9TU9BWwJ6lGYb90HBoOzdi1CST2V3Pn8QdMhMHxyEYMtQtPoF\nZjHvMGqhpUhIk3Dw+xKWLPqNJz2ZFZGH4L2tvegIGxWMX/Qlgi15b2+KxwHQ\nDiYsStDblEP0nDUNmewbIz7hgo5jluwq4ej7sLBrVwBBuZAPSrhiogNZRq3u\nlp3NzPLHPCQ/IU3K++i96uqL1rbiEZKJ7UMsTBlWmmmrsBd8KTVRwjfIK4M5\nPIoM9UzgJgxf+IJXwoSHg732hhRTRPbSz5PAIV457snT6ydKAReldnr8qEwh\ntEYqcCCLqP8/XY/OfiCLJ4Osn06PNTw2UVPDqmQZUTkxzvrvCIr02J36W34e\nEox/1RXibE3l4VfXouYQQawojPNqqH3dOJQE5TkOxzJ6XCUfG1Mfnlx3ipu7\nVHYfzhjPpLIueU9CvKu96lYxdJpexsCJKrnR8yH3/GfR7OcMwf2Qto2aWVKl\nXSoeHZKXquT9ZvZh+HLpj395l8U45oj6WyoqfA4MBOD+0xwCktRVu7TTYbwb\n2qXSBqqgPHLLi1JDxMFDepbX+sJ3nlNdxe6MqF+9ZzzLnU8uYvpDDc3dHvjM\nlp6xtk1EZFs+N4dqXBM1b5VHNthZ5QPRJRjI0rbknKO2Y2iGwE1iBO+ZNeT/\n+y2lrCR3Bjf8OBy96QijJ08EgD8GiEPbhnstH2XCslUXmhKhUmw0r8c7K0CS\n5h6w0d5IIxL1ksAPi7ZW33VxI5U6XuoWvjIk6VbNSyFY8kWIuowQWYR84i+d\nFiiRzSNlUllevWSkdFysnWNxKlgiwD+2XmedVTknfJQKHy+uGxs57vqW+PU7\npWcyu0wH50H05FTy01y15CjCHTIP8nTiOqP6oSWoEJVFAhZGLw7B2blHaZQA\nQEswa/BmyxJMzKPT7ImdATToNGuZWKDKciQFY9wpNiIGP9KQCbq2w7kOE4o+\nEaiCTphA6ZM+zOthZKCTSr65ICDXZjoxV6Xb2aJ783N/zjWyyuPufFDi1Mv4\nuwU2kDG/vzJW9+SCO3Mmjy5H0tgcPQNvybHA63YMgovDaAj6QqQCBTCFKC+G\nVXrQ/jJqhUDw9oDH8q7RKS8TrxHSaybR2zIqrtmeWsMxtx8D7WhBViRrxaU5\nL8iAvpEwJ1o6HnCjLimMHIBBvDvJ4PHJqF680rNFDYFYDG0mDdLLyRlLsPqZ\nxnUUea8P+JySSBft1p3GI0VGU62hVMsDP4BdvAr0JQc8wv1N2CN6bvi099wz\nv9tYMMg6SyBtV/Z+sTSxjrkbBRALrOBe5uBR7p9Dg7rJgF7EhmjcomcNqoZB\nT8ykSGojhePQiyLXw/hr7L0I73Jzfp3WMZOup4xUTALyi90nxw7q224gzbeG\n5GQuuR+qRi84C7hDJvLENWevWdCb34k4mFA/6mdm8pLJPAlh9HY89hYkRDV0\nkTjJNYapfIj1fmhlitAwsRAgA4zVCWY8WOUJx/r9xthd1Ko+QYQUJ+ifq/Lz\nl26qU96fNoIxJ9srPQf85a4EnHQ/4UEsQCszsyyH/nY9A4sjDxVGgZf2RGV7\nQGzPRtPugh8NI9dPS81K3hGGjrONlv/O354AaQrYgMgtaUwMzAMXEr13FpeS\nwgJwLulUbzs7GVgLUxTf/dzYhzQtt/2qVoUi5RbAzrQvllOrrqW6zKtQoQlZ\nJROvh0/3YASJbuX4WvuS2baUJP/D12oTblZbupupIUEFFk8sCiVAzQvZMzU8\noY9Htj5MnljsvodPEUrUxcL1+77jM3g68b40d/f4lELXrQS+H77bx6RM5s8Y\nWPay+Hc28FAB95/ndzqH4AIGFU+p27ydebPHWyS7nj5KeRimcD08EDZhjVvz\nGCbmbSXLJQnvIxOG6HEl7JHdaOEQ237HIE8WD5mBCPLi9S25RjS5jDmB1Qmy\nxSYgeHoCH1oeXIHtAZfXV6DXZoHAmDtyFXHqbuJDFrc6YLS2ENgBrTq+DzEa\n9x6NGldmseedWzXMbL+7OieRn+Q/E0eoO2a3jBVz7lN55aCzM5NPwNhuNRJF\nj6YExBwHs4614erMYh6e0i+YL4dyySKMm5rY/xEnixsdY+iIbDdCAfDkq+ij\nIfK9CJ5rrp/sUzw/SpIenc266p3PE5cCdVnMtliL56dvj+AyxojfO9MaoMww\nXZaRDWiIq+oByosFkfxV4Hx5xEUpaZD+t+QVUp6Vw+PkIOy2XiV0bu4bXGAq\nxwHbd5yCTjjHTEK0J4t6jnU8y3AXd/+j1v1cJ0QJQKJ/eSGhe2TflhsGvjSz\njAR6HADKjeMmVPRgrlkZxvcPjHd8cPCXcZ+sP/LLURfLd3UJuyvhOjV3UcQ6\n0emA1I8e/ptbwx7MrGCKTfDJxiou0hMume6y9dY6yJyvit6+KuGr8IyCDfbK\n9c5sc9XFJmIxQNsklPrEIA3WaEmKuY+xEImlpY1qnJDtnnb+1g7vfLtWe13E\nO0GciIRTvuKbtYGmSnbgTcuv+SYvM9ydrG9369SaicKDBYdekwq6MdbhR36+\nz1VNC6YsRJm8NvYeRmpHNq14npxvh57wZ4f9Ghcxgg71mgDhsb8YhEUtA56Z\ni40dzVICoL2jHojpwonp9602qkojCBLy8jcQwC5sm94P4Yt1q00poanCQ6RO\nUSSKEOQL9pQ87Vj4TW4gxIiSBEqsuhpAz4R9e+DYCJDy5y8U13lySN6wcf/U\n9WQw9UztjnybKIr8kNOd3320yUmxmUrYJqxKtuMZvlYE+8k95HNa/OwzL+K3\nAaeA9ud9uZgkR3NbNbZyFYTw2vfr1SY49Tf3fH8MopmKJMWMBZasnlREZZQo\nErGf1avwFLyZGDh50gXzH3xk7JKIx7U1WbAvN96Qs4aAUyRQiVsK8MIhUJ+s\nUIewq2z1/4oeC9jdUF+0pQouLkZGNh9ta7/NoB5t8VdGnfarttfEXPEUNI1X\nfcjCMVn+jEpmW0+NkbXbqmHoAGUEVSVA0zVzwDl+w84yAXooE9A0lYI7Voxu\nm0/bTiTJzrr2NivMnyIhWdZcl7DwI8TnxpinMDjIVpkd5iLBZtHVlQwrq+K2\nBIdNkovs31soxGGfXNMLvZqjhj1c8NKbYi+W6/5qqHXHp+Ywn3fd2lT6pyGh\np7myFQPTw3b6X2q6YXrP0NxLznxj4DF75X30V87Bp0rocq9MENZpRve0JBsb\n4DNxkPwKFYMF9QN4rAGmVQ1Y5GaU5DzNnaLVUP18oB9DeBhbhKr3E5HLLc8s\nALx48Wrnw+Acc8Uz/AMi2UFZc/A4+dzgC2lIl2GXK72v1sasGnFytoRiVOzn\n+5JGoPv30pUPHbuvsNmOdOfTyqYE4osHSI+ym+LI7wrk0N8Xhxbdps/YDe3l\nMcH5an9XbOp+ReAc1gyHVr0QmNuktgg9CQJ9LXaMGkn56bDkVz5md7gSWlVM\nfXZs+2XZB7PqATc+uqZo6iC4o0t6S1wtsswu8Er+0ER3j5YkOBNyxJNkSxDC\nWCYuT39BFQUUh7KUZw090z3TDYHF47Iu84sFQDTFDYZMch5KNfGMe7Z8OWOX\nlpiLburZqqvqbh10v6J1tUTfA8J5MBdvJwc1iNo8FJUY6Kwu5dWkrfqhe2QI\npxG9b4tsMerQWWEBfnu9KCcDlvN0NAwiDa/4E91pb/xg6m+EbUOGbtcU05H+\ncPDioN8LnkMTEdQAuU9DP4eYDlVXVkcmd0B63zoAusy+FWHSOIMoS98vqVpZ\n5VmzmXUTYsG5AWlgcHCLA3kTCYVI2axuP3q9gDR2cczUlZYaLOZtpnWnvLfx\n6uNrea+zC4UEOMKk8TT1Q1F99CJBYFeHtur01rXQDA6rzCLx40ENRbEtcOkf\nWhAhSVoD3+45TjAYlAf3H3JYyCP1g0IzUK8oES/um6M0qsp9fJN6aasYYIxY\na0a9hvUh4Zyj2taSv8/y+U2UFSJy7lpvYEXJIv1PlR8jbjPLcspkwHJYSDnc\nICdXl+5MBcGzVyIWsekLqtDWs5ObbWeuGwh+OTyK8mUj0w2k11dOqou+pPi5\nQE5hUT+/krd7CeM1Pm+Q/2FAqZv5nw4rfd6xU1Tn259YPafgKyCknvYV+kIH\nTx1lRGIAu3U0lYKUxB4dRpK3zs6WdU7aqNT0D/x/5+vYcIwocTIfVMayjdpe\n1hor/oKG2XiwFyPi9eKqOYps1nHQntiZnT4hunB/5tzgEdtFTINj6dv9oAjA\n/Rpn19Yf0GGrZoOvyP4v9KJMNI+0oqQrr+rL4PWm8PNb/Y4i5Hrk0Ay2jMfc\nWshVadc7O5QfuJ0SMvMv4Zoa20Qf2wQlBSJGkOg9bGev08oqorpL1mTm1Ln1\nYJ38hhS89oIjw/eoGrJVCEBNKKquFfZCzk/DyppHR4t7e6VK39rBmRYTdSsZ\nHAzKAkB8VnFwsCyK7kg2Ogc9fqH2mSslFRZKTemVS0j9N7k/EACO5QNMyEMV\nhgr+G4nggqoMxIZVHdOpAz+gHVkQK+q/u7h2oQ3Vuf31wpePU2MNdZTkTNXF\nwZyGogTpRLu/LHFYT6Ruw4m81fgP5MnWEMArRX+1NiUidTzbteReLBsZk5J6\nqHrj9mi6qaoKXsp9wixn0e/0\n",
-    "bubble_choice_description": "Help Tim find backing tracks to the vocals from Hallelujah",
+    "encrypted_exemplar_sources": "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\n",
+    "bubble_choice_description": "Help Zara focus on adding vocals to I Like to Move It",
     "validations": [
       {
         "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
@@ -531,11 +583,11 @@
       "isPredictLevel": false
     },
     "name_suffix": "_v2",
-    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_hallelujah/rosa_linn_hallelujah.jpg",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/will_i_am_i_like_to_move_it/will_i_am_i_like_to_move_it.jpg",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-26T22:53:20.971+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e_v2\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e_v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-26T22:53:20.971+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e_v2\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e_v2\"},{\"changed_at\":\"2025-06-27 17:23:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:32:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:36:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:38:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:42:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:46:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:49:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 18:01:35 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 18:04:10 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

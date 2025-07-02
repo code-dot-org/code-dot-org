@@ -7,7 +7,7 @@ import Header from '@/components/header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
-import {SUPPORTED_LOCALES_MAP} from '@/config/locale';
+import {SUPPORTED_LOCALES_MAP, SupportedLocale} from '@/config/locale';
 import {getStage} from '@/config/stage';
 import EnvironmentLoader from '@/providers/environment';
 import LocalizeLoader from '@/providers/localize/LocalizeLoader';
@@ -23,7 +23,7 @@ export default async function Layout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{brand: Brand; locale: string}>;
+  params: Promise<{brand: Brand; locale: SupportedLocale}>;
 }>) {
   const syncParams = await params;
   const {brand, locale} = syncParams;

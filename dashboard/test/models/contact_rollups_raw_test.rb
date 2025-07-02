@@ -35,7 +35,8 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
 
   test 'extract_pd_enrollments teacher with multiple enrollments' do
     teacher = create :teacher
-    csf_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
+    csf_workshop = build :workshop, course: Pd::Workshop::COURSE_CSF
+    csf_workshop.save(validate: false)
     csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     create :pd_enrollment, email: teacher.email, workshop: csf_workshop
     create :pd_enrollment, email: teacher.email, workshop: csd_workshop
