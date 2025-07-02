@@ -43,7 +43,8 @@ module Pd::Payment
 
     test 'workshop summary reports attendance count for all sessions attendance for regular workshops' do
       report = @workshop_summary.generate_workshop_summary_line_item
-      assert_equal 2, report[:num_scholarship_teachers_attending_all_sessions]
+      assert_equal 2, report[:num_teachers_attending_all_sessions]
+      assert_equal 0, report[:num_scholarship_teachers_attending_all_sessions]
     end
 
     test 'workshop summary reports nil for attendance count for all sessions attendance for admin workshop' do
@@ -51,6 +52,7 @@ module Pd::Payment
       @ended_admin_workshop.save(validate: false)
       @workshop_summary = WorkshopSummary.new(workshop: @ended_admin_workshop)
       report = @workshop_summary.generate_workshop_summary_line_item
+      assert_nil report[:num_teachers_attending_all_sessions]
       assert_nil report[:num_scholarship_teachers_attending_all_sessions]
     end
 
@@ -58,7 +60,7 @@ module Pd::Payment
       @ended_admin_counselor_workshop = create :admin_counselor_workshop, :ended, enrolled_and_attending_users: 2, enrolled_absent_users: 2, num_sessions: 2
       @workshop_summary = WorkshopSummary.new(workshop: @ended_admin_counselor_workshop)
       report = @workshop_summary.generate_workshop_summary_line_item
-
+      assert_nil report[:num_teachers_attending_all_sessions]
       assert_nil report[:num_scholarship_teachers_attending_all_sessions]
     end
 

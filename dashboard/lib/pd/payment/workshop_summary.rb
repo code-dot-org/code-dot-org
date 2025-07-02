@@ -45,8 +45,12 @@ module Pd::Payment
 
     # Get number of teachers attending all sessions, except for admin and counselor PD where logging in
     # to attend is not required.
+    def num_teachers_attending_all_sessions(filter_by_cdo_scholarship: false)
+      workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: filter_by_cdo_scholarship).count : nil
+    end
+
     def num_scholarship_teachers_attending_all_sessions
-      workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count : nil
+      num_teachers_attending_all_sessions(filter_by_cdo_scholarship: true)
     end
 
     def generate_workshop_summary_line_item
@@ -59,7 +63,8 @@ module Pd::Payment
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
-        num_scholarship_teachers_attending_all_sessions: num_scholarship_teachers_attending_all_sessions
+        num_scholarship_teachers_attending_all_sessions: num_scholarship_teachers_attending_all_sessions,
+        num_teachers_attending_all_sessions: num_teachers_attending_all_sessions
       }
 
       # Attendance days 1-5
