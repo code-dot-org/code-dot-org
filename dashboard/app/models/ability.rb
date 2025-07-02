@@ -169,6 +169,7 @@ class Ability
       can :get_level_source, UserLevel
 
       can :evaluate, :openai_evaluate
+      can :evaluate_section, :openai_evaluate
 
       # all signed in users can access the aichat_request endpoint
       # additional permission logic lives in the controller itself
@@ -205,7 +206,6 @@ class Ability
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
-        can :evaluate_section, :openai_evaluate
         can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
           user.students.exists?(id: evaluation.student_id)
         end

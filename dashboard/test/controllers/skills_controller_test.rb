@@ -80,7 +80,8 @@ class SkillsControllerTest < ActionController::TestCase
       assert_response :success
       response_body = JSON.parse(response.body)
       assert_equal 'success', response_body['status']
-      assert response_body.key?('skills_data')
+      assert response_body.key?('skillsData')
+      assert response_body.key?('evaluationData')
     end
 
     test 'teacher_cannot_access_section_skills_for_other_sections' do
