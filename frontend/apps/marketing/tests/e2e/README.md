@@ -96,7 +96,7 @@ yarn test:ui:fork
 
 2. Make updates on the forked page in Contentful.
 
-- Make sure all top level sections have a Fixed height in the Design sidebar in the Experiences editor. This will decrease page shifts on Eyes tests.
+- If Eyes tests fail due to shifting, make sure top level sections have a Fixed height in the Design sidebar in the Experiences editor.
 
 3. Update the `development` snapshot with your forked version; the ID can be found at the end of the url on the forked experience in Contentful:
 
