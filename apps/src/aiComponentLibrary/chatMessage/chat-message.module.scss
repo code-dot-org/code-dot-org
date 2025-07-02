@@ -167,9 +167,9 @@ $icon-overlay-padding-right: 8px;
 }
 
 .danger {
-  background-color: $light_negative_100;
+  background-color: var(--background-error-extra-light);
 }
 
 .warning {
-  background-color: $light_caution_100;
+  background-color: var(--background-warning-light);
 }
