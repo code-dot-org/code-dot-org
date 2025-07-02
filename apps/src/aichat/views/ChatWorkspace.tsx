@@ -6,13 +6,14 @@ import {useSelector} from 'react-redux';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useLevelProperties} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
 import {
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
+  getSelectMultimodalAvailable,
   selectAllVisibleMessages,
-  selectMultimodalEnabled,
 } from '../redux';
 import {ChatButton} from '../types';
 import {getShortName} from '../utils';
@@ -150,7 +151,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+  const multimodalEnabled = useAppSelector(
+    getSelectMultimodalAvailable(
+      useLevelProperties().aichatSettings?.multimodalEnabled
+    )
+  );
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
