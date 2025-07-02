@@ -77,8 +77,6 @@ export const withLocale: MiddlewareFactory = next => {
         getCookieNameByStage('_user_type', stage),
       );
 
-      console.log('cookie name:', getCookieNameByStage('_user_type', stage));
-
       if (userTypeCookie?.value) {
         return getCachedRedirectResponse(getStudioBaseUrl());
       }
