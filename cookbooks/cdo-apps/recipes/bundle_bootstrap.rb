@@ -42,12 +42,5 @@ execute 'bundle install' do
   environment node['cdo-apps']['bundle_env']
   group user
   user user
-  # Temporarily disable the conditional check so that we always run bundle
-  # install on every build. This will help us avoid the chicken-egg problem we
-  # otherwise get when we try to rely on a Ruby-initiated process to switch
-  # from running bundle install as root to running as local user.
-  #
-  # TODO infra: reenable this check once we have switched over all existing
-  # persistent managed servers to the new bundle install.
-  # not_if 'bundle check', cwd: root
+  not_if 'bundle check', cwd: root
 end
