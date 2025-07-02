@@ -153,7 +153,7 @@ test.describe('All the things UI e2e test', () => {
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
-      '⛔️ [ENGINEERING ONLY] UI Integration Testing - SEO',
+      '❌ [ENGINEERING ONLY] UI Integration Testing - SEO',
     );
     expect(await allTheThingsPage.description).toBe('SEO Description');
     expect(await allTheThingsPage.robots).toBe('noindex, nofollow');
@@ -223,7 +223,7 @@ test.describe('All the things UI e2e test', () => {
 
       test('renders action block', async () => {
         const overline = component.getByText('K-12 Teachers');
-        const title = component.getByText('TEST - Self-Paced PL');
+        const title = component.getByText('❌ [ENG] Self-Paced PL 1');
         const description = component.getByText(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
         );
@@ -290,7 +290,7 @@ test.describe('All the things UI e2e test', () => {
 
       test('renders full width action block', async () => {
         const overline = component.getByText('K-12 Teachers');
-        const title = component.getByText('TEST - Self-Paced PL');
+        const title = component.getByText('❌ [ENG] Self-Paced PL 1');
         const description = component.getByText(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
         );
@@ -364,6 +364,26 @@ test.describe('All the things UI e2e test', () => {
     });
 
     ['Action Block Carousel', 'Image Carousel', 'Video Carousel'].forEach(
+      carousel => {
+        test.describe(carousel.toLowerCase(), () => {
+          let component: Locator;
+
+          test.beforeEach(async () => {
+            component = allTheThingsPage.getSectionLocator(carousel as Section);
+            await component.scrollIntoViewIfNeeded();
+          });
+
+          test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+            await eyes.check(testInfo.title, {
+              region: component,
+              fully: true,
+            });
+          });
+        });
+      },
+    );
+
+    ['Action Block Collection', 'Logo Collection', 'People Collection'].forEach(
       carousel => {
         test.describe(carousel.toLowerCase(), () => {
           let component: Locator;
