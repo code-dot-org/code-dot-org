@@ -58,6 +58,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         scrub_pii
         user.reload
         _(user.name).must_be_nil
+        _(user.given_name).must_be_nil
         _(user.family_name).must_be_nil
         _(user.username).wont_equal original_username
         _(user.username).wont_be_nil

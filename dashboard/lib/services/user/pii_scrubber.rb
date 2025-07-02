@@ -65,6 +65,7 @@ module Services
 
         # Names
         user.name = nil
+        user.given_name = nil
         user.family_name = nil
         user.username = SecureRandom.alphanumeric(20)
         user.ops_first_name = nil
