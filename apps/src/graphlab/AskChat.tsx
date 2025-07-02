@@ -30,7 +30,7 @@ function AskChat({id}: NodeProps) {
       : 'none';
 
   const managerRef = useRef<AiTutor2Manager | null>(
-    new AiTutor2Manager('', 0, '')
+    new AiTutor2Manager(undefined, '', 0, '')
   );
 
   useEffect(() => {
