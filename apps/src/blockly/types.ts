@@ -83,7 +83,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   selected: GoogleBlockly.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;

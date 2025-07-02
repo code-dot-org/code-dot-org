@@ -49,6 +49,19 @@
   padding-bottom: 5px;
 }
 
+/* Styles for ViewSystemPrompt component */
+.view-system-prompt__toggle {
+  cursor: pointer;
+  user-select: none;
+}
+
+.view-system-prompt__text {
+  margin-top: 8px;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
 /* Styles for the modal container and dismiss button for SkillsEditDialog */
 .skills-modal {
   min-width: 400px;

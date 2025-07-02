@@ -83,6 +83,10 @@ export default class WorkshopEnroll extends React.Component {
         signUpUrl: result.sign_up_url,
         workshopUrl: result.workshop_url,
       });
+
+      if (result.workshop_enrollment_status === SUBMISSION_STATUSES.SUCCESS) {
+        this.handleSuccess();
+      }
     } else {
       this.setState({
         workshopEnrollmentStatus: SUBMISSION_STATUSES.UNKNOWN_ERROR,
@@ -153,7 +157,7 @@ export default class WorkshopEnroll extends React.Component {
     );
   }
 
-  renderSuccess() {
+  handleSuccess() {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
     sessionStorage.setItem(
@@ -188,8 +192,6 @@ export default class WorkshopEnroll extends React.Component {
         return this.renderFull();
       case SUBMISSION_STATUSES.NOT_FOUND:
         return this.renderNotFound();
-      case SUBMISSION_STATUSES.SUCCESS:
-        return this.renderSuccess();
       default:
         return (
           <div>

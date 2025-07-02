@@ -71,10 +71,8 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset, collation, and timezone to match our servers
+1. fix your database timezone to match our servers
     - `bin/mysql-client-admin`
-    - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
     - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
     - `SELECT @@global.time_zone;` Verify the setting

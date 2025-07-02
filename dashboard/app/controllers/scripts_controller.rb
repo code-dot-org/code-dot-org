@@ -21,6 +21,8 @@ class ScriptsController < ApplicationController
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
+    #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
+    # will redirect to the redirect script's original unit group
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -345,7 +347,7 @@ class ScriptsController < ApplicationController
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
         UnitGroup.latest_stable_version(unit_name)
-      if unit_group.can_be_participant?(current_user)
+      if unit_group&.can_be_participant?(current_user)
         unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group
       end
       if unit_group&.single_unit_course?

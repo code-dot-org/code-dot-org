@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:58.000Z",
   "level_num": "custom",
@@ -573,7 +574,7 @@
       "isPredictLevel": false
     },
     "display_name": "Beautiful Things",
-    "long_instructions": "### Beautiful Things\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Beautiful Things* by Benson Boone. Your job is to organize the code using functions so the song is easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and think about which sections repeat or can be grouped together. Plan how to group the tracks into clear, reusable functions that make your code easier to read. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/bdc9749ee0667c6d12e24145ac97fbb6-image-1750879608502.png)\r\n\r\n**Try:** Use the functions already provided in the workspace. Move code into each function, then replace the original code with a call to that function. Be careful - your updated version should still sound exactly the same as before. Not all of the original code will go into functions!\r\n\r\n**Reflect:** Does your song still sound the same? Are your functions named clearly and grouped logically? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace repeated or grouped code\r\n- The same final sound as the original version",
+    "long_instructions": "### Beautiful Things\r\n\r\n**Define:** A record producer has sent you the raw tracks for *Beautiful Things* by Benson Boone. Your job is to organize the code using functions so the song is easier to remix and update in the future.\r\n\r\n**Prepare:** Look at the original code and think about which sections repeat or can be grouped together. Plan how to group the tracks into clear, reusable functions that make your code easier to read. Here is one possible way to organize the song:\r\n\r\n![](https://images.code.org/bdc9749ee0667c6d12e24145ac97fbb6-image-1750879608502.png)\r\n\r\n**Try:** Use the functions already provided in the workspace. Move code into each function, then replace the original code with a call to that function. Be careful - your updated version should still sound exactly the same as before. Not all of the original code will go into functions!\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your song still sound the same? Are your functions named clearly and grouped logically? In order to complete this level, your remix must include:\r\n\r\n- Function calls that replace repeated or grouped code\r\n- The same final sound as the original version",
     "bubble_choice_description": "A record producer has sent you the raw tracks for Beautiful Things by Benson Boone. They've asked you to organize it into functions to make the song easier to remix in the future.",
     "validations": [
       {
@@ -611,8 +612,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/benson_boone_beautiful_things/benson_boone_beautiful_things.jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.374+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceC\"},{\"changed_at\":\"2025-06-25 19:25:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:27:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.374+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceC\"},{\"changed_at\":\"2025-06-25 19:25:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:27:15 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:31 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:49:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

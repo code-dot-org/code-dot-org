@@ -10,7 +10,9 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
-import placeholderImage from '@public/images/person-placeholder.avif';
+import placeholderImage from '@public/images/person-placeholder.png';
+
+import {CollectionProps} from '../types';
 
 type ItemFields = {
   name: EntryFields.Text;
@@ -22,11 +24,9 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type PeopleCollectionProps = {
+export type PeopleCollectionProps = CollectionProps & {
   /** Collection content w/ fields from Contentful */
   people: ItemEntry[];
-  /** Show or hide images */
-  imageVisibility?: 'show' | 'hide';
 };
 
 const styles = {
@@ -67,7 +67,9 @@ const styles = {
 
 const PeopleCollection: React.FC<PeopleCollectionProps> = ({
   people,
-  imageVisibility = 'show',
+  sortOrder,
+  hideImages = false,
+  className,
 }) => {
   if (!people) {
     return (
@@ -80,75 +82,72 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
     );
   }
 
-  const peopleData = useMemo(
-    () =>
-      people
-        .filter(Boolean)
-        .map(({fields}) => {
-          const {name, image, title, bio, personalLink} = fields;
+  const peopleData = useMemo(() => {
+    const data = people.filter(Boolean).map(({fields}) => {
+      const {name, image, title, bio, personalLink} = fields;
 
-          return {
-            id: name,
-            item: (
-              <Box sx={styles.gridItem}>
-                {imageVisibility === 'show' && (
-                  <Box component="figure" sx={styles.image}>
-                    <img
-                      src={
-                        getAbsoluteImageUrl(
-                          image,
-                          'fit=fill&w=128&h=128&r=max',
-                        ) ||
-                        (typeof placeholderImage === 'string'
-                          ? placeholderImage
-                          : placeholderImage.src)
-                      }
-                      alt=""
-                      loading="lazy"
-                    />
-                  </Box>
-                )}
-                {name && (
-                  <Typography variant="h6" component="h3">
-                    {name}
-                  </Typography>
-                )}
-                {title && (
-                  <Typography
-                    variant="overline"
-                    component="h4"
-                    sx={styles.overline}
-                  >
-                    {title}
-                  </Typography>
-                )}
-                {bio && (
-                  <Typography variant="body2" component="p" sx={styles.bio}>
-                    {bio}
-                  </Typography>
-                )}
-                {personalLink && (
-                  <Link
-                    variant="body2"
-                    href={personalLink?.fields?.primaryTarget}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={styles.personalLink}
-                  >
-                    Visit personal page
-                    <OpenInNew fontSize="small" color="primary" />
-                  </Link>
-                )}
+      return {
+        id: name,
+        item: (
+          <Box sx={styles.gridItem}>
+            {!hideImages && (
+              <Box component="figure" sx={styles.image}>
+                <img
+                  src={
+                    getAbsoluteImageUrl(image, 'fit=fill&w=128&h=128&r=max') ||
+                    (typeof placeholderImage === 'string'
+                      ? placeholderImage
+                      : placeholderImage.src)
+                  }
+                  alt=""
+                  loading="lazy"
+                />
               </Box>
-            ),
-          };
-        })
-        .sort((a, b) => a?.id?.localeCompare(b?.id)), // Sort alphabetically
-    [people, imageVisibility],
-  );
+            )}
+            {name && (
+              <Typography variant="h6" component="h3">
+                {name}
+              </Typography>
+            )}
+            {title && (
+              <Typography
+                variant="overline"
+                component="h4"
+                sx={styles.overline}
+              >
+                {title}
+              </Typography>
+            )}
+            {bio && (
+              <Typography variant="body2" component="p" sx={styles.bio}>
+                {bio}
+              </Typography>
+            )}
+            {personalLink && (
+              <Link
+                variant="body2"
+                href={personalLink?.fields?.primaryTarget}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={styles.personalLink}
+              >
+                Visit personal page
+                <OpenInNew fontSize="small" color="primary" />
+              </Link>
+            )}
+          </Box>
+        ),
+      };
+    });
+    // Sort alphabetically if sortOrder is 'alphabetical'
+    if (sortOrder === 'alphabetical') {
+      data.sort((a, b) => a?.id?.localeCompare(b?.id));
+    }
+    return data;
+  }, [people, hideImages, sortOrder]);
 
   return (
-    <Grid container spacing={7.5} sx={styles.container}>
+    <Grid container spacing={7.5} sx={styles.container} className={className}>
       {peopleData.map(person => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

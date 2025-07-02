@@ -14,13 +14,15 @@ class AichatRequestsController < ApplicationController
   end
 
   # POST /aichat_request/start_chat_completion
+  # ------------------------------------------
   # Initiate a chat completion request, which is performed asynchronously as an ActiveJob.
   # Returns the ID of the request and a base polling interval + backoff rate.
-  # params are
-  # newMessage: {role: 'user'; chatMessageText: string; status: string}
-  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
-  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # params are:
+  #   newMessage: {role: 'user'; chatMessageText: string; status: string}
+  #   storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string}
+  #     - does not include user's new message
+  #   aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  #.  aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
     puts "here"
     unless chat_completion_has_required_params?
@@ -38,22 +40,11 @@ class AichatRequestsController < ApplicationController
       return head :too_many_requests
     end
 
-    # Filter out non-OK messages (e.g. errors)
+    # Filter out non-OK messages (e.g. errors).
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
     context = params[:aichatContext]
 
-    a = {
-      user_id: current_user.id,
-      model_customizations: params[:aichatModelCustomizations],
-      stored_messages: messages_for_model,
-      new_message: params[:newMessage],
-      level_id: context[:currentLevelId],
-      script_id: context[:scriptId],
-      project_id: 'a' # get_project_id(context)
-    }.to_json
-    puts a
-
-    # Create the request object
+    # Create the request object.
     begin
       request = AichatRequest.create!(
         user_id: current_user.id,
@@ -69,11 +60,11 @@ class AichatRequestsController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    # Start the job
+    # Start the job.
     locale = params[:locale] || "en"
     AichatRequestChatCompletionJob.perform_later(request: request, locale: locale)
 
-    # Return the request ID, polling interval, and backoff rate
+    # Return the request ID, polling interval, and backoff rate.
     response_body = {
       requestId: request.id,
       pollingIntervalMs: get_polling_interval_ms,
@@ -83,6 +74,7 @@ class AichatRequestsController < ApplicationController
   end
 
   # GET /aichat_request/chat_request/:id
+  # ------------------------------------
   # Get the chat completion request status and response for the given ID.
   def chat_request
     begin
@@ -91,7 +83,7 @@ class AichatRequestsController < ApplicationController
       return render status: :not_found, json: {}
     end
 
-    # Only the user who initiated the request can view the response and status
+    # Only the user who initiated the request can view the response and status.
     return render status: :forbidden, json: {} if request.user_id != current_user.id
 
     response_body = {
@@ -120,7 +112,7 @@ class AichatRequestsController < ApplicationController
   # Since we don't know the token count of the current request at the outset,
   # we check whether the user's most recent request exceeded the daily token limit.
   private def should_throttle_token_count?(model_id, user_id)
-    throttle_key = AichatOpenaiHelper.token_throttling_key(model_id, user_id)
+    throttle_key = AichatAiHelper.token_throttling_key(model_id, user_id)
     Cdo::Throttle.throttled?(throttle_key)
   end
 

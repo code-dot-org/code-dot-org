@@ -1,7 +1,7 @@
 export enum Brand {
-  CODE_DOT_ORG = 'code.org',
-  HOUR_OF_CODE = 'hourofcode.com',
-  CS_FOR_ALL = 'csforall.org',
+  CODE_DOT_ORG = 'Code.org', // Not a URL
+  HOUR_OF_CODE = 'Hour of Code',
+  CS_FOR_ALL = 'CS For All',
 }
 
 /**

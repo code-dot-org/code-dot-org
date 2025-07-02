@@ -13,7 +13,10 @@ import AnalyticsReporter from '../../analytics/AnalyticsReporter';
  * A hook for updating the {@link AnalyticsReporter} when relevant redux state changes and attaching callbacks
  * to browser and lifecycle events.
  */
-function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
+function useUpdateAnalytics(
+  analyticsReporter: AnalyticsReporter,
+  isProjectLevel: boolean
+) {
   /**
    * Effect that runs on initial mount
    *   - Starts a new analytics session.
@@ -101,9 +104,7 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
       analyticsReporter.setProjectProperty('channelId', channelId);
   }, [sessionInProgress, channelId, analyticsReporter]);
 
-  const levelType = useAppSelector(state =>
-    state.lab.levelProperties?.isProjectLevel ? 'Standalone Project' : 'Level'
-  );
+  const levelType = isProjectLevel ? 'Standalone Project' : 'Level';
   useEffect(() => {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('levelType', levelType);
