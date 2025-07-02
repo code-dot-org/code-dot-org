@@ -84,7 +84,6 @@ function initializeCodeMirror(target, mode, options = {}) {
             React.createElement(MainInstructionsPreview, {
               instructionsText: editor.getValue(),
               theme: 'Dark',
-              hasPassed: false,
             }),
             previewElement
           );

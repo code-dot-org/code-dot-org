@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-25 22:45:20 UTC",
+    "serialized_at": "2025-07-01 19:29:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -4557,13 +4557,13 @@
     {
       "chapter": 48,
       "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
         "level_keys": [
           "test-music-lab-loops-explore-formative_v2"
         ],
-        "progression": "Check-in"
+        "progression": "Investigate"
       },
       "bonus": false,
       "seeding_key": {
@@ -4573,7 +4573,7 @@
         "lesson.key": "Loops - Explore",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025",
-        "activity_section.key": "836f1ea7-494b-430f-9abd-67fd0de9d3a2"
+        "activity_section.key": "98ee64dc-92c1-458b-b005-512e519006cf"
       },
       "level_keys": [
         "test-music-lab-loops-explore-formative_v2"
@@ -4582,6 +4582,31 @@
     {
       "chapter": 49,
       "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-loops-explore-summative_v2"
+        ],
+        "progression": "Check-in"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-loops-explore-summative_v2"
+        ],
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "836f1ea7-494b-430f-9abd-67fd0de9d3a2"
+      },
+      "level_keys": [
+        "test-music-lab-loops-explore-summative_v2"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4605,20 +4630,20 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 7,
+      "chapter": 51,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
-          "test-music-lab-loops-explore-summative_v2"
+          "music-lab-loops-explore-practice-a_v2"
         ],
         "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-music-lab-loops-explore-summative_v2"
+          "music-lab-loops-explore-practice-a_v2"
         ],
         "lesson.key": "Loops - Explore",
         "lesson_group.key": "lessonGroup-3",
@@ -4626,12 +4651,12 @@
         "activity_section.key": "018f6f4f-8f9c-4b3e-a9f9-9cfc237221c6"
       },
       "level_keys": [
-        "test-music-lab-loops-explore-summative_v2"
+        "music-lab-loops-explore-practice-a_v2"
       ]
     },
     {
-      "chapter": 51,
-      "position": 8,
+      "chapter": 52,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4655,7 +4680,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4680,7 +4705,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4705,7 +4730,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4730,7 +4755,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4755,7 +4780,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4780,7 +4805,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4805,7 +4830,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4830,7 +4855,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4855,7 +4880,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4880,7 +4905,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4905,7 +4930,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4930,7 +4955,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -4955,7 +4980,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4980,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5005,7 +5030,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5030,7 +5055,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5055,7 +5080,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5080,7 +5105,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5105,7 +5130,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5130,7 +5155,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5155,7 +5180,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5180,7 +5205,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -5205,7 +5230,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5230,7 +5255,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -5255,7 +5280,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5280,7 +5305,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5305,7 +5330,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5330,7 +5355,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5355,7 +5380,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5380,7 +5405,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5405,7 +5430,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5430,7 +5455,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5455,7 +5480,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5480,7 +5505,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -5505,7 +5530,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -5530,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5555,7 +5580,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5580,7 +5605,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5605,7 +5630,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5630,7 +5655,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5655,7 +5680,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5680,7 +5705,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5705,7 +5730,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5730,7 +5755,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5755,7 +5780,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5780,7 +5805,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5805,7 +5830,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5830,7 +5855,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5855,7 +5880,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5880,7 +5905,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5905,7 +5930,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5930,7 +5955,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5955,7 +5980,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5980,7 +6005,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6005,7 +6030,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6030,7 +6055,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6055,7 +6080,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6080,7 +6105,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6105,7 +6130,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6130,7 +6155,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6155,7 +6180,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6180,7 +6205,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6205,7 +6230,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6230,7 +6255,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6255,7 +6280,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6280,7 +6305,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6305,7 +6330,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6330,7 +6355,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6355,7 +6380,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6380,7 +6405,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6405,7 +6430,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7004,6 +7029,18 @@
         "lesson.key": "Loops - Explore",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "98ee64dc-92c1-458b-b005-512e519006cf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-loops-explore-summative_v2",
+        "script_level.level_keys": [
+          "test-music-lab-loops-explore-summative_v2"
+        ],
+        "lesson.key": "Loops - Explore",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
         "activity_section.key": "836f1ea7-494b-430f-9abd-67fd0de9d3a2"
       }
     },
@@ -7021,9 +7058,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-loops-explore-summative_v2",
+        "level.key": "music-lab-loops-explore-practice-a_v2",
         "script_level.level_keys": [
-          "test-music-lab-loops-explore-summative_v2"
+          "music-lab-loops-explore-practice-a_v2"
         ],
         "lesson.key": "Loops - Explore",
         "lesson_group.key": "lessonGroup-3",
@@ -8742,12 +8779,261 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "music-lab-genre-project_v2",
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": "1) The only loop block is a repeat block.\n\n2) A nested loop is when one repeat block is inside another or a function with loops that is nested inside another loop.",
+      "seeding_key": {
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+      "position": 3,
+      "learning_goal": "Creativity & Originality",
+      "ai_enabled": false,
+      "tips": "Limited sound use and experimentation could look like:\n- Using the same sounds over and over\n- Making \"immediate\" choices - ie: the first track in the menu every time and not exploring more\n- Limited variation in song structure or sound types\n",
+      "seeding_key": {
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+      "position": 4,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+      "position": 2,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops1, but the implementation may be very basic or not implemented properly.\n\nFor example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths. \n\nFor example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence\n\nAND\n\nAt least 1 nested loop2 is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks\n\nAND\n\nAt least 1 nested loop is used in the song\n\nFor example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project is not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal \n\nOR\n\nThe planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use functions, but the implementation may be very basic or not implemented properly.\n\nFor example: using functions for small chunks of code without a clear purpose, or functions have unclear and misleading names\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Functions are used to make code more efficient by replacing large chunks of code with a single function call\n\nFor example: using a function for the \"verse\" or \"chorus\" of a song\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions\n\nAND\n\nThe majority of the \"when run\" code are function calls\n\nFor example: making a function for the vocals and making a function for the instruments and calling them together in a “choir” function\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions\n\nAND\n\nAt least one function is called in multiple places in the song\n\nAND\n\nThe majority of the \"when run\" code are function calls\n\nFor example: creating a function for \"backingBeats\" and then using this function in both the \"verse\" and \"chorus\" functions\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ]
 }

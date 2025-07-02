@@ -321,6 +321,21 @@ const marketingPaths = {
   "/hour-of-code/poetry": true,
   "/hour-of-code/transformersone": true,
   "/districts/program/coaches-network": true,
+  // Home Page
+  "/": true,
+  // Post Launch 3
+  "/api/health_check": true,
+  "/about/partners": true,
+  "/privacy/cookies": true,
+  "/about/team": true,
+  "/about/leadership": true,
+  // CSAIF
+  "/csaif": true,
+  // Post Launch 4
+  "/your-school": true,
+  "/yourschool": true,
+  "/yourschool/thankyou": true,
+  "/about/team-pets": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

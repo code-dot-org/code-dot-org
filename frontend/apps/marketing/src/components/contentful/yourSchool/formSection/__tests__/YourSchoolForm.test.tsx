@@ -19,6 +19,8 @@ describe('YourSchoolForm Component', () => {
   const defaultProps = {
     regionalPartnerURL: 'https://example.com/partner',
     privacyPolicyURL: 'https://example.com/privacy',
+    shareOnTwitterURL: 'https://example.com/share-twitter',
+    shareOnFacebookURL: 'https://example.com/share-facebook',
   };
 
   const renderComponent = (props = {}) =>
@@ -78,6 +80,24 @@ describe('YourSchoolForm Component', () => {
     expect(
       await screen.findByText(/Thank you for telling us about your school!/i),
     ).toBeInTheDocument();
+
+    const shareOnTwitterLink = await screen.findByRole('link', {
+      name: /Share On Twitter/i,
+    });
+    expect(shareOnTwitterLink).toBeInTheDocument();
+    expect(shareOnTwitterLink).toHaveAttribute(
+      'href',
+      defaultProps.shareOnTwitterURL,
+    );
+
+    const shareOnFacebookLink = await screen.findByRole('link', {
+      name: /Share On Facebook/i,
+    });
+    expect(shareOnFacebookLink).toBeInTheDocument();
+    expect(shareOnFacebookLink).toHaveAttribute(
+      'href',
+      defaultProps.shareOnFacebookURL,
+    );
   });
 
   it('closes success modal when close button is clicked', async () => {

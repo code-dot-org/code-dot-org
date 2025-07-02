@@ -9,6 +9,7 @@ require 'queries/lti'
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
   before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
+  before_action :assign_redirect_url, only: [:finish_teacher_account, :finish_student_account]
 
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -542,6 +543,8 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(
       :parent_email,
       :username,
+      :given_name,
+      :family_name,
       :password,
       :encrypted_password,
       :current_password,
@@ -658,5 +661,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def assign_country_code
     @country_code = request.country_code
+  end
+
+  private def assign_redirect_url
+    @redirect_url = session[:user_return_to] || @redirect_url
   end
 end

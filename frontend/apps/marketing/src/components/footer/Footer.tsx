@@ -5,7 +5,7 @@ import DSCOFooter, {
   FooterProps,
 } from '@code-dot-org/component-library/cms/footer';
 
-import {SUPPORTED_LOCALES} from '@/config/locale';
+import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
 import awsLogo from '@public/images/powered-by-aws.png';
 
 import './onetrust.scss';
@@ -129,7 +129,7 @@ const Footer = ({locale}: GlobalFooterProps) => {
       {...defaultProps}
       onLanguageChange={handleLanguageChange}
       selectedLocaleCode={locale}
-      languages={SUPPORTED_LOCALES}
+      languages={LOCALIZE_JS_CONFIG_MAP}
     />
   );
 };

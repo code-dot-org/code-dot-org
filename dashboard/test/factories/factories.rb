@@ -109,6 +109,7 @@ FactoryBot.define do
       after(:create) do |unit_group, evaluator|
         unit = evaluator.unit || create(:unit, :in_unit_group)
         create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        unit.update(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
         unit.reload
       end
 

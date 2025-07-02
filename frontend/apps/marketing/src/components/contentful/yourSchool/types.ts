@@ -1,7 +1,6 @@
 import type {School as SchoolSearchData} from '@/components/contentful/schoolSearchFieldset';
 
 export type School = SchoolSearchData & {
-  isNew?: boolean;
   teachesCs?: string;
 };
 
@@ -9,10 +8,18 @@ export interface YourSchoolProps {
   dataSourceURL: string;
   regionalPartnerURL: string;
   privacyPolicyURL: string;
+  shareOnTwitterURL: string;
+  shareOnFacebookURL: string;
 }
 
 export interface YourSchoolFormProps
-  extends Pick<YourSchoolProps, 'regionalPartnerURL' | 'privacyPolicyURL'> {
+  extends Pick<
+    YourSchoolProps,
+    | 'regionalPartnerURL'
+    | 'privacyPolicyURL'
+    | 'shareOnTwitterURL'
+    | 'shareOnFacebookURL'
+  > {
   school?: School | null;
 }
 
