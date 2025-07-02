@@ -64,7 +64,15 @@ module Pd::Summary
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
         num_scholarship_teachers_attending_all_sessions: num_scholarship_teachers_attending_all_sessions,
-        num_teachers_attending_all_sessions: num_teachers_attending_all_sessions
+        num_teachers_attending_all_sessions: num_teachers_attending_all_sessions,
+        organizer_id: workshop.organizer&.id,
+        facilitators: workshop.facilitators.pluck(:name).join(', '),
+        workshop_id: workshop.id,
+        workshop_name: workshop.friendly_name,
+        course: workshop.course,
+        subject: workshop.subject,
+        num_qualified_teachers: num_teachers,
+        days: num_days,
       }
 
       # Attendance days 1-5
@@ -72,20 +80,6 @@ module Pd::Summary
       (1..REPORT_ATTENDANCE_DAY_COUNT).each do |n|
         line_item[:"attendance_day_#{n}"] = session_attendance_counts[n - 1]
       end
-
-      # Waiting to add some columns until after attendance to make payment processing easier
-      line_item.merge!(
-        {
-          organizer_id: workshop.organizer&.id,
-          facilitators: workshop.facilitators.pluck(:name).join(', '),
-          workshop_id: workshop.id,
-          workshop_name: workshop.friendly_name,
-          course: workshop.course,
-          subject: workshop.subject,
-          num_qualified_teachers: num_teachers,
-          days: num_days,
-        }
-      )
 
       # Facilitator names and emails, 1-6
       (1..REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
