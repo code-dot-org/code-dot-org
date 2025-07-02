@@ -97,7 +97,6 @@ namespace :seed do
     allthettsthings
     artist
     course1
-    course2
     course3
     course4
     coursea-2017
@@ -335,7 +334,6 @@ namespace :seed do
        allthettsthings
        artist
        course1
-       course2
        course3
        course4
        coursea-2017
