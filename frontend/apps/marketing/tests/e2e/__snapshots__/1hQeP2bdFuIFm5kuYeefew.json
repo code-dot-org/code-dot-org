@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "seoTitle": {
-        "en-US": "❌ [ENG] UI Integration Testing - SEO"
+        "en-US": "❌ [ENGINEERING ONLY] UI Integration Testing - SEO"
       },
       "seoDescription": {
         "en-US": "SEO Description"
@@ -23,10 +23,7 @@
         }
       },
       "keywords": {
-        "en-US": [
-          "UI Integration Test",
-          "All The Things"
-        ]
+        "en-US": ["UI Integration Test", "All The Things"]
       },
       "hidePageFromSearchEnginesNoindex": {
         "en-US": true
