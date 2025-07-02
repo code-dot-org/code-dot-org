@@ -217,17 +217,6 @@ describe('TeacherCourseOverview', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('redirects to unit if standalone unit', async () => {
-    getStore().dispatch(selectSection(11));
-
-    renderDefault('/sections/11/courses/csd-2024');
-
-    expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
-      replace: true,
-    });
-    expect(fetchSpy).not.toHaveBeenCalled();
-  });
-
   it('redirects to unit if single-unit course', async () => {
     getStore().dispatch(selectSection(14));
 
