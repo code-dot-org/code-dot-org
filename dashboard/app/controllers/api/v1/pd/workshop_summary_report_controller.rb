@@ -8,7 +8,7 @@ class Api::V1::Pd::WorkshopSummaryReportController < Api::V1::Pd::ReportControll
     @workshops = load_filtered_ended_workshops
 
     report = @workshops.map do |workshop|
-      ::Pd::Payment::WorkshopSummary.new(workshop: workshop).generate_workshop_summary_line_item
+      ::Pd::Summary::WorkshopSummary.new(workshop: workshop).generate_workshop_summary_line_item
     end
 
     respond_to do |format|

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module Pd::Payment
+module Pd::Summary
   class TeacherSummaryTest < ActiveSupport::TestCase
     setup do
       @workshop = create :workshop, :ended, enrolled_and_attending_users: 1, enrolled_absent_users: 1, num_sessions: 2

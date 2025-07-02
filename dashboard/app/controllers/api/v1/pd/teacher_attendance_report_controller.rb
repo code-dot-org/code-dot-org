@@ -10,7 +10,7 @@ class Api::V1::Pd::TeacherAttendanceReportController < Api::V1::Pd::ReportContro
 
     report = @workshops.flat_map do |workshop|
       workshop.enrollments.map do |enrollment|
-        ::Pd::Payment::TeacherSummary.new(enrollment: enrollment).generate_teacher_summary_line_item
+        ::Pd::Summary::TeacherSummary.new(enrollment: enrollment).generate_teacher_summary_line_item
       end
     end
 
