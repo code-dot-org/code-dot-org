@@ -2,13 +2,22 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "❌ [ENG] Curriculum 4"
+        "en-US": "❌ [ENG] Self-Paced PL 2"
       },
       "actionBlockOverline": {
-        "en-US": "Grades 9-12"
+        "en-US": "K-12 Teachers"
       },
       "shortDescription": {
         "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
       },
       "primaryLinkRef": {
         "en-US": {
@@ -28,12 +37,12 @@
           }
         }
       },
-      "image": {
+      "marketingLink": {
         "en-US": {
           "sys": {
             "type": "Link",
-            "linkType": "Asset",
-            "id": "46WnKBOGVA8e4bFtBSRPuE"
+            "linkType": "Entry",
+            "id": "5CznPyR4ZsbIkhpwSaUxoe"
           }
         }
       },
@@ -43,16 +52,12 @@
         ]
       },
       "duration": {
-        "en-US": [
-          "School Year"
-        ]
+        "en-US": 1
       },
-      "devices": {
-        "en-US": [
-          "Computer"
-        ]
+      "publishedDate": {
+        "en-US": "2025-02-01"
       }
     }
   },
-  "contentType": "curriculum"
+  "contentType": "selfPacedPl"
 }

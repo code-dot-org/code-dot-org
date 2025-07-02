@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "name": {
-        "en-US": "F Person"
+        "en-US": "❌ [ENG] F Person"
       },
       "image": {
         "en-US": {
@@ -21,7 +21,7 @@
           "sys": {
             "type": "Link",
             "linkType": "Entry",
-            "id": "2B8OnhPWAJV7CmxYeCSPKJ"
+            "id": "5CznPyR4ZsbIkhpwSaUxoe"
           }
         }
       }

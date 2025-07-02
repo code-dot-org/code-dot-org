@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "listName": {
-        "en-US": "❌ [ENGINEERING ONLY] Action Block Collection TEST"
+        "en-US": "❌ [ENG] Action Block Collection TEST"
       },
       "itemsInThisList": {
         "en-US": [
@@ -17,21 +17,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "20bNKCaJYcMUpF36ym6ylR"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "3CqSD4orrZzEoAvyXEFS7x"
-            }
-          },
-          {
-            "sys": {
-              "type": "Link",
-              "linkType": "Entry",
-              "id": "23EyWhGd4P97u4WbR4IXk"
+              "id": "7Gumifs6ZTcj2G02BUoqFz"
             }
           },
           {
@@ -45,7 +31,21 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3Z8qPEuqmMhHtCcsDgunT9"
+              "id": "tQOlCHWsKpGR4hFaI3xqm"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3CqSD4orrZzEoAvyXEFS7x"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6gUm7q1JYZjyE5p9EfANIG"
             }
           }
         ]
