@@ -11,6 +11,7 @@ import {
 import {getStage} from '@/config/stage';
 import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
+import {getCookieNameByStage} from '@/cookies/getCookie';
 import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
 import {MiddlewareFactory} from './types';
@@ -50,6 +51,7 @@ export const withLocale: MiddlewareFactory = next => {
     const pathParts = pathname.split('/').filter(Boolean);
 
     const maybeLocale = pathParts[0] as SupportedLocale;
+    const stage = getStage();
 
     if (SUPPORTED_LOCALES_SET.has(maybeLocale)) {
       // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
@@ -57,7 +59,7 @@ export const withLocale: MiddlewareFactory = next => {
 
       response.cookies.set('language_', getDashboardLocale(maybeLocale), {
         path: '/',
-        domain: getStage() === 'production' ? '.code.org' : undefined,
+        domain: stage === 'production' ? '.code.org' : undefined,
       });
 
       return response;
@@ -71,7 +73,11 @@ export const withLocale: MiddlewareFactory = next => {
       // If the _user_type cookie is set, then Dashboard successfully logged in the user which is an early indicator
       // that the user is logged in right now. Therefore, send the user to Code Studio
       // See: https://github.com/code-dot-org/code-dot-org/blob/3fad8bce055846378ae3da343da93a32acd4df8c/dashboard/config/initializers/devise.rb#L331
-      const userTypeCookie = request.cookies.get('_user_type');
+      const userTypeCookie = request.cookies.get(
+        getCookieNameByStage('_user_type', stage),
+      );
+
+      console.log('cookie name:', getCookieNameByStage('_user_type', stage));
 
       if (userTypeCookie?.value) {
         return getCachedRedirectResponse(getStudioBaseUrl());

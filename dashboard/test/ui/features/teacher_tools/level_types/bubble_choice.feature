@@ -38,6 +38,7 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1"
     And I wait until element ".teacher-panel" is visible
     # Teacher has not completed level, so make sure it is not shown as complete
+    And I wait for jquery to load
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
     And I wait for 5 seconds
