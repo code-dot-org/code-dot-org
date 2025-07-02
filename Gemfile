@@ -189,8 +189,6 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
-
 gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
@@ -392,3 +390,8 @@ gem 'rubyzip'
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: Bundler.root, glob: gemspec_path.sub(%r{^.*/engines/}, '**/engines/')
 end
+
+gem "opentelemetry-instrumentation-all", "0.51.1" # pinned due to rails 6.1, upgrade on rails 7
+gem "opentelemetry-sdk", "~> 1.8"
+
+gem "opentelemetry-exporter-otlp", "~> 0.30.0"

@@ -229,11 +229,6 @@ module Dashboard
     # Make sure dependency auto loading is enabled across all environments.
     # See http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html#autoloading-is-disabled-after-booting-in-the-production-environment
     config.enable_dependency_loading = true
-
-    if CDO.newrelic_logging
-      require 'newrelic_rpm'
-    end
-
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
