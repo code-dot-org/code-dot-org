@@ -84,7 +84,8 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'show includes correct SEO data' do
     get :show, params: {
-      id: Unit::TWENTY_HOUR_NAME,
+      course_course_name: Unit::TWENTY_HOUR_NAME,
+      position: 1,
     }
     assert_response :ok
     assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
@@ -119,17 +120,17 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of hoc" do
-    get :show, params: {id: Unit::HOC_NAME}
+    get :show, params: {course_course_name: Unit::HOC_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show of k-8" do
-    get :show, params: {id: Unit::TWENTY_HOUR_NAME}
+    get :show, params: {course_course_name: Unit::TWENTY_HOUR_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show of custom unit" do
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
   end
 
@@ -148,13 +149,13 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
     sign_in create(:student)
 
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if not logged in" do
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
   end
@@ -162,32 +163,32 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should show link to Overview of Courses 1, 2, and 3 if logged in as a teacher" do
     sign_in create(:teacher)
 
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
   test "show of hourofcode redirects to hoc" do
-    get :show, params: {id: 'hourofcode'}
+    get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
 
   test "should get show if not signed in" do
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :forbidden
   end
 
