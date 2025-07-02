@@ -96,7 +96,9 @@ yarn test:ui:fork
 
 2. Make updates on the forked page in Contentful.
 
-3. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
+- Make sure all top level sections have a Fixed height in the Design sidebar in the Experiences editor. This will decrease page shifts on Eyes tests.
+
+3. Update the `development` snapshot with your forked version; the ID can be found at the end of the url on the forked experience in Contentful:
 
 ```bash
 yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development

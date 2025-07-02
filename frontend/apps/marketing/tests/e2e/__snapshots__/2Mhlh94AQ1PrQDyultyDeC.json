@@ -1,0 +1,56 @@
+{
+  "entryContent": {
+    "fields": {
+      "listName": {
+        "en-US": "❌ [ENGINEERING ONLY] Action Block Collection TEST"
+      },
+      "itemsInThisList": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6Jgr1x1twPWiSMQpCUmrUt"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "20bNKCaJYcMUpF36ym6ylR"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3CqSD4orrZzEoAvyXEFS7x"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "23EyWhGd4P97u4WbR4IXk"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1HWV07i9omvarlmtVr4orB"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3Z8qPEuqmMhHtCcsDgunT9"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "list"
+}
