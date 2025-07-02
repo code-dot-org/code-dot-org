@@ -95,6 +95,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       document.body.classList.remove(`background-${oldTheme}`);
     }
     document.body.classList.add(`background-${themeDowncase}`);
+    document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
   // Store the level ID provided by App Options in redux if necessary.
