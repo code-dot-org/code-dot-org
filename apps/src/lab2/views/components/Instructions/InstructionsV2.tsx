@@ -11,6 +11,7 @@ import {
   isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
@@ -27,6 +28,7 @@ import ValidationButton from './ValidationButton';
 import moduleStyles from './instructions.module.scss';
 
 interface InstructionsProps {
+  levelProperties: LevelProperties | undefined;
   /** Whether the lab is currently running (different labs may define this differently). */
   isRunning: boolean;
   /** Whether the lab's code has been executed/run on this level. */
@@ -70,6 +72,7 @@ interface ValidationSettings {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  levelProperties,
   isRunning,
   hasRun,
   hasEdited,
@@ -83,7 +86,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   AiTutor2ResponseView,
   overrideTheme,
 }) => {
-  const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const validationState = useAppSelector(state => state.lab.validationState);
   const predictSettings = useAppSelector(
@@ -181,60 +183,58 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {levelProperties.longInstructions && (
+        <div
+          key={levelProperties.longInstructions}
+          id="instructions-text"
+          className={classNames(moduleStyles.bubble)}
+        >
+          {offerBrowserTts && (
+            <TextToSpeech
+              text={levelProperties.longInstructions}
+              higherPosition={!!bottomComponent}
+            />
+          )}
           <div
-            key={levelProperties.longInstructions}
-            id="instructions-text"
-            className={classNames(moduleStyles.bubble)}
+            id="instructions-text-content"
+            className={moduleStyles.textContent}
           >
-            {offerBrowserTts && (
-              <TextToSpeech
-                text={levelProperties.longInstructions}
-                higherPosition={!!bottomComponent}
+            <div
+              className={
+                offerBrowserTts
+                  ? moduleStyles.scrollingContentWithTTS
+                  : moduleStyles.scrollingContentWithoutTTS
+              }
+            >
+              <MainInstructionsContent
+                instructionsText={levelProperties.longInstructions}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+              <PredictQuestion
+                predictSettings={predictSettings}
+                predictResponse={predictResponse}
+                setPredictResponse={response =>
+                  dispatch(setPredictResponse(response))
+                }
+                predictAnswerLocked={predictAnswerLocked}
+                className={moduleStyles.predictQuestion}
+              />
+            </div>
+            {validationSettings && (
+              <ValidationButton
+                onValidate={validationSettings.onValidate}
+                onStopValidation={validationSettings.onStopValidation}
+                hasConditions={validationState?.hasConditions}
+                isValidating={validationSettings.isValidating}
+                isValidateDisabled={validationSettings.isValidateDisabled}
               />
             )}
-            <div
-              id="instructions-text-content"
-              className={moduleStyles.textContent}
-            >
-              <div
-                className={
-                  offerBrowserTts
-                    ? moduleStyles.scrollingContentWithTTS
-                    : moduleStyles.scrollingContentWithoutTTS
-                }
-              >
-                <MainInstructionsContent
-                  instructionsText={levelProperties.longInstructions}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
-                <PredictQuestion
-                  predictSettings={predictSettings}
-                  predictResponse={predictResponse}
-                  setPredictResponse={response =>
-                    dispatch(setPredictResponse(response))
-                  }
-                  predictAnswerLocked={predictAnswerLocked}
-                  className={moduleStyles.predictQuestion}
-                />
+            {bottomComponent && (
+              <div className={moduleStyles.bottomComponent}>
+                {bottomComponent}
               </div>
-              {validationSettings && (
-                <ValidationButton
-                  onValidate={validationSettings.onValidate}
-                  onStopValidation={validationSettings.onStopValidation}
-                  hasConditions={validationState?.hasConditions}
-                  isValidating={validationSettings.isValidating}
-                  isValidateDisabled={validationSettings.isValidateDisabled}
-                />
-              )}
-              {bottomComponent && (
-                <div className={moduleStyles.bottomComponent}>
-                  {bottomComponent}
-                </div>
-              )}
-            </div>
+            )}
           </div>
-        )}
+        </div>
         {validationState?.validationResults && (
           <>
             <div ref={validationScrollRef} />

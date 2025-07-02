@@ -113,6 +113,7 @@ const DanceView: React.FunctionComponent<
             // Always passing true for now; update when resuming work on Lab2 Dance.
             hasRun={true}
             hasEdited={true}
+            levelProperties={levelProperties}
           />
         </PanelContainer>
         <PanelContainer

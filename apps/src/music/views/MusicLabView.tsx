@@ -348,6 +348,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 hasEdited={hasEdited}
                 fixedDarkBackground={true}
                 overrideTheme={'Light'}
+                levelProperties={levelProperties}
               />
             ) : (
               <Instructions
@@ -382,6 +383,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       player,
       isPlaying,
       useNewInstructions,
+      levelProperties,
     ]
   );
 

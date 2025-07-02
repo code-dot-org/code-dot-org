@@ -67,6 +67,7 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.aichatSettings
   );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
 
   const initialSources = useAppSelector(
     state => (state.lab.initialSources?.source as string) || '{}'
@@ -256,6 +257,7 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
                   isRunning={false}
                   hasRun={hasSentMessage}
                   hasEdited={hasUpdatedCustomizations}
+                  levelProperties={levelProperties}
                 />
               </PanelContainer>
             </div>
