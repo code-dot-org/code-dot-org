@@ -324,6 +324,11 @@ Resources:
     Properties:
       ContainerDefinitions:
         - Environment:
+            # Ensure the hostname is set to 0.0.0.0 instead of the running host
+            # This ensures that localhost can be accessed from middlewares that run and query against localhost
+            # such as the withRedirect middleware
+            - Name: HOSTNAME
+              Value: 0.0.0.0
             - Name: CONTENTFUL_SPACE_ID
               Value: 90t6bu6vlf76
             - Name: CONTENTFUL_ENV_ID

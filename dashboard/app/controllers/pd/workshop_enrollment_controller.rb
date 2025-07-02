@@ -138,11 +138,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         end
 
       view_options(full_width: true, responsive_content: true, no_padding_container: true)
+      users_school_info = Queries::SchoolInfo.current_school(current_user)
       @script_data = {
         props: {
           workshop_enrollment_status: enroll_status,
           workshop_info: {
-            id: @workshop.try(:id)&.to_s,
+            id: @workshop.try(:id),
             course: @workshop.try(:course),
             subject: @workshop.try(:subject),
             name: @workshop.try(:name),
@@ -151,11 +152,18 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
           },
           user_info: {
+            id: current_user.id,
             display_name: current_user.name,
             given_name: current_user.try(:given_name),
             family_name: current_user.try(:family_name),
             email: current_user.email,
-            school_name: current_user.try(:school_info).try(:effective_school_name).try(:titleize)
+            school_info: users_school_info ? {
+              school_type: users_school_info[:school_type],
+              zip: users_school_info[:school_zip],
+              school_id: users_school_info[:school_id],
+              school_name: users_school_info[:school_name]&.strip_utf8mb4,
+              country: users_school_info[:country]
+            } : {}
           }
         }.to_json
       }

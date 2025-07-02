@@ -1,6 +1,7 @@
 import {chainMiddleware} from '@/middleware/chainMiddleware';
 import {withBrand} from '@/middleware/withBrand';
 import {withLocale} from '@/middleware/withLocale';
+import {withRedirects} from '@/middleware/withRedirects';
 
 export const config = {
   matcher: [
@@ -17,4 +18,4 @@ export const config = {
   ],
 };
 
-export default chainMiddleware([withLocale, withBrand]);
+export default chainMiddleware([withRedirects, withLocale, withBrand]);

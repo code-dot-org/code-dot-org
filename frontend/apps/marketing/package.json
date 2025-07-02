@@ -60,6 +60,7 @@
     "@statsig/react-bindings": "^3.14.1",
     "@statsig/statsig-node-core": "^0.0.8",
     "@statsig/web-analytics": "^3.14.1",
+    "@tinyhttp/etag": "^2.1.2",
     "@trieb.work/nextjs-turbo-redis-cache": "^1.8.1",
     "@vercel/otel": "^1.12.0",
     "axios": "^1.10.0",

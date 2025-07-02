@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-27 22:11:43 UTC",
+    "serialized_at": "2025-07-01 19:29:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8779,12 +8779,261 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "music-lab-genre-project_v2",
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": "1) The only loop block is a repeat block.\n\n2) A nested loop is when one repeat block is inside another or a function with loops that is nested inside another loop.",
+      "seeding_key": {
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+      "position": 3,
+      "learning_goal": "Creativity & Originality",
+      "ai_enabled": false,
+      "tips": "Limited sound use and experimentation could look like:\n- Using the same sounds over and over\n- Making \"immediate\" choices - ie: the first track in the menu every time and not exploring more\n- Limited variation in song structure or sound types\n",
+      "seeding_key": {
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+      "position": 4,
+      "learning_goal": "Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+      "position": 2,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use loops1, but the implementation may be very basic or not implemented properly.\n\nFor example, play sequential blocks with duplicate tracks are still used when a repeat block could be used instead",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Loops are used to make code more efficient by repeating tracks of different lengths. \n\nFor example: using loops to play beat and bass backing tracks together, where each track has a different length\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Loops are used strategically in combination with sequencing blocks, such as repeating tracks underneath vocals in sequence\n\nAND\n\nAt least 1 nested loop2 is used in the song",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Loops are used strategically with sequencing blocks and rests to create offset, layered tracks\n\nAND\n\nAt least 1 nested loop is used in the song\n\nFor example: a song where multiple repeated tracks start and stop at different times.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2c4be4d4-58e8-4892-bb32-838b3842a853",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project is not started.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Shows limited creativity, relying on limited sound use and limited experimentation to find interesting combinations or tracks.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Demonstrates some creative thinking by combining musical elements in a thoughtful or experimental way, though the structure of the song may still feel unoriginal or expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Demonstrates innovative and unique approaches, effectively blending musical elements and song structure in unexpected ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "6808a78c-ac7a-4b35-96a4-18d36ef5f07c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The planning guide is blank or the final product does not match the project task at all",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The final product does not align well with the task goal \n\nOR\n\nThe planning steps are incomplete.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Most planning and reflection steps are completed, and the final product mostly aligns with the defined goal, though a few elements may lack clear alignment.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "All planning and reflection steps are complete and documented. The final product clearly meets the defined goal",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bda41f3c-7e9b-4091-a66a-41e5d456dae9",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Attempts to use functions, but the implementation may be very basic or not implemented properly.\n\nFor example: using functions for small chunks of code without a clear purpose, or functions have unclear and misleading names\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Functions are used to make code more efficient by replacing large chunks of code with a single function call\n\nFor example: using a function for the \"verse\" or \"chorus\" of a song\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions\n\nAND\n\nThe majority of the \"when run\" code are function calls\n\nFor example: making a function for the vocals and making a function for the instruments and calling them together in a “choir” function\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Functions are used strategically in combination with each other, where smaller functions are called inside larger functions\n\nAND\n\nAt least one function is called in multiple places in the song\n\nAND\n\nThe majority of the \"when run\" code are function calls\n\nFor example: creating a function for \"backingBeats\" and then using this function in both the \"verse\" and \"chorus\" functions\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c8a1fd1e-0ccd-4e5d-b9fb-ce6f498df152",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ]
 }

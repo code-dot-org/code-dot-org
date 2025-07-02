@@ -1,5 +1,6 @@
 import {NextRequest, NextFetchEvent, NextResponse} from 'next/server';
 
+import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
 import {SUPPORTED_LOCALE_CODES, SUPPORTED_LOCALES_SET} from '@/config/locale';
 import {getStage} from '@/config/stage';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
@@ -88,7 +89,7 @@ describe('withLocale middleware', () => {
       'https://test.code.org/zh-TW/home',
     );
     expect(response?.headers.get('Cache-Control')).toEqual(
-      's-maxage=3600, stale-while-revalidate=31535100',
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 
@@ -112,7 +113,7 @@ describe('withLocale middleware', () => {
       'https://test.code.org/zh-TW/home',
     );
     expect(response?.headers.get('Cache-Control')).toEqual(
-      's-maxage=3600, stale-while-revalidate=31535100',
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 
@@ -170,7 +171,7 @@ describe('withLocale middleware', () => {
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toContain('studio.code.org');
     expect(response?.headers.get('Cache-Control')).toEqual(
-      's-maxage=3600, stale-while-revalidate=31535100',
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 

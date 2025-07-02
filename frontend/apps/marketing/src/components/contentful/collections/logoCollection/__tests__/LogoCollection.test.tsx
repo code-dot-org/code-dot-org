@@ -59,19 +59,19 @@ const mockLogos: LogoCollectionProps['logos'] = [
 
 describe('LogoCollection', () => {
   it('renders logos', () => {
-    render(<LogoCollection logos={mockLogos} />);
+    render(<LogoCollection logos={mockLogos} sortOrder="alphabetical" />);
     expect(screen.getAllByRole('img')).toHaveLength(3);
   });
 
   it('renders logos with correct alt text', () => {
-    render(<LogoCollection logos={mockLogos} />);
+    render(<LogoCollection logos={mockLogos} sortOrder="alphabetical" />);
     expect(screen.getByAltText('Microsoft Logo')).toBeInTheDocument();
     expect(screen.getByAltText('Amazon Logo')).toBeInTheDocument();
     expect(screen.getByAltText('Google Logo')).toBeInTheDocument();
   });
 
   it('renders links for logos with URLs', () => {
-    render(<LogoCollection logos={mockLogos} />);
+    render(<LogoCollection logos={mockLogos} sortOrder="alphabetical" />);
     const images = screen.getAllByRole('figure');
 
     // check that images with URLs have links
@@ -89,11 +89,19 @@ describe('LogoCollection', () => {
   });
 
   it('sorts logos alphabetically by brand title', () => {
-    render(<LogoCollection logos={mockLogos} />);
+    render(<LogoCollection logos={mockLogos} sortOrder="alphabetical" />);
     const images = screen.getAllByRole('img');
     expect(images[0]).toHaveAttribute('alt', 'Amazon Logo');
     expect(images[1]).toHaveAttribute('alt', 'Google Logo');
     expect(images[2]).toHaveAttribute('alt', 'Microsoft Logo');
+  });
+
+  it('sorts logos manually by brand title', () => {
+    render(<LogoCollection logos={mockLogos} sortOrder="manual" />);
+    const images = screen.getAllByRole('img');
+    expect(images[0]).toHaveAttribute('alt', 'Microsoft Logo');
+    expect(images[1]).toHaveAttribute('alt', 'Amazon Logo');
+    expect(images[2]).toHaveAttribute('alt', 'Google Logo');
   });
 
   it('handles logos with missing or undefined fields when sorting', () => {
@@ -117,7 +125,12 @@ describe('LogoCollection', () => {
       } as any,
     ];
 
-    render(<LogoCollection logos={[...logos, ...logosWithMissingFields]} />);
+    render(
+      <LogoCollection
+        logos={[...logos, ...logosWithMissingFields]}
+        sortOrder="alphabetical"
+      />,
+    );
     const images = screen.getAllByRole('img');
     expect(images[0]).toHaveAttribute('alt', 'Amazon Logo');
     expect(images[1]).toHaveAttribute('alt', 'Google Logo');

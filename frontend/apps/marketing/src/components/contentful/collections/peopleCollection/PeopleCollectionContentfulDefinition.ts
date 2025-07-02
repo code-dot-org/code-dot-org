@@ -1,6 +1,11 @@
 // Creates a definition for the PeopleCollection component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
+import {
+  collectionsSortOrderDefinition,
+  hideImagesDefinition,
+} from '@/components/common/definitions';
+
 export const PeopleCollectionContentfulComponentDefinition: ComponentDefinition =
   {
     id: 'collection-people',
@@ -26,17 +31,7 @@ export const PeopleCollectionContentfulComponentDefinition: ComponentDefinition 
           bindingSourceType: ['entry'],
         },
       },
-      imageVisibility: {
-        displayName: 'Image Visibility',
-        type: 'Text',
-        defaultValue: 'show',
-        group: 'style',
-        validations: {
-          in: [
-            {value: 'show', displayName: 'Show'},
-            {value: 'hide', displayName: 'Hide'},
-          ],
-        },
-      },
+      ...collectionsSortOrderDefinition,
+      ...hideImagesDefinition,
     },
   };

@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
 import {useId, useMemo} from 'react';
 
@@ -8,6 +9,8 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
+import {CollectionProps} from '../types';
 
 type ItemFields = {
   title: EntryFields.Text;
@@ -17,7 +20,7 @@ type ItemFields = {
 
 type ItemEntry = Entry<ItemFields>;
 
-export type LogoCollectionProps = {
+export type LogoCollectionProps = Omit<CollectionProps, 'hideImages'> & {
   /** Collection content w/ fields from Contentful */
   logos: ItemEntry[];
 };
@@ -48,60 +51,64 @@ const logoStyles = {
   },
 };
 
-const LogoCollection: React.FC<LogoCollectionProps> = ({logos}) => {
+const LogoCollection: React.FC<LogoCollectionProps> = ({
+  logos,
+  sortOrder,
+  className,
+}) => {
   if (!logos) {
     return (
-      <div style={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Logo Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
         </em>
-      </div>
+      </Typography>
     );
   }
 
-  const logosData = useMemo(
-    () =>
-      logos
-        .filter(Boolean)
-        .map(({fields}) => {
-          const {title, logoImage, primaryLinkRef} = fields;
-          const url = primaryLinkRef?.fields?.primaryTarget || '';
-          const getImage = () => (
-            <img
-              src={getAbsoluteImageUrl(logoImage)}
-              alt={logoImage?.fields?.title || title || 'Logo'}
-              loading="lazy"
-            />
-          );
+  const logosData = useMemo(() => {
+    const data = logos.filter(Boolean).map(({fields}) => {
+      const {title, logoImage, primaryLinkRef} = fields;
+      const url = primaryLinkRef?.fields?.primaryTarget || '';
+      const getImage = () => (
+        <img
+          src={getAbsoluteImageUrl(logoImage)}
+          alt={logoImage?.fields?.title || title || 'Logo'}
+          loading="lazy"
+        />
+      );
 
-          return {
-            id: title,
-            item: (
-              <Box component="figure" sx={logoStyles.gridItem}>
-                {url ? (
-                  <Link
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={logoStyles.link}
-                  >
-                    {getImage()}
-                  </Link>
-                ) : (
-                  getImage()
-                )}
-              </Box>
-            ),
-            url: url,
-          };
-        })
-        .sort((a, b) => a?.id?.localeCompare(b?.id)), // Sort alphabetically
-    [logos],
-  );
+      return {
+        id: title,
+        item: (
+          <Box component="figure" sx={logoStyles.gridItem}>
+            {url ? (
+              <Link
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={logoStyles.link}
+              >
+                {getImage()}
+              </Link>
+            ) : (
+              getImage()
+            )}
+          </Box>
+        ),
+        url: url,
+      };
+    });
+    // Sort alphabetically if sortOrder is 'alphabetical'
+    if (sortOrder === 'alphabetical') {
+      data.sort((a, b) => a?.id?.localeCompare(b?.id));
+    }
+    return data;
+  }, [logos, sortOrder]);
 
   return (
-    <Grid container spacing={7.5}>
+    <Grid container spacing={7.5} className={className}>
       {logosData.map(logo => (
         <Grid
           key={`id-${useId().replaceAll(':', '')}`}

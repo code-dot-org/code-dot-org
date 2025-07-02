@@ -16,7 +16,7 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {BlocklySource} from '@cdo/apps/lab2/types';
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
@@ -41,9 +41,10 @@ import {
   getBlockMode,
   InstructionsPosition,
   setCurrentPlayheadPosition,
+  setShowInstructions,
   showCallout,
 } from '../redux/musicRedux';
-import {MusicExemplarSettings} from '../types';
+import {MusicExemplarSettings, MusicLevelData} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
@@ -77,6 +78,7 @@ interface MusicLabViewProps {
   executeCode: (code: string) => void;
   hasRun: boolean;
   hasEdited: boolean;
+  levelProperties: LevelProperties;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -98,10 +100,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   executeCode,
   hasRun,
   hasEdited,
+  levelProperties,
 }) => {
   const dialogControl = useDialogControl();
   useUpdatePlayer(player);
-  useUpdateAnalytics(analyticsReporter);
+  useUpdateAnalytics(
+    analyticsReporter,
+    levelProperties.isProjectLevel || false
+  );
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const showInstructions = useAppSelector(
@@ -112,12 +118,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const timelineAtTop = useAppSelector(state => state.music.timelineAtTop);
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
-
-  const levelData = useAppSelector(
-    state => state.lab.levelProperties?.levelData
-  );
+  const {
+    id: levelId,
+    appName,
+    skipUrl,
+    levelData,
+    exemplarSources,
+  } = levelProperties;
+  const exemplarSettings = levelProperties.exemplarSettings as
+    | MusicExemplarSettings
+    | undefined;
   const isPlayView = useAppSelector(state => state.lab.isShareView);
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
@@ -129,13 +139,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     state => state.music.startingPlayheadPosition
   );
   const lastMeasure = useAppSelector(state => state.music.lastMeasure);
-
-  const exemplarSources = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSources
-  ) as BlocklySource | undefined;
-  const exemplarSettings = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSettings
-  ) as MusicExemplarSettings | undefined;
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -149,13 +152,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     experiments.LAB2_INSTRUCTIONS_V2
   );
 
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
       progressManager.setValidator(validator);
     }
   }, [progressManager, validator, appName]);
+
+  useEffect(() => {
+    dispatch(setShowInstructions(!!levelProperties.longInstructions));
+  }, [dispatch, levelProperties.longInstructions]);
 
   useEffect(() => {
     if (isStartMode) {
@@ -401,6 +407,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 setPlaying={setPlaying}
                 playTrigger={playTrigger}
                 hasTrigger={hasTrigger}
+                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
                 enableSkipControls={
                   AppConfig.getValue('skip-controls-enabled') === 'true'
                 }
@@ -418,13 +425,19 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               headerContent={musicI18n.panelHeaderTimeline()}
               hideHeaders={hideHeaders}
             >
-              <Timeline />
+              <Timeline
+                allowChangeStartingPlayheadPosition={
+                  (levelProperties.levelData as MusicLevelData | undefined)
+                    ?.allowChangeStartingPlayheadPosition
+                }
+                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+              />
             </PanelContainer>
           </div>
         </div>
       );
     },
-    [setPlaying, playTrigger, hasTrigger, hideHeaders]
+    [setPlaying, playTrigger, hasTrigger, hideHeaders, levelProperties]
   );
 
   const showAdvancedControls =

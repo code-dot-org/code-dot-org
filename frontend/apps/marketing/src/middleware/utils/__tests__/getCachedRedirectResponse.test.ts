@@ -1,5 +1,7 @@
 import {NextResponse} from 'next/server';
 
+import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
+
 import {getCachedRedirectResponse} from '../getCachedRedirectResponse';
 
 jest.mock('next/server', () => ({
@@ -20,7 +22,7 @@ describe('getCachedRedirectResponse', () => {
     expect(NextResponse.redirect).toHaveBeenCalledWith(url);
     expect(response.headers.set).toHaveBeenCalledWith(
       'Cache-Control',
-      's-maxage=3600, stale-while-revalidate=31535100',
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 
@@ -31,7 +33,7 @@ describe('getCachedRedirectResponse', () => {
     expect(NextResponse.redirect).toHaveBeenCalledWith(url);
     expect(response.headers.set).toHaveBeenCalledWith(
       'Cache-Control',
-      's-maxage=3600, stale-while-revalidate=31535100',
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 

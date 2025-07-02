@@ -1302,8 +1302,9 @@ class User < ApplicationRecord
       id: id,
       email: email,
       is_student: user_type == TYPE_STUDENT,
-      first_name: name&.split&.first,
-      last_name: name&.split&.last,
+      first_name: given_name,
+      last_name: family_name,
+      school_info: Queries::SchoolInfo.current_school(self),
     }
   end
 

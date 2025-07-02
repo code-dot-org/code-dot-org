@@ -3019,7 +3019,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, :in_single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+      visible_script = create(:single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3035,7 +3035,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, :in_single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+      visible_script = create(:single_unit_course, name: 'visible-script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).first_unit
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
