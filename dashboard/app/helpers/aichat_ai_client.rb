@@ -88,7 +88,7 @@ class AichatAiClient
   end
 
   # Take response_body and raise any errors if appropriate.
-  private def raise_possible_response_errors_from_body
+  private def raise_possible_response_errors_from_body(response_body)
     raise_not_implemented_error
   end
 
@@ -104,7 +104,14 @@ class AichatAiClient
 
   # Create request body from stored_messages, new_message, system_instructions, temperature,
   # level_name, and encrypted_channel_id.
-  private def create_body
+  private def create_body(
+    stored_messages,
+    new_message,
+    system_instructions,
+    temperature,
+    level_name,
+    encrypted_channel_id
+  )
     raise_not_implemented_error
   end
   # ------------------------------------------------------------
