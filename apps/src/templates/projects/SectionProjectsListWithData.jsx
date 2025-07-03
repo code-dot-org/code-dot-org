@@ -3,14 +3,14 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import SectionProjectsList from './SectionProjectsList';
 
-const SectionProjectsListWithData = ({
-  sectionId,
-  localeCode,
-  studioUrlPrefix,
-}) => {
+const SectionProjectsListWithData = ({sectionId, localeCode}) => {
+  const studioUrlPrefix = useAppSelector(
+    state => state.teacherSections.studioUrlPrefix
+  );
   const [projectsData, setProjectsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -44,8 +44,6 @@ const SectionProjectsListWithData = ({
 };
 
 SectionProjectsListWithData.propTypes = {
-  studioUrlPrefix: PropTypes.string,
-
   // Props provided by redux.
   localeCode: PropTypes.string,
   sectionId: PropTypes.number,

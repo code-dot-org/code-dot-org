@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
 
@@ -14,7 +15,7 @@ class SectionProjectsList extends Component {
     showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
+    studioUrlPrefix: PropTypes.string,
   };
 
   constructor(props) {
@@ -55,6 +56,7 @@ class SectionProjectsList extends Component {
   }
 
   render() {
+    const studioUrlPrefix = this.props.studioUrlPrefix || '';
     const filteredProjectsData = this.props.projectsData
       .filter(project =>
         [ALL_STUDENTS, project['studentName']].includes(
@@ -78,7 +80,7 @@ class SectionProjectsList extends Component {
           localeCode={this.props.localeCode}
           projectsData={filteredProjectsData}
           showProjectThumbnails={this.props.showProjectThumbnails}
-          studioUrlPrefix={this.props.studioUrlPrefix}
+          studioUrlPrefix={studioUrlPrefix}
         />
       </div>
     );
@@ -97,4 +99,8 @@ const styles = {
   },
 };
 
-export default SectionProjectsList;
+export const UnconnectedSectionProjectsList = SectionProjectsList;
+
+export default connect(state => ({
+  studioUrlPrefix: state.teacherSections.studioUrlPrefix,
+}))(SectionProjectsList);

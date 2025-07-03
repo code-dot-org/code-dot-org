@@ -45,7 +45,6 @@ import {SectionDeleteModal} from './SectionDeleteModal';
 import styles from './teacherHomepage.module.scss';
 
 interface SectionListProps {
-  studioUrlPrefix: string;
   showHiddenOnly: boolean;
 }
 
@@ -63,10 +62,7 @@ function moveSection(
   };
 }
 
-export const SectionList: React.FC<SectionListProps> = ({
-  studioUrlPrefix,
-  showHiddenOnly,
-}) => {
+export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   const dispatch = useAppDispatch();
 
   const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
@@ -204,7 +200,6 @@ export const SectionList: React.FC<SectionListProps> = ({
                       key={id}
                       section={sections[id]}
                       onDeleteClickCallback={onDeleteClickCallback}
-                      studioUrlPrefix={studioUrlPrefix}
                     />
                   ) : null
                 )}

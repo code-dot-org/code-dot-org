@@ -105,8 +105,6 @@ export const COLUMNS = {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string,
-
     // Provided by redux
     currentUser: PropTypes.object,
     sectionId: PropTypes.number,
@@ -126,6 +124,7 @@ class ManageStudentsTable extends Component {
     transferStatus: PropTypes.object,
     setSortByFamilyName: PropTypes.func,
     syncEnabled: PropTypes.bool,
+    studioUrlPrefix: PropTypes.string,
   };
 
   constructor(props) {
@@ -780,6 +779,7 @@ class ManageStudentsTable extends Component {
       sectionCode,
       studentData,
       isSectionAssignedCSA,
+      studioUrlPrefix,
     } = this.props;
 
     return (
@@ -873,7 +873,7 @@ class ManageStudentsTable extends Component {
             sectionId={sectionId}
             sectionCode={sectionCode}
             loginType={loginType}
-            studioUrlPrefix={this.props.studioUrlPrefix}
+            studioUrlPrefix={studioUrlPrefix}
             sourceName="ManageStudentsTable"
           />
         </div>
@@ -896,8 +896,8 @@ class ManageStudentsTable extends Component {
             sectionName: sectionName,
             studentData: studentData,
             loginType: loginType,
-            sectionCode: this.props.sectionCode,
-            studioUrlPrefix: this.props.studioUrlPrefix,
+            sectionCode: sectionCode,
+            studioUrlPrefix: studioUrlPrefix,
             providePrivacyLetter: true,
           }}
         />
@@ -1032,6 +1032,7 @@ export default connect(
     transferData: state.manageStudents.transferData,
     transferStatus: state.manageStudents.transferStatus,
     syncEnabled: syncEnabled(state, state.teacherSections.selectedSectionId),
+    studioUrlPrefix: state.teacherSections.studioUrlPrefix,
   }),
   dispatch => ({
     saveAllStudents() {

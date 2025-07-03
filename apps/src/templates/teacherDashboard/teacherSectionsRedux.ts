@@ -63,6 +63,7 @@ type AssignmentData = {
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
+  studioUrlPrefix: string;
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: OAuthSectionTypeName[]; //TODO: I think this is right???
@@ -125,6 +126,7 @@ export const SELECT_SECTION = 'teacherSections/selectSection';
 const initialState: TeacherSectionState = {
   nextTempId: -1,
   studioUrl: '',
+  studioUrlPrefix: '',
   // List of teacher's authentication providers (mapped to OAuthSectionTypes
   // for consistency and ease of comparison).
   providers: [],
@@ -205,6 +207,9 @@ const sectionSlice = createSlice({
     },
     setPageType(state, action: PayloadAction<string>) {
       state.pageType = action.payload;
+    },
+    setStudioUrlPrefix(state, action: PayloadAction<string>) {
+      state.studioUrlPrefix = action.payload;
     },
     selectSection(state, action: PayloadAction<string | number>) {
       if (action.payload) {
@@ -1237,6 +1242,7 @@ export const {
   setSectionCodeReviewExpiresAt,
   setSections,
   setStudentsForCurrentSection,
+  setStudioUrlPrefix,
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiTutorEnabled,

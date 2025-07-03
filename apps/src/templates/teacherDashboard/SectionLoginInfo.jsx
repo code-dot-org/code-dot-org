@@ -29,7 +29,7 @@ const getManageStudentsUrl = sectionId => {
  */
 class SectionLoginInfo extends React.Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
+    studioUrlPrefix: PropTypes.string,
     sectionProviderName: PropTypes.string,
 
     // Provided by redux.
@@ -42,7 +42,11 @@ class SectionLoginInfo extends React.Component {
   };
 
   render() {
-    const {studioUrlPrefix, section} = this.props;
+    const {section} = this.props;
+    const studioUrlPrefix =
+      this.props.studioUrlPrefix ||
+      this.context?.store?.getState()?.teacherSections?.studioUrlPrefix ||
+      '';
     const singleStudentId = queryParams('studentId');
     const autoPrint = !!singleStudentId || !!queryParams('autoPrint');
     const students = singleStudentId

@@ -73,7 +73,6 @@ const PathChangeHandler: React.FC<{needsReload: boolean}> = ({needsReload}) => {
 };
 
 interface TeacherNavigationRouterProps {
-  studioUrlPrefix: string;
   showAITutorTab: boolean;
 }
 
@@ -82,9 +81,11 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 };
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
-  studioUrlPrefix,
   showAITutorTab,
 }) => {
+  const studioUrlPrefix = useAppSelector(
+    state => state.teacherSections.studioUrlPrefix
+  );
   const sectionId = useAppSelector(
     state => state.teacherSections.selectedSectionId
   );
@@ -127,7 +128,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <TeacherHomepage />
                 <ScrollRestoration />
               </div>
             </>
@@ -169,7 +170,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
             <Route
               path={TEACHER_NAVIGATION_PATHS.roster}
-              element={<ManageStudents studioUrlPrefix={studioUrlPrefix} />}
+              element={<ManageStudents />}
             />
             <Route
               path={TEACHER_NAVIGATION_PATHS.loginInfo}
@@ -198,9 +199,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   // Don't show no curriculum assigned error for projects tab.
                   showNoCurriculumAssigned={false}
                   element={applyV1TeacherDashboardWidth(
-                    <SectionProjectsListWithData
-                      studioUrlPrefix={studioUrlPrefix}
-                    />
+                    <SectionProjectsListWithData />
                   )}
                 />
               }

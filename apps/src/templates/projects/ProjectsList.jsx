@@ -1,6 +1,7 @@
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
@@ -54,7 +55,7 @@ class ProjectsList extends React.Component {
     showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
+    studioUrlPrefix: PropTypes.string,
   };
 
   constructor(props) {
@@ -106,7 +107,8 @@ class ProjectsList extends React.Component {
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
-    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
+    const studioUrlPrefix = this.props.studioUrlPrefix || '';
+    const url = `${studioUrlPrefix}/projects/${type}/${channel}/view`;
     return (
       <a
         href={url}
@@ -242,4 +244,8 @@ const styles = {
   },
 };
 
-export default ProjectsList;
+export const UnconnectedProjectsList = ProjectsList;
+
+export default connect(state => ({
+  studioUrlPrefix: state.teacherSections.studioUrlPrefix,
+}))(ProjectsList);

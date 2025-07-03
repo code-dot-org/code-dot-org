@@ -5,6 +5,7 @@ import {CSS} from '@dnd-kit/utilities';
 import React from 'react';
 
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import JoinLinkCopyButton from './JoinLink/JoinLinkCopyButton';
@@ -15,18 +16,19 @@ import SectionOptionsDropdown from './SectionOptionsDropdown';
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
-  studioUrlPrefix: string;
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
   id: number;
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({
-  studioUrlPrefix,
   section,
   onDeleteClickCallback,
   id,
 }) => {
+  const studioUrlPrefix = useAppSelector(
+    state => state.teacherSections.studioUrlPrefix
+  );
   const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
     useSortable({id});
 

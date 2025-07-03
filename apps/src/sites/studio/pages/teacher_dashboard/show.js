@@ -27,6 +27,7 @@ import teacherSections, {
   setAuthProviders,
   selectSection,
   setSections,
+  setStudioUrlPrefix,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
@@ -70,6 +71,7 @@ $(document).ready(function () {
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
+  store.dispatch(setStudioUrlPrefix(scriptData.studioUrlPrefix));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
@@ -93,10 +95,7 @@ $(document).ready(function () {
         // all of the section loading logic in the TeacherNavigationRouter.
         <TeacherHomepage />
       ) : (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
-        />
+        <TeacherNavigationRouter showAITutorTab={showAITutorTab} />
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')

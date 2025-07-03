@@ -4,10 +4,14 @@ import {connect} from 'react-redux';
 
 import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ManageStudentsTable from './Table';
 
-function ManageStudents({studioUrlPrefix, sectionId, isLoadingStudents}) {
+function ManageStudents({sectionId, isLoadingStudents}) {
+  const studioUrlPrefix = useAppSelector(
+    state => state.teacherSections.studioUrlPrefix
+  );
   return (
     // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'manage-students-tab'}>
@@ -28,8 +32,6 @@ function ManageStudents({studioUrlPrefix, sectionId, isLoadingStudents}) {
 export const UnconnectedManageStudents = ManageStudents;
 
 ManageStudents.propTypes = {
-  studioUrlPrefix: PropTypes.string,
-
   // Provided by redux
   sectionId: PropTypes.number,
   isLoadingStudents: PropTypes.bool.isRequired,
