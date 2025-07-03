@@ -34,8 +34,12 @@
     white-space: pre-wrap;
   }
 
+  .richTextList {
+    display: inline-flex;
+  }
+
   ol {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
