@@ -43,5 +43,41 @@ module AiEvaluationOpenaiHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
+
+    def request_code_diff_summary(student_code)
+      headers = {
+        "Content-Type" => "application/json",
+        "Authorization" => "Bearer #{api_key}"
+      }
+
+      data = {
+        model: model,
+        messages: student_code,
+        response_format: {
+          type: "json_schema",
+          json_schema: {
+            name: "code_differences",
+            schema: {
+              type: "object",
+              properties: {
+                newCode: {type: "string"},
+                oldCode: {type: "string"},
+                codeDiff: {type: "string"},
+                codeDiffSummary: {type: "string"},
+                evaluation: {type: "string"}
+              },
+            }
+          }
+        }
+      }
+
+      HTTParty.post(
+        OPEN_AI_URL,
+        headers: headers,
+        body: data.to_json,
+        open_timeout: DCDO.get('openai_http_open_timeout', 5),
+        read_timeout: DCDO.get('openai_http_read_timeout', 30)
+      )
+    end
   end
 end

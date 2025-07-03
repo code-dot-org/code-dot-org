@@ -101,11 +101,11 @@ const ProcessModal = ({useFilesApi}) => {
                       : new Date(version.lastModified).toLocaleString()}
                     <br />
                     <strong>Code Changes:</strong>{' '}
-                    {/* {pending ? (
+                    {pending ? (
                       <span>Loading...</span>
                     ) : (
-                      // <span>{codeByVersion[version.versionId]}</span>
-                    )} */}
+                      <span>{codeByVersion[version.versionId]}</span>
+                    )}
                     {index < versions.length - 1 && (
                       <div className="applab-small-diff">
                         <ReactDiffViewer
