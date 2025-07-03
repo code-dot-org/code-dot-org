@@ -5,8 +5,10 @@ import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropd
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import React, {useCallback, useEffect} from 'react';
+import React, {useCallback, useEffect, useMemo} from 'react';
 
+import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -19,6 +21,7 @@ import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateW
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {getUserHasAichatAccess} from '../aichatApi';
 import {ModalTypes} from '../constants';
@@ -74,7 +77,7 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
-  const {currentAiCustomizations, viewMode} = useAppSelector(
+  const {currentAiCustomizations, viewMode, showModalType} = useAppSelector(
     state => state.aichat
   );
 
@@ -139,6 +142,49 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
         });
     }
   }, [dispatch, signInState]);
+
+  useEffect(() => {
+    const modalToShow = () => {
+      if (!isUserTeacher) {
+        return ModalTypes.WARNING;
+      }
+
+      const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+        'teacherSawAichatOnboarding',
+        'no'
+      );
+
+      return teacherSawAichatOnboardingModal === 'yes'
+        ? undefined
+        : ModalTypes.TEACHER_ONBOARDING;
+    };
+
+    dispatch(setShowModalType(modalToShow()));
+  }, [isUserTeacher, dispatch]);
+
+  const onCloseModal = useCallback(() => {
+    // We only want to show the teacher onboarding modal the first time a teacher user
+    // interacts with the aichat tool. Thus, we store a value in local storage when
+    // closing the modal.
+    if (
+      isUserTeacher &&
+      showModalType === ModalTypes.TEACHER_ONBOARDING &&
+      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
+    ) {
+      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
+    }
+    dispatch(setShowModalType(undefined));
+  }, [dispatch, isUserTeacher, showModalType]);
+
+  const ChatModal = useMemo(
+    () =>
+      showModalType === ModalTypes.TEACHER_ONBOARDING
+        ? TeacherOnboardingModal
+        : showModalType === ModalTypes.WARNING
+        ? ChatWarningModal
+        : undefined,
+    [showModalType]
+  );
 
   // Showing presentation view when:
   // 1) levelbuilder hasn't explicitly configured the toggle to be hidden, and
@@ -226,6 +272,7 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
+      {ChatModal && <ChatModal onClose={onCloseModal} />}
       {showPresentationToggle() && (
         <div
           id="uitest-view-mode-toggle-container"

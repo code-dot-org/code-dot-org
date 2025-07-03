@@ -2,13 +2,13 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "⛔️ [ENGINEERING ONLY] Self-Paced PL 4"
+        "en-US": "❌ [ENG] Self-Paced PL 4"
       },
       "actionBlockOverline": {
-        "en-US": "K-5 Teachers"
+        "en-US": "K-12 Teachers"
       },
       "shortDescription": {
-        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. "
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
       },
       "image": {
         "en-US": {
@@ -37,13 +37,25 @@
           }
         }
       },
+      "marketingLink": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5CznPyR4ZsbIkhpwSaUxoe"
+          }
+        }
+      },
       "experienceLevel": {
         "en-US": [
           "Beginner"
         ]
       },
       "duration": {
-        "en-US": 2
+        "en-US": 1
+      },
+      "publishedDate": {
+        "en-US": "2025-05-02T00:00-07:00"
       }
     }
   },

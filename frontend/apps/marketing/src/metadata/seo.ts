@@ -36,7 +36,9 @@ function getOpenGraph(
   locale: string,
 ) {
   const openGraphImage = seoMetadata.openGraphImage;
-  const openGraphImageUrl = getAbsoluteImageUrl(openGraphImage);
+  // As of July 2025, all open graph providers support JPEG & PNG but there is only partial support for AVIF.
+  // Use webp for compatibility.
+  const openGraphImageUrl = getAbsoluteImageUrl(openGraphImage, {fm: 'webp'});
 
   return {
     type: 'website',

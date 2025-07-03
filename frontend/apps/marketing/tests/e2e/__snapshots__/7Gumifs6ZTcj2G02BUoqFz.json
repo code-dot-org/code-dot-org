@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "⛔️ [ENGINEERING ONLY] TEST - Self-Paced PL"
+        "en-US": "❌ [ENG] Self-Paced PL 1"
       },
       "actionBlockOverline": {
         "en-US": "K-12 Teachers"
@@ -53,9 +53,6 @@
       },
       "duration": {
         "en-US": 1
-      },
-      "publishedDate": {
-        "en-US": "2025-05-16"
       }
     }
   },
