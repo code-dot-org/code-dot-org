@@ -838,7 +838,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "2028px"
+                    "desktop": "2028px",
+                    "tablet": "1981px",
+                    "mobile": "3989px"
                   }
                 },
                 "cfMaxWidth": {
@@ -2873,7 +2875,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1312px"
+                    "desktop": "1312px",
+                    "tablet": "1391px",
+                    "mobile": "1408px"
                   }
                 },
                 "cfMaxWidth": {
@@ -3208,7 +3212,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "709px"
+                    "desktop": "709px",
+                    "tablet": "695px",
+                    "mobile": "1549px"
                   }
                 },
                 "cfMaxWidth": {
@@ -3494,7 +3500,8 @@
                         "cfFlexDirection": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "row"
+                            "desktop": "row",
+                            "mobile": "column"
                           }
                         },
                         "cfFlexReverse": {
@@ -4035,7 +4042,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "602px"
+                    "desktop": "602px",
+                    "tablet": "588px",
+                    "mobile": "1498px"
                   }
                 },
                 "cfMaxWidth": {
@@ -4321,7 +4330,8 @@
                         "cfFlexDirection": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "row"
+                            "desktop": "row",
+                            "mobile": "column"
                           }
                         },
                         "cfFlexReverse": {
@@ -4862,7 +4872,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1378px"
+                    "desktop": "1378px",
+                    "tablet": "2557px",
+                    "mobile": "2046px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6103,7 +6115,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "2833px"
+                    "desktop": "2833px",
+                    "tablet": "4355px",
+                    "mobile": "8065px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6554,7 +6568,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "638px"
+                    "desktop": "638px",
+                    "tablet": "638px",
+                    "mobile": "1522px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6889,7 +6905,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "2318px"
+                    "desktop": "2318px",
+                    "tablet": "2439px",
+                    "mobile": "5619px"
                   }
                 },
                 "cfMaxWidth": {
@@ -8159,7 +8177,8 @@
                 "cfFlexWrap": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "nowrap"
+                    "desktop": "nowrap",
+                    "mobile": "wrap"
                   }
                 },
                 "cfBorder": {
@@ -9317,7 +9336,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1368px"
+                    "desktop": "1368px",
+                    "tablet": "1454px",
+                    "mobile": "fit-content"
                   }
                 },
                 "cfMaxWidth": {
@@ -10923,7 +10944,8 @@
                             "cfFlexWrap": {
                               "type": "DesignValue",
                               "valuesByBreakpoint": {
-                                "desktop": "nowrap"
+                                "desktop": "nowrap",
+                                "mobile": "nowrap"
                               }
                             },
                             "cfBorder": {
@@ -10978,7 +11000,8 @@
                                 "iconName": {
                                   "type": "DesignValue",
                                   "valuesByBreakpoint": {
-                                    "desktop": "circle-1"
+                                    "desktop": "circle-1",
+                                    "mobile": "circle-1"
                                   }
                                 },
                                 "linkEntry": {
@@ -11923,7 +11946,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "443px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12031,7 +12055,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12155,7 +12180,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "499px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12263,7 +12289,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12387,7 +12414,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "499px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12495,7 +12523,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12619,7 +12648,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "665px",
-                    "desktop": "443px"
+                    "desktop": "443px",
+                    "tablet": "837px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12727,7 +12757,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12851,7 +12882,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "665px",
-                    "desktop": "364px"
+                    "desktop": "364px",
+                    "tablet": "837px"
                   }
                 },
                 "cfMaxWidth": {
@@ -13083,7 +13115,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "689px",
-                    "desktop": "409px"
+                    "desktop": "409px",
+                    "tablet": "846px"
                   }
                 },
                 "cfMaxWidth": {
@@ -13191,7 +13224,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -13315,7 +13349,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "547px",
-                    "desktop": "388px"
+                    "desktop": "388px",
+                    "tablet": "412px"
                   }
                 },
                 "cfMaxWidth": {
@@ -13423,7 +13458,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -13547,7 +13583,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "628px",
-                    "desktop": "390px"
+                    "desktop": "390px",
+                    "tablet": "469px"
                   }
                 },
                 "cfMaxWidth": {
@@ -13778,7 +13815,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "fit-content",
+                    "tablet": "787px",
+                    "mobile": "1087px"
                   }
                 },
                 "cfMaxWidth": {
@@ -14911,7 +14950,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1730px"
+                    "desktop": "1730px",
+                    "tablet": "1408px",
+                    "mobile": "1316px"
                   }
                 },
                 "cfMaxWidth": {
