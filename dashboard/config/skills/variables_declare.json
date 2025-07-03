@@ -2,5 +2,5 @@
   "key": "variables_declare",
   "concept": "variables",
   "description": "Declare variables correctly ",
-  "evaluation_criteria": "Did the students declare all of the variables in their code correctly?"
+  "evaluation_criteria": "Did the student declare all of the variables in their code correctly?"
 }

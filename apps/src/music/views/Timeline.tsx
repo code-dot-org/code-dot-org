@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, {
+  memo,
   MouseEvent,
   useCallback,
   useEffect,
@@ -84,28 +85,31 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   const [availableHeight, setAvailableHeight] = useState(0);
 
   // Get the height that each event should occupy.  This is inclusive of empty vertical space at the bottom.
-  const getEventHeight = (numUniqueRows: number) => {
-    // While we might not actually have this many rows to show,
-    // we will limit each row's height to the size that would allow
-    // this many to be shown at once.
-    const minVisible = 5;
+  const getEventHeight = useCallback(
+    (numUniqueRows: number) => {
+      // While we might not actually have this many rows to show,
+      // we will limit each row's height to the size that would allow
+      // this many to be shown at once.
+      const minVisible = 5;
 
-    const maxVisible = 45;
+      const maxVisible = 45;
 
-    // We might not actually have this many rows to show, but
-    // we will size the bars so that this many rows would show.
-    const numSoundsToShow = Math.max(
-      Math.min(numUniqueRows, maxVisible),
-      minVisible
-    );
+      // We might not actually have this many rows to show, but
+      // we will size the bars so that this many rows would show.
+      const numSoundsToShow = Math.max(
+        Math.min(numUniqueRows, maxVisible),
+        minVisible
+      );
 
-    return Math.floor(availableHeight / numSoundsToShow);
-  };
+      return Math.floor(availableHeight / numSoundsToShow);
+    },
+    [availableHeight]
+  );
 
   // How how much of the event height should be left as empty vertical space at the bottom.
-  const getEventVerticalSpace = (eventHeight: number) => {
+  const getEventVerticalSpace = useCallback((eventHeight: number) => {
     return eventHeight > 8 ? 3 : eventHeight > 6 ? 2 : 1;
-  };
+  }, []);
 
   const timelineElementProps = {
     paddingOffset,
@@ -308,4 +312,4 @@ const LoopMarkers: React.FunctionComponent<{
   );
 };
 
-export default Timeline;
+export default memo(Timeline);

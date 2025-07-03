@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-28 20:50:05 UTC",
+    "serialized_at": "2025-07-02 22:32:51 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -9167,12 +9167,78 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "test-music-lab-sequencing-practice-evaluative",
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "77828653-ac97-4d2b-9327-e86dbd652694",
+      "position": 1,
+      "learning_goal": "Test",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "77828653-ac97-4d2b-9327-e86dbd652694",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "d",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "77828653-ac97-4d2b-9327-e86dbd652694",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "c",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "77828653-ac97-4d2b-9327-e86dbd652694",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "b",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "77828653-ac97-4d2b-9327-e86dbd652694",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "a",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "77828653-ac97-4d2b-9327-e86dbd652694",
+        "lesson.key": "Sequencing - Practice",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    }
   ]
 }

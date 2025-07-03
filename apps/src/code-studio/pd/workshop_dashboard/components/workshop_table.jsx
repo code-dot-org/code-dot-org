@@ -163,7 +163,6 @@ export default class WorkshopTable extends React.Component {
         property: 'regional_partner_name',
         header: {
           label: 'Regional Partner',
-          transforms: [sortable],
         },
       },
       {

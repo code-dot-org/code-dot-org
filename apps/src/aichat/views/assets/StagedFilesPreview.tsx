@@ -5,6 +5,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
+import {useLevelProperties} from '../../levelPropertiesContext';
 import aichatI18n from '../../locale';
 import {
   clearStagedFilesAlert,
@@ -33,7 +34,7 @@ const StagedFilesPreview: React.FC = () => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
+  const levelName = useLevelProperties().name;
 
   const [alertMessage, style] = useAppSelector(state => {
     if (!state.aichat.stagedFilesAlert) {

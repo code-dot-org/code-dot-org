@@ -6,10 +6,15 @@ import logger from '@/logger/contentful';
  * Fetches all entries for a given content type from Contentful.
  * @param client - The Contentful client to use for fetching entries (preview or delivery)
  * @param contentType - The content type to fetch all entries for
+ * @param options - Optional options to pass to Contentful getEntries
  */
 export async function getAllEntriesForContentType<
   EntrySkeleton extends EntrySkeletonType = EntrySkeletonType,
->(client: ContentfulClientApi<undefined>, contentType: string) {
+>(
+  client: ContentfulClientApi<undefined>,
+  contentType: string,
+  options?: Parameters<typeof client.getEntries>[0],
+) {
   logger.info(`Fetching all entries for content type: ${contentType}`, {
     contentType,
   });
@@ -21,6 +26,7 @@ export async function getAllEntriesForContentType<
 
   do {
     const response = await client.getEntries<EntrySkeleton>({
+      ...options,
       content_type: contentType,
       skip,
       limit: pageSize,

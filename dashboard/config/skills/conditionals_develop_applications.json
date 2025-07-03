@@ -1,0 +1,6 @@
+{
+  "key": "conditionals_develop_applications",
+  "concept": "conditional",
+  "description": "Develop applications that rely on conditionals to handle user inputs and produce appropriate outputs",
+  "evaluation_criteria": "Does the student make use of a variety of different conditional statements? Does the student use logical operators where appropriate? Is the output of the program affected by conditional statements? Is there a lack of logical errors in the construction of conditional statements? Are the conditional statements used efficiently? Does the conditional statement(s) properly account for user input, as intended?"
+}
