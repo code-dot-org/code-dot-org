@@ -169,6 +169,7 @@ const AFESchoolCheck: React.FC<AFESchoolCheckProps> = ({
         <Button
           buttonTagTypeAttribute="submit"
           text="Find out if I'm eligible"
+          className={styles.afeEligibilityFormButton}
           isPending={isFormSubmitted}
           disabled={!!formError}
           onClick={() => {}}
