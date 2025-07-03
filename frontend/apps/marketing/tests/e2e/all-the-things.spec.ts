@@ -153,7 +153,7 @@ test.describe('All the things UI e2e test', () => {
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
-      '⛔️ [ENGINEERING ONLY] UI Integration Testing - SEO',
+      '❌ [ENGINEERING ONLY] UI Integration Testing - SEO',
     );
     expect(await allTheThingsPage.description).toBe('SEO Description');
     expect(await allTheThingsPage.robots).toBe('noindex, nofollow');
