@@ -75,6 +75,10 @@ const ProcessModal = ({useFilesApi}) => {
     fetchAllVersions();
   }, [useFilesApi]);
 
+  const getDiffSummary(oldCode, newCode) => {
+    summarizeCodeDiff(oldCode, newCode);
+  }
+
   // Sort versions by lastModified (descending, newest first)
   const sortedVersions = [...versions].sort((a, b) => {
     const aTime = new Date(a.lastModified).getTime();
