@@ -107,7 +107,11 @@ const richTextRenderOptions: Options = {
       <>
         <ol>
           {listNode.content.map((itemNode: RichTextNode, index) => (
-            <li key={index}>{extractNodeContent(itemNode)}</li>
+            <li key={index}>
+              <BodyTwoText className={moduleStyles.richTextParagraph}>
+                {extractNodeContent(itemNode)}
+              </BodyTwoText>
+            </li>
           ))}
         </ol>
         <br />
