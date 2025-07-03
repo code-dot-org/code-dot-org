@@ -40,11 +40,11 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
         status: :not_found
     end
 
-    enrollment_email = params[:email]
     user = User.find(params[:user_id])
 
     # See if a previous enrollment exists for this email
-    previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
+    previous_enrollment = @workshop.enrollments.find_by(email: user.email)
+
     if previous_enrollment
       cancel_url = url_for action: :cancel, controller: '/pd/workshop_enrollment', code: previous_enrollment.code
       render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE], {cancel_url: cancel_url}
@@ -57,14 +57,13 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
     else
       ActiveRecord::Base.transaction do
-        enrollment = ::Pd::Enrollment.new workshop: @workshop
-
-        if @workshop.course == COURSE_BUILD_YOUR_OWN
-          enrollment.update!(enrollment_params)
-        else
-          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
-          user&.update_school_info(enrollment.school_info)
-        end
+        enrollment = ::Pd::Enrollment.new(
+          workshop: @workshop,
+          first_name: user&.given_name&.strip_utf8mb4,
+          last_name: user&.family_name&.strip_utf8mb4,
+          email: user&.email,
+          school_info_id: user&.school_info_id
+        )
 
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
@@ -139,22 +138,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     return head :forbidden unless current_user.workshop_admin?
     enrollment = Pd::Enrollment.find_by(id: params[:id])
     enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
-  end
-
-  private def enrollment_params
-    params.require(:user_id)
-    params.permit(:user_id, :first_name, :last_name, :email).to_h.tap do |p|
-      p[:first_name] = p[:first_name]&.strip_utf8mb4
-      p[:last_name] = p[:last_name]&.strip_utf8mb4
-      p[:email] = p[:email]&.strip_utf8mb4
-    end
-  end
-
-  private def school_info_params
-    params.require(:school_info).
-      permit(:school_type, :zip, :school_id, :school_name, :country).to_h.tap do |p|
-        p[:school_name] = p[:school_name]&.strip_utf8mb4
-      end
   end
 
   private def render_unsuccessful(error_message, options = {})

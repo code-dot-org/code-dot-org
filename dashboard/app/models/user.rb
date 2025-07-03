@@ -1297,17 +1297,6 @@ class User < ApplicationRecord
     }
   end
 
-  def summarize_for_workshop
-    {
-      id: id,
-      email: email,
-      is_student: user_type == TYPE_STUDENT,
-      first_name: given_name,
-      last_name: family_name,
-      school_info: Queries::SchoolInfo.current_school(self),
-    }
-  end
-
   def at_risk_age_gated_date
     Policies::ChildAccount::StatePolicies.state_policy(self)&.dig(:lockout_date) unless Policies::ChildAccount.compliant?(self, future: true)
   end

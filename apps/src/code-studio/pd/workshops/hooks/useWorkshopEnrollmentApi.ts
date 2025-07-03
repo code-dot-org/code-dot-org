@@ -1,6 +1,5 @@
 import {useState} from 'react';
 
-import {WorkshopEnrollmentParams} from '@cdo/apps/code-studio/pd/workshops/types';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 export type WorkshopEnrollmentResponse = {
@@ -17,7 +16,7 @@ export function useWorkshopEnrollmentApi(workshopId: number) {
   const [error, setError] = useState<string | null>(null);
 
   const submitEnrollment = async (
-    params: WorkshopEnrollmentParams | null
+    user_id: number
   ): Promise<WorkshopEnrollmentResponse | null> => {
     if (!isSubmitting) {
       setIsSubmitting(true);
@@ -32,7 +31,7 @@ export function useWorkshopEnrollmentApi(workshopId: number) {
               'Content-Type': 'application/json',
               'X-CSRF-Token': await getAuthenticityToken(),
             },
-            body: JSON.stringify(params),
+            body: JSON.stringify({user_id}),
           }
         );
 

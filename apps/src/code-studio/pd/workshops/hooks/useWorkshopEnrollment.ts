@@ -2,10 +2,7 @@ import {LinkProps} from '@code-dot-org/component-library/link';
 import {useState} from 'react';
 
 import {SUBMISSION_STATUSES} from '@cdo/apps/code-studio/pd/workshop_enrollment/constants';
-import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
-} from '@cdo/apps/code-studio/pd/workshops/types';
+import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/workshops/types';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import {useWorkshopEnrollmentApi} from './useWorkshopEnrollmentApi';
@@ -20,7 +17,7 @@ type WorkshopEnrollmentHandlerProps = Pick<
   | 'sessions'
 > & {
   workshopId: number;
-  userInfo: GetUserInfoForWorkshopResponse['userInfo'];
+  userId: number;
 };
 
 /**
@@ -28,7 +25,7 @@ type WorkshopEnrollmentHandlerProps = Pick<
  * */
 export function useWorkshopEnrollment({
   workshopId,
-  userInfo,
+  userId,
   regional_partner_name,
   course,
   format,
@@ -45,20 +42,7 @@ export function useWorkshopEnrollment({
   }>({show: false, text: ''});
 
   const handleClick = async () => {
-    const result = await submitEnrollment(
-      userInfo && {
-        user_id: userInfo.id,
-        email: userInfo.email,
-        first_name: userInfo.first_name,
-        last_name: userInfo.last_name,
-        school_info: {
-          school_id: userInfo.school_info?.school_id,
-          country: userInfo.school_info?.country,
-          school_name: userInfo.school_info?.school_name,
-          school_zip: userInfo.school_info?.school_zip,
-        },
-      }
-    );
+    const result = await submitEnrollment(userId);
 
     switch (result?.workshop_enrollment_status) {
       case SUBMISSION_STATUSES.DUPLICATE:

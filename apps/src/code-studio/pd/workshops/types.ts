@@ -59,14 +59,3 @@ export type UserInfoForWorkshop = {
     school_zip?: string;
   };
 };
-
-export type WorkshopEnrollmentParams = Pick<
-  UserInfoForWorkshop,
-  'email' | 'first_name' | 'last_name' | 'school_info'
-> & {
-  user_id: number;
-};
-
-export interface GetUserInfoForWorkshopResponse {
-  userInfo: UserInfoForWorkshop | null;
-}

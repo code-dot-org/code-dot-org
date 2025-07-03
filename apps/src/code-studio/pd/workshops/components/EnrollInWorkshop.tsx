@@ -7,50 +7,70 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
-} from '@cdo/apps/code-studio/pd/workshops/types';
+import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
-const WORKSHOP_ENROLL_SOURCE_PAGE = 'workshop enroll';
+type WorkshopProps = Pick<
+  GetWorkshopInfoScriptDataResponse,
+  | 'custom_registration_link'
+  | 'num_enrollments'
+  | 'capacity'
+  | 'id'
+  | 'regional_partner_name'
+  | 'course'
+  | 'sessions'
+  | 'name'
+  | 'format'
+  | 'subject'
+>;
 
-interface EnrollInWorkshopProps
-  extends Pick<
-      GetWorkshopInfoScriptDataResponse,
-      | 'custom_registration_link'
-      | 'num_enrollments'
-      | 'capacity'
-      | 'id'
-      | 'regional_partner_name'
-      | 'course'
-      | 'sessions'
-      | 'name'
-      | 'format'
-      | 'subject'
-    >,
-    GetUserInfoForWorkshopResponse {}
-/** Component to display the enrollment information for a workshop. */
-const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
+// Dipslay for users that cannot enroll in workshops: signed-out users or students.
+const EnrollInWorkshopForNonTeachers: React.FC<{
+  workshop_id: number;
+  is_student: boolean;
+}> = ({workshop_id, is_student}) => {
+  const accountUpdateTypePath = is_student
+    ? 'teacher_account_required'
+    : 'logged_out';
+  const needTeacherAccountLink = `/${accountUpdateTypePath}?source_page=${encodeURIComponent(
+    'workshop enroll'
+  )}&return_to=/professional-learning/workshops/${workshop_id}`;
+
+  return (
+    <LinkButton
+      className={moduleStyles.fullWidthButton}
+      type="primary"
+      size="m"
+      href={needTeacherAccountLink}
+      text={is_student ? 'Switch to teacher account' : 'Sign-in to enroll'}
+      iconRight={{iconName: 'right-to-bracket'}}
+    />
+  );
+};
+
+// Display for users that can enroll in workshops: teachers.
+const EnrollInWorkshopForTeachers: React.FC<
+  WorkshopProps & {user_id: number}
+> = ({
   id,
   custom_registration_link,
   num_enrollments,
   capacity,
   sessions,
-  userInfo,
   regional_partner_name,
   course,
   format,
   name,
   subject,
+  user_id,
 }) => {
   const {handleClick, isSubmitting, alertState, setAlertState} =
     useWorkshopEnrollment({
       workshopId: id,
-      userInfo,
+      userId: user_id,
       regional_partner_name,
       course,
       format,
@@ -58,26 +78,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       subject,
       sessions,
     });
-
-  const is_student = userInfo?.is_student || false;
-  const is_signed_out = !userInfo;
   const isFull = num_enrollments >= capacity;
-
-  const buildEnrollButtonLink = (enrollLink: string) => {
-    if (is_signed_out) {
-      return `/logged_out?source_page=${encodeURIComponent(
-        WORKSHOP_ENROLL_SOURCE_PAGE
-      )}&return_to=${encodeURIComponent(enrollLink)}`;
-    }
-
-    if (is_student) {
-      return `/teacher_account_required?source_page=${encodeURIComponent(
-        WORKSHOP_ENROLL_SOURCE_PAGE
-      )}&return_to=${encodeURIComponent(enrollLink)}`;
-    }
-
-    return enrollLink;
-  };
 
   const renderEnrollmentAction = () => {
     if (isFull) {
@@ -96,11 +97,11 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={custom_registration_link}
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -108,19 +109,6 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             iconRight={{iconName: 'up-right-from-square'}}
           />
         </>
-      );
-    }
-
-    if (is_student || is_signed_out) {
-      return (
-        <LinkButton
-          className={moduleStyles.fullWidthButton}
-          type="primary"
-          size="m"
-          href={buildEnrollButtonLink(`/professional-learning/workshops/${id}`)}
-          text={is_student ? 'Switch to teacher account' : 'Sign-in to enroll'}
-          iconRight={{iconName: 'right-to-bracket'}}
-        />
       );
     }
 
@@ -154,6 +142,42 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
         Click to see data sharing notice
       </Link>
     </div>
+  );
+};
+
+/** Component to display the enrollment information for a workshop. */
+const EnrollInWorkshop: React.FC<
+  WorkshopProps & {user_id?: number; is_student: boolean}
+> = ({
+  id,
+  custom_registration_link,
+  num_enrollments,
+  capacity,
+  sessions,
+  regional_partner_name,
+  course,
+  format,
+  name,
+  subject,
+  user_id,
+  is_student,
+}) => {
+  return !user_id || is_student ? (
+    <EnrollInWorkshopForNonTeachers workshop_id={id} is_student={is_student} />
+  ) : (
+    <EnrollInWorkshopForTeachers
+      id={id}
+      custom_registration_link={custom_registration_link}
+      num_enrollments={num_enrollments}
+      capacity={capacity}
+      sessions={sessions}
+      regional_partner_name={regional_partner_name}
+      course={course}
+      format={format}
+      name={name}
+      subject={subject}
+      user_id={user_id}
+    />
   );
 };
 

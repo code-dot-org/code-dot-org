@@ -228,8 +228,13 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   private def build_enrollment_from_params
     enrollment = get_workshop_user_enrollment
-    enrollment.assign_attributes enrollment_params.merge(user_id: current_user.id)
-    enrollment.school_info_attributes = school_info_params
+    enrollment.assign_attributes(
+      user_id: current_user.id,
+      first_name: current_user.given_name,
+      last_name: current_user.family_name,
+      email: current_user.email,
+      school_info_id: current_user.school_info_id
+    )
 
     enrollment
   end
@@ -266,34 +271,10 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
-      full_name: current_user.name,
-      email: current_user.email
-    )
-  end
-
-  private def enrollment_params
-    params.require(:pd_enrollment).permit(
-      :first_name,
-      :last_name,
-      :email,
-      :email_confirmation,
-      :school
-    )
-  end
-
-  private def school_info_params
-    params.require(:school_info).permit(
-      :country,
-      :school_type,
-      :school_state,
-      :school_zip,
-      :school_district_id,
-      :school_district_other,
-      :school_district_name,
-      :school_id,
-      :school_other,
-      :school_name,
-      :full_address,
+      first_name: current_user.given_name,
+      last_name: current_user.family_name,
+      email: current_user.email,
+      school_info_id: current_user.school_info_id
     )
   end
 

@@ -7,10 +7,7 @@ import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
 import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
-import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
-} from './types';
+import {GetWorkshopInfoScriptDataResponse} from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
 
@@ -25,12 +22,8 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
   },
 ];
 
-interface WorkshopMarketingPageProps
-  extends GetWorkshopInfoScriptDataResponse,
-    GetUserInfoForWorkshopResponse {}
-
 const WorkshopMarketingPage: React.FunctionComponent<
-  WorkshopMarketingPageProps
+  GetWorkshopInfoScriptDataResponse & {user_id?: number; is_student: boolean}
 > = props => {
   const {
     id,
@@ -51,7 +44,8 @@ const WorkshopMarketingPage: React.FunctionComponent<
     regional_partner_name,
     organizer,
     facilitators,
-    userInfo,
+    user_id,
+    is_student,
   } = props;
 
   return (
@@ -87,12 +81,13 @@ const WorkshopMarketingPage: React.FunctionComponent<
               capacity={capacity}
               num_enrollments={num_enrollments}
               regional_partner_name={regional_partner_name}
-              userInfo={userInfo}
               course={course}
               subject={subject}
               name={name}
               format={format}
               sessions={sessions}
+              user_id={user_id}
+              is_student={is_student}
             />
 
             <OrganizerInformation
