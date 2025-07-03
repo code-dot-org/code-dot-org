@@ -267,9 +267,6 @@ group :development, :staging, :levelbuilder, :test do
   gem 'scss_lint', require: false
 end
 
-# Reduce volume of production logs
-# Ref: https://github.com/roidrage/lograge/pull/252
-gem 'lograge', github: 'code-dot-org/lograge', ref: 'debug_exceptions'
 gem 'request_store', '~> 1.6.0', require: false
 
 # Enforce SSL
@@ -395,3 +392,11 @@ gem "opentelemetry-instrumentation-all", "0.51.1" # pinned due to rails 6.1, upg
 gem "opentelemetry-sdk", "~> 1.8"
 
 gem "opentelemetry-exporter-otlp", "~> 0.30.0"
+
+gem "opentelemetry-logs-sdk", "~> 0.2.0"
+
+gem "opentelemetry-exporter-otlp-logs", "~> 0.2.0"
+
+gem "semantic_logger", "~> 4.16"
+
+gem "rails_semantic_logger", "~> 4.17"

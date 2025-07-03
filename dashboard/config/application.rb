@@ -238,5 +238,8 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    config.rails_semantic_logger.format = :json             # Log in JSON format
+    config.logger = SemanticLogger['Rails']                 # Use Semantic Logger
   end
 end

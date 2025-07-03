@@ -20,17 +20,6 @@ GIT
       image_optim (~> 0.19)
 
 GIT
-  remote: https://github.com/code-dot-org/lograge.git
-  revision: 8d55ad595c0af229bb144bbe73c9e7404ce0b32c
-  ref: debug_exceptions
-  specs:
-    lograge (0.10.0)
-      actionpack (>= 4)
-      activesupport (>= 4)
-      railties (>= 4)
-      request_store (~> 1.0)
-
-GIT
   remote: https://github.com/code-dot-org/omniauth-clever.git
   revision: 995409e9be86a9864e344e360869ca982c834845
   tag: v2.0.1
@@ -673,6 +662,15 @@ GEM
       opentelemetry-common (~> 0.20)
       opentelemetry-sdk (~> 1.2)
       opentelemetry-semantic_conventions
+    opentelemetry-exporter-otlp-logs (0.2.0)
+      google-protobuf (>= 3.18)
+      googleapis-common-protos-types (~> 1.3)
+      opentelemetry-api (~> 1.1)
+      opentelemetry-common (~> 0.20)
+      opentelemetry-logs-api (~> 0.1)
+      opentelemetry-logs-sdk (~> 0.1)
+      opentelemetry-sdk
+      opentelemetry-semantic_conventions
     opentelemetry-instrumentation-action_pack (0.7.1)
       opentelemetry-api (~> 1.0)
       opentelemetry-instrumentation-base (~> 0.22.1)
@@ -838,6 +836,12 @@ GEM
       opentelemetry-api (~> 1.0)
       opentelemetry-instrumentation-base (~> 0.22.1)
       opentelemetry-semantic_conventions (>= 1.8.0)
+    opentelemetry-logs-api (0.2.0)
+      opentelemetry-api (~> 1.0)
+    opentelemetry-logs-sdk (0.2.0)
+      opentelemetry-api (~> 1.2)
+      opentelemetry-logs-api (~> 0.1)
+      opentelemetry-sdk (~> 1.3)
     opentelemetry-registry (0.4.0)
       opentelemetry-api (~> 1.1)
     opentelemetry-sdk (1.8.0)
@@ -923,6 +927,10 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
+    rails_semantic_logger (4.17.0)
+      rack
+      railties (>= 5.1)
+      semantic_logger (~> 4.16)
     railties (6.1.7.7)
       actionpack (= 6.1.7.7)
       activesupport (= 6.1.7.7)
@@ -1043,6 +1051,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    semantic_logger (4.16.1)
+      concurrent-ruby (~> 1.0)
     sequel (5.67.0)
     set (1.1.0)
     signet (0.17.0)
@@ -1243,7 +1253,6 @@ DEPENDENCIES
   jumphash
   jwt (~> 2.7.0)
   kaminari
-  lograge!
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
@@ -1274,7 +1283,9 @@ DEPENDENCIES
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
   opentelemetry-exporter-otlp (~> 0.30.0)
+  opentelemetry-exporter-otlp-logs (~> 0.2.0)
   opentelemetry-instrumentation-all (= 0.51.1)
+  opentelemetry-logs-sdk (~> 0.2.0)
   opentelemetry-sdk (~> 1.8)
   os
   parallel
@@ -1295,6 +1306,7 @@ DEPENDENCIES
   rack_csrf
   rails (~> 6.1)
   rails-controller-testing (~> 1.0.5)
+  rails_semantic_logger (~> 4.17)
   raindrops
   rambling-trie (>= 2.1.1)
   recaptcha
@@ -1325,6 +1337,7 @@ DEPENDENCIES
   scss_lint
   sd_notify
   selenium-webdriver (~> 4.6)
+  semantic_logger (~> 4.16)
   sequel (~> 5.29)
   simplecov (~> 0.22.0)
   sinatra (= 2.2.3)

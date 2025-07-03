@@ -27,6 +27,7 @@ before_fork do
 end
 
 on_worker_boot do |_index|
+  SemanticLogger.reopen
   Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
 end

@@ -42,6 +42,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # GET /api/v1/users/current
   def current
+    logger = SemanticLogger['test']
+    logger.info('Current user requested', user_id: current_user&.id)
     prevent_caching
     if current_user
       render json: {
