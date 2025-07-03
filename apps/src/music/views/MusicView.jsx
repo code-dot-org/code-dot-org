@@ -41,6 +41,7 @@ import {
   DEFAULT_LIBRARY,
   DEFAULT_PACK,
   DEFAULT_VALIDATION_TIMEOUT,
+  Triggers,
 } from '../constants';
 import {AnalyticsContext} from '../context';
 import MusicRegistry from '../MusicRegistry';
@@ -915,7 +916,9 @@ class UnconnectedMusicView extends React.Component {
           blocklyDivId={BLOCKLY_DIV_ID}
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
-          hasTrigger={this.hasTrigger}
+          triggers={Triggers.filter(trigger =>
+            this.musicBlocklyWorkspace.hasTrigger(trigger.id)
+          )}
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
           undo={this.undo}

@@ -31,6 +31,7 @@ import {
   installFunctionBlocks,
 } from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import {Trigger} from '../constants';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
@@ -64,7 +65,7 @@ interface MusicLabViewProps {
   blocklyDivId: string;
   setPlaying: (playing: boolean) => void;
   playTrigger: (id: string) => void;
-  hasTrigger: (id: string) => boolean;
+  triggers: Trigger[];
   getCurrentPlayheadPosition: () => number;
   updateHighlightedBlocks: () => void;
   undo: () => void;
@@ -86,7 +87,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   blocklyDivId,
   setPlaying,
   playTrigger,
-  hasTrigger,
+  triggers,
   getCurrentPlayheadPosition,
   updateHighlightedBlocks,
   undo,
@@ -448,7 +449,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               <Controls
                 setPlaying={setPlaying}
                 playTrigger={playTrigger}
-                hasTrigger={hasTrigger}
+                triggers={triggers}
                 isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
                 enableSkipControls={
                   AppConfig.getValue('skip-controls-enabled') === 'true'

@@ -4,7 +4,7 @@ import React, {memo, useCallback} from 'react';
 import {useDispatch} from 'react-redux';
 
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {Triggers} from '@cdo/apps/music/constants';
+import {Trigger} from '@cdo/apps/music/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -103,7 +103,7 @@ const SkipControls: React.FunctionComponent = () => {
 interface ControlsProps {
   setPlaying: (value: boolean) => void;
   playTrigger: (id: string) => void;
-  hasTrigger: (id: string) => boolean;
+  triggers: Trigger[];
   isPredictLevel?: boolean;
   enableSkipControls?: boolean;
 }
@@ -115,7 +115,7 @@ interface ControlsProps {
 const Controls: React.FunctionComponent<ControlsProps> = ({
   setPlaying,
   playTrigger,
-  hasTrigger,
+  triggers,
   isPredictLevel,
   enableSkipControls = false,
 }) => {
@@ -153,10 +153,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
         </button>
         {enableSkipControls && <SkipControls />}
       </div>
-      <BeatPad
-        triggers={Triggers.filter(trigger => hasTrigger(trigger.id))}
-        playTrigger={playTrigger}
-      />
+      <BeatPad triggers={triggers} playTrigger={playTrigger} />
       <LoadingProgress />
     </div>
   );
