@@ -13,16 +13,6 @@ class Policies::UnitTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
-  test 'check deletion for stand alone unit in development' do
-    unit = create(:script, published_state: PUBLISHED_STATE.in_development)
-    assert_equal true, Policies::Unit.can_be_deleted?(unit)
-  end
-
-  test 'check deletion for stand alone stable unit' do
-    unit = create(:script, published_state: PUBLISHED_STATE.stable)
-    assert_equal false, Policies::Unit.can_be_deleted?(unit)
-  end
-
   test 'check deletion for unit (nil published state) in unit group with in_development' do
     unit = create(:script, published_state: nil)
     unit_gp = create(:unit_group, published_state: PUBLISHED_STATE.in_development)

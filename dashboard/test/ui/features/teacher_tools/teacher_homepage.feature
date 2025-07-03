@@ -20,7 +20,7 @@ Feature: Using the teacher homepage sections feature
     Given I create a teacher named "Belle" and go home
     And I wait until I am on "http://studio.code.org/home"
     And element ".modal" is not visible
-  
+
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
     When I create a new student section and go home
@@ -60,7 +60,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#uitest-secondary-assignment" is visible
     And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "h1:contains(Progress)" is visible 
+    And I wait until element "h1:contains(Progress)" is visible
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -68,7 +68,7 @@ Feature: Using the teacher homepage sections feature
     # Confirm the assignment
     # When I press "confirm-assign"
     # And I wait for the dialog to close
-    
+
     # Verify the unit was unhidden
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
@@ -100,7 +100,7 @@ Feature: Using the teacher homepage sections feature
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "h1:contains(Progress)" is visible 
+    And I wait until element "h1:contains(Progress)" is visible
     Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
     And I wait until element ".uitest-owned-sections" is visible
@@ -142,7 +142,7 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Do not see the unit when a section is assigned a single-unit course
     Given I create a teacher-associated student named "Sally"
-    Given I am assigned to course "ui-test-single-unit-course-2025" and unit "ui-test-single-unit-2025" with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     Then the student section table should have 2 rows

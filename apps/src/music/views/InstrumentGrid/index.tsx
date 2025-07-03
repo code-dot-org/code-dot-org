@@ -8,6 +8,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 import musicI18n from '../../locale';
 import MusicRegistry from '../../MusicRegistry';
@@ -185,11 +186,13 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       displayNotes.findIndex(displayNote => displayNote.note === note)
     );
 
-    const pitchRowClass = displayNotes.find(
-      displayNote => displayNote.note === note
-    )
+    const showing = displayNotes.find(displayNote => displayNote.note === note);
+
+    const pitchRowClass = showing
       ? styles.pitchRowShowing
       : styles.pitchRowHidden;
+
+    const tabIndex = showing ? 0 : -1;
 
     return {
       pitchRowClass,
@@ -198,6 +201,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       textColor,
       keyColor,
       selectedColor,
+      tabIndex,
     };
   };
 
@@ -221,130 +225,140 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   }, [editorType, scaleMode]);
 
   return (
-    <div className={styles.container} data-theme="Dark">
-      <div className={styles.controlRow}>
-        <div className={styles.left}>
-          <SimpleDropdown
-            className={styles.flexAutoWidth}
-            items={instruments.map(instrument => ({
-              value: instrument.id,
-              text: instrument.name,
-            }))}
-            onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-              setCurrentValue({
-                ...currentValue,
-                instrument: event.target.value,
-              });
-            }}
-            size="s"
-            name="instrument"
-            labelText="Instrument"
-            isLabelVisible={false}
-            selectedValue={currentValue.instrument}
-          />
-          <PreviewControlsV2
-            enabled={currentValue.events.length > 0 && !isLoading}
-            playPreview={startPreview}
-            onClickClear={() => setCurrentValue({...currentValue, events: []})}
-            cancelPreviews={stopPreview}
-            isPlayingPreview={currentPreviewTick > 0}
-          />
+    <FocusLock>
+      <div className={styles.container} data-theme="Dark">
+        <div className={styles.controlRow}>
+          <div className={styles.left}>
+            <SimpleDropdown
+              className={styles.flexAutoWidth}
+              items={instruments.map(instrument => ({
+                value: instrument.id,
+                text: instrument.name,
+              }))}
+              onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+                setCurrentValue({
+                  ...currentValue,
+                  instrument: event.target.value,
+                });
+              }}
+              size="s"
+              name="instrument"
+              labelText="Instrument"
+              isLabelVisible={false}
+              selectedValue={currentValue.instrument}
+            />
+            <PreviewControlsV2
+              enabled={currentValue.events.length > 0 && !isLoading}
+              playPreview={startPreview}
+              onClickClear={() =>
+                setCurrentValue({...currentValue, events: []})
+              }
+              cancelPreviews={stopPreview}
+              isPlayingPreview={currentPreviewTick > 0}
+            />
+          </div>
+          {editorType === 'notes' && (
+            <SegmentedButtons
+              className={styles.flexAutoWidth}
+              buttons={[
+                {label: musicI18n.tuneKeyNotes(), value: 'simple'},
+                {label: musicI18n.tuneAllNotes(), value: 'chromatic'},
+              ]}
+              onChange={value => {
+                setCurrentValue({
+                  ...currentValue,
+                  scaleMode: value as ScaleMode,
+                });
+                MusicRegistry.analyticsReporter.onButtonClicked(
+                  'change-tune-scale-mode',
+                  {scaleMode: value}
+                );
+              }}
+              selectedButtonValue={scaleMode || 'simple'}
+              size="xs"
+            />
+          )}
         </div>
-        {editorType === 'notes' && (
-          <SegmentedButtons
-            className={styles.flexAutoWidth}
-            buttons={[
-              {label: musicI18n.tuneKeyNotes(), value: 'simple'},
-              {label: musicI18n.tuneAllNotes(), value: 'chromatic'},
-            ]}
-            onChange={value => {
-              setCurrentValue({...currentValue, scaleMode: value as ScaleMode});
-              MusicRegistry.analyticsReporter.onButtonClicked(
-                'change-tune-scale-mode',
-                {scaleMode: value}
-              );
-            }}
-            selectedButtonValue={scaleMode || 'simple'}
-            size="xs"
-          />
-        )}
-      </div>
-      <EaseIntoView
-        doEase={editorType !== 'drums'}
-        frames={50}
-        scrollStart={scrollStart}
-        scrollEnd={scrollEnd}
-        className={classNames(styles[`sequence-editor-${interfaceMode}`])}
-      >
-        {allNotes.map(({note, name}) => {
-          const {
-            pitchRowClass,
-            style,
-            label,
-            textColor,
-            keyColor,
-            selectedColor,
-          } = getRowInfo(name, note);
+        <EaseIntoView
+          doEase={editorType !== 'drums'}
+          frames={50}
+          scrollStart={scrollStart}
+          scrollEnd={scrollEnd}
+          className={classNames(styles[`sequence-editor-${interfaceMode}`])}
+        >
+          {allNotes.map(({note, name}) => {
+            const {
+              pitchRowClass,
+              style,
+              label,
+              textColor,
+              keyColor,
+              selectedColor,
+              tabIndex,
+            } = getRowInfo(name, note);
 
-          return (
-            <div
-              className={classNames(styles.pitchRow, pitchRowClass)}
-              key={note}
-            >
-              <button
-                type="button"
-                className={styles['cell-outer']}
-                onClick={() =>
-                  MusicRegistry.player.previewNote(
-                    note,
-                    currentValue.instrument
-                  )
-                }
+            return (
+              <div
+                className={classNames(styles.pitchRow, pitchRowClass)}
+                key={note}
               >
-                <div
-                  className={classNames(style, styles.innerCell)}
-                  style={{backgroundColor: keyColor, color: textColor}}
+                <button
+                  type="button"
+                  className={styles['cell-outer']}
+                  onClick={() =>
+                    MusicRegistry.player.previewNote(
+                      note,
+                      currentValue.instrument
+                    )
+                  }
+                  tabIndex={tabIndex}
                 >
-                  {label}
-                </div>
-              </button>
+                  <div
+                    className={classNames(style, styles.innerCell)}
+                    style={{backgroundColor: keyColor, color: textColor}}
+                  >
+                    {label}
+                  </div>
+                </button>
 
-              <div className={styles.cellRow}>
-                {ticks.map(tick => (
-                  <Fragment key={tick}>
-                    <button
-                      type="button"
-                      className={styles[`cell-outer-${interfaceMode}`]}
-                      key={tick}
-                      onClick={() => onClickCell(note, tick)}
-                    >
-                      <div
-                        className={classNames(
-                          styles.innerCell,
-                          isSelected(note, tick) && styles.selected,
-                          currentPreviewTick === tick && styles.preview
-                        )}
-                        style={{
-                          backgroundColor: isSelected(note, tick)
-                            ? selectedColor
-                            : undefined,
-                        }}
-                      />
-                    </button>
-                    {
-                      tick % 4 === 0 && (
-                        <div className={styles.spacer} />
-                      ) /* Spacer */
-                    }
-                  </Fragment>
-                ))}
+                <div className={styles.cellRow}>
+                  {ticks.map(tick => (
+                    <Fragment key={tick}>
+                      <button
+                        type="button"
+                        className={styles[`cell-outer-${interfaceMode}`]}
+                        key={tick}
+                        onClick={() => onClickCell(note, tick)}
+                        tabIndex={tabIndex}
+                      >
+                        <div
+                          className={classNames(
+                            styles.innerCell,
+                            isSelected(note, tick) && styles.selected,
+                            currentPreviewTick === tick && styles.preview
+                          )}
+                          style={{
+                            backgroundColor: isSelected(note, tick)
+                              ? selectedColor
+                              : undefined,
+                          }}
+                        />
+                      </button>
+                      {
+                        tick % 4 === 0 && (
+                          <div className={styles.spacer} />
+                        ) /* Spacer */
+                      }
+                    </Fragment>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </EaseIntoView>
-      <LoadingOverlay show={isLoading} />
-    </div>
+            );
+          })}
+        </EaseIntoView>
+        <LoadingOverlay show={isLoading} />
+      </div>
+    </FocusLock>
   );
 };
 

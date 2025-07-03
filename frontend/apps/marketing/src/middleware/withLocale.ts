@@ -1,19 +1,23 @@
 import Negotiator from 'negotiator';
-import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
+import {NextFetchEvent, NextRequest} from 'next/server';
 
 import {
-  getLocalizeJsLocale,
-  getPegasusLocale,
+  getLocalizeJsLocaleFromDashboardLocale,
+  getDashboardLocale,
   SUPPORTED_LOCALE_CODES,
   SUPPORTED_LOCALES_SET,
+  SupportedLocale,
 } from '@/config/locale';
 import {getStage} from '@/config/stage';
+import {getStudioBaseUrl} from '@/config/studio';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
+import {getCookieNameByStage} from '@/cookies/getCookie';
+import {getCachedRedirectResponse} from '@/middleware/utils/getCachedRedirectResponse';
 
 import {MiddlewareFactory} from './types';
 
 function getLanguageFromCookie(request: NextRequest) {
-  const cookieLocale = getLocalizeJsLocale(
+  const cookieLocale = getLocalizeJsLocaleFromDashboardLocale(
     request.cookies.get('language_')?.value,
   );
   return cookieLocale !== undefined && SUPPORTED_LOCALES_SET.has(cookieLocale)
@@ -46,22 +50,39 @@ export const withLocale: MiddlewareFactory = next => {
     const {pathname} = request.nextUrl;
     const pathParts = pathname.split('/').filter(Boolean);
 
-    const maybeLocale = pathParts[0];
+    const maybeLocale = pathParts[0] as SupportedLocale;
+    const stage = getStage();
 
     if (SUPPORTED_LOCALES_SET.has(maybeLocale)) {
       // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
       const response = await next(request, event);
 
-      response.cookies.set('language_', getPegasusLocale(maybeLocale), {
+      response.cookies.set('language_', getDashboardLocale(maybeLocale), {
         path: '/',
-        domain: getStage() === 'production' ? '.code.org' : undefined,
+        domain: stage === 'production' ? '.code.org' : undefined,
       });
 
       return response;
     }
 
-    // If pathParts is empty, then it is a request to / which should resolve to the /home slug
-    const slug = pathParts.length === 0 ? 'home' : getContentfulSlug(pathParts);
+    // If pathParts is empty, then it is a request to / which should resolve to the / slug
+    // It is an empty string here because when a call is made to Contentful, `/` is automatically prepended
+    const isRootRoute = pathParts.length === 0;
+
+    if (isRootRoute) {
+      // If the _user_type cookie is set, then Dashboard successfully logged in the user which is an early indicator
+      // that the user is logged in right now. Therefore, send the user to Code Studio
+      // See: https://github.com/code-dot-org/code-dot-org/blob/3fad8bce055846378ae3da343da93a32acd4df8c/dashboard/config/initializers/devise.rb#L331
+      const userTypeCookie = request.cookies.get(
+        getCookieNameByStage('_user_type', stage),
+      );
+
+      if (userTypeCookie?.value) {
+        return getCachedRedirectResponse(getStudioBaseUrl());
+      }
+    }
+
+    const slug = isRootRoute ? '' : getContentfulSlug(pathParts);
 
     const cookieLocale = getLanguageFromCookie(request);
     const browserPreferredLocale = getLanguageFromAcceptLanguageHeader(request);
@@ -74,11 +95,12 @@ export const withLocale: MiddlewareFactory = next => {
      */
     const locale = cookieLocale || browserPreferredLocale || 'en-US';
 
-    const redirectUrl = new URL(`/${locale}/${slug}`, request.url);
-    const response = NextResponse.redirect(redirectUrl);
+    const localizedPath = isRootRoute ? `/${locale}` : `/${locale}/${slug}`;
+    const redirectUrl = new URL(localizedPath, request.url);
+    const response = getCachedRedirectResponse(redirectUrl);
 
     // Set the language cookie if discovered via Accept-Language header
-    response.cookies.set('language_', getPegasusLocale(locale), {
+    response.cookies.set('language_', getDashboardLocale(locale), {
       path: '/',
       domain: getStage() === 'production' ? '.code.org' : undefined,
     });

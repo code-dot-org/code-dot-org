@@ -5,21 +5,10 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     @controller = OpenaiEvaluateController.new
   end
 
-  # level not found
   test 'evaluate returns not found for bogus level",' do
     student = create(:student)
     sign_in(student)
-    unit = create(:script)
-    get :evaluate, params: {level_id: 18976, unit_id: unit.id, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
-    assert_response :not_found
-  end
-
-  # # unit not found
-  test 'evaluate returns not found for bogus unit",' do
-    student = create(:student)
-    sign_in(student)
-    level = create(:level)
-    get :evaluate, params: {level_id: level.id, unit_id: 9478, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
+    get :evaluate, params: {level_id: 18976, student_work: "This is a good answer.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :not_found
   end
 
@@ -28,8 +17,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     student = create(:student)
     sign_in(student)
     level = create(:free_response, :with_script)
-    unit = level.script_levels.first.script
-    get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: " ", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
+    get :evaluate, params: {level_id: level.id, student_work: " ", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
     assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT]
@@ -41,11 +29,11 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
     student = create(:student)
     sign_in(student)
-    csp_course_offering = create(:csp_course_offering, :with_units)
-    unit = csp_course_offering.course_versions.first.content_root
+    csp_course_offering = create(:csp_course_offering, :with_unit_group)
+    unit = csp_course_offering.course_versions.first.content_root.first_unit
     level = create(:free_response)
     create(:script_level, script: unit, levels: [level])
-    get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "This is shit.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
+    get :evaluate, params: {level_id: level.id, student_work: "This is shit.", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
     assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PROFANITY]
@@ -61,7 +49,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     unit = csp_course_offering.course_versions.first.content_root
     level = create(:free_response)
     create(:script_level, script: unit, levels: [level])
-    get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: "My email is harry@hogwarts.edu", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
+    get :evaluate, params: {level_id: level.id, student_work: "My email is harry@hogwarts.edu", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
     assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PII]
@@ -73,8 +61,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     student = create(:student)
     sign_in(student)
     level = create(:applab, :with_script, :with_starter_code)
-    unit = level.script_levels.first.script
-    get :evaluate, params: {level_id: level.id, unit_id: unit.id, student_work: level.get_starter_code, evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
+    get :evaluate, params: {level_id: level.id, student_work: level.get_starter_code, evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}
     assert_response :ok
     custom_response = JSON.parse(json_response["content"])
     assert_equal custom_response["aiEvaluation"], SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT]

@@ -4,21 +4,18 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
-import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import {ModalTypes} from '../constants';
+import {useLevelProperties} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
 import {
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
+  getSelectMultimodalAvailable,
   selectAllVisibleMessages,
-  selectMultimodalEnabled,
-  setShowModalType,
 } from '../redux';
+import {ChatButton} from '../types';
 import {getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -30,6 +27,8 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  chatButtons?: ChatButton[];
+  hiddenContext?: string;
   onClear: () => void;
 }
 
@@ -46,16 +45,15 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  chatButtons,
+  hiddenContext,
   onClear,
 }) => {
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showModalType, studentChatHistory} = useAppSelector(
-    state => state.aichat
-  );
+  const {studentChatHistory} = useAppSelector(state => state.aichat);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
@@ -96,25 +94,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
     [selectedTab]
   );
-
-  useEffect(() => {
-    const modalToShow = () => {
-      if (!isUserTeacher) {
-        return ModalTypes.WARNING;
-      }
-
-      const teacherSawAichatOnboardingModal = tryGetLocalStorage(
-        'teacherSawAichatOnboarding',
-        'no'
-      );
-
-      return teacherSawAichatOnboardingModal === 'yes'
-        ? undefined
-        : ModalTypes.TEACHER_ONBOARDING;
-    };
-
-    dispatch(setShowModalType(modalToShow()));
-  }, [isUserTeacher, dispatch]);
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
@@ -172,35 +151,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const ChatModal = useMemo(
-    () =>
-      showModalType === ModalTypes.TEACHER_ONBOARDING
-        ? TeacherOnboardingModal
-        : showModalType === ModalTypes.WARNING
-        ? ChatWarningModal
-        : undefined,
-    [showModalType]
+  const multimodalEnabled = useAppSelector(
+    getSelectMultimodalAvailable(
+      useLevelProperties().aichatSettings?.multimodalEnabled
+    )
   );
-
-  const onCloseModal = useCallback(() => {
-    // We only want to show the teacher onboarding modal the first time a teacher user
-    // interacts with the aichat tool. Thus, we store a value in local storage when
-    // closing the modal.
-    if (
-      isUserTeacher &&
-      showModalType === ModalTypes.TEACHER_ONBOARDING &&
-      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
-    ) {
-      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
-    }
-    dispatch(setShowModalType(undefined));
-  }, [dispatch, isUserTeacher, showModalType]);
-
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {ChatModal && <ChatModal onClose={onCloseModal} />}
       {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
@@ -212,6 +170,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         {canChatWithModel && (
           <UserChatMessageEditor
             editorContainerClassName={moduleStyles.messageEditorContainer}
+            chatButtons={chatButtons}
+            hiddenContext={hiddenContext}
           />
         )}
         <div className={moduleStyles.buttonRow}>

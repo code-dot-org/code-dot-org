@@ -14,7 +14,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   setup do
-    @workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create :byo_workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 
@@ -30,13 +30,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     )
   end
 
-  test 'non-logged-in users cannot enroll in csf workshop' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :redirect
-    assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
-  end
-
   test 'non-logged-in users cannot enroll in csd workshop' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     get :new, params: {workshop_id: workshop.id}
@@ -49,14 +42,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     get :new, params: {workshop_id: workshop.id}
     assert_response :redirect
     assert_redirected_to "/logged_out?source_page=workshop%20enroll&return_to=%2Fpd%2Fworkshops%2F#{workshop.id}%2Fenroll"
-  end
-
-  test 'logged-in users can enroll in csf workshop' do
-    sign_in @teacher
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
   end
 
   test 'logged-in users can enroll in csd workshop' do
@@ -191,6 +176,78 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'unknown workshop id responds with 404' do
     get :new, params: {workshop_id: 'nonsense'}
     assert_response 404
+  end
+
+  test 'join sends signed out users to sign in gate' do
+    get :join, params: {workshop_id: @workshop.id}
+    assert_redirected_to "/logged_out?source_page=workshop%20join&return_to=%2Fpd%2Fworkshops%2F#{@workshop.id}%2Fjoin"
+  end
+
+  test 'join sends student users to account upgrade gate' do
+    student = create :student
+    sign_in student
+
+    get :join, params: {workshop_id: @workshop.id}
+    assert_redirected_to "/teacher_account_required?source_page=workshop%20join&return_to=%2Fpd%2Fworkshops%2F#{@workshop.id}%2Fjoin"
+  end
+
+  test 'join has Not Found status with invalid workshop id' do
+    sign_in @teacher
+
+    get :join, params: {workshop_id: 'invalid-id'}
+    assert_response :success
+    assert_template :join
+    assert_equal "not found", prop('workshop_enrollment_status')
+  end
+
+  test 'join has Closed status with closed workshop' do
+    closed_workshop = create :workshop, :ended
+    sign_in @teacher
+
+    get :join, params: {workshop_id: closed_workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "closed", prop('workshop_enrollment_status')
+  end
+
+  test 'join has Full status with full workshop' do
+    full_workshop = create :workshop, capacity: 1, num_enrollments: 1
+    sign_in @teacher
+
+    get :join, params: {workshop_id: full_workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "full", prop('workshop_enrollment_status')
+  end
+
+  test 'join has Own status if user tries to join their own workshop' do
+    sign_in @workshop_organizer
+
+    get :join, params: {workshop_id: @organizer_workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "own", prop('workshop_enrollment_status')
+  end
+
+  test 'join has Duplicate status if user is already enrolled in the workshop' do
+    already_enrolled_teacher = create :teacher
+    workshop_with_enrollment = create :workshop
+    create :pd_enrollment, workshop: workshop_with_enrollment, user: already_enrolled_teacher
+    sign_in already_enrolled_teacher
+
+    get :join, params: {workshop_id: workshop_with_enrollment.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "duplicate", prop('workshop_enrollment_status')
+  end
+
+  test 'join has Unsubmitted status if user is able to join the workshop' do
+    sign_in @teacher
+
+    get :join, params: {workshop_id: @workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "unsubmitted", prop('workshop_enrollment_status')
   end
 
   test 'show route' do

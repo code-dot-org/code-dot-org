@@ -30,7 +30,7 @@ module Metrics
       # @request - the request hash (optional)
       def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, session: nil)
         event_value = event_name if event_value.nil?
-        enabled_experiments = get_enabled_experiments && user.present? ? user.get_active_experiment_names : nil
+        enabled_experiments = get_enabled_experiments && user.present? ? Queries::User::EnabledExperiments.call(user) : nil
         managed_test_environment = CDO.running_web_application? && CDO.test_system?
         statsig_stable_id = session&.dig(:statsig_stable_id)
 

@@ -13,7 +13,7 @@ import {fetchStudentCodeSamples} from './StudentWorkSamplesApi';
 
 type EvaluatedCodeSample = StudentAnswer &
   AIResponse & {
-    [key in `skill${number}${
+    [key in `skill-${string}${
       | 'evaluationCriteria'
       | 'aiEvaluation'
       | 'aiReasoning'}`]?: string;
@@ -91,12 +91,13 @@ const StudentCodeDatasetMaker: React.FC = () => {
     if (aiResponse.skillEvaluations) {
       for (let i = 0; i < aiResponse.skillEvaluations.length; i++) {
         const skillEvaluation = aiResponse.skillEvaluations[i];
-        const skillId = skillEvaluation.skillId;
-        evaluation[`skill${skillId}evaluationCriteria`] =
+        const skillKey = skillEvaluation.skillKey;
+        evaluation[`skill-${skillKey}-evaluationCriteria`] =
           skillEvaluation.evaluationCriteria;
-        evaluation[`skill${skillId}aiEvaluation`] =
+        evaluation[`skill-${skillKey}-aiEvaluation`] =
           skillEvaluation.aiEvaluation;
-        evaluation[`skill${skillId}aiReasoning`] = skillEvaluation.aiReasoning;
+        evaluation[`skill-${skillKey}-aiReasoning`] =
+          skillEvaluation.aiReasoning;
       }
     }
     setEvaluatedSamples(prevSamples => [...prevSamples, evaluation]);

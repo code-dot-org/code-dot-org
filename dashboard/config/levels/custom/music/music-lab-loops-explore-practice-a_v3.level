@@ -1,0 +1,520 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-06-26T22:53:10.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Call Me Maybe Remix\r\nGrace noticed that the vocals for Call Me Mabye by Carlea Rae Jepsen build in energy and lead to a big beat drop, an expressive, high-energy moment in the song, that would be fun to exaggerate even further. \r\n\r\n> The song already has a fun beat drop so I wanted to make it even bigger by adding more sound layers to create an even better dance track. \r\n\r\nGrace is using **abstraction** by focusing on accentuating one part of the song instead of the whole thing. \r\n\r\n**Your task:** Use abstraction to organize your code into loops that build to the beat drop with rich, layered sounds. Your song should use at least 10 unique tracks, but focus only on the ones that best support the mood and pacing of the vocals. Use the example for inspiration!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "carly_rae_jepsen_call_me_maybe",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "_}(M|$sp#cUt5[{uR/VT",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "set_effect_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "carly_rae_jepsen_call_me_maybe/i_threw_a_wish_in_a_well"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "vFB^.$|hZqQ*=*wkNbPV",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "v90OVOkWsAb[Sgbw*![%",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "R.M@XK*?+6K]yWz?+wur",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "carly_rae_jepsen_call_me_maybe/id_trade_my_soul_for_a_wish"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "play_sounds_together",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "lU5uzZ;)g}S$`n`Sp||0",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">volume</field>",
+                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "#EQkji;:F@{+#{ELQ~a9",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "carly_rae_jepsen_call_me_maybe/your_stare_was_holdin"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": true,
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins"
+        ],
+        "carly_rae_jepsen_call_me_maybe": [
+          "hey_i_just_met_you",
+          "i_threw_a_wish_in_a_well",
+          "id_trade_my_soul_for_a_wish",
+          "your_stare_was_holdin",
+          "hey_i_just_met_you_no_harm",
+          "its_hard_to_look_right",
+          "and_all_the_other_boys",
+          "before_you_came_into_my_life",
+          "so_call_me_maybe",
+          "chorus_instruments",
+          "strings_big",
+          "strings_small",
+          "muted_guitar",
+          "bass",
+          "drums_full",
+          "drums_intro",
+          "drums_prechorus",
+          "drums_steady",
+          "sweep",
+          "strings_flourish",
+          "strings_slowdown"
+        ]
+      }
+    },
+    "display_name": "Call Me Maybe",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example Song"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pJnTipMV140jy9LGzW8DGjmF\nQA+/SNP2X4CXswB4zClYPwvQ7N5Vv9iTEhaz686dFDlmlLBGrvXeHdA0/Er2\npKi3lQ2ZFqGvyCuX7NZ/uwhcosLCY+2BNEMNZFNSmYrar4DcpNsicPdwx0Aj\n9wJO5cJ88XnPdtKAyOfFEvbcnvZby1rGoX2QieF9eZNtu5NVC21/QhpJZXe1\n3vx9L8UuUI+HAy+ejstqkj0yp+rtLsuOXEQhDMGDDHr6dQuGxXZXs+59kPeE\nn5cpqLfZZaSt5wJKr2Sbs7ks7L3LA9sEbGbXP/azCAdRf6msC4xFbMn4lu8A\n7c7/2rjpynaqUOzR/mbU7FjlnFxzZK9HRPjVeV//lPqLe3De1IDtMEPnNPjz\n9GnK3JbQhBRhpXyFQBXyW5IHZnBIHZOkE1UHW9e3qYnenAxgtNe+SckyjuRB\nbCywzZFBKF2zxUf488Uo+rTq+gV5YTWNRrhymrexZfcmzGEs4/kgF8Ek0lZ6\n8n2jS54ZwcE2u1sqF+jP1Ys/MJ0iJcdKpoILvuqIR0SxTQHqo0KRZa3JfWzn\n0B5NndcA1wQ4vRcuiDzmcS7aJeglsf5lh7++TPypwH5zGF78J6H5EWHutwS5\nXElYnM5nQmhBdZArebAquyUJahAJIEF96lGyGeIoyATFyAMrDvYNyc1lvXW8\nhCInlbcCSogRpb3plK+qWFNNcJbzoRG6dTbBGWfxqcOHbcWJgpoaNBCNE0pL\neSGOUKuOEk1Fg2NWPlNhvB3tAzDlg9kb+L06iKurJFUjcglvneJpXEZpI5cP\nQ6oSkBzKO+vU+oX4m1xYeaAYbWpojuPRCC4SLww9jybjrsTTW1o+Z9RKI5vn\nCiXLp7lK1PcJzM6Ts5nMyI9ho4FrCk3qoCEOkQY1cq9veBtxusjFkgfDieky\n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\nW5FvI/jie4E7K6X27oZIzHK0xPaQDX8mSGMVdQ==\n",
+    "bubble_choice_description": "Help Tim find backing tracks to the vocals from Hallelujah",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
+        "message": "You did it - you've played at least 10 different tracks!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_f8001f85-b5b3-4b9b-acbe-71ff0dc6c28e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 8 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-b_bb94584f-ed8d-4b7a-aeab-9df0cdadea5f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 5 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_fc36406a-2cf1-4583-ae97-d2352fe439e3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear **10 unique tracks**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/carly_rae_jepsen_call_me_maybe/carly_rae_jepsen_call_me_maybe.jpg",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-26T22:53:10.470+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e_v2\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e_v2\"},{\"changed_at\":\"2025-06-26 23:01:21 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 23:07:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 23:17:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:17:15 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:19:11 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:21:09 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

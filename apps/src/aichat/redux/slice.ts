@@ -47,6 +47,8 @@ const initialState: AichatState = {
   userHasAichatAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
+  hasSentMessage: false,
+  hasUpdatedCustomizations: false,
 };
 
 const aichatSlice = createSlice({
@@ -130,6 +132,7 @@ const aichatSlice = createSlice({
       action: PayloadAction<PendingChatMessage>
     ) => {
       state.chatMessagePending = action.payload;
+      state.hasSentMessage = true;
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
@@ -188,6 +191,10 @@ const aichatSlice = createSlice({
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+
+      // Reset sent message and updated customizations flags
+      state.hasSentMessage = false;
+      state.hasUpdatedCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -216,6 +223,7 @@ const aichatSlice = createSlice({
       action: PayloadAction<AiCustomizations>
     ) => {
       state.savedAiCustomizations = action.payload;
+      state.hasUpdatedCustomizations = true;
     },
     setAiCustomizationProperty: <T extends keyof AiCustomizations>(
       state: AichatState,
@@ -230,6 +238,20 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations = updatedAiCustomizations;
+    },
+    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
+      action: PayloadAction<{
+        property: T;
+        value: AiCustomizations[T];
+      }>
+    ) => {
+      const {property, value} = action.payload;
+      const updatedAiCustomizations = {
+        ...state.savedAiCustomizations,
+        [property]: value,
+      };
+      state.savedAiCustomizations = updatedAiCustomizations;
     },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
@@ -338,6 +360,7 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
+  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,

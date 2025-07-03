@@ -5,8 +5,10 @@ import DSCOFooter, {
   FooterProps,
 } from '@code-dot-org/component-library/cms/footer';
 
-import {SUPPORTED_LOCALES} from '@/config/locale';
+import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
 import awsLogo from '@public/images/powered-by-aws.png';
+
+import './onetrust.scss';
 
 const copyrightYear = new Date().getFullYear();
 
@@ -23,6 +25,13 @@ export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
         key: 'manageCookies',
         label: 'Manage Cookies',
         href: '/cookies',
+        onClick: e => {
+          if (window?.OneTrust) {
+            e.preventDefault();
+            // Displays the OneTrust cookie dialog
+            window.OneTrust.ToggleInfoDisplay();
+          }
+        },
       },
       {
         key: 'about',
@@ -120,7 +129,7 @@ const Footer = ({locale}: GlobalFooterProps) => {
       {...defaultProps}
       onLanguageChange={handleLanguageChange}
       selectedLocaleCode={locale}
-      languages={SUPPORTED_LOCALES}
+      languages={LOCALIZE_JS_CONFIG_MAP}
     />
   );
 };
