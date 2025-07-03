@@ -22,7 +22,6 @@ const assertions = {
   'network-dependency-tree-insight': 'off',
   'crawlable-anchors': ['error', {minScore: 0}], // Localizejs has invalid anchor tags
   'unsized-images': ['error', {maxLength: 6}],
-  'target-size': 'off',
 };
 
 if (process.env.STAGE !== 'production') {
