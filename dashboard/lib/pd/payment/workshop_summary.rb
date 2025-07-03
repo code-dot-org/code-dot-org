@@ -85,7 +85,6 @@ module Pd::Payment
         regional_partner_name: workshop.regional_partner.try(:name),
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         num_hours: num_hours,
-        funded: workshop.funding_summary,
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,

@@ -23,7 +23,10 @@
         }
       },
       "keywords": {
-        "en-US": ["UI Integration Test", "All The Things"]
+        "en-US": [
+          "UI Integration Test",
+          "All The Things"
+        ]
       },
       "hidePageFromSearchEnginesNoindex": {
         "en-US": true
