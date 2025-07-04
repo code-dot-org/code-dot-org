@@ -1,0 +1,94 @@
+# This class implements an openai backend for the generic AichatAiClient.
+class AichatOpenaiResponsesClient < AichatAiClient
+  # The url to send with the post request
+  private def url
+    "https://api.openai.com/v1/responses"
+  end
+
+  # Take response_body and raise any errors if appropriate.
+  private def raise_possible_response_errors_from_body(response_body)
+    raise StandardError.new(response_body['error']) if response_body['error']
+  end
+
+  # Take response_body and extract the text response.
+  private def extract_text_response_from_body(response_body)
+    response_body&.dig("output")&.first&.dig('content')&.first&.dig('text')
+  end
+
+  # Take response_body and extract usage data for reporting.
+  private def get_usage_from_body(response_body)
+    {
+      'prompt_tokens' => response_body.dig('usage', 'input_tokens') || 0,
+      'completion_tokens' => response_body.dig('usage', 'output_tokens') || 0,
+      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0
+    }
+  end
+
+  # Create request body.
+  private def create_body(config, request, context = [])
+    input = [
+      format_message(config[:systemInstructions], 'system'),
+      *context.map {|context_item| format_message(context_item[:parts], context_item[:role])},
+      format_message(request)
+    ]
+
+    body = {
+      model: config[:model],
+      temperature: config[:temperature],
+      input: input
+    }
+
+    body
+  end
+
+  # Override base headers and merge in Bearer token.
+  private def headers
+    super.merge(
+      {
+        "Authorization" => "Bearer #{api_key}"
+      }
+    )
+  end
+
+  # Convert role from internal representation to OpenAI's role
+  # (user/model => user/assistant).
+  private def convert_role(role)
+    if role == 'model'
+      return 'assistant'
+    end
+
+    # Else 'user', which is still 'user' for OpenAI.
+    role
+  end
+  # Helper to format openid "message" object for body.
+  private def format_message(parts, role = "user")
+    message = {role: convert_role(role), content: []}
+
+    parts&.each do |part|
+      if part[:type] == 'text'
+
+        message[:content] << {
+          type: role == "model" ? "output_text" : "input_text",
+          text: part[:content]
+        }
+      else # There are currently only two types.
+        data_uri = "data:#{part[:content][:mime_type]};base64,#{part[:content][:data]}"
+        message[:content] << (
+          if part[:content][:mime_type] == 'application/pdf'
+            {
+              type: "input_file",
+                filename: part[:content][:name],
+                file_data: data_uri
+            }
+          else # There are currently only pdfs and images
+            {
+              type: "input_image",
+              image_url: data_uri
+            }
+          end
+        )
+      end
+    end
+    message
+  end
+end

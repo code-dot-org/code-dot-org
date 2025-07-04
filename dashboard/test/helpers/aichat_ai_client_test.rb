@@ -47,18 +47,24 @@ class AichatAiClientTest < ActionView::TestCase
   end
 
   private def call_get_response_text(model_id, level, new_message)
-    AichatAiClient.create_instance(model_id).get_response_text(
+    # TODO - we should have an aichat_ai_helper_test.rb to test this integration path.
+    # (get_openai_assistant_response)
+    # This path should just be unit test with stubbed reporter
+
+    usage_reporter = AichatAiHelper::UsageReporter.new(model_id, @user_id, @project_id, level.id)
+
+    AichatAiClient.create_instance(model_id, usage_reporter).get_response_text(
       @stored_messages,
-         new_message,
-         @temperature,
-         @system_prompt,
-         @retrieval_contexts,
-         model_id,
-         level.id,
-         @encrypted_channel_id,
-         @user_id,
-         @project_id
-      )
+      new_message,
+      @temperature,
+      @system_prompt,
+      @retrieval_contexts,
+      model_id,
+      level.id,
+      @encrypted_channel_id,
+      @user_id,
+      @project_id
+    )
   end
   private def stub_request_and_get_response_test(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level)
     stub_request(:post, url_to_post).

@@ -13,9 +13,9 @@ class AichatGeminiClientTest < AichatAiClientTest
       },
       system_instruction: {
         parts: [
-          {
-            text: "Be safe. test prompt test retrieval"
-          }
+          {text: "Be safe."},
+          {text: "test prompt"},
+          {text: "test retrieval"}
         ]
       }
     }
@@ -120,19 +120,29 @@ class AichatGeminiClientTest < AichatAiClientTest
 
     let(:system_instruction_without_level_system_prompt) do
       {
-        parts: [{text: "test prompt test retrieval"}]
+        parts: [
+          {text: "test prompt"},
+          {text: "test retrieval"}
+        ]
       }
     end
 
     let(:system_instruction_with_hidden_context_and_level_system_prompt) do
       {
-        parts: [{text: "Be safe. test prompt test retrieval"}]
+        parts: [
+          {text: "Be safe."},
+          {text: "test prompt"},
+          {text: "test retrieval"}
+        ]
       }
     end
 
     let(:system_instruction_with_assets_and_without_level_system_prompt) do
       {
-        parts: [{text: "test prompt test retrieval"}]
+        parts: [
+          {text: "test prompt"},
+          {text: "test retrieval"}
+        ]
       }
     end
 
