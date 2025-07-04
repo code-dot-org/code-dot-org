@@ -77,7 +77,7 @@ class AichatGeminiClientTest < AichatAiClientTest
   end
 
   describe '#def get_response_text (unit)' do
-    subject {stub_request_and_get_response_test(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
+    subject {stub_request_and_get_response_text(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
 
     let(:contents_with_level_system_prompt) do
       [

@@ -14,10 +14,7 @@ class AichatAiClient
   end
 
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
-  def get_response_text(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
-    #TODO - further refactor this to happen outside the class.
-    config, request, context = AichatAiHelper.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
-
+  def get_response_text(config, request, context)
     start_time = Time.now
 
     body = create_body(config, request, context)
@@ -37,11 +34,10 @@ class AichatAiClient
     response_text = extract_text_response_from_body(response_body)
 
     usage = get_usage_from_body(response_body)
-    messages_with_assets_count = get_messages_with_assets_count(stored_messages, new_message)
 
     response_time = Time.now - start_time
 
-    usage_reporter.report_usage_and_throttling_metrics(usage, messages_with_assets_count, response_time)
+    usage_reporter.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 
@@ -118,33 +114,6 @@ class AichatAiClient
     text = message['chatMessageText']
     text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
     text
-  end
-
-  # Helper to get message and asset counts used for UsageReporter.
-  private def get_messages_with_assets_count(stored_messages, new_message)
-    messages = stored_messages + [new_message]
-
-    pdfs_count = images_count = messages_with_assets_count = 0
-
-    messages.each do |message|
-      if message['assets'].is_a?(Array)
-
-        messages_with_assets_count +=1 if message['assets'].size > 1
-
-        message['assets'].each do |asset|
-          filename = asset['filename']
-          pdfs_count += 1 if file_is_pdf?(filename)
-          images_count += 1 if file_is_image?(filename)
-        end
-      end
-    end
-
-    {
-      total: messages.count,
-       withAssets: messages_with_assets_count,
-       pdfs: pdfs_count,
-       images: images_count
-    }
   end
 
   private def raise_not_implemented_error

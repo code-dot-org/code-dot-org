@@ -18,7 +18,7 @@ module AichatAiHelper
       @level_id = level_id
     end
 
-    def report_usage_and_throttling_metrics(usage, message_and_file_counts, response_time)
+    def report_usage_and_throttling_metrics(usage, config, request, context, response_time)
       unless usage
         Honeybadger.notify("Response detected without usage statistics, which are required for throttling.")
         return
@@ -40,6 +40,7 @@ module AichatAiHelper
       output_cost = completion_tokens * output_rate
       total_cost = input_cost + output_cost
 
+      message_and_file_counts = get_messages_and_files_counts(config, request, context)
       is_multimodal = message_and_file_counts[:withAssets] > 0
 
       log_payload = {
@@ -75,6 +76,32 @@ module AichatAiHelper
         }
       end
       Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+    end
+
+    # Helper to get message and asset counts used for UsageReporter.
+    private def get_messages_and_files_counts(config, request, context)
+      combined_parts = [
+        *config[:systemInstructions],
+        *request,
+        *context.flat_map {|c| c[:parts]}
+      ]
+
+      files_count = combined_parts.count {|p| p[:type] == 'file'}
+      pdfs_count = combined_parts.count {|p| p[:type] == 'file' && p[:content][:mime_type] == 'application/pdf'}
+
+      # TODO - make a helper for this!
+      # Currently we don't have a shared (between frontend and backd) list of image mime types
+      # so for now, we just assume if not a pdf, then it's an image
+      images_count = files_count - pdfs_count
+
+      return_value = {
+        total: combined_parts.count,
+        withAssets: files_count,
+        pdfs: pdfs_count,
+        images: images_count
+      }
+
+      return_value
     end
 
     private def report_token_usage(prompt_tokens)
@@ -179,19 +206,10 @@ module AichatAiHelper
     usage_reporter = UsageReporter.new(model_id, user_id, project_id, level_id)
     client = AichatAiClient.create_instance(model_id, usage_reporter)
 
+    config, request, context = AichatAiHelper.get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+
     begin
-      response = client.get_response_text(
-        stored_messages,
-        new_message,
-        temperature,
-        system_prompt,
-        retrieval_contexts,
-        model_id,
-        level_id,
-        encrypted_channel_id,
-        user_id,
-        project_id
-      )
+      response = client.get_response_text(config, request, context)
     rescue Net::ReadTimeout
       raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
     end
