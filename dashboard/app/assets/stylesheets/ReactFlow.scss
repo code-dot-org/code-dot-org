@@ -291,3 +291,19 @@
   width: 20%;
   max-width: 150px;
 }
+
+.button-edge__label {
+  position: absolute;
+  pointer-events: all;
+  transform-origin: center;
+
+  max-width: 200px;
+  max-height: 50px;
+  overflow: hidden;
+  font-size: 6px;
+  line-height: 1.2em;
+  background-color: white;
+  padding: 4px;
+  border-radius: 6px;
+  opacity: 0.9;
+}

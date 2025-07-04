@@ -25,8 +25,10 @@ import '@xyflow/react/dist/style.css';
 
 import AskChat from './AskChat';
 import ConditionNode from './ConditionNode';
+import {DataEdge} from './DataEdge';
 import {DnDProvider, useDnD} from './DnDContext';
 import {type MyNode} from './initialElements';
+import LabelEdge from './LabelEdge';
 import ResultNode from './ResultNode';
 import Sidebar from './Sidebar';
 import TextNode from './TextNode';
@@ -40,6 +42,11 @@ const nodeTypes = {
   askchat: AskChat,
   web: WebNode,
   condition: ConditionNode,
+};
+
+const edgeTypes = {
+  'label-edge': LabelEdge,
+  'data-edge': DataEdge,
 };
 
 const initNodes: MyNode[] = [
@@ -125,41 +132,57 @@ const initEdges: Edge[] = [
     id: 'e1-3',
     source: '1',
     target: '3',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e3-4',
     source: '3',
     target: '4',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e2-4',
     source: '2',
     target: '4',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e4-1',
     source: '4',
     target: '5',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e4-2',
     source: '5',
     target: '7',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e4-',
     source: '6',
     target: '7',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e4-4',
     source: '7',
     target: '8',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
   {
     id: 'e4-5',
     source: '5',
     target: '9',
+    type: 'data-edge',
+    data: {key: 'text'},
   },
 ];
 
@@ -174,7 +197,10 @@ const GraphLab: React.FunctionComponent = () => {
   const [type] = useDnD();
 
   const onConnect: OnConnect = useCallback(
-    connection => setEdges(eds => addEdge(connection, eds)),
+    connection =>
+      setEdges(eds =>
+        addEdge({...connection, type: 'data-edge', data: {key: 'text'}}, eds)
+      ),
     [setEdges]
   );
 
@@ -285,6 +311,7 @@ const GraphLab: React.FunctionComponent = () => {
           onDrop={onDrop}
           //onDragStart={onDragStart}
           onDragOver={onDragOver}
+          edgeTypes={edgeTypes}
           fitView
         >
           <Controls />
