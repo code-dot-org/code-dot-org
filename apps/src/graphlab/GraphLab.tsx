@@ -24,6 +24,7 @@ import React, {useCallback, DragEvent, useRef} from 'react';
 import '@xyflow/react/dist/style.css';
 
 import AskChat from './AskChat';
+import ConditionNode from './ConditionNode';
 import {DnDProvider, useDnD} from './DnDContext';
 import {type MyNode} from './initialElements';
 import ResultNode from './ResultNode';
@@ -38,6 +39,7 @@ const nodeTypes = {
   uppercase: UppercaseNode,
   askchat: AskChat,
   web: WebNode,
+  condition: ConditionNode,
 };
 
 const initNodes: MyNode[] = [
@@ -162,7 +164,7 @@ const initEdges: Edge[] = [
 ];
 
 let id = 0;
-const getId = () => `dndnode_${id++}`;
+const getId = () => `node_${id++}`;
 
 const GraphLab: React.FunctionComponent = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initNodes);
@@ -235,6 +237,14 @@ const GraphLab: React.FunctionComponent = () => {
           newNode = {
             id: getId(),
             type: 'web',
+            position,
+            data: {text: 'hi'},
+          };
+          break;
+        case 'condition':
+          newNode = {
+            id: getId(),
+            type: 'condition',
             position,
             data: {text: 'hi'},
           };

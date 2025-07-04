@@ -34,6 +34,13 @@ export default () => {
         Ask chat
       </div>
       <div
+        className="condition"
+        onDragStart={event => onDragStart(event, 'condition')}
+        draggable
+      >
+        Condition
+      </div>
+      <div
         className="dndnode output"
         onDragStart={event => onDragStart(event, 'web')}
         draggable

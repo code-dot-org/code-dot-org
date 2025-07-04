@@ -12,7 +12,7 @@ function TextNode({id, data}: NodeProps<Node<{text: string}>>) {
 
   return (
     <div>
-      <div>node {id}</div>
+      <div>text {id}</div>
       <div>
         <input
           onChange={evt => updateNodeData(id, {text: evt.target.value})}
