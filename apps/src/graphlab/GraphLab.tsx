@@ -23,7 +23,7 @@ import React, {useCallback, DragEvent, useRef} from 'react';
 
 import '@xyflow/react/dist/style.css';
 
-import AskChat from './AskChat';
+import AskChatNode from './AskChatNode';
 import ConditionNode from './ConditionNode';
 import {DataEdge} from './DataEdge';
 import {DnDProvider, useDnD} from './DnDContext';
@@ -39,7 +39,7 @@ const nodeTypes = {
   text: TextNode,
   result: ResultNode,
   uppercase: UppercaseNode,
-  askchat: AskChat,
+  askchat: AskChatNode,
   web: WebNode,
   condition: ConditionNode,
 };

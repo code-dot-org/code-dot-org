@@ -36,6 +36,18 @@ function WebNode({id}: NodeProps) {
           .join('')
       : 'none';
 
+  /*
+  const el = document.createElement('div');
+  el.innerHTML = srcHtml;
+  const srcDoc = el.getElementsByTagName('body')[0].textContent;
+*/
+
+  /*
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(srcHtml, 'text/html');
+  const srcDoc = doc.body.innerHTML;
+  */
+
   return (
     <div>
       <Handle type="target" position={Position.Left} />
