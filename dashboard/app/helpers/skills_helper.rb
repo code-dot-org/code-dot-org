@@ -51,6 +51,7 @@ module SkillsHelper
     end
   end
 
+  # A basic method as an example of how we could determine mastery.
   def self.determine_mastery_level_for_student(evaluations)
     return "Not seen" if evaluations.empty?
 
