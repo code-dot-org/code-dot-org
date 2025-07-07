@@ -14,7 +14,7 @@
     opacity: 0;
 
     &:disabled {
-      cursor: none;
+      cursor: not-allowed;
     }
 
     & + i {
