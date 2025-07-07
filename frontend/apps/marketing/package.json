@@ -76,6 +76,7 @@
     "react-map-gl": "^8.0.4",
     "react-schemaorg": "^2.0.0",
     "redis": "^4.7.1",
+    "sitemap": "^8.0.0",
     "uuid": "^11.1.0"
   },
   "devDependencies": {

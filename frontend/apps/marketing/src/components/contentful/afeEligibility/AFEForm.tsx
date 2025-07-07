@@ -368,6 +368,7 @@ const AFEForm: React.FC<AFEFormProps> = ({
         <Button
           buttonTagTypeAttribute="submit"
           text="Continue"
+          className={styles.afeEligibilityFormButton}
           isPending={isFormSubmitting}
           disabled={!!formError}
           onClick={() => {}}

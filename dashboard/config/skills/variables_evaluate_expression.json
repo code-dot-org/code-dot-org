@@ -1,0 +1,6 @@
+{
+  "key": "variables_evaluate_expression",
+  "concept": "variables",
+  "description": "Evaluate expressions that include variables to determine their outcome",
+  "evaluation_criteria": "Did the student successfully create an expression that included  variable(s)? Was an expression  containing variable(s) evaluated within the program that had an effect on the program's output?\n"
+}

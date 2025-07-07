@@ -78,8 +78,10 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const {hasConditions, satisfied} = useAppSelector(
-    state => state.lab.validationState
+  const passingValidation = useAppSelector(
+    state =>
+      !state.lab.validationState.hasConditions ||
+      state.lab.validationState.satisfied
   );
   const useSecondaryFinishButton =
     useAppSelector(
@@ -87,8 +89,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     ) || queryParams('use-secondary-finish-button') === 'true';
 
   const canShow =
-    (!isPredictLevel || hasSubmittedPredictResponse) &&
-    (!hasConditions || satisfied);
+    (!isPredictLevel || hasSubmittedPredictResponse) && passingValidation;
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 

@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "internalName": {
-        "en-US": "Self-paced PL Carousel"
+        "en-US": "❌ [ENG] Self-paced PL Carousel"
       },
       "carouselName": {
         "en-US": "Self-paced PL Carousel"
@@ -16,28 +16,28 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3Z8qPEuqmMhHtCcsDgunT9"
+              "id": "7Gumifs6ZTcj2G02BUoqFz"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "23EyWhGd4P97u4WbR4IXk"
+              "id": "6gUm7q1JYZjyE5p9EfANIG"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "20bNKCaJYcMUpF36ym6ylR"
+              "id": "tQOlCHWsKpGR4hFaI3xqm"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "4kfldHEBEkW1lZczj6JYRh"
+              "id": "4Uu1fmD76F4wyIY6vCnfp8"
             }
           }
         ]

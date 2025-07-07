@@ -126,7 +126,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     script = create(
       :script,
       :with_levels,
-      :in_unit_group,
       levels_count: 10
     )
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')

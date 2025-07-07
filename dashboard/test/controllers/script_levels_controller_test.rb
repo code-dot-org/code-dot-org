@@ -775,11 +775,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create :script, :in_unit_group, name: 'courseg-2017', family_name: 'courseg'
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    courseg_2018 = create :script, :in_unit_group, name: 'courseg-2018', family_name: 'courseg'
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    courseg_2019 = create :script, :in_unit_group, name: 'courseg-2019', family_name: 'courseg'
+    courseg_2019 = create :script, name: 'courseg-2019', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -799,11 +799,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create :script, :in_unit_group, name: 'courseg-2017', family_name: 'courseg'
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    courseg_2018 = create :script, :in_unit_group, name: 'courseg-2018', family_name: 'courseg'
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    courseg_2019 = create :script, :in_unit_group, name: 'courseg-2019', family_name: 'courseg'
+    courseg_2019 = create :script, name: 'courseg-2019', family_name: 'courseg'
     create :single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
@@ -832,11 +832,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for participant if one exists" do
     sign_in @student
 
-    pl_courseg_2017 = create :script, :in_unit_group, name: 'pl-courseg-2017', family_name: 'pl-courseg'
+    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg'
     create :single_unit_course, unit: pl_courseg_2017, family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    pl_courseg_2018 = create :script, :in_unit_group,  name: 'pl-courseg-2018', family_name: 'pl-courseg'
+    pl_courseg_2018 = create :script,  name: 'pl-courseg-2018', family_name: 'pl-courseg'
     create :single_unit_course, unit: pl_courseg_2018, family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    pl_courseg_2019 = create :script, :in_unit_group, name: 'pl-courseg-2019', family_name: 'pl-courseg'
+    pl_courseg_2019 = create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg'
     create :single_unit_course, unit: pl_courseg_2019, family_name: 'pl-courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     pl_courseg_2017_lesson_group_1 = create :lesson_group, script: pl_courseg_2017
@@ -2119,7 +2119,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, :in_unit_group, :with_levels, name: 'cats1', family_name: 'cats', version_year: '2017'
+    cats1 = create :script, :with_levels, name: 'cats1', family_name: 'cats', version_year: '2017'
     cats1_course = create :single_unit_course, unit: cats1, name: 'cats1', family_name: 'cats', version_year: '2017'
     CourseOffering.add_course_offering(cats1_course)
     Unit.stubs(:family_names).returns(['cats'])
@@ -2132,7 +2132,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    cats2 = create :script, :in_unit_group, :with_levels, name: 'cats2', family_name: 'cats', version_year: '2018'
+    cats2 = create :script, :with_levels, name: 'cats2', family_name: 'cats', version_year: '2018'
     cats2_course = create :single_unit_course, unit: cats2, family_name: 'cats', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(cats2_course)
     get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}

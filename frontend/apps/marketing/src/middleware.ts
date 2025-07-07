@@ -14,7 +14,7 @@ export const config = {
      * 4. all root files inside /public (e.g. /favicon.ico)
      * 5. /robots.txt
      */
-    '/((?!api/|_next/|onetrust/|_static/|_vercel|robots.txt).*)',
+    '/((?!api/|_next/|onetrust/|_static/|_vercel|robots.txt|sitemap.xml).*)',
   ],
 };
 
