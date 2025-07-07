@@ -46,8 +46,6 @@ scripts_map = {
 @lesson_groups = {}
 @lessons = {}
 @script_levels = {}
-@lesson_activities = {}
-@activity_sections = {}
 @callouts = {}
 
 scripts_map.each do |_script_id, name|
@@ -87,12 +85,6 @@ scripts_map.each do |_script_id, name|
 
   script.lessons.each do |lesson|
     @lessons["lesson_#{lesson.id}"] = lesson.attributes
-    lesson.lesson_activities.each do |lesson_activity|
-      @lesson_activities["lesson_activity_#{lesson_activity.id}"] = lesson_activity.attributes
-      lesson_activity.activity_sections.each do |activity_section|
-        @activity_sections["activity_section_#{activity_section.id}"] = activity_section.attributes
-      end
-    end
   end
 
   script.script_levels.to_a[0, 10000].each do |sl|
@@ -125,7 +117,5 @@ File.new("#{prefix}unit.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
 File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
-File.new("#{prefix}lesson_activity.yml", 'w').write(yamlize(@lesson_activities))
-File.new("#{prefix}activity_section.yml", 'w').write(yamlize(@activity_sections))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))
