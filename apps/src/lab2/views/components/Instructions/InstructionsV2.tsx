@@ -41,8 +41,6 @@ interface InstructionsProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
-  /** Whether the instructions panel should show lesson navigation buttons (Continue & Finish) */
-  manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
   /** Optional component to render at the bottom of the main instructions. */
@@ -79,7 +77,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout = 'vertical',
   handleInstructionsTextClick,
   className,
-  manageNavigation = true,
   bottomComponent,
   validationSettings,
   fixedDarkBackground,
@@ -143,7 +140,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   }
 
   const canShowNextButton =
-    manageNavigation &&
     (!validationState?.hasConditions || validationState?.satisfied) &&
     (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 

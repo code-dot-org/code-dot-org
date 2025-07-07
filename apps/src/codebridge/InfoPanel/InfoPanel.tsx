@@ -209,7 +209,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             isRunning={isRunning}
             hasRun={hasRun}
             hasEdited={hasEdited}
-            manageNavigation={true}
             validationSettings={{
               onValidate: handleValidate,
               onStopValidation: handleStopValidation,
