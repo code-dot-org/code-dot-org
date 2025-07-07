@@ -1,0 +1,6 @@
+{
+  "key": "conditionals_create_boolean_expressions",
+  "concept": "conditional",
+  "description": "Create boolean expressions using comparison operators to compare variables or values",
+  "evaluation_criteria": "Is the correct comparison operator used to construct the condition?"
+}

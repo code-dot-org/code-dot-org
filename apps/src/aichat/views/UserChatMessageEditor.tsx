@@ -4,7 +4,8 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectMultimodalEnabled, submitChatContents} from '../redux';
+import {useLevelProperties} from '../levelPropertiesContext';
+import {getSelectMultimodalAvailable, submitChatContents} from '../redux';
 import {ChatButton} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
@@ -22,7 +23,11 @@ const UserChatMessageEditor: React.FunctionComponent<{
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const multimodalEnabled = useAppSelector(selectMultimodalEnabled);
+  const multimodalEnabled = useAppSelector(
+    getSelectMultimodalAvailable(
+      useLevelProperties().aichatSettings?.multimodalEnabled
+    )
+  );
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
   );

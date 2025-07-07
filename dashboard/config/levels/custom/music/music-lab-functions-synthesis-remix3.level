@@ -1,0 +1,1454 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-03T18:45:17.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### Boyfriend\r\n\r\nThis is an example of an \"Only What You Gave Me\" remix, where tracks from the original song are used in new and interesting ways to change how the song sounds and feels. As you listen, consider the following:\r\n\r\n- Notice how the song balances between just a few sounds versus lots of sounds at once. How do those moments feel when you hear them?\r\n- Notice how the song uses effects to create contrasting \"moments\" in the song (like soft vs loud). How do those moments feel when you hear them?\r\n    - Make sure you listen to the very end of the song and how the final snaps sound!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "level_data": {
+      "library": "launch2024",
+      "packId": "dove_cameron_boyfriend",
+      "toolbox": {
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "procedures_callnoreturn",
+                  "id": "WM}@0{~I!N2z+cqR*sxY",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "name": "intro"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "rM*]?P}7/UXX-fWFoRa_",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "name": "lead-in"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": ",JAKrU,u[kTrdkK]58=R",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "name": "chorus1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "procedures_callnoreturn",
+                              "id": "}obap4rDHo]sBjZhX,kL",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "name": "haunting"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "hA)/+w[[[zC9QX8FZ?UX",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "name": "chorus2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "procedures_callnoreturn",
+                                      "id": "2aYEVzM5PI~PWDp}Px$l",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "name": "outro snaps"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "2xkm8^wS~shFHe!m;L.z",
+              "x": 730,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "pzqD9P`pM#rwC.@4DO@e",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "intro"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sounds_sequential",
+                          "id": "NBraf;{m[[LRPK]W%Ltj",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_rest_at_current_location_simple2",
+                                "id": "DMyRx%_E$.L1X9sP_Z|P",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "o?*AXx|Rr+QU$Y?)aQlw",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "dove_cameron_boyfriend/hits"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": ")QD]BF#|[js!,{Bz726{",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "dove_cameron_boyfriend/riser"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": "S(Vu|3vln!m.lf|H^N@6",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "7]DKm{Z8p=UymA*+Gd#C",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "dove_cameron_boyfriend/riser"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "dove_cameron_boyfriend/vocals_verse"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_sequential",
+                                  "id": "play_sounds_sequential",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_rest_at_current_location_simple2",
+                                        "id": "play_rest_at_current_location_simple2",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "rest_duration": "<field name=\"rest_duration\">0.5</field>"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_rest_at_current_location_simple2",
+                                            "id": "Cy5GTVh/mpPD+N4VCJ05",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "rest_duration": "<field name=\"rest_duration\">0.125</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_rest_at_current_location_simple2",
+                                                "id": "(C)?j|H#S7s)?x8nST.l",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "rest_duration": "<field name=\"rest_duration\">0.125</field>"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "48;%n1rten4$(PWyu.y-",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "dove_cameron_boyfriend/hat_beat"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "w%lQl@!c!/C{ZUv-2fK$",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "dove_cameron_boyfriend/hat_beat"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "]5P7TuF.ZyoFLg|z}#hG",
+              "x": 210,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "5S~oE`!`W{)qc9-S/+22",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "lead-in"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "=6$Z`hLQdDH,ZhY)l^h]",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "]^kCSkK9AMJ-aac07B[!",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                            "effects_value": "<field name=\"effects_value\">low</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "set_effect_at_current_location_simple2",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                "effects_value": "<field name=\"effects_value\">medium</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "+xh$[`by;q5,AdJi-%1O",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/hits"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "$t$!`}l(M;HFd*-DALmS",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/vocals_prechorus"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sounds_sequential",
+                                          "id": "_aTFvOC)^UlAC]|FX^bu",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "@cb9{2rc9`lS|bwGEQX8",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "dove_cameron_boyfriend/vocal_chop"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "5L!?Dci)8@aTc([BK99o",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "extraState": {
+                                                      "disableNextConnection": false
+                                                    },
+                                                    "fields": {
+                                                      "sound": "dove_cameron_boyfriend/vocal_chop"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "NA|m#dFHI|1JL~q}zkHK",
+              "x": 990,
+              "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "iiOhKfSM$h0,?=eypV6d",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus1"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "a(VvwvNr7OP[ilRnW+V}",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "oA@RZ)~A{|L!`+D^Ep_w",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "q--cYS?re/+dS0/LZFB1",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "dove_cameron_boyfriend/main_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "Ds3u1no-o-6@e+~Q2:`g",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/guitar_heavy"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "9{BI6tm4[Dj?C0U)F,qB",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/bass_synth_growl"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "2yhZs};e,JYU],.vn[n~",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": ".(/m,S[he,2o94O2~l{Q",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "SoaABv~O+h@[UnPIlr(U",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/vocals_chorus_2"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "LB=]^IbY9|[dms;~Etm1",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/strings_big"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "6Dj6AiaIQ@jw!oUEy;o]",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/main_beat"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": ":bLVIB$kB#=t9Tti~r12",
+              "x": 230,
+              "y": 390,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "7cYM5Vq*9GV!X00puJdN",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "haunting"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "repeat_simple2",
+                    "id": "repeat_simple2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "fields": {
+                      "times": 3
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "wN~;r9kt4ouz%dg:NpF-",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                            "effects_value": "<field name=\"effects_value\">low</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "8kvVuMjkPd|ZDtFr?MPA",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">filter</field>",
+                                "effects_value": "<field name=\"effects_value\">low</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "xoRsZ_*b}]2!X/D8Scm-",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">low</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": "X:JZ:j24m3x$Q_@sU1hO",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "s=Z[=%n!U/9)C|RL0kJT",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "dove_cameron_boyfriend/vocals_chorus_tag"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "_ul6B+:z25v8|E^F7MaX",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "dove_cameron_boyfriend/hits"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "fY?4I*Q9878X0/6X]^I%",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">filter</field>",
+                          "effects_value": "<field name=\"effects_value\">normal</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "set_effect_at_current_location_simple2",
+                            "id": "vfz]Ss]NTatW,})DW_;#",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "fields": {
+                              "effects_name": "<field name=\"effects_name\">delay</field>",
+                              "effects_value": "<field name=\"effects_value\">normal</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "set_effect_at_current_location_simple2",
+                                "id": "IsE7d?g.^4[((}QiT#oX",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "fields": {
+                                  "effects_name": "<field name=\"effects_name\">volume</field>",
+                                  "effects_value": "<field name=\"effects_value\">normal</field>"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_together",
+                                    "id": "=ZnzbJ(?dOfloGVZla$8",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "~~lE/+rnjT;3;a38D#*N",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/vocals_chorus_tag"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "}xz*E^dghnl|PH;47`7;",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "dove_cameron_boyfriend/hits"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "xu*}p`jR7r)4Rl[%KO4L",
+              "x": 670,
+              "y": 590,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "y|Huiq{=FS0cWo$|A5Hv",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "chorus2"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "s{y~N1O*Z=#vYD)ug(}$",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "oIXYw1:0jzKCMd3hdfCG",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "zB{{MHA)NE@~bLklx^TQ",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "rJ/Vp7#vaM!.$(KplzOI",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/main_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "H6wnFQ3OC0RD7+:H/+ob",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/bass_synth_growl"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "?[m,+L^BWNL3I/WKM?W~",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/guitar_heavy"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "$9XL[1wPp%zmRyW!^}z+",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "pGyFzZnW[|{^{PDy~C0*",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "CHSQ),iPLlTu$o!+HoL_",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/main_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": ".3r+AIq,0rP?qYyM}`os",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/vocals_chorus_2"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "Mz^~Ccc`Km+Bq:1AA-[K",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/bass_synth_growl"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "1}SAs@f9S5[]Bk9#5W7:",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "dove_cameron_boyfriend/guitar_heavy"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "e+PMBG`9X7gszDC-YLGK",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "4e@6hDm$F@@U4MX{(FP}",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "-?cs4K;=LMwiLAd=!H}x",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/hat_beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "nE#SQ:.B5v{W:^0q`YpI",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "sound": "dove_cameron_boyfriend/snaps"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "84~$m|nnEPqx#=FLL_kY",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "dove_cameron_boyfriend/vocals_chorus_tag"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "cCV*3E{MBN?t{jY/,$/F",
+              "x": 948,
+              "y": 620,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "hzKR$8#.j:)l-wGgpzTA",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
+              },
+              "fields": {
+                "NAME": "outro snaps"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "+Tr;v==sJkve[:d-uSL5",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "extraState": {
+                      "disableNextConnection": false
+                    },
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "set_effect_at_current_location_simple2",
+                          "id": "Ot~.YgA{;46Lw~Q[`GIp",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "fields": {
+                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "e8Wl^PYI3_39Y:1Vr|^I",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">delay</field>",
+                                "effects_value": "<field name=\"effects_value\">low</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "~UD5/:x?3oEB-/!~L{-!",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "set_effect_at_current_location_simple2",
+                                      "id": "/`YDB(|.Ho?%eBMKx!tk",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "fields": {
+                                        "effects_name": "<field name=\"effects_name\">volume</field>",
+                                        "effects_value": "<field name=\"effects_value\">low</field>"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "U5gvrvTLD%K.uOL#lsb0",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "JJ^9W%n{dI=c!EZd9bXl",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "dove_cameron_boyfriend/snaps"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "%l[$T]QN03tmUh}:?mm9",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "set_effect_at_current_location_simple2",
+                              "id": "[b;QiMAbTh9=^Sk0gLKy",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "fields": {
+                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                "effects_value": "<field name=\"effects_value\">low</field>"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "}:]Ia)NW`oAD|crq3.qH",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">delay</field>",
+                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "uH%`=gM49xQv}PTLXOrb",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "L,(DfUQKvE~;+-Ut;`F5",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "set_effect_at_current_location_simple2",
+                                              "id": "7w}bB.Cf6qRK6JUuL].C",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "fields": {
+                                                "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                "effects_value": "<field name=\"effects_value\">normal</field>"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "i}_e6[!cN+]{/)[Vss8J",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "sound": "dove_cameron_boyfriend/snaps"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "pzqD9P`pM#rwC.@4DO@e",
+            "name": "intro",
+            "returnTypes": null
+          },
+          {
+            "id": "5S~oE`!`W{)qc9-S/+22",
+            "name": "lead-in",
+            "returnTypes": null
+          },
+          {
+            "id": "iiOhKfSM$h0,?=eypV6d",
+            "name": "chorus1",
+            "returnTypes": null
+          },
+          {
+            "id": "7cYM5Vq*9GV!X00puJdN",
+            "name": "haunting",
+            "returnTypes": null
+          },
+          {
+            "id": "y|Huiq{=FS0cWo$|A5Hv",
+            "name": "chorus2",
+            "returnTypes": null
+          },
+          {
+            "id": "hzKR$8#.j:)l-wGgpzTA",
+            "name": "outro snaps",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": false,
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Boyfriend",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/dove_cameron_boyfriend/dove_cameron_boyfriend.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesis-remix3_8b6fb98c-fa9e-4817-8ff5-52335093ae6c",
+        "message": "That was great! <i class=\"fa-solid fa-robot\"></i> DJ Robot learned a lot from listening to this song!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_8767e066-4e1a-4db2-ba36-ae033a121a13",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is taking notes on how the song ramps-up and cools-off...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_56f17fa5-82ff-4662-8700-d8d64d8523d7",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot notices the song has built back up again to lots of instruments and vocals",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 33
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_4e6e57d1-a818-4efc-9c65-c617fec80d5f",
+        "message": "WHOA! <i class=\"fa-solid fa-robot\"></i> DJ Robot falls off its chair again. What a great effect!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 25
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_74339ab7-25fb-4f0c-94a1-c1746a5be900",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot likes how the song slows down again. What a great use of effect blocks!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 19
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_cdf4a7ad-67bb-4ea4-a7e5-747612e85261",
+        "message": "What an explosion of sound! <i class=\"fa-solid fa-robot\"></i> DJ Robot falls off its chair.",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_34976f45-f8ad-45a3-b6c1-5137af3682fd",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot notices how haunting this section sounds...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesis-remix3_4d20343b-8792-400b-9967-d2d93224746b",
+        "message": "Whoa! <i class=\"fa-solid fa-robot\"></i> DJ Robot notices the beat and effect tracks right away!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-03T18:45:17.141+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-remix4\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-remix4\"},{\"changed_at\":\"2025-07-03 18:46:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 19:17:23 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 19:24:53 +0000\",\"changed\":[\"predict_settings\",\"level_data\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 19:27:35 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-03 20:31:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

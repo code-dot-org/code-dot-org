@@ -49,6 +49,7 @@ export interface GetWorkshopInfoScriptDataResponse {
 export type UserInfoForWorkshop = {
   id: number;
   email: string;
+  display_name: string;
   is_student?: boolean;
   first_name?: string;
   last_name?: string;

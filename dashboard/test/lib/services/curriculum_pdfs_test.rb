@@ -37,15 +37,15 @@ module Services
     end
 
     test 'get_pdf_enabled_scripts excludes unit in development published state' do
-      in_development = create :script, :in_unit_group, seeded_from: true
+      in_development = create :script, seeded_from: true
       create :single_unit_course, unit: in_development, published_state: PUBLISHED_STATE.in_development
-      pilot = create :script, :in_unit_group, seeded_from: true
+      pilot = create :script, seeded_from: true
       create :single_unit_course, unit: pilot, published_state: PUBLISHED_STATE.pilot
-      beta = create :script, :in_unit_group, seeded_from: true
+      beta = create :script, seeded_from: true
       create :single_unit_course, unit: beta, published_state: PUBLISHED_STATE.beta
-      preview = create :script, :in_unit_group, seeded_from: true
+      preview = create :script, seeded_from: true
       create :single_unit_course, unit: preview, published_state: PUBLISHED_STATE.preview
-      stable = create :script, :in_unit_group, seeded_from: true
+      stable = create :script, seeded_from: true
       create :single_unit_course, unit: stable, published_state: PUBLISHED_STATE.stable
 
       script_names = Services::CurriculumPdfs.get_pdf_enabled_scripts.map(&:name)

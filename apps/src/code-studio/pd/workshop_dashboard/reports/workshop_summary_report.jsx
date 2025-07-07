@@ -157,6 +157,10 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Num Registered'},
       },
       {
+        property: 'num_teachers_attending_all_sessions',
+        header: {label: 'Num Attending'},
+      },
+      {
         property: 'num_scholarship_teachers_attending_all_sessions',
         header: {label: 'Num Scholarship Attending'},
       },

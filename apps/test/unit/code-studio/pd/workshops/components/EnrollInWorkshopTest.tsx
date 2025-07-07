@@ -9,6 +9,7 @@ const baseUserInfo = {
   is_student: false,
   id: 123,
   email: 'sample@google.com',
+  display_name: 'Mr. Doe',
   first_name: 'John',
   last_name: 'Doe',
   school_info: {

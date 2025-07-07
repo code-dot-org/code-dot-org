@@ -96,7 +96,10 @@ yarn test:ui:fork
 
 2. Make updates on the forked page in Contentful.
 
-3. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
+- Any new content entries used in your component(s) should be prepended with "❌ [ENG]" to indicate they are for engineering/testing purposes only. These entries will be copied to Production in Step 9.
+- Make sure top level sections have a Fixed height in the Design sidebar in the Experiences editor, this can prevent page shifting in preparation to add Eyes tests in Step 11.
+
+3. Update the `development` snapshot with your forked version; the ID can be found at the end of the url on the forked experience in Contentful:
 
 ```bash
 yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development

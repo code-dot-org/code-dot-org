@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T22:55:32.000Z",
   "level_num": "custom",
@@ -32,10 +31,14 @@
               "y": 30,
               "deletable": false,
               "movable": false,
+              "editable": false,
               "next": {
                 "block": {
                   "type": "procedures_callnoreturn",
                   "id": "70vZoN|}mSUzmWg*U!vz",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "name": "intro"
                   },
@@ -43,6 +46,9 @@
                     "block": {
                       "type": "procedures_callnoreturn",
                       "id": "UKPz1MdL+]vp%Y[;#6bi",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
                       "extraState": {
                         "name": "intro chorus"
                       },
@@ -50,6 +56,9 @@
                         "block": {
                           "type": "procedures_callnoreturn",
                           "id": "8fTlF9CX_ZOPe5u8LiTc",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "name": "verse 1"
                           },
@@ -57,6 +66,9 @@
                             "block": {
                               "type": "procedures_callnoreturn",
                               "id": "wB,}%TX]nYAz-aMeZ=wB",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "name": "verse 2"
                               },
@@ -64,6 +76,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "n8X(m44yfeTg)e$I5zC5",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -74,6 +89,9 @@
                                     "block": {
                                       "type": "procedures_callnoreturn",
                                       "id": "Q[@vid]D5|r#:+9Qw=,-",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "name": "prechorus 1"
                                       },
@@ -81,6 +99,9 @@
                                         "block": {
                                           "type": "procedures_callnoreturn",
                                           "id": "4icemNfp5,R^!Ssa0qzC",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "name": "prechorus 2"
                                           },
@@ -88,6 +109,9 @@
                                             "block": {
                                               "type": "procedures_callnoreturn",
                                               "id": "8l(`{Pjfw=QBM(toHMo6",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "name": "final chorus 1"
                                               },
@@ -95,6 +119,9 @@
                                                 "block": {
                                                   "type": "procedures_callnoreturn",
                                                   "id": "o[h3d5{gDZ!,%QktfPB#",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "name": "final chorus 2"
                                                   }
@@ -122,11 +149,14 @@
               "id": "procedures_defnoreturn",
               "x": 430,
               "y": 855,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "EnQko/vRD2QWTJCJb69n",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "intro"
@@ -136,6 +166,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "play_sounds_together",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -144,6 +177,9 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "8i*!uM0:c@P/C-w3!uJs",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -154,6 +190,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "?G*}Ptm4^:3^L9[Y.5J(",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -164,6 +203,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "N0l+h7ec*3N-J~gVC*m/",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -174,6 +216,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "play_sound_at_current_location_simple2",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -193,6 +238,9 @@
                       "block": {
                         "type": "play_sounds_together",
                         "id": "1F6]RJmB-(v[/D{Y:Jrz",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -201,6 +249,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "e:o:/{q74.({!L+ckvqR",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -211,6 +262,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "C%|q!iF9i+{$e6A)Yhw6",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -221,6 +275,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "+T#e%7gh$IhqY#{W}@(5",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -231,6 +288,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "#fcfyH3BS,c3t15zK:1^",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -241,6 +301,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "^Enr(TcF3tQQsBlOV_*}",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -252,6 +315,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "@f-Z:?y$^^,.Vc.h8c2p",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -260,6 +326,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "E8#]@j;XC+nscx;vMx1N",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -275,6 +344,9 @@
                                                 "block": {
                                                   "type": "play_sounds_sequential",
                                                   "id": "play_sounds_sequential",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -283,6 +355,9 @@
                                                       "block": {
                                                         "type": "play_rest_at_current_location_simple2",
                                                         "id": "play_rest_at_current_location_simple2",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -293,6 +368,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "}0.UNH.mUDFZfzz_|zl4",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -328,11 +406,14 @@
               "id": "Gu#AEBixKu;u$/4zhwl$",
               "x": 670,
               "y": 10,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "fWe}SXd5nV^WDOK1^SQ,",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "intro chorus"
@@ -342,6 +423,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "PsYh40U+nz){{n|Q]|u`",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -350,6 +434,9 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "NYTR-|e=$=XE]k%2hj#~",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -360,6 +447,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "p|db@X/pMU=$V`:)(;K@",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -370,6 +460,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "35Z==r4?_K_+XfA+sAgu",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -380,6 +473,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "AG4-%`L];{z)}pj;%yJ7",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -390,6 +486,9 @@
                                         "block": {
                                           "type": "repeat_simple2",
                                           "id": "Nd#kQJ-:Zq3@y77t(SKS",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -401,6 +500,9 @@
                                               "block": {
                                                 "type": "set_effect_at_current_location_simple2",
                                                 "id": ";obB;5E!x1+A+L-/hm5L",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "fields": {
                                                   "effects_name": "<field name=\"effects_name\">filter</field>",
                                                   "effects_value": "<field name=\"effects_value\">low</field>"
@@ -409,6 +511,9 @@
                                                   "block": {
                                                     "type": "play_sound_at_current_location_simple2",
                                                     "id": "Zw16LhUUI:Fkg0?U[`io",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -424,6 +529,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "ns++gq6PTo+Y%eA)0DJ!",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -435,6 +543,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "VJ6tSy|T)vU)77Hn(V0z",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -443,6 +554,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "X=Z7UY1I_Q8yN;.jHOJW",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -471,6 +585,9 @@
                       "block": {
                         "type": "play_sounds_together",
                         "id": "[R%XmXRLT:DEWJ*1)Emh",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -479,6 +596,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "G)VjAnXqARUCng=c]=^f",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -489,6 +609,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "_#Adr*%K{=4Z.+iWPhZK",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -499,6 +622,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "z=[,vL3%??Y*A(l]dRQ]",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -509,6 +635,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "a3-1{GI3znmH.IzB?J@R",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -519,6 +648,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "Vg6|7UW/FKa4#qXi=gmu",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -530,6 +662,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "1UNM+p`@K-WCg79@%qS1",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -538,6 +673,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "Vub7;c6j8]:Ml`R193iX",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -553,6 +691,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "}WgVc+$1|YX6Aja@},^x",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -564,6 +705,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "M|:.|u8:6pQr?a[ZEEzy",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -572,6 +716,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "6{9V/./I]UaZ(Q[qj*R@",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -607,11 +754,14 @@
               "id": "PCQ}S[UuVCdknPc@DvpC",
               "x": 717,
               "y": 855,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "6R:`t%wt:FViAsDGJw%s",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "verse 1"
@@ -621,6 +771,9 @@
                   "block": {
                     "type": "set_effect_at_current_location_simple2",
                     "id": "B,Y}1s,-4R*.`MeQ3kw_",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "fields": {
                       "effects_name": "<field name=\"effects_name\">delay</field>",
                       "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -629,6 +782,9 @@
                       "block": {
                         "type": "play_sounds_together",
                         "id": "kqb#LyLhJ#}KT)bSJAE`",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -637,6 +793,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "|Jh$@{Z!=o[rVxr0/|`v",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -647,6 +806,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "Jx@=%7H8V6:=4%P2)4{2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -657,6 +819,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "KdrR[f;oVW;J6EGE8Jew",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -667,6 +832,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "rwn1IXrL8d*M.w{AwHPc",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -677,6 +845,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "7Ti`V=vT0ry^*(S^K)qr",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -688,6 +859,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "u%k-J}ghQfADc/U#qK~8",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -696,6 +870,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "xo1psMMq@CMVA16K1LcY",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -711,6 +888,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "80`0^9I[cw^g}9C4@YgJ",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -722,6 +902,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "EX;^q5@7,_Ga.zUJ9~Lr",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -730,6 +913,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "$PXj|,w,6zEtON]e3X[5",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -745,6 +931,9 @@
                                                     "block": {
                                                       "type": "repeat_simple2",
                                                       "id": "At!:23i[~:idhq3sS[!?",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
                                                       "extraState": {
                                                         "disableNextConnection": false
                                                       },
@@ -756,6 +945,9 @@
                                                           "block": {
                                                             "type": "set_effect_at_current_location_simple2",
                                                             "id": "0vejBC~@FMah+UGikz(!",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "fields": {
                                                               "effects_name": "<field name=\"effects_name\">filter</field>",
                                                               "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -764,6 +956,9 @@
                                                               "block": {
                                                                 "type": "play_sound_at_current_location_simple2",
                                                                 "id": "@hjE9n{2~%C:fHl#ncg0",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -801,11 +996,14 @@
               "id": "I$3SmG0b{29iLO}WxM``",
               "x": 717,
               "y": 1420,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "aX6`9P8BFxmeinB3VQUG",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "verse 2"
@@ -815,6 +1013,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "E02tETEQH0BNq72WmD;z",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -823,6 +1024,9 @@
                         "block": {
                           "type": "set_effect_at_current_location_simple2",
                           "id": "set_effect_at_current_location_simple2",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "fields": {
                             "effects_name": "<field name=\"effects_name\">volume</field>",
                             "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -831,6 +1035,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "Ja,+m}n8!TTLx+l.AJ;E",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -841,6 +1048,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "-hnV;z#l(U*e?o;DHj#?",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -851,6 +1061,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "F._(x8^Xz5E.F@seQ=c4",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -861,6 +1074,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "n(UCpa[i:?^qbY]YFaYO",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -871,6 +1087,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "I4xt,iS@=w(i7K`]v5?$",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -882,6 +1101,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "{#99GRn,el9k!7?*IIuq",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -890,6 +1112,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": ";?Svd0pt=B7_%HbOelt@",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -905,6 +1130,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "KULpajrr_apD}}8|b2Sa",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -916,6 +1144,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "k-@oZG?i5Y;L8*Yja6V/",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -924,6 +1155,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "keD#EzZJ%htLGw6/;T]v",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -939,6 +1173,9 @@
                                                     "block": {
                                                       "type": "repeat_simple2",
                                                       "id": "WU+}D@{qK_`s/a}P{s8y",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
                                                       "extraState": {
                                                         "disableNextConnection": false
                                                       },
@@ -950,6 +1187,9 @@
                                                           "block": {
                                                             "type": "set_effect_at_current_location_simple2",
                                                             "id": "?@MP|}q}([UuTOP-N3]q",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "fields": {
                                                               "effects_name": "<field name=\"effects_name\">filter</field>",
                                                               "effects_value": "<field name=\"effects_value\">low</field>"
@@ -958,6 +1198,9 @@
                                                               "block": {
                                                                 "type": "play_sound_at_current_location_simple2",
                                                                 "id": "qn28h]CBY#0796ES|u[v",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -995,11 +1238,14 @@
               "id": "aE4g$1[oi-*1f$$3xVd1",
               "x": 717,
               "y": 1985,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "l*0FKS!;9-0;sZof?Lf2",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "prechorus 1"
@@ -1009,6 +1255,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "XOEsYm6P6mfXlY7/i~ZI",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -1017,6 +1266,9 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "jtrc:X9bf?hMDy+_1o~3",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -1027,6 +1279,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "hxU{l4}6;zlhf}6d6?9Z",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -1037,6 +1292,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "zG`BN2G[@pMH=dEn:ok*",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1047,6 +1305,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "~vkCg=9-t`?KWbf~5fm8",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -1057,6 +1318,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": ":Ib7[}C8Dz1_D;tsyX2$",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -1067,6 +1331,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "[ZNiCHMwWi*g/vHL+.Er",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -1078,6 +1345,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "c/l~PPOH{!|ebB0(y}}j",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1086,6 +1356,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "]cr2%]NN7Tc8Ej439sR3",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -1101,6 +1374,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "T~|yvy7c05r#0In#q=*2",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -1112,6 +1388,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "S!c$T]x?$ruYLBk7iX[/",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1120,6 +1399,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "5I5E11rLiPkTubAEB^|4",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -1135,6 +1417,9 @@
                                                     "block": {
                                                       "type": "repeat_simple2",
                                                       "id": "eo~?*kbcpnYJ?BR*@)F[",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
                                                       "extraState": {
                                                         "disableNextConnection": false
                                                       },
@@ -1146,6 +1431,9 @@
                                                           "block": {
                                                             "type": "set_effect_at_current_location_simple2",
                                                             "id": "9DS3;lSls]Bf+teB_HJ4",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "fields": {
                                                               "effects_name": "<field name=\"effects_name\">filter</field>",
                                                               "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1154,6 +1442,9 @@
                                                               "block": {
                                                                 "type": "play_sound_at_current_location_simple2",
                                                                 "id": "yu/T_A:gsDH3%VPggpC^",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -1169,6 +1460,9 @@
                                                         "block": {
                                                           "type": "play_sounds_together",
                                                           "id": "Ru1iQTe^,/p7P4G8$[L4",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
                                                           "extraState": {
                                                             "disableNextConnection": false
                                                           },
@@ -1177,6 +1471,9 @@
                                                               "block": {
                                                                 "type": "set_effect_at_current_location_simple2",
                                                                 "id": "=Z_,Z~m+{C_i[-OkE!~i",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "fields": {
                                                                   "effects_name": "<field name=\"effects_name\">filter</field>",
                                                                   "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1185,6 +1482,9 @@
                                                                   "block": {
                                                                     "type": "play_sound_at_current_location_simple2",
                                                                     "id": "P?Gt`5DVu4N[,#Pb7ri+",
+                                                                    "deletable": false,
+                                                                    "movable": false,
+                                                                    "editable": false,
                                                                     "extraState": {
                                                                       "disableNextConnection": false
                                                                     },
@@ -1224,11 +1524,14 @@
               "id": ";Z:o0@bHy`k3mnOr7pIL",
               "x": 750,
               "y": 2659,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "o:94XojJ%6vh0:UH1-XH",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "prechorus 2"
@@ -1238,6 +1541,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "O}sbyqSZ:2Th4{v%Twj*",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -1246,6 +1552,9 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "B42/n/r-lTEitS*(4/-{",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -1256,6 +1565,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "lt^~H!#Ibr_aG!qVyOog",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -1266,6 +1578,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "r4FEY`u6lzGqIBd/OLtP",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1276,6 +1591,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "|uFv-aJQd*z/d[O,2T}c",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -1286,6 +1604,9 @@
                                         "block": {
                                           "type": "repeat_simple2",
                                           "id": "O`O)k{VJ%^Oi%D7tnr-C",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -1297,6 +1618,9 @@
                                               "block": {
                                                 "type": "set_effect_at_current_location_simple2",
                                                 "id": "5BLqyYaTFZnY@w~vG=FG",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "fields": {
                                                   "effects_name": "<field name=\"effects_name\">filter</field>",
                                                   "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1305,6 +1629,9 @@
                                                   "block": {
                                                     "type": "play_sound_at_current_location_simple2",
                                                     "id": "W9|HTp+Eci)~/Q$mhCM-",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -1320,6 +1647,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "nLX:DXJa=Eh#=7A4EZ*X",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -1331,6 +1661,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "%1jW;eU8,B|K`93p,;yf",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1339,6 +1672,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "zR@n0mhM)A6FH94TTBhr",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -1354,6 +1690,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "}9qJgfOi@{pvKy~I;g*u",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -1365,6 +1704,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "$yBZ0::=8Ck7SJcekNmx",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1373,6 +1715,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "@Z]=(*06|ZdcWXm2[W2y",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -1388,6 +1733,9 @@
                                                     "block": {
                                                       "type": "play_sounds_together",
                                                       "id": "--/vWZAk@+AXRPd*#x4r",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
                                                       "extraState": {
                                                         "disableNextConnection": false
                                                       },
@@ -1396,6 +1744,9 @@
                                                           "block": {
                                                             "type": "set_effect_at_current_location_simple2",
                                                             "id": "9RHE=$-wg_M98Q3d?1uH",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "fields": {
                                                               "effects_name": "<field name=\"effects_name\">filter</field>",
                                                               "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1404,6 +1755,9 @@
                                                               "block": {
                                                                 "type": "play_sound_at_current_location_simple2",
                                                                 "id": "xH?QTWdOt73]DNia.w{s",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -1441,11 +1795,14 @@
               "id": "xM$mu68U$_sNA_vI`7/.",
               "x": 450,
               "y": 2659,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "s;fpl@n9d$S[6H,Rdb[n",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "final chorus 1"
@@ -1455,6 +1812,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "u0dM!$l3{^7$}nc|Grjn",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -1463,6 +1823,9 @@
                         "block": {
                           "type": "set_effect_at_current_location_simple2",
                           "id": "pnEU9lhifXpeYn0_OglB",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "fields": {
                             "effects_name": "<field name=\"effects_name\">filter</field>",
                             "effects_value": "<field name=\"effects_value\">medium</field>"
@@ -1471,6 +1834,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "bJot?bdCqU,5*Ql:S]za",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -1481,6 +1847,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "AXu8_BMG1W.P=P#||vl;",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1491,6 +1860,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "lJUHoD*ObWtOU4+l^$i9",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -1501,6 +1873,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "3L.#(Goc]mVoUI0JLBqd",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -1511,6 +1886,9 @@
                                             "block": {
                                               "type": "play_sound_at_current_location_simple2",
                                               "id": "qBx4iz]0C^5llY:B2dMa",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -1521,6 +1899,9 @@
                                                 "block": {
                                                   "type": "repeat_simple2",
                                                   "id": "B?BkhmY;A/Uwl-j+^bEC",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -1532,6 +1913,9 @@
                                                       "block": {
                                                         "type": "set_effect_at_current_location_simple2",
                                                         "id": "z1)SFEK#8/3(o,1ZHQpO",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "fields": {
                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -1540,6 +1924,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "EtfV?5T*[@!|5PY0r0ba",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -1575,11 +1962,14 @@
               "id": "!y:0861JOEkw#6ML8J?C",
               "x": 750,
               "y": 3299,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "%0+JHAt@@@*ja^?_i!0c",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "final chorus 2"
@@ -1589,6 +1979,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "R-pg.Ekwh;mv;_I}%A2|",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -1597,6 +1990,9 @@
                         "block": {
                           "type": "set_effect_at_current_location_simple2",
                           "id": "H[2;eFe9$Hl+R8zi;BV.",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "fields": {
                             "effects_name": "<field name=\"effects_name\">filter</field>",
                             "effects_value": "<field name=\"effects_value\">low</field>"
@@ -1605,6 +2001,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "o1bsF5.U72qZRY7ni{!I",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -1615,6 +2014,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "?%v(GJ0TW%cM|A~`Eo!r",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1625,6 +2027,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "+fwxSKf-WZmql,m7g1;e",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -1635,6 +2040,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "75;5g:G6=0.GhzKMsaz)",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -1645,6 +2053,9 @@
                                             "block": {
                                               "type": "repeat_simple2",
                                               "id": "8MAHPyL$FB78;^-}fM@$",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -1656,6 +2067,9 @@
                                                   "block": {
                                                     "type": "set_effect_at_current_location_simple2",
                                                     "id": "~0jyeYE$#LY8]8i-$zJl",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "fields": {
                                                       "effects_name": "<field name=\"effects_name\">filter</field>",
                                                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -1664,6 +2078,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "ruwBsM[Q]WV=)S0!p8Wb",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -1748,7 +2165,8 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_espresso/sabrina_carpenter_espresso.jpg",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:50:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:50:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:37:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

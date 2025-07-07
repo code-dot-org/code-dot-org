@@ -1,0 +1,6 @@
+{
+  "key": "variables_assignment_operator",
+  "concept": "variables",
+  "description": "Assign values to variables using the assignment operator",
+  "evaluation_criteria": "Are variable values reassigned within the program based on user input?"
+}

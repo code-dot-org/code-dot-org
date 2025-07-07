@@ -4,18 +4,6 @@
   gap: 8px;
   align-items: center;
 
-  i {
-    vertical-align: bottom;
-
-    &::before {
-      display: inline-block;
-      content: ' ';
-      text-align: center;
-      border: 2px solid var(--neutral-base-black);
-      border-radius: 4px;
-    }
-  }
-
   span {
     margin-bottom: 0;
   }
@@ -24,6 +12,18 @@
     cursor: pointer;
     position: absolute;
     opacity: 0;
+
+    & + i {
+      vertical-align: bottom;
+
+      &::before {
+        display: inline-block;
+        content: ' ';
+        text-align: center;
+        border: 2px solid var(--neutral-base-black);
+        border-radius: 4px;
+      }
+    }
 
     &:checked + i::before {
       content: '\f00c';
@@ -60,13 +60,13 @@
   &:hover {
     cursor: pointer;
 
-    i {
-      &::before {
-        background-color: var(--brand-teal-5);
-      }
-    }
-
     input[type='checkbox'] {
+      & + i {
+        &::before {
+          background-color: var(--brand-teal-5);
+        }
+      }
+
       &:checked + i::before,
       &:indeterminate + i::before {
         color: var(--neutral-base-white);
@@ -78,14 +78,14 @@
 
   // Pressed styles
   &:active {
-    i {
-      &::before {
-        background-color: var(--brand-teal-5);
-        border-color: var(--brand-teal-50);
-      }
-    }
-
     input[type='checkbox'] {
+      & + i {
+        &::before {
+          background-color: var(--brand-teal-5);
+          border-color: var(--brand-teal-50);
+        }
+      }
+
       &:checked + i::before,
       &:indeterminate + i::before {
         color: var(--neutral-base-white);
@@ -101,11 +101,11 @@
       color: var(--neutral-gray-20);
     }
 
-    i::before {
-      border-color: var(--neutral-gray-20);
-    }
-
     input[type='checkbox'] {
+      & + i::before {
+        border-color: var(--neutral-gray-20);
+      }
+
       &:checked + i::before,
       &:indeterminate + i::before {
         background: var(--neutral-gray-20);
@@ -115,8 +115,11 @@
 
     &:hover {
       cursor: not-allowed;
-      i::before {
-        background: var(--neutral-base-white);
+
+      input[type='checkbox'] {
+        & + i::before {
+          background: var(--neutral-base-white);
+        }
       }
 
       input[type='checkbox']:checked + i::before,
@@ -130,57 +133,65 @@
 
 // Sizes
 .label-xs {
-  i {
-    width: 16px;
-    height: 16px;
-  }
+  input[type='checkbox'] {
+    & + i {
+      width: 16px;
+      height: 16px;
 
-  i::before {
-    font-size: 8px;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
+      &::before {
+        font-size: 8px;
+        width: 12px;
+        height: 12px;
+        line-height: 12px;
+      }
+    }
   }
 }
 
 .label-s {
-  i {
-    width: 18px;
-    height: 18px;
-  }
+  input[type='checkbox'] {
+    & + i {
+      width: 18px;
+      height: 18px;
 
-  i::before {
-    font-size: 9.5px;
-    width: 14px;
-    height: 14px;
-    line-height: 14px;
+      &::before {
+        font-size: 9.5px;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+      }
+    }
   }
 }
 
 .label-m {
-  i {
-    width: 20px;
-    height: 20px;
-  }
+  input[type='checkbox'] {
+    & + i {
+      width: 20px;
+      height: 20px;
 
-  i::before {
-    font-size: 11px;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+      &::before {
+        font-size: 11px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+      }
+    }
   }
 }
 
 .label-l {
-  i {
-    width: 24px;
-    height: 24px;
-  }
+  input[type='checkbox'] {
+    & + i {
+      width: 24px;
+      height: 24px;
 
-  i::before {
-    font-size: 13px;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
+      &::before {
+        font-size: 13px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
   }
 }
