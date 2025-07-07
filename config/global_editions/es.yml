@@ -25,45 +25,45 @@ header:
       - title: teach
         id: header-teach
         domain: code.org
-        url: /global/es/teacher
+        url: /global/:region/teacher
       - title: about
         id: header-about
         domain: code.org
-        url: /global/es/about
+        url: /global/:region/about
       - title: csf
         id: header-csf
         domain: code.org
-        url: /global/es/csf
+        url: /global/:region/csf
       - title: hour_of_code
         id: header-hoc
         domain: code.org
-        url: /global/es/hourofcode
+        url: /global/:region/hourofcode
       - title: videos
         id: header-videos
         domain: code.org
-        url: /global/es/videos
+        url: /global/:region/videos
 
     student:
       - title: my_dashboard
-        url: /global/es/home
+        url: /global/:region/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/es/catalog
+        url: /global/:region/catalog
         domain: studio.code.org
         id: header-student-courses
 
     teacher:
       - title: my_dashboard
-        url: /global/es/home
+        url: /global/:region/home
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/es/catalog
+        url: /global/:region/catalog
         domain: studio.code.org
         id: header-teacher-courses
       - title: professional_learning
-        url: /global/es/my-professional-learning
+        url: /global/:region/my-professional-learning
         domain: studio.code.org
         id: header-teacher-professional-learning
 
@@ -72,7 +72,7 @@ header:
     student:
       - title: learn
         domain: studio.code.org
-        url: /global/es/catalog
+        url: /global/:region/catalog
         id: learn
       - title: legal
         type: expander
@@ -88,7 +88,7 @@ header:
     teacher:
       - title: learn
         domain: studio.code.org
-        url: /global/es/catalog
+        url: /global/:region/catalog
         id: learn
       - title: legal
         type: expander
@@ -199,4 +199,4 @@ pages:
         hideMyPLStaticRecommendedPL: false
         hideMyPLStaticRecommendedPLMidHighBlock: true
         hideMyPLStaticRecommendedPLSelfPacedBlock: false
-        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/es/teacher
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/:region/teacher

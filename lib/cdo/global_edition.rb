@@ -49,10 +49,39 @@ module Cdo
       data.freeze
     end
 
+    # Replaces some string keys in the configuration
+    def self.deep_replace(value, dictionary)
+      case value
+      when String
+        # Replace :region with the contents of the variable `region`
+        dictionary.each do |find, replace|
+          value.gsub(find, replace)
+        end
+      when Hash
+        # Recursively call deep_replace on each key-value pair in the hash
+        value.each {|key, val| value[key] = deep_replace(val, region)}
+      when Array
+        # Recursively call deep_replace on each element of the array
+        value.map {|val| deep_replace(val, region)}
+      else
+        # Return value as-is if it's neither a String, Hash, nor Array
+        value
+      end
+    end
+
     # Retrieves the global configuration for the given region.
-    def self.configuration_for(region, inheriting = false)
+    def self.configuration_for(region)
       @@configurations ||= {}
-      @@configurations[region.to_s] ||= load_config(region, inheriting) || {}
+      @@configurations[region.to_s] ||= begin
+        config = load_config(region) || {}
+
+        # Replace :region tag before freezing
+        deep_replace(config, {
+          ':region': region,
+        })
+
+        deep_freeze(config)
+      end
     end
 
     # Returns the parsed configuration for the given region.
@@ -64,12 +93,13 @@ module Cdo
       # If this inherits, load the inherited region too
       # (But only allow one inherit, to avoid loops or misconfigurations)
       if config[:inherit] && !inheriting
-        inherited = configuration_for(config[:inherit], true)
+        inherited = load_config(config[:inherit], true)
 
         # Merge
         config = inherited.merge(config)
       end
-      deep_freeze(config)
+
+      config
     end
 
     def self.target_host?(hostname)
