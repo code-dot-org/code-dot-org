@@ -307,3 +307,11 @@
   border-radius: 6px;
   opacity: 0.9;
 }
+
+/* custom overrides */
+
+.reactflow-textarea {
+  resize: none;
+  font-size: 0.5rem;
+  line-height: 1.2;
+}

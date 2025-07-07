@@ -81,7 +81,7 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
           <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         )}
       </div>
-      <input
+      <textarea
         onChange={evt => updateNodeData(id, {promptText: evt.target.value})}
         onKeyDown={event => {
           if (event.key === 'Enter') {
@@ -89,7 +89,8 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
           }
         }}
         value={data.promptText}
-        className="xy-theme__input"
+        className="reactflow-textarea"
+        rows={10}
       />
       <Handle type="source" position={Position.Right} />
     </div>

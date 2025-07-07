@@ -29,7 +29,7 @@ function WebNode({id}: NodeProps) {
     });
   }, [id, updateNodeData]);
 
-  const srcDoc: string =
+  const srcHtml: string =
     textNodes.length > 0
       ? textNodes
           .map(({data}) => (data && 'text' in data ? data.text : ''))
@@ -47,6 +47,11 @@ function WebNode({id}: NodeProps) {
   const doc = parser.parseFromString(srcHtml, 'text/html');
   const srcDoc = doc.body.innerHTML;
   */
+
+  const srcDoc = srcHtml.substring(
+    srcHtml.indexOf('<html>'),
+    srcHtml.indexOf('</html>') + '</html>'.length
+  );
 
   return (
     <div>
