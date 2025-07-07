@@ -51,7 +51,7 @@ class AichatAiClientTest < ActionView::TestCase
     # (get_openai_assistant_response)
     # This path should just be unit test with stubbed reporter
 
-    usage_reporter = AichatAiHelper::UsageReporter.new(model_id, @user_id, @project_id, level.id)
+    usage_reporter = AichatAiUsageReporter.new(model_id, @user_id, @project_id, level.id)
 
     config, request, context = AichatAiHelper.get_config_request_context(
       @stored_messages,
