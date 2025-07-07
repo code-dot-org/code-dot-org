@@ -55,8 +55,9 @@ module Cdo
       when String
         # Replace :region with the contents of the variable `region`
         dictionary.each do |find, replace|
-          value.gsub(find.to_s, replace)
+          value.gsub!(find.to_s, replace)
         end
+        value
       when Hash
         # Recursively call deep_replace on each key-value pair in the hash
         value.each {|key, val| value[key] = deep_replace(val, dictionary)}
