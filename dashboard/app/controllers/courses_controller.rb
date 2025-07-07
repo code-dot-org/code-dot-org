@@ -37,6 +37,10 @@ class CoursesController < ApplicationController
   end
 
   def show
+    if @unit_group.default_units.all?(&:is_deprecated)
+      return render 'errors/deprecated_course'
+    end
+
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
       redirect_path = Policies::Courses.modularity_enabled? ?
