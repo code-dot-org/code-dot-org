@@ -52,7 +52,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       submittable: true,
       peer_reviewable: 'true'
     )
-    script_only_instructor_review = create :script, only_instructor_review_required: true
+    script_only_instructor_review = create :script, :in_single_unit_course, only_instructor_review_required: true
     script_level_only_instructor_review = create :script_level, levels: [level], script: script_only_instructor_review
     level_source = create :level_source, level: level
 
@@ -468,8 +468,9 @@ class PeerReviewTest < ActiveSupport::TestCase
     assert_equal 6, PeerReview.count
   end
 
+  # TODO: TEACH-1863 Use unit group in peer review. the url will need to be updated
   test 'submission_path' do
-    script_level = create :script_level
+    script_level = create :script_level, script: create(:script, :in_single_unit_course)
     peer_review_with_script_level = create :peer_review, script: script_level.script, level: script_level.level
 
     standalone_level = create :level

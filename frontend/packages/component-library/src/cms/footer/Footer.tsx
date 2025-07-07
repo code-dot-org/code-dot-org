@@ -109,7 +109,7 @@ const Footer: React.FC<FooterProps> = ({
         )}
         size={'s'}
         dropdownTextThickness={'thin'}
-        color={'black'}
+        color={'white'}
         items={languages}
         onChange={e => onLanguageChange(e.target.value)}
         labelText={''}

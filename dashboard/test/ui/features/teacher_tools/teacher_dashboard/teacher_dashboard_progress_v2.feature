@@ -3,7 +3,7 @@ Feature: Using the V2 progress page
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
@@ -31,7 +31,7 @@ Scenario: Teacher can open and close Icon Key and details
 @properties_encryption_key
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
   And I submit this level
@@ -76,8 +76,8 @@ Scenario: Viewing student metadata
 @properties_encryption_key
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
-    
+  Given I am assigned to course "allthethingscourse" unit 1
+
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
@@ -94,7 +94,7 @@ Scenario: Teacher can open and close lessons and see level data cells
 @properties_encryption_key
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -110,7 +110,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
 @skip
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -131,7 +131,7 @@ Scenario: Teacher can open lesson data, refresh the page, and lesson data will s
 @eyes
 Scenario: Teacher can view lesson progress for when students have completed a lesson and when they have started a lesson but not finished
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
   # Student completes one of many levels in lesson 2
   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
@@ -158,7 +158,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 Scenario: Teacher can view student work, ask student to keep working, on rubric level
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
 
   # Student submits project
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1?noautoplay=true"
@@ -216,7 +216,7 @@ Scenario: Teacher can view choice levels
   And I open my eyes to test "V2 Progress - Choice Levels"
 
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to unit "allthethings"
+  Given I am assigned to course "allthethingscourse" unit 1
 
   # Student submits choice level
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"

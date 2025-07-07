@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "title": {
+        "en-US": "❌ [ENG] Microsoft Square TEST"
+      },
+      "logoImage": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4k2CBEbZGR9zaraf9Ax7I1"
+          }
+        }
+      }
+    }
+  },
+  "contentType": "organization"
+}

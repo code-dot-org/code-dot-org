@@ -606,6 +606,24 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
+  describe "#finish_teacher_account" do
+    context "when launching from LTI tool for the first time and creating a new teacher account" do
+      it "assigns redirect_url from session to preserve the LTI target_link_uri" do
+        get :finish_teacher_account, session: {user_return_to: "/sync_course"}
+
+        assert_equal "/sync_course", assigns(:redirect_url)
+      end
+    end
+  end
+
+  describe "#finish_student_account" do
+    it "assigns redirect_url from session if set to preserve the target_link_uri" do
+      get :finish_student_account, session: {user_return_to: "/sync_course"}
+
+      assert_equal "/sync_course", assigns(:redirect_url)
+    end
+  end
+
   # Starts the sign-up flow's user-creation process in RegistrationController.begin_sign_up then
   # returns the parameters with the :password field removed (password is not used when the user is
   # created in RegistrationController.create).

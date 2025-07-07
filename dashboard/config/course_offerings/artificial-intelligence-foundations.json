@@ -15,7 +15,9 @@
   "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": "2025-05-30 05:00:00 UTC",
-  "self_paced_pl_course_offering_key": "self-paced-pl-ai-foundations",
+  "self_paced_pl_course_offering_key": "teaching-ai-foundations",
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

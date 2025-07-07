@@ -2,6 +2,7 @@ import {
   createSkill,
   addSkillToLevel,
   removeSkillFromLevel,
+  updateSkill,
 } from '@cdo/apps/levelbuilder/skills/SkillsApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -116,6 +117,45 @@ describe('skillsApi', () => {
         {'Content-Type': 'application/json; charset=UTF-8'}
       );
       expect(response).toEqual(removeSuccessResponse);
+    });
+  });
+
+  describe('updateSkill', () => {
+    const skillId = 1;
+    const updatedSkillData = {
+      key: 'updated_skill',
+      description: 'Updated description',
+    };
+    const updateSuccessResponse = {
+      status: 'success',
+      message: 'Skill updated successfully',
+    };
+    const putSpy = jest.spyOn(HttpClient, 'put');
+
+    beforeEach(() => {
+      putSpy.mockResolvedValue(
+        new Response(JSON.stringify(updateSuccessResponse), {
+          status: 200,
+          statusText: 'OK',
+          headers: new Headers({'Content-Type': 'application/json'}),
+        })
+      );
+    });
+
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should call updateSkill with correct URL and parameters', async () => {
+      const response = await updateSkill(skillId, updatedSkillData);
+      expect(putSpy).toHaveBeenCalledTimes(1);
+      expect(putSpy).toHaveBeenCalledWith(
+        `/skills/${skillId}`,
+        JSON.stringify(updatedSkillData),
+        true,
+        {'Content-Type': 'application/json; charset=UTF-8'}
+      );
+      expect(response).toEqual(updateSuccessResponse);
     });
   });
 });

@@ -71,7 +71,7 @@ Dashboard tests commands below should be run from the `dashboard/` directory:
 Before running dashboard tests for the first time, run these commands to seed the required test data
 
 1. `RAILS_ENV=test bundle exec rake assets:precompile`
-2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
+2. `RAILS_ENV=test bundle exec rake db:reset db:test:prepare` : seed the DB with test data
 3. `cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
 To run all dashboard tests, which takes about 15 mintues:
@@ -152,8 +152,7 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
       `spring stop` 
 
     3. recreate your local dashboard test db and reseed the data via:
-        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+        * `RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
 
 2. If you get an error about missing db fields, try migrating your test database:
 `RAILS_ENV=test rake db:migrate`

@@ -82,7 +82,7 @@ export default function JoinSectionArea({
         )}
         {isPlSections && joinedPlSections?.length > 0 && isTeacher && (
           <ParticipantSections
-            sections={joinedPlSections}
+            sections={joinedPlSections.concat(joinedStudentSections)}
             isTeacher={isTeacher}
             isPlSections={true}
             updateSectionsResult={updateSectionsResult}
