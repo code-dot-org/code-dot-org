@@ -36,20 +36,20 @@ Feature: Using the teacher homepage sections feature
   @properties_encryption_key
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
-    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    And I create a new "High School" student section with course "Computer Science Principles", version "'19-'20" and unit "CSP Unit 1 - The Internet ('19-'20)"
     Then the student section table should have 1 rows
     And I save the section id from row 0 of the section table
 
-    When I am on "http://studio.code.org/courses/csp-2017"
+    When I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element ".uitest-CourseScript" is visible
     Then the teacher_dashboard url contains the section id
 
     # Hide a unit from the section
-    When I hide unit "CSP Unit 2 - Digital Information ('17-'18)"
-    And unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as not visible
+    When I hide unit "CSP Unit 2 - Digital Information ('19-'20)"
+    And unit "CSP Unit 2 - Digital Information ('19-'20)" is marked as not visible
 
     # Verify hidden unit warning banner appears
-    When I am on "http://studio.code.org/courses/csp-2017/units/2"
+    When I am on "http://studio.code.org/courses/csp-2019/units/2"
     And I wait until element "#script-title" is visible
     Then I wait until element ".announcement-notification:contains(unit is hidden)" is visible
 
@@ -58,7 +58,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 2 - Digital Information ('19-'20)" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "h1:contains(Progress)" is visible
 
@@ -70,9 +70,9 @@ Feature: Using the teacher homepage sections feature
     # And I wait for the dialog to close
 
     # Verify the unit was unhidden
-    When I am on "http://studio.code.org/courses/csp-2017"
+    When I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element ".uitest-CourseScript" is visible
-    Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
+    Then unit "CSP Unit 2 - Digital Information ('19-'20)" is marked as visible
 
   @skip
   # TODO TEACH-538: Reenable with new section setup flow
