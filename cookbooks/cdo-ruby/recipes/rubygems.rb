@@ -26,6 +26,9 @@ end
 #
 # This command removes all gems installed by the root user and their associated
 # executables, leaving only the native gems that come installed by default.
+#
+# TODO infra: remove this once it has executed successfully on all persistent
+# managed servers.
 execute 'gem uninstall --all --ignore-dependencies --executables' do
   only_if do
     # We only want to attempt this if we have gems installed at the target
