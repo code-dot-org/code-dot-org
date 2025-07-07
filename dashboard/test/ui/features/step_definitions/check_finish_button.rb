@@ -12,10 +12,10 @@ free_play_level_urls = {
     'Game Lab' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/19/levels/4?noautoplay=true&no_redirect=true'
   },
   'minecraft' => {
-    'Minecraft Aquatic' => 'http://studio.code.org/courses/aquatic/units/1/lessons/1/levels/12?noautoplay=true&no_redirect=true',
-    'Minecraft Heroes Journey' => 'http://studio.code.org/courses/hero/units/1/lessons/1/levels/12?noautoplay=true&no_redirect=true',
-    'Minecraft Adventurer' => 'http://studio.code.org/courses/mc/units/1/lessons/1/levels/14?noautoplay=true&no_redirect=true',
-    'Minecraft Designer' => 'http://studio.code.org/courses/minecraft/units/1/lessons/1/levels/12?noautoplay=true&no_redirect=true'
+    'Minecraft Aquatic' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/3?noautoplay=true&no_redirect=true',
+    'Minecraft Heroes Journey' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/4?noautoplay=true&no_redirect=true',
+    'Minecraft Adventurer' => 'http://studio.code.org/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
+    'Minecraft Designer' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/6?noautoplay=true&no_redirect=true'
   }
 }
 
