@@ -30,7 +30,7 @@ module OpenaiEvaluateHelper
     aiReasoning: "Dummy data returned for testing purposes."
   }
 
-  def self.evaluate(level, unit, options)
+  def self.evaluate(level, options)
     student_work = options[:student_work]
     evaluation_type = options[:evaluation_type]
 
@@ -56,7 +56,7 @@ module OpenaiEvaluateHelper
       json_response = {"content" => DUMMY_RESPONSE.to_json}
       return {status: :ok, json: json_response}
     else
-      system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)
+      system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, evaluation_type)
       student_work_message = [{role: "user", content: student_work}]
       messages = prepend_system_prompt(system_prompt, student_work_message)
       response = client.request_evaluation(messages)

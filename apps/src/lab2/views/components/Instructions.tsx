@@ -1,12 +1,12 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
+  isPredictResponseSubmitted,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -14,6 +14,12 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import InstructionsPanel from './InstructionsPanel';
 
 interface InstructionsProps {
+  /** Whether the lab is currently running (different labs may define this differently). */
+  isRunning: boolean;
+  /** Whether the lab's code has been executed/run on this level. */
+  hasRun: boolean;
+  /** Whether the lab's code has been edited on this level. */
+  hasEdited: boolean;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
   layout?: 'vertical' | 'horizontal';
   /**
@@ -37,23 +43,29 @@ interface InstructionsProps {
  * For Teachers Only, etc.
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
+  isRunning,
+  hasRun,
+  hasEdited,
   layout,
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
   bottomComponent,
 }) => {
-  const instructionsText = useAppSelector(
-    state => state.lab.levelProperties?.longInstructions
-  );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, message, satisfied, index} = useAppSelector(
-    state => state.lab.validationState
+  const message = useAppSelector(state => state.lab.validationState.message);
+  const messageIndex = useAppSelector(state => state.lab.validationState.index);
+  const passingValidation = useAppSelector(
+    state =>
+      !state.lab.validationState.hasConditions ||
+      state.lab.validationState.satisfied
   );
   const predictSettings = useAppSelector(
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const offerBrowserTts =
@@ -67,27 +79,37 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const setPredictResponseCallback = useCallback(
+    (response: string) => {
+      dispatch(setPredictResponse(response));
+    },
+    [dispatch]
+  );
+
   const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
-  if (instructionsText === undefined) {
+  if (
+    levelProperties === undefined ||
+    levelProperties.longInstructions === undefined
+  ) {
     return null;
   }
 
   const canShowNextButton =
     manageNavigation &&
-    (!hasConditions || satisfied) &&
-    (!predictSettings?.isPredictLevel || predictAnswerLocked);
+    passingValidation &&
+    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   return (
     <InstructionsPanel
-      text={instructionsText}
+      text={levelProperties.longInstructions}
       message={message || undefined}
-      messageIndex={index}
+      messageIndex={messageIndex}
       theme={theme}
       predictSettings={predictSettings}
       predictResponse={predictResponse}
-      setPredictResponse={response => dispatch(setPredictResponse(response))}
+      setPredictResponse={setPredictResponseCallback}
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}
@@ -96,8 +118,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
-      onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
       bottomComponent={bottomComponent}
+      isRunning={isRunning}
+      levelProperties={levelProperties}
+      hasRun={hasRun}
+      hasEdited={hasEdited}
     />
   );
 };

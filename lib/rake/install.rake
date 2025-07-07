@@ -53,7 +53,7 @@ namespace :install do
             # cache, prepare one from scratch by creating the database and loading
             # the schema. If we do, make sure it's up to date with the branch
             # being tested. Either way, seeding will be performed in a later step.
-            RakeUtils.rake 'db:setup_or_migrate'
+            RakeUtils.rake_stream_output 'db:setup_or_migrate'
           else
             raise "Unknown CI job: #{ENV['CI_JOB']}"
           end

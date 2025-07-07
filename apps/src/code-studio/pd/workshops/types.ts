@@ -49,14 +49,21 @@ export interface GetWorkshopInfoScriptDataResponse {
 export type UserInfoForWorkshop = {
   id: number;
   email: string;
+  display_name: string;
   is_student?: boolean;
   first_name?: string;
   last_name?: string;
+  school_info?: {
+    school_id?: number;
+    country?: string;
+    school_name?: string;
+    school_zip?: string;
+  };
 };
 
 export type WorkshopEnrollmentParams = Pick<
   UserInfoForWorkshop,
-  'email' | 'first_name' | 'last_name'
+  'email' | 'first_name' | 'last_name' | 'school_info'
 > & {
   user_id: number;
 };

@@ -16,6 +16,15 @@ import ImageCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/videoCarousel';
+import ActionBlockCollection, {
+  ActionBlockCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/actionBlockCollection';
+import LogoCollection, {
+  LogoCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/logoCollection';
+import PeopleCollection, {
+  PeopleCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/peopleCollection';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -88,6 +97,18 @@ const contentfulRegistration = {
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {component: Button, definition: ButtonContentfulComponentDefinition},
+    {
+      component: ActionBlockCollection,
+      definition: ActionBlockCollectionContentfulComponentDefinition,
+    },
+    {
+      component: LogoCollection,
+      definition: LogoCollectionContentfulComponentDefinition,
+    },
+    {
+      component: PeopleCollection,
+      definition: PeopleCollectionContentfulComponentDefinition,
+    },
     {
       component: Divider,
       definition: DividerContentfulComponentDefinition,

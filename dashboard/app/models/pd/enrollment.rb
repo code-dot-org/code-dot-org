@@ -60,8 +60,6 @@ class Pd::Enrollment < ApplicationRecord
   validates_email_format_of :email, allow_blank: true
   validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
-  validate :school_forbidden, if: -> {new_record? || school_changed?}
-
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
@@ -104,18 +102,6 @@ class Pd::Enrollment < ApplicationRecord
   # School info (https://github.com/code-dot-org/code-dot-org/pull/9023) was deployed on 2016-08-30
   def created_before_school_info?
     persisted? && created_at < '2016-08-30'
-  end
-
-  def school_forbidden
-    errors.add(:school, 'is forbidden') if read_attribute(:school)
-  end
-
-  def school_info_country_required
-    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
-  end
-
-  def self.for_school_district(school_district)
-    joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
   scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
@@ -362,13 +348,13 @@ class Pd::Enrollment < ApplicationRecord
   private_class_method def self.currently_receives_foorm_survey(workshop)
     !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
       !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt? || workshop.byo?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
     completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
       workshop = enrollment.workshop
-      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject]
+      form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject || workshop.course]
       Pd::WorkshopSurveyFoormSubmission.where(pd_workshop: workshop, user: enrollment.user).
         joins(:foorm_submission).
         exists?(foorm_submissions: {form_name: form_name})

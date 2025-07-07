@@ -2,10 +2,10 @@ name 'music-lab-612-pre-q1'
 
 question '**Which code should Alina use so that the drums match the length of the rest of the song?**'
 height '250'
-wrong '![](https://images.code.org/f46babb7d3a4434446621c16db637c4f-image-1750874299884.png)'
-wrong '![](https://images.code.org/b74a51658f04fedc5927cd81f4953950-image-1750874297649.png)'
-right '![](https://images.code.org/46d858269b2f5c26e7905b089b6dc22c-image-1750874291996.png)'
-wrong '![](https://images.code.org/54f72d31b68bda785919b649890b617b-image-1750874294920.png)'
+wrong '![](https://images.code.org/a7e554cd15640cac123ead8a4e3a25d9-image-1751048564460.png)'
+wrong '![](https://images.code.org/75fcaae1a9faf8f49703df1b489cddfe-image-1751048547323.png)'
+right '![](https://images.code.org/9e0e0f3f438fa1efb2de1e4cec7a2f70-image-1751048464095.png)'
+wrong '![](https://images.code.org/c0caf25bbaf1c577f6a86feae40bab38-image-1751048528611.png)'
 
 
 allow_multiple_attempts true

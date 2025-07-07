@@ -142,4 +142,19 @@ describe('getSeoMetadata', () => {
       follow: true,
     });
   });
+
+  it('should call getAbsoluteImageUrl with fm=png for openGraphImage', () => {
+    (getSeoMetadataFromExperience as jest.Mock).mockReturnValue(
+      mockSeoMetadata,
+    );
+    (getAbsoluteImageUrl as jest.Mock).mockReturnValue(
+      'https://example.com/test-image.png',
+    );
+    const locale = 'en-US';
+    getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
+    expect(getAbsoluteImageUrl).toHaveBeenCalledWith(
+      mockSeoMetadata.openGraphImage,
+      {fm: 'webp'},
+    );
+  });
 });

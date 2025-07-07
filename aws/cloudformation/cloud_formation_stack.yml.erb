@@ -410,12 +410,18 @@ Resources:
 
 <%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
+<%
+       marketing_router_package = zip_directory(
+         'marketing-router',
+         environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}
+       )
+%>
   MarketingRouterLambda:
     Type: AWS::Lambda::Function
     Properties:
-      Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
+      Description: 'Lambda for dynamically routing Corporate website traffic to new NextJS/Contentful system based on the URL path.'
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      Code: <%=zip_directory('marketing-router', environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}) %>
+      Code: <%= marketing_router_package[:s3_location].to_json %>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn
@@ -426,6 +432,14 @@ Resources:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref MarketingRouterLambda
+      Description: "Code hash: <%= marketing_router_package[:content_hash] %>"
+  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
+  MarketingRouterAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MarketingRouterLambda
+      FunctionVersion: !GetAtt MarketingRouterVersion.Version
+      Name: LIVE
   MarketingRouterLambdaRole:
     Type: AWS::IAM::Role
     Properties:

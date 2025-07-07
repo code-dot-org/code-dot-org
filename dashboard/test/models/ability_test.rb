@@ -302,6 +302,10 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
 
+    refute ability.can?(:create, Pd::Workshop)
+    refute ability.can?(:destroy, Pd::Workshop)
+    assert ability.can?(:read, Pd::Workshop)
+
     assert ability.can?(:read, Section)
 
     assert ability.can?(:read, Unit.find_by_name('ECSPD'))
@@ -724,7 +728,7 @@ class AbilityTest < ActiveSupport::TestCase
     # Create two javalab levels that share the same project template level.
     # The first one will be used to create the code review and the second one
     # will be used to check the ability.
-    script = create :script
+    script = create :script, :in_single_unit_course
     template_level = create :javalab
     javalab_level_1 = create :javalab, project_template_level_name: template_level.name
     javalab_level_2 = create :javalab, project_template_level_name: template_level.name
