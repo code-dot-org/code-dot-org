@@ -83,7 +83,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
   secretWords: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
@@ -268,7 +268,7 @@ class ManageStudentsTable extends Component {
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
-                secretPicture={rowData.secretPicturePath}
+                secretPictureUrl={rowData.secretPictureUrl}
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
