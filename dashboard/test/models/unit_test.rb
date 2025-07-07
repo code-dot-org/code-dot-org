@@ -862,14 +862,14 @@ class UnitTest < ActiveSupport::TestCase
       absolute_position: 4
     )
 
-    summary = unit.summarize_for_lesson_show
-    assert_equal '/s/my-script', summary[:link]
+    summary = unit.summarize_for_lesson_show(unit_group_unit: unit.original_unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1", summary[:link]
     # only includes lesson groups with lessons with lesson plans
     assert_equal 2, summary[:lessonGroups].count
     # only includes lessons with lesson plans
     assert_equal 1, summary[:lessonGroups][0][:lessons].count
     assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
-    assert_equal '/s/my-script/lessons/1', summary[:lessonGroups][0][:lessons][0][:link]
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1", summary[:lessonGroups][0][:lessons][0][:link]
   end
 
   test 'can summarize unit for student lesson plan' do
@@ -924,15 +924,15 @@ class UnitTest < ActiveSupport::TestCase
       absolute_position: 4
     )
 
-    summary = unit.summarize_for_lesson_show(true)
-    assert_equal '/s/my-script', summary[:link]
+    summary = unit.summarize_for_lesson_show(true, unit_group_unit: unit.original_unit_group_unit)
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1", summary[:link]
     # only includes lesson groups with lessons with lesson plans
     assert_equal 2, summary[:lessonGroups].count
     # only includes lessons with lesson plans
     assert_equal 1, summary[:lessonGroups][0][:lessons].count
     assert_equal 'lesson-1', summary[:lessonGroups][0][:lessons][0][:key]
     # lesson links end with /student
-    assert_equal '/s/my-script/lessons/1/student', summary[:lessonGroups][0][:lessons][0][:link]
+    assert_equal "/courses/#{unit.original_unit_group.name}/units/1/lessons/1/student", summary[:lessonGroups][0][:lessons][0][:link]
   end
 
   test 'should generate a shorter summary for header' do

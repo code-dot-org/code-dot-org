@@ -92,7 +92,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
-    unit = create :script, :in_unit_group, family_name: 'my-script'
+    unit = create :script, family_name: 'my-script'
     course = create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     get :show, params: {
@@ -192,18 +192,20 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should use unit name as param where unit name is words but looks like a number" do
-    unit = create(:script, name: '15-16')
+    unit = create(:script, :in_single_unit_course, name: '15-16')
     get :show, params: {id: "15-16"}
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to "/courses/#{unit.original_unit_group.name}/units/1"
     assert_equal unit, assigns(:script)
   end
 
   test "should use unit name as param where unit name is words" do
-    unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
+    unit = create(:script, :in_single_unit_course, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to "/courses/#{unit.original_unit_group.name}/units/1"
     assert_equal unit, assigns(:script)
   end
 

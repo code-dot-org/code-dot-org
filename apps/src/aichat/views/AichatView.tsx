@@ -25,6 +25,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {getUserHasAichatAccess} from '../aichatApi';
 import {ModalTypes} from '../constants';
+import {LevelPropertiesContext} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
 import {
   addChatEvent,
@@ -59,22 +60,16 @@ const getResetModelNotification = (): Notification => ({
   includeInChatHistory: true,
 });
 
-const AichatView: React.FunctionComponent<LabProps> = () => {
+const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
+  levelProperties,
+  initialSources,
+}) => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
-  const levelAichatSettings = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings
-  );
-
-  const initialSources = useAppSelector(
-    state => (state.lab.initialSources?.source as string) || '{}'
-  );
-
+  const levelAichatSettings = levelProperties.aichatSettings;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const {currentAiCustomizations, viewMode, showModalType} = useAppSelector(
@@ -112,7 +107,9 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
   }, [projectManager, dispatch]);
 
   useEffect(() => {
-    const studentAiCustomizations = JSON.parse(initialSources);
+    const studentAiCustomizations = JSON.parse(
+      (initialSources?.source as string) || '{}'
+    );
     dispatch(
       setStartingAiCustomizations({
         levelAichatSettings,
@@ -271,93 +268,95 @@ const AichatView: React.FunctionComponent<LabProps> = () => {
   }, [dispatch]);
 
   return (
-    <div id="aichat-lab" className={moduleStyles.aichatLab}>
-      {ChatModal && <ChatModal onClose={onCloseModal} />}
-      {showPresentationToggle() && (
-        <div
-          id="uitest-view-mode-toggle-container"
-          className={moduleStyles.viewModeButtons}
-        >
-          <SegmentedButtons {...viewModeButtonsProps} />
-        </div>
-      )}
-      <div className={moduleStyles.labCoreContainer}>
-        {viewMode === ViewMode.EDIT && (
-          <>
-            <div className={moduleStyles.instructionsArea}>
-              <PanelContainer
-                id="aichat-instructions-panel"
-                headerContent={commonI18n.instructions()}
-                className={moduleStyles.panelContainer}
-                headerClassName={moduleStyles.panelHeader}
-                rightHeaderContent={renderInstructionsHeaderRight(
-                  isUserTeacher,
-                  () => {
-                    dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
-                  }
-                )}
-              >
-                <Instructions
-                  className={moduleStyles.instructions}
-                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                  isRunning={false}
-                  hasRun={hasSentMessage}
-                  hasEdited={hasUpdatedCustomizations}
-                />
-              </PanelContainer>
-            </div>
-            {!allFieldsHidden && (
-              <div className={moduleStyles.customizationArea}>
+    <LevelPropertiesContext.Provider value={levelProperties}>
+      <div id="aichat-lab" className={moduleStyles.aichatLab}>
+        {ChatModal && <ChatModal onClose={onCloseModal} />}
+        {showPresentationToggle() && (
+          <div
+            id="uitest-view-mode-toggle-container"
+            className={moduleStyles.viewModeButtons}
+          >
+            <SegmentedButtons {...viewModeButtonsProps} />
+          </div>
+        )}
+        <div className={moduleStyles.labCoreContainer}>
+          {viewMode === ViewMode.EDIT && (
+            <>
+              <div className={moduleStyles.instructionsArea}>
                 <PanelContainer
-                  id="aichat-model-customization-panel"
-                  headerContent={aichatI18n.modelCustomizationHeader()}
+                  id="aichat-instructions-panel"
+                  headerContent={commonI18n.instructions()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
-                  rightHeaderContent={
-                    !viewAsUserId &&
-                    renderModelCustomizationHeaderRight(() => {
-                      onClickStartOver();
-                      dispatch(
-                        sendAnalytics(EVENTS.AICHAT_START_OVER, {
-                          levelPath: window.location.pathname,
-                        })
-                      );
-                    })
-                  }
+                  rightHeaderContent={renderInstructionsHeaderRight(
+                    isUserTeacher,
+                    () => {
+                      dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                    }
+                  )}
                 >
-                  <ModelCustomizationWorkspace />
+                  <Instructions
+                    className={moduleStyles.instructions}
+                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                    isRunning={false}
+                    hasRun={hasSentMessage}
+                    hasEdited={hasUpdatedCustomizations}
+                  />
                 </PanelContainer>
               </div>
-            )}
-          </>
-        )}
-        {viewMode === ViewMode.PRESENTATION && (
-          <div
-            id="uitest-presentation-view-container"
-            className={moduleStyles.presentationArea}
-          >
+              {!allFieldsHidden && (
+                <div className={moduleStyles.customizationArea}>
+                  <PanelContainer
+                    id="aichat-model-customization-panel"
+                    headerContent={aichatI18n.modelCustomizationHeader()}
+                    className={moduleStyles.panelContainer}
+                    headerClassName={moduleStyles.panelHeader}
+                    rightHeaderContent={
+                      !viewAsUserId &&
+                      renderModelCustomizationHeaderRight(() => {
+                        onClickStartOver();
+                        dispatch(
+                          sendAnalytics(EVENTS.AICHAT_START_OVER, {
+                            levelPath: window.location.pathname,
+                          })
+                        );
+                      })
+                    }
+                  >
+                    <ModelCustomizationWorkspace />
+                  </PanelContainer>
+                </div>
+              )}
+            </>
+          )}
+          {viewMode === ViewMode.PRESENTATION && (
+            <div
+              id="uitest-presentation-view-container"
+              className={moduleStyles.presentationArea}
+            >
+              <PanelContainer
+                id="aichat-presentation-panel"
+                headerContent={aichatI18n.modelCardPanelHeader()}
+                className={moduleStyles.panelContainer}
+                headerClassName={moduleStyles.panelHeader}
+              >
+                <PresentationView />
+              </PanelContainer>
+            </div>
+          )}
+          <div className={moduleStyles.chatWorkspaceArea}>
             <PanelContainer
-              id="aichat-presentation-panel"
-              headerContent={aichatI18n.modelCardPanelHeader()}
+              id="aichat-workspace-panel"
+              headerContent={chatWorkspaceHeader}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              <PresentationView />
+              <ChatWorkspace onClear={onClear} />
             </PanelContainer>
           </div>
-        )}
-        <div className={moduleStyles.chatWorkspaceArea}>
-          <PanelContainer
-            id="aichat-workspace-panel"
-            headerContent={chatWorkspaceHeader}
-            className={moduleStyles.panelContainer}
-            headerClassName={moduleStyles.panelHeader}
-          >
-            <ChatWorkspace onClear={onClear} />
-          </PanelContainer>
         </div>
       </div>
-    </div>
+    </LevelPropertiesContext.Provider>
   );
 };
 

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-02 21:16:44 UTC",
+    "serialized_at": "2025-07-03 22:58:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -314,7 +314,7 @@
     },
     {
       "key": "Functions - Synthesis",
-      "name": "Functions - Synthesis",
+      "name": "Functions - Synthesize",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1728,7 +1728,7 @@
       "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge",
+        "progression_name": "Create",
         "tips": [
           {
             "type": "teachingTip",
@@ -1913,7 +1913,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge",
+        "progression_name": "Create",
         "tips": [
           {
             "type": "teachingTip",
@@ -2349,7 +2349,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge",
+        "progression_name": "Create",
         "tips": [
           {
             "type": "teachingTip",
@@ -2528,7 +2528,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge"
+        "progression_name": "Create"
       },
       "seeding_key": {
         "activity_section.key": "36edd498-91bd-4736-84f0-8b5a4b7db91b",
@@ -2658,7 +2658,7 @@
       "key": "e2f534bc-d5f1-4722-a5d4-0789c3bb31fa",
       "position": 8,
       "properties": {
-        "progression_name": "Reflect",
+        "progression_name": "Reflection",
         "tips": [
           {
             "type": "teachingTip",
@@ -2675,7 +2675,7 @@
       "key": "c03f843b-fd58-4715-9177-2b56145d944a",
       "position": 9,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Create"
       },
       "seeding_key": {
         "activity_section.key": "c03f843b-fd58-4715-9177-2b56145d944a",
@@ -2917,7 +2917,7 @@
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge",
+        "progression_name": "Create",
         "tips": [
           {
             "type": "teachingTip",
@@ -3089,21 +3089,10 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Challenge"
+        "progression_name": "Create"
       },
       "seeding_key": {
         "activity_section.key": "691409b7-bf02-40b5-8a3f-c003d7f0db37",
-        "lesson_activity.key": "88135275-ed13-4b53-8e83-be9091de2536"
-      }
-    },
-    {
-      "key": "05842bff-26f2-49b5-8f51-ec910f966378",
-      "position": 9,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "05842bff-26f2-49b5-8f51-ec910f966378",
         "lesson_activity.key": "88135275-ed13-4b53-8e83-be9091de2536"
       }
     },
@@ -3118,24 +3107,8 @@
       }
     },
     {
-      "key": "dcd626e4-141e-4c76-9edb-6c0c4e44e655",
-      "position": 1,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Pilot Note:** We're in the process of creating a video to go with this lesson that features Altrice, but it's not ready yet. The warm-up below is designed to still introduce Altrice as a remix artist although it will take a few additional steps to implement."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "dcd626e4-141e-4c76-9edb-6c0c4e44e655",
-        "lesson_activity.key": "7c3b82a0-fc07-45c4-9d7e-8fb01146856a"
-      }
-    },
-    {
       "key": "8956c5cb-0e8b-4fc8-bfac-17e344db4368",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-headphones\"></i> **Listen**: As a class, listen to the first minute of [Sun by Caribou](https://www.youtube.com/watch?v=4Uez8NNFf9s) without showing students any information about the song.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Do This:** Write down 5 words that describe this song. You could pick words that describe the genre or musicality, or that describe it's \"vibe\" or how it feels.\n\nDo not ask students to share out yet - instead continue to the next song.\n\n<i class=\"fa-solid fa-headphones\"></i> **Listen**: As a class, listen to the first minute of [Sun (Only what you gave me remix) by Altrice](https://www.youtube.com/watch?v=Y_dgMAPaJLM) without showing students any information about the song.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Do This:** Write down 5 words that describe this song. You could pick words that describe the genre or musicality, or that describe it's \"vibe\" or how it feels.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Using the words you wrote down, how were these two songs different? How were they similar?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their similarities and differences, emphasizing that the \"feel\" of the song may be different between them even if some of the more superficial details are the same (ie: is an \"electronic\" song, has repeating beats). If students begin to suspect they're remixes of the same song, ask them to clarify and justify why they think this.\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These two songs are actually very similar - the second song is a remix of the first one. The remix was done by a remix artist named Altrice using the exact same tracks from the original song in a completely new and original way. Today, we're going to apply what we've been learning to create remixes similar to how Altrice does."
       },
@@ -3203,10 +3176,21 @@
       }
     },
     {
-      "key": "9f27720a-496c-4e0e-9a6a-215d80df917f",
+      "key": "d75b3fa1-5f05-4d77-a4e1-80b7ffaf38fc",
       "position": 5,
       "properties": {
-        "progression_name": "\"Only What You Gave Me\" Remixes"
+        "progression_name": "\"Only What You Gave Me\" Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "d75b3fa1-5f05-4d77-a4e1-80b7ffaf38fc",
+        "lesson_activity.key": "aefc5603-3822-4074-a706-9a53f0bbfc67"
+      }
+    },
+    {
+      "key": "9f27720a-496c-4e0e-9a6a-215d80df917f",
+      "position": 6,
+      "properties": {
+        "progression_name": "Remix Strategies"
       },
       "seeding_key": {
         "activity_section.key": "9f27720a-496c-4e0e-9a6a-215d80df917f",
@@ -3215,7 +3199,7 @@
     },
     {
       "key": "c36b83b5-fc32-46df-b96b-5ecbeba1ff2f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3226,7 +3210,7 @@
     },
     {
       "key": "56f538b7-2fbe-4dd0-a989-b8f8483c9ae7",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Reflection",
         "tips": [
@@ -3243,9 +3227,9 @@
     },
     {
       "key": "d3fc04b0-9002-4f38-809c-8188f81d80fc",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Create"
       },
       "seeding_key": {
         "activity_section.key": "d3fc04b0-9002-4f38-809c-8188f81d80fc",
@@ -3479,6 +3463,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3679,7 +3666,7 @@
         "level_keys": [
           "test-music-lab-sequences-explore-song-choice-level_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -3954,7 +3941,7 @@
         "level_keys": [
           "test-music-lab-sequences-practice-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -4679,7 +4666,7 @@
         "level_keys": [
           "test-music-lab-loops-explore-challenge-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -5004,7 +4991,7 @@
         "level_keys": [
           "music-lab-loops-practice-challenge_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -5279,7 +5266,7 @@
         "level_keys": [
           "music-lab-loops-synthesis-reflect-levelgroup_v2"
         ],
-        "progression": "Reflect"
+        "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
@@ -5304,7 +5291,7 @@
         "level_keys": [
           "test-music-lab-loops-synthesis-challenge-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -5724,7 +5711,7 @@
       "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "music-lab-functions-explore-evaluative_v2"
@@ -5754,7 +5741,7 @@
         "level_keys": [
           "music-lab-functions-explore-challenge-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -6104,7 +6091,7 @@
         "level_keys": [
           "music-lab-functions-practice-challenge-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -6201,10 +6188,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "\"Only What You Gave Me\" Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-remixes"
+        ],
+        "lesson.key": "Functions - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "d75b3fa1-5f05-4d77-a4e1-80b7ffaf38fc"
+      },
+      "level_keys": [
+        "music-lab-functions-synthesis-remixes"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "music-lab-functions-synthesis-rearrange1_v2"
         ],
-        "progression": "\"Only What You Gave Me\" Remixes"
+        "progression": "Remix Strategies"
       },
       "bonus": false,
       "seeding_key": {
@@ -6221,15 +6230,15 @@
       ]
     },
     {
-      "chapter": 115,
-      "position": 5,
+      "chapter": 116,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-lab-functions-synthesis-rearrange2_v2"
         ],
-        "progression": "\"Only What You Gave Me\" Remixes"
+        "progression": "Remix Strategies"
       },
       "bonus": false,
       "seeding_key": {
@@ -6246,15 +6255,15 @@
       ]
     },
     {
-      "chapter": 116,
-      "position": 6,
+      "chapter": 117,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-lab-functions-synthesis-rearrange3_v2"
         ],
-        "progression": "\"Only What You Gave Me\" Remixes"
+        "progression": "Remix Strategies"
       },
       "bonus": false,
       "seeding_key": {
@@ -6271,8 +6280,8 @@
       ]
     },
     {
-      "chapter": 117,
-      "position": 7,
+      "chapter": 118,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6296,8 +6305,8 @@
       ]
     },
     {
-      "chapter": 118,
-      "position": 8,
+      "chapter": 119,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6321,15 +6330,15 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 9,
+      "chapter": 120,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-lab-functions-synthesis-challenge-choice_v2"
         ],
-        "progression": "Challenge"
+        "progression": "Create"
       },
       "bonus": false,
       "seeding_key": {
@@ -6346,11 +6355,14 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
         "progression": "Examples"
       },
       "bonus": false,
@@ -6368,11 +6380,14 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-project-prepare_v2"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -6390,11 +6405,14 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-project_v2"
+        ],
         "progression": "Genre Mashup"
       },
       "bonus": false,
@@ -6412,7 +6430,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6437,7 +6455,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7817,6 +7835,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025",
         "activity_section.key": "85d5d374-fae7-4fae-947b-19e5541f2c72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-synthesis-remixes",
+        "script_level.level_keys": [
+          "music-lab-functions-synthesis-remixes"
+        ],
+        "lesson.key": "Functions - Synthesis",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "d75b3fa1-5f05-4d77-a4e1-80b7ffaf38fc"
       }
     },
     {

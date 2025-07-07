@@ -1,4 +1,5 @@
 @use '@code-dot-org/component-library-styles/font.scss' as font;
+@use '@code-dot-org/component-library-styles/cms/variables.scss' as cmsVars;
 
 .afeEligibility {
   display: flex;
@@ -13,6 +14,7 @@
     border-right: 1px solid var(--borders-neutral-primary);
     border-bottom: none;
     padding: 2rem;
+    width: 100%;
 
     fieldset {
       border: none;
@@ -46,7 +48,18 @@
       }
 
       label {
+        min-width: 100%;
         margin: 0.25rem 0;
+
+        &:has(input[type='checkbox']) {
+          align-items: flex-start;
+
+          input,
+          i {
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+          }
+        }
       }
 
       &:has(:required) {
@@ -139,7 +152,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: cmsVars.$tablet-breakpoint) {
   .afeEligibility {
     flex-direction: column;
 
@@ -151,6 +164,20 @@
     .afeEligibilityFormContainer,
     .afeEligibilityReqsContainer {
       flex: 1 1 100%;
+    }
+  }
+}
+
+@media screen and (max-width: cmsVars.$mobile-breakpoint) {
+  .afeEligibility {
+    .afeEligibilityFormContainer {
+      .afeEligibilityFormGrid {
+        grid-template-columns: 1fr;
+      }
+
+      .afeEligibilityFormButton {
+        width: 100%;
+      }
     }
   }
 }
