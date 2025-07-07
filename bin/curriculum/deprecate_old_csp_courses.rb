@@ -7,6 +7,7 @@ SCRIPT_NAMES = %w[
   csp-create-2018
   csp-explore-2017
   csp-explore-2018
+  csp-post-survey
   csp-post-survey-2018
   csp1-2017
   csp1-2018
@@ -19,6 +20,7 @@ SCRIPT_NAMES = %w[
   csp5-2017
   csp5-2018
   csppostap-2017
+  csppostap-2018
   cspunit1
   cspunit2
   cspunit3
