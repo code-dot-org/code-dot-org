@@ -11,7 +11,7 @@ module Cdo
 
       private def setup_opentelemetry
         # Create a LoggerProvider
-        logger_provider = OpenTelemetry::SDK::Logs::LoggerProvider.new
+        logger_provider = OpenTelemetry::SDK::Logs::LoggerProvider.new(resource: OpenTelemetry::SDK::Resources::Resource.telemetry_sdk)
 
         # Create a batching processor configured to export to the OTLP exporter
         processor = OpenTelemetry::SDK::Logs::Export::BatchLogRecordProcessor.new(
