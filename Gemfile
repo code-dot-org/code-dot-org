@@ -400,3 +400,5 @@ gem "opentelemetry-exporter-otlp-logs", "~> 0.2.0"
 gem "semantic_logger", "~> 4.16"
 
 gem "rails_semantic_logger", "~> 4.17"
+
+gem "prometheus-client", "~> 4.2"

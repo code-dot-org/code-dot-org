@@ -1,6 +1,9 @@
 # This file is used by Rack-based servers to start the application.
 
 require_relative '../deployment'
+require 'prometheus/middleware/collector'
+require 'prometheus/middleware/exporter'
+
 # Ensure all application secrets are loaded.
 CDO.cdo_secrets&.required! unless rack_env?(:development)
 
@@ -27,4 +30,8 @@ use Rack::SslEnforcer,
   only_environments: 'development',
   # Only HTTPS-redirect in development when `https_development` is true.
   ignore: ->(request) {!request.ssl? && !CDO.https_development}
+
+use Prometheus::Middleware::Collector
+use Prometheus::Middleware::Exporter
+
 run Rails.application
