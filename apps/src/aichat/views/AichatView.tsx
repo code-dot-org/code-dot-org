@@ -351,7 +351,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              <ChatWorkspace onClear={onClear} />
+              <ChatWorkspace
+                onClear={onClear}
+                levelProperties={levelProperties}
+              />
             </PanelContainer>
           </div>
         </div>
