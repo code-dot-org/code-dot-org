@@ -40,7 +40,7 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
   ) : (
     <Button
       text={codebridgeI18n.validate()}
-      onClick={() => onValidate()}
+      onClick={onValidate}
       type={'secondary'}
       disabled={isValidateDisabled}
       iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
