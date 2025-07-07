@@ -59,10 +59,10 @@ module Cdo
         end
       when Hash
         # Recursively call deep_replace on each key-value pair in the hash
-        value.each {|key, val| value[key] = deep_replace(val, region)}
+        value.each {|key, val| value[key] = deep_replace(val, dictionary)}
       when Array
         # Recursively call deep_replace on each element of the array
-        value.map {|val| deep_replace(val, region)}
+        value.map {|val| deep_replace(val, dictionary)}
       else
         # Return value as-is if it's neither a String, Hash, nor Array
         value
