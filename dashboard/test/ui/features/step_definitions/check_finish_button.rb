@@ -3,7 +3,7 @@ free_play_level_urls = {
   'blockly' => {
     'Dance Party' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/3?noautoplay=true&no_redirect=true',
     'Artist' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/3/levels/10?noautoplay=true&no_redirect=true',
-    'Bounce' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/8/levels/1?noautoplay=true&no_redirect=true',
+    'Bounce' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/8/levels/2?noautoplay=true&no_redirect=true',
     'Flappy' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/7/levels/2?noautoplay=true&no_redirect=true',
     'Sprite Lab' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/36/levels/4?noautoplay=true&no_redirect=true'
   },
