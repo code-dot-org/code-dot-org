@@ -105,7 +105,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               </Box>
             )}
             {name && (
-              <Typography variant="h6" component="h3">
+              <Typography variant="h5" component="h3">
                 {name}
               </Typography>
             )}

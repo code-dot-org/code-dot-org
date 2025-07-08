@@ -76,35 +76,35 @@ const theme = createTheme({
     h1: {
       fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
       fontSize: '3rem', // 48px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.16,
     },
     h2: {
       fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
       fontSize: '2.125rem', // 34px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.24,
     },
     h3: {
       fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
       fontSize: '1.75rem', // 28px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.28,
     },
     h4: {
       fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
       fontSize: '1.5rem', // 24px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.32,
     },
     h5: {
       fontSize: '1.25rem', // 20px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.4,
     },
     h6: {
       fontSize: '1rem', // 16px
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.48,
     },
     overline: {
