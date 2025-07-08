@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import ReactDiffViewer, {DiffMethod} from 'react-diff-viewer';
 
+import {getCodeDiffSummary} from '@cdo/apps/aiEvaluation/codeDiffApi';
 import {fetchStudentCodeSamples} from '@cdo/apps/levelbuilder/ai-iteration-tools/StudentWorkSamplesApi';
 
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
@@ -75,9 +76,15 @@ const ProcessModal = ({useFilesApi}) => {
     fetchAllVersions();
   }, [useFilesApi]);
 
-  const getDiffSummary(oldCode, newCode) => {
-    summarizeCodeDiff(oldCode, newCode);
-  }
+  const getDiffSummary = (oldCode, newCode) => {
+    const summary = getCodeDiffSummary(oldCode, newCode);
+    return (
+      <div className="applab-diff-summary">
+        <strong>Diff Summary:</strong>{' '}
+        {summary ? summary : 'No changes detected.'}
+      </div>
+    );
+  };
 
   // Sort versions by lastModified (descending, newest first)
   const sortedVersions = [...versions].sort((a, b) => {
@@ -125,6 +132,12 @@ const ProcessModal = ({useFilesApi}) => {
                           hideLineNumbers={false}
                           compareMethod={DiffMethod.WORDS}
                         />
+                        <span>
+                          {getDiffSummary(
+                            codeByVersion[sortedVersions[index + 1].versionId],
+                            codeByVersion[sortedVersions[index].versionId]
+                          )}
+                        </span>
                       </div>
                     )}
                   </>

@@ -29,12 +29,6 @@ class UserLevelInteractionsController < ApplicationController
     version_year.to_i >= 2024
   end
 
-  def get_code_difference_summary(old_code, new_code)
-    response = OpenaiEvaluateHelper.summarize_diff(
-      
-    )
-  end
-
   def user_level_interaction_params
     user_level_interaction_params = params.transform_keys(&:underscore).permit(
       :level_id,

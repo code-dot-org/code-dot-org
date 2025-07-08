@@ -71,6 +71,8 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
+    post 'code_diffs/get_code_difference_summary', to: 'code_diffs#get_code_difference_summary'
+
     resources :skills, only: [:create, :index, :update, :destroy]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
