@@ -57,11 +57,7 @@ export const saveAiCustomization = async (
       levelId
     );
   } catch (error) {
-    try {
-      await handleToxicityRequestError(error as Error, dispatch);
-    } catch (e) {
-      console.error(e);
-    }
+    await handleToxicityRequestError(error as Error, dispatch);
     return;
   }
 
