@@ -594,6 +594,23 @@ class Section < ApplicationRecord
     end
   end
 
+  # A very abridged version of summarize that shows only information needed by participants.
+  def summarize_for_participant
+    {
+      id: id,
+      name: name,
+      teacherName: teacher.name,
+      assignedTitle: title,
+      linkToAssigned: link_to_assigned,
+      currentUnitTitle: title_of_current_unit,
+      linkToCurrentUnit: link_to_current_unit,
+      code: code,
+      login_type: login_type,
+      grades: grades,
+      is_assigned_single_unit_course: unit_group&.single_unit_course?,
+    }
+  end
+
   def manage_students_url
     CDO.studio_url("/teacher_dashboard/sections/#{id}/manage_students")
   end
