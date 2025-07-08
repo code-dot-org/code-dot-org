@@ -12,6 +12,7 @@ GLOBAL_TEMPLATE_FILE = 'per-account.yml.erb'
 options = {
   region: 'us-east-1',
   stack_name: 'marketing-sites-global-resources',
+  # https://github.blog/changelog/2022-01-13-github-actions-update-on-oidc-based-deployments-to-aws/
   github_intermediate_cert_thumbprints: '6938fd4d98bab03faadb97b34396831e3780aea1,1c58a3a8518e8759bf075b76b750d4f2df264fcd'
 }
 
