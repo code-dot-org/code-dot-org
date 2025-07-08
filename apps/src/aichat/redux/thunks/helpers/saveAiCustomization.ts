@@ -57,7 +57,11 @@ export const saveAiCustomization = async (
       levelId
     );
   } catch (error) {
-    await handleToxicityRequestError(error as Error, dispatch);
+    try {
+      await handleToxicityRequestError(error as Error, dispatch);
+    } catch (e) {
+      console.error(e);
+    }
     return;
   }
 
@@ -77,7 +81,11 @@ export const saveAiCustomization = async (
       .getMetricsReporter()
       .incrementCounter('Aichat.SaveFailToxicityDetected');
     const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
-    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    dispatchSaveFailNotification(
+      dispatch as AppDispatch,
+      'toxicityError',
+      errorMessage
+    );
     return;
   }
 

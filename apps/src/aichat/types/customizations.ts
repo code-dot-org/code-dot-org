@@ -54,3 +54,13 @@ export enum ViewMode {
 
 // The type of save action being performed (customization update, publish, model card save, etc).
 export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
+
+export type SaveErrorType =
+  | 'toxicityError'
+  | 'permissionsError'
+  | 'genericError';
+
+export interface SaveError {
+  type: SaveErrorType;
+  message?: string;
+}

@@ -42,8 +42,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {getNewRemoveId} from '../redux/utils';
-import {AichatLevelProperties, Notification, ViewMode} from '../types';
+import {AichatLevelProperties, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -51,14 +50,6 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 
 import moduleStyles from './aichatView.module.scss';
-
-const getResetModelNotification = (): Notification => ({
-  removeId: getNewRemoveId(),
-  text: aichatI18n.modelResetNotification(),
-  notificationType: 'success',
-  timestamp: Date.now(),
-  includeInChatHistory: true,
-});
 
 const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   levelProperties,
@@ -238,7 +229,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useDialogControl();
