@@ -124,7 +124,7 @@ export const setSurveys = (scriptId, surveys) => ({
   surveys,
 });
 
-export const asyncLoadAssessments = (sectionId, scriptId) => {
+export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
   return (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
@@ -141,7 +141,8 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 
     const loadResponses = loadAssessmentResponsesFromServer(
       sectionId,
-      scriptId
+      scriptId,
+      courseVersionId
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
@@ -1160,10 +1161,18 @@ const computeScriptAssessmentList = (state, scriptId) => {
 // Requests to the server for assessment data
 
 // Loads the assessment responses.
-const loadAssessmentResponsesFromServer = (sectionId, scriptId) => {
+const loadAssessmentResponsesFromServer = (
+  sectionId,
+  scriptId,
+  courseVersionId
+) => {
+  console.log(courseVersionId);
   let payload = {section_id: sectionId};
   if (scriptId) {
     payload.script_id = scriptId;
+  }
+  if (courseVersionId) {
+    payload.course_version_id = courseVersionId;
   }
   return $.ajax({
     url: `/dashboardapi/assessments/section_responses`,
