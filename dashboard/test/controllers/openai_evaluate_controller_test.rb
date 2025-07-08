@@ -45,8 +45,8 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
     ShareFiltering.stubs(:find_pii_failure).returns 'harry@hogwarts.edu'
     student = create(:student)
     sign_in(student)
-    csp_course_offering = create(:csp_course_offering, :with_units)
-    unit = csp_course_offering.course_versions.first.content_root
+    csp_course_offering = create(:csp_course_offering, :with_unit_group)
+    unit = csp_course_offering.course_versions.first.content_root.first_unit
     level = create(:free_response)
     create(:script_level, script: unit, levels: [level])
     get :evaluate, params: {level_id: level.id, student_work: "My email is harry@hogwarts.edu", evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]}

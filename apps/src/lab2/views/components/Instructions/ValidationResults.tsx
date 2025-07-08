@@ -13,7 +13,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ValidationStatusIcon from './ValidationStatusIcon';
 
-import moduleStyles from './styles/validation-results.module.scss';
+import moduleStyles from './validation-results.module.scss';
 
 interface ValidationResultsProps {
   className?: string;

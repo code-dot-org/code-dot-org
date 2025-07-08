@@ -336,6 +336,7 @@ const marketingPaths = {
   "/yourschool": true,
   "/yourschool/thankyou": true,
   "/about/team-pets": true,
+  "/sitemap.xml": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
