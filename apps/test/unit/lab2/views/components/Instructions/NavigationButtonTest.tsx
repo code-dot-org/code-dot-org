@@ -25,31 +25,6 @@ import {
 import {InitProgressPayload, UnitProgress} from '@cdo/apps/types/progressTypes';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-// Mock external dependencies
-jest.mock('@cdo/apps/lab2/progress/continueOrFinishLesson', () =>
-  jest.fn(() => ({type: 'MOCK_CONTINUE_OR_FINISH_LESSON'}))
-);
-
-jest.mock('@cdo/apps/lab2/views/dialogs', () => ({
-  DialogType: {
-    GenericConfirmation: 'GenericConfirmation',
-  },
-  useDialogControl: jest.fn(() => ({
-    showDialog: jest.fn(),
-  })),
-}));
-
-jest.mock(
-  '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi',
-  () => ({
-    logUserLevelInteraction: jest.fn(),
-  })
-);
-
-jest.mock('@cdo/apps/code-studio/utils', () => ({
-  queryParams: jest.fn(() => null),
-}));
-
 describe('NavigationButton', () => {
   let store: Store;
 
@@ -59,7 +34,6 @@ describe('NavigationButton', () => {
     appName: 'pythonlab',
     submittable: false,
     predictSettings: undefined,
-    useSecondaryFinishButton: false,
   };
 
   const submittableLevelProperties: LevelProperties = {
@@ -207,7 +181,7 @@ describe('NavigationButton', () => {
   }
 
   describe('Submit Button', () => {
-    it('button says "Submit" when level is not submitted and is enabled when hasRun and hasEdited are true', () => {
+    it('displays "Submit" when level is not submitted and is enabled when hasRun and hasEdited are true', () => {
       renderNavigationButton({
         levelProperties: submittableLevelProperties,
         hasRun: true,
@@ -217,7 +191,7 @@ describe('NavigationButton', () => {
       expect(submitButton).toBeEnabled();
     });
 
-    it('displays "Unsubmit" text and is enabled when level has been submitted', () => {
+    it('displays "Unsubmit" and is enabled when level has been submitted', () => {
       // Set up state for submitted level
       const submittedProgressState: InitProgressPayload = {
         ...initialProgress,
@@ -261,7 +235,7 @@ describe('NavigationButton', () => {
       expect(unsubmitButton).toBeEnabled();
     });
 
-    it('is disabled when hasRun is false or hasEdited is false for unsubmitted level', () => {
+    it('is disabled when hasRun is false or hasEdited is false for an unsubmitted level', () => {
       renderNavigationButton({
         levelProperties: submittableLevelProperties,
         hasRun: false,
