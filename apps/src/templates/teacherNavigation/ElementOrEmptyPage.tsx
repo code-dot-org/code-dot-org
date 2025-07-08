@@ -82,6 +82,10 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
 
   const navigate = useNavigate();
 
+  // Intentinoal error for testing
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (window as any).xyz.abc = 123;
+
   const navigateToCoursePage = () => {
     navigate(`../${TEACHER_NAVIGATION_PATHS.courseOverview}`, {
       relative: 'path',

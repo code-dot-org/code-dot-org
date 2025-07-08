@@ -29,6 +29,26 @@ import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 /* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
 
+import {getWebInstrumentations, initializeFaro} from '@grafana/faro-web-sdk';
+import {TracingInstrumentation} from '@grafana/faro-web-tracing';
+
+initializeFaro({
+  url: 'https://faro-collector-prod-us-west-0.grafana.net/collect/cc48ef82083afbe45d9f1cd7cc804172',
+  app: {
+    name: 'dashboard',
+    version: '1.0.0',
+    environment: 'production',
+  },
+
+  instrumentations: [
+    // Mandatory, omits default instrumentations otherwise.
+    ...getWebInstrumentations(),
+
+    // Tracing package to get end-to-end visibility for HTTP requests.
+    new TracingInstrumentation(),
+  ],
+});
+
 const store = getStore();
 store.dispatch(setRtlFromDOM());
 // Shim window.console to be safe in IE

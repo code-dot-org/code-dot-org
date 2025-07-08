@@ -226,6 +226,8 @@
     "@dsco_/link": "^1.1.2",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@grafana/faro-web-sdk": "^1.18.2",
+    "@grafana/faro-web-tracing": "^1.18.2",
     "@lezer/highlight": "^1.2.0",
     "@magenta/music": "^1.23.1",
     "@mapbox/search-js-react": "^1.0.0",

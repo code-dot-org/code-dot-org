@@ -17,5 +17,6 @@
     "nock": "^13.5.3",
     "sinon": "^17.0.1",
     "uglify-js": "^3.19.3"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
