@@ -122,6 +122,7 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
 
       it 'removes only user student email Auth Option' do
         _(user.authentication_options.count).must_equal 2 # Check that the user starts with 2 Auth Options
+        change_user_type
         _(User.find(user.id).authentication_options).must_equal [auth_option]
       end
 
