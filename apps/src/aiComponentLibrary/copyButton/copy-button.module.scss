@@ -1,9 +1,8 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
 @import '@cdo/apps/mixins.scss';
 
 // Double class name is an approach (recommended by design team) to override Component Library specificity
 button.copy-button.copy-button {
-  @include icon-button(var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
+  @include icon-button(transparent, var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
 }
 
 @keyframes fade-in {

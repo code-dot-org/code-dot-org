@@ -29,6 +29,12 @@ Parameters:
     Type: String
     Description: The IAM Policy that any Role created by this template must apply as a Permissions Boundary.
 
+Conditions:
+  IsProductionEnvironment:
+    Fn::Equals:
+      - !Ref EnvironmentType
+      - production
+
 Mappings:
   # Cloudfront Mappings
   # See: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
@@ -209,6 +215,8 @@ Resources:
         # Delete the load balancer if the CloudFormation stack is deleted
         - Key: deletion_protection.enabled
           Value: "false"
+        # Note for idle_timeout.timeout_seconds: The default is 60 seconds, which is is appropriate for this application.
+        # If changing from the default, the KEEP_ALIVE_TIMEOUT in the Dockerfile must also be updated to be greater than this value.
       Scheme: internet-facing
       SecurityGroups:
         - !GetAtt FargateServiceLBSecurityGroup.GroupId
@@ -316,6 +324,11 @@ Resources:
     Properties:
       ContainerDefinitions:
         - Environment:
+            # Ensure the hostname is set to 0.0.0.0 instead of the running host
+            # This ensures that localhost can be accessed from middlewares that run and query against localhost
+            # such as the withRedirect middleware
+            - Name: HOSTNAME
+              Value: 0.0.0.0
             - Name: CONTENTFUL_SPACE_ID
               Value: 90t6bu6vlf76
             - Name: CONTENTFUL_ENV_ID
@@ -327,6 +340,11 @@ Resources:
             - Name: NEXT_PUBLIC_STAGE
               Value: !Ref EnvironmentType
             - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
+              Value: "true"
+            - Name: REDIS_URL
+              Value: !Sub rediss://${RedisCluster.PrimaryEndPoint.Address}:6379
+            # Do not verify that keyspace is available, as it is created by the RedisParameterGroup
+            - Name: SKIP_KEYSPACE_CONFIG_CHECK
               Value: "true"
             - Name: OTEL_SERVICE_NAME
               Value: marketing-sites
@@ -692,11 +710,13 @@ Resources:
               - next-url
               - Accept
               - x-prerender-revalidate
+              - Host # Used in the withBrand middleware to determine tenant in multi-tenant setup
+              - Accept-Language # Used in the withLocale middleware to determine the user's locale
           CookiesConfig:
             CookieBehavior: whitelist
             Cookies:
               - __prerender_bypass # Next.js Draft mode
-              - location_ # Code.org user locale
+              - language_ # Used in the withLocale middleware to determine the user's locale and shared with studio.code.org
           QueryStringsConfig:
             QueryStringBehavior: none
         Comment: Cache policy for the marketing app
@@ -750,6 +770,7 @@ Resources:
 
         Aliases:
           - !Sub "${SubdomainName}.${BaseDomainName}"
+          - !Sub "preview-${SubdomainName}.${BaseDomainName}"
 
         Origins:
           - Id: marketing-sites-application-origin
@@ -830,9 +851,84 @@ Resources:
         Ref: HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
+
+  PreviewCloudFrontDistributionDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId:
+        Ref: HostedZoneId
+      Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+      Type: A
+
   ################################
   # End AWS Cloudfront Resources #
   ################################
+
+  #########################
+  # Start Redis Resources #
+  #########################
+
+  RedisSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Redis access from ECS
+      VpcId: !Ref Vpc
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 6379
+          ToPort: 6379
+          SourceSecurityGroupId: !Ref FargateServiceSecurityGroup
+
+  RedisSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      Description: Marketing Sites Redis Cache Subnet Group
+      SubnetIds:
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+        - Ref: VpcPrivateSubnet<%= index %>
+<% end %>
+
+  # This enables keyspace notifications for Redis, which is required for the Next.js caching.
+  # See: https://github.com/trieb-work/nextjs-turbo-redis-cache
+  RedisParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: redis7
+      Description: Enable keyspace notifications
+      Properties:
+        notify-keyspace-events: Exe
+
+  RedisCluster:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group
+      Engine: redis
+      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
+      CacheParameterGroupName: !Ref RedisParameterGroup
+      EngineVersion: 7.1
+      CacheNodeType:
+        Fn::If:
+          - IsProductionEnvironment
+          - cache.r7g.xlarge
+          - cache.t3.medium
+      NumNodeGroups: 1
+      ReplicasPerNodeGroup: 1
+      SecurityGroupIds:
+        - !Ref RedisSecurityGroup
+      CacheSubnetGroupName: !Ref RedisSubnetGroup
+      MultiAZEnabled: true
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+      AutomaticFailoverEnabled: true
+      AutoMinorVersionUpgrade: true
+      PreferredMaintenanceWindow: "sun:05:00-sun:06:00"
+
+  #######################
+  # End Redis Resources #
+  #######################
 
 Outputs:
   FargateServiceTaskDefExecutionRoleArn:

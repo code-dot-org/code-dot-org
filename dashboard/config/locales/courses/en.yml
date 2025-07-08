@@ -5499,19 +5499,21 @@ en:
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
         self-paced-pl-ai-foundations-2025:
-          title: Teaching AI Foundations
+          title: EARLY ACCESS - Teaching AI Foundations
           description_short: ''
-          description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
-          description_teacher: |-
+          description_student: |+
+            This is an **EARLY ACCESS** version of the PL for AI Foundations. The updated self-paced PL modules can be found at https://studio.code.org/courses/teaching-ai-foundations-2025/.
+            <br>
+            <br>
+
+          description_teacher: |+
+            This is an **EARLY ACCESS** version of the PL for AI Foundations. The updated self-paced PL modules can be found at https://studio.code.org/courses/teaching-ai-foundations-2025/.
+            <br>
+            <br>
+
+
             AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
 
-            ## Prerequisites
-            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
-
-            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
-
-            ## Did you know?
-            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
           version_title: ''
         teaching-k5-music-lab-2025:
           title: teaching-k5-music-lab-2025
@@ -5712,7 +5714,7 @@ en:
           version_title: ''
         teaching-csd-microbit-2025:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
-          description_short: ''
+          description_short: " After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students."
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: 25-26
@@ -5933,7 +5935,7 @@ en:
           description_short: Welcome to Code.org's free self-paced online educator course for getting started with Computer Science Fundamentals!
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-fabric-of-internet-2025:
           title: Teaching Fabric of the Internet
           description_short: ''
@@ -6177,3 +6179,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        allthelessonplans:
+          title: All The Lesson Plans
+          description_short: ''
+          description_student: Student overview of the course.
+          description_teacher: Teacher overview of the course.
+          version_title: '2020'
+        original-allthettsthings-course:
+          title: original-allthettsthings-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

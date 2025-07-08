@@ -1,0 +1,34 @@
+{
+  "entryContent": {
+    "fields": {
+      "name": {
+        "en-US": "❌ [ENG] B Person"
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "title": {
+        "en-US": "B Person Title"
+      },
+      "bio": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
+      },
+      "personalLink": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5CznPyR4ZsbIkhpwSaUxoe"
+          }
+        }
+      }
+    }
+  },
+  "contentType": "person"
+}

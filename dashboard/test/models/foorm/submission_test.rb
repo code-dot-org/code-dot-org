@@ -50,8 +50,10 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
   end
 
   test 'formatted_answers formats submission with workshop metadata as expected' do
+    workshop = build(:csf_101_workshop)
+    workshop.save(validate: false)
     create :foorm_form_csf_intro_post_survey
-    workshop_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low
+    workshop_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop
     answers = workshop_form_submission_metadata.foorm_submission.formatted_answers
 
     workshop_metadata_keys = ['user_id', 'pd_workshop_id', 'pd_session_id']
@@ -67,7 +69,8 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
 
   test 'associated_facilitator_submissions finds submissions when they exist' do
     user = create :teacher
-    workshop = create :csf_101_workshop
+    workshop = build :csf_101_workshop
+    workshop.save(validate: false)
 
     workshop_submission_metadata = create :csf_intro_post_workshop_submission,
       :answers_low,

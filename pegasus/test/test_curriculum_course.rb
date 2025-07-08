@@ -4,7 +4,8 @@ require src_dir 'curriculum_course'
 
 class CurriculumCourseTest < Minitest::Test
   describe CurriculumCourse do
-    def setup
+    before do
+      skip unless CDO.has_pegasus_content
       @course = CurriculumCourse.new('course1')
     end
 
@@ -36,7 +37,7 @@ class CurriculumCourseTest < Minitest::Test
     end
 
     describe 'with unit numbers' do
-      def setup
+      before do
         @course_with_units = CurriculumCourse.new('csp')
         @course_without_units = CurriculumCourse.new('course1')
       end

@@ -94,7 +94,7 @@ module AichatSafetyHelper
     end
 
     private def client
-      OpenaiChatHelper::Client.new(API_KEY, MODEL)
+      AichatOpenaiResponsesHelper::Client.new(API_KEY, MODEL)
     end
 
     private def comprehend_enabled?(role)

@@ -11,7 +11,7 @@ Feature: Using the teacher homepage
     And I get levelbuilder access
 
     # Create a section with a course
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
 
     # Create a student to join the second section
     And I create a student named "Bobby"
@@ -65,7 +65,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I click "#ui-test-delete-section" once it exists
     And I click "#ui-test-delete-section-confirm" once it exists
     Then I wait until element "#section-options-dropdown-dropdown-button" is gone
-  
+
   Scenario: Teacher can assign a course from the "Assign a course" button and access lessons from the "Jump to" dropdown
     Given I am a teacher
     And I create a new student section
@@ -80,7 +80,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait until element "#course-content-dropdown-Untitled-Section" is visible
     And element "#course-content-dropdown-Untitled-Section" has text "Course: AI for Oceans"
-    Then I click "#go-to-lesson-dropdown-dropdown-button" once it exists
+    Then I click "#go-to-lesson-dropdown-button" once it exists
     And I click "#ui-test-Lesson-1-AI-for-Oceans" once it exists
     Then I wait until element "a:contains(AI for Oceans)" is visible
 
@@ -95,7 +95,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     Given I create a teacher named "Teacher Hank"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
     Then I create a student named "Bobby"
     And I sign in as "Bobby"
     And I join the section
@@ -106,7 +106,7 @@ Scenario: Teacher can delete a section from the section options dropdown
 
   Scenario: Teacher can view lesson materials from the "View lesson materials" button on the section card
     Given I am a teacher
-    And I create a new student section assigned to "interactive-games-animations-2024"
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1
     And I am on "http://studio.code.org/teacher_dashboard/home"
     Then I click "#task-button-View-lesson-materials" once it exists
     Then I wait until element "h1:contains(Lesson Materials)" is visible
@@ -122,7 +122,7 @@ Scenario: Teacher can delete a section from the section options dropdown
     And I create a new student section
 
     # Create a section with a course
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
 
     # Create a student to join the second section
     Given I create a student named "Bobby"

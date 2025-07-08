@@ -72,7 +72,7 @@
             = link_to '[E]', edit_level_path(project_template_level)
 
       - elsif @script_level
-        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, **@extra_params)).to_s
+        %li= link_to 'edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, **(@extra_params || {}))).to_s
     - if @level.is_a?(Blockly) && !@level.uses_droplet?
       %button{type: 'button', onclick: 'window.levelbuilder.copySelectedBlockToClipboard()', class: 'btn btn-default btn-sm'}
         Copy selected block
@@ -164,7 +164,7 @@
           Bookmark as a featured project
 
       #unpublished_warning{'style' => 'display: none; margin-top: 20px; width: 250px;'}
-        * This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.
+        * This project is currently unpublished. It can still be bookmarked, but it will not show in the featured projects gallery until it is published.
 
     - if current_user.project_validator?
       %br

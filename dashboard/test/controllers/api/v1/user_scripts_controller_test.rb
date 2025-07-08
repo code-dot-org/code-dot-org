@@ -14,7 +14,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
 
   test "student without user_script can dismiss version warning" do
     user = create :user
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     sign_in user
     patch "/api/v1//user_scripts/#{script.id}", params: {
       version_warning_dismissed: true

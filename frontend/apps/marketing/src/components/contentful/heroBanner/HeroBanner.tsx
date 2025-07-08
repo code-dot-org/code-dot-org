@@ -14,8 +14,6 @@ type HeroBannerProps = {
   contentMode: Theme;
   /** HeroBanner image size (whether show with wide text (text is wider than image)) */
   imageSize: 'Small' | 'Big';
-  /** Whether to show the background color */
-  removeBackground?: boolean;
   /** HeroBanner cf styles*/
   className?: string;
   /** HeroBanner heading */
@@ -75,7 +73,6 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   partnerLogo,
   partnerCallout,
   backgroundImage,
-  removeBackground = false,
   className,
 }) => {
   const firstSectionImage = sectionImages?.[0];
@@ -104,6 +101,8 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
                     href: firstAnnouncementBannerLink.fields.primaryTarget,
                     external:
                       firstAnnouncementBannerLink.fields.isThisAnExternalLink,
+                    openInNewTab:
+                      firstAnnouncementBannerLink.fields.isThisAnExternalLink,
                   }
                 : undefined,
             }
@@ -130,6 +129,9 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
+                : undefined,
             }
           : undefined
       }
@@ -155,7 +157,6 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
           : undefined
       }
       VideoComponent={Video}
-      removeBackground={removeBackground}
     />
   );
 };

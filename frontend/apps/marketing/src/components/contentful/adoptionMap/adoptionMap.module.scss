@@ -1,0 +1,116 @@
+@use '@code-dot-org/component-library-styles/font.scss' as font;
+@use '@code-dot-org/component-library-styles/cms/variables.scss' as cmsVars;
+
+.adoptionMap {
+  background-color: var(--background-neutral-primary);
+  position: relative;
+  width: 100%;
+
+  .adoptionMapPoint {
+    display: inline-block;
+    border-style: solid;
+    border-radius: 50%;
+    height: 0.625rem;
+    width: 0.625rem;
+    flex-shrink: 0;
+  }
+
+  .adoptionMapSchool {
+    .adoptionMapSchoolHeading {
+      margin: 0 0 0.25rem;
+    }
+
+    .adoptionMapSchoolLocation,
+    .adoptionMapSchoolLegend {
+      display: flex;
+      gap: 0.25rem;
+      align-items: flex-start;
+
+      &,
+      :first-child {
+        font-size: 0.75rem;
+        line-height: 1.64;
+      }
+
+      :first-child {
+        flex-shrink: 0;
+      }
+    }
+
+    .adoptionMapSchoolLocation {
+      margin: 0 0 0.75rem;
+
+      i {
+        color: var(--text-neutral-placeholder);
+      }
+
+      .adoptionMapSchoolLocationText {
+        font-weight: font.$semi-bold-font-weight;
+        margin: 0;
+      }
+    }
+
+    .adoptionMapSchoolLegend {
+      color: var(--text-neutral-tertiary);
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      :first-child {
+        margin-top: 0.3rem;
+      }
+    }
+
+    .adoptionMapSchoolButton {
+      width: 100%;
+    }
+  }
+
+  .adoptionMapLegend {
+    width: 15.625rem;
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-primary);
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.07);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 2.25rem;
+    left: 0.5rem;
+    z-index: 1;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+
+        small {
+          @include font.main-font-regular;
+          color: var(--text-neutral-tertiary);
+          font-size: 0.75rem;
+          line-height: 1.64;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: cmsVars.$mobile-breakpoint) {
+  .adoptionMap {
+    .adoptionMapLegend {
+      position: static;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+    }
+  }
+}

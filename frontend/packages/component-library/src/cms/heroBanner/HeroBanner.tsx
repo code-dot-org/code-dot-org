@@ -51,8 +51,6 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
    *  If you're using backgroundImageUrl - you should make sure you set correct theme value to HeroBanner.
    *  */
   'data-theme'?: Theme;
-  /** Whether to show the background color */
-  removeBackground?: boolean;
   /** HeroBanner whether show with wide text (text is wider than image) */
   withWideText?: boolean;
   /** HeroBanner partner prop */
@@ -88,7 +86,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   announcementBannerProps,
   backgroundColor,
   backgroundImageUrl,
-  removeBackground = false,
   withWideText = false,
   className,
   ...HTMLAttributes
@@ -119,7 +116,6 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         backgroundImage: backgroundImageUrl
           ? `url(${backgroundImageUrl})`
           : HTMLAttributes.style?.backgroundImage,
-        ...(removeBackground ? {background: 'none'} : {}),
       }}
     >
       <div className={classNames(moduleStyles.heroBannerContainer)}>

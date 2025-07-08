@@ -18,6 +18,8 @@ export interface TypographyProps {
   children: ReactNode;
   /** Typography element id */
   id?: string;
+  /** Typography without margins */
+  noMargin?: boolean;
 }
 
 const Typography: React.FunctionComponent<TypographyProps> = ({
@@ -27,6 +29,7 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   className,
   style,
   id,
+  noMargin = false,
   ...props
 }) => {
   const Tag = semanticTag;
@@ -34,7 +37,11 @@ const Typography: React.FunctionComponent<TypographyProps> = ({
   return (
     <Tag
       id={id}
-      className={classnames(moduleStyles[visualAppearance], className)}
+      className={classnames(
+        moduleStyles[visualAppearance],
+        noMargin && moduleStyles['no-margin'],
+        className,
+      )}
       style={style}
       {...props}
     >

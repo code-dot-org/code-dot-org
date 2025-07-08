@@ -29,7 +29,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -47,7 +47,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -65,7 +65,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -81,6 +81,9 @@ Feature: Using the teacher dashboard homepage (v1)
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   @eyes
+  @skip
+  # Skipped while fixing issue with curriculum version
+  # https://codedotorg.atlassian.net/browse/TEACH-2080
   Scenario: Teacher can view more tiles when clicking on view more button
     When I open my eyes to test "teacher dashboard"
     Given I am a teacher and go home

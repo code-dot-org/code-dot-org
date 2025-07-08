@@ -4,7 +4,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
   setup do
     Unit.stubs(:should_cache?).returns true
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    @script = create :script
+    @script = create(:single_unit_course).first_unit
     @lesson_group = create :lesson_group, script: @script
     @lesson = create :lesson, script: @script, lesson_group: @lesson_group
     @maze_data = {game_id: 25, user_id: 1, name: '__bob4', level_num: 'custom', skin: 'birds', short_instructions: 'sdfdfs'}
@@ -13,7 +13,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @level.save!
     @script_level = create(:script_level, levels: [@level], lesson: @lesson, script: @script)
     @level_path = "/levels/#{@level.id}"
-    @script_level_path = "/s/#{@script.name}/lessons/1/levels/1"
+    @script_level_path = "/courses/#{@script.original_unit_group.name}/units/1/lessons/1/levels/1"
     Unit.script_cache.delete @script.name
     Unit.script_cache.delete @script.id.to_s
 

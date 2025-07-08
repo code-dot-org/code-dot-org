@@ -25,13 +25,13 @@ FactoryBot.define do
       each_session_hours {6}
       num_enrollments {0}
       enrolled_and_attending_users {0}
-      enrolled_unattending_users {0}
+      enrolled_absent_users {0}
       assign_session_code {false}
     end
 
     association :organizer, factory: :workshop_organizer
-    course {Pd::Workshop::COURSES.first}
-    subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    course {Pd::Workshop::COURSE_CSP}
+    subject {Pd::Workshop::SUBJECTS[course].try(&:second)}
     capacity {10}
     name {'Cool workshop'}
     description {'A really cool workshop'}
@@ -96,7 +96,7 @@ FactoryBot.define do
           session.attendances << build(:pd_attendance, session: session, teacher: teacher)
         end
       end
-      evaluator.enrolled_unattending_users.times do
+      evaluator.enrolled_absent_users.times do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end

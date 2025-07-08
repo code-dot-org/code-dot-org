@@ -8,6 +8,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import {useLevelProperties} from '../levelPropertiesContext';
 import {
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
@@ -33,7 +34,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
   const {status, role, chatMessageText, assets} = chatMessage;
   const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
+  const levelName = useLevelProperties().name;
 
   const displayText = getChatMessageDisplayText(
     status,

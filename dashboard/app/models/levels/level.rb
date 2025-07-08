@@ -833,6 +833,10 @@ class Level < ApplicationRecord
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
+  def grade_levels
+    script_levels.map {|script_level| script_level.script&.get_course_version&.course_offering&.grade_levels}.flatten.compact.uniq.join(', ')
+  end
+
   # Define search filter fields
   def self.search_options
     {
@@ -994,6 +998,23 @@ class Level < ApplicationRecord
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
     end
+  end
+
+  def summarize_for_levels_skills
+    {
+      level_id: id,
+      level_name: name,
+      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      skills: skill_identifiers,
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  def skill_identifiers
+    skills.map {|skill| {id: skill.id, key: skill.key}}
+  end
+
+  def skill_keys
+    skills.pluck(:key)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

@@ -135,6 +135,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             type={'tertiary'}
             target="_blank"
             color={'black'}
+            aria-label={commonI18n.documentation()}
           />
         </WithTooltip>
       )}

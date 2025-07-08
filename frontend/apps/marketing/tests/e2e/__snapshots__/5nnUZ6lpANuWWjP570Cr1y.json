@@ -1,0 +1,28 @@
+{
+  "entryContent": {
+    "fields": {
+      "title": {
+        "en-US": "❌ [ENG] Amazon TEST"
+      },
+      "logoImage": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "7ojmgHRZ58dXVrwArsB87Q"
+          }
+        }
+      },
+      "primaryLinkRef": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "6dKwFBFEBdFlARthWp3NPS"
+          }
+        }
+      }
+    }
+  },
+  "contentType": "organization"
+}

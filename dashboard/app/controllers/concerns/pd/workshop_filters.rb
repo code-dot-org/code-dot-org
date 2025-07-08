@@ -129,8 +129,7 @@ module Pd::WorkshopFilters
         when 'subject'
           workshops = workshops.order("subject #{direction}".strip)
         when 'virtual'
-          workshops = workshops.
-          joins("INNER JOIN pd_sessions ON pd_sessions.pd_workshop_id = pd_workshops.id and pd_sessions.deleted_at is null").
+          workshops = workshops.joins_sessions.
           group("pd_workshops.id").
           select("pd_workshops.*, MAX(CASE WHEN pd_sessions.session_format = #{Pd::Session.session_formats[:virtual]} THEN 1 ELSE 0 END) as has_virtual").
           order(Arel.sql("has_virtual #{direction}"))

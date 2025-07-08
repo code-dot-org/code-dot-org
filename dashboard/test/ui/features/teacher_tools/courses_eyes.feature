@@ -5,6 +5,7 @@ Feature: Courses page
 # Broke during the marketing-sites transition
 @skip
 @as_student
+@pegasus_content
 Scenario: Student courses
   Given I am on "http://studio.code.org/home"
   When I open my eyes to test "student courses"
@@ -29,6 +30,7 @@ Scenario: Teacher courses
 # Broke during the marketing-sites transition
 @skip
 @as_student
+@pegasus_content
 Scenario: Student courses, non-english
   When I open my eyes to test "student courses non-english"
   Given I am on "http://studio.code.org/home/lang/es"
@@ -42,6 +44,7 @@ Scenario: Student courses, non-english
 
 # Broke during the marketing-sites transition
 @skip
+@pegasus_content
 Scenario: Signed out courses, learn
   When I open my eyes to test "signed out courses, learn"
   Given I am on "http://code.org/"
@@ -55,6 +58,7 @@ Scenario: Signed out courses, learn
 
 # Broke during the marketing-sites transition
 @skip
+@pegasus_content
 Scenario: Signed out courses, teach
   When I open my eyes to test "signed out courses, teach"
   Given I am on "http://code.org/"
@@ -68,6 +72,7 @@ Scenario: Signed out courses, teach
 
 # Broke during the marketing-sites transition
 @skip
+@pegasus_content
 Scenario: Signed out courses, non-english
   When I open my eyes to test "signed out courses, non-english"
   Given I am on "http://studio.code.org/home/lang/es"

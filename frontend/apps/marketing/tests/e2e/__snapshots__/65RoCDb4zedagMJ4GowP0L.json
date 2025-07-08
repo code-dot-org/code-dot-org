@@ -1,0 +1,22 @@
+{
+  "entryContent": {
+    "fields": {
+      "name": {
+        "en-US": "❌ [ENG] E Person"
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "title": {
+        "en-US": "E Person Title"
+      }
+    }
+  },
+  "contentType": "person"
+}

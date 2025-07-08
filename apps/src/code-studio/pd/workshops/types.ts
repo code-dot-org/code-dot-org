@@ -10,6 +10,7 @@ export interface FacilitatorInfo {
   name: string;
   email: string;
   bio?: string;
+  image_path?: string;
 }
 
 export interface SessionInfo {
@@ -43,4 +44,30 @@ export interface GetWorkshopInfoScriptDataResponse {
   regional_partner_name?: string;
   organizer: OrganizerInfo;
   facilitators?: FacilitatorInfo[];
+}
+
+export type UserInfoForWorkshop = {
+  id: number;
+  email: string;
+  display_name: string;
+  is_student?: boolean;
+  first_name?: string;
+  last_name?: string;
+  school_info?: {
+    school_id?: number;
+    country?: string;
+    school_name?: string;
+    school_zip?: string;
+  };
+};
+
+export type WorkshopEnrollmentParams = Pick<
+  UserInfoForWorkshop,
+  'email' | 'first_name' | 'last_name' | 'school_info'
+> & {
+  user_id: number;
+};
+
+export interface GetUserInfoForWorkshopResponse {
+  userInfo: UserInfoForWorkshop | null;
 }

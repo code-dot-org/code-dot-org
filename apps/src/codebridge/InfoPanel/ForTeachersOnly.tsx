@@ -1,7 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import React from 'react';
 
-import PredictSolution from '@cdo/apps/lab2/views/components/PredictSolution';
+import PredictSolution from '@cdo/apps/lab2/views/components/Instructions/PredictSolution';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 
 const ForTeachersOnly: React.FunctionComponent = () => {

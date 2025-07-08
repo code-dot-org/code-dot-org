@@ -3,23 +3,23 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Opportunities for Assessment
+# Assessment in the Curriculum
 
-#### Throughout the Programming with Music Lab curriculum, you have various opportunities to assess student work. Within each non-project lesson, students will have a **check-in** level and an **assessment** level. In Synthesis lessons, the assessment is a **reflection** level.
+#### Throughout the Programming with Music Lab curriculum, you have various opportunities to assess student work. Within Explore and Practice lessons, students will complete a **check-in level** and an **assessment level**. Synthesize lessons also have check-ins, but replace the assessment level with a **written reflection level**.
 
-<div style="text-align: center; margin: 30px auto;">
-    <img src="https://images.code.org/5450d5fb4e3f3fe0c537417eb0ab6ade-image-1745270247368.17.22 PM.png" alt="A level progression for the sequences explore lesson, showing the check-in and assessment levels" style="width: 30%; border-radius: 5px;">
-
-  <!-- Caption -->
-  <p style="font-size: 12pt; margin-top: 8px;">Check-in and assessment levels have a purple check mark.</p>
+<div style="width: 90%; margin: 20px auto 0 auto;">
+	<div style="display: flex; justify-content: center; gap: 2%;">
+		<div style="width: 20%; text-align: center;"><img src="https://images.code.org/b8a75bdf85d1adcb961521d9209eb2aa-image-1751489028535.43.45 PM.png" alt="A level progression for the sequences explore lesson, showing the check-in and assessment levels" style="width: 100%; border-radius: 10px;"></div>
+		<div style="width: 78%; text-align: center;"><img src="https://images.code.org/29fc0c2eee30dfea2252b9c6e885a3e6-image-1751488877025.41.13 PM.png" alt="A Music Lab check-in level" style="width: 100%; border-radius: 10px;"></div>
+	</div>
+	<p style="text-align: center; font-size: 12pt; margin-top: 10px; margin-bottom: 20px;">On the <b>curriculum overview page</b> (left), check-in and assessment levels have a purple check mark. On <b>student levels</b> (right), check-in and assessment levels will have the same purple check mark at the top.</p>
 </div>
 
-<div style="text-align: center; margin: 30px auto;">
-    <img src="https://images.code.org/b65fc2316d96a3fccbe3b391d5020153-image-1744327348777.22.07 PM.png" alt="A row of levels in the teacher progress checker that shows assessment levels with black stars next to them." style="width: 80%; border-radius: 10px;">
-    <p style="font-size: 12pt; margin-top: 5px;">When checking student progress, assessment levels will have a black star next to their numbers.</p>
-</div>
+<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+For an introduction to checking student progress, watch our video, <a href="https://www.youtube.com/watch?v=h5PvLB5gZkg" target="blank" rel="noopener noreferrer">Getting Started with Code.org: Progress Feedback & Assessment</a>.
+</p>
 
-#### For an introduction to checking student progress, watch our video, <a href="https://www.youtube.com/watch?v=h5PvLB5gZkg" target="blank" rel="noopener noreferrer">Getting Started with Code.org: Progress Feedback & Assessment</a>.
+#### 
 
 ## Check-In Levels
 
@@ -29,7 +29,6 @@ markdown <<MARKDOWN
 
 #### Assessment levels happen toward the end of a level progression, giving you data to review after a lesson has completed. They are for **summative assessment**. Use these levels to gain a holistic view of student understanding and direction for how to adjust future instruction.
 
-## Projects
-
-#### Mini-Projects and the End-of-Unit Project allow for additional **summative assessment**, but based on a student's understanding of computer science concepts - like sequences, loops, and functions - on a holistic level. We provide rubrics for these levels to capture student learning.
+<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #048899;">We've created Cheat Sheets to help you assess check-in and assessment levels while you're teaching. <a href="https://drive.google.com/file/d/1o0EjewyRvc4QzXtURK5hkMVAn7kfefGP/view?usp=drive_link" target="blank" rel="noopener noreferrer">Access the Cheat Sheets here</a>.
+</p>
 MARKDOWN
