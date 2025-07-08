@@ -2,12 +2,13 @@
 - csf_prefixes = %w[/s/k5-unplugged /s/express-2024 /s/pre-express-2024]
 - donor_prefixes = %w[/s/k5-ai-data-2024 /s/elementaryai-2024 /s/getting-started-with-code /s/k5howaimakesdecisions /s/3-5gamedesign-2024 /s/k5-ai-data-2024 /courses/elementaryai-2024 /s/elem-game-design-2024 /courses/3-5gamedesign-2024 /s/getting-started-with-code /s/k5howaimakesdecisions /s/getting-started-with-code-game-design /s/k5plgamedesign]
 - aif_prefixes = %w[/courses/artificial-intelligence-foundations-2025 /s/aif1-2025 /s/aif2-2025 /s/aif3-2025 /s/aif4-2025 /s/aif5-2025 /s/aif6-2025]
-- prefixes = csd_prefixes + donor_prefixes + csf_prefixes + aif_prefixes
+- dashboard_prefixes = %w[/home /teacher_dashboard /users]
+- prefixes = csd_prefixes + donor_prefixes + csf_prefixes + aif_prefixes + dashboard_prefixes
 - if prefixes.find {|prefix| request.path.start_with?(prefix)}
   / Force English in both JS-land and Rails-land
   - I18n.locale = I18n.default_locale
   - request.locale = I18n.default_locale.to_s
-  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.js", data: { locale: I18n.locale, jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "zM53S8yC4TNgU": aif_prefixes, "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "3vPUSGZrdllW2": csf_prefixes, }.to_json}}
+  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.js", data: { locale: I18n.locale, jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "zM53S8yC4TNgU": aif_prefixes, "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "XJXXkBlsAbHVD": dashboard_prefixes, "3vPUSGZrdllW2": csf_prefixes, }.to_json}}
   :javascript
     // Currently, restrict the localize widget to these pages
     window.forcedLocale = "en-US";
