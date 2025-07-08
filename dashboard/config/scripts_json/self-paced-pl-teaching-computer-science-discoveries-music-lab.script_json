@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-02 22:03:11 UTC",
+    "serialized_at": "2025-07-07 23:45:17 UTC",
     "hide_within_course": true,
     "published_state": null,
     "instruction_type": null,
@@ -505,6 +505,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport"
+        ],
         "progression": "Professional Learning Module Overview"
       },
       "bonus": false,
@@ -677,6 +680,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources"
+        ],
         "progression": "Curriculum Structure"
       },
       "bonus": false,
@@ -699,6 +705,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-CT"
+        ],
         "progression": "Computational Thinking"
       },
       "bonus": false,
@@ -721,6 +730,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-CT1"
+        ],
         "progression": "Computational Thinking"
       },
       "bonus": false,
@@ -743,6 +755,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU"
+        ],
         "progression": "Computational Thinking"
       },
       "bonus": false,
@@ -765,6 +780,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-CT-CFU-Explanation"
+        ],
         "progression": "Computational Thinking"
       },
       "bonus": false,
@@ -787,6 +805,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -809,6 +830,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -831,6 +855,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-careerconnections"
+        ],
         "progression": "Career Spotlights"
       },
       "bonus": false,
@@ -853,6 +880,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-careerspotlights2"
+        ],
         "progression": "Career Spotlights"
       },
       "bonus": false,
@@ -925,6 +955,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-musiclabexplainer"
+        ],
         "progression": "Music Lab Coding Environment"
       },
       "bonus": false,
@@ -1647,15 +1680,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
+          "self-paced-CSDMusicLab-L3-loops4_v2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1663,7 +1693,7 @@
         "activity_section.key": "06bb7a75-fbf6-4514-8f8b-a9fc29e95235"
       },
       "level_keys": [
-        "self-paced-CSDMusicLab-L3-loops4"
+        "self-paced-CSDMusicLab-L3-loops4_v2"
       ]
     },
     {
@@ -3071,9 +3101,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L3-loops4",
+        "level.key": "self-paced-CSDMusicLab-L3-loops4_v2",
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
+          "self-paced-CSDMusicLab-L3-loops4_v2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

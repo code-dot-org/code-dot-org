@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
-import moduleStyles from './styles/validation-status-icon.module.scss';
+import moduleStyles from './validation-status-icon.module.scss';
 
 interface ValidationIconProps {
   status: 'passed' | 'failed' | 'pending' | 'caution' | 'error';

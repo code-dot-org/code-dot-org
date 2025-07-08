@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
@@ -97,6 +98,10 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
       ? (['secondary', 'black'] as const)
       : (['primary', 'purple'] as const);
 
+  const iconRight: FontAwesomeV6IconProps | undefined = hasNextLevel
+    ? {iconName: 'arrow-right', iconStyle: 'solid'}
+    : undefined;
+
   if (!canShow) {
     return null;
   }
@@ -106,6 +111,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
       id="instructions-continue-button"
       {...{className, size, text, type, color}}
       onClick={() => dispatch(continueOrFinishLesson())}
+      iconRight={iconRight}
     />
   );
 };

@@ -662,20 +662,8 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  # Min number of days a teacher must attend for it to count.
-  # @return [Integer]
-  def min_attendance_days
-    [1, time_constraint(:min_days)].compact.max
-  end
-
-  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
-  # @return [Integer] number of payment days, after applying constraints
-  def effective_num_days
-    [sessions.count, time_constraint(:max_days)].compact.min
-  end
-
-  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
-  # @return [Integer] number of payment hours, after applying constraints
+  # Apply max # of hours for certificates, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of pd hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min

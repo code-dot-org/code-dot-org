@@ -22,12 +22,18 @@
   line-height: 1.5;
   display: flex;
   overflow: hidden;
-  margin-bottom: 45px; // space for copyright footer
-  background-color: var(--background-neutral-primary);
 
   &.vertical {
     flex-direction: column;
   }
+}
+
+.fixedDarkBackground {
+  background-color: var( --background-neutral-black-fixed);
+}
+
+.standardBackground {
+  background-color: var(--background-neutral-primary);
 }
 
 .item {
@@ -47,11 +53,15 @@
 }
 
 .bubble {
+  position: relative;
   padding: 12px;
   border-radius: 4px;
   animation: slidein 0.5s;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
 
   h1, h2, h3, h4 {
     color: var(--text-brand-teal-primary);
@@ -70,6 +80,13 @@
   }
 }
 
+.textContent {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
 .bubbleNoSlide {
   animation: none;
 }
@@ -77,12 +94,6 @@
 .buttonInstruction {
   width: 100%;
   height: 32px;
-}
-
-// Using button to increase specificity of this class
-// (this allows it to take precedence over the component library button styles)
-button.validationButton {
-  margin-top: 8px;
 }
 
 .markdownText {
@@ -159,9 +170,70 @@ button.validationButton {
   padding: 12px;
 }
 
-.scrollingContent {
-  display: flex;
-  flex-direction: column;
+.imageContainer {
+  text-align: center;
+
+  &.horizontal {
+    text-align: left;
+    width: 140px;
+  }
+
+  .image {
+    cursor: pointer;
+    max-height: 120px;
+
+    &.fixedHeight {
+      height: 70px;
+    }
+  }
+
+  .bigImage {
+    position: absolute;
+    width: 440px;
+    text-align: left;
+    top: 0;
+    left: 0;
+
+    &Left {
+      left: auto;
+      right: 0;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      border: 10px var(--background-neutral-lab) solid;
+      z-index: 80;
+      cursor: pointer;
+    }
+  }
+}
+
+.feedback {
+  &Bottom {
+    margin-top: auto;
+  }
+}
+
+%scrolling-content {
+  flex: 1;
   overflow-y: auto;
-  margin-bottom: 10px;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 15px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
+}
+
+.bottomComponent {
+  overflow: hidden;
+}
+
+.predictSummaryBubble {
+  flex-shrink: 0; // Ensure the contents always fits in the bubble.
 }
