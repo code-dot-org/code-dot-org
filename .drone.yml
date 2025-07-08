@@ -14,7 +14,7 @@ clone:
   disable: true
 
 services:
-  - name: unit-tests-redis
+  - name: ci-tests-redis
     image: redis
     ports:
       - 6379
@@ -70,14 +70,14 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  - name: restore-cache
-    image: plugins/s3-cache
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      restore: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
+  # - name: restore-cache
+  #   image: plugins/s3-cache
+  #   settings:
+  #     endpoint: s3://cdo-drone
+  #     debug: true
+  #     pull: true
+  #     restore: true
+  #     filename: unit-tests-cache-ubuntu-20.tar.gz
 
   - name: unit-tests
     # see: docker/ci/Dockerfile
@@ -109,19 +109,19 @@ steps:
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
 
-  - name: update-cache
-    image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-    settings:
-      endpoint: s3://cdo-drone
-      debug: true
-      pull: true
-      rebuild: true
-      filename: unit-tests-cache-ubuntu-20.tar.gz
-      mount:
-        - /home/ci/.rbenv
+  # - name: update-cache
+  #   image: plugins/s3-cache
+  #   volumes:
+  #     - name: rbenv
+  #       path: /home/ci/.rbenv
+  #   settings:
+  #     endpoint: s3://cdo-drone
+  #     debug: true
+  #     pull: true
+  #     rebuild: true
+  #     filename: unit-tests-cache-ubuntu-20.tar.gz
+  #     mount:
+  #       - /home/ci/.rbenv
 
 volumes:
   - name: rbenv
@@ -147,7 +147,7 @@ clone:
   disable: true
 
 services:
-  - name: ui-tests-redis
+  - name: ci-tests-redis
     image: redis
     ports:
       - 6379
@@ -204,23 +204,23 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # We cache staging's rbenv and database in the
-  # `cache-staging-build-artifacts` pipeline.
-  - name: get-cached-staging-misc-build-artifacts
-    image: plugins/s3-cache
-    volumes:
-      # Even files cached with absolute paths will be restored into the
-      # workdir; so for this step, we mount the relevant volumes there, too.
-      - name: rbenv
-        path: /drone/src/home/ci/.rbenv
-      - name: mysql
-        path: /drone/src/var/lib/mysql
-    settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
-      endpoint: s3://cdo-drone
-      restore: true
-      debug: true
-      pull: true
+  # # We cache staging's rbenv and database in the
+  # # `cache-staging-build-artifacts` pipeline.
+  # - name: get-cached-staging-misc-build-artifacts
+  #   image: plugins/s3-cache
+  #   volumes:
+  #     # Even files cached with absolute paths will be restored into the
+  #     # workdir; so for this step, we mount the relevant volumes there, too.
+  #     - name: rbenv
+  #       path: /drone/src/home/ci/.rbenv
+  #     - name: mysql
+  #       path: /drone/src/var/lib/mysql
+  #   settings:
+  #     filename: cache-staging-misc-build-artifacts.tar.gz
+  #     endpoint: s3://cdo-drone
+  #     restore: true
+  #     debug: true
+  #     pull: true
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -291,22 +291,23 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL . 
 
-  - name: cache-staging-clone
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-clone.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - .
+  # - name: cache-staging-clone
+  #   image: plugins/s3-cache
+  #   settings:
+  #     filename: cache-staging-clone.tar.gz
+  #     endpoint: s3://cdo-drone
+  #     rebuild: true
+  #     debug: true
+  #     pull: true
+  #     mount:
+  #       - .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
-  - name: prepare-ui-tests
+  - name: prepare-ci-tests
     image: codedotorg/code-dot-org:1.16
     pull: always
     environment:
@@ -319,7 +320,7 @@ steps:
         path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
-      - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+      - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
 
   - name: cache-staging-full-build
     image: plugins/s3-cache
@@ -347,10 +348,15 @@ volumes:
 
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+#     - "staging"
+#     - "staging-next"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
-    - push
+#     - push
+    - pull_request
 ---
 kind: signature
 hmac: d706a958430c49a672f3c7c5a42209f54dd4cc1aada7d68e2489307e2d98b275
