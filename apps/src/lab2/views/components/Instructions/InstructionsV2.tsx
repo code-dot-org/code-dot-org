@@ -1,6 +1,6 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -131,6 +131,25 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     }
   }, [validationState?.validationResults]);
 
+  const canShowNextButton = useMemo(() => {
+    if (levelProperties?.submittable) {
+      return true;
+    } else if (predictSettings?.isPredictLevel) {
+      return predictResponseSubmitted;
+    } else if (validationState?.hasConditions) {
+      return validationState?.satisfied;
+    } else {
+      return hasRun;
+    }
+  }, [
+    hasRun,
+    levelProperties?.submittable,
+    predictResponseSubmitted,
+    predictSettings?.isPredictLevel,
+    validationState?.hasConditions,
+    validationState?.satisfied,
+  ]);
+
   // Don't render anything if we don't have any instructions.
   if (
     levelProperties === undefined ||
@@ -138,10 +157,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   ) {
     return null;
   }
-
-  const canShowNextButton =
-    (!validationState?.hasConditions || validationState?.satisfied) &&
-    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   const vertical = layout === 'vertical';
   const showSecondaryFinishButton = useSecondaryFinishButton && !hasNextLevel;

@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -52,6 +52,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     <ContinueButton
       className={className}
       size={size}
+      hasRun={hasRun}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
     />
   );
@@ -61,6 +62,7 @@ interface ContinueButtonProps {
   className?: string;
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
+  hasRun?: boolean;
 }
 
 /**
@@ -70,6 +72,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   className,
   size,
   isPredictLevel,
+  hasRun,
 }) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
@@ -78,18 +81,32 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const passingValidation = useAppSelector(
-    state =>
-      !state.lab.validationState.hasConditions ||
-      state.lab.validationState.satisfied
+  const hasConditions = useAppSelector(
+    state => state.lab.validationState.hasConditions
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState.satisfied
   );
   const useSecondaryFinishButton =
     useAppSelector(
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
-  const canShow =
-    (!isPredictLevel || hasSubmittedPredictResponse) && passingValidation;
+  const canShow = useMemo(() => {
+    if (isPredictLevel) {
+      return hasSubmittedPredictResponse;
+    } else if (hasConditions) {
+      return validationSatisfied;
+    } else {
+      return hasRun;
+    }
+  }, [
+    hasRun,
+    hasConditions,
+    isPredictLevel,
+    hasSubmittedPredictResponse,
+    validationSatisfied,
+  ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
