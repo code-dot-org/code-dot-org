@@ -122,24 +122,28 @@ namespace :seed do
     focus-on-creativity3-2024
     focus-on-coding3-2024
     customizing-llms-2024
-    csp1-2017
-    csp2-2017
-    csp3-2017
-    csp4-2017
-    csp5-2017
     csp-ap
-    csp-explore-2017
-    csp-create-2017
-    csp-post-survey
-    csppostap-2017
-    csp1-2019
-    csp2-2019
-    csp3-2019
-    csp4-2019
-    csp5-2019
-    csp-explore-2019
-    csp-create-2019
-    csppostap-2019
+    csp1-2024
+    csp2-2024
+    csp3-2024
+    csp4-2024
+    csp5-2024
+    csp6-2024
+    csp7-2024
+    csp8-2024
+    csp9-2024
+    csp10-2024
+    csp-post-survey-2024
+    csp1-2025
+    csp2-2025
+    csp3-2025
+    csp4-2025
+    csp5-2025
+    csp6-2025
+    csp7-2025
+    csp8-2025
+    csp9-2025
+    csp10-2025
     dance
     events
     flappy
@@ -322,8 +326,8 @@ namespace :seed do
   timed_task_with_logging courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
     %w(allthethingscourse
-       csp-2017
-       csp-2019
+       csp-2024
+       csp-2025
        20-hour
        algebra
        allthelessonplans
