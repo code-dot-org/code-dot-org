@@ -5,8 +5,8 @@
 # you can use docker-compose to run locally using
 # `docker/ui-tests-compose.yml`. See instructions in that file.
 
-source docker/ci/scripts/prepare_ci_tests.sh
-
 export CI_JOB=ui_tests
+
+source docker/ci/scripts/prepare_ci_tests.sh
 
 bundle exec rake ci:run_ui_tests
