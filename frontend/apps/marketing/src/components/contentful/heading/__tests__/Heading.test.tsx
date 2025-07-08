@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import Heading from '@/components/contentful/heading';
+import Heading from '../Heading';
 
 describe('Heading Component', () => {
   it('should render out all headings', async () => {
@@ -33,5 +33,15 @@ describe('Heading Component', () => {
     expect(screen.getByRole('heading', {level: 6})).toHaveTextContent(
       'xs - h6',
     );
+  });
+
+  it('removes margin when removeMarginBottom is true', () => {
+    render(
+      <Heading visualAppearance={'heading-md'} removeMarginBottom>
+        No Margin
+      </Heading>,
+    );
+    const heading = screen.getByText('No Margin');
+    expect(window.getComputedStyle(heading).marginBottom).toBe('0px');
   });
 });
