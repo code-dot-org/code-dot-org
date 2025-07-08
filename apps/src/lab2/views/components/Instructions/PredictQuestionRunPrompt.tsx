@@ -33,7 +33,14 @@ const PredictQuestionRunPrompt: React.FunctionComponent<
       </div>
     );
   } else if (hasSubmitted) {
-    return <Alert text="Submitted" type="success" size="s" />;
+    return (
+      <Alert
+        text="Submitted"
+        type="success"
+        size="s"
+        className={moduleStyles.successAlert}
+      />
+    );
   } else {
     return null;
   }

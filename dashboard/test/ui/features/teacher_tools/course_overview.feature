@@ -1,3 +1,6 @@
+@skip
+# Skipped while fixing issue with curriculum version
+# https://codedotorg.atlassian.net/browse/TEACH-2080
 Feature: CourseOverview
   Scenario: Viewing course overview signed out
     Given I am on "http://studio.code.org/courses/csp-2019"

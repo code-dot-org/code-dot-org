@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-14T21:44:42.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Play Sequential\n\nThey can be used to get sounds with different lengths to line up inside a `play together` block\n",
+        "text": "### Play Sequential\n\nThey can be used to get sounds with different lengths to line up inside a `play together` block to create harmony\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> **Harmony:** When different notes or sounds play together to support a melody and make the music sound fuller \n",
         "imageUrl": "https://images.code.org/e23b73233d223dc8bb49c5882a5835a2-sequential-2.png",
         "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf",
         "fadeInOverPrevious": true
@@ -43,7 +44,6 @@
     "bubble_choice_description": "Review how to use Play Sequential when creating songs",
     "display_name": "Play Sequential"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T21:44:42.975+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:44:42.975+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-panel\"},{\"changed_at\":\"2025-07-07 22:09:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Panels>

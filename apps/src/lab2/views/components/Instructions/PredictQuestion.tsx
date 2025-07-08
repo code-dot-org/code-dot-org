@@ -5,7 +5,7 @@ import {
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
 
-import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';
+import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../../constants';
 
 import PredictResetButton from './PredictResetButton';
 

@@ -5,7 +5,7 @@ import {Theme} from '@cdo/apps/lab2/types';
 
 import MainInstructionsContent from './MainInstructionsContent';
 
-import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
+import moduleStyles from './instructions.module.scss';
 
 interface MainInstructionsPreviewProps {
   instructionsText: string;

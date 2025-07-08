@@ -92,7 +92,6 @@ module OpenaiEvaluateHelper
 
     response = evaluate(
       user_level.level,
-      unit,
       student_work: student_work,
       evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     )
@@ -105,7 +104,7 @@ module OpenaiEvaluateHelper
     student_code = helper.get_student_code(user_level.user.id, user_level.level, unit.id)
 
     unless student_code.nil? || student_code[:student_code].nil?
-      response = evaluate(user_level.level, unit, student_work: student_code[:student_code], evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT])
+      response = evaluate(user_level.level, student_work: student_code[:student_code], evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT])
 
       create_ai_evaluations_from_ai_response(user_level.user, user_level, unit, response, code_version: student_code[:code_version])
     end

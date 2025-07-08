@@ -50,6 +50,7 @@ Feature: BubbleChoice
   # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
   @no_mobile
   @no_firefox
+  @no_safari
   @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"

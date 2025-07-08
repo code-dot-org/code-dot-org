@@ -1,13 +1,24 @@
 import Button from '@code-dot-org/component-library/button';
-import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
+import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {
+  setIsValidating,
+  setHasValidated,
+} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import CodebridgeRegistry from '../CodebridgeRegistry';
+import {getSystemMessage} from '../Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ForTeachersOnly from './ForTeachersOnly';
@@ -18,16 +29,6 @@ enum Panels {
   Instructions = 'Instructions',
   ForTeachersOnly = 'For Teachers Only',
 }
-
-const panelMap = {
-  [Panels.Instructions]: ValidatedInstructionsView,
-  [Panels.ForTeachersOnly]: ForTeachersOnly,
-};
-
-const panelProps = {
-  [Panels.Instructions]: {},
-  [Panels.ForTeachersOnly]: {},
-};
 
 const panelEventNames = {
   [Panels.Instructions]: EVENTS.CODEBRIDGE_INSTRUCTIONS_TOGGLE,
@@ -48,12 +49,14 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
   style,
   className,
 }) => {
-  const {levelProperties} = useCodebridgeContext();
+  const {levelProperties, onRun, onStop, AiTutor2ResponseView} =
+    useCodebridgeContext();
   const {
     mapReference,
     referenceLinks,
     teacherMarkdown,
     predictSettings,
+    id: levelId,
     appName,
   } = levelProperties;
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
@@ -66,6 +69,19 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     Panels.Instructions,
   ]);
   const hasPredictSolution = predictSettings?.solution;
+
+  const dispatch = useAppDispatch();
+  const scriptId = useAppSelector(state => state.lab.scriptId);
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source
+  ) as MultiFileSource | undefined;
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const isValidating = useAppSelector(state => state.lab2System.isValidating);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
+  );
 
   useEffect(() => {
     // For now, always include Instructions panel.
@@ -124,7 +140,43 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     setIsDropdownOpen(false);
   };
 
-  const CurrentPanelView = panelMap[currentPanel];
+  const handleValidate = () => {
+    if (onRun) {
+      dispatch(setIsValidating(true));
+      sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appName);
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_validate,
+      });
+      onRun(true, dispatch, source).finally(() =>
+        dispatch(setIsValidating(false))
+      );
+      dispatch(setHasValidated(true));
+      dispatch(setShowSuggestedPrompts(true));
+    } else {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotTest(), appName)
+        );
+    }
+  };
+
+  const handleStopValidation = () => {
+    if (onStop) {
+      onStop();
+      dispatch(setIsValidating(false));
+    } else {
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotStop(), appName)
+        );
+      dispatch(setIsValidating(false));
+    }
+  };
+
   return (
     <div style={style} className={className}>
       <PanelContainer
@@ -152,7 +204,24 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             </ul>
           </form>
         )}
-        <CurrentPanelView {...panelProps[currentPanel]} />
+        {currentPanel === Panels.Instructions ? (
+          <InstructionsV2
+            isRunning={isRunning}
+            hasRun={hasRun}
+            hasEdited={hasEdited}
+            validationSettings={{
+              onValidate: handleValidate,
+              onStopValidation: handleStopValidation,
+              isValidating,
+              isValidateDisabled: !hasLoadedEnvironment || isRunning,
+            }}
+            AiTutor2ResponseView={AiTutor2ResponseView}
+            className={moduleStyles.instructionsContainer}
+            levelProperties={levelProperties}
+          />
+        ) : (
+          <ForTeachersOnly />
+        )}
       </PanelContainer>
     </div>
   );

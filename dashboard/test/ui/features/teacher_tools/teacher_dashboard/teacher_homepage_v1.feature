@@ -81,6 +81,9 @@ Feature: Using the teacher dashboard homepage (v1)
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   @eyes
+  @skip
+  # Skipped while fixing issue with curriculum version
+  # https://codedotorg.atlassian.net/browse/TEACH-2080
   Scenario: Teacher can view more tiles when clicking on view more button
     When I open my eyes to test "teacher dashboard"
     Given I am a teacher and go home

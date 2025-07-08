@@ -71,7 +71,11 @@ Dashboard::Application.routes.draw do
 
     resources :user_level_interactions, only: [:create]
 
-    resources :skills, only: [:create, :index, :update, :destroy]
+    resources :skills, only: [:create, :index, :update, :destroy] do
+      collection do
+        get 'section/:section_id/unit/:unit_name', to: 'skills#section_skills'
+      end
+    end
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
