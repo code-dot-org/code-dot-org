@@ -5,12 +5,13 @@ import {
   useNodesData,
   type NodeProps,
   useReactFlow,
+  NodeResizer,
 } from '@xyflow/react';
 import React, {memo, useEffect} from 'react';
 
 import {isTextNode, type MyNode} from './initialElements';
 
-function WebNode({id}: NodeProps) {
+function WebNode({id, selected}: NodeProps) {
   const connections = useNodeConnections({
     handleType: 'target',
   });
@@ -54,9 +55,20 @@ function WebNode({id}: NodeProps) {
   );
 
   return (
-    <div>
+    <div style={{width: '100%', height: '100%'}}>
+      <NodeResizer
+        color="#ff0071"
+        isVisible={selected}
+        minWidth={100}
+        minHeight={30}
+      />
+
       <Handle type="target" position={Position.Left} />
-      <iframe title="iframe" srcDoc={srcDoc} />
+      <iframe
+        title="iframe"
+        srcDoc={srcDoc}
+        style={{width: '100%', height: '100%'}}
+      />
       <Handle type="source" position={Position.Right} />
     </div>
   );
