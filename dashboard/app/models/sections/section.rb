@@ -603,7 +603,7 @@ class Section < ApplicationRecord
       link_to_assigned = base_url
       title_of_current_unit = ''
       link_to_current_unit = ''
-      #course_version_name = nil
+      # course_version_name = nil
 
       if unit_group
         title = unit_group.localized_title
@@ -612,24 +612,25 @@ class Section < ApplicationRecord
         if script_id
           title_of_current_unit = script.title_for_display
           link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
-                                    course_unit_path(unit_group, unit_group_unit.position)
-                                  else
-                                    script_path(script)
-                                  end
+                                   course_unit_path(unit_group, unit_group_unit.position)
+                                 else
+                                   script_path(script)
+                                 end
         end
       elsif script_id
         title = script.title_for_display
-        if unit_group_unit
-          link_to_assigned = if Policies::Courses.modularity_enabled?
-                                course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
-                              else
-                                script_path(script)
-                              end
-          #course_version_name = unit_group_unit.unit_group.name
-        else
-          #course_version_name = script.name
-          link_to_assigned = script_path(script)
-        end
+        link_to_assigned =
+          if unit_group_unit
+            if Policies::Courses.modularity_enabled?
+              course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+            else
+              script_path(script)
+            end
+            #course_version_name = unit_group_unit.unit_group.name
+          else
+            #course_version_name = script.name
+            script_path(script)
+          end
       end
 
       {
