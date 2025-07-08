@@ -396,4 +396,156 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
       end
     end
   end
+
+  describe 'recent courses and scripts' do
+    let(:locale) {:'te-ST'}
+    let(:custom_i18n) do
+      {
+        'data' => {
+          'course' => {
+            'name' => {
+              'csd' => {
+                'title' => 'Computer Science Discoveries',
+                'description_short' => 'CSD short description',
+              },
+              'pl-csd' => {
+                'title' => 'Computer Science Discoveries PL Course',
+                'description_short' => 'PL CSD short description',
+              }
+            }
+          },
+          'script' => {
+            'name' => {
+              'other' => {
+                title: 'Unit Other',
+                'description_short' => 'other-description'
+              },
+              'pl-other' => {
+                title: 'PL Unit Other',
+                'description_short' => 'pl-other-description'
+              }
+            }
+          }
+        }
+      }
+    end
+
+    let(:student) {create :student}
+    let(:teacher) {create :teacher}
+    let(:facilitator) {create :facilitator}
+
+    let(:unit_group) {create :unit_group, name: 'csd'}
+    let(:other_script) {create(:single_unit_course, unit: create(:script, name: 'other')).first_unit}
+    let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
+
+    let(:pl_unit_group) {create :unit_group, :pl_course, name: 'pl-csd'}
+    let(:other_pl_script) {create(:single_unit_course, :pl_course, unit: create(:script, name: 'pl-other')).first_unit}
+
+    let(:pl_section) {create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group}
+
+    before do
+      I18n.locale = locale
+      I18n.backend.store_translations(locale, custom_i18n)
+
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd2'), position: 2
+
+      student.assign_script(other_script)
+
+      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+
+      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil), position: 1
+      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil), position: 2
+
+      teacher.assign_script(other_pl_script)
+
+      Follower.create!(section_id: pl_section.id, student_user_id: teacher.id, user: facilitator)
+    end
+
+    describe '#recent_pl_courses_and_units' do
+      subject(:recent_pl_courses_and_units) {teacher.recent_pl_courses_and_units(false)}
+
+      it 'returns both pl courses and pl scripts' do
+        _(recent_pl_courses_and_units.length).must_equal 2
+        course_data = recent_pl_courses_and_units.first
+        script_data = recent_pl_courses_and_units.last
+        _(course_data[:name]).must_equal 'pl-csd'
+        _(course_data[:title]).must_equal 'Computer Science Discoveries PL Course'
+        _(course_data[:description]).must_equal 'PL CSD short description'
+        _(course_data[:link]).must_equal '/courses/pl-csd'
+
+        _(script_data[:name]).must_equal 'pl-other'
+        _(script_data[:title]).must_equal 'PL Unit Other'
+        _(script_data[:description]).must_equal 'pl-other-description'
+        _(script_data[:link]).must_equal '/s/pl-other'
+      end
+
+      it 'does not return pl scripts that are in returned pl courses' do
+        script = Unit.find_by_name('pl-csd1')
+        teacher.assign_script(script)
+
+        _(recent_pl_courses_and_units.length).must_equal 2
+        _(recent_pl_courses_and_units.pluck(:title)).must_equal [
+          'Computer Science Discoveries PL Course',
+          'PL Unit Other'
+        ]
+        _(recent_pl_courses_and_units.pluck(:name)).wont_include 'pl-csd1'
+      end
+    end
+
+    describe '#recent_student_courses_and_units' do
+      subject(:recent_student_courses_and_units) {student.recent_student_courses_and_units(false)}
+
+      it 'returns both courses and scripts' do
+        _(recent_student_courses_and_units.length).must_equal 2
+        course_data = recent_student_courses_and_units.first
+        script_data = recent_student_courses_and_units.last
+
+        _(course_data[:name]).must_equal 'csd'
+        _(course_data[:title]).must_equal 'Computer Science Discoveries'
+        _(course_data[:description]).must_equal 'CSD short description'
+        _(course_data[:link]).must_equal '/courses/csd'
+
+        _(script_data[:name]).must_equal 'other'
+        _(script_data[:title]).must_equal 'Unit Other'
+        _(script_data[:description]).must_equal 'other-description'
+        _(script_data[:link]).must_equal '/s/other'
+      end
+
+      it 'does not return student scripts that are in returned student courses' do
+        script = Unit.find_by_name('csd1')
+        student.assign_script(script)
+
+        _(recent_student_courses_and_units.length).must_equal 2
+        _(recent_student_courses_and_units.pluck(:title)).must_equal [
+          'Computer Science Discoveries',
+          'Unit Other'
+        ]
+        _(recent_student_courses_and_units.pluck(:name)).wont_include 'csd1'
+      end
+
+      context 'when primary course should not be included in returned student courses' do
+        let(:student) {create :student}
+        let(:teacher) {create :teacher}
+
+        let(:unit_group) {create :unit_group, name: 'testcourse', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+        let(:unit_group_unit1) {create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable), position: 1}
+        let(:other_script) {create :script, name: 'otherscript', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+        let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
+
+        before do
+          create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
+          create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
+          create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
+          Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+        end
+
+        it 'does not return primary course' do
+          courses_and_scripts = student.recent_student_courses_and_units(true)
+          _(courses_and_scripts.length).must_equal 1
+          _(courses_and_scripts.pluck(:name)).must_equal ['testcourse']
+        end
+      end
+    end
+  end
 end

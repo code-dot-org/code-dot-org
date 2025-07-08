@@ -128,4 +128,118 @@ module User::AssignedCoursesAndScripts
     last_progress = user_script_with_most_recent_progress
     assigned != last_progress && assigned[:assigned_at] >= last_progress[:last_progress_at]
   end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_pl_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_pl_unit(self).try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
+
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+
+    user_script_data = pl_user_scripts.filter_map do |user_script|
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Unit.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end
+
+    user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
+
+    user_course_data + user_script_data
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
+  # on the student home page course tiles
+  def recent_student_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
+      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
+
+    user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
+
+    user_script_data = user_student_scripts.filter_map do |user_script|
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Unit.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end
+
+    user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
+
+    user_course_data + user_script_data
+  end
+
+  def pl_units_started
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+    pl_scripts = pl_user_scripts.map(&:script)
+
+    percent_completed_by_script = {}
+    pl_scripts.each do |pl_script|
+      if pl_user_scripts.find {|us| us.script_id == pl_script.id}.completed_at
+        percent_completed_by_script[pl_script.id] = 100
+        next
+      end
+      num_levels_unpassed = num_unpassed_progression_levels(pl_script)
+      total_levels = pl_script.levels.count
+      next if total_levels == 0
+      percent_completed_by_script[pl_script.id] = (((total_levels - num_levels_unpassed).to_f / total_levels) * 100).round
+    end
+
+    pl_scripts.map do |script|
+      # TODO: TEACH-1555 Get the UnitGroupUnit from the user's activity.
+      unit_group_unit = Queries::Courses.unit_group_unit(script)
+      percent_completed = percent_completed_by_script[script.id] || 0
+      {
+        name: script.name,
+        title: script.title_for_display,
+        percent_completed: percent_completed,
+        finish_url: percent_completed == 100 ? script.finish_url : nil,
+        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name,
+        path: script.link(unit_group_unit: unit_group_unit),
+      }
+    end
+  end
 end
