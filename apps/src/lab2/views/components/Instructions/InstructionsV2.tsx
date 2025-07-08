@@ -52,6 +52,9 @@ interface InstructionsProps {
   /** Component to use for AI Tutor responses, if any. */
   AiTutor2ResponseView?: React.ReactNode;
   overrideTheme?: Theme;
+  /** If the lab requires the user to click run in order to continue.
+   * Only applies to non-validated levels. */
+  requireRun?: boolean;
 }
 
 interface ValidationSettings {
@@ -82,6 +85,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   fixedDarkBackground,
   AiTutor2ResponseView,
   overrideTheme,
+  requireRun,
 }) => {
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const validationState = useAppSelector(state => state.lab.validationState);
@@ -139,7 +143,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     } else if (validationState?.hasConditions) {
       return validationState?.satisfied;
     } else {
-      return hasRun;
+      return !requireRun || hasRun;
     }
   }, [
     hasRun,
@@ -148,6 +152,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     predictSettings?.isPredictLevel,
     validationState?.hasConditions,
     validationState?.satisfied,
+    requireRun,
   ]);
 
   // Don't render anything if we don't have any instructions.

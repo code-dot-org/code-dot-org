@@ -27,6 +27,7 @@ interface NavigationButtonProps {
   hasEdited: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
+  requireRun?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -35,6 +36,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   hasEdited,
   className,
   size,
+  requireRun,
 }) => {
   if (levelProperties.submittable) {
     return (
@@ -54,6 +56,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
       size={size}
       hasRun={hasRun}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+      requireRun={requireRun}
     />
   );
 };
@@ -63,6 +66,7 @@ interface ContinueButtonProps {
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
   hasRun?: boolean;
+  requireRun?: boolean;
 }
 
 /**
@@ -73,6 +77,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   size,
   isPredictLevel,
   hasRun,
+  requireRun,
 }) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
@@ -98,7 +103,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     } else if (hasConditions) {
       return validationSatisfied;
     } else {
-      return hasRun;
+      return !requireRun || hasRun;
     }
   }, [
     hasRun,
@@ -106,6 +111,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     isPredictLevel,
     hasSubmittedPredictResponse,
     validationSatisfied,
+    requireRun,
   ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
