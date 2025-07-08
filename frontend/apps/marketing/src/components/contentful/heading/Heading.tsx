@@ -14,10 +14,10 @@ type HeadingVisualAppearance =
   | 'heading-xs';
 
 export type HeadingProps = {
-  /** Heading visual appearance */
-  visualAppearance: HeadingVisualAppearance;
   /** Heading content */
   children: ReactNode;
+  /** Heading visual appearance */
+  visualAppearance: HeadingVisualAppearance;
   /** Remove margin bottom */
   removeMarginBottom?: boolean;
   /** ClassName passed by Contentful to apply styles
@@ -25,8 +25,8 @@ export type HeadingProps = {
   className?: string;
 };
 
-// Maps the existing Contentful heading visualAppearance
-// values to use with MUI Typography `variant` prop.
+// Maps Contentful Heading visualAppearance values with
+// MUI Typography `component` and `variant` prop values.
 const visualAppearanceToSemanticTagMap: Record<
   HeadingVisualAppearance,
   HeadingSemanticTag
