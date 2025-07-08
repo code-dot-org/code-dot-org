@@ -596,19 +596,56 @@ class Section < ApplicationRecord
 
   # A very abridged version of summarize that shows only information needed by participants.
   def summarize_for_participant
-    {
-      id: id,
-      name: name,
-      teacherName: teacher.name,
-      assignedTitle: title,
-      linkToAssigned: link_to_assigned,
-      currentUnitTitle: title_of_current_unit,
-      linkToCurrentUnit: link_to_current_unit,
-      code: code,
-      login_type: login_type,
-      grades: grades,
-      is_assigned_single_unit_course: unit_group&.single_unit_course?,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      base_url = CDO.studio_url('/teacher_dashboard/sections/')
+
+      title = ''
+      link_to_assigned = base_url
+      title_of_current_unit = ''
+      link_to_current_unit = ''
+      #course_version_name = nil
+
+      if unit_group
+        title = unit_group.localized_title
+        link_to_assigned = course_path(unit_group)
+        #course_version_name = unit_group.name
+        if script_id
+          title_of_current_unit = script.title_for_display
+          link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
+                                    course_unit_path(unit_group, unit_group_unit.position)
+                                  else
+                                    script_path(script)
+                                  end
+        end
+      elsif script_id
+        title = script.title_for_display
+        if unit_group_unit
+          link_to_assigned = if Policies::Courses.modularity_enabled?
+                                course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+                              else
+                                script_path(script)
+                              end
+          #course_version_name = unit_group_unit.unit_group.name
+        else
+          #course_version_name = script.name
+          link_to_assigned = script_path(script)
+        end
+      end
+
+      {
+        id: id,
+        name: name,
+        teacherName: teacher.name,
+        assignedTitle: title,
+        linkToAssigned: link_to_assigned,
+        currentUnitTitle: title_of_current_unit,
+        linkToCurrentUnit: link_to_current_unit,
+        code: code,
+        login_type: login_type,
+        grades: grades,
+        is_assigned_single_unit_course: unit_group&.single_unit_course?,
+      }
+    end
   end
 
   def manage_students_url
