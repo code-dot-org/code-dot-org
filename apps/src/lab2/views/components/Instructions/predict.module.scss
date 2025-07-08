@@ -3,26 +3,20 @@
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
-
-  input {
-    margin: 4px 4px 0 0;
-
-    // When the radio/checkbox is disabled and not checked, dim option.
-    &:disabled:not(:checked) {
-      opacity: 0.5;
-      cursor: not-allowed;
-
-      + .multipleChoiceLetter,
-      + .multipleChoiceLetter + .multipleChoiceLabel {
-        color: var(--text-neutral-placeholder);
-      }
-    }
-  }
 }
 
 .multipleChoiceLetter {
   font-weight: bold;
   margin-left: 4px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.disabledNotChecked {
+  opacity: 0.5;
+  color: var(--text-neutral-placeholder);
 }
 
 .multipleChoiceLabel {
