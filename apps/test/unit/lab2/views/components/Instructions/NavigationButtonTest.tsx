@@ -7,11 +7,13 @@ import {Store} from 'redux';
 import '@testing-library/jest-dom';
 import progress, {
   initProgress,
-  mergeResults,
+  setCurrentLevelId,
   setScriptProgress,
 } from '@cdo/apps/code-studio/progressRedux';
-import {TestResults} from '@cdo/apps/constants';
-import lab from '@cdo/apps/lab2/lab2Redux';
+import lab, {setValidationState} from '@cdo/apps/lab2/lab2Redux';
+import predictLevel, {
+  setHasSubmittedResponse,
+} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import NavigationButton from '@cdo/apps/lab2/views/components/Instructions/NavigationButton';
 import {
@@ -65,6 +67,13 @@ describe('NavigationButton', () => {
     submittable: true,
   };
 
+  const predictLevelProperties: LevelProperties = {
+    ...defaultLevelProperties,
+    predictSettings: {
+      isPredictLevel: true,
+    },
+  };
+
   const initialProgress: InitProgressPayload = {
     currentLevelId: '123',
     scriptId: 456,
@@ -85,8 +94,29 @@ describe('NavigationButton', () => {
             inactiveIds: [],
             is_concept_level: false,
             kind: '',
-            levelNumber: 0,
-            position: 0,
+            levelNumber: 1,
+            position: 1,
+            title: 0,
+            url: '',
+            path: '',
+            scriptLevelId: '',
+            usesLab2: false,
+          },
+          {
+            id: '234',
+            status: LevelStatus.not_tried,
+            activeId: '',
+            app: '',
+            bonus: false,
+            display_as_unplugged: false,
+            freePlay: false,
+            icon: null,
+            ids: ['234'],
+            inactiveIds: [],
+            is_concept_level: false,
+            kind: '',
+            levelNumber: 2,
+            position: 2,
             title: 0,
             url: '',
             path: '',
@@ -139,6 +169,7 @@ describe('NavigationButton', () => {
     registerReducers({
       progress,
       lab,
+      predictLevel,
     });
     store = getStore();
     store.dispatch(initProgress(initialProgress));
@@ -176,15 +207,15 @@ describe('NavigationButton', () => {
   }
 
   describe('Submit Button', () => {
-    // it('button says "Submit" when level is not submitted and is enabled when hasRun and hasEdited are true', () => {
-    //   renderNavigationButton({
-    //     levelProperties: submittableLevelProperties,
-    //     hasRun: true,
-    //     hasEdited: true,
-    //   });
-    //   const submitButton = screen.getByRole('button', {name: 'Submit'});
-    //   expect(submitButton).toBeEnabled();
-    // });
+    it('button says "Submit" when level is not submitted and is enabled when hasRun and hasEdited are true', () => {
+      renderNavigationButton({
+        levelProperties: submittableLevelProperties,
+        hasRun: true,
+        hasEdited: true,
+      });
+      const submitButton = screen.getByRole('button', {name: 'Submit'});
+      expect(submitButton).toBeEnabled();
+    });
 
     it('displays "Unsubmit" text and is enabled when level has been submitted', () => {
       // Set up state for submitted level
@@ -226,153 +257,114 @@ describe('NavigationButton', () => {
         hasEdited: true,
       });
 
-      screen.getByRole('button', {name: 'Unsubmit'});
+      const unsubmitButton = screen.getByRole('button', {name: 'Unsubmit'});
+      expect(unsubmitButton).toBeEnabled();
     });
 
-    // it('is enabled when level has been submitted', () => {
-    //   store.dispatch({
-    //     type: 'SET_LEVEL',
-    //     level: {
-    //       id: 123,
-    //       status: LevelStatus.submitted,
-    //     },
-    //   });
+    it('is disabled when hasRun is false or hasEdited is false for unsubmitted level', () => {
+      renderNavigationButton({
+        levelProperties: submittableLevelProperties,
+        hasRun: false,
+        hasEdited: true,
+      });
 
-    //   renderNavigationButton({
-    //     levelProperties: submittableLevelProperties,
-    //     hasRun: false,
-    //     hasEdited: false,
-    //   });
-
-    //   expect(screen.getByRole('button')).not.toBeDisabled();
-    // });
-
-    // it('is enabled when hasRun and hasEdited are true', () => {
-    //   renderNavigationButton({
-    //     levelProperties: submittableLevelProperties,
-    //     hasRun: true,
-    //     hasEdited: true,
-    //   });
-
-    //   expect(screen.getByRole('button')).not.toBeDisabled();
-    // });
-
-    // it('is disabled when hasRun is false or hasEdited is false for unsubmitted level', () => {
-    //   renderNavigationButton({
-    //     levelProperties: submittableLevelProperties,
-    //     hasRun: false,
-    //     hasEdited: true,
-    //   });
-
-    //   expect(screen.getByRole('button')).toBeDisabled();
-
-    //   // Re-render with hasRun true but hasEdited false
-    //   renderNavigationButton({
-    //     levelProperties: submittableLevelProperties,
-    //     hasRun: true,
-    //     hasEdited: false,
-    //   });
-
-    //   expect(screen.getByRole('button')).toBeDisabled();
-    // });
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+    });
   });
 
-  // describe('ContinueButton (non-submittable levels)', () => {
-  //   it('displays "Continue" text when there is a next level', () => {
-  //     // Mock that there is a next level
-  //     store.dispatch({
-  //       type: 'SET_NEXT_LEVEL_ID',
-  //       nextLevelId: 456,
-  //     });
+  describe('Continue Button', () => {
+    it('displays "Continue" when there is a next level', () => {
+      renderNavigationButton({
+        hasRun: true,
+      });
+      screen.getByRole('button', {name: 'Continue'});
+    });
 
-  //     renderNavigationButton({
-  //       hasRun: true,
-  //     });
+    it('displays "Finish" when there is no next level', () => {
+      store.dispatch(setCurrentLevelId('234'));
+      renderNavigationButton({
+        hasRun: true,
+      });
+      screen.getByRole('button', {name: 'Finish'});
+    });
 
-  //     expect(screen.getByText('Continue')).toBeInTheDocument();
-  //     expect(screen.getByRole('button')).toHaveAttribute(
-  //       'id',
-  //       'instructions-continue-button'
-  //     );
-  //   });
+    it('is hidden when requireRun is true but hasRun is false', () => {
+      renderNavigationButton({
+        hasRun: false,
+        requireRun: true,
+      });
+      expect(
+        screen.queryByRole('button', {name: 'Continue'})
+      ).not.toBeInTheDocument();
+    });
 
-  //   it('displays "Finish" text when there is no next level', () => {
-  //     // Ensure no next level
-  //     store.dispatch({
-  //       type: 'SET_NEXT_LEVEL_ID',
-  //       nextLevelId: undefined,
-  //     });
+    it('is shown when requireRun is true and hasRun is true', () => {
+      renderNavigationButton({
+        hasRun: true,
+        requireRun: true,
+      });
+      screen.getByRole('button', {name: 'Continue'});
+    });
 
-  //     renderNavigationButton({
-  //       hasRun: true,
-  //     });
+    it('is shown when requireRun is false regardless of hasRun', () => {
+      renderNavigationButton({
+        hasRun: false,
+        requireRun: false,
+      });
+      screen.getByRole('button', {name: 'Continue'});
+    });
 
-  //     expect(screen.getByText('Finish')).toBeInTheDocument();
-  //   });
+    it('is hidden when validation conditions exist but are not satisfied', () => {
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: false,
+          message: null,
+          index: 0,
+        })
+      );
+      renderNavigationButton({
+        hasRun: true,
+      });
+      expect(
+        screen.queryByRole('button', {name: 'Continue'})
+      ).not.toBeInTheDocument();
+    });
 
-  //   it('is hidden when requireRun is true but hasRun is false', () => {
-  //     renderNavigationButton({
-  //       hasRun: false,
-  //       requireRun: true,
-  //     });
+    it('is shown when validation conditions exist and are satisfied', () => {
+      store.dispatch(
+        setValidationState({
+          hasConditions: true,
+          satisfied: true,
+          message: null,
+          index: 0,
+        })
+      );
+      renderNavigationButton({
+        hasRun: true,
+      });
+      screen.getByRole('button', {name: 'Continue'});
+    });
 
-  //     expect(screen.queryByRole('button')).not.toBeInTheDocument();
-  //   });
+    it('is hidden if predict response is not submitted', () => {
+      renderNavigationButton({
+        hasRun: true,
+        levelProperties: predictLevelProperties,
+      });
 
-  //   it('is shown when requireRun is true and hasRun is true', () => {
-  //     renderNavigationButton({
-  //       hasRun: true,
-  //       requireRun: true,
-  //     });
+      expect(
+        screen.queryByRole('button', {name: 'Continue'})
+      ).not.toBeInTheDocument();
+    });
 
-  //     expect(screen.getByRole('button')).toBeInTheDocument();
-  //   });
+    it('is shown if predict response is submitted', () => {
+      store.dispatch(setHasSubmittedResponse(true));
+      renderNavigationButton({
+        hasRun: true,
+        levelProperties: predictLevelProperties,
+      });
 
-  //   it('is shown when requireRun is false regardless of hasRun', () => {
-  //     renderNavigationButton({
-  //       hasRun: false,
-  //       requireRun: false,
-  //     });
-
-  //     expect(screen.getByRole('button')).toBeInTheDocument();
-  //   });
-
-  //   it('is hidden when validation conditions exist but are not satisfied', () => {
-  //     store.dispatch({
-  //       type: 'SET_LAB_STATE',
-  //       lab: {
-  //         validationState: {
-  //           hasConditions: true,
-  //           satisfied: false,
-  //         },
-  //         levelProperties: defaultLevelProperties,
-  //       },
-  //     });
-
-  //     renderNavigationButton({
-  //       hasRun: true,
-  //     });
-
-  //     expect(screen.queryByRole('button')).not.toBeInTheDocument();
-  //   });
-
-  //   it('is shown when validation conditions exist and are satisfied', () => {
-  //     store.dispatch({
-  //       type: 'SET_LAB_STATE',
-  //       lab: {
-  //         validationState: {
-  //           hasConditions: true,
-  //           satisfied: true,
-  //         },
-  //         levelProperties: defaultLevelProperties,
-  //       },
-  //     });
-
-  //     renderNavigationButton({
-  //       hasRun: true,
-  //     });
-
-  //     expect(screen.getByRole('button')).toBeInTheDocument();
-  //   });
-  // });
+      screen.getByRole('button', {name: 'Continue'});
+    });
+  });
 });
