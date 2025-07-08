@@ -11,8 +11,6 @@
 #  lesson_id       :integer
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  metadata_config :json
-#  system_prompt   :text(65535)
 #  session_created :datetime
 #  course_id       :integer
 #  level_id        :integer
