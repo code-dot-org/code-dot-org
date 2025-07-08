@@ -321,7 +321,7 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
 
-  - name: cache-staging-misc-build-artifacts
+  - name: cache-staging-full-build
     image: plugins/s3-cache
     volumes:
       - name: rbenv
@@ -329,15 +329,15 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     settings:
-      filename: cache-staging-misc-build-artifacts.tar.gz
+      filename: cache-staging-full-build.tar.gz
       endpoint: s3://cdo-drone
       rebuild: true
       debug: true
       pull: true
       mount:
+        - .
         - /home/ci/.rbenv
         - /var/lib/mysql
-        - ./apps/build
 
 volumes:
   - name: rbenv
