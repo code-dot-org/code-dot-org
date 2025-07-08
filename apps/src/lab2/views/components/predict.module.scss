@@ -5,7 +5,7 @@
   align-items: start;
 }
 
-.multipleSelectLetter {
+.multipleChoiceLetter {
   font-weight: bold;
   margin-left: 4px;
 }
@@ -19,11 +19,7 @@
   color: var(--text-neutral-placeholder);
 }
 
-.singleSelectLetter {
-  font-weight: bold;
-}
-
-.multipleSelectLabel {
+.multipleChoiceLabel {
   margin-left: 6px;
 }
 
