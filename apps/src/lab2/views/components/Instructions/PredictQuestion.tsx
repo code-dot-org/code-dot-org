@@ -48,7 +48,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     }
   };
 
-  const disabledAndNotChecked = (index: number) =>
+  const disabledAndNotSelected = (index: number) =>
     predictAnswerLocked &&
     !Boolean(predictResponse?.split(',').includes(index.toString()));
 
@@ -106,8 +106,8 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                   className={classNames(
                     moduleStyles.multipleChoiceLetter,
                     {
-                      [moduleStyles.disabledNotChecked]:
-                        disabledAndNotChecked(index),
+                      [moduleStyles.disabledNotSelectedLabel]:
+                        disabledAndNotSelected(index),
                     },
                     {[moduleStyles.disabled]: predictAnswerLocked}
                   )}
@@ -116,10 +116,10 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 </span>
                 <span
                   className={classNames(
-                    moduleStyles.multipleChoiceLabel,
+                    moduleStyles.multipleChoiceText,
                     {
-                      [moduleStyles.disabledNotChecked]:
-                        disabledAndNotChecked(index),
+                      [moduleStyles.disabledNotSelectedLabel]:
+                        disabledAndNotSelected(index),
                     },
                     {
                       [moduleStyles.disabled]: predictAnswerLocked,
