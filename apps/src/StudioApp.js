@@ -83,6 +83,7 @@ import {
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
 import ChallengeDialog from './templates/ChallengeDialog';
+import ProcessModal from './templates/ProcessModal';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
@@ -584,6 +585,8 @@ StudioApp.prototype.init = function (config) {
 
   this.initVersionHistoryUI(config);
 
+  this.initStudentProcessUI(config);
+
   if (this.isUsingBlockly() && Blockly.contractEditor) {
     Blockly.contractEditor.registerTestsFailedOnCloseHandler(
       function () {
@@ -775,6 +778,23 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
   };
 };
 
+StudioApp.prototype.getProcessHandler = function (config) {
+  return () => {
+    var contentDiv = document.createElement('div');
+    var dialog = this.createModalDialog({
+      contentDiv: contentDiv,
+      defaultBtnSelector: 'again-button',
+      id: 'showProcessModal',
+    });
+    ReactDOM.render(
+      React.createElement(ProcessModal, {useFilesApi: !!config.useFilesApi}),
+      contentDiv
+    );
+
+    dialog.show();
+  };
+};
+
 StudioApp.prototype.initTimeSpent = function () {
   this.milestoneStartTime = new Date().getTime();
   this.debouncedSilentlyReport = _.debounce(
@@ -791,6 +811,14 @@ StudioApp.prototype.initVersionHistoryUI = function (config) {
       versionsHeader,
       this.getVersionHistoryHandler(config)
     );
+  }
+};
+
+StudioApp.prototype.initStudentProcessUI = function (config) {
+  // Bind listener to 'Student Process' button
+  var processHeader = document.getElementById('process-header');
+  if (processHeader) {
+    dom.addClickTouchEvent(processHeader, this.getProcessHandler(config));
   }
 };
 

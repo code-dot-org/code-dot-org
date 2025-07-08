@@ -65,6 +65,7 @@ class StudentWorkSampleController < ApplicationController
     level_id = student_work_params[:level_id]
     unit_id = student_work_params[:unit_id]
     student_ids = student_work_params[:student_ids] || []
+    code_version = student_work_params[:code_version]
 
     begin
       level = Level.find(level_id)
@@ -82,7 +83,7 @@ class StudentWorkSampleController < ApplicationController
 
     code_samples = []
     student_ids.each do |student_id|
-      student_code = get_student_code(student_id.to_i, level, unit_id)
+      student_code = get_student_code(student_id.to_i, level, unit_id, code_version)
       if student_code[:student_code]
         code_samples << {
           level_id: level.id,
@@ -102,6 +103,7 @@ class StudentWorkSampleController < ApplicationController
       :unit_id,
       {student_ids: []},
       :num_samples,
+      :code_version,
     )
   end
 end

@@ -155,6 +155,22 @@ module OpenaiEvaluateHelper
     end
   end
 
+  def self.summarize_diff(old_code, new_code)
+    system_prompt = "You are an expert Computer Science teacher reviewing a student's code. Respond in correctly formatted JSON.
+    oldCode should be a copy of #{old_code}.
+    newCode should be a copy of #{new_code}
+    codeDiff should be your calculation of the difference between the #{old_code} and the #{new_code}.
+    codeDiffSummary should be 1-2 sentences summarizing the difference. 
+    evaluation should be your judgement of 'good change' or 'bad change' whether the code change is getting them closer to or farther from the ideal solution."
+    code_diff_message = [{role: "user", content: student_code}]
+    messages = prepend_system_prompt(system_prompt, code_diff_message)
+    response = client.request_code_diff_summary(messages)
+    response_body = JSON.parse(response.body)
+    response_body = response_body['choices'][0]['message'] if response.code == 200
+    code_differences =  {status: response.code, json: response_body}
+    return {status: code_differences[:status], json: code_differences[:json]}
+  end
+
   def self.client
     AiEvaluationOpenaiHelper::Client.new(API_KEY, MODEL)
   end
