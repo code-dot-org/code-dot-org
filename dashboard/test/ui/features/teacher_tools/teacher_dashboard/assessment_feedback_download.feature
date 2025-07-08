@@ -1,4 +1,7 @@
 @no_mobile
+@skip
+# Skipped while fixing issue with curriculum version
+# https://codedotorg.atlassian.net/browse/TEACH-2080
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:
