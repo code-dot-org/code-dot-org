@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_06_24_183835) do
+ActiveRecord::Schema.define(version: 2025_07_08_173750) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -157,8 +157,6 @@ ActiveRecord::Schema.define(version: 2025_06_24_183835) do
     t.integer "lesson_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.json "metadata_config"
-    t.text "system_prompt"
     t.datetime "session_created"
     t.integer "course_id"
     t.integer "level_id"
