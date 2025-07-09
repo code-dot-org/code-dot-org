@@ -1,182 +1,185 @@
 #!/usr/bin/env ruby
 
-# Initialize our Dashboard Rails application.
-require_relative '../../dashboard/config/environment'
+# Simple Memcached Growth Monitor
+# Monitors key patterns to identify what's causing cache growth
 
+require_relative '../../dashboard/config/environment' if File.exist?('../../dashboard/config/environment.rb')
 require 'socket'
 require 'timeout'
-require 'digest/md5'
+require 'json'
 
-# Specialized memcached diagnostic tool focused on Cdo::Optimizer cache items (optimize-3-*)
-class OptimizerCacheMonitor
-  STATS_TO_TRACK = %w[curr_items bytes evictions get_hits get_misses].freeze
+class MemcachedGrowthMonitor
+  REQUIRED_STATS = %w[curr_items bytes].freeze
   CACHE_DUMP_END_MARKERS = %w[END ERROR].freeze
 
   def initialize(cache_client = nil)
-    @cache_client = cache_client || CDO.shared_cache
-    @dalli_data = @cache_client.instance_variable_get(:@data)
-    @endpoints = @dalli_data.instance_variable_get(:@servers)
-    @timeout_duration = 10
+    @cache_client = cache_client || (defined?(CDO) ? CDO.shared_cache : nil)
+
+    if @cache_client
+      @dalli_data = @cache_client.instance_variable_get(:@data)
+      @endpoints = @dalli_data.instance_variable_get(:@servers)
+    else
+      # Fallback to manual endpoint configuration
+      @endpoints = ENV['MEMCACHED_SERVERS']&.split(',') || ['localhost:11211']
+    end
+
+    @timeout_duration = 5
+    puts "Monitoring endpoints: #{@endpoints.join(', ')}"
   end
 
-  # Monitor optimize-3- items specifically over time
-  def monitor_optimizer_items(duration_minutes = 10, interval_seconds = 30)
-    puts "=== OPTIMIZER CACHE MONITORING ==="
-    puts "Monitoring optimize-3- items for #{duration_minutes} minutes, checking every #{interval_seconds}s"
+  # Main monitoring method - tracks key pattern growth over time
+  def monitor_growth(duration_minutes: 15, interval_seconds: 60, samples_per_check: 500)
+    puts "=== MEMCACHED GROWTH MONITOR ==="
+    puts "Duration: #{duration_minutes} minutes"
+    puts "Check interval: #{interval_seconds} seconds"
+    puts "Samples per server per check: #{samples_per_check}"
     puts "Started at: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
+    puts "-" * 50
 
     measurements = []
     cycles = (duration_minutes * 60 / interval_seconds).to_i
 
     cycles.times do |cycle|
       timestamp = Time.now
-      cycle_data = {
-        timestamp: timestamp,
-        cycle: cycle + 1,
-        servers: [],
-        optimizer_stats: {
-          total_items: 0,
-          total_bytes: 0,
-          avg_size: 0,
-          largest_item: 0,
-          items_by_server: {}
-        }
-      }
-
-      puts "\n--- Cycle #{cycle + 1}/#{cycles} at #{timestamp.strftime('%H:%M:%S')} ---"
-
-      @endpoints.each_with_index do |endpoint, idx|
-        hostname, port = endpoint.split(":")
-        server_data = {
-          endpoint: endpoint,
-          optimizer_items: [],
-          stats: {}
-        }
-
-        begin
-          Timeout.timeout(@timeout_duration) do
-            # Get server stats first
-            sock = TCPSocket.new(hostname, port || 11211)
-            sock.write("stats\r\n")
-
-            loop do
-              line = sock.readline.strip
-              break if line == "END"
-
-              if line.start_with?("STAT")
-                parts = line.split(" ", 3)
-                stat_name = parts[1]
-                stat_value = parts[2]
-
-                if STATS_TO_TRACK.include?(stat_name)
-                  server_data[:stats][stat_name] = stat_value.to_i
-                end
-              end
-            end
-            sock.close
-
-            # Now scan for optimize-3- items
-            optimizer_items = scan_optimizer_items(hostname, port)
-            server_data[:optimizer_items] = optimizer_items
-
-            # Update cycle totals
-            cycle_data[:optimizer_stats][:total_items] += optimizer_items.length
-            cycle_data[:optimizer_stats][:total_bytes] += optimizer_items.sum {|item| item[:size]}
-            cycle_data[:optimizer_stats][:items_by_server][endpoint] = optimizer_items.length
-
-            if optimizer_items.any?
-              largest_on_server = optimizer_items.max_by {|item| item[:size]}[:size]
-              cycle_data[:optimizer_stats][:largest_item] = [
-                cycle_data[:optimizer_stats][:largest_item],
-                largest_on_server
-              ].max
-            end
-
-            puts "  Server #{idx + 1} (#{endpoint}): #{optimizer_items.length} optimize-3- items"
-          end
-        rescue Timeout::Error
-          puts "  Server #{idx + 1} (#{endpoint}): Timeout"
-          server_data[:error] = "timeout"
-        rescue => exception
-          puts "  Server #{idx + 1} (#{endpoint}): Error - #{exception.message}"
-          server_data[:error] = exception.message
-        end
-
-        cycle_data[:servers] << server_data
-      end
-
-      # Calculate average size
-      if cycle_data[:optimizer_stats][:total_items] > 0
-        cycle_data[:optimizer_stats][:avg_size] =
-          cycle_data[:optimizer_stats][:total_bytes] / cycle_data[:optimizer_stats][:total_items]
-      end
-
+      cycle_data = collect_cycle_data(cycle + 1, cycles, timestamp, samples_per_check)
       measurements << cycle_data
-      display_cycle_summary(cycle_data, measurements)
+
+      analyze_growth_since_last_cycle(measurements) if measurements.length > 1
 
       sleep interval_seconds unless cycle == cycles - 1
     end
 
-    # Final analysis
-    analyze_monitoring_results(measurements)
-    return measurements
+    generate_final_report(measurements)
+    measurements
   end
 
-  # Scan all slabs for optimize-3- items
-  def scan_optimizer_items(hostname, port, max_items_per_slab = 100)
-    optimizer_items = []
+  private def collect_cycle_data(cycle_num, total_cycles, timestamp, samples_per_check)
+    puts "\n--- Cycle #{cycle_num}/#{total_cycles} at #{timestamp.strftime('%H:%M:%S')} ---"
 
-    begin
-      # Get active slabs
-      Timeout.timeout(8) do
-        sock = TCPSocket.new(hostname, port || 11211)
-        sock.write("stats slabs\r\n")
+    cycle_data = {
+      timestamp: timestamp,
+      cycle: cycle_num,
+      total_items: 0,
+      total_bytes: 0,
+      patterns: Hash.new {|h, k| h[k] = {count: 0, total_bytes: 0, examples: []}}
+    }
 
-        active_slabs = []
-        loop do
-          line = sock.readline.strip
-          break if line == "END"
+    @endpoints.each_with_index do |endpoint, idx|
+      hostname, port = endpoint.split(":")
+      puts "  Sampling server #{idx + 1} (#{endpoint})..."
 
-          if line.match(/^STAT (\d+):used_chunks (\d+)/) && $2.to_i > 0
-            active_slabs << $1.to_i
+      begin
+        server_stats = get_server_stats(hostname, port)
+        cycle_data[:total_items] += server_stats['curr_items'] || 0
+        cycle_data[:total_bytes] += server_stats['bytes'] || 0
+
+        sampled_keys = sample_keys_from_server(hostname, port, samples_per_check)
+        puts "    Found #{sampled_keys.length} keys"
+
+        sampled_keys.each do |key_data|
+          pattern = categorize_key_pattern(key_data[:key])
+          pattern_data = cycle_data[:patterns][pattern]
+
+          pattern_data[:count] += 1
+          pattern_data[:total_bytes] += key_data[:size]
+
+          # Keep a few examples (first 3)
+          if pattern_data[:examples].length < 3
+            pattern_data[:examples] << {
+              key: key_data[:key],
+              size: key_data[:size]
+            }
           end
         end
-        sock.close
+      rescue => exception
+        puts "    ERROR: #{exception.message}"
+      end
+    end
 
-        # Scan each slab for optimize-3- items
-        active_slabs.each do |slab_id|
-          Timeout.timeout(5) do
+    # Calculate averages for each pattern
+    cycle_data[:patterns].each do |_pattern, data|
+      data[:avg_size] = data[:count] > 0 ? (data[:total_bytes] / data[:count]) : 0
+    end
+
+    display_cycle_summary(cycle_data)
+    cycle_data
+  end
+
+  private def get_server_stats(hostname, port)
+    stats = {}
+
+    Timeout.timeout(@timeout_duration) do
+      sock = TCPSocket.new(hostname, port || 11211)
+      sock.write("stats\r\n")
+
+      loop do
+        line = sock.readline.strip
+        break if line == "END"
+
+        if line.start_with?("STAT")
+          parts = line.split(" ", 3)
+          stat_name = parts[1]
+          stat_value = parts[2]
+
+          if REQUIRED_STATS.include?(stat_name)
+            stats[stat_name] = stat_value.to_i
+          end
+        end
+      end
+      sock.close
+    end
+
+    stats
+  rescue => exception
+    puts "    Stats error for #{hostname}:#{port} - #{exception.message}"
+    {}
+  end
+
+  private def sample_keys_from_server(hostname, port, max_samples)
+    all_keys = []
+
+    Timeout.timeout(8) do
+      # Get active slabs
+      sock = TCPSocket.new(hostname, port || 11211)
+      sock.write("stats slabs\r\n")
+
+      active_slabs = []
+      loop do
+        line = sock.readline.strip
+        break if line == "END"
+
+        if line.match(/^STAT (\d+):used_chunks (\d+)/) && $2.to_i > 0
+          active_slabs << $1.to_i
+        end
+      end
+      sock.close
+
+      return [] if active_slabs.empty?
+
+      # Sample from each slab
+      samples_per_slab = [max_samples / active_slabs.length, 20].max
+
+      active_slabs.each do |slab_id|
+        break if all_keys.length >= max_samples
+
+        begin
+          Timeout.timeout(3) do
             sock = TCPSocket.new(hostname, port || 11211)
-            sock.write("stats cachedump #{slab_id} #{max_items_per_slab}\r\n")
+            sock.write("stats cachedump #{slab_id} #{samples_per_slab}\r\n")
 
             loop do
               line = sock.readline.strip
               break if CACHE_DUMP_END_MARKERS.include?(line)
 
               if line =~ /^ITEM ([^\s]+) \[(\d+) b; (\d+) s\]/
-                key = $1
-                size = $2.to_i
-                timestamp = $3.to_i
+                all_keys << {
+                  key: $1,
+                  size: $2.to_i,
+                  timestamp: $3.to_i,
+                  slab: slab_id
+                }
 
-                # Only process optimize-3- items
-                if key.start_with?('optimize-3-')
-                  # Extract MD5 hash from key
-                  md5_hash = key.sub('optimize-3-', '')
-
-                  # Check if expired
-                  has_expiration = timestamp > 0
-                  is_expired = has_expiration && timestamp < Time.now.to_i
-
-                  optimizer_items << {
-                    key: key,
-                    md5_hash: md5_hash,
-                    size: size,
-                    slab: slab_id,
-                    has_expiration: has_expiration,
-                    is_expired: is_expired,
-                    timestamp: timestamp
-                  }
-                end
+                break if all_keys.length >= max_samples
               end
             end
             sock.close
@@ -185,184 +188,200 @@ class OptimizerCacheMonitor
           # Skip this slab on timeout
         end
       end
-    rescue StandardError
-      # Return whatever we found
     end
 
-    optimizer_items
+    all_keys
+  rescue => exception
+    puts "    Sampling error: #{exception.message}"
+    []
   end
 
-  # Test the optimizer cache functionality
-  def test_optimizer_cache
-    puts "\n=== OPTIMIZER CACHE TEST ==="
-
-    # Create test image data (small PNG)
-    test_data = "\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\nIDATx\x9cc\x00\x01\x00\x00\x05\x00\x01\r\n-\xdb\x00\x00\x00\x00IEND\xaeB`\x82"
-
-    # Calculate what the cache key should be
-    expected_key = "optimize-3-#{Digest::MD5.hexdigest(test_data)}"
-    puts "Expected cache key: #{expected_key}"
-
-    # Check if key exists in cache
-    cached_result = @cache_client.read(expected_key)
-    puts "Key exists in cache: #{!cached_result.nil?}"
-
-    if cached_result
-      puts "Cached result type: #{cached_result.class}"
-      puts "Cached result size: #{cached_result.is_a?(String) ? cached_result.bytesize : 'N/A'} bytes"
-    end
-
-    # Test writing to cache
-    puts "\nTesting cache write..."
-    test_key = "optimize-3-test-#{Time.now.to_i}"
-    @cache_client.write(test_key, test_data)
-
-    # Verify write
-    retrieved = @cache_client.read(test_key)
-    puts "Write test successful: #{retrieved == test_data}"
-
-    # Clean up
-    @cache_client.delete(test_key)
-
-    # Look for the test key in memcached
-    puts "\nSearching for test key in memcached servers..."
-    found_servers = []
-    @endpoints.each_with_index do |endpoint, _idx|
-      hostname, port = endpoint.split(":")
-      begin
-        Timeout.timeout(3) do
-          sock = TCPSocket.new(hostname, port || 11211)
-          sock.write("get #{test_key}\r\n")
-          response = sock.readline.strip
-          if response.start_with?("VALUE")
-            found_servers << endpoint
-          end
-          sock.close
-        end
-      rescue
-        # Key not on this server or server unreachable
-      end
-    end
-
-    puts "Test key found on servers: #{found_servers.any? ? found_servers.join(', ') : 'none (already deleted)'}"
-  end
-
-  # Analyze size patterns and detect potential issues
-  def analyze_optimizer_patterns
-    puts "\n=== OPTIMIZER PATTERN ANALYSIS ==="
-
-    all_optimizer_items = []
-
-    @endpoints.each_with_index do |endpoint, idx|
-      hostname, port = endpoint.split(":")
-      puts "\nAnalyzing server #{idx + 1}: #{endpoint}"
-
-      items = scan_optimizer_items(hostname, port, 1000)  # Get more items for analysis
-      all_optimizer_items.concat(items)
-
-      if items.any?
-        puts "  Found #{items.length} optimize-3- items"
-        puts "  Total size: #{format_bytes(items.sum {|i| i[:size]})}"
-        puts "  Average size: #{format_bytes(items.sum {|i| i[:size]} / items.length)}"
-        puts "  Largest item: #{format_bytes(items.max_by {|i| i[:size]}[:size])}"
-
-        # Check for expired items
-        expired_items = items.select {|i| i[:is_expired]}
-        puts "  Expired items: #{expired_items.length}"
-
-        # Size distribution
-        size_ranges = {
-          'Small (<10KB)' => items.count {|i| i[:size] < 10.kilobytes},
-          'Medium (10KB-100KB)' => items.count {|i| i[:size] >= 10.kilobytes && i[:size] < 100.kilobytes},
-          'Large (100KB-1MB)' => items.count {|i| i[:size] >= 100.kilobytes && i[:size] < 1.megabyte},
-          'Very Large (>1MB)' => items.count {|i| i[:size] >= 1.megabyte}
-        }
-
-        puts "  Size distribution:"
-        size_ranges.each do |range, count|
-          percentage = (count.to_f / items.length * 100).round(1)
-          puts "    #{range}: #{count} (#{percentage}%)"
-        end
+  private def categorize_key_pattern(key)
+    case key
+    when /^optimize-3-/
+      'optimize-3-* (Image Cache)'
+    when /^session:/
+      'session:* (User Sessions)'
+    when /^partial_registration_/
+      'partial_registration_* (Registration)'
+    when /^views\//
+      'views/* (View Cache)'
+    when /^fragment_cache\//
+      'fragment_cache/* (Fragment Cache)'
+    when /^ActiveRecord:/
+      'ActiveRecord:* (AR Cache)'
+    when /^rack:session/
+      'rack:session* (Rack Sessions)'
+    when /^user_\d+/
+      'user_*'
+    when /^course_\d+/
+      'course_*'
+    when /^level_\d+/
+      'level_*'
+    when /^script_\d+/
+      'script_*'
+    when /^teacher_/
+      'teacher_*'
+    when /^student_/
+      'student_*'
+    when /^progress_/
+      'progress_*'
+    when /^api_/
+      'api_*'
+    when /^[a-f0-9]{32}$/
+      'md5_hash'
+    when /^[a-f0-9]{40}$/
+      'sha1_hash'
+    when /^\w+:/
+      key.split(':', 2)[0] + ':*'
+    else
+      if key.length > 50
+        'long_keys (>50 chars)'
+      elsif key =~ /^([a-z_]+)/
+        "#{$1}_*"
       else
-        puts "  No optimize-3- items found"
+        'other'
       end
     end
+  end
 
-    if all_optimizer_items.any?
-      puts "\n--- CLUSTER TOTALS ---"
-      puts "Total optimize-3- items: #{all_optimizer_items.length}"
-      puts "Total size: #{format_bytes(all_optimizer_items.sum {|i| i[:size]})}"
-      puts "Average size: #{format_bytes(all_optimizer_items.sum {|i| i[:size]} / all_optimizer_items.length)}"
+  private def display_cycle_summary(cycle_data)
+    puts "    Total: #{cycle_data[:total_items]} items, #{format_bytes(cycle_data[:total_bytes])}"
 
-      # Look for potential duplicates (same size items)
-      size_groups = all_optimizer_items.group_by {|i| i[:size]}
-      potential_duplicates = size_groups.select {|_size, items| items.length > 1}
+    # Show top 5 patterns by count
+    top_patterns = cycle_data[:patterns].sort_by {|_, data| -data[:count]}.take(5)
 
-      if potential_duplicates.any?
-        puts "\nPotential duplicate sizes:"
-        potential_duplicates.take(5).each do |size, items|
-          puts "  #{format_bytes(size)}: #{items.length} items"
+    if top_patterns.any?
+      puts "    Top patterns this cycle:"
+      top_patterns.each do |pattern, data|
+        puts "      #{pattern}: #{data[:count]} items (#{format_bytes(data[:total_bytes])})"
+      end
+    end
+  end
+
+  private def analyze_growth_since_last_cycle(measurements)
+    current = measurements.last
+    previous = measurements[-2]
+
+    time_diff = (current[:timestamp] - previous[:timestamp]) / 60.0 # minutes
+
+    # Overall growth
+    items_growth = current[:total_items] - previous[:total_items]
+    bytes_growth = current[:total_bytes] - previous[:total_bytes]
+
+    if items_growth > 0 || bytes_growth > 0
+      puts "\n  📈 GROWTH DETECTED:"
+      puts "    Total: +#{items_growth} items, +#{format_bytes(bytes_growth)}"
+      puts "    Rate: #{(items_growth / time_diff).round(1)} items/min, #{format_bytes(bytes_growth / time_diff)}/min"
+
+      # Pattern-specific growth
+      growing_patterns = []
+
+      current[:patterns].each do |pattern, current_data|
+        previous_data = previous[:patterns][pattern]
+        next unless previous_data
+
+        pattern_items_growth = current_data[:count] - previous_data[:count]
+        pattern_bytes_growth = current_data[:total_bytes] - previous_data[:total_bytes]
+
+        if pattern_items_growth > 0
+          growing_patterns << {
+            pattern: pattern,
+            items_growth: pattern_items_growth,
+            bytes_growth: pattern_bytes_growth,
+            rate_per_min: pattern_items_growth / time_diff
+          }
+        end
+      end
+
+      if growing_patterns.any?
+        puts "    Growing patterns:"
+        growing_patterns.sort_by {|p| -p[:items_growth]}.take(5).each do |p|
+          puts "      #{p[:pattern]}: +#{p[:items_growth]} items (+#{format_bytes(p[:bytes_growth])}) - #{p[:rate_per_min].round(1)}/min"
         end
       end
     end
-
-    all_optimizer_items
   end
 
-  private def display_cycle_summary(cycle_data, measurements)
-    stats = cycle_data[:optimizer_stats]
+  private def generate_final_report(measurements)
+    puts "\n#{('=' * 60)}"
+    puts "FINAL GROWTH ANALYSIS REPORT"
+    puts '=' * 60
 
-    puts "  Total optimize-3- items: #{stats[:total_items]}"
-    puts "  Total size: #{format_bytes(stats[:total_bytes])}"
-    puts "  Average size: #{format_bytes(stats[:avg_size])}" if stats[:avg_size] > 0
-    puts "  Largest item: #{format_bytes(stats[:largest_item])}" if stats[:largest_item] > 0
+    first = measurements.first
+    last = measurements.last
+    total_time = (last[:timestamp] - first[:timestamp]) / 60.0
 
-    # Show growth if we have previous measurements
-    if measurements.length > 1
-      prev_stats = measurements[-2][:optimizer_stats]
-      time_diff = (cycle_data[:timestamp] - measurements[-2][:timestamp]) / 60.0  # minutes
+    # Overall trends
+    total_items_growth = last[:total_items] - first[:total_items]
+    total_bytes_growth = last[:total_bytes] - first[:total_bytes]
 
-      items_growth = stats[:total_items] - prev_stats[:total_items]
-      bytes_growth = stats[:total_bytes] - prev_stats[:total_bytes]
+    puts "\nOVERALL GROWTH:"
+    puts "  Duration: #{total_time.round(1)} minutes"
+    puts "  Items: #{first[:total_items]} → #{last[:total_items]} (+#{total_items_growth})"
+    puts "  Bytes: #{format_bytes(first[:total_bytes])} → #{format_bytes(last[:total_bytes])} (+#{format_bytes(total_bytes_growth)})"
+    puts "  Average rate: #{(total_items_growth / total_time).round(1)} items/min, #{format_bytes(total_bytes_growth / total_time)}/min"
 
-      if items_growth != 0 || bytes_growth != 0
-        puts "  Growth since last check:"
-        puts "    Items: #{items_growth > 0 ? '+' : ''}#{items_growth}"
-        puts "    Bytes: #{bytes_growth > 0 ? '+' : ''}#{format_bytes(bytes_growth)}"
-        puts "    Rate: #{(items_growth / time_diff).round(2)} items/min, #{format_bytes(bytes_growth / time_diff)}/min"
+    # Identify patterns with consistent growth
+    pattern_growth = {}
+
+    last[:patterns].each do |pattern, last_data|
+      first_data = first[:patterns][pattern]
+      next unless first_data
+
+      items_growth = last_data[:count] - first_data[:count]
+      bytes_growth = last_data[:total_bytes] - first_data[:total_bytes]
+
+      if items_growth > 0
+        pattern_growth[pattern] = {
+          items_growth: items_growth,
+          bytes_growth: bytes_growth,
+          items_rate: items_growth / total_time,
+          bytes_rate: bytes_growth / total_time,
+          final_count: last_data[:count],
+          final_bytes: last_data[:total_bytes],
+          avg_size: last_data[:avg_size],
+          examples: last_data[:examples]
+        }
       end
     end
-  end
 
-  private def analyze_monitoring_results(measurements)
-    puts "\n=== MONITORING SUMMARY ==="
-    puts "Duration: #{measurements.length} measurements over #{((measurements.last[:timestamp] - measurements.first[:timestamp]) / 60.0).round(1)} minutes"
+    puts "\nGROWING PATTERNS (sorted by growth rate):"
+    if pattern_growth.any?
+      sorted_growth = pattern_growth.sort_by {|_, data| -data[:items_rate]}
 
-    # Calculate trends
-    item_counts = measurements.map {|m| m[:optimizer_stats][:total_items]}
-    byte_counts = measurements.map {|m| m[:optimizer_stats][:total_bytes]}
+      sorted_growth.each_with_index do |(pattern, data), index|
+        puts "\n#{index + 1}. #{pattern}"
+        puts "   Growth: +#{data[:items_growth]} items (+#{format_bytes(data[:bytes_growth])})"
+        puts "   Rate: #{data[:items_rate].round(1)} items/min, #{format_bytes(data[:bytes_rate])}/min"
+        puts "   Current total: #{data[:final_count]} items (#{format_bytes(data[:final_bytes])})"
+        puts "   Average item size: #{format_bytes(data[:avg_size])}"
+        puts "   Examples:"
+        data[:examples].each do |example|
+          puts "     #{example[:key]} (#{format_bytes(example[:size])})"
+        end
+      end
+    else
+      puts "  No consistent growth patterns detected"
+    end
 
-    puts "Items trend: #{item_counts.first} → #{item_counts.last} (#{item_counts.last - item_counts.first > 0 ? '+' : ''}#{item_counts.last - item_counts.first})"
-    puts "Bytes trend: #{format_bytes(byte_counts.first)} → #{format_bytes(byte_counts.last)} (#{byte_counts.last - byte_counts.first > 0 ? '+' : ''}#{format_bytes(byte_counts.last - byte_counts.first)})"
+    # Recommendations
+    puts "\nRECOMMENDations:"
+    if pattern_growth.any?
+      top_grower = pattern_growth.max_by {|_, data| data[:items_rate]}
+      puts "  🔍 Focus investigation on: #{top_grower[0]}"
+      puts "     This pattern is growing at #{top_grower[1][:items_rate].round(1)} items/min"
 
-    # Peak usage
-    max_items = item_counts.max
-    max_bytes = byte_counts.max
-    max_items_time = measurements[item_counts.index(max_items)][:timestamp]
-    max_bytes_time = measurements[byte_counts.index(max_bytes)][:timestamp]
-
-    puts "Peak items: #{max_items} at #{max_items_time.strftime('%H:%M:%S')}"
-    puts "Peak bytes: #{format_bytes(max_bytes)} at #{max_bytes_time.strftime('%H:%M:%S')}"
-
-    # Calculate average rates
-    if measurements.length > 1
-      total_time = (measurements.last[:timestamp] - measurements.first[:timestamp]) / 60.0
-      avg_items_per_min = (item_counts.last - item_counts.first) / total_time
-      avg_bytes_per_min = (byte_counts.last - byte_counts.first) / total_time
-
-      puts "Average growth rate:"
-      puts "  Items: #{avg_items_per_min.round(2)} items/min"
-      puts "  Bytes: #{format_bytes(avg_bytes_per_min)}/min"
+      large_items = pattern_growth.select {|_, data| data[:avg_size] > 100_000}
+      if large_items.any?
+        puts "  💾 Large item patterns to investigate:"
+        large_items.each do |pattern, data|
+          puts "     #{pattern}: #{format_bytes(data[:avg_size])} avg size"
+        end
+      end
+    else
+      puts "  ✅ No significant growth detected during monitoring period"
+      puts "  💡 Consider running for longer duration or during peak usage"
     end
   end
 
@@ -382,28 +401,55 @@ class OptimizerCacheMonitor
   end
 end
 
-# Main execution
-if __FILE__ == $0
-  monitor = OptimizerCacheMonitor.new
+# Quick analysis method for immediate insights
+def quick_analysis(monitor)
+  puts "=== QUICK CURRENT STATE ANALYSIS ==="
 
-  puts "Memcached Optimizer Cache Monitor"
-  puts "================================="
+  # Take a snapshot of current key patterns
+  snapshot = monitor.send(:collect_cycle_data, 1, 1, Time.now, 1000)
 
-  # 1. Test basic functionality
-  monitor.test_optimizer_cache
+  puts "\nCURRENT KEY PATTERN DISTRIBUTION:"
+  sorted_patterns = snapshot[:patterns].sort_by {|_, data| -data[:count]}
 
-  # 2. Analyze current patterns
-  monitor.analyze_optimizer_patterns
-
-  # 3. Monitor for 10 minutes
-  puts "\nStarting 10-minute monitoring session..."
-  monitor.monitor_optimizer_items(10, 30)  # 10 minutes, check every 30 seconds
-
-  puts "\nMonitoring complete!"
+  sorted_patterns.take(10).each_with_index do |(pattern, data), index|
+    percentage = (data[:count].to_f / snapshot[:patterns].values.sum {|d| d[:count]} * 100).round(1)
+    puts "#{index + 1}. #{pattern}"
+    puts "   Count: #{data[:count]} (#{percentage}%)"
+    puts "   Total size: #{monitor.send(:format_bytes, data[:total_bytes])}"
+    puts "   Avg size: #{monitor.send(:format_bytes, data[:avg_size])}"
+  end
 end
 
-# Individual method access for interactive use:
-# monitor = OptimizerCacheMonitor.new
-# monitor.test_optimizer_cache
-# monitor.analyze_optimizer_patterns
-# monitor.monitor_optimizer_items(5, 15)  # 5 minutes, every 15 seconds
+# Main execution
+if __FILE__ == $0
+  monitor = MemcachedGrowthMonitor.new
+
+  puts "Choose an option:"
+  puts "1. Quick analysis (current state snapshot)"
+  puts "2. Growth monitoring (default: 15 min)"
+  puts "3. Custom monitoring duration"
+  print "Enter choice (1-3) or press Enter for growth monitoring: "
+
+  choice = gets.chomp
+
+  case choice
+  when '1'
+    quick_analysis(monitor)
+  when '3'
+    print "Duration in minutes: "
+    duration = gets.chomp.to_i
+    duration = 15 if duration <= 0
+
+    print "Check interval in seconds (default 60): "
+    interval = gets.chomp.to_i
+    interval = 60 if interval <= 0
+
+    monitor.monitor_growth(duration_minutes: duration, interval_seconds: interval)
+  else
+    # Default: 15-minute monitoring
+    monitor.monitor_growth(duration_minutes: 15, interval_seconds: 60)
+  end
+
+  puts "\nMonitoring complete! Check the growth patterns above."
+  puts "💡 Tip: Run during peak usage times for best results"
+end
