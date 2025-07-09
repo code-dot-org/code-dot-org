@@ -6,18 +6,14 @@ import {useSelector} from 'react-redux';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {
-  isPredictAnswerLocked,
-  isPredictResponseSubmitted,
-  setPredictResponse,
-} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NavigationButton from './NavigationButton';
 import PredictQuestion from './PredictQuestion';
@@ -85,12 +81,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 }) => {
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
   const validationState = useAppSelector(state => state.lab.validationState);
-  const predictSettings = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
-  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const offerBrowserTts =
     useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
@@ -101,7 +95,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
-  const dispatch = useAppDispatch();
   const defaultTheme = useTheme();
   const theme = overrideTheme || defaultTheme;
 
@@ -141,7 +134,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const canShowNextButton =
     (!validationState?.hasConditions || validationState?.satisfied) &&
-    (!predictSettings?.isPredictLevel || predictResponseSubmitted);
+    (!isPredictLevel || predictResponseSubmitted);
 
   const vertical = layout === 'vertical';
   const showSecondaryFinishButton = useSecondaryFinishButton && !hasNextLevel;
@@ -205,15 +198,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 instructionsText={levelProperties.longInstructions}
                 handleInstructionsTextClick={handleInstructionsTextClick}
               />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={response =>
-                  dispatch(setPredictResponse(response))
-                }
-                predictAnswerLocked={predictAnswerLocked}
-                className={moduleStyles.predictQuestion}
-              />
+              <PredictQuestion className={moduleStyles.predictQuestion} />
             </div>
             {validationSettings && (
               <ValidationButton
@@ -244,7 +229,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           </>
         )}
         {AiTutor2ResponseView && AiTutor2ResponseView}
-        {predictSettings?.isPredictLevel && (
+        {isPredictLevel && (
           <>
             <InstructorsOnly>
               <div
@@ -257,10 +242,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               </div>
             </InstructorsOnly>
 
-            <PredictQuestionRunPrompt
-              hasSelected={!!predictResponse}
-              hasSubmitted={predictAnswerLocked}
-            />
+            <PredictQuestionRunPrompt />
           </>
         )}
         {(useMessage || canShowNextButton) && (

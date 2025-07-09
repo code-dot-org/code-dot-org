@@ -2,23 +2,20 @@ import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React from 'react';
 
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './predict.module.scss';
-
-interface PredictQuestionRunPromptProps {
-  hasSelected: boolean;
-  hasSubmitted: boolean;
-}
 
 /**
  * A simple prompt reminding users to click the Run button
  */
-const PredictQuestionRunPrompt: React.FunctionComponent<
-  PredictQuestionRunPromptProps
-> = ({hasSelected, hasSubmitted}) => {
-  if (hasSelected && !hasSubmitted) {
+const PredictQuestionRunPrompt: React.FunctionComponent = () => {
+  const hasSelected = useAppSelector(state => !!state.predictLevel.response);
+  const isLocked = useAppSelector(isPredictAnswerLocked);
+  if (hasSelected && !isLocked) {
     return (
       <div
         className={classNames(
@@ -32,7 +29,7 @@ const PredictQuestionRunPrompt: React.FunctionComponent<
         />
       </div>
     );
-  } else if (hasSubmitted) {
+  } else if (isLocked) {
     return (
       <Alert
         text="Submitted"
