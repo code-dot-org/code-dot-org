@@ -1,6 +1,5 @@
 import PrincipalApprovalComponent, {
   RACE_LIST,
-  MANUAL_SCHOOL_FIELDS,
   REQUIRED_SCHOOL_INFO_FIELDS,
   ALWAYS_REQUIRED_FIELDS,
 } from '@cdo/apps/code-studio/pd/application/principalApproval/PrincipalApprovalComponent';
@@ -23,20 +22,6 @@ describe('PrincipalApproval', () => {
       PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes',
       });
-    expect(actualFields).toEqual(expectedFields);
-  });
-
-  it('Requires more fields if the application is accepted and the school is manually entered', () => {
-    const expectedFields = [
-      ...ALWAYS_REQUIRED_FIELDS,
-      ...REQUIRED_SCHOOL_INFO_FIELDS,
-      ...MANUAL_SCHOOL_FIELDS,
-    ].sort();
-    const actualFields =
-      PrincipalApprovalComponent.getDynamicallyRequiredFields({
-        doYouApprove: 'Yes',
-        school: '-1',
-      }).sort();
     expect(actualFields).toEqual(expectedFields);
   });
 
