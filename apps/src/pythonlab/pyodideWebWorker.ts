@@ -28,6 +28,8 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    // Remove all JS globals so Python can’t call browser APIs (like fetch) unless we
+    // explicitly add them.
     jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
