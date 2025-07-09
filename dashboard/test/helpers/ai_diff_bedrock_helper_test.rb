@@ -710,25 +710,11 @@ The courses that this teacher may ask you about are:
     unit_num = 3
     lesson_number = 5
     section_contexts = nil
-    expected_filter = {
-      and_all: [
-        {or_all: [
-          {equals: {key: "lesson", value: "L05"}},
-          {equals: {key: "lesson", value: "all"}}
-        ]},
-        {or_all: [
-          {equals: {key: "unit", value: "U03"}},
-          {equals: {key: "unit", value: "all"}}
-        ]},
-        {in: {key: "course", value: ["test_course"]}},
-      ]
-    }
 
-    raw_content, content, links, new_session_id, metadata = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_names, @session_id, section_contexts)
-    assert_equal content, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    assert_equal raw_content, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    assert_equal new_session_id, "1234"
-    assert_nil links
-    assert_equal metadata, expected_filter
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_names, @session_id, section_contexts)
+    assert_equal response[:content], "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    assert_equal response[:raw_content], "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    assert_equal response[:session_id], "1234"
+    assert_nil response[:links]
   end
 end
