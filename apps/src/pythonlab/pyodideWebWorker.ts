@@ -28,6 +28,7 @@ async function loadPyodideAndPackages() {
     env: {
       HOME: `/${HOME_FOLDER}/`,
     },
+    jsglobals: {},
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
