@@ -37,10 +37,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    if @unit_group.default_units.all?(&:is_deprecated)
-      return render 'errors/deprecated_course'
-    end
-
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
       redirect_path = Policies::Courses.modularity_enabled? ?
@@ -52,7 +48,8 @@ class CoursesController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
-    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+    redirect_unit_group = redirect_unit_group(@unit_group)
+    if !override_redirect && redirect_unit_group
       redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
       return
     end
@@ -64,6 +61,13 @@ class CoursesController < ApplicationController
         return
       end
     end
+
+    # For deprecated courses, show deprecated course page
+    # if we haven't already redirected to a newer version of the course or the teacher dashboard.
+    if @unit_group.default_units.all?(&:is_deprecated)
+      return render 'errors/deprecated_course'
+    end
+
     if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
