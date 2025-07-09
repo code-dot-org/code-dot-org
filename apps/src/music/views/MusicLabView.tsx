@@ -294,17 +294,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const showExemplarPlayer =
     exemplarSettings?.playerEnabled && exemplarSources && !isEditingExemplar;
 
-  const ExemplarPlayer = ({title}: {title: string}) => {
-    return (
-      <ExemplarPlayerView
-        playbackEvents={exemplarPlaybackEvents}
-        title={title}
-        player={player}
-        insideInstructions={exemplarPlayerInsideInstructions}
-      />
-    );
-  };
-
   const showAdvancedControls =
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
@@ -362,7 +351,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   bottomComponent={
                     exemplarPlayerInsideInstructions &&
                     showExemplarPlayer && (
-                      <ExemplarPlayer title={exemplarSettings.playerTitle!} />
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
                     )
                   }
                   hasRun={hasRun}
@@ -378,7 +372,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   bottomComponent={
                     exemplarPlayerInsideInstructions &&
                     showExemplarPlayer && (
-                      <ExemplarPlayer title={exemplarSettings.playerTitle!} />
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
                     )
                   }
                   hasRun={hasRun}
@@ -386,7 +385,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 />
               )}
               {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
-                <ExemplarPlayer title={exemplarSettings.playerTitle!} />
+                <ExemplarPlayerView
+                  playbackEvents={exemplarPlaybackEvents}
+                  title={exemplarSettings.playerTitle!}
+                  player={player}
+                  insideInstructions={exemplarPlayerInsideInstructions}
+                />
               )}
             </PanelContainer>
           </div>

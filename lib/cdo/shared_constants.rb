@@ -813,6 +813,11 @@ module SharedConstants
     STUDENT_PROFANITY: 'student_profanity',
     # PII detected in the student's work.
     STUDENT_PII: 'student_pii',
+    # Possible responses from AI when evaluating student work.
+    ALL_COMPLETE_CORRECT: 'all_complete_correct',
+    PARTIAL_COMPLETE_CORRECT: 'partial_complete_correct',
+    INCOMPLETE_INCORRECT: 'incomplete_incorrect',
+    NOT_EVALUATED: 'not_evaluated',
   }
 
   AI_CHAT_MODEL_IDS = {

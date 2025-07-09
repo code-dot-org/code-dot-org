@@ -55,9 +55,9 @@ module SkillsHelper
   def self.determine_mastery_level_for_student(evaluations)
     return "Not seen" if evaluations.empty?
 
-    return "Mastered" if evaluations.include?("Great")
-    return "Shown" if evaluations.include?("Ok")
-    return "Needs practice" if evaluations.all?("Needs revision")
+    return "Mastered" if evaluations.include?(SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT])
+    return "Shown" if evaluations.include?(SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT])
+    return "Needs practice" if evaluations.all?(SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT])
 
     "Not seen"
   end

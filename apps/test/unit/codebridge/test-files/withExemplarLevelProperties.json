@@ -48,8 +48,8 @@
   "appName": "pythonlab",
   "useRestrictedSongs": false,
   "usesProjects": true,
-  "finishUrl": "/s/allthethings/lessons/50/levels/2",
-  "exampleSolutions": ["http://localhost-studio.code.org:3000/s/allthethings/lessons/50/levels/2?exemplar=true"],
+  "finishUrl": "/courses/allthethingscourse/units/1/lessons/50/levels/2",
+  "exampleSolutions": ["http://localhost-studio.code.org:3000/courses/allthethingscourse/units/1/lessons/50/levels/2?exemplar=true"],
   "exemplarSources": {
     "files": {
       "0": {

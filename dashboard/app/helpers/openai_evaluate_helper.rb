@@ -4,28 +4,28 @@ module OpenaiEvaluateHelper
   API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
-  # If the student did not do any work on the level, we don't need to send it to AI
-  # for evaluation. Instead, return a custom response explaining why the student's
-  # work was not evaluated.
+  # There are a few special cases where we want skip sending the student work to AI
+  # and instead return a custom response that mimics the format of the response from AI.
   NO_ATTEMPT_RESPONSE = {
-    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT],
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NOT_EVALUATED],
     evaluationCriteria: "Did the student attempt the level?",
+    aiReasoning: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NO_ATTEMPT],
   }
 
   PROFANITY_DETECTED_RESPONSE = {
-    aiEvaluation:  SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PROFANITY],
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NOT_EVALUATED],
     evaluationCriteria: "Did the student use profanity?",
-    aiReasoning: "The response contains profanity and could not be evaluated.",
+    aiReasoning: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PROFANITY],
   }
 
   PII_DETECTED_RESPONSE = {
-    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PII],
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:NOT_EVALUATED],
     evaluationCriteria: "Does the student work contain personally identifying information?",
-    aiReasoning: "The response could not be evaluated because it contains personal information that is not safe for your student to share.",
+    aiReasoning: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:STUDENT_PII]
   }
 
   DUMMY_RESPONSE = {
-    aiEvaluation: "Ok",
+    aiEvaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT],
     evaluationCriteria: "This is a test environment, so no real AI call was made.",
     aiReasoning: "Dummy data returned for testing purposes."
   }
@@ -34,14 +34,8 @@ module OpenaiEvaluateHelper
     student_work = options[:student_work]
     evaluation_type = options[:evaluation_type]
 
-    if level.is_a?(FreeResponse) && student_work.delete(' ').empty?
-      response = {**NO_ATTEMPT_RESPONSE, aiReasoning: "The student response was blank."}
-      # mimic the format of the response from AI
-      json_response = {"content" => response.to_json}
-      return {status: :ok, json: json_response}
-    elsif level.upper_grades_programming_level? && level.get_starter_code == student_work
-      response = {**NO_ATTEMPT_RESPONSE, aiReasoning: "The student did not change the starter code."}
-
+    if (level.is_a?(FreeResponse) && student_work.delete(' ').empty?) || (level.upper_grades_programming_level? && level.get_starter_code == student_work)
+      response = NO_ATTEMPT_RESPONSE
       # mimic the format of the response from AI
       json_response = {"content" => response.to_json}
       return {status: :ok, json: json_response}

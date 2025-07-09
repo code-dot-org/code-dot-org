@@ -45,7 +45,7 @@ const DEFAULT_PROPS = {
     id: 1163,
     excludeCsfColumnInLegend: false,
     title: 'Express Course (2019)',
-    path: '//localhost-studio.code.org:3000/s/express-2019',
+    path: '//localhost-studio.code.org:3000/courses/express-2019/units/1',
     lessons: [],
   },
   scriptFriendlyName: 'Express Course (2019)',
@@ -54,7 +54,7 @@ const DEFAULT_PROPS = {
 const UNIT_DATA = {
   id: 1,
   title: 'Express Course (2019)',
-  path: '//localhost-studio.code.org:3000/s/express-2019',
+  path: '//localhost-studio.code.org:3000/courses/express-2019/units/1',
   lessons: [{id: 1, position: 1, title: 'Lesson 1', levels: []}],
   name: 'Express Course',
   description: 'description',
