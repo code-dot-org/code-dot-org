@@ -1,4 +1,6 @@
 import classNames from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
@@ -9,7 +11,7 @@ import styles from './progress-table-legend.module.scss';
 
 export const PROGRESS_ICON_TITLE_PREFIX = 'progressicon-';
 
-export default function ProgressIcon({itemType}) {
+export default function ProgressIcon({itemType, completedPercent = null}) {
   const needsFeedbackTriangle = () => (
     <div
       className={classNames(styles.needsFeedback, styles.cornerBox)}
@@ -31,7 +33,7 @@ export default function ProgressIcon({itemType}) {
   return (
     // eslint-disable-next-line react/forbid-dom-props
     <div data-testid="progress-icon">
-      {itemType['icon'] !== undefined && (
+      {completedPercent === null && itemType['icon'] !== undefined && (
         <FontAwesome
           id={'uitest-' + itemType['icon']}
           icon={itemType['icon']}
@@ -41,6 +43,14 @@ export default function ProgressIcon({itemType}) {
           )}
           aria-label={itemType['title']}
         />
+      )}
+      {completedPercent !== null && itemType === ITEM_TYPE.IN_PROGRESS && (
+        <div
+          className={styles.completedPercent}
+          aria-label={`${itemType['title']} ${completedPercent}%`}
+        >
+          {_.round(completedPercent)}%
+        </div>
       )}
       {itemType === ITEM_TYPE.NEEDS_FEEDBACK && needsFeedbackTriangle()}
       {itemType === ITEM_TYPE.FEEDBACK_GIVEN && feedbackGivenTriangle()}
@@ -53,4 +63,5 @@ export default function ProgressIcon({itemType}) {
 
 ProgressIcon.propTypes = {
   itemType: ITEM_TYPE_SHAPE.isRequired,
+  completedPercent: PropTypes.number,
 };

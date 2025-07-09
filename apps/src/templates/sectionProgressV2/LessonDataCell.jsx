@@ -78,7 +78,12 @@ function LessonDataCell({
   const lessonCellUnexpanded = getCellComponent(
     <>
       {finished && <ProgressIcon itemType={ITEM_TYPE.SUBMITTED} />}
-      {partiallyComplete && <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} />}
+      {partiallyComplete && (
+        <ProgressIcon
+          itemType={ITEM_TYPE.IN_PROGRESS}
+          completedPercent={studentLessonProgress?.completedPercent}
+        />
+      )}
       {noLevels && <ProgressIcon itemType={ITEM_TYPE.NO_ONLINE_WORK} />}
     </>
   );

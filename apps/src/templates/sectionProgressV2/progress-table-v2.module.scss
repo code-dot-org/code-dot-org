@@ -101,6 +101,9 @@ $level-cell-width: 52;
     max-width: 52px;
     height: 47px;
     line-height: 47px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &Metadata {
