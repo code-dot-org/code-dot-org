@@ -15,5 +15,11 @@
 #  index_user_facilitator_infos_on_user_id  (user_id)
 #
 class User::FacilitatorInfo < ApplicationRecord
-  belongs_to :user, -> {with_deleted}
+  belongs_to :user
+
+  validate :validate_user_is_facilitator, if: :user_id_changed?
+
+  private def validate_user_is_facilitator
+    errors.add(:user, :not_facilitator) unless user&.facilitator?
+  end
 end
