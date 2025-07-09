@@ -3307,6 +3307,7 @@ class UserTest < ActiveSupport::TestCase
         secret_words: @student.secret_words,
         secret_picture_name: secret_picture.name,
         secret_picture_path: secret_picture.path,
+        secret_picture_url: ApplicationController.helpers.image_url(secret_picture.path),
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,

@@ -4,9 +4,10 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import {LevelProperties} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useLevelProperties} from '../levelPropertiesContext';
+import {LevelPropertiesContext} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
 import {
   clearChatMessages,
@@ -15,7 +16,7 @@ import {
   getSelectMultimodalAvailable,
   selectAllVisibleMessages,
 } from '../redux';
-import {ChatButton} from '../types';
+import {AichatLevelProperties, ChatButton} from '../types';
 import {getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -27,6 +28,9 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  // TODO: Temporary passing through level properties again because sub-components depend on the level properties context.
+  // When fully modularizing this component, we will instead pass through necessary data through props.
+  levelProperties: LevelProperties;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
   onClear: () => void;
@@ -45,6 +49,7 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  levelProperties,
   chatButtons,
   hiddenContext,
   onClear,
@@ -153,44 +158,49 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const multimodalEnabled = useAppSelector(
     getSelectMultimodalAvailable(
-      useLevelProperties().aichatSettings?.multimodalEnabled
+      (levelProperties as AichatLevelProperties).aichatSettings
+        ?.multimodalEnabled
     )
   );
 
   return (
-    <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {selectedStudent ? (
-        <Tabs {...tabArgs} />
-      ) : (
-        <ChatEventsList events={visibleItems} />
-      )}
-
-      <div className={moduleStyles.footer}>
-        {multimodalEnabled && <StagedFilesPreview />}
-        {canChatWithModel && (
-          <UserChatMessageEditor
-            editorContainerClassName={moduleStyles.messageEditorContainer}
-            chatButtons={chatButtons}
-            hiddenContext={hiddenContext}
-          />
+    <LevelPropertiesContext.Provider value={levelProperties}>
+      <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
+        {selectedStudent ? (
+          <Tabs {...tabArgs} />
+        ) : (
+          <ChatEventsList events={visibleItems} />
         )}
-        <div className={moduleStyles.buttonRow}>
-          {multimodalEnabled && (
-            <UploadButton isDisabled={!canChatWithModel || !!selectedStudent} />
+
+        <div className={moduleStyles.footer}>
+          {multimodalEnabled && <StagedFilesPreview />}
+          {canChatWithModel && (
+            <UserChatMessageEditor
+              editorContainerClassName={moduleStyles.messageEditorContainer}
+              chatButtons={chatButtons}
+              hiddenContext={hiddenContext}
+            />
           )}
-          <Button
-            text={aichatI18n.clearChatButtonText()}
-            disabled={!canChatWithModel}
-            iconLeft={eraserIcon}
-            size="s"
-            type="secondary"
-            color="gray"
-            onClick={onClear}
-          />
-          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
+          <div className={moduleStyles.buttonRow}>
+            {multimodalEnabled && (
+              <UploadButton
+                isDisabled={!canChatWithModel || !!selectedStudent}
+              />
+            )}
+            <Button
+              text={aichatI18n.clearChatButtonText()}
+              disabled={!canChatWithModel}
+              iconLeft={eraserIcon}
+              size="s"
+              type="secondary"
+              color="gray"
+              onClick={onClear}
+            />
+            <CopyChatHistoryButton isDisabled={!canChatWithModel} />
+          </div>
         </div>
       </div>
-    </div>
+    </LevelPropertiesContext.Provider>
   );
 };
 

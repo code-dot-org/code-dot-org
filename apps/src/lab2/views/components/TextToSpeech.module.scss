@@ -1,4 +1,3 @@
-@import 'color.scss';
 @import '../../../mixins.scss';
 
 .playButton {
@@ -10,7 +9,7 @@
   opacity: 35%;
   cursor: pointer;
   transition: opacity 0.2s ease;
-  color: $neutral_dark;
+  color: var(--text-neutral-primary);
 
   &HigherPosition {
     bottom: 58px;

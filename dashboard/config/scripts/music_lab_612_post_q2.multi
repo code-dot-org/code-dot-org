@@ -14,19 +14,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Sequencing
 
-Standard: Modify the volume, delay, or filter settings for a song,
+Skill: Modify the volume, delay, or filter settings for a song by correctly sequencing effect blocks
 
-Lesson: Sequencing - Synthesis
-
-Skill Progression: Use filter/delay/volume blocks strategically
-
-Pretest Modality: Given algorithm / intent / incorrect code, match with code
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
-
-
-
-
+Appears in Lesson: Sequencing - Synthesis
 MARKDOWN
 
 markdown <<MARKDOWN

@@ -19,9 +19,11 @@ import {
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -143,6 +145,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const useNewInstructions = experiments.isEnabled(
+    experiments.LAB2_INSTRUCTIONS_V2
+  );
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -289,17 +294,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const showExemplarPlayer =
     exemplarSettings?.playerEnabled && exemplarSources && !isEditingExemplar;
 
-  const ExemplarPlayer = ({title}: {title: string}) => {
-    return (
-      <ExemplarPlayerView
-        playbackEvents={exemplarPlaybackEvents}
-        title={title}
-        player={player}
-        insideInstructions={exemplarPlayerInsideInstructions}
-      />
-    );
-  };
-
   const showAdvancedControls =
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
@@ -350,20 +344,53 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               headerContent={musicI18n.panelHeaderInstructions()}
               hideHeaders={hideHeaders}
             >
-              <Instructions
-                isRunning={isPlaying}
-                handleInstructionsTextClick={onInstructionsTextClick}
-                bottomComponent={
-                  exemplarPlayerInsideInstructions &&
-                  showExemplarPlayer && (
-                    <ExemplarPlayer title={exemplarSettings.playerTitle!} />
-                  )
-                }
-                hasRun={hasRun}
-                hasEdited={hasEdited}
-              />
+              {useNewInstructions ? (
+                <InstructionsV2
+                  isRunning={isPlaying}
+                  handleInstructionsTextClick={onInstructionsTextClick}
+                  bottomComponent={
+                    exemplarPlayerInsideInstructions &&
+                    showExemplarPlayer && (
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
+                    )
+                  }
+                  hasRun={hasRun}
+                  hasEdited={hasEdited}
+                  fixedDarkBackground={true}
+                  overrideTheme={'Light'}
+                  levelProperties={levelProperties}
+                />
+              ) : (
+                <Instructions
+                  isRunning={isPlaying}
+                  handleInstructionsTextClick={onInstructionsTextClick}
+                  bottomComponent={
+                    exemplarPlayerInsideInstructions &&
+                    showExemplarPlayer && (
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
+                    )
+                  }
+                  hasRun={hasRun}
+                  hasEdited={hasEdited}
+                />
+              )}
               {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
-                <ExemplarPlayer title={exemplarSettings.playerTitle!} />
+                <ExemplarPlayerView
+                  playbackEvents={exemplarPlaybackEvents}
+                  title={exemplarSettings.playerTitle!}
+                  player={player}
+                  insideInstructions={exemplarPlayerInsideInstructions}
+                />
               )}
             </PanelContainer>
           </div>

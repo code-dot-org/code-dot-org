@@ -3,7 +3,8 @@ import React from 'react';
 
 import {UnconnectedSendLessonDialog as SendLessonDialog} from '@cdo/apps/templates/progress/SendLessonDialog';
 
-const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
+const lessonUrl =
+  'https://studio.code.org/courses/coursee-2020/units/1/lessons/2/levels/1';
 
 describe('SendLessonDialog', () => {
   it('renders a copy lesson link button', () => {

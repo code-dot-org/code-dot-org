@@ -125,14 +125,14 @@ const sections = [
       lesson_extras_available: true,
       text_to_speech_enabled: false,
       course_offering_id: 1,
-      unit_id: null,
+      unit_id: 12,
       version_id: 2017,
     },
     unitName: 'coursea-2017',
     unitPosition: 1,
-    unit_id: null,
-    isAssignedStandaloneCourse: true,
-    script: {name: null},
+    unit_id: 12,
+    isAssignedStandaloneCourse: false,
+    script: {name: 'coursea-2017'},
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -570,15 +570,15 @@ describe('teacherSectionsRedux', () => {
         courseDisplayName: 'Course A',
         course: {
           courseOfferingId: 1,
-          unitId: null,
+          unitId: 12,
           versionId: 2017,
           lessonExtrasAvailable: true,
           textToSpeechEnabled: false,
         },
         unitName: 'coursea-2017',
         unitPosition: 1,
-        unitId: null,
-        isAssignedStandaloneCourse: true,
+        unitId: 12,
+        isAssignedStandaloneCourse: false,
         isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
@@ -1352,7 +1352,10 @@ describe('teacherSectionsRedux', () => {
         stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
+      assert.deepEqual(paths, [
+        '/courses/csa-2022',
+        '/courses/csa-2022/units/1',
+      ]);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1908,7 +1911,7 @@ describe('teacherSectionsRedux', () => {
           providerManaged: false,
           hidden: false,
           assignmentNames: ['Course A'],
-          assignmentPaths: ['/s/coursea-2017'],
+          assignmentPaths: ['/courses/coursea-2017'],
           isAssignedSingleUnitCourse: undefined,
         },
         {

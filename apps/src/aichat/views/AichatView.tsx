@@ -12,7 +12,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {LabProps} from '@cdo/apps/lab2/types';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -42,8 +42,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {getNewRemoveId} from '../redux/utils';
-import {AichatLevelProperties, Notification, ViewMode} from '../types';
+import {AichatLevelProperties, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -51,14 +50,6 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 
 import moduleStyles from './aichatView.module.scss';
-
-const getResetModelNotification = (): Notification => ({
-  removeId: getNewRemoveId(),
-  text: aichatI18n.modelResetNotification(),
-  notificationType: 'success',
-  timestamp: Date.now(),
-  includeInChatHistory: true,
-});
 
 const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   levelProperties,
@@ -238,7 +229,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useDialogControl();
@@ -295,12 +285,13 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     }
                   )}
                 >
-                  <Instructions
+                  <InstructionsV2
                     className={moduleStyles.instructions}
                     /** AI Chat doesn't have a traditional "run" state, so this is always false. */
                     isRunning={false}
                     hasRun={hasSentMessage}
                     hasEdited={hasUpdatedCustomizations}
+                    levelProperties={levelProperties}
                   />
                 </PanelContainer>
               </div>
@@ -351,7 +342,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              <ChatWorkspace onClear={onClear} />
+              <ChatWorkspace
+                onClear={onClear}
+                levelProperties={levelProperties}
+              />
             </PanelContainer>
           </div>
         </div>

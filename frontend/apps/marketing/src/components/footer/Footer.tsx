@@ -6,7 +6,8 @@ import DSCOFooter, {
 } from '@code-dot-org/component-library/cms/footer';
 
 import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
-import awsLogo from '@public/images/powered-by-aws.png';
+// Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
+// import awsLogo from '@public/images/powered-by-aws.png';
 
 import './onetrust.scss';
 
@@ -95,16 +96,17 @@ export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
         icon: {iconFamily: 'brands', iconName: 'medium'},
       },
     ],
-    imageLinks: [
-      {
-        key: 'poweredByAWS',
-        label: 'Powered by AWS Cloud Computing',
-        href: 'https://aws.amazon.com/what-is-cloud-computing',
-        image: {
-          src: awsLogo.src,
-        },
-      },
-    ],
+    // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
+    // imageLinks: [
+    //   {
+    //     key: 'poweredByAWS',
+    //     label: 'Powered by AWS Cloud Computing',
+    //     href: 'https://aws.amazon.com/what-is-cloud-computing',
+    //     image: {
+    //       src: awsLogo.src,
+    //     },
+    //   },
+    // ],
   };
 
 interface GlobalFooterProps {

@@ -1162,7 +1162,7 @@ module Services
     test 'published state set to pilot when pilot_experiment is present' do
       unit = create :script
       assert_nil unit.pilot_experiment
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
 
       json = ScriptSeed.serialize_seeding_json(unit)
       unit_data = JSON.parse(json)
@@ -1370,7 +1370,6 @@ module Services
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
         :script,
-        :in_unit_group,
         name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
         is_migrated: true

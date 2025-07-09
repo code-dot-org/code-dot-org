@@ -2,7 +2,10 @@ import {eTag} from '@tinyhttp/etag';
 import {EmptySitemap, SitemapStream, streamToPromise} from 'sitemap';
 
 import {STALE_WHILE_REVALIDATE_ONE_DAY} from '@/cache/constants';
+import {getBrandFromHostname} from '@/config/brand';
+import {getCanonicalHostname} from '@/config/host';
 import {SUPPORTED_LOCALE_CODES} from '@/config/locale';
+import {getStage} from '@/config/stage';
 import {getContentfulClient} from '@/contentful/client';
 import {getAllEntriesForContentType} from '@/contentful/get-entries';
 import {SeoMetadataEntry} from '@/types/contentful/entries/SeoMetadata';
@@ -31,7 +34,11 @@ export async function GET(request: Request) {
     return new Response();
   }
 
-  const hostname = `https://${request.headers.get('host')}`;
+  const host = request.headers.get('host');
+  const brand = getBrandFromHostname(host);
+  const stage = getStage();
+
+  const hostname = `https://${getCanonicalHostname(brand, stage)}`;
 
   const experienceEntries = await getAllEntriesForContentType<
     Entry<SitemapEntry>
