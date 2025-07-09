@@ -125,7 +125,6 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                 href={personalLink?.fields?.primaryTarget}
                 target="_blank"
                 rel="noopener noreferrer"
-                color="secondary.main"
                 sx={styles.personalLink}
               >
                 Visit personal page

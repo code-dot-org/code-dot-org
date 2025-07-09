@@ -32,6 +32,7 @@ const theme = createTheme({
     MuiLink: {
       styleOverrides: {
         root: ({theme}) => ({
+          color: theme.palette.secondary.main,
           fontWeight: 500,
           textDecoration: 'underline',
           transition: 'color 0.2s ease-in-out',
