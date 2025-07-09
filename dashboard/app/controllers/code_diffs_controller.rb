@@ -1,22 +1,14 @@
 class CodeDiffsController < ApplicationController
   def get_code_difference_summary
-    puts "code_diff_params:"
-    puts code_diff_params
-    puts
     response = OpenaiEvaluateHelper.summarize_diff(
-      code_diff_params[:oldCode], code_diff_params[:newCode]
+      code_diff_params[:old_code], code_diff_params[:new_code]
     )
     puts
     puts
     puts "Response from OpenAI: #{response.inspect}"
     puts
     puts
-    if response[:status] == :success
-      response[:json]['content']
-    else
-      Rails.logger.error("Error summarizing code difference: #{response[:error]}")
-      nil
-    end
+    return render(status: response[:status], json: response[:json])
   end
 
   private def code_diff_params

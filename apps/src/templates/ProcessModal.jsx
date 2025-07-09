@@ -22,7 +22,7 @@ const ProcessModal = ({useFilesApi}) => {
   };
 
   // Fetch all code versions for a given list of versions
-  const fetchAllCodeVersions = async versionsList => {
+  const fetchAllCodeSamples = async versionsList => {
     setPending(true);
     const codeMap = {};
     await Promise.all(
@@ -71,13 +71,15 @@ const ProcessModal = ({useFilesApi}) => {
         });
       }
       setVersions(fetchedVersions);
-      fetchAllCodeVersions(fetchedVersions);
+      fetchAllCodeSamples(fetchedVersions);
     };
     fetchAllVersions();
   }, [useFilesApi]);
 
-  const getDiffSummary = (oldCode, newCode) => {
-    const summary = getCodeDiffSummary(oldCode, newCode);
+  const getDiffSummary = async (oldCode, newCode) => {
+    const result = await getCodeDiffSummary(oldCode, newCode);
+    const summary = JSON.parse(result['content'])['codeDiffSummary'];
+    console.log('Diff Summary:', summary);
     return (
       <div className="applab-diff-summary">
         <strong>Diff Summary:</strong>{' '}
@@ -133,10 +135,14 @@ const ProcessModal = ({useFilesApi}) => {
                           compareMethod={DiffMethod.WORDS}
                         />
                         <span>
-                          {getDiffSummary(
-                            codeByVersion[sortedVersions[index + 1].versionId],
-                            codeByVersion[sortedVersions[index].versionId]
-                          )}
+                          {codeByVersion[sortedVersions[index + 1].versionId] &&
+                            codeByVersion[sortedVersions[index].versionId] &&
+                            getDiffSummary(
+                              codeByVersion[
+                                sortedVersions[index + 1].versionId
+                              ],
+                              codeByVersion[sortedVersions[index].versionId]
+                            )}
                         </span>
                       </div>
                     )}

@@ -45,6 +45,7 @@ module AiEvaluationOpenaiHelper
     end
 
     def request_code_diff_summary(student_code)
+      puts "Requesting code diff summary with student_code: #{student_code}"
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"

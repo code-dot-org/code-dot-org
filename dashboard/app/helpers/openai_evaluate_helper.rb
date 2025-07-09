@@ -160,9 +160,9 @@ module OpenaiEvaluateHelper
     oldCode should be a copy of #{old_code}.
     newCode should be a copy of #{new_code}
     codeDiff should be your calculation of the difference between the #{old_code} and the #{new_code}.
-    codeDiffSummary should be 1-2 sentences summarizing the difference. 
+    codeDiffSummary should be 1-2 sentences summarizing the difference.
     evaluation should be your judgement of 'good change' or 'bad change' whether the code change is getting them closer to or farther from the ideal solution."
-    code_diff_message = [{role: "user", content: student_code}]
+    code_diff_message = [{role: "user", content: "oldCode: #{old_code}\nnewCode: #{new_code}"}]
     messages = prepend_system_prompt(system_prompt, code_diff_message)
     response = client.request_code_diff_summary(messages)
     response_body = JSON.parse(response.body)
