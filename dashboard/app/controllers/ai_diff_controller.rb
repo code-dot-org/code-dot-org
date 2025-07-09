@@ -35,9 +35,6 @@ class AiDiffController < ApplicationController
         lesson_id: @lesson&.id,
         context_type: params[:context][:type]
       )
-      @thread.system_prompt = response_body[:prompt]
-      @thread.metadata_config = response_body[:metadata]
-      @thread.save!
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
@@ -51,7 +48,7 @@ class AiDiffController < ApplicationController
           external_id: @thread.external_id,
           role: :user,
           content: params[:inputText],
-          raw_content: params[:intputText],
+          raw_content: params[:inputText],
           is_preset: params[:isPreset],
         )
       rescue StandardError => exception
@@ -237,18 +234,16 @@ class AiDiffController < ApplicationController
       student_code
     )
 
-    raw_content, content, links, new_session_id, metadata = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chat_message_text: content,
-      session_id: new_session_id,
-      raw_content: raw_content,
-      links: links,
-      prompt: prompt,
-      metadata: metadata
+      chat_message_text: response[:content],
+      session_id: response[:session_id],
+      raw_content: response[:raw_content],
+      links: response[:links],
     }
   end
 
