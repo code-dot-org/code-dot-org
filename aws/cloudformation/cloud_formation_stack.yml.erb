@@ -487,11 +487,11 @@ Resources:
 <% end -%>
 
 
+<%=  component 'cache'%>
 <% if frontends-%>
   # --------------------------------------------------------
   # ElastiCache for Geocoder, Memcached, and Session Storage
   # --------------------------------------------------------
-<%=  component 'cache'%>
 <%=  component 'session_store'%>
 <% end -%>
 
