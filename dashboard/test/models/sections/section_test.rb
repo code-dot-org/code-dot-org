@@ -871,7 +871,7 @@ class SectionTest < ActiveSupport::TestCase
 
     assert_equal expected, section.summarize_for_participant
   end
-    
+
   test 'summarize: section with a course assigned' do
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)

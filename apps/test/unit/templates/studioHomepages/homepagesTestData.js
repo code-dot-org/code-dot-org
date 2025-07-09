@@ -1,5 +1,3 @@
-import {progressUrl, manageStudentsUrl} from './fakeSectionUtils';
-
 export const announcement = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',

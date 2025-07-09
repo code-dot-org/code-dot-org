@@ -483,7 +483,7 @@ class Section < ApplicationRecord
     ActiveRecord::Base.connected_to(role: :reading) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
-      course_version_name = 
+      course_version_name =
         if unit_group
           unit_group.name
         elsif script_id
@@ -517,48 +517,50 @@ class Section < ApplicationRecord
         issuer = lti_course.lti_integration.issuer
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
-      summarize_for_participant.merge({
-        createdAt: created_at,
-        sectionInstructors: serialized_section_instructors,
-        primaryInstructor: primary_instructor,
-        linkToProgress: "#{base_url}#{id}/progress",
-        courseVersionName: course_version_name,
-        numberOfStudents: num_students,
-        linkToStudents: manage_students_url,
-        lesson_extras: lesson_extras,
-        pairing_allowed: pairing_allowed,
-        tts_autoplay_enabled: tts_autoplay_enabled,
-        sharing_disabled: sharing_disabled?,
-        login_type_name: login_type_name,
-        participant_type: participant_type,
-        course_display_name: course_display_name,
-        course_offering_id: course_offering_id,
-        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-        unit_id: unit_group ? script_id : nil,
-        unitPosition: unit_group_unit&.position,
-        course_id: course_id,
-        script: {
-          id: selected_unit&.id,
-          name: selected_unit&.name,
-          project_sharing: selected_unit&.project_sharing
-        },
-        studentCount: num_students,
-        providerManaged: provider_managed?,
-        hidden: hidden,
-        students: include_students ? unique_students.map(&:summarize) : nil,
-        restrict_section: restrict_section,
-        is_assigned_csa: assigned_csa?,
-        is_assigned_single_unit_course: unit_group&.single_unit_course?,
-        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
-        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-        code_review_expires_at: code_review_expires_at,
-        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
-        at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
-        at_risk_age_gated_us_state: at_risk_student&.us_state,
-        avatar_color: avatar_color,
-        avatar_emoji: avatar_emoji,
-      })
+      summarize_for_participant.merge(
+        {
+          createdAt: created_at,
+          sectionInstructors: serialized_section_instructors,
+          primaryInstructor: primary_instructor,
+          linkToProgress: "#{base_url}#{id}/progress",
+          courseVersionName: course_version_name,
+          numberOfStudents: num_students,
+          linkToStudents: manage_students_url,
+          lesson_extras: lesson_extras,
+          pairing_allowed: pairing_allowed,
+          tts_autoplay_enabled: tts_autoplay_enabled,
+          sharing_disabled: sharing_disabled?,
+          login_type_name: login_type_name,
+          participant_type: participant_type,
+          course_display_name: course_display_name,
+          course_offering_id: course_offering_id,
+          course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+          unit_id: unit_group ? script_id : nil,
+          unitPosition: unit_group_unit&.position,
+          course_id: course_id,
+          script: {
+            id: selected_unit&.id,
+            name: selected_unit&.name,
+            project_sharing: selected_unit&.project_sharing
+          },
+          studentCount: num_students,
+          providerManaged: provider_managed?,
+          hidden: hidden,
+          students: include_students ? unique_students.map(&:summarize) : nil,
+          restrict_section: restrict_section,
+          is_assigned_csa: assigned_csa?,
+          is_assigned_single_unit_course: unit_group&.single_unit_course?,
+          # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+          post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+          code_review_expires_at: code_review_expires_at,
+          sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+          ai_tutor_enabled: ai_tutor_enabled,
+          at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
+          at_risk_age_gated_us_state: at_risk_student&.us_state,
+          avatar_color: avatar_color,
+          avatar_emoji: avatar_emoji,
+        }
+      )
     end
   end
 
