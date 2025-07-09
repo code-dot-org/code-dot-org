@@ -74,6 +74,8 @@
 #  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
 #
 class Teacher < User
+  include Facilitatable
+
   def self.sti_name
     TYPE_TEACHER
   end
