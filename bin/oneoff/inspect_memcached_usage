@@ -1,0 +1,468 @@
+#!/usr/bin/env ruby
+
+# Initialize our Dashboard Rails application.
+require_relative '../../dashboard/config/environment'
+
+require 'socket'
+require 'timeout'
+
+# Robust memcached diagnostic methods that handle ElastiCache timeouts gracefully
+
+class RobustMemcachedInspector
+  def initialize(cache_client = nil)
+    @cache_client = cache_client || CDO.shared_cache
+    @dalli_data = @cache_client.instance_variable_get(:@data)
+    @endpoints = @dalli_data.instance_variable_get(:@servers)
+    @timeout_duration = 10  # Shorter timeout for production
+  end
+
+  # 1. Stats-only approach (much faster and more reliable)
+  def comprehensive_stats_analysis
+    puts "=== COMPREHENSIVE STATS ANALYSIS ==="
+
+    total_stats = {
+      curr_items: 0,
+      total_items: 0,
+      bytes: 0,
+      limit_maxbytes: 0,
+      evictions: 0,
+      reclaimed: 0,
+      get_hits: 0,
+      get_misses: 0
+    }
+
+    @endpoints.each_with_index do |endpoint, idx|
+      hostname, port = endpoint.split(":")
+      puts "\n--- Server #{idx + 1}: #{endpoint} ---"
+
+      begin
+        Timeout.timeout(@timeout_duration) do
+          sock = TCPSocket.new(hostname, port || 11211)
+          sock.write("stats\r\n")
+
+          server_stats = {}
+          loop do
+            line = sock.readline.strip
+            break if line == "END"
+
+            if line.start_with?("STAT")
+              parts = line.split(" ", 3)
+              stat_name = parts[1]
+              stat_value = parts[2]
+              server_stats[stat_name] = stat_value
+            end
+          end
+
+          # Display key metrics
+          curr_items = server_stats['curr_items'].to_i
+          bytes_used = server_stats['bytes'].to_i
+          max_bytes = server_stats['limit_maxbytes'].to_i
+          utilization = max_bytes > 0 ? (bytes_used.to_f / max_bytes * 100).round(2) : 0
+
+          puts "  Current Items: #{curr_items.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+          puts "  Bytes Used: #{bytes_used.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+          puts "  Max Bytes: #{max_bytes.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+          puts "  Utilization: #{utilization}%"
+          puts "  Evictions: #{server_stats['evictions']}"
+          puts "  Reclaimed: #{server_stats['reclaimed']}"
+          puts "  Version: #{server_stats['version']}"
+          puts "  Uptime: #{(server_stats['uptime'].to_i / 3600.0).round(1)} hours"
+
+          # Add to totals
+          total_stats[:curr_items] += curr_items
+          total_stats[:total_items] += server_stats['total_items'].to_i
+          total_stats[:bytes] += bytes_used
+          total_stats[:limit_maxbytes] += max_bytes
+          total_stats[:evictions] += server_stats['evictions'].to_i
+          total_stats[:reclaimed] += server_stats['reclaimed'].to_i
+          total_stats[:get_hits] += server_stats['get_hits'].to_i
+          total_stats[:get_misses] += server_stats['get_misses'].to_i
+
+          sock.close
+        end
+      rescue Timeout::Error
+        puts "  ERROR: Timeout after #{@timeout_duration}s"
+      rescue => exception
+        puts "  ERROR: #{exception.message}"
+      end
+    end
+
+    puts "\n=== CLUSTER TOTALS ==="
+    puts "Total Items: #{total_stats[:curr_items].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+    puts "Total Bytes: #{total_stats[:bytes].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+    puts "Total Capacity: #{total_stats[:limit_maxbytes].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
+    puts "Overall Utilization: #{(total_stats[:bytes].to_f / total_stats[:limit_maxbytes] * 100).round(2)}%"
+    puts "Total Evictions: #{total_stats[:evictions]}"
+    puts "Hit Rate: #{(total_stats[:get_hits].to_f / (total_stats[:get_hits] + total_stats[:get_misses]) * 100).round(2)}%"
+
+    return total_stats
+  end
+
+  # 2. Slab analysis (more reliable than metadump)
+  def analyze_slabs
+    puts "\n=== SLAB ANALYSIS ==="
+
+    @endpoints.each_with_index do |endpoint, idx|
+      hostname, port = endpoint.split(":")
+      puts "\n--- Server #{idx + 1}: #{endpoint} ---"
+
+      begin
+        Timeout.timeout(@timeout_duration) do
+          sock = TCPSocket.new(hostname, port || 11211)
+          sock.write("stats slabs\r\n")
+
+          slabs = {}
+          loop do
+            line = sock.readline.strip
+            break if line == "END"
+
+            if line.start_with?("STAT")
+              parts = line.split(" ", 3)
+              if parts[1] =~ /^(\d+):(.+)/
+                slab_id = $1.to_i
+                stat_name = $2
+                stat_value = parts[2]
+
+                slabs[slab_id] ||= {}
+                slabs[slab_id][stat_name] = stat_value
+              end
+            end
+          end
+
+          # Display slab information
+          puts "  Active Slabs: #{slabs.keys.sort.join(', ')}"
+
+          slabs.keys.sort.each do |slab_id|
+            slab = slabs[slab_id]
+            if slab['used_chunks'] && slab['used_chunks'].to_i > 0
+              puts "    Slab #{slab_id}: #{slab['used_chunks']} items, #{slab['chunk_size']} bytes/item"
+            end
+          end
+
+          sock.close
+        end
+      rescue Timeout::Error
+        puts "  ERROR: Timeout after #{@timeout_duration}s"
+      rescue => exception
+        puts "  ERROR: #{exception.message}"
+      end
+    end
+  end
+
+  SKIP_LINES = %w[END ERROR].freeze
+
+  # 3. Sample keys using smaller, faster queries
+  def sample_keys_efficiently(samples_per_slab = 5)
+    puts "\n=== EFFICIENT KEY SAMPLING ==="
+
+    all_sampled_keys = []
+
+    @endpoints.each_with_index do |endpoint, idx|
+      hostname, port = endpoint.split(":")
+      puts "\nSampling from server #{idx + 1}: #{endpoint}"
+
+      begin
+        # First, get slab information
+        Timeout.timeout(@timeout_duration) do
+          sock = TCPSocket.new(hostname, port || 11211)
+          sock.write("stats slabs\r\n")
+
+          active_slabs = []
+          loop do
+            line = sock.readline.strip
+            break if line == "END"
+
+            if line.match(/^STAT (\d+):used_chunks (\d+)/) && $2.to_i > 0
+              active_slabs << $1.to_i
+            end
+          end
+
+          sock.close
+
+          # Sample from each active slab
+          active_slabs.each do |slab_id|
+            Timeout.timeout(5) do  # Even shorter timeout for sampling
+              sock = TCPSocket.new(hostname, port || 11211)
+              sock.write("stats cachedump #{slab_id} #{samples_per_slab}\r\n")
+
+              slab_keys = []
+              loop do
+                line = sock.readline.strip
+                break if SKIP_LINES.include?(line)
+
+                if line =~ /^ITEM ([^\s]+) \[(\d+) b; (\d+) s\]/
+                  key = $1
+                  size = $2.to_i
+                  timestamp = $3.to_i
+
+                  # Calculate if expired (timestamp of 0 means no expiration)
+                  has_expiration = timestamp > 0
+                  is_expired = has_expiration && timestamp < Time.now.to_i
+
+                  slab_keys << {
+                    key: key,
+                    size: size,
+                    slab: slab_id,
+                    has_expiration: has_expiration,
+                    is_expired: is_expired,
+                    server: idx + 1
+                  }
+                end
+              end
+
+              all_sampled_keys.concat(slab_keys)
+              puts "  Slab #{slab_id}: #{slab_keys.length} keys sampled"
+
+              sock.close
+            end
+          rescue Timeout::Error
+            puts "  Slab #{slab_id}: Timeout during sampling"
+          rescue => exception
+            puts "  Slab #{slab_id}: Error - #{exception.message}"
+          end
+        end
+      rescue Timeout::Error
+        puts "  ERROR: Timeout getting slab info"
+      rescue => exception
+        puts "  ERROR: #{exception.message}"
+      end
+    end
+
+    puts "\nSampled #{all_sampled_keys.length} total keys"
+    analyze_sampled_keys(all_sampled_keys)
+
+    return all_sampled_keys
+  end
+
+  STAT_NAMES = %w[curr_items bytes total_items evictions].freeze
+  # 4. Monitor growth with shorter intervals
+  def monitor_growth_robust(cycles = 5, interval_seconds = 30)
+    puts "\n=== ROBUST GROWTH MONITORING ==="
+    puts "Monitoring #{cycles} cycles, #{interval_seconds}s apart"
+
+    measurements = []
+
+    cycles.times do |cycle|
+      timestamp = Time.now
+      cycle_stats = {timestamp: timestamp, servers: []}
+
+      @endpoints.each_with_index do |endpoint, idx|
+        hostname, port = endpoint.split(":")
+
+        begin
+          Timeout.timeout(5) do
+            sock = TCPSocket.new(hostname, port || 11211)
+            sock.write("stats\r\n")
+
+            server_data = {endpoint: endpoint, stats: {}}
+            loop do
+              line = sock.readline.strip
+              break if line == "END"
+
+              if line.start_with?("STAT")
+                parts = line.split(" ", 3)
+                stat_name = parts[1]
+                stat_value = parts[2]
+
+                if STAT_NAMES.include?(stat_name)
+                  server_data[:stats][stat_name] = stat_value.to_i
+                end
+              end
+            end
+
+            cycle_stats[:servers] << server_data
+            sock.close
+          end
+        rescue Timeout::Error
+          puts "  Server #{idx + 1}: Timeout"
+          cycle_stats[:servers] << {endpoint: endpoint, stats: {error: "timeout"}}
+        rescue => exception
+          puts "  Server #{idx + 1}: Error - #{exception.message}"
+          cycle_stats[:servers] << {endpoint: endpoint, stats: {error: exception.message}}
+        end
+      end
+
+      measurements << cycle_stats
+
+      # Calculate and display totals
+      total_items = cycle_stats[:servers].sum {|s| s[:stats]['curr_items'] || 0}
+      total_bytes = cycle_stats[:servers].sum {|s| s[:stats]['bytes'] || 0}
+
+      print "#{timestamp.strftime('%H:%M:%S')}: #{total_items} items, #{total_bytes} bytes"
+
+      if measurements.length > 1
+        prev = measurements[-2]
+        prev_items = prev[:servers].sum {|s| s[:stats]['curr_items'] || 0}
+        prev_bytes = prev[:servers].sum {|s| s[:stats]['bytes'] || 0}
+
+        time_diff = (timestamp - prev[:timestamp]) / 60.0  # minutes
+        items_per_min = ((total_items - prev_items) / time_diff).round(1)
+        bytes_per_min = ((total_bytes - prev_bytes) / time_diff).round(0)
+
+        puts " | Growth: #{items_per_min} items/min, #{bytes_per_min} bytes/min"
+      else
+        puts ""
+      end
+
+      sleep interval_seconds unless cycle == cycles - 1
+    end
+
+    return measurements
+  end
+
+  # 5. Test specific cache operations
+  def test_cache_operations_detailed
+    puts "\n=== DETAILED CACHE OPERATION TEST ==="
+
+    test_cases = [
+      {key: "test_no_expire_#{Time.now.to_i}", value: "no_expire", expires_in: nil},
+      {key: "test_1hour_#{Time.now.to_i}", value: "1hour", expires_in: 1.hour},
+      {key: "test_1min_#{Time.now.to_i}", value: "1min", expires_in: 1.minute}
+    ]
+
+    test_cases.each do |test_case|
+      puts "\nTesting: #{test_case[:key]} (expires_in: #{test_case[:expires_in]})"
+
+      # Write to cache
+      if test_case[:expires_in]
+        @cache_client.write(test_case[:key], test_case[:value], expires_in: test_case[:expires_in])
+      else
+        @cache_client.write(test_case[:key], test_case[:value])
+      end
+
+      # Verify write
+      retrieved = @cache_client.read(test_case[:key])
+      puts "  Write successful: #{retrieved == test_case[:value]}"
+
+      # Check if key appears in memcached with correct expiration
+      found_in_memcached = false
+      @endpoints.each_with_index do |endpoint, idx|
+        hostname, port = endpoint.split(":")
+
+        begin
+          Timeout.timeout(3) do
+            sock = TCPSocket.new(hostname, port || 11211)
+
+            # Use get command to check if key exists
+            sock.write("get #{test_case[:key]}\r\n")
+            response = sock.readline.strip
+
+            if response.start_with?("VALUE")
+              found_in_memcached = true
+              puts "  Found on server #{idx + 1}: #{endpoint}"
+            end
+
+            sock.close
+          end
+        rescue
+          # Key might be on a different server, continue
+        end
+      end
+
+      puts "  Found in memcached: #{found_in_memcached}"
+
+      # Clean up
+      @cache_client.delete(test_case[:key])
+    end
+  end
+
+  private def analyze_sampled_keys(keys)
+    return if keys.empty?
+
+    puts "\n--- Key Analysis ---"
+
+    # Pattern analysis
+    patterns = Hash.new(0)
+    keys.each do |key_data|
+      key = key_data[:key]
+      case key
+      when /session/i then patterns['Sessions'] += 1
+      when /user/i then patterns['User Data'] += 1
+      when /partial/i then patterns['Partial Registration'] += 1
+      when /view/i then patterns['View Cache'] += 1
+      when /fragment/i then patterns['Fragment Cache'] += 1
+      when /ActiveRecord/i then patterns['ActiveRecord Cache'] += 1
+      else patterns['Other'] += 1
+      end
+    end
+
+    puts "Key patterns:"
+    patterns.sort_by {|_k, v| -v}.each do |pattern, count|
+      percentage = (count.to_f / keys.length * 100).round(1)
+      puts "  #{pattern}: #{count} (#{percentage}%)"
+    end
+
+    # Expiration analysis
+    with_expiration = keys.count {|k| k[:has_expiration]}
+    without_expiration = keys.length - with_expiration
+    expired_keys = keys.count {|k| k[:is_expired]}
+
+    puts "\nExpiration analysis:"
+    puts "  With expiration: #{with_expiration}"
+    puts "  Without expiration: #{without_expiration}"
+    puts "  Expired (stale): #{expired_keys}"
+
+    # Size analysis
+    total_size = keys.sum {|k| k[:size]}
+    avg_size = (total_size.to_f / keys.length).round(0)
+    large_keys = keys.select {|k| k[:size] > 10000}  # > 10KB
+
+    puts "\nSize analysis:"
+    puts "  Average size: #{avg_size} bytes"
+    puts "  Large keys (>10KB): #{large_keys.length}"
+
+    if large_keys.any?
+      puts "  Largest keys:"
+      large_keys.sort_by {|k| -k[:size]}.take(3).each do |key_data|
+        puts "    #{key_data[:key]} (#{key_data[:size]} bytes)"
+      end
+    end
+  end
+end
+
+# Usage methods that handle errors gracefully
+def robust_quick_analysis
+  inspector = RobustMemcachedInspector.new
+
+  puts "Starting robust memcached analysis..."
+
+  # 1. Get comprehensive stats (always works)
+  stats = inspector.comprehensive_stats_analysis
+
+  # 2. Analyze slabs (usually works)
+  inspector.analyze_slabs
+
+  # 3. Sample keys efficiently (works even with timeouts)
+  sampled_keys = inspector.sample_keys_efficiently(3)  # 3 keys per slab
+
+  # 4. Test cache operations
+  inspector.test_cache_operations_detailed
+
+  return {stats: stats, sampled_keys: sampled_keys}
+end
+
+def monitor_for_growth
+  inspector = RobustMemcachedInspector.new
+  inspector.monitor_growth_robust(6, 30)  # 6 cycles, 30s apart = 3 minutes
+end
+
+# 1. Complete analysis (timeout-resistant)
+robust_quick_analysis
+
+# 2. Monitor growth over 3 minutes
+monitor_for_growth
+
+# 3. Individual methods:
+inspector = RobustMemcachedInspector.new
+
+# Stats only (fastest, most reliable)
+inspector.comprehensive_stats_analysis
+
+# Slab analysis (usually works)
+inspector.analyze_slabs
+
+# Efficient key sampling (handles timeouts)
+inspector.sample_keys_efficiently(5)
+
+# Test memcached setup
+inspector.test_cache_operations_detailed
