@@ -137,16 +137,32 @@ export default function unitSelection(state = initialState, action) {
 
     const firstUnit = firstCourse ? firstCourse.units[0] : null;
 
+    // If the currently selected Unit is the new set of coursesWithProgress,
+    // the default to selecting the first Unit.
+    let scriptId = firstUnit?.id;
+    let courseVersionId = firstCourse?.id;
+    if (state.scriptId && state.courseVersionId) {
+      const selectedUnit = action.coursesWithProgress.find(
+        course => course.id === state.courseVersionId
+      );
+      if (selectedUnit) {
+        const selectedUnitIndex = selectedUnit.units.findIndex(
+          unit => unit.id === state.scriptId
+        );
+        if (selectedUnitIndex >= 0) {
+          scriptId = state.scriptId;
+          courseVersionId = state.courseVersionId;
+        }
+      }
+    }
+
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
       // This automatically selects the first unit of the first course
       // unless a Unit is already set
-      scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId,
-      courseVersionId:
-        state.courseVersionId === null
-          ? firstCourse?.id
-          : state.courseVersionId,
+      scriptId: scriptId,
+      courseVersionId: courseVersionId,
     };
   }
 
