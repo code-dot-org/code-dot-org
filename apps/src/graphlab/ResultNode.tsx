@@ -18,10 +18,10 @@ function ResultNode() {
   const textNodes = nodesData.filter(isTextNode);
 
   return (
-    <div>
+    <div style={{maxWidth: 400}}>
       <Handle type="target" position={Position.Left} />
+      <div>Output</div>
       <div>
-        incoming texts:{' '}
         {textNodes.length > 0
           ? textNodes.map(({data}, i) =>
               data && 'text' in data ? <div key={i}>{data.text}</div> : null

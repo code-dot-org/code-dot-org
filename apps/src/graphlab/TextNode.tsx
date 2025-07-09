@@ -7,7 +7,10 @@ import {
 } from '@xyflow/react';
 import React, {memo, useCallback} from 'react';
 
-function TextNode({id, data}: NodeProps<Node<{fieldText: string}>>) {
+function TextNode({
+  id,
+  data,
+}: NodeProps<Node<{fieldText: string; text: string}>>) {
   const {updateNodeData} = useReactFlow();
 
   const onEnter = useCallback(() => {
@@ -18,7 +21,7 @@ function TextNode({id, data}: NodeProps<Node<{fieldText: string}>>) {
 
   return (
     <div>
-      <div>text {id}</div>
+      <div>Input {data.fieldText !== data.text && ' *'}</div>
       <div>
         <input
           onChange={evt => updateNodeData(id, {fieldText: evt.target.value})}

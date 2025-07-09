@@ -99,11 +99,10 @@ function AskChatNode({
         /*isConnectable={connections.length === 0}*/
       />
       <div>
-        ask chat{' '}
+        AI {data.fieldText !== data.askedText && ' *'}
         {isWorking && (
           <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         )}
-        {data.fieldText !== data.askedText && ' *'}
       </div>
       <textarea
         onChange={evt => updateNodeData(id, {fieldText: evt.target.value})}

@@ -24,14 +24,14 @@ export default () => {
         onDragStart={event => onDragStart(event, 'text')}
         draggable
       >
-        Text
+        Input
       </div>
       <div
         className="dndnode"
         onDragStart={event => onDragStart(event, 'askchat')}
         draggable
       >
-        Ask chat
+        AI
       </div>
       <div
         className="condition"
@@ -52,7 +52,7 @@ export default () => {
         onDragStart={event => onDragStart(event, 'result')}
         draggable
       >
-        Result
+        Output
       </div>
     </aside>
   );

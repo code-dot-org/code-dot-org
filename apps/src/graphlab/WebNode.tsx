@@ -30,7 +30,7 @@ function WebNode({id, selected}: NodeProps) {
     });
   }, [id, updateNodeData]);
 
-  const srcHtml: string =
+  const srcDoc: string =
     textNodes.length > 0
       ? textNodes
           .map(({data}) => (data && 'text' in data ? data.text : ''))
@@ -49,10 +49,10 @@ function WebNode({id, selected}: NodeProps) {
   const srcDoc = doc.body.innerHTML;
   */
 
-  const srcDoc = srcHtml.substring(
+  /*const srcDoc = srcHtml.substring(
     srcHtml.indexOf('<html>'),
     srcHtml.indexOf('</html>') + '</html>'.length
-  );
+  );*/
 
   return (
     <div style={{width: '100%', height: '100%'}}>
@@ -64,10 +64,11 @@ function WebNode({id, selected}: NodeProps) {
       />
 
       <Handle type="target" position={Position.Left} />
+      <div>Web</div>
       <iframe
         title="iframe"
         srcDoc={srcDoc}
-        style={{width: '100%', height: '100%'}}
+        style={{width: '100%', height: 'calc(100% - 20px)'}}
       />
       <Handle type="source" position={Position.Right} />
     </div>
