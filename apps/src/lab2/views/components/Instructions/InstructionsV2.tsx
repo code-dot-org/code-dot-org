@@ -80,7 +80,21 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   overrideTheme,
 }) => {
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const validationState = useAppSelector(state => state.lab.validationState);
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+  const validationMessage = useAppSelector(
+    state => state.lab.validationState?.message
+  );
+  const validationIndex = useAppSelector(
+    state => state.lab.validationState?.index
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState?.satisfied
+  );
+  const validationResults = useAppSelector(
+    state => state.lab.validationState?.validationResults
+  );
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
@@ -105,10 +119,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     // This ensures it will be read by screen readers.
     // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
     // the program.
-    if (validationState?.message && !isRunning) {
+    if (validationMessage && !isRunning) {
       feedbackRef.current?.focus();
     }
-  }, [validationState?.message, isRunning]);
+  }, [validationMessage, isRunning]);
 
   // Don't render anything if we don't have any instructions.
   if (
@@ -119,7 +133,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   }
 
   const canShowNextButton =
-    (!validationState?.hasConditions || validationState?.satisfied) &&
+    (!hasValidationConditions || validationSatisfied) &&
     (!isPredictLevel || predictResponseSubmitted);
 
   const vertical = layout === 'vertical';
@@ -129,13 +143,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     showSecondaryFinishButton &&
     queryParams('show-secondary-finish-button-question') === 'true'
       ? commonI18n.finishMessage()
-      : validationState?.message;
+      : validationMessage;
 
   // The secondary finish button avoids a reappearance animation by not using
   // the unique index.
   const useMessageIndex = useSecondaryFinishButton
     ? undefined
-    : validationState?.index;
+    : validationIndex;
   return (
     <div
       id="instructions"
@@ -201,13 +215,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             )}
           </div>
         </div>
-        {validationState?.validationResults && (
+        {validationResults && (
           <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
               <div className={moduleStyles.scrollingContentWithoutTTS}>
-                <ValidationResults
-                  isValidating={validationSettings?.isValidating}
-                />
+                <ValidationResults />
               </div>
             </div>
           </div>

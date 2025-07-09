@@ -16,7 +16,6 @@ import ValidationStatusIcon from './ValidationStatusIcon';
 import moduleStyles from './validation-results.module.scss';
 
 interface ValidationResultsProps {
-  isValidating?: boolean;
   className?: string;
 }
 
@@ -54,7 +53,6 @@ function getTranslatedResult(result: ValidationResult) {
 
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
-  isValidating,
 }) => {
   const {validationResults} = useAppSelector(
     state => state.lab.validationState
@@ -67,43 +65,40 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
       <Heading4>{lab2I18n.validationResults()}</Heading4>
-      {isValidating && <i className="fa fa-spinner fa-spin" />}
-      {!isValidating && (
-        <div>
-          <table className={moduleStyles.validationResultsTable}>
-            <thead>
-              <tr>
+      <div>
+        <table className={moduleStyles.validationResultsTable}>
+          <thead>
+            <tr>
+              <td>
+                <Heading6>{lab2I18n.testName()}</Heading6>
+              </td>
+              <td>
+                <Heading6>{lab2I18n.result()}</Heading6>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            {validationResults.map((result, index) => (
+              <tr key={index}>
                 <td>
-                  <Heading6>{lab2I18n.testName()}</Heading6>
+                  <BodyFourText>{result.message}</BodyFourText>
                 </td>
                 <td>
-                  <Heading6>{lab2I18n.result()}</Heading6>
+                  <div className={moduleStyles.results}>
+                    <ValidationStatusIcon
+                      status={getStatusForResult(result)}
+                      className={moduleStyles.icon}
+                    />
+                    <BodyFourText>
+                      <StrongText>{getTranslatedResult(result)}</StrongText>
+                    </BodyFourText>
+                  </div>
                 </td>
               </tr>
-            </thead>
-            <tbody>
-              {validationResults.map((result, index) => (
-                <tr key={index}>
-                  <td>
-                    <BodyFourText>{result.message}</BodyFourText>
-                  </td>
-                  <td>
-                    <div className={moduleStyles.results}>
-                      <ValidationStatusIcon
-                        status={getStatusForResult(result)}
-                        className={moduleStyles.icon}
-                      />
-                      <BodyFourText>
-                        <StrongText>{getTranslatedResult(result)}</StrongText>
-                      </BodyFourText>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
