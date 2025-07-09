@@ -64,6 +64,7 @@ class DeleteAccountsHelper
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
+  # Clear S3 contents for user's channels
   def delete_s3_contents(user)
     project_ids = get_project_ids(user)
     channel_count = project_ids.count
@@ -77,6 +78,7 @@ class DeleteAccountsHelper
     end
   end
 
+  # Clear Datablock Storage contents for user's projects
   def delete_datablock_storage(user)
     project_ids = get_project_ids(user)
     @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
