@@ -60,7 +60,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           <textarea
             value={predictResponse}
             placeholder={predictSettings.placeholderText}
-            onChange={e => setPredictResponse(e.target.value)}
+            onChange={e => dispatch(setPredictResponse(e.target.value))}
             style={{
               height:
                 predictSettings.freeResponseHeight ||

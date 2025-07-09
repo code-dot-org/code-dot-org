@@ -149,12 +149,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   className={moduleStyles.markdownText}
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
-                <PredictQuestion
-                  predictSettings={predictSettings}
-                  predictResponse={predictResponse}
-                  setPredictResponse={setPredictResponse}
-                  predictAnswerLocked={predictAnswerLocked}
-                />
+                <PredictQuestion />
                 {predictSettings?.isPredictLevel && (
                   <InstructorsOnly>
                     <div
