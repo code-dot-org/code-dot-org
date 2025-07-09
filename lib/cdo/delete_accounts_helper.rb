@@ -46,7 +46,7 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
+    project_ids = get_project_ids(user)
     channel_count = project_ids.count
 
     # Clear potential PII from user's channels
@@ -64,7 +64,8 @@ class DeleteAccountsHelper
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
-  def delete_s3_contents(user, project_ids)
+  def delete_s3_contents(user)
+    project_ids = get_project_ids(user)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
       storage_encrypt_channel_id user.user_storage_id, project_id
@@ -76,7 +77,8 @@ class DeleteAccountsHelper
     end
   end
 
-  def delete_datablock_storage(project_ids)
+  def delete_datablock_storage(user)
+    project_ids = get_project_ids(user)
     @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
     project_ids.each do |project_id|
       DatablockStorageTable.where(project_id: project_id).delete_all
@@ -544,6 +546,10 @@ class DeleteAccountsHelper
         processed_data: nil,
         hashed_email: nil,
       )
+  end
+
+  private def get_project_ids(user)
+    DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
   end
 end
 # rubocop:enable CustomCops/PegasusDbUsage
