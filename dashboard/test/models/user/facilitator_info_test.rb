@@ -18,7 +18,7 @@ class User::FacilitatorInfoTest < ActiveSupport::TestCase
       it 'is invalid' do
         _(user).wont_be :facilitator?
         _user_facilitator_info.wont_be :valid?
-        _(user_facilitator_info.errors.messages).must_equal({user: ['must have the facilitator permission']})
+        _(user_facilitator_info.errors.full_messages).must_equal ['User must have the facilitator permission']
       end
     end
   end
