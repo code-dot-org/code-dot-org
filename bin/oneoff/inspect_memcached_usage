@@ -3,7 +3,7 @@
 # Simple Memcached Growth Monitor
 # Monitors key patterns to identify what's causing cache growth
 
-require_relative '../../dashboard/config/environment' if File.exist?('../../dashboard/config/environment.rb')
+require_relative '../../dashboard/config/environment'
 require 'socket'
 require 'timeout'
 require 'json'
@@ -13,16 +13,9 @@ class MemcachedGrowthMonitor
   CACHE_DUMP_END_MARKERS = %w[END ERROR].freeze
 
   def initialize(cache_client = nil)
-    @cache_client = cache_client || (defined?(CDO) ? CDO.shared_cache : nil)
-
-    if @cache_client
-      @dalli_data = @cache_client.instance_variable_get(:@data)
-      @endpoints = @dalli_data.instance_variable_get(:@servers)
-    else
-      # Fallback to manual endpoint configuration
-      @endpoints = ENV['MEMCACHED_SERVERS']&.split(',') || ['localhost:11211']
-    end
-
+    @cache_client = cache_client || CDO.shared_cache
+    @dalli_data = @cache_client.instance_variable_get(:@data)
+    @endpoints = @dalli_data.instance_variable_get(:@servers)
     @timeout_duration = 5
     puts "Monitoring endpoints: #{@endpoints.join(', ')}"
   end
