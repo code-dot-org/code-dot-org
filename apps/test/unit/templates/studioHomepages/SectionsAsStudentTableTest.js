@@ -118,7 +118,6 @@ describe('SectionsAsStudentTable', () => {
         currentUnitTitle: 'Single Unit',
         linkToCurrentUnit: 'https://studio.code.org/s/ui-test-single-unit',
         is_assigned_single_unit_course: true,
-        numberOfStudents: 2,
         linkToStudents:
           'https://studio.code.org/teacher_dashboard/sections/111111/manage_students',
         code: 'ClassFiveCode',

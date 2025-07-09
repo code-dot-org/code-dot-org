@@ -329,8 +329,8 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   existingSchoolInfo: PropTypes.shape({
     country: PropTypes.string,
     id: PropTypes.string,
