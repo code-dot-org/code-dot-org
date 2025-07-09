@@ -5,256 +5,60 @@ require_relative '../../dashboard/config/environment'
 
 require 'socket'
 require 'timeout'
+require 'digest/md5'
 
-# Robust memcached diagnostic methods that handle ElastiCache timeouts gracefully
+# Specialized memcached diagnostic tool focused on Cdo::Optimizer cache items (optimize-3-*)
+class OptimizerCacheMonitor
+  STATS_TO_TRACK = %w[curr_items bytes evictions get_hits get_misses].freeze
+  CACHE_DUMP_END_MARKERS = %w[END ERROR].freeze
 
-class RobustMemcachedInspector
   def initialize(cache_client = nil)
     @cache_client = cache_client || CDO.shared_cache
     @dalli_data = @cache_client.instance_variable_get(:@data)
     @endpoints = @dalli_data.instance_variable_get(:@servers)
-    @timeout_duration = 10  # Shorter timeout for production
+    @timeout_duration = 10
   end
 
-  # 1. Stats-only approach (much faster and more reliable)
-  def comprehensive_stats_analysis
-    puts "=== COMPREHENSIVE STATS ANALYSIS ==="
-
-    total_stats = {
-      curr_items: 0,
-      total_items: 0,
-      bytes: 0,
-      limit_maxbytes: 0,
-      evictions: 0,
-      reclaimed: 0,
-      get_hits: 0,
-      get_misses: 0
-    }
-
-    @endpoints.each_with_index do |endpoint, idx|
-      hostname, port = endpoint.split(":")
-      puts "\n--- Server #{idx + 1}: #{endpoint} ---"
-
-      begin
-        Timeout.timeout(@timeout_duration) do
-          sock = TCPSocket.new(hostname, port || 11211)
-          sock.write("stats\r\n")
-
-          server_stats = {}
-          loop do
-            line = sock.readline.strip
-            break if line == "END"
-
-            if line.start_with?("STAT")
-              parts = line.split(" ", 3)
-              stat_name = parts[1]
-              stat_value = parts[2]
-              server_stats[stat_name] = stat_value
-            end
-          end
-
-          # Display key metrics
-          curr_items = server_stats['curr_items'].to_i
-          bytes_used = server_stats['bytes'].to_i
-          max_bytes = server_stats['limit_maxbytes'].to_i
-          utilization = max_bytes > 0 ? (bytes_used.to_f / max_bytes * 100).round(2) : 0
-
-          puts "  Current Items: #{curr_items.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-          puts "  Bytes Used: #{bytes_used.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-          puts "  Max Bytes: #{max_bytes.to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-          puts "  Utilization: #{utilization}%"
-          puts "  Evictions: #{server_stats['evictions']}"
-          puts "  Reclaimed: #{server_stats['reclaimed']}"
-          puts "  Version: #{server_stats['version']}"
-          puts "  Uptime: #{(server_stats['uptime'].to_i / 3600.0).round(1)} hours"
-
-          # Add to totals
-          total_stats[:curr_items] += curr_items
-          total_stats[:total_items] += server_stats['total_items'].to_i
-          total_stats[:bytes] += bytes_used
-          total_stats[:limit_maxbytes] += max_bytes
-          total_stats[:evictions] += server_stats['evictions'].to_i
-          total_stats[:reclaimed] += server_stats['reclaimed'].to_i
-          total_stats[:get_hits] += server_stats['get_hits'].to_i
-          total_stats[:get_misses] += server_stats['get_misses'].to_i
-
-          sock.close
-        end
-      rescue Timeout::Error
-        puts "  ERROR: Timeout after #{@timeout_duration}s"
-      rescue => exception
-        puts "  ERROR: #{exception.message}"
-      end
-    end
-
-    puts "\n=== CLUSTER TOTALS ==="
-    puts "Total Items: #{total_stats[:curr_items].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-    puts "Total Bytes: #{total_stats[:bytes].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-    puts "Total Capacity: #{total_stats[:limit_maxbytes].to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse}"
-    puts "Overall Utilization: #{(total_stats[:bytes].to_f / total_stats[:limit_maxbytes] * 100).round(2)}%"
-    puts "Total Evictions: #{total_stats[:evictions]}"
-    puts "Hit Rate: #{(total_stats[:get_hits].to_f / (total_stats[:get_hits] + total_stats[:get_misses]) * 100).round(2)}%"
-
-    return total_stats
-  end
-
-  # 2. Slab analysis (more reliable than metadump)
-  def analyze_slabs
-    puts "\n=== SLAB ANALYSIS ==="
-
-    @endpoints.each_with_index do |endpoint, idx|
-      hostname, port = endpoint.split(":")
-      puts "\n--- Server #{idx + 1}: #{endpoint} ---"
-
-      begin
-        Timeout.timeout(@timeout_duration) do
-          sock = TCPSocket.new(hostname, port || 11211)
-          sock.write("stats slabs\r\n")
-
-          slabs = {}
-          loop do
-            line = sock.readline.strip
-            break if line == "END"
-
-            if line.start_with?("STAT")
-              parts = line.split(" ", 3)
-              if parts[1] =~ /^(\d+):(.+)/
-                slab_id = $1.to_i
-                stat_name = $2
-                stat_value = parts[2]
-
-                slabs[slab_id] ||= {}
-                slabs[slab_id][stat_name] = stat_value
-              end
-            end
-          end
-
-          # Display slab information
-          puts "  Active Slabs: #{slabs.keys.sort.join(', ')}"
-
-          slabs.keys.sort.each do |slab_id|
-            slab = slabs[slab_id]
-            if slab['used_chunks'] && slab['used_chunks'].to_i > 0
-              puts "    Slab #{slab_id}: #{slab['used_chunks']} items, #{slab['chunk_size']} bytes/item"
-            end
-          end
-
-          sock.close
-        end
-      rescue Timeout::Error
-        puts "  ERROR: Timeout after #{@timeout_duration}s"
-      rescue => exception
-        puts "  ERROR: #{exception.message}"
-      end
-    end
-  end
-
-  SKIP_LINES = %w[END ERROR].freeze
-
-  # 3. Sample keys using smaller, faster queries
-  def sample_keys_efficiently(samples_per_slab = 5)
-    puts "\n=== EFFICIENT KEY SAMPLING ==="
-
-    all_sampled_keys = []
-
-    @endpoints.each_with_index do |endpoint, idx|
-      hostname, port = endpoint.split(":")
-      puts "\nSampling from server #{idx + 1}: #{endpoint}"
-
-      begin
-        # First, get slab information
-        Timeout.timeout(@timeout_duration) do
-          sock = TCPSocket.new(hostname, port || 11211)
-          sock.write("stats slabs\r\n")
-
-          active_slabs = []
-          loop do
-            line = sock.readline.strip
-            break if line == "END"
-
-            if line.match(/^STAT (\d+):used_chunks (\d+)/) && $2.to_i > 0
-              active_slabs << $1.to_i
-            end
-          end
-
-          sock.close
-
-          # Sample from each active slab
-          active_slabs.each do |slab_id|
-            Timeout.timeout(5) do  # Even shorter timeout for sampling
-              sock = TCPSocket.new(hostname, port || 11211)
-              sock.write("stats cachedump #{slab_id} #{samples_per_slab}\r\n")
-
-              slab_keys = []
-              loop do
-                line = sock.readline.strip
-                break if SKIP_LINES.include?(line)
-
-                if line =~ /^ITEM ([^\s]+) \[(\d+) b; (\d+) s\]/
-                  key = $1
-                  size = $2.to_i
-                  timestamp = $3.to_i
-
-                  # Calculate if expired (timestamp of 0 means no expiration)
-                  has_expiration = timestamp > 0
-                  is_expired = has_expiration && timestamp < Time.now.to_i
-
-                  slab_keys << {
-                    key: key,
-                    size: size,
-                    slab: slab_id,
-                    has_expiration: has_expiration,
-                    is_expired: is_expired,
-                    server: idx + 1
-                  }
-                end
-              end
-
-              all_sampled_keys.concat(slab_keys)
-              puts "  Slab #{slab_id}: #{slab_keys.length} keys sampled"
-
-              sock.close
-            end
-          rescue Timeout::Error
-            puts "  Slab #{slab_id}: Timeout during sampling"
-          rescue => exception
-            puts "  Slab #{slab_id}: Error - #{exception.message}"
-          end
-        end
-      rescue Timeout::Error
-        puts "  ERROR: Timeout getting slab info"
-      rescue => exception
-        puts "  ERROR: #{exception.message}"
-      end
-    end
-
-    puts "\nSampled #{all_sampled_keys.length} total keys"
-    analyze_sampled_keys(all_sampled_keys)
-
-    return all_sampled_keys
-  end
-
-  STAT_NAMES = %w[curr_items bytes total_items evictions].freeze
-  # 4. Monitor growth with shorter intervals
-  def monitor_growth_robust(cycles = 5, interval_seconds = 30)
-    puts "\n=== ROBUST GROWTH MONITORING ==="
-    puts "Monitoring #{cycles} cycles, #{interval_seconds}s apart"
+  # Monitor optimize-3- items specifically over time
+  def monitor_optimizer_items(duration_minutes = 10, interval_seconds = 30)
+    puts "=== OPTIMIZER CACHE MONITORING ==="
+    puts "Monitoring optimize-3- items for #{duration_minutes} minutes, checking every #{interval_seconds}s"
+    puts "Started at: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')}"
 
     measurements = []
+    cycles = (duration_minutes * 60 / interval_seconds).to_i
 
     cycles.times do |cycle|
       timestamp = Time.now
-      cycle_stats = {timestamp: timestamp, servers: []}
+      cycle_data = {
+        timestamp: timestamp,
+        cycle: cycle + 1,
+        servers: [],
+        optimizer_stats: {
+          total_items: 0,
+          total_bytes: 0,
+          avg_size: 0,
+          largest_item: 0,
+          items_by_server: {}
+        }
+      }
 
-      @endpoints.each_with_index do |endpoint, idx|
+      puts "\n--- Cycle #{cycle + 1}/#{cycles} at #{timestamp.strftime('%H:%M:%S')} ---"
+
+      @endpoints.each_with_index do |endpoint, _idx|
         hostname, port = endpoint.split(":")
+        server_data = {
+          endpoint: endpoint,
+          optimizer_items: [],
+          stats: {}
+        }
 
         begin
-          Timeout.timeout(5) do
+          Timeout.timeout(@timeout_duration) do
+            # Get server stats first
             sock = TCPSocket.new(hostname, port || 11211)
             sock.write("stats\r\n")
 
-            server_data = {endpoint: endpoint, stats: {}}
             loop do
               line = sock.readline.strip
               break if line == "END"
@@ -264,205 +68,342 @@ class RobustMemcachedInspector
                 stat_name = parts[1]
                 stat_value = parts[2]
 
-                if STAT_NAMES.include?(stat_name)
+                if STATS_TO_TRACK.include?(stat_name)
                   server_data[:stats][stat_name] = stat_value.to_i
                 end
               end
             end
-
-            cycle_stats[:servers] << server_data
             sock.close
+
+            # Now scan for optimize-3- items
+            optimizer_items = scan_optimizer_items(hostname, port)
+            server_data[:optimizer_items] = optimizer_items
+
+            # Update cycle totals
+            cycle_data[:optimizer_stats][:total_items] += optimizer_items.length
+            cycle_data[:optimizer_stats][:total_bytes] += optimizer_items.sum {|item| item[:size]}
+            cycle_data[:optimizer_stats][:items_by_server][endpoint] = optimizer_items.length
+
+            if optimizer_items.any?
+              largest_on_server = optimizer_items.max_by {|item| item[:size]}[:size]
+              cycle_data[:optimizer_stats][:largest_item] = [
+                cycle_data[:optimizer_stats][:largest_item],
+                largest_on_server
+              ].max
+            end
+
+            puts "  Server #{idx + 1} (#{endpoint}): #{optimizer_items.length} optimize-3- items"
           end
         rescue Timeout::Error
-          puts "  Server #{idx + 1}: Timeout"
-          cycle_stats[:servers] << {endpoint: endpoint, stats: {error: "timeout"}}
+          puts "  Server #{idx + 1} (#{endpoint}): Timeout"
+          server_data[:error] = "timeout"
         rescue => exception
-          puts "  Server #{idx + 1}: Error - #{exception.message}"
-          cycle_stats[:servers] << {endpoint: endpoint, stats: {error: exception.message}}
+          puts "  Server #{idx + 1} (#{endpoint}): Error - #{exception.message}"
+          server_data[:error] = exception.message
         end
+
+        cycle_data[:servers] << server_data
       end
 
-      measurements << cycle_stats
-
-      # Calculate and display totals
-      total_items = cycle_stats[:servers].sum {|s| s[:stats]['curr_items'] || 0}
-      total_bytes = cycle_stats[:servers].sum {|s| s[:stats]['bytes'] || 0}
-
-      print "#{timestamp.strftime('%H:%M:%S')}: #{total_items} items, #{total_bytes} bytes"
-
-      if measurements.length > 1
-        prev = measurements[-2]
-        prev_items = prev[:servers].sum {|s| s[:stats]['curr_items'] || 0}
-        prev_bytes = prev[:servers].sum {|s| s[:stats]['bytes'] || 0}
-
-        time_diff = (timestamp - prev[:timestamp]) / 60.0  # minutes
-        items_per_min = ((total_items - prev_items) / time_diff).round(1)
-        bytes_per_min = ((total_bytes - prev_bytes) / time_diff).round(0)
-
-        puts " | Growth: #{items_per_min} items/min, #{bytes_per_min} bytes/min"
-      else
-        puts ""
+      # Calculate average size
+      if cycle_data[:optimizer_stats][:total_items] > 0
+        cycle_data[:optimizer_stats][:avg_size] =
+          cycle_data[:optimizer_stats][:total_bytes] / cycle_data[:optimizer_stats][:total_items]
       end
+
+      measurements << cycle_data
+      display_cycle_summary(cycle_data, measurements)
 
       sleep interval_seconds unless cycle == cycles - 1
     end
 
+    # Final analysis
+    analyze_monitoring_results(measurements)
     return measurements
   end
 
-  # 5. Test specific cache operations
-  def test_cache_operations_detailed
-    puts "\n=== DETAILED CACHE OPERATION TEST ==="
+  # Scan all slabs for optimize-3- items
+  def scan_optimizer_items(hostname, port, max_items_per_slab = 100)
+    optimizer_items = []
 
-    test_cases = [
-      {key: "test_no_expire_#{Time.now.to_i}", value: "no_expire", expires_in: nil},
-      {key: "test_1hour_#{Time.now.to_i}", value: "1hour", expires_in: 1.hour},
-      {key: "test_1min_#{Time.now.to_i}", value: "1min", expires_in: 1.minute}
-    ]
+    begin
+      # Get active slabs
+      Timeout.timeout(8) do
+        sock = TCPSocket.new(hostname, port || 11211)
+        sock.write("stats slabs\r\n")
 
-    test_cases.each do |test_case|
-      puts "\nTesting: #{test_case[:key]} (expires_in: #{test_case[:expires_in]})"
+        active_slabs = []
+        loop do
+          line = sock.readline.strip
+          break if line == "END"
 
-      # Write to cache
-      if test_case[:expires_in]
-        @cache_client.write(test_case[:key], test_case[:value], expires_in: test_case[:expires_in])
-      else
-        @cache_client.write(test_case[:key], test_case[:value])
-      end
+          if line.match(/^STAT (\d+):used_chunks (\d+)/) && $2.to_i > 0
+            active_slabs << $1.to_i
+          end
+        end
+        sock.close
 
-      # Verify write
-      retrieved = @cache_client.read(test_case[:key])
-      puts "  Write successful: #{retrieved == test_case[:value]}"
-
-      # Check if key appears in memcached with correct expiration
-      found_in_memcached = false
-      @endpoints.each_with_index do |endpoint, idx|
-        hostname, port = endpoint.split(":")
-
-        begin
-          Timeout.timeout(3) do
+        # Scan each slab for optimize-3- items
+        active_slabs.each do |slab_id|
+          Timeout.timeout(5) do
             sock = TCPSocket.new(hostname, port || 11211)
+            sock.write("stats cachedump #{slab_id} #{max_items_per_slab}\r\n")
 
-            # Use get command to check if key exists
-            sock.write("get #{test_case[:key]}\r\n")
-            response = sock.readline.strip
+            loop do
+              line = sock.readline.strip
+              break if CACHE_DUMP_END_MARKERS.include?(line)
 
-            if response.start_with?("VALUE")
-              found_in_memcached = true
-              puts "  Found on server #{idx + 1}: #{endpoint}"
+              if line =~ /^ITEM ([^\s]+) \[(\d+) b; (\d+) s\]/
+                key = $1
+                size = $2.to_i
+                timestamp = $3.to_i
+
+                # Only process optimize-3- items
+                if key.start_with?('optimize-3-')
+                  # Extract MD5 hash from key
+                  md5_hash = key.sub('optimize-3-', '')
+
+                  # Check if expired
+                  has_expiration = timestamp > 0
+                  is_expired = has_expiration && timestamp < Time.now.to_i
+
+                  optimizer_items << {
+                    key: key,
+                    md5_hash: md5_hash,
+                    size: size,
+                    slab: slab_id,
+                    has_expiration: has_expiration,
+                    is_expired: is_expired,
+                    timestamp: timestamp
+                  }
+                end
+              end
             end
-
             sock.close
           end
-        rescue
-          # Key might be on a different server, continue
+        rescue Timeout::Error
+          # Skip this slab on timeout
         end
       end
-
-      puts "  Found in memcached: #{found_in_memcached}"
-
-      # Clean up
-      @cache_client.delete(test_case[:key])
+    rescue StandardError
+      # Return whatever we found
     end
+
+    optimizer_items
   end
 
-  private def analyze_sampled_keys(keys)
-    return if keys.empty?
+  # Test the optimizer cache functionality
+  def test_optimizer_cache
+    puts "\n=== OPTIMIZER CACHE TEST ==="
 
-    puts "\n--- Key Analysis ---"
+    # Create test image data (small PNG)
+    test_data = "\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00\x01\x00\x00\x00\x01\x08\x06\x00\x00\x00\x1f\x15\xc4\x89\x00\x00\x00\nIDATx\x9cc\x00\x01\x00\x00\x05\x00\x01\r\n-\xdb\x00\x00\x00\x00IEND\xaeB`\x82"
 
-    # Pattern analysis
-    patterns = Hash.new(0)
-    keys.each do |key_data|
-      key = key_data[:key]
-      case key
-      when /session/i then patterns['Sessions'] += 1
-      when /user/i then patterns['User Data'] += 1
-      when /partial/i then patterns['Partial Registration'] += 1
-      when /view/i then patterns['View Cache'] += 1
-      when /fragment/i then patterns['Fragment Cache'] += 1
-      when /ActiveRecord/i then patterns['ActiveRecord Cache'] += 1
-      else patterns['Other'] += 1
+    # Calculate what the cache key should be
+    expected_key = "optimize-3-#{Digest::MD5.hexdigest(test_data)}"
+    puts "Expected cache key: #{expected_key}"
+
+    # Check if key exists in cache
+    cached_result = @cache_client.read(expected_key)
+    puts "Key exists in cache: #{!cached_result.nil?}"
+
+    if cached_result
+      puts "Cached result type: #{cached_result.class}"
+      puts "Cached result size: #{cached_result.is_a?(String) ? cached_result.bytesize : 'N/A'} bytes"
+    end
+
+    # Test writing to cache
+    puts "\nTesting cache write..."
+    test_key = "optimize-3-test-#{Time.now.to_i}"
+    @cache_client.write(test_key, test_data)
+
+    # Verify write
+    retrieved = @cache_client.read(test_key)
+    puts "Write test successful: #{retrieved == test_data}"
+
+    # Clean up
+    @cache_client.delete(test_key)
+
+    # Look for the test key in memcached
+    puts "\nSearching for test key in memcached servers..."
+    found_servers = []
+    @endpoints.each_with_index do |endpoint, _idx|
+      hostname, port = endpoint.split(":")
+      begin
+        Timeout.timeout(3) do
+          sock = TCPSocket.new(hostname, port || 11211)
+          sock.write("get #{test_key}\r\n")
+          response = sock.readline.strip
+          if response.start_with?("VALUE")
+            found_servers << endpoint
+          end
+          sock.close
+        end
+      rescue
+        # Key not on this server or server unreachable
       end
     end
 
-    puts "Key patterns:"
-    patterns.sort_by {|_k, v| -v}.each do |pattern, count|
-      percentage = (count.to_f / keys.length * 100).round(1)
-      puts "  #{pattern}: #{count} (#{percentage}%)"
+    puts "Test key found on servers: #{found_servers.any? ? found_servers.join(', ') : 'none (already deleted)'}"
+  end
+
+  # Analyze size patterns and detect potential issues
+  def analyze_optimizer_patterns
+    puts "\n=== OPTIMIZER PATTERN ANALYSIS ==="
+
+    all_optimizer_items = []
+
+    @endpoints.each_with_index do |endpoint, idx|
+      hostname, port = endpoint.split(":")
+      puts "\nAnalyzing server #{idx + 1}: #{endpoint}"
+
+      items = scan_optimizer_items(hostname, port, 1000)  # Get more items for analysis
+      all_optimizer_items.concat(items)
+
+      if items.any?
+        puts "  Found #{items.length} optimize-3- items"
+        puts "  Total size: #{format_bytes(items.sum {|i| i[:size]})}"
+        puts "  Average size: #{format_bytes(items.sum {|i| i[:size]} / items.length)}"
+        puts "  Largest item: #{format_bytes(items.max_by {|i| i[:size]}[:size])}"
+
+        # Check for expired items
+        expired_items = items.select {|i| i[:is_expired]}
+        puts "  Expired items: #{expired_items.length}"
+
+        # Size distribution
+        size_ranges = {
+          'Small (<10KB)' => items.count {|i| i[:size] < 10.kilobytes},
+          'Medium (10KB-100KB)' => items.count {|i| i[:size] >= 10.kilobytes && i[:size] < 100.kilobytes},
+          'Large (100KB-1MB)' => items.count {|i| i[:size] >= 100.kilobytes && i[:size] < 1.megabyte},
+          'Very Large (>1MB)' => items.count {|i| i[:size] >= 1.megabyte}
+        }
+
+        puts "  Size distribution:"
+        size_ranges.each do |range, count|
+          percentage = (count.to_f / items.length * 100).round(1)
+          puts "    #{range}: #{count} (#{percentage}%)"
+        end
+      else
+        puts "  No optimize-3- items found"
+      end
     end
 
-    # Expiration analysis
-    with_expiration = keys.count {|k| k[:has_expiration]}
-    without_expiration = keys.length - with_expiration
-    expired_keys = keys.count {|k| k[:is_expired]}
+    if all_optimizer_items.any?
+      puts "\n--- CLUSTER TOTALS ---"
+      puts "Total optimize-3- items: #{all_optimizer_items.length}"
+      puts "Total size: #{format_bytes(all_optimizer_items.sum {|i| i[:size]})}"
+      puts "Average size: #{format_bytes(all_optimizer_items.sum {|i| i[:size]} / all_optimizer_items.length)}"
 
-    puts "\nExpiration analysis:"
-    puts "  With expiration: #{with_expiration}"
-    puts "  Without expiration: #{without_expiration}"
-    puts "  Expired (stale): #{expired_keys}"
+      # Look for potential duplicates (same size items)
+      size_groups = all_optimizer_items.group_by {|i| i[:size]}
+      potential_duplicates = size_groups.select {|_size, items| items.length > 1}
 
-    # Size analysis
-    total_size = keys.sum {|k| k[:size]}
-    avg_size = (total_size.to_f / keys.length).round(0)
-    large_keys = keys.select {|k| k[:size] > 10000}  # > 10KB
+      if potential_duplicates.any?
+        puts "\nPotential duplicate sizes:"
+        potential_duplicates.take(5).each do |size, items|
+          puts "  #{format_bytes(size)}: #{items.length} items"
+        end
+      end
+    end
 
-    puts "\nSize analysis:"
-    puts "  Average size: #{avg_size} bytes"
-    puts "  Large keys (>10KB): #{large_keys.length}"
+    all_optimizer_items
+  end
 
-    if large_keys.any?
-      puts "  Largest keys:"
-      large_keys.sort_by {|k| -k[:size]}.take(3).each do |key_data|
-        puts "    #{key_data[:key]} (#{key_data[:size]} bytes)"
+  private def display_cycle_summary(cycle_data, measurements)
+    stats = cycle_data[:optimizer_stats]
+
+    puts "  Total optimize-3- items: #{stats[:total_items]}"
+    puts "  Total size: #{format_bytes(stats[:total_bytes])}"
+    puts "  Average size: #{format_bytes(stats[:avg_size])}" if stats[:avg_size] > 0
+    puts "  Largest item: #{format_bytes(stats[:largest_item])}" if stats[:largest_item] > 0
+
+    # Show growth if we have previous measurements
+    if measurements.length > 1
+      prev_stats = measurements[-2][:optimizer_stats]
+      time_diff = (cycle_data[:timestamp] - measurements[-2][:timestamp]) / 60.0  # minutes
+
+      items_growth = stats[:total_items] - prev_stats[:total_items]
+      bytes_growth = stats[:total_bytes] - prev_stats[:total_bytes]
+
+      if items_growth != 0 || bytes_growth != 0
+        puts "  Growth since last check:"
+        puts "    Items: #{items_growth > 0 ? '+' : ''}#{items_growth}"
+        puts "    Bytes: #{bytes_growth > 0 ? '+' : ''}#{format_bytes(bytes_growth)}"
+        puts "    Rate: #{(items_growth / time_diff).round(2)} items/min, #{format_bytes(bytes_growth / time_diff)}/min"
       end
     end
   end
+
+  private def analyze_monitoring_results(measurements)
+    puts "\n=== MONITORING SUMMARY ==="
+    puts "Duration: #{measurements.length} measurements over #{((measurements.last[:timestamp] - measurements.first[:timestamp]) / 60.0).round(1)} minutes"
+
+    # Calculate trends
+    item_counts = measurements.map {|m| m[:optimizer_stats][:total_items]}
+    byte_counts = measurements.map {|m| m[:optimizer_stats][:total_bytes]}
+
+    puts "Items trend: #{item_counts.first} → #{item_counts.last} (#{item_counts.last - item_counts.first > 0 ? '+' : ''}#{item_counts.last - item_counts.first})"
+    puts "Bytes trend: #{format_bytes(byte_counts.first)} → #{format_bytes(byte_counts.last)} (#{byte_counts.last - byte_counts.first > 0 ? '+' : ''}#{format_bytes(byte_counts.last - byte_counts.first)})"
+
+    # Peak usage
+    max_items = item_counts.max
+    max_bytes = byte_counts.max
+    max_items_time = measurements[item_counts.index(max_items)][:timestamp]
+    max_bytes_time = measurements[byte_counts.index(max_bytes)][:timestamp]
+
+    puts "Peak items: #{max_items} at #{max_items_time.strftime('%H:%M:%S')}"
+    puts "Peak bytes: #{format_bytes(max_bytes)} at #{max_bytes_time.strftime('%H:%M:%S')}"
+
+    # Calculate average rates
+    if measurements.length > 1
+      total_time = (measurements.last[:timestamp] - measurements.first[:timestamp]) / 60.0
+      avg_items_per_min = (item_counts.last - item_counts.first) / total_time
+      avg_bytes_per_min = (byte_counts.last - byte_counts.first) / total_time
+
+      puts "Average growth rate:"
+      puts "  Items: #{avg_items_per_min.round(2)} items/min"
+      puts "  Bytes: #{format_bytes(avg_bytes_per_min)}/min"
+    end
+  end
+
+  private def format_bytes(bytes)
+    return "0 B" if bytes == 0
+
+    units = ['B', 'KB', 'MB', 'GB']
+    unit_index = 0
+    size = bytes.to_f
+
+    while size >= 1024 && unit_index < units.length - 1
+      size /= 1024
+      unit_index += 1
+    end
+
+    "#{size.round(1)} #{units[unit_index]}"
+  end
 end
 
-# Usage methods that handle errors gracefully
-def robust_quick_analysis
-  inspector = RobustMemcachedInspector.new
+# Main execution
+if __FILE__ == $0
+  monitor = OptimizerCacheMonitor.new
 
-  puts "Starting robust memcached analysis..."
+  puts "Memcached Optimizer Cache Monitor"
+  puts "================================="
 
-  # 1. Get comprehensive stats (always works)
-  stats = inspector.comprehensive_stats_analysis
+  # 1. Test basic functionality
+  monitor.test_optimizer_cache
 
-  # 2. Analyze slabs (usually works)
-  inspector.analyze_slabs
+  # 2. Analyze current patterns
+  monitor.analyze_optimizer_patterns
 
-  # 3. Sample keys efficiently (works even with timeouts)
-  sampled_keys = inspector.sample_keys_efficiently(3)  # 3 keys per slab
+  # 3. Monitor for 10 minutes
+  puts "\nStarting 10-minute monitoring session..."
+  monitor.monitor_optimizer_items(10, 30)  # 10 minutes, check every 30 seconds
 
-  # 4. Test cache operations
-  inspector.test_cache_operations_detailed
-
-  return {stats: stats, sampled_keys: sampled_keys}
+  puts "\nMonitoring complete!"
 end
 
-def monitor_for_growth
-  inspector = RobustMemcachedInspector.new
-  inspector.monitor_growth_robust(6, 30)  # 6 cycles, 30s apart = 3 minutes
-end
-
-# 1. Complete analysis (timeout-resistant)
-robust_quick_analysis
-
-# 2. Monitor growth over 3 minutes
-monitor_for_growth
-
-# 3. Individual methods:
-inspector = RobustMemcachedInspector.new
-
-# Stats only (fastest, most reliable)
-inspector.comprehensive_stats_analysis
-
-# Slab analysis (usually works)
-inspector.analyze_slabs
-
-# Efficient key sampling (handles timeouts)
-inspector.sample_keys_efficiently(5)
-
-# Test memcached setup
-inspector.test_cache_operations_detailed
+# Individual method access for interactive use:
+# monitor = OptimizerCacheMonitor.new
+# monitor.test_optimizer_cache
+# monitor.analyze_optimizer_patterns
+# monitor.monitor_optimizer_items(5, 15)  # 5 minutes, every 15 seconds
