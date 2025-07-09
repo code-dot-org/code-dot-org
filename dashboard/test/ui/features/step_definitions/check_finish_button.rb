@@ -14,7 +14,7 @@ free_play_level_urls = {
   'minecraft' => {
     'Minecraft Aquatic' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/3?noautoplay=true&no_redirect=true',
     'Minecraft Heroes Journey' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/4?noautoplay=true&no_redirect=true',
-    'Minecraft Adventurer' => 'http://studio.code.org/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
+    'Minecraft Adventurer' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/5?noautoplay=true&no_redirect=true',
     'Minecraft Designer' => 'http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/6?noautoplay=true&no_redirect=true'
   }
 }
