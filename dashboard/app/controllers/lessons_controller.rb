@@ -28,7 +28,7 @@ class LessonsController < ApplicationController
     unit_group = unit_context[:unit_group]
     return render :forbidden unless script.is_migrated
 
-    if script.is_deprecated
+    if script.deprecated?
       return render 'errors/deprecated_course'
     end
 
