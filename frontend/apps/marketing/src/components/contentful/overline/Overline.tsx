@@ -18,8 +18,11 @@ type OverlineProps = RemoveMarginBottomProps & {
   className?: string;
 };
 
-// Define font sizes based on the existing Contentful Overline size
-// values that were set before using the MUI Typography component.
+// Define font sizes based on the existing Contentful Overline size values
+// that were set before using the MUI Typography component.
+//
+// The mapping below intentionally does not match the ComponentSize type one-to-one.
+// This is to provide clearer dropdown options in the Contentful editor.
 const overlineFontSizes: Record<Exclude<ComponentSize, 'xs'>, string> = {
   s: FONT_SIZE.xxs,
   m: FONT_SIZE.xs,
