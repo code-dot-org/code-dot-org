@@ -45,7 +45,7 @@ class OptimizerCacheMonitor
 
       puts "\n--- Cycle #{cycle + 1}/#{cycles} at #{timestamp.strftime('%H:%M:%S')} ---"
 
-      @endpoints.each_with_index do |endpoint, _idx|
+      @endpoints.each_with_index do |endpoint, idx|
         hostname, port = endpoint.split(":")
         server_data = {
           endpoint: endpoint,
