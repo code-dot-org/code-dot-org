@@ -13,12 +13,14 @@ interface Props {
   skills: Skill[];
   levelId: number;
   systemPrompt: string;
+  levelType?: string;
 }
 
 const SkillEvaluationSettings: React.FC<Props> = ({
   skills,
   levelId,
   systemPrompt,
+  levelType,
 }) => {
   return (
     <div className="skill-evaluation-settings">
@@ -50,7 +52,10 @@ const SkillEvaluationSettings: React.FC<Props> = ({
           size="s"
         />
       </p>
-      <AccuracyCheck levelId={levelId} />
+      <AccuracyCheck
+        levelId={levelId}
+        questionAiEvaluatable={levelType === 'FreeResponse'}
+      />
       <br />
       <ViewSystemPrompt systemPrompt={systemPrompt} />
       <br />

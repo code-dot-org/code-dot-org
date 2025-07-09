@@ -146,7 +146,6 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_child_level_bubble_choice_fields': './src/sites/studio/pages/levels/editors/fields/_child_level_bubble_choice_fields.js',
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_exemplar': './src/sites/studio/pages/levels/editors/fields/_exemplar.js',
-  'levels/editors/fields/_frq_evaluations': './src/sites/studio/pages/levels/editors/fields/_frq_evaluations.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
   'levels/editors/fields/_music_level_data': './src/sites/studio/pages/levels/editors/fields/_music_level_data.js',
   'levels/editors/fields/_neighborhood_settings': './src/sites/studio/pages/levels/editors/fields/_neighborhood_settings.js',
