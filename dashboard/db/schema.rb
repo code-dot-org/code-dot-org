@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_06_24_183835) do
+ActiveRecord::Schema.define(version: 2025_07_09_125438) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2350,6 +2350,14 @@ ActiveRecord::Schema.define(version: 2025_06_24_183835) do
     t.index ["user_id"], name: "index_user_data_retention_statuses_on_user_id"
   end
 
+  create_table "user_facilitator_infos", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.text "bio"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_facilitator_infos_on_user_id"
+  end
+
   create_table "user_geos", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -2675,6 +2683,7 @@ ActiveRecord::Schema.define(version: 2025_06_24_183835) do
   add_foreign_key "student_work_evaluation_summaries", "student_work_evaluations", column: "student_work_evaluation_summary_id"
   add_foreign_key "survey_results", "users"
   add_foreign_key "user_data_retention_statuses", "users"
+  add_foreign_key "user_facilitator_infos", "users"
   add_foreign_key "user_geos", "users"
   add_foreign_key "user_proficiencies", "users"
 end
