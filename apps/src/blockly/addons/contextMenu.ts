@@ -4,6 +4,7 @@
 
 import * as GoogleBlockly from 'blockly/core';
 
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -17,7 +18,7 @@ import {
   BLOCK_TYPES,
 } from '../constants';
 import {ExtendedBlockSvg} from '../types';
-import {getBaseName, isDarkTheme} from '../utils';
+import {getBaseName, isDarkTheme, setThemeAndRenderBlocks} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -450,7 +451,10 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
       }
     },
     callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      localStorage.setItem(BLOCKLY_THEME, name);
+      // Save the theme to user preferences, falling back to localStorage for signed-out users.
+      new UserPreferences().setBlocklyTheme(name, () =>
+        localStorage.setItem(BLOCKLY_THEME, name)
+      );
       const currentTheme = scope.workspace?.getTheme();
       const themeName =
         name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
@@ -582,18 +586,7 @@ function setAllWorkspacesTheme(
   Blockly.Workspace.getAll().forEach(baseWorkspace => {
     // Headless workspaces do not have the ability to set the theme.
     const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
-    if (typeof workspace.setTheme === 'function') {
-      workspace.setTheme(newTheme);
-      // Re-render blocks if the font size changed.
-      // Once https://github.com/google/blockly/issues/7782 is resolved,
-      // we should be able to remove this.
-      if (newTheme.fontStyle?.size !== previousTheme?.fontStyle?.size) {
-        workspace.getAllBlocks().map(block => {
-          block.markDirty();
-          block.render();
-        });
-      }
-    }
+    setThemeAndRenderBlocks(workspace, newTheme);
   });
 }
 /**
