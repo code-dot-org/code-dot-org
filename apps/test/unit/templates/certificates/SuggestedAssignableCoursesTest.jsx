@@ -46,7 +46,7 @@ describe('SuggestedAssignableCourses', () => {
     published_date: '2023-07-10T13:00:00.000Z',
     self_paced_pl_course_offering_path: '/courses/self-paced-pl-csp-2024',
     available_resources: {
-      'Lesson Plan': '/s/csp1-2024/lessons/1',
+      'Lesson Plan': '/courses/csp-2024/units/1/lessons/1',
       'Slide Deck':
         'https://docs.google.com/presentation/d/1ccxlBnconEF4KdNTkB-RhzJje5xMviicrhHqTp_QSio/template/preview',
       'Activity Guide':

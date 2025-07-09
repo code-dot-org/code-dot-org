@@ -4,14 +4,23 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
+      "topic_tags": [
+        "music_lab"
+      ],
+      "tts": true,
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-07 23:33:17 UTC",
+    "serialized_at": "2025-07-08 22:45:54 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -97,7 +106,7 @@
           }
         ],
         "overview": "To kick off a unit focused on creative coding and designing interactive music experiences, students will take on the role of music experience designers. Their challenge: help clients bring their ideas for unique songs to life using Music Lab.\n\nStudents begin by reviewing a variety of early songs, each showcasing different musical genres, sounds, and techniques. Then, they read through short client stories—each with a specific goal or mood in mind—and match each client with the song that best fits their vision.\n\nTo wrap up, students reflect on how understanding a user’s goals can shape creative decisions and consider how they might adapt or remix prototypes in Music Lab to better serve different needs.",
-        "preparation": "* Print a copy of the activity guide for each student\n- Preview the prototype examples in Code Studio to get familiar with the student experience",
+        "preparation": "* Print a copy of the activity guide for each student\n- Preview the examples in Code Studio to get familiar with the student experience\n- Get familiar with the musical terms in the [Music Lab Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?slide=id.g33d63a1df26_0_86#slide=id.g33d63a1df26_0_86) begin highlighting the connections between coding and music.",
         "student_overview": "Today, you’ll be a music experience designer! Your job is to help different “clients” bring their song ideas to life. First, you’ll check out some song prototypes in Music Lab. Then, you’ll read each client’s story and decide which prototype fits their idea best.\n\nYou’ll explain your choice and think about how to make the music even better for them."
       },
       "seeding_key": {
@@ -1120,6 +1129,19 @@
       }
     },
     {
+      "key": "abb377af-1f5c-4990-a556-d1ef9fe9b359",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abb377af-1f5c-4990-a556-d1ef9fe9b359",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
       "key": "3526ffa2-50ac-4784-8175-d2650c1bd0e2",
       "position": 1,
       "properties": {
@@ -1157,14 +1179,38 @@
       }
     },
     {
-      "key": "9bd4d7e1-74d2-4f5c-b20f-1fbfe46ac669",
+      "key": "bd4750e2-99f4-4964-ac72-c43f3c5ce265",
       "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd4750e2-99f4-4964-ac72-c43f3c5ce265",
+        "lesson_activity.key": "9b960295-a1f2-48be-9d91-4023a6edb6d1"
+      }
+    },
+    {
+      "key": "9bd4d7e1-74d2-4f5c-b20f-1fbfe46ac669",
+      "position": 2,
       "properties": {
         "description": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit! [**Click here to start learning!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1)",
         "name": "Professional Learning"
       },
       "seeding_key": {
         "activity_section.key": "9bd4d7e1-74d2-4f5c-b20f-1fbfe46ac669",
+        "lesson_activity.key": "9b960295-a1f2-48be-9d91-4023a6edb6d1"
+      }
+    },
+    {
+      "key": "36139b20-e0c0-43b7-939b-41da7837c6c5",
+      "position": 3,
+      "properties": {
+        "description": "Before starting this lesson, provide students with an opportunity to take the pre-assessment for the unit. You can decide to spend 10-15 minutes at the start of class completing this, or at the end of a previous class period. To ensure that students only take the pre-assessment at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" it. The [How to Administer a Locked Survey or Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) document provides details on how to do that when you are ready.\n\nThe **pre-assessment** is a 10-question assessment covering topics students will learn in the unit. **Students will likely be unprepared for these questions** - that's what makes it a pre-assessment! Encourage students to try their best, but they will likely not know many of the answers. Let them know they will see similar questions at the end of the unit and can compare their scores to see how much they've learned! ",
+        "name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "36139b20-e0c0-43b7-939b-41da7837c6c5",
         "lesson_activity.key": "9b960295-a1f2-48be-9d91-4023a6edb6d1"
       }
     },
@@ -1577,7 +1623,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code."
+            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code.\n\n**Music Terminology**- A shared vocabulary is the foundation of meaningful collaboration. The third page of this [Anchor Chart set](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?usp=sharing) could be a powerful resource to share with students at this point. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?usp=sharing) includes definitions and explanations to support instruction.  "
           }
         ]
       },
@@ -1819,7 +1865,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Viewing Example Solutions:** Each level has an example solution that verified teachers can access and view. You can view example solutions by expanding the Teacher Panel from the right-side of the screen, then clicking the blue \"Example Solution\" button. This process is [highlighted in this video](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be) and the graphic below\n\n<img src=\"https://images.code.org/e2be70507c3a22a08d28a3cd7c8cdd5a-example-solutions.png\" style=\"width: 25%\">"
+            "markdown": "**Music Terminology**- The [Musical Terms Anchor Chart - Organizing Music (p.2)](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?slide=id.g36d127f8520_0_59#slide=id.g36d127f8520_0_59) could be helpful to deepen student understanding. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?slide=id.g33d63a1df26_0_86#slide=id.g33d63a1df26_0_86) includes definitions and explanations to support instruction.\n\n**Viewing Example Solutions:** Each level has an example solution that verified teachers can access and view. You can view example solutions by expanding the Teacher Panel from the right-side of the screen, then clicking the blue \"Example Solution\" button. This process is [highlighted in this video](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be) and the graphic below\n\n<img src=\"https://images.code.org/e2be70507c3a22a08d28a3cd7c8cdd5a-example-solutions.png\" style=\"width: 25%\">"
           }
         ]
       },
@@ -1832,6 +1878,7 @@
       "key": "ba7a002c-950b-474e-b7fe-9ef17a4b14f2",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:** As students work, check in by asking clarifying or reflective questions like, *“How are you using play sequential to help your tracks line up the way you want?”* or *“What would happen if you changed this block?”* to promote problem solving.",
         "progression_name": "Play Sequential"
       },
       "seeding_key": {
@@ -1847,7 +1894,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels."
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Sequencing Cheat Sheet.](https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view)"
           }
         ]
       },
@@ -3319,6 +3366,30 @@
       "seeding_key": {
         "activity_section.key": "39d2c3f4-5112-4974-a46f-1ab085cbf571",
         "lesson_activity.key": "65cdc6ec-ffc0-4f47-a69b-72a2faf658b3"
+      }
+    },
+    {
+      "key": "fe345e3e-91aa-4394-b366-4e8dfc859ebb",
+      "position": 1,
+      "properties": {
+        "description": "Have students complete the end of unit assessment. To ensure that students only take the assessment at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" it. The [How to Administer a Locked Survey or Assessment](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys) document provides details on how to do that when you are ready.\n\nThe end of unit assessment is 10 questions and mirrors the questions students saw in the pre-assessment. Consider ways to celebrate student growth between the pre-assessment and the end of unit assessment\n",
+        "name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe345e3e-91aa-4394-b366-4e8dfc859ebb",
+        "lesson_activity.key": "abb377af-1f5c-4990-a556-d1ef9fe9b359"
+      }
+    },
+    {
+      "key": "aff5756f-78db-4573-83bf-d7809fb44dfd",
+      "position": 2,
+      "properties": {
+        "description": "Have students complete the End of Unit survey as well. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "aff5756f-78db-4573-83bf-d7809fb44dfd",
+        "lesson_activity.key": "abb377af-1f5c-4990-a556-d1ef9fe9b359"
       }
     },
     {
@@ -5301,6 +5372,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Play Random"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-random-panel_v2"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "8aa7a421-59a0-4038-a13d-c2011d2ee199"
+      },
+      "level_keys": [
+        "music-lab-random-panel_v2"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-music-lab-mini-project-gif-random-3_v2"
         ],
@@ -5321,9 +5414,9 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 3,
-      "activity_section_position": 2,
+      "chapter": 81,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5346,9 +5439,9 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 82,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5371,8 +5464,8 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 5,
+      "chapter": 83,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5396,8 +5489,8 @@
       ]
     },
     {
-      "chapter": 83,
-      "position": 6,
+      "chapter": 84,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5421,8 +5514,8 @@
       ]
     },
     {
-      "chapter": 84,
-      "position": 7,
+      "chapter": 85,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5446,8 +5539,8 @@
       ]
     },
     {
-      "chapter": 85,
-      "position": 8,
+      "chapter": 86,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5471,8 +5564,8 @@
       ]
     },
     {
-      "chapter": 86,
-      "position": 9,
+      "chapter": 87,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -5496,7 +5589,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5521,7 +5614,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5546,7 +5639,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5571,7 +5664,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5596,7 +5689,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5621,7 +5714,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5646,7 +5739,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5671,7 +5764,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5696,7 +5789,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5721,7 +5814,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5746,7 +5839,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5771,7 +5864,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5796,7 +5889,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5821,7 +5914,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5846,7 +5939,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5871,7 +5964,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5896,7 +5989,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5921,7 +6014,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5946,7 +6039,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -5971,7 +6064,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5996,7 +6089,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6021,7 +6114,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6046,7 +6139,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6071,7 +6164,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6096,7 +6189,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6121,7 +6214,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6146,7 +6239,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6171,7 +6264,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6196,7 +6289,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6221,7 +6314,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6246,7 +6339,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6271,7 +6364,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6296,7 +6389,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6321,7 +6414,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6346,7 +6439,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6371,7 +6464,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6396,7 +6489,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7360,6 +7453,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-random-panel_v2",
+        "script_level.level_keys": [
+          "music-lab-random-panel_v2"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "programming-with-music-lab-2025",
+        "activity_section.key": "8aa7a421-59a0-4038-a13d-c2011d2ee199"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-mini-project-gif-random-3_v2",
         "script_level.level_keys": [
           "test-music-lab-mini-project-gif-random-3_v2"
@@ -7901,15 +8006,72 @@
   ],
   "resources": [
     {
-      "name": "[answer key] Client Stories",
-      "url": "https://docs.google.com/document/d/1ROBaDdO6Hlndp1jKpEcBL9bdFTNhrBLgmIqfxrYlZVM/edit?usp=sharing",
+      "name": "[Key] Client Stories",
+      "url": "https://docs.google.com/document/d/1ROBaDdO6Hlndp1jKpEcBL9bdFTNhrBLgmIqfxrYlZVM/edit",
       "key": "_answer_key_client_stories",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Verified Teacher",
         "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_answer_key_client_stories"
+      }
+    },
+    {
+      "name": "[Key] Music Word Search",
+      "url": "https://docs.google.com/document/d/13jQbeXZy5NvY0CyHAHTpyN9pjdBhtHL2OM8IHMFONIQ/edit",
+      "key": "_key_music_word_search",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_music_word_search"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Charts - Track Types",
+      "url": "https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=sharing",
+      "key": "_musical_terms_anchor_charts_-_track_types",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_musical_terms_anchor_charts_-_track_types"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/courses/programming-with-music-lab-2025/units/1/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/programming-with-music-lab-2025/units/1/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/programming-with-music-lab-2025/units/1/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
       }
     },
     {
@@ -7943,6 +8105,7 @@
       "key": "client_stories",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -8101,10 +8264,35 @@
       "key": "music_word_search",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "music_word_search"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Chart - Organizing Music",
+      "url": "https://drive.google.com/file/d/1RDFizyrovrwzPzZEjapEur2H3mUzfqs4/view?usp=drive_link",
+      "key": "musical_terms_anchor_chart_-_organizing_music",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "name": "Musical Terms Glossary",
+      "url": "https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/view",
+      "key": "musical_terms_glossary",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_glossary"
       }
     },
     {
@@ -8205,6 +8393,18 @@
       }
     },
     {
+      "name": "Sequencing Assessment Levels Cheat Sheet",
+      "url": "https://drive.google.com/file/d/1wO6RJOBslmoDm2Wwua50BW2v6XpShcuV/view",
+      "key": "sequencing_assessment_levels_cheat_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_assessment_levels_cheat_sheet"
+      }
+    },
+    {
       "name": "Spotlight: Henny Tha Bizness, Record Producer",
       "url": "https://www.youtube.com/watch?v=OrrZPzgWPII",
       "key": "spotlight_henny_tha_bizness_record_producer",
@@ -8279,6 +8479,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Music Lab",
         "resource.key": "_answer_key_client_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "resource.key": "_key_music_word_search"
       }
     },
     {
@@ -8392,7 +8598,19 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing - Explore",
+        "resource.key": "_musical_terms_anchor_charts_-_track_types"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
         "resource.key": "make_music_learn_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {
@@ -8410,6 +8628,18 @@
     {
       "seeding_key": {
         "lesson.key": "Sequencing - Practice",
+        "resource.key": "musical_terms_anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
         "resource.key": "pair_programming"
       }
     },
@@ -8417,6 +8647,12 @@
       "seeding_key": {
         "lesson.key": "Sequencing - Practice",
         "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "sequencing_assessment_levels_cheat_sheet"
       }
     },
     {
@@ -8433,7 +8669,30 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "musical_terms_glossary",
+        "script.name": "programming-with-music-lab-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -8612,6 +8871,13 @@
         "lesson.key": "Functions - Synthesis",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-19"
       }
     },
     {

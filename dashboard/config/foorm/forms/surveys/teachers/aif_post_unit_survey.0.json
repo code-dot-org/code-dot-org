@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
@@ -21,7 +21,7 @@
               "name": "unit_name",
               "defaultValueExpression": "{unit_number}",
               "startWithNewLine": false,
-              "readOnly": false,
+              "readOnly": true,
               "visible": true,
               "choices": [
                 {
