@@ -71,7 +71,7 @@ function showCourseEditor() {
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
-        initialHasNumberedUnits={
+        initialNumberedUnits={
           courseEditorData.course_summary.has_numbered_units
         }
         courseFamilies={courseEditorData.course_families}

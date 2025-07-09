@@ -47,7 +47,7 @@ class CourseEditor extends Component {
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
-    initialHasNumberedUnits: PropTypes.bool.isRequired,
+    initialNumberedUnits: PropTypes.string.isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -64,6 +64,11 @@ class CourseEditor extends Component {
   constructor(props) {
     super(props);
 
+    let numberedUnits = this.props.initialNumberedUnits;
+    if (typeof numberedUnits === 'boolean') {
+      numberedUnits = numberedUnits ? 'auto' : 'none';
+    }
+
     this.state = {
       isSaving: false,
       error: null,
@@ -76,7 +81,7 @@ class CourseEditor extends Component {
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
-      hasNumberedUnits: this.props.initialHasNumberedUnits,
+      numberedUnits: numberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       savedFamilyName: this.props.initialFamilyName,
@@ -106,7 +111,7 @@ class CourseEditor extends Component {
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
       has_verified_resources: this.state.hasVerifiedResources,
-      has_numbered_units: this.state.hasNumberedUnits,
+      numbered_units: this.state.numberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
@@ -216,7 +221,7 @@ class CourseEditor extends Component {
       descriptionStudent,
       descriptionTeacher,
       hasVerifiedResources,
-      hasNumberedUnits,
+      numberedUnits,
       familyName,
       versionYear,
       pilotExperiment,
@@ -323,18 +328,19 @@ class CourseEditor extends Component {
             Unit Numbering
             <HelpTip>
               <p>
-                Automatically provide numbers in unit names in the order listed
-                below.
+                Choose between no unit numbering, automatic unit numbering, or
+                custom unit numbering, editable in the Units section below.
               </p>
             </HelpTip>
-            <input
-              type="checkbox"
-              defaultChecked={hasNumberedUnits}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({hasNumberedUnits: !hasNumberedUnits})
-              }
-            />
+            <select
+              style={styles.dropdown}
+              value={numberedUnits}
+              onChange={e => this.setState({numberedUnits: e.target.value})}
+            >
+              <option value="none">None</option>
+              <option value="auto">Automatic</option>
+              <option value="custom">Custom</option>
+            </select>
           </label>
         </CollapsibleEditorSection>
 
@@ -420,6 +426,7 @@ class CourseEditor extends Component {
             </div>
             <CourseUnitsEditor
               inputStyle={styles.input}
+              numberedUnits={numberedUnits}
               initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>
