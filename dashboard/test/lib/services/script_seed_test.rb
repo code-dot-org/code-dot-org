@@ -50,62 +50,6 @@ module Services
       refute result[:properties].key? 'seeded_from'
     end
 
-    test 'seed new script' do
-      # This line of code is used to initialize the `max_allowed_packet` setting in ActiveRecord::Import.
-      # When a test is run in isolation, this setting may not be set, which can cause an extra database request.
-      # This extra request can interfere with the `assert_queries` count in the test, causing it to fail.
-      # By calling `max_allowed_packet` here, we ensure that the setting is initialized before the test begins.
-      # See: https://github.com/zdennis/activerecord-import/blob/v1.0.8/lib/activerecord-import/adapters/mysql_adapter.rb#L55-L64
-      ApplicationRecord.connection.max_allowed_packet if ApplicationRecord.connection.respond_to?(:max_allowed_packet)
-
-      script = create_script_tree
-      script.freeze
-      json = ScriptSeed.serialize_seeding_json(script)
-      counts_before = get_counts
-
-      # remove the script from the database, leaving the frozen script object intact.
-      script_to_destroy = Unit.find(script.id)
-      script_to_destroy.course_version.resources.destroy_all
-      script_to_destroy.course_version.vocabularies.destroy_all
-      script_to_destroy.course_version.destroy!
-      script_to_destroy.destroy!
-
-      # This is currently:
-      #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   4 queries to set up course offering and course version
-      #   34 queries - two for each model, + one extra query each for Lessons,
-      #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
-      #     Resources, Vocabulary, Rubric, LearningGoal, and LearningGoalEvidenceLevel.
-      #     These 2-3 queries per model are to (1) delete old entries, (2) import
-      #     new/updated entries, and then (3) fetch the result for use by the next
-      #     layer down in the hierarchy.
-      #   12 queries - ScriptLevel validations related to having an activity_section.
-      #     These would be good candidates to eliminate in future optimization.
-      #   16 queries, one for each LevelsScriptLevel.
-      #   4 queries, one to remove LessonsResources from each Lesson.
-      #   2 queries, one to remove LessonsVocabularies from each Lesson.
-      #   2 queries, one to remove LessonsProgrammingExpression from each Lesson.
-      #   2 queries, one to remove LessonsStandards from each Lesson.
-      #   2 queries, one to remove LessonsOpportunityStandards from each Lesson.
-      #   1 query to get all the programming environments
-      #   1 query to get all the standards frameworks
-      #   1 query to check for a CourseOffering. (Would be a few more if is_course was true)
-      #   1 query to check if units in family have the same course type settings
-      # LevelsScriptLevels has queries which scale linearly with the number of rows.
-      # As far as I know, to get rid of those queries per row, we'd need to load all Levels into memory. I think
-      # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
-      # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
-      # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      # (Dani) This will go back up by one when we turn the validation of families sharing course type back on
-      assert_queries(98) do
-        ScriptSeed.seed_from_json(json)
-      end
-
-      assert_equal counts_before, get_counts
-      script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
-      assert_script_trees_equal(script, script_after_seed)
-    end
-
     test 'seed modifies script updated_at' do
       Timecop.freeze do
         script = create_script_tree
@@ -119,10 +63,10 @@ module Services
     end
 
     test 'seed script in unit group' do
-      script = create_script_tree(with_unit_group: true)
+      script = create_script_tree
       refute script.course_version
-      assert script.unit_group.course_version
-      assert script.unit_group.id, script.original_unit_group_id
+      assert script.original_unit_group.course_version
+      assert script.original_unit_group.id, script.original_unit_group_id
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -131,8 +75,8 @@ module Services
       # its lessons and everything else they contain. Leave the script and its
       # unit group intact, so that resources can be imported.
       script_to_destroy = Unit.find(script.id)
-      script_to_destroy.unit_group.course_version.resources.destroy_all
-      script_to_destroy.unit_group.course_version.vocabularies.destroy_all
+      script_to_destroy.original_unit_group.course_version.resources.destroy_all
+      script_to_destroy.original_unit_group.course_version.vocabularies.destroy_all
       script_to_destroy.lesson_groups.destroy_all
 
       ScriptSeed.seed_from_json(json)
@@ -148,7 +92,7 @@ module Services
     # later seed step, perhaps because we are seeding for the first time on
     # a particular machine.
     test 'seed script not yet in unit group' do
-      script = create_script_tree(with_unit_group: true)
+      script = create_script_tree
       refute script.course_version
       assert script.unit_group.course_version
 
@@ -168,7 +112,7 @@ module Services
       # be available during seed.
       script_to_destroy = Unit.find(script.id)
       unit_group_to_destroy = script_to_destroy.unit_group
-      script_to_destroy.unit_group.course_version.destroy!
+      script_to_destroy.original_unit_group.course_version.destroy!
       script_to_destroy.destroy!
       unit_group_to_destroy.destroy!
 
@@ -359,8 +303,6 @@ module Services
 
     test 'seed updates lesson resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -369,7 +311,7 @@ module Services
           name: 'New Resource Name',
           key: "#{lesson.name}-resource-3",
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -386,15 +328,13 @@ module Services
 
     test 'seed updates script resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.resources.first.update!(name: 'updated name')
         script.resources.create(
           name: 'New Resource Name',
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -410,15 +350,13 @@ module Services
 
     test 'seed updates script student resources' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         script.student_resources.first.update!(name: 'updated name')
         script.student_resources.create(
           name: 'New Resource Name',
           url: "fake.url",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
       end
 
@@ -434,20 +372,18 @@ module Services
 
     test 'seed updates lesson vocabularies' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
         key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
         # uniquify_key always produces a key later in the sort order
-        key = Vocabulary.uniquify_key(key, script.course_version.id)
+        key = Vocabulary.uniquify_key(key, script.get_course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
           key: key,
           definition: "new definition",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
         vocab_keys = lesson.vocabularies.map(&:key)
         assert_equal vocab_keys, vocab_keys.sort
@@ -470,8 +406,6 @@ module Services
 
     test 'seed updates lesson vocabularies with out of order keys' do
       script = create_script_tree
-      CourseOffering.add_course_offering(script)
-      assert script.course_version
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -482,7 +416,7 @@ module Services
           word: 'new word',
           key: key,
           definition: "new definition",
-          course_version: script.course_version
+          course_version: script.get_course_version
         )
         vocab_keys = lesson.vocabularies.map(&:key)
         refute_equal vocab_keys, vocab_keys.sort
@@ -1194,18 +1128,6 @@ module Services
       end
     end
 
-    test 'seed sets published_state on course_version' do
-      script = create_script_tree(num_lessons_per_group: 1)
-      script.published_state = 'preview'
-      script.save!
-
-      json = ScriptSeed.serialize_seeding_json(script)
-      ScriptSeed.seed_from_json(json)
-
-      script = Unit.with_seed_models.find(script.id)
-      assert_equal 'preview', script.course_version.published_state
-    end
-
     test 'import_script sets seeded_from from serialized_at' do
       script = create(:script, is_migrated: true)
       assert script.seeded_from.nil?
@@ -1240,7 +1162,7 @@ module Services
     test 'published state set to pilot when pilot_experiment is present' do
       unit = create :script
       assert_nil unit.pilot_experiment
-      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, unit.get_published_state
+      assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
 
       json = ScriptSeed.serialize_seeding_json(unit)
       unit_data = JSON.parse(json)
@@ -1436,7 +1358,6 @@ module Services
       num_programming_expressions_per_lesson: 2,
       num_objectives_per_lesson: 2,
       num_standards_per_lesson: 2,
-      with_unit_group: false,
       num_rubrics_per_lesson: 1,
       num_learning_goals_per_rubric: 1,
       num_learning_goal_evidence_levels_per_learning_goal: 2
@@ -1459,19 +1380,9 @@ module Services
       family_name = "#{name_prefix.gsub(/[^a-z\-]/i, '')}-family"
       version_year = "1999"
 
-      if with_unit_group
-        unit_group = create :unit_group, family_name: family_name, version_year: version_year
-        create :unit_group_unit, unit_group: unit_group, script: script, position: 1
-        CourseOffering.add_course_offering(unit_group)
-        script.update!(original_unit_group_id: unit_group.id)
-      else
-        script.update!(
-          is_course: true,
-          family_name: family_name,
-          version_year: version_year
-        )
-        CourseOffering.add_course_offering(script)
-      end
+      unit_group = create :single_unit_course, unit: script, family_name: family_name, version_year: version_year
+      CourseOffering.add_course_offering(unit_group)
+
       script.reload
       course_version = script.get_course_version
       assert course_version

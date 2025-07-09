@@ -425,6 +425,8 @@ class Section < ApplicationRecord
         ai_tutor_enabled: ai_tutor_enabled,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
+        at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
       }
     end
   end

@@ -296,47 +296,7 @@ class TestSection
       }
     )
 
-    parsed_evaluation = JSON.parse(ai_evaluation[:json]['content'])
-
-    student_work_evaluation_params = {
-      type: 'UserLevelEvaluation',
-      student_id: student_user.id,
-      code_version: options[:code_version],
-      level_id: level.id,
-      unit_id: options[:unit].id,
-      evaluator: 'AI',
-      evaluation_criteria: parsed_evaluation['evaluationCriteria'],
-      evaluation: parsed_evaluation['aiEvaluation'],
-      reasoning: parsed_evaluation['aiReasoning'],
-      requester_id: options[:teacher].id,
-      school_year: options[:school_year] || '2024-25',
-      ai_model_version: SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
-    }
-
-    work_evaluation = StudentWorkEvaluation.create!(student_work_evaluation_params)
-
-    skill_evaluations = parsed_evaluation['skillEvaluations']
-    skill_evaluations&.each do |skill_evaluation|
-      skill_evaluation_params = {
-        type: 'UserLevelSkillEvaluation',
-        student_id: student_user.id,
-        code_version: options[:code_version],
-        level_id: level.id,
-        unit_id: options[:unit].id,
-        evaluator: 'AI',
-        evaluation_criteria: skill_evaluation['evaluationCriteria'],
-        evaluation: skill_evaluation['aiEvaluation'],
-        reasoning: skill_evaluation['aiReasoning'],
-        skill_id: skill_evaluation['skillId'],
-      }
-
-      created_skill_evaluation = StudentWorkEvaluation.create!(skill_evaluation_params)
-
-      summary_params = {student_work_evaluation_id: created_skill_evaluation.id,
-        student_work_evaluation_summary_id: work_evaluation.id}
-
-      StudentWorkEvaluationSummary.create!(summary_params)
-    end
+    OpenaiEvaluateHelper.create_ai_evaluations_from_ai_response(ai_evaluation)
   end
 
   def self.max_level_for_student(level_count)

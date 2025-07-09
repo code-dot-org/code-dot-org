@@ -60,7 +60,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @student = create :student
 
-      @pl_script = create(:script, name: 'test-script',  instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @pl_script = create(:single_unit_course, :pl_course).first_unit
       @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
       @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
     end
@@ -102,60 +102,60 @@ class ScriptLevelTest < ActiveSupport::TestCase
       bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
       sl = create :script_level, levels: [bubble_choice]
 
-      assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(sublevel1, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"], sl.get_example_solutions(sublevel2, @authorized_teacher)
     end
 
     test 'get_example_solutions returns empty array if not instructor of course' do
-      unit = create(:script, name: 'example-solution-facilitator-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+      unit = create(:single_unit_course, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator).first_unit
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: unit)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
-      assert_equal sl.get_example_solutions(level, @facilitator), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
+      assert_equal [], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @facilitator)
     end
 
     test 'get_example_solutions for dance level' do
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for spritelab level' do
       level = create(:spritelab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for artist level' do
       level = create(:artist, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/artist/example-1/view", "https://studio.code.org/projects/artist/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/artist/example-1/view", "https://studio.code.org/projects/artist/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for playlab level' do
       level = create(:playlab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for javalab level with exemplar' do
       level = create(:javalab, exemplar_sources: 'some code')
-      script = create(:script)
+      script = create(:script, :in_single_unit_course)
       sl = create(:script_level, levels: [level], script: script)
 
       # Javalab levels should only have one example solution.
       # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
-      example_solutions = sl.get_example_solutions(level, @authorized_teacher)
+      example_solutions = sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
       parsed_url = URI(example_solutions.first)
 
       assert_equal 1, example_solutions.length
-      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1?exemplar=true",
+      assert_equal "test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?exemplar=true",
         parsed_url.host + parsed_url.path + '?' + parsed_url.query
     end
 
@@ -163,51 +163,53 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sublevel = create :javalab, exemplar_sources: 'some code'
       sublevels = [sublevel]
       bubble_choice = create :bubble_choice_level, sublevels: sublevels
-      script = create(:script)
+      script = create(:script, :in_single_unit_course)
       sl = create :script_level, levels: [bubble_choice], script: script
 
       # Javalab levels should only have one example solution.
       # Remove scheme (http v https) for assertion b/c these are inconsistent between CI and development
       # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
-      example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher)
+      example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
       parsed_url = URI(example_solutions.first)
 
       assert_equal 1, example_solutions.length
-      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true",
+      assert_equal "test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1/sublevel/1?exemplar=true",
         parsed_url.host + parsed_url.path + '?' + parsed_url.query
     end
 
     test 'get_example_solutions for level with ideal level source' do
-      script = create(:csp_script, name: 'test-script')
+      script = create(:csp_script, :in_single_unit_course)
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["//test-studio.code.org/s/test-script/lessons/1/levels/1?solution=true"]
+      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
+                   sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
     end
 
     test 'get_example_solutions for level with ideal level source and section_id' do
-      script = create(:csp_script, name: 'test-script')
+      script = create(:csp_script, :in_single_unit_course)
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher, 5), ["//test-studio.code.org/s/test-script/lessons/1/levels/1?section_id=5&solution=true"]
+      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
+                   sl.get_example_solutions(level, @authorized_teacher, 5, unit_group_unit: script.original_unit_group_unit)
     end
 
     test 'get_example_solutions returns empty array if no examples' do
       level = create(:level)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
+      assert_equal [], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions returns empty array if not authorized teacher and not CSF course' do
-      script = create(:csp_script)
+      script = create(:csp_script, :in_single_unit_course)
       level = create(:applab, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/applab/example-1/view", "https://studio.code.org/projects/applab/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @not_authorized_teacher), []
-      assert_equal sl.get_example_solutions(level, @student), []
+      assert_equal ["https://studio.code.org/projects/applab/example-1/view", "https://studio.code.org/projects/applab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @not_authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @student)
     end
 
     test 'get_example_solutions returns example if not authorized teacher but in CSF course' do
@@ -215,9 +217,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @not_authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @student), []
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @not_authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @student)
     end
   end
 
@@ -225,15 +227,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl = create_script_level_with_ancestors
     sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
-    summary = sl.summarize
-    assert_match Regexp.new("^#{CDO.studio_url}/s/bogus-script-[0-9]+/lessons/1/levels/1$"), summary[:url]
+    summary = sl.summarize(unit_group_unit: sl.script.original_unit_group_unit)
+    assert_match Regexp.new("^#{CDO.studio_url}/courses/bogus-single-unit-course-[0-9]+/units/1/lessons/1/levels/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
-    summary = sl2.summarize
-    assert_match Regexp.new("^#{CDO.studio_url}/s/bogus-script-[0-9]+/lessons/1/levels/2$"), summary[:url]
+    summary = sl2.summarize(unit_group_unit: sl.script.original_unit_group_unit)
+    assert_match Regexp.new("^#{CDO.studio_url}/courses/bogus-single-unit-course-[0-9]+/units/1/lessons/1/levels/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
@@ -462,7 +464,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level when next level is unplugged skips the level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_first = create(:script_level, script: script, lesson: lesson, position: 1)
@@ -473,7 +475,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level when next level is unplugged skips the entire unplugged lesson' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     first_lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_first = create(:script_level, script: script, lesson: first_lesson, position: 1, chapter: 1)
@@ -496,7 +498,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on an unplugged level works' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_unplugged = create(:script_level, levels: [create(:unplugged)], script: script, lesson: lesson, position: 1, chapter: 1)
@@ -506,7 +508,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_progression_level when next level is spelling_bee skips the level in non-english' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     first = create(:script_level, script: script, lesson: lesson, position: 1)
@@ -521,7 +523,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_level on an spelling_bee level works in any locale' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     first = create(:script_level, levels: [create(:level, :spelling_bee)], script: script, lesson: lesson, position: 1, chapter: 1)
@@ -535,7 +537,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_progression_level when next level is spelling_bee skips the entire spelling_bee lesson in non-english' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     first_lesson = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     script_level_first = create(:script_level, script: script, lesson: first_lesson, position: 1, chapter: 1)
@@ -562,7 +564,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_progression_level when next level is hidden skips to next unhidden level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson1 = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     lesson2 = create(:lesson, script: script, absolute_position: 2, lesson_group: lesson_group)
@@ -583,7 +585,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'calling next_progression_level when next level is locked skips to next unlocked level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     lesson1 = create(:lesson, script: script, absolute_position: 1, lesson_group: lesson_group)
     lesson2 = create(:lesson, script: script, absolute_position: 2, lockable: true, lesson_group: lesson_group)
@@ -600,7 +602,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user does not skip over next unplugged level from unplugged level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
 
     levels = [
@@ -620,7 +622,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user does not skip over next bee level from bee level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
 
     levels = [
@@ -640,7 +642,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'next_level_or_redirect_path_for_user does skip over hidden levels from unplugged level' do
-    script = create(:script, name: 's1')
+    script = create(:script, :in_single_unit_course, name: 's1')
     lesson_group = create(:lesson_group, script: script)
     levels = [
       create(:level, game: Game.find_by_app(Game::UNPLUG)),
@@ -666,7 +668,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'next_level_or_redirect_path_for_user returns to lesson extras for bonus levels' do
     script_level = create_script_level_with_ancestors({bonus: true})
-    assert_equal "/s/#{script_level.script.name}/lessons/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/extras",
+                 script_level.next_level_or_redirect_path_for_user(nil, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # Bubble Choice parent levels at end of lesson redirect to unit overview.
@@ -678,14 +681,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = true
-    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1?completedLessonNumber=1",
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # Bubble Choice parent levels mid-lesson redirect to next level.
   test 'next_level_or_redirect_path_for_user for BubbleChoice parent levels - mid lesson' do
     student = create :student
     student.stubs(:has_pilot_experiment?).returns true
-    script = create(:script, name: 'script1')
+    script = create(:script, :in_single_unit_course, name: 'script1')
     script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson_group = create(:lesson_group, script: script)
     sublevel = create :level, name: 'choice1'
@@ -713,7 +717,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = false
-    assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent)
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/levels/1",
+                 script_level.next_level_or_redirect_path_for_user(student, bubble_choice_parent: bubble_choice_parent, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -722,7 +727,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student.stubs(:has_pilot_experiment?).returns true
     script_level = create_script_level_with_ancestors({})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
-    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1?completedLessonNumber=1",
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # For script where show_unit_overview_between_lessons? == true
@@ -731,12 +737,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student.stubs(:has_pilot_experiment?).returns true
     script_level = create_script_level_with_ancestors({bonus: true})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
-    assert_equal "/s/#{script_level.script.name}/lessons/1/extras", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/courses/#{script_level.script.original_unit_group.name}/units/1/lessons/1/extras",
+                 script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
   # For script where show_unit_overview_between_lessons? == true
   test 'next_level_or_redirect_path_for_user returns to next level if not end of lesson' do
-    script = create(:script, name: 'script1')
+    script = create(:script, :in_single_unit_course, name: 'script1')
     script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson_group = create(:lesson_group, script: script)
 
@@ -840,7 +847,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'redirects back to correct lesson extras from bonus level' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script
     lesson2 = create :lesson, lesson_group: lesson_group, script: script
@@ -972,7 +979,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   def create_script_level_with_ancestors(script_level_attributes = nil)
     script_level_attributes ||= {}
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     create :script_level, script: script, lesson: lesson, **script_level_attributes
@@ -1090,7 +1097,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'adds variant to custom level in migrated script' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    script = create :script, is_migrated: true
+    script = create :script, :in_single_unit_course, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     level1 = create :level
@@ -1118,7 +1125,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'cannot add variant to non custom level' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    script = create :script, is_migrated: true
+    script = create :script, :in_single_unit_course, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     level1 = create :deprecated_blockly_level
@@ -1136,7 +1143,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'cannot add variant to legacy script' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    script = create :script, is_migrated: false
+    script = create :script, :in_single_unit_course, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     level1 = create :level

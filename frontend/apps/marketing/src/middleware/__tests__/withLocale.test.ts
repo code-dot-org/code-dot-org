@@ -1,5 +1,6 @@
 import {NextRequest, NextFetchEvent, NextResponse} from 'next/server';
 
+import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
 import {SUPPORTED_LOCALE_CODES, SUPPORTED_LOCALES_SET} from '@/config/locale';
 import {getStage} from '@/config/stage';
 import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
@@ -12,6 +13,10 @@ jest.mock('@/contentful/slug/getContentfulSlug', () => ({
 
 jest.mock('@/config/stage', () => ({
   getStage: jest.fn(),
+}));
+
+jest.mock('next/headers', () => ({
+  cookies: jest.fn().mockReturnValue({get: jest.fn()}),
 }));
 
 describe('withLocale middleware', () => {
@@ -83,6 +88,9 @@ describe('withLocale middleware', () => {
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
     );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
+    );
   });
 
   it('should redirect to the locale path if no locale is present in the path but has accept-language haeder', async () => {
@@ -103,6 +111,9 @@ describe('withLocale middleware', () => {
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
       'https://test.code.org/zh-TW/home',
+    );
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 
@@ -141,7 +152,26 @@ describe('withLocale middleware', () => {
 
     expect(response).toBeInstanceOf(NextResponse);
     expect(response?.headers.get('location')).toBe(
-      'https://code.marketing-sites.local/zh-TW/home',
+      'https://code.marketing-sites.local/zh-TW',
+    );
+  });
+
+  it('should redirect to dashboard if _user_type is set', async () => {
+    const request = {
+      nextUrl: {pathname: ''},
+      cookies: {get: jest.fn().mockReturnValue({value: '_user_type=student'})},
+      headers: {
+        get: jest.fn(),
+      },
+      url: 'https://code.marketing-sites.local',
+    } as unknown as NextRequest;
+
+    const response = await withLocale(next)(request, mockEvent);
+
+    expect(response).toBeInstanceOf(NextResponse);
+    expect(response?.headers.get('location')).toContain('studio.code.org');
+    expect(response?.headers.get('Cache-Control')).toEqual(
+      STALE_WHILE_REVALIDATE_ONE_HOUR,
     );
   });
 

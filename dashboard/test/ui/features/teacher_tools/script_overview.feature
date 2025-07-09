@@ -7,7 +7,7 @@ Feature: Unit overview page
   @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     # Make progress as student
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
@@ -81,26 +81,26 @@ Feature: Unit overview page
   Scenario: Unit overview new lesson plan
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector "#uitest-lesson-plan" once I see it
     When I switch tabs
-    And I wait until current URL contains "/courses/allthemigratedthings/units/1/lessons/1"
+    And I wait until current URL contains "/courses/allthelessonplans/units/1/lessons/1"
 
   Scenario: Unit overview student resources as teacher
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector "#uitest-student-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthemigratedthings/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
 
   Scenario: Unit overview student resources as student
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthemigratedthings/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
 
   Scenario: Unit overview for unit in single-unit course
     Given I create an authorized teacher-associated student named "Blake"

@@ -40,6 +40,8 @@
   "copyToClipboardAlert": "Text copied to clipboard",
   "editModeButtonText": "Edit",
   "exampleTopicsValidationAlert": "Must add at least one example prompt",
+  "fromDevice": "From Device",
+  "fromLibrary": "From Library",
   "instructionsHeaderRight": "Instructions Info Dropdown",
   "learnMoreHereInBrackets": "[Learn more here.]",
   "modelCard_botNameHeader": "Chatbot Name",

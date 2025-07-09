@@ -9,11 +9,12 @@
       "topic_tags": [
         "music_lab"
       ],
+      "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-28 05:49:47 UTC",
+    "serialized_at": "2025-06-25 16:49:02 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -73,7 +74,7 @@
       "position": 1,
       "properties": {
         "description": "Learn how to make music using only your computer keyboard! ",
-        "name": "Music Lab keyboard onboarding",
+        "name": "Getting started with keyboard-only Music Lab",
         "progression_name": "Navigating blocks"
       },
       "seeding_key": {
@@ -161,6 +162,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "add_a _sound_keyboard_navigation"
+        ],
         "progression": "Navigating blocks"
       },
       "bonus": false,
@@ -183,6 +187,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "add_two_sounds_keyboard_navigation"
+        ],
         "progression": "Navigating blocks"
       },
       "bonus": false,

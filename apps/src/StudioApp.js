@@ -1276,6 +1276,7 @@ StudioApp.prototype.inject = function (div, options) {
   }
 
   options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
+  options.showBlockHelp = experiments.isEnabled(experiments.BLOCKLY_DOCS);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 

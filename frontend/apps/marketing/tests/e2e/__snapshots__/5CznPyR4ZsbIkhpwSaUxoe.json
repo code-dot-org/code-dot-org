@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "linkName": {
-        "en-US": "⛔️ [ENGINEERING ONLY] External link button test"
+        "en-US": "❌ [ENG] External link button test"
       },
       "label": {
         "en-US": "External link button test"

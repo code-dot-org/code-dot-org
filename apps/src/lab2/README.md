@@ -36,10 +36,9 @@ As of 2024, all new labs should be based on Lab2. To create a new lab, you need 
   - Set up your new lab react views on the frontend. See the apps/aichat folder in this [PR](https://github.com/code-dot-org/code-dot-org/pull/52538/files).
   - Register your lab with lab2, these steps have changed since the aichat PR so we'll be looking at an example from pythonlab instead:
     - Define a new entrypoint for your lab, see [apps/pythonlab/entrypoint.ts](https://github.com/code-dot-org/code-dot-org/pull/59794/files#diff-0dbe9f4f6eecfd5cb5e653b9d592bacbaaf6368602e32a1c357ce7c9067f0cdb)
-      - DO: use `view:` with a dynamic import() call with a webpack chunk name defined
-      - DO NOT: use `hardcodedView:` with a static import of your react view, even if you see examples doing this (why: this results in all lab2 code being loaded in a huge mega-bundle)
+      - Use `view:` with a dynamic import() call with a webpack chunk name defined
     - Create an index.js file for your lab, see [apps/pythonlab/index.js](https://github.com/code-dot-org/code-dot-org/blob/b81b6b98f1ecc01972bf2ae43589b06c40e6183c/apps/src/pythonlab/index.js), this is required to make our typescript config work with dynamic imports.
-    - Add the new lab type to [apps/lab2EntryPoints.ts](https://github.com/code-dot-org/code-dot-org/blob/b81b6b98f1ecc01972bf2ae43589b06c40e6183c/apps/lab2EntryPoints.ts#L21)
+    - Add the new lab type to [apps/lab2EntryPoints.ts](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/lab2EntryPoints.ts)
 
 That’s it!
 
@@ -47,11 +46,11 @@ That’s it!
 
 Currently, the following level apps are built for **Lab2**:
 
+- [AI Chat](../aichat/)
+- [BubbleChoice](../bubbleChoice)
 - [Music](../music/)
 - [Panels](../panels/)
+- [Python Lab](../pythonlab)
 - [StandaloneVideo](../standaloneVideo)
-- [BubbleChoice](../bubbleChoice)
-
-The full list of supported level apps, along with their associated properties, is declared in `LabViewsRenderer` [here](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/src/lab2/views/LabViewsRenderer.tsx#L47).
 
 **Music** drove the initial implementation of **Lab2**.

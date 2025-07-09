@@ -8,8 +8,8 @@ Feature: Using the progress tab of the teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
 
    # Make sure Course A is in the drop down so we can use it for standards tab
-    Given I am assigned to unit "coursea-2019"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "coursea-2019" unit 1
+    Given I am assigned to course "allthethingscourse" unit 1
 
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1"

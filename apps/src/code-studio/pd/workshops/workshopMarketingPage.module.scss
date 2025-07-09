@@ -106,6 +106,21 @@ $mobile-padding: 4rem;
           border: 1px solid var(--borders-neutral-primary);
           background: var(--background-neutral-secondary);
 
+          .internalEnrollButton {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .userPassport {
+              width: 100%;
+
+              > div {
+                background-color: var(--neutral-base-white);
+              }
+            }
+          }
+
           .underCardHeadingDetails {
             display: flex;
             flex-direction: column;

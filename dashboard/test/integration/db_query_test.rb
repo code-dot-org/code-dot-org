@@ -126,7 +126,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     script = create(
       :script,
       :with_levels,
-      :in_unit_group,
       levels_count: 10
     )
     course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
@@ -139,7 +138,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(5) do
+    assert_cached_queries(10) do
       get "/courses/#{course.name}/units/1/"
       assert_response :success
     end

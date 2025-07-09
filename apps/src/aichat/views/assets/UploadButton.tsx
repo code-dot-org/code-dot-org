@@ -16,6 +16,7 @@ import {
   MAX_FILE_SIZE_MB,
   MAX_NUM_FILES,
 } from '../../constants';
+import {useLevelProperties} from '../../levelPropertiesContext';
 import aichatI18n from '../../locale';
 import {
   addStagedFile,
@@ -35,11 +36,9 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     state => state.aichat.stagedFiles.length
   );
   const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
-  const hasStarterAssets = useAppSelector(state => {
-    const starterAssets = state.lab.levelProperties?.starterAssets;
-    return starterAssets && Object.keys(starterAssets).length > 0;
-  });
+  const {name: levelName, starterAssets} = useLevelProperties();
+  const hasStarterAssets =
+    starterAssets && Object.keys(starterAssets).length > 0;
   const [showAssetManager, setShowAssetManager] = useState(false);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -48,7 +47,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       return;
     }
 
-    // Clear the alert, if any
+    // Clear the alert, if any.
     dispatch(clearStagedFilesAlert());
 
     const excessFileCount = files.length - numAllowedFiles;
@@ -83,7 +82,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
             status: 'sizeLimitExceeded',
           })
         );
-        continue; // Skip uploading this file if it exceeds the size limit
+        continue; // Skip uploading this file if it exceeds the size limit.
       }
 
       try {
@@ -102,7 +101,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         } else {
           uploadFailureCount += 1;
           status = 'uploadFailed';
-          // Only log if not a size limit exceeded error
+          // Only log if not a size limit exceeded error.
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Error uploading asset', error as Error, {

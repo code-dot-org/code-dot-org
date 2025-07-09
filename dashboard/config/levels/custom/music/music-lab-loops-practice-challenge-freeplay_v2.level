@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:50.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds** and have **at least 1 nested loop**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)",
+    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds** and have **at least 1 nested loop**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -88,8 +89,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:50.361+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-freeplay\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-freeplay\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:50.361+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-challenge-freeplay\\\"\"],\"cloned_from\":\"music-lab-loops-practice-challenge-freeplay\"},{\"changed_at\":\"2025-06-30 16:54:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
