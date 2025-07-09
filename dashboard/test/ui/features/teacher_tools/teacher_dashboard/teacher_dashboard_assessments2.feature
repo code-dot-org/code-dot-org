@@ -3,6 +3,7 @@ Feature: Using the assessments tab in the teacher dashboard
 
   Scenario: Assessments tab survey submissions
     Given I create an authorized teacher-associated student named "Sally"
+    # Create all students first so that we can unlock the assessment for all of them at once
     And I create a student named "Student2"
     And I join the section
     And I create a student named "Student3"
