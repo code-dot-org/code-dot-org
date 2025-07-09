@@ -77,7 +77,11 @@ export const saveAiCustomization = async (
       .getMetricsReporter()
       .incrementCounter('Aichat.SaveFailToxicityDetected');
     const errorMessage = getToxicityErrorMessage(toxicity.flaggedFields);
-    dispatchSaveFailNotification(dispatch as AppDispatch, errorMessage, true);
+    dispatchSaveFailNotification(
+      dispatch as AppDispatch,
+      'toxicityError',
+      errorMessage
+    );
     return;
   }
 

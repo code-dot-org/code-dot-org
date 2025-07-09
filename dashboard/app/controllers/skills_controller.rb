@@ -1,6 +1,6 @@
 class SkillsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
+  load_and_authorize_resource only: [:index, :create, :update, :destroy]
 
   def index
     skills = Skill.all
@@ -48,6 +48,42 @@ class SkillsController < ApplicationController
     end
   end
 
+  def section_skills
+    section = Section.find_by(id: section_skills_params[:section_id])
+    unit = Unit.find_by(name: section_skills_params[:unit_name])
+
+    if section.nil?
+      render json: {status: 'error', message: 'Section not found'}, status: :not_found
+      return
+    end
+
+    if unit.nil?
+      render json: {status: 'error', message: 'Unit not found'}, status: :not_found
+      return
+    end
+
+    authorize! :manage, section
+
+    evaluation_data = SkillsHelper.get_section_skills_data(section, unit)
+
+    skills_list = evaluation_data.values.flat_map(&:keys).uniq
+
+    skills_data = skills_list.map do |skill_id|
+      skill = Skill.find(skill_id)
+      {
+        id: skill.id,
+        key: skill.key,
+        description: skill.description,
+      }
+    end
+
+    render json: {
+      status: 'success',
+      evaluation_data: evaluation_data,
+      skills_data: skills_data
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
   private def skill_params
     params.permit(
       :key,
@@ -55,5 +91,9 @@ class SkillsController < ApplicationController
       :evaluationCriteria,
       :concept,
     ).transform_keys {|key| key.to_s.underscore.to_sym}
+  end
+
+  private def section_skills_params
+    params.permit(:section_id, :unit_name)
   end
 end

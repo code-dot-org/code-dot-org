@@ -13,14 +13,14 @@ export const courses = [
     title: 'Course 1',
     description:
       'Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
-    link: 'https://studio.code.org/s/course1',
+    link: 'https://studio.code.org/courses/course1',
     assignedSections: [],
   },
   {
     title: 'Course 2',
     description:
       'Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
-    link: 'https://studio.code.org/s/course2',
+    link: 'https://studio.code.org/courses/course2',
     assignedSections: [],
   },
 ];
@@ -29,13 +29,13 @@ export const plCourses = [
   {
     title: 'PL Course 1',
     description: 'Teachers learning things about teaching',
-    link: 'https://studio.code.org/s/pl-course1',
+    link: 'https://studio.code.org/courses/pl-course1',
     assignedSections: [],
   },
   {
     title: 'Course 2',
     description: 'Facilitators learning stuff about facilitating',
-    link: 'https://studio.code.org/s/pl-course2',
+    link: 'https://studio.code.org/courses/pl-course2',
     assignedSections: [],
   },
 ];
@@ -46,28 +46,28 @@ export const moreCourses = [
     title: 'Course 3',
     description:
       'Start with Course 3 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
-    link: 'https://studio.code.org/s/course3',
+    link: 'https://studio.code.org/courses/course3',
     assignedSections: [],
   },
   {
     title: 'Course 4',
     description:
       'Start with Course 4 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
-    link: 'https://studio.code.org/s/course4',
+    link: 'https://studio.code.org/courses/course4',
     assignedSections: [],
   },
   {
     title: 'Course 5',
     description:
       'Start with Course 5 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.',
-    link: 'https://studio.code.org/s/course5',
+    link: 'https://studio.code.org/courses/course5',
     assignedSections: [],
   },
   {
     title: 'Course 6',
     description:
       'Start with Course 6 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.',
-    link: 'https://studio.code.org/s/course6',
+    link: 'https://studio.code.org/courses/course6',
     assignedSections: [],
   },
 ];
@@ -115,7 +115,7 @@ export const joinedSections = [
     loginType: 'picture',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 1',
-    linkToAssigned: 'https://studio.code.org/s/course1',
+    linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
     participantType: 'student',
   },
@@ -125,6 +125,8 @@ export const joinedSections = [
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 2',
     linkToAssigned: 'https://studio.code.org/s/course2',
+    currentUnitTitle: 'Unit 3',
+    linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
     code: 'ClassTwoCode',
     participantType: 'student',
   },
@@ -132,7 +134,7 @@ export const joinedSections = [
     name: 'Period 3 (Google Classroom)',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 3',
-    linkToAssigned: 'https://studio.code.org/s/course3',
+    linkToAssigned: 'https://studio.code.org/courses/course3',
     login_type: 'google_classroom',
     code: 'DoNotShowThis',
     participantType: 'student',
@@ -141,7 +143,7 @@ export const joinedSections = [
     name: 'Period 4 (Clever)',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 4',
-    linkToAssigned: 'https://studio.code.org/s/course4',
+    linkToAssigned: 'https://studio.code.org/courses/course4',
     login_type: 'clever',
     code: 'OrThisEither',
     participantType: 'student',
@@ -154,7 +156,7 @@ export const joinedStorySections = [
     loginType: 'picture',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 1',
-    linkToAssigned: 'https://studio.code.org/s/course1',
+    linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
     participantType: 'student',
   },
@@ -163,9 +165,9 @@ export const joinedStorySections = [
     loginType: 'picture',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'Course 2',
-    linkToAssigned: 'https://studio.code.org/s/course2',
+    linkToAssigned: 'https://studio.code.org/courses/course2',
     currentUnitTitle: 'Unit 3',
-    linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
+    linkToCurrentUnit: 'https://studio.code.org/courses/course2/units/3',
     code: 'ClassTwoCode',
     participantType: 'student',
   },
@@ -177,7 +179,7 @@ export const joinedPlSections = [
     loginType: 'word',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'PL Course 1',
-    linkToAssigned: 'https://studio.code.org/s/course1',
+    linkToAssigned: 'https://studio.code.org/courses/course1',
     code: 'ClassOneCode',
     participantType: 'teacher',
   },
@@ -186,9 +188,9 @@ export const joinedPlSections = [
     loginType: 'word',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'PL Course 2',
-    linkToAssigned: 'https://studio.code.org/s/course2',
+    linkToAssigned: 'https://studio.code.org/courses/course2',
     currentUnitTitle: 'Unit 3',
-    linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
+    linkToCurrentUnit: 'https://studio.code.org/courses/course2/units/3',
     code: 'ClassTwoCode',
     participantType: 'teacher',
   },
@@ -196,7 +198,7 @@ export const joinedPlSections = [
     name: 'Period 3 (Google Classroom)',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'PL Course 3',
-    linkToAssigned: 'https://studio.code.org/s/course3',
+    linkToAssigned: 'https://studio.code.org/courses/course3',
     loginType: 'google_classroom',
     code: 'DoNotShowThis',
     participantType: 'teacher',
@@ -205,7 +207,7 @@ export const joinedPlSections = [
     name: 'Period 4 (Clever)',
     teacherName: 'Ms. Frizzle',
     assignedTitle: 'PL Course 4',
-    linkToAssigned: 'https://studio.code.org/s/course4',
+    linkToAssigned: 'https://studio.code.org/courses/course4',
     loginType: 'clever',
     code: 'OrThisEither',
     participantType: 'teacher',
@@ -215,14 +217,15 @@ export const joinedPlSections = [
 export const topCourse = {
   assignableName: 'Course 1',
   lessonName: 'Lesson 3: Learn to drag and drop',
-  linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
+  linkToOverview: 'http://localhost-studio.code.org:3000/courses/course1',
   linkToLesson:
-    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1',
+    'http://localhost-studio.code.org:3000/courses/course1/units/1/lessons/3/levels/1',
 };
 
 export const topPlCourse = {
   assignableName: 'PL Course 1',
   lessonName: 'Learning how to teacher',
-  linkToOverview: 'http://studio.code.org/s/vpl-csp-2021',
-  linkToLesson: 'http://studio.code.org/s/vpl-csp-2021/lessons/3/levels/1',
+  linkToOverview: 'http://studio.code.org/courses/vpl-csp-2021',
+  linkToLesson:
+    'http://studio.code.org/courses/vpl-csp-2021/units/1/lessons/3/levels/1',
 };

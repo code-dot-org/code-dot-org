@@ -4,7 +4,7 @@ import React, {memo} from 'react';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {modelDescriptions} from '../constants';
+import {FAQ_LINK, modelDescriptions} from '../constants';
 import aichatI18n from '../locale';
 import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
@@ -105,7 +105,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
         link={
           notificationType === 'permissionsError'
             ? {
-                href: 'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ',
+                href: FAQ_LINK,
                 text: commonI18n.learnMore(),
                 className: styles.alertLink,
               }

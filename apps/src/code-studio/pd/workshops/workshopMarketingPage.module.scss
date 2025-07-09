@@ -2,6 +2,7 @@
 
 @mixin inline-detail-p {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.38rem;
   align-items: baseline;
   margin: 0;
@@ -9,7 +10,7 @@
 
 $max-width: 60rem;
 $tablet-breakpoint: 1023px;
-$mobile-padding: 4rem;
+$mobile-padding: 4rem 1.5rem;
 
 .workshopMarketingPage {
   background-color: var(--background-neutral-secondary);
@@ -18,6 +19,11 @@ $mobile-padding: 4rem;
     max-width: $max-width;
     margin: 0 auto;
     padding-block: 4rem;
+
+    .headerBreadcrumbs {
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
 
     h1 {
       margin: 0;

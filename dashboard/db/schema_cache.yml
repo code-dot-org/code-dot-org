@@ -7146,6 +7146,19 @@ columns:
     comment: 
   - *14
   - *15
+  user_facilitator_infos:
+  - *9
+  - *11
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: bio
+    sql_type_metadata: *16
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *14
+  - *15
   user_geos:
   - *5
   - *11
@@ -8426,6 +8439,7 @@ primary_keys:
   unit_groups_resources: 
   unit_groups_student_resources: id
   user_data_retention_statuses: id
+  user_facilitator_infos: id
   user_geos: id
   user_level_interactions: id
   user_levels: id
@@ -8637,6 +8651,7 @@ data_sources:
   unit_groups_resources: true
   unit_groups_student_resources: true
   user_data_retention_statuses: true
+  user_facilitator_infos: true
   user_geos: true
   user_level_interactions: true
   user_levels: true
@@ -14009,6 +14024,20 @@ indexes:
     type: 
     using: :btree
     comment: 
+  user_facilitator_infos:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: user_facilitator_infos
+    name: index_user_facilitator_infos_on_user_id
+    unique: false
+    columns:
+    - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   user_geos:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_geos
@@ -14520,7 +14549,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250624183835
+version: 20250709125438
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

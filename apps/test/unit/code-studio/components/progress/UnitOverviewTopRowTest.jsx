@@ -24,7 +24,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   scriptId: 42,
   scriptName: 'test-script',
-  scriptPath: '/s/test-script',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'Unit test script title',
   unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
@@ -111,7 +111,7 @@ describe('UnitOverviewTopRow', () => {
         <div>
           <Button
             __useDeprecatedTag
-            href="/s/test-script/next"
+            href="/courses/test-course/units/1/next"
             text={i18n.tryNow()}
             size={Button.ButtonSize.large}
           />
@@ -137,7 +137,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.tryNow()}
           size={Button.ButtonSize.large}
         />
@@ -159,7 +159,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
         />
@@ -180,7 +180,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}
         />

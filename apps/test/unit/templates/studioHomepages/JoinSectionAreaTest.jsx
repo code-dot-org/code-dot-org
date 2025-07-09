@@ -37,4 +37,17 @@ describe('JoinSectionArea', () => {
     expect(wrapper.find('ParticipantSections').length).toBe(1);
     expect(wrapper.find('ParticipantSections').props().isTeacher).toBe(true);
   });
+  it('shows student sections for pl if isPlSections is true and has joined student sections', () => {
+    const wrapper = shallow(
+      <JoinSectionArea
+        {...defaultProps}
+        isTeacher={true}
+        initialJoinedStudentSections={joinedSections}
+        isPlSections={true}
+      />
+    );
+    expect(wrapper.find('Connect(JoinSection)').length).toBe(1);
+    expect(wrapper.find('ParticipantSections').length).toBe(1);
+    expect(wrapper.find('ParticipantSections').props().isTeacher).toBe(true);
+  });
 });

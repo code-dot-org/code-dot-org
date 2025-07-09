@@ -173,6 +173,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.isLevelLoadInProgress = false;
     this.exemplarPlaybackEvents = [];
+    this.triggers = [];
 
     MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
@@ -735,7 +736,14 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong(this.props.blockMode);
+    const codeChanged = this.musicBlocklyWorkspace.compileSong(
+      this.props.blockMode
+    );
+    // Update the list of triggers that are available in the workspace.
+    this.triggers = Triggers.filter(trigger =>
+      this.musicBlocklyWorkspace.hasTrigger(trigger.id)
+    );
+    return codeChanged;
   };
 
   // Execute a song that has already been compiled from Blockly sources.
@@ -916,9 +924,7 @@ class UnconnectedMusicView extends React.Component {
           blocklyDivId={BLOCKLY_DIV_ID}
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
-          triggers={Triggers.filter(trigger =>
-            this.musicBlocklyWorkspace.hasTrigger(trigger.id)
-          )}
+          triggers={this.triggers}
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
           undo={this.undo}

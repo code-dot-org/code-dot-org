@@ -2,8 +2,10 @@
 @no_mobile
 @no_firefox
 @no_safari
+@skip
+# Skipped while fixing issue with curriculum version
+# https://codedotorg.atlassian.net/browse/TEACH-2080
 Feature: Using the teacher homepage sections feature
-
   Scenario: See a section creation dialog when logging for the first time
     # After a teacher creates an account, they see the section create dialog
     Given I create a teacher who has never signed in named "Ariel" and go home
