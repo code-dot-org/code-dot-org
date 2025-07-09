@@ -39,4 +39,33 @@ describe('ProgressIconComponent', () => {
     const feedbackGivenTriangle = screen.getByTestId('needs-feedback-triangle');
     expect(feedbackGivenTriangle).to.be.visible;
   });
+
+  it('renders percentage when itemType is IN_PROGRESS and completedPercent is provided', () => {
+    render(
+      <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} completedPercent={75} />
+    );
+
+    const percentageElement = screen.getByLabelText('In progress 75%');
+    expect(percentageElement).to.be.visible;
+    expect(percentageElement.textContent).to.equal('75%');
+  });
+
+  it('rounds percentage to nearest integer when displaying', () => {
+    render(
+      <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} completedPercent={33.7} />
+    );
+
+    const percentageElement = screen.getByLabelText('In progress 33.7%');
+    expect(percentageElement).to.be.visible;
+    expect(percentageElement.textContent).to.equal('34%');
+  });
+
+  it('renders FontAwesome icon when itemType is IN_PROGRESS but completedPercent is null', () => {
+    render(
+      <ProgressIcon itemType={ITEM_TYPE.IN_PROGRESS} completedPercent={null} />
+    );
+
+    const iconElement = screen.getByLabelText('In progress');
+    expect(iconElement).to.be.visible;
+  });
 });
