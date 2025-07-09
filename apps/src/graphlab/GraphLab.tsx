@@ -49,7 +49,9 @@ const edgeTypes = {
   'data-edge': DataEdge,
 };
 
-const initNodes: MyNode[] = [
+const initNodes: MyNode[] = [];
+
+const otherNodes: MyNode[] = [
   {
     id: '1',
     type: 'text',

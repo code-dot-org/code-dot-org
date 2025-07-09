@@ -14,7 +14,10 @@ import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
 
 import {isTextNode, type MyNode} from './initialElements';
 
-function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
+function AskChatNode({
+  id,
+  data,
+}: NodeProps<Node<{fieldText: string; askedText: string; text: string}>>) {
   const {updateNodeData} = useReactFlow();
   const connections = useNodeConnections({
     handleType: 'target',
@@ -26,15 +29,22 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
 
   const [isWorking, setIsWorking] = useState(false);
 
-  const text: string =
-    'Here is the context: ' +
-    (textNodes.length > 0
+  const [lastContextString, setLastContextString] = useState<
+    string | undefined
+  >(undefined);
+
+  const contextString =
+    textNodes.length > 0
       ? textNodes
           .map(({data}) => (data && 'text' in data ? data.text : ''))
           .join('')
-      : 'none') +
+      : 'none';
+
+  const text: string =
+    'Here is the context: ' +
+    contextString +
     ' And here is the request: ' +
-    data.promptText;
+    data.fieldText;
 
   const managerRef = useRef<AiTutor2Manager | null>(
     new AiTutor2Manager(undefined, '', 0, '')
@@ -50,13 +60,17 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
         return;
       }
 
+      updateNodeData(id, {
+        askedText: data.fieldText,
+      });
+
       console.log('Ask chat:', text);
 
       setIsWorking(true);
 
       const response = await managerRef.current?.askAiTutor2(text, '', 'hint');
       const responseText =
-        response && response.length >= 1 ? response[1].chatMessageText : '';
+        response && response.length > 1 ? response[1].chatMessageText : '';
       console.log('Chat responded: ', responseText);
       updateNodeData(id, {
         text: responseText,
@@ -66,7 +80,16 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
     };
 
     askChat();
-  }, [id, text, updateNodeData]);
+  }, [data.fieldText, id, text, updateNodeData]);
+
+  // Also requery if the input nodes' values change.
+  useEffect(() => {
+    console.log('context:', contextString);
+    if (lastContextString !== contextString) {
+      onEnter();
+      setLastContextString(contextString);
+    }
+  }, [contextString, lastContextString, onEnter]);
 
   return (
     <div>
@@ -80,15 +103,17 @@ function AskChatNode({id, data}: NodeProps<Node<{promptText: string}>>) {
         {isWorking && (
           <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         )}
+        {data.fieldText !== data.askedText && ' *'}
       </div>
       <textarea
-        onChange={evt => updateNodeData(id, {promptText: evt.target.value})}
+        onChange={evt => updateNodeData(id, {fieldText: evt.target.value})}
         onKeyDown={event => {
-          if (event.key === 'Enter') {
+          if (event.key === 'Enter' && event.shiftKey) {
             onEnter();
+            event.preventDefault();
           }
         }}
-        value={data.promptText}
+        value={data.fieldText}
         className="reactflow-textarea"
         rows={10}
       />
