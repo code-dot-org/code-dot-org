@@ -116,7 +116,7 @@ export interface Student {
   id: number;
   name: string;
   secretPictureName: string;
-  secretPicturePath: string;
+  secretPictureUrl: string;
   secretWords: string;
   sectionId: number;
   sharingDisabled: boolean;
@@ -128,7 +128,8 @@ export interface ServerStudent {
   id: number;
   name: string;
   secret_picture_name: string;
-  secret_picture_path: string;
+  secret_picture_path?: string; // @deprecated Use `secret_picture_url` instead
+  secret_picture_url: string;
   secret_words: string;
   sectionId: number;
   sharing_disabled: boolean;

@@ -58,6 +58,7 @@ export type UserInfoForWorkshop = {
     country?: string;
     school_name?: string;
     school_zip?: string;
+    school_type?: string;
   };
 };
 

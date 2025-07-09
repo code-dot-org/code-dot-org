@@ -32,8 +32,9 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const levelId = levelProperties?.id;
   const scriptLevelId = useAppSelector(getCurrentScriptLevelId);
 
-  const {isBlockedAbuse, projectSharingDisabled} = useAppSelector(
-    state => state.lab
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const projectSharingDisabled = useAppSelector(
+    state => state.lab.projectSharingDisabled
   );
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)

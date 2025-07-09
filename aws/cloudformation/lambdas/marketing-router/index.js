@@ -341,6 +341,8 @@ const marketingPaths = {
   "/hourofai": true,
   "/curriculum/blockchain": true,
   "/blockchain": true,
+  "/curriculum/music": true,
+  "/security": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

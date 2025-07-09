@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import UserPassport from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const DEFAULT_PROPS = {
   displayName: 'Ms. McEntire',
@@ -10,6 +11,7 @@ const DEFAULT_PROPS = {
   familyName: 'McEntire',
   email: 'reba@mcentire.com',
   schoolName: 'Sample School Name',
+  schoolType: undefined,
   returnToHref: '/fake-return-url',
   className: '',
 };
@@ -32,12 +34,23 @@ describe('UserPassport', () => {
   });
 
   it('missing name or school shows error messages', () => {
-    renderDefault({givenName: '', schoolName: ''});
+    renderDefault({givenName: '', schoolName: '', schoolType: ''});
 
     screen.getByText('Full name');
     screen.getByText('Add your full name');
     screen.getByText('School');
     screen.getByText('Add your school');
+  });
+
+  it('not teaching in a school setting does not show error message', () => {
+    renderDefault({
+      schoolName: '',
+      schoolType: NonSchoolOptions.NO_SCHOOL_SETTING,
+    });
+
+    screen.getByText('School');
+    screen.getByText('Non-School Setting');
+    expect(screen.queryByText('Add your school')).toBe(null);
   });
 
   it('edit link sends user to account settings page with return_to url', () => {

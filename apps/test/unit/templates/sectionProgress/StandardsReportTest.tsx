@@ -74,7 +74,7 @@ const SERVER_STUDENT = {
   ...STUDENT,
   family_name: STUDENT.familyName,
   secret_picture_name: 'secret_picture_name',
-  secret_picture_path: 'secret_picture_path',
+  secret_picture_url: 'secret_picture_path',
   secret_words: 'secret_words',
   sectionId: SECTION_ID,
   sharing_disabled: false,
