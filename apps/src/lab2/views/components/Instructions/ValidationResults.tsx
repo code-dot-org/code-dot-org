@@ -16,6 +16,7 @@ import ValidationStatusIcon from './ValidationStatusIcon';
 import moduleStyles from './validation-results.module.scss';
 
 interface ValidationResultsProps {
+  isValidating?: boolean;
   className?: string;
 }
 
@@ -53,11 +54,11 @@ function getTranslatedResult(result: ValidationResult) {
 
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
+  isValidating,
 }) => {
   const {validationResults} = useAppSelector(
     state => state.lab.validationState
   );
-  const isValidating = useAppSelector(state => state.lab2System.isValidating);
 
   if (!validationResults) {
     return null;

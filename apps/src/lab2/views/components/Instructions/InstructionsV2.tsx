@@ -110,20 +110,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     }
   }, [validationState?.message, isRunning]);
 
-  const validationScrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Scroll to the validation results when they are updated.
-    if (validationState?.validationResults) {
-      // We must at least set a timeout with a wait of 0 to ensure the scroll happens at all,
-      // because the DOM needs to update before we can scroll to the new element.
-      setTimeout(
-        () => validationScrollRef.current?.scrollIntoView({behavior: 'smooth'}),
-        0
-      );
-    }
-  }, [validationState?.validationResults]);
-
   // Don't render anything if we don't have any instructions.
   if (
     levelProperties === undefined ||
@@ -204,7 +190,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               <ValidationButton
                 onValidate={validationSettings.onValidate}
                 onStopValidation={validationSettings.onStopValidation}
-                hasConditions={validationState?.hasConditions}
                 isValidating={validationSettings.isValidating}
                 isValidateDisabled={validationSettings.isValidateDisabled}
               />
@@ -217,16 +202,15 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
           </div>
         </div>
         {validationState?.validationResults && (
-          <>
-            <div ref={validationScrollRef} />
-            <div className={moduleStyles.bubble}>
-              <div className={moduleStyles.textContent}>
-                <div className={moduleStyles.scrollingContentWithoutTTS}>
-                  <ValidationResults />
-                </div>
+          <div className={moduleStyles.bubble}>
+            <div className={moduleStyles.textContent}>
+              <div className={moduleStyles.scrollingContentWithoutTTS}>
+                <ValidationResults
+                  isValidating={validationSettings?.isValidating}
+                />
               </div>
             </div>
-          </>
+          </div>
         )}
         {AiTutor2ResponseView && AiTutor2ResponseView}
         {isPredictLevel && (
@@ -241,7 +225,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 <PredictSummary />
               </div>
             </InstructorsOnly>
-
             <PredictQuestionRunPrompt />
           </>
         )}
