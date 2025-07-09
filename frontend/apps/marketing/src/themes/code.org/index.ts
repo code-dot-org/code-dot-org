@@ -117,7 +117,7 @@ const theme = createTheme({
     },
     overline: {
       fontSize: '0.75rem', // 12px
-      fontWeight: 600,
+      fontWeight: 500,
       letterSpacing: '0.03rem', // 0.48px
       lineHeight: 1.64,
     },
