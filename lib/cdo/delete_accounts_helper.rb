@@ -61,15 +61,28 @@ class DeleteAccountsHelper
     project_commits.each {|version| version.update!(comment: nil)}
     @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
-    # Clear Datablock Storage contents for user's projects
+    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
+  end
+
+  def delete_s3_contents(user, project_ids)
+    channel_count = project_ids.count
+    encrypted_channel_ids = project_ids.map do |project_id|
+      storage_encrypt_channel_id user.user_storage_id, project_id
+    end
+    @log.puts "Deleting S3 contents for #{channel_count} channels"
+    buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
+    buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
+      bucket.hard_delete_channel_content encrypted_channel_id
+    end
+  end
+
+  def delete_datablock_storage(project_ids)
     @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
     project_ids.each do |project_id|
       DatablockStorageTable.where(project_id: project_id).delete_all
       DatablockStorageKvp.where(project_id: project_id).delete_all
       DatablockStorageRecord.where(project_id: project_id).delete_all
     end
-
-    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -500,7 +513,7 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  def clean_pegasus_forms_for_user(user)
+  private def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
