@@ -1,3 +1,5 @@
+export type ComponentSize = 'xs' | 's' | 'm' | 'l';
+
 export interface RemoveMarginBottomProps {
   /** Whether to remove the margin bottom */
   removeMarginBottom: boolean;
