@@ -12,8 +12,6 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../Lab2Registry';
 
-import {isReadOnlyWorkspace} from './lab2ReduxSelectors';
-
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
   viewingOldVersion: boolean;

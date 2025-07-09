@@ -1,4 +1,5 @@
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
@@ -6,6 +7,29 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {RootState} from '@cdo/apps/types/redux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+// Redux selectors for lab2 state.
+
+// If any load is currently in progress.
+export const isLabLoading = (state: {lab: LabState}) =>
+  state.lab.isLoadingProjectOrLevel ||
+  state.lab.isLoading ||
+  state.lab.isLoadingTheme;
+
+// If there is an error present on the page.
+export const hasPageError = (state: {lab: LabState}) => {
+  return state.lab.pageError !== undefined;
+};
+
+// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
+// if not specified.
+export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
+  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
+  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
+};
+
+export const isProjectTemplateLevel = (state: {lab: LabState}) =>
+  !!state.lab.levelProperties?.projectTemplateLevelName;
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {

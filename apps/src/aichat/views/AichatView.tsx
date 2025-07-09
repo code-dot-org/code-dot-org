@@ -9,8 +9,8 @@ import React, {useCallback, useEffect, useMemo} from 'react';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';

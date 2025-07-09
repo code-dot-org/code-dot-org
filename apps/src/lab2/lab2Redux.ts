@@ -288,29 +288,6 @@ export const setUpWithLevel = createAsyncThunk<
   }
 });
 
-// Selectors
-
-// If any load is currently in progress.
-export const isLabLoading = (state: {lab: LabState}) =>
-  state.lab.isLoadingProjectOrLevel ||
-  state.lab.isLoading ||
-  state.lab.isLoadingTheme;
-
-// If there is an error present on the page.
-export const hasPageError = (state: {lab: LabState}) => {
-  return state.lab.pageError !== undefined;
-};
-
-// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
-// if not specified.
-export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
-  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
-  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
-};
-
-export const isProjectTemplateLevel = (state: {lab: LabState}) =>
-  !!state.lab.levelProperties?.projectTemplateLevelName;
-
 // SLICE
 
 const labSlice = createSlice({
