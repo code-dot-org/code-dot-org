@@ -4,6 +4,7 @@ import {
   createAsyncThunk,
   createSlice,
 } from '@reduxjs/toolkit';
+import {isEqual} from 'lodash';
 import {AnyAction} from 'redux';
 
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -11,6 +12,8 @@ import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../Lab2Registry';
+
+import {isReadOnlyWorkspace} from './lab2ReduxSelectors';
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
@@ -67,6 +70,43 @@ export const setAndSaveSource = (
     }
   };
 };
+
+export const updateAndSaveSource = createAsyncThunk<
+  void,
+  {
+    updateCallback: (source: MultiFileSource) => MultiFileSource;
+    forceSave?: boolean;
+    forceNewVersion?: boolean;
+  },
+  {dispatch: AppDispatch; state: RootState}
+>('lab2Project/updateAndSaveSource', async (payload, thunkAPI) => {
+  const currentSource = thunkAPI.getState().lab2Project.projectSources?.source;
+  if (!currentSource) {
+    return;
+  }
+  const updatedSource = payload.updateCallback(
+    currentSource as MultiFileSource
+  );
+  const hasEdited = thunkAPI.getState().lab2Project.hasEdited;
+  if (!hasEdited) {
+    const newSourceHasEdits = !isEqual(currentSource, updatedSource);
+    if (newSourceHasEdits) {
+      thunkAPI.dispatch(setHasEdited(true));
+    }
+  }
+  thunkAPI.dispatch(setSource(updatedSource));
+  const projectSources = thunkAPI.getState().lab2Project.projectSources;
+  const isReadOnly = isReadOnlyWorkspace(thunkAPI.getState());
+  if (
+    Lab2Registry.getInstance().getProjectManager() &&
+    projectSources &&
+    !isReadOnly
+  ) {
+    Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.save(projectSources, payload.forceSave, payload.forceNewVersion);
+  }
+});
 
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
