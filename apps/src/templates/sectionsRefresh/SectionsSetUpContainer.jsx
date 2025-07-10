@@ -36,9 +36,10 @@ const SECTIONS_API = '/api/v1/sections';
 const NEW = 'New';
 
 // Custom hook to update the list of sections to create
-// Currently, this hook returns two things:
+// Currently, this hook returns three things:
 //   - sections: list of objects that represent the sections to create
 //   - updateSection: function to update the section at the given index
+//   - batchUpdateSection: function to update multiple section properties at once
 const useSections = section => {
   // added "default properties" for any new section
   const [sections, setSections] = useState(

@@ -9,6 +9,7 @@ const baseUserInfo = {
   is_student: false,
   id: 123,
   email: 'sample@google.com',
+  display_name: 'Mr. Doe',
   first_name: 'John',
   last_name: 'Doe',
   school_info: {
@@ -16,6 +17,7 @@ const baseUserInfo = {
     country: 'United States',
     school_name: 'School Academy',
     zip: '11111',
+    school_type: undefined,
   },
 };
 
@@ -120,5 +122,26 @@ describe('EnrollInWorkshop', () => {
       name: /Click to see data sharing notice/i,
     });
     expect(link).toHaveAttribute('href', '#data-sharing-notice');
+  });
+
+  it('enroll button is disabled if user information is missing', () => {
+    const missingFirstNameUserInfo = {...baseUserInfo, first_name: ''};
+    render(
+      <EnrollInWorkshop {...baseProps} userInfo={missingFirstNameUserInfo} />
+    );
+    const enrollButton = screen.getByRole('button', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeDisabled();
+  });
+
+  it('enroll button is enabled if all user information is present', () => {
+    render(<EnrollInWorkshop {...baseProps} />);
+    const enrollButton = screen.getByRole('button', {
+      name: /Enroll in this workshop/i,
+    });
+    expect(enrollButton).toBeInTheDocument();
+    expect(enrollButton).toBeEnabled();
   });
 });

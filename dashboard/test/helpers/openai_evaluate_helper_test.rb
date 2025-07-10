@@ -41,7 +41,6 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
 
     OpenaiEvaluateHelper.expects(:evaluate).with(
       @free_response_level,
-      @unit,
       student_work: "This is my free response answer",
       evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     ).returns(mock_response)
@@ -87,7 +86,6 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
 
     OpenaiEvaluateHelper.expects(:evaluate).with(
       @code_level1,
-      @unit,
       student_work: "console.log('Hello')",
       evaluation_type: SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
     ).returns(mock_response)

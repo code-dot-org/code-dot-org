@@ -8,8 +8,11 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
-import UserPassport from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
+import UserPassport, {
+  isMissingUserInfo,
+} from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
 import {useWorkshopEnrollmentApi} from '@cdo/apps/code-studio/pd/workshops/hooks/useWorkshopEnrollmentApi';
+import {GetUserInfoForWorkshopResponse} from '@cdo/apps/code-studio/pd/workshops/types';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -40,29 +43,12 @@ const WorkshopJoin: React.FunctionComponent<{
     rp_name?: string;
     session_info_for_calendar?: SessionCalendarEvent[];
   };
-  user_info: {
-    id: number;
-    display_name: string;
-    given_name?: string;
-    family_name?: string;
-    email: string;
-    school_info?: {
-      school_id?: number;
-      country?: string;
-      school_name?: string;
-      zip?: string;
-      school_type?: string;
-    };
-  };
+  user_info: GetUserInfoForWorkshopResponse['userInfo'];
 }> = ({workshop_enrollment_status, workshop_info, user_info}) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState(
     workshop_enrollment_status
   );
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
-  const hasMissingUserInfo =
-    !user_info.given_name ||
-    !user_info.family_name ||
-    !user_info.school_info?.school_name;
   const {submitEnrollment, isSubmitting, error} = useWorkshopEnrollmentApi(
     workshop_info.id
   );
@@ -72,8 +58,8 @@ const WorkshopJoin: React.FunctionComponent<{
       user_info && {
         user_id: user_info.id,
         email: user_info.email,
-        first_name: user_info.given_name,
-        last_name: user_info.family_name,
+        first_name: user_info.first_name,
+        last_name: user_info.last_name,
         school_info: user_info.school_info,
       }
     );
@@ -121,24 +107,28 @@ const WorkshopJoin: React.FunctionComponent<{
             time in your account settings.
           </BodyThreeText>
           <Button
+            id="joinWorkshop"
             name="joinWorkshop"
             text="Join this workshop"
             color="purple"
             className={style.joinWorkshopButton}
             onClick={handleSubmitEnrollment}
             isPending={isSubmitting}
-            disabled={hasMissingUserInfo || !!error}
+            disabled={isMissingUserInfo(user_info) || !!error}
           />
         </div>
-        <UserPassport
-          displayName={user_info.display_name}
-          givenName={user_info.given_name}
-          familyName={user_info.family_name}
-          email={user_info.email}
-          schoolName={user_info.school_info?.school_name}
-          returnToHref={`/pd/workshops/${workshop_info.id}/join`}
-          className={style.userPassport}
-        />
+        {user_info && (
+          <UserPassport
+            displayName={user_info.display_name}
+            givenName={user_info.first_name}
+            familyName={user_info.last_name}
+            email={user_info.email}
+            schoolName={user_info.school_info?.school_name}
+            schoolType={user_info.school_info?.school_type}
+            returnToHref={`/pd/workshops/${workshop_info.id}/join`}
+            className={style.userPassport}
+          />
+        )}
       </div>
     );
   };

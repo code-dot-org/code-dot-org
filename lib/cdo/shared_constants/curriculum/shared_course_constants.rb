@@ -162,6 +162,7 @@ module Curriculum
       data
       digital_literacy
       games_and_animations
+      hardware
       internet
       physical_computing
       web_design

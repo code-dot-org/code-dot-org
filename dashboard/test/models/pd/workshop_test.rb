@@ -639,34 +639,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal ids.reverse, Pd::Workshop.where(id: ids).order_by_state(desc: true).pluck(:id)
   end
 
-  test 'min_attendance_days with no min_days constraint returns 1' do
-    @workshop.expects(:time_constraint).with(:min_days).returns(nil)
-    assert_equal 1, @workshop.min_attendance_days
-  end
-
-  test 'min_attendance_days with min_days constraint returns that constraint' do
-    @workshop.expects(:time_constraint).with(:min_days).returns(100)
-    assert_equal 100, @workshop.min_attendance_days
-  end
-
-  test 'effective_num_days with no max_days constraint returns the session count' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(nil)
-    assert_equal 10, @workshop.effective_num_days
-  end
-
-  test 'effective_num_days with max_days constraint lower than the session count returns the constraint' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(5)
-    assert_equal 5, @workshop.effective_num_days
-  end
-
-  test 'effective_num_days with max_days constraint greater than the session count returns the session count' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(50)
-    assert_equal 10, @workshop.effective_num_days
-  end
-
   test 'effective_num_hours with no max_hours constraint returns the total session hours' do
     @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
     @workshop.expects(:time_constraint).with(:max_hours).returns(nil)

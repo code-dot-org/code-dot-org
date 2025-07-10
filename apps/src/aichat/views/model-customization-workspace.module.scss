@@ -105,7 +105,7 @@ $default-spacing: 4px;
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px 6px;
+  padding: 10px 6px 0 6px;
 }
 
 label.selectedModelDropdown {
@@ -142,12 +142,11 @@ button.updateButton {
 }
 
 .saveAlertContainer {
-  height: 10px;
+  min-height: 25px;
 }
 
 .saveAlert {
   margin-left: 4px;
-  height: 10px;
   padding-top: 0;
   padding-bottom: 0;
   background-color: white;

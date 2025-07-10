@@ -1284,7 +1284,11 @@ class User < ApplicationRecord
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
+
+      # DEPRECATED: +secret_picture_path+ will be removed in future releases. Use +secret_picture_url+ instead.
       secret_picture_path: secret_picture&.path,
+      secret_picture_url: secret_picture && ApplicationController.helpers.image_url(secret_picture.path),
+
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
@@ -1302,6 +1306,7 @@ class User < ApplicationRecord
       id: id,
       email: email,
       is_student: user_type == TYPE_STUDENT,
+      display_name: name,
       first_name: given_name,
       last_name: family_name,
       school_info: Queries::SchoolInfo.current_school(self),

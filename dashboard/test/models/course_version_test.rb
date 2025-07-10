@@ -13,17 +13,17 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   setup do
-    @unit_teacher_to_students = create(:script, :in_unit_group, name: 'unit-teacher-to-student22')
+    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student22')
     create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-22')
-    @unit_teacher_to_students2 = create(:script, :in_unit_group, name: 'unit-teacher-to-student32')
+    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student32')
     create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1992', family_name: 'family-22')
-    @unit_facilitator_to_teacher = create(:script, :in_unit_group, name: 'unit-facilitator-to-teacher22')
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher22')
     create(:single_unit_course, :pl_course, :with_course_offering, unit: @unit_facilitator_to_teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-32')
 
-    @beta_unit = create(:script, :in_unit_group, name: 'beta-unit2')
+    @beta_unit = create(:script, name: 'beta-unit2')
     create(:single_unit_course, :with_course_offering, unit: @beta_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'beta2')
 
-    @in_development_unit = create(:script, :in_unit_group, name: 'in-development-unit22')
+    @in_development_unit = create(:script, name: 'in-development-unit22')
     create(:single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development2')
 
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')

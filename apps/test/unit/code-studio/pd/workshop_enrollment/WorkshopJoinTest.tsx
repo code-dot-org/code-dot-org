@@ -5,6 +5,7 @@ import React from 'react';
 import {SUBMISSION_STATUSES} from '@cdo/apps/code-studio/pd/workshop_enrollment/constants';
 import WorkshopJoin from '@cdo/apps/code-studio/pd/workshop_enrollment/WorkshopJoin';
 import * as utils from '@cdo/apps/utils';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
   getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
@@ -23,14 +24,15 @@ const DEFAULT_PROPS = {
   user_info: {
     id: 1,
     display_name: 'Ms. McEntire',
-    given_name: 'Reba',
-    family_name: 'McEntire',
+    first_name: 'Reba',
+    last_name: 'McEntire',
     email: 'reba@mcentire.com',
     school_info: {
       school_id: 1,
       country: 'United States',
       school_name: 'Sample School Name',
-      zip: '11111',
+      school_zip: '11111',
+      school_type: undefined,
     },
   },
 };
@@ -74,7 +76,7 @@ describe('WorkshopJoin', () => {
     screen.getByText('Review your information');
     screen.getByText(DEFAULT_PROPS.user_info.display_name);
     screen.getByText(
-      `${DEFAULT_PROPS.user_info.given_name} ${DEFAULT_PROPS.user_info.family_name}`
+      `${DEFAULT_PROPS.user_info.first_name} ${DEFAULT_PROPS.user_info.last_name}`
     );
     screen.getByText(DEFAULT_PROPS.user_info.email);
     screen.getByText(DEFAULT_PROPS.user_info.school_info.school_name);
@@ -90,11 +92,30 @@ describe('WorkshopJoin', () => {
     ).not.toBeDisabled();
   });
 
+  it('enroll button is enabled and no errors are shown if user does not teach in a school setting', () => {
+    const noSchoolSettingSchoolInfo = {
+      ...DEFAULT_PROPS.user_info.school_info,
+      school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
+    };
+    renderDefault({
+      user_info: {
+        ...DEFAULT_PROPS.user_info,
+        school_info: noSchoolSettingSchoolInfo,
+      },
+    });
+
+    expect(screen.queryByText('Add your full name')).toBe(null);
+    expect(screen.queryByText('Add your school')).toBe(null);
+    expect(
+      screen.getByRole('button', {name: 'Join this workshop'})
+    ).not.toBeDisabled();
+  });
+
   it('enroll button is disabled and errors are shown if there are missing UserPassport fields', () => {
     renderDefault({
       user_info: {
-        given_name: '',
-        school_name: '',
+        first_name: '',
+        school_info: {},
       },
     });
 
@@ -133,8 +154,8 @@ describe('WorkshopJoin', () => {
           body: JSON.stringify({
             user_id: DEFAULT_PROPS.user_info.id,
             email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.given_name,
-            last_name: DEFAULT_PROPS.user_info.family_name,
+            first_name: DEFAULT_PROPS.user_info.first_name,
+            last_name: DEFAULT_PROPS.user_info.last_name,
             school_info: DEFAULT_PROPS.user_info.school_info,
           }),
         }
@@ -174,8 +195,8 @@ describe('WorkshopJoin', () => {
           body: JSON.stringify({
             user_id: DEFAULT_PROPS.user_info.id,
             email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.given_name,
-            last_name: DEFAULT_PROPS.user_info.family_name,
+            first_name: DEFAULT_PROPS.user_info.first_name,
+            last_name: DEFAULT_PROPS.user_info.last_name,
             school_info: DEFAULT_PROPS.user_info.school_info,
           }),
         }

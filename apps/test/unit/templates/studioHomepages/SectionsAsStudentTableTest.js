@@ -116,7 +116,8 @@ describe('SectionsAsStudentTable', () => {
         linkToAssigned:
           'https://studio.code.org/courses/ui-test-single-unit-course',
         currentUnitTitle: 'Single Unit',
-        linkToCurrentUnit: 'https://studio.code.org/s/ui-test-single-unit',
+        linkToCurrentUnit:
+          'https://studio.code.org/courses/ui-test-single-unit-course/units/1',
         is_assigned_single_unit_course: true,
         numberOfStudents: 2,
         linkToStudents:

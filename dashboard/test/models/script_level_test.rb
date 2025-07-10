@@ -102,8 +102,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
       sl = create :script_level, levels: [bubble_choice]
 
-      assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(sublevel1, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"], sl.get_example_solutions(sublevel2, @authorized_teacher)
     end
 
     test 'get_example_solutions returns empty array if not instructor of course' do
@@ -111,36 +111,36 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: unit)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
-      assert_equal sl.get_example_solutions(level, @facilitator), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
+      assert_equal [], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @facilitator)
     end
 
     test 'get_example_solutions for dance level' do
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for spritelab level' do
       level = create(:spritelab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for artist level' do
       level = create(:artist, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/artist/example-1/view", "https://studio.code.org/projects/artist/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/artist/example-1/view", "https://studio.code.org/projects/artist/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for playlab level' do
       level = create(:playlab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
+      assert_equal ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for javalab level with exemplar' do
@@ -182,8 +182,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit),
-                   ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"]
+      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?solution=true"],
+                   sl.get_example_solutions(level, @authorized_teacher, unit_group_unit: script.original_unit_group_unit)
     end
 
     test 'get_example_solutions for level with ideal level source and section_id' do
@@ -191,25 +191,25 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher, 5, unit_group_unit: script.original_unit_group_unit),
-                   ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"]
+      assert_equal ["//test-studio.code.org/courses/#{script.original_unit_group.name}/units/1/lessons/1/levels/1?section_id=5&solution=true"],
+                   sl.get_example_solutions(level, @authorized_teacher, 5, unit_group_unit: script.original_unit_group_unit)
     end
 
     test 'get_example_solutions returns empty array if no examples' do
       level = create(:level)
       sl = create(:script_level, levels: [level])
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), []
+      assert_equal [], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions returns empty array if not authorized teacher and not CSF course' do
-      script = create(:csp_script)
+      script = create(:csp_script, :in_single_unit_course)
       level = create(:applab, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/applab/example-1/view", "https://studio.code.org/projects/applab/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @not_authorized_teacher), []
-      assert_equal sl.get_example_solutions(level, @student), []
+      assert_equal ["https://studio.code.org/projects/applab/example-1/view", "https://studio.code.org/projects/applab/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @not_authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @student)
     end
 
     test 'get_example_solutions returns example if not authorized teacher but in CSF course' do
@@ -217,9 +217,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:dance, :with_example_solutions)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @not_authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(level, @student), []
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"], sl.get_example_solutions(level, @not_authorized_teacher)
+      assert_equal [], sl.get_example_solutions(level, @student)
     end
   end
 

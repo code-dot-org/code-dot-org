@@ -1,5 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -54,8 +54,12 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 }) => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, message, satisfied, index} = useAppSelector(
-    state => state.lab.validationState
+  const message = useAppSelector(state => state.lab.validationState.message);
+  const messageIndex = useAppSelector(state => state.lab.validationState.index);
+  const passingValidation = useAppSelector(
+    state =>
+      !state.lab.validationState.hasConditions ||
+      state.lab.validationState.satisfied
   );
   const predictSettings = useAppSelector(
     state => state.lab.levelProperties?.predictSettings
@@ -75,6 +79,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const setPredictResponseCallback = useCallback(
+    (response: string) => {
+      dispatch(setPredictResponse(response));
+    },
+    [dispatch]
+  );
+
   const {theme} = useTheme();
 
   // Don't render anything if we don't have any instructions.
@@ -87,18 +98,18 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const canShowNextButton =
     manageNavigation &&
-    (!hasConditions || satisfied) &&
+    passingValidation &&
     (!predictSettings?.isPredictLevel || predictResponseSubmitted);
 
   return (
     <InstructionsPanel
       text={levelProperties.longInstructions}
       message={message || undefined}
-      messageIndex={index}
+      messageIndex={messageIndex}
       theme={theme}
       predictSettings={predictSettings}
       predictResponse={predictResponse}
-      setPredictResponse={response => dispatch(setPredictResponse(response))}
+      setPredictResponse={setPredictResponseCallback}
       predictAnswerLocked={predictAnswerLocked}
       layout={layout}
       handleInstructionsTextClick={handleInstructionsTextClick}

@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-08T13:15:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "### Play Random\n\nThe `play random` block changes your song each time it plays. \n\nDrag blocks inside `play random` to set up your timeline.\n",
+        "imageUrl": "https://images.code.org/4c57aea0d0f490dfd30063b6fd157fbf-random-1.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-c846fce5-8889-4bff-8a48-f717d5302c15",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "### Play Random\n\nThen when you press Run, `play random` will choose just one of the blocks to play.\n\nThe timeline will update by graying out the blocks that aren't playing.\n",
+        "imageUrl": "https://images.code.org/44f193f5420b437c6bc22c0b69268857-random-2.png",
+        "key": "music-lab-triggers-panel-3b7934d6-0a4f-4044-b9b8-7f75623de70f",
+        "layout": "text-top-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Play Random\n\nWhen you use a loop, `play random` will choose a different block each time\n",
+        "imageUrl": "https://images.code.org/d74574159c32feda2b2ef93840026dbc-random-3.png",
+        "key": "music-lab-triggers-panel-4bf95691-3ba3-40f8-b7df-64bccf9a7122",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "### Play Random\n\nYou can nest blocks within `play random`, but it only chooses from the outer blocks. \n\nFor example, with `play together` blocks, `play random` will choose from the outer `play together` blocks and not the inner blocks.\n",
+        "imageUrl": "https://images.code.org/9e8087cc16db508a74c13776acbc7be7-random-4.png",
+        "key": "music-lab-triggers-panel-4e2f979d-91a9-4a4e-b05f-47937578f59d",
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      },
+      {
+        "text": "Key Takeaway: play random lets you change how your song sounds each time it's played. It chooses from the blocks inside of it, and grays out the others on the timeline.",
+        "imageUrl": "https://images.code.org/4725874a5070a0420406de05d90c2d26-random-5.png",
+        "key": "music-lab-triggers-panel-2a0be431-01b0-464e-86db-5a849c039be6",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-right"
+      }
+    ],
+    "bubble_choice_description": "Review how to use Play Sequential when creating songs",
+    "display_name": "Play Sequential",
+    "name_suffix": "_v2"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-08T13:15:55.275+00:00\",\"changed\":[\"cloned from \\\"music-lab-triggers-panel_v2\\\"\"],\"cloned_from\":\"music-lab-triggers-panel_v2\"},{\"changed_at\":\"2025-07-08 13:23:21 +0000\",\"changed\":[\"offer_browser_tts\",\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:23:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>
