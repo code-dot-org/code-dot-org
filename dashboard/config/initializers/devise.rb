@@ -373,7 +373,7 @@ end
 
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  unless Devise::Models::CustomLockable <= Devise::Models::Lockable
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
     Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
   end
 end
