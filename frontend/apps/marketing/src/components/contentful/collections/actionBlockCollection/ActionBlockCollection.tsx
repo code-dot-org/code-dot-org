@@ -85,7 +85,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
 
   if (!blocks) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body2">
         <em>
           <strong>📋 Action Block Collection placeholder.</strong> Please add a
           "List" content type entry in the Content sidebar.

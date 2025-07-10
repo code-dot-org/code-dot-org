@@ -9,9 +9,9 @@ import React, {useEffect, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import i18n from '@cdo/apps/pythonlab/locale';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';

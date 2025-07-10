@@ -46,13 +46,8 @@ const styles = {
     borderRadius: '50%',
   },
   overline: {
-    // TODO: replace this w/ theme palette value
-    color: '#4C5661',
     marginTop: 1,
-    marginBottom: 1.5,
-  },
-  bio: {
-    textAlign: 'center',
+    marginBottom: 1.25,
   },
   personalLink: {
     display: 'inline-flex',
@@ -73,7 +68,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
 }) => {
   if (!people) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body2">
         <em>
           <strong>📋 People Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
@@ -113,13 +108,14 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               <Typography
                 variant="overline"
                 component="h4"
+                color="text.secondary"
                 sx={styles.overline}
               >
                 {title}
               </Typography>
             )}
             {bio && (
-              <Typography variant="body2" component="p" sx={styles.bio}>
+              <Typography variant="body2" component="p" align="center">
                 {bio}
               </Typography>
             )}
@@ -132,7 +128,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                 sx={styles.personalLink}
               >
                 Visit personal page
-                <OpenInNew fontSize="small" color="primary" />
+                <OpenInNew fontSize="small" color="secondary" />
               </Link>
             )}
           </Box>

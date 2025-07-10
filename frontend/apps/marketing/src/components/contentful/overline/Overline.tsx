@@ -1,39 +1,32 @@
-import classNames from 'classnames';
+import Typography from '@mui/material/Typography';
 import React, {ReactNode} from 'react';
 
-import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import {FONT_SIZE} from '@/components/common/constants';
 import {
-  default as Typography,
-  VisualAppearance,
-} from '@code-dot-org/component-library/typography';
-
-import {RemoveMarginBottomProps} from '@/components/common/types';
-
-import moduleStyles from './overline.module.scss';
-
-type OverlineVisualAppearance = Extract<
-  VisualAppearance,
-  'overline-one' | 'overline-two' | 'overline-three'
->;
+  ComponentSize,
+  RemoveMarginBottomProps,
+} from '@/components/common/types';
 
 type OverlineProps = RemoveMarginBottomProps & {
   /** Overline content */
   children: ReactNode;
   /** Overline size */
-  size: Exclude<ComponentSizeXSToL, 'xs'>;
+  size: Exclude<ComponentSize, 'xs'>;
   /** Overline color */
   color: 'primary' | 'secondary';
   /** ClassName passed by Contentful to apply styles that are set through Contentful native editor*/
   className?: string;
 };
 
-const overlineSizeToVisualAppearance: Record<
-  Exclude<ComponentSizeXSToL, 'xs'>,
-  OverlineVisualAppearance
-> = {
-  s: 'overline-three',
-  m: 'overline-two',
-  l: 'overline-one',
+// Define font sizes based on the existing Contentful Overline size values
+// that were set before using the MUI Typography component.
+//
+// The mapping below intentionally does not match the ComponentSize type one-to-one.
+// This is to provide clearer dropdown options in the Contentful editor.
+const overlineFontSizes: Record<Exclude<ComponentSize, 'xs'>, string> = {
+  s: FONT_SIZE.xxs,
+  m: FONT_SIZE.xs,
+  l: FONT_SIZE.s,
 };
 
 const Overline: React.FunctionComponent<OverlineProps> = ({
@@ -45,14 +38,12 @@ const Overline: React.FunctionComponent<OverlineProps> = ({
 }) => {
   return (
     <Typography
-      className={classNames(
-        moduleStyles.overline,
-        moduleStyles[`overline-color-${color}`],
-        removeMarginBottom && moduleStyles['overline-removeMarginBottom'],
-        className,
-      )}
-      semanticTag="p"
-      visualAppearance={overlineSizeToVisualAppearance[size]}
+      className={className}
+      component="p"
+      variant="overline"
+      color={color === 'primary' ? 'primary.main' : 'text.secondary'}
+      fontSize={overlineFontSizes[size]}
+      gutterBottom={!removeMarginBottom}
     >
       {children}
     </Typography>

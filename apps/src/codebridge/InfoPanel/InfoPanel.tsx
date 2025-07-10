@@ -218,6 +218,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
             AiTutor2ResponseView={AiTutor2ResponseView}
             className={moduleStyles.instructionsContainer}
             levelProperties={levelProperties}
+            requireRun={true}
           />
         ) : (
           <ForTeachersOnly />

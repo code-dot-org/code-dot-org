@@ -371,7 +371,7 @@ a.button-l {
 
   span {
     @include mixins.button-one-text;
-    margin: 1px 0 0;
+    margin: 0;
   }
 
   i {
@@ -393,7 +393,7 @@ a.button-m {
 
   span {
     @include mixins.button-two-text;
-    margin: 1px 0 0;
+    margin: 0;
   }
 
   i {
@@ -415,7 +415,7 @@ a.button-s {
 
   span {
     @include mixins.button-three-text;
-    margin: 1px 0 0;
+    margin: 0;
   }
 
   i {
@@ -437,7 +437,7 @@ a.button-xs {
 
   span {
     @include mixins.button-four-text;
-    margin: 1px 0 0;
+    margin: 0;
   }
 
   i {

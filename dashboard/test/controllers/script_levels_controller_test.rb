@@ -759,7 +759,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Unit.twenty_hour_unit,
+        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
       }
@@ -767,7 +768,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Unit.twenty_hour_unit,
+        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
       }
@@ -1017,7 +1019,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for hoc" do
     get :show, params: {
-      script_id: Unit::HOC_NAME,
+      course_course_name: Unit::HOC_NAME,
+      unit_position: 1,
       lesson_position: '1',
       id: '2'
     }
@@ -1039,7 +1042,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for special scripts" do
     get :show, params: {
-      script_id: Unit::FLAPPY_NAME,
+      course_course_name: Unit::FLAPPY_NAME,
+      unit_position: 1,
       lesson_position: '1',
       id: '2'
     }
@@ -1304,7 +1308,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Unit::FROZEN_NAME,
+      course_course_name: Unit::FROZEN_NAME,
+      unit_position: 1,
       lesson_position: 1,
       id: 1
     }
@@ -1320,7 +1325,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Unit::PLAYLAB_NAME,
+      course_course_name: Unit::PLAYLAB_NAME,
+      unit_position: 1,
       lesson_position: 1,
       id: 1
     }
@@ -1335,13 +1341,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should 404 for invalid lesson for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', lesson_position: 4000, id: 1}
+      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 4000, id: 1}
     end
   end
 
   test "should 404 for invalid puzzle for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', lesson_position: 1, id: 4000}
+      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 1, id: 4000}
     end
   end
 

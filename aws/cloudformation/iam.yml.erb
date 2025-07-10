@@ -232,7 +232,10 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
+  # TODO: Migrate to REDTeam_Analyst
+  # These permissions also require applying the following SQL permissions on the Redshift cluster:
+  # GRANT ROLE sys:monitor TO "IAM:DataAnalyst";
+  # GRANT ROLE sys:operator TO "IAM:DataAnalyst";
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -526,6 +529,10 @@ roles.each do |name, config| %>
               - 'redshift:DescribeClusterSubnetGroups'
               - 'redshift:ViewQueriesInConsole'
               - 'redshift:ViewQueriesFromConsole'
+              - 'redshift:DescribeClusters'
+              - 'redshift:DescribeQuery'
+              - 'redshift:CancelQuery'
+              - 'redshift:GetClusterCredentialsWithIAM'
               - 'events:ListRules'
             Resource: '*'
 
