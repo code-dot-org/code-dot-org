@@ -25,6 +25,9 @@ Parameters:
   WebApplicationServerSecretsARN:
     Type: String
     Description: AWS Secret ARN that contains passwords and API Keys used by the Next.js web application server.
+  RoleBoundary:
+    Type: String
+    Description: The IAM Policy that any Role created by this template must apply as a Permissions Boundary.
 
 Conditions:
   IsProductionEnvironment:
@@ -314,8 +317,7 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
-      PermissionsBoundary:
-        Fn::ImportValue: !Sub "marketing-sites-global-resources:MarketingSitesRoleCreationBoundary${EnvironmentType}PolicyArn"
+      PermissionsBoundary: !Ref RoleBoundary
 
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
@@ -428,29 +430,28 @@ Resources:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
       Policies:
-        - PolicyName: Logging
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Action:
-                  - secretsmanager:DescribeSecret
-                  - secretsmanager:GetSecretValue
-                Effect: Allow
-                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
-              - Action:
-                  - logs:CreateLogStream
-                  - logs:PutLogEvents
-                Effect: Allow
-                Resource:
-                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
-              - Action:
-                  - logs:CreateLogGroup
-                Effect: Allow
-                Resource:
-                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
-                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
-      PermissionsBoundary:
-        Fn::ImportValue: !Sub "marketing-sites-global-resources:MarketingSitesRoleCreationBoundary${EnvironmentType}PolicyArn"
+      - PolicyName: Logging
+        PolicyDocument:
+          Version: "2012-10-17"
+          Statement:
+          - Action:
+              - secretsmanager:DescribeSecret
+              - secretsmanager:GetSecretValue
+            Effect: Allow
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
+          - Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
+          - Action:
+              - logs:CreateLogGroup
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
+      PermissionsBoundary: !Ref RoleBoundary
   FargateService:
     Type: AWS::ECS::Service
     Properties:
@@ -575,8 +576,7 @@ Resources:
                   - cloudwatch:DeleteAlarms
                   - ecs:DescribeServices
                 Resource: '*'
-      PermissionsBoundary:
-        Fn::ImportValue: !Sub "marketing-sites-global-resources:MarketingSitesRoleCreationBoundary${EnvironmentType}PolicyArn"
+      PermissionsBoundary: !Ref RoleBoundary
 
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
@@ -983,4 +983,3 @@ Outputs:
     Export:
       Name:
         'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'
-
