@@ -31,7 +31,7 @@ const sectionRowData = [
     courseOfferingsAreLoaded: true,
     isAssignedSingleUnitCourse: false,
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
-    assignmentPaths: ['/courses/csd', '/s/csd1-2019'],
+    assignmentPaths: ['/courses/csd', '/courses/csd-2019/units/1'],
   },
   {
     id: 2,
@@ -101,7 +101,7 @@ const sectionRowData = [
     assignmentNames: ['Single Unit Course 2025', 'Single Unit 2025'],
     assignmentPaths: [
       '/courses/single-unit-course-2025',
-      '/s/single-unit-2025',
+      '/courses/single-unit-course-2025/units/1',
     ],
   },
 ];

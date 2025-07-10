@@ -1,0 +1,35 @@
+name 'self-paced-CSDMusicLab-L1-assessment3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Opportunities for Assessment
+
+#### Throughout the Programming with Music Lab curriculum, you have various opportunities to assess student work. Within each non-project lesson, students will have a **check-in** level and an **assessment** level. In Synthesis lessons, the assessment is a **reflection** level.
+
+<div style="text-align: center; margin: 30px auto;">
+    <img src="https://images.code.org/5450d5fb4e3f3fe0c537417eb0ab6ade-image-1745270247368.17.22 PM.png" alt="A level progression for the sequences explore lesson, showing the check-in and assessment levels" style="width: 30%; border-radius: 5px;">
+
+  <!-- Caption -->
+  <p style="font-size: 12pt; margin-top: 8px;">Check-in and assessment levels have a purple check mark.</p>
+</div>
+
+<div style="text-align: center; margin: 30px auto;">
+    <img src="https://images.code.org/b65fc2316d96a3fccbe3b391d5020153-image-1744327348777.22.07 PM.png" alt="A row of levels in the teacher progress checker that shows assessment levels with black stars next to them." style="width: 80%; border-radius: 10px;">
+    <p style="font-size: 12pt; margin-top: 5px;">When checking student progress, assessment levels will have a black star next to their numbers.</p>
+</div>
+
+#### For an introduction to checking student progress, watch our video, <a href="https://www.youtube.com/watch?v=h5PvLB5gZkg" target="blank" rel="noopener noreferrer">Getting Started with Code.org: Progress Feedback & Assessment</a>.
+
+## Check-In Levels
+
+#### Check-in levels happen after students have had some initial practice with a skill, and allow for you, as the educator, to gauge how content is landing with your students in real time. They are for **formative assessment**. After releasing students to do independent work, sample their progress on check-in levels to understand how you might support your class.
+
+## Assessment Levels
+
+#### Assessment levels happen toward the end of a level progression, giving you data to review after a lesson has completed. They are for **summative assessment**. Use these levels to gain a holistic view of student understanding and direction for how to adjust future instruction.
+
+## Projects
+
+#### Mini-Projects and the End-of-Unit Project allow for additional **summative assessment**, but based on a student's understanding of computer science concepts - like sequences, loops, and functions - on a holistic level. We provide rubrics for these levels to capture student learning.
+MARKDOWN

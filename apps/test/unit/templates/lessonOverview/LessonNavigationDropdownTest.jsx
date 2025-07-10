@@ -97,7 +97,7 @@ const twoLessonGroups = [
 let lesson = {
   unit: {
     displayName: 'Unit 1',
-    link: '/s/unit-1',
+    link: '/courses/course/units/1',
     lessonGroups: [],
   },
   id: 3,

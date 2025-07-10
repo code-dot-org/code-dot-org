@@ -414,7 +414,13 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
               })}
             </div>
           )}
-          <div id="sounds-panel-right" className={styles.rightColumn}>
+          <div
+            id="sounds-panel-right"
+            className={styles.rightColumn}
+            tabIndex={0}
+            role="tabpanel"
+            aria-label={'Sounds Panel, ' + selectedFolder.name}
+          >
             {rightColumnSoundEntries.map((soundEntry, soundIndex) => {
               return (
                 <SoundsPanelRow

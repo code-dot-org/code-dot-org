@@ -13,15 +13,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Sequencing
 
-Standard: Use the play together and play sequential blocks together to create layered tracks with different measure counts
+Skill: Use the play together and play sequential blocks together to create layered tracks with different measure counts
 
-Lesson Type: Sequencing - Practice
-
-Skill Progression: Play 2+ sounds with different measure lengths together with at least 1 offset
-
-Pretest Modality: Given code, match to timeline
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
+Appears in the lesson: Sequencing - Practice
 MARKDOWN
 
 markdown <<MARKDOWN

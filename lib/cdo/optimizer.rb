@@ -96,7 +96,11 @@ module Cdo
       cache_key = Optimizer.cache_key(data)
       cache.fetch(cache_key) do
         # Write `false` to cache to prevent concurrent image optimizations.
-        cache.write(cache_key, false)
+        #
+        # The expiry here is almost certainly unnecessary; adding it mostly to
+        # help debug some unexpected runaway growth by conclusively ruling this
+        # operation out as a culprit. Can be removed once we're done debugging.
+        cache.write(cache_key, false, expires_in: 1.day)
         IMAGE_OPTIM.optimize_image_data(data) || data
       end
     rescue => exception
@@ -106,7 +110,9 @@ module Cdo
           key: cache_key
         }
       )
-      cache.write(cache_key, data) if cache && cache_key
+      # Only cache results in the CDO shared cache for a short while; we mostly
+      # rely on CloudFront to cache this content.
+      cache.write(cache_key, data, expires_in: 1.day) if cache && cache_key
       data
     end
   end

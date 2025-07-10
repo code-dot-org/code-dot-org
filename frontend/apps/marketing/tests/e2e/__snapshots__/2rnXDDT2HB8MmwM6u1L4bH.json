@@ -41,7 +41,7 @@
               "id": "4qnfpsV7",
               "displayName": "Section",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -161,7 +161,7 @@
                   "id": "0fJNzzC8",
                   "displayName": "Introduction",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -197,7 +197,7 @@
                       "id": "uUa7o1jl",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -234,7 +234,7 @@
                       "id": "UUn7E5n5",
                       "displayName": "Paragraph",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -283,7 +283,7 @@
                       "id": "AXIFq1qJ",
                       "displayName": "Paragraph",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -336,7 +336,7 @@
               "id": "sYH6ME1D",
               "displayName": "Localization",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -456,7 +456,7 @@
                   "id": "YVm0InSQ",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -492,7 +492,7 @@
                       "id": "BkKYMhQm",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -529,7 +529,7 @@
                       "id": "dxKxFE8C",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -566,7 +566,7 @@
                       "id": "b55f9mox",
                       "displayName": "Paragraph",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -615,7 +615,7 @@
                       "id": "VzJgPw9B",
                       "displayName": "Heading 2",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -652,7 +652,7 @@
                       "id": "QKZo3i6u",
                       "displayName": "Paragraph 1",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -701,7 +701,7 @@
                       "id": "jltL4xD9",
                       "displayName": "Heading 3",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -738,7 +738,7 @@
                       "id": "RydO4DZ5",
                       "displayName": "Paragraph 1",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -791,7 +791,7 @@
               "id": "QPXgm7xP",
               "displayName": "Action Block",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -838,7 +838,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "2028px",
+                    "tablet": "1981px",
+                    "mobile": "3989px"
                   }
                 },
                 "cfMaxWidth": {
@@ -911,7 +913,7 @@
                   "id": "fCFouSL6",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -947,7 +949,7 @@
                       "id": "lBfKWG1Q",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -983,7 +985,7 @@
                     {
                       "id": "NcFGUcus",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -1019,7 +1021,7 @@
                     {
                       "id": "4Z9z51w4",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -1140,7 +1142,7 @@
                         {
                           "id": "KXc3wv4t",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -1259,7 +1261,7 @@
                             {
                               "id": "cqVonltI",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/Ura63qS4/fields/actionBlockOverline/~locale",
@@ -1327,7 +1329,7 @@
                         {
                           "id": "GIbKtM99",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -1446,7 +1448,7 @@
                             {
                               "id": "cNcSAcmb",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/btGygYlg/fields/actionBlockOverline/~locale",
@@ -1516,7 +1518,7 @@
                     {
                       "id": "XkRIiyuw",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -1542,7 +1544,7 @@
                     {
                       "id": "WF9VdUgg",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -1578,7 +1580,7 @@
                     {
                       "id": "Jx09S5tI",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -1699,7 +1701,7 @@
                         {
                           "id": "pSAn3QNf",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -1818,7 +1820,7 @@
                             {
                               "id": "HA6kV8lH",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/eV4HBBLe/fields/actionBlockOverline/~locale",
@@ -1886,7 +1888,7 @@
                         {
                           "id": "hAm0hXK7",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -2005,7 +2007,7 @@
                             {
                               "id": "NRvZhJuI",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/pnEVNJEY/fields/actionBlockOverline/~locale",
@@ -2075,7 +2077,7 @@
                     {
                       "id": "HT5aw3I7",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -2101,7 +2103,7 @@
                     {
                       "id": "aAeOh6L6",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -2137,7 +2139,7 @@
                     {
                       "id": "kAFZ2mur",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -2258,7 +2260,7 @@
                         {
                           "id": "CC1rbHZN",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -2377,7 +2379,7 @@
                             {
                               "id": "vKRDeLjD",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/S9wdCChd/fields/actionBlockOverline/~locale",
@@ -2445,7 +2447,7 @@
                         {
                           "id": "MFJ3yTqG",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -2564,7 +2566,7 @@
                             {
                               "id": "1yfSgGaI",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/qUW7SuUq/fields/actionBlockOverline/~locale",
@@ -2632,7 +2634,7 @@
                         {
                           "id": "w6KnOUij",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -2751,7 +2753,7 @@
                             {
                               "id": "KtyKVhex",
                               "definitionId": "verticalActionBlock",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "overline": {
                                   "path": "/MKnXMzs0/fields/actionBlockOverline/~locale",
@@ -2826,7 +2828,7 @@
               "id": "zC8t7qbw",
               "displayName": "Action Block Carousel",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -2873,7 +2875,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1312px"
+                    "desktop": "1312px",
+                    "tablet": "1391px",
+                    "mobile": "1408px"
                   }
                 },
                 "cfMaxWidth": {
@@ -2945,7 +2949,7 @@
                 {
                   "id": "xxFZByXS",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -2980,7 +2984,7 @@
                     {
                       "id": "SG3kkKac",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3016,7 +3020,7 @@
                     {
                       "id": "Io66Ey3G",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3052,7 +3056,7 @@
                     {
                       "id": "zaDFSR3J",
                       "definitionId": "carousel-action-block",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/JZkN7NP/fields/slides/~locale",
@@ -3076,7 +3080,7 @@
                     {
                       "id": "ubwdePdg",
                       "definitionId": "spacer",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -3096,7 +3100,7 @@
                     {
                       "id": "mgOOb7aW",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3132,7 +3136,7 @@
                     {
                       "id": "MLwaI0Sb",
                       "definitionId": "carousel-action-block",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/jCkSbED3/fields/slides/~locale",
@@ -3161,7 +3165,7 @@
               "id": "LRiJRiIo",
               "displayName": "Action Block Pattern Default ",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -3208,7 +3212,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "709px"
+                    "desktop": "709px",
+                    "tablet": "695px",
+                    "mobile": "1549px"
                   }
                 },
                 "cfMaxWidth": {
@@ -3280,7 +3286,7 @@
                 {
                   "id": "hZMPclhE",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -3315,7 +3321,7 @@
                     {
                       "id": "gFPpTXnU",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3351,7 +3357,7 @@
                     {
                       "id": "TOTzTf8y",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3387,7 +3393,7 @@
                     {
                       "id": "qLIHIGLs",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -3435,7 +3441,7 @@
                     {
                       "id": "zcjPri47",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -3494,7 +3500,8 @@
                         "cfFlexDirection": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "row"
+                            "desktop": "row",
+                            "mobile": "column"
                           }
                         },
                         "cfFlexReverse": {
@@ -3554,7 +3561,7 @@
                         {
                           "id": "93vwjXnn",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "hDMAL2U",
@@ -3620,7 +3627,7 @@
                         {
                           "id": "YmiE6Ywp",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "E7Cjhbo",
@@ -3686,7 +3693,7 @@
                         {
                           "id": "86MbYKov",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "Wz9SJiE",
@@ -3754,7 +3761,7 @@
                     {
                       "id": "OINcNI7F",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -3873,7 +3880,7 @@
                         {
                           "id": "qX9jhnyf",
                           "definitionId": "button",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "color": {
                               "type": "DesignValue",
@@ -3927,7 +3934,7 @@
                         {
                           "id": "axzVGDQG",
                           "definitionId": "button",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "color": {
                               "type": "DesignValue",
@@ -3988,7 +3995,7 @@
               "id": "xSkU9PU0",
               "displayName": "Action Block Pattern Hidden Elements",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -4035,7 +4042,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "602px"
+                    "desktop": "602px",
+                    "tablet": "588px",
+                    "mobile": "1498px"
                   }
                 },
                 "cfMaxWidth": {
@@ -4107,7 +4116,7 @@
                 {
                   "id": "KAaeXuCb",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -4142,7 +4151,7 @@
                     {
                       "id": "iEYHtr8L",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -4178,7 +4187,7 @@
                     {
                       "id": "Rq1QaSxv",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -4214,7 +4223,7 @@
                     {
                       "id": "a9X5giIf",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -4262,7 +4271,7 @@
                     {
                       "id": "309tDLjp",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -4321,7 +4330,8 @@
                         "cfFlexDirection": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "row"
+                            "desktop": "row",
+                            "mobile": "column"
                           }
                         },
                         "cfFlexReverse": {
@@ -4381,7 +4391,7 @@
                         {
                           "id": "nBmn1JMd",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "73db4weH",
@@ -4447,7 +4457,7 @@
                         {
                           "id": "MGbvWLy6",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "T1XSxOfG",
@@ -4513,7 +4523,7 @@
                         {
                           "id": "DqkrNi7I",
                           "definitionId": "verticalActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "key": "1rLXmQf4",
@@ -4581,7 +4591,7 @@
                     {
                       "id": "Co1Bs0NX",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -4700,7 +4710,7 @@
                         {
                           "id": "XoeUOX2Z",
                           "definitionId": "button",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "color": {
                               "type": "DesignValue",
@@ -4754,7 +4764,7 @@
                         {
                           "id": "hiMpRxOH",
                           "definitionId": "button",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "color": {
                               "type": "DesignValue",
@@ -4815,7 +4825,7 @@
               "id": "pD8UQKqT",
               "displayName": "Full Width Action Block",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -4862,7 +4872,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "1378px",
+                    "tablet": "2557px",
+                    "mobile": "2046px"
                   }
                 },
                 "cfMaxWidth": {
@@ -4935,7 +4947,7 @@
                   "id": "e3oqSxBp",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -4971,7 +4983,7 @@
                       "id": "mKmQjjB5",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -5007,7 +5019,7 @@
                     {
                       "id": "XQ7TfDn9",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -5043,7 +5055,7 @@
                     {
                       "id": "pU9KFVeN",
                       "definitionId": "fullWidthActionBlock",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "overline": {
                           "path": "/zibXm2hu/fields/actionBlockOverline/~locale",
@@ -5109,7 +5121,7 @@
                     {
                       "id": "X3HvQXNU",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5135,7 +5147,7 @@
                     {
                       "id": "qPYEMk2o",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -5171,7 +5183,7 @@
                     {
                       "id": "dtvNdOmk",
                       "definitionId": "fullWidthActionBlock",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "overline": {
                           "path": "/XvAA9yze/fields/actionBlockOverline/~locale",
@@ -5237,7 +5249,7 @@
                     {
                       "id": "RdLeOx6U",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5263,7 +5275,7 @@
                     {
                       "id": "fwnmq3Qj",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -5299,7 +5311,7 @@
                     {
                       "id": "SYclWTwE",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -5418,7 +5430,7 @@
                         {
                           "id": "jPGXtwTT",
                           "definitionId": "fullWidthActionBlock",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "overline": {
                               "path": "/XXpWcD4q/fields/actionBlockOverline/~locale",
@@ -5491,7 +5503,7 @@
               "id": "8dDKrpX8",
               "displayName": "Button",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -5611,7 +5623,7 @@
                   "id": "HjMZCQC6",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -5647,7 +5659,7 @@
                       "id": "sqnBKCvr",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -5684,7 +5696,7 @@
                       "id": "ZA7w0xDd",
                       "displayName": "Button",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5741,7 +5753,7 @@
                       "id": "sMndlIZK",
                       "displayName": "Button 1",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5798,7 +5810,7 @@
                       "id": "i9TQ90r1",
                       "displayName": "Button 2",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5854,7 +5866,7 @@
                     {
                       "id": "LLoJaXAe",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5881,7 +5893,7 @@
                       "id": "fdLp3ahg",
                       "displayName": "Left Aligned Button",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5938,7 +5950,7 @@
                       "id": "n4kkpjAV",
                       "displayName": "Centered Button",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -5995,7 +6007,7 @@
                       "id": "UkQimeF2",
                       "displayName": "Right Aligned Button",
                       "definitionId": "button",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -6053,10 +6065,1235 @@
               ]
             },
             {
+              "id": "zUp73tET",
+              "displayName": "Action Block Collection",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "2833px",
+                    "tablet": "4355px",
+                    "mobile": "8065px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "pVPzc3-"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "shs9eH4"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "uzR0fY4"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "hXnvQBwE",
+                  "definitionId": "section",
+                  "parameters": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "type": "UnboundValue",
+                      "key": "DeNUEmj"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "jfTuPjP5",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "Synpi6Ji",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "FbKbLnWB",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "XK7rMUD",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "gtMT1Eyq",
+                      "definitionId": "collection-action-block",
+                      "parameters": {},
+                      "variables": {
+                        "blocks": {
+                          "path": "/EiVrjhR/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "background": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "alphabetical"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "QyYew5SN",
+                      "definitionId": "spacer",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "PTcz6zoI",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "UuNfyogY",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "yFi31954",
+                      "definitionId": "collection-action-block",
+                      "parameters": {},
+                      "variables": {
+                        "blocks": {
+                          "path": "/57l2NOzB/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "background": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "manual"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "tdh3zs9v",
+                      "definitionId": "spacer",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "CgtGOcg6",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "6U7rCA9s",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "EmXpUTE3",
+                      "definitionId": "collection-action-block",
+                      "parameters": {},
+                      "variables": {
+                        "blocks": {
+                          "path": "/z9WwOZHG/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "background": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "alphabetical"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "x47GXNvs",
+              "displayName": "Logo Collection",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "638px",
+                    "tablet": "638px",
+                    "mobile": "1522px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "byJD1LER"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "TtMDehnh"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "yvK1RSIA"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "PnWTkane",
+                  "definitionId": "section",
+                  "parameters": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "type": "UnboundValue",
+                      "key": "SXPs2oUx"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "1D1ZEGLH",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "tYSB9zEq",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "jSgNmru3",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "E0gqtvHC",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "Wg61pihU",
+                      "definitionId": "collection-logo",
+                      "parameters": {},
+                      "variables": {
+                        "logos": {
+                          "path": "/pszAFJYF/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "alphabetical"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "29kmcHZL",
+                      "definitionId": "spacer",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "XEPWxZ4Y",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "PZglZYB1",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "xSpB0UtJ",
+                      "definitionId": "collection-logo",
+                      "parameters": {},
+                      "variables": {
+                        "logos": {
+                          "path": "/OBD9ebsG/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "manual"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "4z16afI7",
+              "displayName": "People Collection",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "2318px",
+                    "tablet": "2439px",
+                    "mobile": "5619px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "type": "UnboundValue",
+                  "key": "PepR4hzX"
+                },
+                "cfOpenInNewTab": {
+                  "type": "UnboundValue",
+                  "key": "cJ416zZF"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "type": "UnboundValue",
+                  "key": "NVkFhzl1"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "lPzzvBLx",
+                  "definitionId": "section",
+                  "parameters": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "type": "UnboundValue",
+                      "key": "y1w4Y1O0"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "yduI5eDL",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "8BCQn7kU",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "0lNgWCey",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "FjaNJXPA",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "hyOUpEwq",
+                      "definitionId": "collection-people",
+                      "parameters": {},
+                      "variables": {
+                        "people": {
+                          "path": "/R7vOpqiB/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "alphabetical"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "E8HvLj1R",
+                      "definitionId": "spacer",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "8JnbcdV2",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "n8TwgioS",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "VIAUn76i",
+                      "definitionId": "collection-people",
+                      "parameters": {},
+                      "variables": {
+                        "people": {
+                          "path": "/ou4SQXZP/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "manual"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "UrrU8nhm",
+                      "definitionId": "spacer",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "YiR79zk2",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "oRgnef43",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "WiIfHSGJ",
+                      "definitionId": "collection-people",
+                      "parameters": {},
+                      "variables": {
+                        "people": {
+                          "path": "/u6GdJTjQ/fields/itemsInThisList/~locale",
+                          "type": "BoundValue"
+                        },
+                        "sortOrder": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "alphabetical"
+                          }
+                        },
+                        "hideImages": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "gXGGF3fe",
               "displayName": "Column",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -6175,7 +7412,7 @@
                 {
                   "id": "g3bDeJ5Q",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -6210,7 +7447,7 @@
                     {
                       "id": "kSaqrZkL",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -6246,7 +7483,7 @@
                     {
                       "id": "1xhHBB2q",
                       "definitionId": "contentful-columns",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVisibility": {
                           "type": "DesignValue",
@@ -6339,7 +7576,7 @@
                         {
                           "id": "4aK86X01",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -6432,7 +7669,7 @@
                             {
                               "id": "zAfKojaP",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -6482,7 +7719,7 @@
                         {
                           "id": "ivBBNdu3",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -6575,7 +7812,7 @@
                             {
                               "id": "gbRF7ltC",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -6625,7 +7862,7 @@
                         {
                           "id": "2fCB1Xtu",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -6718,7 +7955,7 @@
                             {
                               "id": "L9hvodcz",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -6768,7 +8005,7 @@
                         {
                           "id": "lv1SSmyU",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -6869,7 +8106,7 @@
               "id": "ti6YFTJB",
               "displayName": "Container",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -6940,7 +8177,8 @@
                 "cfFlexWrap": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "nowrap"
+                    "desktop": "nowrap",
+                    "mobile": "wrap"
                   }
                 },
                 "cfBorder": {
@@ -6988,7 +8226,7 @@
                 {
                   "id": "uHUM5mzD",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -7023,7 +8261,7 @@
                     {
                       "id": "eDgH4prd",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -7059,7 +8297,7 @@
                     {
                       "id": "uCuOdCYT",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -7178,7 +8416,7 @@
                         {
                           "id": "a9I1ElrU",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -7297,7 +8535,7 @@
                             {
                               "id": "FNbhC3Xu",
                               "definitionId": "heading",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7333,7 +8571,7 @@
                             {
                               "id": "UDIwg6gf",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7383,7 +8621,7 @@
                         {
                           "id": "E07pN8W4",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -7502,7 +8740,7 @@
                             {
                               "id": "o6xpiMNG",
                               "definitionId": "heading",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7538,7 +8776,7 @@
                             {
                               "id": "NcKsyTr5",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7588,7 +8826,7 @@
                         {
                           "id": "1vmrSFao",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -7707,7 +8945,7 @@
                             {
                               "id": "48VmFOtI",
                               "definitionId": "heading",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7743,7 +8981,7 @@
                             {
                               "id": "VkXRXr2S",
                               "definitionId": "paragraph",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "visualAppearance": {
                                   "type": "DesignValue",
@@ -7800,7 +9038,7 @@
               "id": "Clx6dZLd",
               "displayName": "Divider",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -7920,7 +9158,7 @@
                   "id": "BRrxH9Ul",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -7956,7 +9194,7 @@
                       "id": "s5HoxC42",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -7993,7 +9231,7 @@
                       "id": "pHAqHABK",
                       "displayName": "Divider",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -8020,7 +9258,7 @@
                       "id": "WydkYUZS",
                       "displayName": "Divider 1",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -8051,7 +9289,7 @@
               "id": "5zyOvo0R",
               "displayName": "Editorial Card",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -8098,7 +9336,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1368px"
+                    "desktop": "1368px",
+                    "tablet": "1454px",
+                    "mobile": "fit-content"
                   }
                 },
                 "cfMaxWidth": {
@@ -8170,7 +9410,7 @@
                 {
                   "id": "iAnEaEgb",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -8205,7 +9445,7 @@
                     {
                       "id": "KbvRGvbe",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -8241,7 +9481,7 @@
                     {
                       "id": "kCyXqFYa",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -8277,7 +9517,7 @@
                     {
                       "id": "tyRjn9oz",
                       "definitionId": "contentful-columns",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVisibility": {
                           "type": "DesignValue",
@@ -8370,7 +9610,7 @@
                         {
                           "id": "oA5CCPAo",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -8463,7 +9703,7 @@
                             {
                               "id": "gWLpFHSs",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -8507,7 +9747,7 @@
                         {
                           "id": "ZAJJ0iiW",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -8600,7 +9840,7 @@
                             {
                               "id": "oB5N7VD7",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -8644,7 +9884,7 @@
                         {
                           "id": "0HS0ONm2",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -8737,7 +9977,7 @@
                             {
                               "id": "M7f6MF4w",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -8781,7 +10021,7 @@
                         {
                           "id": "VmHyAkEI",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -8874,7 +10114,7 @@
                             {
                               "id": "uXHKjg4c",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -8920,7 +10160,7 @@
                     {
                       "id": "YBCpbCJj",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -8946,7 +10186,7 @@
                     {
                       "id": "q3uxB4j5",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -8982,7 +10222,7 @@
                     {
                       "id": "1YSW91U9",
                       "definitionId": "contentful-columns",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVisibility": {
                           "type": "DesignValue",
@@ -9075,7 +10315,7 @@
                         {
                           "id": "aoJUv1Zk",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -9168,7 +10408,7 @@
                             {
                               "id": "rKc3s7j0",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -9212,7 +10452,7 @@
                         {
                           "id": "jHkDH3sl",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -9305,7 +10545,7 @@
                             {
                               "id": "pzMz2OhY",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -9349,7 +10589,7 @@
                         {
                           "id": "bU9H6jve",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -9442,7 +10682,7 @@
                             {
                               "id": "fVrnXEBe",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -9488,7 +10728,7 @@
                     {
                       "id": "q6NhaRVm",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -9514,7 +10754,7 @@
                     {
                       "id": "dH7Gjk31",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -9550,7 +10790,7 @@
                     {
                       "id": "GdhWRJFc",
                       "definitionId": "contentful-columns",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVisibility": {
                           "type": "DesignValue",
@@ -9643,7 +10883,7 @@
                         {
                           "id": "7W0IRB60",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -9704,7 +10944,8 @@
                             "cfFlexWrap": {
                               "type": "DesignValue",
                               "valuesByBreakpoint": {
-                                "desktop": "nowrap"
+                                "desktop": "nowrap",
+                                "mobile": "nowrap"
                               }
                             },
                             "cfBorder": {
@@ -9736,7 +10977,7 @@
                             {
                               "id": "AffVKIg1",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -9759,7 +11000,8 @@
                                 "iconName": {
                                   "type": "DesignValue",
                                   "valuesByBreakpoint": {
-                                    "desktop": "circle-1"
+                                    "desktop": "circle-1",
+                                    "mobile": "circle-1"
                                   }
                                 },
                                 "linkEntry": {
@@ -9780,7 +11022,7 @@
                         {
                           "id": "sJE8ZKDk",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -9873,7 +11115,7 @@
                             {
                               "id": "g5QjgPLT",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -9917,7 +11159,7 @@
                         {
                           "id": "670Z8b2P",
                           "definitionId": "contentful-single-column",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVisibility": {
                               "type": "DesignValue",
@@ -10010,7 +11252,7 @@
                             {
                               "id": "ZaZM8AR8",
                               "definitionId": "editorialCard",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "layoutOpt": {
                                   "type": "DesignValue",
@@ -10061,7 +11303,7 @@
               "id": "me3IiW8q",
               "displayName": "FAQ Accordion",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -10180,7 +11422,7 @@
                 {
                   "id": "IhSSyoYp",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -10215,7 +11457,7 @@
                     {
                       "id": "Mmpso6JB",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10251,7 +11493,7 @@
                     {
                       "id": "7Jk2HkXK",
                       "definitionId": "faqAccordion",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "faqs": {
                           "path": "/nizD06r/fields/faqItems/~locale",
@@ -10274,7 +11516,7 @@
               "id": "KpnHx64w",
               "displayName": "Heading",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -10394,7 +11636,7 @@
                   "id": "DiK9VHcn",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -10430,7 +11672,7 @@
                       "id": "QeFTqe9z",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10467,7 +11709,7 @@
                       "id": "s9BWm87K",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10504,7 +11746,7 @@
                       "id": "g7eJTxtZ",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10541,7 +11783,7 @@
                       "id": "Og5azalB",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10578,7 +11820,7 @@
                       "id": "aqtlS0Go",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10615,7 +11857,7 @@
                       "id": "B3ylIbTZ",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -10656,7 +11898,7 @@
               "id": "P9oDg6Un",
               "displayName": "Hero Banner Basic",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -10704,7 +11946,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "443px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -10776,7 +12019,7 @@
                 {
                   "id": "hdmeVNvO",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -10812,7 +12055,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -10888,7 +12132,7 @@
               "id": "4nY572oI",
               "displayName": "Hero Banner with Bg Color",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -10936,7 +12180,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "499px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -11008,7 +12253,7 @@
                 {
                   "id": "ULFjBceJ",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -11044,7 +12289,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -11120,7 +12366,7 @@
               "id": "4RC8SY0m",
               "displayName": "Hero Banner with Bg Image",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -11168,7 +12414,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "499px",
-                    "desktop": "340px"
+                    "desktop": "340px",
+                    "tablet": "364px"
                   }
                 },
                 "cfMaxWidth": {
@@ -11240,7 +12487,7 @@
                 {
                   "id": "FfjnJhjO",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -11276,7 +12523,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -11352,7 +12600,7 @@
               "id": "usYMJ5ah",
               "displayName": "Hero Banner with Image Big",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -11400,7 +12648,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "665px",
-                    "desktop": "443px"
+                    "desktop": "443px",
+                    "tablet": "837px"
                   }
                 },
                 "cfMaxWidth": {
@@ -11472,7 +12721,7 @@
                 {
                   "id": "5mkaBW2Z",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -11508,7 +12757,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -11584,7 +12834,7 @@
               "id": "MpKRjo3D",
               "displayName": "Hero Banner with Image Small",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -11632,7 +12882,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "665px",
-                    "desktop": "364px"
+                    "desktop": "364px",
+                    "tablet": "837px"
                   }
                 },
                 "cfMaxWidth": {
@@ -11704,7 +12955,7 @@
                 {
                   "id": "Fqv3MkSt",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -11816,7 +13067,7 @@
               "id": "WsxFVMof",
               "displayName": "Hero Banner with Video",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -11864,7 +13115,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "689px",
-                    "desktop": "409px"
+                    "desktop": "409px",
+                    "tablet": "846px"
                   }
                 },
                 "cfMaxWidth": {
@@ -11936,7 +13188,7 @@
                 {
                   "id": "qkGaMjtQ",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -11972,7 +13224,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12048,7 +13301,7 @@
               "id": "wigV8dBv",
               "displayName": "Hero Banner with Partner Callout",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -12096,7 +13349,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "547px",
-                    "desktop": "388px"
+                    "desktop": "388px",
+                    "tablet": "412px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12168,7 +13422,7 @@
                 {
                   "id": "WuzUV6lS",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -12204,7 +13458,8 @@
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
                         "mobile": "",
-                        "desktop": ""
+                        "desktop": "",
+                        "tablet": ""
                       }
                     },
                     "heading": {
@@ -12280,7 +13535,7 @@
               "id": "7mN1LdWp",
               "displayName": "Hero Banner with Announcement Banner",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -12328,7 +13583,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "628px",
-                    "desktop": "390px"
+                    "desktop": "390px",
+                    "tablet": "469px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12400,7 +13656,7 @@
                 {
                   "id": "XV9Oc6f4",
                   "definitionId": "heroBanner",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "contentMode": {
                       "type": "DesignValue",
@@ -12512,7 +13768,7 @@
               "id": "emFwvLP8",
               "displayName": "Image",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -12559,7 +13815,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "fit-content",
+                    "tablet": "787px",
+                    "mobile": "1087px"
                   }
                 },
                 "cfMaxWidth": {
@@ -12632,7 +13890,7 @@
                   "id": "OX0joJve",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -12668,7 +13926,7 @@
                       "id": "AI1IIxgR",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -12704,7 +13962,7 @@
                     {
                       "id": "pW9sYR0b",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -12826,7 +14084,7 @@
                         {
                           "id": "Jk6x2y8G",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -12945,7 +14203,7 @@
                             {
                               "id": "8oIklkai",
                               "definitionId": "image",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "src": {
                                   "path": "/JtSxyKC/fields/file/~locale",
@@ -12993,7 +14251,7 @@
                         {
                           "id": "wzdQlRZH",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -13112,7 +14370,7 @@
                             {
                               "id": "t9aHgC0s",
                               "definitionId": "image",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "src": {
                                   "path": "/2Te0IAmc/fields/file/~locale",
@@ -13162,7 +14420,7 @@
                     {
                       "id": "WWXtCxfi",
                       "definitionId": "spacer",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -13182,7 +14440,7 @@
                     {
                       "id": "ZrgPrUKJ",
                       "definitionId": "contentful-container",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "cfVerticalAlignment": {
                           "type": "DesignValue",
@@ -13304,7 +14562,7 @@
                         {
                           "id": "K3kEoR9T",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -13423,7 +14681,7 @@
                             {
                               "id": "fSh2sEYp",
                               "definitionId": "image",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "src": {
                                   "path": "/gxYbZM71/fields/file/~locale",
@@ -13471,7 +14729,7 @@
                         {
                           "id": "4q7Agi2K",
                           "definitionId": "contentful-container",
-                          "patternProperties": {},
+                          "parameters": {},
                           "variables": {
                             "cfVerticalAlignment": {
                               "type": "DesignValue",
@@ -13590,7 +14848,7 @@
                             {
                               "id": "PLoMFmHU",
                               "definitionId": "image",
-                              "patternProperties": {},
+                              "parameters": {},
                               "variables": {
                                 "src": {
                                   "path": "/DtbkKOnf/fields/file/~locale",
@@ -13645,7 +14903,7 @@
               "id": "6Cg8BXM0",
               "displayName": "Image Carousel",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -13692,7 +14950,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1730px"
+                    "desktop": "1730px",
+                    "tablet": "1408px",
+                    "mobile": "1316px"
                   }
                 },
                 "cfMaxWidth": {
@@ -13765,7 +15025,7 @@
                   "id": "bQ4LdirF",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -13801,7 +15061,7 @@
                       "id": "vxvNXiBg",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -13837,7 +15097,7 @@
                     {
                       "id": "u0EWqasb",
                       "definitionId": "carousel-image",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/Uzc6FQP/fields/imageSlides/~locale",
@@ -13861,7 +15121,7 @@
                     {
                       "id": "fPEysWis",
                       "definitionId": "carousel-image",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/DsX1MPtQ/fields/imageSlides/~locale",
@@ -13885,7 +15145,7 @@
                     {
                       "id": "sFqKYPPq",
                       "definitionId": "carousel-image",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/ubziaBYn/fields/imageSlides/~locale",
@@ -13909,7 +15169,7 @@
                     {
                       "id": "gJSl3QMj",
                       "definitionId": "carousel-image",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/VTZgp9YI/fields/imageSlides/~locale",
@@ -13938,7 +15198,7 @@
               "id": "xHJlZCCH",
               "displayName": "Overline",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -14058,7 +15318,7 @@
                   "id": "85sUjnT6",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -14094,7 +15354,7 @@
                       "id": "b2f0KDFZ",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14131,7 +15391,7 @@
                       "id": "L9QvdEUS",
                       "displayName": "Overline",
                       "definitionId": "overline",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -14174,7 +15434,7 @@
                       "id": "H2y2eW6g",
                       "displayName": "Overline 1",
                       "definitionId": "overline",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -14217,7 +15477,7 @@
                       "id": "K6qaxqTv",
                       "displayName": "Overline 2",
                       "definitionId": "overline",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -14264,7 +15524,7 @@
               "id": "elX9Jq6X",
               "displayName": "Paragraph",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -14384,7 +15644,7 @@
                   "id": "5XxdQJUA",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -14420,7 +15680,7 @@
                       "id": "KesTZnYJ",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14457,7 +15717,7 @@
                       "id": "AMYwkYNk",
                       "displayName": "Paragraph",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14506,7 +15766,7 @@
                       "id": "zJvuD0HD",
                       "displayName": "Paragraph 1",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14555,7 +15815,7 @@
                       "id": "SJd9fYto",
                       "displayName": "Paragraph 2",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14604,7 +15864,7 @@
                       "id": "pl5CZVbe",
                       "displayName": "Paragraph",
                       "definitionId": "paragraph",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14657,7 +15917,7 @@
               "id": "u1TeiA6d",
               "displayName": "Rich Text",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -14776,7 +16036,7 @@
                 {
                   "id": "1vABUG7n",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -14811,7 +16071,7 @@
                     {
                       "id": "7CMLxa8Y",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -14847,7 +16107,7 @@
                     {
                       "id": "YRr8N99X",
                       "definitionId": "richText",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "content": {
                           "path": "/UGLXrgn/fields/formattedSectionContent/~locale",
@@ -14870,7 +16130,7 @@
               "id": "mmiz1hHo",
               "displayName": "Section",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -14990,7 +16250,7 @@
                   "id": "jIECLTTH",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -15026,7 +16286,7 @@
                       "id": "io9EJVj6",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -15064,7 +16324,7 @@
                 {
                   "id": "Ko7M7vnH",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -15099,7 +16359,7 @@
                     {
                       "id": "RSQxdVwv",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -15140,7 +16400,7 @@
               "id": "ZX4djoXt",
               "displayName": "Text Link",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -15260,7 +16520,7 @@
                   "id": "wrGEKnPn",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -15296,7 +16556,7 @@
                       "id": "WF76U7uH",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -15333,7 +16593,7 @@
                       "id": "OYIhzN9w",
                       "displayName": "Text Link 2",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15384,7 +16644,7 @@
                       "id": "bTLH9bp5",
                       "displayName": "Text Link",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15435,7 +16695,7 @@
                       "id": "Bobqy9W3",
                       "displayName": "Text Link 1",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15486,7 +16746,7 @@
                       "id": "8WDnlPms",
                       "displayName": "Text Link 1",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15536,7 +16796,7 @@
                     {
                       "id": "bBEfl0Ck",
                       "definitionId": "divider",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "color": {
                           "type": "DesignValue",
@@ -15563,7 +16823,7 @@
                       "id": "5IqQIrwI",
                       "displayName": "Left aligned",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15614,7 +16874,7 @@
                       "id": "MjacnNa2",
                       "displayName": "Centered",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15665,7 +16925,7 @@
                       "id": "nLDuaCau",
                       "displayName": "Right aligned",
                       "definitionId": "link",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "size": {
                           "type": "DesignValue",
@@ -15720,7 +16980,7 @@
               "id": "UXWNakDB",
               "displayName": "Video",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -15840,7 +17100,7 @@
                   "id": "rtrOzYi0",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -15876,7 +17136,7 @@
                       "id": "AdqCNDR9",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -15913,7 +17173,7 @@
                       "id": "CuFH5tMP",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -15950,7 +17210,7 @@
                       "id": "e56jD7Ml",
                       "displayName": "Video",
                       "definitionId": "video",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "videoTitle": {
                           "key": "FdwpeSt6bn8LpSSV0pbtv",
@@ -15991,7 +17251,7 @@
                       "id": "51WBcL8X",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -16028,7 +17288,7 @@
                       "id": "WVvTAVCW",
                       "displayName": "Video 1",
                       "definitionId": "video",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "videoTitle": {
                           "key": "uTgCIxZc",
@@ -16069,7 +17329,7 @@
                       "id": "jkcCZDp5",
                       "displayName": "Heading 1",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -16106,7 +17366,7 @@
                       "id": "x1xIoh5c",
                       "displayName": "Video",
                       "definitionId": "video",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "videoTitle": {
                           "key": "jNBarAZvvExnBW0FccdXk",
@@ -16151,7 +17411,7 @@
               "id": "bjFoamKh",
               "displayName": "Video Carousel",
               "definitionId": "contentful-section",
-              "patternProperties": {},
+              "parameters": {},
               "variables": {
                 "cfVerticalAlignment": {
                   "type": "DesignValue",
@@ -16271,7 +17531,7 @@
                   "id": "6IJt4Yzz",
                   "displayName": "Section",
                   "definitionId": "section",
-                  "patternProperties": {},
+                  "parameters": {},
                   "variables": {
                     "background": {
                       "type": "DesignValue",
@@ -16307,7 +17567,7 @@
                       "id": "C1TcON0M",
                       "displayName": "Heading",
                       "definitionId": "heading",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "visualAppearance": {
                           "type": "DesignValue",
@@ -16343,7 +17603,7 @@
                     {
                       "id": "CzL11C45",
                       "definitionId": "carousel-video",
-                      "patternProperties": {},
+                      "parameters": {},
                       "variables": {
                         "slides": {
                           "path": "/9g-7kZ472XQBkhnml-mZ-/fields/slides/~locale",
@@ -16377,6 +17637,13 @@
           "3UNaYMj": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EiVrjhR": {
+            "sys": {
+              "id": "2Mhlh94AQ1PrQDyultyDeC",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -16580,6 +17847,13 @@
           "4rTEErM8": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "57l2NOzB": {
+            "sys": {
+              "id": "2Mhlh94AQ1PrQDyultyDeC",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -16801,6 +18075,13 @@
               "linkType": "Entry"
             }
           },
+          "OBD9ebsG": {
+            "sys": {
+              "id": "5bfkiF0mx4JQbUpf7xCWYg",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "OBu7LBgD": {
             "sys": {
               "id": "4SDvKKtx0qpCDwFTizoPVx",
@@ -16832,6 +18113,13 @@
           "PkMzRu3l": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "R7vOpqiB": {
+            "sys": {
+              "id": "49VdYaS7eknpZ0NJlPiL1X",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -17179,6 +18467,13 @@
               "linkType": "Entry"
             }
           },
+          "ou4SQXZP": {
+            "sys": {
+              "id": "49VdYaS7eknpZ0NJlPiL1X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "pIDJfntD": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -17189,6 +18484,13 @@
           "pnEVNJEY": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "pszAFJYF": {
+            "sys": {
+              "id": "5bfkiF0mx4JQbUpf7xCWYg",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -17263,6 +18565,13 @@
               "linkType": "Entry"
             }
           },
+          "u6GdJTjQ": {
+            "sys": {
+              "id": "49VdYaS7eknpZ0NJlPiL1X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "ubziaBYn": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
@@ -17326,6 +18635,13 @@
               "linkType": "Entry"
             }
           },
+          "z9WwOZHG": {
+            "sys": {
+              "id": "2Mhlh94AQ1PrQDyultyDeC",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "zibXm2hu": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -17372,6 +18688,7 @@
           },
           "CtWVJCR": {},
           "DMiqqWu": {},
+          "DeNUEmj": {},
           "E7Cjhbo": {},
           "EKQDsC5": {},
           "ESHDx-N": {
@@ -17458,6 +18775,9 @@
           },
           "WmoW8Tc": {},
           "Wz9SJiE": {},
+          "XK7rMUD": {
+            "value": "Action Block Collection sorted alphabetically (default)"
+          },
           "XonT3vx": {
             "value": "Horizontal With Image"
           },
@@ -17535,11 +18855,17 @@
               }
             }
           },
+          "pVPzc3-": {
+            "value": ""
+          },
           "rOJjuA1": {
             "value": false
           },
           "rtOw9NH": {
             "value": ""
+          },
+          "shs9eH4": {
+            "value": false
           },
           "sjc08rI": {
             "value": false
@@ -17547,6 +18873,7 @@
           "uaOANCd": {
             "value": "FAQ Accordion"
           },
+          "uzR0fY4": {},
           "vSKlRHP": {},
           "vwAdtQr": {
             "value": "Editorial Card 4"
@@ -17621,6 +18948,9 @@
           "5wXRsLJn": {},
           "640trRtn": {},
           "65wUpmTS": {},
+          "6U7rCA9s": {
+            "value": "Action Block Collection with hidden images"
+          },
           "6axn1isp": {},
           "6dweZgN5": {
             "value": false
@@ -17648,6 +18978,9 @@
           },
           "7WPQbEGK": {
             "value": ""
+          },
+          "8BCQn7kU": {
+            "value": "People Collection"
           },
           "8FL8qMqw": {
             "value": "Hero Banner with Background Image"
@@ -17711,6 +19044,9 @@
           "DEtHVoSd": {
             "value": "Link"
           },
+          "E0gqtvHC": {
+            "value": "Logo Collection sorted alphabetically (default)"
+          },
           "EHyIYlxz": {},
           "EPmvg0WJ": {},
           "ERvTdJXH": {
@@ -17722,6 +19058,9 @@
           "FS1U8GfG": {},
           "Fa2xfSTa": {
             "value": "Action Block Title"
+          },
+          "FjaNJXPA": {
+            "value": "People Collection sorted alphabetically (default)"
           },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
@@ -17792,6 +19131,7 @@
           "MAPxIo7U": {},
           "Mo4S1GHf": {},
           "NTMvp4T3": {},
+          "NVkFhzl1": {},
           "NhzwQJMw": {
             "value": "https://code.org"
           },
@@ -17813,8 +19153,14 @@
           "P8671GK5": {
             "value": false
           },
+          "PZglZYB1": {
+            "value": "Logo Collection sorted manually"
+          },
           "PeTivMde": {
             "value": "Link"
+          },
+          "PepR4hzX": {
+            "value": ""
           },
           "PhNIy5V6": {},
           "PyeBaTT5": {
@@ -17835,6 +19181,10 @@
           },
           "SGrm6TeM": {},
           "SWiUA59D": {},
+          "SXPs2oUx": {},
+          "Synpi6Ji": {
+            "value": "Action Block Collection"
+          },
           "T0ieOlqB": {},
           "T1XSxOfG": {},
           "T6anbs8T": {},
@@ -17846,6 +19196,9 @@
             "value": "Three across"
           },
           "TnZjwBke": {
+            "value": false
+          },
+          "TtMDehnh": {
             "value": false
           },
           "U3p4tTyP": {
@@ -17861,6 +19214,9 @@
             "value": "Pattern Header"
           },
           "UmzzoZTw": {},
+          "UuNfyogY": {
+            "value": "Action Block Collection sorted manually"
+          },
           "V8YHlFRp": {
             "value": "Container"
           },
@@ -17956,8 +19312,14 @@
           "byHQXRz8": {
             "value": false
           },
+          "byJD1LER": {
+            "value": ""
+          },
           "cGlkfKmX": {
             "value": "In partnership with"
+          },
+          "cJ416zZF": {
+            "value": false
           },
           "ccFVr1cJ": {},
           "cex92Z12": {
@@ -18071,6 +19433,9 @@
           "mJJmzfsA": {},
           "mp03r8eT": {},
           "n7OE6ZPP": {},
+          "n8TwgioS": {
+            "value": "People Collection sorted manually"
+          },
           "nBnzzrrg": {
             "value": "External Link L"
           },
@@ -18082,6 +19447,9 @@
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
           "oPc8lo0F": {},
+          "oRgnef43": {
+            "value": "People Collection with hidden images"
+          },
           "oT3G3H6n": {
             "value": ""
           },
@@ -18130,6 +19498,9 @@
           "st5uoXAq": {
             "value": "Action Block Title"
           },
+          "tYSB9zEq": {
+            "value": "Logo Collection"
+          },
           "tgfqSQxT": {
             "value": "Overline Primary Large"
           },
@@ -18168,9 +19539,11 @@
           "xauf2a1R": {
             "value": false
           },
+          "y1w4Y1O0": {},
           "yMDRjVcG": {
             "value": false
           },
+          "yvK1RSIA": {},
           "yzVjh0Ni": {
             "value": ""
           },

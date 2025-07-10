@@ -169,6 +169,7 @@ class Ability
       can :get_level_source, UserLevel
 
       can :evaluate, :openai_evaluate
+      can :evaluate_section, :openai_evaluate
 
       # all signed in users can access the aichat_request endpoint
       # additional permission logic lives in the controller itself

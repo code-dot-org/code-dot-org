@@ -22,6 +22,7 @@ import {
   isCompletedChatMessage,
   PendingChatMessage,
   ChatAsset,
+  SaveError,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -49,6 +50,8 @@ const initialState: AichatState = {
   stagedFilesAlert: undefined,
   hasSentMessage: false,
   hasUpdatedCustomizations: false,
+  saveError: undefined,
+  showResetMessage: false,
 };
 
 const aichatSlice = createSlice({
@@ -213,10 +216,10 @@ const aichatSlice = createSlice({
         ),
       };
 
-      state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      state.showResetMessage = true;
     },
     setSavedAiCustomizations: (
       state,
@@ -238,6 +241,9 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations = updatedAiCustomizations;
+      // Clear save error and reset message, if any.
+      state.saveError = undefined;
+      state.showResetMessage = false;
     },
     setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
       state: AichatState,
@@ -270,6 +276,8 @@ const aichatSlice = createSlice({
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
+      // Clear save error, if any.
+      state.saveError = undefined;
     },
     endSave(state) {
       state.saveInProgress = false;
@@ -318,6 +326,9 @@ const aichatSlice = createSlice({
     clearStagedFiles(state) {
       state.stagedFiles = [];
       state.stagedFilesAlert = undefined;
+    },
+    setSaveError(state, action: PayloadAction<SaveError | undefined>) {
+      state.saveError = action.payload;
     },
   },
 });
@@ -375,4 +386,5 @@ export const {
   clearStagedFiles,
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
+  setSaveError,
 } = aichatSlice.actions;

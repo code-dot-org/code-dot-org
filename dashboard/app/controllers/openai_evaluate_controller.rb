@@ -30,9 +30,9 @@ class OpenaiEvaluateController < ApplicationController
     authorize! :manage, section
 
     begin
-      unit = Unit.find(evaluate_section_params[:unit_id])
+      unit = Unit.find_by(name: evaluate_section_params[:unit_name])
     rescue ActiveRecord::RecordNotFound
-      return render status: :not_found, json: "Unit with id #{evaluate_section_params[:unit_id]}"
+      return render status: :not_found, json: "Unit with name #{evaluate_section_params[:unit_name]}"
     end
 
     OpenaiEvaluateHelper.evaluate_section(
@@ -48,6 +48,6 @@ class OpenaiEvaluateController < ApplicationController
   end
 
   private def evaluate_section_params
-    params.transform_keys(&:underscore).permit(:unit_id, :section_id)
+    params.transform_keys(&:underscore).permit(:unit_name, :section_id)
   end
 end

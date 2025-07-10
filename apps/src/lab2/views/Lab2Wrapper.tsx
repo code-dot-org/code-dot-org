@@ -48,8 +48,9 @@ export interface Lab2WrapperProps {
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
-  const {isBlockedAbuse, projectSharingDisabled} = useAppSelector(
-    state => state.lab
+  const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
+  const projectSharingDisabled = useAppSelector(
+    state => state.lab.projectSharingDisabled
   );
   const dispatch = useAppDispatch();
   const isProjectValidator = useAppSelector(state =>

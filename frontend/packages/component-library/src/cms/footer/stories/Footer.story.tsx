@@ -97,16 +97,17 @@ const defaultArgs: FooterProps = {
       icon: {iconFamily: 'brands', iconName: 'medium'},
     },
   ],
-  imageLinks: [
-    {
-      key: 'poweredByAWS',
-      label: 'Powered by AWS Cloud Computing',
-      href: 'https://aws.amazon.com/what-is-cloud-computing',
-      image: {
-        src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
-      },
-    },
-  ],
+  // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
+  // imageLinks: [
+  //   {
+  //     key: 'poweredByAWS',
+  //     label: 'Powered by AWS Cloud Computing',
+  //     href: 'https://aws.amazon.com/what-is-cloud-computing',
+  //     image: {
+  //       src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
+  //     },
+  //   },
+  // ],
   languages: [
     {value: 'en-US', text: 'English'},
     {value: 'es', text: 'Spanish'},

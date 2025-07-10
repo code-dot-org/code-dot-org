@@ -1,6 +1,6 @@
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect} from 'react';
+import React, {memo, useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
@@ -19,9 +19,11 @@ import {
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -31,6 +33,7 @@ import {
   installFunctionBlocks,
 } from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import {Trigger} from '../constants';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import MusicPlayer from '../player/MusicPlayer';
@@ -57,11 +60,14 @@ import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
 
+const exemplarPlayerInsideInstructions =
+  AppConfig.getValue('exemplar-player-bottom') !== 'true';
+
 interface MusicLabViewProps {
   blocklyDivId: string;
   setPlaying: (playing: boolean) => void;
   playTrigger: (id: string) => void;
-  hasTrigger: (id: string) => boolean;
+  triggers: Trigger[];
   getCurrentPlayheadPosition: () => number;
   updateHighlightedBlocks: () => void;
   undo: () => void;
@@ -83,7 +89,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   blocklyDivId,
   setPlaying,
   playTrigger,
-  hasTrigger,
+  triggers,
   getCurrentPlayheadPosition,
   updateHighlightedBlocks,
   undo,
@@ -130,13 +136,6 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
-  const currentPlayheadPosition = useAppSelector(
-    state => state.music.currentPlayheadPosition
-  );
-  const startingPlayheadPosition = useAppSelector(
-    state => state.music.startingPlayheadPosition
-  );
-  const lastMeasure = useAppSelector(state => state.music.lastMeasure);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -146,6 +145,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
+  const useNewInstructions = experiments.isEnabled(
+    experiments.LAB2_INSTRUCTIONS_V2
+  );
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -239,16 +241,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     progressManager,
   ]);
 
-  // Stop the song if the playhead is past the desired end.
-  useEffect(() => {
-    if (!isPlaying) {
-      return;
-    }
-
-    if (lastMeasure === undefined) {
-      return;
-    }
-
+  const playheadPastEnd = useAppSelector(state => {
+    const {startingPlayheadPosition, lastMeasure, currentPlayheadPosition} =
+      state.music;
     // We are done playing once the playhead reaches the end of the last scheduled sound.
     // But if the starting playhead position has been set beyond that point, we'll use that
     // instead, so that at least a bit of playback can be shown.
@@ -258,17 +253,19 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     // the user wants to trigger another sound.
     const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 2;
 
-    if (currentPlayheadPosition >= stopMeasure + extraMeasures) {
+    return currentPlayheadPosition >= stopMeasure + extraMeasures;
+  });
+
+  // Stop the song if the playhead is past the desired end.
+  useEffect(() => {
+    if (!isPlaying) {
+      return;
+    }
+
+    if (playheadPastEnd) {
       setPlaying(false);
     }
-  }, [
-    blocklyWorkspace,
-    currentPlayheadPosition,
-    isPlaying,
-    lastMeasure,
-    setPlaying,
-    startingPlayheadPosition,
-  ]);
+  }, [isPlaying, setPlaying, playheadPastEnd]);
 
   const resetValidation = useCallback(
     () => progressManager?.resetValidation(),
@@ -294,126 +291,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [blocklyWorkspace]
   );
 
-  // TODO: Rendering instructions with a function causes frequent re-renders.
-  // Pull this out into a component and/or drop support for "top" position
-  const renderInstructions = useCallback(
-    (position: InstructionsPosition) => {
-      const exemplarPlayerInsideInstructions =
-        AppConfig.getValue('exemplar-player-bottom') !== 'true';
-
-      const exemplarPlayer = exemplarSettings?.playerEnabled &&
-        exemplarSources &&
-        !isEditingExemplar && (
-          <ExemplarPlayerView
-            playbackEvents={exemplarPlaybackEvents}
-            title={exemplarSettings.playerTitle!}
-            player={player}
-            insideInstructions={exemplarPlayerInsideInstructions}
-          />
-        );
-
-      return (
-        <div
-          id="instructions-area"
-          className={classNames(
-            moduleStyles.instructionsArea,
-            position === InstructionsPosition.TOP
-              ? moduleStyles.instructionsTop
-              : moduleStyles.instructionsSide
-          )}
-        >
-          <PanelContainer
-            id="instructions-panel"
-            headerContent={musicI18n.panelHeaderInstructions()}
-            hideHeaders={hideHeaders}
-          >
-            <Instructions
-              isRunning={isPlaying}
-              layout={
-                position !== InstructionsPosition.TOP
-                  ? 'vertical'
-                  : 'horizontal'
-              }
-              handleInstructionsTextClick={onInstructionsTextClick}
-              bottomComponent={
-                exemplarPlayerInsideInstructions && exemplarPlayer
-              }
-              hasRun={hasRun}
-              hasEdited={hasEdited}
-            />
-            {!exemplarPlayerInsideInstructions && exemplarPlayer}
-          </PanelContainer>
-        </div>
-      );
-    },
-    [
-      hasRun,
-      hasEdited,
-      hideHeaders,
-      exemplarSettings,
-      exemplarSources,
-      isEditingExemplar,
-      onInstructionsTextClick,
-      exemplarPlaybackEvents,
-      player,
-      isPlaying,
-    ]
-  );
-
-  const renderPlayArea = useCallback(
-    (timelineAtTop: boolean) => {
-      return (
-        <div
-          id="play-area"
-          className={classNames(
-            moduleStyles.playArea,
-            timelineAtTop
-              ? moduleStyles.playAreaTop
-              : moduleStyles.playAreaBottom
-          )}
-        >
-          <div id="controls-area" className={moduleStyles.controlsArea}>
-            <PanelContainer
-              id="controls-panel"
-              headerContent={musicI18n.panelHeaderControls()}
-              hideHeaders={hideHeaders}
-            >
-              <Controls
-                setPlaying={setPlaying}
-                playTrigger={playTrigger}
-                hasTrigger={hasTrigger}
-                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-                enableSkipControls={
-                  AppConfig.getValue('skip-controls-enabled') === 'true'
-                }
-              />
-            </PanelContainer>
-          </div>
-
-          <div
-            dir="ltr"
-            id="timeline-area"
-            className={moduleStyles.timelineArea}
-          >
-            <PanelContainer
-              id="timeline-panel"
-              headerContent={musicI18n.panelHeaderTimeline()}
-              hideHeaders={hideHeaders}
-            >
-              <Timeline
-                allowChangeStartingPlayheadPosition={
-                  (levelProperties.levelData as MusicLevelData | undefined)
-                    ?.allowChangeStartingPlayheadPosition
-                }
-                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
-              />
-            </PanelContainer>
-          </div>
-        </div>
-      );
-    },
-    [setPlaying, playTrigger, hasTrigger, hideHeaders, levelProperties]
-  );
+  const showExemplarPlayer =
+    exemplarSettings?.playerEnabled && exemplarSources && !isEditingExemplar;
 
   const showAdvancedControls =
     AppConfig.getValue('player') === 'tonejs' &&
@@ -435,25 +314,87 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
 
   return (
-    <div id="music-lab" className={moduleStyles.musicLab}>
+    <div
+      id="music-lab"
+      className={classNames(
+        moduleStyles.musicLab,
+        timelineAtTop && moduleStyles.reverse
+      )}
+    >
       {allowPackSelection && <PackDialog player={player} />}
-
-      {showInstructions &&
-        instructionsPosition === InstructionsPosition.TOP &&
-        renderInstructions(InstructionsPosition.TOP)}
-
-      {timelineAtTop && !isToolboxMode && renderPlayArea(true)}
-
       <div
         id="work-area"
         className={classNames(moduleStyles.workArea, {
           // Allow full height when the play area is hidden.
           [moduleStyles.toolboxMode]: isToolboxMode,
+          [moduleStyles.reverse]:
+            instructionsPosition === InstructionsPosition.RIGHT,
         })}
       >
-        {showInstructions &&
-          instructionsPosition === InstructionsPosition.LEFT &&
-          renderInstructions(InstructionsPosition.LEFT)}
+        {showInstructions && (
+          <div
+            id="instructions-area"
+            className={classNames(
+              moduleStyles.instructionsArea,
+              moduleStyles.instructionsSide
+            )}
+          >
+            <PanelContainer
+              id="instructions-panel"
+              headerContent={musicI18n.panelHeaderInstructions()}
+              hideHeaders={hideHeaders}
+            >
+              {useNewInstructions ? (
+                <InstructionsV2
+                  isRunning={isPlaying}
+                  handleInstructionsTextClick={onInstructionsTextClick}
+                  bottomComponent={
+                    exemplarPlayerInsideInstructions &&
+                    showExemplarPlayer && (
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
+                    )
+                  }
+                  hasRun={hasRun}
+                  hasEdited={hasEdited}
+                  fixedDarkBackground={true}
+                  overrideTheme={'Light'}
+                  levelProperties={levelProperties}
+                />
+              ) : (
+                <Instructions
+                  isRunning={isPlaying}
+                  handleInstructionsTextClick={onInstructionsTextClick}
+                  bottomComponent={
+                    exemplarPlayerInsideInstructions &&
+                    showExemplarPlayer && (
+                      <ExemplarPlayerView
+                        playbackEvents={exemplarPlaybackEvents}
+                        title={exemplarSettings.playerTitle!}
+                        player={player}
+                        insideInstructions={exemplarPlayerInsideInstructions}
+                      />
+                    )
+                  }
+                  hasRun={hasRun}
+                  hasEdited={hasEdited}
+                />
+              )}
+              {!exemplarPlayerInsideInstructions && showExemplarPlayer && (
+                <ExemplarPlayerView
+                  playbackEvents={exemplarPlaybackEvents}
+                  title={exemplarSettings.playerTitle!}
+                  player={player}
+                  insideInstructions={exemplarPlayerInsideInstructions}
+                />
+              )}
+            </PanelContainer>
+          </div>
+        )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
           <PanelContainer
@@ -522,15 +463,51 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             )}
           </PanelContainer>
         </div>
-
-        {showInstructions &&
-          instructionsPosition === InstructionsPosition.RIGHT &&
-          renderInstructions(InstructionsPosition.RIGHT)}
       </div>
 
-      {!timelineAtTop && !isToolboxMode && renderPlayArea(false)}
+      {!isToolboxMode && (
+        <div id="play-area" className={classNames(moduleStyles.playArea)}>
+          <div id="controls-area" className={moduleStyles.controlsArea}>
+            <PanelContainer
+              id="controls-panel"
+              headerContent={musicI18n.panelHeaderControls()}
+              hideHeaders={hideHeaders}
+            >
+              <Controls
+                setPlaying={setPlaying}
+                playTrigger={playTrigger}
+                triggers={triggers}
+                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+                enableSkipControls={
+                  AppConfig.getValue('skip-controls-enabled') === 'true'
+                }
+              />
+            </PanelContainer>
+          </div>
+
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
+            <PanelContainer
+              id="timeline-panel"
+              headerContent={musicI18n.panelHeaderTimeline()}
+              hideHeaders={hideHeaders}
+            >
+              <Timeline
+                allowChangeStartingPlayheadPosition={
+                  (levelProperties.levelData as MusicLevelData | undefined)
+                    ?.allowChangeStartingPlayheadPosition
+                }
+                isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+              />
+            </PanelContainer>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default MusicLabView;
+export default memo(MusicLabView);
