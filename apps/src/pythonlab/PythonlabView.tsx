@@ -78,14 +78,11 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {
-    source,
-    setProject,
-    startSources,
-    projectVersion,
-    validationFile,
-    labConfig,
-  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
+  const {startSources, validationFile, labConfig} = useSource(
+    DEFAULT_PROJECT,
+    levelProperties,
+    initialSources
+  );
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -95,7 +92,11 @@ const PythonlabView: React.FunctionComponent<
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
-
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+  const hasSource = !!source;
   const isAiTutor2Enabled =
     levelProperties.aiTutor2Available ||
     queryParams('show-ai-tutor2') === 'true';
@@ -245,16 +246,13 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {source && (
+      {hasSource && (
         <Codebridge
-          source={source}
           config={config}
-          setProject={setProject}
           setConfig={setConfig}
           startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
-          projectVersion={projectVersion}
           labConfig={labConfig}
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
