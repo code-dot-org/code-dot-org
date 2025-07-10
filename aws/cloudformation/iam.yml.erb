@@ -1003,7 +1003,7 @@ roles.each do |name, config| %>
             Resource:
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*"
               - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*"
-<% if environment_type == 'test' %>
+<% if environment_type != 'production' %>
           - Sid: AllowSSMMessagesForECSExec
             Effect: Allow
             Action:

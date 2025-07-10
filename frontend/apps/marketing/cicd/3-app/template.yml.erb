@@ -318,6 +318,21 @@ Resources:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
       PermissionsBoundary: !Ref RoleBoundary
+      Policies:
+        - !If
+          - IsProductionEnvironment
+          - !Ref AWS::NoValue
+          - PolicyName: ECSExecPolicy
+            PolicyDocument:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - ssmmessages:CreateControlChannel
+                    - ssmmessages:CreateDataChannel
+                    - ssmmessages:OpenControlChannel
+                    - ssmmessages:OpenDataChannel
+                  Resource: "*"
 
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
