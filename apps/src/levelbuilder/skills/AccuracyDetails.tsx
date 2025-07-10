@@ -5,9 +5,9 @@ import './skills.css';
 const AccuracyPercent: React.FC<{percentAccurate: number}> = ({
   percentAccurate,
 }) => (
-  <div style={{marginTop: '16px', fontWeight: 'bold'}}>
-    Your accuracy is at {percentAccurate}%
-  </div>
+  <ul>
+    <li>AI evaluations were {percentAccurate}% accurate</li>
+  </ul>
 );
 
 interface AccuracyDetailsProps {
@@ -41,17 +41,13 @@ const AccuracyDetails: React.FC<AccuracyDetailsProps> = ({evaluations}) => {
         {open ? '▼' : '▶'} View Evaluation Results
       </span>
       {open && (
-        <div id="system-prompt-text" className="view-system-prompt__text">
-          <AccuracyPercent percentAccurate={percentAccurate} />
+        <div id="accuracy-results" className="accuracy-results-box">
           {evaluations.length > 0 && (
-            <div style={{marginTop: '24px'}}>
+            <div>
               <h3>Evaluation Results</h3>
-              <div style={{overflowX: 'auto'}}>
-                <table
-                  border={1}
-                  cellPadding={6}
-                  style={{borderCollapse: 'collapse', minWidth: '600px'}}
-                >
+              <AccuracyPercent percentAccurate={percentAccurate} />
+              <div className="accuracy-results-table-wrapper">
+                <table className="accuracy-results-table">
                   <thead>
                     <tr>
                       {Object.keys(evaluations[0]).map(key => (
@@ -61,24 +57,20 @@ const AccuracyDetails: React.FC<AccuracyDetailsProps> = ({evaluations}) => {
                   </thead>
                   <tbody>
                     {evaluations.map((row, idx) => {
-                      let rowStyle = {};
+                      let className = 'green-row';
                       if (
-                        row.humanEvaluation &&
-                        row.aiEvaluation &&
-                        row.humanEvaluation === row.aiEvaluation
-                      ) {
-                        rowStyle = {backgroundColor: '#c8e6c9'};
-                      } else if (
                         row.humanEvaluation &&
                         row.aiEvaluation &&
                         row.humanEvaluation !== row.aiEvaluation
                       ) {
-                        rowStyle = {backgroundColor: '#ffcdd2'};
+                        className = 'red-row';
                       }
                       return (
-                        <tr key={idx} style={rowStyle}>
+                        <tr key={idx}>
                           {Object.keys(evaluations[0]).map(key => (
-                            <td key={key}>{String(row[key])}</td>
+                            <td key={key} className={className}>
+                              {String(row[key])}
+                            </td>
                           ))}
                         </tr>
                       );

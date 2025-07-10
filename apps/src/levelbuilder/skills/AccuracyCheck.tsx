@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
+import './skills.css';
 
 import {
   evaluationFromOpenAI,
@@ -194,13 +195,13 @@ const AccuracyCheck: React.FC<{
         <Button
           text="Download CSV"
           onClick={downloadCSV}
-          disabled={aiEvaluatedAnswers.length === 0}
+          disabled={aiEvaluatedAnswers.length === 0 || evaluationPending}
         />
       </div>
       {aiEvaluatedAnswers.length > 0 &&
         !evaluationPending &&
         questionAiEvaluatable && (
-          <div style={{marginTop: '12px'}}>
+          <div className="evaluation-complete-notification">
             🎉 Evaluation complete
             <AccuracyDetails evaluations={aiEvaluatedAnswers} />
           </div>
