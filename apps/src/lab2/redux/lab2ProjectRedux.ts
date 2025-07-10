@@ -275,7 +275,7 @@ const projectSlice = createSlice({
     },
     createNewFolder(
       state,
-      action: PayloadAction<{folderName: string; parentId?: string}>
+      action: PayloadAction<{folderName: string; parentId?: FolderId}>
     ) {
       if (state.projectSources?.source) {
         state.projectSources = {

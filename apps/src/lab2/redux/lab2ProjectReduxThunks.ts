@@ -30,6 +30,10 @@ import {
   renameFolder,
   setLastSavedLabConfig,
   deleteFile,
+  rearrangeFiles,
+  activateFile,
+  closeFile,
+  toggleOpenFolder,
 } from './lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './lab2ReduxSelectors';
 
@@ -171,6 +175,28 @@ export const setFileTypeThunk = (
   };
 };
 
+export const setActiveFileThunk = (
+  fileId: FileId,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(activateFile(fileId));
+    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+  };
+};
+
+export const closeFileThunk = (
+  fileId: FileId,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(closeFile(fileId));
+    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+  };
+};
+
 export const deleteFileThunk = (
   fileId: FileId,
   forceSave: boolean = false,
@@ -218,6 +244,17 @@ export const createNewFolderThunk = (
   };
 };
 
+export const toggleOpenFolderThunk = (
+  folderId: FolderId,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(toggleOpenFolder(folderId)); // Assuming this toggles open/close
+    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+  };
+};
+
 export const deleteFolderThunk = (
   folderId: FolderId,
   forceSave: boolean = false,
@@ -237,6 +274,17 @@ export const renameFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(renameFolder({folderId, newName}));
+    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+  };
+};
+
+export const rearrangeFilesThunk = (
+  fileIds: FileId[],
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(rearrangeFiles(fileIds));
     saveProjectIfEditable(getState, forceSave, forceNewVersion);
   };
 };
