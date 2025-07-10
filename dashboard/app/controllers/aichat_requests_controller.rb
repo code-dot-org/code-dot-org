@@ -51,7 +51,7 @@ class AichatRequestsController < ApplicationController
         new_message: params[:newMessage],
         level_id: context[:currentLevelId],
         script_id: context[:scriptId],
-        project_id: get_project_id(context) || '1'
+        project_id: get_project_id(context)
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
