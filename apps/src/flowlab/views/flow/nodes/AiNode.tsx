@@ -14,6 +14,12 @@ import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
 
 import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
+// This node asks the aichat service a question entered in its input field, and
+// sends the response to its output handle as text.  It acepts optional context
+// via any text sent to its input handle.  It makes a new request whenever
+// shift-enter is pressed while its input has focus, and whenever its input
+// context changes.
+
 function AiNode({
   id,
   data,

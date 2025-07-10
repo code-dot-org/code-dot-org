@@ -7,6 +7,9 @@ import {
 } from '@xyflow/react';
 import React, {memo, useCallback} from 'react';
 
+// This node sends the content of its input field to its output handle
+// when shift-enter is pressed while it has focus.
+
 function TextNode({
   id,
   data,

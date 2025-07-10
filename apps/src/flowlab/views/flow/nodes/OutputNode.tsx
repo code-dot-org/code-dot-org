@@ -8,6 +8,8 @@ import React, {memo} from 'react';
 
 import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
+// This node simply displays any text sent to its input handle.
+
 function OutputNode() {
   const connections = useNodeConnections({
     handleType: 'target',

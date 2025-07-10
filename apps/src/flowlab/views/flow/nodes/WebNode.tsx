@@ -11,6 +11,9 @@ import React, {memo, useEffect} from 'react';
 
 import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
+// This node renders HTML sent to its input node as text in an iframe.
+// It is able to send a message received from its iframe to its output handle.
+
 function WebNode({id, selected}: NodeProps) {
   const connections = useNodeConnections({
     handleType: 'target',

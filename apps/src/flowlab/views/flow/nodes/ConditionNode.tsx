@@ -11,6 +11,11 @@ import React, {memo, useEffect} from 'react';
 
 import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
+// This node compares the text sent to its input handle to the text in its
+// text field, and sends a comparison result to its output handle as text.
+// The intent is that execution of the chain does not continue in the negative
+// case.
+
 function ConditionNode({id, data}: NodeProps<Node<{checkText: string}>>) {
   const {updateNodeData} = useReactFlow();
   const connections = useNodeConnections({
