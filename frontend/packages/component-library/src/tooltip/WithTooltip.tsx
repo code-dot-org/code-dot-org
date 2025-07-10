@@ -15,6 +15,8 @@ import {createPortal} from 'react-dom';
 import {updatePositionedElementStyles} from '@/common/helpers';
 import {ComponentPlacementDirection} from '@/common/types';
 
+import {useTheme} from '../common/contexts';
+
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 
 // Define the tail offset and length values
@@ -107,6 +109,13 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         }),
       [nodePosition, tailLength, actualDirection],
     );
+
+    try {
+      const {theme} = useTheme();
+      console.warn('useTheme() SUCCESS with theme:', theme);
+    } catch (e) {
+      console.error('useTheme FAILURE with error:', e);
+    }
 
     // Effect to update tooltip styles when the tooltip is shown
     useEffect(() => {

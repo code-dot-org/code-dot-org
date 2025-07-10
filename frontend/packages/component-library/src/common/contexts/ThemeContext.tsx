@@ -2,6 +2,8 @@ import {createContext, useContext, useState, ReactNode} from 'react';
 
 export type Theme = 'Light' | 'Dark';
 
+console.error('ThemeContext created in:', __filename);
+
 interface ThemeContextProps {
   /** Theme value */
   theme: Theme;
