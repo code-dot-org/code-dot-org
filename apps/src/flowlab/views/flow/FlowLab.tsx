@@ -26,6 +26,8 @@ import TextNode from './nodes/TextNode';
 import WebNode from './nodes/WebNode';
 import Sidebar from './Sidebar';
 
+import './ReactFlow.css';
+
 const nodeTypes = {
   ai: AiNode,
   condition: ConditionNode,
