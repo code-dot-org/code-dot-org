@@ -10,7 +10,6 @@ import {
   getSelectedCourseId,
   getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
