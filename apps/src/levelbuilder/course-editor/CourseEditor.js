@@ -45,9 +45,10 @@ class CourseEditor extends Component {
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
-    initialNumberedUnits: PropTypes.string.isRequired,
+    initialNumberedUnits: PropTypes.oneOf([null, 'auto', 'custom']).isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -64,9 +65,13 @@ class CourseEditor extends Component {
   constructor(props) {
     super(props);
 
-    let numberedUnits = this.props.initialNumberedUnits;
-    if (typeof numberedUnits === 'boolean') {
-      numberedUnits = numberedUnits ? 'auto' : 'none';
+    let unitPrefixes;
+    if (this.props.initialUnitPrefixes === undefined) {
+      unitPrefixes = this.props.initialUnitsInCourse.map((_, index) =>
+        (index + 1).toString()
+      );
+    } else {
+      unitPrefixes = this.props.initialUnitPrefixes;
     }
 
     this.state = {
@@ -81,12 +86,13 @@ class CourseEditor extends Component {
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
-      numberedUnits: numberedUnits,
+      numberedUnits: this.props.initialNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       savedFamilyName: this.props.initialFamilyName,
       savedVersionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
+      unitPrefixes: unitPrefixes,
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
@@ -120,6 +126,7 @@ class CourseEditor extends Component {
       instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse,
+      unit_prefixes: this.state.unitPrefixes,
     };
 
     if (this.props.teacherResources) {
@@ -226,6 +233,7 @@ class CourseEditor extends Component {
       versionYear,
       pilotExperiment,
       unitsInCourse,
+      unitPrefixes,
       publishedState,
       instructionType,
       instructorAudience,
@@ -427,6 +435,9 @@ class CourseEditor extends Component {
             <CourseUnitsEditor
               inputStyle={styles.input}
               numberedUnits={numberedUnits}
+              intialUnitPrefixes={this.props.initialUnitPrefixes}
+              unitPrefixes={unitPrefixes}
+              updateUnitPrefixes={unitPrefixes => this.setState({unitPrefixes})}
               initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>

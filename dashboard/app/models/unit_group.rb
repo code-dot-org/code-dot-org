@@ -77,7 +77,7 @@ class UnitGroup < ApplicationRecord
 
   serialized_attrs %w(
     has_verified_resources
-    has_numbered_units
+    numbered_units
     family_name
     version_year
     pilot_experiment
@@ -309,7 +309,7 @@ class UnitGroup < ApplicationRecord
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
-        has_numbered_units: has_numbered_units?,
+        numbered_units: numbered_units,
         course_versions: summarize_course_versions(user, locale_code),
         show_assign_button: course_assignable?(user),
         announcements: announcements,
@@ -330,7 +330,7 @@ class UnitGroup < ApplicationRecord
         unit_group_unit = unit.unit_group_units.find {|ugu| ugu.unit_group == self}
         unit.summarize_for_rollup(user, unit_group_unit: unit_group_unit)
       end,
-      has_numbered_units: has_numbered_units?
+      numbered_units: numbered_units,
     }
   end
 
