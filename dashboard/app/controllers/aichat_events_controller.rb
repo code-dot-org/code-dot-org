@@ -1,5 +1,5 @@
 class AichatEventsController < ApplicationController
-  #authorize_resource class: false
+  authorize_resource class: false
 
   # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat_events/log_chat_event
@@ -53,7 +53,7 @@ class AichatEventsController < ApplicationController
     level_id = params[:levelId]
     user_id = params[:userId].to_i
     unless can_view_chat_history?(user_id)
-      #return render(status: :forbidden, json: {error: "Access denied for chat history."})
+      return render(status: :forbidden, json: {error: "Access denied for chat history."})
     end
 
     aichat_events = AichatEvent.where(user_id: user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|

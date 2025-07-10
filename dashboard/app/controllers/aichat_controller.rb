@@ -1,5 +1,5 @@
 class AichatController < ApplicationController
-  #authorize_resource class: false
+  authorize_resource class: false
 
   # GET /aichat/user_has_access
   def user_has_access
