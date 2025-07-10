@@ -1,12 +1,5 @@
 import {FileId, FolderId} from '@codebridge/types';
-import {
-  PayloadAction,
-  ThunkAction,
-  createAsyncThunk,
-  createSlice,
-} from '@reduxjs/toolkit';
-import {isEqual} from 'lodash';
-import {AnyAction} from 'redux';
+import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
 import {
   LabConfig,
@@ -14,10 +7,7 @@ import {
   ProjectSources,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
-import {RootState} from '@cdo/apps/types/redux';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import Lab2Registry from '../Lab2Registry';
 import {
   activateFileHelper,
   closeFileHelper,
@@ -26,8 +16,6 @@ import {
   deleteFileHelper,
   deleteFolderHelper,
 } from '../utils/multiFileSourceEditUtils';
-
-import {isReadOnlyWorkspace} from './lab2ReduxSelectors';
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
@@ -46,118 +34,6 @@ const initialState: Lab2ProjectState = {
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
 };
-
-// THUNKS
-
-// Store the project source in the redux store and tell the project manager
-// to save it.
-export const setAndSaveProjectSources = (
-  projectSources: ProjectSources,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return dispatch => {
-    dispatch(projectSlice.actions.setProjectSource(projectSources));
-    dispatch(
-      projectSlice.actions.setLastSavedLabConfig(projectSources.labConfig)
-    );
-    if (Lab2Registry.getInstance().getProjectManager()) {
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(projectSources, forceSave, forceNewVersion);
-    }
-  };
-};
-
-export const setAndSaveSource = (
-  source: MultiFileSource,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(setSource(source));
-    const projectSources = getState().lab2Project.projectSources;
-    if (Lab2Registry.getInstance().getProjectManager() && projectSources) {
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(projectSources, forceSave, forceNewVersion);
-    }
-  };
-};
-
-function saveProjectIfEditable(
-  getState: () => RootState,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-) {
-  const projectSources = getState().lab2Project.projectSources;
-  const isReadOnly = isReadOnlyWorkspace(getState());
-  if (
-    Lab2Registry.getInstance().getProjectManager() &&
-    projectSources &&
-    !isReadOnly
-  ) {
-    Lab2Registry.getInstance()
-      .getProjectManager()
-      ?.save(projectSources, forceSave, forceNewVersion);
-  }
-}
-
-export const loadVersion = createAsyncThunk(
-  'lab2Project/loadVersion',
-  async (
-    payload: {versionId: string; startSources: ProjectSources},
-    thunkAPI
-  ) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      // We need to ensure we save the existing project before loading a new one.
-      await projectManager.flushSave();
-      // Fall back to start source if we can't load the version.
-      const sources =
-        (await projectManager.loadSources(payload.versionId)) ||
-        payload.startSources;
-      thunkAPI.dispatch(setPreviousVersionSource(sources));
-    }
-  }
-);
-
-export const previewStartSources = createAsyncThunk(
-  'lab2Project/previewStartSources',
-  async (payload: {startSources: ProjectSources}, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      // We need to ensure we save the existing project before loading the start source.
-      await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
-    }
-  }
-);
-
-export const resetToCurrentVersion = createAsyncThunk(
-  'lab2Project/resetToActiveVersion',
-  async (_, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      const sources = await projectManager.loadSources();
-      thunkAPI.dispatch(setProjectSource(sources));
-      thunkAPI.dispatch(setViewingOldVersion(false));
-    }
-  }
-);
-
-export const changeProjectType = createAsyncThunk<
-  void,
-  {newSources: ProjectSources},
-  {dispatch: AppDispatch; state: RootState}
->('lab2Project/changeProjectType', async (payload, thunkAPI) => {
-  const projectManager = Lab2Registry.getInstance().getProjectManager();
-  if (projectManager) {
-    // We need to ensure we save the existing project before loading a new one.
-    await projectManager.flushSave();
-    thunkAPI.dispatch(setAndSaveProjectSources(payload.newSources, true, true));
-  }
-});
 
 // SLICE
 
@@ -531,6 +407,7 @@ export const {
   deleteFolder,
   renameFolder,
   rearrangeFiles,
+  setLastSavedLabConfig,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;
