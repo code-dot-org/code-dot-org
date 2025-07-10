@@ -2,4 +2,5 @@
   #flowlab-container{style: "height: 100%"}
 
 - content_for(:head) do
+  %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{src: webpack_asset_path('js/flowlab/index.js')}
