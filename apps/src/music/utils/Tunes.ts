@@ -113,7 +113,7 @@ export function getInstruments(editorType: EditorType) {
 }
 
 const noteColorsSimple = [
-  '#ff0c86',
+  '#ee0916',
   '#ff7b00',
   '#ff0',
   '#0f0',
@@ -123,7 +123,7 @@ const noteColorsSimple = [
 ];
 
 const noteColorsSimpleKeys = [
-  '#e60073',
+  '#bb0710',
   '#bd5b00',
   '#7a7a00',
   '#008a00',
