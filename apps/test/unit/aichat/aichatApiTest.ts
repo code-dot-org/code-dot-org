@@ -4,7 +4,7 @@ import {
 } from '@cdo/apps/aichat/aichatApi';
 import {
   AichatContext,
-  AichatModelCustomizations,
+  ModelParameters,
   AiCustomizations,
   CompletedChatMessage,
   PendingChatMessage,
@@ -26,7 +26,7 @@ describe('aichatApi', () => {
   let chatMessage: PendingChatMessage,
     storedMessages: CompletedChatMessage[],
     aiCustomizations: AiCustomizations,
-    aichatModelCustomizations: AichatModelCustomizations,
+    aichatModelCustomizations: ModelParameters,
     aichatContext: AichatContext,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
