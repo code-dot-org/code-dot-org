@@ -8,10 +8,9 @@ import {
   type Node,
   type NodeProps,
 } from '@xyflow/react';
-import React, {memo, useEffect, useRef, useState, useCallback} from 'react';
+import React, {memo, useEffect, useState, useCallback} from 'react';
 
-import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
-
+import askAi from '../../../flow/askAi';
 import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
 // This node asks the aichat service a question entered in its input field, and
@@ -52,10 +51,6 @@ function AiNode({
     ' And here is the request: ' +
     data.fieldText;
 
-  const managerRef = useRef<AiTutor2Manager | null>(
-    new AiTutor2Manager(undefined, '', 0, '')
-  );
-
   const onEnter = useCallback(() => {
     const askChat = async () => {
       if (text === '') {
@@ -74,7 +69,7 @@ function AiNode({
 
       setIsWorking(true);
 
-      const response = await managerRef.current?.askAiTutor2(text, '', 'hint');
+      const response = await askAi(text);
       const responseText =
         response && response.length > 1 ? response[1].chatMessageText : '';
       console.log('Chat responded: ', responseText);
