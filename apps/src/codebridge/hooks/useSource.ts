@@ -14,10 +14,10 @@ import {
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  setAndSaveProjectSources,
   setHasEdited,
   setProjectSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
