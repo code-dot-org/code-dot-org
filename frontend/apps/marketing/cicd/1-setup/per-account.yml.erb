@@ -331,7 +331,7 @@ Resources:
     Type: AWS::IAM::ManagedPolicy
     Properties:
       Description: Permissions boundary for Roles created by CloudFormationMarketingSites<%=environment_type.capitalize%>Role
-      ManagedPolicyName: marketing-sites-role-permissions-boundary-<%=environment_type%>
+      ManagedPolicyName: marketing-sites-role-permissions-boundary-<%=environment_type%>-policy
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
