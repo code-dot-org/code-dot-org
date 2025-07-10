@@ -18,7 +18,6 @@ import {type MyNode} from '../../flow/initialElements';
 
 import {DataEdge} from './DataEdge';
 import {DnDProvider, useDnD} from './DnDContext';
-import LabelEdge from './LabelEdge';
 import AiNode from './nodes/AiNode';
 import ConditionNode from './nodes/ConditionNode';
 import OutputNode from './nodes/OutputNode';
@@ -37,7 +36,6 @@ const nodeTypes = {
 };
 
 const edgeTypes = {
-  'label-edge': LabelEdge,
   'data-edge': DataEdge,
 };
 
