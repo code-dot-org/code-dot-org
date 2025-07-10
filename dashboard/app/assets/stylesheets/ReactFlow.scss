@@ -271,19 +271,19 @@
 
 /* drag and drop */
 
-.graphlab {
+.flowlab {
   flex-direction: row;
   display: flex;
   flex-grow: 1;
   height: 100%;
 }
 
-.graphlab .reactflow-wrapper {
+.flowlab .reactflow-wrapper {
   flex-grow: 1;
   height: 100%;
 }
 
-.graphlab aside {
+.flowlab aside {
   border-right: 1px solid #eee;
   padding: 15px 10px;
   font-size: 12px;

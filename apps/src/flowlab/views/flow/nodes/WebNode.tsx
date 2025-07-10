@@ -9,7 +9,7 @@ import {
 } from '@xyflow/react';
 import React, {memo, useEffect} from 'react';
 
-import {isTextNode, type MyNode} from './initialElements';
+import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
 function WebNode({id, selected}: NodeProps) {
   const connections = useNodeConnections({

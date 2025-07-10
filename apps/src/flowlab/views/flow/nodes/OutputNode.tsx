@@ -6,9 +6,9 @@ import {
 } from '@xyflow/react';
 import React, {memo} from 'react';
 
-import {isTextNode, type MyNode} from './initialElements';
+import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
-function ResultNode() {
+function OutputNode() {
   const connections = useNodeConnections({
     handleType: 'target',
   });
@@ -32,4 +32,4 @@ function ResultNode() {
   );
 }
 
-export default memo(ResultNode);
+export default memo(OutputNode);

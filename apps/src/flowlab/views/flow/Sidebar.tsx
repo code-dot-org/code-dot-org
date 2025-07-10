@@ -20,15 +20,15 @@ export default () => {
   return (
     <aside>
       <div
-        className="dndnode input"
+        className="dndnode"
         onDragStart={event => onDragStart(event, 'text')}
         draggable
       >
-        Input
+        Text
       </div>
       <div
         className="dndnode"
-        onDragStart={event => onDragStart(event, 'askchat')}
+        onDragStart={event => onDragStart(event, 'ai')}
         draggable
       >
         AI
@@ -41,15 +41,15 @@ export default () => {
         Condition
       </div>
       <div
-        className="dndnode output"
+        className="dndnode"
         onDragStart={event => onDragStart(event, 'web')}
         draggable
       >
         Web
       </div>
       <div
-        className="dndnode output"
-        onDragStart={event => onDragStart(event, 'result')}
+        className="dndnode"
+        onDragStart={event => onDragStart(event, 'output')}
         draggable
       >
         Output

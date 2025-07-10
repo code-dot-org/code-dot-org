@@ -9,7 +9,7 @@ import {
 } from '@xyflow/react';
 import React, {memo, useEffect} from 'react';
 
-import {isTextNode, type MyNode} from './initialElements';
+import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
 function ConditionNode({id, data}: NodeProps<Node<{checkText: string}>>) {
   const {updateNodeData} = useReactFlow();

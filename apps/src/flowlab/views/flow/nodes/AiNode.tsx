@@ -12,9 +12,9 @@ import React, {memo, useEffect, useRef, useState, useCallback} from 'react';
 
 import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
 
-import {isTextNode, type MyNode} from './initialElements';
+import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
-function AskChatNode({
+function AiNode({
   id,
   data,
 }: NodeProps<Node<{fieldText: string; askedText: string; text: string}>>) {
@@ -121,4 +121,4 @@ function AskChatNode({
   );
 }
 
-export default memo(AskChatNode);
+export default memo(AiNode);
