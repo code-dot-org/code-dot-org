@@ -120,4 +120,4 @@ jobs:
       fail-fast: true
       max-parallel: 1
       matrix:
-        GITHUB_ENVIRONMENT_NAME: [ marketing-sites-test, marketing-sites-production ]
+        GITHUB_ENVIRONMENT_NAME: [ marketing-sites-test-code, marketing-sites-production-code ]
