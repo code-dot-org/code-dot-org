@@ -12,10 +12,10 @@ import {
 } from 'react';
 import {createPortal} from 'react-dom';
 
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
+
 import {updatePositionedElementStyles} from '@/common/helpers';
 import {ComponentPlacementDirection} from '@/common/types';
-
-import {useTheme} from '../common/contexts';
 
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 
@@ -114,7 +114,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       const {theme} = useTheme();
       console.warn('useTheme() SUCCESS with theme:', theme);
     } catch (e) {
-      console.error('useTheme FAILURE with error:', e);
+      console.error('useTheme() FAILURE with error:', e);
     }
 
     // Effect to update tooltip styles when the tooltip is shown
