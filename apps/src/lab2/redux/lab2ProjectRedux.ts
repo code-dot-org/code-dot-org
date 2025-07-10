@@ -85,32 +85,13 @@ export const setAndSaveSource = (
   };
 };
 
-export const updateAndSaveSource = createAsyncThunk<
-  void,
-  {
-    updateCallback: (source: MultiFileSource) => MultiFileSource;
-    forceSave?: boolean;
-    forceNewVersion?: boolean;
-  },
-  {dispatch: AppDispatch; state: RootState}
->('lab2Project/updateAndSaveSource', async (payload, thunkAPI) => {
-  const currentSource = thunkAPI.getState().lab2Project.projectSources?.source;
-  if (!currentSource) {
-    return;
-  }
-  const updatedSource = payload.updateCallback(
-    currentSource as MultiFileSource
-  );
-  const hasEdited = thunkAPI.getState().lab2Project.hasEdited;
-  if (!hasEdited) {
-    const newSourceHasEdits = !isEqual(currentSource, updatedSource);
-    if (newSourceHasEdits) {
-      thunkAPI.dispatch(setHasEdited(true));
-    }
-  }
-  thunkAPI.dispatch(setSource(updatedSource));
-  const projectSources = thunkAPI.getState().lab2Project.projectSources;
-  const isReadOnly = isReadOnlyWorkspace(thunkAPI.getState());
+function saveProjectIfEditable(
+  getState: () => RootState,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+) {
+  const projectSources = getState().lab2Project.projectSources;
+  const isReadOnly = isReadOnlyWorkspace(getState());
   if (
     Lab2Registry.getInstance().getProjectManager() &&
     projectSources &&
@@ -118,9 +99,9 @@ export const updateAndSaveSource = createAsyncThunk<
   ) {
     Lab2Registry.getInstance()
       .getProjectManager()
-      ?.save(projectSources, payload.forceSave, payload.forceNewVersion);
+      ?.save(projectSources, forceSave, forceNewVersion);
   }
-});
+}
 
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
