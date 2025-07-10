@@ -429,6 +429,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
+    raise 'A simulated error occurred'
     @permission_status = current_user.cap_status
 
     # Get the request location
