@@ -68,7 +68,7 @@ function showCourseEditor() {
           unit => unit.name
         )}
         initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
-          unit => unit.unit_prefix
+          (unit, index) => unit.unit_prefix || (index + 1).toString()
         )}
         unitNames={courseEditorData.script_names.sort()}
         initialHasVerifiedResources={
