@@ -39,10 +39,18 @@ function OutputNode() {
       : 'none';
 
   return (
-    <div style={{maxWidth: 400}}>
+    <div style={{maxWidth: 140}}>
       <Handle type="target" position={Position.Left} />
       <div>Output</div>
-      <div>{text}</div>
+      <div
+        style={{
+          maxHeight: 200,
+          overflowWrap: 'break-word',
+          overflowY: 'scroll',
+        }}
+      >
+        {text}
+      </div>
     </div>
   );
 }

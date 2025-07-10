@@ -306,7 +306,7 @@
   }
 
   .outputnode-markdown {
-    p {
+    h1, h2, h3, h4, p, ol, ul, li {
       font-size: 0.5rem;
       text-align: initial;
       line-height: 1.2;
