@@ -43,7 +43,7 @@ function AiNode({
       ? textNodes
           .map(({data}) => (data && 'text' in data ? data.text : ''))
           .join('')
-      : 'none';
+      : '';
 
   const text: string =
     'Here is the context: ' +
@@ -53,8 +53,8 @@ function AiNode({
 
   const onEnter = useCallback(() => {
     const askChat = async () => {
-      if (text === '') {
-        console.warn('No text data available to ask chat');
+      if (!data.fieldText || data.fieldText === '') {
+        console.log('No text data available to ask chat');
         updateNodeData(id, {
           text: '',
         });
@@ -85,7 +85,6 @@ function AiNode({
 
   // Also requery if the input nodes' values change.
   useEffect(() => {
-    console.log('context:', contextString);
     if (lastContextString !== contextString) {
       onEnter();
       setLastContextString(contextString);

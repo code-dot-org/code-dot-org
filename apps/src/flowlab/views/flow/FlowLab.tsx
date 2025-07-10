@@ -87,7 +87,7 @@ const FlowLab: React.FunctionComponent = () => {
             id: getId(),
             type: 'ai',
             position,
-            data: {text: 'hi'},
+            data: {text: ''},
           };
           break;
         case 'condition':
@@ -95,7 +95,7 @@ const FlowLab: React.FunctionComponent = () => {
             id: getId(),
             type: 'condition',
             position,
-            data: {text: 'hi'},
+            data: {text: ''},
           };
           break;
         case 'text':
@@ -103,7 +103,7 @@ const FlowLab: React.FunctionComponent = () => {
             id: getId(),
             type: 'text',
             position,
-            data: {text: 'hi'},
+            data: {text: ''},
           };
           break;
         case 'output':
@@ -119,7 +119,7 @@ const FlowLab: React.FunctionComponent = () => {
             id: getId(),
             type: 'web',
             position,
-            data: {text: 'hi'},
+            data: {text: ''},
           };
           break;
         default:

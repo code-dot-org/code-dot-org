@@ -26,7 +26,13 @@ function OutputNode() {
       ? textNodes.map(({data}, i) =>
           data && 'text' in data ? (
             <div key={i}>
-              {<SafeMarkdown openExternalLinksInNewTab markdown={data.text} />}
+              {
+                <SafeMarkdown
+                  openExternalLinksInNewTab
+                  markdown={data.text}
+                  className="outputnode-markdown"
+                />
+              }
             </div>
           ) : null
         )
