@@ -435,7 +435,7 @@ class CourseEditor extends Component {
             <CourseUnitsEditor
               inputStyle={styles.input}
               numberedUnits={numberedUnits}
-              intialUnitPrefixes={this.props.initialUnitPrefixes}
+              initialUnitPrefixes={this.props.initialUnitPrefixes}
               unitPrefixes={unitPrefixes}
               updateUnitPrefixes={unitPrefixes => this.setState({unitPrefixes})}
               initialUnitsInCourse={this.props.initialUnitsInCourse}

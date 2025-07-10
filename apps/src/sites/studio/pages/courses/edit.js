@@ -67,7 +67,7 @@ function showCourseEditor() {
         initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
           unit => unit.name
         )}
-        intialUnitPrefixes={courseEditorData.course_summary.scripts.map(
+        initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
           unit => unit.unit_prefix
         )}
         unitNames={courseEditorData.script_names.sort()}
