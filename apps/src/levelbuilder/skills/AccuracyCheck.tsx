@@ -34,8 +34,7 @@ type ExampleAnswer = {
 
 const AccuracyCheck: React.FC<{
   levelId: number;
-  questionAiEvaluatable?: boolean;
-}> = ({levelId, questionAiEvaluatable}) => {
+}> = ({levelId}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -198,14 +197,12 @@ const AccuracyCheck: React.FC<{
           disabled={aiEvaluatedAnswers.length === 0 || evaluationPending}
         />
       </div>
-      {aiEvaluatedAnswers.length > 0 &&
-        !evaluationPending &&
-        questionAiEvaluatable && (
-          <div className="evaluation-complete-notification">
-            🎉 Evaluation complete
-            <AccuracyDetails evaluations={aiEvaluatedAnswers} />
-          </div>
-        )}
+      {aiEvaluatedAnswers.length > 0 && !evaluationPending && (
+        <div className="evaluation-complete-notification">
+          🎉 Evaluation complete
+          <AccuracyDetails evaluations={aiEvaluatedAnswers} />
+        </div>
+      )}
     </div>
   );
 };

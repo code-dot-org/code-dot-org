@@ -52,10 +52,7 @@ const SkillEvaluationSettings: React.FC<Props> = ({
           size="s"
         />
       </p>
-      <AccuracyCheck
-        levelId={levelId}
-        questionAiEvaluatable={levelType === 'FreeResponse'}
-      />
+      <AccuracyCheck levelId={levelId} />
       <br />
       <ViewSystemPrompt systemPrompt={systemPrompt} />
       <br />
