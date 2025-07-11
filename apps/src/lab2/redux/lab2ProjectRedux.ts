@@ -156,21 +156,23 @@ const projectSlice = createSlice({
           !source.files[action.payload.fileId] ||
           source.files[action.payload.fileId]?.type === action.payload.type
         ) {
-          state.projectSources = {
-            ...state.projectSources,
-            source: {
-              ...source,
-              files: {
-                ...source.files,
-                [action.payload.fileId]: {
-                  ...source.files[action.payload.fileId],
-                  type: action.payload.type,
-                },
+          // No-op if the type is the same or the file does not exist.
+          return;
+        }
+        state.projectSources = {
+          ...state.projectSources,
+          source: {
+            ...source,
+            files: {
+              ...source.files,
+              [action.payload.fileId]: {
+                ...source.files[action.payload.fileId],
+                type: action.payload.type,
               },
             },
-          };
-          state.hasEdited = true;
-        }
+          },
+        };
+        state.hasEdited = true;
       }
     },
     activateFile(state, action: PayloadAction<FileId>) {

@@ -1,12 +1,8 @@
 import {CodebridgeLevelProperties} from '@codebridge/types';
 import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
-import {debounce} from 'lodash';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
-import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -18,7 +14,6 @@ import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThu
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -31,10 +26,9 @@ export const useSource = (
   initiaServerSources: ProjectSources | undefined
 ) => {
   const dispatch = useAppDispatch();
-  const projectSource = useAppSelector(
-    state => state.lab2Project.projectSources
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
   );
-  const source = projectSource?.source as MultiFileSource;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const {
@@ -47,11 +41,7 @@ export const useSource = (
   const previousInitialSources = useRef<ProjectSources | null>(null);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
-  const currentLevelStatus = useAppSelector(
-    state => getCurrentLevel(state)?.status
-  );
-  const {appName, id: levelId} = levelProperties;
+  const {id: levelId} = levelProperties;
 
   const setSourceHelper = useMemo(
     () => (newProjectSource: ProjectSources) => {
@@ -120,7 +110,5 @@ export const useSource = (
 
   return {
     startSources,
-    validationFile: levelProperties.validationFile,
-    labConfig: projectSource?.labConfig,
   };
 };

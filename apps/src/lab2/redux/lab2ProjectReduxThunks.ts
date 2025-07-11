@@ -323,7 +323,6 @@ function saveProjectIfEditable(
 
 const debouncedStartedProgressReport = debounce(
   (dispatch: AppDispatch, appName: string) => {
-    console.log(`Sending progress report for ${appName}`);
     dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
   },
   100
