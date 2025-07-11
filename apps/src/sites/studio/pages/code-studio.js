@@ -28,7 +28,8 @@ import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
-import '@cdo/apps/telemetry/otel';
+//import '@cdo/apps/telemetry/otel';
+import '@cdo/apps/telemetry/datadog';
 
 // import {getWebInstrumentations, initializeFaro} from '@grafana/faro-web-sdk';
 // import {TracingInstrumentation} from '@grafana/faro-web-tracing';

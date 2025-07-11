@@ -4294,6 +4294,59 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@datadog/browser-core@npm:6.13.0":
+  version: 6.13.0
+  resolution: "@datadog/browser-core@npm:6.13.0"
+  checksum: 10/881b33a3d08eccb064c0afeeadd126dcdb6b6f77d5a7c8dadf45046b745a0e4a764b503a1ca3f3df34facdf4fc210b6775e5c86148cc19f2d4e25723ca8ad48c
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum-core@npm:6.13.0":
+  version: 6.13.0
+  resolution: "@datadog/browser-rum-core@npm:6.13.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.13.0"
+  checksum: 10/fd79554e1a91c551470bfa6b0b39fbc79c13ace450d2da1cc238fa803af7483a2c8ca2eda27832cef64003796ed5f3747c7703687788b3354cd520cd3842acf3
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum-react@npm:^6.13.0":
+  version: 6.13.0
+  resolution: "@datadog/browser-rum-react@npm:6.13.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.13.0"
+    "@datadog/browser-rum-core": "npm:6.13.0"
+  peerDependencies:
+    react: 18 || 19
+    react-router-dom: 6 || 7
+  peerDependenciesMeta:
+    "@datadog/browser-rum":
+      optional: true
+    "@datadog/browser-rum-slim":
+      optional: true
+    react:
+      optional: true
+    react-router-dom:
+      optional: true
+  checksum: 10/84dd844aaccab1c1272334d5c25f7a24f64fe4720b6682810e86d00d13cf2cf61f14cf62c840f63143566f8583a205d30152dfd5cf5517be80362f0ccf714fe5
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum@npm:^6.13.0":
+  version: 6.13.0
+  resolution: "@datadog/browser-rum@npm:6.13.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.13.0"
+    "@datadog/browser-rum-core": "npm:6.13.0"
+  peerDependencies:
+    "@datadog/browser-logs": 6.13.0
+  peerDependenciesMeta:
+    "@datadog/browser-logs":
+      optional: true
+  checksum: 10/4ab6023a9b8034f161958cc688c186068491bcaae3893ec85ac586811a594c8b0bd6e1e60660d92b6684d7089a283d4bbec07cadb02603c512b0cd21e3e0f6da
+  languageName: node
+  linkType: hard
+
 "@discoveryjs/json-ext@npm:0.5.7, @discoveryjs/json-ext@npm:^0.5.0, @discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
@@ -11202,6 +11255,8 @@ __metadata:
     "@codemirror/search": "npm:^6.5.10"
     "@codemirror/state": "npm:^6.5.2"
     "@codemirror/view": "npm:^6.36.5"
+    "@datadog/browser-rum": "npm:^6.13.0"
+    "@datadog/browser-rum-react": "npm:^6.13.0"
     "@dnd-kit/core": "npm:^6.3.0"
     "@dnd-kit/modifiers": "npm:^9.0.0"
     "@dnd-kit/sortable": "npm:^10.0.0"
