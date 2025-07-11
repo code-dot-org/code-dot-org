@@ -45,27 +45,28 @@ module AichatSafetyHelper
       attempts = 0
       messages = safety_check_messages(text, level_id)
 
-      # Retry only on network-related exceptions
-      response = Retryable.retryable(
-        tries: 2,
-        on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
-      ) do
-        attempts += 1
-        client.request_chat_completion(messages, 1)
-      end
-      raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
-
-      evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
+      # # Retry only on network-related exceptions
+      # response = Retryable.retryable(
+      #   tries: 2,
+      #   on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
+      # ) do
+      #   attempts += 1
+      #   client.request_chat_completion(messages, 1)
+      # end
+      # raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
+      #
+      # evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
+      evaluation = 'poop'
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse")
         attempts +=1
 
         # Fallback to structured call (non-retryable)
-        response = client.request_chat_completion(messages, 0, options: {response_format: structured_response_format})
+        response = client.request_chat_completion(messages, 0, options: {text: structured_response_format})
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
-        raw_content = body.dig("choices", 0, "message", "content")
+        raw_content = body.dig("output", 0, "content", 0, "text")
 
         begin
           parsed = JSON.parse(raw_content)
@@ -163,9 +164,9 @@ module AichatSafetyHelper
 
     private def structured_response_format
       {
-        type: "json_schema",
-        json_schema: {
+        format: {
           name: "safety_evaluation",
+          type: "json_schema",
           schema: {
             type: "object",
             properties: {
@@ -175,7 +176,8 @@ module AichatSafetyHelper
                 enum: ["OK", "INAPPROPRIATE"]
               }
             },
-            required: ["classification"]
+            required: ["classification"],
+            additionalProperties: false
           }
         }
       }
