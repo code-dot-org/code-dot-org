@@ -102,6 +102,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         text={announcementBannerProps.text}
         icon={announcementBannerProps.icon}
         link={announcementBannerProps.link}
+        type="gray"
       />
     )}
     <div
