@@ -20,6 +20,9 @@ const csf_prefixes = [
 ];
 
 const donor_prefixes = [
+  '/courses/customizing-llms-2024',
+  '/courses/self-paced-pl-ai-101-2024',
+  '/courses/foundations-gen-ai-2024',
   '/courses/k5-ai-data-2024',
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
@@ -30,11 +33,14 @@ const donor_prefixes = [
 
 const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
 
+const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
+
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
   '3vPUSGZrdllW2': csf_prefixes,
   I0P5RaUEW8s5h: donor_prefixes,
   zM53S8yC4TNgU: aif_prefixes,
+  XJXXkBlsAbHVD: dashboard_prefixes,
 };
 
 const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
