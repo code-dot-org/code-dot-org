@@ -357,7 +357,6 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
             >
               <textarea
                 name="user[facilitator_bio]"
-                className={commonStyles.textarea}
                 value={facilitatorBio}
                 onChange={e => {
                   setFacilitatorBio(e.target.value);
