@@ -20,6 +20,7 @@ import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {useLocalization} from '@cdo/apps/localization';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {
   restartPyodideIfProgramIsRunning,
@@ -49,6 +50,7 @@ import VerticalLayout from './layout/VerticalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
+import PythonLocalizer from './PythonLocalizer';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -78,6 +80,13 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const locale = useLocalization();
+
+  const localizer: PythonLocalizer = useMemo(
+    () => new PythonLocalizer(locale),
+    [locale]
+  );
+
   const {
     source,
     setProject,
@@ -85,7 +94,7 @@ const PythonlabView: React.FunctionComponent<
     projectVersion,
     validationFile,
     labConfig,
-  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
+  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources, localizer);
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
