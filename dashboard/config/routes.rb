@@ -35,7 +35,6 @@ Dashboard::Application.routes.draw do
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show
       get :get_school_info_interstitial_data, controller: :teacher_dashboard, action: :get_school_info_interstitial_data
-      get :update_last_seen_school_info_interstitial, controller: :teacher_dashboard, action: :update_last_seen_school_info_interstitial
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter

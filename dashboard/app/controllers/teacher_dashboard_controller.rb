@@ -57,17 +57,14 @@ class TeacherDashboardController < ApplicationController
   def get_school_info_interstitial_data
     show_school_info_interstitial = SchoolInfoInterstitialHelper.show?(current_user)
     show_school_info_confirmation = SchoolInfoInterstitialHelper.show_confirmation_dialog?(current_user)
-
     school_info = Queries::SchoolInfo.current_school(current_user)
+
+    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
+
     render json: {
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,
       schoolInfo: school_info,
     }
-  end
-
-  def update_last_seen_school_info_interstitial
-    SchoolInfoInterstitialHelper.update_last_seen_timestamp(current_user)
-    render json: {success: true}
   end
 end

@@ -172,9 +172,6 @@ export const TeacherHomepageDrawer: React.FC = () => {
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
-    HttpClient.get('update_last_seen_school_info_interstitial').catch(error =>
-      console.error('Error updating last seen timestamp:', error)
-    );
   };
 
   return (
