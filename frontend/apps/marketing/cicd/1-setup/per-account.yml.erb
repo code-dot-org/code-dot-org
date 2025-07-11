@@ -439,6 +439,14 @@ Resources:
                   - iam:DeleteRolePolicy
                   - iam:DetachRolePolicy
                   - iam:PutRolePolicy
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
+
+              - Sid: AllowPermissionsBoundaryManagement
+                Effect: Allow
+                Action:
                   - iam:PutRolePermissionsBoundary
                   - iam:DeleteRolePermissionsBoundary
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
