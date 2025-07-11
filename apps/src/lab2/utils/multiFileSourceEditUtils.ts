@@ -1,4 +1,3 @@
-import {findFiles} from '@cdo/apps/codebridge';
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getOpenFileIds, sortFilesByName} from '@cdo/apps/codebridge/utils';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -25,6 +24,22 @@ export const findSubFolders = (parentId: string, folders: ProjectFolder[]) =>
     }
     return bucket;
   }, <string[]>[]);
+
+export const findFiles = (
+  folderId: string,
+  files: ProjectFile[],
+  folders?: ProjectFolder[]
+) => {
+  const folderIds = new Set(
+    folders ? [folderId, ...findSubFolders(folderId, folders)] : [folderId]
+  );
+  return files.reduce((bucket, f: ProjectFile) => {
+    if (folderIds.has(f.folderId)) {
+      bucket.push(f.id);
+    }
+    return bucket;
+  }, <string[]>[]);
+};
 
 /**
  * Create a new file.
