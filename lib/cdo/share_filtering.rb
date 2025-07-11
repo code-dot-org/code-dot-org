@@ -39,7 +39,7 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['COMMENT', 'SPEECH', 'TEXT', 'TITLE', 'title name\=\"VAL\"'].freeze
+  USER_ENTERED_TEXT_INDICATORS = ['AUTHOR', 'COMMENT',  'LINE', 'QUESTION', 'SPEECH', 'TEXT', 'TEXT1', 'TEXT2', 'TITLE', 'title name\=\"VAL\"'].freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
