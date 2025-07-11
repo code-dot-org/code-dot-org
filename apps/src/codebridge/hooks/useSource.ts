@@ -5,6 +5,7 @@ import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -17,6 +18,7 @@ import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThu
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {useInitialSources} from './useInitialSources';
 
@@ -46,6 +48,9 @@ export const useSource = (
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
   const {appName, id: levelId} = levelProperties;
 
   const setSourceHelper = useMemo(
@@ -59,7 +64,7 @@ export const useSource = (
   );
 
   const debouncedProgressReport = debounce(() => {
-    if (appName) {
+    if (appName && currentLevelStatus === LevelStatus.not_tried) {
       dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
     }
   }, 100);
