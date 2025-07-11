@@ -3,7 +3,7 @@ import {type Node} from '@xyflow/react';
 export type AiNode = Node<{text: string}, 'ai'>;
 export type ConditionNode = Node<{text: string}, 'condition'>;
 export type TextNode = Node<{text: string}, 'text'>;
-export type OutputNode = Node<{}, 'output'>;
+export type OutputNode = Node<Record<string, never>, 'output'>;
 export type WebNode = Node<{text: string}, 'web'>;
 export type MyNode = AiNode | TextNode | OutputNode | ConditionNode | WebNode;
 

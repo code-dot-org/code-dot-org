@@ -3,7 +3,7 @@ import React from 'react';
 import {useDnD} from './DnDContext';
 
 export default () => {
-  const [_, setType] = useDnD();
+  const [, setType] = useDnD();
 
   const onDragStart = (
     event: React.DragEvent<HTMLDivElement>,
