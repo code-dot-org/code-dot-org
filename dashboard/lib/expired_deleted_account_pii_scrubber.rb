@@ -2,7 +2,7 @@ require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
-require 'queries/child_account'
+require 'cdo/honeybadger'
 
 # Queries for accounts soft-deleted at least 28 days ago and scrube them
 # of PII (personally identifiable information).
@@ -33,23 +33,78 @@ class ExpiredDeletedAccountPiiScrubber
 
     # Maximum number of accounts to scrub in a single run.
     # This is a safety limit to prevent accidental deletion of too many accounts.
-    @max_accounts_to_scrub = options[:max_accounts_to_scrub] || 200
+    @max_accounts_to_scrub = options[:max_accounts_to_scrub] || 8000
     raise ArgumentError.new('max_accounts_to_scrub must be Integer') unless @max_accounts_to_scrub.is_a? Integer
 
     reset
   end
 
-  private def reset
-    # Logging stream we can pass down to the account purger component so it
-    # can add its own content to the log
-    @log = StringIO.new
+  def scrub_pii_from_expired_deleted_accounts!
+    reset_metrics
 
-    # Other values tracked internally and reset with every run
-    @num_accounts_purged = 0
-    @num_accounts_queued = 0
-    @purge_size_limit_exceeded = 0
+    accounts_to_scrub.in_batches(of: 1000).each do |batch|
+      batch.each do |user|
+        scrub_user(user)
+        @num_accounts_scrubbed += 1
+      rescue Exception => exception
+        Honeybadger.notify(exception, context: {user_id: user.id})
+        log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
+      end
+    end
+
+    if @dry_run
+      log_message("Dry run complete: would scrub #{@num_accounts_scrubbed} accounts. Encountered #{@num_errors} errors.")
+    else
+      log_message("Scrubbed #{@num_accounts_scrubbed} accounts in #{Time.now - @start_time} seconds. Encountered #{@num_errors} errors.")
+      upload_metrics
+    end
+  end
+
+  def accounts_to_scrub
+    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: @scrub_accounts_deleted_since)
+    if accounts.count > @max_accounts_to_scrub
+      raise SafetyConstraintViolation, "Too many accounts to scrub: #{accounts.count} exceeds limit of #{@max_accounts_to_scrub}"
+    end
+    accounts
+  end
+
+  private def scrub_user(user)
+    if @dry_run
+      log_message("Dry run: would scrub PII from user_id #{user.id}")
+    else
+      log_message("Scrubbing PII from user_id #{user.id}")
+      Services::User.PiiScrubber.call(user: user)
+    end
+  end
+
+  private def upload_metrics
+    Cdo::Metrics.push('PiiScrubber',
+      [
+        {
+          metric_name: 'NumAccountsScrubbed',
+          value: @num_accounts_scrubbed,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ]
+        },
+        {
+          metric_name: 'NumErrors',
+          value: @num_errors,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ]
+        }
+      ]
+    )
+  end
+
+  private def log_message(message)
+    CDO.log.info({event: message, namespace: 'PiiScrubber'})
+  end
+
+  private def reset_metrics
+    @num_accounts_scrubbed = 0
+    @num_errors = 0
     @start_time = Time.now
-
-    start_activity_log
   end
 end

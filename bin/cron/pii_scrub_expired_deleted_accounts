@@ -32,5 +32,5 @@ OptionParser.new do |opts|
 end.parse!
 
 require_relative '../../dashboard/config/environment'
-require_relative '../../dashboard/lib/expired_child_account_purger'
-ExpiredChildAccountPurger.new(options).purge_expired_child_accounts!
+require_relative '../../dashboard/lib/expired_deleted_account_pii_scrubber'
+ExpiredDeletedAccountPiiScrubber.new(options).scrub_pii_from_expired_deleted_accounts!
