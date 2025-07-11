@@ -7,7 +7,7 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   getNextFileId,
   getNextFolderId,
-} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 

@@ -14,7 +14,7 @@ import {
   ProjectFileType,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
-import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
+import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 /**
  * Custom hook that determines the initial sources for the current level.
  * It selects various sources including from the student's project, the start sources
