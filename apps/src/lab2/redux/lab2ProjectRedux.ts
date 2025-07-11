@@ -7,7 +7,6 @@ import {
   ProjectSources,
   ProjectFileType,
 } from '@cdo/apps/lab2/types';
-
 import {
   activateFileHelper,
   closeFileHelper,
@@ -15,7 +14,7 @@ import {
   createNewFolderHelper,
   deleteFileHelper,
   deleteFolderHelper,
-} from '../utils/multiFileSourceEditUtils';
+} from '@cdo/apps/lab2/utils/multiFileSourceEditUtils';
 
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;

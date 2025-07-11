@@ -22,7 +22,6 @@ import {
 import {
   nonValidatedLevelProperties,
   smallProject,
-  // smallProjectSources,
   templateBackedLevelProperties,
 } from '../test-files';
 import {mockAppOptions} from '../test_utils';

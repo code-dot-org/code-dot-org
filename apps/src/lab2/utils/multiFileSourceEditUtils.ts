@@ -10,6 +10,8 @@ import {
   findFiles,
 } from './multiFileSourceUtils';
 
+// Helper functions for editing multi-file sources in lab2.
+
 /**
  * Create a new file.
  */

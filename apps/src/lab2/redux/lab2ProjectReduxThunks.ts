@@ -1,5 +1,3 @@
-// Store the project source in the redux store and tell the project manager
-
 import {ThunkAction, createAsyncThunk} from '@reduxjs/toolkit';
 import {debounce} from 'lodash';
 import {AnyAction} from 'redux';
@@ -42,6 +40,7 @@ import {
 } from './lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './lab2ReduxSelectors';
 
+// Store the project source in the redux store and tell the project manager
 // to save it.
 export const setAndSaveProjectSources = (
   projectSources: ProjectSources,
@@ -59,6 +58,8 @@ export const setAndSaveProjectSources = (
   };
 };
 
+// Store the source in the redux store and tell the project manager
+// to save the current project.
 export const setAndSaveSource = (
   source: MultiFileSource,
   forceSave: boolean = false,
@@ -75,6 +76,8 @@ export const setAndSaveSource = (
   };
 };
 
+// Load a version of the project by its ID and set the previous version source.
+// If the version cannot be loaded, it will fall back to the provided start sources.
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
   async (
@@ -94,6 +97,7 @@ export const loadVersion = createAsyncThunk(
   }
 );
 
+// Load the start sources for the project and set them as the previous version source.
 export const previewStartSources = createAsyncThunk(
   'lab2Project/previewStartSources',
   async (payload: {startSources: ProjectSources}, thunkAPI) => {
@@ -106,6 +110,7 @@ export const previewStartSources = createAsyncThunk(
   }
 );
 
+// Reset the project to the current version, loading the sources from the project manager.
 export const resetToCurrentVersion = createAsyncThunk(
   'lab2Project/resetToActiveVersion',
   async (_, thunkAPI) => {
@@ -118,6 +123,9 @@ export const resetToCurrentVersion = createAsyncThunk(
   }
 );
 
+// Change the project type by flushing the current save and setting new sources.
+// This is used when switching between different subtypes of a project,
+// such as from a console Python project to a neighborhood Python project.
 export const changeProjectType = createAsyncThunk<
   void,
   {newSources: ProjectSources},
@@ -130,6 +138,14 @@ export const changeProjectType = createAsyncThunk<
     thunkAPI.dispatch(setAndSaveProjectSources(payload.newSources, true, true));
   }
 });
+
+// FILE OPERATION THUNKS
+// ---------------------
+// The below thunks are used to perform various file and folder operations
+// on a multi-file source, such as creating, renaming, saving, and deleting files and folders.
+// After the operation, the project is saved via the project manager if we are
+// not in a read-only state. We will also set the progress state if the project has been edited
+// and the level was in a not_tried state.
 
 export const createNewFileThunk = (
   fileName: string,
@@ -294,6 +310,9 @@ export const rearrangeFilesThunk = (
   };
 };
 
+// Save the current project sources to the project manager if we are not in a read-only state.
+// If the level status is not_tried and the project has been edited, we will also report the progress
+// as started.
 function saveProjectIfEditable(
   getState: () => RootState,
   dispatch: AppDispatch,
