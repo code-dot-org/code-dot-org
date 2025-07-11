@@ -1,13 +1,8 @@
-import {
-  BodyThreeText,
-  EmText,
-  OverlineThreeText,
-} from '@code-dot-org/component-library/typography';
-import classnames from 'classnames';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Select from 'react-select';
 
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
@@ -40,8 +35,8 @@ function StudentSelector({
   hasTeacherFeedbackMap,
   aiEvalStatusMap,
 }) {
-  const handleSelectStudentChange = event => {
-    const newUserId = event.value;
+  const handleSelectStudentChange = selectedOption => {
+    const newUserId = selectedOption.value;
     updateQueryParam(
       'user_id',
       newUserId === NO_SELECTED_SECTION_VALUE ? undefined : newUserId
@@ -70,56 +65,69 @@ function StudentSelector({
     return studentProgressStatusMap[userId];
   };
 
+  const handleOptionClick = value => {
+    const selectedOption = {value};
+    handleSelectStudentChange(selectedOption);
+  };
+
+  const getStudentDisplayName = student => {
+    return student.familyName
+      ? student.familyName.length + student.name.length < MAX_NAME_LENGTH
+        ? `${student.name} ${student.familyName}`
+        : `${student.name} ${student.familyName}`
+            .substring(0, MAX_NAME_LENGTH - 1)
+            .concat('', '...')
+      : `${student.name}`;
+  };
+
+  const selectedDisplayValue = selectedUserId
+    ? (() => {
+        const selectedStudent = students.find(s => s.id === selectedUserId);
+        return selectedStudent ? getStudentDisplayName(selectedStudent) : '';
+      })()
+    : i18n.selectStudentOption();
+
   return (
-    <Select
+    <CustomDropdown
       className={styleName ? styleName : 'uitest-studentselect'}
       name="students"
-      clearable={false}
-      searchable={false}
-      aria-label={i18n.selectStudentOption()}
-      value={selectedUserId || NO_SELECTED_SECTION_VALUE}
-      onChange={handleSelectStudentChange}
-      options={(selectedUserId
-        ? []
-        : [
-            {
-              value: NO_SELECTED_SECTION_VALUE,
-              label: (
-                <BodyThreeText className={style.submitStatusText}>
-                  <EmText>{i18n.selectStudentOption()}</EmText>
-                </BodyThreeText>
-              ),
-            },
-          ]
-      ).concat(
-        students.map(student => ({
-          value: student.id,
-          label: (
-            <div className={style.studentDropdownOptionContainer}>
-              <div className={style.studentDropdownOption}>
-                <BodyThreeText className={style.submitStatusText}>
-                  {student.familyName
-                    ? student.familyName.length + student.name.length <
-                      MAX_NAME_LENGTH
-                      ? `${student.name} ${student.familyName}`
-                      : `${student.name} ${student.familyName}`
-                          .substring(0, MAX_NAME_LENGTH - 1)
-                          .concat('', '...')
-                    : `${student.name}`}
-                </BodyThreeText>
-                {!!levelsWithProgress && aiEvalStatusMap && (
-                  <StudentProgressStatus
-                    aiEvalStatus={aiEvalStatusMap[student.id]}
-                    hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
-                    status={getStudentProgressStatusForUser(student.id)}
-                  />
-                )}
-              </div>
-            </div>
-          ),
-        }))
-      )}
-    />
+      size="m"
+      labelText="Select a student"
+      styleAsFormField={true}
+      selectedValueText={selectedDisplayValue}
+    >
+      <ul>
+        {!selectedUserId && (
+          <li>
+            <button
+              className={style.studentDropdownOption}
+              onClick={() => handleOptionClick(NO_SELECTED_SECTION_VALUE)}
+              type="button"
+            >
+              <span>{i18n.selectStudentOption()}</span>
+            </button>
+          </li>
+        )}
+        {students.map(student => (
+          <li key={student.id}>
+            <button
+              className={style.studentDropdownOption}
+              onClick={() => handleOptionClick(student.id)}
+              type="button"
+            >
+              <span>{getStudentDisplayName(student)}</span>
+              {!!levelsWithProgress && aiEvalStatusMap && (
+                <StudentProgressStatus
+                  aiEvalStatus={aiEvalStatusMap[student.id]}
+                  hasTeacherFeedback={hasTeacherFeedbackMap[student.id]}
+                  status={getStudentProgressStatusForUser(student.id)}
+                />
+              )}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </CustomDropdown>
   );
 }
 
@@ -176,17 +184,19 @@ const STATUS_BUBBLE_TEXT = {
 };
 
 function StudentProgressStatus({status}) {
-  const bubbleColor = STATUS_BUBBLE_COLOR[status];
-  const bubbleText = STATUS_BUBBLE_TEXT[status];
-
-  if (status === null) {
+  if (status === null || status === undefined) {
     return null;
   }
 
-  const classes = classnames('uitest-student-progress-status', bubbleColor);
-  return (
-    <OverlineThreeText className={classes}>{bubbleText}</OverlineThreeText>
+  const bubbleColor = STATUS_BUBBLE_COLOR[status];
+  const bubbleText = STATUS_BUBBLE_TEXT[status];
+
+  const classes = classNames(
+    'uitest-student-progress-status',
+    style.statusBlob,
+    bubbleColor
   );
+  return <span className={classes}>{bubbleText}</span>;
 }
 
 StudentProgressStatus.propTypes = {
