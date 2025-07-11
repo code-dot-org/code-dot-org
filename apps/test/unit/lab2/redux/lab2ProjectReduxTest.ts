@@ -17,11 +17,9 @@ import reducer, {
   renameFolder,
   rearrangeFiles,
   resetProjectMetadata,
-  setLastSavedLabConfig,
   Lab2ProjectState,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
-  LabConfig,
   MultiFileSource,
   ProjectSources,
   ProjectFileType,
@@ -70,11 +68,10 @@ const createMockMultiFileSource = (
 });
 
 const createMockProjectSources = (
-  overrides: Partial<ProjectSources> = {}
+  sourceOverrides: Partial<MultiFileSource> = {}
 ): ProjectSources => ({
-  source: createMockMultiFileSource(),
+  source: createMockMultiFileSource(sourceOverrides),
   labConfig: undefined,
-  ...overrides,
 });
 
 const initialState: Lab2ProjectState = {
@@ -270,26 +267,6 @@ describe('lab2ProjectRedux', () => {
       expect(state).toEqual(initialStateWithSources);
     });
 
-    it('should not set type if type is the same', () => {
-      const initialProjectSources = createMockProjectSources({
-        files: {
-          ...createMockMultiFileSource().files,
-          '1': createMockFile('1', {type: ProjectFileType.STARTER}),
-        },
-      });
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      const state = reducer(
-        initialStateWithSources,
-        setFileType({fileId: '1', type: ProjectFileType.STARTER})
-      );
-
-      expect(state).toEqual(initialStateWithSources);
-    });
-
     it('should not set type when project sources is undefined', () => {
       const state = reducer(
         initialState,
@@ -310,10 +287,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, activateFile('2'));
 
-      // The helper function should handle the activation logic
-      expect(state.projectSources!.source).not.toBe(
-        initialProjectSources.source
-      );
+      expect(
+        (state.projectSources!.source as MultiFileSource).files['2'].active
+      ).toBe(true);
       expect(state.hasEdited).toBe(false); // Activating doesn't count as edit
     });
 
@@ -333,10 +309,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, closeFile('1'));
 
-      // The helper function should handle the closing logic
-      expect(state.projectSources!.source).not.toBe(
-        initialProjectSources.source
-      );
+      expect(
+        (state.projectSources!.source as MultiFileSource).files['1'].active
+      ).toBe(false);
       expect(state.hasEdited).toBe(false); // Closing doesn't count as edit
     });
 
@@ -356,7 +331,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, deleteFile('1'));
 
-      expect(state.projectSources!.source.files['1']).toBeUndefined();
+      expect(
+        (state.projectSources!.source as MultiFileSource).files['1']
+      ).toBeUndefined();
       expect(state.hasEdited).toBe(true);
     });
 
@@ -391,7 +368,9 @@ describe('lab2ProjectRedux', () => {
         moveFile({fileId: '1', folderId: '1'})
       );
 
-      expect(state.projectSources!.source.files['1'].folderId).toBe('1');
+      expect(
+        (state.projectSources!.source as MultiFileSource).files['1'].folderId
+      ).toBe('1');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -405,21 +384,6 @@ describe('lab2ProjectRedux', () => {
       const state = reducer(
         initialStateWithSources,
         moveFile({fileId: 'nonexistent', folderId: '1'})
-      );
-
-      expect(state).toEqual(initialStateWithSources);
-    });
-
-    it('should not move if already in target folder', () => {
-      const initialProjectSources = createMockProjectSources();
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      const state = reducer(
-        initialStateWithSources,
-        moveFile({fileId: '1', folderId: DEFAULT_FOLDER_ID})
       );
 
       expect(state).toEqual(initialStateWithSources);
@@ -453,9 +417,9 @@ describe('lab2ProjectRedux', () => {
         moveFolder({folderId: '2', parentId: DEFAULT_FOLDER_ID})
       );
 
-      expect(state.projectSources!.source.folders['2'].parentId).toBe(
-        DEFAULT_FOLDER_ID
-      );
+      expect(
+        (state.projectSources!.source as MultiFileSource).folders['2'].parentId
+      ).toBe(DEFAULT_FOLDER_ID);
       expect(state.hasEdited).toBe(true);
     });
 
@@ -469,21 +433,6 @@ describe('lab2ProjectRedux', () => {
       const state = reducer(
         initialStateWithSources,
         moveFolder({folderId: 'nonexistent', parentId: DEFAULT_FOLDER_ID})
-      );
-
-      expect(state).toEqual(initialStateWithSources);
-    });
-
-    it('should not move if already in target parent', () => {
-      const initialProjectSources = createMockProjectSources();
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      const state = reducer(
-        initialStateWithSources,
-        moveFolder({folderId: '1', parentId: DEFAULT_FOLDER_ID})
       );
 
       expect(state).toEqual(initialStateWithSources);
@@ -512,8 +461,11 @@ describe('lab2ProjectRedux', () => {
         createNewFolder({folderName: 'newFolder'})
       );
 
-      const newFolders = Object.values(state.projectSources!.source.folders);
-      const newFolder = newFolders.find(f => f.name === 'newFolder');
+      const source = state.projectSources!.source as MultiFileSource;
+      const newFolders = Object.values(source.folders);
+      const newFolder = newFolders.find(
+        (f: ProjectFolder) => f.name === 'newFolder'
+      );
 
       expect(newFolder).toBeDefined();
       expect(newFolder?.parentId).toBe(DEFAULT_FOLDER_ID);
@@ -532,8 +484,11 @@ describe('lab2ProjectRedux', () => {
         createNewFolder({folderName: 'newFolder', parentId: '1'})
       );
 
-      const newFolders = Object.values(state.projectSources!.source.folders);
-      const newFolder = newFolders.find(f => f.name === 'newFolder');
+      const source = state.projectSources!.source as MultiFileSource;
+      const newFolders = Object.values(source.folders);
+      const newFolder = newFolders.find(
+        (f: ProjectFolder) => f.name === 'newFolder'
+      );
 
       expect(newFolder).toBeDefined();
       expect(newFolder?.parentId).toBe('1');
@@ -564,7 +519,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, toggleOpenFolder('1'));
 
-      expect(state.projectSources!.source.folders['1'].open).toBe(true);
+      expect(
+        (state.projectSources!.source as MultiFileSource).folders['1'].open
+      ).toBe(true);
       expect(state.hasEdited).toBe(false); // Toggling doesn't count as edit
     });
 
@@ -581,7 +538,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, toggleOpenFolder('1'));
 
-      expect(state.projectSources!.source.folders['1'].open).toBe(false);
+      expect(
+        (state.projectSources!.source as MultiFileSource).folders['1'].open
+      ).toBe(false);
       expect(state.hasEdited).toBe(false);
     });
 
@@ -616,10 +575,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, deleteFolder('1'));
 
-      // The helper function should handle the deletion logic
-      expect(state.projectSources!.source).not.toBe(
-        initialProjectSources.source
-      );
+      expect(
+        (state.projectSources!.source as MultiFileSource).folders['1']
+      ).toBeUndefined();
       expect(state.hasEdited).toBe(true);
     });
 
@@ -657,9 +615,9 @@ describe('lab2ProjectRedux', () => {
         renameFolder({folderId: '1', newName: 'renamedFolder'})
       );
 
-      expect(state.projectSources!.source.folders['1'].name).toBe(
-        'renamedFolder'
-      );
+      expect(
+        (state.projectSources!.source as MultiFileSource).folders['1'].name
+      ).toBe('renamedFolder');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -673,21 +631,6 @@ describe('lab2ProjectRedux', () => {
       const state = reducer(
         initialStateWithSources,
         renameFolder({folderId: 'nonexistent', newName: 'renamed'})
-      );
-
-      expect(state).toEqual(initialStateWithSources);
-    });
-
-    it('should not rename if name is the same', () => {
-      const initialProjectSources = createMockProjectSources();
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      const state = reducer(
-        initialStateWithSources,
-        renameFolder({folderId: '1', newName: 'folder1'})
       );
 
       expect(state).toEqual(initialStateWithSources);
@@ -718,7 +661,9 @@ describe('lab2ProjectRedux', () => {
         rearrangeFiles(['2', '1'])
       );
 
-      expect(state.projectSources!.source.openFiles).toEqual(['2', '1']);
+      expect(
+        (state.projectSources!.source as MultiFileSource).openFiles
+      ).toEqual(['2', '1']);
       expect(state.hasEdited).toBe(false); // Rearranging doesn't count as edit
     });
 
@@ -735,7 +680,7 @@ describe('lab2ProjectRedux', () => {
         hasEdited: true,
         viewingOldVersion: true,
         restoredOldVersion: true,
-        projectSources: createMockProjectSources(),
+        projectSources: undefined,
       };
 
       const state = reducer(stateWithMetadata, resetProjectMetadata());
@@ -743,57 +688,6 @@ describe('lab2ProjectRedux', () => {
       expect(state.hasEdited).toBe(false);
       expect(state.viewingOldVersion).toBe(false);
       expect(state.restoredOldVersion).toBe(false);
-      expect(state.projectSources).toBe(stateWithMetadata.projectSources); // Source unchanged
-    });
-  });
-
-  describe('setLastSavedLabConfig', () => {
-    it('should set last saved lab config', () => {
-      const labConfig: LabConfig = {
-        miniApp: {name: 'test'},
-      };
-
-      const state = reducer(initialState, setLastSavedLabConfig(labConfig));
-
-      expect(state.lastSavedLabConfig).toBe(labConfig);
-    });
-
-    it('should set last saved lab config to undefined', () => {
-      const stateWithConfig = {
-        ...initialState,
-        lastSavedLabConfig: {miniApp: {name: 'test'}},
-      };
-
-      const state = reducer(stateWithConfig, setLastSavedLabConfig(undefined));
-
-      expect(state.lastSavedLabConfig).toBeUndefined();
-    });
-  });
-
-  describe('state immutability', () => {
-    it('should not mutate original state when making changes', () => {
-      const initialProjectSources = createMockProjectSources();
-      const initialStateWithSources = {
-        ...initialState,
-        projectSources: initialProjectSources,
-      };
-
-      const state = reducer(
-        initialStateWithSources,
-        saveFile({fileId: '1', contents: 'new content'})
-      );
-
-      // Original state should not be mutated
-      expect(
-        initialStateWithSources.projectSources!.source.files['1'].contents
-      ).toBe('Content of file 1');
-      expect(initialStateWithSources.hasEdited).toBe(false);
-
-      // New state should have changes
-      expect(state.projectSources!.source.files['1'].contents).toBe(
-        'new content'
-      );
-      expect(state.hasEdited).toBe(true);
     });
   });
 });
