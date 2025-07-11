@@ -13,6 +13,7 @@ class ConvertHasNumberedUnitsToNumberedUnits < ActiveRecord::Migration[6.1]
 
       # Update the unit group
       unit_group.update_column(:properties, properties)
+      unit_group.write_serialization
     end
   end
 
@@ -31,6 +32,7 @@ class ConvertHasNumberedUnitsToNumberedUnits < ActiveRecord::Migration[6.1]
 
       # Update the unit group
       unit_group.update_column(:properties, properties)
+      unit_group.write_serialization
     end
   end
 end
