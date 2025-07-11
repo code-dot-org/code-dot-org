@@ -531,6 +531,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         addNextBlocks: false,
         // We intentionally do not save IDs, because this can break student code
         // on the hidden procedure definition workspace.
+        // https://github.com/google/blockly/issues/9226
         saveIds: false,
       })!;
     }
