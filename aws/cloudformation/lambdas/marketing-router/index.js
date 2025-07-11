@@ -355,6 +355,7 @@ const marketingPaths = {
   "/professional-learning/international": true,
   "/hourofcode/overview": true,
   "/hourofcode/mc": true,
+  "/about/InformationSecurityPolicy.pdf": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

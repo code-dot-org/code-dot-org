@@ -1,7 +1,7 @@
 import {NextFetchEvent, NextRequest, NextResponse} from 'next/server';
 
 import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
-import {RedirectEntry} from '@/cache/redirects/types';
+import {RedirectEntryResponse} from '@/cache/redirects/types';
 import {getBrandFromHostname} from '@/config/brand';
 import {getLocalhostAddress} from '@/config/host';
 
@@ -27,12 +27,14 @@ export const withRedirects: MiddlewareFactory = next => {
       method: 'GET',
     });
 
-    if (redirectCacheByBrandResponse.status === 404) {
+    const redirectEntryResponse: RedirectEntryResponse =
+      await redirectCacheByBrandResponse.json();
+
+    if (!redirectEntryResponse.redirectEntry) {
       return next(request, event);
     }
 
-    const redirectEntry: RedirectEntry =
-      await redirectCacheByBrandResponse.json();
+    const redirectEntry = redirectEntryResponse.redirectEntry;
 
     const redirectUrl = redirectEntry.destination.startsWith('/')
       ? `${request.nextUrl.origin}${redirectEntry.destination}`

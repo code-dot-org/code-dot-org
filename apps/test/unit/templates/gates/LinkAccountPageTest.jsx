@@ -2,23 +2,29 @@ import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
 import LinkAccountPage from '@cdo/apps/templates/gates/LinkAccountPage';
 import i18n from '@cdo/locale';
 
-const NEW_ACCOUNT_URL = '/test/new-account-url';
-const EXISTING_ACCOUNT_URL = '/test/existing-account-url';
-
-const renderDefault = sourcePage => {
-  render(
-    <LinkAccountPage
-      sourcePage={sourcePage}
-      newAccountUrl={NEW_ACCOUNT_URL}
-      existingAccountUrl={EXISTING_ACCOUNT_URL}
-    />
-  );
-};
+const TEST_RETURN_TO_HREF = '/test/returnto/href';
 
 describe('LinkAccountPage', () => {
+  afterEach(() => {
+    resetWindowLocation();
+  });
+
+  const renderDefault = sourcePage => {
+    setWindowLocation({
+      search: `?return_to=${encodeURIComponent(
+        TEST_RETURN_TO_HREF
+      )}&source_page=${encodeURIComponent(sourcePage)}`,
+    });
+    render(<LinkAccountPage />);
+  };
+
   it('invalid sourcePage shows default text', () => {
     renderDefault('invalid source page');
 
@@ -48,11 +54,19 @@ describe('LinkAccountPage', () => {
 
     expect(
       screen.getByRole('link', {name: i18n.createAccount()})
-    ).toHaveAttribute('href', NEW_ACCOUNT_URL);
+    ).toHaveAttribute(
+      'href',
+      `/users/sign_up/account_type?user_return_to=${encodeURIComponent(
+        TEST_RETURN_TO_HREF
+      )}`
+    );
     expect(
       screen.getByRole('link', {
         name: i18n.ltiLinkAccountExistingAccountCardActionLabel(),
       })
-    ).toHaveAttribute('href', EXISTING_ACCOUNT_URL);
+    ).toHaveAttribute(
+      'href',
+      `/users/sign_in?user_return_to=${encodeURIComponent(TEST_RETURN_TO_HREF)}`
+    );
   });
 });
