@@ -280,11 +280,9 @@ class ShareFilteringTest < Minitest::Test
 
   def test_should_filter_program_check_project_type
     Gatekeeper.stubs(:allows).with('webpurify', default: true).returns(true)
-    indicator = ShareFiltering::USER_ENTERED_TEXT_INDICATORS.first
-    program_with_indicator = "<xml><field name=\"FNAME\">#{indicator}</field></xml>"
     # 'gamelab' is not in FILTERED_PROJECT_TYPES
-    assert_equal false, ShareFiltering.should_filter_program(program_with_indicator, 'gamelab')
-    assert_equal true, ShareFiltering.should_filter_program(program_with_indicator, 'poetry')
+    assert_equal false, ShareFiltering.should_filter_program('<xml/>', 'gamelab')
+    assert_equal true, ShareFiltering.should_filter_program('<xml/>', 'poetry')
   end
 
   def test_should_filter_program_playlab_only_with_indicator
