@@ -188,9 +188,21 @@ class CourseOffering < ApplicationRecord
 
   def self.all_course_offerings
     if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+      @@course_offerings ||= CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     else
-      CourseOffering.all.includes(course_versions: :content_root)
+      CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     end
   end
 
