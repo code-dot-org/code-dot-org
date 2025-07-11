@@ -16,6 +16,7 @@ import '@xyflow/react/dist/style.css';
 
 import {type MyNode} from '../../flow/initialElements';
 
+import CustomSmoothStepConnectionLine from './CustomSmoothStepConnectionLine';
 import {DataEdge} from './DataEdge';
 import {DnDProvider, useDnD} from './DnDContext';
 import AiNode from './nodes/AiNode';
@@ -158,6 +159,7 @@ const FlowLab: React.FunctionComponent = () => {
           onDragOver={onDragOver}
           edgeTypes={edgeTypes}
           fitView
+          connectionLineComponent={CustomSmoothStepConnectionLine}
         >
           <Controls />
           <Background />

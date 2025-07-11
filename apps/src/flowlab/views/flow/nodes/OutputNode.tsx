@@ -39,7 +39,7 @@ function OutputNode() {
       : 'none';
 
   return (
-    <div style={{maxWidth: 140}}>
+    <div className="nowheel" style={{maxWidth: 140, width: '100%'}}>
       <Handle type="target" position={Position.Left} />
       <div>Output</div>
       <div

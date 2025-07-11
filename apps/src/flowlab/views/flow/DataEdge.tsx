@@ -46,7 +46,7 @@ export function DataEdge({
 }: EdgeProps<DataEdge>) {
   const nodeData = useStore(state => state.nodeLookup.get(source)?.data);
   const [edgePath, labelX, labelY] = getPath({
-    type: data.path ?? 'bezier',
+    type: data.path ?? 'smoothstep',
     sourceX,
     sourceY,
     sourcePosition,
@@ -78,7 +78,7 @@ export function DataEdge({
   return (
     <>
       <BaseEdge id={id} path={edgePath} markerEnd={markerEnd} style={style} />
-      {data.key && (
+      {data.key && label && (
         <EdgeLabelRenderer>
           <div
             className="button-edge__label nodrag nopan"
