@@ -105,6 +105,7 @@
     "playwright-core": "~1.49.1",
     "prettier": "3.4.2",
     "schema-dts": "^1.1.5",
+    "simple-git": "^3.28.0",
     "stylelint": "^16.14.1",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.3",
