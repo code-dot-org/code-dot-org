@@ -42,6 +42,18 @@ class AichatRequestsController < ApplicationController
     messages_for_model = params[:storedMessages].select {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]}
     context = params[:aichatContext]
 
+    # We're already doing some futzing with messages above, so doesn't feel so terrible to scale the temperature here as well.
+    if client == 'ai_chat_lab'
+      scaling_factor = 1
+      if params[:aichatModelCustomizations][:selectedModelId] == 'gpt-4o-mini'
+        scaling_factor = 1.6
+      elsif params[:aichatModelCustomizations][:selectedModelId] == 'gemini'
+        scaling_factor = 2
+      end
+
+      params[:aichatModelCustomizations][:temperature] = params[:aichatModelCustomizations][:temperature] * scaling_factor
+    end
+
     # Create the request object.
     begin
       request = AichatRequest.create!(

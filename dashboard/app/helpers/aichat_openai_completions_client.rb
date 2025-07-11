@@ -34,9 +34,6 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     encrypted_channel_id
     )
 
-    # We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
-    temperature *= 2
-
     messages = [
       {role: "system", content: [{type: "text", text: system_instructions}]},
       *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
