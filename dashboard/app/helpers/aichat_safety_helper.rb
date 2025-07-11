@@ -45,18 +45,17 @@ module AichatSafetyHelper
       attempts = 0
       messages = safety_check_messages(text, level_id)
 
-      # # Retry only on network-related exceptions
-      # response = Retryable.retryable(
-      #   tries: 2,
-      #   on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
-      # ) do
-      #   attempts += 1
-      #   client.request_chat_completion(messages, 1)
-      # end
-      # raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
-      #
-      # evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
-      evaluation = 'poop'
+      # Retry only on network-related exceptions
+      response = Retryable.retryable(
+        tries: 2,
+        on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
+      ) do
+        attempts += 1
+        client.request_chat_completion(messages, 1)
+      end
+      raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
+
+      evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse")
         attempts +=1
