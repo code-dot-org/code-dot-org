@@ -1564,7 +1564,7 @@ class Unit < ApplicationRecord
         id: id,
         name: name,
         title: title_for_display(unit_group_unit: unit_group_unit),
-        unit_prefix: unit_group_unit.unit_prefix,
+        unit_prefix: unit_group_unit&.unit_prefix,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
         course_id: unit_group_unit&.cached_unit_group&.id,
