@@ -1,0 +1,105 @@
+// A background variable so that it matches what we use for the bar chart
+$encrypted-color: var(--background-accent-orange-primary);
+
+.frequencyLevel {
+  height: 100%;
+  width: 100%;
+
+  .messagePane {
+    padding: 1rem;
+  }
+
+  .messageContainer {
+    letter-spacing: 0.125rem;
+  }
+
+  .encryptedMessageLetter {
+    border-bottom: 1px solid $encrypted-color;
+  }
+
+  .plotPane {
+    padding-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  // The tabs that contain controls
+  .tabContent {
+    text-align: center;
+    width: 100%;
+  }
+
+  .randomControls,
+  .caesarControls {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .field {
+    min-width: 0;
+    width: 3rem;
+
+    input {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .letters {
+    height: 2rem;
+    position: relative;
+    width: 100%;
+
+    .caption {
+      box-sizing: border-box;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      position: absolute;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    .letter {
+      box-sizing: border-box;
+      height: 1.75rem;
+      line-height: 1.75rem;
+      position: absolute;
+      text-align: center;
+      transition: 1s left;
+      vertical-align: middle;
+      width: 1.75rem;
+
+      &.uninteractive {
+        color: $encrypted-color;
+        font-weight: bold;
+      }
+
+      &.interactive {
+        border: 1px solid var(--borders-neutral-light);
+        border-radius: 25%;
+        cursor: pointer;
+
+        &.source {
+          background: var(--background-brand-purple-primary);
+          border-color: var(--borders-brand-purple-strong);
+          color: var(--text-neutral-inverse);
+        }
+
+        &.selected {
+          border-color: var(--background-neutral-primary);
+          outline: 2px solid var(--borders-brand-teal-primary);
+        }
+      }
+
+      &.interactive.empty.source,
+      &.interactive.empty {
+        background: var(--background-neutral-lab);
+        border-color: var(--borders-neutral-primary);
+        border-style: dashed;
+        color: var(--borders-neutral-primary);
+      }
+    }
+  }
+}

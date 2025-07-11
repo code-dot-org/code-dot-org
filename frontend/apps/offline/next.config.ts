@@ -32,7 +32,7 @@ const copySkinAssets = async () => {
 
   // Cancel it if there is already the target path
   try {
-    await fs.access(target);
+    await fs.access(path.join(target, 'birds'));
     return;
   } catch (_) {
     // If this fails, then the directory doesn't exist.

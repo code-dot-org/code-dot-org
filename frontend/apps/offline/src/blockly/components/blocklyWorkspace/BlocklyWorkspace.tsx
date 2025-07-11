@@ -5,7 +5,7 @@ import * as libraryBlocks from 'blockly/blocks';
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
-import classnames from 'classnames';
+import classNames from 'classnames';
 import React, {
   createElement,
   useEffect,
@@ -316,7 +316,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
 
   return createElement(inline ? 'span' : 'div', {
     ref: anchor,
-    className: classnames([
+    className: classNames([
       moduleStyles.blocklyWorkspace,
       ...(hidden ? [moduleStyles.hiddenWorkspace] : []),
     ]),

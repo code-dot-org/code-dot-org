@@ -46,6 +46,8 @@
     "@rexxars/react-split-pane": "^1.0.0",
     "blockly": "11.1.1",
     "csv-parser": "^3.2.0",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
     "hammerjs": "^2.0.8",
     "interactjs": "^1.10.27",
     "jsdom": "^20.0.3",

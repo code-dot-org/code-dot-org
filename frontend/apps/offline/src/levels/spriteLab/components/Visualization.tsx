@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import {forwardRef} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
@@ -45,7 +45,7 @@ const Visualization = forwardRef<HTMLDivElement, VisualizationProps>(
     },
     ref,
   ) => (
-    <div className={classnames(moduleStyles.visualization, className)}>
+    <div className={classNames(moduleStyles.visualization, className)}>
       <div className={moduleStyles.container} ref={ref}>
         <div className={moduleStyles.spinner}>
           <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />

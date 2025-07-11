@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classNames from 'classnames';
 import ReactMarkdown, {MarkdownToJSX} from 'markdown-to-jsx';
 import React from 'react';
 
@@ -111,7 +111,7 @@ const Markdown: React.FunctionComponent<MarkdownProps> = ({
       forceBlock: !inline,
       forceInline: !!inline,
     }}
-    className={classnames(moduleStyles.markdownContainer, className)}
+    className={classNames(moduleStyles.markdownContainer, className)}
   >
     {content || children || ''}
   </ReactMarkdown>

@@ -11,6 +11,7 @@ import type {ActivitySectionData} from '@/app/models/unit';
 
 import ArtistLevel from '../artist';
 import CraftLevel from '../craft';
+//import FrequencyLevel from '../frequency';
 import KarelLevel from '../karel';
 import MazeLevel from '../maze';
 import PanelsLevel from '../panels';
@@ -42,6 +43,8 @@ const Level: React.FunctionComponent<LevelProps> = ({
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      color: 'var(--text-neutral-primary)',
+      background: 'var(--background-neutral-primary)',
     }}
   >
     {!level && (
@@ -57,6 +60,7 @@ const Level: React.FunctionComponent<LevelProps> = ({
       <StandaloneVideoLevel activitySection={activitySection} level={level} />
     )}
     {level?.type === 'Panels' && <PanelsLevel level={level} />}
+    {/*<FrequencyLevel level={level} />*/}
   </div>
 );
 
