@@ -63,18 +63,6 @@ export const useSource = (
     [dispatch, isReadOnly]
   );
 
-  const debouncedProgressReport = debounce(() => {
-    if (appName && currentLevelStatus === LevelStatus.not_tried) {
-      dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
-    }
-  }, 100);
-
-  useEffect(() => {
-    if (hasEdited) {
-      debouncedProgressReport();
-    }
-  }, [debouncedProgressReport, hasEdited]);
-
   const startSources = useMemo(() => {
     return (
       (!isStartMode && templateStartSources) ||

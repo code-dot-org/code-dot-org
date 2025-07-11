@@ -1,8 +1,12 @@
 // Store the project source in the redux store and tell the project manager
 
 import {ThunkAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {debounce} from 'lodash';
 import {AnyAction} from 'redux';
 
+import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   ProjectSources,
@@ -13,6 +17,7 @@ import {
 } from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   setSource,
@@ -135,7 +140,7 @@ export const createNewFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(createNewFile({fileName, folderId, contents}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -147,7 +152,7 @@ export const renameFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(renameFile({fileId, newName}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -159,7 +164,7 @@ export const saveFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(saveFile({fileId, contents}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -171,7 +176,7 @@ export const setFileTypeThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(setFileType({fileId, type}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -182,7 +187,7 @@ export const setActiveFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(activateFile(fileId));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -193,7 +198,7 @@ export const closeFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(closeFile(fileId));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -204,7 +209,7 @@ export const deleteFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(deleteFile(fileId));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -216,7 +221,7 @@ export const moveFileThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(moveFile({fileId, folderId}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -228,7 +233,7 @@ export const moveFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(moveFolder({folderId, parentId}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -240,7 +245,7 @@ export const createNewFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(createNewFolder({folderName, parentId}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -251,7 +256,7 @@ export const toggleOpenFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(toggleOpenFolder(folderId)); // Assuming this toggles open/close
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -262,7 +267,7 @@ export const deleteFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(deleteFolder(folderId));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -274,7 +279,7 @@ export const renameFolderThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(renameFolder({folderId, newName}));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
@@ -285,17 +290,26 @@ export const rearrangeFilesThunk = (
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return (dispatch, getState) => {
     dispatch(rearrangeFiles(fileIds));
-    saveProjectIfEditable(getState, forceSave, forceNewVersion);
+    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
   };
 };
 
 function saveProjectIfEditable(
   getState: () => RootState,
+  dispatch: AppDispatch,
   forceSave: boolean = false,
   forceNewVersion: boolean = false
 ) {
   const projectSources = getState().lab2Project.projectSources;
   const isReadOnly = isReadOnlyWorkspace(getState());
+  const hasEdited = getState().lab2Project.hasEdited;
+  const levelStatus = getCurrentLevel(getState())?.status;
+  if (levelStatus === LevelStatus.not_tried && hasEdited) {
+    const appName = Lab2Registry.getInstance().getAppName();
+    if (appName) {
+      debouncedStartedProgressReport(dispatch, appName);
+    }
+  }
   if (
     Lab2Registry.getInstance().getProjectManager() &&
     projectSources &&
@@ -306,3 +320,11 @@ function saveProjectIfEditable(
       ?.save(projectSources, forceSave, forceNewVersion);
   }
 }
+
+const debouncedStartedProgressReport = debounce(
+  (dispatch: AppDispatch, appName: string) => {
+    console.log(`Sending progress report for ${appName}`);
+    dispatch(sendProgressReport(appName, TestResults.LEVEL_STARTED));
+  },
+  100
+);

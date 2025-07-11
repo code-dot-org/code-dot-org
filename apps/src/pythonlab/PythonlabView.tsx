@@ -88,7 +88,9 @@ const PythonlabView: React.FunctionComponent<
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
-  const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
@@ -219,11 +221,7 @@ const PythonlabView: React.FunctionComponent<
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (
-      currentLevel &&
-      !isPredictLevel &&
-      currentLevel.status === LevelStatus.not_tried
-    ) {
+    if (!isPredictLevel && currentLevelStatus === LevelStatus.not_tried) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
       dispatch(
