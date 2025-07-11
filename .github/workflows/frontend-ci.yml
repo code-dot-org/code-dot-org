@@ -41,7 +41,7 @@ jobs:
     needs: setup
     uses: ./.github/workflows/marketing-app-ci.yml
     with:
-      BRANCHED_TESTING_ENABLED: ${{ github.event.pull_request.labels.*.name == 'All The Things' }}
+      BRANCHED_TESTING_ENABLED: ${{ contains( github.event.pull_request.labels.*.name, 'All The Things') }}
     secrets: inherit
 
   # Start the component library CI workflow
