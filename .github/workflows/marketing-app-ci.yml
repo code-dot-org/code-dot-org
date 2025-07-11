@@ -2,6 +2,12 @@ name: Marketing-CI
 
 on:
   workflow_call:
+    inputs:
+      BRANCHED_TESTING_ENABLED:
+        type: boolean
+        description: "Whether branched testing is enabled. Defaults to false"
+        default: false
+        required: false
 
 defaults:
   run:
@@ -113,4 +119,4 @@ jobs:
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           DRAFT_MODE_TOKEN: ci-draft-mode
-          BRANCHED_TESTING_ENABLED: ${{ github.event.pull_request.labels.*.name == 'All The Things' }}
+          BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
