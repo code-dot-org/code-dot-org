@@ -26,6 +26,9 @@ export const findSubFolders = (parentId: string, folders: ProjectFolder[]) =>
     return bucket;
   }, <string[]>[]);
 
+/**
+ * Create a new file.
+ */
 export const createNewFileHelper = (
   source: MultiFileSource,
   fileName: string,
@@ -35,19 +38,20 @@ export const createNewFileHelper = (
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
+  const defaultContents = `Add your changes to ${fileName}`;
 
   newSource.files[fileId] = {
     id: fileId,
     name: fileName,
     language: extension || 'html',
-    contents,
+    contents: contents || defaultContents,
     folderId,
   };
 
   return activateFileHelper(newSource, fileId);
 };
 /**
- * Activate a file (open and make active)
+ * Activate a file (open and make active).
  */
 export const activateFileHelper = (
   source: MultiFileSource,
@@ -85,7 +89,7 @@ export const activateFileHelper = (
 };
 
 /**
- * Close a file
+ * Close a file.
  */
 export const closeFileHelper = (
   source: MultiFileSource,
@@ -136,7 +140,7 @@ export const closeFileHelper = (
 };
 
 /**
- * Delete a file
+ * Delete a file.
  */
 export const deleteFileHelper = (
   source: MultiFileSource,
@@ -161,7 +165,7 @@ export const deleteFileHelper = (
 };
 
 /**
- * Create a new folder
+ * Create a new folder.
  */
 export const createNewFolderHelper = (
   source: MultiFileSource,
@@ -181,7 +185,7 @@ export const createNewFolderHelper = (
 };
 
 /**
- * Delete a folder and all its contents
+ * Delete a folder and all of its contents.
  */
 export const deleteFolderHelper = (
   source: MultiFileSource,
@@ -205,7 +209,7 @@ export const deleteFolderHelper = (
     )
   );
 
-  // Delete the folder/
+  // Delete the folder.
   delete newSource.folders[folderId];
 
   // Delete all its child folders.
