@@ -6,7 +6,7 @@ import {
   type Node,
   type NodeProps,
 } from '@xyflow/react';
-import React, {memo, useEffect, useState, useCallback} from 'react';
+import React, {memo, useEffect, useState} from 'react';
 
 import askAi from '../../../flow/askAi';
 import {useInputTexts} from '../../../flow/flowNodes';
@@ -26,19 +26,12 @@ function AiNode({
 
   const [isWorking, setIsWorking] = useState(false);
 
-  const [lastContextString, setLastContextString] = useState<
-    string | undefined
-  >(undefined);
-
-  const text: string =
-    'Here is the context: \n' +
-    contextString +
-    '\nAnd here is the request: \n' +
-    data.fieldText;
-
-  const onEnter = useCallback(() => {
-    const askChat = async () => {
-      if (!data.fieldText || data.fieldText === '') {
+  useEffect(() => {
+    (async () => {
+      // Assume that asked text has just been set (in the case that
+      // shift-enter was pressed), or the context changed so we're using the
+      // last asked text.)  If there is none, then set the output to be empty.
+      if (!data.askedText || data.askedText === '') {
         console.log('No text data available to ask chat');
         updateNodeData(id, {
           text: '',
@@ -46,16 +39,18 @@ function AiNode({
         return;
       }
 
-      updateNodeData(id, {
-        askedText: data.fieldText,
-      });
-
-      console.log('Ask chat:', text);
-
       setIsWorking(true);
+
+      const text: string =
+        'Here is the context: \n' +
+        contextString +
+        '\nAnd here is the request: \n' +
+        data.askedText;
+      console.log('Ask chat:', text);
 
       const response = await askAi(text);
       console.log('Chat responded: ', response);
+
       const responseText =
         response && response.length > 1 ? response[1].chatMessageText : '';
       updateNodeData(id, {
@@ -63,18 +58,16 @@ function AiNode({
       });
 
       setIsWorking(false);
-    };
+    })();
+  }, [contextString, data.askedText, id, updateNodeData]);
 
-    askChat();
-  }, [data.fieldText, id, text, updateNodeData]);
-
-  // Also requery if the input nodes' values change.
-  useEffect(() => {
-    if (lastContextString !== contextString) {
-      onEnter();
-      setLastContextString(contextString);
-    }
-  }, [contextString, lastContextString, onEnter]);
+  // This doesn't use useCallback because a dependency on data.fieldText
+  // would trigger an AI request every time the user types in the input field.
+  const onEnter = () => {
+    updateNodeData(id, {
+      askedText: data.fieldText,
+    });
+  };
 
   return (
     <div>
