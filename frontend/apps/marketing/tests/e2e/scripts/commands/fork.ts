@@ -17,6 +17,7 @@ export async function fork(createOrUpdateEntry: CreateOrUpdateEntryType) {
 
   snapshotData.fields.slug['en-US'] = slug;
   snapshotData.fields.title['en-US'] = title;
+  snapshotData.fields.pageHeading['en-US'] = title;
 
   const createdEntry = await createOrUpdateEntry({
     contentType: serializedComponent.contentType,
