@@ -522,6 +522,22 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalToCopyData = blocklyWrapper.BlockSvg.prototype.toCopyData;
+  extendedBlockSvg.toCopyData = function () {
+    const blockCopyData = originalToCopyData.call(this);
+    if (blockCopyData) {
+      blockCopyData.blockState = GoogleBlockly.serialization.blocks.save(this, {
+        addCoordinates: true,
+        addNextBlocks: false,
+        // We intentionally do not save IDs, because this can break student code
+        // on the hidden procedure definition workspace.
+        // https://github.com/google/blockly/issues/9226
+        saveIds: false,
+      })!;
+    }
+    return blockCopyData;
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;

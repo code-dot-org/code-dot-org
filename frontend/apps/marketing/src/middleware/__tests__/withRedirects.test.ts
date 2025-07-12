@@ -1,6 +1,7 @@
 import {NextResponse} from 'next/server';
 
 import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
+import {getBrandFromHostname} from '@/config/brand';
 
 import {withRedirects} from '../withRedirects';
 
@@ -35,7 +36,28 @@ describe('withRedirects middleware', () => {
   });
 
   it('calls next if redirect config API returns 404', async () => {
-    (fetch as jest.Mock).mockResolvedValue({status: 404});
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 404,
+      json: async () => ({}), // Ensure json method exists
+    });
+    await withRedirects(next)(makeRequest(), event);
+    expect(next).toHaveBeenCalled();
+  });
+
+  it('calls next if redirect config API returns redirectEntry is null', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      json: async () => ({redirectEntry: null}),
+    });
+    await withRedirects(next)(makeRequest(), event);
+    expect(next).toHaveBeenCalled();
+  });
+
+  it('calls next if redirect config API returns malformed data', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      json: async () => ({}), // missing redirectFound
+    });
     await withRedirects(next)(makeRequest(), event);
     expect(next).toHaveBeenCalled();
   });
@@ -47,8 +69,10 @@ describe('withRedirects middleware', () => {
         get: (header: string) => MOCK_RESPONSE_HEADERS[header],
       },
       json: async () => ({
-        destination: 'https://external.com',
-        permanent: true,
+        redirectEntry: {
+          destination: 'https://external.com',
+          permanent: true,
+        },
       }),
     });
     const response = await withRedirects(next)(makeRequest(), event);
@@ -69,11 +93,90 @@ describe('withRedirects middleware', () => {
       headers: {
         get: (header: string) => MOCK_RESPONSE_HEADERS[header],
       },
-      json: async () => ({destination: '/bar', permanent: false}),
+      json: async () => ({
+        redirectEntry: {destination: '/bar', permanent: false},
+      }),
     });
     const response = await withRedirects(next)(makeRequest('/foo'), event);
     expect(response).toEqual(
       NextResponse.redirect('http://localhost:3000/bar', {
+        status: 307,
+        headers: {
+          'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
+          ETag: 'mocked-etag',
+        },
+      }),
+    );
+  });
+
+  it('permanent redirects to absolute destination without ETag', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      headers: {
+        get: () => undefined,
+      },
+      json: async () => ({
+        redirectEntry: {
+          destination: 'https://external.com',
+          permanent: true,
+        },
+      }),
+    });
+    const response = await withRedirects(next)(makeRequest(), event);
+    expect(response).toEqual(
+      NextResponse.redirect('https://external.com', {
+        status: 308,
+        headers: {
+          'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
+        },
+      }),
+    );
+  });
+
+  it('temporary redirects to relative destination without ETag', async () => {
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      headers: {
+        get: () => undefined,
+      },
+      json: async () => ({
+        redirectEntry: {
+          destination: '/bar',
+          permanent: false,
+        },
+      }),
+    });
+    const response = await withRedirects(next)(makeRequest('/foo'), event);
+    expect(response).toEqual(
+      NextResponse.redirect('http://localhost:3000/bar', {
+        status: 307,
+        headers: {
+          'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
+        },
+      }),
+    );
+  });
+
+  it('uses the correct brand from getBrandFromHostname', async () => {
+    (getBrandFromHostname as jest.Mock).mockReturnValue('Hour of Code');
+    (fetch as jest.Mock).mockResolvedValue({
+      status: 200,
+      headers: {
+        get: (header: string) => MOCK_RESPONSE_HEADERS[header],
+      },
+      json: async () => ({
+        redirectEntry: {
+          destination: '/hoc',
+          permanent: false,
+        },
+      }),
+    });
+    const response = await withRedirects(next)(
+      makeRequest('/hoc', 'hourofcode.com'),
+      event,
+    );
+    expect(response).toEqual(
+      NextResponse.redirect('http://localhost:3000/hoc', {
         status: 307,
         headers: {
           'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,

@@ -57,14 +57,19 @@ describe('getSeoMetadata', () => {
 
   it('should return metadata when seoMetadata is defined', () => {
     const locale = 'en-US';
-    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
+    const result = getSeoMetadata(
+      mockExperience,
+      Brand.CODE_DOT_ORG,
+      locale,
+      'engineering/all-the-things',
+    );
 
     expect(result).toEqual<Metadata>({
       title: 'Test Title',
       description: 'Test Description',
       keywords: ['test', 'seo'],
       alternates: {
-        canonical: 'https://example.com',
+        canonical: 'https://code.org/en-US/engineering/all-the-things',
       },
       openGraph: {
         type: 'website',
@@ -84,7 +89,12 @@ describe('getSeoMetadata', () => {
   it('should return undefined when seoMetadata is undefined', () => {
     (getSeoMetadataFromExperience as jest.Mock).mockReturnValue(undefined);
 
-    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, 'en-US');
+    const result = getSeoMetadata(
+      mockExperience,
+      Brand.CODE_DOT_ORG,
+      'en-US',
+      '/engineering/all-the-things',
+    );
 
     expect(result).toBeUndefined();
   });
@@ -99,7 +109,12 @@ describe('getSeoMetadata', () => {
       seoMetadataWithoutImage,
     );
 
-    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
+    const result = getSeoMetadata(
+      mockExperience,
+      Brand.CODE_DOT_ORG,
+      locale,
+      '/engineering/all-the-things',
+    );
 
     expect(result?.openGraph?.images).toBe(
       'https://contentful-images.code.org/90t6bu6vlf76/6QAykNTAjFdgHya4lBchyF/539e119f045b74395ec9aca97bacf6ed/opengraph-default.png',
@@ -120,6 +135,7 @@ describe('getSeoMetadata', () => {
       mockExperience,
       'incorrect brand' as Brand,
       locale,
+      '/engineering/all-the-things',
     );
 
     expect(result?.openGraph?.images).toBeUndefined();
@@ -135,7 +151,12 @@ describe('getSeoMetadata', () => {
       seoMetadataWithoutRobots,
     );
 
-    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, 'en-US');
+    const result = getSeoMetadata(
+      mockExperience,
+      Brand.CODE_DOT_ORG,
+      'en-US',
+      '/engineering/all-the-things',
+    );
 
     expect(result?.robots).toEqual({
       index: true,
@@ -151,7 +172,12 @@ describe('getSeoMetadata', () => {
       'https://example.com/test-image.png',
     );
     const locale = 'en-US';
-    getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
+    getSeoMetadata(
+      mockExperience,
+      Brand.CODE_DOT_ORG,
+      locale,
+      '/engineering/all-the-things',
+    );
     expect(getAbsoluteImageUrl).toHaveBeenCalledWith(
       mockSeoMetadata.openGraphImage,
       {fm: 'webp'},

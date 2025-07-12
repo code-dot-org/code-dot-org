@@ -16,7 +16,7 @@ export function getLocalhostAddress() {
   return `http://${getLocalhostDomain()}`;
 }
 
-function getProductionCanonicalRootDomain(brand: Brand) {
+export function getProductionCanonicalRootDomain(brand: Brand | undefined) {
   switch (brand) {
     case Brand.CS_FOR_ALL:
       return `csforall.org`;

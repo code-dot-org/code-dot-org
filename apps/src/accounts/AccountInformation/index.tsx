@@ -13,6 +13,10 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import {
+  AccountSettingsSectionUrlParams,
+  handleUpdateUrlOnSettingsSave,
+} from '../accountUpdateConstants';
 import ChangeEmailModal from '../ChangeEmail/ChangeEmailModal';
 
 import {AccountInformationProps} from './types';
@@ -135,10 +139,18 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
 
     if (response.ok) {
       setShowAccountUpdateSuccess(true);
-      const returnToHref = queryParams('user_return_to') as string;
-      // If sent here with a user_return_to param, return the user upon submission,
-      // otherwise handle reload.
-      if (returnToHref) {
+
+      // If sent here with a user_return_to param and there are no
+      // more Accoutn Settings sections the user is meant to update
+      // (tracked in the URL params), then redirect the user to
+      // user_return_to, otherwise handle reload.
+      const returnToHref = decodeURIComponent(
+        (queryParams('user_return_to') || '') as string
+      );
+      const hasFinishedAccountUpdates = handleUpdateUrlOnSettingsSave(
+        AccountSettingsSectionUrlParams.AccountInformation
+      );
+      if (returnToHref && hasFinishedAccountUpdates) {
         navigateToHref(returnToHref);
       } else {
         handleReload();

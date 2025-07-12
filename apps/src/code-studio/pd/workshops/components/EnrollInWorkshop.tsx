@@ -13,7 +13,7 @@ import {
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
-import UserPassport from './UserPassport';
+import UserPassport, {isMissingUserInfo} from './UserPassport';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
@@ -97,11 +97,11 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={custom_registration_link}
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -125,11 +125,6 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       );
     }
 
-    const isMissingRequiredUserField =
-      !userInfo.first_name ||
-      !userInfo.last_name ||
-      !userInfo.email ||
-      !userInfo.school_info?.school_name;
     return (
       <div className={moduleStyles.internalEnrollButton}>
         {userInfo && (
@@ -139,6 +134,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             familyName={userInfo.last_name}
             email={userInfo.email}
             schoolName={userInfo.school_info?.school_name}
+            schoolType={userInfo.school_info?.school_type}
             returnToHref={`/professional-learning/workshops/${id}`}
             className={moduleStyles.userPassport}
           />
@@ -160,7 +156,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
           isPending={isSubmitting}
           onClick={handleClick}
           text="Enroll in this workshop"
-          disabled={isMissingRequiredUserField}
+          disabled={isMissingUserInfo(userInfo)}
         />
       </div>
     );

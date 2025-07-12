@@ -1,6 +1,8 @@
 import Typography from '@mui/material/Typography';
 import {ReactNode} from 'react';
 
+import {RemoveMarginBottomProps} from '@/components/common/types';
+
 type HeadingSemanticTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 // Existing Contentful Heading visualAppearance values that
@@ -13,13 +15,11 @@ type HeadingVisualAppearance =
   | 'heading-sm'
   | 'heading-xs';
 
-export type HeadingProps = {
+export type HeadingProps = RemoveMarginBottomProps & {
   /** Heading content */
   children: ReactNode;
   /** Heading visual appearance */
   visualAppearance: HeadingVisualAppearance;
-  /** Remove margin bottom */
-  removeMarginBottom?: boolean;
   /** ClassName passed by Contentful to apply styles
    * that are set through Contentful native editor */
   className?: string;

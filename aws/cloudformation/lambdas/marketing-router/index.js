@@ -343,6 +343,19 @@ const marketingPaths = {
   "/blockchain": true,
   "/curriculum/music": true,
   "/security": true,
+  "/about/geocode_test": true,
+  "/teacher-dashboard": true,
+  "/minecraft*": true,
+  "/learn": true,
+  "/oceans ": true,
+  "/professional-learning/contact-regional-partner": true,
+  "/rp-contact-form-alt": true,
+  "/international/apply": true,
+  "/professional-learning/international-partners": true,
+  "/professional-learning/international": true,
+  "/hourofcode/overview": true,
+  "/hourofcode/mc": true,
+  "/about/InformationSecurityPolicy.pdf": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
