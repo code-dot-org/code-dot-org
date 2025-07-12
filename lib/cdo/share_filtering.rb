@@ -39,7 +39,11 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['A', 'B', 'C', 'COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'title name\=\"VAL\"'].freeze
+  # We are omiting comments, procedures, and variables from the indicator list as they are not displayed in share mode.
+  # However, if the program possibly contains user-generated text, we will also filter comments and variable/procedure names.
+  # Note that 'A', 'B', and 'C' could possibly indicate user-entered strings in fields, but are also used for input options.
+  POSSIBLE_USER_ENTERED_TEXT_INDICATORS = ['SPEECH', 'TEXT', 'TEXT1', '\"A\":', '\"B\":', '\"C\":', 'TITLE', 'title name\=\"VAL\"'].freeze
+  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE A B C)
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
@@ -93,6 +97,16 @@ module ShareFiltering
       end
     end
 
+    # Extract user-created procedure names and descriptions.
+    json.dig("blocks", "blocks")&.each do |block|
+      if block["type"].match?(/^procedures_def/)
+        name = clean_text_value(block.dig("fields", "NAME"))
+        description = clean_text_value(block.dig("fields", "DESCRIPTION"))
+        texts << name if name && !name.empty?
+        texts << description if description && !description.empty?
+      end
+    end
+
     # Traverse each block recursively extracting comments, field values, nested inputs via traverse_block.
     json.dig("blocks", "blocks")&.each do |block|
       traverse_block(block, texts)
@@ -130,7 +144,7 @@ module ShareFiltering
     inputs = block["inputs"] || {}
 
     fields.each do |key, value|
-      if USER_ENTERED_TEXT_INDICATORS.include?(key)
+      if USER_ENTERED_TEXT_FIELDS.include?(key)
         cleaned = clean_text_value(value)
         texts << cleaned if cleaned && !cleaned.strip.empty?
       end
@@ -151,7 +165,7 @@ module ShareFiltering
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
     # Only filter if program contains user-entered indicators.
-    return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
+    return program.match?(/(?:#{POSSIBLE_USER_ENTERED_TEXT_INDICATORS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
