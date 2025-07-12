@@ -23,96 +23,62 @@ import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {ServerSection} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import UnitCalendar from '@cdo/apps/templates/teacherNavigation/UnitCalendar';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-const SECTIONS: ServerSection[] = [
+const SECTIONS = [
   {
     id: 1,
     name: 'Period 2',
     course_offering_id: 123,
-    course_version_id: 2024,
-    courseVersionName: 'csd-2024',
-    course_display_name: 'CSD 2024',
-    course_id: 2024,
+    courseVersionId: 2023,
     unitName: 'csd1-2024',
-    unitPosition: 1,
-    code: '',
-    hidden: false,
-    isAssignedStandaloneCourse: false,
-    lesson_extras: false,
-    login_type: '',
-    pairing_allowed: false,
-    sharing_disabled: false,
-    studentCount: 0,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
   },
   {
     id: 9,
     name: 'Period 9',
     course_offering_id: null,
-    course_version_id: null,
-    courseVersionName: null,
-    code: '',
-    course_id: null,
-    hidden: false,
-    isAssignedStandaloneCourse: false,
-    lesson_extras: false,
-    login_type: '',
-    pairing_allowed: false,
-    sharing_disabled: false,
-    studentCount: 0,
+    courseVersionId: null,
+    unitName: null,
+    unitSelection: null,
   },
   {
     id: 10,
     name: 'Period 10',
     course_offering_id: 123,
-    course_version_id: 2024,
+    courseVersionId: 2023,
     courseVersionName: 'csd-2024',
-    course_id: 2024,
+    unitName: null,
+    unitSelection: null,
     course_display_name: 'CSD',
-    code: '',
-    hidden: false,
-    isAssignedStandaloneCourse: false,
-    lesson_extras: false,
-    login_type: '',
-    pairing_allowed: false,
-    sharing_disabled: false,
-    studentCount: 0,
   },
   {
     id: 11,
     name: 'Period 11',
     course_offering_id: 1234,
-    course_version_id: 2020,
-    courseVersionName: 'csd-2020',
-    course_id: 2020,
+    courseVersionId: 20234,
+    courseVersionName: 'csd1-2020',
     unitName: 'csd1-2020',
-    unitPosition: 1,
-    course_display_name: 'CSD-2020',
-    code: '',
-    hidden: false,
-    isAssignedStandaloneCourse: false,
-    lesson_extras: false,
-    login_type: '',
-    pairing_allowed: false,
-    sharing_disabled: false,
-    studentCount: 0,
+    unitSelection: {
+      unitName: 'csd1-2020',
+    },
+    course_display_name: 'CSD1-2020',
   },
 ];
 
 const UNIT_SUMMARY = {
   id: 1,
   name: 'csd1-2024',
-  course_name: 'csd-2024',
-  unit_position: 1,
   lessons: [],
   title: "Unit 1 - Problem Solving and Computing ('23-'24)",
   description: 'CSD description',
   studentDescription: 'CSD student description',
   course_versions: {},
-  courseVersionId: 2024,
+  courseVersionId: 2,
   lessonGroups: [],
   isPlCourse: false,
   plc: false,
@@ -138,17 +104,13 @@ const NO_SHOW_CALENDAR_UNIT_SUMMARY = {
 
 const LEGACY_UNIT_SUMMARY = {
   ...UNIT_SUMMARY,
-  id: 2,
   name: 'csd1-2020',
-  course_name: 'csd-2020',
-  unit_position: 1,
-  courseVersionId: 2020,
   version_year: '2020',
 };
 
 const COURSES_WITH_PROGRESS = [
   {
-    id: 2024,
+    id: 1,
     display_name: 'CSD',
     units: [
       {
@@ -156,7 +118,7 @@ const COURSES_WITH_PROGRESS = [
         version_year: UNIT_SUMMARY.version_year,
         key: UNIT_SUMMARY.name,
         name: UNIT_SUMMARY.title,
-        position: 1,
+        position: null,
       },
     ],
   },
@@ -164,7 +126,7 @@ const COURSES_WITH_PROGRESS = [
 
 const LEGACY_COURSES_WITH_PROGRESS = [
   {
-    id: 2020,
+    id: 1,
     display_name: 'CSD',
     units: [
       {
@@ -172,7 +134,7 @@ const LEGACY_COURSES_WITH_PROGRESS = [
         version_year: LEGACY_UNIT_SUMMARY.version_year,
         key: LEGACY_UNIT_SUMMARY.name,
         name: LEGACY_UNIT_SUMMARY.title,
-        position: 1,
+        position: null,
       },
     ],
   },
@@ -337,6 +299,6 @@ describe('UnitCalendar', () => {
 
     screen.getByAltText(i18n.calendarNotAvailable());
     screen.getByText(i18n.calendarNotAvailable());
-    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD-2020'}));
+    screen.getByText(i18n.calendarLegacyMessage({courseName: 'CSD1-2020'}));
   });
 });

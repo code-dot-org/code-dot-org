@@ -5,7 +5,10 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {setUnit, getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  setScriptId,
+  getSelectedUnitName,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
@@ -25,7 +28,7 @@ const CSV_HEADERS = [
 ];
 const PADDING = 8;
 
-function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
+function TextResponses({sectionId, scriptId, scriptName, setScriptId}) {
   const [textResponsesByScript, setTextResponsesByScript] = useState({});
   const [isLoadingResponses, setIsLoadingResponses] = useState(false);
   const [filterByLessonName, setFilterByLessonName] = useState(null);
@@ -73,8 +76,8 @@ function TextResponses({sectionId, scriptId, scriptName, setUnit}) {
     [textResponsesByScript]
   );
 
-  const onChangeScript = (scriptId, courseVersionId) => {
-    setUnit(scriptId, courseVersionId);
+  const onChangeScript = scriptId => {
+    setScriptId(scriptId);
     setFilterByLessonName(null);
   };
 
@@ -134,7 +137,7 @@ TextResponses.propTypes = {
   sectionId: PropTypes.number.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
-  setUnit: PropTypes.func.isRequired,
+  setScriptId: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -168,12 +171,11 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseVersionId,
     scriptName: getSelectedUnitName(state),
   }),
   dispatch => ({
-    setUnit(scriptId, courseVersionId) {
-      dispatch(setUnit(scriptId, courseVersionId));
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
     },
   })
 )(TextResponses);

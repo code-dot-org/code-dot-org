@@ -12,8 +12,6 @@ interface CalendarLesson {
 
 export interface CalendarState {
   unitName: string | null;
-  unitPosition: number | null;
-  courseName: string | null;
   showCalendar: boolean;
   calendarLessons: CalendarLesson[] | null;
   versionYear: number | null;
@@ -21,8 +19,6 @@ export interface CalendarState {
 
 interface CalendarDataPayload {
   unitName: string | null;
-  unitPosition: number | null;
-  courseName: string | null;
   showCalendar: boolean;
   calendarLessons: CalendarLesson[] | null;
   versionYear: number | null;
@@ -30,8 +26,6 @@ interface CalendarDataPayload {
 
 const initialState: CalendarState = {
   unitName: null,
-  unitPosition: null,
-  courseName: null,
   showCalendar: false,
   calendarLessons: null,
   versionYear: null,
@@ -43,8 +37,6 @@ const calendarReduxSlice = createSlice({
   reducers: {
     setCalendarData(state, action: PayloadAction<CalendarDataPayload>) {
       state.unitName = action.payload.unitName;
-      state.unitPosition = action.payload.unitPosition;
-      state.courseName = action.payload.courseName;
       state.showCalendar = action.payload.showCalendar;
       state.calendarLessons = action.payload.calendarLessons;
       state.versionYear = action.payload.versionYear;
