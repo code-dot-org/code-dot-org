@@ -39,8 +39,8 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
+  USER_ENTERED_TEXT_INDICATORS = ['A', 'B', 'C', 'COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'title name\=\"VAL\"'].freeze
+  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -126,18 +126,14 @@ module ShareFiltering
   def self.traverse_block(block, texts)
     return unless block.is_a?(Hash)
 
-    type = block["type"]
     fields = block["fields"] || {}
     inputs = block["inputs"] || {}
 
-    if type == "gamelab_comment"
-      comment = clean_text_value(fields["COMMENT"])
-      texts << comment if comment && !comment.strip.empty?
-    end
-
-    fields.each_value do |value|
-      cleaned = clean_text_value(value)
-      texts << cleaned if cleaned && !cleaned.strip.empty?
+    fields.each do |key, value|
+      if USER_ENTERED_TEXT_INDICATORS.include?(key)
+        cleaned = clean_text_value(value)
+        texts << cleaned if cleaned && !cleaned.strip.empty?
+      end
     end
 
     inputs.each_value do |input|
@@ -154,11 +150,8 @@ module ShareFiltering
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
-    # For Playlab projects, only filter if program contains user-entered indicators.
-    if project_type == 'playlab'
-      return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
-    end
-    true
+    # Only filter if program contains user-entered indicators.
+    return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
