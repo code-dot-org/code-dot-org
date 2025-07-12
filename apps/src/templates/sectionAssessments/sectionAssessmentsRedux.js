@@ -1,5 +1,5 @@
 import {
-  SET_UNIT,
+  SET_SCRIPT,
   getSelectedUnitName,
   doesCurrentCourseUseFeedback,
 } from '@cdo/apps/redux/unitSelectionRedux';
@@ -164,7 +164,7 @@ export const asyncLoadAssessments = (sectionId, scriptId) => {
 };
 
 export default function sectionAssessments(state = initialState, action) {
-  if (action.type === SET_UNIT) {
+  if (action.type === SET_SCRIPT) {
     return {
       ...state,
       studentId: ALL_STUDENT_FILTER,

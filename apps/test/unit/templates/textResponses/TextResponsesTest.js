@@ -58,7 +58,7 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
+            setScriptId={() => {}}
             scriptName="A Script"
           />
         );
@@ -75,7 +75,7 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
+            setScriptId={() => {}}
             scriptName="A Script"
           />
         );
@@ -96,7 +96,7 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
+            setScriptId={() => {}}
             scriptName="A Script"
           />
         );
@@ -114,7 +114,7 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
+            setScriptId={() => {}}
             scriptName="A Script"
           />
         );
@@ -147,7 +147,7 @@ describe('TextResponses', () => {
           <TextResponses
             sectionId={2}
             scriptId={1}
-            setUnit={() => {}}
+            setScriptId={() => {}}
             scriptName="A Script"
           />
         );

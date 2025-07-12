@@ -5,7 +5,8 @@
 import HttpClient from '../util/HttpClient';
 
 // Action type constants
-export const SET_UNIT = 'unitSelection/SET_UNIT';
+export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
+export const SET_UNIT_NAME = 'unitSelection/SET_UNIT_NAME';
 export const SET_COURSES = 'unitSelection/SET_COURSES';
 
 export const START_LOADING_COURSES = 'unitSelection/START_LOADING_COURSES';
@@ -15,11 +16,7 @@ export const FINISHED_LOADING_COURSES =
 const SET_LOADED_SECTION_ID = 'unitSelection/SET_LOADED_SECTION_ID';
 
 // Action creators
-export const setUnit = (scriptId, courseVersionId) => ({
-  type: SET_UNIT,
-  scriptId,
-  courseVersionId,
-});
+export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
   coursesWithProgress,
@@ -38,30 +35,21 @@ export const finishedLoadingCoursesWithProgress = () => ({
 
 // Selectors
 export const getSelectedUnitId = state => state.unitSelection.scriptId;
-export const getSelectedCourseId = state => state.unitSelection.courseVersionId;
-
-export const getSelectedCourse = state => {
-  const courseVersionId = getSelectedCourseId(state);
-  return state.unitSelection.coursesWithProgress.find(
-    c => c.id === courseVersionId
-  );
-};
-
-export const getSelectedCourseName = state => {
-  return getSelectedCourse(state)?.course_name || null;
-};
 
 const getSelectedUnit = state => {
-  const courseVersionId = getSelectedCourseId(state);
-  const unitId = getSelectedUnitId(state);
-  if (!courseVersionId || !unitId) {
+  const scriptId = state.unitSelection.scriptId;
+  if (!scriptId) {
     return null;
   }
 
-  const course = state.unitSelection.coursesWithProgress.find(
-    course => course.id === courseVersionId
-  );
-  return course?.units.find(unit => unitId === unit.id);
+  let unit;
+  state.unitSelection.coursesWithProgress.forEach(course => {
+    const tempUnit = course.units.find(unit => scriptId === unit.id);
+    if (tempUnit) {
+      unit = tempUnit;
+    }
+  });
+  return unit;
 };
 
 export const getSelectedUnitName = state => {
@@ -80,10 +68,6 @@ export const getSelectedScriptDescription = state => {
 
 export const doesCurrentCourseUseFeedback = state => {
   return !!getSelectedUnit(state)?.is_feedback_enabled;
-};
-
-export const getSelectedUnitPosition = state => {
-  return getSelectedUnit(state) ? getSelectedUnit(state).position : null;
 };
 
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
@@ -125,7 +109,6 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  courseVersionId: null,
   coursesWithProgress: [],
   isLoadingCoursesWithProgress: false,
   loadedSectionId: null,
@@ -137,40 +120,19 @@ export default function unitSelection(state = initialState, action) {
 
     const firstUnit = firstCourse ? firstCourse.units[0] : null;
 
-    // If the currently selected Unit is the new set of coursesWithProgress,
-    // the default to selecting the first Unit.
-    let scriptId = firstUnit?.id;
-    let courseVersionId = firstCourse?.id;
-    if (state.scriptId && state.courseVersionId) {
-      const selectedUnit = action.coursesWithProgress.find(
-        course => course.id === state.courseVersionId
-      );
-      if (selectedUnit) {
-        const selectedUnitIndex = selectedUnit.units.findIndex(
-          unit => unit.id === state.scriptId
-        );
-        if (selectedUnitIndex >= 0) {
-          scriptId = state.scriptId;
-          courseVersionId = state.courseVersionId;
-        }
-      }
-    }
-
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
       // This automatically selects the first unit of the first course
-      // unless a Unit is already set
-      scriptId: scriptId,
-      courseVersionId: courseVersionId,
+      // unless a scriptId is already set
+      scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId,
     };
   }
 
-  if (action.type === SET_UNIT) {
+  if (action.type === SET_SCRIPT) {
     return {
       ...state,
       scriptId: action.scriptId,
-      courseVersionId: action.courseVersionId,
     };
   }
 
