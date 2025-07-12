@@ -14,7 +14,7 @@ import React, {DragEvent, useCallback, useRef} from 'react';
 
 import '@xyflow/react/dist/style.css';
 
-import {type MyNode} from '../../flow/initialElements';
+import {type MyNode} from '../../flow/flowNodes';
 
 import CustomSmoothStepConnectionLine from './CustomSmoothStepConnectionLine';
 import {DataEdge} from './DataEdge';

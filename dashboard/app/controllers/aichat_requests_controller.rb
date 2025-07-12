@@ -97,8 +97,6 @@ class AichatRequestsController < ApplicationController
   end
 
   private def can_access_aichat?
-    return true if current_user.levelbuilder?
-
     !DCDO.get("block_aichat_chat_completion", false) && current_user.has_aichat_access?
   end
 

@@ -1,29 +1,22 @@
 import {
   Handle,
   Position,
-  useNodeConnections,
-  useNodesData,
   type NodeProps,
-  useReactFlow,
   NodeResizer,
+  useReactFlow,
 } from '@xyflow/react';
 import React, {memo, useEffect} from 'react';
 
-import {isTextNode, type MyNode} from '../../../flow/initialElements';
+import {useInputTexts} from '../../../flow/flowNodes';
 
 // This node renders HTML sent to its input node as text in an iframe.
 // It is able to send a message received from its iframe to its output handle.
 
 function WebNode({id, selected}: NodeProps) {
-  const connections = useNodeConnections({
-    handleType: 'target',
-  });
-  const nodesData = useNodesData<MyNode>(
-    connections.map(connection => connection.source)
-  );
-  const textNodes = nodesData.filter(isTextNode);
   const {updateNodeData} = useReactFlow();
+  const srcDoc = useInputTexts().join('\n');
 
+  // Handles a message sent from the iframe, and sends its content to the output.
   useEffect(() => {
     window.addEventListener('message', function (event) {
       if (typeof event.data === 'string') {
@@ -32,30 +25,6 @@ function WebNode({id, selected}: NodeProps) {
       }
     });
   }, [id, updateNodeData]);
-
-  const srcDoc: string =
-    textNodes.length > 0
-      ? textNodes
-          .map(({data}) => (data && 'text' in data ? data.text : ''))
-          .join('')
-      : 'none';
-
-  /*
-  const el = document.createElement('div');
-  el.innerHTML = srcHtml;
-  const srcDoc = el.getElementsByTagName('body')[0].textContent;
-*/
-
-  /*
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(srcHtml, 'text/html');
-  const srcDoc = doc.body.innerHTML;
-  */
-
-  /*const srcDoc = srcHtml.substring(
-    srcHtml.indexOf('<html>'),
-    srcHtml.indexOf('</html>') + '</html>'.length
-  );*/
 
   return (
     <div style={{width: '100%', height: '100%'}}>

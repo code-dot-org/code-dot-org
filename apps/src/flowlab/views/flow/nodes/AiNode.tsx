@@ -3,15 +3,13 @@ import {
   Position,
   Handle,
   useReactFlow,
-  useNodeConnections,
-  useNodesData,
   type Node,
   type NodeProps,
 } from '@xyflow/react';
 import React, {memo, useEffect, useState, useCallback} from 'react';
 
 import askAi from '../../../flow/askAi';
-import {isTextNode, type MyNode} from '../../../flow/initialElements';
+import {useInputTexts} from '../../../flow/flowNodes';
 
 // This node asks the aichat service a question entered in its input field, and
 // sends the response to its output handle as text.  It acepts optional context
@@ -22,15 +20,9 @@ import {isTextNode, type MyNode} from '../../../flow/initialElements';
 function AiNode({
   id,
   data,
-}: NodeProps<Node<{fieldText: string; askedText: string; text: string}>>) {
+}: NodeProps<Node<{fieldText: string; askedText: string}>>) {
   const {updateNodeData} = useReactFlow();
-  const connections = useNodeConnections({
-    handleType: 'target',
-  });
-  const nodesData = useNodesData<MyNode>(
-    connections.map(connection => connection.source)
-  );
-  const textNodes = nodesData.filter(isTextNode);
+  const contextString = useInputTexts().join('\n');
 
   const [isWorking, setIsWorking] = useState(false);
 
@@ -38,17 +30,10 @@ function AiNode({
     string | undefined
   >(undefined);
 
-  const contextString =
-    textNodes.length > 0
-      ? textNodes
-          .map(({data}) => (data && 'text' in data ? data.text : ''))
-          .join('')
-      : '';
-
   const text: string =
-    'Here is the context: ' +
+    'Here is the context: \n' +
     contextString +
-    ' And here is the request: ' +
+    '\nAnd here is the request: \n' +
     data.fieldText;
 
   const onEnter = useCallback(() => {
@@ -70,9 +55,9 @@ function AiNode({
       setIsWorking(true);
 
       const response = await askAi(text);
+      console.log('Chat responded: ', response);
       const responseText =
         response && response.length > 1 ? response[1].chatMessageText : '';
-      console.log('Chat responded: ', responseText);
       updateNodeData(id, {
         text: responseText,
       });

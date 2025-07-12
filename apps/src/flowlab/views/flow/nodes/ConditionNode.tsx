@@ -4,12 +4,10 @@ import {
   useReactFlow,
   type NodeProps,
   type Node,
-  useNodesData,
-  useNodeConnections,
 } from '@xyflow/react';
 import React, {memo, useEffect} from 'react';
 
-import {isTextNode, type MyNode} from '../../../flow/initialElements';
+import {useInputTexts} from '../../../flow/flowNodes';
 
 // This node compares the text sent to its input handle to the text in its
 // text field, and sends a comparison result to its output handle as text.
@@ -18,20 +16,7 @@ import {isTextNode, type MyNode} from '../../../flow/initialElements';
 
 function ConditionNode({id, data}: NodeProps<Node<{checkText: string}>>) {
   const {updateNodeData} = useReactFlow();
-  const connections = useNodeConnections({
-    handleType: 'target',
-  });
-  const nodesData = useNodesData<MyNode>(
-    connections.map(connection => connection.source)
-  );
-  const textNodes = nodesData.filter(isTextNode);
-
-  const inputText: string =
-    textNodes.length > 0
-      ? textNodes
-          .map(({data}) => (data && 'text' in data ? data.text : ''))
-          .join('')
-      : 'none';
+  const inputText = useInputTexts().join('\n');
 
   useEffect(() => {
     const updateValue = inputText.includes(data.checkText)
@@ -49,7 +34,7 @@ function ConditionNode({id, data}: NodeProps<Node<{checkText: string}>>) {
       <div>
         <input
           onChange={evt => updateNodeData(id, {checkText: evt.target.value})}
-          value={data.checkText}
+          value={data.checkText || ''}
           className="xy-theme__input"
         />
       </div>

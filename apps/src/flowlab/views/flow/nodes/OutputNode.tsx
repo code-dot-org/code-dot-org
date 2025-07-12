@@ -1,42 +1,23 @@
-import {
-  Handle,
-  Position,
-  useNodeConnections,
-  useNodesData,
-} from '@xyflow/react';
+import {Handle, Position} from '@xyflow/react';
 import React, {memo} from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {isTextNode, type MyNode} from '../../../flow/initialElements';
+import {useInputTexts} from '../../../flow/flowNodes';
 
 // This node simply displays any text sent to its input handle.
 
 function OutputNode() {
-  const connections = useNodeConnections({
-    handleType: 'target',
-  });
-  const nodesData = useNodesData<MyNode>(
-    connections.map(connection => connection.source)
-  );
-  const textNodes = nodesData.filter(isTextNode);
+  const outputTexts = useInputTexts();
 
-  const text =
-    textNodes.length > 0
-      ? textNodes.map(({data}, i) =>
-          data && 'text' in data ? (
-            <div key={i}>
-              {
-                <SafeMarkdown
-                  openExternalLinksInNewTab
-                  markdown={data.text}
-                  className="outputnode-markdown"
-                />
-              }
-            </div>
-          ) : null
-        )
-      : 'none';
+  const text = outputTexts.map((outputText, index) => (
+    <SafeMarkdown
+      key={index}
+      openExternalLinksInNewTab
+      markdown={outputText}
+      className="outputnode-markdown"
+    />
+  ));
 
   return (
     <div className="nowheel" style={{maxWidth: 140, width: '100%'}}>
