@@ -1,7 +1,6 @@
 class FlowlabController < ApplicationController
   def index
-    # Ensure that user has levelbuilder permissions.
-    authorize! :create, Level
+    return head :forbidden unless current_user&.levelbuilder?
 
     view_options(no_footer: true)
   end
