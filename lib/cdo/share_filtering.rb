@@ -39,10 +39,8 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  # We are omiting comments, procedures, and variables from the indicator list as they are not displayed in share mode.
-  # However, if the program possibly contains user-generated text, we will also filter comments and variable/procedure names.
-  # Note that 'A', 'B', and 'C' could possibly indicate user-entered strings in fields, but are also used for input options.
-  POSSIBLE_USER_ENTERED_TEXT_INDICATORS = ['SPEECH', 'TEXT', 'TEXT1', '\"A\":', '\"B\":', '\"C\":', 'TITLE', 'title name\=\"VAL\"'].freeze
+  USER_ENTERED_TEXT_INDICATORS = ['COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'procedures_def', 'title name\=\"VAL\"'].freeze
+  # poetry_setpromptwithchoices block has 4 text fields: 'TEXT', 'A', 'B', and 'C'. So A, B, C added in field names list.
   USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE A B C)
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
@@ -80,7 +78,7 @@ module ShareFiltering
       return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
     end
 
-    # Texts will include field values, text values in block inputs, comments, and variable names.
+    # Texts will include user-generated block text field values including comments and variable/user-created procedure names.
     texts = []
     begin
       json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
@@ -107,7 +105,7 @@ module ShareFiltering
       end
     end
 
-    # Traverse each block recursively extracting comments, field values, nested inputs via traverse_block.
+    # Traverse each block recursively extracting user-generated field string values via traverse_block.
     json.dig("blocks", "blocks")&.each do |block|
       traverse_block(block, texts)
     end
@@ -133,10 +131,9 @@ module ShareFiltering
   # (comments, field values, etc.), 'cleans' the text value (strips XML tags & quotes), and
   # adds the text value to the texts array.
   # For each block it:
-  #   1. Checks for a “gamelab_comment” type and adds its COMMENT field.
-  #   2. Iterates all other fields, cleaning and collecting string values.
-  #   3. Recurses into both normal and shadow inputs.
-  #   4. Follows the “next” chain to handle sequenced blocks.
+  #   1. Iterates through block fields, cleaning and collecting user-genereated string values.
+  #   2. Recurses into both normal and shadow inputs.
+  #   3. Follows the “next” chain to handle sequenced blocks.
   def self.traverse_block(block, texts)
     return unless block.is_a?(Hash)
 
@@ -165,7 +162,7 @@ module ShareFiltering
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
     # Only filter if program contains user-entered indicators.
-    return program.match?(/(?:#{POSSIBLE_USER_ENTERED_TEXT_INDICATORS.join('|')})/)
+    return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
