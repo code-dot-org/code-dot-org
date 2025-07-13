@@ -1,10 +1,11 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useContext} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import Tabs from '@code-dot-org/component-library/tabs';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
+import FrequencyLevelContext from '../contexts/FrequencyLevelContext';
 import {FrequencyData} from '../types';
 
 import moduleStyles from './frequencyLevel.module.scss';
@@ -20,7 +21,9 @@ const CaesarControls: React.FunctionComponent<ControlsProps> = ({
   onUpdate,
 }) => {
   const [shift, setShift] = useState<number>(0);
+  const {mapLetter} = useContext(FrequencyLevelContext);
 
+  // Pull all assigned cipher letters back
   const reset = useCallback(() => {
     const {cipher} = frequencyData.current;
 
@@ -34,6 +37,7 @@ const CaesarControls: React.FunctionComponent<ControlsProps> = ({
     onUpdate();
   }, []);
 
+  // Applies the shift amount, which assigns all the cipher letters accordingly
   const updateShift = useCallback(
     (newShift: number) => {
       const {cipher, letters} = frequencyData.current;
@@ -45,8 +49,7 @@ const CaesarControls: React.FunctionComponent<ControlsProps> = ({
       cipher.clear();
       letters.forEach((letter, i) => {
         const newLetter = letters[(i + newShift) % letters.length];
-        cipher.set(letter, newLetter);
-        cipher.set(letter.toLowerCase(), newLetter.toLowerCase());
+        mapLetter(letter, newLetter);
       });
 
       // Update the shift amount
@@ -61,31 +64,33 @@ const CaesarControls: React.FunctionComponent<ControlsProps> = ({
   return (
     <div className={moduleStyles.tabContent}>
       <BodyTwoText>Shift the substitutions left or right.</BodyTwoText>
-      <div className={moduleStyles.caesarControls}>
-        <Button
-          icon={{
-            iconName: 'arrow-left',
-            iconStyle: 'solid',
-          }}
-          isIconOnly
-          onClick={() => updateShift(shift - 1)}
-        />
-        <TextField
-          className={moduleStyles.field}
-          value={shift.toString()}
-          onChange={(el: ChangeEvent<HTMLInputElement>) =>
-            updateShift(parseInt(el.target.value) || 0)
-          }
-        />
-        <Button
-          icon={{
-            iconName: 'arrow-right',
-            iconStyle: 'solid',
-          }}
-          isIconOnly
-          onClick={() => updateShift(shift + 1)}
-        />
-        <Button text="Reset" onClick={() => reset()} />
+      <div className={moduleStyles.controls}>
+        <div className={moduleStyles.caesarControls}>
+          <Button
+            icon={{
+              iconName: 'arrow-left',
+              iconStyle: 'solid',
+            }}
+            isIconOnly
+            onClick={() => updateShift(shift - 1)}
+          />
+          <TextField
+            className={moduleStyles.field}
+            value={shift.toString()}
+            onChange={(el: ChangeEvent<HTMLInputElement>) =>
+              updateShift(parseInt(el.target.value) || 0)
+            }
+          />
+          <Button
+            icon={{
+              iconName: 'arrow-right',
+              iconStyle: 'solid',
+            }}
+            isIconOnly
+            onClick={() => updateShift(shift + 1)}
+          />
+          <Button text="Reset" onClick={() => reset()} />
+        </div>
       </div>
     </div>
   );
@@ -116,6 +121,30 @@ const RandomControls: React.FunctionComponent<ControlsProps> = ({
   frequencyData,
   onUpdate,
 }) => {
+  const {mapLetter, isMapped} = useContext(FrequencyLevelContext);
+
+  // Assign all unassigned cipher letters
+  const assign = useCallback(() => {
+    const {cipher, letters, sourceLetters} = frequencyData.current;
+
+    // For each unfulfilled letter, apply the first unassigned letter
+    for (const letter of letters) {
+      if (!cipher.has(letter)) {
+        // Determine next source letter that isn't assigned
+        for (const sourceLetter of sourceLetters) {
+          if (!isMapped(sourceLetter)) {
+            mapLetter(letter, sourceLetter);
+            break;
+          }
+        }
+      }
+    }
+
+    // Notify the parent component
+    onUpdate();
+  }, []);
+
+  // Pull all assigned cipher letters back
   const reset = useCallback(() => {
     const {cipher} = frequencyData.current;
 
@@ -129,68 +158,52 @@ const RandomControls: React.FunctionComponent<ControlsProps> = ({
   return (
     <div className={moduleStyles.tabContent}>
       <BodyTwoText>Sort substitutions</BodyTwoText>
-      <div className={moduleStyles.randomControls}>
-        <Button
-          text="Random"
-          onClick={() => {
-            const {cipher, letters} = frequencyData.current;
-            const newLetters = shuffle(letters);
+      <div className={moduleStyles.controls}>
+        <div className={moduleStyles.randomControls}>
+          <Button
+            text="By letter"
+            onClick={() => {
+              // Update source letters to return them to alphabetical order
+              frequencyData.current.sourceLetters =
+                frequencyData.current.alphabetical.slice();
 
-            // Update the cipher
-            cipher.clear();
-            letters.forEach((letter, i) => {
-              const newLetter = newLetters[i];
-              cipher.set(letter, newLetter);
-              cipher.set(letter.toLowerCase(), newLetter.toLowerCase());
-            });
+              // Notify the parent component
+              onUpdate();
+            }}
+          />
+          <Button
+            text="Percentage"
+            onClick={() => {
+              const {letters, sourceData} = frequencyData.current;
 
-            // Notify the parent component
-            onUpdate();
-          }}
-        />
-        <Button
-          text="By letter"
-          onClick={() => {
-            const {cipher, letters} = frequencyData.current;
-            const newLetters = letters.slice();
+              const newLetters = letters
+                .slice()
+                .sort(
+                  (a, b) =>
+                    sourceData.find(item => item.letter === b).frequency -
+                    sourceData.find(item => item.letter === a).frequency,
+                );
+              frequencyData.current.sourceLetters = newLetters;
 
-            // Update the cipher
-            cipher.clear();
-            letters.forEach((letter, i) => {
-              const newLetter = newLetters[i];
-              cipher.set(letter, newLetter);
-              cipher.set(letter.toLowerCase(), newLetter.toLowerCase());
-            });
-
-            // Notify the parent component
-            onUpdate();
-          }}
-        />
-        <Button
-          text="Percentage"
-          onClick={() => {
-            const {sourceData, cipher, letters} = frequencyData.current;
-            const newLetters = letters
-              .slice()
-              .sort(
-                (a, b) =>
-                  sourceData.find(item => item.letter === b).frequency -
-                  sourceData.find(item => item.letter === a).frequency,
+              // Notify the parent component
+              onUpdate();
+            }}
+          />
+          <Button
+            text="Random"
+            onClick={() => {
+              // Update source letters to be in a random order
+              frequencyData.current.sourceLetters = shuffle(
+                frequencyData.current.alphabetical.slice(),
               );
 
-            // Update the cipher
-            cipher.clear();
-            letters.forEach((letter, i) => {
-              const newLetter = newLetters[i];
-              cipher.set(letter, newLetter);
-              cipher.set(letter.toLowerCase(), newLetter.toLowerCase());
-            });
-
-            // Notify the parent component
-            onUpdate();
-          }}
-        />
-        <Button text="Reset" onClick={() => reset()} />
+              // Notify the parent component
+              onUpdate();
+            }}
+          />
+          <Button text="Reset" onClick={() => reset()} />
+          <Button text="Assign" onClick={() => assign()} />
+        </div>
       </div>
       <BodyTwoText>Sort originals</BodyTwoText>
       <div className={moduleStyles.randomControls}>
@@ -243,8 +256,8 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
         onUpdate();
       }
     }}
-    _tabsContainerClassName=""
-    _tabPanelsContainerClassName=""
+    _tabsContainerClassName={''}
+    tabPanelsContainerClassName={moduleStyles.tabContentContainer}
     tabs={[
       {
         value: 'caesar',

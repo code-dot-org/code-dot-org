@@ -1,16 +1,60 @@
 // A background variable so that it matches what we use for the bar chart
 $encrypted-color: var(--background-accent-orange-primary);
+$mobile-breakpoint: 900px;
 
 .frequencyLevel {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
   height: 100%;
+  overflow: hidden;
+  position: realtive;
   width: 100%;
 
+  .split {
+    position: relative !important;
+  }
+
+  .splitPane {
+    display: flex;
+    overflow: hidden auto;
+    position: relative;
+  }
+
+  .resizerVertical {
+    background-color: var(--borders-neutral-primary);
+    border-left: 0.0625rem solid var(--borders-brand-purple-light);
+    cursor: ew-resize;
+    width: 0.375rem;
+  }
+
+  .resizerHorizontal {
+    background-color: var(--borders-neutral-primary);
+    border-left: 0.0625rem solid var(--borders-brand-purple-light);
+    cursor: ns-resize;
+    height: 0.375rem;
+  }
+
   .messagePane {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: hidden;
     padding: 1rem;
   }
 
   .messageContainer {
     letter-spacing: 0.125rem;
+    overflow-y: auto;
+  }
+
+  .messageDropdown {
+    width: 100%;
+
+    & > div {
+      width: 100%;
+    }
   }
 
   .encryptedMessageLetter {
@@ -23,18 +67,50 @@ $encrypted-color: var(--background-accent-orange-primary);
     width: 100%;
   }
 
-  // The tabs that contain controls
-  .tabContent {
-    text-align: center;
+  .graph {
+    height: 15rem;
+  }
+
+  .graphPlane {
+    overflow: hidden;
+    overflow-x: auto;
     width: 100%;
+  }
+
+  .graphPlaneContainer {
+    min-width: auto;
+  }
+
+  // The tabs that contain controls
+  .tabContentContainer {
+    overflow-x: auto;
+    text-align: center;
+  }
+
+  .tabContent {
+    width: 100%;
+  }
+
+  .controls {
+    display: block;
+    white-space: nowrap;
   }
 
   .randomControls,
   .caesarControls {
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    justify-content: center;
+    overflow-x: auto;
+    padding: 1rem;
+    width: 100%;
+
+    &::after,
+    &::before {
+      content: '';
+      margin: auto;
+    }
   }
 
   .field {
@@ -59,6 +135,14 @@ $encrypted-color: var(--background-accent-orange-primary);
       position: absolute;
       text-align: right;
       vertical-align: middle;
+      width: 100px;
+      left: 0;
+    }
+
+    &.animate {
+      .letter {
+        transition: 1s left;
+      }
     }
 
     .letter {
@@ -67,9 +151,10 @@ $encrypted-color: var(--background-accent-orange-primary);
       line-height: 1.75rem;
       position: absolute;
       text-align: center;
-      transition: 1s left;
+      transition: 0s left;
       vertical-align: middle;
       width: 1.75rem;
+      z-index: 99;
 
       &.uninteractive {
         color: $encrypted-color;
@@ -82,8 +167,8 @@ $encrypted-color: var(--background-accent-orange-primary);
         cursor: pointer;
 
         &.source {
-          background: var(--background-brand-purple-primary);
-          border-color: var(--borders-brand-purple-strong);
+          background: var(--background-brand-teal-primary);
+          border-color: var(--borders-brand-teal-strong);
           color: var(--text-neutral-inverse);
         }
 
@@ -99,6 +184,50 @@ $encrypted-color: var(--background-accent-orange-primary);
         border-color: var(--borders-neutral-primary);
         border-style: dashed;
         color: var(--borders-neutral-primary);
+      }
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    .split {
+      display: flex;
+      flex: 1 1 100% !important;
+      flex-direction: column !important;
+      height: unset !important;
+      position: relative !important;
+
+      .splitPane:first-child {
+        flex: 0 1 15rem !important;
+        width: 100% !important;
+      }
+
+      .splitPane:not(:first-child) {
+        flex: 1 1 auto !important;
+        width: 100% !important;
+        overflow: auto;
+      }
+    }
+
+    .graph {
+      height: 5rem;
+    }
+
+    .messageContainer {
+      letter-spacing: 0.125rem;
+      overflow-y: auto;
+
+      span {
+        font-size: 0.75rem;
+      }
+    }
+
+    .tabContent {
+      p {
+        margin: 0;
+
+        &:first-child {
+          margin-top: 1rem;
+        }
       }
     }
   }

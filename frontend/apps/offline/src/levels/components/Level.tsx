@@ -2,16 +2,12 @@
 
 import React from 'react';
 
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@code-dot-org/component-library/fontAwesomeV6Icon';
-
 import type {LevelData} from '@/app/models/level';
 import type {ActivitySectionData} from '@/app/models/unit';
 
 import ArtistLevel from '../artist';
 import CraftLevel from '../craft';
-//import FrequencyLevel from '../frequency';
+import FrequencyLevel from '../frequency';
 import KarelLevel from '../karel';
 import MazeLevel from '../maze';
 import PanelsLevel from '../panels';
@@ -19,11 +15,9 @@ import SpriteLabLevel from '../spriteLab';
 import StandaloneVideoLevel from '../standaloneVideo';
 import StarWarsLevel from '../starWars';
 
-const spinnerIcon: FontAwesomeV6IconProps = {
-  iconName: 'spinner',
-  iconStyle: 'solid',
-  animationType: 'spin',
-};
+import Spinner from './Spinner';
+
+import moduleStyles from './level.module.scss';
 
 export interface LevelProps {
   activitySection?: ActivitySectionData;
@@ -37,19 +31,8 @@ const Level: React.FunctionComponent<LevelProps> = ({
   activitySection,
   level,
 }) => (
-  <div
-    style={{
-      flex: '1 1 100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      color: 'var(--text-neutral-primary)',
-      background: 'var(--background-neutral-primary)',
-    }}
-  >
-    {!level && (
-      <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
-    )}
+  <div className={moduleStyles.level}>
+    {!level && <Spinner />}
     {level?.type === 'Maze' && <MazeLevel level={level} />}
     {level?.type === 'Karel' && <KarelLevel level={level} />}
     {level?.type === 'Artist' && <ArtistLevel level={level} />}
@@ -60,7 +43,7 @@ const Level: React.FunctionComponent<LevelProps> = ({
       <StandaloneVideoLevel activitySection={activitySection} level={level} />
     )}
     {level?.type === 'Panels' && <PanelsLevel level={level} />}
-    {/*<FrequencyLevel level={level} />*/}
+    {level?.type === 'FrequencyAnalysis' && <FrequencyLevel level={level} />}
   </div>
 );
 

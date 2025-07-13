@@ -5,9 +5,11 @@ import {SVGRenderer} from 'echarts/renderers';
 import ReactEChartsCore, {EChartsReactCore} from 'echarts-for-react/lib/core';
 import React, {useRef, useState, useMemo, useEffect, useCallback} from 'react';
 
-echarts.use([SVGRenderer, GridComponent, TooltipComponent, BarChart]);
-
 import {FrequencyData, FrequencyDataPoint} from '../types';
+
+import moduleStyles from './frequencyLevel.module.scss';
+
+echarts.use([SVGRenderer, GridComponent, TooltipComponent, BarChart]);
 
 const getCSSVariable: (name: string) => string = name =>
   typeof window !== 'undefined'
@@ -110,11 +112,13 @@ const Graph = (React.FunctionComponent<GraphProps> = ({
 
   return (
     <ReactEChartsCore
+      className={moduleStyles.graph}
       echarts={echarts}
       ref={chartRef}
       onEvents={onEvents}
       style={{
-        height: '15rem',
+        // Do not let it set a default height... we will apply it from the styling
+        height: '',
       }}
       theme={isDarkMode ? 'dark' : undefined}
       option={{
@@ -180,7 +184,7 @@ const Graph = (React.FunctionComponent<GraphProps> = ({
           trigger: 'axis',
           valueFormatter: (value: number | string, _dataIndex: number) => {
             value = (parseFloat(value) || 0) * 100;
-            return `${value.toFixed(0)}%`;
+            return `${value.toFixed(2)}%`;
           },
           axisPointer: {
             type: 'shadow',

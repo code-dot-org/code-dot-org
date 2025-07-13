@@ -3,11 +3,15 @@ import React, {
   useRef,
   useEffect,
   useMemo,
+  useState,
   useCallback,
   useContext,
 } from 'react';
+import Draggable from 'react-draggable';
 
 import Typography from '@code-dot-org/component-library/typography';
+
+import Spinner from '@/levels/components/Spinner';
 
 import FrequencyLevelContext from '../contexts/FrequencyLevelContext';
 import {FrequencyData} from '../types';
@@ -38,6 +42,131 @@ export interface LettersProps {
   onUpdate?: () => void;
 }
 
+const Letter: React.FunctionComponent<LetterProps> = ({
+  isSource,
+  itemSourcePositions,
+  itemSourceVisibility,
+  letter,
+  i,
+  onUpdate,
+  handleUpdate,
+}) => {
+  const nodeRef = useRef(null);
+  const {selected, setSelected, mapLetter, swapMapping, clearMapping} =
+    useContext(FrequencyLevelContext);
+
+  const handleClick = useCallback(() => {
+    if (selected) {
+      swapMapping(selected, letter);
+
+      setSelected(undefined);
+      handleUpdate();
+      if (onUpdate) {
+        onUpdate();
+      }
+    } else {
+      setSelected(isSource ? letter : letter);
+    }
+  }, [selected, setSelected, letter, handleUpdate, onUpdate, isSource]);
+
+  return (
+    <Draggable
+      key={`letter-${i}`}
+      position={{
+        x: 0,
+        y: 0,
+      }}
+      nodeRef={nodeRef}
+      onStart={() => {
+        handleClick();
+        nodeRef.current.style.zIndex = '999';
+      }}
+      onDrag={(_, info) => {
+        // If we achieve a solid drag distance, cancel the selection
+        if (
+          Math.pow(Math.abs(info.x), 2) + Math.pow(Math.abs(info.y), 2) >
+          10
+        ) {
+          setSelected(undefined);
+        }
+      }}
+      onStop={event => {
+        if (nodeRef.current) {
+          nodeRef.current.style.top = '';
+          nodeRef.current.style.transform = '';
+          nodeRef.current.style.zIndex = '';
+
+          // Determine if there is a letter underneath us
+          const x = isNaN(event.pageX)
+            ? event.changedTouches?.[0]?.pageX
+            : event.pageX;
+          const y = isNaN(event.pageY)
+            ? event.changedTouches?.[0]?.pageY
+            : event.pageY;
+          const el =
+            !isNaN(x) && !isNaN(y)
+              ? window.document.elementFromPoint(x, y)
+              : undefined;
+
+          // Determine what the letter is we have dragged ourselves to and
+          // what type it is and act accordingly
+          if (el && el.classList.contains('letter')) {
+            // We dragged ourselves onto another source letter when true
+            const sourceLetter = el.classList.contains('source');
+
+            // We dragged ourselves onto the source 'space' of letters (the bottom row)
+            // when true
+            const targetIsSource = el.hasAttribute('data-is-source');
+
+            const targetLetter = el.getAttribute('data-letter');
+
+            if (sourceLetter) {
+              // We want to swap mappings in this case
+              swapMapping(targetLetter, letter);
+            } else if (targetIsSource) {
+              // We have moved over the blank in our unassigned row
+              // This means we clear this mapping
+              clearMapping(letter);
+            } else {
+              // This is a blank letter, we just 'set' it
+              mapLetter(targetLetter, letter);
+            }
+
+            handleUpdate();
+            if (onUpdate) {
+              onUpdate();
+            }
+          }
+        }
+      }}
+    >
+      <Typography
+        className={classNames(
+          'letter',
+          'source',
+          selected === letter ? moduleStyles.selected : undefined,
+          moduleStyles.letter,
+          moduleStyles.interactive,
+          moduleStyles.source,
+        )}
+        data-is-source={isSource}
+        data-is-interactive
+        ref={nodeRef}
+        semanticTag="span"
+        visualAppearance="body-two"
+        data-letter={letter}
+        data-notranslate
+        style={{
+          left: itemSourcePositions.current[letter],
+          display: itemSourceVisibility.current[letter] ? '' : 'none',
+        }}
+      >
+        {letter}
+      </Typography>
+    </Draggable>
+  );
+};
+
 /**
  * Represents the set of letters for the cipher widget.
  *
@@ -56,14 +185,18 @@ const Letters: React.FunctionComponent<LettersProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const itemPositions = useRef<{[key: string]: number}>({});
-  const itemSourcePositions = useRef<number[]>({});
+  const itemSourcePositions = useRef<{[key: string]: number}>({});
+  const itemSourceVisibility = useRef<{[key: string]: boolean}>({});
   const {selected, setSelected} = useContext(FrequencyLevelContext);
-
-  console.log('letters', frequencyData.current.letters);
+  const [visible, setVisible] = useState<boolean>(false);
 
   const handleUpdate = useCallback(() => {
-    if (ref.current) {
-      const captionElement = ref.current.querySelector('span.caption');
+    if (!visible) {
+      // Show the letters now that we have rendered something
+      // This same function will be called on the next render
+      // so that the letter spans are actually there to move around
+      setVisible(true);
+    } else if (ref.current) {
       const letterElement = ref.current.querySelector('span.letter');
       const letterWidth = letterElement?.getBoundingClientRect().width || 0;
 
@@ -76,25 +209,48 @@ const Letters: React.FunctionComponent<LettersProps> = ({
       itemPositions.current = {};
       itemSourcePositions.current = {};
 
-      // Position the caption that comes before the letter elements
-      if (captionElement) {
-        const letter = letters[0];
+      for (const letter of frequencyData.current.alphabetical) {
         const index = letters.findIndex(item => item === letter);
-        const width = captionElement.getBoundingClientRect().width;
-        console.log('caption position', letter, index, width);
-        captionElement.style.left = `${(positions[index] || 0) - 10 - width - letterWidth / 2.0}px`;
+        const left = (positions[index] || 0) + 2 - letterWidth / 2.0;
+        itemPositions.current[letter] = left;
       }
+
+      frequencyData.current.alphabetical.forEach((letter, i) => {
+        // For the source letter:
+        //
+        // Find the index of the mapped letter. For the source letters, this is
+        // just the index if the letter is not in the cipher. This is affect by
+        // sourceLetters. If it is in the cipher, we make the source letter
+        // invisible since it is in the middle row instead.
+        //
+        // For that middle row (the committed cipher letters), we mark it as
+        // visible only when it exists in the cipher.
+        const mappedIndex = letters.findIndex(
+          mapped => cipher.has(mapped) && cipher.get(mapped) === letter,
+        );
+
+        const encryptedIndex = isSource
+          ? mappedIndex !== -1
+            ? -1
+            : letters.indexOf(letter)
+          : mappedIndex;
+
+        const left =
+          (positions[encryptedIndex === -1 ? i : encryptedIndex] || 0) +
+          2 -
+          letterWidth / 2.0;
+
+        const visible = encryptedIndex !== -1 ? true : false;
+
+        itemSourcePositions.current[letter] = left;
+        itemSourceVisibility.current[letter] = visible;
+      });
 
       // Position each letter element under the bar according to the positions array
       Array.from(ref.current.querySelectorAll('span.letter')).forEach(
         (span, i) => {
           const letter = frequencyData.current.alphabetical[i];
-          const index = letters.findIndex(item => item === letter);
-          if (!interactive) {
-            console.log(letter, index, positions[index]);
-          }
-          const left = (positions[index] || 0) + 2 - letterWidth / 2.0;
-          itemPositions.current[letter] = left;
+          const left = itemPositions.current[letter];
           span.style.left = `${left}px`;
         },
       );
@@ -103,28 +259,11 @@ const Letters: React.FunctionComponent<LettersProps> = ({
         Array.from(ref.current.querySelectorAll('span.source')).forEach(
           (span, i) => {
             const letter = frequencyData.current.alphabetical[i];
-            // For the source letter
-            // Find the index of the mapped letter. For the source letters, this is
-            // just the index if the letter is not in the cipher. If it is in the
-            // cipher, we make the source letter invisible since it is in the middle
-            // row instead.
-            //
-            // For that middle row (the committed cipher letters), we mark it as
-            // visible only when it exists in the cipher.
-            const mappedIndex = letters.findIndex(
-              mapped => cipher.has(mapped) && cipher.get(mapped) === letter,
-            );
-            const encryptedIndex = isSource
-              ? mappedIndex !== -1
-                ? -1
-                : i
-              : mappedIndex;
-            const left =
-              (positions[encryptedIndex === -1 ? i : encryptedIndex] || 0) +
-              2 -
-              letterWidth / 2.0;
-            const display = encryptedIndex !== -1 ? 'block' : 'none';
-            itemSourcePositions.current[letter] = left;
+            const left = itemSourcePositions.current[letter];
+            const display = itemSourceVisibility.current[letter]
+              ? 'block'
+              : 'none';
+
             if (span.style.display !== display && display !== 'none') {
               // If we are turning this on, turn off the CSS animation momentarily
               span.style.transitionDuration = '0s';
@@ -138,7 +277,7 @@ const Letters: React.FunctionComponent<LettersProps> = ({
         );
       }
     }
-  }, [ref, isSource]);
+  }, [visible, ref, isSource]);
 
   // In order to get an immediate signal that the positions of the bars have changed
   // due to a resize, we assign a reference to the update callback to the parent
@@ -148,138 +287,111 @@ const Letters: React.FunctionComponent<LettersProps> = ({
       // Set the outgoing reference to our updater method
       setUpdater(handleUpdate);
     }
-  }, [handleUpdate, setUpdater]);
+  }, [ref, handleUpdate, setUpdater]);
 
-  const {cipher} = frequencyData.current;
+  useEffect(() => {
+    if (visible) {
+      handleUpdate();
+    }
+  }, [visible, handleUpdate]);
 
-  const letters = frequencyData.current.alphabetical;
+  const {alphabetical: letters} = frequencyData.current;
+
+  const handleClick = useCallback(
+    (letter: string) => {
+      const {cipher, alphabetical: letters} = frequencyData.current;
+
+      if (interactive && selected) {
+        const mapped = letters.find(
+          mapped => cipher.has(mapped) && cipher.get(mapped) === selected,
+        );
+        if (mapped) {
+          cipher.delete(mapped);
+          cipher.delete(mapped.toLowerCase());
+        }
+        if (!isSource) {
+          // Set the cipher
+          cipher.set(letter, selected);
+          cipher.set(letter.toLowerCase(), selected.toLowerCase());
+        }
+        setSelected(undefined);
+        handleUpdate();
+        if (onUpdate) {
+          onUpdate();
+        }
+      }
+    },
+    [interactive, selected, setSelected, handleUpdate, onUpdate, frequencyData],
+  );
 
   return useMemo(
     () => (
-      <div className={moduleStyles.letters} ref={ref}>
-        <Typography
-          semanticTag="span"
-          visualAppearance="body-four"
-          className={classNames('caption', moduleStyles.caption)}
-        >
-          {caption}
-        </Typography>
-        {letters.map((letter, i) => {
-          // The space is empty if it is the source and the cipher for that letter is
-          // used, or if it is the cipher space (not the source) then it is empty when
-          // there is no assigned letter in the cipher.
-
-          // The base letter showing the space where the letter can be placed
-          return (
+      <div
+        className={classNames(moduleStyles.animate, moduleStyles.letters)}
+        ref={ref}
+      >
+        {/* Just have a spinner appear on the middle row */}
+        {!visible && interactive && !isSource && <Spinner />}
+        {visible && (
+          <>
             <Typography
-              className={classNames(
-                'letter',
-                moduleStyles.letter,
-                moduleStyles.empty,
-                interactive
-                  ? moduleStyles.interactive
-                  : moduleStyles.uninteractive,
-              )}
               semanticTag="span"
-              visualAppearance="body-two"
-              key={`base-letter-${i}`}
-              data-letter={letter}
-              data-notranslate
-              style={{
-                left: itemPositions.current[letter],
-              }}
-              onClick={() => {
-                if (interactive && selected) {
-                  const mapped = letters.find(
-                    mapped =>
-                      cipher.has(mapped) && cipher.get(mapped) === selected,
-                  );
-                  if (mapped) {
-                    cipher.delete(mapped);
-                    cipher.delete(mapped.toLowerCase());
-                  }
-                  if (!isSource) {
-                    // Set the cipher
-                    cipher.set(letter, selected);
-                    cipher.set(letter.toLowerCase(), selected.toLowerCase());
-                  }
-                  setSelected(undefined);
-                  handleUpdate();
-                  if (onUpdate) {
-                    onUpdate();
-                  }
-                }
-              }}
+              visualAppearance="body-four"
+              className={classNames('caption', moduleStyles.caption)}
             >
-              {letter}
+              {caption}
             </Typography>
-          );
-        })}
-        {interactive &&
-          letters.map((letter, i) => {
-            //const mapped = letters.find(mapped => cipher.has(mapped) && cipher.get(mapped) === letter);
-
-            // The filled in letter
-            return (
+            {/* The space is empty if it is the source and the cipher for that letter is
+             * used, or if it is the cipher space (not the source) then it is empty when
+             * there is no assigned letter in the cipher.
+             *
+             * The base letter showing the space where the letter can be placed
+             */}
+            {letters.map((letter, i) => (
               <Typography
                 className={classNames(
-                  'source',
-                  selected === letter ? moduleStyles.selected : undefined,
+                  'letter',
                   moduleStyles.letter,
-                  moduleStyles.interactive,
-                  moduleStyles.source,
+                  moduleStyles.empty,
+                  interactive
+                    ? moduleStyles.interactive
+                    : moduleStyles.uninteractive,
                 )}
                 semanticTag="span"
                 visualAppearance="body-two"
-                key={`letter-${i}`}
+                key={`base-letter-${i}`}
                 data-letter={letter}
+                data-is-source={isSource}
+                data-is-interactive={interactive}
                 data-notranslate
                 style={{
-                  left: itemSourcePositions.current[letter],
-                  display: 'none',
+                  left: itemPositions.current[letter],
                 }}
-                onClick={() => {
-                  if (selected) {
-                    // Swap them
-                    const mapped = letters.find(
-                      mapped =>
-                        cipher.has(mapped) && cipher.get(mapped) === selected,
-                    );
-                    const mappedTo = letters.find(
-                      mapped =>
-                        cipher.has(mapped) && cipher.get(mapped) === letter,
-                    );
-                    if (mapped) {
-                      // Swap mapped letters
-                      cipher.set(mapped, letter);
-                      cipher.set(mapped.toLowerCase(), letter.toLowerCase());
-                    }
-
-                    if (mappedTo) {
-                      cipher.set(mappedTo, selected);
-                      cipher.set(
-                        mappedTo.toLowerCase(),
-                        selected.toLowerCase(),
-                      );
-                    }
-
-                    setSelected(undefined);
-                    handleUpdate();
-                    if (onUpdate) {
-                      onUpdate();
-                    }
-                  } else {
-                    setSelected(isSource ? letter : letter);
-                  }
-                }}
+                onClick={handleClick.bind(null, letter)}
               >
                 {letter}
               </Typography>
-            );
-          })}
+            ))}
+            {interactive &&
+              letters.map((letter, i) => (
+                <Letter
+                  letter={letter}
+                  i={i}
+                  key={`interactive-letter-${letter}`}
+                  selected={selected}
+                  setSelected={setSelected}
+                  itemSourcePositions={itemSourcePositions}
+                  itemSourceVisibility={itemSourceVisibility}
+                  isSource={isSource}
+                  onUpdate={onUpdate}
+                  handleUpdate={handleUpdate}
+                />
+              ))}
+          </>
+        )}
       </div>
     ),
-    [caption, selected],
+    [caption, selected, visible],
   );
 };
 

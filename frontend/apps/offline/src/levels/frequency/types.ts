@@ -1,3 +1,10 @@
+/** Describes a selectable message */
+export interface FrequencyMessageData {
+  title: string;
+  message: string;
+}
+
+/** Describes the frequency of a particular letter */
 export interface FrequencyDataPoint {
   /** The letter that this data point is for. */
   letter: string;
@@ -5,6 +12,7 @@ export interface FrequencyDataPoint {
   frequency: number;
 }
 
+/** The data context for the level */
 export interface FrequencyData {
   /** A representation of the original letters */
   letters: string[];

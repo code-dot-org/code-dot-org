@@ -2,9 +2,16 @@ import React, {PropsWithChildren, useState} from 'react';
 
 import FrequencyLevelContext from '../contexts/FrequencyLevelContext';
 
-const FrequencyLevelProvider: React.FunctionComponent<PropsWithChildren> = ({
-  children,
-}) => {
+export interface FrequencyLevelProviderProps extends PropsWithChildren {
+  mapLetter: (letter: string, letter: string) => void;
+  swapMapping: (letter: string, letter: string) => void;
+  clearMapping: (letter: string) => void;
+  isMapped: (letter: string) => boolean;
+}
+
+const FrequencyLevelProvider: React.FunctionComponent<
+  FrequencyLevelProviderProps
+> = ({mapLetter, swapMapping, clearMapping, isMapped, children}) => {
   // Themes can be updated
   const [selected, setSelected] = useState<string | undefined>(undefined);
 
@@ -13,6 +20,10 @@ const FrequencyLevelProvider: React.FunctionComponent<PropsWithChildren> = ({
       value={{
         selected,
         setSelected,
+        mapLetter,
+        swapMapping,
+        clearMapping,
+        isMapped,
       }}
     >
       {children}
