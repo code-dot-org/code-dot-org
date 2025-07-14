@@ -127,13 +127,13 @@ module ShareFiltering
     end
   end
 
-  # This function recursively traverses a Blockly “block”, extracting any user-entered text
-  # (comments, field values, etc.), 'cleans' the text value (strips XML tags & quotes), and
+  # This function recursively traverses a Blockly block, extracting any user-entered text
+  # (comments, field values), 'cleans' the text value (strips XML tags & quotes), and
   # adds the text value to the texts array.
   # For each block it:
-  #   1. Iterates through block fields, cleaning and collecting user-genereated string values.
+  #   1. Iterates through block fields, cleaning and collecting user-generated strings.
   #   2. Recurses into both normal and shadow inputs.
-  #   3. Follows the “next” chain to handle sequenced blocks.
+  #   3. Handles sequenced blocks by following the 'next' chain of connections.
   def self.traverse_block(block, texts)
     return unless block.is_a?(Hash)
 
