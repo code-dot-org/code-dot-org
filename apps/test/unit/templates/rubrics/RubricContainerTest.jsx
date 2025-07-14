@@ -1258,6 +1258,36 @@ describe('RubricContainer', () => {
     );
   });
 
+  it('shows "Rubric" title when teacherHasEnabledAi is false', async () => {
+    stubFetch({
+      evalStatusForUser: {},
+      evalStatusForAll: {},
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={false}
+          onLevelForEvaluation={true}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+    await wait();
+
+    expect(screen.queryByText(i18n.rubricAiHeaderText())).toBeNull();
+    // Verify AI-specific elements are not present
+    expect(
+      screen.queryByRole('img', {name: i18n.rubricAiHeaderText()})
+    ).toBeNull();
+  });
+
   it('sanitizes all intro text rendered by introjs', () => {
     STEPS.forEach((step, index) => {
       expect(typeof step.intro).toEqual(
