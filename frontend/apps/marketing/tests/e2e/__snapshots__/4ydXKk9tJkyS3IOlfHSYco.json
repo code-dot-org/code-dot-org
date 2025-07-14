@@ -1,0 +1,16 @@
+{
+  "entryContent": {
+    "fields": {
+      "name": {
+        "en-US": "❌ [ENG] List Item 2"
+      },
+      "shortText": {
+        "en-US": "List Item 2"
+      },
+      "longText": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    }
+  },
+  "contentType": "listItem"
+}

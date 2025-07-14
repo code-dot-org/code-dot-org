@@ -208,18 +208,6 @@ end
 And(/^I complete Section 2 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 2: Find Your Region"
-    And I press the first "input[name='country']" element
-    And I press keys "nonexistent" for element "#school input"
-    Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
-    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
-    Then I wait until element "input#schoolName" is visible
-    And I press keys "Code.org" for element "input#schoolName"
-    And I press keys "Code.org District" for element "input#schoolDistrictName"
-    And I press keys "1501 4th Ave" for element "input#schoolAddress"
-    And I press keys "Seattle" for element "input#schoolCity"
-    And I select the "Washington" option in dropdown "schoolState"
-    And I press keys "98101" for element "input#schoolZipCode"
-    And I press the first "input[name='schoolType'][value='Other']" element
   GHERKIN
 end
 
@@ -289,14 +277,57 @@ And(/^I am viewing a workshop with fake survey results$/) do
   steps "And I am on \"http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}\""
 end
 
-Given(/^I am a teacher enrolling in "([^"]*)"$/) do |course|
-  workshop = FactoryBot.create(:workshop, course: course)
+Given(/^I visit the old enroll form page of a workshop$/) do
+  require_rails_env
+
+  workshop = FactoryBot.create :workshop
   @workshop_id = workshop.id
-  random_teacher_name = "Test Teacher" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
-    And I create a teacher named "#{random_teacher_name}"
     And I am on "http://studio.code.org/pd/workshops/#{@workshop_id}/enroll"
   GHERKIN
+end
+
+Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do |user_type, status|
+  require_rails_env
+
+  random_name = "TestFacilitator" + SecureRandom.hex[0..9]
+  user = case user_type
+         when "student"
+           steps <<~GHERKIN
+             And I create a student named "#{random_name}"
+             And I sign in as "#{random_name}"
+           GHERKIN
+           find_test_user_by_name(random_name)
+         when "teacher"
+           steps <<~GHERKIN
+             And I create a teacher named "#{random_name}"
+             And I sign in as "#{random_name}"
+           GHERKIN
+
+           school_info = FactoryBot.create :school_info
+           teacher = find_test_user_by_name(random_name)
+           teacher.update!(school_info: school_info)
+           teacher
+         else
+           nil
+         end
+
+  workshop = case status
+             when "closed"
+               FactoryBot.create :workshop, :ended
+             when "full"
+               FactoryBot.create :workshop, capacity: 1, num_enrollments: 1
+             when "own"
+               FactoryBot.create :workshop, organizer: user
+             else
+               FactoryBot.create :workshop
+             end
+  if status == "duplicate"
+    FactoryBot.create :pd_enrollment, workshop: workshop, user: user
+  end
+  @workshop_id = workshop.id
+
+  steps "Then I am on \"http://studio.code.org/pd/workshops/#{@workshop_id}/join\""
 end
 
 Given 'I start a self-paced PL course' do

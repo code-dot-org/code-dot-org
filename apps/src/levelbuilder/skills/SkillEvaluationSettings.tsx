@@ -12,12 +12,14 @@ interface Props {
   skills: Skill[];
   levelId: number;
   systemPrompt: string;
+  levelType?: string;
 }
 
 const SkillEvaluationSettings: React.FC<Props> = ({
   skills,
   levelId,
   systemPrompt,
+  levelType,
 }) => {
   return (
     <div className="skill-evaluation-settings">
