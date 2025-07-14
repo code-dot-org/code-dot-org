@@ -39,8 +39,7 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'title name\=\"VAL\"'].freeze
-  USER_ENTERED_TEXT_FIELDS = %w(SPEECH TEXT TEXT1 TITLE).freeze
+  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
@@ -142,8 +141,8 @@ module ShareFiltering
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
-    # Only filter if program contains user-entered indicators.
-    return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
+    # Only filter if program contains fields that accept user-entered strings.
+    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.
