@@ -87,7 +87,6 @@ export interface ServerSection {
   course_id: number | null;
   course_offering_id?: number | null;
   course_version_id?: number | null;
-  courseVersionName?: string | null;
   createdAt?: string;
   grades?: string[];
   hidden: boolean;
@@ -107,7 +106,6 @@ export interface ServerSection {
   sync_enabled?: boolean;
   tts_autoplay_enabled?: boolean;
   unit_id?: number | null;
-  unitName?: string | null;
   unitPosition?: number | null;
   avatar_color?: number | null;
   avatar_emoji?: number | null;

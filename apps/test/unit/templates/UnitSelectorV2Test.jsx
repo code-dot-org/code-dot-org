@@ -10,7 +10,7 @@ const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,
   scriptId: 2, // Course A (2018)
   sectionId: 1,
-  setUnit: () => {},
+  setScriptId: () => {},
   onChange: () => {},
   asyncLoadCoursesWithProgress: () => {},
   isLoadingCourses: false,
@@ -35,15 +35,17 @@ describe('UnitSelector', () => {
   });
 
   it('sets scriptId on change', () => {
-    const setUnit = jest.fn();
-    render(<UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setUnit={setUnit} />);
+    const setScriptId = jest.fn();
+    render(
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setScriptId={setScriptId} />
+    );
     const dropdown = screen.getByRole('combobox');
     fireEvent.click(dropdown);
 
     const option = screen.getByRole('option', {name: 'Flappy'});
     fireEvent.change(dropdown, {target: {value: option.value}});
 
-    expect(setUnit).toHaveBeenCalledTimes(1);
+    expect(setScriptId).toHaveBeenCalledTimes(1);
   });
 
   it('loads courses on initial render', () => {

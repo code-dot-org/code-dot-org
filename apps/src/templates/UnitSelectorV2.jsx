@@ -8,7 +8,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
-  setUnit,
+  setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import i18n from '@cdo/locale';
@@ -37,10 +37,9 @@ function UnitSelectorV2({
   filterToSelectedCourse = false,
   sectionId,
   unitId,
-  courseVersionId,
   coursesWithProgress,
   className,
-  setUnit,
+  setScriptId,
   asyncLoadCoursesWithProgress,
   isLoadingCourses,
   isLoadingSectionData,
@@ -55,13 +54,8 @@ function UnitSelectorV2({
 
   const onSelectUnit = React.useCallback(
     e => {
-      const value = e.target.value;
-      const [newCourseVersionId, newUnitId] = value
-        .split('-')
-        .map(id => parseInt(id));
-      setUnit(newUnitId, newCourseVersionId);
-      // TODO: TEACH-1938 Pass the newCourseVersionId to the progress API
-      // loadUnitProgress(newUnitId, newCourseVersionId, sectionId);
+      const newUnitId = parseInt(e.target.value);
+      setScriptId(newUnitId);
       loadUnitProgress(newUnitId, sectionId);
 
       recordEvent('change_script', sectionId, {
@@ -75,7 +69,7 @@ function UnitSelectorV2({
         unitId: newUnitId,
       });
     },
-    [unitId, setUnit, sectionId]
+    [unitId, setScriptId, sectionId]
   );
 
   const itemGroups = coursesWithProgress
@@ -87,13 +81,10 @@ function UnitSelectorV2({
     )
     .map(version => ({
       label: version.display_name,
-      groupItems: version.units.map(unit => {
-        const itemValue = `${version.id}-${unit.id}`;
-        return {
-          value: itemValue,
-          text: unit.name,
-        };
-      }),
+      groupItems: version.units.map(unit => ({
+        value: unit.id,
+        text: unit.name,
+      })),
     }));
 
   const loadingDropdown = () => (
@@ -114,7 +105,7 @@ function UnitSelectorV2({
   return (
     <SimpleDropdown
       itemGroups={itemGroups}
-      selectedValue={`${courseVersionId}-${unitId}`}
+      selectedValue={unitId}
       name="unitSelector"
       onChange={onSelectUnit}
       className={className}
@@ -131,10 +122,9 @@ function UnitSelectorV2({
 UnitSelectorV2.propTypes = {
   filterToSelectedCourse: PropTypes.bool,
   unitId: PropTypes.number,
-  courseVersionId: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
-  setUnit: PropTypes.func.isRequired,
+  setScriptId: PropTypes.func.isRequired,
   className: PropTypes.string,
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
@@ -147,7 +137,6 @@ export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 export default connect(
   state => ({
     unitId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseVersionId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
@@ -157,8 +146,8 @@ export default connect(
         ?.courseVersionId,
   }),
   dispatch => ({
-    setUnit(unitId, courseVersionId) {
-      dispatch(setUnit(unitId, courseVersionId));
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
     },
     asyncLoadCoursesWithProgress() {
       dispatch(asyncLoadCoursesWithProgress());

@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection, {
   setCoursesWithProgress,
-  setUnit,
+  setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
@@ -26,8 +26,7 @@ import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 // TODO: convert to @testing-library/react
 const DEFAULT_PROPS = {
-  unitId: 2,
-  courseVersionId: 1,
+  scriptId: 2,
   teacherName: 'Awesome Teacher',
   sectionName: 'Great Section',
   teacherComment: null as string | null,
@@ -38,9 +37,8 @@ const DEFAULT_PROPS = {
   setTeacherCommentForReport: (comment: string) => {
     DEFAULT_PROPS.teacherComment = comment;
   },
-  setUnit: (unitId: number, courseVersionId: number) => {
-    DEFAULT_PROPS.unitId = unitId;
-    DEFAULT_PROPS.courseVersionId = courseVersionId;
+  setScriptId: (scriptId: number) => {
+    DEFAULT_PROPS.scriptId = scriptId;
   },
   sectionId: 6,
   scriptData: {
@@ -101,7 +99,6 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        courseVersionId: 1,
         teacherComment: teacherComment,
       },
     });
@@ -122,7 +119,7 @@ describe('StandardsReport', () => {
       addDataByUnit({unitDataByUnit: {[UNIT_DATA.id]: UNIT_DATA}})
     );
 
-    store.dispatch(setUnit(UNIT_DATA.id, 1));
+    store.dispatch(setScriptId(1));
     store.dispatch(
       setCoursesWithProgress([
         {
