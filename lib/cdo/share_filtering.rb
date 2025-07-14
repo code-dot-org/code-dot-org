@@ -40,8 +40,7 @@ module ShareFiltering
   end
 
   USER_ENTERED_TEXT_INDICATORS = ['COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'procedures_def', 'title name\=\"VAL\"'].freeze
-  # poetry_setpromptwithchoices block has 4 text fields: 'TEXT', 'A', 'B', and 'C'. So A, B, C added in field names list.
-  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE A B C)
+  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE)
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
