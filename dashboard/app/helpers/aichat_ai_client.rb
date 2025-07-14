@@ -57,7 +57,7 @@ class AichatAiClient
     messages_with_assets_count = get_messages_with_assets_count(stored_messages, new_message)
 
     response_time = Time.now - start_time
-    report_usage_and_throttling_metrics(usage, messages_with_assets_count, level_id, project_id, user_id, model_id, response_time)
+    # report_usage_and_throttling_metrics(usage, messages_with_assets_count, level_id, project_id, user_id, model_id, response_time)
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 

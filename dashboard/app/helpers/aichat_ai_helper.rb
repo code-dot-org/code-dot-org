@@ -25,22 +25,18 @@ module AichatAiHelper
 
     client = AichatAiClient.create_instance(model_id)
 
-    begin
-      response = client.get_response_text(
-        stored_messages,
-        new_message,
-        temperature,
-        system_prompt,
-        retrieval_contexts,
-        model_id,
-        level_id,
-        encrypted_channel_id,
-        user_id,
-        project_id
-      )
-    rescue Net::ReadTimeout
-      raise OpenaiUserInputResponseTimeout.new("Timeout waiting for AI client to provide response to user input.")
-    end
+    response = client.get_response_text(
+      stored_messages,
+      new_message,
+      temperature,
+      system_prompt,
+      retrieval_contexts,
+      model_id,
+      level_id,
+      encrypted_channel_id,
+      user_id,
+      project_id
+    )
 
     response
   end
