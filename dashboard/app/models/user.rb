@@ -437,6 +437,7 @@ class User < ApplicationRecord
   # Make sure to include these Concerns after we include the default Devise
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
+  include Devise::Models::CustomLockable
   include Devise::Models::ManualSessionExpiration
   include Devise::DatabaseAuthenticationOverrides
 

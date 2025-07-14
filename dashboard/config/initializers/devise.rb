@@ -370,10 +370,3 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 end
-
-Rails.application.config.to_prepare do
-  # See lib/devise/models/custom_lockable.rb
-  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
-    Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
-  end
-end

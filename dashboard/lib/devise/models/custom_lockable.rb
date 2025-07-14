@@ -1,3 +1,5 @@
+require 'devise/models/lockable'
+
 module Devise
   module Models
     # Extend Devise's built-in Lockable functionality for compatibility with
@@ -6,6 +8,8 @@ module Devise
     #
     # See https://www.rubydoc.info/github/plataformatec/devise/Devise/Models/Lockable
     module CustomLockable
+      include Lockable
+
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L122-L125
       def increment_failed_attempts
         # Only track failed attempts for teachers; we can't send 'unlock your
