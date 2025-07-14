@@ -53,13 +53,21 @@
         ]
       },
       "experienceLevel": {
-        "en-US": ["Beginner"]
+        "en-US": [
+          "Beginner"
+        ]
       },
       "devices": {
-        "en-US": ["Laptop", "Chromebook", "Tablet"]
+        "en-US": [
+          "Laptop",
+          "Chromebook",
+          "Tablet"
+        ]
       },
       "browsers": {
-        "en-US": ["All modern browsers"]
+        "en-US": [
+          "All modern browsers"
+        ]
       },
       "accessibility": {
         "en-US": [

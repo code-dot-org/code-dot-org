@@ -13912,6 +13912,43 @@
                       "children": []
                     },
                     {
+                      "id": "b8oWcHkc",
+                      "displayName": "Heading 1",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G2oGQTXF",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
                       "id": "L5oerNnG",
                       "definitionId": "iconHighlight",
                       "parameters": {},
@@ -16367,7 +16404,7 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "desktop": "5079px",
-                    "tablet": "5402px",
+                    "tablet": "5431px",
                     "mobile": "7321px"
                   }
                 },
@@ -18050,7 +18087,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "295px",
+                    "desktop": "fit-content",
                     "tablet": "fit-content",
                     "mobile": "fit-content"
                   }
@@ -19254,9 +19291,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "616px",
-                    "tablet": "454px",
-                    "mobile": "fit-content"
+                    "desktop": "675px",
+                    "tablet": "514px",
+                    "mobile": "556px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19379,6 +19416,42 @@
                         },
                         "children": {
                           "key": "vqJjtbRA",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "Ab2DX8Mz",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G3QkOYjJ",
                           "type": "UnboundValue"
                         },
                         "cfVisibility": {
@@ -22946,6 +23019,12 @@
           },
           "FjaNJXPA": {
             "value": "People Collection sorted alphabetically (default)"
+          },
+          "G2oGQTXF": {
+            "value": "Supports optional link and multiline text"
+          },
+          "G3QkOYjJ": {
+            "value": "Supports multiple content options"
           },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
