@@ -1,6 +1,7 @@
 import {ThemeProvider} from '@mui/material';
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -33,6 +34,7 @@ export default async function Layout({
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
   const theme = getMuiTheme(brand);
+  const isDraftModeEnabled = (await draftMode()).isEnabled;
 
   return (
     <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
@@ -42,7 +44,11 @@ export default async function Layout({
             <EnvironmentLoader />
             <NewRelicLoader />
             <OneTrustLoader brand={brand} />
-            <LocalizeLoader brand={brand} locale={locale} />
+            <LocalizeLoader
+              brand={brand}
+              locale={locale}
+              isDraftMode={isDraftModeEnabled}
+            />
 
             <OneTrustProvider>
               {googleAnalyticsMeasurementId && (

@@ -7,6 +7,7 @@ class SkillsController < ApplicationController
     skills_by_concept = {}
     skills.each do |skill|
       formatted_skill = skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+      formatted_skill['hasLevels'] = skill.levels.any?
       if skills_by_concept.key?(skill.concept)
         skills_by_concept[skill.concept] << formatted_skill
       else
