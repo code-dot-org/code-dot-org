@@ -182,7 +182,7 @@ async function postChatCompletionAsyncPolling(
   const payload = {
     newMessage,
     storedMessages,
-    modelParameters,
+    aichatModelCustomizations: modelParameters,
     aichatContext,
   };
 
