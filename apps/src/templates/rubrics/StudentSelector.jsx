@@ -91,21 +91,16 @@ function StudentSelector({
     <CustomDropdown
       className={styleName ? styleName : 'uitest-studentselect'}
       name="students"
-      size="m"
-      labelText="Select a student"
+      size="s"
       styleAsFormField={true}
       selectedValueText={selectedDisplayValue}
     >
       <ul>
         {!selectedUserId && (
-          <li>
-            <button
-              className={style.studentDropdownOption}
-              onClick={() => handleOptionClick(NO_SELECTED_SECTION_VALUE)}
-              type="button"
-            >
+          <li className={style.studentDropdownUnselectable}>
+            <div className={style.studentDropdownOption}>
               <span>{i18n.selectStudentOption()}</span>
-            </button>
+            </div>
           </li>
         )}
         {students.map(student => (
