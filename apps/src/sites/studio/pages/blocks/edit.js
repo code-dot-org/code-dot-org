@@ -133,14 +133,7 @@ function validateJSON(editor) {
 
 // Ensure that text field names are supported for share filtering.
 function validateTextFieldNames(json) {
-  const allowedNames = [
-    'COMMENT', // Used in gamelab_comment
-    'DESCRIPTION', // Used in procedure definitions
-    'SPEECH', // Used in gamelab_spriteSay and others
-    'TEXT', // Used in text fields in many blocks
-    'TEXT1', // Used in gamelab_textJoin
-    'TITLE', // Used in studio_showTitleScreen
-  ];
+  const allowedNames = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'];
   if (json.args) {
     for (const arg of json.args) {
       if (
@@ -151,7 +144,7 @@ function validateTextFieldNames(json) {
         throw new Error(
           `Invalid name '${
             arg.name
-          }' for type 'String'. Allowed names are: ${allowedNames.join(
+          }' for text field. Allowed names are: ${allowedNames.join(
             ', '
           )}. (This is required for share filtering.)`
         );
