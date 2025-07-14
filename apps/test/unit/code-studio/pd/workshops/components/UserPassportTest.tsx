@@ -53,11 +53,63 @@ describe('UserPassport', () => {
     expect(screen.queryByText('Add your school')).toBe(null);
   });
 
-  it('edit link sends user to account settings page with return_to url', () => {
-    renderDefault();
-    expect(screen.getByRole('link', {name: 'Edit'})).toHaveAttribute(
+  it('edit link adds missing info params to url: missing full name', () => {
+    renderDefault({givenName: ''});
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Edit',
+      })
+    ).toHaveAttribute(
       'href',
-      '/users/edit?user_return_to=/fake-return-url'
+      `/users/edit?user_return_to=${encodeURIComponent(
+        DEFAULT_PROPS.returnToHref
+      )}&accountInformation=true`
+    );
+  });
+
+  it('edit link adds missing info params to url: missing school', () => {
+    renderDefault({schoolName: '', schoolType: ''});
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Edit',
+      })
+    ).toHaveAttribute(
+      'href',
+      `/users/edit?user_return_to=${encodeURIComponent(
+        DEFAULT_PROPS.returnToHref
+      )}&schoolInformation=true`
+    );
+  });
+
+  it('edit link adds missing info params to url: missing full name and school', () => {
+    renderDefault({familyName: '', schoolName: '', schoolType: ''});
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Edit',
+      })
+    ).toHaveAttribute(
+      'href',
+      `/users/edit?user_return_to=${encodeURIComponent(
+        DEFAULT_PROPS.returnToHref
+      )}&accountInformation=true&schoolInformation=true`
+    );
+  });
+
+  it('edit link just has return_to url param if user has all required fields', () => {
+    renderDefault();
+
+    expect(
+      screen.getByRole('link', {
+        name: 'Edit',
+      })
+    ).toHaveAttribute(
+      'href',
+      `/users/edit?user_return_to=${encodeURIComponent(
+        DEFAULT_PROPS.returnToHref
+      )}`
     );
   });
 });

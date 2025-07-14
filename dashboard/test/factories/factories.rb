@@ -768,6 +768,11 @@ FactoryBot.define do
     end
   end
 
+  factory :user_facilitator_info, class: User::FacilitatorInfo do
+    association :user, factory: :facilitator
+    bio {Faker::Lorem.paragraph}
+  end
+
   factory :authentication_option do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}

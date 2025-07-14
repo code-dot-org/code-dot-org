@@ -81,9 +81,6 @@ Feature: Using the teacher dashboard homepage (v1)
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   @eyes
-  @skip
-  # Skipped while fixing issue with curriculum version
-  # https://codedotorg.atlassian.net/browse/TEACH-2080
   Scenario: Teacher can view more tiles when clicking on view more button
     When I open my eyes to test "teacher dashboard"
     Given I am a teacher and go home
@@ -91,7 +88,7 @@ Feature: Using the teacher dashboard homepage (v1)
     # Add new courses so new tiles are visible on the teacher dashboard
     And I create a new "Hour of Code" student section named "Section 1" assigned to "AI for Oceans"
     And I press keys ":escape"
-    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'17-'18"
+    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'25-'26"
     And I create a new "Hour of Code" student section named "Section 3" assigned to "Artist"
     And I create a new "Hour of Code" student section named "Section 4" assigned to "Classic Maze"
     And element ".ui-test-view-more-courses" is not visible

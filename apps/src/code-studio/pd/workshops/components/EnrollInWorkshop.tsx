@@ -97,11 +97,11 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={custom_registration_link}
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"

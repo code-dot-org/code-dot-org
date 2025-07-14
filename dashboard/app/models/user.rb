@@ -106,6 +106,7 @@ class User < ApplicationRecord
   include SectionParticipation
   include PartialRegistration
   include Purgeable
+  include Facilitator
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
