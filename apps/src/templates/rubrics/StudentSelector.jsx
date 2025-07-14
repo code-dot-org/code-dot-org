@@ -97,7 +97,7 @@ function StudentSelector({
     >
       <ul>
         {!selectedUserId && (
-          <li className={style.unselectableDropdownOption}>
+          <li className={style.unselectableDropdownOption} key="select-student">
             <div className={style.dropdownOption}>
               <span>{i18n.selectStudentOption()}</span>
             </div>

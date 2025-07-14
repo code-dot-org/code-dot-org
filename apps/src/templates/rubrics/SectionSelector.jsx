@@ -67,7 +67,7 @@ function SectionSelector({
     >
       <ul>
         {!selectedSectionId && (
-          <li className={style.unselectableDropdownOption}>
+          <li className={style.unselectableDropdownOption} key="select-section">
             <div className={style.dropdownOption}>
               <span>{i18n.selectSectionOption()}</span>
             </div>

@@ -192,7 +192,7 @@ describe('RubricSettings', () => {
     );
 
     // section selector is visible
-    screen.getByText(fakeSection.name);
+    screen.getByRole('button', {name: fakeSection.name});
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
