@@ -13,8 +13,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   asyncLoadCoursesWithProgress,
   getSelectedUnitName,
-  getSelectedUnitPosition,
-  getSelectedCourseName,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
@@ -43,13 +41,6 @@ const UnitCalendar: React.FC = () => {
   const selectedSection = useAppSelector(selectedSectionSelector);
 
   const unitName = useSelector(state => getSelectedUnitName(state));
-  let unitPosition = useSelector(state => getSelectedUnitPosition(state));
-  let courseName = useSelector(state => getSelectedCourseName(state));
-
-  if (!(unitPosition && courseName)) {
-    unitPosition = selectedSection.unitPosition;
-    courseName = selectedSection.courseVersionName;
-  }
 
   const hasCalendar = useAppSelector(state => state.calendar?.showCalendar);
 
@@ -57,18 +48,19 @@ const UnitCalendar: React.FC = () => {
     state => state.calendar?.calendarLessons
   );
 
-  const calendarCourseName = useAppSelector(
-    state => state.calendar?.courseName
-  );
-  const calendarUnitPosition = useAppSelector(
-    state => state.calendar?.unitPosition
-  );
+  const calendarUnitName = useAppSelector(state => state.calendar?.unitName);
 
   const {userId, userType} = useAppSelector(state => state.currentUser);
 
   const isLoadingCoursesWithProgress = useSelector(
     (state: {unitSelection: {isLoadingCoursesWithProgress: boolean}}) =>
       state.unitSelection.isLoadingCoursesWithProgress
+  );
+
+  const unitToLoad = React.useMemo(
+    () =>
+      !!selectedSection.unitName ? unitName || selectedSection.unitName : null,
+    [unitName, selectedSection.unitName]
   );
 
   const dispatch = useAppDispatch();
@@ -78,12 +70,10 @@ const UnitCalendar: React.FC = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (!selectedSection.courseOfferingId || !(courseName && unitPosition)) {
+    if (!selectedSection.courseOfferingId || !unitToLoad) {
       dispatch(
         setCalendarData({
           unitName: null,
-          unitPosition: null,
-          courseName: null,
           showCalendar: false,
           calendarLessons: null,
           versionYear: null,
@@ -91,18 +81,17 @@ const UnitCalendar: React.FC = () => {
       );
     } else if (
       !isLoading &&
-      courseName &&
-      unitPosition &&
+      unitToLoad &&
       userType &&
       userId &&
       (hasCalendar === undefined ||
         calendarLessons === null ||
-        courseName !== calendarCourseName ||
-        unitPosition !== calendarUnitPosition)
+        (unitToLoad !== calendarUnitName && unitName !== null))
     ) {
       setIsLoading(true);
-      const fetchUnitSummaryPath = `/dashboardapi/unit_summary/${courseName}/${unitPosition}`;
-      HttpClient.fetchJson<UnitSummaryResponse>(fetchUnitSummaryPath)
+      HttpClient.fetchJson<UnitSummaryResponse>(
+        `/dashboardapi/unit_summary/${unitToLoad}`
+      )
         .then(response => response?.value)
         .then(responseJson => {
           // Initialize Redux state with the new data
@@ -110,14 +99,14 @@ const UnitCalendar: React.FC = () => {
           setIsLoading(false);
 
           analyticsReporter.sendEvent(EVENTS.VIEW_UNIT_CALENDAR, {
-            unitName,
+            unitToLoad,
           });
         })
         .catch(error => {
           console.error('Error loading unit calendar', error);
 
           analyticsReporter.sendEvent(EVENTS.UNIT_CALENDAR_FAILURE, {
-            unitName,
+            unitToLoad,
           });
           return null;
         });
@@ -133,11 +122,8 @@ const UnitCalendar: React.FC = () => {
     dispatch,
     isLoading,
     selectedSection.courseOfferingId,
-    selectedSection.courseVersionName,
-    courseName,
-    unitPosition,
-    calendarCourseName,
-    calendarUnitPosition,
+    unitToLoad,
+    calendarUnitName,
   ]);
 
   const weeklyMinutesOptions = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS.map(

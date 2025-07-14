@@ -654,7 +654,7 @@ class Section < ApplicationRecord
   def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?

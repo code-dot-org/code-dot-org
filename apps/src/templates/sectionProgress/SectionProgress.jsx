@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import logToCloud from '@cdo/apps/logToCloud';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
@@ -42,12 +42,11 @@ class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
     scriptId: PropTypes.number,
-    courseVersionId: PropTypes.number,
     sectionId: PropTypes.number,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: unitDataPropType,
-    setUnit: PropTypes.func.isRequired,
+    setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
@@ -122,8 +121,8 @@ class SectionProgress extends Component {
     }
   }
 
-  onChangeScript = (scriptId, courseVersionId) => {
-    this.props.setUnit(scriptId, courseVersionId);
+  onChangeScript = scriptId => {
+    this.props.setScriptId(scriptId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
@@ -197,7 +196,6 @@ class SectionProgress extends Component {
     const {
       currentView,
       scriptId,
-      courseVersionId,
       scriptData,
       sectionId,
       showStandardsIntroDialog,
@@ -223,11 +221,7 @@ class SectionProgress extends Component {
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
             </div>
-            <UnitSelector
-              scriptId={scriptId}
-              courseVersionId={courseVersionId}
-              onChange={this.onChangeScript}
-            />
+            <UnitSelector scriptId={scriptId} onChange={this.onChangeScript} />
           </div>
           {levelDataInitialized && (
             <div style={styles.toggle}>
@@ -321,7 +315,6 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
-    courseVersionId: state.unitSelection.courseVersionId,
     sectionId: state.teacherSections.selectedSectionId,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
@@ -330,8 +323,8 @@ export default connect(
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo,
   }),
   dispatch => ({
-    setUnit(scriptId, courseVersionId) {
-      dispatch(setUnit(scriptId, courseVersionId));
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));
