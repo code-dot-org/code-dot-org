@@ -13947,38 +13947,6 @@
                         }
                       },
                       "children": []
-                    },
-                    {
-                      "id": "L5oerNnG",
-                      "definitionId": "iconHighlight",
-                      "parameters": {},
-                      "variables": {
-                        "heading": {
-                          "type": "UnboundValue",
-                          "key": "AjbCOAC"
-                        },
-                        "text": {
-                          "type": "UnboundValue",
-                          "key": "ov3FiaZ"
-                        },
-                        "iconName": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "smile"
-                          }
-                        },
-                        "linkEntries": {
-                          "path": "/hGSB4J2/fields/ctas/~locale",
-                          "type": "BoundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
                     }
                   ]
                 }
@@ -17403,38 +17371,6 @@
                             },
                             "linkEntry": {
                               "path": "/iLWZf8Dw/fields/singleCta/~locale",
-                              "type": "BoundValue"
-                            },
-                            "cfVisibility": {
-                              "type": "DesignValue",
-                              "valuesByBreakpoint": {
-                                "desktop": true
-                              }
-                            }
-                          },
-                          "children": []
-                        },
-                        {
-                          "id": "j1tOoRfv",
-                          "definitionId": "iconHighlight",
-                          "parameters": {},
-                          "variables": {
-                            "heading": {
-                              "type": "UnboundValue",
-                              "key": "k22W8Wm"
-                            },
-                            "text": {
-                              "type": "UnboundValue",
-                              "key": "_CGzCa9"
-                            },
-                            "iconName": {
-                              "type": "DesignValue",
-                              "valuesByBreakpoint": {
-                                "desktop": "smile"
-                              }
-                            },
-                            "linkEntries": {
-                              "path": "/M8UeEdi/fields/ctas/~locale",
                               "type": "BoundValue"
                             },
                             "cfVisibility": {
@@ -21101,352 +21037,16 @@
               "linkType": "Entry"
             }
           },
-          "0Qtu4TL": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "14ZoJ13": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "2lNgI-W": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "3UNaYMj": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "42tcnEV": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "4JpIssm": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "7JpUxyt": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "87qAqf1": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "E9umSEs": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "EiVrjhR": {
-            "sys": {
-              "id": "2Mhlh94AQ1PrQDyultyDeC",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "EivjDD3": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "F_sVXx5": {
-            "sys": {
-              "id": "6TJZRnAUG6nipPqCP7pVFL",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
-          "Is7ioIc": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "J2Az9DM": {
-            "sys": {
-              "id": "YV17p1FI47ZYdCLm39S8W",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JZkN7NP": {
-            "sys": {
-              "id": "29RmoSX0ra5slBXtk5KXzM",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JqZWSk7": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Ku53DtN": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "LRQ6mHr": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "M8UeEdi": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "MU2wC9g": {
-            "sys": {
-              "id": "1dZ4s6uwH0POzF2Al8kKgK",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "MluIs3_": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OGiPVAk": {
-            "sys": {
-              "id": "49VdYaS7eknpZ0NJlPiL1X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OfnA27v": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OlpMQbg": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OqULTYk": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "TN8XTWJ": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "ToLGlFl": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "UGLXrgn": {
-            "sys": {
-              "id": "6lO284hjA2HSBDkgipX18Q",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Uzc6FQP": {
-            "sys": {
-              "id": "1JoMHQi1j1tApZYAZeMXzD",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "VExqHM0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "WPQHtk0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "XEFBi12": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Y6BjzQj": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Z5z0C68": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "_BG8Ipz": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "_jLvyJJ": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "b5Lvt-f": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "cTEogzz": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "gJB25Ug": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "hGSB4J2": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "iZYxsRR": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "j82DfDg": {
-            "sys": {
-              "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "kkL-UdO": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "lSKgjSI": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "nizD06r": {
-            "sys": {
-              "id": "1dZ4s6uwH0POzF2Al8kKgK",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "rF2IN10": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "u3zLJM2": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "uU2F7om": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "yNxDeG0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "0HkUraow": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "0Qtu4TL": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21461,6 +21061,13 @@
           "0Uc1jnt8": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "14ZoJ13": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21493,9 +21100,23 @@
               "linkType": "Entry"
             }
           },
+          "2lNgI-W": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "3Fk0zSOY": {
             "sys": {
               "id": "YV17p1FI47ZYdCLm39S8W",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "3UNaYMj": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21510,6 +21131,20 @@
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "42tcnEV": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "4JpIssm": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21570,6 +21205,13 @@
               "linkType": "Entry"
             }
           },
+          "7JpUxyt": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "7tg8fqU6": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21582,6 +21224,13 @@
               "id": "7iR45Lju4ssVPnrB0TYy8S",
               "type": "Link",
               "linkType": "Asset"
+            }
+          },
+          "87qAqf1": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
             }
           },
           "8W24TK7L": {
@@ -21608,6 +21257,13 @@
           "9VSvsbCf": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "9g-7kZ472XQBkhnml-mZ-": {
+            "sys": {
+              "id": "20rQYDvS9V3fnwtMyAW0m4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21647,9 +21303,30 @@
               "linkType": "Entry"
             }
           },
+          "E9umSEs": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "EGqljg4x": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EiVrjhR": {
+            "sys": {
+              "id": "2Mhlh94AQ1PrQDyultyDeC",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EivjDD3": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21666,6 +21343,13 @@
               "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
+            }
+          },
+          "F_sVXx5": {
+            "sys": {
+              "id": "6TJZRnAUG6nipPqCP7pVFL",
+              "type": "Link",
+              "linkType": "Asset"
             }
           },
           "FbSNI62I": {
@@ -21710,6 +21394,34 @@
               "linkType": "Asset"
             }
           },
+          "Is7ioIc": {
+            "sys": {
+              "id": "5BwSS39gK80UzJXuM4zT0X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "J2Az9DM": {
+            "sys": {
+              "id": "YV17p1FI47ZYdCLm39S8W",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JZkN7NP": {
+            "sys": {
+              "id": "29RmoSX0ra5slBXtk5KXzM",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JqZWSk7": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "KNEEYqu2": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21724,6 +21436,13 @@
               "linkType": "Entry"
             }
           },
+          "Ku53DtN": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "L1oQ0Cfn": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21734,6 +21453,13 @@
           "L4ppraxB": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "LRQ6mHr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21759,6 +21485,13 @@
               "linkType": "Entry"
             }
           },
+          "MU2wC9g": {
+            "sys": {
+              "id": "1dZ4s6uwH0POzF2Al8kKgK",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Md4QjG4e": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21769,6 +21502,13 @@
           "MdJaRWGZ": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "MluIs3_": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21808,9 +21548,37 @@
               "linkType": "Entry"
             }
           },
+          "OGiPVAk": {
+            "sys": {
+              "id": "49VdYaS7eknpZ0NJlPiL1X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OfnA27v": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "OkAdGTNN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OlpMQbg": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OqULTYk": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21899,6 +21667,20 @@
               "linkType": "Entry"
             }
           },
+          "TN8XTWJ": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "ToLGlFl": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "U67Bt9so": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -21913,9 +21695,30 @@
               "linkType": "Entry"
             }
           },
+          "UGLXrgn": {
+            "sys": {
+              "id": "6lO284hjA2HSBDkgipX18Q",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Ura63qS4": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Uzc6FQP": {
+            "sys": {
+              "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "VExqHM0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21955,9 +21758,23 @@
               "linkType": "Entry"
             }
           },
+          "WPQHtk0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "XC0Orztn": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "XEFBi12": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21976,7 +21793,42 @@
               "linkType": "Entry"
             }
           },
+          "Y6BjzQj": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Z5z0C68": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "ZsffSorr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_BG8Ipz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_jLvyJJ": {
+            "sys": {
+              "id": "3CKippL3oudp1CS3chX4e4",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "b5Lvt-f": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
@@ -22021,6 +21873,13 @@
           "cNokTlRK": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "cTEogzz": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22088,6 +21947,13 @@
               "linkType": "Asset"
             }
           },
+          "gJB25Ug": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "h2KlnmZU": {
             "sys": {
               "id": "3qrVQ4IDOS7JwR8uQy2VMV",
@@ -22130,9 +21996,23 @@
               "linkType": "Entry"
             }
           },
+          "iZYxsRR": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "j3DDxs9Y": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "j82DfDg": {
+            "sys": {
+              "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22193,6 +22073,13 @@
               "linkType": "Entry"
             }
           },
+          "kkL-UdO": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "l4luizWo": {
             "sys": {
               "id": "3BLuF3jm0oTV17RPwLOgC6",
@@ -22203,6 +22090,13 @@
           "lB5qBMen": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "lSKgjSI": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22252,6 +22146,13 @@
           "n6O7U0vI": {
             "sys": {
               "id": "20rQYDvS9V3fnwtMyAW0m4",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "nizD06r": {
+            "sys": {
+              "id": "1dZ4s6uwH0POzF2Al8kKgK",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22333,6 +22234,13 @@
               "linkType": "Entry"
             }
           },
+          "rF2IN10": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "rU3ah9na": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -22389,9 +22297,23 @@
               "linkType": "Entry"
             }
           },
+          "u3zLJM2": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "u6GdJTjQ": {
             "sys": {
               "id": "49VdYaS7eknpZ0NJlPiL1X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "uU2F7om": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22459,6 +22381,13 @@
               "linkType": "Entry"
             }
           },
+          "yNxDeG0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "yuwzRF76": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -22479,18 +22408,24 @@
               "type": "Link",
               "linkType": "Entry"
             }
-          },
-          "9g-7kZ472XQBkhnml-mZ-": {
-            "sys": {
-              "id": "20rQYDvS9V3fnwtMyAW0m4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
           }
         }
       },
       "unboundValues": {
         "en-US": {
+          "-KqdBQBCJexO6AUlN6Hdk": {
+            "value": "Overline"
+          },
+          "-hiP47xkS8H9dfmgslbdh": {},
+          "08mxl1BGFzTbKwyQDG6DD": {},
+          "0BYMXHkY": {
+            "value": "Full Width Action Block"
+          },
+          "0C-c5xDSOUoiupxN-tMsR": {},
+          "0FOHuKmh": {},
+          "0ZmNLA6K": {},
+          "0kPDA79g": {},
+          "0v9inr8Fpqnw8F8ElhUQT": {},
           "0x7A2L1": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
@@ -22501,351 +22436,17 @@
             "value": false
           },
           "1702ebh": {},
-          "2ql_rY9": {
-            "value": "Title/position"
-          },
-          "347Oltn": {},
-          "3RSL9am": {
-            "value": "In partnership with"
-          },
-          "3blPTQr": {
-            "value": "Overline"
-          },
-          "3gD4aa9": {},
-          "3uZuy0t": {
-            "value": "Text Link"
-          },
-          "4H-a8iq": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "4XQPWR-": {
-            "value": true
-          },
-          "4qoR2Ve": {
-            "value": "Paragraph"
-          },
-          "60M5ZzR": {},
-          "6AJoP57": {
-            "value": "Action Block Title"
-          },
-          "6znvK3h": {},
-          "7M_2_I3": {
-            "value": "Editorial Card and Icon Highlight Dark Mode"
-          },
-          "7OACowT": {},
-          "84NjXHS": {
-            "value": "Button"
-          },
-          "8p5f3sx": {},
-          "9FFVH8n": {
-            "value": false
-          },
-          "ABf-FSO": {},
-          "AjbCOAC": {
-            "value": "Icon Highlight Heading"
-          },
-          "BkMDUSL": {
-            "value": "https://code.org"
-          },
-          "C6J5B0V": {},
-          "CCG45Cf": {
-            "value": false
-          },
-          "CtWVJCR": {},
-          "DMiqqWu": {},
-          "DeNUEmj": {},
-          "DrNGxez": {
-            "value": ""
-          },
-          "E7Cjhbo": {},
-          "ECsE7T3": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png"
-          },
-          "EKQDsC5": {},
-          "ESHDx-N": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "ETBqUYX": {
-            "value": "https://code.org"
-          },
-          "Eoggq-j": {
-            "value": "Testimonial author"
-          },
-          "FBj3Am9": {},
-          "FSg2WhG": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
-          "GkMrM3D": {},
-          "GmGKjDd": {},
-          "GsLOLdu": {},
-          "HANecnh": {},
-          "HURk-ZX": {
-            "value": "https://code.org"
-          },
-          "HmUDGQ4": {},
-          "ICrX3vs": {
-            "value": ""
-          },
-          "IcIQJVk": {
-            "value": ""
-          },
-          "IgW-F6-": {},
-          "JJQxY31": {
-            "value": "Action block description goes here."
-          },
-          "J_GeKST": {
-            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum."
-          },
-          "KXMj-y0": {},
-          "Khqf7OC": {
-            "value": "Button"
-          },
-          "LDMq3zA": {
-            "value": "Action Block Title"
-          },
-          "LRYvjsK": {
-            "value": "Pattern Header"
-          },
-          "LbAW-Uv": {
-            "value": false
-          },
-          "LsBgETo": {
-            "value": false
-          },
-          "MOKb3tV": {},
-          "M_8vrhJ": {},
-          "Mh5oewj": {
-            "value": false
-          },
-          "NDzLtVL": {},
-          "OCvEUyr": {},
-          "PAn6OhE": {},
-          "Pbti9HD": {
-            "value": "Curriculum Snapshot"
-          },
-          "RF1zjg6": {},
-          "SAid6Gk": {
-            "value": "Overline"
-          },
-          "SKcaTMP": {
-            "value": "Simple List"
-          },
-          "SKnPv-9": {},
-          "SO13Vmq": {
-            "value": "Editorial Card 1"
-          },
-          "SV5gVCc": {},
-          "T1ZuBpV": {},
-          "T68Oo4f": {},
-          "TH-_LAe": {},
-          "U1KmKKh": {},
-          "UaQvzts": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
-          "UjouKpK": {
-            "value": false
-          },
-          "WYRzX9h": {},
-          "WmoW8Tc": {},
-          "Wz9SJiE": {},
-          "XK7rMUD": {
-            "value": "Action Block Collection sorted alphabetically (default)"
-          },
-          "XonT3vx": {
-            "value": "Horizontal With Image"
-          },
-          "Xpd0GYP": {},
-          "YdN-mw6": {},
-          "ZKgwMwb": {
-            "value": "Rich Text"
-          },
-          "ZlGBh22": {},
-          "_CGzCa9": {
-            "value": "Icon Highlight\nMultiline Text"
-          },
-          "_yg5mft": {},
-          "_zwsCfw": {},
-          "aBzIX6V": {
-            "value": "Action block description goes here."
-          },
-          "aGWZHxe": {
-            "value": ""
-          },
-          "aTQLwIy": {
-            "value": "Editorial Card\nMultiline Text"
-          },
-          "aXCTjNk": {},
-          "acae6EU": {},
-          "alDLE92": {
-            "value": "Action Block Pattern Hidden Elements"
-          },
-          "aohR35B": {
-            "value": "Action block description goes here."
-          },
-          "bAIeQt5": {
-            "value": false
-          },
-          "bKUURbE": {},
-          "bs0mKZu": {
-            "value": "Action Block Pattern Default"
-          },
-          "c6Xllyd": {
-            "value": "Link"
-          },
-          "cGdHTOr": {},
-          "cLEr2oT": {},
-          "ccJpf-l": {
-            "value": "Action block description goes here."
-          },
-          "dF5TCmS": {
-            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
-          },
-          "eRITgAP": {},
-          "ezWxsUM": {},
-          "f24Wg65": {},
-          "fKy-MMp": {},
-          "fupk4k7": {},
-          "gI0IiV4": {
-            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
-          },
-          "gScLFwq": {},
-          "go9slZF": {
-            "value": ""
-          },
-          "hDMAL2U": {},
-          "i4tvl_O": {
-            "value": "Button"
-          },
-          "iHnCvhA": {
-            "value": ""
-          },
-          "io65oYg": {},
-          "jLTpao2": {
-            "value": false
-          },
-          "jekav-Z": {
-            "value": "Action Block Title"
-          },
-          "k22W8Wm": {
-            "value": "Icon Highlight Heading"
-          },
-          "kV8GyX4": {
-            "value": ""
-          },
-          "ktHLai2": {
-            "value": "video title"
-          },
-          "lakTr2l": {},
-          "mqPCQ9z": {
-            "value": "Editorial Card 2"
-          },
-          "n6pmjoG": {},
-          "nIT3Py6": {
-            "value": true
-          },
-          "nWRTZCk": {
-            "value": false
-          },
-          "nXf_AKG": {
-            "value": "Editorial Card"
-          },
-          "nZ3KuxH": {},
-          "nluOMYh": {},
-          "nsI4jPw": {
-            "value": ""
-          },
-          "oGnTTO-": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
-          "ov3FiaZ": {
-            "value": "Icon Highlight\nMultiline Text"
-          },
-          "pVPzc3-": {
-            "value": ""
-          },
-          "r8uRR68": {
-            "value": false
-          },
-          "rOJjuA1": {
-            "value": false
-          },
-          "rYV1-qR": {
-            "value": {
-              "fields": {
-                "url": "#",
-                "label": "Primary button"
-              }
-            }
-          },
-          "rtOw9NH": {
-            "value": ""
-          },
-          "s8SjMXS": {
-            "value": ""
-          },
-          "s9aRaAn": {},
-          "shs9eH4": {
-            "value": false
-          },
-          "sjc08rI": {
-            "value": false
-          },
-          "uaOANCd": {
-            "value": "FAQ Accordion"
-          },
-          "uzR0fY4": {},
-          "vSKlRHP": {},
-          "vwAdtQr": {
-            "value": "Editorial Card 4"
-          },
-          "w3AE6Sz": {
-            "value": "Action Block Title"
-          },
-          "xE5DIeP": {
-            "value": "Editorial Card Heading"
-          },
-          "xF6NHMp": {
-            "value": false
-          },
-          "xWwE9or": {
-            "value": "Editorial Card 3"
-          },
-          "yG60pRy": {
-            "value": ""
-          },
-          "yKDw71r": {},
-          "zHoBMf8": {
-            "value": false
-          },
-          "zh7msz6": {
-            "value": ""
-          },
-          "0BYMXHkY": {
-            "value": "Full Width Action Block"
-          },
-          "0FOHuKmh": {},
-          "0ZmNLA6K": {},
-          "0kPDA79g": {},
           "18Loxedj": {
             "value": false
           },
           "1IroczRN": {},
+          "1O9vd7afmvcqJPb-Hst2m": {
+            "value": "Heading"
+          },
           "1VT4PEqW": {},
+          "1eCExq2WLGpJwNbRFYPCg": {
+            "value": "Overline Primary Medium"
+          },
           "1g7RleiK": {
             "value": false
           },
@@ -22857,9 +22458,27 @@
             "value": false
           },
           "1rLXmQf4": {},
+          "204Ys74QveR6n_DzcowIB": {
+            "value": "This page is for engineering to test the integration between Contentful and Code.org. Please do not modify this page unless part of the engineering group."
+          },
           "26IBqL3f": {},
+          "2KEarucS_dKgkRLyuo98m": {},
+          "2PSTJ_DqEZxNVxIpr_H8t": {
+            "value": false
+          },
+          "2T84aGT0sd1wyPrlXpm_v": {
+            "value": false
+          },
+          "2ql_rY9": {
+            "value": "Title/position"
+          },
+          "31e004Qi2jxgOZbdzynWn": {},
+          "347Oltn": {},
           "36YfTgYM": {
             "value": ""
+          },
+          "3BFpKy2b749t3Z0j19D9a": {
+            "value": "Right aligned"
           },
           "3BL7DZFT": {
             "value": "Editorial Card 3"
@@ -22867,20 +22486,45 @@
           "3CADhMmH": {
             "value": false
           },
+          "3RSL9am": {
+            "value": "In partnership with"
+          },
+          "3blPTQr": {
+            "value": "Overline"
+          },
+          "3gD4aa9": {},
           "3kOq2u6E": {},
           "3kX4nLae": {
             "value": ""
           },
+          "3uZuy0t": {
+            "value": "Text Link"
+          },
           "3yBDKjMa": {
             "value": "Image"
           },
+          "46SVVu7SVI_27igWB64S2": {},
+          "4GGacxRsnhMslE0UcSJ97": {},
+          "4H-a8iq": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "4UefySBz": {},
+          "4XQPWR-": {
+            "value": true
+          },
+          "4fZ-pGgFlP7R6tach397W": {
+            "value": "Paragraph"
+          },
           "4iDaBkxU": {
             "value": false
+          },
+          "4qoR2Ve": {
+            "value": "Paragraph"
           },
           "4v9R8Bod": {},
           "5OJDXQCx": {},
           "5OKBDu4C": {},
+          "5S0WDaNvwkgyaaXOaPShS": {},
           "5VhVg4k7": {},
           "5VjDE2CK": {},
           "5qW6ky0f": {
@@ -22890,8 +22534,13 @@
             "value": ""
           },
           "5wXRsLJn": {},
+          "60M5ZzR": {},
           "640trRtn": {},
           "65wUpmTS": {},
+          "6AJoP57": {
+            "value": "Action Block Title"
+          },
+          "6AjZi52JdcRm7jrVI6Sal": {},
           "6U7rCA9s": {
             "value": "Action Block Collection with hidden images"
           },
@@ -22909,22 +22558,36 @@
           "6pLrv7NC": {
             "value": false
           },
+          "6znvK3h": {},
           "73db4weH": {},
           "7954gvrQ": {},
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
+          "7M_2_I3": {
+            "value": "Editorial Card and Icon Highlight Dark Mode"
+          },
+          "7OACowT": {},
           "7PWBeER6": {
             "value": "External Button"
           },
           "7SxgQMWi": {
             "value": false
           },
+          "7W1Qi2iLcCJo1S5FoTklH": {},
           "7WPQbEGK": {
             "value": ""
           },
           "7WZ8oRk3": {
             "value": "Snapshot"
+          },
+          "7cjXZUvesiyPKoMJZUraJ": {},
+          "7eG4kFaj4GjaK65GAb1XH": {},
+          "7tPoQs29dgRnwZubnGEms": {
+            "value": "Column"
+          },
+          "84NjXHS": {
+            "value": "Button"
           },
           "8BCQn7kU": {
             "value": "People Collection"
@@ -22938,9 +22601,12 @@
           "8LDk6KB4": {
             "value": ""
           },
+          "8_ui-w3T7YBJfrbKIZsqZ": {},
+          "8n2BleO7Gcx4W4_BZc4H8": {},
           "8o4htNCj": {
             "value": "Vertical With Image"
           },
+          "8p5f3sx": {},
           "8tSwOMzw": {
             "value": "With fallback"
           },
@@ -22949,6 +22615,9 @@
           },
           "93BsbPz6": {
             "value": "Image Carousel"
+          },
+          "9FFVH8n": {
+            "value": false
           },
           "9SU8qYse": {},
           "9UNUmh23": {},
@@ -22965,6 +22634,7 @@
           },
           "9jZF29Xj": {},
           "A4Z16hGr": {},
+          "ABf-FSO": {},
           "AKTPfVrs": {},
           "AYGGhSH9": {},
           "Ah8TeN7u": {
@@ -22975,6 +22645,7 @@
           "B1N7IJY8": {
             "value": "Right Aligned Button"
           },
+          "BHheSJr0-DKiQ2KV6nT9b": {},
           "BJ2pvpv5": {
             "value": ""
           },
@@ -22982,8 +22653,18 @@
             "value": ""
           },
           "BiJMMif0": {},
+          "BkMDUSL": {
+            "value": "https://code.org"
+          },
           "C2eh9B38": {
             "value": "Secondary Black Button"
+          },
+          "C6J5B0V": {},
+          "C820WrIq2MCzdJJuM4oiI": {
+            "value": "Left Aligned Button\n\n"
+          },
+          "CCG45Cf": {
+            "value": false
           },
           "CDhmJ0kv": {},
           "Ca3QU6Yy": {
@@ -22996,26 +22677,68 @@
           "CtU2QeRy": {
             "value": ""
           },
+          "CtWVJCR": {},
           "DEtHVoSd": {
             "value": "Link"
           },
           "DJKa1PGd": {
             "value": false
           },
+          "DMiqqWu": {},
+          "DeNUEmj": {},
+          "DrNGxez": {
+            "value": ""
+          },
           "E0gqtvHC": {
             "value": "Logo Collection sorted alphabetically (default)"
           },
+          "E7Cjhbo": {},
+          "ECsE7T3": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png"
+          },
           "EHyIYlxz": {},
+          "EKQDsC5": {},
           "EPmvg0WJ": {},
+          "EQwp1HmvvkB_vAVpnhrVs": {},
           "ERvTdJXH": {
             "value": "Internal Link XS"
+          },
+          "ESHDx-N": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
+          "ETBqUYX": {
+            "value": "https://code.org"
+          },
+          "EX79hiIuw8_2Ria-2tQkj": {
+            "value": "Internal Link S"
+          },
+          "Eoggq-j": {
+            "value": "Testimonial author"
           },
           "F5HNTQjd": {
             "value": false
           },
+          "FBj3Am9": {},
           "FS1U8GfG": {},
+          "FSg2WhG": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "FW4Y2V_ECnApbkzqsUbE_": {
+            "value": ""
+          },
+          "FXuaWYztKfKJWXod-xTpd": {
+            "value": ""
+          },
           "Fa2xfSTa": {
             "value": "Action Block Title"
+          },
+          "FdwpeSt6bn8LpSSV0pbtv": {
+            "value": ""
           },
           "FjaNJXPA": {
             "value": "People Collection sorted alphabetically (default)"
@@ -23025,6 +22748,9 @@
           },
           "G3QkOYjJ": {
             "value": "Supports multiple content options"
+          },
+          "G5Iyv0YkdyGi6tu6eXCln": {
+            "value": ""
           },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
@@ -23039,16 +22765,37 @@
           "GHhlmC5d": {
             "value": "In partnership with"
           },
+          "GQ_meekKAizcWHfsUxUEe": {
+            "value": ""
+          },
           "GRD8jad1": {},
+          "GkMrM3D": {},
+          "GmGKjDd": {},
           "GmnU58eE": {},
+          "Gs0XOO8d5eKpR2MQKAm8x": {
+            "value": false
+          },
+          "GsLOLdu": {},
           "GyRRWzRP": {
             "value": "Image without rounded corners"
           },
           "H6ykocnY": {
             "value": "Hero Banner with Image Small"
           },
+          "HANecnh": {},
+          "HURk-ZX": {
+            "value": "https://code.org"
+          },
+          "HjYR79gp4557yEu5dZQnA": {},
+          "HkS6sKTzMLaB2xX5evo7Z": {
+            "value": "nKIu9yen5nc"
+          },
+          "HmUDGQ4": {},
           "IAwsxK7N": {
             "value": "With all content"
+          },
+          "ICrX3vs": {
+            "value": ""
           },
           "IRGGNCsc": {
             "value": "With all content "
@@ -23056,8 +22803,18 @@
           "IWN149RM": {
             "value": false
           },
+          "IcIQJVk": {
+            "value": ""
+          },
           "Icqsu9JA": {
             "value": "about:blank"
+          },
+          "IgW-F6-": {},
+          "Is-QBxBKRvrSLF5e6k8WM": {
+            "value": "Default Drop In"
+          },
+          "IsyZ4DkUsAKB5tReDxD1q": {
+            "value": ""
           },
           "IuXKDn7Q": {},
           "IxzSvJTD": {
@@ -23067,9 +22824,19 @@
             "value": "Heading 4"
           },
           "JAbzmYv0": {},
+          "JJQxY31": {
+            "value": "Action block description goes here."
+          },
+          "JVQR-tfdKQE3G3iyEGd3d": {
+            "value": false
+          },
+          "J_GeKST": {
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum."
+          },
           "JjsxkEPq": {
             "value": ""
           },
+          "Jr3_e_AP72m0PxsOOIzg6": {},
           "Js55plSA": {
             "value": "In partnership with"
           },
@@ -23077,6 +22844,10 @@
             "value": "/ping"
           },
           "Jy1nky8K": {},
+          "K0KxrTFkzU8KmLwowRzGo": {
+            "value": "Video"
+          },
+          "KGUo-pbAmZDeE_onnJmeM": {},
           "KMDGAxsG": {
             "value": {
               "fields": {
@@ -23092,16 +22863,37 @@
           "KU6fzBI2": {
             "value": false
           },
+          "KXMj-y0": {},
           "KbA5RoOr": {},
+          "Khqf7OC": {
+            "value": "Button"
+          },
           "KwkHGNFq": {
             "value": ""
+          },
+          "L6HfuP4oVMvQ_xwZqzQc7": {},
+          "L7sMSlH7Y_F-LSZzoglh6": {
+            "value": "/ping"
+          },
+          "LC3Zogrcyn7ko8fQM4Nqs": {},
+          "LDMq3zA": {
+            "value": "Action Block Title"
+          },
+          "LRYvjsK": {
+            "value": "Pattern Header"
           },
           "LSvTACg7": {},
           "LY3fwrGF": {
             "value": ""
           },
+          "LbAW-Uv": {
+            "value": false
+          },
           "LkQcsQV1": {
             "value": ""
+          },
+          "LsBgETo": {
+            "value": false
           },
           "Lu9xfUr8": {
             "value": "Overline Secondary Small"
@@ -23110,24 +22902,39 @@
           "M6UV6klE": {
             "value": "Math Symbols: 1 + 2 − 2 × 5 ≠ 0"
           },
+          "M8tEEkEnbhdKkkzZSTBRd": {
+            "value": "Center"
+          },
           "MAPxIo7U": {},
           "MGQAZ8um": {},
+          "MJmfC3N564sY154aazOqg": {
+            "value": false
+          },
+          "MOKb3tV": {},
+          "M_8vrhJ": {},
+          "Mh5oewj": {
+            "value": false
+          },
           "MhlfpP6T": {},
           "Mo4S1GHf": {},
           "NDaBXH7I": {
             "value": "Image with shadow"
           },
+          "NDzLtVL": {},
           "NFAjwunN": {
             "value": false
           },
+          "NKhqZcRLslsP54yMLsR5h": {},
           "NTMvp4T3": {},
           "NVkFhzl1": {},
+          "NZ_PNrjRqoCQaO6_D-taO": {},
           "NgkvysEf": {
             "value": ""
           },
           "NhzwQJMw": {
             "value": "https://code.org"
           },
+          "NlDrsQYH6YfDkTOhuiGCA": {},
           "Nn6DaalN": {
             "value": false
           },
@@ -23138,7 +22945,9 @@
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
+          "OCvEUyr": {},
           "OaekmZwc": {},
+          "OmmiviO_PnQgExsnIQWG2": {},
           "Oor1uCW9": {},
           "OpG1fkXt": {
             "value": false
@@ -23149,11 +22958,21 @@
           "P8671GK5": {
             "value": false
           },
+          "PAn6OhE": {},
+          "PCzKJMe9OjlbNoNQ_94r4": {},
+          "PFl39glIFt1TSFfKzC2-Z": {
+            "value": false
+          },
           "PQHeuFfu": {
             "value": ""
           },
+          "PWEyhxSkmxTGO951MgkM_": {},
+          "PYAFM4N-beKo_shq2nV91": {},
           "PZglZYB1": {
             "value": "Logo Collection sorted manually"
+          },
+          "Pbti9HD": {
+            "value": "Curriculum Snapshot"
           },
           "PeTivMde": {
             "value": "Link"
@@ -23164,16 +22983,47 @@
           "PhNIy5V6": {},
           "PnFpiQEq": {},
           "Q0shKXpw": {},
+          "Q8S_CqSaOYMVwDMKlR3jr": {},
+          "QNG0pC1wH1Njlch34RMkL": {},
           "QOmaSWNU": {},
           "QZOw56pD": {},
+          "QcBjAcsD-IhgBz5nwADMs": {
+            "value": "Left Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+          },
+          "Qkx4iDxSBpSpgdmwqZhqM": {},
+          "R0C45WqvjfIgrCLvhJPSB": {
+            "value": "All the things UI Integration Test"
+          },
+          "REWmmbf2LKIIYFlPSLTFy": {
+            "value": ""
+          },
+          "RF1zjg6": {},
           "RLcvWIOm": {
             "value": false
           },
+          "ReHgFwZk-BHm9gAcpYww7": {},
           "RvhBpXIN": {},
+          "Ry2EmrfLWGKKxHzN2NKK2": {
+            "value": ""
+          },
+          "S8bLV41F4hutoHarZ0rkC": {},
+          "SAid6Gk": {
+            "value": "Overline"
+          },
           "SGrm6TeM": {},
+          "SHqULneHIzJfEOPmKB4fN": {},
           "SIXve8Mn": {
             "value": false
           },
+          "SKcaTMP": {
+            "value": "Simple List"
+          },
+          "SKnPv-9": {},
+          "SO13Vmq": {
+            "value": "Editorial Card 1"
+          },
+          "SQ455se7uXiseEPWsgHS4": {},
+          "SV5gVCc": {},
           "SWiUA59D": {},
           "SXPs2oUx": {},
           "Synpi6Ji": {
@@ -23181,8 +23031,12 @@
           },
           "T0ieOlqB": {},
           "T1XSxOfG": {},
+          "T1ZuBpV": {},
+          "T68Oo4f": {},
           "T6anbs8T": {},
           "TC9267aF": {},
+          "TH-_LAe": {},
+          "TPp4t_zOnGYYUCQCHczCd": {},
           "TSFzv7B9": {
             "value": "Paragraph Secondary Medium"
           },
@@ -23195,9 +23049,11 @@
           "TnZjwBke": {
             "value": false
           },
+          "TpH8B3Rf71dRzy9-Eij_B": {},
           "TtMDehnh": {
             "value": false
           },
+          "U1KmKKh": {},
           "U3p4tTyP": {
             "value": {
               "fields": {
@@ -23210,7 +23066,19 @@
           "UCzH3lZH": {
             "value": "Pattern Header"
           },
+          "UaQvzts": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "UjouKpK": {
+            "value": false
+          },
           "UmzzoZTw": {},
+          "UnsmjdqCrmrO4Trj1nuzn": {},
           "UuNfyogY": {
             "value": "Action Block Collection sorted manually"
           },
@@ -23238,23 +23106,41 @@
           "WTQ4Ru9V": {
             "value": "Editorial Card 1"
           },
+          "WWIhqOfAkCpzLs6ZV3raO": {
+            "value": "https://videos.code.org/social/what-most-schools-dont-teach.mp4"
+          },
+          "WYRzX9h": {},
+          "WZMLswwT0kYnFPpZo3TTj": {},
           "WasTGlxj": {
             "value": "Centered Button"
           },
           "WelvRTbQ": {},
           "WesaEtSA": {},
+          "WmoW8Tc": {},
           "Wn9tbkAL": {},
           "WwX8DppO": {
             "value": "Action block description goes here."
           },
+          "Wz9SJiE": {},
           "WzScpfoh": {},
           "X4E1tjHt": {
             "value": ""
           },
           "X9xn8eNy": {},
+          "XK7rMUD": {
+            "value": "Action Block Collection sorted alphabetically (default)"
+          },
+          "XeBIpyktpVkLEy45skA7l": {
+            "value": ""
+          },
+          "XonT3vx": {
+            "value": "Horizontal With Image"
+          },
+          "Xpd0GYP": {},
           "Xsx7dtxc": {
             "value": "With external link buttons"
           },
+          "Xyg0Z-kNXwLoS7tUWKWe4": {},
           "Y1CYXNGq": {
             "value": ""
           },
@@ -23263,6 +23149,9 @@
           },
           "Y49Qk1ie": {
             "value": ""
+          },
+          "YKCODw2Gj_YPupxeh2ON7": {
+            "value": false
           },
           "YR0gzGmT": {
             "value": ""
@@ -23276,11 +23165,17 @@
           },
           "YaR6axmk": {},
           "YbKlV53B": {},
+          "YdN-mw6": {},
           "Yf7O7sCY": {
             "value": "Vertical With Icon"
           },
+          "YfZC6-Hmjrj20Loaq6-FT": {},
           "Z9WGsU2k": {
             "value": ""
+          },
+          "ZB5FoBocb0a2xm1iIHy3V": {},
+          "ZClRveUvVcQjBrlrDvtm6": {
+            "value": false
           },
           "ZF1JlQXv": {},
           "ZGRiDrVS": {
@@ -23294,14 +23189,34 @@
           "ZJnqNzR6": {
             "value": "Icon Highlight"
           },
+          "ZKgwMwb": {
+            "value": "Rich Text"
+          },
           "ZM07TiyV": {
             "value": false
           },
           "ZQBzXWAq": {},
+          "ZUNHb1QCXiLvRUG9taeN8": {},
           "ZdTFBVAL": {
             "value": false
           },
+          "ZjNhDMDj-A_r1U5fX4P_3": {},
+          "ZlGBh22": {},
           "ZpinQk1s": {},
+          "_WdDIbt-5tT6wtW9kafcJ": {},
+          "_byo2Rxu56P0ZbFndME7R": {},
+          "_yg5mft": {},
+          "_zwsCfw": {},
+          "aBzIX6V": {
+            "value": "Action block description goes here."
+          },
+          "aDgvlZ6op1gK3MYklFgKX": {
+            "value": false
+          },
+          "aGWZHxe": {
+            "value": ""
+          },
+          "aL5ooU7rF-Cfhi4sEFovm": {},
           "aNOfIztd": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
@@ -23311,10 +23226,29 @@
           "aPeti3xV": {
             "value": false
           },
+          "aRYsNWTbO_8er8D_crzl2": {},
+          "aTQLwIy": {
+            "value": "Editorial Card\nMultiline Text"
+          },
+          "aTtjH3mTVn7fMVJ-xb2nG": {},
+          "aXCTjNk": {},
+          "acae6EU": {},
+          "acbHb14E61rtxFPwilkay": {},
+          "alDLE92": {
+            "value": "Action Block Pattern Hidden Elements"
+          },
+          "aohR35B": {
+            "value": "Action block description goes here."
+          },
           "av7tIVe0": {},
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
           },
+          "bAIeQt5": {
+            "value": false
+          },
+          "bKUURbE": {},
+          "bRZ_5eNDP4PPs0YRpv33P": {},
           "bisJWX6Q": {},
           "bjBXncS7": {
             "value": "Lab Snapshot"
@@ -23322,7 +23256,11 @@
           "bke8mAuc": {
             "value": "Paragraph"
           },
+          "bqiEUCLI4bXV9vGPiy960": {},
           "bqv4sKJA": {},
+          "bs0mKZu": {
+            "value": "Action Block Pattern Default"
+          },
           "bvkdCWAp": {
             "value": "Math"
           },
@@ -23332,19 +23270,29 @@
           "byJD1LER": {
             "value": ""
           },
+          "c4v6YnB_qr1DPGprnz21k": {},
+          "c6Xllyd": {
+            "value": "Link"
+          },
           "cEbn0dHP": {
             "value": "Editorial Card\nMultiline Text"
           },
+          "cGdHTOr": {},
           "cGlkfKmX": {
             "value": "In partnership with"
           },
           "cJ416zZF": {
             "value": false
           },
+          "cKcaNJOJ3vHPn3yBMhHgh": {},
+          "cLEr2oT": {},
           "cUXXqRJd": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png"
           },
           "ccFVr1cJ": {},
+          "ccJpf-l": {
+            "value": "Action block description goes here."
+          },
           "cdtPigP8": {
             "value": false
           },
@@ -23357,6 +23305,10 @@
             "value": "Localization"
           },
           "d7bQZFYP": {},
+          "dDFAtpAu4xTWTM3cwvHX_": {},
+          "dF5TCmS": {
+            "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
+          },
           "dJFFS4dn": {},
           "dJNC5rnb": {},
           "dWrBnOHy": {},
@@ -23368,6 +23320,7 @@
           "eMXbhJJO": {
             "value": ""
           },
+          "eRITgAP": {},
           "eUKHdTTY": {
             "value": false
           },
@@ -23380,12 +23333,24 @@
           "eyHY3MEf": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
+          "ezWxsUM": {},
           "f0smL8E1": {},
+          "f24Wg65": {},
           "f2ekMSN8": {
             "value": false
           },
+          "fI0vejApDKu8D64Tu7OI_": {},
+          "fKy-MMp": {},
+          "fLRxfb9Ecsh1B9F3VCTCi": {
+            "value": "Center Aligned"
+          },
+          "fP6j0_ZupHdFnUUB_Ia5H": {},
           "fP9VBKqZ": {},
           "fS0eRSbO": {},
+          "fbxlhQrAD8jhqeEPcb_Zc": {},
+          "ffghidWHggvoSMMiCh1cL": {},
+          "ffoqmsBPCGiToy1_8nIqI": {},
+          "fupk4k7": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
@@ -23395,7 +23360,15 @@
           "fyOOEBkF": {
             "value": "Tab Group Dark Mode"
           },
+          "g0HwQRMBd_KNX24OHsNRb": {},
           "g1GOPI4w": {
+            "value": ""
+          },
+          "gI0IiV4": {
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
+          },
+          "gScLFwq": {},
+          "go9slZF": {
             "value": ""
           },
           "gr0DK9TI": {
@@ -23405,38 +23378,78 @@
           "gyjlsYtE": {
             "value": ""
           },
+          "h1C3gxnYgR9u4L8CDjo3D": {},
           "hAGyY1mh": {
             "value": false
           },
           "hCapPNxm": {
             "value": false
           },
+          "hDMAL2U": {},
           "hEDkMrEi": {
             "value": false
+          },
+          "hRhxjrt3N9VU1NMl2QRh3": {
+            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit orci nec iaculis ullamcorper. Morbi blandit bibendum nibh, at auctor metus consequat sit amet. Fusce sodales nisi dolor. Nam at lorem mattis, aliquam elit ut, facilisis nunc. Donec mollis sollicitudin dolor, sed blandit diam accumsan id. Proin suscipit lacus et elit molestie dignissim. Aliquam nisi velit, lobortis ut porta volutpat, aliquam at arcu.\n\nDonec nunc sapien, mattis congue pulvinar vel, sollicitudin vel sapien. Morbi quis pulvinar nulla. Cras ac sem ante. Sed eu interdum sapien, id fermentum nunc. Donec vehicula ut erat eget vehicula. Ut euismod sem ut nisl vehicula sagittis. Suspendisse mattis justo elit, eu sagittis lorem mattis id. Sed sit amet scelerisque magna, nec dictum ex. Praesent tincidunt massa sed laoreet posuere. Sed efficitur, justo id pharetra pretium, dui turpis convallis metus, eleifend euismod risus nibh vel enim. Vestibulum molestie justo eget ligula posuere bibendum."
+          },
+          "hXGMAy_S9tLUATPGf5Zry": {
+            "value": "Primary Button"
           },
           "haXmmTvi": {},
           "hlcsKtxX": {},
           "hyi7gIig": {},
+          "i-CBt91tEkCmZHGzb85xW": {
+            "value": "Each Section in this page is composed of a unique CMS component. Add edge case scenarios to this section that you would like tested."
+          },
           "i28p2boi": {
             "value": "Video Carousel"
           },
+          "i4tvl_O": {
+            "value": "Button"
+          },
+          "iDNU5n4mauFmUgQLUfXMq": {},
           "iGAgwfwT": {},
           "iH1kL29p": {
             "value": "Hero Banner with Image Big"
+          },
+          "iHnCvhA": {
+            "value": ""
           },
           "iTdkJBKi": {
             "value": "Testimonial author"
           },
           "iZFS7Cey": {},
+          "ilVAO2EaIUZ0lA5ewKtJI": {
+            "value": ""
+          },
+          "io65oYg": {},
           "iqe3YM0l": {
             "value": false
+          },
+          "is6sJNT7GqG8M-aved8xI": {
+            "value": ""
+          },
+          "jLTpao2": {
+            "value": false
+          },
+          "jNBarAZvvExnBW0FccdXk": {
+            "value": "Video with Fallback"
           },
           "jTc0vIOy": {
             "value": "Hero Banner with Partner Callout"
           },
+          "jUIXS8jmgg7N0QAzowItS": {},
           "jX7FtFyx": {},
+          "jekav-Z": {
+            "value": "Action Block Title"
+          },
+          "jjrfcFBAJ5AspsCCOO2xO": {},
           "joAfMQhO": {},
+          "joR8i87odA3R7JLfvzfCw": {
+            "value": "Paragraph Body XS"
+          },
           "jr98RSyJ": {},
+          "k2x0YIUxjaXNGJxbL2xFl": {},
           "k7cc4DWU": {
             "value": "Heading 3"
           },
@@ -23448,6 +23461,13 @@
             "value": ""
           },
           "kQ4rHG8h": {},
+          "kV8GyX4": {
+            "value": ""
+          },
+          "koY0ISJaPzBIDXqlznL0H": {},
+          "ktHLai2": {
+            "value": "video title"
+          },
           "kykrsTI1": {},
           "l2UKloU9": {
             "value": "Center Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -23462,14 +23482,29 @@
           "lMpw2utY": {
             "value": "Hero Banner with Background Color"
           },
+          "lP2xlEiG4Ur15q_7otUZo": {},
           "lTlx2Ck5": {
             "value": ""
           },
+          "lakTr2l": {},
           "lfVVFBsh": {},
+          "lgABBbaFeSQbvkWefAwA5": {},
+          "lgGRRfq5zcVueL3yrxoh9": {},
+          "lzUBFGk045vgYma7aXjur": {
+            "value": "Button"
+          },
+          "m4M7qU_VBvy3rP_lT7V-J": {
+            "value": false
+          },
+          "m4QjN6kQNz27cSdOQUkRf": {},
+          "m5B_-isX7sffstDtAWTWi": {
+            "value": "/ping"
+          },
           "m5IjfPMd": {},
           "mCXPy8Sk": {
             "value": "Heading 5"
           },
+          "mFzwT6KHtA9j1FYYT0dvh": {},
           "mI3808f6": {
             "value": false
           },
@@ -23478,6 +23513,11 @@
             "value": ""
           },
           "mp03r8eT": {},
+          "mqPCQ9z": {
+            "value": "Editorial Card 2"
+          },
+          "n0l5OgPZtTMQsbZ3GNKiR": {},
+          "n6pmjoG": {},
           "n7OE6ZPP": {},
           "n8TwgioS": {
             "value": "People Collection sorted manually"
@@ -23485,16 +23525,42 @@
           "nBnzzrrg": {
             "value": "External Link L"
           },
+          "nIT3Py6": {
+            "value": true
+          },
+          "nM4Jx3EajfRTuaILiaRh1": {
+            "value": ""
+          },
           "nOVfFtTI": {
             "value": "Without fallback"
           },
+          "nWRTZCk": {
+            "value": false
+          },
+          "nXf_AKG": {
+            "value": "Editorial Card"
+          },
+          "nZ3KuxH": {},
           "neeT53Dk": {},
+          "nluOMYh": {},
           "nqVSCp3F": {
             "value": false
+          },
+          "nsI4jPw": {
+            "value": ""
           },
           "nzQ1wskT": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
+          "oGnTTO-": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "oJDnQp_KZKNrbozA0NkHt": {},
           "oPc8lo0F": {},
           "oRgnef43": {
             "value": "People Collection with hidden images"
@@ -23507,50 +23573,99 @@
           "oeJZ3M7B": {
             "value": false
           },
+          "op-Qp-gdr8uf9I9-WXcdr": {
+            "value": "Left"
+          },
           "ovjouB0p": {
             "value": false
           },
           "pLRLaUbo": {
             "value": ""
           },
+          "pVPzc3-": {
+            "value": ""
+          },
+          "ppcJTpQrNNmiFzRpoKuk7": {
+            "value": "Heading 2"
+          },
           "puVvzXrl": {},
           "q5IUWqtG": {
             "value": ""
           },
           "q93QFEXW": {},
+          "qM57cKR3J1QPDQnHDERkX": {
+            "value": "Section - Pattern Dark"
+          },
           "qQFZT2Ct": {
             "value": "Localization - Long Text"
           },
+          "qg0XcsQhQK20HDFZctW0_": {},
           "qhMtsAXw": {
             "value": false
           },
           "qt3Q2MgT": {},
+          "qtdvi1G7h9Xv_rt24jpHJ": {},
           "qxvB9D5X": {
+            "value": false
+          },
+          "r8uRR68": {
             "value": false
           },
           "rMO0UpAm": {
             "value": "Heading 6"
           },
+          "rOJjuA1": {
+            "value": false
+          },
           "rXgI4Mvr": {
             "value": "With secondary background"
           },
+          "rYV1-qR": {
+            "value": {
+              "fields": {
+                "url": "#",
+                "label": "Primary button"
+              }
+            }
+          },
+          "rpWptElOUBNuPNQXKsjMo": {
+            "value": false
+          },
           "rqSvSSLH": {
+            "value": ""
+          },
+          "rtOw9NH": {
             "value": ""
           },
           "rxHzmdeX": {
             "value": "Hero Banner with Announcement Banner"
           },
+          "s8SjMXS": {
+            "value": ""
+          },
+          "s9aRaAn": {},
           "sAMYhNiz": {
             "value": "Curriculum Carousel"
           },
           "sOrYv4IZ": {},
+          "sQZaBqbWsJUIR6cGO4R7w": {},
+          "sfjHI0Y3PWcC6rm8lYfap": {
+            "value": "Right"
+          },
           "sgcocoTx": {},
           "sgiL7BBr": {
             "value": "Editorial Card Heading"
           },
+          "shs9eH4": {
+            "value": false
+          },
+          "sjc08rI": {
+            "value": false
+          },
           "st5uoXAq": {
             "value": "Action Block Title"
           },
+          "tPJ7tTdvjSJTFWD-yBJSP": {},
           "tYSB9zEq": {
             "value": "Logo Collection"
           },
@@ -23561,6 +23676,9 @@
           "uML982xB": {
             "value": "Short Text"
           },
+          "uMhUcdTnHh9zPBFXifvKq": {
+            "value": "https://code.org"
+          },
           "uTgCIxZc": {
             "value": "Video without Fallback"
           },
@@ -23570,34 +23688,68 @@
           "uWNHXGKp": {
             "value": ""
           },
+          "uaOANCd": {
+            "value": "FAQ Accordion"
+          },
           "uqryIUsQ": {
             "value": "Section - Dark Gray"
           },
           "uwJDIDdP": {},
+          "uyEiVj6ofeCIPPsOLAAcg": {
+            "value": "Left Aligned"
+          },
+          "uzR0fY4": {},
           "v6A0d7WI": {
             "value": "With secondary background"
           },
           "vNAYFsDQ": {
             "value": "nKIu9yen5nc"
           },
+          "vNE31MABBbkMScnKL4BMU": {},
+          "vSKlRHP": {},
           "vTYAEM28": {
             "value": "Editorial Card 2"
           },
           "vXZLNu6a": {},
+          "vYKqsBQ5xXnkpbPCxrnKb": {},
           "vl7mGMNk": {
             "value": false
           },
           "vqJjtbRA": {
             "value": "Tab Group"
           },
+          "vqPcHC14XgqSYsn9IyRum": {},
           "vufKREmr": {
             "value": "Action Block Carousel Dark Mode"
           },
+          "vwAdtQr": {
+            "value": "Editorial Card 4"
+          },
+          "vy3Z4qCBqa2yM79waYyZx": {},
+          "w3AE6Sz": {
+            "value": "Action Block Title"
+          },
+          "wFn89J5HPVSMpitbq3P6R": {},
+          "wNcVm6e_tn5ekVTzpelnd": {},
           "wVW6XsMS": {
             "value": "Image with border"
           },
           "wkPxn3cF": {},
+          "wmG6IXrB1B-h8zddto0vr": {},
+          "ws1Q0E4GP0WIGLne79bIY": {
+            "value": "Text Link"
+          },
+          "x-X4H6z9WU87N3ye_EFWT": {},
+          "xE5DIeP": {
+            "value": "Editorial Card Heading"
+          },
+          "xF6NHMp": {
+            "value": false
+          },
           "xLlgqSTM": {},
+          "xWwE9or": {
+            "value": "Editorial Card 3"
+          },
           "xaSe4Rjf": {
             "value": ""
           },
@@ -23608,6 +23760,11 @@
             "value": ""
           },
           "y1w4Y1O0": {},
+          "y3sqxFPxn3L-VtAsB29K_": {},
+          "yG60pRy": {
+            "value": ""
+          },
+          "yKDw71r": {},
           "yMDRjVcG": {
             "value": false
           },
@@ -23626,268 +23783,21 @@
             "value": "Action Block"
           },
           "zHKQk2B6": {},
+          "zHoBMf8": {
+            "value": false
+          },
           "zQNTpdsD": {
             "value": "/ping"
           },
+          "zcuX6eaiBiUs3mCXjHYq2": {},
           "zgUdfBPC": {},
+          "zh7msz6": {
+            "value": ""
+          },
           "zkx5V9ed": {},
+          "zpea3KaVPS0iJXoZMAHok": {},
           "zq3mza7y": {},
           "zxogi8F5": {},
-          "-KqdBQBCJexO6AUlN6Hdk": {
-            "value": "Overline"
-          },
-          "-hiP47xkS8H9dfmgslbdh": {},
-          "08mxl1BGFzTbKwyQDG6DD": {},
-          "0C-c5xDSOUoiupxN-tMsR": {},
-          "0v9inr8Fpqnw8F8ElhUQT": {},
-          "1O9vd7afmvcqJPb-Hst2m": {
-            "value": "Heading"
-          },
-          "1eCExq2WLGpJwNbRFYPCg": {
-            "value": "Overline Primary Medium"
-          },
-          "204Ys74QveR6n_DzcowIB": {
-            "value": "This page is for engineering to test the integration between Contentful and Code.org. Please do not modify this page unless part of the engineering group."
-          },
-          "2KEarucS_dKgkRLyuo98m": {},
-          "2PSTJ_DqEZxNVxIpr_H8t": {
-            "value": false
-          },
-          "2T84aGT0sd1wyPrlXpm_v": {
-            "value": false
-          },
-          "31e004Qi2jxgOZbdzynWn": {},
-          "3BFpKy2b749t3Z0j19D9a": {
-            "value": "Right aligned"
-          },
-          "46SVVu7SVI_27igWB64S2": {},
-          "4GGacxRsnhMslE0UcSJ97": {},
-          "4fZ-pGgFlP7R6tach397W": {
-            "value": "Paragraph"
-          },
-          "5S0WDaNvwkgyaaXOaPShS": {},
-          "6AjZi52JdcRm7jrVI6Sal": {},
-          "7W1Qi2iLcCJo1S5FoTklH": {},
-          "7cjXZUvesiyPKoMJZUraJ": {},
-          "7eG4kFaj4GjaK65GAb1XH": {},
-          "7tPoQs29dgRnwZubnGEms": {
-            "value": "Column"
-          },
-          "8_ui-w3T7YBJfrbKIZsqZ": {},
-          "8n2BleO7Gcx4W4_BZc4H8": {},
-          "BHheSJr0-DKiQ2KV6nT9b": {},
-          "C820WrIq2MCzdJJuM4oiI": {
-            "value": "Left Aligned Button\n\n"
-          },
-          "EQwp1HmvvkB_vAVpnhrVs": {},
-          "EX79hiIuw8_2Ria-2tQkj": {
-            "value": "Internal Link S"
-          },
-          "FW4Y2V_ECnApbkzqsUbE_": {
-            "value": ""
-          },
-          "FXuaWYztKfKJWXod-xTpd": {
-            "value": ""
-          },
-          "FdwpeSt6bn8LpSSV0pbtv": {
-            "value": ""
-          },
-          "G5Iyv0YkdyGi6tu6eXCln": {
-            "value": ""
-          },
-          "GQ_meekKAizcWHfsUxUEe": {
-            "value": ""
-          },
-          "Gs0XOO8d5eKpR2MQKAm8x": {
-            "value": false
-          },
-          "HjYR79gp4557yEu5dZQnA": {},
-          "HkS6sKTzMLaB2xX5evo7Z": {
-            "value": "nKIu9yen5nc"
-          },
-          "Is-QBxBKRvrSLF5e6k8WM": {
-            "value": "Default Drop In"
-          },
-          "IsyZ4DkUsAKB5tReDxD1q": {
-            "value": ""
-          },
-          "JVQR-tfdKQE3G3iyEGd3d": {
-            "value": false
-          },
-          "Jr3_e_AP72m0PxsOOIzg6": {},
-          "K0KxrTFkzU8KmLwowRzGo": {
-            "value": "Video"
-          },
-          "KGUo-pbAmZDeE_onnJmeM": {},
-          "L6HfuP4oVMvQ_xwZqzQc7": {},
-          "L7sMSlH7Y_F-LSZzoglh6": {
-            "value": "/ping"
-          },
-          "LC3Zogrcyn7ko8fQM4Nqs": {},
-          "M8tEEkEnbhdKkkzZSTBRd": {
-            "value": "Center"
-          },
-          "MJmfC3N564sY154aazOqg": {
-            "value": false
-          },
-          "NKhqZcRLslsP54yMLsR5h": {},
-          "NZ_PNrjRqoCQaO6_D-taO": {},
-          "NlDrsQYH6YfDkTOhuiGCA": {},
-          "OmmiviO_PnQgExsnIQWG2": {},
-          "PCzKJMe9OjlbNoNQ_94r4": {},
-          "PFl39glIFt1TSFfKzC2-Z": {
-            "value": false
-          },
-          "PWEyhxSkmxTGO951MgkM_": {},
-          "PYAFM4N-beKo_shq2nV91": {},
-          "Q8S_CqSaOYMVwDMKlR3jr": {},
-          "QNG0pC1wH1Njlch34RMkL": {},
-          "QcBjAcsD-IhgBz5nwADMs": {
-            "value": "Left Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          },
-          "Qkx4iDxSBpSpgdmwqZhqM": {},
-          "R0C45WqvjfIgrCLvhJPSB": {
-            "value": "All the things UI Integration Test"
-          },
-          "REWmmbf2LKIIYFlPSLTFy": {
-            "value": ""
-          },
-          "ReHgFwZk-BHm9gAcpYww7": {},
-          "Ry2EmrfLWGKKxHzN2NKK2": {
-            "value": ""
-          },
-          "S8bLV41F4hutoHarZ0rkC": {},
-          "SHqULneHIzJfEOPmKB4fN": {},
-          "SQ455se7uXiseEPWsgHS4": {},
-          "TPp4t_zOnGYYUCQCHczCd": {},
-          "TpH8B3Rf71dRzy9-Eij_B": {},
-          "UnsmjdqCrmrO4Trj1nuzn": {},
-          "WWIhqOfAkCpzLs6ZV3raO": {
-            "value": "https://videos.code.org/social/what-most-schools-dont-teach.mp4"
-          },
-          "WZMLswwT0kYnFPpZo3TTj": {},
-          "XeBIpyktpVkLEy45skA7l": {
-            "value": ""
-          },
-          "Xyg0Z-kNXwLoS7tUWKWe4": {},
-          "YKCODw2Gj_YPupxeh2ON7": {
-            "value": false
-          },
-          "YfZC6-Hmjrj20Loaq6-FT": {},
-          "ZB5FoBocb0a2xm1iIHy3V": {},
-          "ZClRveUvVcQjBrlrDvtm6": {
-            "value": false
-          },
-          "ZUNHb1QCXiLvRUG9taeN8": {},
-          "ZjNhDMDj-A_r1U5fX4P_3": {},
-          "_WdDIbt-5tT6wtW9kafcJ": {},
-          "_byo2Rxu56P0ZbFndME7R": {},
-          "aDgvlZ6op1gK3MYklFgKX": {
-            "value": false
-          },
-          "aL5ooU7rF-Cfhi4sEFovm": {},
-          "aRYsNWTbO_8er8D_crzl2": {},
-          "aTtjH3mTVn7fMVJ-xb2nG": {},
-          "acbHb14E61rtxFPwilkay": {},
-          "bRZ_5eNDP4PPs0YRpv33P": {},
-          "bqiEUCLI4bXV9vGPiy960": {},
-          "c4v6YnB_qr1DPGprnz21k": {},
-          "cKcaNJOJ3vHPn3yBMhHgh": {},
-          "dDFAtpAu4xTWTM3cwvHX_": {},
-          "fI0vejApDKu8D64Tu7OI_": {},
-          "fLRxfb9Ecsh1B9F3VCTCi": {
-            "value": "Center Aligned"
-          },
-          "fP6j0_ZupHdFnUUB_Ia5H": {},
-          "fbxlhQrAD8jhqeEPcb_Zc": {},
-          "ffghidWHggvoSMMiCh1cL": {},
-          "ffoqmsBPCGiToy1_8nIqI": {},
-          "g0HwQRMBd_KNX24OHsNRb": {},
-          "h1C3gxnYgR9u4L8CDjo3D": {},
-          "hRhxjrt3N9VU1NMl2QRh3": {
-            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit orci nec iaculis ullamcorper. Morbi blandit bibendum nibh, at auctor metus consequat sit amet. Fusce sodales nisi dolor. Nam at lorem mattis, aliquam elit ut, facilisis nunc. Donec mollis sollicitudin dolor, sed blandit diam accumsan id. Proin suscipit lacus et elit molestie dignissim. Aliquam nisi velit, lobortis ut porta volutpat, aliquam at arcu.\n\nDonec nunc sapien, mattis congue pulvinar vel, sollicitudin vel sapien. Morbi quis pulvinar nulla. Cras ac sem ante. Sed eu interdum sapien, id fermentum nunc. Donec vehicula ut erat eget vehicula. Ut euismod sem ut nisl vehicula sagittis. Suspendisse mattis justo elit, eu sagittis lorem mattis id. Sed sit amet scelerisque magna, nec dictum ex. Praesent tincidunt massa sed laoreet posuere. Sed efficitur, justo id pharetra pretium, dui turpis convallis metus, eleifend euismod risus nibh vel enim. Vestibulum molestie justo eget ligula posuere bibendum."
-          },
-          "hXGMAy_S9tLUATPGf5Zry": {
-            "value": "Primary Button"
-          },
-          "i-CBt91tEkCmZHGzb85xW": {
-            "value": "Each Section in this page is composed of a unique CMS component. Add edge case scenarios to this section that you would like tested."
-          },
-          "iDNU5n4mauFmUgQLUfXMq": {},
-          "ilVAO2EaIUZ0lA5ewKtJI": {
-            "value": ""
-          },
-          "is6sJNT7GqG8M-aved8xI": {
-            "value": ""
-          },
-          "jNBarAZvvExnBW0FccdXk": {
-            "value": "Video with Fallback"
-          },
-          "jUIXS8jmgg7N0QAzowItS": {},
-          "jjrfcFBAJ5AspsCCOO2xO": {},
-          "joR8i87odA3R7JLfvzfCw": {
-            "value": "Paragraph Body XS"
-          },
-          "k2x0YIUxjaXNGJxbL2xFl": {},
-          "koY0ISJaPzBIDXqlznL0H": {},
-          "lP2xlEiG4Ur15q_7otUZo": {},
-          "lgABBbaFeSQbvkWefAwA5": {},
-          "lgGRRfq5zcVueL3yrxoh9": {},
-          "lzUBFGk045vgYma7aXjur": {
-            "value": "Button"
-          },
-          "m4M7qU_VBvy3rP_lT7V-J": {
-            "value": false
-          },
-          "m4QjN6kQNz27cSdOQUkRf": {},
-          "m5B_-isX7sffstDtAWTWi": {
-            "value": "/ping"
-          },
-          "mFzwT6KHtA9j1FYYT0dvh": {},
-          "n0l5OgPZtTMQsbZ3GNKiR": {},
-          "nM4Jx3EajfRTuaILiaRh1": {
-            "value": ""
-          },
-          "oJDnQp_KZKNrbozA0NkHt": {},
-          "op-Qp-gdr8uf9I9-WXcdr": {
-            "value": "Left"
-          },
-          "ppcJTpQrNNmiFzRpoKuk7": {
-            "value": "Heading 2"
-          },
-          "qM57cKR3J1QPDQnHDERkX": {
-            "value": "Section - Pattern Dark"
-          },
-          "qg0XcsQhQK20HDFZctW0_": {},
-          "qtdvi1G7h9Xv_rt24jpHJ": {},
-          "rpWptElOUBNuPNQXKsjMo": {
-            "value": false
-          },
-          "sQZaBqbWsJUIR6cGO4R7w": {},
-          "sfjHI0Y3PWcC6rm8lYfap": {
-            "value": "Right"
-          },
-          "tPJ7tTdvjSJTFWD-yBJSP": {},
-          "uMhUcdTnHh9zPBFXifvKq": {
-            "value": "https://code.org"
-          },
-          "uyEiVj6ofeCIPPsOLAAcg": {
-            "value": "Left Aligned"
-          },
-          "vNE31MABBbkMScnKL4BMU": {},
-          "vYKqsBQ5xXnkpbPCxrnKb": {},
-          "vqPcHC14XgqSYsn9IyRum": {},
-          "vy3Z4qCBqa2yM79waYyZx": {},
-          "wFn89J5HPVSMpitbq3P6R": {},
-          "wNcVm6e_tn5ekVTzpelnd": {},
-          "wmG6IXrB1B-h8zddto0vr": {},
-          "ws1Q0E4GP0WIGLne79bIY": {
-            "value": "Text Link"
-          },
-          "x-X4H6z9WU87N3ye_EFWT": {},
-          "y3sqxFPxn3L-VtAsB29K_": {},
-          "zcuX6eaiBiUs3mCXjHYq2": {},
-          "zpea3KaVPS0iJXoZMAHok": {},
           "zzAR2RbYo5crCkVRXKeSK": {}
         }
       },
