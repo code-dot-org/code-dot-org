@@ -992,38 +992,6 @@ class User < ApplicationRecord
     end
   end
 
-  def pl_units_started
-    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self)
-    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
-    pl_scripts = pl_user_scripts.map(&:script)
-
-    percent_completed_by_script = {}
-    pl_scripts.each do |pl_script|
-      if pl_user_scripts.find {|us| us.script_id == pl_script.id}.completed_at
-        percent_completed_by_script[pl_script.id] = 100
-        next
-      end
-      num_levels_unpassed = num_unpassed_progression_levels(pl_script)
-      total_levels = pl_script.levels.count
-      next if total_levels == 0
-      percent_completed_by_script[pl_script.id] = (((total_levels - num_levels_unpassed).to_f / total_levels) * 100).round
-    end
-
-    pl_scripts.map do |script|
-      # TODO: TEACH-1555 Get the UnitGroupUnit from the user's activity.
-      unit_group_unit = Queries::Courses.unit_group_unit(script)
-      percent_completed = percent_completed_by_script[script.id] || 0
-      {
-        name: script.name,
-        title: script.title_for_display,
-        percent_completed: percent_completed,
-        finish_url: percent_completed == 100 ? script.finish_url : nil,
-        current_lesson_name: next_unpassed_progression_level(script)&.lesson&.localized_name,
-        path: script.link(unit_group_unit: unit_group_unit),
-      }
-    end
-  end
-
   # Returns integer days since account creation, rounded down
   def account_age_days
     (DateTime.now - created_at.to_datetime).to_i

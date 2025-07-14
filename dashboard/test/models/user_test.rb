@@ -4422,53 +4422,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal fully_registered_teacher.authentication_options.first.email, params.dig('authentication_options_attributes', '0', 'email')
   end
 
-  test 'pl_units_started only counts parent BubbleChoice level' do
-    pl_unit = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_unit
-
-    sublevels = []
-    3.times do
-      sublevels << create(:level)
-    end
-    bubble_choice_level = create :bubble_choice_level, sublevels: sublevels
-    lg = create :lesson_group, script: pl_unit
-    lesson = create :lesson, script: pl_unit, lesson_group: lg
-    create :script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson
-    pl_unit.reload
-
-    user = create :teacher
-    create :user_script, user: user, script: pl_unit
-
-    sublevels.each {|sl| create :user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT}
-    create :user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
-
-    pl_units_started = user.pl_units_started
-    assert_equal 100, pl_units_started[0][:percent_completed]
-  end
-
-  test "pl_units_started counts predict level" do
-    pl_unit = create(:single_unit_course, :pl_course).first_unit
-    create :course_version, content_root: pl_unit
-
-    free_response_level = create :free_response, name: 'free response level'
-    game_level = create :level
-    game_level.contained_level_names = ['free response level']
-    game_level.save!
-
-    lg = create :lesson_group, script: pl_unit
-    lesson = create :lesson, script: pl_unit, lesson_group: lg
-    create :script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson
-    pl_unit.reload
-
-    user = create :teacher
-    create :user_script, user: user, script: pl_unit
-
-    create :user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
-
-    pl_units_started = user.pl_units_started
-    assert_equal 100, pl_units_started[0][:percent_completed]
-  end
-
   test "validate_us_state" do
     # If we don't know what country they are in, we don't require US State.
     student = create :student
@@ -4830,63 +4783,6 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns nil' do
         _authenticate_with_section_and_secret_picture.must_be_nil
-      end
-    end
-  end
-
-  describe '#pl_units_started' do
-    let(:subject) {user.pl_units_started}
-    let(:user) {create :teacher}
-    let(:unit) {create :unit, :with_levels}
-    let(:unit_group) {create :unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator'}
-    let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
-    let!(:user_script) {create :user_script, user: user, script: unit}
-    let(:modularity_enabled) {true}
-
-    before do
-      allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
-      unit.reload
-      user.reload
-    end
-
-    it 'returns 1 result' do
-      _(subject.count).must_equal 1
-    end
-
-    it 'returns an Array of Hash' do
-      _(subject).must_be_kind_of Array
-      _(subject.first).must_be_kind_of Hash
-    end
-
-    it 'returns the Unit name' do
-      _(subject.first[:name]).must_equal unit.name
-    end
-
-    it 'returns the Unit title' do
-      _(subject.first[:title]).must_equal unit.title_for_display
-    end
-
-    it 'returns 0 percent completed' do
-      _(subject.first[:percent_completed]).must_equal 0
-    end
-
-    it 'returns nil finish_url' do
-      _(subject.first[:finish_url]).must_equal nil
-    end
-
-    it 'returns the current Lesson name' do
-      _(subject.first[:current_lesson_name]).must_equal unit.lessons.first.localized_name
-    end
-
-    it 'returns the path to the Unit' do
-      _(subject.first[:path]).must_equal "/courses/#{unit_group.name}/units/1"
-    end
-
-    context 'modularity experiment is off' do
-      let(:modularity_enabled) {false}
-
-      it 'returns the deprecated /s/ path' do
-        _(subject.first[:path]).must_equal "/s/#{unit.name}"
       end
     end
   end

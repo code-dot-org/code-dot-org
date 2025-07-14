@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class AssignedCoursesAndScripts < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   let(:student) {create :student}
   let(:teacher) {create :teacher}
   let(:section) {create :section, user_id: teacher.id, unit_group: unit_group}
@@ -545,6 +547,126 @@ class AssignedCoursesAndScripts < ActiveSupport::TestCase
           _(courses_and_scripts.length).must_equal 1
           _(courses_and_scripts.pluck(:name)).must_equal ['testcourse']
         end
+      end
+    end
+  end
+
+  describe '#pl_units_started' do
+    context 'when testing basic functionality' do
+      subject(:pl_units_started) {user.pl_units_started}
+      let(:user) {create :teacher}
+      let(:unit) {create :unit, :with_levels}
+      let(:unit_group) {create :unit_group, participant_audience: 'teacher', instructor_audience: 'facilitator'}
+      let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
+      let!(:user_script) {create :user_script, user: user, script: unit}
+      let(:modularity_enabled) {true}
+
+      before do
+        allow(Policies::Courses).to receive(:modularity_enabled?).and_return(modularity_enabled)
+        unit.reload
+        user.reload
+      end
+
+      it 'returns 1 result' do
+        _(pl_units_started.count).must_equal 1
+      end
+
+      it 'returns an Array of Hash' do
+        _(pl_units_started).must_be_kind_of Array
+        _(pl_units_started.first).must_be_kind_of Hash
+      end
+
+      it 'returns the Unit name' do
+        _(pl_units_started.first[:name]).must_equal unit.name
+      end
+
+      it 'returns the Unit title' do
+        _(pl_units_started.first[:title]).must_equal unit.title_for_display
+      end
+
+      it 'returns 0 percent completed' do
+        _(pl_units_started.first[:percent_completed]).must_equal 0
+      end
+
+      it 'returns nil finish_url' do
+        _(pl_units_started.first[:finish_url]).must_equal nil
+      end
+
+      it 'returns the current Lesson name' do
+        _(pl_units_started.first[:current_lesson_name]).must_equal unit.lessons.first.localized_name
+      end
+
+      it 'returns the path to the Unit' do
+        _(pl_units_started.first[:path]).must_equal "/courses/#{unit_group.name}/units/1"
+      end
+
+      context 'modularity experiment is off' do
+        let(:modularity_enabled) {false}
+
+        it 'returns the deprecated /s/ path' do
+          _(pl_units_started.first[:path]).must_equal "/s/#{unit.name}"
+        end
+      end
+    end
+
+    context 'with BubbleChoice level' do
+      subject(:pl_units_started) {user.pl_units_started}
+      let(:user) {create :teacher}
+      let(:pl_unit) {create(:single_unit_course, :pl_course).first_unit}
+      let(:sublevels) {[]}
+      let(:bubble_choice_level) {create(:bubble_choice_level, sublevels: sublevels)}
+      let(:lesson_group) {create :lesson_group, script: pl_unit}
+      let(:lesson) {create :lesson, script: pl_unit, lesson_group: lesson_group}
+
+      before do
+        create :course_version, content_root: pl_unit
+
+        3.times do
+          sublevels << create(:level)
+        end
+
+        create :script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson
+        pl_unit.reload
+
+        create :user_script, user: user, script: pl_unit
+
+        sublevels.each {|sl| create :user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT}
+
+        create :user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+      end
+
+      it 'only counts parent level' do
+        _(pl_units_started[0][:percent_completed]).must_equal 100
+      end
+    end
+
+    context 'with Predict level' do
+      subject(:pl_units_started) {user.pl_units_started}
+      let(:user) {create :teacher}
+      let(:pl_unit) {create(:single_unit_course, :pl_course).first_unit}
+
+      let(:free_response_level) {create :free_response, name: 'free response level'}
+      let(:game_level) {create :level}
+
+      let(:lesson_group) {create :lesson_group, script: pl_unit}
+      let(:lesson) {create :lesson, script: pl_unit, lesson_group: lesson_group}
+
+      before do
+        create :course_version, content_root: pl_unit
+
+        game_level.contained_level_names = ['free response level']
+        game_level.save!
+
+        create :script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson
+        pl_unit.reload
+
+        create :user_script, user: user, script: pl_unit
+
+        create :user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+      end
+
+      it 'only counts predict level' do
+        _(pl_units_started[0][:percent_completed]).must_equal 100
       end
     end
   end
