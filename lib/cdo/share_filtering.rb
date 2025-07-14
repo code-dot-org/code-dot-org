@@ -39,8 +39,8 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'procedures_def', 'title name\=\"VAL\"'].freeze
-  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE).freeze
+  USER_ENTERED_TEXT_INDICATORS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'title name\=\"VAL\"'].freeze
+  USER_ENTERED_TEXT_FIELDS = %w(SPEECH TEXT TEXT1 TITLE).freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
@@ -77,31 +77,13 @@ module ShareFiltering
       return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
     end
 
-    # Texts will include user-generated block text field values including comments and variable/user-created procedure names.
+    # Texts will include user-generated block text field values.
     texts = []
     begin
       json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
     rescue JSON::NestingError
       CDO.log.warn "ShareFiltering.extract_text_blockly: JSON too deep after #{JSON_MAX_DEPTH} levels"
       return texts
-    end
-
-    # Extract variable names.
-    if json["variables"].is_a?(Array)
-      json["variables"].each do |variable|
-        name = variable["name"]
-        texts << name if name.is_a?(String) && !name.strip.empty?
-      end
-    end
-
-    # Extract user-created procedure names and descriptions.
-    json.dig("blocks", "blocks")&.each do |block|
-      if block["type"].match?(/^procedures_def/)
-        name = clean_text_value(block.dig("fields", "NAME"))
-        description = clean_text_value(block.dig("fields", "DESCRIPTION"))
-        texts << name if name && !name.empty?
-        texts << description if description && !description.empty?
-      end
     end
 
     # Traverse each block recursively extracting user-generated field string values via traverse_block.
@@ -126,9 +108,9 @@ module ShareFiltering
     end
   end
 
-  # This function recursively traverses a Blockly block, extracting any user-entered text
-  # (comments, field values), 'cleans' the text value (strips XML tags & quotes), and
-  # adds the text value to the texts array.
+  # This function recursively traverses a Blockly block, extracting any user-entered text,
+  # 'cleans' the text value (strips XML tags & quotes), and then adds the text value
+  # to the texts array.
   # For each block it:
   #   1. Iterates through block fields, cleaning and collecting user-generated strings.
   #   2. Recurses into both normal and shadow inputs.
