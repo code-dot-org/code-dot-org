@@ -94,6 +94,7 @@ function StudentSelector({
       size="s"
       styleAsFormField={true}
       selectedValueText={selectedDisplayValue}
+      aria-label={i18n.selectStudentOption()}
     >
       <ul>
         {!selectedUserId && (
