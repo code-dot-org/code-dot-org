@@ -40,7 +40,7 @@ module ShareFiltering
   end
 
   USER_ENTERED_TEXT_INDICATORS = ['COMMENT', 'SPEECH', 'TEXT', 'TEXT1', 'TITLE', 'procedures_def', 'title name\=\"VAL\"'].freeze
-  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE)
+  USER_ENTERED_TEXT_FIELDS = %w(COMMENT SPEECH TEXT TEXT1 TITLE).freeze
   FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
