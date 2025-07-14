@@ -258,6 +258,23 @@ function RubricContainer({
     }
   };
 
+  const headerLeft = React.useMemo(
+    () =>
+      teacherHasEnabledAi ? (
+        <>
+          <img
+            src={aiBotOutlineIcon}
+            className={style.aiBotOutlineIcon}
+            alt={i18n.rubricAiHeaderText()}
+          />
+          <span>{i18n.rubricAiHeaderText()}</span>
+        </>
+      ) : (
+        i18n.rubric()
+      ),
+    [teacherHasEnabledAi]
+  );
+
   return (
     <Draggable
       defaultPosition={{x: positionX, y: positionY}}
@@ -297,14 +314,7 @@ function RubricContainer({
           // eslint-disable-next-line react/forbid-dom-props
           data-testid="ai-rubric-handle-test-id"
         >
-          <div className={style.rubricHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={i18n.rubricAiHeaderText()}
-            />
-            <span>{i18n.rubricAiHeaderText()}</span>
-          </div>
+          <div className={style.rubricHeaderLeftSide}>{headerLeft}</div>
           <div className={style.rubricHeaderRightSide}>
             {canProvideFeedback && teacherHasEnabledAi && (
               <button
