@@ -19,12 +19,12 @@ module Services
 
         unless user.migrated?
           params[:provider] = nil
-          return user.update(params.except(:secret_words))
+          return user.update(params)
         end
 
         user.transaction do
           update_contact_info if contact_info_present?
-          user.update!(params.except(:secret_words, :email, :hashed_email))
+          user.update!(params.except(:email, :hashed_email))
         end
         true
       rescue

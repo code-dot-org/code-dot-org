@@ -59,7 +59,7 @@ class Pd::SessionAttendanceController < ApplicationController
     if current_user.student?
       if User.hash_email(enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        Services::User::UserType::UpgradeToTeacher.call(user: current_user, email: enrollment.email)
+        Services::User::UpgradeToTeacher.call(user: current_user, email: enrollment.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to action: 'upgrade_account'
@@ -84,7 +84,7 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    Services::User::UserType::UpgradeToTeacher.call(user: current_user, email: @email)
+    Services::User::UpgradeToTeacher.call(user: current_user, email: @email)
     redirect_to action: :attend
   end
 

@@ -1,11 +1,11 @@
 require 'test_helper'
 
-class Services::User::UserType::DowngradeToStudentTest < ActiveSupport::TestCase
+class Services::User::DowngradeToStudentTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   let(:user) {create(:user)}
 
-  subject(:downgrade_to_student_call) {Services::User::UserType::DowngradeToStudent.call(user: user)}
+  subject(:downgrade_to_student_call) {Services::User::DowngradeToStudent.call(user: user)}
 
   describe '#call' do
     context 'when user is already a student' do

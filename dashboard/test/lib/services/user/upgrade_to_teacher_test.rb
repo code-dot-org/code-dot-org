@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
+class Services::User::UpgradeToTeacherTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   let(:user) {create(:user)}
@@ -16,7 +16,7 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
   end
 
   subject(:upgrade_to_teacher_call) do
-    Services::User::UserType::UpgradeToTeacher.call(user: user, email: email, email_preference: email_preference_params)
+    Services::User::UpgradeToTeacher.call(user: user, email: email, email_preference: email_preference_params)
   end
 
   describe '#call' do
@@ -38,7 +38,6 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
 
     context 'when user is migrated' do
       it 'updates user with contact info and email preferences' do
-        expect(user).to receive(:family_name=).with(nil)
         expect(user).to receive(:user_type=).with(::User::TYPE_TEACHER)
         expect(user).to receive(:parent_email=).with(nil)
         expect(user).to receive(:update_primary_contact_info!).with(new_email: email, new_hashed_email: hashed_email)
@@ -54,7 +53,6 @@ class Services::User::UserType::UpgradeToTeacherTest < ActiveSupport::TestCase
       it 'sets email in email_preference and updates' do
         allow(::Policies::Lti).to receive(:lti?).with(user).and_return(true)
 
-        expect(user).to receive(:family_name=).with(nil)
         expect(user).to receive(:user_type=).with(::User::TYPE_TEACHER)
         expect(user).to receive(:parent_email=).with(nil)
         expect(user).to receive(:lti_roster_sync_enabled=).with(true)
