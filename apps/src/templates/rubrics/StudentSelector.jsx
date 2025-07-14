@@ -97,8 +97,8 @@ function StudentSelector({
     >
       <ul>
         {!selectedUserId && (
-          <li className={style.studentDropdownUnselectable}>
-            <div className={style.studentDropdownOption}>
+          <li className={style.unselectableDropdownOption}>
+            <div className={style.dropdownOption}>
               <span>{i18n.selectStudentOption()}</span>
             </div>
           </li>
@@ -106,7 +106,7 @@ function StudentSelector({
         {students.map(student => (
           <li key={student.id}>
             <button
-              className={style.studentDropdownOption}
+              className={style.dropdownOption}
               onClick={() => handleOptionClick(student.id)}
               type="button"
             >

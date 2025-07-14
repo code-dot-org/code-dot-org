@@ -1331,7 +1331,7 @@ p.detailsHidden {
   justify-content: space-between;
 }
 
-.studentDropdownOption {
+.dropdownOption {
   /* Reset's every elements apperance */
   background: none repeat scroll 0 0 transparent;
   border: none !important;
@@ -1371,8 +1371,13 @@ p.detailsHidden {
   }
 }
 
-.studentDropdownUnselectable {
-  font-style: italic;
+.unselectableDropdownOption {
+  div {
+    cursor: default !important;
+    span {
+      font-style: italic;
+    }
+  }
 
   &:hover {
     background-color: inherit !important;
