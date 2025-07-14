@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-1. Execute `1-setup/deploy.rb` to create Global resources (`per-account.yml.erb`) that support all Marketing Sites deployed to the current AWS Account.
+1. Execute `1-setup/deploy.rb` to create Global resources (`per-account.yml.erb` and `per-region.yml.erb`) that support all Marketing Sites deployed to the current AWS Account and Region. This defaults to setting up Region resources in `us-east-1`. Use `setup.rb --region [region id]` to prepare a different Region to support Marketing Sites.
 1. Create an AWS Secrets Manager Secret in the same Account and Region where the marketing site Stack will be provisioned and with the naming convention `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]` and populate it with the following keys
    - CONTENTFUL_DELIVERY_TOKEN
    - CONTENTFUL_PREVIEW_TOKEN
