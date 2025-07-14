@@ -61,7 +61,9 @@ function SectionSelector({
       name="sections"
       size="s"
       styleAsFormField={true}
-      selectedValueText={selectedSection.name}
+      selectedValueText={
+        selectedSectionId ? selectedSection.name : i18n.selectSectionOption()
+      }
     >
       <ul>
         {!selectedSectionId && (
