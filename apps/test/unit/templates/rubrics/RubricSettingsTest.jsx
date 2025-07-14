@@ -434,12 +434,32 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
     expect(input.checked).toBe(true);
+  });
+
+  it('Doesnt display the AI enable toggle if ai is disabled', () => {
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+          aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={false}
+        />
+      </Provider>
+    );
+
+    expect(
+      screen.queryByRole('checkbox', {name: i18n.useAiFeatures()})
+    ).toBeNull();
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -454,6 +474,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );
@@ -471,6 +492,7 @@ describe('RubricSettings', () => {
           rubric={defaultRubric}
           sectionId={1}
           aiEvalStatusCounters={ready}
+          teacherHasEnabledAi={true}
         />
       </Provider>
     );

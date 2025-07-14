@@ -155,7 +155,7 @@ function RubricContainer({
   // Currently the settings tab only provides a way to manually run AI.
   // In the future, we should update or remove this conditional when we
   // add more functionality to the settings tab.
-  const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
+  const showSettings = onLevelForEvaluation;
 
   // Update the server to indicate that the product tour has been seen.
   const updateTourStatus = useCallback(
@@ -374,6 +374,7 @@ function RubricContainer({
               sectionId={sectionId}
               tabSelectCallback={tabSelectCallback}
               reportingData={reportingData}
+              teacherHasEnabledAi={teacherHasEnabledAi}
             />
           )}
         </div>

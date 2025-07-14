@@ -44,6 +44,7 @@ const STATUS_ALL = {
 };
 
 function RubricSettings({
+  teacherHasEnabledAi,
   visible,
   refreshAiEvaluations,
   rubric,
@@ -363,33 +364,35 @@ function RubricSettings({
           </div>
         </div>
 
-        <div className={style.settingsGroup}>
-          <Heading4>{i18n.aiSettings()}</Heading4>
-          <div
-            className={classnames(
-              'uitest-rubric-ai-enable',
-              style.settingsContainers,
-              style.aiSettingsContainer
-            )}
-          >
-            <BodyThreeText>
-              <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
-            </BodyThreeText>
-            <Toggle
-              label={i18n.useAiFeatures()}
-              checked={!aiRubricsDisabled}
-              onChange={updateAiRubricsDisabled}
-              size="s"
-            />
+        {teacherHasEnabledAi && (
+          <div className={style.settingsGroup}>
+            <Heading4>{i18n.aiSettings()}</Heading4>
+            <div
+              className={classnames(
+                'uitest-rubric-ai-enable',
+                style.settingsContainers,
+                style.aiSettingsContainer
+              )}
+            >
+              <BodyThreeText>
+                <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
+              </BodyThreeText>
+              <Toggle
+                label={i18n.useAiFeatures()}
+                checked={!aiRubricsDisabled}
+                onChange={updateAiRubricsDisabled}
+                size="s"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
 
 RubricSettings.propTypes = {
-  teacherHasEnabledAi: PropTypes.bool,
+  teacherHasEnabledAi: PropTypes.bool.isRequired,
   updateTeacherAiSetting: PropTypes.func,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
