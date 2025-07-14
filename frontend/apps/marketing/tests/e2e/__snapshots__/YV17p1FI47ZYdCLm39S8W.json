@@ -1,38 +1,41 @@
 {
   "entryContent": {
     "fields": {
-      "internalName": {
-        "en-US": "❌ [ENG] FAQ Accordion Test"
+      "listName": {
+        "en-US": "❌ [ENG] Simple List Test"
       },
-      "faQsName": {
-        "en-US": "FAQ Accordion Test"
+      "listHeading": {
+        "en-US": "Simple List Test Heading"
       },
-      "faqItems": {
+      "description": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "itemsInThisList": {
         "en-US": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "51urVYxgf4qqIZy5jWkgRk"
+              "id": "3CKippL3oudp1CS3chX4e4"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "19LOg2OhaQROxsIT7ATjqc"
+              "id": "4ydXKk9tJkyS3IOlfHSYco"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "7rV1ujJgi05fYtqIEKagMm"
+              "id": "70ISdflgSNLgfLOAq6JcVf"
             }
           }
         ]
       }
     }
   },
-  "contentType": "faqs"
+  "contentType": "list"
 }

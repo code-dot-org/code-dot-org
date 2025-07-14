@@ -1,0 +1,111 @@
+{
+  "entryContent": {
+    "fields": {
+      "title": {
+        "en-US": "❌ [ENG] Lab Test"
+      },
+      "actionBlockOverline": {
+        "en-US": "Ages 5-18"
+      },
+      "shortDescription": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+      },
+      "longDescription": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus. Phasellus ut euismod massa, eu eleifend ipsum. Nulla eu neque commodo, dapibus dolor eget, dictum arcu."
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "primaryLinkRef": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "79dI2fR2dzbb0IN3dFQJ3t"
+          }
+        }
+      },
+      "whatYouCanMake": {
+        "en-US": "Block-based music mixes"
+      },
+      "ages": {
+        "en-US": [
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18"
+        ]
+      },
+      "experienceLevel": {
+        "en-US": [
+          "Beginner"
+        ]
+      },
+      "devices": {
+        "en-US": [
+          "Laptop",
+          "Chromebook",
+          "Tablet"
+        ]
+      },
+      "browsers": {
+        "en-US": [
+          "All modern browsers"
+        ],
+        "es-ES": [
+          "All modern browsers"
+        ]
+      },
+      "accessibility": {
+        "en-US": [
+          "Text to Speech",
+          "Closed captioning",
+          "Keyboard and Screen Reader Accessible"
+        ]
+      },
+      "languages": {
+        "en-US": [
+          "Arabic",
+          "Bahasa Indonesian",
+          "Chinese Traditional",
+          "English",
+          "Farsi",
+          "Filipino",
+          "French",
+          "German",
+          "Hebrew",
+          "Hindi",
+          "Italian",
+          "Japanese",
+          "Korean",
+          "Polish",
+          "Portuguese - Brazil",
+          "Portuguese - Portugal",
+          "Romanian",
+          "Slovak",
+          "Spanish - Latam",
+          "Spanish - Spain",
+          "Thai",
+          "Turkish"
+        ]
+      }
+    }
+  },
+  "contentType": "lab"
+}

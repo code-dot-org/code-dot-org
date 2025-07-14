@@ -2,37 +2,44 @@
   "entryContent": {
     "fields": {
       "internalName": {
-        "en-US": "❌ [ENG] FAQ Accordion Test"
+        "en-US": "❌ [ENG] Tab Group Test"
       },
-      "faQsName": {
-        "en-US": "FAQ Accordion Test"
+      "sectionHeading": {
+        "en-US": "Tab Group Test"
       },
-      "faqItems": {
+      "tabGroupItems": {
         "en-US": [
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "51urVYxgf4qqIZy5jWkgRk"
+              "id": "3xJ2LiZNhVnIlKKDbMQdFa"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "19LOg2OhaQROxsIT7ATjqc"
+              "id": "12iuTUu5MlPvPWLus9Hvrf"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "7rV1ujJgi05fYtqIEKagMm"
+              "id": "46NCc7SIHw7515NHSQqNU7"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4ZWA1QCB7lTf2qZE0NWtoW"
             }
           }
         ]
       }
     }
   },
-  "contentType": "faqs"
+  "contentType": "tabGroup"
 }
