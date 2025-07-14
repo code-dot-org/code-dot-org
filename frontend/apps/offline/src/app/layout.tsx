@@ -1,0 +1,25 @@
+import type {Metadata} from 'next';
+// Include the pre-packaged font-awesome 'free' version
+import '@fortawesome/fontawesome-free/css/all.css';
+
+import '@code-dot-org/component-library-styles/colors.scss';
+import '@code-dot-org/fonts/index.css';
+
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'Code.org',
+  description: 'Anyone can learn!',
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}

@@ -1,0 +1,13 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}

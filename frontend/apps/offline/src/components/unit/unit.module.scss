@@ -1,0 +1,171 @@
+$mobile-breakpoint: 425px;
+$wire-color: var(--background-brand-purple-light);
+
+.unitContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1rem;
+}
+
+.lessonGroupContainer {
+  & > details > summary {
+    background: var(--background-brand-purple-primary);
+
+    &:hover {
+      background: var(--background-brand-purple-strong);
+
+      i {
+        color: var(--text-neutral-inverse);
+      }
+    }
+
+    p {
+      color: var(--text-neutral-inverse);
+    }
+
+    i {
+      color: var(--text-neutral-inverse);
+    }
+  }
+}
+
+.lessonGroupPanel {
+  background: var(--background-brand-purple-extra-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.lessonOverview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+
+  // A lesson activity section without a name, which is for our hour-of-code
+  // style lessons with a single set of levels
+  .bareLesson {
+    &::before {
+      background-color: $wire-color;
+      content: '';
+      height: 0.25rem;
+      width: 5rem;
+    }
+  }
+
+  a.activityButton {
+    color: var(--text-neutral-primary);
+    min-width: 5rem;
+    padding-left: 0;
+    padding-right: 0;
+    width: 5rem;
+  }
+}
+
+.lessonActivitySection {
+  position: relative;
+
+  & > div:first-child {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .lessonActivitySectionLevelProgression {
+    align-items: flex-start;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    // Joint image
+    & > svg {
+      bottom: 1.25rem;
+      left: 1.25rem;
+      position: absolute;
+    }
+
+    & > div {
+      margin-inline-start: 5.75rem;
+
+      div {
+        display: inline-block;
+        margin-bottom: 0.25rem;
+        white-space: nowrap;
+
+        & svg:first-child {
+          fill: $wire-color;
+          min-width: 1.0625rem;
+          width: 1.0625rem;
+        }
+
+        a {
+          margin-top: 0.75rem;
+          width: 2.75rem;
+
+          &.diamond {
+            height: 2.25rem;
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+            transform: rotate(45deg);
+            width: 2.25rem;
+
+            span {
+              transform: rotate(-45deg);
+            }
+          }
+        }
+
+        &:last-child a + svg {
+          min-width: 1.75rem;
+          width: 1.75rem;
+        }
+      }
+    }
+
+    svg {
+      fill: $wire-color;
+      min-width: 4.5rem;
+      width: 4.5rem;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: $mobile-breakpoint) {
+  .lessonActivitySection {
+    h5 {
+      font-size: 1rem;
+    }
+
+    & > div:first-child.bareLesson {
+      display: none;
+    }
+
+    .lessonActivitySectionLevelProgression {
+      svg {
+        display: none;
+      }
+
+      & > div {
+        border-inline-start: 0.25rem solid var(--background-brand-purple-light);
+        margin-inline-start: 0;
+        margin-top: 0.5rem;
+        padding: 0.25rem;
+
+        a {
+          margin: 0.5rem;
+        }
+      }
+    }
+  }
+}
