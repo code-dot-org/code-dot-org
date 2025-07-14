@@ -300,11 +300,20 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
-  def duration
+  def duration_in_minutes
     return nil unless latest_published_version
     co_units = latest_published_version.units
-    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
-    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+    co_units.sum(&:duration_in_minutes)
+  end
+
+  def duration_in_hours
+    return nil unless duration_in_minutes
+    duration_in_minutes > 60 ? duration_in_minutes / 60 : 1
+  end
+
+  def duration
+    return nil unless duration_in_minutes
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
   def translated?(locale_code = 'en-us')
@@ -347,6 +356,7 @@ class CourseOffering < ApplicationRecord
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
+      duration_in_hours: duration_in_hours,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,

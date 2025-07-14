@@ -1,22 +1,18 @@
 # Marketing Site Continuous Integration / Continuous Deployment Infrastructure
 
-This is a work in progress, and this implementation does not represent the final deploy process we are iterating towards.
+## Prerequisites
 
-## Provision a Marketing Site (a single Stack)
+1. Execute `1-setup/deploy.rb` to create Global resources (`per-account.yml.erb`) that support all Marketing Sites deployed to the current AWS Account.
+1. Create an AWS Secrets Manager Secret in the same Account and Region where the marketing site Stack will be provisioned and with the naming convention `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]` and populate it with the following keys
+   - CONTENTFUL_DELIVERY_TOKEN
+   - CONTENTFUL_PREVIEW_TOKEN
+   - CONTENTFUL_REVALIDATE_TOKEN
+   - DRAFT_MODE_TOKEN
+   - STATSIG_CLIENT_KEY
+   - STATSIG_SERVER_KEY
+   - OTEL_EXPORTER_OTLP_HEADERS
 
-# Prerequisites
-
-- The deploy script requires first provisioning a CloudFormationMarketingSites deployer Role and other IAM resources.
-- Create an AWS Secrets Manager Secret in the same Account and Region where the marketing site Stack will be provisioned and with the naming convention `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]` and populate it with the following keys
-  - CONTENTFUL_DELIVERY_TOKEN
-  - CONTENTFUL_PREVIEW_TOKEN
-  - CONTENTFUL_REVALIDATE_TOKEN
-  - DRAFT_MODE_TOKEN
-  - STATSIG_CLIENT_KEY
-  - STATSIG_SERVER_KEY
-  - OTEL_EXPORTER_OTLP_HEADERS
-
-# Full usage with all parameters
+## Provision a Marketing Site CloudFormation Stack
 
 ```bash
 ./deploy.rb --environment_type test \

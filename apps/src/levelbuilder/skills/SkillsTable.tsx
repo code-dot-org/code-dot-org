@@ -1,15 +1,18 @@
-import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 
+import Tooltip from '@cdo/apps/templates/Tooltip';
+
 import './skills.css';
 
 import SkillsEditDialog from './SkillsEditDialog';
-import {Skill, SkillsByConcept} from './types';
+import {Skill} from './types';
 
-interface SkillsByConceptTableProps {
-  skills: SkillsByConcept;
+interface SkillsTableProps {
+  skills: Skill[];
+  canModifySkill: boolean;
 }
 
 export const columns = [
@@ -62,6 +65,9 @@ export const columns = [
       props: {className: 'skills-table-cell-unset-maxwidth'},
     },
   },
+];
+
+const actionColumns = [
   {
     property: 'edit',
     header: {
@@ -86,18 +92,7 @@ export const columns = [
   },
 ];
 
-const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
-  skills,
-}) => {
-  const [selectedConcept, setSelectedConcept] = React.useState('');
-  const concepts = Object.keys(skills)
-    .sort((a, b) => a.localeCompare(b))
-    .map(concept => ({
-      value: concept,
-      text: concept,
-    }));
-  concepts.push({value: '', text: ''});
-  const skillsToShow = skills[selectedConcept] || [];
+const SkillsTable: React.FC<SkillsTableProps> = ({skills, canModifySkill}) => {
   const [skillToEdit, setSkillToEdit] = useState<Skill | undefined>(undefined);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -131,30 +126,15 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
       alert('Failed to delete skill.');
     }
   };
-
+  const columnsToShow = canModifySkill
+    ? columns.concat(actionColumns)
+    : columns;
   return (
     <div>
-      <h2>View Available Skills</h2>
-      <SimpleDropdown
-        labelText="Concept"
-        name="concept"
-        size="s"
-        onChange={e => {
-          setSelectedConcept(e.target.value);
-        }}
-        selectedValue={selectedConcept}
-        items={concepts}
-        isLabelVisible={false}
-      />
-      <br />
-      <br />
-      {skillsToShow.length === 0 && (
-        <h3>There are no skills for the selected concept.</h3>
-      )}
-      <Table.Provider columns={columns} className="skills-table">
+      <Table.Provider columns={columnsToShow} className="skills-table">
         <Table.Header />
         <Table.Body
-          rows={skillsToShow.map(skill => ({
+          rows={skills.map(skill => ({
             id: skill.id,
             key: skill.key,
             description: skill.description,
@@ -168,13 +148,23 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
               </span>
             ),
             delete: (
-              <span
-                style={{cursor: 'pointer', color: 'red'}}
-                onClick={() => handleDelete(skill.id)}
-                title="Delete Skill"
-              >
-                <FontAwesomeV6Icon iconName="times" />
-              </span>
+              <>
+                <Tooltip
+                  text={
+                    'You can only delete skills that are not associated with levels.'
+                  }
+                  place="right"
+                >
+                  <Button
+                    icon={{iconName: 'trash'}}
+                    isIconOnly
+                    onClick={() => handleDelete(skill.id)}
+                    size="s"
+                    color={buttonColors.destructive}
+                    disabled={skill.hasLevels}
+                  />
+                </Tooltip>
+              </>
             ),
           }))}
           rowKey="key"
@@ -191,4 +181,4 @@ const SkillsByConceptTable: React.FC<SkillsByConceptTableProps> = ({
   );
 };
 
-export default SkillsByConceptTable;
+export default SkillsTable;

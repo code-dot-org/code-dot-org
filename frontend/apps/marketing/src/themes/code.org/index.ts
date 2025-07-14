@@ -10,49 +10,44 @@ const theme = createTheme({
   cssVariables: true,
   palette: {
     primary: {
-      main: '#0093A4', // Teal
-    },
-    secondary: {
-      main: '#8C52BA', // Purple
-    },
-    text: {
-      primary: '#292F36', // Dark Gray
+      main: '#000000',
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
-        root: ({theme}) => ({
+        root: {
           ['&.MuiButton-contained.MuiButton-colorPrimary']: {
-            backgroundColor: theme.palette.secondary.main,
+            backgroundColor: 'var(--brand-purple-50)',
           },
-        }),
+        },
       },
     },
     MuiLink: {
       styleOverrides: {
-        root: ({theme}) => ({
-          color: theme.palette.secondary.main,
+        root: {
+          color: 'var(--text-brand-purple-primary)',
           fontWeight: 500,
           textDecoration: 'underline',
           transition: 'color 0.2s ease-in-out',
           '&:hover': {
-            color: theme.palette.secondary.dark,
+            color: 'var(--text-brand-purple-secondary)',
             '& svg': {
-              color: theme.palette.secondary.dark,
+              color: 'var(--text-brand-purple-secondary)',
             },
           },
           ['& svg']: {
+            color: 'var(--text-brand-purple-primary)',
             transition: 'color 0.2s ease-in-out',
           },
-        }),
+        },
       },
     },
     MuiTypography: {
       styleOverrides: {
-        root: ({theme}) => ({
-          color: theme.palette.text.primary,
-        }),
+        root: {
+          color: 'var(--text-neutral-primary)',
+        },
         gutterBottom: {
           '&.MuiTypography-h1': {
             marginBottom: '1.5rem', // 24px
@@ -71,9 +66,6 @@ const theme = createTheme({
           },
           '&.MuiTypography-h6': {
             marginBottom: '0.5rem', // 8px
-          },
-          '&.MuiTypography-overline': {
-            marginBottom: '1rem', // 16px
           },
         },
       },
@@ -116,10 +108,8 @@ const theme = createTheme({
       lineHeight: 1.48,
     },
     overline: {
-      fontSize: '0.75rem', // 12px
-      fontWeight: 600,
       letterSpacing: '0.03rem', // 0.48px
-      lineHeight: 1.64,
+      lineHeight: 1.4,
     },
   },
 });
