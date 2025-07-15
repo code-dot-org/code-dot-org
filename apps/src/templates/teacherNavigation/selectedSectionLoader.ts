@@ -64,9 +64,9 @@ export const setSelectedSectionData = (sectionData: any) => {
   );
   // Default Unit assigned to the section
   const defaultUnitId = sectionData.script ? sectionData.script.id : null;
-  const defaultCourseId = sectionData.course_id;
+  const defaultCourseVersionId = sectionData.course_version_id;
   if (defaultUnitId) {
-    getStore().dispatch(setUnit(defaultUnitId, defaultCourseId));
+    getStore().dispatch(setUnit(defaultUnitId, defaultCourseVersionId));
   }
 
   if (!sectionData.sharing_disabled && sectionData.script.project_sharing) {
