@@ -91,9 +91,12 @@ Resources:
   EcsCluster:
     Type: AWS::ECS::Cluster
 
-  FargateServiceLB:
+  # New Load Balancer resources with "V2" suffix for shared VPC
+  # ALBs cannot be moved between VPCs, so we create new ones
+  FargateServiceLBV2:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
+      Name: !Sub "${SubdomainName}-${EnvironmentType}-alb-v2"
       LoadBalancerAttributes:
         # Delete the load balancer if the CloudFormation stack is deleted
         - Key: deletion_protection.enabled
@@ -102,17 +105,21 @@ Resources:
         # If changing from the default, the KEEP_ALIVE_TIMEOUT in the Dockerfile must also be updated to be greater than this value.
       Scheme: internet-facing
       SecurityGroups:
-        - !GetAtt FargateServiceLBSecurityGroup.GroupId
+        - !GetAtt FargateServiceLBSecurityGroupV2.GroupId
       Subnets:
 <% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |_, index| %>
-        - !ImportValue MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
+        - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
 <% end %>
       Type: application
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-alb-v2"
 
-  FargateServiceLBSecurityGroup:
+  FargateServiceLBSecurityGroupV2:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Security Group for ELB MarketingStackStagingFargateService
+      GroupName: !Sub "${SubdomainName}-${EnvironmentType}-alb-sg-v2"
+      GroupDescription: Security Group for ELB MarketingStackStagingFargateService (Shared VPC)
       SecurityGroupIngress:
         - Description: Allow HTTPS from com.amazonaws.global.cloudfront.origin-facing
           FromPort: 443
@@ -120,9 +127,12 @@ Resources:
           ToPort: 443
           SourcePrefixListId:  !FindInMap [CFRegionMap, !Ref 'AWS::Region', PrefixList]
       VpcId:
-        !ImportValue MarketingSitesRegionInfrastructure-VpcId
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-alb-sg-v2"
 
-  FargateServiceLBSecurityGrouptoMarketingStackStagingFargateServiceSecurityGroup:
+  FargateServiceLBSecurityGrouptoMarketingStackStagingFargateServiceSecurityGroupV2:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
       Description: Load balancer to target
@@ -133,12 +143,12 @@ Resources:
       FromPort: 3000
       GroupId:
         Fn::GetAtt:
-          - FargateServiceLBSecurityGroup
+          - FargateServiceLBSecurityGroupV2
           - GroupId
       IpProtocol: tcp
       ToPort: 3000
 
-  FargateServiceLBPublicListener:
+  FargateServiceLBPublicListenerV2:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       Certificates:
@@ -146,10 +156,10 @@ Resources:
             Ref: TLSCertificate
       DefaultActions:
         - TargetGroupArn:
-            Ref: FargateServiceLBPublicListenerECSGroup
+            Ref: FargateServiceLBPublicListenerECSGroupV2
           Type: forward
       LoadBalancerArn:
-        Ref: FargateServiceLB
+        Ref: FargateServiceLBV2
       Port: 443
       Protocol: HTTPS
 
@@ -162,20 +172,21 @@ Resources:
             - ""
             - - dualstack.
               - Fn::GetAtt:
-                  - FargateServiceLB
+                  - FargateServiceLBV2
                   - DNSName
         HostedZoneId:
           Fn::GetAtt:
-            - FargateServiceLB
+            - FargateServiceLBV2
             - CanonicalHostedZoneID
       HostedZoneId:
         Ref: HostedZoneId
       Name: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
       Type: A
 
-  FargateServiceLBPublicListenerECSGroup:
+  FargateServiceLBPublicListenerECSGroupV2:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
+      Name: !Sub "${SubdomainName}-${EnvironmentType}-tg-v2"
       Port: 80
       Protocol: HTTP
       HealthCheckPath: /api/health_check
@@ -187,7 +198,10 @@ Resources:
           Value: "false"
       TargetType: ip
       VpcId:
-        !ImportValue MarketingSitesRegionInfrastructure-VpcId
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-tg-v2"
 
   FargateServiceTaskDefTaskRole:
     Type: AWS::IAM::Role
@@ -296,9 +310,9 @@ Resources:
         # More details: https://nextjs.org/docs/app/building-your-application/caching#full-route-cache
         - Name: code-dot-org-full-page-router-cache
           EFSVolumeConfiguration:
-            FilesystemId: !Ref CacheFileSystem
+            FilesystemId: !Ref CacheFileSystemV2
             AuthorizationConfig:
-              AccessPointId: !Ref CacheAccessPoint
+              AccessPointId: !Ref CacheAccessPointV2
               IAM: ENABLED
             TransitEncryption: ENABLED
   FargateServiceTaskDefExecutionRole:
@@ -352,7 +366,7 @@ Resources:
         - ContainerName: web
           ContainerPort: 3000
           TargetGroupArn:
-            Ref: FargateServiceLBPublicListenerECSGroup
+            Ref: FargateServiceLBPublicListenerECSGroupV2
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: DISABLED
@@ -362,13 +376,13 @@ Resources:
                 - GroupId
           Subnets:
 <% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-            - !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+            - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
 <% end %>
       TaskDefinition:
         Ref: FargateServiceTaskDef
     DependsOn:
-      - FargateServiceLBPublicListenerECSGroup
-      - FargateServiceLBPublicListener
+      - FargateServiceLBPublicListenerECSGroupV2
+      - FargateServiceLBPublicListenerV2
       - FargateServiceTaskDefTaskRole
 
   FargateServiceSecurityGroup:
@@ -380,11 +394,11 @@ Resources:
           Description: Allow all outbound traffic by default
           IpProtocol: "-1"
       VpcId:
-        !ImportValue MarketingSitesRegionInfrastructure-VpcId
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcId
     DependsOn:
       - FargateServiceTaskDefTaskRole
 
-  FargateServiceSecurityGroupfromMarketingStackStagingFargateServiceLBSecurityGroup:
+  FargateServiceSecurityGroupfromMarketingStackStagingFargateServiceLBSecurityGroupV2:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       Description: Load balancer to target
@@ -396,7 +410,7 @@ Resources:
       IpProtocol: tcp
       SourceSecurityGroupId:
         Fn::GetAtt:
-          - FargateServiceLBSecurityGroup
+          - FargateServiceLBSecurityGroupV2
           - GroupId
       ToPort: 3000
     DependsOn:
@@ -491,7 +505,9 @@ Resources:
   # Start AWS EFS Resources #
   ###########################
 
-  CacheFileSystem:
+  # Create a new EFS file system for the shared VPC
+  # EFS mount targets cannot be moved between VPCs, so we need a new file system
+  CacheFileSystemV2:
     Type: AWS::EFS::FileSystem
     Properties:
       Encrypted: true
@@ -501,21 +517,22 @@ Resources:
         - TransitionToIA: AFTER_30_DAYS
       FileSystemTags:
         - Key: Name
-          Value: Marketing-EFS-Cache
+          Value: !Sub "Marketing-EFS-Cache-V2-${SubdomainName}-${EnvironmentType}"
 
 <% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-  CacheMountTarget<%= index %>:
+  CacheMountTargetV2<%= index %>:
     Type: AWS::EFS::MountTarget
     Properties:
-      FileSystemId: !Ref CacheFileSystem
-      SubnetId: !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
-      SecurityGroups: [!Ref CacheEFSSecurityGroup]
+      FileSystemId: !Ref CacheFileSystemV2
+      SubnetId:
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+      SecurityGroups: [!Ref CacheEFSSecurityGroupV2]
 <% end %>
 
-  CacheAccessPoint:
+  CacheAccessPointV2:
     Type: AWS::EFS::AccessPoint
     Properties:
-      FileSystemId: !Ref CacheFileSystem
+      FileSystemId: !Ref CacheFileSystemV2
       PosixUser:
         Uid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
         Gid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
@@ -525,13 +542,17 @@ Resources:
           OwnerUid: "1001"
           OwnerGid: "1001"
           Permissions: "755"
+      AccessPointTags:
+        - Key: Name
+          Value: !Sub "Marketing-EFS-AccessPoint-V2-${SubdomainName}-${EnvironmentType}"
 
-  CacheEFSSecurityGroup:
+  CacheEFSSecurityGroupV2:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Allow Marketing ECS to connect to EFS
+      GroupName: !Sub "${SubdomainName}-${EnvironmentType}-efs-sg-v2"
+      GroupDescription: Allow Marketing ECS to connect to EFS (Shared VPC)
       VpcId:
-        !ImportValue MarketingSitesRegionInfrastructure-VpcId
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcId
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 2049
@@ -540,6 +561,9 @@ Resources:
             Fn::GetAtt:
               - FargateServiceSecurityGroup
               - GroupId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-efs-sg-v2"
 
   ###########################
   # End AWS EFS Resources   #
@@ -757,44 +781,57 @@ Resources:
   # Start Redis Resources #
   #########################
 
-  RedisSecurityGroup:
+  # New Redis resources with "V2" suffix to avoid conflicts with existing resources
+  # This allows CloudFormation to create new resources in the shared VPC while leaving
+  # old resources intact until they can be safely cleaned up later
+  RedisSecurityGroupV2:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Redis access from ECS
+      GroupDescription: Redis access from ECS (Shared VPC)
       VpcId:
-        !ImportValue MarketingSitesRegionInfrastructure-VpcId
+        Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcId
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 6379
           ToPort: 6379
           SourceSecurityGroupId: !Ref FargateServiceSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-redis-sg-v2"
 
-  RedisSubnetGroup:
+  RedisSubnetGroupV2:
     Type: AWS::ElastiCache::SubnetGroup
     Properties:
-      Description: Marketing Sites Redis Cache Subnet Group
+      CacheSubnetGroupName: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-v2"
+      Description: Marketing Sites Redis Cache Subnet Group (Shared VPC)
       SubnetIds:
 <% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-        - !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+        - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
 <% end %>
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-subnet-group-v2"
 
   # This enables keyspace notifications for Redis, which is required for the Next.js caching.
   # See: https://github.com/trieb-work/nextjs-turbo-redis-cache
-  RedisParameterGroup:
+  RedisParameterGroupV2:
     Type: AWS::ElastiCache::ParameterGroup
     Properties:
       CacheParameterGroupFamily: redis7
-      Description: Enable keyspace notifications
+      Description: Enable keyspace notifications (Shared VPC)
       Properties:
         notify-keyspace-events: Exe
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-params-v2"
 
   RedisCluster:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group
+      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group (Shared VPC)
       Engine: redis
-      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
-      CacheParameterGroupName: !Ref RedisParameterGroup
+      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-v2"
+      CacheParameterGroupName: !Ref RedisParameterGroupV2
       EngineVersion: 7.1
       CacheNodeType:
         Fn::If:
@@ -804,14 +841,17 @@ Resources:
       NumNodeGroups: 1
       ReplicasPerNodeGroup: 1
       SecurityGroupIds:
-        - !Ref RedisSecurityGroup
-      CacheSubnetGroupName: !Ref RedisSubnetGroup
+        - !Ref RedisSecurityGroupV2
+      CacheSubnetGroupName: !Ref RedisSubnetGroupV2
       MultiAZEnabled: true
       TransitEncryptionEnabled: true
       AtRestEncryptionEnabled: true
       AutomaticFailoverEnabled: true
       AutoMinorVersionUpgrade: true
       PreferredMaintenanceWindow: "sun:05:00-sun:06:00"
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-cluster-v2"
 
   #######################
   # End Redis Resources #
@@ -859,7 +899,7 @@ Outputs:
   FargateServiceLoadBalancerDNS:
     Value:
       Fn::GetAtt:
-        - FargateServiceLB
+        - FargateServiceLBV2
         - DNSName
   CloudFrontDistributionId:
     Value:
