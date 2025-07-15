@@ -2640,41 +2640,40 @@ class UnitTest < ActiveSupport::TestCase
           _(subject).must_equal 'Unit 1a - my_unit_title'
         end
       end
+    end
 
-      context 'unit_group_unit is the other' do
-        let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
+    context 'unit_group_unit is the other' do
+      let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
 
-        context 'numbered_units is nil' do
-          let(:numbered_units) {nil}
+      context 'numbered_units is nil' do
+        let(:numbered_units) {nil}
 
-          it 'returns the unit title' do
-            _(subject).must_equal 'my_unit_title'
-          end
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
         end
+      end
 
-        context 'numbered_units is auto' do
-          let(:numbered_units) {'auto'}
+      context 'numbered_units is auto' do
+        let(:numbered_units) {'auto'}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1 - my_unit_title'
+        end
+        context 'position_other is 3' do
+          let(:position_other) {3}
 
           it 'returns the unit title with prefix' do
-            _(subject).must_equal 'Unit 1 - my_unit_title'
+            _(subject).must_equal 'Unit 3 - my_unit_title'
           end
+        end
+      end
 
-          context 'numbered_units is custom' do
-            let(:numbered_units) {'custom'}
-            let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position, unit_prefix: '1a'}
+      context 'numbered_units is custom' do
+        let(:numbered_units) {'custom'}
+        let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position, unit_prefix: '1a'}
 
-            it 'returns the unit title with prefix' do
-              _(subject).must_equal 'Unit 1a - my_unit_title'
-            end
-          end
-
-          context 'position_other is 3' do
-            let(:position_other) {3}
-
-            it 'returns the unit title with prefix' do
-              _(subject).must_equal 'Unit 3 - my_unit_title'
-            end
-          end
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1a - my_unit_title'
         end
       end
     end
