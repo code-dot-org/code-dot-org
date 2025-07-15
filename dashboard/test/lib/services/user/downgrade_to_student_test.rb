@@ -17,13 +17,15 @@ class Services::User::DowngradeToStudentTest < ActiveSupport::TestCase
     end
 
     context 'when user is not a student' do
-      it 'updates the user_type to student and clears cleartext emails' do
+      it 'updates the user_type to student and clears given name, display name, and cleartext emails' do
         allow(user).to receive(:student?).and_return(false)
         expect(user).to receive(:update).with(user_type: ::User::TYPE_STUDENT).and_return(true)
 
         _downgrade_to_student_call.must_equal true
         user.reload
         _(user.email).must_be :blank?
+        _(user.given_name).must_be :blank?
+        _(user.family_name).must_be :blank?
       end
     end
 

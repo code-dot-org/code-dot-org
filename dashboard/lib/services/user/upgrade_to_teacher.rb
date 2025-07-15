@@ -13,7 +13,6 @@ module Services
         return true if user.teacher?
         return false if email.blank?
 
-        user.family_name = nil
         user.user_type = ::User::TYPE_TEACHER
         user.parent_email = nil
 

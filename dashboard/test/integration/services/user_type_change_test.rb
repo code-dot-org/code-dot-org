@@ -45,6 +45,7 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
       user_as_student = Student.find(user.id)
 
       _(user_as_student.email).must_equal ''
+
       _(user_as_student.hashed_email).must_equal user.hashed_email
       _(user_as_student.school_info).must_be_nil
       _(user_as_student.full_address).must_be_nil
