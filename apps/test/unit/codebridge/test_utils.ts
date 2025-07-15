@@ -65,7 +65,6 @@ export const getDefaultCodebridgeContext = () => {
       PreviewComponents: undefined,
       languageMapping: {},
       activeLayout: undefined,
-      showFileBrowser: false,
       validMimeTypes: undefined,
       layoutComponents: {
         horizontal: () => null,
