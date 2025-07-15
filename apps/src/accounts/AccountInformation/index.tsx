@@ -10,6 +10,8 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {roleItemGroups} from '@cdo/apps/signUpFlow/FinishTeacherAccount';
+import locale from '@cdo/apps/signUpFlow/locale';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
