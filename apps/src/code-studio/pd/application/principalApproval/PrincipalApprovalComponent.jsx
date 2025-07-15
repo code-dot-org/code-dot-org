@@ -1,7 +1,7 @@
 import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {
   PageLabels,
@@ -10,11 +10,15 @@ import {
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {isInt, isPercent} from '@cdo/apps/util/formatValidation';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {PrivacyDialogMode} from '../../constants';
-import {FormContext} from '../../form_components_func/FormComponent';
+import {
+  FormContext,
+  getValidationState,
+} from '../../form_components_func/FormComponent';
 import {
   LabeledInput,
   LabeledNumberInput,
@@ -29,6 +33,14 @@ import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {styles} from '../teacher/TeacherApplicationConstants';
 
+const MANUAL_SCHOOL_FIELDS = [
+  'schoolName',
+  'schoolAddress',
+  'schoolCity',
+  'schoolState',
+  'schoolZipCode',
+  'schoolType',
+];
 const RACE_LIST = [
   'white',
   'black',
@@ -39,6 +51,7 @@ const RACE_LIST = [
   'other',
 ];
 const REQUIRED_SCHOOL_INFO_FIELDS = [
+  'school',
   'totalStudentEnrollment',
   'freeLunchPercent',
   ...RACE_LIST,
@@ -59,7 +72,7 @@ const COURSE_SUFFIXES = {
 };
 
 const PrincipalApprovalComponent = props => {
-  const {teacherApplication, data} = props;
+  const {teacherApplication, onChange, data, errors} = props;
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const [regionalPartner] = useRegionalPartner({
     program: teacherApplication.course,
@@ -67,6 +80,10 @@ const PrincipalApprovalComponent = props => {
     schoolZipCode: teacherApplication.school_zip_code,
     schoolState: teacherApplication.school_state,
   });
+
+  const handleSchoolChange = selectedSchool => {
+    onChange({school: selectedSchool && selectedSchool.value});
+  };
 
   const openPrivacyDialog = event => {
     // preventDefault so clicking this link inside the label doesn't
@@ -79,9 +96,57 @@ const PrincipalApprovalComponent = props => {
     setIsPrivacyDialogOpen(false);
   };
 
+  const renderSchoolSection = () => {
+    return (
+      <>
+        <p>
+          To help us measure our progress towards expanding access and providing
+          resources where they’re needed most, we ask that you confirm
+          demographic information about your school as well as how the course
+          will be implemented during the upcoming school year. If your school is
+          not listed please select from the drop down “Other school not listed
+          below” and provide the school details below.
+        </p>
+        <FormGroup
+          id="school"
+          controlId="school"
+          validationState={getValidationState('school', errors)}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                School
+                <span style={{color: 'red'}}> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <SchoolAutocompleteDropdown
+                value={data.school}
+                onChange={handleSchoolChange}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+        {data.school && data.school === '-1' && (
+          <div style={styles.indented}>
+            <LabeledInput name="schoolName" />
+            <LabeledInput name="schoolAddress" />
+            <LabeledInput name="schoolCity" />
+            <LabeledSelect name="schoolState" placeholder="Select a state" />
+            <LabeledInput name="schoolZipCode" />
+            <LabeledRadioButtons name="schoolType" />
+          </div>
+        )}
+      </>
+    );
+  };
+
   const renderSchoolInfoSection = () => {
     return (
       <div>
+        {renderSchoolSection()}
         <LabeledNumberInput name="totalStudentEnrollment" />
         <LabeledNumberInput
           name="freeLunchPercent"
@@ -255,6 +320,17 @@ PrincipalApprovalComponent.associatedFields = [
 PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
   let requiredFields = [...ALWAYS_REQUIRED_FIELDS];
 
+  if (data.school && data.school === '-1') {
+    requiredFields.push(
+      'schoolName',
+      'schoolAddress',
+      'schoolCity',
+      'schoolState',
+      'schoolZipCode',
+      'schoolType'
+    );
+  }
+
   if (data.doYouApprove !== 'No') {
     requiredFields.push(...REQUIRED_SCHOOL_INFO_FIELDS);
   }
@@ -264,6 +340,10 @@ PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
 
 PrincipalApprovalComponent.getErrorMessages = data => {
   let formatErrors = {};
+
+  if (data.schoolZipCode && !isZipCode(data.schoolZipCode)) {
+    formatErrors.schoolZipCode = 'Must be a valid zip code';
+  }
 
   if (
     data.totalStudentEnrollment &&
@@ -296,6 +376,11 @@ PrincipalApprovalComponent.processPageData = data => {
     fieldsToClear = fieldsToClear.concat(REQUIRED_SCHOOL_INFO_FIELDS);
   }
 
+  // Clear out school form data if we have a school
+  if (data.school && data.school !== '-1') {
+    fieldsToClear = fieldsToClear.concat(MANUAL_SCHOOL_FIELDS);
+  }
+
   if (data.doYouApprove !== 'No') {
     // Sanitize numeric fields (necessary for older browsers that don't
     // automatically enforce numeric inputs)
@@ -313,6 +398,11 @@ PrincipalApprovalComponent.processPageData = data => {
   return changes;
 };
 
-export {ALWAYS_REQUIRED_FIELDS, REQUIRED_SCHOOL_INFO_FIELDS, RACE_LIST};
+export {
+  ALWAYS_REQUIRED_FIELDS,
+  MANUAL_SCHOOL_FIELDS,
+  REQUIRED_SCHOOL_INFO_FIELDS,
+  RACE_LIST,
+};
 
 export default PrincipalApprovalComponent;

@@ -39,8 +39,8 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
-  USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry'].freeze
+  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
   JSON_MAX_DEPTH = 999
 
   # Searches for a sharing failure given a program and locale.
@@ -76,7 +76,7 @@ module ShareFiltering
       return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
     end
 
-    # Texts will include field values, text values in block inputs, comments, and variable names.
+    # Texts will include user-generated block text field values.
     texts = []
     begin
       json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
@@ -85,15 +85,7 @@ module ShareFiltering
       return texts
     end
 
-    # Extract variable names.
-    if json["variables"].is_a?(Array)
-      json["variables"].each do |variable|
-        name = variable["name"]
-        texts << name if name.is_a?(String) && !name.strip.empty?
-      end
-    end
-
-    # Traverse each block recursively extracting comments, field values, nested inputs via traverse_block.
+    # Traverse each block recursively extracting user-generated field string values via traverse_block.
     json.dig("blocks", "blocks")&.each do |block|
       traverse_block(block, texts)
     end
@@ -115,29 +107,24 @@ module ShareFiltering
     end
   end
 
-  # This function recursively traverses a Blockly “block”, extracting any user-entered text
-  # (comments, field values, etc.), 'cleans' the text value (strips XML tags & quotes), and
-  # adds the text value to the texts array.
+  # This function recursively traverses a Blockly block, extracting any user-entered text,
+  # 'cleans' the text value (strips XML tags & quotes), and then adds the text value
+  # to the texts array.
   # For each block it:
-  #   1. Checks for a “gamelab_comment” type and adds its COMMENT field.
-  #   2. Iterates all other fields, cleaning and collecting string values.
-  #   3. Recurses into both normal and shadow inputs.
-  #   4. Follows the “next” chain to handle sequenced blocks.
+  #   1. Iterates through block fields, cleaning and collecting user-generated strings.
+  #   2. Recurses into both normal and shadow inputs.
+  #   3. Handles sequenced blocks by following the 'next' chain of connections.
   def self.traverse_block(block, texts)
     return unless block.is_a?(Hash)
 
-    type = block["type"]
     fields = block["fields"] || {}
     inputs = block["inputs"] || {}
 
-    if type == "gamelab_comment"
-      comment = clean_text_value(fields["COMMENT"])
-      texts << comment if comment && !comment.strip.empty?
-    end
-
-    fields.each_value do |value|
-      cleaned = clean_text_value(value)
-      texts << cleaned if cleaned && !cleaned.strip.empty?
+    fields.each do |key, value|
+      if USER_ENTERED_TEXT_FIELDS.include?(key)
+        cleaned = clean_text_value(value)
+        texts << cleaned if cleaned && !cleaned.strip.empty?
+      end
     end
 
     inputs.each_value do |input|
@@ -154,11 +141,8 @@ module ShareFiltering
     return false unless Gatekeeper.allows('webpurify', default: true)
     return false unless FILTERED_PROJECT_TYPES.include?(project_type)
 
-    # For Playlab projects, only filter if program contains user-entered indicators.
-    if project_type == 'playlab'
-      return program.match?(/(?:#{USER_ENTERED_TEXT_INDICATORS.join('|')})/)
-    end
-    true
+    # Only filter if program contains fields that accept user-entered strings.
+    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.

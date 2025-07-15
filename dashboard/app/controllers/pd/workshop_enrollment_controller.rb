@@ -31,15 +31,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
+      redirect_to build_redirect_for_non_teacher("logged_out", @workshop.id)
     elsif current_user.user_type == 'student'
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
+      redirect_to build_redirect_for_non_teacher("teacher_account_required", @workshop.id)
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
@@ -210,6 +204,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
 
     redirect_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  private def build_redirect_for_non_teacher(page_name, workshop_id)
+    source_page = ERB::Util.url_encode('workshop enroll')
+    return_to = ERB::Util.url_encode("/pd/workshops/#{workshop_id}/enroll")
+    "/#{page_name}?source_page=#{source_page}&return_to=#{return_to}"
   end
 
   private def build_enrollment_from_params
