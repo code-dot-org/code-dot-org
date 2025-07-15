@@ -23,7 +23,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
     @common_params = {
       storedMessages: [],
-      aichatModelCustomizations: @default_model_customizations,
+      modelParameters: @default_model_customizations,
       aichatContext: @default_aichat_context
     }
 
@@ -165,6 +165,17 @@ class AichatRequestsControllerTest < ActionController::TestCase
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :too_many_requests
+  end
+
+  test 'start_chat_completion reassigns aichatModelCustomizations param to modelParameters' do
+    AichatRequestChatCompletionJob.stubs(:perform_later)
+    sign_in(@authorized_teacher1)
+    params_with_aichat_customizations = @valid_params_chat_completion.merge(aichatModelCustomizations: @default_model_customizations)
+    post :start_chat_completion, params: params_with_aichat_customizations, as: :json
+    assert_response :success
+    request_id = json_response['requestId']
+    request = AichatRequest.find(request_id)
+    assert_equal request.model_customizations, @default_model_customizations
   end
 
   # chat_request tests

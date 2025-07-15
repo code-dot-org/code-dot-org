@@ -141,7 +141,7 @@ describe('aichatApi', () => {
         JSON.stringify({
           newMessage: chatMessage,
           storedMessages,
-          aichatModelCustomizations: modelParameters,
+          modelParameters,
           aichatContext,
         })
       );
