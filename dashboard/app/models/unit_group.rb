@@ -174,7 +174,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        unit_prefixes: default_unit_group_units.map(&:unit_prefix),
+        unit_prefixes: default_unit_group_units.all? {|ugu| ugu.unit_prefix.nil?} ? nil : default_unit_group_units.map(&:unit_prefix),
         original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
