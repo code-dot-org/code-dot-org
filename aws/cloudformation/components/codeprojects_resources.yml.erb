@@ -18,6 +18,16 @@ LocalhostCodeprojectsRecord:
     TTL: 3600
     ResourceRecords:
       - 127.0.0.1
+
+LocalhostPreviewCodeprojectsRecord:
+  Type: AWS::Route53::RecordSet
+  Properties:
+    HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+    Name: localhost-preview.<%= CDO.codeprojects_hostname %>
+    Type: A
+    TTL: 3600
+    ResourceRecords:
+      - 127.0.0.1
 <%- end -%>
 
 CodeprojectsCertificate:
@@ -36,6 +46,39 @@ CodeprojectsCertificate:
       - DomainName: www.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       - DomainName: static.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- end -%>
+
+# Preview subdomains (production, staging, test)
+PreviewCodeprojectsCertificate:
+  Type: AWS::CertificateManager::Certificate
+  Properties:
+    DomainName: preview.<%= CDO.codeprojects_hostname %>
+    <%- if rack_env?(:production) -%>
+    SubjectAlternativeNames:
+      - staging-preview.<%= CDO.codeprojects_hostname %>
+      - test-preview.<%= CDO.codeprojects_hostname %>
+    <%- elsif rack_env?(:staging) -%>
+    SubjectAlternativeNames:
+      - staging-preview.<%= CDO.codeprojects_hostname %>
+    <%- elsif rack_env?(:test) -%>
+    SubjectAlternativeNames:
+      - test-preview.<%= CDO.codeprojects_hostname %>
+    <%- end -%>
+    ValidationMethod: DNS
+    DomainValidationOptions:
+      - DomainName: preview.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- if rack_env?(:production) -%>
+      - DomainName: staging-preview.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      - DomainName: test-preview.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- elsif rack_env?(:staging) -%>
+      - DomainName: staging-preview.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      <%- elsif rack_env?(:test) -%>
+      - DomainName: test-preview.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- end -%>
 

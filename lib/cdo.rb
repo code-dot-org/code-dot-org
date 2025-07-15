@@ -113,6 +113,10 @@ module Cdo
       canonical_hostname('codeprojects.org')
     end
 
+    def preview_codeprojects_hostname
+      canonical_hostname('preview.codeprojects.org')
+    end
+
     def hostedzone_id(domain)
       hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
       raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
