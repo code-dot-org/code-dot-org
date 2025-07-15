@@ -27,6 +27,7 @@ module Services
         end
 
         def pdf_exists_at?(pathname)
+          return false
           return false if pathname.blank?
 
           # Only use the shared cache if it's backed by MemCache (as it is in
