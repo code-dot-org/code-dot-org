@@ -41,6 +41,10 @@ const genAIEndpoints = [
     name: 'Google Gemini 2.0 Flash + Webpurify',
   },
   {
+    id: AiChatModelIds.GEMINI_2_0_FLASH_LITE,
+    name: 'Google Gemini 2.0 Flash Lite + Webpurify',
+  },
+  {
     id: AiChatModelIds.GEMINI_2_5_FLASH,
     name: 'Google Gemini 2.5 Flash + Webpurify',
   },

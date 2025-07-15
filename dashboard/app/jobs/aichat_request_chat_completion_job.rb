@@ -54,6 +54,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH_LITE],
      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO]].include? model_id
   end
