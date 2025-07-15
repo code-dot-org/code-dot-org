@@ -208,6 +208,18 @@ end
 And(/^I complete Section 2 of the teacher PD application$/) do
   steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 2: Find Your Region"
+    And I press the first "input[name='country']" element
+    And I press keys "nonexistent" for element "#school input"
+    Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+    And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+    Then I wait until element "input#schoolName" is visible
+    And I press keys "Code.org" for element "input#schoolName"
+    And I press keys "Code.org District" for element "input#schoolDistrictName"
+    And I press keys "1501 4th Ave" for element "input#schoolAddress"
+    And I press keys "Seattle" for element "input#schoolCity"
+    And I select the "Washington" option in dropdown "schoolState"
+    And I press keys "98101" for element "input#schoolZipCode"
+    And I press the first "input[name='schoolType'][value='Other']" element
   GHERKIN
 end
 

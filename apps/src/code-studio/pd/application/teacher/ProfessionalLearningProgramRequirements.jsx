@@ -46,17 +46,10 @@ const getProgramName = program => {
 
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
-  // school info has been removed from the FindYourRegion section
-  // use user's entered home state and zip to search for regional
-  // partner until the teacher application is fully deprecated
-  const [regionalPartner, regionalPartnerError] = useRegionalPartner({
-    program: data.program,
-    schoolZipCode: data.zipCode,
-    schoolState: data.state,
-    school: '-1',
-  });
+  const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const hasNoProgramSelected = data.program === undefined;
+  const hasNoSchoolInformation = !data.school;
   const hasNotLoadedRegionalPartner = regionalPartner === undefined;
   const hasRegionalPartner =
     !hasNotLoadedRegionalPartner && regionalPartner !== null;
@@ -116,6 +109,15 @@ const ProfessionalLearningProgramRequirements = props => {
         <div style={styles.error}>
           <p>
             Please fill out Section 1 and select your program before completing
+            this section.
+          </p>
+        </div>
+      );
+    } else if (hasNoSchoolInformation) {
+      return (
+        <div style={styles.error}>
+          <p>
+            Please fill out Section 2 and select your school before completing
             this section.
           </p>
         </div>
