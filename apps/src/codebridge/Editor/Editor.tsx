@@ -30,7 +30,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const onChange = useCallback(
     (value: string) => {
       if (file?.id) {
-        dispatch(saveFileThunk(file.id, value));
+        dispatch(saveFileThunk({fileId: file.id, contents: value}));
       }
     },
     [dispatch, file?.id]

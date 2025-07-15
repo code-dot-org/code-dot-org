@@ -58,7 +58,7 @@ export const useStartModeFileRowOptions = (
         dispatch(setShowLockedFilesBanner(true));
         setTimeout(() => dispatch(setShowLockedFilesBanner(false)), 8000);
       }
-      dispatch(setFileTypeThunk(file.id, type));
+      dispatch(setFileTypeThunk({fileId: file.id, type}));
     },
     [dispatch, file]
   );

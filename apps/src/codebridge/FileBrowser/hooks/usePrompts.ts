@@ -70,22 +70,31 @@ export const usePrompts = () => {
   const deleteFolder = (folderId: string) =>
     dispatch(deleteFolderThunk(folderId));
   const newFolder = (arg: {folderName: string; parentId?: FolderId}) =>
-    dispatch(createNewFolderThunk(arg.folderName, arg.parentId));
+    dispatch(
+      createNewFolderThunk({folderName: arg.folderName, parentId: arg.parentId})
+    );
   const newFile = (arg: {
     fileName: string;
     folderId?: FolderId;
     contents?: string;
-  }) => dispatch(createNewFileThunk(arg.fileName, arg.folderId, arg.contents));
+  }) =>
+    dispatch(
+      createNewFileThunk({
+        fileName: arg.fileName,
+        folderId: arg.folderId,
+        contents: arg.contents,
+      })
+    );
   const moveFile = (fileId: string, folderId: FolderId) =>
-    dispatch(moveFileThunk(fileId, folderId));
+    dispatch(moveFileThunk({fileId, folderId}));
   const moveFolder = (folderId: FolderId, parentId: FolderId) =>
-    dispatch(moveFolderThunk(folderId, parentId));
+    dispatch(moveFolderThunk({folderId, parentId}));
   const renameFile = (fileId: string, newName: string) =>
-    dispatch(renameFileThunk(fileId, newName));
+    dispatch(renameFileThunk({fileId, newName}));
   const renameFolder = (folderId: FolderId, newName: string) =>
-    dispatch(renameFolderThunk(folderId, newName));
+    dispatch(renameFolderThunk({folderId, newName}));
   const saveFile = (fileId: string, contents: string) =>
-    dispatch(saveFileThunk(fileId, contents));
+    dispatch(saveFileThunk({fileId, contents}));
 
   const openConfirmDeleteFile = usePartialApply(globalOpenConfirmDeleteFile, {
     dialogControl,

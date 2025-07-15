@@ -62,10 +62,10 @@ export const useHandleDragEnd = () => {
             });
           } else {
             dispatch(
-              moveFolderThunk(
-                e.active.data.current.id as string,
-                e.over.id as string
-              )
+              moveFolderThunk({
+                folderId: e.active.data.current.id as string,
+                parentId: e.over.id as string,
+              })
             );
           }
         } else if (e.active.data.current?.type === DragType.FILE) {
@@ -80,10 +80,10 @@ export const useHandleDragEnd = () => {
             });
           } else {
             dispatch(
-              moveFileThunk(
-                e.active.data.current.id as string,
-                e.over.id as string
-              )
+              moveFileThunk({
+                fileId: e.active.data.current.id as string,
+                folderId: e.over.id as string,
+              })
             );
           }
         }
