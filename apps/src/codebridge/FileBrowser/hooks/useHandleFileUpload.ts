@@ -44,7 +44,7 @@ export const useHandleFileUpload = (
         return;
       }
 
-      dispatch(createNewFileThunk(fileName, folderId, contents));
+      dispatch(createNewFileThunk({fileName, folderId, contents}));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
       });

@@ -1,4 +1,8 @@
-import {ThunkAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {
+  PayloadActionCreator,
+  ThunkAction,
+  createAsyncThunk,
+} from '@reduxjs/toolkit';
 import {debounce} from 'lodash';
 import {AnyAction} from 'redux';
 
@@ -6,13 +10,7 @@ import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  ProjectSources,
-  MultiFileSource,
-  FolderId,
-  FileId,
-  ProjectFileType,
-} from '@cdo/apps/lab2/types';
+import {ProjectSources, MultiFileSource} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -147,168 +145,35 @@ export const changeProjectType = createAsyncThunk<
 // not in a read-only state. We will also set the progress state if the project has been edited
 // and the level was in a not_tried state.
 
-export const createNewFileThunk = (
-  fileName: string,
-  folderId?: FolderId,
-  contents?: string,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(createNewFile({fileName, folderId, contents}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const renameFileThunk = (
-  fileId: FileId,
-  newName: string,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(renameFile({fileId, newName}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const saveFileThunk = (
-  fileId: FileId,
-  contents: string,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(saveFile({fileId, contents}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const setFileTypeThunk = (
-  fileId: FileId,
-  type: ProjectFileType,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(setFileType({fileId, type}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const setActiveFileThunk = (
-  fileId: FileId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(activateFile(fileId));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const closeFileThunk = (
-  fileId: FileId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(closeFile(fileId));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const deleteFileThunk = (
-  fileId: FileId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(deleteFile(fileId));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const moveFileThunk = (
-  fileId: FileId,
-  folderId: FolderId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(moveFile({fileId, folderId}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const moveFolderThunk = (
-  folderId: FolderId,
-  parentId: FolderId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(moveFolder({folderId, parentId}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const createNewFolderThunk = (
-  folderName: string,
-  parentId?: string,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(createNewFolder({folderName, parentId}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const toggleOpenFolderThunk = (
-  folderId: FolderId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(toggleOpenFolder(folderId)); // Assuming this toggles open/close
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const deleteFolderThunk = (
-  folderId: FolderId,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(deleteFolder(folderId));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const renameFolderThunk = (
-  folderId: FolderId,
-  newName: string,
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(renameFolder({folderId, newName}));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
-
-export const rearrangeFilesThunk = (
-  fileIds: FileId[],
-  forceSave: boolean = false,
-  forceNewVersion: boolean = false
-): ThunkAction<void, RootState, undefined, AnyAction> => {
-  return (dispatch, getState) => {
-    dispatch(rearrangeFiles(fileIds));
-    saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
-  };
-};
+// THUNK FACTORY FOR FILE OPERATIONS
+function makeFileOperationThunk<P>(
+  actionCreator: PayloadActionCreator<P, string>
+): (
+  payload: P,
+  forceSave?: boolean,
+  forceNewVersion?: boolean
+) => ThunkAction<void, RootState, undefined, AnyAction> {
+  return (payload: P, forceSave = false, forceNewVersion = false) =>
+    (dispatch: AppDispatch, getState: () => RootState) => {
+      dispatch(actionCreator(payload));
+      saveProjectIfEditable(getState, dispatch, forceSave, forceNewVersion);
+    };
+}
+// Generate all thunks in one line each
+export const createNewFileThunk = makeFileOperationThunk(createNewFile);
+export const renameFileThunk = makeFileOperationThunk(renameFile);
+export const saveFileThunk = makeFileOperationThunk(saveFile);
+export const setFileTypeThunk = makeFileOperationThunk(setFileType);
+export const setActiveFileThunk = makeFileOperationThunk(activateFile);
+export const closeFileThunk = makeFileOperationThunk(closeFile);
+export const deleteFileThunk = makeFileOperationThunk(deleteFile);
+export const moveFileThunk = makeFileOperationThunk(moveFile);
+export const moveFolderThunk = makeFileOperationThunk(moveFolder);
+export const createNewFolderThunk = makeFileOperationThunk(createNewFolder);
+export const toggleOpenFolderThunk = makeFileOperationThunk(toggleOpenFolder);
+export const deleteFolderThunk = makeFileOperationThunk(deleteFolder);
+export const renameFolderThunk = makeFileOperationThunk(renameFolder);
+export const rearrangeFilesThunk = makeFileOperationThunk(rearrangeFiles);
 
 // Save the current project sources to the project manager if we are not in a read-only state.
 // If the level status is not_tried and the project has been edited, we will also report the progress
