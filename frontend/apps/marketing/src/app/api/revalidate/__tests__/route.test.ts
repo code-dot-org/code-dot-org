@@ -123,4 +123,88 @@ describe('POST /api/revalidate', () => {
     expect(mockRevalidateTag).toHaveBeenCalledWith('entry-456');
     expect(mockRevalidatePath).not.toHaveBeenCalled();
   });
+
+  it('should call revalidatePath with correct paths when pagePaths is provided', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      pagePaths: {'en-US': '/foo', 'zh-CN': '/bar'},
+      secret: 'valid-secret',
+    });
+    mockRevalidatePath.mockImplementation(() => true);
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidatePath).toHaveBeenCalledWith('/en-US/foo');
+    expect(mockRevalidatePath).toHaveBeenCalledWith('/zh-CN/bar');
+  });
+
+  it('should call both revalidatePath and revalidateTag if both pagePaths and entryId are provided', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      pagePaths: {'en-US': '/foo'},
+      entryId: 'entry-789',
+      secret: 'valid-secret',
+    });
+    mockRevalidatePath.mockImplementation(() => true);
+    mockRevalidateTag.mockImplementation(() => true);
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidatePath).toHaveBeenCalledWith('/en-US/foo');
+    expect(mockRevalidateTag).toHaveBeenCalledWith('entry-789');
+  });
+
+  it('should not call revalidatePath if pagePaths is an empty object', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      pagePaths: {},
+      secret: 'valid-secret',
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidatePath).not.toHaveBeenCalled();
+  });
+
+  it('should not call revalidateTag if entryId is an empty string', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      entryId: '',
+      secret: 'valid-secret',
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidateTag).not.toHaveBeenCalled();
+  });
+
+  it('should not call revalidatePath or revalidateTag if params are undefined', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      secret: 'valid-secret',
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidatePath).not.toHaveBeenCalled();
+    expect(mockRevalidateTag).not.toHaveBeenCalled();
+  });
+
+  it('should call revalidateTag with "redirect" when contentType is "redirect"', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      contentType: 'redirect',
+      secret: 'valid-secret',
+    });
+    mockRevalidateTag.mockImplementation(() => true);
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidateTag).toHaveBeenCalledWith('redirect');
+  });
+
+  it('should not call revalidateTag when contentType is not "redirect"', async () => {
+    mockEnv('valid-secret');
+    const request = mockRequest({
+      contentType: 'otherType',
+      secret: 'valid-secret',
+    });
+    const response = await POST(request);
+    expect(response.status).toBe(200);
+    expect(mockRevalidateTag).not.toHaveBeenCalled();
+  });
 });

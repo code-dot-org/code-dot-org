@@ -78,7 +78,12 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        aiCustomizations,
+        {
+          selectedModelId: aiCustomizations.selectedModelId,
+          systemPrompt: aiCustomizations.systemPrompt,
+          retrievalContexts: aiCustomizations.retrievalContexts,
+          temperature: aiCustomizations.temperature,
+        },
         aichatContext
       );
 

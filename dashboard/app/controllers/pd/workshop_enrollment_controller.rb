@@ -31,15 +31,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
     elsif !current_user
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
+      redirect_to build_redirect_for_non_teacher("logged_out", @workshop.id)
     elsif current_user.user_type == 'student'
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
+      redirect_to build_redirect_for_non_teacher("teacher_account_required", @workshop.id)
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
@@ -55,9 +49,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
-      facilitators = @workshop.facilitators.map do |facilitator|
+      facilitators = @workshop.facilitators.includes(:facilitator_info).map do |facilitator|
         # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-        bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
         image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
 
         {
@@ -65,7 +58,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           name: facilitator.name,
           email: facilitator.email,
           image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.read(bio_file) : nil
+          bio: facilitator.facilitator_bio,
         }
       end
 
@@ -142,7 +135,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         props: {
           workshop_enrollment_status: enroll_status,
           workshop_info: {
-            id: @workshop.try(:id)&.to_s,
+            id: @workshop.try(:id),
             course: @workshop.try(:course),
             subject: @workshop.try(:subject),
             name: @workshop.try(:name),
@@ -150,13 +143,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             rp_name: @workshop.try(:regional_partner).try(:name),
             session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
           },
-          user_info: {
-            display_name: current_user.name,
-            given_name: current_user.try(:given_name),
-            family_name: current_user.try(:family_name),
-            email: current_user.email,
-            school_name: current_user.try(:school_info).try(:effective_school_name).try(:titleize)
-          }
+          user_info: current_user&.summarize_for_workshop
         }.to_json
       }
     end
@@ -216,6 +203,12 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
 
     redirect_to controller: 'pd/session_attendance', action: 'attend'
+  end
+
+  private def build_redirect_for_non_teacher(page_name, workshop_id)
+    source_page = ERB::Util.url_encode('workshop enroll')
+    return_to = ERB::Util.url_encode("/pd/workshops/#{workshop_id}/enroll")
+    "/#{page_name}?source_page=#{source_page}&return_to=#{return_to}"
   end
 
   private def build_enrollment_from_params

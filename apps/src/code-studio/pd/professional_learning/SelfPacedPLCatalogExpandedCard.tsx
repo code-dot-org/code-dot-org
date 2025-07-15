@@ -18,7 +18,7 @@ const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
   courseKey: string;
   displayName: string;
   gradeLevels: string;
-  duration: string;
+  duration: number;
   csTopics: string;
   description: string;
   image?: string;

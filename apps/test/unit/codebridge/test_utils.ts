@@ -1,5 +1,4 @@
-import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {CodebridgeContextType} from '@cdo/apps/codebridge';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {GenericPromptProps} from '@cdo/apps/lab2/views/dialogs/GenericPrompt';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -59,7 +58,6 @@ export const getAnalyticsMock = (): [AnalyticsDataType, AnalyticsMockType] => {
 
 export const getDefaultCodebridgeContext = () => {
   const context: CodebridgeContextType = {
-    source: smallProject,
     config: {
       defaultTheme: undefined,
       editableFileTypes: [],
@@ -74,32 +72,11 @@ export const getDefaultCodebridgeContext = () => {
         vertical: () => null,
       },
     },
-    setProject: () => {},
     setConfig: () => {},
     onRun: () => {
       return Promise.resolve();
     },
     onStop: () => {},
-    saveFile: (fileId: FileId, contents: string) => {},
-    closeFile: (fileId: FileId) => {},
-    setActiveFile: (fileId: FileId) => {},
-    newFolder: (arg: {folderName: string; parentId?: FolderId}) => {},
-    toggleOpenFolder: (folderId: FolderId) => {},
-    deleteFolder: (folderId: FolderId) => {},
-    openFile: (fileId: FileId) => {},
-    deleteFile: (fileId: FileId) => {},
-    newFile: (arg: {
-      fileName: string;
-      folderId?: FolderId;
-      contents?: string;
-      validationFileId?: string;
-    }) => {},
-    renameFile: (fileId: FileId, newName: string) => {},
-    moveFile: (fileId: FileId, folderId: FolderId) => {},
-    moveFolder: (folderId: FolderId, parentId: FolderId) => {},
-    renameFolder: (folderId: string, newName: string) => {},
-    setFileType: (fileId: FileId, type: ProjectFileType) => {},
-    rearrangeFiles: (fileIds: FileId[]) => {},
     startSources: {source: smallProject},
     levelProperties: {
       id: 0,

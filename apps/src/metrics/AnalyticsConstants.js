@@ -111,13 +111,17 @@ const EVENTS = {
   LESSON_OVERVIEW_PAGE_VISITED_EVENT: 'Lesson Overview Page Visited',
   LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
+  // Regional Workshop Catalog
+  REGIONAL_WS_CATALOG_PAGE_VISITED: 'Regional Workshop Catalog Page Visited',
+  REGIONAL_WS_CATALOG_ZIP_ENTERED: 'Regional Workshop Catalog Zip Entered',
+  REGIONAL_WS_CATALOG_LEARN_MORE_CLICK_EVENT:
+    'Regional Workshop Catalog Learn More Button Clicked',
+
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
-  RP_LANDING_ZIP_ENTERED: 'Regional Partner Landing Zip Entered',
-  RP_LANDING_ENROLL_CLICKED: 'Regional Partner Landing Enroll Button Clicked',
 
   // Workshop session attendance
   WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
@@ -133,7 +137,6 @@ const EVENTS = {
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
-  RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited',
 
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',

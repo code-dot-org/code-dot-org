@@ -1,6 +1,8 @@
 // Creates a definition for the LogoCollection component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
+import {collectionsSortOrderDefinition} from '@/components/common/definitions';
+
 export const LogoCollectionContentfulComponentDefinition: ComponentDefinition =
   {
     id: 'collection-logo',
@@ -26,5 +28,6 @@ export const LogoCollectionContentfulComponentDefinition: ComponentDefinition =
           bindingSourceType: ['entry'],
         },
       },
+      ...collectionsSortOrderDefinition,
     },
   };

@@ -62,6 +62,8 @@ experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 experiments.MODULARITY = 'modularity';
 // LocalizeJS
 experiments.LOCALIZEJS = 'localizejs';
+// Use the new lab2 instructions panel
+experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

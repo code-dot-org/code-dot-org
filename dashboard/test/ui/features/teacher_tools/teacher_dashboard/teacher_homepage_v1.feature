@@ -88,7 +88,7 @@ Feature: Using the teacher dashboard homepage (v1)
     # Add new courses so new tiles are visible on the teacher dashboard
     And I create a new "Hour of Code" student section named "Section 1" assigned to "AI for Oceans"
     And I press keys ":escape"
-    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'17-'18"
+    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'25-'26"
     And I create a new "Hour of Code" student section named "Section 3" assigned to "Artist"
     And I create a new "Hour of Code" student section named "Section 4" assigned to "Classic Maze"
     And element ".ui-test-view-more-courses" is not visible

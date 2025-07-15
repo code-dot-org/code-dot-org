@@ -39,6 +39,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
             <Button
               type="tertiary"
               size="s"
+              className={moduleStyles.showBioButton}
               text={showBio ? 'Hide biography' : 'Show biography'}
               iconRight={{iconName: showBio ? 'chevron-up' : 'chevron-down'}}
               onClick={() => handleShowBio(!showBio)}

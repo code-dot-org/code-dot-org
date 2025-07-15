@@ -63,7 +63,7 @@ export default function RegionalWorkshopCatalog({
     } else {
       // Log page visit event with null info if there's no valid prepopulated zip
       analyticsReporter.sendEvent(
-        EVENTS.RP_LANDING_PAGE_VISITED_EVENT,
+        EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED,
         {
           'zip code': null,
           'regional partner': null,
@@ -100,13 +100,16 @@ export default function RegionalWorkshopCatalog({
       setIsSubmitting(true);
       try {
         updateQueryParam('zip', submittedZip, true);
-        const response = await fetch(`regional_workshop_data/${submittedZip}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': await getAuthenticityToken(),
-          },
-        });
+        const response = await fetch(
+          `/professional-learning/regional_workshop_data/${submittedZip}`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': await getAuthenticityToken(),
+            },
+          }
+        );
 
         if (response.ok) {
           const jsonData = await response.json();
@@ -131,8 +134,8 @@ export default function RegionalWorkshopCatalog({
           // or from a URL param), otherwise log the data as the zip enter event.
           analyticsReporter.sendEvent(
             prepopulatingZip
-              ? EVENTS.RP_LANDING_PAGE_VISITED_EVENT
-              : EVENTS.RP_LANDING_ZIP_ENTERED,
+              ? EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED
+              : EVENTS.REGIONAL_WS_CATALOG_ZIP_ENTERED,
             {
               'zip code': submittedZip,
               'regional partner': regionalPartner.name,
@@ -284,8 +287,6 @@ export default function RegionalWorkshopCatalog({
           location_name,
           fee,
           has_prereq,
-          description,
-          custom_registration_link,
         }) => (
           <RegionalWorkshopCatalogCard
             id={id}
@@ -301,8 +302,6 @@ export default function RegionalWorkshopCatalog({
             locationName={location_name}
             fee={fee || ''}
             hasPrereq={has_prereq}
-            description={description}
-            customRegistrationLink={custom_registration_link}
           />
         )
       )}

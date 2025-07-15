@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
+import UserPassport, {isMissingUserInfo} from './UserPassport';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
@@ -49,8 +50,8 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
 }) => {
   const {handleClick, isSubmitting, alertState, setAlertState} =
     useWorkshopEnrollment({
-      workshopId: id,
-      userInfo,
+      workshop_id: id,
+      user_id: userInfo?.id,
       regional_partner_name,
       course,
       format,
@@ -96,11 +97,12 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={custom_registration_link}
+            target="_blank"
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -125,30 +127,45 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
     }
 
     return (
-      <Button
-        className={moduleStyles.fullWidthButton}
-        type="primary"
-        size="m"
-        isPending={isSubmitting}
-        onClick={handleClick}
-        text="Enroll in this workshop"
-      />
+      <div className={moduleStyles.internalEnrollButton}>
+        {userInfo && (
+          <UserPassport
+            displayName={userInfo.display_name}
+            givenName={userInfo.first_name}
+            familyName={userInfo.last_name}
+            email={userInfo.email}
+            schoolName={userInfo.school_info?.school_name}
+            schoolType={userInfo.school_info?.school_type}
+            returnToHref={`/professional-learning/workshops/${id}`}
+            className={moduleStyles.userPassport}
+          />
+        )}
+        {alertState.show && (
+          <Alert
+            type={'danger'}
+            text={alertState.text}
+            link={alertState.link}
+            onClose={() =>
+              setAlertState({show: false, text: '', link: undefined})
+            }
+          />
+        )}
+        <Button
+          className={moduleStyles.fullWidthButton}
+          type="primary"
+          size="m"
+          isPending={isSubmitting}
+          onClick={handleClick}
+          text="Enroll in this workshop"
+          disabled={isMissingUserInfo(userInfo)}
+        />
+      </div>
     );
   };
 
   return (
     <div className={moduleStyles.card}>
       <Heading3 visualAppearance="heading-xs">Enroll in this workshop</Heading3>
-      {alertState.show && (
-        <Alert
-          type={'danger'}
-          text={alertState.text}
-          link={alertState.link}
-          onClose={() =>
-            setAlertState({show: false, text: '', link: undefined})
-          }
-        />
-      )}
       {renderEnrollmentAction()}
       <Link type="secondary" size="xs" href="#data-sharing-notice">
         Click to see data sharing notice

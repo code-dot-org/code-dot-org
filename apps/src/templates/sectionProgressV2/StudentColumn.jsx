@@ -23,14 +23,17 @@ const SECTION_PROGRESS_V2 = 'SectionProgressV2';
 
 const skeletonCell = index => (
   <div
-    className={classNames(styles.gridBox, styles.gridBoxStudent)}
+    className={classNames(
+      styles.gridBox,
+      styles.gridBoxStudent,
+      index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+    )}
     key={index}
   >
     <span
       className={classNames(
         skeletonizeContent.skeletonizeContent,
-        styles.gridBoxSkeleton,
-        index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        styles.gridBoxSkeleton
       )}
       style={{width: _.random(30, 90) + '%'}}
       // eslint-disable-next-line react/forbid-dom-props

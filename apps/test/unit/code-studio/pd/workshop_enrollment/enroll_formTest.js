@@ -11,7 +11,6 @@ import EnrollForm, {
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import * as useSchoolInfoModule from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import * as getAuthenticityTokenModule from '@cdo/apps/util/AuthenticityTokenStore';
-import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const refute = p => assert.isNotOk(p);
 
@@ -472,47 +471,6 @@ describe('Enroll Form', () => {
     };
     beforeEach(() => {
       enrollForm = renderDefault();
-    });
-
-    it('submit other school_info fields when no school_id', async () => {
-      const school_info_without_id = {
-        school_name: 'Hogwarts School of Witchcraft and Wizardry',
-        zip: '12345',
-        country: 'US',
-      };
-
-      useSchoolInfoStub.returns({
-        schoolName: 'Hogwarts School of Witchcraft and Wizardry',
-        schoolState: 'WA',
-        schoolZip: '12345',
-        country: 'US',
-        schoolId: NonSchoolOptions.CLICK_TO_ADD,
-        schoolsList: [],
-        ...restOfUseSchoolInfo,
-      });
-
-      enrollForm = renderDefault(requiredParams);
-
-      await act(async () => {
-        enrollForm.find(getIdSelector('submit')).simulate('click');
-      });
-
-      expect(fetchStub.calledOnce).to.be.true;
-      expect(
-        JSON.parse(fetchStub.getCall(0).args[1].body).school_info
-      ).to.deep.equal(school_info_without_id);
-    });
-
-    it('do not submit other school_info fields when school_id is selected', async () => {
-      enrollForm = renderDefault(requiredParams);
-      await act(async () => {
-        enrollForm.find(getIdSelector('submit')).simulate('click');
-      });
-
-      expect(fetchStub.calledOnce).to.be.true;
-      expect(
-        JSON.parse(fetchStub.getCall(0).args[1].body).school_info
-      ).to.deep.equal({school_id: school_id});
     });
 
     it('disable submit button after submit', () => {

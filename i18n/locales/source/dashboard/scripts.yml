@@ -19375,7 +19375,7 @@ en:
             lesson-2:
               name: Assessments
             lesson-3:
-              name: Sequences - Explore
+              name: Testing Rubrics
             lesson-4:
               name: Sequences - Practice
             lesson-5:
@@ -19801,7 +19801,7 @@ en:
           description_audience: ''
           description_short: ''
           description: "## Welcome\n\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n##### Find the learning that works for you:\n\n-   ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs."
-          student_description: "## Welcome\n\n#### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n#### Find the learning that works for you:\n\n-   #### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n-   #### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs."
+          student_description: "## Welcome\n\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n##### Find the learning that works for you:\n\n-   ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n-   ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs."
         csp1-2025:
           lesson_groups:
             cspSurvey:
@@ -23184,3 +23184,23 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        allthelessonplans:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lesson Group 1
+              big_questions: |-
+                * Who?
+                * What?
+                * Where?
+              description: Lesson group 1 description
+            lessonGroup-3:
+              display_name: Lesson Group 2
+            lessonGroup-4:
+              display_name: UI/Eyes Test Content
+          name: allthelessonplans
+          title: All The Lesson Plans
+          description_audience: ''
+          description_short: ''
+          description: Teacher overview of the unit.
+          student_description: Student overview of the unit.

@@ -36,6 +36,20 @@ function getContentfulClientProps(clientType: ClientType): CreateClientParams {
       const contentfulSystemIds: string = config.params?.['sys.id[in]'];
       const contentfulSystemIdTags = contentfulSystemIds?.split(',');
 
+      const tags = [];
+
+      // When making a request to Contentful, add all the system ids (entry id, asset id, etc.) as a cache key tag
+      // When a webhook is published from Contentful, the cache will be invalidated for all entries with these system ids
+      if (contentfulSystemIdTags) {
+        tags.push(...contentfulSystemIdTags);
+      }
+
+      // If requesting for all entries of a specific content type, add the content type as a tag
+      // When a webhook is published from Contentful, the cache will be invalidated for all entries of this content type
+      if (config.params['content_type']) {
+        tags.push(config.params['content_type']);
+      }
+
       // Clone the config to avoid mutation
       // Then ensure Contentful requests are cached
       const modifiedConfig = {
@@ -45,7 +59,7 @@ function getContentfulClientProps(clientType: ClientType): CreateClientParams {
           cache: 'force-cache',
           next: {
             revalidate: 900, // Cache for 15 minutes
-            tags: contentfulSystemIdTags,
+            tags,
           },
         },
       };
@@ -54,6 +68,8 @@ function getContentfulClientProps(clientType: ClientType): CreateClientParams {
     },
   };
 }
+
+export {getContentfulClientProps};
 
 export function createContentfulClient(clientType: ClientType) {
   /**

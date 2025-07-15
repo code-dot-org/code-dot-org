@@ -2,12 +2,15 @@ import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
+import './skills.css';
 
 import {
   evaluationFromOpenAI,
   SkillBasedAIResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import AccuracyDetails from './AccuracyDetails';
 
 type AIEvaluation = {
   aiEvaluation: string;
@@ -26,9 +29,12 @@ type EvaluatedExample = ExampleAnswer &
 
 type ExampleAnswer = {
   studentWork: string;
+  humanEvaluation?: string;
 };
 
-const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
+const AccuracyCheck: React.FC<{
+  levelId: number;
+}> = ({levelId}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -41,7 +47,19 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
     : 'ai-evaluations.csv';
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(aiEvaluatedAnswers);
+    // Add humanEvaluation and evaluationsMatch to each row
+    const csvRows = aiEvaluatedAnswers.map(row => {
+      const humanEval = row.humanEvaluation || '';
+      const aiEval = row.aiEvaluation || '';
+      const evaluationsMatch =
+        humanEval && aiEval ? String(humanEval === aiEval) : '';
+      return {
+        ...row,
+        humanEvaluation: humanEval,
+        evaluationsMatch: evaluationsMatch,
+      };
+    });
+    const csv = Papa.unparse(csvRows);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
@@ -71,6 +89,7 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
       aiEvaluation: parsedResponse?.aiEvaluation,
       aiReasoning: parsedResponse?.aiReasoning,
       evaluationCriteria: parsedResponse?.evaluationCriteria,
+      humanEvaluation: example.humanEvaluation,
     };
     if (parsedResponse?.skillEvaluations) {
       for (let i = 0; i < parsedResponse.skillEvaluations.length; i++) {
@@ -101,7 +120,9 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
     }
   };
 
-  const updateData = (result: {data: {studentWork: string}[]}) => {
+  const updateData = (result: {
+    data: {studentWork: string; humanEvaluation?: string}[];
+  }) => {
     if (result.data.length === 0) {
       alert('No data found in the CSV file.');
       return;
@@ -173,9 +194,15 @@ const AccuracyCheck: React.FC<{levelId: number}> = ({levelId}) => {
         <Button
           text="Download CSV"
           onClick={downloadCSV}
-          disabled={aiEvaluatedAnswers.length === 0}
+          disabled={aiEvaluatedAnswers.length === 0 || evaluationPending}
         />
       </div>
+      {aiEvaluatedAnswers.length > 0 && !evaluationPending && (
+        <div className="evaluation-complete-notification">
+          🎉 Evaluation complete
+          <AccuracyDetails evaluations={aiEvaluatedAnswers} />
+        </div>
+      )}
     </div>
   );
 };
