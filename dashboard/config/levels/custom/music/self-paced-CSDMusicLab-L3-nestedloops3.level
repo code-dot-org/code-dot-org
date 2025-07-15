@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "##### **Teacher Note**: This is Lesson 7, level 6 in the curriculum.\r\n___\r\n\r\n### Use Nested Loops\r\nYou created this song in the first level. Try using a nested loop for this code. Find the repeating chunk of code and use an outer loop to repeat that code twice.\r\n\r\n![](https://images.code.org/489b7ab984f3cc9b1e8937f924a69d72-image-1741991573177.32.50 PM.png)",
+    "long_instructions": "##### **Teacher Note**: This is Lesson 7, level 6 in the curriculum.\r\n___\r\n\r\n### Nested Loops\r\n\r\nColin noticed that this song has two repeating sections. Instead of writing the same code over and over, he could use a **nested loop** to make his code simpler and more efficient!\r\n\r\n![](https://images.code.org/202b3dbd1c35dfa7ee594f8e2c8d79fa-image-1745009401512.png)\r\n\r\nCan you recreate Colin’s code using a nested loop? All the blocks you need are already in the workspace.\r\n\r\n> ***Hint:*** Not all of the code belongs inside the loop. Take a look at what repeats and where!\r\n\r\nUse **pattern recognition** to prepare:\r\n- What sections of the song repeat? Try to spot them in the code.\r\n- Which blocks appear more than once?\r\n- Do any instruments or tracks follow the same pattern over and over?",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -352,9 +352,10 @@
     "predict_settings": {
       "isPredictLevel": false
     },
+    "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:51.511+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"},{\"changed_at\":\"2025-04-17 01:46:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 01:46:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:54:56 +0000\",\"changed\":[\"offer_browser_tts\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T17:58:51.511+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"},{\"changed_at\":\"2025-04-17 01:46:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 01:46:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:54:56 +0000\",\"changed\":[\"offer_browser_tts\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-07 23:56:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

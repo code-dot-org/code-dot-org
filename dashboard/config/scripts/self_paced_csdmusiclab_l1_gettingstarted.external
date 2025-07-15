@@ -1,0 +1,132 @@
+name ' self-paced-CSDMusicLab-L1-GettingStarted'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Code.org Platform Support 
+
+<div style="float: right; width: 30%; margin-left: 20px; margin-bottom: 20px;">
+  <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 100%; border-radius: 5px;">
+</div>
+
+#### This professional learning module centers on curriculum content. You may find that you need additional support navigating the Code.org platform **in addition to** the curriculum content - tasks like creating classroom sections, assigning lessons, or reviewing student work.
+
+#### Our Getting Started with Code.org Module contains all the information you need to get up and running with our platform!
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-getting-started-2024" target="blank" rel="noopener noreferrer">Access Getting Started with Code.org</a>
+</div>
+
+## Getting Started with Code.org Module
+
+#### This module contains five lessons, and we estimate it to take **80 minutes to complete**.
+
+<div style="display: flex; justify-content: space-between; flex-wrap: nowrap; gap: 10px; margin: 20px 0px;">
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 1</p>
+    <p style="font-size: 12pt; margin: 0;">Welcome to Code.org</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 2</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating the Code.org Learning Platform</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 3</p>
+    <p style="font-size: 12pt; margin: 0;">The Student Experience</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 4</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating Lesson Plans, Assessments, and Resources</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 5</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating Support</p>
+  </div>
+
+</div>
+
+
+#### In this module, we walk you through how to do the following:
+
+* #### Get verified as a teacher to unlock additional features.
+* #### Explore the Code.org website and teacher tools.
+* #### Set up your first classroom section.
+* #### Add a course for your students.
+* #### Find & use lesson plans and teacher resources.
+* #### Connect with other educators on the Teacher Forum.
+* #### Access ongoing support while teaching Code.org curricula.
+
+## Next Steps
+
+#### Access the module at the button above to begin! Click "Continue" when you're ready to continue learning about the curriculum content in this module.
+
+``` html
+
+# Code.org Platform Support 
+
+<div style="float: right; width: 30%; margin-left: 20px; margin-bottom: 20px;">
+  <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 100%; border-radius: 5px;">
+</div>
+
+#### This professional learning module centers on curriculum content. You may find that you need additional support navigating the Code.org platform **in addition to** the curriculum content - tasks like creating classroom sections, assigning lessons, or reviewing student work.
+
+#### Our Getting Started with Code.org Module contains all the information you need to get up and running with our platform!
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-getting-started-2024" target="blank" rel="noopener noreferrer">Access Getting Started with Code.org</a>
+</div>
+
+## Getting Started with Code.org Module
+
+#### This module contains five lessons, and we estimate it to take **80 minutes to complete**.
+
+<div style="display: flex; justify-content: space-between; flex-wrap: nowrap; gap: 10px; margin: 20px 0px;">
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 1</p>
+    <p style="font-size: 12pt; margin: 0;">Welcome to Code.org</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 2</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating the Code.org Learning Platform</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 3</p>
+    <p style="font-size: 12pt; margin: 0;">The Student Experience</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 4</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating Lesson Plans, Assessments, and Resources</p>
+  </div>
+
+  <div style="width: 19%; background-color: #F5F7F8; padding: 15px; border-radius: 10px; text-align: center;">
+    <p style="font-size: 13pt; font-weight: bold;">Lesson 5</p>
+    <p style="font-size: 12pt; margin: 0;">Navigating Support</p>
+  </div>
+
+</div>
+
+
+#### In this module, we walk you through how to do the following:
+
+* #### Get verified as a teacher to unlock additional features.
+* #### Explore the Code.org website and teacher tools.
+* #### Set up your first classroom section.
+* #### Add a course for your students.
+* #### Find & use lesson plans and teacher resources.
+* #### Connect with other educators on the Teacher Forum.
+* #### Access ongoing support while teaching Code.org curricula.
+
+## Next Steps
+
+#### Access the module at the button above to begin! Click "Continue" when you're ready to continue learning about the curriculum content in this module.
+```
+MARKDOWN

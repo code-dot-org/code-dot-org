@@ -1,7 +1,12 @@
+/**
+ * Brand is a website asset (not a URL). Brand is detected in the `withBrand` middleware.
+ *
+ * The string value is URL encoded, so don't use spaces or other special characters that are URL encoded.
+ */
 export enum Brand {
-  CODE_DOT_ORG = 'code.org',
-  HOUR_OF_CODE = 'hourofcode.com',
-  CS_FOR_ALL = 'csforall.org',
+  CODE_DOT_ORG = 'Code.org', // Not a URL
+  HOUR_OF_CODE = 'HOC',
+  CS_FOR_ALL = 'CSForAll',
 }
 
 /**

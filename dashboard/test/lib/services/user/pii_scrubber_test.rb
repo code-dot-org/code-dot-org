@@ -11,6 +11,10 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       :within_united_states,
       email: email,
       current_sign_in_ip: '192.168.0.1',
+      name: 'John Doe',
+      given_name: 'John',
+      family_name: 'Doe',
+      full_address: '123 Main St, Springfield, USA',
     ).destroy
   end
   let(:described_instance) {described_class.new(user: user)}
@@ -44,6 +48,9 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       end
 
       it 'removes user email and authentication data' do
+        _(user.read_attribute(:email)).must_be :present?
+        _(user.read_attribute(:hashed_email)).must_be :present?
+        _(user.authentication_options.with_deleted).must_be :present?
         scrub_pii
         user.reload
         _(user.email).must_equal ''
@@ -54,16 +61,22 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       end
 
       it 'removes names and assigns a UUID username' do
+        _(user.name).must_be :present?
+        _(user.given_name).must_be :present?
+        _(user.family_name).must_be :present?
         original_username = user.username
         scrub_pii
         user.reload
         _(user.name).must_be_nil
+        _(user.given_name).must_be_nil
         _(user.family_name).must_be_nil
         _(user.username).wont_equal original_username
         _(user.username).wont_be_nil
       end
 
       it 'removes address and location data' do
+        _(user.full_address).must_be :present?
+        _(user.current_sign_in_ip).must_be :present?
         scrub_pii
         user.reload
         _(user.full_address).must_be_nil
@@ -101,6 +114,9 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       end
 
       it 'removes legacy oauth fields' do
+        _(user.oauth_token).must_be :present?
+        _(user.oauth_refresh_token).must_be :present?
+        _(user.oauth_token_expiration).must_be :present?
         scrub_pii
         user.reload
         _(user.oauth_token).must_be_nil

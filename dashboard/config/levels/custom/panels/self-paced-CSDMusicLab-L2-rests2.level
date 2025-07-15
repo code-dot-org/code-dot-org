@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-14T21:46:09.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "### Rest\n\nA `rest` block creates a gap in your timeline\n",
+        "text": "### Rest\n\nA `rest` block creates a gap in your timeline\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> A **rest** is a moment of silence in music\n",
         "imageUrl": "https://images.code.org/99974398c26c378b4ff853e3093de8bc-Slide9.PNG",
         "key": "test-music-lab-sequences-practice-rest-panel-18ead53c-578a-4f5b-a4ee-9b67dea847e4",
         "fadeInOverPrevious": true
@@ -21,7 +22,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Rest\n\nYou can also rest on the beat of a song instead of the measure. This lets you create shorter gaps between tracks\n",
+        "text": "### Rest\n\nYou can also rest on the beat of a song instead of the measure. This lets you create shorter gaps between tracks\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> The **beat** is the steady pulse in music that measures time. There are four beats per measure in Music Lab. \n",
         "imageUrl": "https://images.code.org/e983263b8c3dce10ae8d9a73dc75cf03-Slide11.PNG",
         "key": "test-music-lab-sequences-practice-rest-panel-c9ce43f4-c787-4b12-adf8-b5e0b2133570",
         "fadeInOverPrevious": true
@@ -43,7 +44,6 @@
     "bubble_choice_description": "Review how to use Rests when creating songs",
     "display_name": "Rests"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T21:46:09.249+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:46:09.249+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-panel\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-panel\"},{\"changed_at\":\"2025-07-07 22:15:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Panels>

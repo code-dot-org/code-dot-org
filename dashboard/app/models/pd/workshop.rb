@@ -266,14 +266,18 @@ class Pd::Workshop < ApplicationRecord
 
   scope :group_by_id, -> {group('pd_workshops.id')}
 
+  def self.joins_sessions
+    joins("INNER JOIN pd_sessions ON pd_sessions.pd_workshop_id = pd_workshops.id")
+  end
+
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
-    joins(:sessions).group_by_id.having('(DATE(MIN(pd_sessions.start)) <= ?)', date)
+    joins_sessions.group_by_id.having('(DATE(MIN(pd_sessions.start)) <= ?)', date)
   end
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_after(date)
-    joins(:sessions).group_by_id.having('(DATE(MIN(pd_sessions.start)) >= ?)', date)
+    joins_sessions.group_by_id.having('(DATE(MIN(pd_sessions.start)) >= ?)', date)
   end
 
   scope(
@@ -289,7 +293,7 @@ class Pd::Workshop < ApplicationRecord
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_scheduled_start(desc: false)
-    joins("INNER JOIN pd_sessions ON pd_sessions.pd_workshop_id = pd_workshops.id").
+    joins_sessions.
       group_by_id.
       # This SQL string is not at risk for injection vulnerabilites because
       # it's not injesting arbitrary strings, but programmatically constructing
@@ -327,20 +331,20 @@ class Pd::Workshop < ApplicationRecord
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_before(date)
-    joins(:sessions).group_by_id.having("(DATE(MAX(end)) <= ?)", date)
+    joins_sessions.group_by_id.having("(DATE(MAX(pd_sessions.end)) <= ?)", date)
   end
 
   # Filters by scheduled end date (date of last session)
   def self.scheduled_end_on_or_after(date)
-    joins(:sessions).group_by_id.having("(DATE(MAX(end)) >= ?)", date)
+    joins_sessions.group_by_id.having("(DATE(MAX(pd_sessions.end)) >= ?)", date)
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Time.zone.today + days.days)
+    joins_sessions.group_by_id.having("(DATE(MIN(pd_sessions.start)) = ?)", Time.zone.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Time.zone.today + days.days)
+    joins_sessions.group_by_id.having("(DATE(MAX(pd_sessions.end)) = ?)", Time.zone.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -362,7 +366,7 @@ class Pd::Workshop < ApplicationRecord
   # Find the workshop that is closest in time to today
   # @return [Pd::Workshop, nil]
   def self.nearest
-    joins(:sessions).
+    joins_sessions.
       select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff ASC").
       first
@@ -658,20 +662,8 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  # Min number of days a teacher must attend for it to count.
-  # @return [Integer]
-  def min_attendance_days
-    [1, time_constraint(:min_days)].compact.max
-  end
-
-  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
-  # @return [Integer] number of payment days, after applying constraints
-  def effective_num_days
-    [sessions.count, time_constraint(:max_days)].compact.min
-  end
-
-  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
-  # @return [Integer] number of payment hours, after applying constraints
+  # Apply max # of hours for certificates, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of pd hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
@@ -791,14 +783,6 @@ class Pd::Workshop < ApplicationRecord
       Pd::Workshop::SUBJECT_FIT
     ].include?(subject) &&
       state != Pd::Workshop::STATE_ENDED
-  end
-
-  # deprecated
-  def funding_summary
-    # funded is no longer a required field
-    # new workshops will not have a funding_summary
-    return '' if funded.nil?
-    (funded ? 'Yes' : 'No') + (funding_type.present? ? ": #{funding_type}" : '')
   end
 
   # Get all enrollments for this workshop with no associated attendances
@@ -961,9 +945,6 @@ class Pd::Workshop < ApplicationRecord
       location_name: location_name,
       fee: fee,
       has_prereq: prereq.present?,
-      description: description,
-      custom_registration_link: registration_link,
-      regional_partner_name: regional_partner&.name,
     }
   end
 

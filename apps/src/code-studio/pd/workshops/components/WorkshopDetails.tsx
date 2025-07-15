@@ -60,8 +60,7 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
           )}
           <BodyTwoText className={moduleStyles.fee}>
             <FontAwesomeV6Icon iconName="dollar-circle" />
-            <StrongText>Cost:</StrongText>{' '}
-            {!fee || fee === '0' ? 'Free' : `$${fee}`}
+            <StrongText>Cost:</StrongText> {!fee || fee === '0' ? 'Free' : fee}
           </BodyTwoText>
         </div>
       </section>
@@ -80,10 +79,12 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         <BodyTwoText>{description}</BodyTwoText>
       </section>
 
-      <section className={moduleStyles.workshopDetailsItem}>
-        <Heading3 visualAppearance={'heading-xs'}>Attendee Notes:</Heading3>
-        <BodyTwoText>{notes}</BodyTwoText>
-      </section>
+      {notes && (
+        <section className={moduleStyles.workshopDetailsItem}>
+          <Heading3 visualAppearance={'heading-xs'}>Attendee Notes:</Heading3>
+          <BodyTwoText>{notes}</BodyTwoText>
+        </section>
+      )}
 
       {course_offerings && course_offerings.length > 0 && (
         <section className={moduleStyles.workshopDetailsItem}>
@@ -96,10 +97,14 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         </section>
       )}
 
-      <section className={moduleStyles.workshopDetailsItem}>
-        <Heading3 visualAppearance="heading-xs">Workshop Facilitators</Heading3>
-        <WorkshopFacilitatorsList facilitators={facilitators} />
-      </section>
+      {facilitators && facilitators.length > 0 && (
+        <section className={moduleStyles.workshopDetailsItem}>
+          <Heading3 visualAppearance="heading-xs">
+            Workshop Facilitators
+          </Heading3>
+          <WorkshopFacilitatorsList facilitators={facilitators} />
+        </section>
+      )}
 
       <section
         id="data-sharing-notice"

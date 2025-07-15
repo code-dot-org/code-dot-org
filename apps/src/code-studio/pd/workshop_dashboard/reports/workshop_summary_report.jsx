@@ -4,12 +4,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {connect} from 'react-redux';
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import Spinner from '../../../../sharedComponents/Spinner';
-import {PermissionPropType, WorkshopAdmin} from '../permission';
 
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import ReportTable from './report_table';
@@ -20,7 +18,6 @@ const QUERY_URL = '/api/v1/pd/workshop_summary_report';
 
 export class WorkshopSummaryReport extends React.Component {
   static propTypes = {
-    permission: PermissionPropType.isRequired,
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
@@ -140,10 +137,6 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Workshop Total Hours'},
       },
       {
-        property: 'funded',
-        header: {label: 'Funded'},
-      },
-      {
         property: 'attendance_url',
         header: {label: 'Attendance URL'},
         cell: {format: this.formatUrl},
@@ -155,6 +148,10 @@ export class WorkshopSummaryReport extends React.Component {
       {
         property: 'num_registered',
         header: {label: 'Num Registered'},
+      },
+      {
+        property: 'num_teachers_attending_all_sessions',
+        header: {label: 'Num Attending'},
       },
       {
         property: 'num_scholarship_teachers_attending_all_sessions',
@@ -177,10 +174,6 @@ export class WorkshopSummaryReport extends React.Component {
       {
         property: 'workshop_name',
         header: {label: 'Workshop Name'},
-      },
-      {
-        property: 'on_map',
-        header: {label: 'Shown on Map'},
       },
       {
         property: 'workshop_id',
@@ -227,49 +220,6 @@ export class WorkshopSummaryReport extends React.Component {
       }
     );
 
-    if (this.props.permission.has(WorkshopAdmin)) {
-      columns.push(
-        {
-          property: `pay_period`,
-          header: {label: `Pay Period`},
-        },
-        {
-          property: `payment_type`,
-          header: {label: `Payment Type`},
-        },
-        {
-          property: `qualified`,
-          header: {label: `Qualified`},
-          cell: {format: this.formatYesNo},
-        },
-        {
-          property: `food_payment`,
-          header: {label: `Food Payment`},
-          cell: {format: this.formatCurrency},
-        },
-        {
-          property: `facilitator_payment`,
-          header: {label: `Facilitator Payment`},
-          cell: {format: this.formatCurrency},
-        },
-        {
-          property: `staffer_payment`,
-          header: {label: `Staffer Payment`},
-          cell: {format: this.formatCurrency},
-        },
-        {
-          property: `venue_payment`,
-          header: {label: `Venue Payment`},
-          cell: {format: this.formatCurrency},
-        },
-        {
-          property: `payment_total`,
-          header: {label: `Payment Total`},
-          cell: {format: this.formatCurrency},
-        }
-      );
-    }
-
     return columns;
   }
 
@@ -306,6 +256,4 @@ const styles = {
   link: {cursor: 'pointer'},
 };
 
-export default connect(state => ({
-  permission: state.workshopDashboard.permission,
-}))(WorkshopSummaryReport);
+export default WorkshopSummaryReport;

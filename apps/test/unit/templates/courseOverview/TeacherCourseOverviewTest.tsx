@@ -74,7 +74,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
-      scriptPath: '/s/csp1',
+      scriptPath: '/courses/csp/units/1',
     },
     {
       course_id: 30,
@@ -82,7 +82,7 @@ const COURSE_SUMMARY = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
-      scriptPath: '/s/csp2',
+      scriptPath: '/courses/csp/units/2',
     },
   ],
   show_assign_button: true,
@@ -212,17 +212,6 @@ describe('TeacherCourseOverview', () => {
     renderDefault('/sections/12/courses/csp-2024');
 
     expect(navigate).toHaveBeenCalledWith('../courses/csd-2024', {
-      replace: true,
-    });
-    expect(fetchSpy).not.toHaveBeenCalled();
-  });
-
-  it('redirects to unit if standalone unit', async () => {
-    getStore().dispatch(selectSection(11));
-
-    renderDefault('/sections/11/courses/csd-2024');
-
-    expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
       replace: true,
     });
     expect(fetchSpy).not.toHaveBeenCalled();

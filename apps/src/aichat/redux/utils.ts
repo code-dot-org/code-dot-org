@@ -46,19 +46,11 @@ export const findChangedProperties = (
   previous: AiCustomizations | undefined,
   next: AiCustomizations
 ) => {
+  const allKeys = getTypedKeys(next);
   if (!previous) {
-    return Object.keys(next);
+    return allKeys;
   }
-
-  const changedProperties: string[] = [];
-  Object.keys(next).forEach(key => {
-    const typedKey = key as keyof AiCustomizations;
-    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
-      changedProperties.push(key);
-    }
-  });
-
-  return changedProperties;
+  return allKeys.filter(key => haveDifferentValues(previous[key], next[key]));
 };
 
 // Used to decide whether to unpublish a project based on whether

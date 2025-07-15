@@ -28,18 +28,21 @@ import i18n from '@cdo/locale';
 describe('TeacherHomepageDrawer', () => {
   const schoolInfo: SchoolInfo = {
     country: 'US',
-    school_name: 'Test School',
+    school_name: '',
     school_zip: '12345',
-    school_id: '67890',
+    school_id: '1',
     school_type: 'public',
   };
 
   const mockSchoolInfo = {
-    schoolId: '67890',
+    schoolId: '1',
     country: 'US',
-    schoolName: 'Test School',
+    schoolName: '',
     schoolZip: '12345',
-    schoolsList: [],
+    schoolsList: [
+      {value: '1', text: 'School One'},
+      {value: '2', text: 'School Two'},
+    ],
     schoolsLoading: false,
     usIp: true,
     setSchoolId: jest.fn(),
@@ -49,9 +52,26 @@ describe('TeacherHomepageDrawer', () => {
     reset: jest.fn(),
   };
 
-  const schoolName = schoolInfo.school_name;
+  const mockSchoolInfoCustomSchool = {
+    schoolId: '',
+    country: 'US',
+    schoolName: 'Test School',
+    schoolZip: '12345',
+    schoolsList: [
+      {value: '1', text: 'School One'},
+      {value: '2', text: 'School Two'},
+    ],
+    schoolsLoading: false,
+    usIp: true,
+    setSchoolId: jest.fn(),
+    setCountry: jest.fn(),
+    setSchoolName: jest.fn(),
+    setSchoolZip: jest.fn(),
+    reset: jest.fn(),
+  };
 
   let sendEventSpy: jest.SpyInstance;
+  let schoolInfoSpy: jest.SpyInstance;
   let updateSchoolInfoSpy: jest.SpyInstance;
   let fetchSpy: jest.SpyInstance;
 
@@ -62,9 +82,7 @@ describe('TeacherHomepageDrawer', () => {
       .spyOn(schoolInfoFunc, 'updateSchoolInfo')
       .mockImplementation(jest.fn());
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    jest
-      .spyOn(useSchoolInfoModule, 'useSchoolInfo')
-      .mockReturnValue(mockSchoolInfo);
+    schoolInfoSpy = jest.spyOn(useSchoolInfoModule, 'useSchoolInfo');
   });
 
   afterEach(() => {
@@ -98,6 +116,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('renders the correct title, subtitle, and school data inputs when showSchoolInfoInterstitial is true', async () => {
     fetchSpySetup(true, false);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.censusHeading());
@@ -107,6 +126,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event when the secondary button is clicked', async () => {
     fetchSpySetup(true, false);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const secondaryButton = screen.getByText(i18n.dismiss());
@@ -116,6 +136,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event and calls updateSchoolInfo when the school data entry submit button is clicked', async () => {
     fetchSpySetup(true, false);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
@@ -126,6 +147,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('displays success message after school data entry submit button is clicked', async () => {
     fetchSpySetup(true, false);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.save());
@@ -136,6 +158,26 @@ describe('TeacherHomepageDrawer', () => {
 
   it('renders the correct title and subtitle when showSchoolInfoConfirmation is true', async () => {
     fetchSpySetup(false, true);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
+    const schoolName = 'School One';
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.reviewSchoolInfo());
+    screen.getByText(
+      `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
+        {schoolName}
+      )}`,
+      {
+        exact: true,
+        normalizer: getDefaultNormalizer({collapseWhitespace: false}),
+      }
+    );
+  });
+
+  it('displays a custom school name on the confirmation first page when the teacher has entered one', async () => {
+    fetchSpySetup(false, true);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfoCustomSchool);
+    const schoolName = 'Test School';
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText(i18n.reviewSchoolInfo());
@@ -152,6 +194,7 @@ describe('TeacherHomepageDrawer', () => {
 
   it('sends analytics event and displays the school data inputs after clicking the primary button when showSchoolInfoConfirmation is true', async () => {
     fetchSpySetup(false, true);
+    schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     const primaryButton = screen.getByText(i18n.imAtaNewSchool());

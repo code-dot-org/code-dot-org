@@ -7,7 +7,23 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import {AccountSettingsSectionUrlParams} from '@cdo/apps/accounts/accountUpdateConstants';
+import {GetUserInfoForWorkshopResponse} from '@cdo/apps/code-studio/pd/workshops/types';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
+
 import style from './userPassport.module.scss';
+
+export const isMissingUserInfo = (
+  userInfo: GetUserInfoForWorkshopResponse['userInfo']
+) => {
+  return (
+    !userInfo ||
+    !userInfo.first_name ||
+    !userInfo.last_name ||
+    !userInfo.email ||
+    (!userInfo.school_info?.school_name && !userInfo.school_info?.school_type)
+  );
+};
 
 const UserPassport: React.FunctionComponent<{
   displayName: string;
@@ -15,6 +31,7 @@ const UserPassport: React.FunctionComponent<{
   familyName?: string;
   email: string;
   schoolName?: string;
+  schoolType?: string;
   returnToHref: string;
   className?: string;
 }> = ({
@@ -23,9 +40,15 @@ const UserPassport: React.FunctionComponent<{
   familyName,
   email,
   schoolName,
+  schoolType,
   returnToHref,
   className = '',
 }) => {
+  const listedSchoolName =
+    schoolType === NonSchoolOptions.NO_SCHOOL_SETTING
+      ? 'Non-School Setting'
+      : schoolName;
+
   const RenderErrorMessage = (message: string) => {
     return (
       <span className={style.errorMessage}>
@@ -33,6 +56,21 @@ const UserPassport: React.FunctionComponent<{
         <BodyThreeText>{message}</BodyThreeText>
       </span>
     );
+  };
+
+  const buildEditLink = () => {
+    let editLink = `/users/edit?user_return_to=${encodeURIComponent(
+      returnToHref
+    )}`;
+
+    if (!givenName || !familyName) {
+      editLink += `&${AccountSettingsSectionUrlParams.AccountInformation}=true`;
+    }
+    if (!schoolName && !schoolType) {
+      editLink += `&${AccountSettingsSectionUrlParams.SchoolInformation}=true`;
+    }
+
+    return editLink;
   };
 
   return (
@@ -47,7 +85,7 @@ const UserPassport: React.FunctionComponent<{
           size="xs"
           iconLeft={{iconName: 'pencil', iconStyle: 'solid'}}
           className={style.editButton}
-          href={`/users/edit?user_return_to=${returnToHref}`}
+          href={buildEditLink()}
         />
       </span>
       <div className={style.userInfoContent}>
@@ -71,8 +109,8 @@ const UserPassport: React.FunctionComponent<{
           <OverlineThreeText className={style.userInfoLabel}>
             School
           </OverlineThreeText>
-          {schoolName ? (
-            <BodyThreeText>{schoolName}</BodyThreeText>
+          {schoolName || schoolType ? (
+            <BodyThreeText>{listedSchoolName}</BodyThreeText>
           ) : (
             RenderErrorMessage('Add your school')
           )}

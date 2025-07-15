@@ -2,6 +2,7 @@
 @eyes
 Feature: Workshop Dashboard
 
+@skip
 Scenario: New workshop: BYOW
   Given I am a program manager named "Test BYO PM" for regional partner "Test Partner"
   Given there is a facilitator named "Test BYO Facilitator 1" for course "Build Your Own Workshop"

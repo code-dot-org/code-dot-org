@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-25 23:10:36 UTC",
+    "serialized_at": "2025-07-02 16:12:00 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -388,6 +389,23 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Project: Genre Mash-Up",
+      "name": "Project: Genre Mash-Up",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 23,
+      "properties": {
+        "overview": "In this end-of-unit project, students select an existing song and remix it into a new genre using the structure of functions. They draw on skills from the entire unit to define musical sections, apply abstraction, and shift tone or style, just like real-world remix artists.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1176,6 +1194,61 @@
       "seeding_key": {
         "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7",
         "lesson.key": "lesson-22",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d9861093-3acd-4f74-870e-faa6a7e1bb92",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9861093-3acd-4f74-870e-faa6a7e1bb92",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c",
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "228b6b16-1270-4d0f-9ea4-5336a9300989",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "228b6b16-1270-4d0f-9ea4-5336a9300989",
+        "lesson.key": "Project: Genre Mash-Up",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -3414,6 +3487,92 @@
       "seeding_key": {
         "activity_section.key": "6da81283-a763-4bd7-b8ea-f3b3b3e3f5c4",
         "lesson_activity.key": "619f2862-83c5-4b54-853a-125fa98172b7"
+      }
+    },
+    {
+      "key": "4af3b831-e3fb-44d9-94de-b96881f95cc9",
+      "position": 1,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "4af3b831-e3fb-44d9-94de-b96881f95cc9",
+        "lesson_activity.key": "d9861093-3acd-4f74-870e-faa6a7e1bb92"
+      }
+    },
+    {
+      "key": "30416d94-6595-40c2-881d-be444cf1fe4e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "30416d94-6595-40c2-881d-be444cf1fe4e",
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e"
+      }
+    },
+    {
+      "key": "7152a13f-bd3c-400c-a15e-f36e65c9991a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Every song has a genre or two that it belongs to, and one exciting thing a musical artist can do is remix or re-record a song in a different genre. This is the focus of our next project - taking an existing song and remixing it to a different genre. For example: taking a pop song and making it sound like a heavy rock song, or taking a hip-hop song and making it sound like an indie song.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Real-World Examples:** Depending on how much time you have in class and the interests of your students, consider sharing some real-world examples of this:\n- [The Vitamin String Quartet](https://www.youtube.com/channel/UCC9h6FtIb58ZQCRPJ2ZQtKg) creates string quartet versions of pop music, which are often used in commercials or television shows.\n- The Australian radio program Triple J hosts a series called [Like a Version](https://www.youtube.com/playlist?list=PLFqO_oqoHHMznB9S1bAJa5hOp9_U9ud1h) where artists cover songs often mixing genres. Consider comparing the song [Love](https://www.youtube.com/watch?v=ox7RsX1Ee34) by Kendrick Lamar to the [cover by Chvrches](https://www.youtube.com/watch?v=msgimk3mV6g), which replaces the backing hip-hop drums and beats with synths and bass to create a poppy transformation. Or compare the song [Hide and Seek](https://www.youtube.com/watch?v=UYIAfiVGluk) by Imogen Heap to the [cover by Ball Park Music](https://www.youtube.com/watch?v=VdX8ZfMB02k), which replaces the electronic backing and vocals with a more indie sound using guitars and drums."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7152a13f-bd3c-400c-a15e-f36e65c9991a",
+        "lesson_activity.key": "dd0a8e18-6eac-4934-bbb9-29876c1f447e"
+      }
+    },
+    {
+      "key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674",
+      "position": 1,
+      "properties": {
+        "progression_name": "Examples"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "f4a53927-b72e-4240-bfd2-202db871ff96",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
+        "progression_name": "Genre Mashup"
+      },
+      "seeding_key": {
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb",
+        "lesson_activity.key": "ba16db8d-cc13-40ac-9e84-2b1ce3b7a09c"
+      }
+    },
+    {
+      "key": "427aba4c-887b-4c1a-89eb-29ae695028d9",
+      "position": 1,
+      "properties": {
+        "description": "**Share Out:** Have students share their work with their peers in some way. Their peers can provide feedback using \"I like...\" and \"What if...\" sentence stems to provide positive constructive feedback. Some options could be:\n- **Class Shareout:** Ask for volunteers and let them share their songs with the whole class, then choose 2-3 students to provide feedback\n- **Pair Networking:** Have students pair up and share their songs and provide feedback, then swap to a new pair\n- **Gallery Walk:** Have students leave their song open on their computer, then walk around and visit other songs. Students carry post-it notes with them and leave feedback on any students they visit."
+      },
+      "seeding_key": {
+        "activity_section.key": "427aba4c-887b-4c1a-89eb-29ae695028d9",
+        "lesson_activity.key": "228b6b16-1270-4d0f-9ea4-5336a9300989"
       }
     }
   ],
@@ -5841,6 +6000,72 @@
       "level_keys": [
         "test-music-lab-sequences-explore-song-choice-level_testing"
       ]
+    },
+    {
+      "chapter": 98,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Examples"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674"
+      },
+      "level_keys": [
+        "music-lab-genre-examples-choice"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96"
+      },
+      "level_keys": [
+        "music-lab-functions-project-prepare_v2"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Genre Mashup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb"
+      },
+      "level_keys": [
+        "music-lab-genre-project_v2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7007,6 +7232,42 @@
         "script.name": "csd-playground",
         "activity_section.key": "97343e94-13a8-4835-ad66-7cba4540a786"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-examples-choice",
+        "script_level.level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "d5d1a6db-d9dd-4e7a-93f2-4a32d0a00674"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-functions-project-prepare_v2",
+        "script_level.level_keys": [
+          "music-lab-functions-project-prepare_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f4a53927-b72e-4240-bfd2-202db871ff96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-genre-project_v2",
+        "script_level.level_keys": [
+          "music-lab-genre-project_v2"
+        ],
+        "lesson.key": "Project: Genre Mash-Up",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "61ece8f0-11d3-4957-b99e-f4977c8d3adb"
+      }
     }
   ],
   "resources": [
@@ -7136,6 +7397,31 @@
       }
     },
     {
+      "name": "Genre Mashup",
+      "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
+      "key": "genre_mashup",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
       "name": "Innovations in Computing",
       "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
       "key": "innovations_in_computing",
@@ -7171,6 +7457,18 @@
       },
       "seeding_key": {
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
+      "key": "project_-_genre_mash_up",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up"
       }
     },
     {
@@ -7319,6 +7617,24 @@
       "seeding_key": {
         "lesson.key": "Physical Changes",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "project_-_genre_mash_up"
       }
     },
     {
@@ -7717,6 +8033,20 @@
         "lesson.key": "Physical Changes",
         "framework.shortcode": "ngss",
         "standard.shortcode": "5-PS1-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
       }
     },
     {

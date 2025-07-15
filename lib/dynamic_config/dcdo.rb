@@ -66,6 +66,7 @@ class DCDOBase < DynamicConfigBase
       modularity: DCDO.get('modularity', true),
       # Remove this as part of Pegasus cleanup after the move to the CMS
       'aif-launch': DCDO.get('aif-launch', false),
+      'skills-dashboard': DCDO.get('skills-dashboard', false),
     }
   end
 end

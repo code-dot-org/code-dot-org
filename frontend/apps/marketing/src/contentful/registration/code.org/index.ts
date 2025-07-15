@@ -22,6 +22,9 @@ import ImageCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/videoCarousel';
+import ActionBlockCollection, {
+  ActionBlockCollectionContentfulComponentDefinition,
+} from '@/components/contentful/collections/actionBlockCollection';
 import LogoCollection, {
   LogoCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/logoCollection';
@@ -123,6 +126,18 @@ const contentfulRegistration = {
     },
     {component: Button, definition: ButtonContentfulComponentDefinition},
     {
+      component: ActionBlockCollection,
+      definition: ActionBlockCollectionContentfulComponentDefinition,
+    },
+    {
+      component: LogoCollection,
+      definition: LogoCollectionContentfulComponentDefinition,
+    },
+    {
+      component: PeopleCollection,
+      definition: PeopleCollectionContentfulComponentDefinition,
+    },
+    {
       component: Divider,
       definition: DividerContentfulComponentDefinition,
       options: {
@@ -186,14 +201,6 @@ const contentfulRegistration = {
     {
       component: Link,
       definition: LinkContentfulComponentDefinition,
-    },
-    {
-      component: LogoCollection,
-      definition: LogoCollectionContentfulComponentDefinition,
-    },
-    {
-      component: PeopleCollection,
-      definition: PeopleCollectionContentfulComponentDefinition,
     },
     {component: Overline, definition: OverlineContentfulComponentDefinition},
     {

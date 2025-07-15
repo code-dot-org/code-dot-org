@@ -6,16 +6,18 @@ fi
 
 set -e
 
-# On an adhoc, the mysql 'root' user's password got reset, so we need to
-# reassign it to the desired value.
-# TODO: figure out what we should do here for our build pipeline servers
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';";
+# Upgrade apt packages following the distro upgrade
+apt update;
+apt upgrade --yes;
 
 # Reinstall rmagick to resolve the error:
 #   This installation of RMagick was configured with ImageMagick 6.9.10 but
 #   ImageMagick 6.9.11-60 is in use.
-bundle exec gem uninstall rmagick;
-bundle install;
+# Bundle should be run as local rather than root user
+sudo -u ubuntu bundle exec gem uninstall rmagick;
+sudo -u ubuntu bundle install;
 
-# Finally, run a regular build to get everything working again!
-echo "now kick off a regular build with something like 'start-build'";
+# Run a regular build once we're done to get everything working again!
+echo "after the server reboots, kick off a regular build with something like 'start-build'";
+
+reboot;

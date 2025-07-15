@@ -121,15 +121,12 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     run_bundle_command('config set --local without', *without)
+    run_bundle_command('config set --local deployment \'true\'') if CDO.chef_managed
     run_bundle_command('install --quiet --jobs', nproc, *args)
   end
 
   def self.run_bundle_command(*args)
-    if CDO.bundler_use_sudo
-      sudo('bundle', *args)
-    else
-      system('bundle', *args)
-    end
+    system('bundle', *args)
   end
 
   def self.python_venv_install

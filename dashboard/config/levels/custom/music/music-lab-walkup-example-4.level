@@ -30,13 +30,17 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false
+              "movable": false,
+              "editable": false
             },
             {
               "type": "triggered_at_simple2",
               "id": "triggered_at_simple2",
               "x": 30,
               "y": 70,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
                 "trigger_start": "<field name=\"trigger_start\">immediately</field>"
@@ -45,6 +49,9 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -53,6 +60,9 @@
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -63,6 +73,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": ".qD6yLtQ]4T.U.l,r.LO",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -78,6 +91,9 @@
                     "block": {
                       "type": "play_sounds_together",
                       "id": "NfjIvl]lN=$T1t$b[n8H",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
                       "extraState": {
                         "disableNextConnection": false
                       },
@@ -86,6 +102,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "r+,9c6z({6`fQke6~wa?",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -96,6 +115,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "ns~jqx|ZDk/_|_sp9caO",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -106,6 +128,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": ",-tCL@z.U9RRV`UJOVB)",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -123,6 +148,9 @@
                         "block": {
                           "type": "play_sounds_together",
                           "id": "+|PhoB9i-Mr4T{U1+]ai",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -131,6 +159,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "Zl,bD+6Te]{?QAM!4Dw]",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -141,6 +172,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "%CM/]-X1~WDG[?m6elOV",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -151,6 +185,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "JlNPzig$}|}`qORgI{Po",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -161,6 +198,9 @@
                                           "block": {
                                             "type": "play_sound_at_current_location_simple2",
                                             "id": "2mU8Jl$KSBXGwL?mwtzy",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
                                             "extraState": {
                                               "disableNextConnection": false
                                             },
@@ -188,6 +228,9 @@
               "id": "}]b{q5YHqniEwR[Dv@6:",
               "x": 326,
               "y": 70,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger2</field>",
                 "trigger_start": "<field name=\"trigger_start\">next_beat</field>"
@@ -196,6 +239,9 @@
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "6jM;l,G?OSb5qo|9bwo/",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -206,6 +252,9 @@
                     "block": {
                       "type": "play_sounds_together",
                       "id": "8maQ73mrW4HCiPZF;;!_",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
                       "extraState": {
                         "disableNextConnection": false
                       },
@@ -214,6 +263,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "s4S03_/P1qFp8LT|.A[d",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -224,6 +276,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "]$Dv8zopU9eFXqa3YChP",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -239,6 +294,9 @@
                         "block": {
                           "type": "play_sounds_together",
                           "id": "E6h?u43WhR5}Cq11Y_1v",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -247,6 +305,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "1qgir_Cc]Q9?9REb8@pr",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -257,6 +318,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "mPtKHG(jvsw1[4wUtKy(",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -267,6 +331,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "Gdfj{~mmE$gvg1@Q)@dm",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -284,6 +351,9 @@
                             "block": {
                               "type": "play_sounds_together",
                               "id": "KwTw~J}PihZKb@{dEy_K",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -292,6 +362,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "Uyz[C/r^BYPmWhy_9D1R",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -302,6 +375,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": ";Fc)M5}weyhH2[BmG[i,",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -327,6 +403,9 @@
               "id": "idN[TI%H7X5DuJ`)[F%2",
               "x": 622,
               "y": 70,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger3</field>",
                 "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
@@ -335,6 +414,9 @@
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "D_9?l@1d`[)T~(pjJXV/",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -345,6 +427,9 @@
                     "block": {
                       "type": "play_sounds_together",
                       "id": "#9iLCc*I1bD,mF42v@[V",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
                       "extraState": {
                         "disableNextConnection": false
                       },
@@ -353,6 +438,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "hCj/9#TA!KYfWu|6-j,^",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -363,6 +451,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "Y.tfx4+{ku}cYHB8JrtY",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -373,6 +464,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "K8!M-.JWFQB6dk^j{mE:",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -390,6 +484,9 @@
                         "block": {
                           "type": "play_sounds_together",
                           "id": "|%m~778$1ZnHZP%HS),D",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -398,6 +495,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "k#YCS4Z+}g@EuGd`vnB_",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -408,6 +508,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "`Nd?-Ai9vOJlu[w//e^E",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -418,6 +521,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "`7y%JQf0|!!ao/hzMHJh",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -452,7 +558,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:41:37.958+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-3\\\"\"],\"cloned_from\":\"music-lab-walkup-example-3\"},{\"changed_at\":\"2025-06-03 22:41:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:43:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 22:03:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:05:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:07:13 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:08:18 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:17:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:21:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:26:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:41:37.958+00:00\",\"changed\":[\"cloned from \\\"music-lab-walkup-example-3\\\"\"],\"cloned_from\":\"music-lab-walkup-example-3\"},{\"changed_at\":\"2025-06-03 22:41:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:43:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 22:03:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:05:47 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:07:13 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:08:18 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:17:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:21:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:26:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:34:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

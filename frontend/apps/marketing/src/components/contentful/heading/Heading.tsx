@@ -1,40 +1,33 @@
-import classNames from 'classnames';
-import React, {ReactNode} from 'react';
-
-import {
-  default as Typography,
-  VisualAppearance,
-  SemanticTag,
-} from '@code-dot-org/component-library/typography';
+import Typography from '@mui/material/Typography';
+import {ReactNode} from 'react';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
 
-import moduleStyles from './heading.module.scss';
+type HeadingSemanticTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-type HeadingVisualAppearance = Extract<
-  VisualAppearance,
+// Existing Contentful Heading visualAppearance values that
+// were set before using the MUI Typography component.
+type HeadingVisualAppearance =
   | 'heading-xxl'
   | 'heading-xl'
   | 'heading-lg'
   | 'heading-md'
   | 'heading-sm'
-  | 'heading-xs'
->;
-type HeadingSemanticTag = Extract<
-  SemanticTag,
-  'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
->;
+  | 'heading-xs';
 
-type HeadingProps = RemoveMarginBottomProps & {
+export type HeadingProps = RemoveMarginBottomProps & {
   /** Heading content */
   children: ReactNode;
   /** Heading visual appearance */
   visualAppearance: HeadingVisualAppearance;
-  /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
+  /** ClassName passed by Contentful to apply styles
+   * that are set through Contentful native editor */
   className?: string;
 };
 
-const headingVisualAppearanceToSemanticTagMap: Record<
+// Maps Contentful Heading visualAppearance values with
+// MUI Typography `component` and `variant` prop values.
+const visualAppearanceToSemanticTagMap: Record<
   HeadingVisualAppearance,
   HeadingSemanticTag
 > = {
@@ -53,13 +46,10 @@ const Heading: React.FunctionComponent<HeadingProps> = ({
   className,
 }) => (
   <Typography
-    semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
-    className={classNames(
-      moduleStyles.heading,
-      removeMarginBottom && moduleStyles['heading-removeMarginBottom'],
-      className,
-    )}
-    visualAppearance={visualAppearance}
+    className={className}
+    component={visualAppearanceToSemanticTagMap[visualAppearance]}
+    variant={visualAppearanceToSemanticTagMap[visualAppearance]}
+    gutterBottom={!removeMarginBottom}
   >
     {children}
   </Typography>

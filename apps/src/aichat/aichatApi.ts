@@ -11,7 +11,7 @@ import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
   AichatContext,
-  AichatModelCustomizations,
+  ModelParameters,
   ChatEvent,
   DetectToxicityResponse,
   FeedbackValue,
@@ -51,22 +51,15 @@ interface UserHasAichatAccessResponse {
 export async function postAichatCompletionMessage(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
-  aiCustomizations: AiCustomizations,
+  modelParameters: ModelParameters,
   aichatContext: AichatContext,
   // Configurable for testing.
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
-  const aichatModelCustomizations: AichatModelCustomizations = {
-    selectedModelId: aiCustomizations.selectedModelId,
-    temperature: aiCustomizations.temperature,
-    retrievalContexts: aiCustomizations.retrievalContexts,
-    systemPrompt: aiCustomizations.systemPrompt,
-  };
-
   return postChatCompletionAsyncPolling(
     newMessage,
     storedMessages,
-    aichatModelCustomizations,
+    modelParameters,
     aichatContext,
     maxPollingTimeMs
   );
@@ -182,14 +175,14 @@ export interface GetChatRequestResponse {
 async function postChatCompletionAsyncPolling(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
-  aichatModelCustomizations: AichatModelCustomizations,
+  modelParameters: ModelParameters,
   aichatContext: AichatContext,
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
     storedMessages,
-    aichatModelCustomizations,
+    aichatModelCustomizations: modelParameters,
     aichatContext,
   };
 
