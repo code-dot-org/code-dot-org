@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import * as sectionProgressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import sectionProgress, {
@@ -36,7 +36,7 @@ describe('SectionProgressV2', () => {
     });
 
     store = createStore(5, 5);
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 99));
     store.dispatch(finishLoadingProgress());
     jest
       .spyOn(sectionProgressLoader, 'loadUnitProgress')
