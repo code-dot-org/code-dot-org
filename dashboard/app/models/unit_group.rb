@@ -133,6 +133,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
+    unit_group.update_unit_prefixes(hash['unit_prefixes']) if hash['unit_prefixes']
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
@@ -173,6 +174,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
+        unit_prefixes: default_unit_group_units.map(&:unit_prefix),
         original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
@@ -265,6 +267,13 @@ class UnitGroup < ApplicationRecord
     end
     # Reload model so that default_unit_group_units is up to date
     transaction {reload}
+  end
+
+  def update_unit_prefixes(unit_prefixes)
+    return if unit_prefixes.nil?
+    default_unit_group_units.each do |unit_group_unit|
+      unit_group_unit.update!(unit_prefix: unit_prefixes[unit_group_unit.position - 1])
+    end
   end
 
   def self.all_courses
