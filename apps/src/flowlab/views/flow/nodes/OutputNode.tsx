@@ -13,7 +13,7 @@ function OutputNode() {
   const text = outputTexts.map((outputText, index) => (
     <SafeMarkdown
       key={index}
-      openExternalLinksInNewTab
+      openLinksInNewTab
       markdown={outputText}
       className="outputnode-markdown"
     />

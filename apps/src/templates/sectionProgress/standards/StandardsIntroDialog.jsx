@@ -56,7 +56,7 @@ class StandardsIntroDialog extends Component {
         <h2>{i18n.progressOnCSTAStandards()}</h2>
         <div style={styles.description}>
           <SafeMarkdown
-            openExternalLinksInNewTab={true}
+            openLinksInNewTab={true}
             markdown={i18n.progressOnCSTAStandardsDescription({
               cstaLink: cstaStandardsURL,
             })}

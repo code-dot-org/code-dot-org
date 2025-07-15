@@ -176,14 +176,14 @@ class UnitOverviewHeader extends Component {
             {viewAs === ViewType.Instructor && (
               <SafeMarkdown
                 className={styles.description}
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={unitDescription}
               />
             )}
             {viewAs === ViewType.Participant && (
               <SafeMarkdown
                 className={styles.description}
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={unitStudentDescription}
               />
             )}

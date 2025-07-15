@@ -90,7 +90,7 @@ class DataLibraryPane extends React.Component {
       <div className={style.container}>
         <SafeMarkdown
           markdown={msg.dataLibraryDescription()}
-          openExternalLinksInNewTab
+          openLinksInNewTab
         />
         <SearchBar
           placeholderText={msg.dataLibrarySearchPlacholder()}

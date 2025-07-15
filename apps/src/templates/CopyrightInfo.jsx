@@ -28,7 +28,7 @@ const CopyrightInfo = () => {
           markdown={i18n.licenseInformation({
             link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/',
           })}
-          openExternalLinksInNewTab
+          openLinksInNewTab
         />
       </div>
       <SafeMarkdown

@@ -1,15 +1,14 @@
 /**
- * Open external links in a new tab.
+ * Open links in a new tab.
  */
-export default function externalLinks(options = {}) {
+export default function newTabLinks(options = {}) {
   const Parser = this.Parser;
   const tokenizers = Parser.prototype.inlineTokenizers;
   const original = tokenizers.link;
-  const all = options.links === 'all';
 
   tokenizers.link = function (eat, value, silent) {
     const link = original.call(this, eat, value, silent);
-    if (link && link.type === 'link' && (all || isExternalLink(link.url))) {
+    if (link && link.type === 'link') {
       link.data = link.data || {};
       link.data.hProperties = link.data.hProperties || {};
 
@@ -21,15 +20,4 @@ export default function externalLinks(options = {}) {
     return link;
   };
   tokenizers.link.locator = original.locator;
-}
-
-export function isExternalLink(url) {
-  return !/https?:\/\/([^.]+\.)*code.org(:[0-9]+)?\//.test(fullyQualified(url));
-}
-
-let a;
-function fullyQualified(path) {
-  a = a || document.createElement('a');
-  a.href = path;
-  return a.href;
 }

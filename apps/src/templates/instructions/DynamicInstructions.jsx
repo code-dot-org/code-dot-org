@@ -107,7 +107,7 @@ class DynamicInstructions extends React.Component {
                 >
                   <SafeMarkdown
                     markdown={this.props.dynamicInstructions[key]}
-                    openExternalLinksInNewTab={true}
+                    openLinksInNewTab={true}
                   />
                 </div>
               </div>

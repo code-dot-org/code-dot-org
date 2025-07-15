@@ -124,7 +124,7 @@ export class ClickableTextWrapper extends React.Component {
 export default class EnhancedSafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
-    openExternalLinksInNewTab: PropTypes.bool,
+    openLinksInNewTab: PropTypes.bool,
     expandableImages: PropTypes.bool,
     className: PropTypes.string,
     handleInstructionsTextClick: PropTypes.func,
@@ -137,13 +137,13 @@ export default class EnhancedSafeMarkdown extends React.Component {
     // self-contained functionality.
     //
     // Right now, that's just expandable images and clickable text. But we
-    // could (should?) take the "open external links" functionality out of
+    // could (should?) take the "open links in new tab" functionality out of
     // SafeMarkdown and add it here; I expect we almost certainly will put the
     // "render blockly blocks" functionality in here, too.
     let result = (
       <SafeMarkdown
         markdown={this.props.markdown}
-        openExternalLinksInNewTab={this.props.openExternalLinksInNewTab}
+        openLinksInNewTab={this.props.openLinksInNewTab}
         className={this.props.className}
       />
     );

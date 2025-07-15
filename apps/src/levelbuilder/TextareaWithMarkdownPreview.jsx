@@ -47,7 +47,7 @@ export default class TextareaWithMarkdownPreview extends React.Component {
             <div style={{marginBottom: 5}}>Preview:</div>
             <div style={styles.preview}>
               <EnhancedSafeMarkdown
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={this.props.markdown}
                 expandableImages
               />

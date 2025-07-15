@@ -21,7 +21,7 @@ export default class LessonGroupInfo extends Component {
             <h4 style={styles.subTitle}>{i18n.description()}</h4>
             <div style={styles.description}>
               <SafeMarkdown
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={this.props.description}
               />
             </div>
@@ -32,7 +32,7 @@ export default class LessonGroupInfo extends Component {
             <h4 style={styles.subTitle}>{i18n.bigQuestions()}</h4>
             <div style={styles.description}>
               <SafeMarkdown
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={this.props.bigQuestions}
               />
             </div>

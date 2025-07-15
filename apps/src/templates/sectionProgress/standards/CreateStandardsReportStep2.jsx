@@ -50,7 +50,7 @@ class CreateStandardsReportStep2 extends Component {
           <li>
             {showLinkToStandardsOverview && (
               <SafeMarkdown
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={i18n.createStandardsReportSuggestion2Link({
                   standardsOverviewLink: `http://curriculum.code.org/csf-${versionYear.slice(
                     -2
@@ -66,7 +66,7 @@ class CreateStandardsReportStep2 extends Component {
           </li>
           <li>
             <SafeMarkdown
-              openExternalLinksInNewTab={true}
+              openLinksInNewTab={true}
               markdown={i18n.createStandardsReportSuggestion4({
                 projectsLink: teacherDashboardUrl(
                   this.props.sectionId,

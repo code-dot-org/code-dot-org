@@ -40,7 +40,7 @@ class StandardsView extends Component {
         <div id="test-how-to-standards">
           <h3>{i18n.standardsHowTo()}</h3>
           <SafeMarkdown
-            openExternalLinksInNewTab={true}
+            openLinksInNewTab={true}
             markdown={i18n.standardsHowToDetails({
               courseName: scriptFriendlyName,
               courseLink: linkToOverview,

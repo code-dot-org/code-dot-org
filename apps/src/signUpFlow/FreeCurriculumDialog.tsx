@@ -36,7 +36,7 @@ const FreeCurriculumDialog: React.FunctionComponent<
       <div className={style.contentWrapper}>
         <SafeMarkdown
           className={style.markdownDesc}
-          openExternalLinksInNewTab={true}
+          openLinksInNewTab={true}
           markdown={locale.our_commitment_to_free_resources({
             creativeCommonsLink:
               'https://creativecommons.org/licenses/by-nc-sa/4.0/',

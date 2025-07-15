@@ -8,7 +8,7 @@ export default function SupportArticleMarkdown() {
   return (
     <SafeMarkdown
       markdown={weblabI18n.troubleshootingSupport({url: SUPPORT_ARTICLE_URL})}
-      openExternalLinksInNewTab
+      openLinksInNewTab
     />
   );
 }

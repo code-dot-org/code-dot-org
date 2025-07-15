@@ -79,7 +79,7 @@ const BulkSetModal: React.FC<BulkSetModalProps> = ({
         </FormGroup>
 
         <SafeMarkdown
-          openExternalLinksInNewTab={true}
+          openLinksInNewTab={true}
           markdown={i18n.studentUsStateUpdatesModal_desc({
             docURL: CapLinks.PARENTAL_CONSENT_GUIDE_URL,
           })}

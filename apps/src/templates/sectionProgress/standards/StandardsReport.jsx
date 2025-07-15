@@ -142,7 +142,7 @@ function StandardsReport({
                 {i18n.standardsHowToForPrint()}
               </h2>
               <SafeMarkdown
-                openExternalLinksInNewTab={true}
+                openLinksInNewTab={true}
                 markdown={i18n.standardsHowToDetailsForPrint({
                   courseName: scriptFriendlyName,
                   courseLink: linkToOverview,

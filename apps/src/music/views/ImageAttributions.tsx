@@ -69,7 +69,7 @@ const ImageAttributions: React.FunctionComponent<ImageAttributionsProps> = ({
       {attributions.map((attribution, index) => (
         <div key={index}>
           <SafeMarkdown
-            openExternalLinksInNewTab
+            openLinksInNewTab
             markdown={getMarkdown(attribution)}
             className={moduleStyles.markdown}
           />

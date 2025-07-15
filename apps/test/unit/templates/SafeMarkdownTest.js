@@ -207,7 +207,7 @@ describe('SafeMarkdown', () => {
   it('will open links in a new tab if specified', () => {
     const externalLink = shallow(
       <SafeMarkdown
-        openExternalLinksInNewTab
+        openLinksInNewTab
         markdown="[external link](example.com)"
       />
     );
@@ -225,7 +225,7 @@ describe('SafeMarkdown', () => {
 
     const internalLink = shallow(
       <SafeMarkdown
-        openExternalLinksInNewTab
+        openLinksInNewTab
         markdown="[internal link](code.org)"
       />
     );
