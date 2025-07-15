@@ -1003,11 +1003,13 @@ class User < ApplicationRecord
   end
 
   def assigned_script?(script)
+    # TODO TEACH-1548
     section_scripts.include?(script) || section_courses.include?(script&.unit_group)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
+    # TODO TEACH-1548
     visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
 

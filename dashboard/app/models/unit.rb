@@ -682,6 +682,7 @@ class Unit < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the unit overview page the user should be redirected to (if any).
   def redirect_to_unit_url(user, locale: nil)
+    # TODO TEACH-1548
     # No redirect unless unit belongs to a family.
     return nil unless family_name
     # Only redirect participants.
@@ -1086,6 +1087,7 @@ class Unit < ApplicationRecord
   # When given an object from the unit cache, returns whether it has other
   # versions, without touching the database.
   def has_other_versions?
+    # TODO TEACH-1548
     get_course_version&.course_offering&.course_versions&.many?
   end
 
@@ -1963,28 +1965,33 @@ class Unit < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
+    # TODO TEACH-1548
     published_state || unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   # If a script is in a unit group, use that unit group's instruction type. If not, use the units's instruction type
   # If both are null, the unit should be teacher led
   def get_instruction_type
+    # TODO TEACH-1548
     unit_group&.instruction_type || instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
   end
 
   # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
   # If both are null, the unit should be instructed by teacher
   def get_instructor_audience
+    # TODO TEACH-1548
     unit_group&.instructor_audience || instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
   end
 
   # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
   # If both are null, the unit should be participated in by students
   def get_participant_audience
+    # TODO TEACH-1548
     unit_group&.participant_audience || participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
+  # TODO TEACH-1548
   def get_pilot_experiment
     pilot_experiment || unit_group&.pilot_experiment
   end
