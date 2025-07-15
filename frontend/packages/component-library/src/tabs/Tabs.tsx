@@ -123,8 +123,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               onClick={handleChange}
               size={size}
               onClose={handleTabClose}
-              tabPanelId={`${nameStripped}-panel-${tab.value}`}
-              tabButtonId={`${nameStripped}-tab-${tab.value}`}
+              tabPanelId={`${nameStripped}-panel-${tab.value.replace(/\s+/g, '-')}`}
+              tabButtonId={`${nameStripped}-tab-${tab.value.replace(/\s+/g, '-')}`}
             />
           ))}
         </ul>
