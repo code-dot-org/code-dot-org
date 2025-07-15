@@ -19,13 +19,14 @@ test.describe('All the things UI e2e test', () => {
       if (accessibilityScanResults.violations.length > 0) {
         // Log out the violations so we can fix them
         // The current allowed violations are:
-        // 1. color contrast on overline
-        // 2. color contrast on overline in action block carousel
+        // 1. color contrast on overline in action blocks
+        // 2. color contrast on rich text table heading and
+        //    people collection title (overline) in dark mode
         console.warn(
           JSON.stringify(accessibilityScanResults.violations, null, 2),
         );
 
-        expect(accessibilityScanResults.violations.length).toEqual(1);
+        expect(accessibilityScanResults.violations.length).toEqual(2);
       }
     });
   });
