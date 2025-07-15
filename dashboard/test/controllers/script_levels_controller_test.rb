@@ -11,7 +11,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    seed_deprecated_unit_fixtures
+    unit_names = [
+      Unit::HOC_NAME,
+      Unit::FLAPPY_NAME,
+      Unit::FROZEN_NAME,
+      Unit::PLAYLAB_NAME,
+      'ECSPD'
+    ]
+    seed_deprecated_unit_fixtures(unit_names: unit_names)
 
     @student = create :student
     @young_student = create :young_student
