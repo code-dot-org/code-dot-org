@@ -95,10 +95,8 @@ class ScriptsController < ApplicationController
       @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
 
-    # TODO TEACH-1548 - remove course_id if it is unused.
     additional_script_data = {
       course_name: @course&.name,
-      course_id: @course&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
       section: @section,
