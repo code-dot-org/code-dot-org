@@ -107,11 +107,9 @@ class CoursesController < ApplicationController
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
     end
 
-    # Fix this weird type thing
-    if @unit_group.numbered_units == 'custom'
+    if @unit_group.numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
       @unit_group.default_unit_group_units.each do |ugu|
         ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position-1])
-        puts ugu.inspect
       end
     end
 

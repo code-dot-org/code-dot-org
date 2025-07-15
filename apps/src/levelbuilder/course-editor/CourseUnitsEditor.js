@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
+import {NumberedUnitsType} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
 export default class CourseUnitsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    numberedUnits: PropTypes.string.isRequired,
-    initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string).isRequired,
+    numberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)).isRequired,
+    initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitPrefixes: PropTypes.arrayOf(PropTypes.string).isRequired,
     updateUnitPrefixes: PropTypes.func.isRequired,
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -30,13 +32,19 @@ export default class CourseUnitsEditor extends Component {
   handlePrefixChange = (index, value) => {
     const newPrefixes = [...this.props.unitPrefixes];
     newPrefixes[index] = value;
-    console.log(newPrefixes[index]);
     this.props.updateUnitPrefixes(newPrefixes);
+  };
+
+  getDisplayValue = index => {
+    if (this.props.numberedUnits === NumberedUnitsType.custom) {
+      return this.props.unitPrefixes[index] || '';
+    }
+    // For auto or any other case, show index + 1
+    return (index + 1).toString();
   };
 
   render() {
     const {unitNames} = this.props;
-    console.log(this.props.unitPrefixes);
     return (
       <div>
         {this.props.unitsInCourse.concat('').map((selectedUnit, index) => (
@@ -44,7 +52,7 @@ export default class CourseUnitsEditor extends Component {
             key={index}
             style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}
           >
-            {this.props.numberedUnits !== null && (
+            {this.props.numberedUnits !== NumberedUnitsType.none && (
               <>
                 <span style={{marginRight: '8px', marginBottom: '10px'}}>
                   Unit
@@ -58,9 +66,11 @@ export default class CourseUnitsEditor extends Component {
                     padding: '4px',
                     textAlign: 'center',
                   }}
-                  defaultValue={this.props.unitPrefixes[index]}
+                  value={this.getDisplayValue(index)}
                   onChange={e => this.handlePrefixChange(index, e.target.value)}
-                  disabled={this.props.numberedUnits === 'auto'}
+                  disabled={
+                    this.props.numberedUnits !== NumberedUnitsType.custom
+                  }
                 />
               </>
             )}

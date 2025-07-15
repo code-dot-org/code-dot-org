@@ -9,6 +9,7 @@ import {
   InstructionType,
   InstructorAudience,
   ParticipantAudience,
+  NumberedUnitsType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import AnnouncementsEditor from '@cdo/apps/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSection';
@@ -48,7 +49,8 @@ class CourseEditor extends Component {
     initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
-    initialNumberedUnits: PropTypes.oneOf([null, 'auto', 'custom']).isRequired,
+    initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType))
+      .isRequired,
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -117,7 +119,6 @@ class CourseEditor extends Component {
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
       has_verified_resources: this.state.hasVerifiedResources,
-      numbered_units: this.state.numberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
@@ -126,8 +127,16 @@ class CourseEditor extends Component {
       instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse,
-      unit_prefixes: this.state.unitPrefixes,
     };
+
+    if (this.state.numberedUnits === NumberedUnitsType.none) {
+      dataToSave.numbered_units = null;
+    } else {
+      dataToSave.numbered_units = this.state.numberedUnits;
+      if (this.state.numberedUnits === NumberedUnitsType.custom) {
+        dataToSave.unit_prefixes = this.state.unitPrefixes;
+      }
+    }
 
     if (this.props.teacherResources) {
       dataToSave.resourceIds = this.props.teacherResources.map(r => r.id);
@@ -345,9 +354,9 @@ class CourseEditor extends Component {
               value={numberedUnits}
               onChange={e => this.setState({numberedUnits: e.target.value})}
             >
-              <option value="none">None</option>
-              <option value="auto">Automatic</option>
-              <option value="custom">Custom</option>
+              <option value={NumberedUnitsType.none}>None</option>
+              <option value={NumberedUnitsType.auto}>Automatic</option>
+              <option value={NumberedUnitsType.custom}>Custom</option>
             </select>
           </label>
         </CollapsibleEditorSection>
