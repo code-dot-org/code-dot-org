@@ -136,6 +136,8 @@ class AichatRequestsController < ApplicationController
 
   # Reassign model customizations from aichatModelCustomizations to modelParameters
   # for compatibility with the existing API.
+  # Note that this is only required for clients with stale JavaScript code using the
+  # old parameter name. This should be removed in the future.
   private def reassign_model_customizations
     if params[:aichatModelCustomizations].present?
       params[:modelParameters] = params[:aichatModelCustomizations]

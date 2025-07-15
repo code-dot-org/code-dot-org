@@ -167,6 +167,8 @@ class AichatRequestsControllerTest < ActionController::TestCase
     assert_response :too_many_requests
   end
 
+  # Note that this is only required for clients with stale JavaScript code using the
+  # old parameter name. This should be removed in the future.
   test 'start_chat_completion reassigns aichatModelCustomizations param to modelParameters' do
     AichatRequestChatCompletionJob.stubs(:perform_later)
     sign_in(@authorized_teacher1)
