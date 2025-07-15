@@ -32,6 +32,10 @@ export type Section =
   | 'Rich Text'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
+  | 'Simple List'
+  | 'Skinny Banner'
+  | 'Snapshot'
+  | 'Testimonial'
   | 'Text Link'
   | 'Video'
   | 'Video Carousel';
