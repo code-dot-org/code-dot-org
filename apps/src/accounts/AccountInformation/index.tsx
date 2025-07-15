@@ -72,6 +72,9 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   );
   const [age, setAge] = useState(userAge ?? '');
   const [usState, setUsState] = useState(userProperties?.us_state ?? '');
+  const [educatorRole, setEducatorRole] = useState(
+    userProperties?.educator_role ?? ''
+  );
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [currentPassword, setCurrentPassword] = useState('');
@@ -135,6 +138,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       facilitator_info_attributes: isFacilitator
         ? {bio: facilitatorBio}
         : undefined,
+      educator_role: !isStudent && educatorRole ? educatorRole : undefined,
     };
     const response = await fetch('/users', {
       method: 'PUT',
@@ -344,6 +348,23 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               maxLength={20}
               minLength={5}
               errorMessage={getError('username')}
+            />
+          )}
+
+          {/* educator_role */}
+          {!isStudent && (
+            <SimpleDropdown
+              id="educator_role"
+              className={classNames(styles.dropdownContainer)}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={e => {
+                setEducatorRole(e.target.value);
+              }}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+              errorMessage={getError('educator_role')}
             />
           )}
 

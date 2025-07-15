@@ -138,6 +138,9 @@ describe('AccountInformation', () => {
     fireEvent.change(screen.getByLabelText(/last name/i), {
       target: {value: 'Doe'},
     });
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: 'classroom_teacher'},
+    });
     fireEvent.change(screen.getByLabelText(/^password$/i), {
       target: {value: 'newpassword'},
     });
@@ -166,6 +169,7 @@ describe('AccountInformation', () => {
         username: 'janedoe',
         given_name: 'Jane',
         family_name: 'Doe',
+        educator_role: 'classroom_teacher',
         password: 'newpassword',
         password_confirmation: 'newpassword',
         current_password: 'currentpassword',
