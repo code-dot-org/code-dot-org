@@ -187,6 +187,7 @@
   "aiTrainedModelsDeleteModelMessage": "This model will be permanently deleted, and you will not be able to use this model in any App Lab projects.",
   "aiTrainedModelsDeleteModelFailed": "Model with id {id} could not be deleted.",
   "aiTutor": "AI Tutor",
+  "aiTutor2": "AI Tutor 2",
   "aiUserMessagePlaceholder": "Add a chat message...",
   "aiWarningModalHeader": "Remember to chat responsibly!",
   "aiWarningModalInappropriateFlagged": "Inappropriate messages will be flagged by our content moderation policy.",

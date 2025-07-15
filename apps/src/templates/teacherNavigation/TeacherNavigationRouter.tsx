@@ -15,6 +15,7 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import TutorTab2 from '@cdo/apps/aiTutor2/views/teacherDashboard/TutorTab';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -346,6 +347,18 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 element={<SkillsDashboard />}
               />
             )}
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.aiTutor2}
+              element={
+                <ElementOrEmptyPage
+                  showNoStudents={studentCount === 0}
+                  showNoCurriculumAssigned={false}
+                  element={applyV1TeacherDashboardWidth(
+                    <TutorTab2 sectionId={sectionId || 0} />
+                  )}
+                />
+              }
+            />
           </Route>
         </Route>
       </Route>

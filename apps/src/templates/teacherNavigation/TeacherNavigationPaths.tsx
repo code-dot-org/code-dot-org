@@ -15,6 +15,7 @@ export const TEACHER_NAVIGATION_PATHS = {
   loginInfo: 'login_info',
   standardsReport: 'standards_report',
   aiTutorChatMessages: 'ai_tutor',
+  aiTutor2: 'ai_tutor2',
   lessonMaterials: 'materials',
   calendar: 'calendar',
   courseOverview: 'courses/:courseVersionName?',
@@ -108,6 +109,12 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     // this is not part of the navigation sidebar so it doesn't need a label or icon
     label: i18n.aiTutor(),
     icon: 'messages',
+  },
+  aiTutor2: {
+    url: TEACHER_NAVIGATION_PATHS.aiTutor2,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutor2),
+    label: i18n.aiTutor2(),
+    icon: 'ai-bot-solid',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
