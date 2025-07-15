@@ -356,6 +356,11 @@ const marketingPaths = {
   "/hourofcode/overview": true,
   "/hourofcode/mc": true,
   "/about/InformationSecurityPolicy.pdf": true,
+  "/promote*": true,
+  "/curriculum*": true,
+  "/about/it": true,
+  "/events": true,
+  "/events/conferences": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';
