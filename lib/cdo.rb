@@ -127,6 +127,10 @@ module Cdo
       hostedzone_id('codeprojects.org')
     end
 
+    def preview_codeprojects_hostedzone_id
+      hostedzone_id('preview.codeprojects.org')
+    end
+
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||

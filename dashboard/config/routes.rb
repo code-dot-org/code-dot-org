@@ -1369,6 +1369,6 @@ Dashboard::Application.routes.draw do
   end
 
   constraints host: CDO.preview_codeprojects_hostname do
-    root to: 'preview#show'
+    get '/', to: 'preview#show'
   end
 end
