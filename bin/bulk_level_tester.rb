@@ -7,7 +7,7 @@ def main
   rows = CSV.read('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1.csv', headers: true)
   additional_headers = ['File count', 'Flagged input?', 'Response', 'Flagged output?', 'Response time (ms)']
 
-  CSV.open('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1 output.csv', 'w') do |output_csv|
+  CSV.open('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1 output (Flash Lite).csv', 'w') do |output_csv|
     output_csv << (rows.headers + additional_headers)
 
     rows.each do |row|
@@ -29,8 +29,9 @@ def main
 
       user = User.find_by(email: 'ben+levelbuilder@code.org')
 
+      # to do: get temperature from level
       model_customizations = {
-        'selectedModelId' => 'gpt-4o-mini',
+        'selectedModelId' => 'gemini-2.0-flash-lite',
         'temperature' => 0.5,
         'retrievalContexts' => [],
         'systemPrompt' => ''
