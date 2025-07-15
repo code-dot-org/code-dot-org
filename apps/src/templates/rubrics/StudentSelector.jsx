@@ -180,7 +180,7 @@ const STATUS_BUBBLE_TEXT = {
 };
 
 function StudentProgressStatus({status}) {
-  if (status === null || status === undefined) {
+  if (!status) {
     return null;
   }
 
