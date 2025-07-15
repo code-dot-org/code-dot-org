@@ -58,6 +58,7 @@ class ActivitiesController < ApplicationController
       share_failure = nil
       # True if STUDIO game. The other open-ended 'game's geared for young users
       # are channel-backed and filtered in loadProjectBackedLevel_ in project.js.
+      # Note that STUDIO games also include Star Wars (droplet) which is not a Blockly lab.
       if @level.game.sharing_filtered?
         project_type = 'playlab'
         begin

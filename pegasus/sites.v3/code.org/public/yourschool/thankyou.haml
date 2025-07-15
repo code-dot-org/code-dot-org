@@ -10,6 +10,7 @@ social:
 
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/yourschool/thankyou.js')}
 
 %h1 Thank you for telling us about your school
 
@@ -17,3 +18,4 @@ Tell your friends and coworkers and encourage them to join too!
 = view :share_buttons, facebook:facebook, twitter:twitter
 
 %h2 Here is what you can do to help expand computer science in your school or district.
+#thankyou
