@@ -609,6 +609,7 @@ h2.studentName {
 
 .evidenceLevelLabel {
   @include main-font-semi-bold;
+  color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
@@ -1113,9 +1114,12 @@ p.evidenceLevelHeaderText {
 .evidenceLevelSetHorizontalV2 {
   display: flex;
   flex-direction: row;
-  height: 100px;
   width: 100%;
   gap: 8px;
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .evidenceLevelOptionV2 {
