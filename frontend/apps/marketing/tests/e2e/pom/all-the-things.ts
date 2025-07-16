@@ -65,6 +65,6 @@ export class AllTheThingsPage extends MarketingPage {
     });
 
     // Go through the top-level sections, finding the one that has this heading
-    return this.page.locator('section, div').filter({has: headingLocator});
+    return this.page.locator('section').filter({has: headingLocator});
   }
 }
