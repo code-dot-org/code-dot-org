@@ -103,9 +103,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with just page param" do
+    # seed all levels that are seeded by other tests to ensure repeatability.
+    # if the number of levels seeded by this method changes, the numbers below
+    # may also need to change.
+    seed_deprecated_unit_fixtures
+
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 22, JSON.parse(@response.body)['numPages']
+    assert_equal 11, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
