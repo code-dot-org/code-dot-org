@@ -1926,6 +1926,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # hard_delete_channel_content interface.
   #
 
+  test "SourceBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents SourceBucket
+  end
+
+  test "AssetBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AssetBucket
+  end
+
+  test "AnimationBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents AnimationBucket
+  end
+
+  test "FileBucket: hard-deletes all of user's channels" do
+    assert_bucket_hard_deletes_contents FileBucket
+  end
+
   def assert_bucket_hard_deletes_contents(bucket)
     # Here we are testing that for every one of the user's channels we
     # ask the bucket to delete its contents.  To avoid interacting with S3
@@ -1944,6 +1960,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
           with(storage_encrypt_channel_id(storage_id, project_id_b))
 
         purge_user student
+        DeleteAccountsHelper.new.delete_s3_contents student
       end
     end
   end
@@ -1955,6 +1972,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.datablock_storage_tables, dashboard.datablock_storage_records
   test "Datablock Storage: hard-deletes all of user's project tables" do
     student = create :student
+    helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
         timestamp = DateTime.now
@@ -1968,7 +1986,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
         assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
 
-        purge_user student
+        # purge_user student
+        helper.delete_datablock_storage(student)
         assert_logged "Deleting Datablock Storage contents for 2 projects"
         assert_empty DatablockStorageTable.where(project_id: project_id_a)
         assert_empty DatablockStorageTable.where(project_id: project_id_b)
@@ -1981,6 +2000,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.datablock_storage_kvps
   test "Datablock Storage: hard-deletes all of user's project kvps" do
     student = create :student
+    helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
         DatablockStorageKvp.set_kvp(project_id_a, "key_a", '"value_a"')
@@ -1989,7 +2009,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
         assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
 
-        purge_user student
+        #purge_user student
+        helper.delete_datablock_storage(student)
         assert_logged "Deleting Datablock Storage contents for 2 projects"
         assert_empty DatablockStorageKvp.where(project_id: project_id_a)
         assert_empty DatablockStorageKvp.where(project_id: project_id_b)
