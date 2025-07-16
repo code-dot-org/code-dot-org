@@ -170,7 +170,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_registration_link_format
-    unless self.class.valid_url?(registration_link, true)
+    unless self.class.valid_url?(registration_link)
       errors.add(:registration_link, "is not a valid URL")
     end
   end
@@ -194,7 +194,7 @@ class Pd::Workshop < ApplicationRecord
 
   def set_registration_link
     if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = "/pd/application/teacher"
+      self.registration_link = "https://studio.code.org/pd/application/teacher"
     end
   end
 
