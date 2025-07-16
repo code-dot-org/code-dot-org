@@ -113,6 +113,11 @@ GroupOfTypesOfAlerts.args = {
       type: 'gray',
       size: 'm',
     },
+    {
+      text: 'Aqua Alert',
+      type: 'aqua',
+      size: 'm',
+    },
   ],
 };
 

@@ -1,18 +1,28 @@
 import {FileTabs} from '@codebridge/FileTabs/FileTabs';
+import {Store} from '@reduxjs/toolkit';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import {Provider} from 'react-redux';
 
+import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import lab from '@cdo/apps/lab2/lab2Redux';
+import lab2Project, {
+  setProjectSource,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {
-  CodebridgeContextProvider,
-  CodebridgeContextType,
-} from '@cdo/apps/codebridge';
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 
-import {getDefaultCodebridgeContext} from '../test_utils';
 import '@testing-library/jest-dom';
+import {initProgressPayload} from '../test-files';
 
-const context: CodebridgeContextType = {
-  ...getDefaultCodebridgeContext(),
+const project: ProjectSources = {
   source: {
     files: {
       '1': {
@@ -36,8 +46,6 @@ const context: CodebridgeContextType = {
     },
     folders: {},
   },
-  setActiveFile: jest.fn(),
-  closeFile: jest.fn(),
 };
 
 beforeAll(() => {
@@ -45,11 +53,29 @@ beforeAll(() => {
 });
 
 describe('FileTabs', () => {
+  let store: Store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({
+      lab2Project,
+      lab,
+      progress,
+      lab2System,
+    });
+    store = getStore();
+    store.dispatch(setProjectSource(project));
+    store.dispatch(initProgress(initProgressPayload));
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
   function renderDefault() {
     render(
-      <CodebridgeContextProvider value={context}>
+      <Provider store={store}>
         <FileTabs />
-      </CodebridgeContextProvider>
+      </Provider>
     );
   }
 
@@ -57,11 +83,13 @@ describe('FileTabs', () => {
   // userEvent seems to take a while on drone/staging.
   it('activates an inactive tab on click', async () => {
     renderDefault();
-    const file = context.source.files['1'];
+    const file = (project.source as MultiFileSource).files['1'];
     const tab = screen.getByText(file.name);
     const user = userEvent.setup();
     await user.click(tab);
-    expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
+    const newSource = store.getState().lab2Project.projectSources
+      .source as MultiFileSource;
+    expect(newSource.files[file.id].active).toBe(true);
   });
 
   it('can close a tab', async () => {
@@ -71,6 +99,9 @@ describe('FileTabs', () => {
     });
     const user = userEvent.setup();
     await user.click(closeButton);
-    expect(context.closeFile).toHaveBeenCalledWith('1');
+    // Expect the file to be closed, which means the close button should be gone.
+    expect(
+      screen.queryByRole('button', {name: 'close file file1.py'})
+    ).not.toBeInTheDocument();
   });
 });

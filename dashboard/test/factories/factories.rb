@@ -770,7 +770,7 @@ FactoryBot.define do
 
   factory :user_facilitator_info, class: User::FacilitatorInfo do
     association :user, factory: :facilitator
-    bio {Faker::Lorem.paragraph}
+    bio {Faker::Lorem.paragraph(sentence_count: 5).truncate(User::FacilitatorInfo::BIO_MAX_LENGTH)}
   end
 
   factory :authentication_option do

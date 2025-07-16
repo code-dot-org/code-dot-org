@@ -13,7 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-06 19:14:31 UTC",
+    "serialized_at": "2025-07-15 20:35:07 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -463,6 +464,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-CSD-mod3-LevelType-practice-lc_25"
         ],
