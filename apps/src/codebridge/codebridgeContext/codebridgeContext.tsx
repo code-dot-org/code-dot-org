@@ -1,6 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
-import {LabConfig, ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 
 import {
   ConfigType,
@@ -18,7 +18,6 @@ export type CodebridgeContextType = {
   onRun?: OnRunFunction;
   onStop?: OnStopFunction;
   startSources: ProjectSources;
-  labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
@@ -33,7 +32,7 @@ export const CodebridgeContext = createContext<CodebridgeContextType | null>(
 export const useCodebridgeContext = () => {
   const context = useContext(CodebridgeContext);
   if (context === null) {
-    throw new Error('CDO IDE Context has not been provided!');
+    throw new Error('Codebridge Context has not been provided!');
   }
   return context;
 };

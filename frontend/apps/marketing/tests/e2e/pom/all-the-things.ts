@@ -32,6 +32,10 @@ export type Section =
   | 'Rich Text'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
+  | 'Simple List'
+  | 'Skinny Banner'
+  | 'Snapshot'
+  | 'Testimonial'
   | 'Text Link'
   | 'Video'
   | 'Video Carousel';
@@ -61,6 +65,6 @@ export class AllTheThingsPage extends MarketingPage {
     });
 
     // Go through the top-level sections, finding the one that has this heading
-    return this.page.locator('section').filter({has: headingLocator});
+    return this.page.locator('div').filter({has: headingLocator}).first();
   }
 }
