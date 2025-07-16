@@ -114,7 +114,6 @@ function initPage() {
             context={differentiationContext}
             scriptId={reportingData.unitName}
             scriptName={reportingData.unitName}
-            unitDisplayName={reportingData.unitName}
           />
         </Provider>,
         aiDiffFabMountPoint

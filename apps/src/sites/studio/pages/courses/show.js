@@ -128,7 +128,6 @@ function displayDifferentiationChat(scriptData) {
             courseId: scriptData.course_summary.id,
           }}
           scriptName={scriptData.course_summary.name}
-          unitDisplayName={scriptData.course_summary.title}
         />
       </Provider>,
       aiDiffFabMountPoint

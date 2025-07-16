@@ -65,7 +65,6 @@ interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
   firstState?: WelcomeState;
   curriculumCourses?: string[];
 }
@@ -199,7 +198,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
-  unitDisplayName,
   // This should only be used for testing purposes
   firstState = 'get_started',
   curriculumCourses,
@@ -221,10 +219,9 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       aiDiffChatContext: context,
       scriptName,
       selectedOption,
-      unitName: unitDisplayName,
       url: window.location.href,
     };
-  }, [context, scriptName, unitDisplayName, selectedOption]);
+  }, [context, scriptName, selectedOption]);
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
@@ -430,7 +427,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            unitDisplayName={unitDisplayName}
             initialChatMessage={initialMessage}
             suggestedPrompts={suggestedPrompts}
             disableEndButtons={true}
@@ -446,7 +442,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     selectedOption,
     context,
     scriptName,
-    unitDisplayName,
     continueAndSkipButtons,
     chatContinueButtonDisabled,
   ]);

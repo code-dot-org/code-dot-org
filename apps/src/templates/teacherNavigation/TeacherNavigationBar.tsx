@@ -295,7 +295,6 @@ const TeacherNavigationBar: React.FC<{
         <AiDiffFloatingActionButton
           context={aiContext()}
           scriptName={selectedSection?.courseVersionName}
-          unitDisplayName={selectedSection?.courseDisplayName}
         />
       )}
     </nav>
