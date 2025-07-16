@@ -173,7 +173,7 @@ class Ability
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
       can [:start_chat_completion, :chat_request], :aichat_request
-      can [:log_chat_event, :chat_history], :aichat_event
+      can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
         can :manage, Section do |s|
@@ -522,10 +522,6 @@ class Ability
 
       can :find_toxicity, :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
-      end
-
-      can :submit_teacher_feedback, :aichat_event do
-        user.teacher?
       end
 
       can :user_has_access, :aichat

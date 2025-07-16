@@ -969,13 +969,6 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
-  test 'teachers should be able to submit_teacher_feedback but not students' do
-    student = create :student
-    teacher = create :teacher
-    refute Ability.new(student).can? :submit_teacher_feedback, :aichat_event
-    assert Ability.new(teacher).can? :submit_teacher_feedback, :aichat_event
-  end
-
   # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
   private def put_students_in_section_and_code_review_group(students, section)
