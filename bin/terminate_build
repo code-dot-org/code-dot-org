@@ -56,10 +56,18 @@ begin
   CDO.log.info 'Killing the following aws/ci_build process and all of its child processes:'
   execute_system_command("pgrep -g #{process_group_id} -a")
 
-  # The hyphen ('-') in front of the Process Group ID specifies we want to kill all processes with that Process Group ID.
-  execute_system_command("kill -9 -#{process_group_id}")
-  CDO.log.info 'Done killing the current build and its child processes!'
-  ChatClient.log "Done killing the current build and its child processes!", color: 'red'
+  begin
+    CDO.log.info "Killing process group #{process_group_id}..."
+    # The negative ID specifies we want to kill all processes in the Process Group with that ID.
+    Process.kill('KILL', -process_group_id.to_i)  # SIGKILL to process group
+    CDO.log.info 'Done killing the current build and its child processes!'
+    ChatClient.log "Done killing the current build and its child processes!", color: 'red'
+  rescue Errno::ESRCH
+    CDO.log.info 'Process group was already terminated.'
+  rescue Exception => exception
+    CDO.log.error "Error killing process group: #{exception.message}"
+    raise
+  end
 
   begin
     CDO.log.info 'Deleting the file build-started to prevent a new build from starting on the current commit.'
@@ -69,8 +77,9 @@ begin
     CDO.log.error "Failed to delete build-started file: #{exception.message}"
     # Don't re-raise since this shouldn't be considered a build termination failure
   end
-rescue => exception
-  CDO.log.error "Failed to terminate build processes: #{exception.message}"
-  ChatClient.log "Failed to terminate build processes: #{exception.message}", color: 'red'
+rescue Exception => exception  # Catch ALL exceptions, not just StandardError
+  CDO.log.error "Failed to terminate build processes: #{exception.class}: #{exception.message}"
+  CDO.log.error "Backtrace: #{exception.backtrace.first(5).join(', ')}" if exception.backtrace
+  ChatClient.log "Failed to terminate build processes: #{exception.class}: #{exception.message}", color: 'red'
   raise
 end
