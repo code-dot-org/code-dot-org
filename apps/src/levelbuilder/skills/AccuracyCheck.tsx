@@ -151,10 +151,22 @@ const AccuracyCheck: React.FC<{
       <h2>Check AI Evaluations</h2>
       <p>
         Upload a CSV of sample student solutions. The CSV should have a column
-        named `studentWork`. The AI will evaluate each student work sample, and
-        then you can download the results as a CSV file. Review the evaluations
-        and reasoning provided by the AI for each sample to see if they match
-        your expectations.
+        named <code>studentWork</code>. The AI will evaluate each student work
+        sample, and then you can download the results as a CSV file. Review the
+        evaluations and reasoning provided by the AI for each sample to see if
+        they match your expectations.
+        <br />
+        <br />
+        You can also add a column named <code>humanEvaluation</code> to provide
+        evaluations for the student work samples. The AI's evaluation will be
+        compared against the human evaluation, and you can see if they match in
+        the downloaded CSV.{' '}
+        <Link
+          text="Use this template to get started."
+          href="https://docs.google.com/spreadsheets/d/19UFD6mnsz_Lj7WcTgSzf5BEuDbIeo1qZvbzvADUlUbA/edit?usp=sharing"
+          openInNewTab={true}
+          size="s"
+        />
       </p>
       <p>
         If you find discrepancies, you can iterate by: editing evaluation
