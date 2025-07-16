@@ -58,6 +58,8 @@ const fakeSection = {
   hidden: false,
 };
 
+jest.mock('@cdo/apps/templates/rubrics/Chart');
+
 describe('RubricSettings', () => {
   let fetchStub;
   let store;

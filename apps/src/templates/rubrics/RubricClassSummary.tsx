@@ -5,67 +5,16 @@ import {
   StrongText,
 } from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
-// Our build system bundles typescript in a way that allows importing these types
-// of packages without require, but the type checker doesn't know that, so it
-// errors when linting/type-checking. So we ignore the type error and then ignore
-// the lint error about using ts-ignore.
-//
-// This is generally because ECharts is built as modules and the type checker
-// believes incorrectly that we are building our application as common-js.
-//
-// When our build system improves such that we are building modules first-class,
-// we can re-visit this.
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - this is OK because the bundler will handle the ambiguity
-import {BarChart, PieChart} from 'echarts/charts';
-import {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is OK because the bundler will handle the ambiguity
-  GridComponent,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is OK because the bundler will handle the ambiguity
-  LegendComponent,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is OK because the bundler will handle the ambiguity
-  PolarComponent,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is OK because the bundler will handle the ambiguity
-  TooltipComponent,
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore - this is OK because the bundler will handle the ambiguity
-} from 'echarts/components';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - this is OK because the bundler will handle the ambiguity
-import * as echarts from 'echarts/core';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - this is OK because the bundler will handle the ambiguity
-import {LabelLayout} from 'echarts/features';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - this is OK because the bundler will handle the ambiguity
-import {SVGRenderer} from 'echarts/renderers';
-import ReactEChartsCore from 'echarts-for-react/lib/core';
 import React, {useMemo, useState} from 'react';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import Chart from '@cdo/apps/templates/rubrics/Chart';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {Rubric, TeacherEvaluations} from './types';
 
 import style from './rubrics.module.scss';
-
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore - this is OK because the bundler will handle the ambiguity
-echarts.use([
-  SVGRenderer,
-  LabelLayout,
-  GridComponent,
-  PolarComponent,
-  LegendComponent,
-  TooltipComponent,
-  BarChart,
-  PieChart,
-]);
 
 const getCSSVariable: (name: string) => string = name =>
   typeof window !== 'undefined'
@@ -189,8 +138,7 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
             <>
               {!haveFullData && <Spinner />}
               {haveFullData && (
-                <ReactEChartsCore
-                  echarts={echarts}
+                <Chart
                   style={{
                     height: '425px',
                     width: '100%',
@@ -290,8 +238,7 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
                   </BodyTwoText>
                   {!haveData && <Spinner />}
                   {haveData && (
-                    <ReactEChartsCore
-                      echarts={echarts}
+                    <Chart
                       style={{
                         height: '250px',
                         width: '100%',
