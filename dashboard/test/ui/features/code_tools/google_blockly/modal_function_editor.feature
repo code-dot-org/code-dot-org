@@ -11,9 +11,9 @@ Background:
   And element "#resetButton" is hidden
 
 Scenario: Can create a function
-  Then element "#blockly-10" is visible
+  Then element "#blockly-a" is visible
   And element "#modalFunctionEditor" is not visible
-  And I press "blockly-10"
+  And I press "blockly-a"
   And the open flyout has 1 blocks
   And I click toolbox block with selector ".blocklyFlyoutButton"
   # Open modal function editor
@@ -21,7 +21,7 @@ Scenario: Can create a function
   # Close editor
   And I press "closeModalFunctionEditor"
   # Now the function should be in the toolbox, along with the original function from start code
-  Then I press "blockly-10"
+  Then I press "blockly-a"
   And the open flyout has 2 blocks
 
 Scenario: Can edit a function
