@@ -549,7 +549,6 @@ class Section < ApplicationRecord
           students: include_students ? unique_students.map(&:summarize) : nil,
           restrict_section: restrict_section,
           is_assigned_csa: assigned_csa?,
-          is_assigned_single_unit_course: unit_group&.single_unit_course?,
           # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
@@ -588,12 +587,8 @@ class Section < ApplicationRecord
       elsif script_id
         title = script.title_for_display
         link_to_assigned =
-          if unit_group_unit
-            if Policies::Courses.modularity_enabled?
-              course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
-            else
-              script_path(script)
-            end
+          if unit_group_unit && Policies::Courses.modularity_enabled?
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
           else
             script_path(script)
           end
