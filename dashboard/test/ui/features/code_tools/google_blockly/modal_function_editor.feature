@@ -29,7 +29,7 @@ Scenario: Can edit a function
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
-  And I press "blockly-d"
+  And I press "blockly-e"
   # Drag new sprite block to top of function
   And I drag block number 2 to offset "40, 100"
   # Close function
