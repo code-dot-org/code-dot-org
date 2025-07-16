@@ -168,15 +168,9 @@ class ActiveSupport::TestCase
   # please make sure that they are instead relying on factory-provided
   # content.
   DEFAULT_FIXTURE_UNIT_NAMES = [
-    'ECSPD',
-    'allthethings',
-    Unit::COURSE1_NAME,
-    Unit::COURSE4_NAME,
     Unit::FLAPPY_NAME,
     Unit::FROZEN_NAME,
     Unit::HOC_NAME,
-    Unit::PLAYLAB_NAME,
-    Unit::TWENTY_HOUR_NAME
   ].freeze
 
   def seed_deprecated_unit_fixtures(unit_names: DEFAULT_FIXTURE_UNIT_NAMES)
