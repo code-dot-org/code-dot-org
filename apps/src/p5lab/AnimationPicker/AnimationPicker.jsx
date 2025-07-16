@@ -162,6 +162,28 @@ class AnimationPicker extends React.Component {
     );
   }
 
+
+  /**
+   * Intercept the raw file upload, send it to your moderation endpoint,
+   * log the rating, then continue with the normal upload-start logic.
+   */
+  handleModeratedUploadStart = data => {
+    const file = data.files[0];
+    console.log('file', file);
+    // fire off moderation check
+    fetch(`/v3/images/${this.props.channelId}/moderate`, {
+      method: 'POST',
+      headers: { 'Content-Type': file.type },
+      body: file
+    })
+      .then(res => res.json())
+      .then(json => console.log('In AnimationPickerImage moderation rating:', json.rating))
+      .catch(err => console.error('Moderation error:', err));
+
+   // now proceed with the original Redux-backed upload start
+    this.props.onUploadStart(data);
+  };
+
   render() {
     if (!this.props.visible) {
       return null;
@@ -187,7 +209,7 @@ class AnimationPicker extends React.Component {
             '.png'
           }
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />

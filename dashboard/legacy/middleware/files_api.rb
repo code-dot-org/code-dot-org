@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'stringio'
 require 'nokogiri'
 
 class FilesApi < Sinatra::Base
@@ -1046,6 +1047,35 @@ class FilesApi < Sinatra::Base
 
     FileBucket.new.delete(encrypted_channel_id, filename)
     no_content
+  end
+
+    #
+  # POST /v3/images/<channel-id>/moderate
+  #
+  # Accept an image upload, run it through ImageModeration, and return a JSON rating.
+  #
+  post %r{/v3/images/([^/]+)/moderate$} do |encrypted_channel_id|
+    content_type :json
+    dont_cache
+
+    puts "inside moderate endpoint"
+    # Read the raw bytes and wrap in an IO
+    raw = request.body.read
+    image_stream = StringIO.new(raw)
+    puts "image stream size: #{image_stream.size}"
+
+    # Determine MIME type (e.g. "image/png", "image/jpeg")
+    content_type_header = request.content_type
+    puts "content_type_header: #{content_type_header}"
+    # Optionally record the URL for metrics, if passed as a query param
+    image_url = params['image_url']
+    puts "image_url: #{image_url}"
+
+    # Call into your moderation module
+    rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+
+    # Return a simple JSON response
+    { rating: rating.to_s }.to_json
   end
 
   #
