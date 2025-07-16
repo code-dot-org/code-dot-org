@@ -1,4 +1,3 @@
-import {getNextFileId} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
 import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
 import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
@@ -15,6 +14,7 @@ import {
   ProjectFileType,
   ProjectSources,
 } from '@cdo/apps/lab2/types';
+import {getNextFileId} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 /**
  * Custom hook that determines the initial sources for the current level.
  * It selects various sources including from the student's project, the start sources

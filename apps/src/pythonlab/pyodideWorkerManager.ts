@@ -8,7 +8,7 @@ import {
 } from '@codebridge/Console/MessageHelpers';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   setHasError,
   setLoadedCodeEnvironment,
