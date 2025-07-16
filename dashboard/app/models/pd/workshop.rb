@@ -194,7 +194,7 @@ class Pd::Workshop < ApplicationRecord
 
   def set_registration_link
     if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = "https://studio.code.org/pd/application/teacher"
+      self.registration_link = Rails.application.routes.url_helpers.pd_application_teacher_url
     end
   end
 
