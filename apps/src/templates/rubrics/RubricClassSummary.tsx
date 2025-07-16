@@ -42,6 +42,11 @@ echarts.use([
   PieChart,
 ]);
 
+const getCSSVariable: (name: string) => string = name =>
+  typeof window !== 'undefined'
+    ? window.getComputedStyle(document.body).getPropertyValue(`--${name}`) || ''
+    : '';
+
 const COLORS = {
   NOT_STARTED: '#D1D4D8',
   NONE: '#ED6060',
@@ -149,6 +154,13 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
                           stillShowZeroSum: false,
                           data: values,
                           center: ['50%', '37.5%'],
+                          itemStyle: {
+                            borderRadius: 3,
+                            borderColor: getCSSVariable(
+                              'background-neutral-primary'
+                            ),
+                            borderWidth: 3,
+                          },
                           label: {
                             show: false,
                           },
