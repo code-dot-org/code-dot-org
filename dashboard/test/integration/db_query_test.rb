@@ -3,10 +3,12 @@ require 'test_helper'
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
   setup_all do
-    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME, 'allthethings'])
+    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME])
   end
 
   def setup
+    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
+    @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
     setup_script_cache
   end
 
@@ -14,7 +16,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Unit.get_from_cache('allthethings')
+    script = @multi_lesson_unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
