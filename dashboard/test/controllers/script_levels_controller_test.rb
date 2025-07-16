@@ -13,7 +13,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   setup_all do
     unit_names = [
       Unit::HOC_NAME,
-      Unit::FLAPPY_NAME,
     ]
     seed_deprecated_unit_fixtures(unit_names: unit_names)
 
@@ -1025,6 +1024,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should show special script level by chapter" do
     # this works for 'special' scripts like flappy, hoc
+    seed_deprecated_unit_fixtures(unit_names: [Unit::FLAPPY_NAME])
     expected_script_level = ScriptLevel.where(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5).first
 
     get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: '5'}
