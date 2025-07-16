@@ -5,10 +5,6 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   include ApplicationHelper
   include LevelsHelper
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
     @teacher = create(:teacher)
     @student = create(:student)
@@ -37,23 +33,18 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     assert_equal '//test.code.org/api/hour/finish/artist', Unit.get_from_cache(Unit::ARTIST_NAME).hoc_finish_url
   end
 
-  test 'script name instead of lesson name in header for HOC' do
+  test 'unit name instead of lesson name in header for single-lesson unit' do
     stubs(:current_user).returns(nil)
-    script_level = Unit.find_by_name(Unit::HOC_NAME).get_script_level_by_chapter 1
-    assert_equal 'Classic Maze', script_level.lesson.summarize[:title]
+    unit = create :unit, :with_levels
+    script_level = unit.get_script_level_by_chapter 1
+    assert_equal unit.name, script_level.lesson.summarize[:title]
   end
 
-  test 'show lesson name in header for multi-lesson script' do
+  test 'show lesson name in header for multi-lesson unit' do
     stubs(:current_user).returns(nil)
-    script = Unit.find_by_name(Unit::COURSE4_NAME)
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
+    unit = create :unit, :with_levels, lessons_count: 3
+    script_level = unit.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
     assert_equal "Lesson 3: #{script_level.lesson.name}", script_level.lesson.summarize[:title]
-  end
-
-  test 'show lesson position in header for default script' do
-    stubs(:current_user).returns(nil)
-    script_level = Unit.twenty_hour_unit.script_levels.fifth
-    assert_equal 'Lesson 2: The Maze', script_level.lesson.summarize[:title]
   end
 
   test 'get End-of-Lesson experience when enabled' do
