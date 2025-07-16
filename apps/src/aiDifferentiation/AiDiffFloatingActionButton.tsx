@@ -70,7 +70,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const body = JSON.stringify({
       context: context,
     });
-    HttpClient.post(`/ai_diff/curriculum_courses`, body, true, {
+    HttpClient.post(`/aidiff_threads/curriculum_courses`, body, true, {
       'Content-Type': 'application/json',
     })
       .then(response => response.json())
