@@ -15,7 +15,7 @@ interface Props {
   systemPrompt: string;
   levelType?: string;
   additionalAiEvaluationInstructions?: string;
-  updateAdditionalAiEvaluationInstructions?: (value: string) => void;
+  updateAdditionalAiEvaluationInstructions: (value: string) => void;
 }
 
 const SkillEvaluationSettings: React.FC<Props> = ({

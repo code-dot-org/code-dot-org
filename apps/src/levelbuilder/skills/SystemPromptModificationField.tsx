@@ -10,15 +10,15 @@ const SystemPromptModificationField: React.FC<
   SystemPromptModificationFieldProps
 > = ({initialValue = '', onChange}) => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState(initialValue);
+  const [addedAiInstructions, setAddedAiInstructions] = useState(initialValue);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
+    setAddedAiInstructions(e.target.value);
     if (onChange) onChange(e.target.value);
   };
 
   return (
-    <div className="system-prompt-modification-field">
+    <div>
       <span
         className="system-prompt-modification-field__toggle"
         onClick={() => setOpen(o => !o)}
@@ -43,7 +43,7 @@ const SystemPromptModificationField: React.FC<
             <textarea
               id="level_additional_ai_evaluation_instructions"
               className="edit-box"
-              value={value}
+              value={addedAiInstructions}
               onChange={handleChange}
               rows={4}
               placeholder="Enter your text here..."

@@ -15,7 +15,6 @@ $(document).ready(function () {
       skills={data.skills}
       levelId={data.levelId}
       systemPrompt={data.systemPrompt}
-      levelType={data.levelType}
       additionalAiEvaluationInstructions={
         data.additionalAiEvaluationInstructions
       }
