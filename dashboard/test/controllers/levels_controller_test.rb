@@ -105,7 +105,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 9, JSON.parse(@response.body)['numPages']
+    assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
