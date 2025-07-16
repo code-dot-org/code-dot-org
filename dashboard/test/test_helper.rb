@@ -168,7 +168,6 @@ class ActiveSupport::TestCase
   # please make sure that they are instead relying on factory-provided
   # content.
   DEFAULT_FIXTURE_UNIT_NAMES = [
-    Unit::FLAPPY_NAME,
     Unit::FROZEN_NAME,
     Unit::HOC_NAME,
   ].freeze
