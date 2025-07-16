@@ -25,7 +25,6 @@ import ReactEChartsCore from 'echarts-for-react/lib/core';
 import React, {useMemo} from 'react';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {Rubric, TeacherEvaluations} from './types';
@@ -60,63 +59,77 @@ interface RubricClassSummaryProps {
   teacherEval: TeacherEvaluations;
 }
 
+/** The summary data for a particular learning goal */
+interface StudentEvalData {
+  /** The name of the learning goal in question. */
+  name: string;
+  /** A set of evaluations for each score */
+  data: {
+    /** The name of the score */
+    name: string;
+    /**
+     * The number of students that achieved that score for the given learning goal.
+     */
+    value: number;
+  }[];
+}
+
 const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
   rubric,
   teacherEval,
 }) => {
   const learningGoals = rubric.learningGoals;
-  const students = useAppSelector(
-    state => state.teacherSections.selectedStudents
-  );
 
-  return useMemo(
-    () => (
+  return useMemo(() => {
+    // The possible scores
+    const labels = [
+      'Unsubmitted',
+      'None',
+      'Limited',
+      'Convincing',
+      'Extensive',
+    ];
+
+    // Get the assigned score for every student for the given learning goals
+    const fullValues: StudentEvalData[] = learningGoals.map(learningGoal => ({
+      name: learningGoal.learningGoal,
+      // Count the occurances for each score for this learning goal
+      data: labels.map(label => {
+        const value = (teacherEval || []).reduce(
+          (acc, value) =>
+            (value[learningGoal.id] || labels[0]) === label ? acc + 1 : acc,
+          0
+        );
+
+        return {
+          name: label,
+          value,
+        };
+      }),
+    }));
+
+    // Get the student names that match each data point on the graph so we can
+    // show them within the popover tooltip.
+    const fullNames = learningGoals.map(learningGoal =>
+      labels.map(label =>
+        (teacherEval || [])
+          .filter(value => (value[learningGoal.id] || labels[0]) === label)
+          .map(
+            value =>
+              `${value.user_name}${
+                value.user_family_name ? ` ${value.user_family_name}` : ''
+              }`
+          )
+      )
+    );
+
+    return (
       <div className={style.settingsGroup}>
         <Heading4>{i18n.rubricClassroomScoreSummary()}</Heading4>
         <div className={style.summaryContainer}>
-          {learningGoals.map(learningGoal => {
-            // The possible scores
-            const labels = [
-              'Unsubmitted',
-              'None',
-              'Limited',
-              'Convincing',
-              'Extensive',
-            ];
-
-            // Get the assigned score for every student for the given learning goal
-            const results = (teacherEval || []).map(
-              studentEval => studentEval[learningGoal.id] || labels[0]
-            );
-
-            // Count the occurances for each score for this learning goal
-            const values = labels.map(label => {
-              const value = results.reduce(
-                (acc, value) => (value === label ? acc + 1 : acc),
-                0
-              );
-
-              return {
-                name: label,
-                value,
-              };
-            });
-
-            // Get the student names that match each data point on the graph so we can
-            // show them within the popover tooltip.
-            const names = labels.map(label => {
-              return (
-                results
-                  .map((value, i) => [value, i])
-                  .filter(([value, _]) => value === label) as [string, number][]
-              ).map(
-                ([_, i]) =>
-                  `${students[i]?.name || ''}${
-                    students[i]?.familyName ? ` ${students[i].familyName}` : ''
-                  }`
-              );
-            });
-
+          {learningGoals.map((learningGoal, learningGoalIndex) => {
+            const values = fullValues[learningGoalIndex].data;
+            const names = fullNames[learningGoalIndex];
             const haveData = values.some(n => n.value !== 0);
 
             return (
@@ -214,9 +227,8 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
           })}
         </div>
       </div>
-    ),
-    [teacherEval, learningGoals, students]
-  );
+    );
+  }, [teacherEval, learningGoals]);
 };
 
 export default RubricClassSummary;
