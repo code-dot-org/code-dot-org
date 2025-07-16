@@ -153,10 +153,6 @@ describe('WorkshopJoin', () => {
           },
           body: JSON.stringify({
             user_id: DEFAULT_PROPS.user_info.id,
-            email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.first_name,
-            last_name: DEFAULT_PROPS.user_info.last_name,
-            school_info: DEFAULT_PROPS.user_info.school_info,
           }),
         }
       );
@@ -194,10 +190,6 @@ describe('WorkshopJoin', () => {
           },
           body: JSON.stringify({
             user_id: DEFAULT_PROPS.user_info.id,
-            email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.first_name,
-            last_name: DEFAULT_PROPS.user_info.last_name,
-            school_info: DEFAULT_PROPS.user_info.school_info,
           }),
         }
       );

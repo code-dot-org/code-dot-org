@@ -11,6 +11,7 @@ export interface AccountInformationProps {
   shouldSeeEditEmailLink: boolean;
   isPasswordRequired: boolean;
   isStudent: boolean;
+  isFacilitator: boolean;
   migrated: boolean;
   encryptedPasswordPresent: boolean;
   canEditPassword: boolean;
@@ -30,4 +31,5 @@ export interface AccountInformationProps {
   userFamilyName?: string;
   userEmail?: string;
   userProperties?: UserProperties;
+  userFacilitatorBio?: string;
 }

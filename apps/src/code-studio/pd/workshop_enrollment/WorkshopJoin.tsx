@@ -54,15 +54,7 @@ const WorkshopJoin: React.FunctionComponent<{
   );
 
   const handleSubmitEnrollment = async () => {
-    const result = await submitEnrollment(
-      user_info && {
-        user_id: user_info.id,
-        email: user_info.email,
-        first_name: user_info.first_name,
-        last_name: user_info.last_name,
-        school_info: user_info.school_info,
-      }
-    );
+    const result = await submitEnrollment(user_info?.id);
 
     if (result?.workshop_enrollment_status === SUBMISSION_STATUSES.SUCCESS) {
       navigateOnEnrollSuccess();
