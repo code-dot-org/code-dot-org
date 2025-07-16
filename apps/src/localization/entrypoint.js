@@ -29,6 +29,7 @@ const donor_prefixes = [
   '/courses/elementaryai-2024',
   '/courses/elem-game-design-2024',
   '/courses/3-5gamedesign-2024',
+  '/courses/foundations-gen-ai-2025',
 ];
 
 const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
