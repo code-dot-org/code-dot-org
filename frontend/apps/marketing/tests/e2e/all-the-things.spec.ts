@@ -666,6 +666,19 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('icon highlight', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Icon Highlight');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('image', () => {
       let component: Locator;
 
@@ -801,6 +814,19 @@ test.describe('All the things UI e2e test', () => {
 
       test.beforeEach(async () => {
         component = allTheThingsPage.getSectionLocator('Snapshot');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('tab group', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Tab Group');
         await component.scrollIntoViewIfNeeded();
       });
 
