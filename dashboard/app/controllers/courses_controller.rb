@@ -64,7 +64,8 @@ class CoursesController < ApplicationController
 
     # For deprecated courses, show deprecated course page
     # if we haven't already redirected to a newer version of the course or the teacher dashboard.
-    if @unit_group.default_units.all?(&:is_deprecated)
+    units = @unit_group.default_units
+    if !units.empty? && units.all?(&:is_deprecated)
       return render 'errors/deprecated_course'
     end
 
