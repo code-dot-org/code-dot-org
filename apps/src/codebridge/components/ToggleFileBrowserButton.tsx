@@ -11,7 +11,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setShowFileBrowser} from '../redux/workspaceRedux';
 
 /*
-  This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
+  This component will look to the `showFileBrowser` boolean in redux and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
 */
 
