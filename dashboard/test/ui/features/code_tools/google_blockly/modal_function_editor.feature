@@ -26,7 +26,7 @@ Scenario: Can create a function
 
 Scenario: Can edit a function
   # Click the "edit" button on the block
-  Then I click block field that is number 1 in the list of blocks and number 2 in the field row
+  Then I click block field that is number 2 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-e"
@@ -36,7 +36,7 @@ Scenario: Can edit a function
   And I press "closeModalFunctionEditor"
   And element "#modalFunctionEditor" is not visible
   # Re-open function
-  Then I click block field that is number 1 in the list of blocks and number 2 in the field row
+  Then I click block field that is number 2 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Now the function editor workspace should have 4 blocks: the procedure block,
   # the set background block, the new sprite block, and the location block attached to the new sprite block.
@@ -45,7 +45,7 @@ Scenario: Can edit a function
 @chrome
 Scenario: Can close the editor using the ESC key
   # Open the editor
-  Then I click block field that is number 1 in the list of blocks and number 2 in the field row
+  Then I click block field that is number 2 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Close editor
   Then I press keys ":escape"
