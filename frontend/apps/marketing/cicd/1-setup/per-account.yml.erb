@@ -440,6 +440,9 @@ Resources:
                   - iam:DetachRolePolicy
                   - iam:PutRolePolicy
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
 
               - Sid: AllowIAMRoleManagement
                 Effect: Allow
