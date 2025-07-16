@@ -16,7 +16,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       Unit::FLAPPY_NAME,
       Unit::FROZEN_NAME,
       Unit::PLAYLAB_NAME,
-      'ECSPD'
     ]
     seed_deprecated_unit_fixtures(unit_names: unit_names)
 
@@ -309,17 +308,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal netsim_script_level, assigns(:script_level)
-  end
-
-  test "should show script level of ECSPD if signed in" do
-    sign_in @student
-    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
-    assert_response :success
-  end
-
-  test "should not get show of ECSPD if not signed in" do
-    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
-    assert_redirected_to_sign_in
   end
 
   test "should not fetch partial peer review matches" do
