@@ -783,6 +783,28 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    [
+      'Section - Dark Gray',
+      'Section - Pattern Dark',
+      'Section - Pattern Teal',
+    ].forEach(carousel => {
+      test.describe(carousel.toLowerCase(), () => {
+        let component: Locator;
+
+        test.beforeEach(async () => {
+          component = allTheThingsPage.getSectionLocator(carousel as Section);
+          await component.scrollIntoViewIfNeeded();
+        });
+
+        test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+          await eyes.check(testInfo.title, {
+            region: component,
+            fully: true,
+          });
+        });
+      });
+    });
+
     test.describe('simple list', () => {
       let component: Locator;
 

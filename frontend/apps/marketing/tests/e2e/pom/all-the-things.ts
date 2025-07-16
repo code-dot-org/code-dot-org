@@ -31,6 +31,7 @@ export type Section =
   | 'Overline'
   | 'Paragraph'
   | 'Rich Text'
+  | 'Section - Dark Gray'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
   | 'Simple List'
