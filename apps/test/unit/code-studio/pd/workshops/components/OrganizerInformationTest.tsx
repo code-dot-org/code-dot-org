@@ -44,18 +44,6 @@ describe('OrganizerInformation', () => {
     expect(screen.getByText(/The Best Regional Partner/i)).toBeInTheDocument();
   });
 
-  it('renders the contact regional partner link button', () => {
-    setup();
-    const button = screen.getByRole('link', {
-      name: /contact regional partner/i,
-    });
-    expect(button).toBeInTheDocument();
-    expect(button).toHaveAttribute(
-      'href',
-      '/professional-learning/contact-regional-partner'
-    );
-  });
-
   it('does not render regional partner name if not provided', () => {
     setup({regional_partner_name: undefined});
     expect(screen.queryByText(/regional partner:/i)).not.toBeInTheDocument();

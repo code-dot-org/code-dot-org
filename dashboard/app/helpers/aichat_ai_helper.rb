@@ -9,7 +9,7 @@ module AichatAiHelper
   TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
-    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id) if project_id
 
     model_id = aichat_model_customizations["selectedModelId"]
 

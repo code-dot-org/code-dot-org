@@ -44,6 +44,7 @@ const STATUS_ALL = {
 };
 
 function RubricSettings({
+  teacherHasEnabledAi,
   visible,
   refreshAiEvaluations,
   rubric,
@@ -281,45 +282,47 @@ function RubricSettings({
       </div>
 
       <div className={style.settingsContent}>
-        <div className={style.settingsGroup}>
-          <Heading4>{i18n.aiAssessment()}</Heading4>
-          <div className={style.settingsContainers}>
-            <div className={style.runAiAllStatuses}>
-              <BodyTwoText>
-                <StrongText>{summaryText()}</StrongText>
-              </BodyTwoText>
-              {statusAllText() && (
-                <BodyTwoText className="uitest-eval-status-all-text">
-                  {statusAllText()}
+        {teacherHasEnabledAi && (
+          <div className={style.settingsGroup}>
+            <Heading4>{i18n.aiAssessment()}</Heading4>
+            <div className={style.settingsContainers}>
+              <div className={style.runAiAllStatuses}>
+                <BodyTwoText>
+                  <StrongText>{summaryText()}</StrongText>
                 </BodyTwoText>
-              )}
-            </div>
-            <Button
-              className="uitest-run-ai-assessment-all"
-              text={i18n.runAiAssessmentClass()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-              onClick={handleRunAiAssessmentAll}
-              style={{margin: 0}}
-              disabled={statusAll !== STATUS_ALL.READY}
-            >
-              {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-                <i className="fa fa-spinner fa-spin" />
-              )}
-            </Button>
-            <div className={style.detailsGroup}>
-              <BodyTwoText
-                className={
-                  displayDetails ? style.detailsVisible : style.detailsHidden
-                }
+                {statusAllText() && (
+                  <BodyTwoText className="uitest-eval-status-all-text">
+                    {statusAllText()}
+                  </BodyTwoText>
+                )}
+              </div>
+              <Button
+                className="uitest-run-ai-assessment-all"
+                text={i18n.runAiAssessmentClass()}
+                color={Button.ButtonColor.brandSecondaryDefault}
+                onClick={handleRunAiAssessmentAll}
+                style={{margin: 0}}
+                disabled={statusAll !== STATUS_ALL.READY}
               >
-                {i18n.aiEvaluationDetails()}
-              </BodyTwoText>
-              <Link onClick={showHideDetails}>
-                {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
-              </Link>
+                {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+                  <i className="fa fa-spinner fa-spin" />
+                )}
+              </Button>
+              <div className={style.detailsGroup}>
+                <BodyTwoText
+                  className={
+                    displayDetails ? style.detailsVisible : style.detailsHidden
+                  }
+                >
+                  {i18n.aiEvaluationDetails()}
+                </BodyTwoText>
+                <Link onClick={showHideDetails}>
+                  {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className={style.settingsGroup}>
           <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
@@ -363,33 +366,35 @@ function RubricSettings({
           </div>
         </div>
 
-        <div className={style.settingsGroup}>
-          <Heading4>{i18n.aiSettings()}</Heading4>
-          <div
-            className={classnames(
-              'uitest-rubric-ai-enable',
-              style.settingsContainers,
-              style.aiSettingsContainer
-            )}
-          >
-            <BodyThreeText>
-              <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
-            </BodyThreeText>
-            <Toggle
-              label={i18n.useAiFeatures()}
-              checked={!aiRubricsDisabled}
-              onChange={updateAiRubricsDisabled}
-              size="s"
-            />
+        {teacherHasEnabledAi && (
+          <div className={style.settingsGroup}>
+            <Heading4>{i18n.aiSettings()}</Heading4>
+            <div
+              className={classnames(
+                'uitest-rubric-ai-enable',
+                style.settingsContainers,
+                style.aiSettingsContainer
+              )}
+            >
+              <BodyThreeText>
+                <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
+              </BodyThreeText>
+              <Toggle
+                label={i18n.useAiFeatures()}
+                checked={!aiRubricsDisabled}
+                onChange={updateAiRubricsDisabled}
+                size="s"
+              />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
 }
 
 RubricSettings.propTypes = {
-  teacherHasEnabledAi: PropTypes.bool,
+  teacherHasEnabledAi: PropTypes.bool.isRequired,
   updateTeacherAiSetting: PropTypes.func,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,

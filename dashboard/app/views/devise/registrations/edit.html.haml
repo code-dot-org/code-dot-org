@@ -228,6 +228,8 @@
       userEmail: current_user.email,
       userProperties: current_user.properties,
       userUsState: current_user.us_state,
+      userFacilitatorBio: current_user.facilitator? ? current_user.facilitator_bio : nil,
+      isFacilitator: current_user.facilitator?,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,
