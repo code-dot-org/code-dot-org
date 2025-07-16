@@ -67,7 +67,6 @@ class AzureContentModerator
   #   successful.
   #
   private def make_request(image_data, content_type)
-    puts "make_request with content_type: #{content_type}"
     uri = URI(@endpoint + '/moderate/v1.0/ProcessImage/Evaluate')
     request = Net::HTTP::Post.new(uri.request_uri)
     request['Content-Type'] = content_type

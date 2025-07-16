@@ -6,6 +6,7 @@ import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {
@@ -162,25 +163,21 @@ class AnimationPicker extends React.Component {
     );
   }
 
-
   /**
-   * Intercept the raw file upload, send it to your moderation endpoint,
-   * log the rating, then continue with the normal upload-start logic.
+   * Send the uploaded image file to be moderated. Then continue with uploadStart.
    */
   handleModeratedUploadStart = data => {
     const file = data.files[0];
-    console.log('file', file);
-    // fire off moderation check
-    fetch(`/v3/images/${this.props.channelId}/moderate`, {
-      method: 'POST',
-      headers: { 'Content-Type': file.type },
-      body: file
+    HttpClient.post(`/v3/images/${this.props.channelId}/moderate`, file, true, {
+      'Content-Type': file.type,
     })
-      .then(res => res.json())
-      .then(json => console.log('In AnimationPickerImage moderation rating:', json.rating))
+      .then(response => response.json())
+      .then(json =>
+        console.log('In AnimationPickerImage moderation rating:', json.rating)
+      )
       .catch(err => console.error('Moderation error:', err));
 
-   // now proceed with the original Redux-backed upload start
+    // Continue upload start.
     this.props.onUploadStart(data);
   };
 
