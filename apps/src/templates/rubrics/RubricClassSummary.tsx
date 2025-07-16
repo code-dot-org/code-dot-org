@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {
   BodyTwoText,
   Heading4,
@@ -5,12 +6,14 @@ import {
 } from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 // @ts-expect-error - this is OK because the bundler will handle the ambiguity
-import {PieChart} from 'echarts/charts';
+import {BarChart, PieChart} from 'echarts/charts';
 import {
   // @ts-expect-error - this is OK because the bundler will handle the ambiguity
   GridComponent,
   // @ts-expect-error - this is OK because the bundler will handle the ambiguity
   LegendComponent,
+  // @ts-expect-error - this is OK because the bundler will handle the ambiguity
+  PolarComponent,
   // @ts-expect-error - this is OK because the bundler will handle the ambiguity
   TooltipComponent,
   // @ts-expect-error - this is OK because the bundler will handle the ambiguity
@@ -22,9 +25,10 @@ import {LabelLayout} from 'echarts/features';
 // @ts-expect-error - this is OK because the bundler will handle the ambiguity
 import {SVGRenderer} from 'echarts/renderers';
 import ReactEChartsCore from 'echarts-for-react/lib/core';
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {Rubric, TeacherEvaluations} from './types';
@@ -36,8 +40,10 @@ echarts.use([
   SVGRenderer,
   LabelLayout,
   GridComponent,
+  PolarComponent,
   LegendComponent,
   TooltipComponent,
+  BarChart,
   PieChart,
 ]);
 
@@ -79,6 +85,10 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
   teacherEval,
 }) => {
   const learningGoals = rubric.learningGoals;
+  const rubricSummaryChartType = 'rubricFABSummaryChartType';
+  const [chartType, setChartType] = useState<string>(
+    tryGetSessionStorage(rubricSummaryChartType, 'pies') || 'pies'
+  );
 
   return useMemo(() => {
     // The possible scores
@@ -123,112 +133,228 @@ const RubricClassSummary: React.FunctionComponent<RubricClassSummaryProps> = ({
       )
     );
 
+    const haveFullData = fullValues.length > 0;
+
     return (
       <div className={style.settingsGroup}>
-        <Heading4>{i18n.rubricClassroomScoreSummary()}</Heading4>
-        <div className={style.summaryContainer}>
-          {learningGoals.map((learningGoal, learningGoalIndex) => {
-            const values = fullValues[learningGoalIndex].data;
-            const names = fullNames[learningGoalIndex];
-            const haveData = values.some(n => n.value !== 0);
-
-            return (
-              <div
-                className={classnames(
-                  style.settingsContainers,
-                  style.summaryItemContainer
-                )}
-                key={`learning-goal-summary-${learningGoal.id}`}
-              >
-                <BodyTwoText>
-                  <StrongText>{learningGoal.learningGoal}</StrongText>
-                </BodyTwoText>
-                {!haveData && <Spinner />}
-                {haveData && (
-                  <ReactEChartsCore
-                    echarts={echarts}
-                    style={{
-                      height: '250px',
-                      width: '100%',
-                    }}
-                    option={{
-                      renderer: 'svg',
-                      avoidLabelOverlap: true,
-                      color: Object.values(COLORS),
-                      legend: {
-                        show: true,
-                        bottom: 0,
+        <Heading4 className={style.settingsSummaryHeader}>
+          <span>{i18n.rubricClassroomScoreSummary()}</span>
+          <SegmentedButtons
+            size="s"
+            className={style.settingsSummarySegmentedButtons}
+            selectedButtonValue={chartType}
+            onChange={value => {
+              trySetSessionStorage(rubricSummaryChartType, value);
+              setChartType(value);
+            }}
+            buttons={[
+              {
+                label: 'Full',
+                value: 'full',
+              },
+              {
+                label: 'By Goal',
+                value: 'pies',
+              },
+            ]}
+          />
+        </Heading4>
+        {chartType === 'full' && (
+          <div
+            className={classnames(
+              style.settingsContainers,
+              style.summaryItemContainer
+            )}
+          >
+            <>
+              {!haveFullData && <Spinner />}
+              {haveFullData && (
+                <ReactEChartsCore
+                  echarts={echarts}
+                  style={{
+                    height: '425px',
+                    width: '100%',
+                  }}
+                  option={{
+                    renderer: 'svg',
+                    radiusAxis: {
+                      label: {show: false},
+                      labelLine: {show: false},
+                      axisLine: {show: false},
+                      axisLabel: {show: false},
+                      axisTick: {show: false},
+                    },
+                    polar: {
+                      center: ['50%', '45%'],
+                      radius: '90%',
+                    },
+                    avoidLabelOverlap: true,
+                    color: Object.values(COLORS),
+                    legend: {
+                      show: true,
+                      bottom: 0,
+                    },
+                    angleAxis: {
+                      type: 'category',
+                      data: learningGoals.map(
+                        learningGoal => learningGoal.learningGoal
+                      ),
+                      axisTick: {show: false},
+                      axisLine: {show: false},
+                      axisLabel: {
+                        lineHeight: 16,
+                        overflow: 'break',
+                        width: 125,
                       },
-                      series: [
-                        {
-                          name: learningGoal.learningGoal,
-                          type: 'pie',
-                          radius: '70%',
-                          stillShowZeroSum: false,
-                          data: values,
-                          center: ['50%', '37.5%'],
-                          itemStyle: {
-                            borderRadius: 3,
-                            borderColor: getCSSVariable(
-                              'background-neutral-primary'
-                            ),
-                            borderWidth: 3,
-                          },
-                          label: {
-                            show: false,
-                          },
-                          emphasis: {
+                    },
+                    series: labels.map((label, i) => ({
+                      name: label,
+                      data: fullValues.map(values => values.data[i].value),
+                      type: 'bar',
+                      coordinateSystem: 'polar',
+                      stack: 'a',
+                      emphasis: {
+                        focus: 'item',
+                      },
+                    })),
+                    tooltip: {
+                      confine: true,
+                      trigger: 'item',
+                      formatter: (params: {
+                        data: {
+                          name: string;
+                          value: number;
+                        };
+                        percent: number;
+                        name: string;
+                        seriesName: string;
+                        dataIndex: number;
+                        color: string;
+                      }) =>
+                        [
+                          // Tooltip firsts prints the name of the learning goal
+                          `<strong>${params.name}</strong>`,
+                          // Then the label and value
+                          `<strong style="color: ${params.color};">${params.seriesName}</strong>: ${params.data}`,
+                          ...(fullNames[params.dataIndex]?.[
+                            labels.indexOf(params.seriesName)
+                          ] || []),
+                        ].join('<br/>'),
+                      axisPointer: {
+                        type: 'shadow',
+                      },
+                    },
+                  }}
+                />
+              )}
+            </>
+          </div>
+        )}
+        {chartType === 'pies' && (
+          <div className={style.summaryContainer}>
+            {learningGoals.map((learningGoal, learningGoalIndex) => {
+              const values = fullValues[learningGoalIndex].data;
+              const names = fullNames[learningGoalIndex];
+              const haveData = values.some(n => n.value !== 0);
+
+              return (
+                <div
+                  className={classnames(
+                    style.settingsContainers,
+                    style.summaryItemContainer
+                  )}
+                  key={`learning-goal-summary-${learningGoal.id}`}
+                >
+                  <BodyTwoText>
+                    <StrongText>{learningGoal.learningGoal}</StrongText>
+                  </BodyTwoText>
+                  {!haveData && <Spinner />}
+                  {haveData && (
+                    <ReactEChartsCore
+                      echarts={echarts}
+                      style={{
+                        height: '250px',
+                        width: '100%',
+                      }}
+                      option={{
+                        renderer: 'svg',
+                        avoidLabelOverlap: true,
+                        color: Object.values(COLORS),
+                        legend: {
+                          show: true,
+                          bottom: 0,
+                        },
+                        series: [
+                          {
+                            name: learningGoal.learningGoal,
+                            type: 'pie',
+                            radius: '70%',
+                            stillShowZeroSum: false,
+                            data: values,
+                            center: ['50%', '37.5%'],
+                            itemStyle: {
+                              borderRadius: 3,
+                              borderColor: getCSSVariable(
+                                'background-neutral-primary'
+                              ),
+                              borderWidth: 3,
+                            },
                             label: {
                               show: false,
+                            },
+                            emphasis: {
+                              label: {
+                                show: false,
+                              },
+                              labelLine: {
+                                show: false,
+                              },
                             },
                             labelLine: {
                               show: false,
                             },
                           },
-                          labelLine: {
-                            show: false,
+                        ],
+                        tooltip: {
+                          confine: true,
+                          trigger: 'item',
+                          formatter: (params: {
+                            data: {
+                              name: string;
+                              value: number;
+                            };
+                            percent: number;
+                            seriesName: string;
+                            dataIndex: number;
+                            color: string;
+                          }) =>
+                            [
+                              // Tooltip firsts prints the name of the graph essentially
+                              `<strong>${params.seriesName}</strong>`,
+                              // Then the label and value
+                              `<strong style="color: ${params.color};">${
+                                params.data.name
+                              }</strong>: ${
+                                params.data.value
+                              } (${params.percent.toFixed(2)}%)`,
+                              // Then a set of student names
+                              ...names[params.dataIndex],
+                            ].join('<br/>'),
+                          axisPointer: {
+                            type: 'shadow',
                           },
                         },
-                      ],
-                      tooltip: {
-                        confine: true,
-                        trigger: 'item',
-                        formatter: (params: {
-                          data: {
-                            name: string;
-                            value: number;
-                          };
-                          percent: number;
-                          seriesName: string;
-                          dataIndex: number;
-                          color: string;
-                        }) =>
-                          [
-                            // Tooltip firsts prints the name of the graph essentially
-                            `<strong>${params.seriesName}</strong>`,
-                            // Then the label and value
-                            `<strong style="color: ${params.color};">${
-                              params.data.name
-                            }</strong>: ${
-                              params.data.value
-                            } (${params.percent.toFixed(2)}%)`,
-                            // Then a set of student names
-                            ...names[params.dataIndex],
-                          ].join('<br/>'),
-                        axisPointer: {
-                          type: 'shadow',
-                        },
-                      },
-                    }}
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
+                      }}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     );
-  }, [teacherEval, learningGoals]);
+  }, [teacherEval, learningGoals, chartType]);
 };
 
 export default RubricClassSummary;

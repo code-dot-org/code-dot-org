@@ -1281,6 +1281,16 @@ button.infoAlertRight {
   align-self: stretch;
 }
 
+.settingsSummaryHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.settingsSummarySegmentedButtons {
+  display: inline-flex;
+}
+
 .settingsContent {
   display: flex;
   flex-direction: column;
