@@ -13912,32 +13912,37 @@
                       "children": []
                     },
                     {
-                      "id": "L5oerNnG",
-                      "definitionId": "iconHighlight",
+                      "id": "b8oWcHkc",
+                      "displayName": "Heading 1",
+                      "definitionId": "heading",
                       "parameters": {},
                       "variables": {
-                        "heading": {
-                          "type": "UnboundValue",
-                          "key": "AjbCOAC"
-                        },
-                        "text": {
-                          "type": "UnboundValue",
-                          "key": "ov3FiaZ"
-                        },
-                        "iconName": {
+                        "visualAppearance": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
-                            "desktop": "smile"
+                            "desktop": "heading-xl"
                           }
                         },
-                        "linkEntries": {
-                          "path": "/hGSB4J2/fields/ctas/~locale",
-                          "type": "BoundValue"
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G2oGQTXF",
+                          "type": "UnboundValue"
                         },
                         "cfVisibility": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
                           }
                         }
                       },
@@ -16367,8 +16372,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "desktop": "5079px",
-                    "tablet": "5402px",
-                    "mobile": "7321px"
+                    "tablet": "5431px",
+                    "mobile": "7196px"
                   }
                 },
                 "cfMaxWidth": {
@@ -16494,54 +16499,6 @@
                         "children": {
                           "key": "uqryIUsQ",
                           "type": "UnboundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "qLFMZnUw",
-                      "definitionId": "link",
-                      "parameters": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "children": {
-                          "key": "3uZuy0t",
-                          "type": "UnboundValue"
-                        },
-                        "href": {
-                          "type": "UnboundValue",
-                          "key": "GsLOLdu"
-                        },
-                        "isLinkExternal": {
-                          "key": "nIT3Py6",
-                          "type": "UnboundValue"
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "ariaLabel": {
-                          "type": "UnboundValue",
-                          "key": "bKUURbE"
                         },
                         "cfVisibility": {
                           "type": "DesignValue",
@@ -17376,38 +17333,6 @@
                             }
                           },
                           "children": []
-                        },
-                        {
-                          "id": "j1tOoRfv",
-                          "definitionId": "iconHighlight",
-                          "parameters": {},
-                          "variables": {
-                            "heading": {
-                              "type": "UnboundValue",
-                              "key": "k22W8Wm"
-                            },
-                            "text": {
-                              "type": "UnboundValue",
-                              "key": "_CGzCa9"
-                            },
-                            "iconName": {
-                              "type": "DesignValue",
-                              "valuesByBreakpoint": {
-                                "desktop": "smile"
-                              }
-                            },
-                            "linkEntries": {
-                              "path": "/M8UeEdi/fields/ctas/~locale",
-                              "type": "BoundValue"
-                            },
-                            "cfVisibility": {
-                              "type": "DesignValue",
-                              "valuesByBreakpoint": {
-                                "desktop": true
-                              }
-                            }
-                          },
-                          "children": []
                         }
                       ]
                     },
@@ -17828,24 +17753,6 @@
                         }
                       },
                       "children": []
-                    },
-                    {
-                      "id": "3GUNqaf3",
-                      "definitionId": "tabGroup",
-                      "parameters": {},
-                      "variables": {
-                        "tabs": {
-                          "path": "/Is7ioIc/fields/tabGroupItems/~locale",
-                          "type": "BoundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
                     }
                   ]
                 },
@@ -18052,7 +17959,7 @@
                   "valuesByBreakpoint": {
                     "desktop": "295px",
                     "tablet": "fit-content",
-                    "mobile": "fit-content"
+                    "mobile": "295px"
                   }
                 },
                 "cfMaxWidth": {
@@ -18452,9 +18359,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "537px",
-                    "tablet": "1654px",
-                    "mobile": "1200px"
+                    "desktop": "734px",
+                    "tablet": "2369px",
+                    "mobile": "1688px"
                   }
                 },
                 "cfMaxWidth": {
@@ -18703,7 +18610,7 @@
                   ]
                 },
                 {
-                  "id": "awoWj4tT",
+                  "id": "bfxBdemA",
                   "definitionId": "skinnyBanner",
                   "parameters": {},
                   "variables": {
@@ -18714,31 +18621,31 @@
                       }
                     },
                     "heading": {
-                      "path": "/ToLGlFl/fields/heading/~locale",
-                      "type": "BoundValue"
+                      "key": "zYDxVcG",
+                      "type": "UnboundValue"
                     },
                     "description": {
-                      "path": "/kkL-UdO/fields/description/~locale",
+                      "path": "/-O7cSWw/fields/description/~locale",
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "path": "/14ZoJ13/fields/image/~locale",
+                      "path": "/KaQqWLG/fields/image/~locale",
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
                       "type": "UnboundValue",
-                      "key": "fKy-MMp"
+                      "key": "OUEomYX"
                     },
                     "buttonLinks": {
-                      "path": "/OqULTYk/fields/sectionCTAs/~locale",
+                      "path": "/unqw4P0/fields/sectionCTAs/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "key": "3RSL9am",
-                      "type": "UnboundValue"
+                      "type": "UnboundValue",
+                      "key": "TmJ0MzE"
                     },
                     "partnerLogo": {
-                      "path": "/F_sVXx5/fields/file/~locale",
+                      "path": "/1xL47Tj/fields/file/~locale",
                       "type": "BoundValue"
                     },
                     "cfVisibility": {
@@ -18750,14 +18657,14 @@
                     "cfBackgroundColor": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "rgba(244, 244, 255, 1)"
+                        "desktop": "rgba(255, 240, 254, 1)"
                       }
                     }
                   },
                   "children": []
                 },
                 {
-                  "id": "kPjRLm1R",
+                  "id": "VK8yWIFi",
                   "definitionId": "skinnyBanner",
                   "parameters": {},
                   "variables": {
@@ -18768,31 +18675,31 @@
                       }
                     },
                     "heading": {
-                      "path": "/NXMfg3eE/fields/heading/~locale",
-                      "type": "BoundValue"
+                      "key": "sGoNbelT",
+                      "type": "UnboundValue"
                     },
                     "description": {
-                      "path": "/jkDRhuen/fields/description/~locale",
+                      "path": "/obJssqmg/fields/description/~locale",
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "path": "/viCKPG4P/fields/image/~locale",
+                      "path": "/E8WmwE15/fields/image/~locale",
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
                       "type": "UnboundValue",
-                      "key": "hlcsKtxX"
+                      "key": "Ot9LbHyA"
                     },
                     "buttonLinks": {
-                      "path": "/b7aIMB9d/fields/sectionCTAs/~locale",
+                      "path": "/QE9z3z2f/fields/sectionCTAs/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "key": "GHhlmC5d",
-                      "type": "UnboundValue"
+                      "type": "UnboundValue",
+                      "key": "usadL0Lq"
                     },
                     "partnerLogo": {
-                      "path": "/86mx2BX5/fields/file/~locale",
+                      "path": "/nSm9YBxT/fields/file/~locale",
                       "type": "BoundValue"
                     },
                     "cfVisibility": {
@@ -18804,7 +18711,61 @@
                     "cfBackgroundColor": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "rgba(8, 0, 128, 1)"
+                        "desktop": "rgba(129, 0, 121, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "id": "8gTF47KG",
+                  "definitionId": "skinnyBanner",
+                  "parameters": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Dark"
+                      }
+                    },
+                    "heading": {
+                      "key": "880aQQ23",
+                      "type": "UnboundValue"
+                    },
+                    "description": {
+                      "path": "/VKJRP4fd/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "path": "/Pz8Eqmh4/fields/image/~locale",
+                      "type": "BoundValue"
+                    },
+                    "backgroundImage": {
+                      "path": "/aQ2FTXVY/fields/file/~locale",
+                      "type": "BoundValue"
+                    },
+                    "buttonLinks": {
+                      "path": "/4eEM78bn/fields/sectionCTAs/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "lG7muo2m"
+                    },
+                    "partnerLogo": {
+                      "key": "lboT0aD2",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
                       }
                     }
                   },
@@ -18863,9 +18824,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content",
+                    "desktop": "896px",
                     "tablet": "fit-content",
-                    "mobile": "fit-content"
+                    "mobile": "1618px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19254,9 +19215,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "616px",
-                    "tablet": "454px",
-                    "mobile": "fit-content"
+                    "desktop": "675px",
+                    "tablet": "514px",
+                    "mobile": "556px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19397,18 +19358,36 @@
                       "children": []
                     },
                     {
-                      "id": "GWul51a6",
-                      "definitionId": "tabGroup",
+                      "id": "Ab2DX8Mz",
+                      "definitionId": "heading",
                       "parameters": {},
                       "variables": {
-                        "tabs": {
-                          "path": "/1ffVAXjN/fields/tabGroupItems/~locale",
-                          "type": "BoundValue"
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G3QkOYjJ",
+                          "type": "UnboundValue"
                         },
                         "cfVisibility": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
                           }
                         }
                       },
@@ -19469,7 +19448,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "499px",
+                    "mobile": "499px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20049,7 +20029,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "681px",
+                    "mobile": "934px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20414,7 +20395,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "2070px",
+                    "mobile": "1026px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20845,7 +20827,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "547px"
+                    "desktop": "fit-content",
+                    "mobile": "473px"
                   }
                 },
                 "cfMaxWidth": {
@@ -21028,6 +21011,13 @@
               "linkType": "Entry"
             }
           },
+          "-O7cSWw": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "0Qtu4TL": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
@@ -21035,11 +21025,11 @@
               "linkType": "Entry"
             }
           },
-          "14ZoJ13": {
+          "1xL47Tj": {
             "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "id": "6TJZRnAUG6nipPqCP7pVFL",
               "type": "Link",
-              "linkType": "Entry"
+              "linkType": "Asset"
             }
           },
           "2lNgI-W": {
@@ -21105,20 +21095,6 @@
               "linkType": "Entry"
             }
           },
-          "F_sVXx5": {
-            "sys": {
-              "id": "6TJZRnAUG6nipPqCP7pVFL",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
-          "Is7ioIc": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "J2Az9DM": {
             "sys": {
               "id": "YV17p1FI47ZYdCLm39S8W",
@@ -21140,6 +21116,13 @@
               "linkType": "Entry"
             }
           },
+          "KaQqWLG": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Ku53DtN": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
@@ -21150,13 +21133,6 @@
           "LRQ6mHr": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "M8UeEdi": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21196,23 +21172,9 @@
               "linkType": "Entry"
             }
           },
-          "OqULTYk": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "TN8XTWJ": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "ToLGlFl": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21301,13 +21263,6 @@
               "linkType": "Entry"
             }
           },
-          "hGSB4J2": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "iZYxsRR": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
@@ -21318,13 +21273,6 @@
           "j82DfDg": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "kkL-UdO": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21364,6 +21312,13 @@
               "linkType": "Entry"
             }
           },
+          "unqw4P0": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "yNxDeG0": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -21399,13 +21354,6 @@
               "linkType": "Entry"
             }
           },
-          "1ffVAXjN": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "289w042P": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21437,6 +21385,13 @@
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "4eEM78bn": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21504,13 +21459,6 @@
               "linkType": "Entry"
             }
           },
-          "86mx2BX5": {
-            "sys": {
-              "id": "7iR45Lju4ssVPnrB0TYy8S",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
           "8W24TK7L": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21570,6 +21518,13 @@
           "DsX1MPtQ": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "E8WmwE15": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21707,13 +21662,6 @@
               "linkType": "Entry"
             }
           },
-          "NXMfg3eE": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "NqrmKrUA": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21759,6 +21707,20 @@
           "PkMzRu3l": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Pz8Eqmh4": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "QE9z3z2f": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21854,6 +21816,13 @@
               "linkType": "Entry"
             }
           },
+          "VKJRP4fd": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "VTZgp9YI": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
@@ -21910,11 +21879,11 @@
               "linkType": "Entry"
             }
           },
-          "b7aIMB9d": {
+          "aQ2FTXVY": {
             "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "id": "5CxK7pS9iAl2fs6smAtV3Z",
               "type": "Link",
-              "linkType": "Entry"
+              "linkType": "Asset"
             }
           },
           "baGfsFOR": {
@@ -22092,13 +22061,6 @@
               "linkType": "Entry"
             }
           },
-          "jkDRhuen": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "k5eX10Tv": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22183,6 +22145,13 @@
               "linkType": "Entry"
             }
           },
+          "nSm9YBxT": {
+            "sys": {
+              "id": "7iR45Lju4ssVPnrB0TYy8S",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
           "o5ZyffFl": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22193,6 +22162,13 @@
           "o8e0EuB2": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "obJssqmg": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22337,13 +22313,6 @@
               "linkType": "Entry"
             }
           },
-          "viCKPG4P": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "w3A8mGao": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22432,16 +22401,10 @@
             "value": "Title/position"
           },
           "347Oltn": {},
-          "3RSL9am": {
-            "value": "In partnership with"
-          },
           "3blPTQr": {
             "value": "Overline"
           },
           "3gD4aa9": {},
-          "3uZuy0t": {
-            "value": "Text Link"
-          },
           "4H-a8iq": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
@@ -22468,9 +22431,6 @@
             "value": false
           },
           "ABf-FSO": {},
-          "AjbCOAC": {
-            "value": "Icon Highlight Heading"
-          },
           "BkMDUSL": {
             "value": "https://code.org"
           },
@@ -22509,7 +22469,6 @@
           },
           "GkMrM3D": {},
           "GmGKjDd": {},
-          "GsLOLdu": {},
           "HANecnh": {},
           "HURk-ZX": {
             "value": "https://code.org"
@@ -22551,6 +22510,7 @@
           },
           "NDzLtVL": {},
           "OCvEUyr": {},
+          "OUEomYX": {},
           "PAn6OhE": {},
           "Pbti9HD": {
             "value": "Curriculum Snapshot"
@@ -22570,6 +22530,7 @@
           "T1ZuBpV": {},
           "T68Oo4f": {},
           "TH-_LAe": {},
+          "TmJ0MzE": {},
           "U1KmKKh": {},
           "UaQvzts": {
             "value": {
@@ -22597,9 +22558,6 @@
             "value": "Rich Text"
           },
           "ZlGBh22": {},
-          "_CGzCa9": {
-            "value": "Icon Highlight\nMultiline Text"
-          },
           "_yg5mft": {},
           "_zwsCfw": {},
           "aBzIX6V": {
@@ -22622,7 +22580,6 @@
           "bAIeQt5": {
             "value": false
           },
-          "bKUURbE": {},
           "bs0mKZu": {
             "value": "Action Block Pattern Default"
           },
@@ -22640,7 +22597,6 @@
           "eRITgAP": {},
           "ezWxsUM": {},
           "f24Wg65": {},
-          "fKy-MMp": {},
           "fupk4k7": {},
           "gI0IiV4": {
             "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
@@ -22663,9 +22619,6 @@
           "jekav-Z": {
             "value": "Action Block Title"
           },
-          "k22W8Wm": {
-            "value": "Icon Highlight Heading"
-          },
           "kV8GyX4": {
             "value": ""
           },
@@ -22677,9 +22630,6 @@
             "value": "Editorial Card 2"
           },
           "n6pmjoG": {},
-          "nIT3Py6": {
-            "value": true
-          },
           "nWRTZCk": {
             "value": false
           },
@@ -22698,9 +22648,6 @@
                 "label": "Primary button"
               }
             }
-          },
-          "ov3FiaZ": {
-            "value": "Icon Highlight\nMultiline Text"
           },
           "pVPzc3-": {
             "value": ""
@@ -22758,6 +22705,9 @@
           "yKDw71r": {},
           "zHoBMf8": {
             "value": false
+          },
+          "zYDxVcG": {
+            "value": "Skinny Banner Light Background"
           },
           "zh7msz6": {
             "value": ""
@@ -22853,6 +22803,9 @@
           "7WZ8oRk3": {
             "value": "Snapshot"
           },
+          "880aQQ23": {
+            "value": "Skinny Banner Image Background"
+          },
           "8BCQn7kU": {
             "value": "People Collection"
           },
@@ -22947,6 +22900,12 @@
           "FjaNJXPA": {
             "value": "People Collection sorted alphabetically (default)"
           },
+          "G2oGQTXF": {
+            "value": "Supports optional link and multiline text"
+          },
+          "G3QkOYjJ": {
+            "value": "Supports multiple content options"
+          },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
           },
@@ -22956,9 +22915,6 @@
           },
           "GGSUj7T7": {
             "value": ""
-          },
-          "GHhlmC5d": {
-            "value": "In partnership with"
           },
           "GRD8jad1": {},
           "GmnU58eE": {},
@@ -23064,6 +23020,7 @@
           "OpG1fkXt": {
             "value": false
           },
+          "Ot9LbHyA": {},
           "Ov2KaMlI": {
             "value": ""
           },
@@ -23336,7 +23293,6 @@
             "value": false
           },
           "haXmmTvi": {},
-          "hlcsKtxX": {},
           "hyi7gIig": {},
           "i28p2boi": {
             "value": "Video Carousel"
@@ -23376,6 +23332,7 @@
           "l8StqolB": {
             "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
           },
+          "lG7muo2m": {},
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
@@ -23386,6 +23343,7 @@
           "lTlx2Ck5": {
             "value": ""
           },
+          "lboT0aD2": {},
           "lfVVFBsh": {},
           "m5IjfPMd": {},
           "mCXPy8Sk": {
@@ -23464,6 +23422,9 @@
           "sAMYhNiz": {
             "value": "Curriculum Carousel"
           },
+          "sGoNbelT": {
+            "value": "Skinny Banner Dark Background"
+          },
           "sOrYv4IZ": {},
           "sgcocoTx": {},
           "sgiL7BBr": {
@@ -23494,6 +23455,7 @@
           "uqryIUsQ": {
             "value": "Section - Dark Gray"
           },
+          "usadL0Lq": {},
           "uwJDIDdP": {},
           "v6A0d7WI": {
             "value": "With secondary background"

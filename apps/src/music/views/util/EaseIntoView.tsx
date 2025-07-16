@@ -23,6 +23,8 @@ interface EaseIntoViewProps {
   scrollStart: number;
   /** Scroll position to stop scrolling at */
   scrollEnd?: number;
+  /** Aria label for the container */
+  ariaLabel?: string;
   children: React.ReactNode;
 }
 
@@ -34,6 +36,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   frames,
   scrollStart,
   scrollEnd = 0,
+  ariaLabel = 'Scrollable content',
   children,
 }) => {
   const scrollStep = useRef<number | undefined>(0);
@@ -112,7 +115,14 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
   return (
-    <div id={id} className={className} ref={containerRefCallback}>
+    <div
+      id={id}
+      role="tablist"
+      tabIndex={0}
+      aria-label={ariaLabel}
+      className={className}
+      ref={containerRefCallback}
+    >
       {children}
     </div>
   );
