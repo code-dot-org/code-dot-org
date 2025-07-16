@@ -23,7 +23,7 @@ class Services::User::UserTypeSetterTest < ActiveSupport::TestCase
       let(:user_type) {::User::TYPE_TEACHER}
 
       it 'calls UpgradeToTeacher with correct arguments' do
-        allow(Services::User::UserType::UpgradeToTeacher).to receive(:call).
+        allow(Services::User::UpgradeToTeacher).to receive(:call).
           with(user: user, email: email, email_preference: email_preference).
           and_return(true)
 
@@ -36,7 +36,7 @@ class Services::User::UserTypeSetterTest < ActiveSupport::TestCase
       let(:user_type) {::User::TYPE_STUDENT}
 
       it 'calls DowngradeToStudent with correct arguments' do
-        allow(Services::User::UserType::DowngradeToStudent).to receive(:call).
+        allow(Services::User::DowngradeToStudent).to receive(:call).
           with(user: user).
           and_return(true)
 
