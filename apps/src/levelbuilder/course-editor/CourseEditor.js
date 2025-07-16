@@ -49,8 +49,7 @@ class CourseEditor extends Component {
     initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
-    initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType))
-      .isRequired,
+    initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)),
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -129,13 +128,9 @@ class CourseEditor extends Component {
       scripts: this.state.unitsInCourse,
     };
 
-    if (this.state.numberedUnits === NumberedUnitsType.none) {
-      dataToSave.numbered_units = null;
-    } else {
-      dataToSave.numbered_units = this.state.numberedUnits;
-      if (this.state.numberedUnits === NumberedUnitsType.custom) {
-        dataToSave.unit_prefixes = this.state.unitPrefixes;
-      }
+    dataToSave.numbered_units = this.state.numberedUnits;
+    if (this.state.numberedUnits === NumberedUnitsType.custom) {
+      dataToSave.unit_prefixes = this.state.unitPrefixes;
     }
 
     if (this.props.teacherResources) {

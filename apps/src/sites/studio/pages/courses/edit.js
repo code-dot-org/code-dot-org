@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {NumberedUnitsType} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseEditor from '@cdo/apps/levelbuilder/course-editor/CourseEditor';
 import createResourcesReducer, {
   initResources,
@@ -78,10 +77,7 @@ function showCourseEditor() {
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
-        initialNumberedUnits={
-          courseEditorData.course_summary.numbered_units ||
-          NumberedUnitsType.none
-        }
+        initialNumberedUnits={courseEditorData.course_summary.numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}

@@ -207,7 +207,7 @@ module Curriculum
 
     NUMBERED_UNITS_TYPE = OpenStruct.new(
       {
-        none: "none",
+        none: nil,
         auto: "auto",
         custom: "custom"
       }

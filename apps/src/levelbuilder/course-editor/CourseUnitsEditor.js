@@ -7,7 +7,7 @@ import {NumberedUnitsType} from '@cdo/apps/generated/curriculum/sharedCourseCons
 export default class CourseUnitsEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
-    numberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)).isRequired,
+    numberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)),
     initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitPrefixes: PropTypes.arrayOf(PropTypes.string).isRequired,
     updateUnitPrefixes: PropTypes.func.isRequired,

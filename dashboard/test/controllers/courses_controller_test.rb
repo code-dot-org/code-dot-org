@@ -914,65 +914,52 @@ class CoursesControllerTest < ActionController::TestCase
     end
   end
 
-  describe 'updating numbered units setting' do
-    let(:course) {create :unit_group, :with_units}
+  test "update: updates the course to have auto-numbered units" do
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: 'auto'}
+    course.reload
+    assert course.numbered_units?
+    assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto, course.numbered_units
 
-    context 'updating to auto numbering' do
-      it 'updates the course to have numbered units' do
-        sign_in create(:levelbuilder)
-        post :update, params: {course_name: course.name, numbered_units: 'auto'}
-        course.reload
-        assert course.numbered_units?
-        assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto, course.numbered_units
+    ugu1 = course.default_unit_group_units.first
+    assert_nil ugu1.unit_prefix
+  end
 
-        ugu1 = course.default_unit_group_units.first
-        assert_nil ugu1.unit_prefix
-      end
-    end
+  test "update: updates the course to have custom-numbered units" do
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: 'custom', unit_prefixes: %w[1a 1b]}
+    course.reload
+    assert course.numbered_units?
+    assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom, course.numbered_units
 
-    context 'updating to custom numbering' do
-      it 'updates the course to have custom numbered units' do
-        sign_in create(:levelbuilder)
-        post :update, params: {course_name: course.name, numbered_units: 'custom', unit_prefixes: %w[1a 1b]}
-        course.reload
-        assert course.numbered_units?
-        assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom, course.numbered_units
+    ugu1 = course.default_unit_group_units.first
+    ugu2 = course.default_unit_group_units.second
+    assert_equal '1a', ugu1.unit_prefix
+    assert_equal '1b', ugu2.unit_prefix
+  end
 
-        ugu1 = course.default_unit_group_units.first
-        ugu2 = course.default_unit_group_units.second
-        assert_equal '1a', ugu1.unit_prefix
-        assert_equal '1b', ugu2.unit_prefix
-      end
-    end
+  test "update: updates the course to not have numbered units" do
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: false}
+    course.reload
+    refute course.numbered_units?
+  end
 
-    context 'updating to no numbering' do
-      it 'updates the course to not have numbered units' do
-        sign_in create(:levelbuilder)
-        post :update, params: {course_name: course.name, numbered_units: false}
-        course.reload
-        refute course.numbered_units?
-      end
+  test "update: saves unit prefixes but does not show them when switching from custom numbering to no numbering" do
+    course = create :unit_group, :with_units, numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+    ugu1 = course.default_unit_group_units.first
+    ugu2 = course.default_unit_group_units.second
+    ugu1.update!(unit_prefix: '1a')
+    ugu2.update!(unit_prefix: '1b')
 
-      context 'from custom numbering' do
-        let(:course) {create :unit_group, :with_units, numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom}
-        let(:ugu1) {course.default_unit_group_units.first}
-        let(:ugu2) {course.default_unit_group_units.second}
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: false}
+    course.reload
+    ugu1.reload
+    ugu2.reload
 
-        it 'saves the unit prefixes, but does not show them' do
-          ugu1.update!(unit_prefix: '1a')
-          ugu2.update!(unit_prefix: '1b')
-
-          sign_in create(:levelbuilder)
-          post :update, params: {course_name: course.name, numbered_units: false}
-          course.reload
-          ugu1.reload
-          ugu2.reload
-
-          refute course.numbered_units?
-          assert_equal '1a', ugu1.unit_prefix
-          assert_equal '1b', ugu2.unit_prefix
-        end
-      end
-    end
+    refute course.numbered_units?
+    assert_equal '1a', ugu1.unit_prefix
+    assert_equal '1b', ugu2.unit_prefix
   end
 end

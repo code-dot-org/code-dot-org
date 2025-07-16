@@ -1843,12 +1843,12 @@ class Unit < ApplicationRecord
     unit_group_unit ||= Queries::Courses.unit_group_unit(self)
     unit_group = unit_group_unit&.cached_unit_group
     title = localized_title
-    has_prefix = unit_group&.numbered_units
-    return title unless has_prefix
+    numbered_units = unit_group&.numbered_units
+    return title unless numbered_units
 
-    if has_prefix == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto
+    if numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto
       position = unit_group_unit&.position
-    elsif has_prefix == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+    elsif numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
       position = unit_group_unit&.unit_prefix
       return title if position&.strip&.empty?
     end
