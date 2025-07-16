@@ -6,7 +6,7 @@ module Services
       def initialize(user:, email:, email_preference: nil)
         @user = user
         @email = email
-        @email_preference = email_preference || {}
+        @new_attributes = email_preference || {}
       end
 
       def call
@@ -24,9 +24,9 @@ module Services
           if user.migrated?
             user.update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
           else
-            email_preference[:email] = email
+            @new_attributes[:email] = email
           end
-          user.update!(email_preference)
+          user.update!(@new_attributes)
 
           user
         end
