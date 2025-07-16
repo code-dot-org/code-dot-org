@@ -1359,10 +1359,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes workshop.errors.full_messages, 'Description is required'
   end
 
+  test 'valid_registration_link_format validation passes' do
+    workshop = build :workshop, registration_link: 'https://good/url/here'
+    assert workshop.valid?
+  end
+
+  test 'valid_registration_link_format validation error' do
+    workshop = build :workshop, registration_link: 'bad/url here'
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Registration link is not a valid URL', workshop.errors.full_messages[0]
+  end
+
   test 'registration_link defaults to teacher app link if applications are required' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
 
-    assert_equal "/pd/application/teacher", workshop.registration_link
+    assert_equal "https://studio.code.org/pd/application/teacher", workshop.registration_link
   end
 
   test 'registration_link does not default to anything if applications are not required' do
