@@ -49,17 +49,13 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
-      facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-        bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-        image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
+      facilitators = @workshop.facilitators.includes(:facilitator_info).map do |facilitator|
         {
           id: facilitator.id,
           name: facilitator.name,
           email: facilitator.email,
-          image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.read(bio_file) : nil
+          image_path: nil,
+          bio: facilitator.facilitator_bio,
         }
       end
 

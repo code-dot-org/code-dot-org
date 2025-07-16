@@ -4,30 +4,34 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useLevelProperties} from '../levelPropertiesContext';
-import {getSelectMultimodalAvailable, submitChatContents} from '../redux';
+import {submitChatContents} from '../redux';
 import {ChatButton} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
-/**
- * Renders the AI Chat Lab user chat message editor component.
- */
-const UserChatMessageEditor: React.FunctionComponent<{
+interface UserChatMessageEditorProps {
   editorContainerClassName?: string;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
-}> = ({editorContainerClassName, chatButtons, hiddenContext}) => {
+  multimodalAvailable?: boolean;
+}
+
+/**
+ * Renders the AI Chat Lab user chat message editor component.
+ */
+const UserChatMessageEditor: React.FunctionComponent<
+  UserChatMessageEditorProps
+> = ({
+  editorContainerClassName,
+  chatButtons,
+  hiddenContext,
+  multimodalAvailable,
+}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => !!state.aichat.chatMessagePending
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
-  const multimodalEnabled = useAppSelector(
-    getSelectMultimodalAvailable(
-      useLevelProperties().aichatSettings?.multimodalEnabled
-    )
-  );
   const chatAssets = useAppSelector(state =>
     state.aichat.stagedFiles.map(file => file.asset)
   );
@@ -46,7 +50,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
             text: userMessage,
             hiddenContext: hiddenContext,
             assets:
-              multimodalEnabled && chatAssets.length > 0
+              multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
                 : undefined,
           })
@@ -57,7 +61,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
       isWaitingForChatResponse,
       dispatch,
       hiddenContext,
-      multimodalEnabled,
+      multimodalAvailable,
       chatAssets,
     ]
   );

@@ -295,4 +295,30 @@ describe('AccountInformation', () => {
       screen.getByText(/account information successfully updated/i)
     ).toBeInTheDocument();
   });
+
+  it('renders no facilitator info fields when user is not facilitator', () => {
+    render(<AccountInformation {...defaultProps} isFacilitator={false} />);
+
+    expect(
+      screen.queryByRole('textbox', {name: /Facilitator biography/i})
+    ).not.toBeInTheDocument();
+  });
+
+  it('renders facilitator info fields when user is facilitator', () => {
+    const userFacilitatorBio = 'This is a facilitator bio';
+
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isFacilitator={true}
+        userFacilitatorBio={userFacilitatorBio}
+      />
+    );
+
+    const facilitatorBioTextarea = screen.getByRole('textbox', {
+      name: /Facilitator biography/i,
+    });
+    expect(facilitatorBioTextarea).toBeInTheDocument();
+    expect(facilitatorBioTextarea.value).toBe(userFacilitatorBio);
+  });
 });

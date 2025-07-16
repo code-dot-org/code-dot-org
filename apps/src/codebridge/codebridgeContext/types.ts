@@ -1,7 +1,6 @@
 import {FileId, FolderId} from '@codebridge/types';
 
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-export type ReplaceSourceFunction = (source: MultiFileSource) => void;
+import {ProjectFileType} from '@cdo/apps/lab2/types';
 
 export type SaveFileFunction = (fileId: FileId, contents: string) => void;
 export type CloseFileFunction = (fileId: FileId) => void;

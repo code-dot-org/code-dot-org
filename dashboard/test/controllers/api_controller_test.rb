@@ -1946,6 +1946,117 @@ class ApiControllerTest < ActionController::TestCase
     end
   end
 
+  describe '#show_courses_with_progress' do
+    let(:call_api) do
+      get :show_courses_with_progress, params: {section_id: section.id}
+    end
+    let(:response) do
+      call_api
+      JSON.parse(@response.body, symbolize_names: true)
+    end
+    let(:context) {create :modular_course_context}
+    let(:new_unit_group) {context[:new_unit_group]}
+    let(:original_unit_group) {context[:original_unit_group]}
+    let(:teacher) {create :teacher}
+    let(:user) {teacher}
+    let(:section) {create :section, user: teacher, course_id: new_unit_group.id}
+
+    before do
+      sign_in user if user
+    end
+
+    context 'user is not signed in' do
+      let(:user) {nil}
+
+      it 'returns a 302 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated student' do
+      let(:user) {create :student}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated teacher' do
+      let(:user) {create :teacher}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'section.course_id defined' do
+      let(:section) {create :section, user: user, course_id: new_unit_group.id}
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+    end
+
+    context 'student in section' do
+      let(:student) {create :student}
+
+      before do
+        section.add_student(student)
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      context 'student has progress in an unrelated course' do
+        let(:outside_unit_group) {create :single_unit_course, :stable}
+        let!(:outside_course_version) {create :course_version, content_root: outside_unit_group}
+
+        before do
+          # add progress for User in outside course
+          create :user_script, user: student, script: outside_unit_group.default_units.first
+        end
+
+        it 'returns the outside_unit_group' do
+          _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
+        end
+      end
+    end
+  end
+
   private def create_script_with_bonus_levels
     script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script

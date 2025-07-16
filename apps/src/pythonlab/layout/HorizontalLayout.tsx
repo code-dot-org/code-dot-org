@@ -124,10 +124,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutor2Chat
-                  hiddenContext={aiTutor2Context}
-                  levelProperties={levelProperties}
-                />
+                <AiTutor2Chat hiddenContext={aiTutor2Context} />
               </div>
             </PanelContainer>
           </div>
