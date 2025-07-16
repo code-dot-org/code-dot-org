@@ -38,21 +38,22 @@ export const finishedLoadingCoursesWithProgress = () => ({
 
 // Selectors
 export const getSelectedUnitId = state => state.unitSelection.scriptId;
-export const getSelectedCourseVersionId = state => state.unitSelection.courseVersionId;
+export const getSelectedCourseVersionId = state =>
+  state.unitSelection.courseVersionId;
 
 export const getSelectedCourseVersion = state => {
-  const courseVersionId = getSelectedCourseId(state);
+  const courseVersionId = getSelectedCourseVersionId(state);
   return state.unitSelection.coursesWithProgress.find(
     c => c.id === courseVersionId
   );
 };
 
 export const getSelectedCourseName = state => {
-  return getSelectedCourse(state)?.course_name || null;
+  return getSelectedCourseVersion(state)?.course_name || null;
 };
 
 const getSelectedUnit = state => {
-  const courseVersionId = getSelectedCourseId(state);
+  const courseVersionId = getSelectedCourseVersionId(state);
   const unitId = getSelectedUnitId(state);
   if (!courseVersionId || !unitId) {
     return null;
