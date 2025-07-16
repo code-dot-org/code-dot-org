@@ -59,10 +59,9 @@ export default async function Layout({
                 clientKey={statsigClientKey}
                 values={statsigBootstrapValues}
               >
-                <Header />
+                {brand === Brand.CODE_DOT_ORG && <Header />}
                 {children}
-
-                <Footer locale={locale} />
+                {brand === Brand.CODE_DOT_ORG && <Footer locale={locale} />}
               </StatsigProvider>
             </OneTrustProvider>
 
