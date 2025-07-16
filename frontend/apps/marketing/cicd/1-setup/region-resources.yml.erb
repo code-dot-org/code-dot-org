@@ -1,6 +1,44 @@
+<%
+# Get all AZs for the region
+region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
+all_azs = region_config[:availability_zones]
+
+# Determine which AZs to use
+if options[:availability_zones]
+  # Use provided AZs (validate they exist in the region)
+  selected_azs = options[:availability_zones].select { |az| all_azs.include?(az) }
+  if selected_azs.empty?
+    raise "None of the specified availability zones exist in #{options[:region]}"
+  end
+else
+  # Default to first 3 AZs (or all if fewer than 3)
+  selected_azs = all_azs.first(3)
+end
+
+# Build subnet configurations for selected AZs
+public_subnets = selected_azs.map.with_index do |az, index|
+  {
+    availability_zone: az,
+    cidr_block: MarketingSites::Configuration::PUBLIC_SUBNET_CIDRS[index]
+  }
+end
+
+private_subnets = selected_azs.map.with_index do |az, index|
+  {
+    availability_zone: az,
+    cidr_block: MarketingSites::Configuration::PRIVATE_SUBNET_CIDRS[index]
+  }
+end
+%>
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: Provision a shared infrastructure (such as a VPC and Subnets) in a specific AWS Region to support provisioning one or more development, test, and production marketing sites within the Region.
+
+Parameters:
+  AvailabilityZones:
+    Type: CommaDelimitedList
+    Description: List of Availability Zones to use for subnets (defaults to first 3 AZs in region if not specified)
+    Default: "<%= selected_azs.join(',') %>"
 
 Resources:
   # VPC for ECS and ALB
@@ -15,7 +53,7 @@ Resources:
         - Key: Name
           Value: MarketingSites-VPC
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
+<% public_subnets.each_with_index do |subnet, index| %>
   VpcPublicSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -108,7 +146,7 @@ Resources:
         Ref: VpcPrivateSubnet<%= index %>RouteTable
 <% end %>
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
+<% private_subnets.each_with_index do |subnet, index| %>
   VpcPrivateSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -150,18 +188,42 @@ Outputs:
     Export:
       Name: MarketingSites-VpcCidrBlock
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
+  AvailabilityZones:
+    Description: Availability zones used for subnets
+    Value: '<%= selected_azs.join(',') %>'
+    Export:
+      Name: MarketingSitesRegionInfrastructure-AvailabilityZones
+
+  AvailabilityZoneCount:
+    Description: Number of availability zones used
+    Value: <%= selected_azs.length %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-AvailabilityZoneCount
+
+<% public_subnets.each_with_index do |subnet, index| %>
   VpcPublicSubnet<%= index %>Id:
     Description: Marketing Sites Public Subnet <%= index %> ID
     Value: !Ref VpcPublicSubnet<%= index %>
     Export:
       Name: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
+
+  VpcPublicSubnet<%= index %>AvailabilityZone:
+    Description: Marketing Sites Public Subnet <%= index %> Availability Zone
+    Value: <%= subnet[:availability_zone] %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>AvailabilityZone
 <% end %>
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
+<% private_subnets.each_with_index do |subnet, index| %>
   VpcPrivateSubnet<%= index %>Id:
     Description: Marketing Sites Private Subnet <%= index %> ID
     Value: !Ref VpcPrivateSubnet<%= index %>
     Export:
       Name: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+
+  VpcPrivateSubnet<%= index %>AvailabilityZone:
+    Description: Marketing Sites Private Subnet <%= index %> Availability Zone
+    Value: <%= subnet[:availability_zone] %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>AvailabilityZone
 <% end %>
