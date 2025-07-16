@@ -5,9 +5,9 @@ require_relative '../dashboard/config/environment'
 
 def main
   rows = CSV.read('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1.csv', headers: true)
-  additional_headers = ['File count', 'Flagged input?', 'Response', 'Flagged output?', 'Response time (ms)']
+  additional_headers = ['File count (request)', 'File count (level)', 'Flagged input?', 'Response', 'Flagged output?', 'Response time (ms)']
 
-  CSV.open('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1 output (Flash Lite).csv', 'w') do |output_csv|
+  CSV.open('/Users/benjaminbrooks/Downloads/AIF chat prompts - Unit 1 output (gpt-4o-mini).csv', 'w') do |output_csv|
     output_csv << (rows.headers + additional_headers)
 
     rows.each do |row|
@@ -25,14 +25,14 @@ def main
           'filename' => friendly_name,
           'source' => 'level'
         }
-      end.sample(5)
+      end.first(5)
 
       user = User.find_by(email: 'ben+levelbuilder@code.org')
 
-      # to do: get temperature from level
+      temperature = level.aichat_settings.dig('initialCustomizations', 'temperature') || 0.5
       model_customizations = {
-        'selectedModelId' => 'gemini-2.0-flash-lite',
-        'temperature' => 0.5,
+        'selectedModelId' => 'gpt-4o-mini',
+        'temperature' => temperature,
         'retrievalContexts' => [],
         'systemPrompt' => ''
       }
@@ -75,10 +75,6 @@ def main
         response_time = ((Time.now - start_time) * 1000).to_i
 
         model_toxicity = AichatSafetyHelper.find_toxicity('assistant', response, locale, request.level_id)
-        puts [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
-
-        # Moderate model output for toxicity.
-        puts [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
       rescue Net::ReadTimeout
         puts "timeout on level #{level.id}"
         response = 'timeout'
@@ -89,7 +85,8 @@ def main
       end
 
       output = {
-        file_count: assets.length,
+        file_count_in_request: assets.length,
+        file_count_in_level: starter_assets.length,
         flagged_input: user_toxicity,
         response: response,
         flagged_output: model_toxicity,

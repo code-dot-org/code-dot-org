@@ -35,7 +35,7 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     )
 
     # We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
-    temperature *= 2
+    temperature *= 1.5
 
     messages = [
       {role: "system", content: [{type: "text", text: system_instructions}]},
