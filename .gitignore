@@ -39,6 +39,7 @@ npm-debug.log
 dashboard/brakeman_security_report.htm
 .rakeTasks
 /vendor/bundle
+/dashboard/vendor/bundle
 /cookbooks/vendor/bundle
 
 #
