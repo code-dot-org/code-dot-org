@@ -58,8 +58,7 @@ begin
 
   begin
     CDO.log.info "Killing process group #{process_group_id}..."
-    # The negative ID specifies we want to kill all processes in the Process Group with that ID.
-    Process.kill('KILL', -process_group_id.to_i)  # SIGKILL to process group
+    Process.kill('-KILL', process_group_id.to_i)  # SIGKILL to process group
     CDO.log.info 'Done killing the current build and its child processes!'
     ChatClient.log "Done killing the current build and its child processes!", color: 'red'
   rescue Errno::ESRCH
