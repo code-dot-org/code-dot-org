@@ -895,7 +895,7 @@ def element_exists?(selector)
 end
 
 def element_focused?(selector)
-  @browser.execute_script("return $(#{selector.dump}).is(':focus');")
+  @browser.execute_script("return document.querySelector(#{selector.dump}) === document.activeElement;")
 end
 
 def element_visible?(selector)
