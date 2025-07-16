@@ -75,7 +75,6 @@ const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 interface AiDiffChatProps {
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
@@ -86,7 +85,6 @@ interface AiDiffChatProps {
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   scriptName,
-  unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
   suggestedPrompts = context.type === AiDiffContext.GENERAL
@@ -99,9 +97,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     return {
       chatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
-  }, [context, scriptName, unitDisplayName]);
+  }, [context, scriptName]);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
