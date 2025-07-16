@@ -57,6 +57,7 @@ const defaultProps = {
   rubric: defaultRubric,
   currentLevelName: 'test_level',
   studentLevelInfo: null,
+  aiEnabled: true,
 };
 
 describe('RubricFloatingActionButton', () => {
