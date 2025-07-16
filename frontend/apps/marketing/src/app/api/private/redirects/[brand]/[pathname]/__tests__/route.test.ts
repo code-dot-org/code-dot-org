@@ -62,13 +62,13 @@ describe('GET /api/private/redirects/[brand]/[pathname]', () => {
     expect(text).toMatch(/brand/);
   });
 
-  it('returns 404 if no redirect entry found', async () => {
+  it('returns 200 and redirect not found if no redirect entry found', async () => {
     mockGetRedirectEntry.mockResolvedValue(undefined);
     const req = makeRequest();
     const res = await GET(req, {params});
-    expect(res.status).toBe(404);
-    const text = await res.text();
-    expect(text).toMatch(/Not Found/);
+    expect(res.status).toBe(200);
+    const resJson = await res.json();
+    expect(resJson.redirectEntry).toBeNull();
   });
 
   it('returns 200 and the redirect entry with correct headers', async () => {
@@ -82,6 +82,8 @@ describe('GET /api/private/redirects/[brand]/[pathname]', () => {
     );
     expect(res.headers.get('ETag')).toBeDefined();
     const json = await res.json();
-    expect(json).toEqual(entry);
+    expect(json).toEqual({
+      redirectEntry: {destination: '/bar', permanent: true},
+    });
   });
 });

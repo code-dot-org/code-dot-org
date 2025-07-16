@@ -1,6 +1,7 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
 import {Heading2} from '@code-dot-org/component-library/typography';
@@ -34,6 +35,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   shouldSeeEditEmailLink,
   isPasswordRequired,
   isStudent,
+  isFacilitator,
   migrated,
   userType,
   userAge,
@@ -43,6 +45,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   userFamilyName,
   userProperties,
   userEmail,
+  userFacilitatorBio,
   hashedEmail,
   encryptedPasswordPresent,
   canEditPassword,
@@ -59,6 +62,9 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   const [givenName, setGivenName] = useState(userGivenName ?? '');
   const [familyName, setFamilyName] = useState(userFamilyName ?? '');
   const [email, setEmail] = useState(userEmail ?? '');
+  const [facilitatorBio, setFacilitatorBio] = useState(
+    userFacilitatorBio ?? ''
+  );
   const [gender, setGender] = useState(
     userProperties?.gender_student_input ?? ''
   );
@@ -124,6 +130,9 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       gender_student_input: isStudent && gender ? gender : undefined,
       us_state: isStudent && isUSA ? usState : undefined,
       country_code: isStudent ? countryCode : undefined,
+      facilitator_info_attributes: isFacilitator
+        ? {bio: facilitatorBio}
+        : undefined,
     };
     const response = await fetch('/users', {
       method: 'PUT',
@@ -334,6 +343,27 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               minLength={5}
               errorMessage={getError('username')}
             />
+          )}
+
+          {/* facilitator bio */}
+          {isFacilitator && (
+            <FormFieldWrapper
+              label={i18n.facilitatorBio()}
+              errorMessage={
+                getError('facilitator_info.bio') ||
+                getError('facilitator_info.base') ||
+                getError('facilitator_info.user')
+              }
+            >
+              <textarea
+                name="user[facilitator_bio]"
+                value={facilitatorBio}
+                onChange={e => {
+                  setFacilitatorBio(e.target.value);
+                  clearError('facilitator_info.bio');
+                }}
+              />
+            </FormFieldWrapper>
           )}
 
           {/* email */}

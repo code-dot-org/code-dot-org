@@ -10,7 +10,13 @@ import {useMemo} from 'react';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  moveFileThunk,
+  moveFolderThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
  * Handles the drag end event for the file browser, performing file/folder movement and validation.
@@ -18,8 +24,11 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
  * @returns A function that handles the DragOverEvent from `@dnd-kit/core`.
  */
 export const useHandleDragEnd = () => {
-  const {source, moveFile, moveFolder, levelProperties} =
-    useCodebridgeContext();
+  const {levelProperties} = useCodebridgeContext();
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source as MultiFileSource
+  );
+  const dispatch = useAppDispatch();
 
   const dialogControl = useDialogControl();
   const validationFile = levelProperties.validationFile;
@@ -52,7 +61,12 @@ export const useHandleDragEnd = () => {
               title: validationError,
             });
           } else {
-            moveFolder(e.active.data.current.id as string, e.over.id as string);
+            dispatch(
+              moveFolderThunk({
+                folderId: e.active.data.current.id as string,
+                parentId: e.over.id as string,
+              })
+            );
           }
         } else if (e.active.data.current?.type === DragType.FILE) {
           const validationError = validateFileName({
@@ -65,18 +79,16 @@ export const useHandleDragEnd = () => {
               title: validationError,
             });
           } else {
-            moveFile(e.active.data.current.id as string, e.over.id as string);
+            dispatch(
+              moveFileThunk({
+                fileId: e.active.data.current.id as string,
+                folderId: e.over.id as string,
+              })
+            );
           }
         }
       }
     },
-    [
-      dialogControl,
-      moveFile,
-      moveFolder,
-      source.files,
-      source.folders,
-      validateFileName,
-    ]
+    [dialogControl, dispatch, source.files, source.folders, validateFileName]
   );
 };

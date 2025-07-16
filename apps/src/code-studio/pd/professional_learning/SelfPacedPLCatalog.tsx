@@ -16,7 +16,7 @@ export interface SelfPacedPLCourseInfo {
   key: string;
   display_name: string;
   grade_levels: string;
-  duration: string;
+  duration_in_hours: number;
   cs_topic: string;
   description: string;
   image?: string;
@@ -61,7 +61,7 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
               courseKey={courseOffering.key}
               displayName={courseOffering.display_name}
               gradeLevels={courseOffering.grade_levels}
-              duration={courseOffering.duration}
+              duration={courseOffering.duration_in_hours}
               csTopics={courseOffering.cs_topic}
               description={courseOffering.description}
               image={courseOffering.image || defaultImageSrc}
