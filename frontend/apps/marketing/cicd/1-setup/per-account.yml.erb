@@ -1,0 +1,545 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: |
+  Provision all the global Resources (such as IAM Roles/Policies) needed in an AWS Account to support provisioning one
+  or more Marketing Sites Stacks in the Account.
+
+Parameters:
+  # https://github.blog/changelog/2023-06-27-github-actions-update-on-oidc-integration-with-aws/
+  GitHubIntermediateCertificateThumbprintList:
+    Type: CommaDelimitedList
+    Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
+    Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
+
+<%
+  marketing_sites_environment_type_configuration = {
+    development: {
+       base_domain_name: 'marketing-sites.dev-code.org'
+    },
+    test: {
+      base_domain_name: 'marketing-sites.test-code.org'
+    },
+    production: {
+      base_domain_name: 'code.org'
+    }
+  }
+%>
+
+Resources:
+  GitHubOpenIDConnectProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-the-identity-provider-to-aws
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList: !Ref GitHubIntermediateCertificateThumbprintList
+
+  CloudFormationPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-cloudformation-policy
+      Description: CloudFormation permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: CloudFormationFullAccess
+            Effect: Allow
+            Action: cloudformation:*
+            Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*marketing-sites-*"
+  EC2ManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-ec2-management-policy
+      Description: EC2 permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowEC2CreateActions
+            Effect: Allow
+            Action:
+              - ec2:Create*
+              - ec2:Allocate*
+              - ec2:Associate*
+              - ec2:Attach*
+              - ec2:Authorize*
+              - ec2:Modify*
+            Resource: '*'
+          - Sid: AllowEC2DescribeActions
+            Effect: Allow
+            Action: ec2:Describe*
+            Resource: '*'
+  ECSManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-ecs-management-policy
+      Description: ECS permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowECSCreateActions
+            Effect: Allow
+            Action:
+              - ecs:Create*
+              - ecs:Register*
+              - ecs:Tag*
+            Resource:
+              - !Sub "arn:aws:ecs:*:${AWS::AccountId}:cluster/*"
+              - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*marketing-sites-*:*"
+              - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-marketing-sites-*"
+          - Sid: AllowECSDescribeActions
+            Effect: Allow
+            Action:
+              - ecs:Describe*
+              - ecs:Deregister*
+            Resource: '*'
+  LoadBalancerManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-loadbalancer-management-policy
+      Description: Load Balancer permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowELBCreateActions
+            Effect: Allow
+            Action:
+              - elasticloadbalancing:Create*
+              - elasticloadbalancing:Register*
+              - elasticloadbalancing:Add*
+              - elasticloadbalancing:Modify*
+            Resource: '*'
+          - Sid: AllowELBDescribeAndDeleteNonTaggable
+            Effect: Allow
+            Action:
+              - elasticloadbalancing:Describe*
+              - elasticloadbalancing:DeleteListener
+            Resource: '*'
+  CloudFrontManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-cloudfront-management-policy
+      Description: CloudFront permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowCloudFrontCreateActions
+            Effect: Allow
+            Action:
+              - cloudfront:Create*
+              - cloudfront:Publish*
+              - cloudfront:Tag*
+            Resource: '*'
+          - Sid: AllowCloudFrontActionsNonTaggableResources
+            Effect: Allow
+            Action:
+              - cloudfront:CreateCachePolicy
+              - cloudfront:UpdateCachePolicy
+              - cloudfront:DeleteCachePolicy
+              - cloudfront:GetCachePolicy
+              - cloudfront:ListCachePolicies
+              - cloudfront:CreateOriginAccessControl
+              - cloudfront:UpdateOriginAccessControl
+              - cloudfront:DeleteOriginAccessControl
+              - cloudfront:GetOriginAccessControl
+              - cloudfront:ListOriginAccessControls
+              - cloudfront:CreateResponseHeadersPolicy
+              - cloudfront:UpdateResponseHeadersPolicy
+              - cloudfront:DeleteResponseHeadersPolicy
+              - cloudfront:GetResponseHeadersPolicy
+              - cloudfront:ListResponseHeadersPolicies
+              - cloudfront:CreateFunction
+              - cloudfront:UpdateFunction
+              - cloudfront:DeleteFunction
+              - cloudfront:DescribeFunction
+              - cloudfront:GetFunction
+              - cloudfront:ListFunctions
+              - cloudfront:PublishFunction
+              - cloudfront:TestFunction
+            Resource: '*'
+          - Sid: AllowCloudFrontDescribeActions
+            Effect: Allow
+            Action:
+              - cloudfront:Get*
+              - cloudfront:Describe*
+            Resource: '*'
+  DNSCertificateManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-dns-certificate-management-policy
+      Description: Route53 and ACM permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowRoute53ACMActions
+            Effect: Allow
+            Action:
+              - route53:Change*
+              - route53:Get*
+              - route53:List*
+              - acm:Request*
+              - acm:Add*
+              - acm:Describe*
+            Resource: '*'
+  EFSManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-efs-management-policy
+      Description: EFS permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowEFSCreateActions
+            Effect: Allow
+            Action:
+              - elasticfilesystem:Create*
+              - elasticfilesystem:Tag*
+              - elasticfilesystem:Put*
+              - elasticfilesystem:Modify*
+            Resource: '*'
+          - Sid: AllowEFSDescribeActions
+            Effect: Allow
+            Action:
+              - elasticfilesystem:Describe*
+              - elasticfilesystem:List*
+            Resource: '*'
+  ElastiCacheManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-elasticache-management-policy
+      Description: ElastiCache permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowElastiCacheCreateActions
+            Effect: Allow
+            Action:
+              - elasticache:Create*
+              - elasticache:Add*
+              - elasticache:Modify*
+            Resource: '*'
+          - Sid: AllowElastiCacheDescribeActions
+            Effect: Allow
+            Action:
+              - elasticache:Describe*
+              - elasticache:List*
+            Resource: '*'
+  AutoScalingManagementPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-autoscaling-management-policy
+      Description: Auto Scaling permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowApplicationAutoScalingActions
+            Effect: Allow
+            Action: application-autoscaling:*
+            Resource: '*'
+  S3LoggingPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: marketing-sites-s3-logging-policy
+      Description: S3 logging permissions for marketing sites
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowS3LoggingBucketACLManagement
+            Effect: Allow
+            Action:
+              - s3:Get*
+              - s3:Put*
+            Resource: "arn:aws:s3:::cdo-logs"
+
+  # ------------------------------------------------------------
+  # Environment-specific Resources (Generated via ERB)
+  # ------------------------------------------------------------
+<%
+  marketing_sites_environment_type_configuration.each do |env_type, configuration|
+    environment_type = env_type.to_s
+    hyphenated_base_domain = configuration[:base_domain_name].tr('.', '-')
+%>
+<%  # We only trust GitHub Actions to trigger Stack creation/updates for GitHub test and production Environments
+    if %w[test production].include?(environment_type)%>
+  GitHubActions<%=environment_type.capitalize%>Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: github-actions-cloudformation-<%=environment_type%>-role
+      Description: Role for GitHub Actions to create/update CloudFormation stacks.
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>'
+      Policies:
+        - PolicyName: github-actions-cloudformation-policy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Sid: CloudFormationPermissions
+                Effect: Allow
+                Action:
+                  - cloudformation:CreateStack
+                  - cloudformation:DescribeStacks
+                  - cloudformation:CreateChangeSet
+                  - cloudformation:DescribeChangeSet
+                  - cloudformation:DeleteChangeSet
+                  - cloudformation:ExecuteChangeSet
+                  - cloudformation:DeleteStack
+                  - cloudformation:UpdateStack
+                  - cloudformation:GetTemplateSummary
+                Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_base_domain%>*"
+              - Sid: PassRoleToCloudFormation
+                Effect: Allow
+                Action:
+                  - iam:PassRole
+                Resource: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
+              # GitHub Actions needs to flush the content distribution network cache after invoking a successful Stack update.
+              - Sid: AllowCloudfrontInvalidation
+                Effect: Allow
+                Action:
+                  - cloudfront:CreateInvalidation
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+              # GitHub Actions syncs Next.js assets (CSS, javascript, fonts, images etc.) to the static assets bucket
+              # during each build.
+              - Sid: AllowS3StaticAssetsSync
+                Effect: Allow
+                Action:
+                  - s3:PutObject
+                  - s3:PutObjectAcl
+                  - s3:DeleteObject
+                  - s3:GetObject
+                  - s3:GetObjectAcl
+                  - s3:ListBucket
+                  - s3:ListBucketMultipartUploads
+                Resource:
+                  - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
+                  - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets'
+<%  end %>
+  # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
+  MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      Description: Permissions boundary for Roles created by CloudFormationMarketingSites<%=environment_type.capitalize%>Role
+      ManagedPolicyName: marketing-sites-role-permissions-boundary-<%=environment_type%>-policy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowSecretsManagerForMarketingSites
+            Effect: Allow
+            Action:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:DescribeSecret
+            Resource: 'arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*'
+          - Sid: AllowCloudfrontInvalidation
+            Effect: Allow
+            Action:
+              - cloudfront:CreateInvalidation
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: <%=environment_type%>
+          - Sid: AllowECSOperationsOnTaggedResources
+            Effect: Allow
+            Action:
+              - ecs:UpdateService
+              - ecs:DescribeServices
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: <%=environment_type%>
+          - Sid: AllowCloudWatchForAutoScaling
+            Effect: Allow
+            Action:
+              - cloudwatch:DescribeAlarms
+              - cloudwatch:GetMetricStatistics
+              - cloudwatch:PutMetricAlarm
+              - cloudwatch:DeleteAlarms
+            Resource: '*'
+          - Sid: AllowECSTaskExecutionLogging
+            Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*/*"
+          - Sid: AllowECSTaskExecutionCreateLogGroup
+            Action:
+              - logs:CreateLogGroup
+            Effect: Allow
+            Resource:
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*"
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*"
+<% if environment_type != 'production' %>
+          - Sid: AllowSSMMessagesForECSExec
+            Effect: Allow
+            Action:
+              - ssmmessages:CreateControlChannel
+              - ssmmessages:CreateDataChannel
+              - ssmmessages:OpenControlChannel
+              - ssmmessages:OpenDataChannel
+            Resource: '*'
+<% end %>
+
+  CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationMarketingSites<%=environment_type.capitalize%>Role
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudformation.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - !Ref CloudFormationPolicy
+        - !Ref EC2ManagementPolicy
+        - !Ref ECSManagementPolicy
+        - !Ref LoadBalancerManagementPolicy
+        - !Ref CloudFrontManagementPolicy
+        - !Ref DNSCertificateManagementPolicy
+        - !Ref EFSManagementPolicy
+        - !Ref ElastiCacheManagementPolicy
+        - !Ref AutoScalingManagementPolicy
+        - !Ref S3LoggingPolicy
+      Policies:
+        - PolicyName: EnvironmentSpecific<%=environment_type.capitalize%>Policy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Sid: CloudFormation<%=environment_type.capitalize%>
+                Effect: Allow
+                Action: cloudformation:*
+                # The Stack Name must match this naming prefix convention. Examples:
+                # marketing-sites-production-code-org
+                # marketing-sites-production-hourofcode-com
+                # marketing-sites-test-teachai-org
+                # marketing-sites-test-code-org
+                # marketing-sites-development-code-org-my-feature-branch
+                # marketing-sites-development-code-org-my-other-branch
+                Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_base_domain%>*"
+
+              - Sid: AllowCreateRoleWithBoundary
+                Effect: Allow
+                Action:
+                  - iam:AttachRolePolicy
+                  - iam:CreateRole
+                  - iam:DeleteRolePolicy
+                  - iam:DetachRolePolicy
+                  - iam:PutRolePolicy
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
+
+              - Sid: AllowIAMRoleManagement
+                Effect: Allow
+                Action:
+                  - iam:CreatePolicy
+                  - iam:DeleteRole
+                  - iam:DeletePolicy
+                  - iam:DeleteRolePolicy
+                  - iam:GetRole*
+                  - iam:ListAttachedRolePolicies
+                  - iam:TagRole
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+
+              - Sid: AllowPassRoleToService
+                Effect: Allow
+                Action: iam:PassRole
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEquals:
+                    iam:PassedToService:
+                      - ecs-tasks.amazonaws.com
+                      - application-autoscaling.amazonaws.com
+
+              # Environment-specific resource deletions
+              - Sid: AllowTaggedResourceDeletions
+                Effect: Allow
+                Action:
+                  - ec2:Delete*
+                  - ec2:Release*
+                  - ec2:Disassociate*
+                  - ec2:Detach*
+                  - ec2:Revoke*
+                  - ecs:Update*
+                  - ecs:Delete*
+                  - elasticloadbalancing:Delete*
+                  - elasticloadbalancing:Deregister*
+                  - cloudfront:Update*
+                  - cloudfront:Delete*
+                  - acm:Delete*
+                  - secretsmanager:Delete*
+                  - elasticfilesystem:Delete*
+                  - elasticfilesystem:Untag*
+                  - elasticache:Delete*
+                  - elasticache:Remove*
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+
+              # Environment-specific ECS resources
+              - Sid: AllowECSCreateActionsOnSpecificResources
+                Effect: Allow
+                Action:
+                  - ecs:Create*
+                  - ecs:Register*
+                  - ecs:Tag*
+                Resource:
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:cluster/*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*<%=hyphenated_base_domain%>*:*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-<%=hyphenated_base_domain%>-*"
+
+              - Sid: AllowS3ActionsOnStaticAssets
+                Effect: Allow
+                Action:
+                  - s3:Create*
+                  - s3:Put*
+                  - s3:Delete*
+                  - s3:Get*
+                  - s3:List*
+                Resource:
+                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
+                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
+
+              - Sid: AllowSecretsManagerActions
+                Effect: Allow
+                Action:
+                  - secretsmanager:Get*
+                  - secretsmanager:Describe*
+                Resource: "arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*"
+<% end %>
+
+Outputs:
+<%
+  marketing_sites_environment_type_configuration.each do |env_type, configuration|
+    environment_type = env_type.to_s
+%>
+  CloudFormationServiceMarketingSites<%=environment_type.capitalize%>RoleArn:
+    Description: ARN of the CloudFormation service role for <%=environment_type%> environment
+    Value: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
+  MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn:
+    Description: ARN of the permissions boundary policy for <%=environment_type%> environment roles
+    Value: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
+    Export:
+      Name: !Sub "${AWS::StackName}-MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn"
+<%  if %w[test production].include?(environment_type) %>
+  GitHubActions<%=environment_type.capitalize%>RoleArn:
+    Description: ARN of the GitHub Actions role for <%=environment_type%> environment
+    Value: !GetAtt GitHubActions<%=environment_type.capitalize%>Role.Arn
+<%  end %>
+<%end %>

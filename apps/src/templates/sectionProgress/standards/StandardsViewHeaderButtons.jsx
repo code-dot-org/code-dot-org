@@ -28,6 +28,7 @@ class StandardsViewHeaderButtons extends Component {
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
     unpluggedLessons: PropTypes.array.isRequired,
     fetchStudentLevelScores: PropTypes.func,
@@ -97,6 +98,7 @@ class StandardsViewHeaderButtons extends Component {
     window.teacherDashboardStoreInformation = {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId,
+      courseVersionId: this.props.courseVersionId,
     };
     firehoseClient.putRecord(
       {
@@ -216,6 +218,7 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseVersionId: state.unitSelection.courseVersionId,
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     unpluggedLessons: getUnpluggedLessonsForScript(state),
   }),

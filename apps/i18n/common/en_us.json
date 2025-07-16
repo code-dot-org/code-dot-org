@@ -1367,6 +1367,7 @@
   "extraTopBlocks": "You have unattached blocks.",
   "extraTopBlocksWhenRun": "You have unattached blocks. Did you mean to attach these to the \"when run\" block?",
   "facilitatorLedWorkshops": "Facilitator led workshops",
+  "facilitatorBio": "Facilitator biography",
   "failedToGenerateBlocklyCode": "Uh oh! We can’t run your code. We are investigating this issue. In the meantime, you may need to start over or skip to another level.",
   "fallbackVideoClosedCaptioningLink": "Closed Captioning and Translations",
   "fallbackVideoClosedCaptioningDialogHeading": "Closed captioning and translations available on YouTube",

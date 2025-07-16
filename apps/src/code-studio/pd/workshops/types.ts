@@ -58,14 +58,8 @@ export type UserInfoForWorkshop = {
     country?: string;
     school_name?: string;
     school_zip?: string;
+    school_type?: string;
   };
-};
-
-export type WorkshopEnrollmentParams = Pick<
-  UserInfoForWorkshop,
-  'email' | 'first_name' | 'last_name' | 'school_info'
-> & {
-  user_id: number;
 };
 
 export interface GetUserInfoForWorkshopResponse {

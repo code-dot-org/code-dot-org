@@ -9,8 +9,8 @@ import React, {useCallback, useEffect, useMemo} from 'react';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -42,8 +42,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {getNewRemoveId} from '../redux/utils';
-import {AichatLevelProperties, Notification, ViewMode} from '../types';
+import {AichatLevelProperties, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -51,14 +50,6 @@ import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
 
 import moduleStyles from './aichatView.module.scss';
-
-const getResetModelNotification = (): Notification => ({
-  removeId: getNewRemoveId(),
-  text: aichatI18n.modelResetNotification(),
-  notificationType: 'success',
-  timestamp: Date.now(),
-  includeInChatHistory: true,
-});
 
 const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   levelProperties,
@@ -238,7 +229,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useDialogControl();

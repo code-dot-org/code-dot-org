@@ -166,9 +166,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     @student.reload
     assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    refute_equal response['secret_picture_path'], old_secret_picture_path
+    refute_equal response['secret_picture_url'], ApplicationController.helpers.image_url(old_secret_picture_path)
     refute_equal response['secret_words'], old_secret_words
-    assert_equal response['secret_picture_path'], @student.secret_picture.path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(@student.secret_picture.path)
     assert_equal response['secret_words'], @student.secret_words
   end
 
@@ -185,7 +185,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     @student.reload
     assert response['secret_picture_path'].present?
     assert response['secret_words'].present?
-    assert_equal response['secret_picture_path'], secret_picture_path
+    assert_equal response['secret_picture_url'], ApplicationController.helpers.image_url(secret_picture_path)
     assert_equal response['secret_words'], secret_words
     assert_equal secret_picture_path, @student.secret_picture.path
     assert_equal secret_words, @student.secret_words

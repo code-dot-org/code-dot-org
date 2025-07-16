@@ -76,7 +76,7 @@ const plSectionRowData = [
     assignmentNames: ['Single Unit Course 2025', 'Single Unit 2025'],
     assignmentPaths: [
       '/courses/single-unit-course-2025',
-      '/s/single-unit-2025',
+      '/courses/single-unit-course-2025/units/1',
     ],
   },
 ];

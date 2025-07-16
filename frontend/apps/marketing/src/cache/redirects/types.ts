@@ -6,3 +6,7 @@ export interface RedirectEntry {
   destination: string;
   permanent: boolean;
 }
+
+export type RedirectEntryResponse = {
+  redirectEntry: RedirectEntry | null;
+};

@@ -63,6 +63,7 @@ const WorkshopMarketingPage: React.FunctionComponent<
           showHomeIcon={true}
           homeIconHref="/my-professional-learning"
           breadcrumbs={workshopMarketingBreadcrumbs}
+          className={moduleStyles.headerBreadcrumbs}
         />
         <Heading1>Register for a workshop</Heading1>
       </section>

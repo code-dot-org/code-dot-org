@@ -7,6 +7,7 @@ import Bootstrap from '@/bootstrap';
 import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
 import {getIcons} from '@/config/metadata/icons';
+import {getSiteVerification} from '@/config/metadata/siteVerification';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
 import {registerContentfulComponents} from '@/contentful/registration';
@@ -80,7 +81,13 @@ export async function generateMetadata({
   return {
     title: getPageHeading(experience),
     icons: getIcons(pageProps.brand),
-    ...getSeoMetadata(experience, pageProps.brand, pageProps.locale),
+    ...getSeoMetadata(
+      experience,
+      pageProps.brand,
+      pageProps.locale,
+      pageProps.slug,
+    ),
+    verification: getSiteVerification(pageProps.brand),
   };
 }
 export default async function ExperiencePage({

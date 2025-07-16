@@ -66,6 +66,14 @@ describe('WorkshopDetails', () => {
     expect(screen.getByText(baseProps.notes)).toBeInTheDocument();
   });
 
+  it('does not render notes if none provided', () => {
+    render(<WorkshopDetails {...baseProps} notes="" />);
+    expect(
+      screen.queryByRole('heading', {name: /attendee notes/i})
+    ).not.toBeInTheDocument();
+    expect(screen.queryByText(baseProps.notes)).not.toBeInTheDocument();
+  });
+
   it('renders course offering tags if provided', () => {
     render(<WorkshopDetails {...baseProps} />);
     baseProps.course_offerings.forEach(course =>
@@ -78,6 +86,12 @@ describe('WorkshopDetails', () => {
     expect(screen.getByText(/facilitator a/i)).toBeInTheDocument();
     expect(screen.getByText(/facilitator@example.com/i)).toBeInTheDocument();
     expect(screen.getByText(/show biography/i)).toBeInTheDocument();
+  });
+
+  it('does not render facilitator info if none provided', () => {
+    render(<WorkshopDetails {...baseProps} facilitators={undefined} />);
+    expect(screen.queryByText(/facilitator a/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/show biography/i)).not.toBeInTheDocument();
   });
 
   it('renders data sharing notice section with anchor', () => {
