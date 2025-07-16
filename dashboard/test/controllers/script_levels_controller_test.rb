@@ -14,8 +14,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     unit_names = [
       Unit::HOC_NAME,
       Unit::FLAPPY_NAME,
-      Unit::FROZEN_NAME,
-      Unit::PLAYLAB_NAME,
     ]
     seed_deprecated_unit_fixtures(unit_names: unit_names)
 
@@ -1293,39 +1291,36 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to '/hoc/1'
   end
 
-  test 'should show tracking pixel for hoc chapter 1 in prod' do
+  test 'should show tracking pixel for first level of hoc course in prod' do
     set_env :production
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: 1}
 
-    assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
-  end
+    unit = create(:script, :with_levels, name: 'hoc-script')
+    create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
 
-  test 'should show tracking pixel for frozen chapter 1 in prod' do
-    set_env :production
     get :show, params: {
-      course_course_name: Unit::FROZEN_NAME,
+      course_course_name: 'hoc-course',
       unit_position: 1,
       lesson_position: 1,
-      id: 1
+      id: 1,
     }
-    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
+
+    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]'
   end
 
-  test 'should show tracking pixel for flappy chapter 1 in prod' do
+  test 'should not show tracking pixel for second level of hoc course in prod' do
     set_env :production
-    get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: 1}
-    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
-  end
 
-  test 'should show tracking pixel for playlab chapter 1 in prod' do
-    set_env :production
+    unit = create(:script, :with_levels, name: 'hoc-script')
+    create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
+
     get :show, params: {
-      course_course_name: Unit::PLAYLAB_NAME,
+      course_course_name: 'hoc-course',
       unit_position: 1,
       lesson_position: 1,
-      id: 1
+      id: 2,
     }
-    assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
+
+    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do
