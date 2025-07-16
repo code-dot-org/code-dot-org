@@ -14,8 +14,8 @@ module Queries
         ::User.only_deleted.
           where(deleted_at: ..@deleted_before).
           where(purged_at: nil).
-          where(pii_scrubbed_at: nil).
-          where(anonymized_at: nil)
+          left_outer_joins(:user_data_retention_status).
+          where(user_data_retention_statuses: {pii_scrubbed_at: nil, anonymized_at: nil})
       end
 
       private def validate_deleted_before

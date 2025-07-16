@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'stringio'
 require 'cdo/aws/metrics'
 require 'cdo/aws/s3'
@@ -20,8 +22,10 @@ require 'cdo/honeybadger'
 class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :scrub_accounts_deleted_since, :max_accounts_to_scrub, :log
+  attr_reader :dry_run, :scrub_accounts_deleted_since, :max_accounts_to_scrub, :num_accounts_scrubbed, :num_errors, :start_time
   alias :dry_run? :dry_run
+
+  LOGGING_NAMESPACE = 'Platform/PiiScrubber'
 
   def initialize(options = {})
     @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
@@ -36,7 +40,7 @@ class ExpiredDeletedAccountPiiScrubber
     @max_accounts_to_scrub = options[:max_accounts_to_scrub] || 8000
     raise ArgumentError.new('max_accounts_to_scrub must be Integer') unless @max_accounts_to_scrub.is_a? Integer
 
-    reset
+    reset_metrics
   end
 
   def scrub_pii_from_expired_deleted_accounts!
@@ -73,7 +77,7 @@ class ExpiredDeletedAccountPiiScrubber
       log_message("Dry run: would scrub PII from user_id #{user.id}")
     else
       log_message("Scrubbing PII from user_id #{user.id}")
-      Services::User.PiiScrubber.call(user: user)
+      Services::User::PiiScrubber.call(user: user)
     end
   end
 
@@ -99,7 +103,7 @@ class ExpiredDeletedAccountPiiScrubber
   end
 
   private def log_message(message)
-    CDO.log.info({event: message, namespace: 'PiiScrubber'})
+    CDO.log.info({event: message, namespace: LOGGING_NAMESPACE})
   end
 
   private def reset_metrics
