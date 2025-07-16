@@ -2,7 +2,6 @@ import {createSelector} from '@reduxjs/toolkit';
 
 import type {RootState} from '@cdo/apps/types/redux';
 
-import {modelDescriptions} from '../../constants';
 import {
   allFieldsHidden,
   anyFieldsChanged,
@@ -46,13 +45,3 @@ export const selectHavePropertiesChanged = (state: RootState) =>
     state.aichat.savedAiCustomizations,
     state.aichat.currentAiCustomizations
   ).length > 0;
-
-export const getSelectMultimodalAvailable =
-  (multimodalEnabled?: boolean) =>
-  ({aichat}: RootState) => {
-    const multimodalSupported = modelDescriptions.find(
-      model => model.id === aichat.savedAiCustomizations.selectedModelId
-    )?.multimodal;
-
-    return multimodalSupported && multimodalEnabled;
-  };
