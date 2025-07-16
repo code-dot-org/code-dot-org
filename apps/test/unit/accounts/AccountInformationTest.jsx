@@ -325,4 +325,69 @@ describe('AccountInformation', () => {
     expect(facilitatorBioTextarea).toBeInTheDocument();
     expect(facilitatorBioTextarea.value).toBe(userFacilitatorBio);
   });
+
+  it('does not block updates if user never had an educator_role', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.change(screen.getByLabelText(/username/i), {
+      target: {value: 'coder1'},
+    });
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'coder1',
+        given_name: '',
+        family_name: '',
+        educator_role: undefined,
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+        gender_student_input: undefined,
+        us_state: undefined,
+        country_code: undefined,
+      },
+    });
+  });
+
+  it('does not allow removing educator_role after it is set', () => {
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: 'classroom_teacher'},
+    });
+
+    const roleErrorText = 'Educator role cannot be removed.';
+
+    expect(screen.queryByText(roleErrorText)).not.toBeInTheDocument();
+
+    // attempt to clear educator_role value
+    fireEvent.change(screen.getByLabelText(/what is your primary role/i), {
+      target: {value: ''},
+    });
+
+    expect(screen.getByText(roleErrorText)).toBeInTheDocument();
+
+    // educator_role cannot be cleared once it is set
+    expect(screen.getByLabelText(/what is your primary role/i).value).toBe(
+      'classroom_teacher'
+    );
+  });
 });

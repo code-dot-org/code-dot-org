@@ -6,7 +6,7 @@ import Link from '@code-dot-org/component-library/link';
 import TextField from '@code-dot-org/component-library/textField';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {ChangeEvent, useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -119,6 +119,25 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
       sessionStorage.removeItem(ACCOUNT_UPDATE_SUCCESS);
     }
   }, []);
+
+  const handleRoleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+    if (educatorRole && !e.target.value) {
+      setErrors(prevErrors => ({
+        ...prevErrors,
+        educator_role: [
+          ...(prevErrors.educator_role ?? []),
+          i18n.accountInformation_educatorRoleCannotBeRemoved(),
+        ],
+      }));
+    } else {
+      setEducatorRole(e.target.value);
+      setErrors(prevErrors => {
+        const updatedErrors = {...prevErrors};
+        delete updatedErrors.educator_role;
+        return updatedErrors;
+      });
+    }
+  };
 
   const handleSubmitAccountSettingsUpdate = async () => {
     resetMessages();
@@ -359,9 +378,7 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
               labelText={locale.what_is_your_role()}
               name="educator_role"
               selectedValue={educatorRole}
-              onChange={e => {
-                setEducatorRole(e.target.value);
-              }}
+              onChange={handleRoleChange}
               itemGroups={roleItemGroups}
               dropdownTextThickness="thin"
               errorMessage={getError('educator_role')}
