@@ -1948,6 +1948,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # in this test, we depend on the unit tests for the particular buckets to
     # verify correct hard-delete behavior for that bucket.
     student = create :student
+    helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, storage_id|
         projects_table.where(id: project_id_a).update(state: 'deleted')
@@ -1959,8 +1960,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
           expects(:hard_delete_channel_content).
           with(storage_encrypt_channel_id(storage_id, project_id_b))
 
-        purge_user student
-        DeleteAccountsHelper.new.delete_s3_contents student
+        helper.delete_s3_contents(student)
       end
     end
   end
@@ -1986,7 +1986,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
         assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
 
-        # purge_user student
         helper.delete_datablock_storage(student)
         assert_logged "Deleting Datablock Storage contents for 2 projects"
         assert_empty DatablockStorageTable.where(project_id: project_id_a)
@@ -2009,7 +2008,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
         assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
 
-        #purge_user student
         helper.delete_datablock_storage(student)
         assert_logged "Deleting Datablock Storage contents for 2 projects"
         assert_empty DatablockStorageKvp.where(project_id: project_id_a)
