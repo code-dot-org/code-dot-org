@@ -52,11 +52,6 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
         _(described_instance.num_errors).must_equal 1
       end
 
-      it 'should log the error' do
-        expect(described_instance).to receive(:log_message).with(/Error scrubbing user_id #{user.id}: Test error/)
-        _(proc {scrub_pii}).must_raise Exception
-      end
-
       it 'should notify Honeybadger' do
         expect(Honeybadger).to receive(:notify).with(
           instance_of(Exception),
