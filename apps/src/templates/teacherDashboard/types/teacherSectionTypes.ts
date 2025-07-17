@@ -130,7 +130,6 @@ export interface ServerStudent {
   id: number;
   name: string;
   secret_picture_name: string;
-  secret_picture_path?: string; // @deprecated Use `secret_picture_url` instead
   secret_picture_url: string;
   secret_words: string;
   sectionId: number;

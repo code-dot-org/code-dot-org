@@ -13,7 +13,7 @@ import React, {useEffect, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {LabConfig, ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -31,7 +31,6 @@ type CodebridgeProps = {
   startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
-  labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
@@ -46,7 +45,6 @@ export const Codebridge = React.memo(
     startSources,
     onRun,
     onStop,
-    labConfig,
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
@@ -147,7 +145,6 @@ export const Codebridge = React.memo(
           startSources,
           onRun,
           onStop,
-          labConfig,
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,

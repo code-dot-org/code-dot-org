@@ -74,7 +74,6 @@ export interface Student {
   gender?: string;
   genderTeacherInput?: string;
   secretWords: string;
-  secretPicturePath?: string; // @deprecated Use `secretPictureUrl` instead
   secretPictureUrl: string;
   loginType: string;
   sectionId?: number;
