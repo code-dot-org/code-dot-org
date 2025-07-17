@@ -28,7 +28,7 @@ module User::AssignedCoursesAndScripts
   # Checks if there are any launched scripts assigned to the user.
   # @return [Array] of Scripts
   def visible_assigned_scripts
-    user_scripts.where("assigned_at").
+    user_scripts.where.not(assigned_at: nil).
       map {|user_script| Unit.where(id: user_script.script.id).select(&:launched?)}.
       flatten
   end
