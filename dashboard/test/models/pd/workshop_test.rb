@@ -1368,7 +1368,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop, registration_link: 'bad/url here'
     refute workshop.valid?
     assert_equal 1, workshop.errors.messages.count
-    assert_equal 'Registration link is not a valid URL', workshop.errors.full_messages[0]
+    assert_equal 'Registration link is not valid or is missing http or https', workshop.errors.full_messages[0]
   end
 
   test 'registration_link defaults to teacher app link if applications are required' do

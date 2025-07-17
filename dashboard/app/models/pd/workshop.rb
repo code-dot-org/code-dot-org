@@ -171,7 +171,7 @@ class Pd::Workshop < ApplicationRecord
 
   def valid_registration_link_format
     unless self.class.valid_url?(registration_link)
-      errors.add(:registration_link, "is not a valid URL")
+      errors.add(:registration_link, "is not valid or is missing http or https")
     end
   end
 

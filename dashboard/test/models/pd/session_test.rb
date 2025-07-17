@@ -31,7 +31,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session = build :pd_session, meeting_link: 'bad/url here'
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'Meeting link is not a valid URL', session.errors.full_messages[0]
+    assert_equal 'Meeting link is not valid or is missing http or https', session.errors.full_messages[0]
   end
 
   test 'formatted_date' do
