@@ -11,6 +11,7 @@ import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModa
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
@@ -85,6 +86,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   );
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
+
+  const isLevelbuilder = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
+  );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
@@ -265,7 +270,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     );
   }, [dispatch]);
 
-  const showFlowLab = queryParams('show-flow-lab') === 'true';
+  const showFlowLab = queryParams('show-flow-lab') === 'true' && isLevelbuilder;
 
   return (
     <LevelPropertiesContext.Provider value={levelProperties}>
