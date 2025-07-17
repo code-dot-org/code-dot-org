@@ -3,8 +3,8 @@ require 'test_helper'
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
   def setup
-    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
-    @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
+    @unit = create :unit, :with_levels
+    create :single_unit_course, unit: @unit
     setup_script_cache
   end
 
@@ -12,7 +12,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = @multi_lesson_unit
+    script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
@@ -37,7 +37,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = @multi_lesson_unit
+    script = @unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
