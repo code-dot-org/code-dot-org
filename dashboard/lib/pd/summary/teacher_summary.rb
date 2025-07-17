@@ -38,8 +38,10 @@ module Pd::Summary
       conditions = {pd_session_id: session_ids}
       if teacher&.id
         conditions[:teacher_id] = teacher.id
-      else
+      elsif enrollment.id
         conditions[:pd_enrollment_id] = enrollment.id
+      else
+        return teacher_attendance
       end
       attendances = Pd::Attendance.where(conditions)
 
