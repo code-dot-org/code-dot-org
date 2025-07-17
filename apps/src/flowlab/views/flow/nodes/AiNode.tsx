@@ -117,9 +117,6 @@ function AiNode({
         text: responseText,
       });
 
-      //uploadedFiles.current = [];
-      //setUploadedFileCount(0);
-
       setIsWorking(false);
     })();
   }, [channelId, contextString, data.askedText, id, updateNodeData]);
