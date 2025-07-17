@@ -1,19 +1,7 @@
 <%
-# Get all AZs for the region
+# Get region configuration and selected AZs
 region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
-all_azs = region_config[:availability_zones]
-
-# Determine which AZs to use
-if options[:availability_zones]
-  # Use provided AZs (validate they exist in the region)
-  selected_azs = options[:availability_zones].select { |az| all_azs.include?(az) }
-  if selected_azs.empty?
-    raise "None of the specified availability zones exist in #{options[:region]}"
-  end
-else
-  # Default to first 3 AZs (or all if fewer than 3)
-  selected_azs = all_azs.first(3)
-end
+selected_azs = region_config[:selected_availability_zones]
 
 # Build subnet configurations for selected AZs
 public_subnets = selected_azs.map.with_index do |az, index|
@@ -32,13 +20,9 @@ end
 %>
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Provision a shared infrastructure (such as a VPC and Subnets) in a specific AWS Region to support provisioning one or more development, test, and production marketing sites within the Region.
-
-Parameters:
-  AvailabilityZones:
-    Type: CommaDelimitedList
-    Description: List of Availability Zones to use for subnets (defaults to first 3 AZs in region if not specified)
-    Default: "<%= selected_azs.join(',') %>"
+Description: >
+  Provision a shared infrastructure (such as a VPC and Subnets) in a specific AWS Region to support provisioning one or
+  more development, test, and production marketing sites within the Region.
 
 Resources:
   # VPC for ECS and ALB

@@ -24,6 +24,7 @@ module MarketingSites
     REGIONS = {
       'us-east-1': {
         availability_zones: %w[us-east-1a us-east-1b us-east-1c us-east-1d us-east-1e us-east-1f],
+        selected_availability_zones: %w[us-east-1a us-east-1b us-east-1c],
         vpc: {
           public_subnets: [
             {
@@ -37,18 +38,6 @@ module MarketingSites
             {
               availability_zone: 'us-east-1c',
               cidr_block: PUBLIC_SUBNET_CIDRS[2]
-            },
-            {
-              availability_zone: 'us-east-1d',
-              cidr_block: PUBLIC_SUBNET_CIDRS[3]
-            },
-            {
-              availability_zone: 'us-east-1e',
-              cidr_block: PUBLIC_SUBNET_CIDRS[4]
-            },
-            {
-              availability_zone: 'us-east-1f',
-              cidr_block: PUBLIC_SUBNET_CIDRS[5]
             }
           ],
           private_subnets: [
@@ -63,24 +52,13 @@ module MarketingSites
             {
               availability_zone: 'us-east-1c',
               cidr_block: PRIVATE_SUBNET_CIDRS[2]
-            },
-            {
-              availability_zone: 'us-east-1d',
-              cidr_block: PRIVATE_SUBNET_CIDRS[3]
-            },
-            {
-              availability_zone: 'us-east-1e',
-              cidr_block: PRIVATE_SUBNET_CIDRS[4]
-            },
-            {
-              availability_zone: 'us-east-1f',
-              cidr_block: PRIVATE_SUBNET_CIDRS[5]
             }
           ]
         }
       },
       'us-east-2': {
         availability_zones: %w[us-east-2a us-east-2b us-east-2c],
+        selected_availability_zones: %w[us-east-2a us-east-2b us-east-2c],
         vpc: {
           public_subnets: [
             {
@@ -114,6 +92,7 @@ module MarketingSites
       },
       'us-west-1': {
         availability_zones: %w[us-west-1a us-west-1c],
+        selected_availability_zones: %w[us-west-1a us-west-1c],
         vpc: {
           public_subnets: [
             {
@@ -139,6 +118,7 @@ module MarketingSites
       },
       'us-west-2': {
         availability_zones: %w[us-west-2a us-west-2b us-west-2c us-west-2d],
+        selected_availability_zones: %w[us-west-2a us-west-2b us-west-2c],
         vpc: {
           public_subnets: [
             {
@@ -152,10 +132,6 @@ module MarketingSites
             {
               availability_zone: 'us-west-2c',
               cidr_block: PUBLIC_SUBNET_CIDRS[2]
-            },
-            {
-              availability_zone: 'us-west-2d',
-              cidr_block: PUBLIC_SUBNET_CIDRS[3]
             }
           ],
           private_subnets: [
@@ -170,10 +146,6 @@ module MarketingSites
             {
               availability_zone: 'us-west-2c',
               cidr_block: PRIVATE_SUBNET_CIDRS[2]
-            },
-            {
-              availability_zone: 'us-west-2d',
-              cidr_block: PRIVATE_SUBNET_CIDRS[3]
             }
           ]
         }

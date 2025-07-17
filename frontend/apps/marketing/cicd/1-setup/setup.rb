@@ -8,7 +8,6 @@ require 'json'
 # Load the MarketingSites::Configuration module
 require_relative '../config'
 
-# Default options
 options = {
   region: 'us-east-1',
   account_stack_name: 'marketing-sites-global-resources',
@@ -88,11 +87,11 @@ opt_parser = OptionParser.new do |opts|
 
   opts.on('-h', '--help', 'Show this help message') do
     puts opts
-    puts "\nExample:"
-    puts "  # Setup Marketing Sites global resources and region-specific infrastructure in a default region (us-east-1)"
+    puts "\nExamples:"
+    puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in the default region (us-east-1)"
     puts "  ./setup.rb"
     puts ""
-    puts "  # Setup Marketing Sites global resources and region-specific infrastructure in a specific region"
+    puts "  # Setup Marketing Sites Global Resources in the current AWS Account and Region Resources in in a specific region (us-west-2)"
     puts "  ./setup.rb --region us-west-2"
     exit
   end
@@ -142,6 +141,7 @@ end
 def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [])
   temp_dir = File.join(Dir.pwd, 'tmp')
   FileUtils.mkdir_p(temp_dir)
+  parameter_path = nil  # Initialize to nil
 
   # Build the AWS CLI command
   command_parts = [
@@ -179,7 +179,7 @@ def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn:
     execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
   ensure
     # Clean up the parameter file if it was created
-    if defined?(parameter_path) && File.exist?(parameter_path)
+    if parameter_path && File.exist?(parameter_path)
       FileUtils.rm_f(parameter_path)
     end
   end
@@ -195,7 +195,20 @@ def get_stack_outputs(stack_name, region)
   CMD
 
   output = execute_command(command, "Getting outputs from stack '#{stack_name}'")
-  JSON.parse(output)
+
+  # Handle case where output might be nil or empty
+  return [] if output.nil? || output.strip.empty?
+
+  begin
+    parsed_output = JSON.parse(output.strip)
+    # Handle case where Outputs is null in CloudFormation
+    return [] if parsed_output.nil?
+    return parsed_output
+  rescue JSON::ParserError => exception
+    puts "Warning: Could not parse stack outputs as JSON: #{exception.message}"
+    puts "Raw output: #{output}"
+    return []
+  end
 end
 
 def validate_template(template_file, region)
@@ -240,10 +253,14 @@ def deploy_account_resources(options)
   begin
     outputs = get_stack_outputs(options[:account_stack_name], options[:region])
 
-    puts "\nAccount-Level Stack Outputs:"
-    outputs.each do |output|
-      puts "  #{output['OutputKey']}: #{output['OutputValue']}"
-      puts "    Description: #{output['Description']}" if output['Description']
+    if outputs.empty?
+      puts "No outputs found for account-level stack."
+    else
+      puts "\nAccount-Level Stack Outputs:"
+      outputs.each do |output|
+        puts "  #{output['OutputKey']}: #{output['OutputValue']}"
+        puts "    Description: #{output['Description']}" if output['Description']
+      end
     end
   rescue => exception
     puts "Warning: Could not retrieve account-level stack outputs: #{exception.message}"
@@ -264,10 +281,16 @@ def deploy_region_resources(options)
   validate_template(processed_template_path, options[:region])
 
   puts "\n=== Step 3: Deploying Region-Level Stack ==="
-  parameters = {
-    "HostedZoneId" => options[:hosted_zone_id],
-    "BaseDomainName" => options[:base_domain_name]
-  }
+  parameters = {}
+
+  # Add other parameters as needed
+  if options[:hosted_zone_id]
+    parameters["HostedZoneId"] = options[:hosted_zone_id]
+  end
+
+  if options[:base_domain_name]
+    parameters["BaseDomainName"] = options[:base_domain_name]
+  end
 
   # For region resources
   deploy_stack(
@@ -282,10 +305,25 @@ def deploy_region_resources(options)
   begin
     outputs = get_stack_outputs(options[:region_stack_name], options[:region])
 
-    puts "\nRegion-Level Stack Outputs:"
-    outputs.each do |output|
-      puts "  #{output['OutputKey']}: #{output['OutputValue']}"
-      puts "    Description: #{output['Description']}" if output['Description']
+    if outputs.empty?
+      puts "No outputs found for region-level stack."
+    else
+      puts "\nRegion-Level Stack Outputs:"
+      outputs.each do |output|
+        puts "  #{output['OutputKey']}: #{output['OutputValue']}"
+        puts "    Description: #{output['Description']}" if output['Description']
+      end
+
+      # Show which AZs were used
+      az_output = outputs.find {|o| o['OutputKey'] == 'AvailabilityZones'}
+      if az_output
+        puts "\n✓ Infrastructure deployed across Availability Zones: #{az_output['OutputValue']}"
+      else
+        # Fallback to showing configured AZs if output not found
+        region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
+        selected_azs = region_config[:selected_availability_zones]
+        puts "\n✓ Infrastructure deployed across Availability Zones: #{selected_azs.join(', ')}"
+      end
     end
   rescue => exception
     puts "Warning: Could not retrieve region-level stack outputs: #{exception.message}"
@@ -306,6 +344,7 @@ begin
 
   puts "Deployment configuration:"
   options.each do |key, value|
+    next if value.nil?
     puts "  #{key}: #{value}"
   end
 
@@ -323,12 +362,14 @@ begin
 
     begin
       deploy_region_resources(options)
+      puts "\n🎉 === Setup Account-level & Region-level resources Complete ==="
     rescue => exception
       puts "❌ Region-level resources deployment failed: #{exception.message}"
+      puts "Exception class: #{exception.class}"
+      puts "Backtrace:"
+      puts exception.backtrace.first(10)  # Show first 10 lines of backtrace
       exit 1
     end
-
-    puts "\n🎉 === Setup Account-level & Region-level resources Complete ==="
   else
     puts "Deployment cancelled."
     exit 0
