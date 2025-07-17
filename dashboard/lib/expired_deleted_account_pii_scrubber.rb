@@ -6,19 +6,13 @@ require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'cdo/honeybadger'
 
-# Queries for accounts soft-deleted at least 28 days ago and scrube them
+# Queries for accounts soft-deleted at least 28 days ago and scrub them
 # of PII (personally identifiable information).
 #
 # This renders the accounts unrecoverable but retains as much useful non-PII
 # data as possible.
 #
-# Logs activity to Cloudwatch and Slack #cron-daily room.
-#
-# @see Technical Spec: Hard-deleting accounts
-# https://docs.google.com/document/d/15hkknuRlvGFbPuwlZssliMQTmykxM8_ajXB4yDOSPCA/edit
-# @see Account Purger Cloudwatch dashboard
-# TODO - Add link to the dashboard
-#
+# Logs activity to the user-accounts and cron-daily Slack channels, as well as Cloudwatch.
 class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -56,12 +50,15 @@ class ExpiredDeletedAccountPiiScrubber
       end
     end
 
-    if @dry_run
+    if dry_run?
       log_message("Dry run complete: would scrub #{@num_accounts_scrubbed} accounts. Encountered #{@num_errors} errors.")
     else
       log_message("Scrubbed #{@num_accounts_scrubbed} accounts in #{Time.now - @start_time} seconds. Encountered #{@num_errors} errors.")
       upload_metrics
     end
+
+    log_to_slack(summary)
+    log_to_slack(summary, 'user-accounts') if @num_errors
   end
 
   def accounts_to_scrub
@@ -72,8 +69,16 @@ class ExpiredDeletedAccountPiiScrubber
     accounts
   end
 
+  def summary
+    summary = "Removed PII from #{@num_accounts_scrubbed} accounts"
+    summary += "\nEncountered #{@num_errors} errors" if @num_errors.positive?
+    summary += "\nDuration #{Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")}"
+    summary += "\nDry run, no accounts actually scrubbed" if dry_run?
+    summary
+  end
+
   private def scrub_user(user)
-    if @dry_run
+    if dry_run?
       log_message("Dry run: would scrub PII from user_id #{user.id}")
     else
       log_message("Scrubbing PII from user_id #{user.id}")
@@ -104,6 +109,16 @@ class ExpiredDeletedAccountPiiScrubber
 
   private def log_message(message)
     CDO.log.info({event: message, namespace: LOGGING_NAMESPACE})
+  end
+
+  private def log_to_slack(message, channel = 'cron-daily', options = {})
+    ChatClient.message(channel, prefixed(message), options)
+  end
+
+  private def prefixed(message)
+    "*PII Scrub Cronjob*#{dry_run? ? ' (dry-run)' : ''} " \
+    "<https://github.com/code-dot-org/code-dot-org/blob/production/dashboard/lib/expired_deleted_account_pii_scrubber.rb|(source)>" \
+    "\n#{message}"
   end
 
   private def reset_metrics

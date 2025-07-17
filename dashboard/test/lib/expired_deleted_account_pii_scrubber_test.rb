@@ -13,6 +13,8 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
     before do
       user.update(deleted_at: 29.days.ago)
+      Cdo::Metrics.stubs(:push)
+      ChatClient.stubs(:message)
     end
 
     it 'should run the PII scrub service on expired deleted accounts' do
@@ -23,6 +25,11 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     it 'should increment num_accounts_scrubbed' do
       scrub_pii
       _(described_instance.num_accounts_scrubbed).must_equal 1
+    end
+
+    it 'should upload metrics' do
+      expect(Cdo::Metrics).to receive(:push)
+      scrub_pii
     end
 
     context 'when dry run' do
