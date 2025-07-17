@@ -49,6 +49,7 @@ export function loadUnitProgress(scriptId, sectionId, courseId, unitPosition) {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
       scriptId,
+      courseId,
     });
   }
 
