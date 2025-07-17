@@ -13,5 +13,3 @@ export const aiTutorModelId = Object.values(AiChatModelIds).includes(
 )
   ? (modelQueryParam as AiChatModelIdType)
   : AiChatModelIds.GEMINI_2_0_FLASH;
-
-console.log('🤖: aiTutorModelId:', aiTutorModelId);

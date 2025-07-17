@@ -22,6 +22,10 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
+    console.log('🤖: aiTutorModelId:', aiTutorModelId);
+  }, []);
+
+  useEffect(() => {
     // Give aichat a system prompt.
     dispatch(
       setSavedAiCustomizationProperty({
