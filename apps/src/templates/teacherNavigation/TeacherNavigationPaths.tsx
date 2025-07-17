@@ -114,7 +114,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutor2,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutor2),
     label: i18n.aiTutor2(),
-    icon: 'ai-bot-solid',
+    icon: 'ai-large',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
