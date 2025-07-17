@@ -1222,6 +1222,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/react-sticky": "npm:^6"
     "@vercel/otel": "npm:^1.12.0"
     axios: "npm:^1.10.0"
     contentful: "npm:^11.7.3"
@@ -1231,6 +1232,8 @@ __metadata:
     dotenv: "npm:^16.4.7"
     eslint: "npm:^9.16.0"
     eslint-plugin-jest: "npm:^28.9.0"
+    focus-trap-react: "npm:^11.0.4"
+    immutable: "npm:^5.1.3"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     mapbox-gl: "npm:^3.12.0"
@@ -1241,10 +1244,13 @@ __metadata:
     pino-pretty: "npm:^13.0.0"
     playwright-core: "npm:~1.49.1"
     prettier: "npm:3.4.2"
+    query-string: "npm:^9.2.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-lazy-load: "npm:^4.0.1"
     react-map-gl: "npm:^8.0.4"
     react-schemaorg: "npm:^2.0.0"
+    react-sticky: "npm:^6.0.3"
     redis: "npm:^4.7.1"
     schema-dts: "npm:^1.1.5"
     sitemap: "npm:^8.0.0"
@@ -7797,6 +7803,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-sticky@npm:^6":
+  version: 6.0.6
+  resolution: "@types/react-sticky@npm:6.0.6"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10c0/e770ea5085d28cf592b7f64bec1fe3e377ec41b3f876a1f44b7cd4818669475fc00aedccc4ccb9c3cf28d0862b934b7f890b079531332cefdd6eae99d07fe6ed
+  languageName: node
+  linkType: hard
+
 "@types/react-transition-group@npm:^4.4.12":
   version: 4.4.12
   resolution: "@types/react-transition-group@npm:4.4.12"
@@ -11028,6 +11043,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"decode-uri-component@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "decode-uri-component@npm:0.4.1"
+  checksum: 10c0/a180bbdb5398ec8270d236a3ac07cb988bbf6097428481780b85840f088951dc0318a8d8f9d56796e1a322b55b29859cea29982f22f9b03af0bc60974c54e591
+  languageName: node
+  linkType: hard
+
 "decompress-response@npm:^6.0.0":
   version: 6.0.0
   resolution: "decompress-response@npm:6.0.0"
@@ -13012,6 +13034,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"filter-obj@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "filter-obj@npm:5.1.0"
+  checksum: 10c0/716e8ad2bc352e206556b3e5695b3cdff8aab80c53ea4b00c96315bbf467b987df3640575100aef8b84e812cf5ea4251db4cd672bbe33b1e78afea88400c67dd
+  languageName: node
+  linkType: hard
+
 "find-cache-dir@npm:^3.2.0, find-cache-dir@npm:^3.3.1":
   version: 3.3.2
   resolution: "find-cache-dir@npm:3.3.2"
@@ -13143,6 +13172,30 @@ __metadata:
   version: 3.3.3
   resolution: "flatted@npm:3.3.3"
   checksum: 10c0/e957a1c6b0254aa15b8cce8533e24165abd98fadc98575db082b786b5da1b7d72062b81bfdcd1da2f4d46b6ed93bec2434e62333e9b4261d79ef2e75a10dd538
+  languageName: node
+  linkType: hard
+
+"focus-trap-react@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "focus-trap-react@npm:11.0.4"
+  dependencies:
+    focus-trap: "npm:^7.6.5"
+    tabbable: "npm:^6.2.0"
+  peerDependencies:
+    "@types/react": ^18.0.0 || ^19.0.0
+    "@types/react-dom": ^18.0.0 || ^19.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/c1b5bd29e8b226715e697202c540f28fa2cd47974b88d15b144e84422bcd199dab1bc461a491d7d36c97744d91087fc949984ddf71ddc867f4f971af0bf0aa30
+  languageName: node
+  linkType: hard
+
+"focus-trap@npm:^7.6.5":
+  version: 7.6.5
+  resolution: "focus-trap@npm:7.6.5"
+  dependencies:
+    tabbable: "npm:^6.2.0"
+  checksum: 10c0/36cac0d9b05fe5824733675bb49792842dae4704286ef7e17c736ee0c9c14701e874e6821449e78b70c17e42ba1b2c98ef10434bfe644b9d7654d8ef7f1c8faf
   languageName: node
   linkType: hard
 
@@ -14315,6 +14368,13 @@ __metadata:
   version: 5.0.3
   resolution: "immutable@npm:5.0.3"
   checksum: 10c0/3269827789e1026cd25c2ea97f0b2c19be852ffd49eda1b674b20178f73d84fa8d945ad6f5ac5bc4545c2b4170af9f6e1f77129bc1cae7974a4bf9b04a9cdfb9
+  languageName: node
+  linkType: hard
+
+"immutable@npm:^5.1.3":
+  version: 5.1.3
+  resolution: "immutable@npm:5.1.3"
+  checksum: 10c0/f094891dcefb9488a84598376c9218ebff3a130c8b807bda3f6b703c45fe7ef238b8bf9a1eb9961db0523c8d7eb116ab6f47166702e4bbb1927ff5884157cd97
   languageName: node
   linkType: hard
 
@@ -17896,6 +17956,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"performance-now@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "performance-now@npm:2.1.0"
+  checksum: 10c0/22c54de06f269e29f640e0e075207af57de5052a3d15e360c09b9a8663f393f6f45902006c1e71aa8a5a1cdfb1a47fe268826f8496d6425c362f00f5bc3e85d9
+  languageName: node
+  linkType: hard
+
 "pg-int8@npm:1.0.1":
   version: 1.0.1
   resolution: "pg-int8@npm:1.0.1"
@@ -18569,7 +18636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -18758,6 +18825,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"query-string@npm:^9.2.2":
+  version: 9.2.2
+  resolution: "query-string@npm:9.2.2"
+  dependencies:
+    decode-uri-component: "npm:^0.4.1"
+    filter-obj: "npm:^5.1.0"
+    split-on-first: "npm:^3.0.0"
+  checksum: 10c0/2e3cbee52622ac9dd299237d617c922cb2a238e70d58a08eb3ad0be814642578948f58e85376b10bef1c64df04bdde94ca8aad3f319451ee3aba2f553278ed2b
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -18811,6 +18889,15 @@ __metadata:
   version: 4.0.3
   resolution: "raf-schd@npm:4.0.3"
   checksum: 10c0/ecabf0957c05fad059779bddcd992f1a9d3a35dfea439a6f0935c382fcf4f7f7fa60489e467b4c2db357a3665167d2a379782586b59712bb36c766e02824709b
+  languageName: node
+  linkType: hard
+
+"raf@npm:^3.3.0":
+  version: 3.4.1
+  resolution: "raf@npm:3.4.1"
+  dependencies:
+    performance-now: "npm:^2.1.0"
+  checksum: 10c0/337f0853c9e6a77647b0f499beedafea5d6facfb9f2d488a624f88b03df2be72b8a0e7f9118a3ff811377d534912039a3311815700d2b6d2313f82f736f9eb6e
   languageName: node
   linkType: hard
 
@@ -18929,6 +19016,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-lazy-load@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "react-lazy-load@npm:4.0.1"
+  peerDependencies:
+    react: ^17.0.0 || ^18.0.0
+    react-dom: ^17.0.0 || ^18.0.0
+  checksum: 10c0/8654951dddfc853b55c2909f347b0943926373aeaa349422ea7335f90ff1bab11ab6d428649d976c9a1f1376600124ab66ad67aa883d45659ab70e8a21df894d
+  languageName: node
+  linkType: hard
+
 "react-map-gl@npm:^8.0.4":
   version: 8.0.4
   resolution: "react-map-gl@npm:8.0.4"
@@ -19006,6 +19103,19 @@ __metadata:
     schema-dts: ">=0.7.4"
     typescript: ">=3.1.6"
   checksum: 10c0/34dd300c6154a908a26cd8a7c664e60ed30b583d9b4c3afc0de1ca6a8ce139bb5fac2630483639d73bf79089ff699d86d453e81cbbb6a3bd2c485f92506ff3c0
+  languageName: node
+  linkType: hard
+
+"react-sticky@npm:^6.0.3":
+  version: 6.0.3
+  resolution: "react-sticky@npm:6.0.3"
+  dependencies:
+    prop-types: "npm:^15.5.8"
+    raf: "npm:^3.3.0"
+  peerDependencies:
+    react: ">=15"
+    react-dom: ">=15"
+  checksum: 10c0/4ac027870dac9f2817e33e243b9b3a080a8acebb41a6d725f2212ab40afd1e88239938af9cce655e3a7d1d187e2530c578471d2fdf9117a2f0edd2255ddc23be
   languageName: node
   linkType: hard
 
@@ -20439,6 +20549,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"split-on-first@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "split-on-first@npm:3.0.0"
+  checksum: 10c0/a1262eae12b68de235e1a08e011bf5b42c42621985ddf807e6221fb1e2b3304824913ae7019f18436b96b8fab8aef5f1ad80dedd2385317fdc51b521c3882cd0
+  languageName: node
+  linkType: hard
+
 "split-string@npm:^3.0.1":
   version: 3.1.0
   resolution: "split-string@npm:3.1.0"
@@ -21094,6 +21211,13 @@ __metadata:
     "@pkgr/core": "npm:^0.1.0"
     tslib: "npm:^2.6.2"
   checksum: 10c0/e0c262817444e5b872708adb6f5ad37951ba33f6b2d1d4477d45db1f57573a784618ceed5e6614e0225db330632b1f6b95bb74d21e4d013e45ad4bde03d0cb59
+  languageName: node
+  linkType: hard
+
+"tabbable@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "tabbable@npm:6.2.0"
+  checksum: 10c0/ced8b38f05f2de62cd46836d77c2646c42b8c9713f5bd265daf0e78ff5ac73d3ba48a7ca45f348bafeef29b23da7187c72250742d37627883ef89cbd7fa76898
   languageName: node
   linkType: hard
 
