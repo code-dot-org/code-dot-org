@@ -17,6 +17,10 @@ import {
   getAppOptionsTheme,
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
+import {
+  isLabLoading,
+  hasPageError,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
@@ -25,13 +29,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
-import {
-  LabState,
-  isLabLoading,
-  hasPageError,
-  setIsShareView,
-  setPermissions,
-} from '../lab2Redux';
+import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {LifecycleEvent} from '../utils';
 
@@ -96,10 +94,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       document.body.classList.remove(`background-${oldTheme}`);
     }
     document.body.classList.add(`background-${themeDowncase}`);
-    // Set body's data-theme attribute to the current theme, as the copy button tooltip (DSCO Tooltip) is
-    // not a DOM descendant of its logical parent. Rather it is placed directly under body and thus is not
-    // affected by the data-theme attribute value set in ThemeProvider.
-    document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
   // Store the level ID provided by App Options in redux if necessary.

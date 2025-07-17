@@ -67,13 +67,17 @@ function showCourseEditor() {
         initialUnitsInCourse={courseEditorData.course_summary.scripts.map(
           unit => unit.name
         )}
+        initialUnitPrefixes={courseEditorData.course_summary.scripts.map(
+          (unit, index) =>
+            unit.unit_prefix === null
+              ? (index + 1).toString()
+              : unit.unit_prefix
+        )}
         unitNames={courseEditorData.script_names.sort()}
         initialHasVerifiedResources={
           courseEditorData.course_summary.has_verified_resources
         }
-        initialHasNumberedUnits={
-          courseEditorData.course_summary.has_numbered_units
-        }
+        initialNumberedUnits={courseEditorData.course_summary.numbered_units}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}

@@ -12,7 +12,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "music-pilot-gj",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "music-lab-gj",
     "version_year": "2025"
   },

@@ -60,18 +60,21 @@ Scenario: Attempting to join workshop as a teacher requires user info then allow
   Given I am a "teacher" user enrolling in workshop with "unsubmitted" status
   And I wait until element "p:contains('Add your full name')" is visible
   And I wait until element "a:contains('Edit')" is visible
-  Then I click selector "a:contains('Edit')"
+  Then I click selector "a:contains('Edit')" to load a new page
 
   # add full name in account settings
   And I wait until current URL contains "users/edit"
+  And I wait until element "h2:contains('Account information')" is visible
+  Then I scroll the "input#given_name" element into view
   And I press keys "Reba" for element "input#given_name"
+  Then I scroll the "input#family_name" element into view
   And I press keys "McEntire" for element "input#family_name"
   And I scroll the "button:contains(Update account information)" element into view
-  Then I click selector "button:contains(Update account information)"
+  Then I click selector "button:contains(Update account information)" to load a new page
 
   # join workshop
-  And I wait until current URL contains "pd/workshops"
-  Then I click selector "#joinWorkshop"
+  And I wait until element "#joinWorkshop" is visible
+  Then I click selector "#joinWorkshop" to load a new page
   And I wait until current URL contains "my-professional-learning"
 
   # test clean up

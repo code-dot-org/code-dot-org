@@ -26,7 +26,6 @@
     "edit_code": true,
     "embed": "false",
     "instructions_important": "false",
-    "start_blocks": "//1) Add the draw loop block to the bottom of this program.\r\n//2) Move any blocks that need to be inside the draw loop.\r\n\r\nvar salt = createSprite(200,200);\r\nsalt.setAnimation(\"salt\");\r\nbackground(\"skyblue\");\r\ndrawSprites();",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -91,7 +90,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.224+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\"},{\"changed_at\":\"2024-02-14 16:35:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:11:46.224+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\\\"\"],\"cloned_from\":\"CSD U3 Draw Loop Plugged wiggle sprite y_2023\"},{\"changed_at\":\"2024-02-14 16:35:40 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-14 16:58:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

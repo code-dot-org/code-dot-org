@@ -15,6 +15,7 @@ import {
   isNotification,
   isModelUpdate,
   ChatEventDescriptionKey,
+  ChatAsset,
 } from '../types';
 
 import ChatMessageView from './ChatMessageView';
@@ -35,6 +36,7 @@ const chatEventDescriptionsStudent = {
 interface ChatEventViewProps {
   event: ChatEvent;
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -71,6 +73,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
   isTeacherView,
+  buildAssetUrl,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -83,6 +86,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
       <ChatMessageView
         chatMessage={event}
         isChatHistoryView={isTeacherView || false}
+        buildAssetUrl={buildAssetUrl}
       />
     );
   }

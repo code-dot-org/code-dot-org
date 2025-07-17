@@ -39,18 +39,16 @@ export async function GET(
 
   const redirectEntry = await getRedirectEntry(pathname, brand);
 
-  if (redirectEntry) {
-    const responseBody = JSON.stringify(redirectEntry);
-    // This API uses Stale While Revalidate with an ETag for caching
-    return new Response(responseBody, {
-      headers: {
-        'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
-        ETag: eTag(responseBody),
-      },
-    });
-  }
+  const response = {
+    redirectEntry: redirectEntry ?? null,
+  };
 
-  return new Response('Not Found', {
-    status: 404,
+  const responseBody = JSON.stringify(response);
+  // This API uses Stale While Revalidate with an ETag for caching
+  return new Response(responseBody, {
+    headers: {
+      'Cache-Control': STALE_WHILE_REVALIDATE_ONE_HOUR,
+      ETag: eTag(responseBody),
+    },
   });
 }
