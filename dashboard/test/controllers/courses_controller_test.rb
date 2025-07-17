@@ -915,6 +915,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "update: updates the course to have auto-numbered units" do
+    course = create :unit_group, :with_units
     sign_in create(:levelbuilder)
     post :update, params: {course_name: course.name, numbered_units: 'auto'}
     course.reload
@@ -926,6 +927,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "update: updates the course to have custom-numbered units" do
+    course = create :unit_group, :with_units
     sign_in create(:levelbuilder)
     post :update, params: {course_name: course.name, numbered_units: 'custom', unit_prefixes: %w[1a 1b]}
     course.reload
@@ -939,6 +941,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "update: updates the course to not have numbered units" do
+    course = create :unit_group, :with_units
     sign_in create(:levelbuilder)
     post :update, params: {course_name: course.name, numbered_units: false}
     course.reload
