@@ -18,54 +18,38 @@ class AichatSafetyHelperTest < ActionView::TestCase
       }
     }
     openai_response_profanity_hash = {
-      output: [
+      choices: [
         {
-          content: [
-            {
-              type: "output_text",
-              text: "INAPPROPRIATE"
-            }
-          ],
-          role: "assistant"
+          message: {
+            content: "INAPPROPRIATE"
+          }
         }
       ]
     }
     openai_response_safe_hash = {
-      output: [
+      choices: [
         {
-          content: [
-            {
-              type: "output_text",
-              text: "OK"
-            }
-          ],
-          role: "assistant"
+          message: {
+            content: "OK"
+          }
         }
       ]
     }
     openai_response_invalid_hash = {
-      output: [
+      choices: [
         {
-          content: [
-            {
-              type: "output_text",
-              text: "INVALID"
-            }
-          ],
-          role: "assistant"
+          message: {
+            content: "INVALID"
+          }
         }
       ]
     }
     openai_response_structured_hash = {
-      output: [
+      choices: [
         {
-          content: [
-            {
-              type: "output_text",
-              text: {classification: "OK"}.to_json
-            }
-          ],
-          role: "assistant"
+          message: {
+            content: {classification: "OK"}.to_json
+          }
         }
       ]
     }
@@ -157,8 +141,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
   test "Open AI safety check uses American safety prompt if not in Spanish script" do
     stub_safety_services('openai', 'user')
 
-    AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).with do |input, _|
-      assert_includes input[0][:content][0][:text], "American"
+    AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
+      assert_includes messages[0][:content], "American"
       return true
     end
 
@@ -168,8 +152,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
   test "Open AI safety check uses Spanish safety prompt if in Spanish script" do
     stub_safety_services('openai', 'user')
 
-    AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).with do |input, _|
-      assert_includes input[0][:content][0][:text], "Spanish"
+    AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
+      assert_includes messages[0][:content], "Spanish"
       return true
     end
 

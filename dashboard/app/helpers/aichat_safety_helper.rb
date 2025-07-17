@@ -43,7 +43,7 @@ module AichatSafetyHelper
       start_time = Time.now
       report_openai_safety_check("Start")
       attempts = 0
-      input = safety_check_input(text, level_id)
+      messages = safety_check_messages(text, level_id)
 
       # Retry only on network-related exceptions
       response = Retryable.retryable(
@@ -51,21 +51,21 @@ module AichatSafetyHelper
         on: [Net::OpenTimeout, Net::ReadTimeout, SocketError, Errno::ECONNRESET]
       ) do
         attempts += 1
-        client.request_chat_completion(input, 1)
+        client.request_chat_completion(messages, 1)
       end
       raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
-      evaluation = JSON.parse(response.body)['output'][0]['content'][0]['text']
+      evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
       unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
         report_openai_safety_check("InvalidResponse")
         attempts +=1
 
         # Fallback to structured call (non-retryable)
-        response = client.request_chat_completion(input, 0, options: {text: structured_response_format})
+        response = client.request_chat_completion(messages, 0, options: {response_format: structured_response_format})
         raise "OpenAI structured request failed with status #{response.code}: #{response.body}" unless response.success?
 
         body = JSON.parse(response.body)
-        raw_content = body.dig("output", 0, "content", 0, "text")
+        raw_content = body.dig("choices", 0, "message", "content")
 
         begin
           parsed = JSON.parse(raw_content)
@@ -148,24 +148,24 @@ module AichatSafetyHelper
     end
 
     # Format messages with text to be checked for safety and moderation system prompt.
-    private def safety_check_input(text, level_id)
+    private def safety_check_messages(text, level_id)
       [
         {
           role: "system",
-          content: [{type: 'input_text', text: get_safety_system_prompt(level_id)}]
+          content: get_safety_system_prompt(level_id)
         },
         {
           role: "user",
-          content: [{type: 'input_text', text: text}]
+          content: text
         }
       ]
     end
 
     private def structured_response_format
       {
-        format: {
+        type: "json_schema",
+        json_schema: {
           name: "safety_evaluation",
-          type: "json_schema",
           schema: {
             type: "object",
             properties: {
@@ -175,8 +175,7 @@ module AichatSafetyHelper
                 enum: ["OK", "INAPPROPRIATE"]
               }
             },
-            required: ["classification"],
-            additionalProperties: false
+            required: ["classification"]
           }
         }
       }
