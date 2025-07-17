@@ -1017,6 +1017,10 @@ class Level < ApplicationRecord
     skills.pluck(:key)
   end
 
+  def uses_theme_preference?
+    is_a?(Pythonlab) || is_a?(Weblab2)
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.
