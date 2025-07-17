@@ -1307,10 +1307,6 @@ Dashboard::Application.routes.draw do
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
-    # post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
-    # post 'ai_diff/curriculum_courses', to: 'ai_diff#curriculum_courses'
-    # post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
-
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end
