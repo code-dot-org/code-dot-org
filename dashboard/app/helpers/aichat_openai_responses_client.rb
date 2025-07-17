@@ -1,8 +1,8 @@
 # This class implements an openai backend for the generic AichatAiClient.
-class AichatOpenaiCompletionsClient < AichatAiClient
+class AichatOpenaiResponsesClient < AichatAiClient
   # The url to send with the post request
   private def url
-    "https://api.openai.com/v1/chat/completions"
+    "https://api.openai.com/v1/responses"
   end
 
   # Take response_body and raise any errors if appropriate.
@@ -12,15 +12,15 @@ class AichatOpenaiCompletionsClient < AichatAiClient
 
   # Take response_body and extract the text response.
   private def extract_text_response_from_body(response_body)
-    response_body&.dig("choices")&.first&.dig('message', 'content')
+    response_body&.dig("output")&.first&.dig('content')&.first&.dig('text')
   end
 
   # Take response_body and extract usage data for reporting.
   private def get_usage_from_body(response_body)
     {
-      'prompt_tokens' => response_body.dig('usage', 'prompt_tokens') || 0,
-      'completion_tokens' => response_body.dig('usage', 'completion_tokens') || 0,
-      'cached_prompt_tokens' => response_body.dig('usage', 'prompt_tokens_details', 'cached_tokens') || 0
+      'prompt_tokens' => response_body.dig('usage', 'input_tokens') || 0,
+      'completion_tokens' => response_body.dig('usage', 'output_tokens') || 0,
+      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0
     }
   end
 
@@ -38,8 +38,8 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     # As of 7/11/25, testing revealed temperatures exceeding 1.5 generate garbage and trigger timeouts/false moderation calls
     temperature *= DCDO.get('openai_temperature_scaling_factor', 1.5)
 
-    messages = [
-      {role: "system", content: [{type: "text", text: system_instructions}]},
+    input = [
+      {role: "system", content: [{type: "input_text", text: system_instructions}]},
       *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
       format_message(new_message, encrypted_channel_id, level_name)
     ]
@@ -47,7 +47,7 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     body = {
       model: model,
       temperature: temperature,
-      messages: messages
+      input: input
     }
 
     body
@@ -55,19 +55,21 @@ class AichatOpenaiCompletionsClient < AichatAiClient
 
   # Override base headers and merge in Bearer token.
   private def headers
-    super.merge({
-                  "Authorization" => "Bearer #{api_key}"
-                }
-)
+    super.merge(
+      {
+        "Authorization" => "Bearer #{api_key}"
+      }
+    )
   end
 
   # Helper to format openid "message" object for body.
   private def format_message(message, encrypted_channel_id, level_name)
+    type = message['role'] == "assistant" ? "output_text" : "input_text"
     formatted = {
       role: message['role'],
       content: [
         {
-          type: "text",
+          type: type,
           text: get_message_text(message)
         }
       ]
@@ -79,9 +81,9 @@ class AichatOpenaiCompletionsClient < AichatAiClient
       data_uri = AichatAssetHelper.get_asset_data_uri(filename, source, encrypted_channel_id, level_name)
 
       formatted[:content] << if file_is_pdf?(filename)
-                               {type: 'file', file: {filename: asset["filename"], file_data: data_uri}}
+                               {type: 'input_file', filename: asset["filename"], file_data: data_uri}
                              elsif file_is_image?(filename)
-                               {type: "image_url", image_url: {url: data_uri}}
+                               {type: "input_image", image_url: data_uri}
                              end
     end
     formatted

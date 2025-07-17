@@ -1,12 +1,12 @@
 require_relative './aichat_ai_client_test'
 
-class AichatOpenaiCompletionsClientTest < AichatAiClientTest
+class AichatOpenaiResponsesClientTest < AichatAiClientTest
   let(:internal_model_id) {'gpt-4o-mini'}
   let(:endpoint_model_id) {'gpt-4o-mini-2024-07-18'}
 
-  let(:endpoint_url) {"https://api.openai.com/v1/chat/completions"}
+  let(:endpoint_url) {"https://api.openai.com/v1/responses"}
 
-  let(:request_body_without_messages) do
+  let(:request_body_without_input) do
     {
       model: endpoint_model_id,
       temperature: 0.75
@@ -25,40 +25,45 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
 
   let(:stubbed_success_response_body) do
     {
-      id: "chatcmpl-12345678901234567891234567890",
-      object: "chat.completion",
-      created: 1_750_694_792,
+      id: "resp_123456789012345678912345678901234567890123456789",
+      object: "response",
+      created: 1_751_504_177,
       model: endpoint_model_id,
-      choices: [
+      output: [
         {
-          index: 0,
-          message: {
-            role: "assistant",
-            content: @response_text,
-            refusal: nil,
-            annotations: []
-          },
-          logprobs: nil,
-          finish_reason: "stop"
+          id: "msg_123456789012345678912345678901234567890123456789",
+            type: "message",
+            status: "completed",
+            content: [
+              {
+                type: "output_text",
+                  annotations: [],
+                  logprobs: [],
+                  text: @response_text
+              }
+            ],
+            role: "assistant"
         }
       ],
+
+      tool_choice: "auto",
+      tools: [],
+      top_logprobs: 0,
+      top_p: 1.0,
+      truncation: "disabled",
       usage: {
-        prompt_tokens: 6070,
-        completion_tokens: 111,
-        total_tokens: 6181,
-        prompt_tokens_details: {
-          cached_tokens: 0,
-          audio_tokens: 0
+        input_tokens: 10099,
+         input_tokens_details: {
+           cached_tokens: 0
+         },
+        output_tokens: 87,
+        output_tokens_details: {
+          reasoning_tokens: 0
         },
-        completion_tokens_details: {
-          reasoning_tokens: 0,
-          audio_tokens: 0,
-          accepted_prediction_tokens: 0,
-          rejected_prediction_tokens: 0
-        }
+        total_tokens: 10186
       },
-      service_tier: "default",
-      system_fingerprint: "fp_62a0000def"
+      user: nil,
+      metadata: {}
     }
   end
 
@@ -73,43 +78,43 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   describe '#def get_response_text (unit)' do
     subject {stub_request_and_get_response_test(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
 
-    let(:messages_with_level_system_prompt) do
+    let(:input_with_level_system_prompt) do
       [
-        {role: "system", content: [{type: "text", text: "Be safe. test prompt test retrieval"}]},
-        {role: "user", content: [{type: "text", text: "hello from user"}]},
-        {role: "assistant", content: [{type: "text", text: "assistant response"}]},
-        {role: "user", content: [{type: "text", text: "new message from user"}]}
+        {role: "system", content: [{type: "input_text", text: "Be safe. test prompt test retrieval"}]},
+        {role: "user", content: [{type: "input_text", text: "hello from user"}]},
+        {role: "assistant", content: [{type: "output_text", text: "assistant response"}]},
+        {role: "user", content: [{type: "input_text", text: "new message from user"}]}
       ]
     end
 
-    let(:messages_without_level_system_prompt) do
+    let(:input_without_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
-        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
-        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
-        {role: 'user', content: [{type: 'text', text: 'new message from user'}]}
+        {role: 'system', content: [{type: 'input_text', text: "test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
+        {role: 'user', content: [{type: 'input_text', text: 'new message from user'}]}
       ]
     end
 
-    let(:messages_with_assets_and_without_level_system_prompt) do
+    let(:input_with_assets_and_without_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
-        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
-        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
+        {role: 'system', content: [{type: 'input_text', text: "test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
         {role: 'user', content: [
-          {type: 'text', text: 'message with assets'},
-          {type: 'image_url', image_url: {url: @image_uri}},
-          {type: 'file', file: {filename: 'file.pdf', file_data: @pdf_uri}}
+          {type: 'input_text', text: 'message with assets'},
+          {type: 'input_image', image_url: @image_uri},
+          {type: 'input_file', filename: 'file.pdf', file_data: @pdf_uri}
         ]}
       ]
     end
 
-    let(:messages_with_hidden_context_and_level_system_prompt) do
+    let(:input_with_hidden_context_and_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'text', text: "Be safe. test prompt test retrieval"}]},
-        {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
-        {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
-        {role: 'user', content: [{type: 'text', text: "new message from user\nextra text"}]}
+        {role: 'system', content: [{type: 'input_text', text: "Be safe. test prompt test retrieval"}]},
+        {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
+        {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
+        {role: 'user', content: [{type: 'input_text', text: "new message from user\nextra text"}]}
       ]
     end
 
@@ -133,9 +138,9 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       context 'when body is well formed and request succeeds' do
         let(:new_message) {@new_message}
         let(:request_body) do
-          request_body_without_messages.merge(
+          request_body_without_input.merge(
             {
-              messages: messages_with_level_system_prompt
+              input: input_with_level_system_prompt
             }
           )
         end
@@ -152,9 +157,9 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
         let(:level) {@level_with_level_system_prompt}
 
         let(:request_body) do
-          request_body_without_messages.merge(
+          request_body_without_input.merge(
             {
-              messages: messages_with_hidden_context_and_level_system_prompt
+              input: input_with_hidden_context_and_level_system_prompt
             }.deep_stringify_keys
           )
         end
@@ -173,9 +178,9 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       context 'when body is well formed and request succeeds' do
         let(:new_message) {@new_message}
         let(:request_body) do
-          request_body_without_messages.merge(
+          request_body_without_input.merge(
             {
-              messages: messages_without_level_system_prompt
+              input: input_without_level_system_prompt
             }
           )
         end
@@ -190,9 +195,9 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
       context 'when body is well formed and with assets and request succeeds' do
         let(:new_message) {@new_message_with_assets}
         let(:request_body) do
-          request_body_without_messages.merge(
+          request_body_without_input.merge(
             {
-              messages: messages_with_assets_and_without_level_system_prompt
+              input: input_with_assets_and_without_level_system_prompt
             }.deep_stringify_keys
           )
         end
