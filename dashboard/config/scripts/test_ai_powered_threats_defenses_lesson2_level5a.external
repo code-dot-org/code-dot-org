@@ -1,0 +1,15 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5a'
+title 'Scenario 1'
+bubble_choice_description 'description goes here'
+display_name 'Scenario 1'
+thumbnail_url 'https://images.code.org/63a7affcc5b4d3a905111756947ad6c1-image-1752695966233.59.17 PM.png'
+
+markdown <<MARKDOWN
+## Scenario 1
+
+Text here
+
+<div style="text-align: center; margin-top: 20px; width:300px">
+    <img src="https://images.code.org/63a7affcc5b4d3a905111756947ad6c1-image-1752695966233.59.17 PM.png">
+</div>
+MARKDOWN

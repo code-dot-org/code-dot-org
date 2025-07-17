@@ -204,5 +204,13 @@ module Curriculum
         facilitator: ['student', 'teacher', 'facilitator']
       }
     ).freeze
+
+    NUMBERED_UNITS_TYPE = OpenStruct.new(
+      {
+        none: nil,
+        auto: "auto",
+        custom: "custom"
+      }
+    ).freeze
   end
 end

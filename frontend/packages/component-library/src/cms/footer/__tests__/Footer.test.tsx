@@ -1,7 +1,7 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import Footer, {FooterProps, SiteLink, SocialLink} from '../Footer';
+import Footer, {FooterProps, SiteLink, SocialLink, ImageLink} from '../Footer';
 
 describe('CMS Footer', () => {
   const title = 'Footer Title';
@@ -21,17 +21,16 @@ describe('CMS Footer', () => {
       icon: {iconName: 'facebook'},
     },
   ];
-  // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-  // const imageLinks: ImageLink[] = [
-  //   {
-  //     key: 'imageLink',
-  //     label: 'Image Link Label',
-  //     href: '/image-link',
-  //     image: {
-  //       src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
-  //     },
-  //   },
-  // ];
+  const imageLinks: ImageLink[] = [
+    {
+      key: 'imageLink',
+      label: 'Image Link Label',
+      href: '/image-link',
+      image: {
+        src: 'https://code.org/shared/images/Powered-By_logo-horiz_RGB_REV.png',
+      },
+    },
+  ];
   const languages = [
     {value: 'en', text: 'English'},
     {value: 'es', text: 'Spanish'},
@@ -42,7 +41,7 @@ describe('CMS Footer', () => {
     render(
       <Footer
         {...props}
-        {...{title, copyright, siteLinks, socialLinks}}
+        {...{title, copyright, siteLinks, socialLinks, imageLinks}}
         onLanguageChange={mockLanguageChange}
         languages={languages}
       />,
@@ -77,21 +76,19 @@ describe('CMS Footer', () => {
     expect(socialLink).toHaveAttribute('href', socialLinks[0].href);
   });
 
-  // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-  // eslint-disable-next-line
-  // it('renders footer image links', () => {
-  //   renderFooterContainer();
+  it('renders footer image links', () => {
+    renderFooterContainer();
 
-  //   const imageLink = screen.getByRole('link', {name: imageLinks[0].label});
-  //   expect(imageLink).toBeVisible();
-  //   expect(imageLink).toHaveAttribute('href', imageLinks[0].href);
+    const imageLink = screen.getByRole('link', {name: imageLinks[0].label});
+    expect(imageLink).toBeVisible();
+    expect(imageLink).toHaveAttribute('href', imageLinks[0].href);
 
-  //   const imageLinkImg = within(imageLink).getByRole('img', {
-  //     name: imageLinks[0].label,
-  //   });
-  //   expect(imageLinkImg).toBeVisible();
-  //   expect(imageLinkImg).toHaveAttribute('src', imageLinks[0].image.src);
-  // });
+    const imageLinkImg = within(imageLink).getByRole('img', {
+      name: imageLinks[0].label,
+    });
+    expect(imageLinkImg).toBeVisible();
+    expect(imageLinkImg).toHaveAttribute('src', imageLinks[0].image.src);
+  });
 
   it('renders footer with provided className styles', () => {
     const className = 'customClass';

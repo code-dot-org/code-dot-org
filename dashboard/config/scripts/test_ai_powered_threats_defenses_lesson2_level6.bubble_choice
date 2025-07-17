@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson2-level6'
+display_name 'Interview Your Computing Roles'
+description 'Explore the key technical roles who contribute to developing your chosen innovation. Select a role to conduct an AI interview and learn how their work helps bring this technology to life, the challenges they face, and how computing drives innovation.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson2-level6a'
+level 'test-ai-powered-threats-defenses-lesson2-level6b'
+level 'test-ai-powered-threats-defenses-lesson2-level6c'
+level 'test-ai-powered-threats-defenses-lesson2-level6d'

@@ -16,7 +16,7 @@ import shapes from './shapes';
 
 class SectionsAsStudentTable extends React.Component {
   static propTypes = {
-    sections: shapes.sections,
+    sections: shapes.participantSections,
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
