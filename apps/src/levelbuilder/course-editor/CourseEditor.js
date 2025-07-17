@@ -336,28 +336,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <label>
-            Unit Numbering
-            <HelpTip>
-              <p>
-                Choose between no unit numbering, automatic unit numbering, or
-                custom unit numbering, editable in the Units section below.
-              </p>
-            </HelpTip>
-            <select
-              style={styles.dropdown}
-              value={numberedUnits || 'none'}
-              onChange={e =>
-                this.setState({
-                  numberedUnits: NumberedUnitsType[e.target.value],
-                })
-              }
-            >
-              <option value={'none'}>None</option>
-              <option value={NumberedUnitsType.auto}>Automatic</option>
-              <option value={NumberedUnitsType.custom}>Custom</option>
-            </select>
-          </label>
         </CollapsibleEditorSection>
 
         <CourseTypeEditor
@@ -434,6 +412,28 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Units">
+          <label>
+            Unit Numbering
+            <HelpTip>
+              <p>
+                Choose between no unit numbering, automatic unit numbering, or
+                custom unit numbering, editable in the Units section below.
+              </p>
+            </HelpTip>
+            <select
+              style={styles.dropdown}
+              value={numberedUnits || 'none'}
+              onChange={e =>
+                this.setState({
+                  numberedUnits: NumberedUnitsType[e.target.value],
+                })
+              }
+            >
+              <option value={'none'}>None</option>
+              <option value={NumberedUnitsType.auto}>Automatic</option>
+              <option value={NumberedUnitsType.custom}>Custom</option>
+            </select>
+          </label>
           <label>
             <div>
               The dropdown(s) below represent the ordered set of units in this
