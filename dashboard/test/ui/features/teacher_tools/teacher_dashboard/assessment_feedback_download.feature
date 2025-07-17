@@ -1,7 +1,4 @@
 @no_mobile
-@skip
-# Skipped while fixing issue with curriculum version
-# https://codedotorg.atlassian.net/browse/TEACH-2080
 Feature: Using the assessments tab in the teacher dashboard to get feedback for script
 
   Background:
@@ -21,9 +18,9 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('19-'20)" once I see it
+    And I click selector ".assignment-version-title:contains('25-'26)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
+    And I select the "Intro to App Design" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
 
     # Progress tab

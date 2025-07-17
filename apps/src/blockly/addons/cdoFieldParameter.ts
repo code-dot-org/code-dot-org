@@ -202,54 +202,6 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
     }
     return {definitionBlock, workspace};
   }
-  /**
-   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
-   *
-   * Additionally, we need fix the arrow position on Safari, but only until
-   * upgrading to Blockly v11. After this, we should be able to just call
-   * super.createTextArrow_() after the early return.
-   *  @override */
-  createTextArrow_() {
-    /**
-     * Begin CDO customization
-     */
-    if (!this.getSourceBlock()?.isEditable()) {
-      return;
-    }
-    /**
-     * End CDO customization
-     */
-
-    const arrow = Blockly.utils.dom.createSvgElement(
-      Blockly.utils.Svg.TSPAN,
-      {},
-      this.textElement_
-    );
-    arrow.appendChild(
-      document.createTextNode(
-        this.getSourceBlock()?.RTL
-          ? Blockly.FieldDropdown.ARROW_CHAR + ' '
-          : ' ' + Blockly.FieldDropdown.ARROW_CHAR
-      )
-    );
-
-    /**
-     * Begin CDO customization
-     */
-    arrow.setAttribute('dominant-baseline', 'central');
-    /**
-     * End CDO customization
-     */
-
-    if (this.getSourceBlock()?.RTL) {
-      this.getTextElement().insertBefore(arrow, this.textContent_);
-    } else {
-      this.getTextElement().appendChild(arrow);
-    }
-    // this.arrow is private in the parent.
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (this as any).arrow = arrow;
-  }
 
   menuGenerator_ = function (
     this: GoogleBlockly.FieldDropdown

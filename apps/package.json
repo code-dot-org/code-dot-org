@@ -249,6 +249,7 @@
     "@xterm/addon-fit": "^0.10.0",
     "@xterm/addon-image": "^0.8.0",
     "@xterm/xterm": "^5.5.0",
+    "@xyflow/react": "^12.8.1",
     "aws-sdk": "2.1231.0",
     "blockly": "12.1.0",
     "bootstrap-sass": "^3.4.1",

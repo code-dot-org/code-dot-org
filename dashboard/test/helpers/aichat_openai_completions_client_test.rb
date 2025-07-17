@@ -9,7 +9,7 @@ class AichatOpenaiCompletionsClientTest < AichatAiClientTest
   let(:request_body_without_messages) do
     {
       model: endpoint_model_id,
-      temperature: 1.0
+      temperature: 0.75
     }
   end
 

@@ -11,7 +11,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
@@ -50,7 +50,7 @@ describe('SectionProgressSelector', () => {
 
     store = getStore();
     store.dispatch(setShowProgressTableV2(false));
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 1));
 
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);

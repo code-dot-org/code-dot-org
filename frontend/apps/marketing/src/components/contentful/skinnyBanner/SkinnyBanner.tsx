@@ -50,6 +50,7 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
   return (
     <DSCOSkinnyBanner
       data-theme={contentMode}
+      aria-label={heading}
       className={className}
       heading={heading}
       description={description}

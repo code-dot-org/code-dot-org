@@ -35,7 +35,8 @@ class AichatOpenaiCompletionsClient < AichatAiClient
     )
 
     # We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
-    temperature *= 2
+    # As of 7/11/25, testing revealed temperatures exceeding 1.5 generate garbage and trigger timeouts/false moderation calls
+    temperature *= DCDO.get('openai_temperature_scaling_factor', 1.5)
 
     messages = [
       {role: "system", content: [{type: "text", text: system_instructions}]},

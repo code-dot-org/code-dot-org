@@ -103,7 +103,6 @@
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
       cronjob at:'0 5 * * *', do:deploy_dir('bin', 'cron', 'summer_workshops_to_gdrive')
-      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'csf_workshop_attendance_to_gdrive')
       cronjob at:'0 13 * * *', do:deploy_dir('bin', 'cron', 'eir_teachers_to_gdrive')
       cronjob at:'0 7 * * 6', do:deploy_dir('bin', 'cron', 'stop_inactive_adhoc_instances')
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')

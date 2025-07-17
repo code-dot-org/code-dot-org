@@ -525,6 +525,7 @@ ActiveRecord::Schema.define(version: 2025_07_16_223213) do
     t.integer "course_id", null: false
     t.integer "script_id", null: false
     t.integer "position", null: false
+    t.string "unit_prefix"
     t.index ["course_id"], name: "index_course_scripts_on_course_id"
     t.index ["script_id"], name: "index_course_scripts_on_script_id"
   end
