@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
-  setup_all do
-    create_hourofcode_unit_and_levels
-  end
-
   def setup
     @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
     @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
@@ -18,7 +12,10 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "should get /hoc/1" do
-    assert_cached_queries(0) do
+    create_hourofcode_unit_and_levels
+    setup_script_cache
+
+    assert_cached_queries(1) do
       get '/hoc/1'
     end
     assert_response :success

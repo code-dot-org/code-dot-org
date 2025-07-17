@@ -2,12 +2,6 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
-  setup_all do
-    create_hourofcode_unit_and_levels
-  end
-
   test 'session cookie name contains environment' do
     get '/reset_session'
 
@@ -35,6 +29,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
   test 'session cookie is set in on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
+    create_hourofcode_unit_and_levels
     get '/hoc/1',
       headers: {'Cache-Control' => 'no-cache'},
       env: {'rack-cache.allow_reload' => true}

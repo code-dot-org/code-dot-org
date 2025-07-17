@@ -2,12 +2,6 @@ require 'test_helper'
 
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
-  self.use_transactional_test_case = true
-
-  setup_all do
-    create_hourofcode_unit_and_levels
-  end
-
   def setup
     @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
     @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
@@ -43,7 +37,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = Unit.hoc_2014_unit
+    script = @multi_lesson_unit
     lesson = script.lessons.first
     level = lesson.script_levels.first.levels.first
 
