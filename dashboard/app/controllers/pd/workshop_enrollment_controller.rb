@@ -131,15 +131,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       @script_data = {
         props: {
           workshop_enrollment_status: enroll_status,
-          workshop_info: {
-            id: @workshop.try(:id),
-            course: @workshop.try(:course),
-            subject: @workshop.try(:subject),
-            name: @workshop.try(:name),
-            format: @workshop.try(:format),
-            rp_name: @workshop.try(:regional_partner).try(:name),
-            session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
-          },
+          workshop_info: @workshop&.summarize_for_marketing_page,
           user_info: current_user&.summarize_for_workshop
         }.to_json
       }

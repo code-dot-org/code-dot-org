@@ -1923,6 +1923,14 @@ columns:
     comment: 
   - *37
   - *47
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: unit_prefix
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb3_unicode_ci
+    comment: 
   course_versions:
   - *5
   - *23
@@ -14549,7 +14557,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250709125438
+version: 20250709141326
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -40,7 +40,7 @@ import {
 
 import style from './signUpFlowStyles.module.scss';
 
-const roleItemGroups = [
+export const roleItemGroups = [
   {
     label: '',
     groupItems: [{value: '', text: locale.select_a_role()}],

@@ -1,0 +1,15 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5d'
+title 'Scenario 4'
+description 'description goes here'
+display_name 'Scenario 4'
+thumbnail_url ''
+
+markdown <<MARKDOWN
+## Scenario 4
+
+Text here
+
+<div style="text-align: center; margin-top: 20px;">
+    <img src="">
+</div>
+MARKDOWN
