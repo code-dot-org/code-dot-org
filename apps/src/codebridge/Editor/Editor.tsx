@@ -46,14 +46,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     if (file?.language && langMapping[file.language]) {
       const extensions: Extension[] = [langMapping[file.language]];
       if (file.language === 'js') {
+        // eslint configuration
         const config = {
           ...js.configs.recommended,
-          // eslint configuration
           languageOptions: {
-            parserOptions: {
-              ecmaVersion: 2022,
-              sourceType: 'module',
-            },
             globals: {
               ...globals.browser,
             },
