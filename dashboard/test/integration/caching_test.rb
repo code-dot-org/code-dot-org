@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
   setup_all do
-    create_hoc_unit_and_levels
+    create_hourofcode_unit_and_levels
   end
 
   def setup

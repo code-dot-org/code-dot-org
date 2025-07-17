@@ -166,7 +166,7 @@ class ActiveSupport::TestCase
   # The hourofcode unit has some special properties, such as special routes for
   # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
   # with this exact name.
-  def create_hoc_unit_and_levels
+  def create_hourofcode_unit_and_levels
     unit_name = Unit::HOC_NAME
 
     # remove any existing fixture-provided unit with this name.

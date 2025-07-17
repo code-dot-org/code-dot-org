@@ -3,7 +3,7 @@ require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
   setup_all do
-    create_hoc_unit_and_levels
+    create_hourofcode_unit_and_levels
   end
 
   test 'session cookie name contains environment' do

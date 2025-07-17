@@ -11,7 +11,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    create_hoc_unit_and_levels
+    create_hourofcode_unit_and_levels
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
