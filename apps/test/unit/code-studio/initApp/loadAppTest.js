@@ -37,6 +37,8 @@ describe('loadApp.js', () => {
     sinon.stub(project, 'load').callsFake(() => ({
       then: successCallback => successCallback(),
     }));
+    sinon.stub(project, 'hideBecauseAbusive').returns(false);
+    sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
     sinon.stub(project, 'getSharingDisabled').returns(false);
   });
   beforeEach(() => {
@@ -59,6 +61,8 @@ describe('loadApp.js', () => {
     clientState.writeSourceForLevel.restore();
     clientState.sourceForLevel.restore();
     project.load.restore();
+    project.hideBecauseAbusive.restore();
+    project.hideBecausePrivacyViolationOrProfane.restore();
     project.getSharingDisabled.restore();
     window.appOptions = oldAppOptions;
   });
