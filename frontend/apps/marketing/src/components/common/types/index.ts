@@ -1,3 +1,16 @@
+export interface SpacingProps {
+  /** None */
+  none: string;
+  /** Extra small */
+  xs: string;
+  /** Small */
+  s: string;
+  /** Medium */
+  m: string;
+  /** Large */
+  l: string;
+}
+
 export interface RemoveMarginBottomProps {
   /** Whether to remove the margin bottom */
   removeMarginBottom: boolean;
