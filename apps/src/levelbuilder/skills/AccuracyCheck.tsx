@@ -8,7 +8,10 @@ import {
   evaluationFromOpenAI,
   SkillBasedAIResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import {AiEvaluationTypes} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiEvaluationTypes,
+  StudentWorkEvaluationStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import AccuracyDetails from './AccuracyDetails';
 
@@ -45,6 +48,21 @@ const AccuracyCheck: React.FC<{
   const datasetName = csvFile
     ? `${csvFile.name}-ai-evaluations.csv`
     : 'ai-evaluations.csv';
+
+  function renderStudentWorkEvaluationStatusCodes() {
+    return (
+      <span>
+        {Object.values(StudentWorkEvaluationStatus).map((status, idx) => (
+          <React.Fragment key={status}>
+            <code>{status}</code>
+            {idx < Object.values(StudentWorkEvaluationStatus).length - 1
+              ? ', '
+              : ''}
+          </React.Fragment>
+        ))}
+      </span>
+    );
+  }
 
   const downloadCSV = () => {
     // Add humanEvaluation and evaluationsMatch to each row
@@ -159,12 +177,10 @@ const AccuracyCheck: React.FC<{
         <br />
         You can also add a column named <code>humanEvaluation</code> to provide
         evaluations for the student work samples. Please use the rating system
-        that includes <code>incomplete_incorrect</code>,{' '}
-        <code>partial_complete_correct</code>, and{' '}
-        <code>all_complete_correct</code> when providing the{' '}
-        <code>humanEvaluation</code>. The AI's evaluation will be compared
-        against the human evaluation, and you can see if they match in the
-        downloaded CSV.{' '}
+        that includes any of the following:{' '}
+        {renderStudentWorkEvaluationStatusCodes()}. The AI's evaluation will be
+        compared against the human evaluation, and you can see if they match in
+        the downloaded CSV.{' '}
         <Link
           text="Use this template to get started."
           href="https://docs.google.com/spreadsheets/d/19UFD6mnsz_Lj7WcTgSzf5BEuDbIeo1qZvbzvADUlUbA/edit?usp=sharing"
