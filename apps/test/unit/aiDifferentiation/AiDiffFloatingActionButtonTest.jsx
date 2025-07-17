@@ -24,7 +24,6 @@ const DEFAULT_PROPS = {
     scriptId: 1,
   },
   scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
 };
 
 const defaultCoursesResponse = {
@@ -77,7 +76,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -95,7 +94,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -112,7 +111,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault({});
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -130,7 +129,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -148,7 +147,7 @@ describe('AIDiffFloatingActionButton', () => {
     renderDefault();
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/curriculum_courses',
+        '/aidiff_threads/curriculum_courses',
         JSON.stringify({
           context: DEFAULT_PROPS.context,
         }),
@@ -170,7 +169,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault({});
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),
@@ -196,7 +195,7 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault();
       await waitFor(() => {
         expect(fetchStub).toHaveBeenCalledWith(
-          '/ai_diff/curriculum_courses',
+          '/aidiff_threads/curriculum_courses',
           JSON.stringify({
             context: DEFAULT_PROPS.context,
           }),

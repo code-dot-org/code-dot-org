@@ -27,7 +27,6 @@ const DEFAULT_PROPS = {
     lessonId: 2,
   },
   scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
   curriculumCourses: [],
 };
 

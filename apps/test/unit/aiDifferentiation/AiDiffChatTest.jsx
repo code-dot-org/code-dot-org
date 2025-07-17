@@ -34,14 +34,13 @@ const defaultProps = {
     lessonId: 2,
   },
   scriptName: 'test_lesson',
-  unitDisplayName: 'test unit name',
 };
 
 const defaultChatResponse = {
   chat_message_text: "Beep boop I'm a bot",
   status: Status.OK,
-  session_id: '123abc',
-  messageId: 42,
+  thread_id: 3,
+  message_id: 42,
 };
 
 describe('AiDiffChat', () => {
@@ -153,11 +152,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.USER,
       isPreset: true,
       text: 'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const responseEventData2 = {
@@ -166,28 +164,25 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.ASSISTANT,
       isPreset: true,
       text: "Beep boop I'm a bot",
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
 
     //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/chat_completion',
+        '/aidiff_threads',
         JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: true,
+          presetChipText: 'Explain a concept',
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
           },
-          inputText: responseEventData.text,
-          lessonId: responseEventData.lessonId,
-          unitDisplayName: responseEventData.unitName,
-          sessionId: null,
-          isPreset: true,
         }),
         true,
         {
@@ -256,11 +251,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.USER,
       isPreset: true,
       text: 'Can I give students a grade on their Create PT?',
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const responseEventData2 = {
@@ -269,28 +263,25 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.ASSISTANT,
       isPreset: true,
       text: "Beep boop I'm a bot",
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
 
     //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/chat_completion',
+        '/aidiff_threads',
         JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: true,
+          presetChipText: 'Can I grade the Create Task',
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
           },
-          inputText: responseEventData.text,
-          lessonId: responseEventData.lessonId,
-          unitDisplayName: responseEventData.unitName,
-          sessionId: null,
-          isPreset: true,
         }),
         true,
         {
@@ -330,11 +321,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.USER,
       isPreset: true,
       text: 'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const responseEventData2 = {
@@ -343,11 +333,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.ASSISTANT,
       isPreset: true,
       text: "Beep boop I'm a bot",
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const feedbackEventData = {
@@ -356,7 +345,6 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       thumbsUp: true,
       thumbsDown: false,
       flagged: false,
@@ -367,17 +355,15 @@ describe('AiDiffChat', () => {
     //sends the api call then logs the suggested prompt and the bot message
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/chat_completion',
+        '/aidiff_threads',
         JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: true,
+          presetChipText: 'Explain a concept',
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
           },
-          inputText: responseEventData.text,
-          lessonId: responseEventData.lessonId,
-          unitDisplayName: responseEventData.unitName,
-          sessionId: null,
-          isPreset: true,
         }),
         true,
         {
@@ -450,11 +436,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.USER,
       isPreset: false,
       text: userMessage,
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const responseEventData2 = {
@@ -463,28 +448,25 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.ASSISTANT,
       isPreset: false,
       text: "Beep boop I'm a bot",
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
 
     //sends the api call then logs the user message and the bot message
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/chat_completion',
+        '/aidiff_threads',
         JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: false,
+          presetChipText: null,
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
           },
-          inputText: responseEventData.text,
-          lessonId: responseEventData.lessonId,
-          unitDisplayName: responseEventData.unitName,
-          sessionId: null,
-          isPreset: false,
         }),
         true,
         {
@@ -532,11 +514,10 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.USER,
       isPreset: false,
       text: userMessage,
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     const responseEventData2 = {
@@ -545,26 +526,23 @@ describe('AiDiffChat', () => {
         lessonId: 2,
       },
       scriptName: 'test_lesson',
-      unitName: 'test unit name',
       role: Role.ASSISTANT,
       isPreset: false,
       text: "Beep boop I'm a bot",
-      sessionId: '123abc',
+      threadId: 3,
       url: window.location.href,
     };
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        '/ai_diff/chat_completion',
+        '/aidiff_threads',
         JSON.stringify({
+          inputText: responseEventData.text,
+          isPreset: false,
+          presetChipText: null,
           context: {
             type: AiDiffContext.LESSON,
             lessonId: 2,
           },
-          inputText: responseEventData.text,
-          lessonId: responseEventData.lessonId,
-          unitDisplayName: responseEventData.unitName,
-          sessionId: null,
-          isPreset: false,
         }),
         true,
         {

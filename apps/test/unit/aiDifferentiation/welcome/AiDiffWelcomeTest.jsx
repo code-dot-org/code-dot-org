@@ -36,7 +36,6 @@ const DEFAULT_PROPS = {
   context: 'some-context',
   scriptId: 1,
   scriptName: 'Test Script',
-  unitDisplayName: 'Unit 1',
 };
 
 describe('AiDiffWelcome', () => {
