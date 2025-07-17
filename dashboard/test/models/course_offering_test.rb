@@ -605,11 +605,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'query count for assignable_course_offerings' do
     Unit.stubs(:should_cache?).returns true
 
-    assert_cached_queries(16) do
+    assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@teacher)
     end
 
-    assert_cached_queries(18) do
+    assert_cached_queries(0) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
 
@@ -647,6 +647,63 @@ class CourseOfferingTest < ActiveSupport::TestCase
     create :course_version, content_root: unit.original_unit_group, course_offering: co
 
     refute(co.missing_required_device_compatibility?)
+  end
+
+  test 'duration_in_minutes returns nil if latest_published_version does not exist' do
+    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    co = CourseOffering.add_course_offering(course)
+
+    assert_nil co.latest_published_version
+    assert_nil co.duration_in_minutes
+  end
+
+  test 'duration_in_minutes returns sum of units duration in minutes' do
+    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 40)
+
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+    create(:lesson_activity, lesson: lesson2, duration: 40)
+
+    co = CourseOffering.add_course_offering(unit.original_unit_group)
+    assert_equal 120, co.duration_in_minutes
+  end
+
+  test 'duration_in_hours returns nil if latest_published_version does not exist' do
+    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    co = CourseOffering.add_course_offering(course)
+
+    assert_nil co.latest_published_version
+    assert_nil co.duration_in_hours
+  end
+
+  test 'duration_in_hours returns 1 hour as the minimum if latest_published_version exists' do
+    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 20)
+
+    co = CourseOffering.add_course_offering(unit.original_unit_group)
+    assert_equal 1, co.duration_in_hours
+  end
+
+  test 'duration_in_hours returns sum of units duration in hours (rounded down using integer math)' do
+    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
+    lesson_group = create(:lesson_group, script: unit)
+
+    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson1, duration: 50)
+
+    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
+    create(:lesson_activity, lesson: lesson2, duration: 50)
+    create(:lesson_activity, lesson: lesson2, duration: 50)
+
+    co = CourseOffering.add_course_offering(unit.original_unit_group)
+    assert_equal 2, co.duration_in_hours
   end
 
   test 'duration returns nil if latest_published_version does not exist' do

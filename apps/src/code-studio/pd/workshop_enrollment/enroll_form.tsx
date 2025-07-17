@@ -15,7 +15,6 @@ import {DATA_SHARING_NOTICE} from '@cdo/apps/code-studio/pd/constants';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
-import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs.jsx';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -235,99 +234,10 @@ export default function EnrollForm(props: EnrollFormProps) {
     return errors;
   };
 
-  const getRole = () => {
-    if (!formState.role) {
-      return null;
-    }
-    let roleWithDescription = formState.role;
-    if (formState.describe_role) {
-      roleWithDescription += `: ${formState.describe_role}`;
-    }
-    return roleWithDescription;
-  };
-
-  const getCsfCoursesPlanned = () => {
-    if (!formState.csf_courses_planned) {
-      return undefined;
-    }
-    const processedCourses: string[] = [];
-    formState.csf_courses_planned.forEach(course => {
-      if (course === `${OTHER} ${EXPLAIN}`) {
-        if (formState.explain_csf_course_other) {
-          processedCourses.push(
-            `${OTHER}: ${formState.explain_csf_course_other}`
-          );
-        } else {
-          processedCourses.push(OTHER);
-        }
-      } else {
-        processedCourses.push(course);
-      }
-    });
-    return processedCourses;
-  };
-
-  const getGradesTeaching = () => {
-    if (!formState.grades_teaching) {
-      return null;
-    }
-    const processedGrades: string[] = [];
-    formState.grades_teaching.forEach(grade => {
-      if (grade === `${OTHER} ${EXPLAIN}`) {
-        if (formState.explain_teaching_other) {
-          processedGrades.push(`${OTHER}: ${formState.explain_teaching_other}`);
-        } else {
-          processedGrades.push(OTHER);
-        }
-      } else if (grade === `${NOT_TEACHING} ${EXPLAIN}`) {
-        if (formState.explain_not_teaching) {
-          processedGrades.push(
-            `${NOT_TEACHING}: ${formState.explain_not_teaching}`
-          );
-        } else {
-          processedGrades.push(NOT_TEACHING);
-        }
-      } else {
-        processedGrades.push(grade);
-      }
-    });
-    return processedGrades;
-  };
-
   const submit = async () => {
     setFormErrors({});
     setSubmissionErrorMessage('');
     setIsSubmitting(true);
-
-    const params = {
-      user_id: props.user_id,
-      first_name: formState.first_name,
-      last_name: formState.last_name,
-      email: formState.email,
-      school_info: buildSchoolData({
-        schoolId: schoolInfo.schoolId,
-        country: schoolInfo.country,
-        schoolName: schoolInfo.schoolName,
-        schoolZip: schoolInfo.schoolZip,
-      }),
-      role: getRole(),
-      describe_role: formState.describe_role,
-      grades_teaching: getGradesTeaching(),
-      explain_teaching_other: formState.explain_teaching_other,
-      explain_not_teaching: formState.explain_not_teaching,
-      csf_course_experience: formState.csf_course_experience,
-      csf_courses_planned: getCsfCoursesPlanned(),
-      explain_csf_course_other: formState.explain_csf_course_other,
-      attended_csf_intro_workshop:
-        ATTENDED_CSF_COURSES_OPTIONS[formState.attended_csf_intro_workshop],
-      previous_courses: formState.previous_courses,
-      csf_intro_intent: formState.csf_intro_intent,
-      csf_intro_other_factors: formState.csf_intro_other_factors,
-      years_teaching: formState.years_teaching,
-      years_teaching_cs: formState.years_teaching_cs,
-      taught_ap_before: formState.taught_ap_before,
-      planning_to_teach_ap: formState.planning_to_teach_ap,
-    };
 
     try {
       const response = await fetch(
@@ -338,7 +248,7 @@ export default function EnrollForm(props: EnrollFormProps) {
             'Content-Type': 'application/json',
             'X-CSRF-Token': await getAuthenticityToken(),
           },
-          body: JSON.stringify(params),
+          body: JSON.stringify({user_id: props.user_id}),
         }
       );
       setIsSubmitting(false);

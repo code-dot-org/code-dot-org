@@ -8,7 +8,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
-  setScriptId,
+  setUnit,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -45,7 +45,7 @@ function StandardsReport({
   numLessonsCompleted,
   numLessonsInUnit,
   setTeacherCommentForReport,
-  setScriptId,
+  setUnit,
   lessonsByStandard,
 }) {
   React.useEffect(() => {
@@ -55,19 +55,16 @@ function StandardsReport({
       );
       const scriptIdFromTD =
         window.opener.teacherDashboardStoreInformation.scriptId;
-      setScriptId(scriptIdFromTD);
+      const courseVersionIdFromTD =
+        window.opener.teacherDashboardStoreInformation.courseVersionId;
+      setUnit(scriptIdFromTD, courseVersionIdFromTD);
       loadUnitProgress(scriptIdFromTD, sectionId);
     } catch (e) {
       throw new Error(
         '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
       );
     }
-  }, [
-    sectionId,
-    setTeacherCommentForReport,
-    setScriptId,
-    numStudentsInSection,
-  ]);
+  }, [sectionId, setTeacherCommentForReport, setUnit, numStudentsInSection]);
 
   const getLinkToOverview = () => {
     return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
@@ -193,7 +190,7 @@ StandardsReport.propTypes = {
   numLessonsCompleted: PropTypes.number,
   numLessonsInUnit: PropTypes.number,
   setTeacherCommentForReport: PropTypes.func.isRequired,
-  setScriptId: PropTypes.func.isRequired,
+  setUnit: PropTypes.func.isRequired,
   lessonsByStandard: PropTypes.object,
 };
 
@@ -243,8 +240,8 @@ export default connect(
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
     },
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
   })
 )(StandardsReport);

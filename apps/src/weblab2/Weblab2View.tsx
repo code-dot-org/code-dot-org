@@ -12,6 +12,7 @@ import React, {useState} from 'react';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
+import {useAppSelector} from '../util/reduxHooks';
 
 import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
@@ -29,7 +30,6 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
   },
-  showFileBrowser: true,
 };
 
 const defaultSource: MultiFileSource = {
@@ -112,23 +112,24 @@ const Weblab2View: React.FC<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setProject, startSources, projectVersion} = useSource(
+  const {startSources} = useSource(
     defaultProject,
     levelProperties,
     initialSources
   );
 
+  const hasSource = useAppSelector(
+    state => !!state.lab2Project.projectSources?.source
+  );
+
   return (
     <div className="app-wrapper">
       <div className="app-ide">
-        {source && (
+        {hasSource && (
           <Codebridge
-            source={source}
             config={config}
-            setProject={setProject}
             setConfig={setConfig}
             startSources={startSources}
-            projectVersion={projectVersion}
             levelProperties={levelProperties}
           />
         )}

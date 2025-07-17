@@ -9,13 +9,13 @@ import {
   TOOLBOX_BLOCKS,
   WARNING_BANNER_MESSAGES,
 } from '@cdo/apps/lab2/constants';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';

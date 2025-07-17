@@ -7,7 +7,7 @@ import {
   saveTypeToAnalyticsEvent,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../../constants';
-import {AiCustomizations, ViewMode} from '../../types';
+import {ViewMode} from '../../types';
 import {
   endSave,
   setNewChatSession,
@@ -39,22 +39,24 @@ export const onSaveComplete =
     }
 
     changedProperties.forEach(property => {
-      const typedProperty = property as keyof AiCustomizations;
-      const modelUpdate = {
-        removeId: getNewRemoveId(),
-        updatedField: typedProperty,
-        updatedValue: currentAiCustomizations[typedProperty],
-        timestamp: Date.now(),
-      };
-      dispatch(addChatEvent(modelUpdate));
+      if (property !== 'modelCardInfo') {
+        dispatch(
+          addChatEvent({
+            removeId: getNewRemoveId(),
+            updatedField: property,
+            updatedValue: currentAiCustomizations[property],
+            timestamp: Date.now(),
+          })
+        );
+      }
 
       // Report to analytics the changed value for only selected model id and temperature properties.
       // Do not include the free text changes (system prompt and retrieval contexts).
       const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
       const propertyChangedTo = propertiesChangedValueToReport.includes(
-        typedProperty
+        property
       )
-        ? currentAiCustomizations[typedProperty]
+        ? currentAiCustomizations[property]
         : 'NULL';
       if (currentSaveType) {
         dispatch(

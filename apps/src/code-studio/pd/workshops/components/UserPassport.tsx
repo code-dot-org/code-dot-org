@@ -7,6 +7,7 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import {AccountSettingsSectionUrlParams} from '@cdo/apps/accounts/accountUpdateConstants';
 import {GetUserInfoForWorkshopResponse} from '@cdo/apps/code-studio/pd/workshops/types';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
@@ -57,6 +58,21 @@ const UserPassport: React.FunctionComponent<{
     );
   };
 
+  const buildEditLink = () => {
+    let editLink = `/users/edit?user_return_to=${encodeURIComponent(
+      returnToHref
+    )}`;
+
+    if (!givenName || !familyName) {
+      editLink += `&${AccountSettingsSectionUrlParams.AccountInformation}=true`;
+    }
+    if (!schoolName && !schoolType) {
+      editLink += `&${AccountSettingsSectionUrlParams.SchoolInformation}=true`;
+    }
+
+    return editLink;
+  };
+
   return (
     <div className={classNames(style.userInfoContainer, className)}>
       <span className={style.userInfoHeader}>
@@ -69,7 +85,7 @@ const UserPassport: React.FunctionComponent<{
           size="xs"
           iconLeft={{iconName: 'pencil', iconStyle: 'solid'}}
           className={style.editButton}
-          href={`/users/edit?user_return_to=${returnToHref}`}
+          href={buildEditLink()}
         />
       </span>
       <div className={style.userInfoContent}>

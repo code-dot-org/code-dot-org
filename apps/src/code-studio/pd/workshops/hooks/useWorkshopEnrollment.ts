@@ -2,10 +2,7 @@ import {LinkProps} from '@code-dot-org/component-library/link';
 import {useState} from 'react';
 
 import {SUBMISSION_STATUSES} from '@cdo/apps/code-studio/pd/workshop_enrollment/constants';
-import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
-} from '@cdo/apps/code-studio/pd/workshops/types';
+import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/workshops/types';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import {useWorkshopEnrollmentApi} from './useWorkshopEnrollmentApi';
@@ -19,16 +16,16 @@ type WorkshopEnrollmentHandlerProps = Pick<
   | 'subject'
   | 'sessions'
 > & {
-  workshopId: number;
-  userInfo: GetUserInfoForWorkshopResponse['userInfo'];
+  workshop_id: number;
+  user_id?: number;
 };
 
 /**
  * Handles the enrollment logic for a workshop, differentiating between various submission statuses
  * */
 export function useWorkshopEnrollment({
-  workshopId,
-  userInfo,
+  workshop_id,
+  user_id,
   regional_partner_name,
   course,
   format,
@@ -37,7 +34,7 @@ export function useWorkshopEnrollment({
   sessions,
 }: WorkshopEnrollmentHandlerProps) {
   const {submitEnrollment, isSubmitting, error} =
-    useWorkshopEnrollmentApi(workshopId);
+    useWorkshopEnrollmentApi(workshop_id);
   const [alertState, setAlertState] = useState<{
     show: boolean;
     text: string;
@@ -45,20 +42,7 @@ export function useWorkshopEnrollment({
   }>({show: false, text: ''});
 
   const handleClick = async () => {
-    const result = await submitEnrollment(
-      userInfo && {
-        user_id: userInfo.id,
-        email: userInfo.email,
-        first_name: userInfo.first_name,
-        last_name: userInfo.last_name,
-        school_info: {
-          school_id: userInfo.school_info?.school_id,
-          country: userInfo.school_info?.country,
-          school_name: userInfo.school_info?.school_name,
-          school_zip: userInfo.school_info?.school_zip,
-        },
-      }
-    );
+    const result = await submitEnrollment(user_id);
 
     switch (result?.workshop_enrollment_status) {
       case SUBMISSION_STATUSES.DUPLICATE:
@@ -94,7 +78,7 @@ export function useWorkshopEnrollment({
         break;
       case SUBMISSION_STATUSES.SUCCESS:
         sessionStorage.setItem('rpName', regional_partner_name || '');
-        sessionStorage.setItem('workshopId', `${workshopId}`);
+        sessionStorage.setItem('workshopId', `${workshop_id}`);
         sessionStorage.setItem('workshopCourse', course);
         sessionStorage.setItem('workshopSubject', subject || '');
         sessionStorage.setItem('workshopName', name || '');

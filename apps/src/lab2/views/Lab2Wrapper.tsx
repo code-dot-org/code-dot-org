@@ -17,6 +17,10 @@ import {
   getAppOptionsTheme,
   getIsShareView,
 } from '@cdo/apps/lab2/projects/utils';
+import {
+  isLabLoading,
+  hasPageError,
+} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
@@ -25,13 +29,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
-import {
-  LabState,
-  isLabLoading,
-  hasPageError,
-  setIsShareView,
-  setPermissions,
-} from '../lab2Redux';
+import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {LifecycleEvent} from '../utils';
 
