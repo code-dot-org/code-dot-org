@@ -1043,38 +1043,6 @@
     desc: "Step into the theater to save the day in The Show Must Go On! Find the missing star, unlock hidden gags, and interact with a cast of mobs. Help the Agent overcome stage fright as you solve fun coding puzzles. Watch your coding skills shine in an epic final performance!"
     aria_label: "Get started with Minecraft: The Show Must Go On"
 
-  afe_page_heading: "Free resources from Amazon Future Engineer"
-  afe_page_top_desc: "Enhance your teaching experience with Code.org in partnership with [Amazon Future Engineer](%{afe_url}). Eligible educators from underserved schools can access these benefits at no cost:"
-  afe_page_top_list_01: "**Professional Growth:** Complimentary CSTA+ membership, with expert-led webinars and resources."
-  afe_page_top_list_02: "**Opportunities:** Chance to join a paid-fellowship experience to increase access in computer science working alongside industry experts at Amazon!"
-  afe_page_top_list_03: "**Resources:** Inspiration kits, including posters and stickers, to engage students in computer science."
-  afe_page_top_list_04: "**Innovation:** Exclusive access to pilot programs that explore cutting-edge career and computer science topics."
-  afe_page_eligibility_heading: "School Eligibility Requirements*"
-  afe_page_eligibility_list_01: "Title 1 and/or > 40% Free/Reduced Lunch (FRL) student enrollment"
-  afe_page_eligibility_list_02: ">30% Black/Latino/Native American (BLNA) student enrollment"
-  afe_page_eligibility_list_03: "Rural school"
-  afe_page_eligibility_disclaimer: "*Eligibility requirements verified using [NCES data](%{nces_url})."
-  afe_page_programs_heading: "More Amazon Future Engineer programs & opportunities"
-  afe_page_programs_alexa_title: "Alexa Skills Inventor"
-  afe_page_programs_alexa_desc: "Learn how to program Alexa with skills that could help astronauts solve problems in space and communities at home."
-  afe_page_programs_cloud_tour_title: "Uncovering Cloud Computer Career Tour"
-  afe_page_programs_cloud_tour_desc: "How did we go from renting movies at the store to streaming from anywhere at any time? Learn how data centers and cloud computing have changed the way we watch our favorite content, and the careers behind it."
-  afe_page_programs_voice_title: "Your Voice is Power"
-  afe_page_programs_voice_desc: "Students will code and compete to learn how entrepreneurship, coding, and music can intersect for positive change."
-  afe_page_programs_scholarships_title: "Scholarships and Internships"
-  afe_page_programs_scholarships_desc: "Supporting students after high school is imperative to fulfilling the Amazon Future Engineer mission for all of our scholars."
-  afe_page_programs_robotics_title: "Robotics Fulfillment Center Tour"
-  afe_page_programs_robotics_desc: "Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon."
-  afe_page_programs_data_tour_title: "Keeping Data Safe Career Tour"
-  afe_page_programs_data_tour_desc: "You want to upload your photos to the cloud, but what if something happens at a data center? Learn how AWS and data center professionals keep data safe and sustainable."
-
-  afe_page_success_heading: "Congratulations! You successfully signed up for the Amazon Future Engineer Program."
-  afe_page_success_desc: "You should receive an email shortly from Amazon Future Engineer to claim your benefits. In the meantime, check out some of the amazing resources around our site."
-  afe_page_eligibility_check_heading: "We've checked your eligibility"
-  afe_page_eligibility_check_fail_desc: "Your school does not meet the eligibility [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can still take advantage of all Code.org has to offer, including our robust curriculum and professional learning opportunities."
-  afe_page_eligibility_check_fail_error: "If you think you received this message in error, contact us at [support@code.org](%{email_url})."
-  afe_page_eligibility_check_disclaimer: "*To participate in the Amazon Future Engineer program, a school must have Title 1 status OR have student enrollment of more than 40% underrepresented minority students and/or 40% students who qualify for free or reduced lunch."
-
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'

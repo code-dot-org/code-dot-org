@@ -2,19 +2,26 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 /**
- * Attempt to construct an absolute Pegasus url (that is,
+ * Attempt to construct an absolute Marketing url (that is,
  * starting with https://code.org or the appropriate
  * equivalent for the current environment) from a given
- * relative url.  If we're already on pegasus we'll
+ * relative url. If we're already on marketing we'll
  * just return the relative url.
  * @param {string} relativeUrl - should start with a
  *   leading slash.
  */
-export function pegasus(relativeUrl) {
+export function marketingUrl(relativeUrl) {
   if (window.dashboard && window.dashboard.CODE_ORG_URL) {
     return window.dashboard.CODE_ORG_URL + relativeUrl;
   }
   return relativeUrl;
+}
+
+/**
+ * @deprecated `pegasus()` is deprecated. Use `marketingUrl()` directly instead.
+ */
+export function pegasus(relativeUrl) {
+  return marketingUrl(relativeUrl);
 }
 
 /**
