@@ -15,6 +15,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       user.update(deleted_at: 29.days.ago)
       Cdo::Metrics.stubs(:push)
       ChatClient.stubs(:message)
+      Honeybadger.stubs(:notify)
     end
 
     it 'should run the PII scrub service on expired deleted accounts' do
@@ -37,6 +38,30 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
       it 'should not call the PII scrub service' do
         expect(Services::User::PiiScrubber).not_to receive(:call)
+        scrub_pii
+      end
+    end
+
+    context 'when an error occurs' do
+      before do
+        expect(described_instance).to receive(:scrub_user).and_raise(Exception.new('Test error'))
+      end
+
+      it 'should increment num_errors' do
+        scrub_pii
+        _(described_instance.num_errors).must_equal 1
+      end
+
+      it 'should log the error' do
+        expect(described_instance).to receive(:log_message).with(/Error scrubbing user_id #{user.id}: Test error/)
+        _(proc {scrub_pii}).must_raise Exception
+      end
+
+      it 'should notify Honeybadger' do
+        expect(Honeybadger).to receive(:notify).with(
+          instance_of(Exception),
+          context: {user_id: user.id}
+        )
         scrub_pii
       end
     end

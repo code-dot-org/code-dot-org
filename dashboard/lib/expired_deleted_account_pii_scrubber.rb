@@ -45,6 +45,7 @@ class ExpiredDeletedAccountPiiScrubber
         scrub_user(user)
         @num_accounts_scrubbed += 1
       rescue Exception => exception
+        @num_errors += 1
         Honeybadger.notify(exception, context: {user_id: user.id})
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
       end
@@ -58,7 +59,7 @@ class ExpiredDeletedAccountPiiScrubber
     end
 
     log_to_slack(summary)
-    log_to_slack(summary, 'user-accounts') if @num_errors
+    log_to_slack(summary, 'user-accounts') if @num_errors.positive?
   end
 
   def accounts_to_scrub
