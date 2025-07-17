@@ -175,20 +175,14 @@ class ActiveSupport::TestCase
     unit_names.each do |unit_name|
       raise "unexpected unit name: #{unit_name}" unless DEFAULT_FIXTURE_UNIT_NAMES.include?(unit_name)
 
-      # create a placeholder factory-provided Unit if we don't already have a
-      # fixture-provided one.
-      # Specify skip_name_format_validation because 'ECSPD' will fail to be
-      # created otherwise, because upper case letters are not allowed.
-      unit = Unit.find_by_name(unit_name) ||
-        create(:script, :with_levels, levels_count: 5, name: unit_name, skip_name_format_validation: true)
+      # remove any existing fixture-provided unit with this name
+      Unit.find_by_name(unit_name)&.destroy
+      UnitGroup.find_by_name(unit_name)&.destroy
+      CourseOffering.find_by_key(unit_name)&.destroy
 
-      # make sure that all the Unit's ScriptLevels have associated Levels.
-      # This is expected during the interim period where we are no longer
-      # generating Levels from fixtures, but are still generating Scripts
-      unit.script_levels.each do |script_level|
-        next unless script_level.levels.empty?
-        script_level.levels = [create(:level)]
-      end
+      # create a placeholder factory-provided Unit, UnitGroup, and CourseOffering
+      unit = create(:script, :with_levels, levels_count: 20, name: unit_name)
+      create :hoc_course, unit: unit, name: unit_name, family_name: unit_name
     end
   end
 
