@@ -7,7 +7,7 @@ class AidiffThreadsController < ApplicationController
   # POST /aidiff_threads
   def create
     puts "create"
-    unless has_required_create_params?
+    unless validate_context? && has_required_chat_params?
       return render status: :bad_request, json: {}
     end
 
@@ -94,9 +94,7 @@ class AidiffThreadsController < ApplicationController
   # POST /aidiff_threads/:id/chat_completion
   def chat_completion
     puts "chat_completion"
-    begin
-      params.require([:inputText, :isPreset])
-    rescue ActionController::ParameterMissing
+    unless has_required_chat_params?
       return render status: :bad_request, json: {}
     end
 
@@ -265,6 +263,7 @@ class AidiffThreadsController < ApplicationController
       content: params[:inputText],
       raw_content: params[:inputText],
       is_preset: params[:isPreset],
+      preset_chip_text: params[:presetChipText]
     )
 
     @assistant_message = AidiffMessage.create!(
@@ -278,10 +277,12 @@ class AidiffThreadsController < ApplicationController
     )
   end
 
-  private def has_required_create_params?
-    return false unless validate_context?
+  private def has_required_chat_params?
     begin
       params.require([:inputText, :isPreset])
+      if params[:isPreset] == true
+        params.require(:presetChipText)
+      end
     rescue ActionController::ParameterMissing
       return false
     end
