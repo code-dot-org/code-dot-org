@@ -157,33 +157,26 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
 
-  # Some of the functionality we're testing here relies on Scripts with
-  # certain hardcoded names. In the old fixture-based model, this data was
-  # all provided; in the new factory-based model, we need to do a little
-  # prep.
+  # Create the hourofcode unit and levels from factories, taking care to first
+  # delete any conflicting objects that may have already been created in test
+  # fixtures. This paves the way to remove this unit from the test fixtures
+  # without breaking tests which use this helper.
   #
-  # NOTE for any future developers: please DO NOT add new scripts to this
-  # list. This exists to provide backwards compatibility to old tests which
-  # are dependent on factory-provided content. If you are writing new tests,
-  # please make sure that they are instead relying on factory-provided
-  # content.
-  DEFAULT_FIXTURE_UNIT_NAMES = [
-    Unit::HOC_NAME,
-  ].freeze
+  # The hourofcode unit has some special properties, such as special routes for
+  # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
+  # with this exact name.
+  def create_hoc_unit_and_levels
+    unit_name = Unit::HOC_NAME
 
-  def seed_deprecated_unit_fixtures(unit_names: DEFAULT_FIXTURE_UNIT_NAMES)
-    unit_names.each do |unit_name|
-      raise "unexpected unit name: #{unit_name}" unless DEFAULT_FIXTURE_UNIT_NAMES.include?(unit_name)
+    # remove any existing fixture-provided unit with this name.
+    # TODO: remove these lines once the hourofcode unit is no longer in fixtures.
+    Unit.find_by_name(unit_name)&.destroy
+    UnitGroup.find_by_name(unit_name)&.destroy
+    CourseOffering.find_by_key(unit_name)&.destroy
 
-      # remove any existing fixture-provided unit with this name
-      Unit.find_by_name(unit_name)&.destroy
-      UnitGroup.find_by_name(unit_name)&.destroy
-      CourseOffering.find_by_key(unit_name)&.destroy
-
-      # create a placeholder factory-provided Unit, UnitGroup, and CourseOffering
-      unit = create(:script, :with_levels, levels_count: 20, name: unit_name)
-      create :hoc_course, unit: unit, name: unit_name, family_name: unit_name
-    end
+    # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
+    unit = create(:script, :with_levels, levels_count: 20, name: unit_name)
+    create :hoc_course, unit: unit, name: unit_name, family_name: unit_name
   end
 
   def assert_creates(*args, &block)

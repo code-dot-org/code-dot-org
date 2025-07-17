@@ -241,7 +241,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with custom route' do
-    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME])
+    create_hoc_unit_and_levels
     summary = Unit.hoc_2014_unit.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]

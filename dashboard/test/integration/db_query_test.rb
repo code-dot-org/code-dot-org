@@ -3,7 +3,7 @@ require 'test_helper'
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
   setup_all do
-    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME])
+    create_hoc_unit_and_levels
   end
 
   def setup

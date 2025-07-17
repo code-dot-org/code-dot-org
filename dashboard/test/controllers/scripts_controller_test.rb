@@ -133,7 +133,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show of hourofcode redirects to hoc" do
-    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME])
+    create_hoc_unit_and_levels
     get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end

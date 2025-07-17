@@ -3,7 +3,7 @@ require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
   setup_all do
-    seed_deprecated_unit_fixtures(unit_names: [Unit::HOC_NAME])
+    create_hoc_unit_and_levels
   end
 
   test 'session cookie name contains environment' do
