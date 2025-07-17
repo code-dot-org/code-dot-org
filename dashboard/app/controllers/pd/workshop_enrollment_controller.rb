@@ -50,14 +50,11 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
 
       facilitators = @workshop.facilitators.includes(:facilitator_info).map do |facilitator|
-        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-        image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
         {
           id: facilitator.id,
           name: facilitator.name,
           email: facilitator.email,
-          image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
+          image_path: nil,
           bio: facilitator.facilitator_bio,
         }
       end
@@ -134,15 +131,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       @script_data = {
         props: {
           workshop_enrollment_status: enroll_status,
-          workshop_info: {
-            id: @workshop.try(:id),
-            course: @workshop.try(:course),
-            subject: @workshop.try(:subject),
-            name: @workshop.try(:name),
-            format: @workshop.try(:format),
-            rp_name: @workshop.try(:regional_partner).try(:name),
-            session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
-          },
+          workshop_info: @workshop&.summarize_for_marketing_page,
           user_info: current_user&.summarize_for_workshop
         }.to_json
       }

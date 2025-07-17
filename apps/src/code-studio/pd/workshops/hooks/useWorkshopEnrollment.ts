@@ -2,31 +2,26 @@ import {LinkProps} from '@code-dot-org/component-library/link';
 import {useState} from 'react';
 
 import {SUBMISSION_STATUSES} from '@cdo/apps/code-studio/pd/workshop_enrollment/constants';
-import {GetWorkshopInfoScriptDataResponse} from '@cdo/apps/code-studio/pd/workshops/types';
+import {WorkshopInfo} from '@cdo/apps/code-studio/pd/workshops/types';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import {useWorkshopEnrollmentApi} from './useWorkshopEnrollmentApi';
 
 type WorkshopEnrollmentHandlerProps = Pick<
-  GetWorkshopInfoScriptDataResponse,
-  | 'regional_partner_name'
-  | 'format'
-  | 'course'
-  | 'name'
-  | 'subject'
-  | 'sessions'
+  WorkshopInfo,
+  'regionalPartnerName' | 'format' | 'course' | 'name' | 'subject' | 'sessions'
 > & {
-  workshop_id: number;
-  user_id?: number;
+  workshopId: number;
+  userId?: number;
 };
 
 /**
  * Handles the enrollment logic for a workshop, differentiating between various submission statuses
  * */
 export function useWorkshopEnrollment({
-  workshop_id,
-  user_id,
-  regional_partner_name,
+  workshopId,
+  userId,
+  regionalPartnerName,
   course,
   format,
   name,
@@ -34,7 +29,7 @@ export function useWorkshopEnrollment({
   sessions,
 }: WorkshopEnrollmentHandlerProps) {
   const {submitEnrollment, isSubmitting, error} =
-    useWorkshopEnrollmentApi(workshop_id);
+    useWorkshopEnrollmentApi(workshopId);
   const [alertState, setAlertState] = useState<{
     show: boolean;
     text: string;
@@ -42,7 +37,7 @@ export function useWorkshopEnrollment({
   }>({show: false, text: ''});
 
   const handleClick = async () => {
-    const result = await submitEnrollment(user_id);
+    const result = await submitEnrollment(userId);
 
     switch (result?.workshop_enrollment_status) {
       case SUBMISSION_STATUSES.DUPLICATE:
@@ -77,8 +72,8 @@ export function useWorkshopEnrollment({
         });
         break;
       case SUBMISSION_STATUSES.SUCCESS:
-        sessionStorage.setItem('rpName', regional_partner_name || '');
-        sessionStorage.setItem('workshopId', `${workshop_id}`);
+        sessionStorage.setItem('rpName', regionalPartnerName || '');
+        sessionStorage.setItem('workshopId', `${workshopId}`);
         sessionStorage.setItem('workshopCourse', course);
         sessionStorage.setItem('workshopSubject', subject || '');
         sessionStorage.setItem('workshopName', name || '');

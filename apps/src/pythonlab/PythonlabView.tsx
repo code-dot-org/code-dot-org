@@ -71,7 +71,6 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     widget: HorizontalLayout,
   },
-  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent<
@@ -255,7 +254,6 @@ const PythonlabView: React.FunctionComponent<
           startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
-          labConfig={labConfig}
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}

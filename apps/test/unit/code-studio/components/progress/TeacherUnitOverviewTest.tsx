@@ -70,7 +70,7 @@ const UNIT_SUMMARY = {
   lessonGroups: [],
   isPlCourse: false,
   plc: false,
-  unit_position: '1',
+  unit_position: 1,
 };
 
 const navigate = jest.fn();

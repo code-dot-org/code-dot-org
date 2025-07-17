@@ -454,7 +454,17 @@ Resources:
                   - iam:GetRole*
                   - iam:ListAttachedRolePolicies
                   - iam:TagRole
+                  - iam:GetRolePolicy
+                  - iam:ListRolePolicies
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+
+              - Sid: AllowPermissionsBoundaryPolicyAccess
+                Effect: Allow
+                Action:
+                  - iam:GetPolicy
+                  - iam:GetPolicyVersion
+                  - iam:ListPolicyVersions
+                Resource: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
 
               - Sid: AllowPassRoleToService
                 Effect: Allow

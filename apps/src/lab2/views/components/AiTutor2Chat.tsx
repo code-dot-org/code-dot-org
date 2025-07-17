@@ -8,19 +8,16 @@ import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {aiTutorModelId} from '../../ai/AiTutorModelId';
-import {LevelProperties} from '../../types';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 interface AiTutor2ChatProps {
   hiddenContext: string;
-  levelProperties: LevelProperties;
 }
 
 // A free chat with lab-supplied context added to each question.
 const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   hiddenContext,
-  levelProperties,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -67,7 +64,6 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         onClear={() => {
           dispatch(clearChatMessages());
         }}
-        levelProperties={levelProperties}
       />
     </div>
   );

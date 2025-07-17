@@ -29,6 +29,7 @@
   "accountInformation_reviewErrors": "Review errors above and try again.",
   "accountInformation_updateSuccess": "Account information successfully updated.",
   "accountInformation_emailUpdateSuccess": "Email successfully updated.",
+  "accountInformation_educatorRoleCannotBeRemoved": "Educator role cannot be removed.",
   "accountExistingAccountCardContentWorkshopEnroll": "You’ll need to sign in to your Code.org account to enroll in this workshop.",
   "accountExistingAccountCardDefaultDescription": "You'll need to sign in to your Code.org account to access this page.",
   "accountKeepStudentAccountCardTitle": "Keep my student account",
