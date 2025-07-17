@@ -2,15 +2,15 @@
 // spacing props like margin or padding.
 export interface SpacingProps {
   /** None */
-  none: string;
+  none: number;
   /** Extra small */
-  xs: string;
+  xs: number;
   /** Small */
-  s: string;
+  s: number;
   /** Medium */
-  m: string;
+  m: number;
   /** Large */
-  l: string;
+  l: number;
 }
 
 export interface RemoveMarginBottomProps {

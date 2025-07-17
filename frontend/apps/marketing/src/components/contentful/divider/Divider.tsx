@@ -45,9 +45,7 @@ const Divider: React.FC<DividerProps> = ({
       sx={theme => ({
         marginTop: theme.spacing(spacingMap[margin]),
         marginBottom: theme.spacing(spacingMap[margin]),
-        ...(color && {
-          backgroundColor: getColorValue(color),
-        }),
+        backgroundColor: getColorValue(color),
       })}
       flexItem
     />
