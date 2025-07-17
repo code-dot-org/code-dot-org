@@ -21,30 +21,30 @@ Conditions:
 Resources:
   # TLS Cert for CloudFront Distribution (must be in us-east-1)
   # Deprecated: Remove after CloudfrontTLSCertificate is deployed to production.
-   TLSCertificate:
-     Condition: IsUSEast1
-     Type: AWS::CertificateManager::Certificate
-     Properties:
-       DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-       DomainValidationOptions:
-         - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-           HostedZoneId: !Ref HostedZoneId
-       ValidationMethod: DNS
+  TLSCertificate:
+    Condition: IsUSEast1
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+      DomainValidationOptions:
+        - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+          HostedZoneId: !Ref HostedZoneId
+      ValidationMethod: DNS
 
   # Wildcard TLS Cert for CloudFront Distribution (must be in us-east-1)
-   CloudFrontTLSCertificate:
-     Condition: IsUSEast1
-     Type: AWS::CertificateManager::Certificate
-     Properties:
-       DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-       SubjectAlternativeNames:
-         - !Sub "preview-${SubdomainName}.${BaseDomainName}"
-       DomainValidationOptions:
-         - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-           HostedZoneId: !Ref HostedZoneId
-         - DomainName: !Sub "preview-${SubdomainName}.${BaseDomainName}"
-           HostedZoneId: !Ref HostedZoneId
-       ValidationMethod: DNS
+  CloudFrontTLSCertificate:
+    Condition: IsUSEast1
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "preview-${SubdomainName}.${BaseDomainName}"
+      DomainValidationOptions:
+        - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
+          HostedZoneId: !Ref HostedZoneId
+        - DomainName: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+          HostedZoneId: !Ref HostedZoneId
+      ValidationMethod: DNS
 
 Outputs:
   TLSCertificateArn:

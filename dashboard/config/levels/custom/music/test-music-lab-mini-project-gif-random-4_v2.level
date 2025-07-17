@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Random Block\r\nYou can add entire sequences inside a `play random` block. In this example, every time the loop repeats, it will choose a new style of song to play (Electro, Pop, or Hip-Hop).\r\n\r\nAdd a fourth sequence to this code to play a Heavy Metal set of beats, bass, and lead. This requires:\r\n\r\n1) Adding a new `play together` block inside the `play random` block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_random_workspace)\r\n2) Adding 3 new `play` blocks and choosing 3 new tracks from the Heavy Metal pack\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear a different selection of beat, bass, and lead tracks as the song plays!",
+    "long_instructions": "### Random Block\r\nYou can add entire sequences inside a `play random` block. In this example, every time the loop repeats, it will choose a new style of song to play (Electro, Pop, or Hip-Hop).\r\n\r\nAdd a fourth sequence to this code to play a Heavy Rock set of beats, bass, and lead. This requires:\r\n\r\n1) Adding a new `play together` block inside the `play random` block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_together_toolbox---id:play_random_workspace)\r\n2) Adding 3 new `play` blocks and choosing 3 new tracks from the Heavy Metal pack\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should hear a different selection of beat, bass, and lead tracks as the song plays!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -397,7 +397,7 @@
     "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:21.439+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-4\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-4\"},{\"changed_at\":\"2025-07-08 13:33:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:37:02 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:21.439+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-4\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-4\"},{\"changed_at\":\"2025-07-08 13:33:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:37:02 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-10 21:19:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

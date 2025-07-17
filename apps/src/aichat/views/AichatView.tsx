@@ -9,8 +9,8 @@ import React, {useCallback, useEffect, useMemo} from 'react';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -60,7 +60,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
-  const levelAichatSettings = levelProperties.aichatSettings;
+  const {
+    name: levelName,
+    aichatSettings: levelAichatSettings,
+    starterAssets,
+  } = levelProperties;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
   const {currentAiCustomizations, viewMode, showModalType} = useAppSelector(
@@ -77,6 +81,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const hasUpdatedCustomizations = useAppSelector(
     state => state.aichat.hasUpdatedCustomizations
   );
+
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
@@ -344,7 +350,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             >
               <ChatWorkspace
                 onClear={onClear}
-                levelProperties={levelProperties}
+                levelName={levelName}
+                channelId={channelId}
+                hasStarterAssets={
+                  starterAssets && Object.keys(starterAssets).length > 0
+                }
+                multimodalEnabled={levelAichatSettings?.multimodalEnabled}
               />
             </PanelContainer>
           </div>

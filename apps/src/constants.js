@@ -203,4 +203,9 @@ export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
 
 export const OPEN_ENDED_LAB2_PROJECT_TYPES = ['pythonlab', 'weblab2'];
 
-export const OPEN_ENDED_PROJECTS_YOUNG_AGE = ['spritelab', 'poetry', 'playlab'];
+export const OPEN_ENDED_PROJECTS_YOUNG_AGE = [
+  'spritelab',
+  'poetry',
+  'playlab',
+  'starwarsblocks',
+];

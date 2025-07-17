@@ -1,20 +1,20 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {FolderId} from '@codebridge/types';
 import {shouldShowFile} from '@codebridge/utils';
 import classNames from 'classnames';
 import React from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setActiveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDndDataContext} from './DnDDataContextProvider';
 import {NotDraggable, Draggable} from './Draggable';
 import {Droppable} from './Droppable';
 import {FolderRow, FileRowProps, FileRow} from './FileBrowserRow';
-import {setFileType, DragType} from './types';
+import {DragType} from './types';
 
 import moduleStyles from './styles/filebrowser.module.scss';
 
@@ -22,7 +22,6 @@ type FilesComponentProps = {
   files: MultiFileSource['files'];
   folders: MultiFileSource['folders'];
   parentId?: FolderId;
-  setFileType: setFileType;
   appName?: string;
 };
 
@@ -31,7 +30,7 @@ type FilesComponentProps = {
  * (there is an implicit root folder with a default parentId).
  */
 const InnerFileBrowser = React.memo(
-  ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
+  ({parentId, folders, files, appName}: FilesComponentProps) => {
     const {dragData, dropData} = useDndDataContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -39,7 +38,7 @@ const InnerFileBrowser = React.memo(
       f => f.type === ProjectFileType.VALIDATION
     );
     const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-    const {openFile} = useCodebridgeContext();
+    const dispatch = useAppDispatch();
 
     return (
       <>
@@ -75,7 +74,6 @@ const InnerFileBrowser = React.memo(
                         folders={folders}
                         parentId={f.id}
                         files={files}
-                        setFileType={setFileType}
                         appName={appName}
                       />
                     </div>
@@ -106,7 +104,7 @@ const InnerFileBrowser = React.memo(
                 Component="div"
                 onKeyDown={event => {
                   if (event.key === 'Enter' || event.key === ' ') {
-                    openFile(f.id);
+                    dispatch(setActiveFileThunk(f.id));
                   }
                 }}
               >
