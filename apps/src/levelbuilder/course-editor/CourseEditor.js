@@ -346,10 +346,14 @@ class CourseEditor extends Component {
             </HelpTip>
             <select
               style={styles.dropdown}
-              value={numberedUnits}
-              onChange={e => this.setState({numberedUnits: e.target.value})}
+              value={numberedUnits || 'none'}
+              onChange={e =>
+                this.setState({
+                  numberedUnits: NumberedUnitsType[e.target.value],
+                })
+              }
             >
-              <option value={NumberedUnitsType.none}>None</option>
+              <option value={'none'}>None</option>
               <option value={NumberedUnitsType.auto}>Automatic</option>
               <option value={NumberedUnitsType.custom}>Custom</option>
             </select>
