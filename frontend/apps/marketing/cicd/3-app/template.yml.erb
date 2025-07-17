@@ -1,3 +1,8 @@
+<%
+# Get region configuration and selected AZs from the new configuration structure
+region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
+selected_azs = region_config[:selected_availability_zones]
+%>
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by our Next.js web application server and the Contentful cloud service.
@@ -107,7 +112,7 @@ Resources:
       SecurityGroups:
         - !GetAtt FargateServiceLBSecurityGroupV2.GroupId
       Subnets:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |_, index| %>
+<% selected_azs.each_with_index do |_, index| %>
         - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
 <% end %>
       Type: application
@@ -375,7 +380,7 @@ Resources:
                 - FargateServiceSecurityGroup
                 - GroupId
           Subnets:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% selected_azs.each_with_index do |_, index| %>
             - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
 <% end %>
       TaskDefinition:
@@ -519,7 +524,7 @@ Resources:
         - Key: Name
           Value: !Sub "Marketing-EFS-Cache-V2-${SubdomainName}-${EnvironmentType}"
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% selected_azs.each_with_index do |_, index| %>
   CacheMountTargetV2<%= index %>:
     Type: AWS::EFS::MountTarget
     Properties:
@@ -805,7 +810,7 @@ Resources:
       CacheSubnetGroupName: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-v2"
       Description: Marketing Sites Redis Cache Subnet Group (Shared VPC)
       SubnetIds:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% selected_azs.each_with_index do |_, index| %>
         - Fn::ImportValue: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
 <% end %>
       Tags:
