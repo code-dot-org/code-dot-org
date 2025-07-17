@@ -19,7 +19,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in student
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -31,7 +31,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher_sans_experiment
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -43,7 +43,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message_not_teacher.id,
+      id: @message_not_teacher.id,
       approval: true,
       flagged: false
     }
@@ -55,7 +55,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -69,7 +69,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: true,
       flagged: false
     }
@@ -81,7 +81,7 @@ class AidiffMessagesControllerTest < ActionController::TestCase
     feedback_id = @message.aidiff_message_feedback.id
 
     post :submit_feedback, params: {
-      aidiff_message_id: @message.id,
+      id: @message.id,
       approval: false,
       flagged: true
     }
