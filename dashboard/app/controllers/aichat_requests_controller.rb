@@ -2,6 +2,7 @@ require 'cdo/throttle'
 
 class AichatRequestsController < ApplicationController
   authorize_resource class: false
+  before_action :reassign_model_customizations, only: [:start_chat_completion]
 
   AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
   DEFAULT_REQUEST_LIMIT_PER_MIN = 50
@@ -21,7 +22,7 @@ class AichatRequestsController < ApplicationController
   #   newMessage: {role: 'user'; chatMessageText: string; status: string}
   #   storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string}
   #     - does not include user's new message
-  #   aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  #   modelParameters: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   #.  aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
     unless chat_completion_has_required_params?
@@ -31,7 +32,7 @@ class AichatRequestsController < ApplicationController
 
     return head :too_many_requests if should_throttle_request_count?
 
-    model_id = params[:aichatModelCustomizations][:selectedModelId]
+    model_id = params[:modelParameters][:selectedModelId]
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
       log_token_throttling(current_user.id)
 
@@ -46,7 +47,7 @@ class AichatRequestsController < ApplicationController
     begin
       request = AichatRequest.create!(
         user_id: current_user.id,
-        model_customizations: params[:aichatModelCustomizations],
+        model_customizations: params[:modelParameters],
         stored_messages: messages_for_model,
         new_message: params[:newMessage],
         level_id: context[:currentLevelId],
@@ -123,7 +124,7 @@ class AichatRequestsController < ApplicationController
 
   private def chat_completion_has_required_params?
     begin
-      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
+      params.require([:newMessage, :modelParameters, :aichatContext])
     rescue ActionController::ParameterMissing
       return false
     end
@@ -131,6 +132,17 @@ class AichatRequestsController < ApplicationController
     # If so, the above require check will not pass.
     # Check storedMessages param separately.
     params[:storedMessages].is_a?(Array)
+  end
+
+  # Reassign model customizations from aichatModelCustomizations to modelParameters
+  # for compatibility with the existing API.
+  # Note that this is only required for clients with stale JavaScript code using the
+  # old parameter name. This should be removed in the future.
+  private def reassign_model_customizations
+    if params[:aichatModelCustomizations].present?
+      params[:modelParameters] = params[:aichatModelCustomizations]
+      params.delete(:aichatModelCustomizations)
+    end
   end
 
   private def get_project_id(context)

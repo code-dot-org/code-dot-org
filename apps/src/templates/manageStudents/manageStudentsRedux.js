@@ -884,11 +884,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       gender: student.gender || '',
       genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
-
-      // @deprecated Use `secretPictureUrl` instead
-      secretPicturePath: student.secret_picture_path,
       secretPictureUrl: student.secret_picture_url,
-
       loginType: loginType,
       sectionId: sectionId,
       sharingDisabled: student.sharing_disabled,

@@ -44,27 +44,6 @@ interface UserHasAichatAccessResponse {
 }
 
 /**
- * This function formats chat completion messages and aichatParameters, sends a POST request
- * to the aichat completion backend controller, then returns the status of the response
- * and assistant message if successful.
- */
-export async function postAichatCompletionMessage(
-  newMessage: PendingChatMessage,
-  storedMessages: CompletedChatMessage[],
-  modelParameters: ModelParameters,
-  aichatContext: AichatContext,
-  // Configurable for testing.
-  maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<CompletedChatMessage[]> {
-  return postChatCompletionAsyncPolling(
-    newMessage,
-    storedMessages,
-    modelParameters,
-    aichatContext,
-    maxPollingTimeMs
-  );
-}
-/**
  * @param eventId
  * @param feedback
  *
@@ -170,9 +149,11 @@ export interface GetChatRequestResponse {
 }
 
 /**
- * Perform chat completion by initiating an asynchronous request and polling for the response.
+ * This function formats chat completion messages and aichatParameters, sends a POST request
+ * to the aichat completion backend controller, then returns the status of the response
+ * and assistant message if successful.
  */
-async function postChatCompletionAsyncPolling(
+export async function postAichatCompletionMessage(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
@@ -182,7 +163,7 @@ async function postChatCompletionAsyncPolling(
   const payload = {
     newMessage,
     storedMessages,
-    aichatModelCustomizations: modelParameters,
+    modelParameters,
     aichatContext,
   };
 

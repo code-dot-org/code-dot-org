@@ -13085,7 +13085,7 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "689px",
-                    "desktop": "409px",
+                    "desktop": "408px",
                     "tablet": "846px"
                   }
                 },
@@ -13313,7 +13313,7 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "mobile": "547px",
-                    "desktop": "388px",
+                    "desktop": "387px",
                     "tablet": "412px"
                   }
                 },
@@ -13912,17 +13912,54 @@
                       "children": []
                     },
                     {
-                      "id": "L5oerNnG",
+                      "id": "b8oWcHkc",
+                      "displayName": "Heading 1",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G2oGQTXF",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "sUf2DZj3",
                       "definitionId": "iconHighlight",
                       "parameters": {},
                       "variables": {
                         "heading": {
                           "type": "UnboundValue",
-                          "key": "AjbCOAC"
+                          "key": "BAguqyG"
                         },
                         "text": {
                           "type": "UnboundValue",
-                          "key": "ov3FiaZ"
+                          "key": "T4XMQbJ"
                         },
                         "iconName": {
                           "type": "DesignValue",
@@ -13931,7 +13968,7 @@
                           }
                         },
                         "linkEntries": {
-                          "path": "/hGSB4J2/fields/ctas/~locale",
+                          "path": "/ePtx4b4/fields/ctas/~locale",
                           "type": "BoundValue"
                         },
                         "cfVisibility": {
@@ -16317,7 +16354,7 @@
             },
             {
               "id": "mmiz1hHo",
-              "displayName": "Section",
+              "displayName": "Section - Dark Gray",
               "definitionId": "contentful-section",
               "parameters": {},
               "variables": {
@@ -16366,9 +16403,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "5079px",
-                    "tablet": "5402px",
-                    "mobile": "7321px"
+                    "desktop": "4664px",
+                    "tablet": "5016px",
+                    "mobile": "6794px"
                   }
                 },
                 "cfMaxWidth": {
@@ -16511,54 +16548,6 @@
                       "children": []
                     },
                     {
-                      "id": "qLFMZnUw",
-                      "definitionId": "link",
-                      "parameters": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "children": {
-                          "key": "3uZuy0t",
-                          "type": "UnboundValue"
-                        },
-                        "href": {
-                          "type": "UnboundValue",
-                          "key": "GsLOLdu"
-                        },
-                        "isLinkExternal": {
-                          "key": "nIT3Py6",
-                          "type": "UnboundValue"
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "ariaLabel": {
-                          "type": "UnboundValue",
-                          "key": "bKUURbE"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
                       "id": "zANB3sZ3",
                       "definitionId": "button",
                       "parameters": {},
@@ -16627,6 +16616,54 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "i0nv1StR",
+                      "definitionId": "link",
+                      "parameters": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "children": {
+                          "key": "hahrMv-",
+                          "type": "UnboundValue"
+                        },
+                        "href": {
+                          "key": "jKXFVRK",
+                          "type": "UnboundValue"
+                        },
+                        "isLinkExternal": {
+                          "key": "TBViIol",
+                          "type": "UnboundValue"
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "ariaLabel": {
+                          "type": "UnboundValue",
+                          "key": "vgQP03b"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
                           }
                         }
                       },
@@ -17378,17 +17415,17 @@
                           "children": []
                         },
                         {
-                          "id": "j1tOoRfv",
+                          "id": "ZOlc0kCl",
                           "definitionId": "iconHighlight",
                           "parameters": {},
                           "variables": {
                             "heading": {
                               "type": "UnboundValue",
-                              "key": "k22W8Wm"
+                              "key": "OFtiuMdr"
                             },
                             "text": {
                               "type": "UnboundValue",
-                              "key": "_CGzCa9"
+                              "key": "IizeSUrY"
                             },
                             "iconName": {
                               "type": "DesignValue",
@@ -17397,7 +17434,7 @@
                               }
                             },
                             "linkEntries": {
-                              "path": "/M8UeEdi/fields/ctas/~locale",
+                              "path": "/EQJ2plkT/fields/ctas/~locale",
                               "type": "BoundValue"
                             },
                             "cfVisibility": {
@@ -17830,12 +17867,12 @@
                       "children": []
                     },
                     {
-                      "id": "3GUNqaf3",
+                      "id": "sw8inDDS",
                       "definitionId": "tabGroup",
                       "parameters": {},
                       "variables": {
                         "tabs": {
-                          "path": "/Is7ioIc/fields/tabGroupItems/~locale",
+                          "path": "/YWpFD8B/fields/tabGroupItems/~locale",
                           "type": "BoundValue"
                         },
                         "cfVisibility": {
@@ -17848,9 +17885,133 @@
                       "children": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "CfUuNdZv",
+              "displayName": "Section - Pattern Dark",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
                 },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "208px",
+                    "tablet": "208px",
+                    "mobile": "263px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "ttukEIfu",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "PfyP9le7",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "fWoNf2US",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
                 {
-                  "id": "Ko7M7vnH",
+                  "id": "0vWsZKHu",
                   "displayName": "Section - Pattern Dark",
                   "definitionId": "section",
                   "parameters": {},
@@ -17874,7 +18035,7 @@
                       }
                     },
                     "id": {
-                      "key": "wmG6IXrB1B-h8zddto0vr",
+                      "key": "tprqlNTv",
                       "type": "UnboundValue"
                     },
                     "cfVisibility": {
@@ -17886,7 +18047,7 @@
                   },
                   "children": [
                     {
-                      "id": "RSQxdVwv",
+                      "id": "ByA5Pqyf",
                       "definitionId": "heading",
                       "parameters": {},
                       "variables": {
@@ -17903,7 +18064,7 @@
                           }
                         },
                         "children": {
-                          "key": "qM57cKR3J1QPDQnHDERkX",
+                          "key": "6UZCnrPj",
                           "type": "UnboundValue"
                         },
                         "cfVisibility": {
@@ -17922,9 +18083,133 @@
                       "children": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "sjlFNFZ3",
+              "displayName": "Section - Pattern Teal",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
                 },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "208px",
+                    "tablet": "208px",
+                    "mobile": "263px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "eopZgvT1",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "C0WKJdvg",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "7IeIhikq",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
                 {
-                  "id": "3BASA9wY",
+                  "id": "osWtj9bw",
                   "displayName": "Section - Pattern Teal",
                   "definitionId": "section",
                   "parameters": {},
@@ -17948,7 +18233,7 @@
                       }
                     },
                     "id": {
-                      "key": "KbA5RoOr",
+                      "key": "Gt2FZe1n",
                       "type": "UnboundValue"
                     },
                     "cfVisibility": {
@@ -17960,7 +18245,7 @@
                   },
                   "children": [
                     {
-                      "id": "j2IxDkyM",
+                      "id": "HA0dhO0J",
                       "definitionId": "heading",
                       "parameters": {},
                       "variables": {
@@ -17977,7 +18262,7 @@
                           }
                         },
                         "children": {
-                          "key": "ehhBibmm",
+                          "key": "5bw69n34",
                           "type": "UnboundValue"
                         },
                         "cfVisibility": {
@@ -18052,7 +18337,7 @@
                   "valuesByBreakpoint": {
                     "desktop": "295px",
                     "tablet": "fit-content",
-                    "mobile": "fit-content"
+                    "mobile": "295px"
                   }
                 },
                 "cfMaxWidth": {
@@ -18434,7 +18719,7 @@
                 "cfPadding": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "0 0 0 0"
+                    "desktop": "64px 0 0 0"
                   }
                 },
                 "cfBackgroundColor": {
@@ -18452,9 +18737,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "537px",
-                    "tablet": "1654px",
-                    "mobile": "1200px"
+                    "desktop": "734px",
+                    "tablet": "2369px",
+                    "mobile": "1688px"
                   }
                 },
                 "cfMaxWidth": {
@@ -18523,26 +18808,6 @@
                 }
               },
               "children": [
-                {
-                  "id": "0wWdvGQE",
-                  "definitionId": "spacer",
-                  "parameters": {},
-                  "variables": {
-                    "size": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": "l"
-                      }
-                    },
-                    "cfVisibility": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": true
-                      }
-                    }
-                  },
-                  "children": []
-                },
                 {
                   "id": "bteO2Nes",
                   "definitionId": "contentful-container",
@@ -18703,7 +18968,7 @@
                   ]
                 },
                 {
-                  "id": "awoWj4tT",
+                  "id": "bfxBdemA",
                   "definitionId": "skinnyBanner",
                   "parameters": {},
                   "variables": {
@@ -18714,31 +18979,31 @@
                       }
                     },
                     "heading": {
-                      "path": "/ToLGlFl/fields/heading/~locale",
-                      "type": "BoundValue"
+                      "key": "zYDxVcG",
+                      "type": "UnboundValue"
                     },
                     "description": {
-                      "path": "/kkL-UdO/fields/description/~locale",
+                      "path": "/-O7cSWw/fields/description/~locale",
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "path": "/14ZoJ13/fields/image/~locale",
+                      "path": "/KaQqWLG/fields/image/~locale",
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
                       "type": "UnboundValue",
-                      "key": "fKy-MMp"
+                      "key": "OUEomYX"
                     },
                     "buttonLinks": {
-                      "path": "/OqULTYk/fields/sectionCTAs/~locale",
+                      "path": "/unqw4P0/fields/sectionCTAs/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "key": "3RSL9am",
-                      "type": "UnboundValue"
+                      "type": "UnboundValue",
+                      "key": "TmJ0MzE"
                     },
                     "partnerLogo": {
-                      "path": "/F_sVXx5/fields/file/~locale",
+                      "path": "/1xL47Tj/fields/file/~locale",
                       "type": "BoundValue"
                     },
                     "cfVisibility": {
@@ -18750,14 +19015,14 @@
                     "cfBackgroundColor": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "rgba(244, 244, 255, 1)"
+                        "desktop": "rgba(255, 240, 254, 1)"
                       }
                     }
                   },
                   "children": []
                 },
                 {
-                  "id": "kPjRLm1R",
+                  "id": "VK8yWIFi",
                   "definitionId": "skinnyBanner",
                   "parameters": {},
                   "variables": {
@@ -18768,31 +19033,31 @@
                       }
                     },
                     "heading": {
-                      "path": "/NXMfg3eE/fields/heading/~locale",
-                      "type": "BoundValue"
+                      "key": "sGoNbelT",
+                      "type": "UnboundValue"
                     },
                     "description": {
-                      "path": "/jkDRhuen/fields/description/~locale",
+                      "path": "/obJssqmg/fields/description/~locale",
                       "type": "BoundValue"
                     },
                     "sectionImages": {
-                      "path": "/viCKPG4P/fields/image/~locale",
+                      "path": "/E8WmwE15/fields/image/~locale",
                       "type": "BoundValue"
                     },
                     "backgroundImage": {
                       "type": "UnboundValue",
-                      "key": "hlcsKtxX"
+                      "key": "Ot9LbHyA"
                     },
                     "buttonLinks": {
-                      "path": "/b7aIMB9d/fields/sectionCTAs/~locale",
+                      "path": "/QE9z3z2f/fields/sectionCTAs/~locale",
                       "type": "BoundValue"
                     },
                     "partnerCallout": {
-                      "key": "GHhlmC5d",
-                      "type": "UnboundValue"
+                      "type": "UnboundValue",
+                      "key": "usadL0Lq"
                     },
                     "partnerLogo": {
-                      "path": "/86mx2BX5/fields/file/~locale",
+                      "path": "/nSm9YBxT/fields/file/~locale",
                       "type": "BoundValue"
                     },
                     "cfVisibility": {
@@ -18804,7 +19069,61 @@
                     "cfBackgroundColor": {
                       "type": "DesignValue",
                       "valuesByBreakpoint": {
-                        "desktop": "rgba(8, 0, 128, 1)"
+                        "desktop": "rgba(129, 0, 121, 1)"
+                      }
+                    }
+                  },
+                  "children": []
+                },
+                {
+                  "id": "8gTF47KG",
+                  "definitionId": "skinnyBanner",
+                  "parameters": {},
+                  "variables": {
+                    "contentMode": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "Dark"
+                      }
+                    },
+                    "heading": {
+                      "key": "880aQQ23",
+                      "type": "UnboundValue"
+                    },
+                    "description": {
+                      "path": "/VKJRP4fd/fields/description/~locale",
+                      "type": "BoundValue"
+                    },
+                    "sectionImages": {
+                      "path": "/Pz8Eqmh4/fields/image/~locale",
+                      "type": "BoundValue"
+                    },
+                    "backgroundImage": {
+                      "path": "/aQ2FTXVY/fields/file/~locale",
+                      "type": "BoundValue"
+                    },
+                    "buttonLinks": {
+                      "path": "/4eEM78bn/fields/sectionCTAs/~locale",
+                      "type": "BoundValue"
+                    },
+                    "partnerCallout": {
+                      "type": "UnboundValue",
+                      "key": "lG7muo2m"
+                    },
+                    "partnerLogo": {
+                      "key": "lboT0aD2",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    },
+                    "cfBackgroundColor": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "rgba(0, 0, 0, 0)"
                       }
                     }
                   },
@@ -18863,9 +19182,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content",
+                    "desktop": "896px",
                     "tablet": "fit-content",
-                    "mobile": "fit-content"
+                    "mobile": "1618px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19254,9 +19573,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "616px",
-                    "tablet": "454px",
-                    "mobile": "fit-content"
+                    "desktop": "675px",
+                    "tablet": "514px",
+                    "mobile": "556px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19397,12 +19716,48 @@
                       "children": []
                     },
                     {
-                      "id": "GWul51a6",
+                      "id": "Ab2DX8Mz",
+                      "definitionId": "heading",
+                      "parameters": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "G3QkOYjJ",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "Qrp3ZP4W",
                       "definitionId": "tabGroup",
                       "parameters": {},
                       "variables": {
                         "tabs": {
-                          "path": "/1ffVAXjN/fields/tabGroupItems/~locale",
+                          "path": "/QPDkBlze/fields/tabGroupItems/~locale",
                           "type": "BoundValue"
                         },
                         "cfVisibility": {
@@ -19469,7 +19824,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "499px",
+                    "mobile": "499px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20049,7 +20405,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "681px",
+                    "mobile": "934px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20414,7 +20771,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "fit-content"
+                    "desktop": "2070px",
+                    "mobile": "1026px"
                   }
                 },
                 "cfMaxWidth": {
@@ -20845,7 +21203,8 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "547px"
+                    "desktop": "fit-content",
+                    "mobile": "473px"
                   }
                 },
                 "cfMaxWidth": {
@@ -21028,6 +21387,13 @@
               "linkType": "Entry"
             }
           },
+          "-O7cSWw": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "0Qtu4TL": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
@@ -21035,11 +21401,11 @@
               "linkType": "Entry"
             }
           },
-          "14ZoJ13": {
+          "1xL47Tj": {
             "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "id": "6TJZRnAUG6nipPqCP7pVFL",
               "type": "Link",
-              "linkType": "Entry"
+              "linkType": "Asset"
             }
           },
           "2lNgI-W": {
@@ -21105,20 +21471,6 @@
               "linkType": "Entry"
             }
           },
-          "F_sVXx5": {
-            "sys": {
-              "id": "6TJZRnAUG6nipPqCP7pVFL",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
-          "Is7ioIc": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "J2Az9DM": {
             "sys": {
               "id": "YV17p1FI47ZYdCLm39S8W",
@@ -21140,6 +21492,13 @@
               "linkType": "Entry"
             }
           },
+          "KaQqWLG": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Ku53DtN": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
@@ -21150,13 +21509,6 @@
           "LRQ6mHr": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "M8UeEdi": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21196,23 +21548,9 @@
               "linkType": "Entry"
             }
           },
-          "OqULTYk": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "TN8XTWJ": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "ToLGlFl": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21259,6 +21597,13 @@
               "linkType": "Entry"
             }
           },
+          "YWpFD8B": {
+            "sys": {
+              "id": "5BwSS39gK80UzJXuM4zT0X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "Z5z0C68": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21294,16 +21639,16 @@
               "linkType": "Entry"
             }
           },
-          "gJB25Ug": {
+          "ePtx4b4": {
             "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
+              "id": "3CKippL3oudp1CS3chX4e4",
               "type": "Link",
               "linkType": "Entry"
             }
           },
-          "hGSB4J2": {
+          "gJB25Ug": {
             "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
+              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21318,13 +21663,6 @@
           "j82DfDg": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "kkL-UdO": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21364,6 +21702,13 @@
               "linkType": "Entry"
             }
           },
+          "unqw4P0": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "yNxDeG0": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -21399,13 +21744,6 @@
               "linkType": "Entry"
             }
           },
-          "1ffVAXjN": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "289w042P": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21437,6 +21775,13 @@
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "4eEM78bn": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21504,13 +21849,6 @@
               "linkType": "Entry"
             }
           },
-          "86mx2BX5": {
-            "sys": {
-              "id": "7iR45Lju4ssVPnrB0TYy8S",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
           "8W24TK7L": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21574,9 +21912,23 @@
               "linkType": "Entry"
             }
           },
+          "E8WmwE15": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "EGqljg4x": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EQJ2plkT": {
+            "sys": {
+              "id": "3CKippL3oudp1CS3chX4e4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21707,13 +22059,6 @@
               "linkType": "Entry"
             }
           },
-          "NXMfg3eE": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "NqrmKrUA": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21759,6 +22104,27 @@
           "PkMzRu3l": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Pz8Eqmh4": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "QE9z3z2f": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "QPDkBlze": {
+            "sys": {
+              "id": "5BwSS39gK80UzJXuM4zT0X",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21854,6 +22220,13 @@
               "linkType": "Entry"
             }
           },
+          "VKJRP4fd": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "VTZgp9YI": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
@@ -21910,11 +22283,11 @@
               "linkType": "Entry"
             }
           },
-          "b7aIMB9d": {
+          "aQ2FTXVY": {
             "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "id": "5CxK7pS9iAl2fs6smAtV3Z",
               "type": "Link",
-              "linkType": "Entry"
+              "linkType": "Asset"
             }
           },
           "baGfsFOR": {
@@ -22092,13 +22465,6 @@
               "linkType": "Entry"
             }
           },
-          "jkDRhuen": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "k5eX10Tv": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22183,6 +22549,13 @@
               "linkType": "Entry"
             }
           },
+          "nSm9YBxT": {
+            "sys": {
+              "id": "7iR45Lju4ssVPnrB0TYy8S",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
           "o5ZyffFl": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22193,6 +22566,13 @@
           "o8e0EuB2": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "obJssqmg": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22337,13 +22717,6 @@
               "linkType": "Entry"
             }
           },
-          "viCKPG4P": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "w3A8mGao": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22432,16 +22805,10 @@
             "value": "Title/position"
           },
           "347Oltn": {},
-          "3RSL9am": {
-            "value": "In partnership with"
-          },
           "3blPTQr": {
             "value": "Overline"
           },
           "3gD4aa9": {},
-          "3uZuy0t": {
-            "value": "Text Link"
-          },
           "4H-a8iq": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
           },
@@ -22468,7 +22835,7 @@
             "value": false
           },
           "ABf-FSO": {},
-          "AjbCOAC": {
+          "BAguqyG": {
             "value": "Icon Highlight Heading"
           },
           "BkMDUSL": {
@@ -22509,7 +22876,6 @@
           },
           "GkMrM3D": {},
           "GmGKjDd": {},
-          "GsLOLdu": {},
           "HANecnh": {},
           "HURk-ZX": {
             "value": "https://code.org"
@@ -22551,6 +22917,7 @@
           },
           "NDzLtVL": {},
           "OCvEUyr": {},
+          "OUEomYX": {},
           "PAn6OhE": {},
           "Pbti9HD": {
             "value": "Curriculum Snapshot"
@@ -22568,8 +22935,15 @@
           },
           "SV5gVCc": {},
           "T1ZuBpV": {},
+          "T4XMQbJ": {
+            "value": "Icon Highlight\nMultiline Text"
+          },
           "T68Oo4f": {},
+          "TBViIol": {
+            "value": true
+          },
           "TH-_LAe": {},
+          "TmJ0MzE": {},
           "U1KmKKh": {},
           "UaQvzts": {
             "value": {
@@ -22597,9 +22971,6 @@
             "value": "Rich Text"
           },
           "ZlGBh22": {},
-          "_CGzCa9": {
-            "value": "Icon Highlight\nMultiline Text"
-          },
           "_yg5mft": {},
           "_zwsCfw": {},
           "aBzIX6V": {
@@ -22622,7 +22993,6 @@
           "bAIeQt5": {
             "value": false
           },
-          "bKUURbE": {},
           "bs0mKZu": {
             "value": "Action Block Pattern Default"
           },
@@ -22640,7 +23010,6 @@
           "eRITgAP": {},
           "ezWxsUM": {},
           "f24Wg65": {},
-          "fKy-MMp": {},
           "fupk4k7": {},
           "gI0IiV4": {
             "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
@@ -22650,6 +23019,9 @@
             "value": ""
           },
           "hDMAL2U": {},
+          "hahrMv-": {
+            "value": "Text Link"
+          },
           "i4tvl_O": {
             "value": "Button"
           },
@@ -22657,14 +23029,14 @@
             "value": ""
           },
           "io65oYg": {},
+          "jKXFVRK": {
+            "value": "https://code.org"
+          },
           "jLTpao2": {
             "value": false
           },
           "jekav-Z": {
             "value": "Action Block Title"
-          },
-          "k22W8Wm": {
-            "value": "Icon Highlight Heading"
           },
           "kV8GyX4": {
             "value": ""
@@ -22677,9 +23049,6 @@
             "value": "Editorial Card 2"
           },
           "n6pmjoG": {},
-          "nIT3Py6": {
-            "value": true
-          },
           "nWRTZCk": {
             "value": false
           },
@@ -22698,9 +23067,6 @@
                 "label": "Primary button"
               }
             }
-          },
-          "ov3FiaZ": {
-            "value": "Icon Highlight\nMultiline Text"
           },
           "pVPzc3-": {
             "value": ""
@@ -22737,6 +23103,7 @@
           },
           "uzR0fY4": {},
           "vSKlRHP": {},
+          "vgQP03b": {},
           "vwAdtQr": {
             "value": "Editorial Card 4"
           },
@@ -22758,6 +23125,9 @@
           "yKDw71r": {},
           "zHoBMf8": {
             "value": false
+          },
+          "zYDxVcG": {
+            "value": "Skinny Banner Light Background"
           },
           "zh7msz6": {
             "value": ""
@@ -22810,6 +23180,9 @@
           "5OKBDu4C": {},
           "5VhVg4k7": {},
           "5VjDE2CK": {},
+          "5bw69n34": {
+            "value": "Section - Pattern Teal"
+          },
           "5qW6ky0f": {
             "value": "Full Width Action Block Dark Mode"
           },
@@ -22821,6 +23194,9 @@
           "65wUpmTS": {},
           "6U7rCA9s": {
             "value": "Action Block Collection with hidden images"
+          },
+          "6UZCnrPj": {
+            "value": "Section - Pattern Dark"
           },
           "6axn1isp": {},
           "6dweZgN5": {
@@ -22841,6 +23217,7 @@
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
+          "7IeIhikq": {},
           "7PWBeER6": {
             "value": "External Button"
           },
@@ -22852,6 +23229,9 @@
           },
           "7WZ8oRk3": {
             "value": "Snapshot"
+          },
+          "880aQQ23": {
+            "value": "Skinny Banner Image Background"
           },
           "8BCQn7kU": {
             "value": "People Collection"
@@ -22909,6 +23289,9 @@
             "value": ""
           },
           "BiJMMif0": {},
+          "C0WKJdvg": {
+            "value": false
+          },
           "C2eh9B38": {
             "value": "Secondary Black Button"
           },
@@ -22947,6 +23330,12 @@
           "FjaNJXPA": {
             "value": "People Collection sorted alphabetically (default)"
           },
+          "G2oGQTXF": {
+            "value": "Supports optional link and multiline text"
+          },
+          "G3QkOYjJ": {
+            "value": "Supports multiple content options"
+          },
           "GApUZWyE": {
             "value": "Self-Paced PL Carousel"
           },
@@ -22957,11 +23346,9 @@
           "GGSUj7T7": {
             "value": ""
           },
-          "GHhlmC5d": {
-            "value": "In partnership with"
-          },
           "GRD8jad1": {},
           "GmnU58eE": {},
+          "Gt2FZe1n": {},
           "GyRRWzRP": {
             "value": "Image without rounded corners"
           },
@@ -22979,6 +23366,9 @@
           },
           "Icqsu9JA": {
             "value": "about:blank"
+          },
+          "IizeSUrY": {
+            "value": "Icon Highlight\nMultiline Text"
           },
           "IuXKDn7Q": {},
           "IxzSvJTD": {
@@ -23013,7 +23403,6 @@
           "KU6fzBI2": {
             "value": false
           },
-          "KbA5RoOr": {},
           "KwkHGNFq": {
             "value": ""
           },
@@ -23059,11 +23448,15 @@
           "OCSRD9uM": {
             "value": "Editorial Card 2"
           },
+          "OFtiuMdr": {
+            "value": "Icon Highlight Heading"
+          },
           "OaekmZwc": {},
           "Oor1uCW9": {},
           "OpG1fkXt": {
             "value": false
           },
+          "Ot9LbHyA": {},
           "Ov2KaMlI": {
             "value": ""
           },
@@ -23081,6 +23474,9 @@
           },
           "PepR4hzX": {
             "value": ""
+          },
+          "PfyP9le7": {
+            "value": false
           },
           "PhNIy5V6": {},
           "PnFpiQEq": {},
@@ -23295,8 +23691,8 @@
           "edgca4Q7": {
             "value": ""
           },
-          "ehhBibmm": {
-            "value": "Section - Pattern Teal"
+          "eopZgvT1": {
+            "value": ""
           },
           "eyHY3MEf": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
@@ -23307,6 +23703,7 @@
           },
           "fP9VBKqZ": {},
           "fS0eRSbO": {},
+          "fWoNf2US": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
@@ -23336,7 +23733,6 @@
             "value": false
           },
           "haXmmTvi": {},
-          "hlcsKtxX": {},
           "hyi7gIig": {},
           "i28p2boi": {
             "value": "Video Carousel"
@@ -23376,6 +23772,7 @@
           "l8StqolB": {
             "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
           },
+          "lG7muo2m": {},
           "lIsy1GAr": {
             "value": "Internal Link M"
           },
@@ -23386,6 +23783,7 @@
           "lTlx2Ck5": {
             "value": ""
           },
+          "lboT0aD2": {},
           "lfVVFBsh": {},
           "m5IjfPMd": {},
           "mCXPy8Sk": {
@@ -23464,6 +23862,9 @@
           "sAMYhNiz": {
             "value": "Curriculum Carousel"
           },
+          "sGoNbelT": {
+            "value": "Skinny Banner Dark Background"
+          },
           "sOrYv4IZ": {},
           "sgcocoTx": {},
           "sgiL7BBr": {
@@ -23478,6 +23879,10 @@
           "tecCpijG": {},
           "tgfqSQxT": {
             "value": "Overline Primary Large"
+          },
+          "tprqlNTv": {},
+          "ttukEIfu": {
+            "value": ""
           },
           "uML982xB": {
             "value": "Short Text"
@@ -23494,6 +23899,7 @@
           "uqryIUsQ": {
             "value": "Section - Dark Gray"
           },
+          "usadL0Lq": {},
           "uwJDIDdP": {},
           "v6A0d7WI": {
             "value": "With secondary background"
@@ -23776,9 +24182,6 @@
           "ppcJTpQrNNmiFzRpoKuk7": {
             "value": "Heading 2"
           },
-          "qM57cKR3J1QPDQnHDERkX": {
-            "value": "Section - Pattern Dark"
-          },
           "qg0XcsQhQK20HDFZctW0_": {},
           "qtdvi1G7h9Xv_rt24jpHJ": {},
           "rpWptElOUBNuPNQXKsjMo": {
@@ -23801,7 +24204,6 @@
           "vy3Z4qCBqa2yM79waYyZx": {},
           "wFn89J5HPVSMpitbq3P6R": {},
           "wNcVm6e_tn5ekVTzpelnd": {},
-          "wmG6IXrB1B-h8zddto0vr": {},
           "ws1Q0E4GP0WIGLne79bIY": {
             "value": "Text Link"
           },

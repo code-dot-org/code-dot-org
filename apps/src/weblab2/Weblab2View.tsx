@@ -30,7 +30,6 @@ const defaultConfig: ConfigType = {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
   },
-  showFileBrowser: true,
 };
 
 const defaultSource: MultiFileSource = {

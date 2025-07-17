@@ -37,7 +37,6 @@ class Ability
       Pd::Workshop,
       Pd::Session,
       Pd::Enrollment,
-      Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
