@@ -2,15 +2,15 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 /**
- * Attempt to construct an absolute Marketing url (that is,
+ * Attempt to construct an absolute Corporate Website url (that is,
  * starting with https://code.org or the appropriate
  * equivalent for the current environment) from a given
- * relative url. If we're already on marketing we'll
+ * relative url. If we're already on Corporate Website we'll
  * just return the relative url.
  * @param {string} relativeUrl - should start with a
  *   leading slash.
  */
-export function marketingUrl(relativeUrl) {
+export function corporateWebsiteUrl(relativeUrl) {
   if (window.dashboard && window.dashboard.CODE_ORG_URL) {
     return window.dashboard.CODE_ORG_URL + relativeUrl;
   }
@@ -18,10 +18,10 @@ export function marketingUrl(relativeUrl) {
 }
 
 /**
- * @deprecated `pegasus()` is deprecated. Use `marketingUrl()` directly instead.
+ * @deprecated `pegasus()` is deprecated. Use `corporateWebsiteUrl()` directly instead.
  */
 export function pegasus(relativeUrl) {
-  return marketingUrl(relativeUrl);
+  return corporateWebsiteUrl(relativeUrl);
 }
 
 /**
