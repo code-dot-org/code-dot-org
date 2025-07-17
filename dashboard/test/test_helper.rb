@@ -176,7 +176,7 @@ class ActiveSupport::TestCase
     CourseOffering.find_by_key(unit_name)&.destroy
 
     # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
-    unit = create(:script, :with_levels, levels_count: 20, name: unit_name)
+    unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
     create :hoc_course, unit: unit, name: unit_name, family_name: unit_name, published_state: PUBLISHED_STATE.stable
   end
 

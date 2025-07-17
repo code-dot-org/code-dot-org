@@ -1247,31 +1247,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects admins to root" do
     sign_in create(:admin)
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_redirected_to root_path
   end
 
   test 'end of HoC for logged in user works' do
     sign_in(create(:user))
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
 
   test 'end of HoC for anonymous visitor works' do
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
-
-  # test 'end of HoC has wrapup video in response' do
-  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   assert_includes(@response.body, 'hoc_wrapup')
-  # end
-
-  # test 'end of HoC for signed-in users has no wrapup video, does have lesson change info' do
-  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   refute_includes(@response.body, 'hoc_wrapup')
-  #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
-  # end
 
   test "next redirects admins to root" do
     sign_in create(:admin)
