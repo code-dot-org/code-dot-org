@@ -21,7 +21,7 @@ const spacingMap: Record<keyof SpacingProps, number> = {
   l: 8, // 64px
 };
 
-// Map color values to CSS variables
+// Get the color value based on the provided color prop
 const getColorValue = (color: DividerProps['color']) => {
   switch (color) {
     case 'strong':

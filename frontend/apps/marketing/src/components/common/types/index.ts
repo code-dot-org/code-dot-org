@@ -1,3 +1,5 @@
+// Can be used for components that require
+// spacing props like margin or padding.
 export interface SpacingProps {
   /** None */
   none: string;

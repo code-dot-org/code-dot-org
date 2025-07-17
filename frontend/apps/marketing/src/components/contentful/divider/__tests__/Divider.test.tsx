@@ -10,7 +10,7 @@ describe('Divider Component', () => {
     expect(screen.getByRole('separator')).toBeInTheDocument();
   });
 
-  describe('margin prop', () => {
+  describe('renders margin based on margin prop', () => {
     const marginTestCases = [
       {margin: 'none', expected: 'margin: 0px 0px 0px 0px'},
       {margin: 'xs', expected: 'margin: 8px 0px 8px 0px'},
@@ -27,7 +27,7 @@ describe('Divider Component', () => {
     });
   });
 
-  describe('color prop', () => {
+  describe('renders color based on color prop', () => {
     const colorTestCases: {color: DividerProps['color']; expected: string}[] = [
       {
         color: 'primary',
