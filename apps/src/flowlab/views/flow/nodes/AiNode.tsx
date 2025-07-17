@@ -81,8 +81,9 @@ function AiNode({
     true
   );
 
-  const onDeviceUploadClick = () => {
+  const onDeviceUploadClick = (event: React.MouseEvent) => {
     openFileInput();
+    event.stopPropagation();
   };
 
   useEffect(() => {

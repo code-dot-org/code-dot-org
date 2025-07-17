@@ -31,6 +31,9 @@ export default function useHiddenFileInput(
       onChange={onChange}
       accept={accept}
       multiple={multiple}
+      onClick={e => {
+        e.stopPropagation();
+      }}
     />
   );
 
