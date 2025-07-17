@@ -25,10 +25,10 @@ const spacingMap: Record<keyof SpacingProps, number> = {
 const getColorValue = (color: DividerProps['color']) => {
   switch (color) {
     case 'strong':
-      return 'var(--background-neutral-senary)';
+      return 'var(--background-neutral-senary)'; // TODO: Replace with theme color
     case 'primary':
     default:
-      return 'var(--background-neutral-quaternary)';
+      return 'var(--background-neutral-quaternary)'; // TODO: Replace with theme color
   }
 };
 
