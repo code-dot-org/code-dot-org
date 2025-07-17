@@ -262,6 +262,7 @@
     "dapjs": "^2.3.0",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "ejs": "^3.1.10",
+    "eslint-linter-browserify": "^9.31.0",
     "fast-memoize": "2.0.2",
     "filesaver.js": "0.2.0",
     "firmata": "^2.2.0",

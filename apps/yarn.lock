@@ -10965,6 +10965,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-prettier: "npm:^8.8.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
+    eslint-linter-browserify: "npm:^9.31.0"
     eslint-plugin-babel: "npm:^5.3.1"
     eslint-plugin-cdo-custom-rules: "file:./eslint"
     eslint-plugin-import: "npm:^2.29.1"
@@ -15095,6 +15096,13 @@ canvg@gabelerner/canvg:
     eslint: "*"
     eslint-plugin-import: "*"
   checksum: 10/261df24721a7c5e37ee598b63e7e12c54e3d20c9ae5de6dbc132cecced023cb967c481007eef73252da108ac7eabb2e859853ff2e2d5776699a2954466ca716f
+  languageName: node
+  linkType: hard
+
+"eslint-linter-browserify@npm:^9.31.0":
+  version: 9.31.0
+  resolution: "eslint-linter-browserify@npm:9.31.0"
+  checksum: 10/32dd54bfd53b394e2c641496ba38dd42b1e3f73a46219e7e9ac54429eaae38791ba8a840e4ed049495c8dd00d7574a0b1163345d13e3fed693c0ad5f6e3c501a
   languageName: node
   linkType: hard
 
