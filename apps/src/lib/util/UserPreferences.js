@@ -202,22 +202,17 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
-   * Merges new theme settings with any existing preferences and saves them.
+   * Sends new theme settings to the server.
+   * The server automatically merges them with any existing theme preferences.
    *
-   * @param {Object} themeUpdate - A partial theme object to merge (e.g., {global: 'Dark'}).
+   * @param {Object} themeUpdate - A partial theme object to update (e.g., {global: 'Dark'}).
    * @param {function} [errorCallback]
    */
   async updateThemeSettings(themeUpdate, errorCallback) {
     try {
-      const existingTheme = await this.getThemeSettings(() => {});
-      const updatedTheme = {
-        ...existingTheme,
-        ...themeUpdate,
-      };
-
       return await HttpClient.put(
         '/user_preference',
-        JSON.stringify({theme: updatedTheme}),
+        JSON.stringify({theme: themeUpdate}),
         true,
         {'Content-Type': 'application/json'}
       );
