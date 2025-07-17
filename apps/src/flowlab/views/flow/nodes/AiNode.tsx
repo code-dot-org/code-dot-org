@@ -36,7 +36,11 @@ function AiNode({
 
   const [isWorking, setIsWorking] = useState(false);
 
-  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const channelId = useAppSelector(state => state.lab.channel?.id) || '';
+  const currentLevelId = useAppSelector(state =>
+    parseInt(state.progress.currentLevelId || '')
+  );
+  const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const uploadedFiles = useRef<ChatAsset[]>([]);
   const [uploadedFileCount, setUploadedFileCount] = useState(0);
@@ -106,7 +110,13 @@ function AiNode({
         data.askedText;
       console.log('Ask chat:', text);
 
-      const response = await askAi(text, channelId, uploadedFiles.current);
+      const response = await askAi(
+        text,
+        currentLevelId,
+        scriptId,
+        channelId,
+        uploadedFiles.current
+      );
       console.log('Chat responded: ', response);
 
       const responseText =
@@ -117,7 +127,15 @@ function AiNode({
 
       setIsWorking(false);
     })();
-  }, [channelId, contextString, data.askedText, id, updateNodeData]);
+  }, [
+    channelId,
+    contextString,
+    currentLevelId,
+    data.askedText,
+    id,
+    scriptId,
+    updateNodeData,
+  ]);
 
   // This doesn't use useCallback because a dependency on data.fieldText
   // would trigger an AI request every time the user types in the input field.

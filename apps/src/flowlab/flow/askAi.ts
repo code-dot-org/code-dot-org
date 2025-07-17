@@ -13,7 +13,9 @@ import {
 
 export default async function askAi(
   message: string,
-  channelId?: string,
+  currentLevelId: number | null,
+  scriptId: number | null,
+  channelId: string,
   assets?: ChatAsset[]
 ) {
   const newUserMessage: PendingChatMessage = {
@@ -25,8 +27,8 @@ export default async function askAi(
   };
 
   const aichatContext: AichatContext = {
-    currentLevelId: null, // this.currentLevelId ? parseInt(this.currentLevelId) : null,
-    scriptId: null, // this.scriptId || null,
+    currentLevelId,
+    scriptId,
     channelId,
   };
 
