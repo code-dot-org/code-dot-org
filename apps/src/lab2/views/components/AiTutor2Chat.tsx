@@ -22,7 +22,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // We currently use query params to allow AI model selection but otherwise does not provide any user
+    // We currently use query params to allow AI model selection but otherwise do not provide any user
     // interface to select or see the selected model. This console log was added to give users (testers)
     // feedback as to which model was actually selected (e.g. if the query param is entered incorrectly or
     // an unavailable model is selected, it will use the default model). It's in a useEffect (on first
