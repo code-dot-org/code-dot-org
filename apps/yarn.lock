@@ -4902,6 +4902,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eslint/js@npm:^9.31.0":
+  version: 9.31.0
+  resolution: "@eslint/js@npm:9.31.0"
+  checksum: 10/83b45c707d9a6c62b79a9fb69b7ebcb31e8163647c0fdcae5972b4b2fcbbb1e8eac543986e0cca3582f8462a6587f6b6dc48e362b2ce3feb74282606c3d425ea
+  languageName: node
+  linkType: hard
+
 "@fal-works/esbuild-plugin-global-externals@npm:^2.1.2":
   version: 2.1.2
   resolution: "@fal-works/esbuild-plugin-global-externals@npm:2.1.2"
@@ -10882,6 +10889,7 @@ __metadata:
     "@dsco_/link": "npm:^1.1.2"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
+    "@eslint/js": "npm:^9.31.0"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
@@ -10982,6 +10990,7 @@ __metadata:
     firmata: "npm:^2.2.0"
     focus-trap-react: "npm:^10.1.1"
     fork-ts-checker-webpack-plugin: "npm:^8.0.0"
+    globals: "npm:^16.3.0"
     grunt: "npm:^1.4.1"
     grunt-cli: "npm:1.4.3"
     grunt-concurrent: "npm:1.0.1"
@@ -16954,6 +16963,13 @@ canvg@gabelerner/canvg:
   dependencies:
     type-fest: "npm:^0.20.2"
   checksum: 10/62c5b1997d06674fc7191d3e01e324d3eda4d65ac9cc4e78329fa3b5c4fd42a0e1c8722822497a6964eee075255ce21ccf1eec2d83f92ef3f06653af4d0ee28e
+  languageName: node
+  linkType: hard
+
+"globals@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "globals@npm:16.3.0"
+  checksum: 10/accb0939d993a1c461df8d961ce9911a9a96120929e0a61057ae8e75b7df0a8bf8089da0f4e3a476db0211156416fbd26e222a56f74b389a140b34481c0a72b0
   languageName: node
   linkType: hard
 
