@@ -46,7 +46,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_view_abusive_assets?(encrypted_channel_id)
+  def can_view_flagged_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
@@ -69,10 +69,6 @@ class FilesApi < Sinatra::Base
   # Default to cannot view if there is an error
   rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
-  end
-
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -269,8 +265,8 @@ class FilesApi < Sinatra::Base
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     project = Projects.new(get_storage_id).get(encrypted_channel_id)
     project_type = project[:projectType]&.downcase
-    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
