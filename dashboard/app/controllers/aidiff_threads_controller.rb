@@ -6,7 +6,6 @@ class AidiffThreadsController < ApplicationController
 
   # POST /aidiff_threads
   def create
-    puts "create"
     unless validate_context? && has_required_chat_params?
       return render status: :bad_request, json: {}
     end
@@ -18,7 +17,6 @@ class AidiffThreadsController < ApplicationController
 
     response_body = get_response_body(session_id, context[:type])
     # get or create thread obj
-    puts "before create thread"
     begin
       @aidiff_thread = AidiffThread.find_or_create_by!(
         user_id: current_user.id,
@@ -31,7 +29,6 @@ class AidiffThreadsController < ApplicationController
         context_type: params[:context][:type]
       )
     rescue StandardError => exception
-      puts exception
       return render status: :bad_request, json: {error: exception.message}
     end
 
@@ -54,14 +51,11 @@ class AidiffThreadsController < ApplicationController
 
   # GET /aidiff_threads
   def index
-    puts "index"
     render json: @aidiff_threads&.map(&:summarize)
   end
 
   # GET /aidiff_threads/:id
   def show
-    puts "show"
-    puts @aidiff_thread
     render json: @aidiff_thread.summarize_with_messages
   end
 
@@ -93,7 +87,6 @@ class AidiffThreadsController < ApplicationController
   # preset_chip_text
   # POST /aidiff_threads/:id/chat_completion
   def chat_completion
-    puts "chat_completion"
     unless has_required_chat_params?
       return render status: :bad_request, json: {}
     end
@@ -104,12 +97,8 @@ class AidiffThreadsController < ApplicationController
     #if session invalid, concatenate prior messages
 
     session_id = @aidiff_thread.external_id
-    puts @aidiff_thread.inspect
-    puts session_id
     get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, @aidiff_thread.context_type)
     response_body = get_response_body(session_id, @aidiff_thread.context_type)
-
-    puts response_body
 
     # Log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
@@ -183,7 +172,6 @@ class AidiffThreadsController < ApplicationController
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
 
     unit_display_name = @unit&.title_for_display(unit_group_unit: @unit&.unit_group_units&.first)
-    puts unit_display_name
     student_code = get_student_code(params[:viewAsUserId] || current_user.id, @level, @unit.id) if context_type == SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
 
     prompt = AiDiffBedrockHelper.get_prompt_for_context(
