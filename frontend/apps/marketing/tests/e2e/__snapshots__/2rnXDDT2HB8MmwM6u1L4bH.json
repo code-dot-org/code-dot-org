@@ -16354,7 +16354,7 @@
             },
             {
               "id": "mmiz1hHo",
-              "displayName": "Section",
+              "displayName": "Section - Dark Gray",
               "definitionId": "contentful-section",
               "parameters": {},
               "variables": {
@@ -16403,9 +16403,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "5079px",
-                    "tablet": "5431px",
-                    "mobile": "7196px"
+                    "desktop": "4664px",
+                    "tablet": "5016px",
+                    "mobile": "6794px"
                   }
                 },
                 "cfMaxWidth": {
@@ -17885,9 +17885,133 @@
                       "children": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "CfUuNdZv",
+              "displayName": "Section - Pattern Dark",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
                 },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "208px",
+                    "tablet": "208px",
+                    "mobile": "263px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "ttukEIfu",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "PfyP9le7",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "fWoNf2US",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
                 {
-                  "id": "Ko7M7vnH",
+                  "id": "0vWsZKHu",
                   "displayName": "Section - Pattern Dark",
                   "definitionId": "section",
                   "parameters": {},
@@ -17911,7 +18035,7 @@
                       }
                     },
                     "id": {
-                      "key": "wmG6IXrB1B-h8zddto0vr",
+                      "key": "tprqlNTv",
                       "type": "UnboundValue"
                     },
                     "cfVisibility": {
@@ -17923,7 +18047,7 @@
                   },
                   "children": [
                     {
-                      "id": "RSQxdVwv",
+                      "id": "ByA5Pqyf",
                       "definitionId": "heading",
                       "parameters": {},
                       "variables": {
@@ -17940,7 +18064,7 @@
                           }
                         },
                         "children": {
-                          "key": "qM57cKR3J1QPDQnHDERkX",
+                          "key": "6UZCnrPj",
                           "type": "UnboundValue"
                         },
                         "cfVisibility": {
@@ -17959,9 +18083,133 @@
                       "children": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "id": "sjlFNFZ3",
+              "displayName": "Section - Pattern Teal",
+              "definitionId": "contentful-section",
+              "parameters": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
                 },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "208px",
+                    "tablet": "208px",
+                    "mobile": "263px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "eopZgvT1",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "C0WKJdvg",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "7IeIhikq",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
                 {
-                  "id": "3BASA9wY",
+                  "id": "osWtj9bw",
                   "displayName": "Section - Pattern Teal",
                   "definitionId": "section",
                   "parameters": {},
@@ -17985,7 +18233,7 @@
                       }
                     },
                     "id": {
-                      "key": "KbA5RoOr",
+                      "key": "Gt2FZe1n",
                       "type": "UnboundValue"
                     },
                     "cfVisibility": {
@@ -17997,7 +18245,7 @@
                   },
                   "children": [
                     {
-                      "id": "j2IxDkyM",
+                      "id": "HA0dhO0J",
                       "definitionId": "heading",
                       "parameters": {},
                       "variables": {
@@ -18014,7 +18262,7 @@
                           }
                         },
                         "children": {
-                          "key": "ehhBibmm",
+                          "key": "5bw69n34",
                           "type": "UnboundValue"
                         },
                         "cfVisibility": {
@@ -21146,16 +21394,331 @@
               "linkType": "Entry"
             }
           },
-          "0HkUraow": {
+          "0Qtu4TL": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "1xL47Tj": {
+            "sys": {
+              "id": "6TJZRnAUG6nipPqCP7pVFL",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
+          "2lNgI-W": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "3UNaYMj": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "42tcnEV": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "4JpIssm": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "7JpUxyt": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "87qAqf1": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "E9umSEs": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EiVrjhR": {
+            "sys": {
+              "id": "2Mhlh94AQ1PrQDyultyDeC",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "EivjDD3": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "J2Az9DM": {
+            "sys": {
+              "id": "YV17p1FI47ZYdCLm39S8W",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JZkN7NP": {
+            "sys": {
+              "id": "29RmoSX0ra5slBXtk5KXzM",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JqZWSk7": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "KaQqWLG": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Ku53DtN": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "LRQ6mHr": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "MU2wC9g": {
+            "sys": {
+              "id": "1dZ4s6uwH0POzF2Al8kKgK",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "MluIs3_": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OGiPVAk": {
+            "sys": {
+              "id": "49VdYaS7eknpZ0NJlPiL1X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OfnA27v": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "OlpMQbg": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "TN8XTWJ": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "UGLXrgn": {
+            "sys": {
+              "id": "6lO284hjA2HSBDkgipX18Q",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Uzc6FQP": {
+            "sys": {
+              "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "VExqHM0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "WPQHtk0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "XEFBi12": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Y6BjzQj": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "YWpFD8B": {
+            "sys": {
+              "id": "5BwSS39gK80UzJXuM4zT0X",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "Z5z0C68": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_BG8Ipz": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "_jLvyJJ": {
+            "sys": {
+              "id": "3CKippL3oudp1CS3chX4e4",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "b5Lvt-f": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "cTEogzz": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "ePtx4b4": {
+            "sys": {
+              "id": "3CKippL3oudp1CS3chX4e4",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "gJB25Ug": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "iZYxsRR": {
+            "sys": {
+              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "j82DfDg": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
             }
           },
-          "0Qtu4TL": {
+          "lSKgjSI": {
             "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "nizD06r": {
+            "sys": {
+              "id": "1dZ4s6uwH0POzF2Al8kKgK",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "rF2IN10": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "u3zLJM2": {
+            "sys": {
+              "id": "6s4DKSio8Ott6c0lfzWJga",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "uU2F7om": {
+            "sys": {
+              "id": "5tj5VA14Nr5OMZUtSubk1E",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "unqw4P0": {
+            "sys": {
+              "id": "chSuAWwdqGWCHCMQ2JK1Z",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "yNxDeG0": {
+            "sys": {
+              "id": "1M58VbIv8wux84Tq58P78v",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "0HkUraow": {
+            "sys": {
+              "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21181,13 +21744,6 @@
               "linkType": "Entry"
             }
           },
-          "1xL47Tj": {
-            "sys": {
-              "id": "6TJZRnAUG6nipPqCP7pVFL",
-              "type": "Link",
-              "linkType": "Asset"
-            }
-          },
           "289w042P": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21202,23 +21758,9 @@
               "linkType": "Entry"
             }
           },
-          "2lNgI-W": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "3Fk0zSOY": {
             "sys": {
               "id": "YV17p1FI47ZYdCLm39S8W",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "3UNaYMj": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21233,20 +21775,6 @@
           "3xRBhtEN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "42tcnEV": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "4JpIssm": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21314,23 +21842,9 @@
               "linkType": "Entry"
             }
           },
-          "7JpUxyt": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "7tg8fqU6": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "87qAqf1": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21359,13 +21873,6 @@
           "9VSvsbCf": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "9g-7kZ472XQBkhnml-mZ-": {
-            "sys": {
-              "id": "20rQYDvS9V3fnwtMyAW0m4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21412,13 +21919,6 @@
               "linkType": "Entry"
             }
           },
-          "E9umSEs": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "EGqljg4x": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -21429,20 +21929,6 @@
           "EQJ2plkT": {
             "sys": {
               "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "EiVrjhR": {
-            "sys": {
-              "id": "2Mhlh94AQ1PrQDyultyDeC",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "EivjDD3": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21503,27 +21989,6 @@
               "linkType": "Asset"
             }
           },
-          "J2Az9DM": {
-            "sys": {
-              "id": "YV17p1FI47ZYdCLm39S8W",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JZkN7NP": {
-            "sys": {
-              "id": "29RmoSX0ra5slBXtk5KXzM",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JqZWSk7": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "KNEEYqu2": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21531,23 +21996,9 @@
               "linkType": "Entry"
             }
           },
-          "KaQqWLG": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "KjZ9WuCk": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Ku53DtN": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21562,13 +22013,6 @@
           "L4ppraxB": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "LRQ6mHr": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21594,13 +22038,6 @@
               "linkType": "Entry"
             }
           },
-          "MU2wC9g": {
-            "sys": {
-              "id": "1dZ4s6uwH0POzF2Al8kKgK",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "Md4QjG4e": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -21611,13 +22048,6 @@
           "MdJaRWGZ": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "MluIs3_": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21650,30 +22080,9 @@
               "linkType": "Entry"
             }
           },
-          "OGiPVAk": {
-            "sys": {
-              "id": "49VdYaS7eknpZ0NJlPiL1X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OfnA27v": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "OkAdGTNN": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "OlpMQbg": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21783,13 +22192,6 @@
               "linkType": "Entry"
             }
           },
-          "TN8XTWJ": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "U67Bt9so": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -21804,30 +22206,9 @@
               "linkType": "Entry"
             }
           },
-          "UGLXrgn": {
-            "sys": {
-              "id": "6lO284hjA2HSBDkgipX18Q",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "Ura63qS4": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Uzc6FQP": {
-            "sys": {
-              "id": "1JoMHQi1j1tApZYAZeMXzD",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "VExqHM0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21874,23 +22255,9 @@
               "linkType": "Entry"
             }
           },
-          "WPQHtk0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "XC0Orztn": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "XEFBi12": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21909,44 +22276,9 @@
               "linkType": "Entry"
             }
           },
-          "Y6BjzQj": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "YWpFD8B": {
-            "sys": {
-              "id": "5BwSS39gK80UzJXuM4zT0X",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Z5z0C68": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "ZsffSorr": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "_BG8Ipz": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "_jLvyJJ": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -21956,13 +22288,6 @@
               "id": "5CxK7pS9iAl2fs6smAtV3Z",
               "type": "Link",
               "linkType": "Asset"
-            }
-          },
-          "b5Lvt-f": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
             }
           },
           "baGfsFOR": {
@@ -22000,13 +22325,6 @@
               "linkType": "Entry"
             }
           },
-          "cTEogzz": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "d2JuVKZQ": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -22026,13 +22344,6 @@
               "id": "6fdNRFZbNXpiXQd6v7fHen",
               "type": "Link",
               "linkType": "Asset"
-            }
-          },
-          "ePtx4b4": {
-            "sys": {
-              "id": "3CKippL3oudp1CS3chX4e4",
-              "type": "Link",
-              "linkType": "Entry"
             }
           },
           "eV4HBBLe": {
@@ -22077,13 +22388,6 @@
               "linkType": "Asset"
             }
           },
-          "gJB25Ug": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "h2KlnmZU": {
             "sys": {
               "id": "3qrVQ4IDOS7JwR8uQy2VMV",
@@ -22126,23 +22430,9 @@
               "linkType": "Entry"
             }
           },
-          "iZYxsRR": {
-            "sys": {
-              "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "j3DDxs9Y": {
             "sys": {
               "id": "3CqSD4orrZzEoAvyXEFS7x",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "j82DfDg": {
-            "sys": {
-              "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22210,13 +22500,6 @@
               "linkType": "Entry"
             }
           },
-          "lSKgjSI": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "lZoDcpjz": {
             "sys": {
               "id": "1M58VbIv8wux84Tq58P78v",
@@ -22271,13 +22554,6 @@
               "id": "7iR45Lju4ssVPnrB0TYy8S",
               "type": "Link",
               "linkType": "Asset"
-            }
-          },
-          "nizD06r": {
-            "sys": {
-              "id": "1dZ4s6uwH0POzF2Al8kKgK",
-              "type": "Link",
-              "linkType": "Entry"
             }
           },
           "o5ZyffFl": {
@@ -22364,13 +22640,6 @@
               "linkType": "Entry"
             }
           },
-          "rF2IN10": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "rU3ah9na": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -22427,13 +22696,6 @@
               "linkType": "Entry"
             }
           },
-          "u3zLJM2": {
-            "sys": {
-              "id": "6s4DKSio8Ott6c0lfzWJga",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "u6GdJTjQ": {
             "sys": {
               "id": "49VdYaS7eknpZ0NJlPiL1X",
@@ -22441,23 +22703,9 @@
               "linkType": "Entry"
             }
           },
-          "uU2F7om": {
-            "sys": {
-              "id": "5tj5VA14Nr5OMZUtSubk1E",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "ubziaBYn": {
             "sys": {
               "id": "1JoMHQi1j1tApZYAZeMXzD",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "unqw4P0": {
-            "sys": {
-              "id": "chSuAWwdqGWCHCMQ2JK1Z",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22511,13 +22759,6 @@
               "linkType": "Entry"
             }
           },
-          "yNxDeG0": {
-            "sys": {
-              "id": "1M58VbIv8wux84Tq58P78v",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "yuwzRF76": {
             "sys": {
               "id": "5tj5VA14Nr5OMZUtSubk1E",
@@ -22535,6 +22776,13 @@
           "zibXm2hu": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "9g-7kZ472XQBkhnml-mZ-": {
+            "sys": {
+              "id": "20rQYDvS9V3fnwtMyAW0m4",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -22932,6 +23180,9 @@
           "5OKBDu4C": {},
           "5VhVg4k7": {},
           "5VjDE2CK": {},
+          "5bw69n34": {
+            "value": "Section - Pattern Teal"
+          },
           "5qW6ky0f": {
             "value": "Full Width Action Block Dark Mode"
           },
@@ -22943,6 +23194,9 @@
           "65wUpmTS": {},
           "6U7rCA9s": {
             "value": "Action Block Collection with hidden images"
+          },
+          "6UZCnrPj": {
+            "value": "Section - Pattern Dark"
           },
           "6axn1isp": {},
           "6dweZgN5": {
@@ -22963,6 +23217,7 @@
           "7Cj0SIqV": {
             "value": "Right Aligned: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
           },
+          "7IeIhikq": {},
           "7PWBeER6": {
             "value": "External Button"
           },
@@ -23034,6 +23289,9 @@
             "value": ""
           },
           "BiJMMif0": {},
+          "C0WKJdvg": {
+            "value": false
+          },
           "C2eh9B38": {
             "value": "Secondary Black Button"
           },
@@ -23090,6 +23348,7 @@
           },
           "GRD8jad1": {},
           "GmnU58eE": {},
+          "Gt2FZe1n": {},
           "GyRRWzRP": {
             "value": "Image without rounded corners"
           },
@@ -23144,7 +23403,6 @@
           "KU6fzBI2": {
             "value": false
           },
-          "KbA5RoOr": {},
           "KwkHGNFq": {
             "value": ""
           },
@@ -23216,6 +23474,9 @@
           },
           "PepR4hzX": {
             "value": ""
+          },
+          "PfyP9le7": {
+            "value": false
           },
           "PhNIy5V6": {},
           "PnFpiQEq": {},
@@ -23430,8 +23691,8 @@
           "edgca4Q7": {
             "value": ""
           },
-          "ehhBibmm": {
-            "value": "Section - Pattern Teal"
+          "eopZgvT1": {
+            "value": ""
           },
           "eyHY3MEf": {
             "value": "https://contentful-images.code.org/90t6bu6vlf76/3ObZQWtgyo31ILZ7j8qm4c/421404b4e7ee968584902c697cdca751/action_block_placeholder_image.png?fm=avif"
@@ -23442,6 +23703,7 @@
           },
           "fP9VBKqZ": {},
           "fS0eRSbO": {},
+          "fWoNf2US": {},
           "fvbdsWsT": {
             "value": "Divider"
           },
@@ -23617,6 +23879,10 @@
           "tecCpijG": {},
           "tgfqSQxT": {
             "value": "Overline Primary Large"
+          },
+          "tprqlNTv": {},
+          "ttukEIfu": {
+            "value": ""
           },
           "uML982xB": {
             "value": "Short Text"
@@ -23916,9 +24182,6 @@
           "ppcJTpQrNNmiFzRpoKuk7": {
             "value": "Heading 2"
           },
-          "qM57cKR3J1QPDQnHDERkX": {
-            "value": "Section - Pattern Dark"
-          },
           "qg0XcsQhQK20HDFZctW0_": {},
           "qtdvi1G7h9Xv_rt24jpHJ": {},
           "rpWptElOUBNuPNQXKsjMo": {
@@ -23941,7 +24204,6 @@
           "vy3Z4qCBqa2yM79waYyZx": {},
           "wFn89J5HPVSMpitbq3P6R": {},
           "wNcVm6e_tn5ekVTzpelnd": {},
-          "wmG6IXrB1B-h8zddto0vr": {},
           "ws1Q0E4GP0WIGLne79bIY": {
             "value": "Text Link"
           },
