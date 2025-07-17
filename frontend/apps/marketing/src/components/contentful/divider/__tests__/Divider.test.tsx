@@ -31,11 +31,11 @@ describe('Divider Component', () => {
     const colorTestCases: {color: DividerProps['color']; expected: string}[] = [
       {
         color: 'primary',
-        expected: 'var(--background-neutral-quaternary)',
+        expected: 'var(--background-neutral-quaternary)', // TODO: Replace with MUI theme color
       },
       {
         color: 'strong',
-        expected: 'var(--background-neutral-senary)',
+        expected: 'var(--background-neutral-senary)', // TODO: Replace with MUI theme color
       },
     ];
 
