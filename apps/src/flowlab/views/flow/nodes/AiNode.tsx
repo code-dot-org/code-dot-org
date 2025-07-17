@@ -64,12 +64,10 @@ function AiNode({
         uploadedFiles.current.push(asset);
         setUploadedFileCount(uploadedFiles.current.length);
       } catch (error) {
-        let status: 'sizeLimitExceeded' | 'uploadFailed' = 'uploadFailed';
-        if (error instanceof NetworkError && error.response.status === 413) {
-          status = 'sizeLimitExceeded';
-        } else {
-          status = 'uploadFailed';
-        }
+        const status =
+          error instanceof NetworkError && error.response.status === 413
+            ? 'sizeLimitExceeded'
+            : 'uploadFailed';
         console.log('Error uploading file:', file.name, status);
       }
     }
