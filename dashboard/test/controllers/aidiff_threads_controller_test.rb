@@ -172,6 +172,24 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_equal "assistant", json_response["role"]
     end
 
+    test "chat_completion returns forbidden when teacher doesn't own the thread" do
+      @teacher2 = create(:teacher)
+      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
+
+      #sign in different teacher
+      sign_in @teacher
+
+      post :chat_completion, params: {
+        id: @thread.id,
+        inputText: "Hello!",
+        isPreset: false,
+        presetChipText: nil,
+      }
+
+      assert_response :forbidden
+    end
+
     test "chat_completion returns success when experiment is enabled and thread exists" do
       sign_in @teacher
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
@@ -267,6 +285,47 @@ class AidiffThreadsControllerTest < ActionController::TestCase
 
       json_response = JSON.parse(response.body)
       assert_response :success
+      assert_equal @expected_response, json_response["chat_message_text"]
+      assert_equal "assistant", json_response["role"]
+    end
+
+    test "create followed by chat_completion returns uses same thread" do
+      sign_in @teacher
+
+      post :create, params: {
+        context: {
+          type: "course",
+          courseId: @unit_group.id
+        },
+        inputText: "Hello!",
+        isPreset: false,
+        presetChipText: nil,
+      }
+
+      assert_response :success
+
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 2, thread.aidiff_messages.count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: false).count
+
+      post :chat_completion, params: {
+        id: thread.id,
+        inputText: "Hello2!",
+        isPreset: true,
+        presetChipText: "Explain a concept",
+      }
+
+      json_response = JSON.parse(response.body)
+      assert_response :success
+
+      assert_equal 1, AidiffThread.where(user_id: @teacher.id, external_id: @session_id).count
+      thread = AidiffThread.where(user_id: @teacher.id, external_id: @session_id).first
+      assert_equal 4, thread.aidiff_messages.count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello2!", is_preset: true, preset_chip_text: "Explain a concept").count
+      assert_equal 1, AidiffMessage.where(aidiff_thread_id: thread.id, external_id: @session_id, role: :assistant, content: @expected_response, is_preset: true).count
+
       assert_equal @expected_response, json_response["chat_message_text"]
       assert_equal "assistant", json_response["role"]
     end
