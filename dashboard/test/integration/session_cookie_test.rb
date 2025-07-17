@@ -2,6 +2,8 @@ require 'test_helper'
 require 'cdo/script_config'
 
 class SessionCookieTest < ActionDispatch::IntegrationTest
+  self.use_transactional_test_case = true
+
   setup_all do
     create_hourofcode_unit_and_levels
   end

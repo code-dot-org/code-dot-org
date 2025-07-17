@@ -2,6 +2,8 @@ require 'test_helper'
 
 # Prevent regressions in the number of database queries on high-traffic routes.
 class DBQueryTest < ActionDispatch::IntegrationTest
+  self.use_transactional_test_case = true
+
   setup_all do
     create_hourofcode_unit_and_levels
   end

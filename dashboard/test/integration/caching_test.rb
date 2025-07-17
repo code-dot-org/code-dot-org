@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
+  self.use_transactional_test_case = true
+
   setup_all do
     create_hourofcode_unit_and_levels
   end
