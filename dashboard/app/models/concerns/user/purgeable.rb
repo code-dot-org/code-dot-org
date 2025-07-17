@@ -25,6 +25,8 @@ module User::Purgeable
 
     self.studio_person_id = nil
     self.name = nil
+    self.given_name = nil
+    self.family_name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil
     self.last_sign_in_ip = nil
