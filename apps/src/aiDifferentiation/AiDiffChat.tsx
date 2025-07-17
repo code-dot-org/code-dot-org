@@ -193,7 +193,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   );
 
   const getAIResponse = React.useCallback(
-    (prompt: string, isPreset: boolean, promptChipText: string | null) => {
+    (prompt: string, isPreset: boolean, presetChipText: string | null) => {
       setIsWaitingForResponse(true);
 
       if (threadId !== null) {
@@ -208,7 +208,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       const body = JSON.stringify({
         inputText: prompt,
         isPreset,
-        promptChipText,
+        presetChipText,
         ...(threadId === null ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
       });
