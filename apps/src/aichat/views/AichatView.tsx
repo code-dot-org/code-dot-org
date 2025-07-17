@@ -271,11 +271,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [dispatch]);
 
   if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
-    return (
-      <LevelPropertiesContext.Provider value={levelProperties}>
-        <FlowLab />
-      </LevelPropertiesContext.Provider>
-    );
+    return <FlowLab />;
   }
 
   return (
