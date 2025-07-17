@@ -667,6 +667,8 @@ module Pd::Application
     # @override
     def self.required_fields
       %i(
+        country
+        school
         first_name
         last_name
         phone

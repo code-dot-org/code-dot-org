@@ -59,6 +59,17 @@ Scenario: Teacher starts a new application and submits it
   Then I press the first "input[name='canEmailYou']" element
   Then I press the first "input[name='doYouApprove'][value='Yes']" element
 
+  And I press keys "nonexistent" for element "#nces_school"
+  Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
+  And I press ".VirtualizedSelectOption:contains('Other school not listed below')" using jQuery
+  Then I wait until element "input#schoolName" is visible
+  And I press keys "Code.org" for element "input#schoolName"
+  And I press keys "1501 4th Ave" for element "input#schoolAddress"
+  And I press keys "Seattle" for element "input#schoolCity"
+  And I select the "Washington" option in dropdown "schoolState"
+  # zip code is autofilled from the teacher app data (in order to fetch the regional partner)
+  And I press the first "input[name='schoolType'][value='Other']" element
+
   Then I press keys "1000" for element "#totalStudentEnrollment"
   Then I press keys "10" for element "#freeLunchPercent"
   Then I press keys "10" for element "#white"
@@ -91,6 +102,7 @@ Scenario: Teacher saves, re-opens, and submits an application
   Then I see no difference for "Section 1: Choose Your Program"
   And I press the first "button#next" element
   Then I wait until element "h3" contains text "Section 2: Find Your Region"
+  And I press the first "input[name='country']" element
   And I press the first "button#save" element
   Then I wait until element "p" contains text "Your progress has been saved. Return to this page at any time to continue working on your application."
   And I see no difference for "Viewing teacher application after saving"

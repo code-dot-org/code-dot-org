@@ -8,20 +8,20 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {AccountSettingsSectionUrlParams} from '@cdo/apps/accounts/accountUpdateConstants';
-import {GetUserInfoForWorkshopResponse} from '@cdo/apps/code-studio/pd/workshops/types';
+import {UserInfoForWorkshop} from '@cdo/apps/code-studio/pd/workshops/types';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 import style from './userPassport.module.scss';
 
 export const isMissingUserInfo = (
-  userInfo: GetUserInfoForWorkshopResponse['userInfo']
+  userInfo: UserInfoForWorkshop['userInfo']
 ) => {
   return (
     !userInfo ||
-    !userInfo.first_name ||
-    !userInfo.last_name ||
+    !userInfo.givenName ||
+    !userInfo.familyName ||
     !userInfo.email ||
-    (!userInfo.school_info?.school_name && !userInfo.school_info?.school_type)
+    (!userInfo.schoolInfo?.schoolName && !userInfo.schoolInfo?.schoolType)
   );
 };
 

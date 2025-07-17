@@ -12,7 +12,10 @@ import UserPassport, {
   isMissingUserInfo,
 } from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
 import {useWorkshopEnrollmentApi} from '@cdo/apps/code-studio/pd/workshops/hooks/useWorkshopEnrollmentApi';
-import {GetUserInfoForWorkshopResponse} from '@cdo/apps/code-studio/pd/workshops/types';
+import {
+  WorkshopInfo,
+  UserInfoForWorkshop,
+} from '@cdo/apps/code-studio/pd/workshops/types';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -20,49 +23,36 @@ import {SUBMISSION_STATUSES} from './constants';
 
 import style from './workshop_join.module.scss';
 
-interface SessionCalendarEvent {
-  id: number;
-  start: string;
-  end: string;
-  is_local: boolean;
-  session_format: string;
-  location_address?: string;
-  meeting_link?: string;
-  description?: string;
-  notes?: string;
-}
+type WorkshopJoinProps = {
+  workshopInfo: Pick<
+    WorkshopInfo,
+    | 'id'
+    | 'course'
+    | 'subject'
+    | 'name'
+    | 'format'
+    | 'regionalPartnerName'
+    | 'sessions'
+  >;
+  userInfo: UserInfoForWorkshop['userInfo'];
+  workshopEnrollmentStatus: string;
+};
 
-const WorkshopJoin: React.FunctionComponent<{
-  workshop_enrollment_status: string;
-  workshop_info: {
-    id: number;
-    course: string;
-    subject?: string;
-    name?: string;
-    format: string;
-    rp_name?: string;
-    session_info_for_calendar?: SessionCalendarEvent[];
-  };
-  user_info: GetUserInfoForWorkshopResponse['userInfo'];
-}> = ({workshop_enrollment_status, workshop_info, user_info}) => {
+const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
+  workshopInfo,
+  userInfo,
+  workshopEnrollmentStatus,
+}) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState(
-    workshop_enrollment_status
+    workshopEnrollmentStatus
   );
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
   const {submitEnrollment, isSubmitting, error} = useWorkshopEnrollmentApi(
-    workshop_info.id
+    workshopInfo?.id
   );
 
   const handleSubmitEnrollment = async () => {
-    const result = await submitEnrollment(
-      user_info && {
-        user_id: user_info.id,
-        email: user_info.email,
-        first_name: user_info.first_name,
-        last_name: user_info.last_name,
-        school_info: user_info.school_info,
-      }
-    );
+    const result = await submitEnrollment(userInfo?.id);
 
     if (result?.workshop_enrollment_status === SUBMISSION_STATUSES.SUCCESS) {
       navigateOnEnrollSuccess();
@@ -79,17 +69,15 @@ const WorkshopJoin: React.FunctionComponent<{
   const navigateOnEnrollSuccess = () => {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
-    sessionStorage.setItem('workshopId', `${workshop_info.id}`);
-    sessionStorage.setItem('workshopCourse', workshop_info.course);
-    sessionStorage.setItem('workshopSubject', workshop_info.subject || '');
-    sessionStorage.setItem('workshopName', workshop_info.name || '');
-    sessionStorage.setItem('workshopFormat', workshop_info.format);
-    sessionStorage.setItem('rpName', workshop_info.rp_name || '');
+    sessionStorage.setItem('workshopId', `${workshopInfo.id}`);
+    sessionStorage.setItem('workshopCourse', workshopInfo.course);
+    sessionStorage.setItem('workshopSubject', workshopInfo.subject || '');
+    sessionStorage.setItem('workshopName', workshopInfo.name || '');
+    sessionStorage.setItem('workshopFormat', workshopInfo.format);
+    sessionStorage.setItem('rpName', workshopInfo.regionalPartnerName || '');
     sessionStorage.setItem(
       'sessionTimeInfo',
-      workshop_info.session_info_for_calendar
-        ? JSON.stringify(workshop_info.session_info_for_calendar)
-        : ''
+      workshopInfo.sessions ? JSON.stringify(workshopInfo.sessions) : ''
     );
 
     navigateToHref('/my-professional-learning');
@@ -114,18 +102,18 @@ const WorkshopJoin: React.FunctionComponent<{
             className={style.joinWorkshopButton}
             onClick={handleSubmitEnrollment}
             isPending={isSubmitting}
-            disabled={isMissingUserInfo(user_info) || !!error}
+            disabled={isMissingUserInfo(userInfo) || !!error}
           />
         </div>
-        {user_info && (
+        {userInfo && (
           <UserPassport
-            displayName={user_info.display_name}
-            givenName={user_info.first_name}
-            familyName={user_info.last_name}
-            email={user_info.email}
-            schoolName={user_info.school_info?.school_name}
-            schoolType={user_info.school_info?.school_type}
-            returnToHref={`/pd/workshops/${workshop_info.id}/join`}
+            displayName={userInfo.displayName}
+            givenName={userInfo.givenName}
+            familyName={userInfo.familyName}
+            email={userInfo.email}
+            schoolName={userInfo.schoolInfo?.schoolName}
+            schoolType={userInfo.schoolInfo?.schoolType}
+            returnToHref={`/pd/workshops/${workshopInfo.id}/join`}
             className={style.userPassport}
           />
         )}

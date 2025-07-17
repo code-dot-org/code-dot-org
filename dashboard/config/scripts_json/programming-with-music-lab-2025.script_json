@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-10 14:26:34 UTC",
+    "serialized_at": "2025-07-11 20:43:26 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -296,7 +296,7 @@
           }
         ],
         "overview": "Students listen to mashups and identify patterns that make each part of a song stand out. In Music Lab, they learn to use functions to organize code into reusable sections. Through Predict and Investigate levels, students discover how functions help reduce repetition and clarify musical structure.",
-        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be).\n- Print out the [Functions Cheat Sheet](https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view) to keep handy while reviewing students’ work on Check-In and Assessment levels"
       },
       "seeding_key": {
         "lesson.key": "Functions - Explore",
@@ -2057,7 +2057,7 @@
       "key": "a4a1549c-9ebb-409d-b3db-64a7a561500d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue through the remaining levels in the lesson. Students will learn about the Effect blocks and how to apply them to songs.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:**  As students work, check in by asking clarifying or reflective questions like, How is the effect you added changing the sound of your song? Or, Which blocks are being affected by this effect? How do you know? ",
         "progression_name": "Effects"
       },
       "seeding_key": {
@@ -2761,6 +2761,7 @@
       "key": "e9b20161-e034-42d7-8146-661a52ad2278",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students start with exploring the student project examples. Encourage them to discuss what they notice, wonder and like about the projects",
         "progression_name": "Example Projects"
       },
       "seeding_key": {
@@ -2772,7 +2773,7 @@
       "key": "8aa7a421-59a0-4038-a13d-c2011d2ee199",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Play Random levels and the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to Music Lab to learn about the Play Random and complete the Prepare portion of the activity guide",
         "progression_name": "Play Random"
       },
       "seeding_key": {
@@ -2784,6 +2785,7 @@
       "key": "c89e1a4c-1cc8-483c-bf54-eca170d055e7",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students complete the Prepare section of their activity guide. Use this level to plan which tracks they will use!\n\nRemind students of the Track Types anchor chart to use as a guide to plan their tracks.",
         "progression_name": "Prepare"
       },
       "seeding_key": {
@@ -2795,7 +2797,7 @@
       "key": "593be110-eba5-49cf-ae1f-7dba3a261f4d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you..",
         "progression_name": "Musical Cat GIFs"
       },
       "seeding_key": {
@@ -2830,7 +2832,7 @@
       "key": "bc294012-211c-4760-b36a-e2f5078e0d77",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-headphones\"></i> **Listen**: Choose one of the mashup videos from this Youtube Playlist to have the class listen to: [35 Years of Music Remixed Year by Year](https://www.youtube.com/playlist?list=PLqrkwSi3LHneR8zHLgCnuFLCE76Qwm2iE).\n\n**Disclaimer:** Listen to the song fully before playing for students. We do not recommend showing the video since the visual is inconsequential to the song. As an alternative to this playlist: find any song that is a \"mashup\" of at least 3 different songs where different parts of songs are cut together (as opposed to a medley, where parts of songs are sung in a row).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How many songs could you identify in the mashup? How could you tell?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may have fun discussing the first part of this prompt, but the second part is what will tie into the lesson. Students may identify unique aspects of songs that \"stand out\", like a particular drumline or guitar solo or verse. Emphasize how identifying these components required focusing on what was important and \"tuning out\" the other parts of the song you may not have recognized.\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Songs have unique structures, and our brain can compartmentalize the unique parts of songs to help recognize them later. Today we're going to learn how to do something similar in code - separate out songs into parts called functions and use those functions to build the complete song."
+        "description": "<i class=\"fa-solid fa-headphones\"></i> **Listen**: Choose one of the mashup videos from this Youtube Playlist to have the class listen to: [35 Years of Music Remixed Year by Year](https://www.youtube.com/playlist?list=PLqrkwSi3LHneR8zHLgCnuFLCE76Qwm2iE).\n\n**Disclaimer:** Listen to the song fully before playing for students. We do not recommend showing the video since the visual is inconsequential to the song. As an alternative to this playlist: find any song that is a \"mashup\" of at least 3 different songs where different parts of songs are cut together (as opposed to a medley, where parts of songs are sung in a row).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Think, Pair, Share:** How many songs could you identify in the mashup? How could you tell?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may have fun discussing the first part of this prompt, but the second part is what will tie into the lesson. Students may identify unique aspects of songs that \"stand out\", like a particular drumline or guitar solo or verse. Emphasize how identifying these components required focusing on what was important and \"tuning out\" the other parts of the song you may not have recognized.\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Songs have unique structures, and our brain can compartmentalize the unique parts of songs to help recognize them later. Today we're going to learn how to do something similar in code - separate out songs into parts called functions and use those functions to build the complete song."
       },
       "seeding_key": {
         "activity_section.key": "bc294012-211c-4760-b36a-e2f5078e0d77",
@@ -2845,7 +2847,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code."
+            "markdown": "**No Wrong Answers** - These questions are intentionally structured to encourage \"no wrong answer\" thinking, which invites students to make unstructured observations and participate in class discussions. These predict levels are based on the PRIMM pedagogy for teaching coding, which shows increased engagement and ownership when students are asked to form hypotheses about code before seeing it in action. As you structure these discussions, ensure all students feel supported in participating and try to avoid confirming or denying any ideas and instead letting students make those observations themselves when running the code.\n\n**Music Terminology**- A shared vocabulary is the foundation of meaningful collaboration. The first page of this [Anchor Chart set](https://docs.google.com/presentation/d/12R4e0xxMFBbkyu4gaXbXfwyLba-OjivpRNggZlw8hiE/edit?usp=sharing) could be a powerful resource to share with students at this point. Additionally, the [Music Terms Glossary](https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?usp=sharing) includes definitions and explanations to support instruction.  "
           }
         ]
       },
@@ -2880,7 +2882,7 @@
       "key": "1a758376-12a6-471c-9bae-0e7edfce9412",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should work through the Investigate levels independently or with a partner. This allows you to circulate and provide targeted support. Your goal is to check in with every student or pair, which is a high-impact practice for boosting engagement.",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -2892,7 +2894,7 @@
       "key": "960de339-c8fd-46fa-870f-577e94e8399b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:** As students work independently, your presence and encouragement can have a powerful impact. A simple check-in can boost confidence, uncover misunderstandings, or spark deeper thinking. Use this time to:\n\n- Notice patterns then use this info to tailor your next move.\n- Ask open-ended questions to prompt reflection and reasoning.\n- Celebrate progress: Point out creative approaches or persistence, even if a solution isn't perfect yet.\n\nIf students are stuck, guide them to:\n- Re-read the step-by-step instructions and click the icons for hints\n- Listen to the example song for clues\n- Try one idea and observe what happens\n\n**<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>  Do This (Optional):** Once enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "960de339-c8fd-46fa-870f-577e94e8399b",
@@ -2908,7 +2910,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels."
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Functions Cheat Sheet.](https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view)"
           }
         ]
       },
@@ -2944,7 +2946,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped."
           }
         ]
       },
@@ -2957,12 +2959,12 @@
       "key": "537c8096-6139-4dac-a8b1-24f9561c0499",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Create levels as they can.",
         "progression_name": "Create",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
+            "markdown": "**Facilitating Create Levels:** Create levels are designed as extensions to the concepts and skills students learn throughout a lesson. Create levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nCreate levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a create level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the create levels."
           }
         ]
       },
@@ -2986,7 +2988,7 @@
       "key": "f77909ac-a8a5-414a-9e0a-9f2b5c52ea8b",
       "position": 1,
       "properties": {
-        "description": "After class has ended, use the Teacher Dashboard to review how much progress students made and how well they did on the Assessment level. Some things to notice might be:\n- Did most students make it to the Assessment level, or are there still a lot of empty progress bubbles?\n- Did students make it to the Assessment level, but did not complete it (ie: green outlines with white circles)?\n- Did students finish the Assessment level and continue to the challenge levels?\n\nBased on these observations, you can adapt the warm up tomorrow to best meet the needs of the class.",
+        "description": "After class has ended, use the Teacher Dashboard to review how much progress students made and how well they did on the Assessment level. Some things to notice might be:\n- Did most students make it to the Assessment level, or are there still a lot of empty progress bubbles?\n- Did students make it to the Assessment level, but did not complete it (ie: green outlines with white circles)?\n- Did students finish the Assessment level and continue to the create levels?\n\nBased on these observations, you can adapt the warm up tomorrow to best meet the needs of the class.",
         "name": "Reviewing the Assessment Level"
       },
       "seeding_key": {
@@ -3010,7 +3012,7 @@
       "key": "a2c8a198-bf59-42af-a69c-b825fb7ee5b9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Start class based on how students performed on yesterday’s Assessment level:\n\n**If many students struggled or didn’t reach the Assessment:** \n- **Whole-Class Reteach** - Walk through a Practice level together, then have students retry the Assessment or move to a Create level.\n\n**If a few students struggled:**\n- **Targeted Support**- Have the class revisit a Create level while you work with students who need extra help.\n\n**If most students did well:**\n- **Move Forward**-  Begin today’s lesson right away to give students more time for practice and deeper exploration.",
         "name": "Differentiated Warm Up"
       },
       "seeding_key": {
@@ -3022,7 +3024,7 @@
       "key": "c64f51e2-1e4b-4681-a09b-b85f574be728",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set students up for successful Pair Programming by clearly explaining roles, expectations, and when to switch. You can also show [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A) to model what it looks like.\n\n**Say:** Today you’ll be working in pairs using Pair Programming. One of you will be the Driver, the person who controls the keyboard and mouse. The other will be the Navigator, who reads the instructions, checks for bugs, and helps think through the steps. Both roles are important, and both of you are responsible for the solution.\nYou must switch roles after each level. This is how both of you learn and stay involved.",
         "name": "Pair Programming"
       },
       "seeding_key": {
@@ -3062,6 +3064,7 @@
       "key": "00d8f919-dade-45cf-b6d1-55ef5c0817fb",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Support:** As students work, check in by asking clarifying or reflective questions like, *What part of your song does this function represent?* or *Could you reuse this function somewhere else in your song?* Encourage thinking about repetition and reusability.",
         "progression_name": "Reusing Functions"
       },
       "seeding_key": {
@@ -3077,7 +3080,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels."
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels.\n- Use the tips and guiding questions on the [Functions Cheat Sheet.](https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view)"
           }
         ]
       },
@@ -3116,7 +3119,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped."
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the create levels they may have skipped."
           }
         ]
       },
@@ -3129,8 +3132,14 @@
       "key": "691409b7-bf02-40b5-8a3f-c003d7f0db37",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
-        "progression_name": "Create"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Create levels as they can.",
+        "progression_name": "Create",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**High Ceiling:**\nCreate levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" create level for students who want a more open-ended experience in building their songs.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "691409b7-bf02-40b5-8a3f-c003d7f0db37",
@@ -3332,7 +3341,8 @@
       "key": "99063f75-1cf8-40e9-8519-3f3a0fc89a6a",
       "position": 1,
       "properties": {
-        "progression_name": "Examples"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students start with exploring the student project examples. Encourage them to discuss what they notice, wonder and like about the projects.",
+        "progression_name": "Example Projects"
       },
       "seeding_key": {
         "activity_section.key": "99063f75-1cf8-40e9-8519-3f3a0fc89a6a",
@@ -3343,7 +3353,7 @@
       "key": "abd66180-87b4-4cd8-807f-5f0d392c7357",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide.\n\nRemind students of the [Song Structure anchor chart](https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link) to use as a guide to plan their tracks.\n",
         "progression_name": "Prepare"
       },
       "seeding_key": {
@@ -3355,7 +3365,7 @@
       "key": "e70fee4c-8895-4cc0-a6f2-de5ef184be1f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate & Approve:** As students complete their project plan, circulate to give them a quick review and a thumbs-up. Hand them the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0) once their plan is solid. Students do not need to stop and wait for you.",
         "progression_name": "Genre Mashup"
       },
       "seeding_key": {
@@ -6406,7 +6416,7 @@
         "level_keys": [
           "music-lab-genre-examples-choice"
         ],
-        "progression": "Examples"
+        "progression": "Example Projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -8158,6 +8168,18 @@
       }
     },
     {
+      "name": "Functions Assessment Levels Cheat Sheet",
+      "url": "https://drive.google.com/file/d/1PFQdLhk1Yi4HdzBmI17N31GtybQcm2Nm/view",
+      "key": "functions_assessment_levels_cheat_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "functions_assessment_levels_cheat_sheet"
+      }
+    },
+    {
       "name": "Genre Mashup",
       "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
       "key": "genre_mashup",
@@ -8302,6 +8324,18 @@
       },
       "seeding_key": {
         "resource.key": "musical_terms_anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "name": "Musical Terms Anchor Charts - Song Structure",
+      "url": "https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link",
+      "key": "musical_terms_anchor_charts_-_song_structure",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
       }
     },
     {
@@ -8486,14 +8520,62 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Functions - Practice",
         "resource.key": "functions_-_practice"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "resource.key": "functions_assessment_levels_cheat_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Functions - Synthesis",
         "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Synthesis",
+        "resource.key": "functions_assessment_levels_cheat_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Synthesis",
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Synthesis",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {
@@ -8620,6 +8702,18 @@
       "seeding_key": {
         "lesson.key": "Project: Genre Mash-Up",
         "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "musical_terms_anchor_charts_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {

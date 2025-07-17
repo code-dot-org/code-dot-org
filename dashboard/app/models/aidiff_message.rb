@@ -10,6 +10,9 @@
 #  is_preset        :boolean          not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  preset_chip_text :text(65535)
+#  raw_content      :text(65535)
+#  source_links     :json
 #
 # Indexes
 #

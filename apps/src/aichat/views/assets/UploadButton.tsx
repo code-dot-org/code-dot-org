@@ -16,7 +16,6 @@ import {
   MAX_FILE_SIZE_MB,
   MAX_NUM_FILES,
 } from '../../constants';
-import {useLevelProperties} from '../../levelPropertiesContext';
 import aichatI18n from '../../locale';
 import {
   addStagedFile,
@@ -25,20 +24,28 @@ import {
   stagedFilesLimitExceeded,
   stagedFileUploadFinished,
 } from '../../redux';
-import {AssetSource} from '../../types';
+import {AssetSource, ChatAsset} from '../../types';
 
 import styles from './upload-button.module.scss';
 
-const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
+interface UploadButtonProps {
+  isDisabled: boolean;
+  levelName: string;
+  buildAssetUrl: (asset: ChatAsset) => string;
+  hasStarterAssets?: boolean;
+}
+
+const UploadButton: React.FC<UploadButtonProps> = ({
+  isDisabled,
+  levelName,
+  buildAssetUrl,
+  hasStarterAssets = false,
+}) => {
   const dispatch = useAppDispatch();
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
   const numStagedFiles = useAppSelector(
     state => state.aichat.stagedFiles.length
   );
   const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
-  const {name: levelName, starterAssets} = useLevelProperties();
-  const hasStarterAssets =
-    starterAssets && Object.keys(starterAssets).length > 0;
   const [showAssetManager, setShowAssetManager] = useState(false);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -57,23 +64,21 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
 
     const allowedFiles = Array.from(files)
       .slice(0, numAllowedFiles)
-      .map<[string, string, File]>(file => [
+      .map<[string, ChatAsset, File]>(file => [
         // Create a unique key for each upload in case the same file is uploaded more than once.
         `${file.name}-${Date.now()}`,
-        file.name,
+        {filename: file.name, source: AssetSource.PROJECT},
         file,
       ]);
 
-    for (const [key, filename] of allowedFiles) {
-      dispatch(
-        addStagedFile({key, asset: {filename, source: AssetSource.PROJECT}})
-      );
+    for (const [key, asset] of allowedFiles) {
+      dispatch(addStagedFile({key, asset}));
     }
 
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
-    for (const [key, filename, file] of allowedFiles) {
+    for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
         dispatch(
@@ -86,10 +91,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       }
 
       try {
-        await HttpClient.put(
-          `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
-          file
-        );
+        await HttpClient.put(buildAssetUrl(asset), file);
         uploadSuccessCount += 1;
 
         dispatch(stagedFileUploadFinished({key, status: 'uploaded'}));
@@ -165,10 +167,6 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
       })
     );
   };
-
-  if (!currentChannelId) {
-    return null;
-  }
 
   const buttonProps: ButtonProps = {
     type: 'secondary',

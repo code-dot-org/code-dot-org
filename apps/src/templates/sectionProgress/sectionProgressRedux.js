@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+import {SET_UNIT} from '@cdo/apps/redux/unitSelectionRedux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import firehoseClient from '../../metrics/firehose';
@@ -103,7 +103,7 @@ const initialState = {
 };
 
 export default function sectionProgress(state = initialState, action) {
-  if (action.type === SET_SCRIPT) {
+  if (action.type === SET_UNIT) {
     return {
       ...state,
       lessonOfInterest: INITIAL_LESSON_OF_INTEREST,

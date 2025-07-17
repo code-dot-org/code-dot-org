@@ -414,7 +414,7 @@ function LandingPage({
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
