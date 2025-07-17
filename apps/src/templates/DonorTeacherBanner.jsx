@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {corporateWebsiteUrl} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
@@ -37,9 +37,7 @@ export default class DonorTeacherBanner extends Component {
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
-      window.location.assign(
-        corporateWebsiteUrl('/amazon-future-engineer#eligibility')
-      );
+      window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
     }
 
     this.setState({submitted: true});
@@ -75,7 +73,7 @@ export default class DonorTeacherBanner extends Component {
         <div style={styles.paragraph}>
           {i18n.afeFreeResources()}
           <span>
-            <a href={corporateWebsiteUrl('/amazon-future-engineer')}>
+            <a href={pegasus('/amazon-future-engineer')}>
               {i18n.amazonFutureEngineer()}
             </a>
           </span>
@@ -130,7 +128,7 @@ export default class DonorTeacherBanner extends Component {
             />
             <Button
               __useDeprecatedTag
-              href={corporateWebsiteUrl('/amazon-future-engineer')}
+              href={pegasus('/amazon-future-engineer')}
               style={styles.secondaryButton}
               color={Button.ButtonColor.white}
               text={i18n.learnMore()}
@@ -150,9 +148,7 @@ export default class DonorTeacherBanner extends Component {
           notice={i18n.yourResponseSubmitted()}
           details={i18n.thankYouForResponse()}
           detailsLinkText={i18n.clickHere()}
-          detailsLink={corporateWebsiteUrl(
-            '/amazon-future-engineer#eligibility'
-          )}
+          detailsLink={pegasus('/amazon-future-engineer#eligibility')}
           detailsLinkNewWindow={true}
           dismissible={true}
         />
