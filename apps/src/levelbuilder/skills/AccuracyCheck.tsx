@@ -158,9 +158,13 @@ const AccuracyCheck: React.FC<{
         <br />
         <br />
         You can also add a column named <code>humanEvaluation</code> to provide
-        evaluations for the student work samples. The AI's evaluation will be
-        compared against the human evaluation, and you can see if they match in
-        the downloaded CSV.{' '}
+        evaluations for the student work samples. Please use the rating system
+        that includes <code>incomplete_incorrect</code>,{' '}
+        <code>partial_complete_correct</code>, and{' '}
+        <code>all_complete_correct</code> when providing the{' '}
+        <code>humanEvaluation</code>. The AI's evaluation will be compared
+        against the human evaluation, and you can see if they match in the
+        downloaded CSV.{' '}
         <Link
           text="Use this template to get started."
           href="https://docs.google.com/spreadsheets/d/19UFD6mnsz_Lj7WcTgSzf5BEuDbIeo1qZvbzvADUlUbA/edit?usp=sharing"
