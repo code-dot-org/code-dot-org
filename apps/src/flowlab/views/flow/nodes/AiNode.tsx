@@ -46,25 +46,15 @@ function AiNode({
   const [uploadedFileCount, setUploadedFileCount] = useState(0);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
-    console.log('onUploadFiles called');
     const files = event.target.files;
     if (!files) {
       return;
     }
 
-    const allowedFiles = Array.from(files).map<[string, ChatAsset, File]>(
-      file => [
-        // Create a unique key for each upload in case the same file is uploaded more than once.
-        `${file.name}-${Date.now()}`,
-        {filename: file.name, source: AssetSource.PROJECT},
-        file,
-      ]
-    );
-
-    for (const [, asset, file] of allowedFiles) {
+    for (const file of files) {
+      const asset = {filename: file.name, source: AssetSource.PROJECT};
       try {
         await HttpClient.put(getAssetUrl(asset, channelId), file);
-
         uploadedFiles.current.push(asset);
         setUploadedFileCount(uploadedFiles.current.length);
       } catch (error) {
