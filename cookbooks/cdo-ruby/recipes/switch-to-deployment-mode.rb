@@ -5,18 +5,23 @@
 # TODO infra: remove this recipe once we've fully migrated all servers
 
 root_dir = File.join(node[:home], node.chef_environment)
-['dashboard', 'cookbooks'].each do |subdir|
+['', 'dashboard', 'cookbooks'].each do |subdir|
   project_dir = File.join(root_dir, subdir)
   bundle_dir = File.join(project_dir, '.bundle')
   vendor_dir = File.join(project_dir, 'vendor/bundle')
 
-  # First, re-own the existing root-owned .bundle directories so we have
-  # permission to update the config file
+  # First, re-own the existing root-owned bundle config and install directories
   # See https://github.com/code-dot-org/code-dot-org/pull/66536
-  execute "change ownership of #{subdir} bundle directory" do
+  execute "change ownership of #{subdir} .bundle directory" do
     command "chown -R #{node[:user]}:#{node[:user]} #{bundle_dir}"
     user 'root'
     only_if {Dir.exist?(bundle_dir)}
+  end
+
+  execute "change ownership of #{subdir} vendord/bundle directory" do
+    command "chown -R #{node[:user]}:#{node[:user]} #{vendor_dir}"
+    user 'root'
+    only_if {Dir.exist?(vendor_dir)}
   end
 
   # Second, run bundle install in deployment mode, which will as a side effect
