@@ -81,39 +81,39 @@ const theme = createTheme({
     fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
     h1: {
       fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
-      fontSize: '13rem', // 208px
+      fontSize: '5rem', // 80px
       fontWeight: 800,
-      lineHeight: 1,
+      lineHeight: 1.1,
     },
     h2: {
       fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
-      fontSize: '11.125rem', // 178px
+      fontSize: '4rem', // 64px
       fontWeight: 800,
-      lineHeight: 1,
+      lineHeight: 1.125,
     },
     h3: {
       fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
-      fontSize: '6.75rem', // 108px
+      fontSize: '3.125rem', // 50px
       fontWeight: 800,
-      lineHeight: 1,
+      lineHeight: 1.16,
     },
     h4: {
       fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
-      fontSize: '4.25rem', // 68px
+      fontSize: '2.5rem', // 40px
       fontWeight: 800,
-      lineHeight: 1,
+      lineHeight: 1.2,
     },
     h5: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
-      fontSize: '2.625rem', // 42px
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontSize: '2rem', // 32px
       fontWeight: 800,
-      lineHeight: 1.1,
+      lineHeight: 1.125,
     },
     h6: {
-      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 800,
-      lineHeight: 1.1,
+      lineHeight: 1.25,
     },
   },
 });
