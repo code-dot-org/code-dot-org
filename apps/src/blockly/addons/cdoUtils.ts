@@ -411,15 +411,16 @@ export async function getUserTheme(
   }
 
   const userPrefs = new UserPreferences();
-  const userPreferencesTheme = await userPrefs.getBlocklyTheme(() => {});
-  const baseThemeName =
-    userPreferencesTheme ||
-    // Today we only store the theme's base name in localStorage, which never includes 'dark'.
-    // Until March, 2024 we stored the full theme name, so we need to convert it now.
-    // getBaseName strips the 'dark' suffix from a theme name, if present.
-    getBaseName(localStorage.blocklyTheme);
+  const userThemePreference = await userPrefs.getBlocklyTheme(() => {});
+  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+  // Until March, 2024 we stored the full theme name, so we need to convert it now.
+  // getBaseName strips the 'dark' suffix from a theme name, if present.
+  const browserThemePreference = getBaseName(localStorage.blocklyTheme);
 
-  if (!baseThemeName) {
+  // Prioritize persistent user preference over local browser preference.
+  const themePreference = userThemePreference || browserThemePreference;
+
+  if (!themePreference) {
     // The user has not indicated a preference, so we use the lab theme or a safe default.
     return currentTheme || getDefaultTheme();
   }
@@ -427,7 +428,7 @@ export async function getUserTheme(
   // The base theme name is the name of the theme, always without the 'dark' suffix.
   // If the user is in dark mode, we append the 'dark' suffix to the base theme name.
   const fullThemeName =
-    baseThemeName + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
+    themePreference + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
   const userTheme = Blockly.themes[fullThemeName as Themes];
   return userTheme || currentTheme || getDefaultTheme();
 }
