@@ -1,6 +1,8 @@
 'use client';
 import {createTheme} from '@mui/material';
 
+import {createFontStack} from '../common/constants';
+
 const BARLOW_FONT = 'Barlow Semi Condensed Semibold';
 const FIGTREE_FONT = 'Figtree';
 const NOTO_FONT =
@@ -104,27 +106,27 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+    fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
     h1: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
       fontSize: '3rem', // 48px
       fontWeight: 500,
       lineHeight: 1.16,
     },
     h2: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
       fontSize: '2.125rem', // 34px
       fontWeight: 500,
       lineHeight: 1.24,
     },
     h3: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
       fontSize: '1.75rem', // 28px
       fontWeight: 500,
       lineHeight: 1.28,
     },
     h4: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(BARLOW_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 500,
       lineHeight: 1.32,

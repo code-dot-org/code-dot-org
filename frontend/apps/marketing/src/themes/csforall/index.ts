@@ -1,6 +1,8 @@
 'use client';
 import {createTheme} from '@mui/material';
 
+import {createFontStack} from '../common/constants';
+
 const FIGTREE_FONT = 'Figtree';
 const ROBOTO_MONO_FONT = 'Roboto Mono';
 const NOTO_FONT =
@@ -76,15 +78,15 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: [ROBOTO_MONO_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+    fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
     h1: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '13rem', // 208px
       fontWeight: 800,
       lineHeight: 1,
     },
     h2: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '11.125rem', // 178px
       fontWeight: 800,
       lineHeight: 1,
@@ -96,19 +98,19 @@ const theme = createTheme({
       lineHeight: 1,
     },
     h4: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '4.25rem', // 68px
       fontWeight: 800,
       lineHeight: 1,
     },
     h5: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '2.625rem', // 42px
       fontWeight: 800,
       lineHeight: 1.1,
     },
     h6: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 800,
       lineHeight: 1.1,
