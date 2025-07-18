@@ -24,16 +24,6 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "CSF Kursong A"
-        },
-        {
-          "key": "9ef7284e-b5d0-4ba3-aa47-46d40960ef9b",
-          "notice": "",
-          "details": "",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": ""
         }
       ],
       "content_area": "curriculum_k_5",
@@ -53,7 +43,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-16 20:39:27 UTC",
+    "serialized_at": "2025-07-17 15:56:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

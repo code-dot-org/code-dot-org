@@ -38,21 +38,3 @@ pegasus/sites.v3/code.org/public/certificates/splat.haml
 pegasus/sites.v3/code.org/public/congrats.haml
 pegasus/sites.v3/code.org/public/congrats/splat.haml
 pegasus/sites.v3/code.org/public/sharecertificate.moved
-
-# certificate images
-# TODO: move to dashboard server
-pegasus/sites.v3/code.org/public/images/20hours_certificate.jpg
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_Aquatic.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_Generation_Ai.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_Hero.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_Show.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_mee.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_mee_empathy.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_mee_estate.png
-pegasus/sites.v3/code.org/public/images/MC_Hour_Of_Code_Certificate_mee_timecraft.png
-pegasus/sites.v3/code.org/public/images/blank_certificate.png
-pegasus/sites.v3/code.org/public/images/hour_of_code_certificate.jpg
-pegasus/sites.v3/code.org/public/images/music_hoc_certificate.png
-pegasus/sites.v3/code.org/public/images/oceans_hoc_certificate.png
-pegasus/sites.v3/code.org/public/images/self_paced_pl_certificate.png

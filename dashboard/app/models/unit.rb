@@ -2009,6 +2009,7 @@ class Unit < ApplicationRecord
     unit_group_unit ||= unit_group_units&.first
     {
       id: id,
+      course_id: unit_group_unit&.course_id,
       key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
