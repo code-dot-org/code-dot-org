@@ -813,7 +813,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme: optOptionsExtended.theme,
+      theme: optOptionsExtended.theme || CdoTheme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
