@@ -29,16 +29,30 @@ const theme = createTheme({
       styleOverrides: {
         root: ({theme}) => ({
           fontFamily: ROBOTO_MONO_FONT,
+          ['&:focus-visible']: {
+            outline: '2px solid ' + theme.palette.primary.main,
+            outlineOffset: '2px',
+          },
           textTransform: 'none',
+          border: '1px solid transparent',
           ['&.MuiButton-contained.button--color-emphasized']: {
             backgroundColor: theme.palette.secondary.main,
+            ['&:hover']: {
+              backgroundColor: theme.palette.secondary.dark,
+            },
           },
           ['&.MuiButton-contained.button--color-primary']: {
             backgroundColor: theme.palette.primary.main,
+            ['&:hover']: {
+              backgroundColor: theme.palette.primary.dark,
+            },
           },
           ['&.MuiButton-outlined.button--color-secondary']: {
             color: theme.palette.common.black,
             borderColor: theme.palette.common.black,
+            ['&:hover']: {
+              backgroundColor: theme.palette.grey[100],
+            },
           },
           ['&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall']:
             {
