@@ -862,6 +862,15 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal 'light', lesson.get_background_for_user(@student)
   end
 
+  test 'get_background_for_user returns user preference for web lab 2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create :script, :in_single_unit_course
+    lesson = create :lesson, background: 'dark', script: script
+    weblab2_level = create :weblab2
+    create :script_level, lesson: lesson, levels: [weblab2_level], script: script
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
   test 'get_background_for_user returns default for music lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
     script = create :script, :in_single_unit_course
