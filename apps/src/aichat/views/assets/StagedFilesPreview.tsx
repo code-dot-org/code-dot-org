@@ -11,7 +11,7 @@ import {
   removeStagedFile,
   stagedFileUploadFinished,
 } from '../../redux';
-import {getAssetUrl} from '../../utils';
+import {ChatAsset} from '../../types';
 
 import FilePreview from './FilePreview';
 
@@ -29,11 +29,15 @@ const alerts = {
   ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
 
-const StagedFilesPreview: React.FC = () => {
+interface StagedFilesPreviewProps {
+  buildAssetUrl: (asset: ChatAsset) => string;
+}
+
+const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
+  buildAssetUrl,
+}) => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
-  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
-  const levelName = useAppSelector(state => state.lab.levelProperties?.name);
 
   const [alertMessage, style] = useAppSelector(state => {
     if (!state.aichat.stagedFilesAlert) {
@@ -56,11 +60,7 @@ const StagedFilesPreview: React.FC = () => {
             <FilePreview
               key={key}
               type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-              url={`${getAssetUrl(
-                asset,
-                currentChannelId,
-                levelName
-              )}?t=${key}`}
+              url={`${buildAssetUrl(asset)}?t=${key}`}
               filename={filename}
               isUploading={status === 'uploading'}
               onRemove={() => dispatch(removeStagedFile(key))}

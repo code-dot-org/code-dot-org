@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-05 18:29:04 UTC",
+    "serialized_at": "2025-07-02 21:20:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -414,6 +414,38 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Testing Rubrics",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "[Testing Rubrics] Sequencing - Practice",
+      "name": "[Testing Rubrics] Sequencing - Practice",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+        "overview": "Students practice sequencing by combining tracks of different lengths and adding rests to create offsets. Working in pairs, they apply concepts from the Explore lesson and build fluency through guided challenges. Teachers circulate to support and adjust instruction as needed.",
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+      },
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -1348,6 +1380,73 @@
       "seeding_key": {
         "lesson_activity.key": "c393f18b-a966-4e83-9d12-915cb42a9da7",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "963b4b8a-025a-45ea-9061-566e28901fb2",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "963b4b8a-025a-45ea-9061-566e28901fb2",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "6063d64a-af80-4462-9164-59daf61d9469",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6063d64a-af80-4462-9164-59daf61d9469",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "a656e56d-a257-4030-bdfe-00c99c7030a2",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "key": "5d6cde28-db16-4800-8ecc-ee76207d374b",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5d6cde28-db16-4800-8ecc-ee76207d374b",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "musiclab-6-12-playground"
       }
@@ -3943,6 +4042,200 @@
         "activity_section.key": "6df670ae-041c-48da-af9e-4d375082781d",
         "lesson_activity.key": "c393f18b-a966-4e83-9d12-915cb42a9da7"
       }
+    },
+    {
+      "key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Rubrics!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5",
+        "lesson_activity.key": "1a8fd7bc-4a76-407f-ab9f-afc1d781c938"
+      }
+    },
+    {
+      "key": "921602fe-bd44-437e-a0d4-791135a1533c",
+      "position": 1,
+      "properties": {
+        "description": "Before teaching today's lesson, be sure to use the Teacher Dashboard to assess how students did to make a decision for how to start today's lesson. The Warm-Up for this lesson is adaptable based on how well students did with the Assessment level from the previous lesson. ",
+        "name": "Reviewing the Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "921602fe-bd44-437e-a0d4-791135a1533c",
+        "lesson_activity.key": "963b4b8a-025a-45ea-9061-566e28901fb2"
+      }
+    },
+    {
+      "key": "eddb37cb-e52c-421d-ac57-f425c249f923",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
+        "name": "Differentiated Warm-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "eddb37cb-e52c-421d-ac57-f425c249f923",
+        "lesson_activity.key": "6063d64a-af80-4462-9164-59daf61d9469"
+      }
+    },
+    {
+      "key": "fba094f7-2d95-433e-bb36-3d3ec26c12a1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
+        "name": "Pair Programming",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Digging Deeper**: To learn more about pair programming in the classroom, check out the [K-12 Pair Programming Toolkit](https://www.etr.org/default/assets/File/projects/Pair%20Programming%20Toolkit_FINAL%207_30_19.pdf) from ETR. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fba094f7-2d95-433e-bb36-3d3ec26c12a1",
+        "lesson_activity.key": "6063d64a-af80-4462-9164-59daf61d9469"
+      }
+    },
+    {
+      "key": "5c2b9cb2-f2ec-4a42-abfc-742828c14b73",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Algorithmic Thinking:** Algorithmic Thinking is all about developing a step-by-step solution to the problem, or the rules to follow to solve the problem. In Music Lab, algorithmic thinking shows up when students follow steps to create a song, such as \"first I'll get my backing beats, then I'll layer in my leads, and finally I'll add the vocals\". Use these questions to help students identify what’s essential in their song or code:\n\n* What steps did you follow to build your song? Could you explain them in order?\n* If you had to teach someone else to build a similar track, what instructions would you give them?\n* Could you create a checklist to build a track like this again?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Algorithmic Thinking](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c2b9cb2-f2ec-4a42-abfc-742828c14b73",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "15a21e70-cb9f-4fa0-9aad-131f6673ee83",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Viewing Example Solutions:** Each level has an example solution that verified teachers can access and view. You can view example solutions by expanding the Teacher Panel from the right-side of the screen, then clicking the blue \"Example Solution\" button. This process is [highlighted in this video](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be) and the graphic below\n\n<img src=\"https://images.code.org/e2be70507c3a22a08d28a3cd7c8cdd5a-example-solutions.png\" style=\"width: 25%\">"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "15a21e70-cb9f-4fa0-9aad-131f6673ee83",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "0b9768bb-7d70-44db-adf6-20269279dab7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Play Sequential"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "61841d92-3f7e-462d-a829-f885dcb83525",
+      "position": 4,
+      "properties": {
+        "progression_name": "Check-in",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Check-in levels are strategically placed in the middle of the lesson so you can check-in on how students are doing while they are still in the room with you and you can adjust instruction if needed. For example:\n- If you notice most students are able to complete the check-in with no assistance, the class can continue to the remaining problems\n- If most of the class is struggling with the check-in, consider regrouping as a class and completing the Investigate levels together or completing the check-in as a class\n- If a few students are struggling, consider working individually with those students to ensure they can be successful in later levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "61841d92-3f7e-462d-a829-f885dcb83525",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "26611a25-9b04-4d05-9814-c5471eabd470",
+      "position": 5,
+      "properties": {
+        "progression_name": "Rests"
+      },
+      "seeding_key": {
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "e63d0882-5718-4e65-bdaa-2f2f661c628a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "e63d0882-5718-4e65-bdaa-2f2f661c628a",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "216bfba6-1603-4830-a7ea-a7a60542bfbd",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Evaluative Assessment:** Assessment levels are provided towards the end of a lesson as a culmination of the skills being emphasized in the lesson. If you need to check only one level in this whole lesson, it can be this level. They are designed to be checked after class, allowing you to decide if you want to adjust instruction for the next day's lesson. For example:\n- If most students struggle with the assessment level, it may be worth starting tomorrow's class with a quick review and completing one of the practice levels they skipped in today's lesson.\n- If most students are successful in the assessment level, you can continue with the planned warm-up or you can encourage students to complete one of the challenge levels they may have skipped."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "216bfba6-1603-4830-a7ea-a7a60542bfbd",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "1dac5f0c-7d10-44b7-9b51-b17123559075",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "progression_name": "Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1dac5f0c-7d10-44b7-9b51-b17123559075",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "108ceac5-971d-4291-a354-033879ca514f",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "108ceac5-971d-4291-a354-033879ca514f",
+        "lesson_activity.key": "a656e56d-a257-4030-bdfe-00c99c7030a2"
+      }
+    },
+    {
+      "key": "f096395c-49e9-4327-90ee-d1bfa0e364d7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f096395c-49e9-4327-90ee-d1bfa0e364d7",
+        "lesson_activity.key": "5d6cde28-db16-4800-8ecc-ee76207d374b"
+      }
     }
   ],
   "script_levels": [
@@ -4777,6 +5070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-walkup-examples-choice"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5849,6 +6145,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-cats-examples-choice"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -6871,6 +7170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-examples-choice"
+        ],
         "progression": "Examples"
       },
       "bonus": false,
@@ -8235,6 +8537,273 @@
       },
       "level_keys": [
         "music-lab-functions-synthesis-formative"
+      ]
+    },
+    {
+      "chapter": 173,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "progression": "Rubrics!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 7"
+      ]
+    },
+    {
+      "chapter": 174,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "15a21e70-cb9f-4fa0-9aad-131f6673ee83"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-predict_v2_v3"
+      ]
+    },
+    {
+      "chapter": 175,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-panel_v2_v3"
+      ]
+    },
+    {
+      "chapter": 176,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-1_v2_v3"
+      ]
+    },
+    {
+      "chapter": 177,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Play Sequential"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-play-sequential-2_v2_v3"
+      ]
+    },
+    {
+      "chapter": 178,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check-in"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "61841d92-3f7e-462d-a829-f885dcb83525"
+      },
+      "level_keys": [
+        "test-music-lab-sequence-practice-formative_v2_v3"
+      ]
+    },
+    {
+      "chapter": 179,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-predict_v2_v3"
+      ]
+    },
+    {
+      "chapter": 180,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-panel_v2_v3"
+      ]
+    },
+    {
+      "chapter": 181,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Rests"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-rest-1_v2_v3"
+      ]
+    },
+    {
+      "chapter": 182,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e63d0882-5718-4e65-bdaa-2f2f661c628a"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-artist-choice_v2_v3"
+      ]
+    },
+    {
+      "chapter": 183,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "216bfba6-1603-4830-a7ea-a7a60542bfbd"
+      },
+      "level_keys": [
+        "test-music-lab-sequencing-practice-evaluative_v2_v3"
+      ]
+    },
+    {
+      "chapter": 184,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "1dac5f0c-7d10-44b7-9b51-b17123559075"
+      },
+      "level_keys": [
+        "test-music-lab-sequences-practice-choice_v2_v3"
       ]
     }
   ],
@@ -10302,6 +10871,150 @@
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "7a392ec7-ebdb-4106-8160-346ae395da13"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 7",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "f45f8876-4a5e-4dbb-9c63-99d16d6f57c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-predict_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-predict_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "15a21e70-cb9f-4fa0-9aad-131f6673ee83"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-panel_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-panel_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-1_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-1_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-play-sequential-2_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-play-sequential-2_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0b9768bb-7d70-44db-adf6-20269279dab7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequence-practice-formative_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequence-practice-formative_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "61841d92-3f7e-462d-a829-f885dcb83525"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-predict_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-predict_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-panel_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-panel_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-rest-1_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-rest-1_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "26611a25-9b04-4d05-9814-c5471eabd470"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-artist-choice_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-artist-choice_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "e63d0882-5718-4e65-bdaa-2f2f661c628a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequencing-practice-evaluative_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequencing-practice-evaluative_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "216bfba6-1603-4830-a7ea-a7a60542bfbd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-sequences-practice-choice_v2_v3",
+        "script_level.level_keys": [
+          "test-music-lab-sequences-practice-choice_v2_v3"
+        ],
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "1dac5f0c-7d10-44b7-9b51-b17123559075"
+      }
     }
   ],
   "resources": [
@@ -10835,6 +11548,18 @@
         "lesson.key": "Sequencing - Synthesize",
         "resource.key": "spotlight_henny_tha_bizness_record_producer"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "resource.key": "sequencing_-_practice_1"
+      }
     }
   ],
   "scripts_resources": [
@@ -10912,6 +11637,20 @@
         "programming_environment.name": "music",
         "programming_expression.key": "set_effect"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "play_sequential"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "programming_environment.name": "music",
+        "programming_expression.key": "rest"
+      }
     }
   ],
   "objectives": [
@@ -10926,6 +11665,16 @@
       }
     },
     {
+      "key": "4a6d4a7d-6240-4b14-9743-6b409f36e6d8",
+      "properties": {
+        "description": "Combine tracks with different measure lengths"
+      },
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "objective.key": "4a6d4a7d-6240-4b14-9743-6b409f36e6d8"
+      }
+    },
+    {
       "key": "5404f94d-a55d-46e2-b8be-c7a243f6adb6",
       "properties": {
         "description": "Apply the problem-solving process to explore and refine design ideas in Music Lab"
@@ -10933,6 +11682,16 @@
       "seeding_key": {
         "lesson.key": "Introduction to Music Lab",
         "objective.key": "5404f94d-a55d-46e2-b8be-c7a243f6adb6"
+      }
+    },
+    {
+      "key": "558e71ff-8ef3-4c0a-9ea9-edcf05e0e08c",
+      "properties": {
+        "description": "Create offset moments in songs with rests"
+      },
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "objective.key": "558e71ff-8ef3-4c0a-9ea9-edcf05e0e08c"
       }
     },
     {
@@ -11144,18 +11903,106 @@
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
     }
   ],
   "lessons_opportunity_standards": [
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "test-music-lab-sequencing-practice-evaluative_v2_v3",
+      "seeding_key": {
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "level_name": "Allthethings Python Lab 7",
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+      "position": 1,
+      "learning_goal": "Loops",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ee584675-ef4b-4382-b95d-4d0c54edc0c9",
+        "lesson.key": "[Testing Rubrics] Sequencing - Practice",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
   ]
 }

@@ -4,6 +4,8 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= render 'devise/registrations/sign_up_locale'
+
 = render_parental_permission_banner(current_user, request)
 
 = link_to :back do
@@ -228,6 +230,8 @@
       userEmail: current_user.email,
       userProperties: current_user.properties,
       userUsState: current_user.us_state,
+      userFacilitatorBio: current_user.facilitator? ? current_user.facilitator_bio : nil,
+      isFacilitator: current_user.facilitator?,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
       isPasswordRequired: current_user.encrypted_password.present?,

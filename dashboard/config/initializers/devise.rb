@@ -371,9 +371,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 end
 
+require 'devise/models/custom_lockable'
+
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  unless Devise::Models::CustomLockable <= Devise::Models::Lockable
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
     Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
   end
 end

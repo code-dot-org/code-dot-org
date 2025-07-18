@@ -13,22 +13,11 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Sequencing
 
-Standard: Modify the volume, delay, or filter settings for a song,
+Skill: Modify the volume, delay, or filter settings for a song by correctly sequencing effect blocks
 
-Lesson: Sequencing - Synthesis
-
-Skill Progression: Use filter/delay/volume blocks strategically
-
-Pretest Modality: Given algorithm / intent / incorrect code, match with code
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
-
+Appears in Lesson: Sequencing - Synthesis
 MARKDOWN
 
 markdown <<MARKDOWN
-Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to begin low then play the Big Chorus at full volume. 
-
-<img src="https://images.code.org/fec4744e9189ed64160b0ab6f007e9b6-image-1750181083739.png" width="100">
-
-<img src="https://images.code.org/5ec2346d268fb547ba4ba3336812a295-image-1750186788227.png" width="150">
+Luca is working on the chorus vocals of a new song. He wants it to sound like the vocals are building up by getting louder, so he adjusts the volume in his code to begin low then play the Big Chorus at full volume.
 MARKDOWN

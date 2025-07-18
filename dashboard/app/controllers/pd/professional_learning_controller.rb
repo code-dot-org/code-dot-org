@@ -24,8 +24,8 @@ class Pd::ProfessionalLearningController < ApplicationController
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
-      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
-      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_for_participant),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_for_participant),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
   end
@@ -50,7 +50,7 @@ class Pd::ProfessionalLearningController < ApplicationController
   def workshop_marketing_page
     view_options(full_width: true, responsive_content: true, no_padding_container: true)
     @workshop_info = Pd::Workshop.find(params[:workshop_id])&.summarize_for_marketing_page
-    @user_info = current_user ? User.find(current_user&.id)&.summarize_for_workshop : nil
+    @user_info = current_user&.summarize_for_workshop
     render 'pd/professional_learning/workshops/index'
   end
 

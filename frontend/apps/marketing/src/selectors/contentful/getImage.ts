@@ -6,7 +6,7 @@ export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
 
 export function getAbsoluteImageUrl(
   asset: ExperienceAsset | string | undefined,
-  additionalParams?: string,
+  additionalParams?: ConstructorParameters<typeof URLSearchParams>[0],
 ) {
   const imgUrl =
     typeof asset === 'string' ? asset : getRelativeImageUrl(asset) || undefined;

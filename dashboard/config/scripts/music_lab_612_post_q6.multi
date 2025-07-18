@@ -12,16 +12,9 @@ allow_multiple_attempts true
 teacher_markdown <<MARKDOWN
 Topic: Functions
 
-Standard: Identify portions of a song that could be abstracted as a function and write an algorithm representing the song and its functions.
+Skill: Design songs with sections that can be abstracted to functions to make the code reusable, easier to understand, or more organized.
 
-Lesson: Functions - Practice
-
-Skill Progression: Decompose a song into functions
-
-Pretest Modality: Given starting code / shadow blocks, refactor
-
-Posttest Modality: Given algorithm / intent / incorrect code, match with code
-
+Appears in Lesson: Functions - Practice
 MARKDOWN
 
 markdown <<MARKDOWN

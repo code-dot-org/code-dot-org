@@ -9,6 +9,9 @@ export type Section =
   | 'Action Block Pattern Default'
   | 'Action Block Pattern Hidden Elements'
   | 'Button'
+  | 'Action Block Collection'
+  | 'Logo Collection'
+  | 'People Collection'
   | 'Divider'
   | 'Editorial Card'
   | 'FAQ Accordion'
@@ -21,14 +24,21 @@ export type Section =
   | 'Hero Banner with Partner Callout'
   | 'Hero Banner with Announcement Banner'
   | 'Heading'
+  | 'Icon Highlight'
   | 'Image'
   | 'Image Carousel'
   | 'Localization'
   | 'Overline'
   | 'Paragraph'
   | 'Rich Text'
+  | 'Section - Dark Gray'
   | 'Section - Pattern Dark'
   | 'Section - Pattern Teal'
+  | 'Simple List'
+  | 'Skinny Banner'
+  | 'Snapshot'
+  | 'Tab Group'
+  | 'Testimonial'
   | 'Text Link'
   | 'Video'
   | 'Video Carousel';
@@ -58,6 +68,6 @@ export class AllTheThingsPage extends MarketingPage {
     });
 
     // Go through the top-level sections, finding the one that has this heading
-    return this.page.locator('section').filter({has: headingLocator});
+    return this.page.locator('div').filter({has: headingLocator}).first();
   }
 }

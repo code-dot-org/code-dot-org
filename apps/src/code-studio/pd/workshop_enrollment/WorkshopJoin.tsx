@@ -8,7 +8,14 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
-import UserPassport from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
+import UserPassport, {
+  isMissingUserInfo,
+} from '@cdo/apps/code-studio/pd/workshops/components/UserPassport';
+import {useWorkshopEnrollmentApi} from '@cdo/apps/code-studio/pd/workshops/hooks/useWorkshopEnrollmentApi';
+import {
+  WorkshopInfo,
+  UserInfoForWorkshop,
+} from '@cdo/apps/code-studio/pd/workshops/types';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -16,65 +23,61 @@ import {SUBMISSION_STATUSES} from './constants';
 
 import style from './workshop_join.module.scss';
 
-interface SessionCalendarEvent {
-  id: number;
-  start: string;
-  end: string;
-  is_local: boolean;
-  session_format: string;
-  location_address?: string;
-  meeting_link?: string;
-  description?: string;
-  notes?: string;
-}
+type WorkshopJoinProps = {
+  workshopInfo: Pick<
+    WorkshopInfo,
+    | 'id'
+    | 'course'
+    | 'subject'
+    | 'name'
+    | 'format'
+    | 'regionalPartnerName'
+    | 'sessions'
+  >;
+  userInfo: UserInfoForWorkshop['userInfo'];
+  workshopEnrollmentStatus: string;
+};
 
-const WorkshopJoin: React.FunctionComponent<{
-  workshop_enrollment_status: string;
-  workshop_info: {
-    id: string;
-    course: string;
-    subject?: string;
-    name?: string;
-    format: string;
-    rp_name?: string;
-    session_info_for_calendar?: SessionCalendarEvent[];
-  };
-  user_info: {
-    display_name: string;
-    given_name?: string;
-    family_name?: string;
-    email: string;
-    school_name?: string;
-  };
-}> = ({workshop_enrollment_status, workshop_info, user_info}) => {
+const WorkshopJoin: React.FunctionComponent<WorkshopJoinProps> = ({
+  workshopInfo,
+  userInfo,
+  workshopEnrollmentStatus,
+}) => {
   const [enrollmentStatus, setEnrollmentStatus] = useState(
-    workshop_enrollment_status
+    workshopEnrollmentStatus
   );
   const [submissionErrorMessage, setSubmissionErrorMessage] = useState('');
-  const hasMissingUserInfo =
-    !user_info.given_name || !user_info.family_name || !user_info.school_name;
+  const {submitEnrollment, isSubmitting, error} = useWorkshopEnrollmentApi(
+    workshopInfo?.id
+  );
 
-  const submitEnrollment = async () => {
-    // TODO: This is filler behavior that will be actually implemented in followup.
-    setEnrollmentStatus(SUBMISSION_STATUSES.SUCCESS);
-    setSubmissionErrorMessage('');
-    navigateOnEnrollSuccess();
+  const handleSubmitEnrollment = async () => {
+    const result = await submitEnrollment(userInfo?.id);
+
+    if (result?.workshop_enrollment_status === SUBMISSION_STATUSES.SUCCESS) {
+      navigateOnEnrollSuccess();
+    } else {
+      setEnrollmentStatus(SUBMISSION_STATUSES.UNKNOWN_ERROR);
+      setSubmissionErrorMessage(
+        result?.error_message ||
+          error ||
+          'An unknown error occurred while processing your enrollment.'
+      );
+    }
   };
 
   const navigateOnEnrollSuccess = () => {
     // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
     // on that page since event logs immediately followed by redirects sometimes do not fire.
-    sessionStorage.setItem('workshopId', workshop_info.id);
-    sessionStorage.setItem('workshopCourse', workshop_info.course);
-    sessionStorage.setItem('workshopSubject', workshop_info.subject || '');
-    sessionStorage.setItem('workshopName', workshop_info.name || '');
-    sessionStorage.setItem('workshopFormat', workshop_info.format);
-    sessionStorage.setItem('rpName', workshop_info.rp_name || '');
+    sessionStorage.setItem('workshopId', `${workshopInfo.id}`);
+    sessionStorage.setItem('workshopCourse', workshopInfo.course);
+    sessionStorage.setItem('workshopSubject', workshopInfo.subject || '');
+    sessionStorage.setItem('workshopName', workshopInfo.name || '');
+    sessionStorage.setItem('workshopFormat', workshopInfo.format);
+    sessionStorage.setItem('rpName', workshopInfo.regionalPartnerName || '');
     sessionStorage.setItem(
       'sessionTimeInfo',
-      workshop_info.session_info_for_calendar
-        ? JSON.stringify(workshop_info.session_info_for_calendar)
-        : ''
+      workshopInfo.sessions ? JSON.stringify(workshopInfo.sessions) : ''
     );
 
     navigateToHref('/my-professional-learning');
@@ -92,23 +95,28 @@ const WorkshopJoin: React.FunctionComponent<{
             time in your account settings.
           </BodyThreeText>
           <Button
+            id="joinWorkshop"
             name="joinWorkshop"
             text="Join this workshop"
             color="purple"
             className={style.joinWorkshopButton}
-            onClick={submitEnrollment}
-            disabled={hasMissingUserInfo}
+            onClick={handleSubmitEnrollment}
+            isPending={isSubmitting}
+            disabled={isMissingUserInfo(userInfo) || !!error}
           />
         </div>
-        <UserPassport
-          displayName={user_info.display_name}
-          givenName={user_info.given_name}
-          familyName={user_info.family_name}
-          email={user_info.email}
-          schoolName={user_info.school_name}
-          returnToHref={`/pd/workshops/${workshop_info.id}/join`}
-          className={style.userPassport}
-        />
+        {userInfo && (
+          <UserPassport
+            displayName={userInfo.displayName}
+            givenName={userInfo.givenName}
+            familyName={userInfo.familyName}
+            email={userInfo.email}
+            schoolName={userInfo.schoolInfo?.schoolName}
+            schoolType={userInfo.schoolInfo?.schoolType}
+            returnToHref={`/pd/workshops/${workshopInfo.id}/join`}
+            className={style.userPassport}
+          />
+        )}
       </div>
     );
   };

@@ -53,7 +53,7 @@
   "appName": "pythonlab",
   "useRestrictedSongs": false,
   "usesProjects": true,
-  "finishUrl": "/s/allthethings/lessons/50/levels/3",
+  "finishUrl": "/courses/allthethingscourse/units/1/lessons/50/levels/3",
   "validations": [
     {
       "conditions": [

@@ -5,7 +5,6 @@ import React, {useCallback, useRef, useState, useEffect} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import Divider from '@code-dot-org/component-library/divider';
 import {
   SimpleDropdown,
   CheckboxDropdown,
@@ -20,6 +19,8 @@ import {
 } from '@code-dot-org/component-library/typography';
 
 import {getStudioUrl} from '@/config/studio';
+
+import Divider from '../divider';
 
 import AFEContinueNotice from './AFEContinueNotice';
 import AFESuccessNotice from './AFESuccessNotice';
@@ -368,6 +369,7 @@ const AFEForm: React.FC<AFEFormProps> = ({
         <Button
           buttonTagTypeAttribute="submit"
           text="Continue"
+          className={styles.afeEligibilityFormButton}
           isPending={isFormSubmitting}
           disabled={!!formError}
           onClick={() => {}}

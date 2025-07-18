@@ -14,8 +14,10 @@ jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader', () => ({
 const DEFAULT_PROPS = {
   setLessonOfInterest: () => {},
   setCurrentView: () => {},
-  setScriptId: () => {},
+  setUnit: () => {},
   scriptId: 123,
+  courseId: 1,
+  unitPosition: 1,
   sectionId: 2,
   currentView: ViewType.SUMMARY,
   scriptData: {

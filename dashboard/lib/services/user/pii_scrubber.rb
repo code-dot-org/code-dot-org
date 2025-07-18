@@ -52,6 +52,7 @@ module Services
         user.secret_picture_id = nil
         user.secret_words = nil
         user.studio_person&.destroy # Studio person record may contain emails
+        user.facilitator_info&.destroy
 
         # Users might have multiple accounts with the same email address.
         # If there is a live user with the same email, these data points will not be scrubbed.
@@ -65,6 +66,7 @@ module Services
 
         # Names
         user.name = nil
+        user.given_name = nil
         user.family_name = nil
         user.username = SecureRandom.alphanumeric(20)
         user.ops_first_name = nil

@@ -545,6 +545,7 @@ class RegistrationsController < Devise::RegistrationsController
       :username,
       :given_name,
       :family_name,
+      :educator_role,
       :password,
       :encrypted_password,
       :current_password,
@@ -564,6 +565,9 @@ class RegistrationsController < Devise::RegistrationsController
       :user_provided_us_state,
       :ai_rubrics_disabled,
       :lti_roster_sync_enabled,
+      facilitator_info_attributes: [
+        :bio,
+      ],
       school_info_attributes: [
         :country,
         :school_type,

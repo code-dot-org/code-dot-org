@@ -502,21 +502,20 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  test 'concise_summarize: section with a script assigned' do
+  test 'concise_summarize: section with a single-unit course assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
-    CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: script, unit_group: nil
+      section = create :section, script: script, unit_group: script.unit_group
 
       expected = {
         id: section.id,
         name: section.name,
         courseVersionName: 'jigsaw',
         unitName: script.name,
-        unitPosition: nil,
-        isAssignedStandaloneCourse: true,
+        unitPosition: 1,
+        isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
         providerManaged: false,
@@ -526,11 +525,11 @@ class SectionTest < ActiveSupport::TestCase
         sharing_disabled: false,
         studentCount: 0,
         code: section.code,
-        course_display_name: script.course_version.localized_title,
-        course_offering_id: script.course_version.course_offering.id,
-        course_version_id: script.course_version.id,
+        course_display_name: script.unit_group.course_version.localized_title,
+        course_offering_id: script.unit_group.course_version.course_offering.id,
+        course_version_id: script.unit_group.course_version.id,
         unit_id: script.id,
-        course_id: nil,
+        course_id: script.unit_group.id,
         hidden: false,
         restrict_section: false,
         post_milestone_disabled: false,
@@ -771,10 +770,9 @@ class SectionTest < ActiveSupport::TestCase
   test 'selected_section_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
-    CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: script, unit_group: nil
+      section = create :section, script: script, unit_group: script.unit_group
 
       expected = {
         id: section.id,
@@ -783,10 +781,10 @@ class SectionTest < ActiveSupport::TestCase
         script: {id: script.id, name: script.name, project_sharing: nil},
         students: [],
         any_student_has_progress: false,
-        is_assigned_single_unit_course: nil,
+        is_assigned_single_unit_course: true,
         course: {
-          course_offering_id: script.course_version.course_offering.id,
-          version_id: script.course_version.id,
+          course_offering_id: script.unit_group.course_version.course_offering.id,
+          version_id: script.unit_group.course_version.id,
           lesson_extras_available: script.lesson_extras_available,
           text_to_speech_enabled: script.text_to_speech_enabled?,
           unit_id: section.unit_group ? section.script_id : nil,
@@ -848,6 +846,29 @@ class SectionTest < ActiveSupport::TestCase
     summarized_section = section.selected_section_summarize
 
     assert summarized_section[:script][:project_sharing]
+  end
+
+  test 'summarize_for_participant: section with a course assigned' do
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: unit_group
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      teacherName: section.teacher.name,
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
+      currentUnitTitle: '',
+      linkToCurrentUnit: '',
+      code: section.code,
+      login_type: "email",
+      grades: nil,
+      is_assigned_single_unit_course: false,
+    }
+
+    assert_equal expected, section.summarize_for_participant
   end
 
   test 'summarize: section with a course assigned' do
@@ -912,12 +933,10 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
-    # TODO: TEACH-1788 This test will need to be updated when we update fixtures
     script = Unit.find_by_name('jigsaw')
-    CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
-      section = create :section, script: script, unit_group: nil
+      section = create :section, script: script, unit_group: script.unit_group
 
       expected = {
         id: section.id,
@@ -925,9 +944,9 @@ class SectionTest < ActiveSupport::TestCase
         teacherName: section.teacher.name,
         linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'Jigsaw',
-        linkToAssigned: '/s/jigsaw',
-        currentUnitTitle: '',
-        linkToCurrentUnit: '',
+        linkToAssigned: '/courses/jigsaw',
+        currentUnitTitle: 'Jigsaw',
+        linkToCurrentUnit: '/courses/jigsaw/units/1',
         courseVersionName: 'jigsaw',
         numberOfStudents: 0,
         linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
@@ -939,12 +958,12 @@ class SectionTest < ActiveSupport::TestCase
         login_type: "email",
         login_type_name: "Email",
         participant_type: 'student',
-        course_display_name: script.course_version.localized_title,
-        course_offering_id: script.course_version.course_offering.id,
-        course_version_id: script.course_version.id,
-        unit_id: nil,
-        unitPosition: nil,
-        course_id: nil,
+        course_display_name: script.unit_group.course_version.localized_title,
+        course_offering_id: script.unit_group.course_version.course_offering.id,
+        course_version_id: script.unit_group.course_version.id,
+        unit_id: script.id,
+        unitPosition: 1,
+        course_id: script.unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
         grades: nil,
@@ -953,7 +972,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_single_unit_course: nil,
+        is_assigned_single_unit_course: true,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],

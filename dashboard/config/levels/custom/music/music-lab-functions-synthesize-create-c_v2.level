@@ -1,0 +1,96 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-03T23:51:13.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout",
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Build-a-Song\r\n\r\n**The Scenario:**\r\n\r\nYou've been asked to create a remix that is modular and reusable in new ways. You'll break the original song into functional parts, then remix it by calling those functions multiple times in different ways.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n**Do This:**\r\n\r\n- Break your song into small reusable sections, like 1 or 2 measure intros, drops, or motifs.\r\n- Write a function for each one.\r\n- Use those functions to build a full track by reusing them in different sequences or with different effects.\r\n- Challenge: use at least one function inside another function (composition).\r\n\r\n**Musical Suggestions:**\r\n\r\n- \"Espresso\" - Sabrina Carpenter (tight, remixable segments)\r\n- \"Treat Me\" - Chlöe (snappy ideas that can repeat or rework)\r\n- \"Pick Up The Phone\" - Henry Moodie (quiet phrases that can layer in multiple roles)\r\n\r\n**To pass this level, your remix must include at least 4 small section functions and use function composition or repetition to build the full song structure.**",
+    "display_name": "Build-a-Song",
+    "bubble_choice_description": "Remix a song by breaking the original song into parts, then remix it by calling those functions multiple times in different ways.",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesize-create-a_v2_cb2d62a7-d376-4338-b570-db9d053e937f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesize-create-a_v2_2d0f3728-b482-4224-814a-2c9b5dac62ca",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to make sure you call 4 different functions...",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "thumbnail_url": "https://images.code.org/606acf3e24df3f55103e86a7589e9d98-bluegreen.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-03T23:51:13.651+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesize-create-b_v2\\\"\"],\"cloned_from\":\"music-lab-functions-synthesize-create-b_v2\"},{\"changed_at\":\"2025-07-03 23:59:28 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-11 20:37:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

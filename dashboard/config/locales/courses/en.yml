@@ -6179,6 +6179,11 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
+            This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
+
+            ::: details [**Professional Development**]
+            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
+            :::
           version_title: "'25-'26"
         allthelessonplans:
           title: All The Lesson Plans
@@ -6200,6 +6205,18 @@ en:
           version_title: ''
         ui-test-original-course-2019:
           title: ui-test-original-course-2019
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        facilitator-onboarding-2025:
+          title: Facilitator Onboarding
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        facilitator-training-2025:
+          title: 'Facilitator Training '
           description_short: ''
           description_student: ''
           description_teacher: ''

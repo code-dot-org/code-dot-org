@@ -39,12 +39,15 @@ scripts_map = {
 @course_offerings = {}
 @course_versions = {}
 @unit_groups = {}
+@unit_group_units = {}
 @plc_courses = {}
 @scripts = {}
 @plc_course_units = {}
 @lesson_groups = {}
 @lessons = {}
 @script_levels = {}
+@lesson_activities = {}
+@activity_sections = {}
 @callouts = {}
 
 scripts_map.each do |_script_id, name|
@@ -54,6 +57,10 @@ scripts_map.each do |_script_id, name|
 
   script.unit_groups&.each do |unit_group|
     @unit_groups[unit_group.name] = unit_group.attributes
+  end
+
+  script.unit_group_units&.each do |ugu|
+    @unit_group_units["ugu-#{script.name}-#{ugu.course_id}"] = ugu.attributes
   end
 
   course_version = script.get_course_version
@@ -80,6 +87,12 @@ scripts_map.each do |_script_id, name|
 
   script.lessons.each do |lesson|
     @lessons["lesson_#{lesson.id}"] = lesson.attributes
+    lesson.lesson_activities.each do |lesson_activity|
+      @lesson_activities["lesson_activity_#{lesson_activity.id}"] = lesson_activity.attributes
+      lesson_activity.activity_sections.each do |activity_section|
+        @activity_sections["activity_section_#{activity_section.id}"] = activity_section.attributes
+      end
+    end
   end
 
   script.script_levels.to_a[0, 10000].each do |sl|
@@ -106,10 +119,13 @@ prefix = Rails.root.join('test/fixtures/')
 File.new("#{prefix}course_offerings.yml", 'w').write(yamlize(@course_offerings))
 File.new("#{prefix}course_versions.yml", 'w').write(yamlize(@course_versions))
 File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
+File.new("#{prefix}unit_group_units.yml", 'w').write(yamlize(@unit_group_units))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}unit.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
 File.new("#{prefix}lesson_group.yml", 'w').write(yamlize(@lesson_groups))
 File.new("#{prefix}lesson.yml", 'w').write(yamlize(@lessons))
+File.new("#{prefix}lesson_activity.yml", 'w').write(yamlize(@lesson_activities))
+File.new("#{prefix}activity_section.yml", 'w').write(yamlize(@activity_sections))
 File.new("#{prefix}script_level.yml", 'w').write(yamlize(@script_levels))
 File.new("#{prefix}callout.yml", 'w').write(yamlize(@callouts))

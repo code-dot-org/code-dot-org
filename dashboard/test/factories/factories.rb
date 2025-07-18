@@ -11,16 +11,6 @@ FactoryBot.define do
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
     assignable {true}
 
-    # TODO: TEACH-1678 Remove this trait
-    trait :with_units do
-      after(:create) do |course_offering|
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-        create(:course_version, :with_unit, course_offering: course_offering)
-      end
-    end
-
     trait :with_unit_groups do
       after(:create) do |course_offering|
         create(:course_version, :with_unit_group, course_offering: course_offering)
@@ -35,13 +25,6 @@ FactoryBot.define do
       sequence(:display_name, 'a') {|c| "csp-course-offering-#{c}"}
       assignable {true}
       grade_levels {"9,10,11,12"}
-
-      # TODO: TEACH-1678 Remove this trait
-      trait :with_units do
-        after(:create) do |csp_course_offering|
-          create(:course_version, :with_csp_unit, course_offering: csp_course_offering)
-        end
-      end
 
       trait :with_unit_group do
         after(:create) do |csp_course_offering|
@@ -59,15 +42,6 @@ FactoryBot.define do
 
     trait :with_unit_group do
       association(:content_root, factory: :unit_group)
-    end
-
-    # TODO: TEACH-1678 Remove these traits
-    trait :with_unit do
-      association(:content_root, factory: :script, is_course: true)
-    end
-
-    trait :with_csp_unit do
-      association(:content_root, factory: :csp_script, is_course: true)
     end
 
     trait :with_single_unit_course do
@@ -94,6 +68,10 @@ FactoryBot.define do
     participant_audience {"student"}
     instructor_audience {"teacher"}
 
+    trait :stable do
+      published_state {Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    end
+
     trait :pl_course do
       participant_audience {"teacher"}
       instructor_audience {"facilitator"}
@@ -105,11 +83,10 @@ FactoryBot.define do
       transient do
         unit {nil}
       end
-      # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+
       after(:create) do |unit_group, evaluator|
-        unit = evaluator.unit || create(:unit, :in_unit_group)
+        unit = evaluator.unit || create(:unit)
         create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-        unit.update(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
         unit.reload
       end
 
@@ -145,17 +122,17 @@ FactoryBot.define do
       transient do
         unit {nil}
       end
-      # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+
       after(:create) do |unit_group, evaluator|
-        unit = evaluator.unit || create(:unit, :in_unit_group)
+        unit = evaluator.unit || create(:unit)
         create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
         unit_group.reload
       end
     end
-    # TODO: TEACH-1678 We can clean this unit create up once we remove those fields from the unit factory
+
     trait :with_units do
       transient do
-        units {[create(:unit, :in_unit_group), create(:unit, :in_unit_group)]}
+        units {[create(:unit), create(:unit)]}
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
@@ -795,6 +772,11 @@ FactoryBot.define do
     end
   end
 
+  factory :user_facilitator_info, class: User::FacilitatorInfo do
+    association :user, factory: :facilitator
+    bio {Faker::Lorem.paragraph(sentence_count: 5).truncate(User::FacilitatorInfo::BIO_MAX_LENGTH)}
+  end
+
   factory :authentication_option do
     association :user
     sequence(:email) {|n| "testuser#{n}@example.com.xx"}
@@ -1068,7 +1050,7 @@ FactoryBot.define do
 
     trait :with_example_solutions do
       after(:create) do |level|
-        level.examples = ['https://studio.code.org/s/csa-examples/lessons/1/levels/1/']
+        level.examples = ['https://studio.code.org/courses/csa-examples/units/1/lessons/1/levels/1/']
         level.save!
       end
     end
@@ -1169,26 +1151,7 @@ FactoryBot.define do
   factory :unit, aliases: [:script] do
     sequence(:name) {|n| "bogus-script-#{n}"}
     is_migrated {true}
-    # TODO: TEACH-1678 Delete these fields
-    published_state {"beta"}
-    instruction_type {"teacher_led"}
-    participant_audience {"student"}
-    instructor_audience {"teacher"}
-
-    # TODO: TEACH-1678 Delete this trait once we have deleted the fields in the unit factory
-    trait :in_unit_group do
-      published_state {nil}
-      instruction_type {nil}
-      participant_audience {nil}
-      instructor_audience {nil}
-    end
-
-    # TODO: TEACH-1678 Delete this trait
-    trait :is_course do
-      sequence(:version_year) {|n| "bogus-version-year-#{n}"}
-      sequence(:family_name) {|n| "bogus-family-name-#{n}"}
-      is_course {true}
-    end
+    published_state {nil}
 
     trait :in_single_unit_course do
       published_state {nil}
@@ -1259,31 +1222,6 @@ FactoryBot.define do
       end
     end
 
-    # TODO: TEACH-1678 Delete this factory
-    factory :hoc_script do
-      is_course {true}
-      sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}
-      sequence(:family_name) {|n| "bogus-hoc-family-name-#{n}"}
-      after(:create) do |hoc_script|
-        hoc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC
-        hoc_script.save!
-        course_offering = CourseOffering.add_course_offering(hoc_script)
-        course_offering.update!(marketing_initiative: 'HOC')
-      end
-    end
-    # TODO: TEACH-1678 Delete this factory
-    factory :standalone_unit do
-      after(:create) do |standalone_unit|
-        standalone_unit.is_course = true
-        standalone_unit.save!
-      end
-    end
-    # TODO: TEACH-1678 Delete this factory
-    factory :pl_unit do
-      participant_audience {"teacher"}
-      instructor_audience {"facilitator"}
-    end
-
     factory :foundations_of_cs_script do
       after(:create) do |foundations_of_cs_script|
         foundations_of_cs_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs
@@ -1338,7 +1276,7 @@ FactoryBot.define do
 
   factory :script_level do
     script do |script_level|
-      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script)
+      script_level.activity_section&.lesson&.script || script_level.lesson&.script || create(:script, :in_single_unit_course)
     end
 
     trait :assessment do
@@ -1429,7 +1367,7 @@ FactoryBot.define do
     sequence(:key) {|n| "Bogus-Lesson-#{n}"}
     has_lesson_plan {false}
     script do |lesson|
-      lesson.lesson_group&.script || create(:script)
+      lesson.lesson_group&.script || create(:script, :in_single_unit_course)
     end
 
     absolute_position do |lesson|
@@ -2319,8 +2257,7 @@ FactoryBot.define do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
-    unit_id {1}
-    level_id {1}
+    context_type {"general"}
   end
 
   factory :aidiff_message do
@@ -2329,6 +2266,30 @@ FactoryBot.define do
     role {:assistant}
     content {"Lorem ipsum"}
     is_preset {false}
+  end
+
+  factory :modular_course_context, class: Hash do
+    skip_create
+    initialize_with do
+      original_unit_group = create :unit_group, :stable
+      new_unit_group = create :unit_group, :stable
+      unit_a = create :unit, :with_levels
+      unit_b = create :unit, :with_levels
+
+      [original_unit_group, new_unit_group].each do |unit_group|
+        create :course_version, content_root: unit_group
+        [unit_a, unit_b].each_with_index do |unit, index|
+          create :unit_group_unit, unit_group: unit_group, script: unit, position: index + 1
+        end
+      end
+
+      {
+        original_unit_group: original_unit_group,
+        new_unit_group: new_unit_group,
+        unit_a: unit_a,
+        unit_b: unit_b,
+      }
+    end
   end
 
   factory :sign_in do

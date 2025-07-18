@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T23:23:48.000Z",
   "level_num": "custom",
@@ -32,10 +31,14 @@
               "y": 30,
               "deletable": false,
               "movable": false,
+              "editable": false,
               "next": {
                 "block": {
                   "type": "procedures_callnoreturn",
                   "id": "{,c4`;N)#lYgD.v^DbM`",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "name": "build"
                   },
@@ -43,6 +46,9 @@
                     "block": {
                       "type": "procedures_callnoreturn",
                       "id": "ZaHq_v[@IjJm@8](wRh/",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
                       "extraState": {
                         "name": "middle"
                       },
@@ -50,6 +56,9 @@
                         "block": {
                           "type": "procedures_callnoreturn",
                           "id": "ng4j2}37k$EhkkSJSz!1",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "name": "chorus2"
                           },
@@ -57,6 +66,9 @@
                             "block": {
                               "type": "procedures_callnoreturn",
                               "id": "5yYOh|Nc|TWrWP{pP;O#",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "name": "outro"
                               }
@@ -78,6 +90,9 @@
                 "MANUALLY_DISABLED",
                 "ORPHANED"
               ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -94,6 +109,9 @@
                 "MANUALLY_DISABLED",
                 "ORPHANED"
               ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -106,11 +124,14 @@
               "id": "KwGPL=jQDO?$@Ix(v$8o",
               "x": 910,
               "y": 90,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "g%wA=gXti|CZpX57-1,g",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "build"
@@ -120,6 +141,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "play_sounds_together",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -128,6 +152,9 @@
                         "block": {
                           "type": "repeat_simple2",
                           "id": "ml#X;L{=z)krUhu@M@*L",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -139,6 +166,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "7S`eTo`TYy:[lX=_bA8/",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -152,6 +182,9 @@
                             "block": {
                               "type": "play_sounds_sequential",
                               "id": ",?)T-44_g)M5R9So/7Zr",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -160,6 +193,9 @@
                                   "block": {
                                     "type": "play_rest_at_current_location_simple2",
                                     "id": "3o{LLrKs{dS8g#:66;B)",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -170,6 +206,9 @@
                                       "block": {
                                         "type": "procedures_callnoreturn",
                                         "id": "uHZltN!#_78(F%#wgzVq",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "name": "vocals"
                                         }
@@ -182,6 +221,9 @@
                                 "block": {
                                   "type": "repeat_simple2",
                                   "id": "repeat_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -193,6 +235,9 @@
                                       "block": {
                                         "type": "procedures_callnoreturn",
                                         "id": "K93d#9=b^c,Ujd#;.*f-",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "name": "bassleads"
                                         }
@@ -203,6 +248,9 @@
                                     "block": {
                                       "type": "play_sounds_sequential",
                                       "id": "play_sounds_sequential",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -211,6 +259,9 @@
                                           "block": {
                                             "type": "play_rest_at_current_location_simple2",
                                             "id": "play_rest_at_current_location_simple2",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
                                             "extraState": {
                                               "disableNextConnection": false
                                             },
@@ -221,6 +272,9 @@
                                               "block": {
                                                 "type": "play_rest_at_current_location_simple2",
                                                 "id": "8KY}]hA)r([Mv27=QX18",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -231,6 +285,9 @@
                                                   "block": {
                                                     "type": "repeat_simple2",
                                                     "id": "{9y4_*d#6AFUyDk,oaZ*",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -242,6 +299,9 @@
                                                         "block": {
                                                           "type": "play_sound_at_current_location_simple2",
                                                           "id": "n;}IA=6(usLz}8D@^wi5",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
                                                           "extraState": {
                                                             "disableNextConnection": false
                                                           },
@@ -262,6 +322,9 @@
                                         "block": {
                                           "type": "play_sounds_sequential",
                                           "id": "*Xze[Aowt=1,aAlTo3sL",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -270,6 +333,9 @@
                                               "block": {
                                                 "type": "play_rest_at_current_location_simple2",
                                                 "id": "1FF48Yj%jby.GHaZ}n:d",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -280,6 +346,9 @@
                                                   "block": {
                                                     "type": "play_rest_at_current_location_simple2",
                                                     "id": "^moNfGdk1!Eu!j)kLAXK",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -290,6 +359,9 @@
                                                       "block": {
                                                         "type": "play_rest_at_current_location_simple2",
                                                         "id": "z#LwLwOyN4+wD+k@$QG#",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -300,6 +372,9 @@
                                                           "block": {
                                                             "type": "repeat_simple2",
                                                             "id": "($VFdEPrAGA[K(NVM|hi",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -311,6 +386,9 @@
                                                                 "block": {
                                                                   "type": "play_sounds_together",
                                                                   "id": "pQf_ngd|0+{[L5:c8iOl",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
                                                                   "extraState": {
                                                                     "disableNextConnection": false
                                                                   },
@@ -319,6 +397,9 @@
                                                                       "block": {
                                                                         "type": "set_effect_at_current_location_simple2",
                                                                         "id": "-%@8l~uTvJ4k_(pH@nH/",
+                                                                        "deletable": false,
+                                                                        "movable": false,
+                                                                        "editable": false,
                                                                         "fields": {
                                                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                                                           "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -327,6 +408,9 @@
                                                                           "block": {
                                                                             "type": "play_sound_at_current_location_simple2",
                                                                             "id": ";!D`od0(VxG|z:#!h{Jx",
+                                                                            "deletable": false,
+                                                                            "movable": false,
+                                                                            "editable": false,
                                                                             "extraState": {
                                                                               "disableNextConnection": false
                                                                             },
@@ -337,6 +421,9 @@
                                                                               "block": {
                                                                                 "type": "play_sound_at_current_location_simple2",
                                                                                 "id": "pJ?r]LoWF|oNd9-W`}-i",
+                                                                                "deletable": false,
+                                                                                "movable": false,
+                                                                                "editable": false,
                                                                                 "extraState": {
                                                                                   "disableNextConnection": false
                                                                                 },
@@ -347,6 +434,9 @@
                                                                                   "block": {
                                                                                     "type": "play_sound_at_current_location_simple2",
                                                                                     "id": "6zA_o^r0,]k]Qj|ga42g",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
                                                                                     "extraState": {
                                                                                       "disableNextConnection": false
                                                                                     },
@@ -378,6 +468,9 @@
                                             "block": {
                                               "type": "play_sounds_sequential",
                                               "id": "jos=E30|9}b;#NDGtq88",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -386,6 +479,9 @@
                                                   "block": {
                                                     "type": "play_rest_at_current_location_simple2",
                                                     "id": "obDGz*yS88-Cs-kg(}f`",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -396,6 +492,9 @@
                                                       "block": {
                                                         "type": "play_rest_at_current_location_simple2",
                                                         "id": "N#WEE;a3K9IxOF`hw6uZ",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -406,6 +505,9 @@
                                                           "block": {
                                                             "type": "repeat_simple2",
                                                             "id": "d[Q#JOjuz,;rCCq2,`D6",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -417,6 +519,9 @@
                                                                 "block": {
                                                                   "type": "play_sound_at_current_location_simple2",
                                                                   "id": "+hRG:L^nk,Q:9I6dq.-Y",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
                                                                   "extraState": {
                                                                     "disableNextConnection": false
                                                                   },
@@ -437,6 +542,9 @@
                                                 "block": {
                                                   "type": "play_sounds_sequential",
                                                   "id": "*_C^|CxnE}[)U}`t~$5n",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -445,6 +553,9 @@
                                                       "block": {
                                                         "type": "play_rest_at_current_location_simple2",
                                                         "id": "LN0M?^t7-Aj8]M_X!0!q",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -455,6 +566,9 @@
                                                           "block": {
                                                             "type": "play_rest_at_current_location_simple2",
                                                             "id": "8`f1R{uLioln)g7)I|n.",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -465,6 +579,9 @@
                                                               "block": {
                                                                 "type": "play_rest_at_current_location_simple2",
                                                                 "id": "Yr[d$8rC)rCQT?/UP]Nw",
+                                                                "deletable": false,
+                                                                "movable": false,
+                                                                "editable": false,
                                                                 "extraState": {
                                                                   "disableNextConnection": false
                                                                 },
@@ -475,6 +592,9 @@
                                                                   "block": {
                                                                     "type": "play_rest_at_current_location_simple2",
                                                                     "id": "]aQ_OtX)iT*Z..t={FJ{",
+                                                                    "deletable": false,
+                                                                    "movable": false,
+                                                                    "editable": false,
                                                                     "extraState": {
                                                                       "disableNextConnection": false
                                                                     },
@@ -485,6 +605,9 @@
                                                                       "block": {
                                                                         "type": "repeat_simple2",
                                                                         "id": "Jhrrfb#/!YNb9{4)(-Gx",
+                                                                        "deletable": false,
+                                                                        "movable": false,
+                                                                        "editable": false,
                                                                         "extraState": {
                                                                           "disableNextConnection": false
                                                                         },
@@ -496,6 +619,9 @@
                                                                             "block": {
                                                                               "type": "play_sounds_together",
                                                                               "id": "6]Vcw0/qv]a2v7Y_`XzX",
+                                                                              "deletable": false,
+                                                                              "movable": false,
+                                                                              "editable": false,
                                                                               "extraState": {
                                                                                 "disableNextConnection": false
                                                                               },
@@ -504,6 +630,9 @@
                                                                                   "block": {
                                                                                     "type": "play_sound_at_current_location_simple2",
                                                                                     "id": "k9DnbXL)IL5tk{q8^q-R",
+                                                                                    "deletable": false,
+                                                                                    "movable": false,
+                                                                                    "editable": false,
                                                                                     "extraState": {
                                                                                       "disableNextConnection": false
                                                                                     },
@@ -514,6 +643,9 @@
                                                                                       "block": {
                                                                                         "type": "play_sound_at_current_location_simple2",
                                                                                         "id": "d2QUH@liGg@FYwnb9fUy",
+                                                                                        "deletable": false,
+                                                                                        "movable": false,
+                                                                                        "editable": false,
                                                                                         "extraState": {
                                                                                           "disableNextConnection": false
                                                                                         },
@@ -563,11 +695,14 @@
               "id": "rAc]p5$,hL4:]-jWX2Jb",
               "x": 590,
               "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": ")Aw+,gx,E:+016_;qVTp",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "middle"
@@ -577,6 +712,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "e|,231pTdaG.*c;=M`C:",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -585,6 +723,9 @@
                         "block": {
                           "type": "repeat_simple2",
                           "id": "}nI4zP7%1@h`TP`x7?qD",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -596,6 +737,9 @@
                               "block": {
                                 "type": "play_sounds_together",
                                 "id": "4@plNWVC.7T}RY9V3=4|",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -604,6 +748,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "4}wL]@c!{ANBIAH`bA~E",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -614,6 +761,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "wMVeJ8/b|lSoq#b3X_~Q",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -632,6 +782,9 @@
                             "block": {
                               "type": "repeat_simple2",
                               "id": "]?~zfCPM!k*-f^M:kRlO",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -643,6 +796,9 @@
                                   "block": {
                                     "type": "play_sounds_together",
                                     "id": "`.rL_o6pE*#-LXPF61ai",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -651,6 +807,9 @@
                                         "block": {
                                           "type": "set_effect_at_current_location_simple2",
                                           "id": "@=a*{*]flPSYN^#PSiJ!",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "fields": {
                                             "effects_name": "<field name=\"effects_name\">filter</field>",
                                             "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -659,6 +818,9 @@
                                             "block": {
                                               "type": "play_sound_at_current_location_simple2",
                                               "id": "OqOACmefsU`)b[cjLRay",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
                                               "extraState": {
                                                 "disableNextConnection": false
                                               },
@@ -669,6 +831,9 @@
                                                 "block": {
                                                   "type": "play_sound_at_current_location_simple2",
                                                   "id": ".RK!S477}B[IqX~g6mM^",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
                                                   "extraState": {
                                                     "disableNextConnection": false
                                                   },
@@ -679,6 +844,9 @@
                                                     "block": {
                                                       "type": "play_sound_at_current_location_simple2",
                                                       "id": "q=%t?tTFi;cM)+;u2wO{",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
                                                       "extraState": {
                                                         "disableNextConnection": false
                                                       },
@@ -701,6 +869,9 @@
                                 "block": {
                                   "type": "repeat_simple2",
                                   "id": "BW2OeE93j8*%!;1.Q)@c",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -712,6 +883,9 @@
                                       "block": {
                                         "type": "procedures_callnoreturn",
                                         "id": "k)XIeV._W9$[B5~U+X8W",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "name": "bassleads"
                                         }
@@ -734,11 +908,14 @@
               "id": "w]#dO{($}FAS94=$RomP",
               "x": 230,
               "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "Yu$]IP[x(lSZWI/R.!~j",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "chorus2"
@@ -748,6 +925,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "zA4P?R~hjOBMO]2YW{_2",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -756,6 +936,9 @@
                         "block": {
                           "type": "procedures_callnoreturn",
                           "id": "%yRjOXZY{32cSg]OI}V1",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "name": "vocals"
                           },
@@ -763,6 +946,9 @@
                             "block": {
                               "type": "repeat_simple2",
                               "id": "Adv!|}q!2ieJiE9.s1YS",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -774,6 +960,9 @@
                                   "block": {
                                     "type": "procedures_callnoreturn",
                                     "id": "Vyu3)07wp}[yX0b9]-:w",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "name": "bassleads"
                                     }
@@ -784,6 +973,9 @@
                                 "block": {
                                   "type": "play_sounds_sequential",
                                   "id": "}Y^n9/L3hAjiuUQAXb#B",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -792,6 +984,9 @@
                                       "block": {
                                         "type": "set_effect_at_current_location_simple2",
                                         "id": ",Rc*m=2jI/G-r8i;gjcu",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "fields": {
                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -800,6 +995,9 @@
                                           "block": {
                                             "type": "set_effect_at_current_location_simple2",
                                             "id": "cjW5W4^~6)b4_KX.,1)W",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
                                             "fields": {
                                               "effects_name": "<field name=\"effects_name\">volume</field>",
                                               "effects_value": "<field name=\"effects_value\">low</field>"
@@ -808,6 +1006,9 @@
                                               "block": {
                                                 "type": "play_sound_at_current_location_simple2",
                                                 "id": "1PS9hS{ZKnoPw8v[LS~j",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -818,6 +1019,9 @@
                                                   "block": {
                                                     "type": "play_sound_at_current_location_simple2",
                                                     "id": "v37;BTUvlVcEG*}K?[py",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -828,6 +1032,9 @@
                                                       "block": {
                                                         "type": "play_sound_at_current_location_simple2",
                                                         "id": "uVpwV;4Snge%X;OB/(?(",
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
                                                         "extraState": {
                                                           "disableNextConnection": false
                                                         },
@@ -838,6 +1045,9 @@
                                                           "block": {
                                                             "type": "play_sound_at_current_location_simple2",
                                                             "id": "j%,;JISJ%7?X5(K?{lsc",
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
                                                             "extraState": {
                                                               "disableNextConnection": false
                                                             },
@@ -873,11 +1083,14 @@
               "id": "jhU;V|C4yC`.:nZmq#DT",
               "x": 210,
               "y": 710,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "REWz7$y4^!W;f-og7DR}",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "outro"
@@ -887,6 +1100,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "mft3j/=)8.a+Q|e1qz1]",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -895,6 +1111,9 @@
                         "block": {
                           "type": "repeat_simple2",
                           "id": "ARyAE5Vc]ch-wv%p^iaJ",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -906,6 +1125,9 @@
                               "block": {
                                 "type": "set_effect_at_current_location_simple2",
                                 "id": "80,dHMslGo`Ru}y{RXE1",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "fields": {
                                   "effects_name": "<field name=\"effects_name\">filter</field>",
                                   "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -914,6 +1136,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "F+for9ropEa3ayV,Cp=d",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -929,6 +1154,9 @@
                             "block": {
                               "type": "play_sounds_sequential",
                               "id": "+@PIEE2|RZ]KJH!/(dl}",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -937,6 +1165,9 @@
                                   "block": {
                                     "type": "set_effect_at_current_location_simple2",
                                     "id": "D:5iNOoVPl7z7pYQx@mc",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "fields": {
                                       "effects_name": "<field name=\"effects_name\">volume</field>",
                                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -945,6 +1176,9 @@
                                       "block": {
                                         "type": "set_effect_at_current_location_simple2",
                                         "id": "W{.Y6rx#Lq~pyMF.A;r[",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "fields": {
                                           "effects_name": "<field name=\"effects_name\">filter</field>",
                                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -953,6 +1187,9 @@
                                           "block": {
                                             "type": "play_sound_at_current_location_simple2",
                                             "id": "Ilo/QY;,[6R~*b`p8{+Z",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
                                             "extraState": {
                                               "disableNextConnection": false
                                             },
@@ -963,6 +1200,9 @@
                                               "block": {
                                                 "type": "play_sound_at_current_location_simple2",
                                                 "id": "F-j_KyyW:b0F24cK2EIN",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
                                                 "extraState": {
                                                   "disableNextConnection": false
                                                 },
@@ -973,6 +1213,9 @@
                                                   "block": {
                                                     "type": "play_sound_at_current_location_simple2",
                                                     "id": "$U^!I6)L-aa]DqWoXQNf",
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
                                                     "extraState": {
                                                       "disableNextConnection": false
                                                     },
@@ -994,6 +1237,9 @@
                                 "block": {
                                   "type": "repeat_simple2",
                                   "id": "r{E98#8p]cij,%B,DhM?",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1005,6 +1251,9 @@
                                       "block": {
                                         "type": "procedures_callnoreturn",
                                         "id": "yQGZ8VCq}4W+L_=P2jwu",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "name": "bassleads"
                                         }
@@ -1027,11 +1276,14 @@
               "id": "W9a%7Ito-{x/CS588Y/q",
               "x": 1230,
               "y": 50,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "TTU:87YTxKv#:i(piO5N",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "bassleads"
@@ -1041,6 +1293,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "0A.L(Q3@GrY!`[9rYE/w",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": false
                     },
@@ -1049,6 +1304,9 @@
                         "block": {
                           "type": "set_effect_at_current_location_simple2",
                           "id": ";e#@JuRDIF$[=,T?Djj!",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
                           "fields": {
                             "effects_name": "<field name=\"effects_name\">volume</field>",
                             "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -1057,6 +1315,9 @@
                             "block": {
                               "type": "set_effect_at_current_location_simple2",
                               "id": "[q8P6i8a)NS?NnHwMS19",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
                               "fields": {
                                 "effects_name": "<field name=\"effects_name\">filter</field>",
                                 "effects_value": "<field name=\"effects_value\">normal</field>"
@@ -1065,6 +1326,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "lZMyHxR}`tMAD+$sk~58",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -1075,6 +1339,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "jttLuhl*jx`4hjhCFcZ/",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -1085,6 +1352,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "8G[xUe,eU^H.t,IbFf}S",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": false
                                           },
@@ -1111,11 +1381,14 @@
               "id": "hT9~eeM{k{Q1A?%/,_3(",
               "x": 1250,
               "y": 330,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
               "extraState": {
                 "procedureId": "gNGj5/wz,O+iJkh1;I=O",
-                "initialDeleteConfig": true,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": false
               },
               "fields": {
                 "NAME": "vocals"
@@ -1125,6 +1398,9 @@
                   "block": {
                     "type": "set_effect_at_current_location_simple2",
                     "id": "{(^;w.|pFTNU)J:od_(%",
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
                     "fields": {
                       "effects_name": "<field name=\"effects_name\">filter</field>",
                       "effects_value": "<field name=\"effects_value\">low</field>"
@@ -1133,6 +1409,9 @@
                       "block": {
                         "type": "set_effect_at_current_location_simple2",
                         "id": "FV}_[.PQ`#K^8P$TzE5J",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "fields": {
                           "effects_name": "<field name=\"effects_name\">volume</field>",
                           "effects_value": "<field name=\"effects_value\">low</field>"
@@ -1141,6 +1420,9 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "%_iBV;te0_p8o_3a3KYn",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -1151,6 +1433,9 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": ")R59]2^R/qfLS!^9sdWk",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -1161,6 +1446,9 @@
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "1G#Ht3:e)xc~g?3R}-72",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": false
                                     },
@@ -1171,6 +1459,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "916y5Ix%Bb%]L~8Ub,#q",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
                                         "extraState": {
                                           "disableNextConnection": false
                                         },
@@ -1237,7 +1528,8 @@
     "thumbnail_url": "\thttps://curriculum.code.org/media/musiclab/library-launch2024/packs/twinkle_twinkle/twinkle_twinkle.png",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-06-03T23:23:48.483+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-2\\\"\"],\"cloned_from\":\"music-lab-genre-example-2\"},{\"changed_at\":\"2025-06-03 23:24:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 23:25:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:18:24 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:21:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:15:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:20:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:29:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:31:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-03T23:23:48.483+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-2\\\"\"],\"cloned_from\":\"music-lab-genre-example-2\"},{\"changed_at\":\"2025-06-03 23:24:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 23:25:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:18:24 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:21:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:15:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-28 00:20:50 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:29:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:31:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:38:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

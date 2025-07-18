@@ -1,0 +1,96 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-03T23:34:56.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout",
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Flip the Foundation\r\n\r\n**The Scenario:**\r\n\r\nYou're given the original tracks from a song - but instead of using the beat as the track's foundation and the vocals as the melody, you'll flip the roles. Try making the vocals or bass act like the rhythmic base, and turn the beat into something that decorates or accents.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n**Do This:**\r\n\r\n- Create at least three functions: one for the foundational beat, one for the bass and leads, one for the vocals and effects.\r\n- Then mix different track types to create your song. For example, use vocals where you'd normally use beats, and use bass where you'd normally change up the vocals.\r\n- Use loops or volume to emphasize the new song.\r\n\r\n**Musical Suggestions:**\r\n\r\n- \"Angel\" - Halle (smooth vocals that can loop rhythmically)\r\n- \"Feather\" - Sabrina Carpenter (bass and vocals blend well as a base)\r\n- \"Do It\" - Chloe x Halle (great for experimenting with structural roles)\r\n\r\n**To pass this level, your remix must include at least 3 functions and use a non-beat track (like vocals or bass) as the main rhythmic foundation.**",
+    "display_name": "Flip the Foundation",
+    "bubble_choice_description": "You're given the original tracks from a song - but instead of using the beat as the track's foundation and the vocals as the melody, you'll flip the roles.",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-functions-synthesize-create-a_v2_cb2d62a7-d376-4338-b570-db9d053e937f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-synthesize-create-a_v2_2d0f3728-b482-4224-814a-2c9b5dac62ca",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to make sure you call 3 different functions...",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "thumbnail_url": "https://images.code.org/9847a819d2a1b5d8b8754ffdf47a9a1b-purple.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-03T23:34:56.377+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a_v2\"},{\"changed_at\":\"2025-07-03 23:42:59 +0000\",\"changed\":[\"level_data\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"predict_settings\",\"validations\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-11 20:37:20 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
