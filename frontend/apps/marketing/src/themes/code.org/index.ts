@@ -79,27 +79,27 @@ const theme = createTheme({
     },
     MuiTypography: {
       styleOverrides: {
-        root: ({theme}) => ({
+        root: {
           color: 'var(--text-neutral-primary)',
-          gutterBottom: {
-            '&.MuiTypography-h1': {
-              marginBottom: theme.spacing(3), // 24px
-            },
-            '&.MuiTypography-h2': {
-              marginBottom: theme.spacing(2.125), // 16px
-            },
-            '&.MuiTypography-h3': {
-              marginBottom: theme.spacing(1.75), // 14px
-            },
-            '&.MuiTypography-h4': {
-              marginBottom: theme.spacing(0.75), // 12px
-            },
-            '&.MuiTypography-h5': {
-              marginBottom: theme.spacing(0.625), // 10px
-            },
-            '&.MuiTypography-h6': {
-              marginBottom: theme.spacing(0.5), // 8px
-            },
+        },
+        gutterBottom: ({theme}) => ({
+          '&.MuiTypography-h1': {
+            marginBottom: theme.spacing(3), // 24px
+          },
+          '&.MuiTypography-h2': {
+            marginBottom: theme.spacing(2.125), // 16px
+          },
+          '&.MuiTypography-h3': {
+            marginBottom: theme.spacing(1.75), // 14px
+          },
+          '&.MuiTypography-h4': {
+            marginBottom: theme.spacing(1.5), // 12px
+          },
+          '&.MuiTypography-h5': {
+            marginBottom: theme.spacing(1.125), // 10px
+          },
+          '&.MuiTypography-h6': {
+            marginBottom: theme.spacing(1), // 8px
           },
         }),
       },
