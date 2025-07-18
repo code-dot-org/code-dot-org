@@ -2,6 +2,7 @@ class AidiffThreadsController < ApplicationController
   include AiDiffBedrockHelper
   include LevelsHelper
 
+  before_action :authenticate_user!
   load_and_authorize_resource
 
   # POST /aidiff_threads
