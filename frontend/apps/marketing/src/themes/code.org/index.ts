@@ -27,10 +27,10 @@ const theme = createTheme({
       styleOverrides: {
         root: ({theme}) => ({
           ['&.MuiDivider-root.divider--color-primary']: {
-            backgroundColor: 'var(--background-neutral-quaternary)',
+            borderColor: 'var(--background-neutral-quaternary)',
           },
           ['&.MuiDivider-root.divider--color-strong']: {
-            backgroundColor: 'var(--background-neutral-senary)',
+            borderColor: 'var(--background-neutral-senary)',
           },
           ['&.MuiDivider-root.divider--margin-none']: {
             marginTop: 0,
