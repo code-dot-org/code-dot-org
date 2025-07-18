@@ -11,8 +11,8 @@ import AFEEligibility, {
   AFEEligibilityContentfulComponentDefinition,
 } from '@/components/contentful/afeEligibility';
 import Button, {
-  ButtonContentfulComponentDefinition,
-} from '@/components/contentful/button';
+  ButtonCDOContentfulComponentDefinition,
+} from '@/components/contentful/buttonCDO';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -124,7 +124,7 @@ const contentfulRegistration = {
       component: AFEEligibility,
       definition: AFEEligibilityContentfulComponentDefinition,
     },
-    {component: Button, definition: ButtonContentfulComponentDefinition},
+    {component: Button, definition: ButtonCDOContentfulComponentDefinition},
     {
       component: ActionBlockCollection,
       definition: ActionBlockCollectionContentfulComponentDefinition,

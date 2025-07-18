@@ -1,3 +1,3 @@
 // Export the Component Definition for use in Contentful Studio
-export {ButtonCSforAllContentfulComponentDefinition} from './ButtonCSforAllContentfulDefinition';
+export {ButtonCDOContentfulComponentDefinition} from './ButtonCDOContentfulDefinition';
 export {default} from './Button';
