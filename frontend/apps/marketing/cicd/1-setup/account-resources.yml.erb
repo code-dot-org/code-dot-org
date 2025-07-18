@@ -325,6 +325,11 @@ Resources:
                 Resource:
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
                   - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets'
+              - Sid: AllowEC2DescribeAvailabilityZones
+                Effect: Allow
+                Action:
+                  - ec2:DescribeAvailabilityZones
+                Resource: '*'
 <%  end %>
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
