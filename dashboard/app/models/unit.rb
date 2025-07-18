@@ -46,6 +46,7 @@ class Unit < ApplicationRecord
   include Curriculum::SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
+  # TODO: TEACH-1949 remove AssignableCourse because Units are no longer courses.
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
   include Unit::TextToSpeech
