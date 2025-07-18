@@ -245,6 +245,7 @@ class User < ApplicationRecord
   ## Association Macros
 
   belongs_to :invited_by, polymorphic: true, optional: true
+  belongs_to :organization, optional: true
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
   belongs_to :school_info, optional: true
   belongs_to :secret_picture, optional: true

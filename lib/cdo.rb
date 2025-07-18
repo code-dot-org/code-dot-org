@@ -31,6 +31,8 @@ module Cdo
       'https://preview-code.marketing-sites.code.org',
     ].freeze
 
+    DEFAULT_SESSION_LENGTH = 40.days
+
     def initialize
       super
       root = File.expand_path('..', __dir__)
@@ -71,6 +73,10 @@ module Cdo
 
     def cache
       CDO_CACHE
+    end
+
+    def default_session_length
+      DEFAULT_SESSION_LENGTH
     end
 
     def i18n_backend
