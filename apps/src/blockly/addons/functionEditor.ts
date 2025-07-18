@@ -17,6 +17,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
 
 import {BLOCK_TYPES} from '../constants';
+import CdoTheme from '../themes/cdoTheme';
 import {
   EditorWorkspaceSvg,
   ExtendedBlocklyOptions,
@@ -89,7 +90,7 @@ export default class FunctionEditor {
       readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
-      theme: options.theme,
+      theme: options.theme || CdoTheme,
       toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
