@@ -32,7 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-ec2 (~> 1.0)
-  nokogiri
+  nokogiri (~> 1.15)
 
 RUBY VERSION
    ruby 3.1.0p0
