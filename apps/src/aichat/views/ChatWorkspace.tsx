@@ -5,16 +5,23 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import usePrevious from '@cdo/apps/util/usePrevious';
 
+import {
+  modelDescriptions,
+  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
+} from '../constants';
 import aichatI18n from '../locale';
 import {
+  addChatEvent,
   clearChatMessages,
   clearStagedFiles,
   fetchUserChatHistory,
-  getSelectMultimodalAvailable,
   selectAllVisibleMessages,
+  setNewChatSession,
 } from '../redux';
-import {ChatAsset, ChatButton} from '../types';
+import {findChangedProperties, getNewRemoveId} from '../redux/utils';
+import {ChatAsset, ChatButton, ModelParameters} from '../types';
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -26,6 +33,7 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  modelParameters: ModelParameters;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
   onClear: () => void;
@@ -50,6 +58,7 @@ const eraserIcon: FontAwesomeV6IconProps = {
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  modelParameters,
   chatButtons,
   hiddenContext,
   onClear,
@@ -68,7 +77,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {studentChatHistory} = useAppSelector(state => state.aichat);
+  const studentChatHistory = useAppSelector(
+    state => state.aichat.studentChatHistory
+  );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
@@ -82,10 +93,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   });
 
+  const multimodalSupported = useMemo(() => {
+    return modelDescriptions.find(
+      model => model.id === modelParameters.selectedModelId
+    )?.multimodal;
+  }, [modelParameters.selectedModelId]);
+
   const multimodalAvailable =
-    useAppSelector(getSelectMultimodalAvailable(multimodalEnabled)) &&
-    !!levelName &&
-    !!channelId;
+    multimodalSupported && multimodalEnabled && !!levelName && !!channelId;
 
   const buildAssetUrl = useCallback(
     (asset: ChatAsset) => {
@@ -131,6 +146,34 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       setSelectedTab(null);
     }
   }, [selectedStudent, selectedTab]);
+
+  // Whenever model parameters change, 1) reset the chat session if necessary,
+  // and 2) log the changed properties to the chat history.
+  const previousParameters: ModelParameters = usePrevious(modelParameters);
+  useEffect(() => {
+    const changedProperties = findChangedProperties(
+      previousParameters,
+      modelParameters
+    );
+    if (
+      changedProperties.some(property =>
+        RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
+      )
+    ) {
+      dispatch(setNewChatSession());
+    }
+
+    changedProperties.forEach(property => {
+      dispatch(
+        addChatEvent({
+          removeId: getNewRemoveId(),
+          updatedField: property,
+          updatedValue: modelParameters[property],
+          timestamp: Date.now(),
+        })
+      );
+    });
+  }, [dispatch, previousParameters, modelParameters]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -205,6 +248,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         )}
         {canChatWithModel && (
           <UserChatMessageEditor
+            modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}
             hiddenContext={hiddenContext}

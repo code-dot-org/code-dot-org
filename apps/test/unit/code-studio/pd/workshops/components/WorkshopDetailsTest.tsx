@@ -7,7 +7,7 @@ import WorkshopDetails from '@cdo/apps/code-studio/pd/workshops/components/Works
 
 const baseProps = {
   name: 'Cybersecurity Basics Workshop',
-  grade_levels: ['K', '1', '2'],
+  gradeLevels: ['K', '1', '2'],
   sessions: [
     {
       id: 1,
@@ -24,7 +24,7 @@ const baseProps = {
   prereq: 'Some workshop A, Some workshop B',
   description: 'Workshop description goes here.',
   notes: 'Bring your device. Stay hydrated!',
-  course_offerings: ['AI and Machine Learning', 'Apps with Devices'],
+  courseOfferings: ['AI and Machine Learning', 'Apps with Devices'],
   facilitators: [
     {
       name: 'Facilitator A',
@@ -76,7 +76,7 @@ describe('WorkshopDetails', () => {
 
   it('renders course offering tags if provided', () => {
     render(<WorkshopDetails {...baseProps} />);
-    baseProps.course_offerings.forEach(course =>
+    baseProps.courseOfferings.forEach(course =>
       expect(screen.getByText(course)).toBeInTheDocument()
     );
   });
@@ -111,7 +111,7 @@ describe('WorkshopDetails', () => {
   });
 
   it('does not render course tags section if list is empty', () => {
-    render(<WorkshopDetails {...baseProps} course_offerings={[]} />);
+    render(<WorkshopDetails {...baseProps} courseOfferings={[]} />);
     expect(screen.queryByText(/PL Topics Covered/i)).not.toBeInTheDocument();
   });
 });

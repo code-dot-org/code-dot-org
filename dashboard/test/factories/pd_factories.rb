@@ -68,11 +68,6 @@ FactoryBot.define do
     end
   end
 
-  factory :pd_payment_term, class: 'Pd::PaymentTerm' do
-    start_date {Time.zone.today}
-    fixed_payment {50}
-  end
-
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
@@ -235,13 +230,6 @@ FactoryBot.define do
           scholarship_params
       end
     end
-  end
-
-  factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
-    association :school_district
-    course {Pd::Workshop::COURSES.first}
-    rate_type {Pd::DistrictPaymentTerm::RATE_TYPES.first}
-    rate {10}
   end
 
   factory :pd_course_facilitator, class: 'Pd::CourseFacilitator' do

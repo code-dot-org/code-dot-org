@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_07_09_141326) do
+ActiveRecord::Schema.define(version: 2025_07_16_223213) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -142,6 +142,9 @@ ActiveRecord::Schema.define(version: 2025_07_09_141326) do
     t.boolean "is_preset", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "preset_chip_text"
+    t.text "raw_content"
+    t.json "source_links"
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
@@ -151,9 +154,13 @@ ActiveRecord::Schema.define(version: 2025_07_09_141326) do
     t.text "llm_version", null: false
     t.text "title"
     t.integer "unit_id"
-    t.integer "level_id"
+    t.integer "lesson_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "session_created"
+    t.integer "course_id"
+    t.integer "level_id"
+    t.string "context_type"
     t.index ["user_id"], name: "index_aidiff_threads_on_user_id"
   end
 
