@@ -410,6 +410,13 @@ export async function getUserTheme(
     return Blockly.themes.jigsaw;
   }
 
+  // If a workspace was created without a theme, Blockly will default to 'classic',
+  // which we do not support. Use the default modern theme instead.
+  const supportedThemes = Object.keys(Blockly.themes);
+  if (!supportedThemes.includes(currentTheme?.name || '')) {
+    currentTheme = getDefaultTheme();
+  }
+
   const userPrefs = new UserPreferences();
   const userPreferencesTheme = await userPrefs.getBlocklyTheme(() => {});
   const baseThemeName =

@@ -382,10 +382,7 @@ export function setThemeAndRenderBlocks(
     // Re-render blocks if the font size changed.
     // Once https://github.com/google/blockly/issues/7782 is resolved,
     // we should be able to remove this.
-    if (
-      !previousTheme.fontStyle?.size ||
-      theme.fontStyle?.size !== previousTheme.fontStyle?.size
-    ) {
+    if (theme.fontStyle?.size !== previousTheme.fontStyle?.size) {
       renderedWorkspace.getAllBlocks().map(block => {
         block.markDirty();
         block.render();

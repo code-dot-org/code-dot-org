@@ -742,7 +742,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   ) {
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
-      theme: options.theme || blocklyWrapper.cdoUtils.getDefaultTheme(),
+      theme: options.theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
@@ -813,8 +813,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme:
-        optOptionsExtended.theme || blocklyWrapper.cdoUtils.getDefaultTheme(),
+      theme: optOptionsExtended.theme,
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
