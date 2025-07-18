@@ -92,7 +92,7 @@ const theme = createTheme({
       lineHeight: 1,
     },
     h3: {
-      fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '6.75rem', // 108px
       fontWeight: 800,
       lineHeight: 1,
