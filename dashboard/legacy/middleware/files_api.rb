@@ -1055,9 +1055,11 @@ class FilesApi < Sinatra::Base
   # Moderate a custom image upload via ImageModeration and return a JSON rating.
   # Possible ratings: [:everyone|:racy|:adult|:unknown]
   #
-  post %r{/v3/images/([^/]+)/moderate$} do
+  post %r{/v3/images/([^/]+)/moderate$} do |encrypted_channel_id|
     content_type :json
     dont_cache
+
+    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # Read the raw bytes and wrap in an IO.
     raw = request.body.read
