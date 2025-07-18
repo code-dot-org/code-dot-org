@@ -2,7 +2,6 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import {useSelector} from 'react-redux';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
@@ -21,7 +20,7 @@ import {
   setNewChatSession,
 } from '../redux';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
-import {ChatAsset, ChatButton, ModelParameters} from '../types';
+import {ChatAsset, ChatButton, isModelUpdate, ModelParameters} from '../types';
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -33,10 +32,16 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
+  /** Model parameters passed to the LLM chat endpoint. Required. */
   modelParameters: ModelParameters;
+  /** Optional prompt buttons. */
   chatButtons?: ChatButton[];
+  /** Optional hidden context provided to the LLM chat endpoint. Not shown to users. */
   hiddenContext?: string;
+  /** Callback to clear chat messages. */
   onClear: () => void;
+  /** If model parameter update notifications should be shown in the chat window. */
+  showUpdates?: boolean;
 
   // Multimodal support
   multimodalEnabled?: boolean;
@@ -62,6 +67,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   chatButtons,
   hiddenContext,
   onClear,
+  showUpdates = false,
   multimodalEnabled = false,
   levelName,
   channelId,
@@ -77,11 +83,19 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const studentChatHistory = useAppSelector(
-    state => state.aichat.studentChatHistory
-  );
+  const studentChatHistory = useAppSelector(state => {
+    const allHistory = state.aichat.studentChatHistory;
+    return showUpdates
+      ? allHistory
+      : allHistory.filter(message => !isModelUpdate(message));
+  });
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
-  const visibleItems = useSelector(selectAllVisibleMessages);
+  const visibleItems = useAppSelector(state => {
+    const allMessages = selectAllVisibleMessages(state);
+    return showUpdates
+      ? allMessages
+      : allMessages.filter(message => !isModelUpdate(message));
+  });
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
@@ -148,7 +162,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [selectedStudent, selectedTab]);
 
   // Whenever model parameters change, 1) reset the chat session if necessary,
-  // and 2) log the changed properties to the chat history.
+  // and 2) log the changed properties to the chat history if updates are enabled.
   const previousParameters: ModelParameters = usePrevious(modelParameters);
   useEffect(() => {
     const changedProperties = findChangedProperties(
@@ -163,17 +177,19 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       dispatch(setNewChatSession());
     }
 
-    changedProperties.forEach(property => {
-      dispatch(
-        addChatEvent({
-          removeId: getNewRemoveId(),
-          updatedField: property,
-          updatedValue: modelParameters[property],
-          timestamp: Date.now(),
-        })
-      );
-    });
-  }, [dispatch, previousParameters, modelParameters]);
+    if (showUpdates) {
+      changedProperties.forEach(property => {
+        dispatch(
+          addChatEvent({
+            removeId: getNewRemoveId(),
+            updatedField: property,
+            updatedValue: modelParameters[property],
+            timestamp: Date.now(),
+          })
+        );
+      });
+    }
+  }, [dispatch, previousParameters, showUpdates, modelParameters]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',

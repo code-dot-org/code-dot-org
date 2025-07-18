@@ -387,6 +387,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                   starterAssets && Object.keys(starterAssets).length > 0
                 }
                 multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                showUpdates={!allFieldsHidden}
               />
             </PanelContainer>
           </div>
