@@ -1,22 +1,11 @@
 <%
 # Get region configuration and selected AZs
-region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
+region_config = MarketingSites::Configuration.regions[options[:region].to_sym]
 selected_azs = region_config[:selected_availability_zones]
 
-# Build subnet configurations for selected AZs
-public_subnets = selected_azs.map.with_index do |az, index|
-  {
-    availability_zone: az,
-    cidr_block: MarketingSites::Configuration::PUBLIC_SUBNET_CIDRS[index]
-  }
-end
-
-private_subnets = selected_azs.map.with_index do |az, index|
-  {
-    availability_zone: az,
-    cidr_block: MarketingSites::Configuration::PRIVATE_SUBNET_CIDRS[index]
-  }
-end
+# Get subnet configurations directly from the module
+public_subnets = region_config[:vpc][:public_subnets]
+private_subnets = region_config[:vpc][:private_subnets]
 %>
 AWSTemplateFormatVersion: 2010-09-09
 
