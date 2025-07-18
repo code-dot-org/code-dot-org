@@ -9,6 +9,8 @@ import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
   setUnit,
+  getSelectedCourseId,
+  getSelectedUnitPosition,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -34,6 +36,8 @@ import StandardsReportHeader from './StandardsReportHeader';
 
 function StandardsReport({
   scriptId,
+  courseId,
+  unitPosition,
   sectionId,
   scriptFriendlyName,
   scriptData,
@@ -57,14 +61,30 @@ function StandardsReport({
         window.opener.teacherDashboardStoreInformation.scriptId;
       const courseVersionIdFromTD =
         window.opener.teacherDashboardStoreInformation.courseVersionId;
+      const courseIdFromTD =
+        window.opener.teacherDashboardStoreInformation.courseId;
+      const unitPositionFromTD =
+        window.opener.teacherDashboardStoreInformation.unitPosition;
       setUnit(scriptIdFromTD, courseVersionIdFromTD);
-      loadUnitProgress(scriptIdFromTD, sectionId);
+      loadUnitProgress(
+        scriptIdFromTD,
+        sectionId,
+        courseIdFromTD,
+        unitPositionFromTD
+      );
     } catch (e) {
       throw new Error(
         '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
       );
     }
-  }, [sectionId, setTeacherCommentForReport, setUnit, numStudentsInSection]);
+  }, [
+    sectionId,
+    setTeacherCommentForReport,
+    setUnit,
+    numStudentsInSection,
+    courseId,
+    unitPosition,
+  ]);
 
   const getLinkToOverview = () => {
     return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
@@ -179,6 +199,8 @@ function StandardsReport({
 StandardsReport.propTypes = {
   //redux
   scriptId: PropTypes.number,
+  courseId: PropTypes.number,
+  unitPosition: PropTypes.number,
   sectionId: PropTypes.number.isRequired,
   scriptFriendlyName: PropTypes.string.isRequired,
   scriptData: unitDataPropType,
@@ -224,6 +246,8 @@ const styles = {
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     sectionId: state.teacherSections.selectedSectionId,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),

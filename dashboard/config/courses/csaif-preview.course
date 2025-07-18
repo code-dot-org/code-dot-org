@@ -22,7 +22,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csaif-preview",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

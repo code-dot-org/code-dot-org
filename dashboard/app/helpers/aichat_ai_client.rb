@@ -6,7 +6,7 @@ class AichatAiClient
   def self.create_instance(model_id)
     # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
     if model_id == "gpt-4o-mini"
-      return AichatOpenaiCompletionsClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION)
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION)
     else
       return AichatGeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id)
     end
