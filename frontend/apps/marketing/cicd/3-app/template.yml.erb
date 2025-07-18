@@ -754,6 +754,6 @@ Resources:
 Outputs:
   SiteDomainName:
     Description: Fully qualified domain name of the marketing site
-    Value: !GetAtt CloudFrontDistribution.DomainName
+    Value: !Sub "${SubdomainName}.${BaseDomainName}"
     Export:
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
