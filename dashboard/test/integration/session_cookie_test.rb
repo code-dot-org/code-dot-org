@@ -23,16 +23,23 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
   test 'session cookie not set in publicly cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
-    get '/hoc/1'
+    unit = create :unit, :with_levels, name: 'music-jam-2024'
+    create :single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable'
+    assert_includes HttpCache.cached_scripts, unit.name
+    get '/courses/music-jam-2024/units/1/lessons/1/levels/1'
+    assert_response :success
     assert_nil cookies['_learn_session_test']
   end
 
   test 'session cookie is set in on non-cached level page' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
-    create_hourofcode_unit_and_levels
-    get '/hoc/1',
+    unit = create :unit, :with_levels, name: 'music-jam-2024'
+    create :single_unit_course, unit: unit, name: 'music-jam-2024', published_state: 'stable'
+    assert_includes HttpCache.cached_scripts, unit.name
+    get '/courses/music-jam-2024/units/1/lessons/1/levels/1',
       headers: {'Cache-Control' => 'no-cache'},
       env: {'rack-cache.allow_reload' => true}
+    assert_response :success
     refute_nil cookies['_learn_session_test']
   end
 end
