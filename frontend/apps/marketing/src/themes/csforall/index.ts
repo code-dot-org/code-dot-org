@@ -71,9 +71,6 @@ const theme = createTheme({
       styleOverrides: {
         root: ({theme}) => ({
           color: theme.palette.text.primary,
-          ['&.MuiTypography-h1.heading--color-white']: {
-            color: theme.palette.common.white,
-          },
         }),
       },
     },

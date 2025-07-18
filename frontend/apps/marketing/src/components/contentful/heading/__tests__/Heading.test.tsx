@@ -58,7 +58,6 @@ describe('Heading Component', () => {
       </Heading>,
     );
     const heading = screen.getByText('White Heading');
-    expect(heading).toHaveClass('heading--color-white');
     expect(heading).toHaveStyle('color: white');
   });
 

@@ -1,5 +1,4 @@
 import Typography from '@mui/material/Typography';
-import classNames from 'classnames';
 import {ReactNode} from 'react';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
@@ -50,11 +49,8 @@ const Heading: React.FunctionComponent<HeadingProps> = ({
   className,
 }) => (
   <Typography
+    className={className}
     color={color}
-    className={classNames(
-      color === 'white' && `heading--color-${color}`,
-      className,
-    )}
     component={visualAppearanceToSemanticTagMap[visualAppearance]}
     variant={visualAppearanceToSemanticTagMap[visualAppearance]}
     gutterBottom={!removeMarginBottom}

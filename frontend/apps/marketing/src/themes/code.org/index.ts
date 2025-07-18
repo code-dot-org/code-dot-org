@@ -79,9 +79,6 @@ const theme = createTheme({
       styleOverrides: {
         root: ({theme}) => ({
           color: 'var(--text-neutral-primary)',
-          ['&.MuiTypography-h1.heading--color-white']: {
-            color: theme.palette.common.white,
-          },
           gutterBottom: {
             '&.MuiTypography-h1': {
               marginBottom: theme.spacing(3), // 24px
