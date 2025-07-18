@@ -18,6 +18,7 @@ import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
 import {getMuiTheme} from '@/themes';
+import {CookieConsentProvider} from '@/providers/CookieConsentProvider';
 
 export default async function Layout({
   children,
@@ -42,31 +43,32 @@ export default async function Layout({
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <EnvironmentLoader />
-            <NewRelicLoader />
-            <OneTrustLoader brand={brand} />
-            <LocalizeLoader
-              brand={brand}
-              locale={locale}
-              isDraftMode={isDraftModeEnabled}
-            />
+            <CookieConsentProvider brand={brand}>
+              <NewRelicLoader />
+              <LocalizeLoader
+                brand={brand}
+                locale={locale}
+                isDraftMode={isDraftModeEnabled}
+              />
 
-            <OneTrustProvider>
-              {googleAnalyticsMeasurementId && (
-                <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
-              )}
-              <StatsigProvider
-                stage={getStage()}
-                clientKey={statsigClientKey}
-                values={statsigBootstrapValues}
-              >
-                <Header />
-                {children}
+              <OneTrustProvider>
+                {googleAnalyticsMeasurementId && (
+                  <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
+                )}
+                <StatsigProvider
+                  stage={getStage()}
+                  clientKey={statsigClientKey}
+                  values={statsigBootstrapValues}
+                >
+                  <Header />
+                  {children}
 
-                <Footer locale={locale} />
-              </StatsigProvider>
-            </OneTrustProvider>
+                  <Footer locale={locale} />
+                </StatsigProvider>
+              </OneTrustProvider>
 
-            <OrganizationJsonLd brand={brand} />
+              <OrganizationJsonLd brand={brand} />
+            </CookieConsentProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
