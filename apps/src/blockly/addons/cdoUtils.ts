@@ -421,7 +421,7 @@ export async function getUserTheme(
 
   if (!baseThemeName) {
     // The user has not indicated a preference, so we use the lab theme or a safe default.
-    return currentTheme || (Blockly.isDarkTheme ? cdoDark : cdoTheme);
+    return currentTheme || getDefaultTheme();
   }
 
   // The base theme name is the name of the theme, always without the 'dark' suffix.
@@ -429,9 +429,12 @@ export async function getUserTheme(
   const fullThemeName =
     baseThemeName + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
   const userTheme = Blockly.themes[fullThemeName as Themes];
-  return (
-    userTheme || currentTheme || (Blockly.isDarkTheme ? cdoDark : cdoTheme)
-  );
+  return userTheme || currentTheme || getDefaultTheme();
+}
+
+// Returns the default theme based on Blockly.isDarkTheme.
+export function getDefaultTheme() {
+  return Blockly.isDarkTheme ? cdoDark : cdoTheme;
 }
 
 /**
