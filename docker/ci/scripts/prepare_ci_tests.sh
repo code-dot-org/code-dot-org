@@ -78,4 +78,6 @@ set -x
 bundle exec rake install
 bundle exec rake build
 
-bundle exec rake ci:seed_ui_test
+# We only need a seeded database for UI tests, but it's simpler to do it here
+# anyway than it is to maintain two separate build artifact caching pipelines.
+bundle exec rake ci:seed_ui_test CI_JOB=ui_tests
