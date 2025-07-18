@@ -1,6 +1,6 @@
 <%
 # Get region configuration and selected AZs from the new configuration structure
-region_config = MarketingSites::Configuration::REGIONS[options[:region].to_sym]
+region_config = MarketingSites::Configuration::regions[options[:region].to_sym]
 selected_azs = region_config[:selected_availability_zones]
 %>
 AWSTemplateFormatVersion: 2010-09-09
