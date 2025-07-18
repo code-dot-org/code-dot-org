@@ -1,12 +1,15 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
-import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
+import {ApiContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClients,
+  AiInteractionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
   let userChatMessage: CompletedChatMessage;
-  let aichatContext: AichatContext;
+  let apiContext: ApiContext;
   let chatEventLogger: ChatEventLogger;
   let postLogChatEventSpy: jest.SpyInstance;
 
@@ -18,12 +21,13 @@ describe('ChatEventLogger', () => {
       status: AiInteractionStatus.OK,
       timestamp: Date.now(),
     };
-    aichatContext = {
+    apiContext = {
+      client: AiChatClients.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
     };
-    chatEventLogger = new ChatEventLogger();
+    chatEventLogger = new ChatEventLogger(apiContext);
   });
 
   afterEach(() => {
@@ -35,7 +39,7 @@ describe('ChatEventLogger', () => {
       .spyOn(aichatApi, 'postLogChatEvent')
       .mockResolvedValue(userChatMessage);
 
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
+    chatEventLogger.logChatEvent(userChatMessage);
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
   });
 
@@ -50,8 +54,8 @@ describe('ChatEventLogger', () => {
         });
       });
 
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
-    chatEventLogger.logChatEvent(userChatMessage, aichatContext);
+    chatEventLogger.logChatEvent(userChatMessage);
+    chatEventLogger.logChatEvent(userChatMessage);
     // Because the first postLogChatEvent call is not yet resolved, the second logChatEvent
     // does not call on sendChatEvent.
     expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);

@@ -1,5 +1,5 @@
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
-import {PendingChatMessage, AichatContext} from '@cdo/apps/aichat/types';
+import {PendingChatMessage, ApiContext} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
@@ -7,6 +7,7 @@ import {
   logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 import {
+  AiChatClients,
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -51,7 +52,8 @@ export default class AiTutor2Manager {
       timestamp: Date.now(),
     };
 
-    const aichatContext: AichatContext = {
+    const apiContext: ApiContext = {
+      client: AiChatClients.AI_TUTOR,
       currentLevelId: this.currentLevelId
         ? parseInt(this.currentLevelId)
         : null,
@@ -69,7 +71,7 @@ export default class AiTutor2Manager {
       newUserMessage,
       [],
       aiCustomizations,
-      aichatContext
+      apiContext
     );
 
     const feedbackData: FeedbackData = {

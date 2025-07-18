@@ -1,8 +1,9 @@
 import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
-import {PendingChatMessage, AichatContext} from '@cdo/apps/aichat/types';
+import {PendingChatMessage, ApiContext} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
+  AiChatClients,
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -16,7 +17,8 @@ export default async function askAi(message: string) {
     timestamp: Date.now(),
   };
 
-  const aichatContext: AichatContext = {
+  const apiContext: ApiContext = {
+    client: AiChatClients.FLOW_LAB,
     currentLevelId: null, // this.currentLevelId ? parseInt(this.currentLevelId) : null,
     scriptId: null, // this.scriptId || null,
     channelId: undefined, // this.channelId,
@@ -32,7 +34,7 @@ export default async function askAi(message: string) {
     newUserMessage,
     [],
     aiCustomizations,
-    aichatContext
+    apiContext
   );
 
   return messages;

@@ -10,7 +10,7 @@ import {ValueOf} from '../types/utils';
 import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
-  AichatContext,
+  ApiContext,
   ModelParameters,
   ChatEvent,
   DetectToxicityResponse,
@@ -73,7 +73,7 @@ export async function postSubmitTeacherFeedback(
  */
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
-  aichatContext: AichatContext
+  aichatContext: ApiContext
 ): Promise<ChatEvent> {
   const payload = {
     newChatEvent,
@@ -157,7 +157,7 @@ export async function postAichatCompletionMessage(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
   modelParameters: ModelParameters,
-  aichatContext: AichatContext,
+  aichatContext: ApiContext,
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
   const payload = {
