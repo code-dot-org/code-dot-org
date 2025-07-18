@@ -103,7 +103,7 @@ Resources:
     Type: AWS::CloudFront::OriginAccessControl
     Properties:
       OriginAccessControlConfig:
-        Name: !Sub "CLoudfront-OAC-${SubdomainName}.${BaseDomainName}"
+        Name: !Sub "CloudFront-OAC-${SubdomainName}.${BaseDomainName}"
         SigningBehavior: always
         SigningProtocol: sigv4
         OriginAccessControlOriginType: s3
@@ -755,5 +755,3 @@ Outputs:
   SiteDomainName:
     Description: Fully qualified domain name of the marketing site
     Value: !Sub "${SubdomainName}.${BaseDomainName}"
-    Export:
-      Name: !Sub "${SubdomainName}.${BaseDomainName}"
