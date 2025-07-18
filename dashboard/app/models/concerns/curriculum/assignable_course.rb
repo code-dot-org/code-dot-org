@@ -4,9 +4,8 @@
 module Curriculum::AssignableCourse
   extend ActiveSupport::Concern
 
-  def course_assignable?(user)
-    # TODO TEACH-1548
-    return false unless get_course_version&.course_offering&.assignable?
+  def course_assignable?(user, course_version = get_course_version)
+    return false unless course_version&.course_offering&.assignable?
     return false unless can_be_instructor?(user)
     return true if launched?
     return true if pilot? && has_pilot_experiment?(user)

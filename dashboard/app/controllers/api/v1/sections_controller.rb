@@ -319,7 +319,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         course_id = course_version.content_root_id
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
-        return head :forbidden unless @course.course_assignable?(current_user)
+        return head :forbidden unless @course.course_assignable?(current_user, course_version)
         @unit = if @course.single_unit_course?
                   @course.units_for_user(current_user).first
                 else
@@ -330,7 +330,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit
-        return head :forbidden unless @unit.course_assignable?(current_user)
+        return head :forbidden unless @unit.course_assignable?(current_user, course_version)
       end
     else
       # Should not get a unit_id unless also get a course version which is course

@@ -285,4 +285,15 @@ class CourseVersionTest < ActiveSupport::TestCase
       CourseVersion.add_course_version(course_offering, course)
     end
   end
+
+  test "course_assignable? delegates to content_root with course_version parameter" do
+    course_version = create(:course_version, :with_single_unit_course)
+    course_version.content_root.update!(published_state: 'stable')
+
+    assert course_version.course_assignable?(@teacher)
+
+    # Test that the course_version is passed to the content_root
+    course_version.content_root.expects(:course_assignable?).with(@teacher, course_version).returns(true)
+    course_version.course_assignable?(@teacher)
+  end
 end

@@ -78,4 +78,12 @@ class AssignableCourseTests < ActiveSupport::TestCase
     in_development_course.update!(published_state: 'in_development')
     refute in_development_course.course_assignable?(@teacher)
   end
+
+  test 'course_assignable? can accept course_version parameter' do
+    course_version = create(:course_version, :with_single_unit_course)
+    course = course_version.content_root
+    course.update!(published_state: 'stable')
+
+    assert course.course_assignable?(@teacher, course_version)
+  end
 end
