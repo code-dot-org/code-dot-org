@@ -98,6 +98,17 @@ class ReportAbuseController < ApplicationController
     render json: {abuse_score: value}
   end
 
+  # POST /v3/channels/:channel_id/abuse/image
+  def update_abuse_image_moderation
+    begin
+      value = Projects.new(get_storage_id).increment_abuse(channel_id, 15, current_user&.project_validator?)
+      puts "value #{value}"
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      raise ActionController::BadRequest.new, "Bad channel_id"
+    end
+    render json: {abuse_score: value}
+  end
+
   # Non-actions, public methods so they can be tested easier.
   # The methods below are in this controller because they depend on the
   # storage_id helper, which has dependencies on current_user.
