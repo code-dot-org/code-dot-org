@@ -4,9 +4,6 @@ import ActionBlock, {
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
-import Button, {
-  ButtonCSforAllContentfulComponentDefinition,
-} from '@/components/contentful/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -25,6 +22,9 @@ import LogoCollection, {
 import PeopleCollection, {
   PeopleCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/peopleCollection';
+import Button, {
+  ButtonCSforAllContentfulComponentDefinition,
+} from '@/components/contentful/csForAll/button';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';

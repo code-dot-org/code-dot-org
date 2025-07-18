@@ -1,6 +1,6 @@
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-export const ButtonCDOContentfulComponentDefinition: ComponentDefinition = {
+export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   id: 'button',
   name: 'Button',
   category: '03: Content Building Blocks',
