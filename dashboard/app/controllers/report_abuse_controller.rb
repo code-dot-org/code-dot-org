@@ -101,7 +101,7 @@ class ReportAbuseController < ApplicationController
   # POST /v3/channels/:channel_id/abuse/image
   def update_abuse_image_moderation
     begin
-      value = Projects.new(get_storage_id).increment_abuse(channel_id, 15, current_user&.project_validator?)
+      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], 15, current_user&.project_validator?)
       puts "value #{value}"
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
