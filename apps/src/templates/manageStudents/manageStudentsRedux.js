@@ -729,7 +729,7 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          secretPicturePath: action.image,
+          secretPictureUrl: action.image,
         },
       },
     };
@@ -884,7 +884,7 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       gender: student.gender || '',
       genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
-      secretPicturePath: student.secret_picture_path,
+      secretPictureUrl: student.secret_picture_url,
       loginType: loginType,
       sectionId: sectionId,
       sharingDisabled: student.sharing_disabled,

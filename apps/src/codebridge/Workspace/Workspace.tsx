@@ -9,9 +9,9 @@ import React, {useEffect, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {setRestoredOldVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import i18n from '@cdo/apps/pythonlab/locale';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
@@ -48,6 +48,9 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
   );
   const projectTooLarge = useAppSelector(
     state => state.lab2Project.projectTooLarge
+  );
+  const showFileBrowser = useAppSelector(
+    state => state.codebridgeWorkspace.showFileBrowser
   );
   const dispatch = useAppDispatch();
 
@@ -112,22 +115,22 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
       >
         <div
           className={classnames(moduleStyles.workspaceWorkarea, {
-            [moduleStyles.withFileBrowser]: config.showFileBrowser,
+            [moduleStyles.withFileBrowser]: showFileBrowser,
           })}
         >
           <div
             className={classnames(moduleStyles.workspaceToggleButtonContainer, {
-              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+              [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
           >
             <ToggleFileBrowserButton />
           </div>
           <FileTabs />
-          {config.showFileBrowser && <FileBrowser />}
+          {showFileBrowser && <FileBrowser />}
           {/* eslint-disable jsx-a11y/no-noninteractive-tabindex */}
           <div
             className={classnames(moduleStyles.workplaceEditorWrapper, {
-              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+              [moduleStyles.withFileBrowser]: showFileBrowser,
             })}
             tabIndex={0}
             onKeyDown={onKeyDown}

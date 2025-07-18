@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {FontSize} from '@cdo/apps/lab2/constants';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   fetchAndSaveEditorFontSize,
   setEditorFontSizeLoaded,

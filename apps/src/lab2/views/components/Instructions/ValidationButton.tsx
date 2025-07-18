@@ -3,13 +3,13 @@ import classNames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './validation-results.module.scss';
 
 interface ValidationButtonProps {
   onValidate: () => void;
   onStopValidation: () => void;
-  hasConditions: boolean;
   isValidating: boolean;
   isValidateDisabled: boolean;
 }
@@ -17,10 +17,12 @@ interface ValidationButtonProps {
 const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
   onValidate,
   onStopValidation,
-  hasConditions,
   isValidating,
   isValidateDisabled = false,
 }) => {
+  const hasConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
   if (!hasConditions) {
     return null;
   }

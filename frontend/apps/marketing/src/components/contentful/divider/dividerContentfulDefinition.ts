@@ -24,7 +24,11 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
       validations: {
         in: [
           {value: 'primary', displayName: 'Primary'},
-          {value: 'strong', displayName: 'Strong'},
+          // This value is `strong` in existing usage of this component on Code.org,
+          // but a Secondary displayName label is more generic for different themes.
+          // Keeping the value as `strong` so it can be used in existing components
+          // without breaking, but the dropdown will say "Secondary" on all sites.
+          {value: 'strong', displayName: 'Secondary'},
         ],
       },
     },

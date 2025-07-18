@@ -1006,7 +1006,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      course_version_id: 1,
+      course_version_id: CourseVersion.maximum(:id).to_i + 1,
     }
     section.reload
     assert_response :bad_request

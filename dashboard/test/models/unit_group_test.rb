@@ -732,7 +732,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources,
-                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
+                  :student_resources, :is_migrated, :has_verified_resources, :numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
@@ -756,9 +756,9 @@ class UnitGroupTest < ActiveSupport::TestCase
   test 'summarize with numbered units' do
     unit_group = create :unit_group, name: 'my-unit-group'
     unit1 = create(:script, name: 'unit1')
-    create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit1)
+    ugu1 = create(:unit_group_unit, unit_group: unit_group, position: 1, script: unit1)
     unit2 = create(:script, name: 'unit2')
-    create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit2)
+    ugu2 = create(:unit_group_unit, unit_group: unit_group, position: 2, script: unit2)
     unit1.reload
     unit2.reload
 
@@ -794,7 +794,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit2-title', unit_group.summarize[:scripts].last[:title]
     assert_equal 'unit2-title', unit2.summarize[:title]
 
-    unit_group.has_numbered_units = true
+    unit_group.numbered_units = 'auto'
     unit_group.save!
     unit_group.reload
 
@@ -803,6 +803,20 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert_equal 'Unit 2 - unit2-title', unit_group.summarize[:scripts].last[:title]
     assert_equal 'Unit 2 - unit2-title', unit2.summarize[:title]
+
+    unit_group.numbered_units = 'custom'
+    unit_group.save!
+    ugu1.update!(unit_prefix: '1a')
+    ugu2.update!(unit_prefix: '1b')
+    unit_group.reload
+    unit1.reload
+    unit2.reload
+
+    assert_equal 'Unit 1a - unit1-title', unit_group.summarize[:scripts].first[:title]
+    assert_equal 'Unit 1a - unit1-title', unit1.summarize[:title]
+
+    assert_equal 'Unit 1b - unit2-title', unit_group.summarize[:scripts].last[:title]
+    assert_equal 'Unit 1b - unit2-title', unit2.summarize[:title]
   end
 
   test 'summarize preprocesses markdown' do

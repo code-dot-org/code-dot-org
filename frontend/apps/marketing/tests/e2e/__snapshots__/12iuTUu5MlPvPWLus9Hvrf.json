@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "❌ [ENG] Tab Group Test Item - Text only"
+      },
+      "tabLabel": {
+        "en-US": "Test Item Text Only"
+      },
+      "title": {
+        "en-US": "Text Only"
+      },
+      "description": {
+        "en-US": "Without image, without button"
+      }
+    }
+  },
+  "contentType": "tabGroupItem"
+}

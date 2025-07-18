@@ -81,7 +81,12 @@ export async function generateMetadata({
   return {
     title: getPageHeading(experience),
     icons: getIcons(pageProps.brand),
-    ...getSeoMetadata(experience, pageProps.brand, pageProps.locale),
+    ...getSeoMetadata(
+      experience,
+      pageProps.brand,
+      pageProps.locale,
+      pageProps.slug,
+    ),
     verification: getSiteVerification(pageProps.brand),
   };
 }

@@ -1,8 +1,9 @@
 import {render} from '@testing-library/react';
-import {headers} from 'next/headers';
+import {draftMode, headers} from 'next/headers';
 
 import {Brand, getBrandFromHostname} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
+import {SupportedLocale} from '@/config/locale';
 import {getStage} from '@/config/stage';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 
@@ -10,6 +11,7 @@ import Layout from '../layout';
 
 jest.mock('next/headers', () => ({
   headers: jest.fn(),
+  draftMode: jest.fn(),
 }));
 
 jest.mock('@/config/brand', () => ({
@@ -81,11 +83,15 @@ describe('Layout', () => {
     (getGoogleAnalyticsMeasurementId as jest.Mock).mockReturnValue('GA-123456');
     (getStage as jest.Mock).mockReturnValue('production');
     (generateBootstrapValues as jest.Mock).mockResolvedValue({});
+    (draftMode as jest.Mock).mockReturnValue(false);
 
     const {findByText} = render(
       await Layout({
         children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand, locale: 'en-US'}),
+        params: Promise.resolve({
+          brand: 'code.org' as Brand,
+          locale: 'en-US' as SupportedLocale,
+        }),
       }),
     );
 
@@ -111,7 +117,10 @@ describe('Layout', () => {
     const {queryByText} = render(
       await Layout({
         children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand, locale: 'en-US'}),
+        params: Promise.resolve({
+          brand: 'code.org' as Brand,
+          locale: 'en-US' as SupportedLocale,
+        }),
       }),
     );
 
@@ -132,7 +141,10 @@ describe('Layout', () => {
     const {container} = render(
       await Layout({
         children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand, locale}),
+        params: Promise.resolve({
+          brand: 'code.org' as Brand,
+          locale: locale as SupportedLocale,
+        }),
       }),
     );
 
@@ -154,7 +166,10 @@ describe('Layout', () => {
     const {container} = render(
       await Layout({
         children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand, locale}),
+        params: Promise.resolve({
+          brand: 'code.org' as Brand,
+          locale: locale as SupportedLocale,
+        }),
       }),
     );
 

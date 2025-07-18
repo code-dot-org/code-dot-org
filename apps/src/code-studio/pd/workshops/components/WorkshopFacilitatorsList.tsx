@@ -9,7 +9,7 @@ import {
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {FacilitatorInfo, GetWorkshopInfoScriptDataResponse} from './../types';
+import {FacilitatorInfo, WorkshopInfo} from './../types';
 
 import moduleStyles from './workshopFaccilitatorsList.module.scss';
 
@@ -39,6 +39,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
             <Button
               type="tertiary"
               size="s"
+              className={moduleStyles.showBioButton}
               text={showBio ? 'Hide biography' : 'Show biography'}
               iconRight={{iconName: showBio ? 'chevron-up' : 'chevron-down'}}
               onClick={() => handleShowBio(!showBio)}
@@ -62,7 +63,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
 };
 
 interface WorkshopSessionsListProps
-  extends Pick<GetWorkshopInfoScriptDataResponse, 'facilitators'> {}
+  extends Pick<WorkshopInfo, 'facilitators'> {}
 
 /** Component to render a list of workshop facilitators. */
 const WorkshopFacilitatorsList: React.FC<WorkshopSessionsListProps> = ({
