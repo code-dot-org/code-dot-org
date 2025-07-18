@@ -3001,7 +3001,7 @@
   "switchToOldProgressView": "Switch to old progress view",
   "switchToNewProgressViewDeprecation": "Switch to the new progress view",
   "switchToOldProgressViewDeprecation": "Switch to legacy progress view",
-  "progressDeprecationWarning": "The new progress view is now available! This legacy progress view will eventually be disabled and is no longer being supported. Click the link below to switch to the new progress view.",
+  "progressDeprecationWarning": "This legacy Progress view is in the process of being deprecated. We're no longer providing support or bug fixes as we focus resources on newer offerings. Click the link below to switch to the new progress view.",
   "progressLegacy": "Progress (Legacy)",
   "progressV2_feedback_question": "Hi there! Overall, how satisfied are you with the new progress view?",
   "progressV2_feedback_shareMore": "Are you willing to share more? Just a few minutes will help us improve!",

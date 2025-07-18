@@ -155,7 +155,7 @@ function SectionProgressSelector({
       {!displayV2 && (
         <Alert
           text={i18n.progressDeprecationWarning()}
-          type="info"
+          type="warning"
           className={styles.deprecationBanner}
         />
       )}
