@@ -77,29 +77,32 @@ const theme = createTheme({
     },
     MuiTypography: {
       styleOverrides: {
-        root: {
+        root: ({theme}) => ({
           color: 'var(--text-neutral-primary)',
-        },
-        gutterBottom: {
-          '&.MuiTypography-h1': {
-            marginBottom: '1.5rem', // 24px
+          ['&.MuiTypography-h1.heading--color-white']: {
+            color: theme.palette.common.white,
           },
-          '&.MuiTypography-h2': {
-            marginBottom: '1.0625rem', // 17px
+          gutterBottom: {
+            '&.MuiTypography-h1': {
+              marginBottom: theme.spacing(3), // 24px
+            },
+            '&.MuiTypography-h2': {
+              marginBottom: theme.spacing(2.125), // 16px
+            },
+            '&.MuiTypography-h3': {
+              marginBottom: theme.spacing(1.75), // 14px
+            },
+            '&.MuiTypography-h4': {
+              marginBottom: theme.spacing(0.75), // 12px
+            },
+            '&.MuiTypography-h5': {
+              marginBottom: theme.spacing(0.625), // 10px
+            },
+            '&.MuiTypography-h6': {
+              marginBottom: theme.spacing(0.5), // 8px
+            },
           },
-          '&.MuiTypography-h3': {
-            marginBottom: '0.875rem', // 14px
-          },
-          '&.MuiTypography-h4': {
-            marginBottom: '0.75rem', // 12px
-          },
-          '&.MuiTypography-h5': {
-            marginBottom: '0.625rem', // 10px
-          },
-          '&.MuiTypography-h6': {
-            marginBottom: '0.5rem', // 8px
-          },
-        },
+        }),
       },
     },
   },
