@@ -12,7 +12,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "csa-async",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2022"
   },
   "resources": [

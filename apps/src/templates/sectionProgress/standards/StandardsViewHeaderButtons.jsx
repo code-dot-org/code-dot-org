@@ -6,6 +6,10 @@ import {connect} from 'react-redux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
@@ -28,6 +32,9 @@ class StandardsViewHeaderButtons extends Component {
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+    courseId: PropTypes.number,
+    unitPosition: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
     unpluggedLessons: PropTypes.array.isRequired,
     fetchStudentLevelScores: PropTypes.func,
@@ -97,6 +104,9 @@ class StandardsViewHeaderButtons extends Component {
     window.teacherDashboardStoreInformation = {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId,
+      courseVersionId: this.props.courseVersionId,
+      courseId: this.props.courseId,
+      unitPosition: this.props.unitPosition,
     };
     firehoseClient.putRecord(
       {
@@ -216,6 +226,9 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
+    courseVersionId: state.unitSelection.courseVersionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     unpluggedLessons: getUnpluggedLessonsForScript(state),
   }),

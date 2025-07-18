@@ -6,6 +6,7 @@ import {
   AiCustomizations,
   FieldVisibilities,
   ModelCardInfo,
+  ModelParameters,
   Visibility,
 } from '../types';
 
@@ -43,8 +44,8 @@ const haveDifferentValues = (
 // between the previous save and the current one,
 // such that we can display a notification for each to users.
 export const findChangedProperties = (
-  previous: AiCustomizations | undefined,
-  next: AiCustomizations
+  previous: ModelParameters | undefined,
+  next: ModelParameters
 ) => {
   const allKeys = getTypedKeys(next);
   if (!previous) {

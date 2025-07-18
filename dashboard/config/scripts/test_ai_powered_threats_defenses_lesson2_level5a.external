@@ -1,0 +1,19 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5a'
+title 'Scenario 1'
+bubble_choice_description 'Your friend sends you an email with a link to download Fortnite cheat codes. Is it too good to be true?'
+display_name 'Scenario 1'
+thumbnail_url 'https://images.code.org/f3a884a088b6a2684d0843feb382a98c-image-1752764308580.57.52 AM.png'
+
+markdown <<MARKDOWN
+## Scenario 1
+
+You receive an email from a classmate saying, “Click here to download Fortnite cheat codes!” with a link to download a file. 
+
+You download and open the file — but something looks suspicious. Instead of getting cheat codes, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! 
+
+The malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.
+
+&nbsp;
+
+<img src="https://images.code.org/351687e403fac3c115b85fea72a6cb9d-image-1752764017862.jpg" alt="emails and virus particles being sent digitally" width="300"/>
+MARKDOWN

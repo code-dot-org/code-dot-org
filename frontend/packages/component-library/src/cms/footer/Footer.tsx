@@ -3,8 +3,7 @@ import {Key, HTMLAttributes, AnchorHTMLAttributes} from 'react';
 
 import {DefaultDropdown} from '@/dropdown/simpleDropdown/stories/SimpleDropdown.story';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
-// Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-// import Image, {ImageProps} from '@/image';
+import Image, {ImageProps} from '@/image';
 
 import moduleStyles from './footer.module.scss';
 
@@ -21,13 +20,12 @@ export interface SocialLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: FontAwesomeV6IconProps;
 }
 
-// Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-// export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-//   key: Key;
-//   label: string;
-//   href: string;
-//   image: ImageProps;
-// }
+export interface ImageLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  key: Key;
+  label: string;
+  href: string;
+  image: ImageProps;
+}
 
 export interface LanguageOption {
   value: string;
@@ -39,9 +37,8 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   siteLinks: SiteLink[];
   /** Footer social links */
   socialLinks: SocialLink[];
-  // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
-  // /** Footer bottom image links */
-  // imageLinks: ImageLink[];
+  /** Footer bottom image links */
+  imageLinks: ImageLink[];
   /** Footer copyright notices */
   copyright: string;
   /** Footer language options */
@@ -73,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({
   brand = 'Code.org',
   siteLinks,
   socialLinks,
-  // imageLinks, // Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886
+  imageLinks,
   copyright,
   className,
   languages,
@@ -133,8 +130,7 @@ const Footer: React.FC<FooterProps> = ({
         ))}
       </ul>
 
-      {/* Hiding temporarily, see https://codedotorg.atlassian.net/browse/CMS-886 */}
-      {/* <ul className={moduleStyles.footerImageLinkList}>
+      <ul className={moduleStyles.footerImageLinkList}>
         {imageLinks?.map(({key, label, href, image, ...link}) => (
           <li key={key}>
             <a href={href} aria-label={label} {...link}>
@@ -146,7 +142,7 @@ const Footer: React.FC<FooterProps> = ({
             </a>
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   </footer>
 );

@@ -1,6 +1,12 @@
 import {BodyOneText} from '@code-dot-org/component-library/typography';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
+import {linter, lintGutter} from '@codemirror/lint';
+import {Extension} from '@codemirror/state';
+import js from '@eslint/js';
+import * as eslint from 'eslint-linter-browserify';
+import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -38,7 +44,23 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
   const editorConfigExtensions = useMemo(() => {
     if (file?.language && langMapping[file.language]) {
-      return [langMapping[file.language]];
+      const extensions: Extension[] = [langMapping[file.language]];
+      if (file.language === 'js') {
+        // eslint configuration
+        const config = {
+          ...js.configs.recommended,
+          languageOptions: {
+            globals: {
+              ...globals.browser,
+            },
+          },
+        };
+
+        extensions.push(linter(esLint(new eslint.Linter(), config)));
+        extensions.push(lintGutter());
+      }
+
+      return extensions;
     } else {
       return [];
     }

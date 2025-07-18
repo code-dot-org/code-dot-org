@@ -30,7 +30,10 @@ class AiDiffController < ApplicationController
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
         unit_id: @unit&.id,
-        level_id: @lesson&.id,
+        level_id: @level&.id,
+        course_id: @unit_group&.id,
+        lesson_id: @lesson&.id,
+        context_type: params[:context][:type]
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
@@ -45,6 +48,7 @@ class AiDiffController < ApplicationController
           external_id: @thread.external_id,
           role: :user,
           content: params[:inputText],
+          raw_content: params[:inputText],
           is_preset: params[:isPreset],
         )
       rescue StandardError => exception
@@ -58,6 +62,8 @@ class AiDiffController < ApplicationController
           external_id: @thread.external_id,
           role: :assistant,
           content: response_body[:chat_message_text],
+          raw_content: response_body[:raw_content],
+          source_links: response_body[:links],
           is_preset: params[:isPreset],
         )
         response_body[:messageId] = assistant_message.id
@@ -67,7 +73,9 @@ class AiDiffController < ApplicationController
       end
     end
 
-    render(status: :ok, json: response_body)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :session_id)
+
+    render(status: :ok, json: return_body)
   end
 
   def get_active_sections
@@ -168,6 +176,8 @@ class AiDiffController < ApplicationController
         role: "assistant",
         status: SharedConstants::AI_INTERACTION_STATUS[:PII_VIOLATION],
         chat_message_text: 'Sorry, I cannot accept messages that contain personal information.',
+        raw_content: 'Sorry, I cannot accept messages that contain personal information.',
+        links: nil,
         session_id: session_id
       }
     end
@@ -224,14 +234,16 @@ class AiDiffController < ApplicationController
       student_code
     )
 
-    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chat_message_text: bedrock_rag_response.output.text,
-      session_id: bedrock_rag_response.session_id
+      chat_message_text: response[:content],
+      session_id: response[:session_id],
+      raw_content: response[:raw_content],
+      links: response[:links],
     }
   end
 

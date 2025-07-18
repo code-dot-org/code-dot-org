@@ -9,6 +9,7 @@ import {
   InstructionType,
   InstructorAudience,
   ParticipantAudience,
+  NumberedUnitsType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import AnnouncementsEditor from '@cdo/apps/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSection';
@@ -45,9 +46,10 @@ class CourseEditor extends Component {
     initialDescriptionStudent: PropTypes.string,
     initialDescriptionTeacher: PropTypes.string,
     initialUnitsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
+    initialUnitPrefixes: PropTypes.arrayOf(PropTypes.string),
     unitNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialHasVerifiedResources: PropTypes.bool.isRequired,
-    initialHasNumberedUnits: PropTypes.bool.isRequired,
+    initialNumberedUnits: PropTypes.oneOf(Object.values(NumberedUnitsType)),
     courseFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
     versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
@@ -64,6 +66,15 @@ class CourseEditor extends Component {
   constructor(props) {
     super(props);
 
+    let unitPrefixes;
+    if (this.props.initialUnitPrefixes === undefined) {
+      unitPrefixes = this.props.initialUnitsInCourse.map((_, index) =>
+        (index + 1).toString()
+      );
+    } else {
+      unitPrefixes = this.props.initialUnitPrefixes;
+    }
+
     this.state = {
       isSaving: false,
       error: null,
@@ -76,12 +87,13 @@ class CourseEditor extends Component {
       versionTitle: this.props.initialVersionTitle,
       descriptionShort: this.props.initialDescriptionShort,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
-      hasNumberedUnits: this.props.initialHasNumberedUnits,
+      numberedUnits: this.props.initialNumberedUnits,
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       savedFamilyName: this.props.initialFamilyName,
       savedVersionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
+      unitPrefixes: unitPrefixes,
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
@@ -106,7 +118,6 @@ class CourseEditor extends Component {
       description_student: this.state.descriptionStudent,
       description_teacher: this.state.descriptionTeacher,
       has_verified_resources: this.state.hasVerifiedResources,
-      has_numbered_units: this.state.hasNumberedUnits,
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
@@ -116,6 +127,11 @@ class CourseEditor extends Component {
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse,
     };
+
+    dataToSave.numbered_units = this.state.numberedUnits;
+    if (this.state.numberedUnits === NumberedUnitsType.custom) {
+      dataToSave.unit_prefixes = this.state.unitPrefixes;
+    }
 
     if (this.props.teacherResources) {
       dataToSave.resourceIds = this.props.teacherResources.map(r => r.id);
@@ -216,11 +232,12 @@ class CourseEditor extends Component {
       descriptionStudent,
       descriptionTeacher,
       hasVerifiedResources,
-      hasNumberedUnits,
+      numberedUnits,
       familyName,
       versionYear,
       pilotExperiment,
       unitsInCourse,
+      unitPrefixes,
       publishedState,
       instructionType,
       instructorAudience,
@@ -319,23 +336,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <label>
-            Unit Numbering
-            <HelpTip>
-              <p>
-                Automatically provide numbers in unit names in the order listed
-                below.
-              </p>
-            </HelpTip>
-            <input
-              type="checkbox"
-              defaultChecked={hasNumberedUnits}
-              style={styles.checkbox}
-              onChange={() =>
-                this.setState({hasNumberedUnits: !hasNumberedUnits})
-              }
-            />
-          </label>
         </CollapsibleEditorSection>
 
         <CourseTypeEditor
@@ -413,6 +413,28 @@ class CourseEditor extends Component {
 
         <CollapsibleEditorSection title="Units">
           <label>
+            Unit Numbering
+            <HelpTip>
+              <p>
+                Choose between no unit numbering, automatic unit numbering, or
+                custom unit numbering, editable in the Units section below.
+              </p>
+            </HelpTip>
+            <select
+              style={styles.dropdown}
+              value={numberedUnits || 'none'}
+              onChange={e =>
+                this.setState({
+                  numberedUnits: NumberedUnitsType[e.target.value],
+                })
+              }
+            >
+              <option value={'none'}>None</option>
+              <option value={NumberedUnitsType.auto}>Automatic</option>
+              <option value={NumberedUnitsType.custom}>Custom</option>
+            </select>
+          </label>
+          <label>
             <div>
               The dropdown(s) below represent the ordered set of units in this
               course. To remove a unit, just set the dropdown to the default
@@ -420,6 +442,10 @@ class CourseEditor extends Component {
             </div>
             <CourseUnitsEditor
               inputStyle={styles.input}
+              numberedUnits={numberedUnits}
+              initialUnitPrefixes={this.props.initialUnitPrefixes}
+              unitPrefixes={unitPrefixes}
+              updateUnitPrefixes={unitPrefixes => this.setState({unitPrefixes})}
               initialUnitsInCourse={this.props.initialUnitsInCourse}
               unitsInCourse={unitsInCourse}
               updateUnitsInCourse={unitsInCourse =>

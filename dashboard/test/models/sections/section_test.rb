@@ -847,6 +847,29 @@ class SectionTest < ActiveSupport::TestCase
     assert summarized_section[:script][:project_sharing]
   end
 
+  test 'summarize_for_participant: section with a course assigned' do
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: unit_group
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      teacherName: section.teacher.name,
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
+      currentUnitTitle: '',
+      linkToCurrentUnit: '',
+      code: section.code,
+      login_type: "email",
+      grades: nil,
+      is_assigned_single_unit_course: false,
+    }
+
+    assert_equal expected, section.summarize_for_participant
+  end
+
   test 'summarize: section with a course assigned' do
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)

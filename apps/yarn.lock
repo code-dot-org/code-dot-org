@@ -4122,9 +4122,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@codemirror/lang-javascript@npm:^6.0.0":
-  version: 6.2.1
-  resolution: "@codemirror/lang-javascript@npm:6.2.1"
+"@codemirror/lang-javascript@npm:^6.0.0, @codemirror/lang-javascript@npm:^6.2.4":
+  version: 6.2.4
+  resolution: "@codemirror/lang-javascript@npm:6.2.4"
   dependencies:
     "@codemirror/autocomplete": "npm:^6.0.0"
     "@codemirror/language": "npm:^6.6.0"
@@ -4133,7 +4133,7 @@ __metadata:
     "@codemirror/view": "npm:^6.17.0"
     "@lezer/common": "npm:^1.0.0"
     "@lezer/javascript": "npm:^1.0.0"
-  checksum: 10/edc874d7c0563aeb50c720e3c9cb4928f08263ae2b26f72e49d58c57ed75cfbd2f4ef9f704f15747087989b37d249cbb17e9833c5281d992ab33120bd910887b
+  checksum: 10/7d0b7fdacc90f89d1a5f2b9c575c61b6ee7813005cde32c1f35aedb0da71ad298998e116126ba19ca0bb02cdb14064945c31e24c57ef60bcbd5c19dae955ccb6
   languageName: node
   linkType: hard
 
@@ -4899,6 +4899,13 @@ __metadata:
   version: 8.56.0
   resolution: "@eslint/js@npm:8.56.0"
   checksum: 10/97a4b5ccf7e24f4d205a1fb0f21cdcd610348ecf685f6798a48dd41ba443f2c1eedd3050ff5a0b8f30b8cf6501ab512aa9b76e531db15e59c9ebaa41f3162e37
+  languageName: node
+  linkType: hard
+
+"@eslint/js@npm:^9.31.0":
+  version: 9.31.0
+  resolution: "@eslint/js@npm:9.31.0"
+  checksum: 10/83b45c707d9a6c62b79a9fb69b7ebcb31e8163647c0fdcae5972b4b2fcbbb1e8eac543986e0cca3582f8462a6587f6b6dc48e362b2ce3feb74282606c3d425ea
   languageName: node
   linkType: hard
 
@@ -10868,6 +10875,7 @@ __metadata:
     "@codemirror/lang-css": "npm:^6.3.1"
     "@codemirror/lang-html": "npm:^6.4.9"
     "@codemirror/lang-java": "npm:^6.0.1"
+    "@codemirror/lang-javascript": "npm:^6.2.4"
     "@codemirror/lang-python": "npm:^6.1.7"
     "@codemirror/language": "npm:^6.11.0"
     "@codemirror/lint": "npm:^6.8.5"
@@ -10881,6 +10889,7 @@ __metadata:
     "@dsco_/link": "npm:^1.1.2"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
+    "@eslint/js": "npm:^9.31.0"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
     "@mapbox/search-js-react": "npm:^1.0.0"
@@ -10964,6 +10973,7 @@ __metadata:
     eslint: "npm:^8.56.0"
     eslint-config-prettier: "npm:^8.8.0"
     eslint-import-resolver-typescript: "npm:^3.6.1"
+    eslint-linter-browserify: "npm:^9.31.0"
     eslint-plugin-babel: "npm:^5.3.1"
     eslint-plugin-cdo-custom-rules: "file:./eslint"
     eslint-plugin-import: "npm:^2.29.1"
@@ -10980,6 +10990,7 @@ __metadata:
     firmata: "npm:^2.2.0"
     focus-trap-react: "npm:^10.1.1"
     fork-ts-checker-webpack-plugin: "npm:^8.0.0"
+    globals: "npm:^16.3.0"
     grunt: "npm:^1.4.1"
     grunt-cli: "npm:1.4.3"
     grunt-concurrent: "npm:1.0.1"
@@ -15097,6 +15108,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"eslint-linter-browserify@npm:^9.31.0":
+  version: 9.31.0
+  resolution: "eslint-linter-browserify@npm:9.31.0"
+  checksum: 10/32dd54bfd53b394e2c641496ba38dd42b1e3f73a46219e7e9ac54429eaae38791ba8a840e4ed049495c8dd00d7574a0b1163345d13e3fed693c0ad5f6e3c501a
+  languageName: node
+  linkType: hard
+
 "eslint-module-utils@npm:^2.7.4, eslint-module-utils@npm:^2.8.0":
   version: 2.8.1
   resolution: "eslint-module-utils@npm:2.8.1"
@@ -16945,6 +16963,13 @@ canvg@gabelerner/canvg:
   dependencies:
     type-fest: "npm:^0.20.2"
   checksum: 10/62c5b1997d06674fc7191d3e01e324d3eda4d65ac9cc4e78329fa3b5c4fd42a0e1c8722822497a6964eee075255ce21ccf1eec2d83f92ef3f06653af4d0ee28e
+  languageName: node
+  linkType: hard
+
+"globals@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "globals@npm:16.3.0"
+  checksum: 10/accb0939d993a1c461df8d961ce9911a9a96120929e0a61057ae8e75b7df0a8bf8089da0f4e3a476db0211156416fbd26e222a56f74b389a140b34481c0a72b0
   languageName: node
   linkType: hard
 

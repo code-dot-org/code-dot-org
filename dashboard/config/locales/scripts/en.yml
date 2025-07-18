@@ -24946,3 +24946,34 @@ en:
           description_short: ''
           description: Teacher overview of the unit.
           student_description: Student overview of the unit.
+        joi-playground:
+          lessons:
+            lesson-1:
+              name: App Lab Levels
+            lesson-2:
+              name: Other
+          lesson_groups: {}
+          name: joi-playground
+          title: Joi's Playground Script
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-in-training:
+          lessons: {}
+          lesson_groups: {}
+          name: facilitator-in-training
+          title: Facilitator-in-Training
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        facilitator-training:
+          lessons: {}
+          lesson_groups: {}
+          name: facilitator-training
+          title: Facilitator Training
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
