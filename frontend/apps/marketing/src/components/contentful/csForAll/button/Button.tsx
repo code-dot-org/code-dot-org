@@ -1,5 +1,5 @@
 import OpenInNew from '@mui/icons-material/OpenInNew';
-import ButtonMUI from '@mui/material/Button';
+import MuiButton from '@mui/material/Button';
 import classNames from 'classnames';
 import {EntryFields} from 'contentful';
 
@@ -31,7 +31,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 }) => {
   return (
     href && (
-      <ButtonMUI
+      <MuiButton
         className={classNames(`button--color-${type}`, className)}
         variant={
           type === 'emphasized' || type === 'primary' ? 'contained' : 'outlined'
@@ -46,7 +46,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         disableRipple
       >
         {text}
-      </ButtonMUI>
+      </MuiButton>
     )
   );
 };
