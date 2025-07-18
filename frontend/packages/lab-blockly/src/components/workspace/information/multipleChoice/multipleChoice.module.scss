@@ -1,0 +1,10 @@
+.multipleChoiceGroup {
+  counter-reset: choices;
+
+  label span::before {
+    content: counter(choices, upper-alpha) '.';
+    counter-increment: choices;
+    margin: 0 0.25rem;
+    font-weight: bold;
+  }
+}

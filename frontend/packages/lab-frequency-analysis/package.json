@@ -15,7 +15,9 @@
     "directory": "frontend/packages/lab-frequency-analysis"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "main": "src/index.ts",
   "files": [
     "dist"

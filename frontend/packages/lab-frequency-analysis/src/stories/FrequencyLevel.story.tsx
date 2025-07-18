@@ -5,6 +5,9 @@ import FrequencyLevel, {FrequencyLevelProps} from '@/components/FrequencyLevel';
 export default {
   title: 'Labs/FrequencyAnalysis',
   component: FrequencyLevel,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } as Meta;
 
 //
