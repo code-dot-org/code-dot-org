@@ -20,6 +20,7 @@
     "build": "storybook build -o dist/storybook",
     "clean": "rimraf dist",
     "dev": "yarn run storybook",
+    "start": "yarn run storybook",
     "serve": "serve dist/storybook -p 3002",
     "eyes-storybook": "tsx ./scripts/eyes-storybook.ts",
     "lint": "eslint .",
