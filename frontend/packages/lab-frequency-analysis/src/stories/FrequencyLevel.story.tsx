@@ -1,6 +1,6 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import FrequencyLevel, {FrequencyLevelProps} from '@/components/FrequencyLevel';
+import FrequencyLevel, {FrequencyLevelProps} from '@code-dot-org/lab-frequency-analysis';
 
 export default {
   title: 'Labs/FrequencyAnalysis',

@@ -1,6 +1,8 @@
 import {StorybookConfig} from '@storybook/react-webpack5';
-import {join, dirname, basename, resolve} from 'node:path';
-import {fileURLToPath} from 'url';
+import {join, dirname, resolve} from 'node:path';
+import {IgnorePlugin} from 'webpack';
+import path from 'path';
+import fs from 'fs';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -10,12 +12,18 @@ function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-const packageName = basename(dirname(join(fileURLToPath(import.meta.url), '..')))
+const packageRoot = resolve(__dirname, '../../../packages');
+const packages = fs.readdirSync(packageRoot).filter(packageName => fs.statSync(path.join(packageRoot, packageName)).isDirectory() && fs.existsSync(path.join(packageRoot, packageName, 'src')));
+const packageAliases = Object.fromEntries(
+  packages.map(packageName => (
+    [`@${packageName}`, resolve(__dirname, packageRoot, packageName, 'src')]
+  ))
+);
+const publicPaths = packages.map(packageName => resolve(__dirname, '../../../packages', packageName, 'public')).filter(publicPath => fs.existsSync(publicPath));
 
 const config: StorybookConfig = {
-  logLevel: 'trace',
   stories: [
-    '../src/**/stories/*.story.@(ts|tsx)',
+    '../../../packages/**/src/**/stories/*.story.@(ts|tsx)',
   ],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
@@ -76,7 +84,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
-  staticDirs: ['../public'],
+  staticDirs: ['../public', ...publicPaths],
   swc: () => ({
     // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
     // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react
@@ -89,13 +97,24 @@ const config: StorybookConfig = {
     },
   }),
   webpackFinal: async config => {
-    config.stats = 'verbose';
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        [`@${packageName}`]: resolve(__dirname, '../src'),
-        '@public': resolve(__dirname, '../public'),
+        ...packageAliases,
+        '@': resolve(__dirname, '../../../packages/component-library/src'),
+        '@public': [resolve(__dirname, '../public'), resolve(__dirname, '../../design-system-storybook/public')],
       };
+    }
+
+    if (config.plugins) {
+      // Ignore the auto generated index.css which is bundled by tsup
+      // webpack generates its own css in the styling plugin above
+      config.plugins.push(
+        new IgnorePlugin({
+          resourceRegExp: /^\.\/index.css$/,
+          contextRegExp: /component-library\/src/,
+        }),
+      );
     }
 
     return config;
@@ -104,5 +123,4 @@ const config: StorybookConfig = {
     reactDocgen: 'react-docgen-typescript',
   },
 };
-
 export default config;

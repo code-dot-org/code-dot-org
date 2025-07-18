@@ -1,6 +1,6 @@
 import {createContext} from 'react';
 
-import {LevelData} from '@/types';
+import {LevelData} from '@lab-blockly/types';
 
 export interface LevelContent {
   level?: LevelData;

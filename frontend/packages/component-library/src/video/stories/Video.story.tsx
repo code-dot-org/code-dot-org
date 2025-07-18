@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import Section from '@/cms/section';
+import Section from '@code-dot-org/component-library/cms/section';
 
 import Video from '../index';
 

@@ -1,12 +1,12 @@
 import {createContext} from 'react';
 
-import type {Plugin} from '@/plugins';
+import type {Plugin} from '@blockly-workspace/plugins';
 import type {
   BlockDefinition,
   Theme,
   Renderer,
   Environment,
-} from '@/types';
+} from '@blockly-workspace/types';
 
 export interface BlocklyContent {
   environment?: Environment & object;

@@ -2,8 +2,8 @@
 
 import React, {PropsWithChildren, useState} from 'react';
 
-import {LevelContext} from '@/contexts';
-import type {LevelData} from '@/types';
+import {LevelContext} from '@lab-blockly/contexts';
+import type {LevelData} from '@lab-blockly/types';
 
 export interface LevelProviderProps extends PropsWithChildren {
   level?: LevelData;

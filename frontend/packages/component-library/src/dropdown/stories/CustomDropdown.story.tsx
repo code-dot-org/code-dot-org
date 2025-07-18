@@ -1,9 +1,11 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import {Button} from '@/button';
-import Link from '@/link/Link';
-
-import CustomDropdown, {CustomDropdownProps} from '../CustomDropdown';
+import {Button} from '@code-dot-org/component-library/button';
+import {
+  CustomDropdown,
+  CustomDropdownProps,
+} from '@code-dot-org/component-library/dropdown';
+import Link from '@code-dot-org/component-library/link';
 
 export default {
   title: 'DesignSystem/Dropdown/Custom Dropdown',

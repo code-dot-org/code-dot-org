@@ -7,7 +7,7 @@
 
 import * as Blockly from 'blockly/core';
 
-import ThrasosRenderer from '@/renderers/thrasos';
+import ThrasosRenderer from '@blockly-workspace/renderers/thrasos';
 
 import {PluginType} from './plugins';
 import type {

@@ -4,7 +4,7 @@ import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 
-import type {Skin} from '@/skin';
+import type {Skin} from '@lab-maze/skin';
 
 /**
  * Generates the block list considering the given Skin.

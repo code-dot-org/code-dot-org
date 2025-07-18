@@ -30,7 +30,7 @@ function createConfig(format: 'cjs' | 'esm'): Options {
         '--emitDeclarationOnly',
         '--declaration',
         '--project',
-        '.',
+        'src',
         '--outDir',
         `dist/${format}`,
       ]);

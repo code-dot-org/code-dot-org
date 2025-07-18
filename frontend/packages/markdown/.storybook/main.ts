@@ -1,5 +1,6 @@
 import {StorybookConfig} from '@storybook/react-webpack5';
-import {join, dirname, resolve} from 'node:path';
+import {join, dirname, basename, resolve} from 'node:path';
+import {fileURLToPath} from 'url';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -8,6 +9,8 @@ import {join, dirname, resolve} from 'node:path';
 function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
+
+const packageName = basename(dirname(join(fileURLToPath(import.meta.url), '..')))
 
 const config: StorybookConfig = {
   logLevel: 'trace',
@@ -90,7 +93,7 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': resolve(__dirname, '../src'),
+        [`@${packageName}`]: resolve(__dirname, '../src'),
         '@public': resolve(__dirname, '../public'),
       };
     }

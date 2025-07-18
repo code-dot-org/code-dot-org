@@ -13,20 +13,20 @@ import React, {
   MutableRefObject,
 } from 'react';
 
-import {disableOrphans, grayOutUndeletableBlocks} from '@/events';
-import FunctionBlockMixin from '@/mixins/functionBlockMixin';
-import {PluginType} from '@/plugins';
-import type {Plugin} from '@/plugins';
-import Registry from '@/Registry';
-import {positionBlocksOnWorkspace} from '@/serialization';
-import DefaultTheme from '@/themes/default';
+import {disableOrphans, grayOutUndeletableBlocks} from '@blockly-workspace/events';
+import FunctionBlockMixin from '@blockly-workspace/mixins/functionBlockMixin';
+import {PluginType} from '@blockly-workspace/plugins';
+import type {Plugin} from '@blockly-workspace/plugins';
+import Registry from '@blockly-workspace/Registry';
+import {positionBlocksOnWorkspace} from '@blockly-workspace/serialization';
+import DefaultTheme from '@blockly-workspace/themes/default';
 import type {
   BlocklySerialization,
   BlockDefinition,
   Theme,
   Renderer,
   Environment,
-} from '@/types';
+} from '@blockly-workspace/types';
 
 import moduleStyles from './blocklyWorkspace.module.scss';
 

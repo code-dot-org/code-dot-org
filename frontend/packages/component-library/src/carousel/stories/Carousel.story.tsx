@@ -7,9 +7,9 @@ import image6 from '@public/images/action-block-06.png';
 import type {Meta, StoryFn} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import ActionBlock from '@/actionBlock';
-import {Heading2} from '@/typography';
-import Video from '@/video';
+import ActionBlock from '@code-dot-org/component-library/actionBlock';
+import {Heading2} from '@code-dot-org/component-library/typography';
+import Video from '@code-dot-org/component-library/video';
 
 import Carousel, {CarouselProps} from '../index';
 

@@ -4,8 +4,7 @@ import {Meta, StoryFn} from '@storybook/react';
 import {
   Heading1,
 } from '@code-dot-org/component-library/typography';
-
-import Markdown, {MarkdownProps} from '@/components/Markdown';
+import Markdown, {MarkdownProps} from '@code-dot-org/markdown';
 
 
 export default {
@@ -16,7 +15,7 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<MArkdownProps> = args => (
+const SingleTemplate: StoryFn<MarkdownProps> = args => (
   <Markdown
     {...args}
   />

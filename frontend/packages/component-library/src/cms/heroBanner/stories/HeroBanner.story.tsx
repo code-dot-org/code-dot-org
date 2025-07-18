@@ -5,9 +5,8 @@ import {MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import Video from '@/video';
-
-import HeroBanner from './../HeroBanner';
+import HeroBanner from '@code-dot-org/component-library/cms/heroBanner';
+import Video from '@code-dot-org/component-library/video';
 
 export default {
   title: 'CMS/HeroBanner',

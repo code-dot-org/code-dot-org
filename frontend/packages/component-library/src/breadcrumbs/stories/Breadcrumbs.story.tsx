@@ -1,9 +1,10 @@
 import {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-
-import Breadcrumbs, {BreadcrumbsProps} from '../index';
+import Breadcrumbs, {
+  BreadcrumbsProps,
+} from '@code-dot-org/component-library/breadcrumbs';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 export default {
   title: 'DesignSystem/Breadcrumbs',

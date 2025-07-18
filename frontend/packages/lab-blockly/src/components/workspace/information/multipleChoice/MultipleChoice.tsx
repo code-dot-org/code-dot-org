@@ -3,7 +3,7 @@ import React from 'react';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
-import type {MultipleChoiceData} from '@/types';
+import type {MultipleChoiceData} from '@lab-blockly/types';
 
 import moduleStyles from './multipleChoice.module.scss';
 

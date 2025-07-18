@@ -1,5 +1,5 @@
-import type {MazeData} from '@/MazeController';
-import type {SkinData} from '@/skin';
+import type {MazeData} from '@lab-maze/MazeController';
+import type {SkinData} from '@lab-maze/skin';
 
 /**
  * Represents a set of skins for a particular level set.

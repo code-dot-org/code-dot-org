@@ -8,7 +8,7 @@
     "rootDir": ".",
     "baseUrl": "../",
     "paths": {
-      "@lab-maze/*": ["./src/*"]
+      "@lab-frequency-analysis/*": ["./src/*"]
     }
   },
   "exclude": ["**/__tests__/*", "**/stories/*"]

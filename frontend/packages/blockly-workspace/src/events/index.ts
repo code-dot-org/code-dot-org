@@ -5,8 +5,8 @@
 
 import * as Blockly from 'blockly/core';
 
-import {BLOCK_TYPES} from '@/constants';
-import {updateBlockEnabled, disableOrphanBlocks} from '@/utils';
+import {BLOCK_TYPES} from '@blockly-workspace/constants';
+import {updateBlockEnabled, disableOrphanBlocks} from '@blockly-workspace/utils';
 
 type State = Blockly.serialization.blocks.State;
 

@@ -1,7 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 import {useRef} from 'react';
 
-import {Button} from '@/button';
+import {Button} from '@code-dot-org/component-library/button';
 
 import Tooltip, {TooltipProps, WithTooltip, WithTooltipHandle} from '../index';
 

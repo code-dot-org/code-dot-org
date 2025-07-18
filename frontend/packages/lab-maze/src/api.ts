@@ -1,7 +1,7 @@
-import ExecutionInfo from '@/ExecutionInfo';
-import type MazeController from '@/MazeController';
-import Validator from '@/Validator';
-import type WordSearch from '@/WordSearch';
+import ExecutionInfo from '@lab-maze/ExecutionInfo';
+import type MazeController from '@lab-maze/MazeController';
+import Validator from '@lab-maze/Validator';
+import type WordSearch from '@lab-maze/WordSearch';
 
 type Tiles = typeof import('./tiles');
 

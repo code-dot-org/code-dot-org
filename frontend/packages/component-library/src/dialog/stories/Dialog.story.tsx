@@ -1,9 +1,8 @@
 import {Meta, StoryFn} from '@storybook/react';
 import {useState} from 'react';
 
-import {Button} from '@/button';
-
-import Dialog, {DialogProps} from '../Dialog';
+import {Button} from '@code-dot-org/component-library/button';
+import Dialog, {DialogProps} from '@code-dot-org/component-library/dialog';
 
 export default {
   title: 'DesignSystem/Dialog/Dialog',

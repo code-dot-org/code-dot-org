@@ -3,12 +3,11 @@ import * as Blockly from 'blockly/core';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
-
-import MazeLevel, {MazeLevelProps} from '@/components/MazeLevel';
-import type {LevelData, MazeData} from '@/types';
+import MazeLevel, {MazeLevelProps} from '@code-dot-org/lab-maze';
+import type {LevelData, MazeData} from '@code-dot-org/lab-maze';
 
 export default {
-  title: 'Labs/Blockly',
+  title: 'Labs/Maze',
   component: MazeLevel,
   parameters: {
     layout: 'fullscreen',

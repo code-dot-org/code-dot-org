@@ -1,7 +1,7 @@
 import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
-import {BLOCK_TYPES, ToolboxType} from '@/constants';
+import {BLOCK_TYPES, ToolboxType} from '@blockly-workspace/constants';
 
 /**
  * Options for the `getAllGeneratedCode` method.

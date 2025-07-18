@@ -20,13 +20,13 @@ import BlocklyLevel, {
 import type {LevelData} from '@code-dot-org/lab-blockly';
 import {LevelContext} from '@code-dot-org/lab-blockly/contexts';
 
-import blocks from '@/blocks';
-import Visualization from '@/components/Visualization';
-import Maze from '@/Maze';
-import type {MazeData} from '@/MazeController';
-import defaultSkins, {skinFor} from '@/skins';
-import type {SkinsData, API} from '@/types';
-import Validator from '@/Validator';
+import blocks from '@lab-maze/blocks';
+import Visualization from '@lab-maze/components/Visualization';
+import Maze from '@lab-maze/Maze';
+import type {MazeData} from '@lab-maze/MazeController';
+import defaultSkins, {skinFor} from '@lab-maze/skins';
+import type {SkinsData, API} from '@lab-maze/types';
+import Validator from '@lab-maze/Validator';
 
 /** By default, a blank level should at least show a 'When Run' block */
 const DefaultStartBlocks: BlocklySerialization = {

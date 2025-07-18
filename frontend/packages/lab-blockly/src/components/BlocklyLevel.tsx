@@ -16,10 +16,10 @@ import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Heading6} from '@code-dot-org/component-library/typography';
 
-import Workspace from '@/components/workspace';
-import Instructions from '@/components/workspace/information/instructions';
-import MultipleChoice from '@/components/workspace/information/multipleChoice';
-import type {LevelData} from '@/types';
+import Workspace from '@lab-blockly/components/workspace';
+import Instructions from '@lab-blockly/components/workspace/information/instructions';
+import MultipleChoice from '@lab-blockly/components/workspace/information/multipleChoice';
+import type {LevelData} from '@lab-blockly/types';
 
 import moduleStyles from './blocklyLevel.module.scss';
 

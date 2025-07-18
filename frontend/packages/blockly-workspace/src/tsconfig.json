@@ -8,7 +8,7 @@
     "rootDir": ".",
     "baseUrl": "../",
     "paths": {
-      "@/*": ["./src/*"]
+      "@blockly-workspace/*": ["./src/*"]
     }
   },
   "exclude": ["**/__tests__/*", "**/stories/*"]

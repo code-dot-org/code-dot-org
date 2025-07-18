@@ -1,8 +1,8 @@
 import * as Blockly from 'blockly/core';
 
-import {frameSizes} from '@/constants';
-import {isFunctionBlock} from '@/mixins/functionBlockMixin';
-import {Collider} from '@/types';
+import {frameSizes} from '@blockly-workspace/constants';
+import {isFunctionBlock} from '@blockly-workspace/mixins/functionBlockMixin';
+import {Collider} from '@blockly-workspace/types';
 
 // Margins for SVG frames for unused blocks and functions
 const {

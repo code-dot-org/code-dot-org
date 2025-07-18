@@ -1,5 +1,7 @@
-import {dirname} from 'path';
+import {dirname, basename} from 'path';
 import {fileURLToPath} from 'url';
+
+const packageName = basename(dirname(fileURLToPath(import.meta.url)));
 
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 export default {
@@ -12,7 +14,7 @@ export default {
         jsc: {
           baseUrl: '.',
           paths: {
-            '@/*': [`${dirname(fileURLToPath(import.meta.url))}/src/*`],
+            [`@${packageName}/*`]: [`${dirname(fileURLToPath(import.meta.url))}/src/*`],
           },
           transform: {
             react: {
@@ -24,7 +26,7 @@ export default {
     ],
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    [`^@${packageName}/(.*)$`]: '<rootDir>/src/$1',
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],

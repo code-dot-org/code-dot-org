@@ -3,9 +3,8 @@ import * as Blockly from 'blockly/core';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
-
-import BlocklyLevel, {BlocklyLevelProps} from '@/components/BlocklyLevel';
-import type {LevelData} from '@/types';
+import BlocklyLevel, {BlocklyLevelProps} from '@code-dot-org/lab-blockly';
+import type {LevelData} from '@code-dot-org/lab-blockly';
 
 export default {
   title: 'Labs/Blockly',
