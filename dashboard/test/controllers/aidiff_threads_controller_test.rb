@@ -69,6 +69,98 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       AidiffThreadsController.any_instance.stubs(:contains_pii?).returns(false)
     end
 
+    test "index redirects to signin when teacher not signed in" do
+      get :index
+      assert_redirected_to_sign_in
+    end
+
+    test "index returns forbidden when teacher not in experiment" do
+      sign_in @teacher_sans_experiment
+      get :index
+      assert_response :forbidden
+    end
+
+    test "index returns only user-owned threads" do
+      #some other user's thread
+      @teacher2 = create(:teacher)
+      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
+
+      #this user's threads
+      sign_in @teacher
+      create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: nil, lesson_id: nil, context_type: "course")
+      create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: nil, context_type: "unit")
+
+      get :index
+
+      assert_response :success
+      json_response = JSON.parse(response.body)
+      assert_equal 2, json_response.count
+      assert_equal "course", json_response[0]["context_type"]
+      assert_equal "unit", json_response[1]["context_type"]
+    end
+
+    test "show redirects to signin when teacher not signed in" do
+      #some other user's thread
+      @teacher2 = create(:teacher)
+      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
+
+      get :show, params: {id: thread.id}
+      assert_redirected_to_sign_in
+    end
+
+    test "show returns forbidden when teacher not in experiment" do
+      #some other user's thread
+      sign_in @teacher_sans_experiment
+      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher_sans_experiment, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
+
+      get :show, params: {id: thread.id}
+      assert_response :forbidden
+    end
+
+    test "show returns forbidden when teacher doesn't own thread" do
+      #some other user's thread
+      @teacher2 = create(:teacher)
+      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
+
+      sign_in @teacher
+
+      get :show, params: {id: thread.id}
+      assert_response :forbidden
+    end
+
+    test "show returns only user-owned thread" do
+      #this user's threads
+      sign_in @teacher
+      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: nil, lesson_id: nil, context_type: "course")
+
+      get :show, params: {id: thread.id}
+
+      assert_response :success
+      json_response = JSON.parse(response.body)
+      assert_equal "course", json_response["context_type"]
+      assert_equal 0, json_response["messages"].count
+    end
+
+    test "show returns messages in thread" do
+      #this user's threads
+      sign_in @teacher
+      thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: nil, lesson_id: nil, context_type: "course")
+      create(:aidiff_message, aidiff_thread: thread, role: :user, content: "hello")
+      create(:aidiff_message, aidiff_thread: thread, content: "beep boop")
+
+      get :show, params: {id: thread.id}
+
+      assert_response :success
+      json_response = JSON.parse(response.body)
+      assert_equal "course", json_response["context_type"]
+      assert_equal 2, json_response["messages"].count
+      assert_equal "hello", json_response["messages"][0]["content"]
+      assert_equal "beep boop", json_response["messages"][1]["content"]
+    end
+
     test "returns bad_request when creating thread if bad params for lesson context" do
       sign_in @teacher
 
@@ -107,6 +199,20 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       }
 
       assert_response :bad_request
+    end
+
+    test "returns redirect to signin when creating thread if teacher not signed in" do
+      post :create, params: {
+        context: {
+          type: "lesson",
+          lessonId: @lesson.id,
+        },
+        inputText: "Hello!",
+        isPreset: false,
+        presetChipText: nil,
+      }
+
+      assert_redirected_to_sign_in
     end
 
     test "returns forbidden when creating thread if ai_diff experiment isn't enabled" do
