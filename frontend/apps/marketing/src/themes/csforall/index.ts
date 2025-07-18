@@ -1,6 +1,8 @@
 'use client';
 import {createTheme} from '@mui/material';
 
+const ROBOTO_MONO_FONT = 'Roboto Mono';
+
 const COLORS = {
   black: '#15092C',
 };
@@ -9,23 +11,53 @@ const theme = createTheme({
   cssVariables: true,
   palette: {
     primary: {
-      main: '#D401F2',
+      main: '#2C079F',
     },
     secondary: {
-      main: '#2C079F',
+      main: '#D401F2',
     },
     text: {
       primary: COLORS.black,
     },
     divider: COLORS.black,
+    common: {
+      black: COLORS.black,
+    },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: ({theme}) => ({
-          ['&.MuiButton-contained.MuiButton-colorPrimary']: {
+          fontFamily: ROBOTO_MONO_FONT,
+          textTransform: 'none',
+          ['&.MuiButton-contained.button--color-emphasized']: {
+            backgroundColor: theme.palette.secondary.main,
+          },
+          ['&.MuiButton-contained.button--color-primary']: {
             backgroundColor: theme.palette.primary.main,
           },
+          ['&.MuiButton-outlined.button--color-secondary']: {
+            color: theme.palette.common.black,
+            borderColor: theme.palette.common.black,
+          },
+          ['&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall']:
+            {
+              fontSize: '1rem',
+              padding: theme.spacing(1.25, 2.5),
+              borderRadius: theme.spacing(3),
+            },
+          ['&.MuiButton-contained.MuiButton-sizeMedium, &.MuiButton-outlined.MuiButton-sizeMedium']:
+            {
+              fontSize: '1.125rem',
+              padding: theme.spacing(1.5, 3),
+              borderRadius: theme.spacing(4),
+            },
+          ['&.MuiButton-contained.MuiButton-sizeLarge, &.MuiButton-outlined.MuiButton-sizeLarge']:
+            {
+              fontSize: '1.25rem',
+              padding: theme.spacing(2, 5),
+              borderRadius: theme.spacing(8),
+            },
         }),
       },
     },
