@@ -15,7 +15,9 @@
     "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     "./package.json": "./package.json",
     "./accordion": {

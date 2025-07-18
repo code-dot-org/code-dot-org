@@ -181,8 +181,9 @@ const Graph: React.FunctionComponent<GraphProps> = ({
         animationDurationUpdate: 1000,
         animationEasingUpdate: 'cubicOut',
         tooltip: {
+          confine: true,
           trigger: 'axis',
-          valueFormatter: (value: number | string, _dataIndex: number) => {
+          valueFormatter: (value: number | string, _: number) => {
             value = (parseFloat(value.toString()) || 0) * 100;
             return `${value.toFixed(2)}%`;
           },

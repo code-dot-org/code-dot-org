@@ -58,7 +58,7 @@ const config: StorybookConfig = {
                 loader: 'css-loader',
                 options: {
                   modules: {
-                    mode: (path) => {console.log(path); return 'global';},
+                    auto: true,
                     localIdentName: '[name]__[local]--[hash:base64:5]',
                   },
                 },
