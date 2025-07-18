@@ -104,13 +104,13 @@ const theme = createTheme({
       lineHeight: 1.2,
     },
     h5: {
-      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '2rem', // 32px
       fontWeight: 800,
       lineHeight: 1.125,
     },
     h6: {
-      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       fontSize: '1.5rem', // 24px
       fontWeight: 800,
       lineHeight: 1.25,
