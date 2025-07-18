@@ -1018,6 +1018,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show special script level by chapter" do
+    create_hourofcode_unit_and_levels
     # this works for 'special' scripts like flappy, hoc
     expected_script_level = ScriptLevel.where(script_id: Unit.get_from_cache(Unit::HOC_NAME).id, chapter: 5).first
 
@@ -1251,27 +1252,29 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'end of HoC for logged in user works' do
+    create_hourofcode_unit_and_levels
     sign_in(create(:user))
     get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
 
   test 'end of HoC for anonymous visitor works' do
+    create_hourofcode_unit_and_levels
     get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
 
   test "next redirects admins to root" do
     sign_in create(:admin)
-    get :next, params: {script_id: Unit::HOC_NAME}
+    get :next, params: {script_id: @custom_script.name}
     assert_redirected_to root_path
   end
 
   test 'next for non signed in user' do
-    get :next, params: {script_id: Unit::HOC_NAME}
+    get :next, params: {script_id: @custom_script.name}
 
     assert_response :redirect
-    assert_redirected_to '/hoc/1'
+    assert_redirected_to "/courses/#{@custom_script.original_unit_group.name}/units/1/lessons/1/levels/1"
   end
 
   test 'should show tracking pixel for first level of hoc course in prod' do
