@@ -175,7 +175,7 @@ class AnimationPicker extends React.Component {
       .then(json => {
         console.log('In AnimationPickerImage moderation rating:', json.rating);
         const body = JSON.stringify({
-          amount: 15,
+          type: 'flag',
         });
         HttpClient.post(
           `/v3/channels/${this.props.channelId}/abuse/image`,
