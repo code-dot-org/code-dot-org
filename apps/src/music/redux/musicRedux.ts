@@ -76,6 +76,9 @@ export interface MusicState {
   loopEnd: number;
   key: Key;
   bpm: number;
+
+  // Some code to load.  Reset to undefined when the code is loaded.
+  codeToLoad?: string;
 }
 
 const initialState: MusicState = {
@@ -107,6 +110,7 @@ const initialState: MusicState = {
   loopEnd: 5,
   key: DEFAULT_KEY,
   bpm: DEFAULT_BPM,
+  codeToLoad: undefined,
 };
 
 const musicSlice = createSlice({
@@ -256,6 +260,14 @@ const musicSlice = createSlice({
 
       state.bpm = bpm;
     },
+    // Some code to load.
+    setCodeToLoad: (state, action: PayloadAction<string | undefined>) => {
+      if (action.payload === undefined || action.payload === '') {
+        state.codeToLoad = undefined;
+      } else {
+        state.codeToLoad = action.payload;
+      }
+    },
   },
 });
 
@@ -335,4 +347,5 @@ export const {
   setLoopEnd,
   setKey,
   setBpm,
+  setCodeToLoad,
 } = musicSlice.actions;

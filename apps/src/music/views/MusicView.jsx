@@ -65,6 +65,7 @@ import {
   clearSelectedTriggerId,
   getBlockMode,
   addPlaybackEvents,
+  setCodeToLoad,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -123,6 +124,8 @@ class UnconnectedMusicView extends React.Component {
     validationState: PropTypes.object,
     canUndo: PropTypes.bool,
     canRedo: PropTypes.bool,
+    codeToLoad: PropTypes.string,
+    clearCodeToLoad: PropTypes.func,
   };
 
   constructor(props) {
@@ -258,6 +261,14 @@ class UnconnectedMusicView extends React.Component {
 
     if (prevProps.isReadOnlyWorkspace !== this.props.isReadOnlyWorkspace) {
       this.musicBlocklyWorkspace.setIsReadOnly(this.props.isReadOnlyWorkspace);
+    }
+
+    if (this.props.codeToLoad) {
+      // If there is code to load, load it and reset the codeToLoad state.
+      this.loadCode(JSON.parse(this.props.codeToLoad));
+      this.props.clearCodeToLoad();
+      // Reset the hasEdited state since we just loaded code.
+      this.setState({hasEdited: false});
     }
   }
 
@@ -979,6 +990,7 @@ const MusicView = connect(
     lastMeasure: state.music.lastMeasure,
     canUndo: state.music.canUndo,
     canRedo: state.music.canRedo,
+    codeToLoad: state.music.codeToLoad,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -1014,6 +1026,7 @@ const MusicView = connect(
       dispatch(addOrderedFunctions(data.orderedFunctions));
       dispatch(setLastMeasure(data.lastMeasure));
     },
+    clearCodeToLoad: () => dispatch(setCodeToLoad(undefined)),
   })
 )(UnconnectedMusicView);
 
