@@ -174,14 +174,17 @@ class AnimationPicker extends React.Component {
       .then(response => response.json())
       .then(json => {
         console.log('In AnimationPickerImage moderation rating:', json.rating);
-        HttpClient.post(`/v3/channels/${this.props.channelId}/abuse/image`, file, true, {
-          'Content-Type': file.type,
-        })
-        .then(response => response.json())
-        .then(json => {
-          console.log('json', json);
-        })
-        .catch(err => console.log('update abuse error', err));
+        HttpClient.post(
+          `/v3/channels/${this.props.channelId}/abuse/image`,
+          file,
+          true,
+          {
+            'Content-Type': file.type,
+          }
+        )
+          .then(response => response.json())
+          .then(json => console.log('json', json))
+          .catch(err => console.log('update abuse error', err));
       })
       .catch(err => console.error('Moderation error:', err));
 
