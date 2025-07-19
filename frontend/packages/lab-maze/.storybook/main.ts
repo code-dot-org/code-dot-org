@@ -1,6 +1,7 @@
 import {StorybookConfig} from '@storybook/react-webpack5';
-import {join, dirname, basename, resolve} from 'node:path';
-import {fileURLToPath} from 'url';
+import fs from 'fs';
+import {join, dirname, resolve} from 'node:path';
+import path from 'path';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -10,7 +11,14 @@ function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, 'package.json')));
 }
 
-const packageName = basename(dirname(join(fileURLToPath(import.meta.url), '..')))
+const packageRoot = resolve(__dirname, '../../../packages');
+const packages = fs.readdirSync(packageRoot).filter(packageName => fs.statSync(path.join(packageRoot, packageName)).isDirectory() && fs.existsSync(path.join(packageRoot, packageName, 'src')));
+const packageAliases = Object.fromEntries(
+  packages.map(packageName => (
+    [`@${packageName}`, resolve(__dirname, packageRoot, packageName, 'src')]
+  ))
+);
+const publicPaths = packages.map(packageName => resolve(__dirname, '../../../packages', packageName, 'public')).filter(publicPath => fs.existsSync(publicPath));
 
 const config: StorybookConfig = {
   logLevel: 'trace',
@@ -76,7 +84,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
-  staticDirs: ['../public'],
+  staticDirs: ['../public', ...publicPaths],
   swc: () => ({
     // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
     // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react
@@ -93,8 +101,9 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        [`@${packageName}`]: resolve(__dirname, '../src'),
-        '@public': resolve(__dirname, '../public'),
+        ...packageAliases,
+        '@': resolve(__dirname, '../../../packages/component-library/src'),
+        '@public': [resolve(__dirname, '../public'), resolve(__dirname, '../../design-system-storybook/public')],
       };
     }
 

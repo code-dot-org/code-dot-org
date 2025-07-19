@@ -1,8 +1,8 @@
 import {StorybookConfig} from '@storybook/react-webpack5';
-import {join, dirname, resolve} from 'node:path';
-import {IgnorePlugin} from 'webpack';
-import path from 'path';
 import fs from 'fs';
+import {join, dirname, resolve} from 'node:path';
+import path from 'path';
+import {IgnorePlugin} from 'webpack';
 
 /**
  * This function is used to resolve the absolute path of a package.

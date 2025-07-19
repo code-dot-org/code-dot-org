@@ -1343,6 +1343,78 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/lab-artist@workspace:packages/lab-artist":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/lab-artist@workspace:packages/lab-artist"
+  dependencies:
+    "@code-dot-org/audio": "workspace:*"
+    "@code-dot-org/blockly-workspace": "workspace:*"
+    "@code-dot-org/changelogs": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*"
+    "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lab-blockly": "workspace:*"
+    "@code-dot-org/lint-config": "workspace:*"
+    "@eslint/js": "npm:^9.15.0"
+    "@release-it/conventional-changelog": "npm:^10.0.0"
+    "@storybook/addon-a11y": "npm:^8.6.9"
+    "@storybook/addon-essentials": "npm:^8.6.9"
+    "@storybook/addon-interactions": "npm:^8.6.9"
+    "@storybook/addon-storysource": "npm:^8.6.9"
+    "@storybook/addon-styling-webpack": "npm:^1.0.1"
+    "@storybook/addon-webpack5-compiler-swc": "npm:^3.0.0"
+    "@storybook/blocks": "npm:^8.6.9"
+    "@storybook/react": "npm:^8.6.9"
+    "@storybook/react-webpack5": "npm:^8.6.9"
+    "@storybook/test": "npm:^8.6.9"
+    "@storybook/test-runner": "npm:^0.22.0"
+    "@swc/core": "npm:^1.9.3"
+    "@swc/jest": "npm:^0.2.37"
+    "@testing-library/dom": "npm:^10.4.0"
+    "@testing-library/jest-dom": "npm:^6.6.3"
+    "@testing-library/react": "npm:^16.0.1"
+    "@types/identity-obj-proxy": "npm:^3"
+    "@types/jest": "npm:^29.5.14"
+    "@types/lodash": "npm:^4"
+    "@types/node": "npm:^22.9.0"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    axe-playwright: "npm:^2.0.3"
+    classnames: "npm:^2.5.1"
+    clean-package: "npm:^2.2.0"
+    esbuild-sass-plugin: "npm:^3.3.1"
+    eslint: "npm:^9.15.0"
+    eslint-plugin-jest: "npm:^28.9.0"
+    eslint-plugin-react: "npm:^7.37.2"
+    eslint-plugin-storybook: "npm:^0.11.1"
+    glob: "npm:^11.0.0"
+    globals: "npm:^15.12.0"
+    identity-obj-proxy: "npm:^3.0.0"
+    jest: "npm:^29.7.0"
+    jest-environment-jsdom: "npm:^29.7.0"
+    postcss: "npm:^8.4.49"
+    postcss-modules: "npm:^6.0.1"
+    prettier: "npm:3.4.2"
+    react: "npm:^18.3.1"
+    react-dom: "npm:^18.3.1"
+    release-it: "npm:^18.1.2"
+    rimraf: "npm:^6.0.1"
+    schema-dts: "npm:^1.1.5"
+    storybook: "npm:^8.6.9"
+    storybook-addon-rtl: "npm:^1.0.1"
+    stylelint: "npm:^16.14.1"
+    swiper: "npm:^11.0.5"
+    tsc-alias: "npm:^1.8.11"
+    tsup: "npm:^8.3.5"
+    typescript: "npm:^5.7.3"
+    typescript-eslint: "npm:^8.15.0"
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+    swiper: ^11.0.5
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/lab-blockly@workspace:*, @code-dot-org/lab-blockly@workspace:packages/lab-blockly":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab-blockly@workspace:packages/lab-blockly"
@@ -1504,9 +1576,7 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lab-blockly": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
-    "@code-dot-org/markdown": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
-    "@react-hook/resize-observer": "npm:^2.0.2"
     "@release-it/conventional-changelog": "npm:^10.0.0"
     "@storybook/addon-a11y": "npm:^8.6.9"
     "@storybook/addon-essentials": "npm:^8.6.9"
@@ -23391,21 +23461,21 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>":
   version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=cef18b"
+  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/c891ccf04008bc1305ba34053db951f8a4584b4a1bf2f68fd972c4a354df3dc5e62c8bfed4f6ac2d12e5b3b1c49af312c83a651048f818cd5b4949d17baacd79
+  checksum: 10c0/f3b8082c9d1d1629a215245c9087df56cb784f9fb6f27b5d55577a20e68afe2a889c040aacff6d27e35be165ecf9dca66e694c42eb9a50b3b2c451b36b5675cb
   languageName: node
   linkType: hard
 
 "typescript@patch:typescript@npm%3A^5.7.3#optional!builtin<compat/typescript>":
   version: 5.7.3
-  resolution: "typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=cef18b"
+  resolution: "typescript@patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/3b56d6afa03d9f6172d0b9cdb10e6b1efc9abc1608efd7a3d2f38773d5d8cfb9bbc68dfb72f0a7de5e8db04fc847f4e4baeddcd5ad9c9feda072234f0d788896
+  checksum: 10c0/6fd7e0ed3bf23a81246878c613423730c40e8bdbfec4c6e4d7bf1b847cbb39076e56ad5f50aa9d7ebd89877999abaee216002d3f2818885e41c907caaa192cc4
   languageName: node
   linkType: hard
 

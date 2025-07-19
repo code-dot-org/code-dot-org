@@ -8,7 +8,7 @@ import Markdown, {MarkdownProps} from '@code-dot-org/markdown';
 
 
 export default {
-  title: 'Markdown',
+  title: 'Platform/Markdown',
   component: Markdown,
 } as Meta;
 
@@ -34,7 +34,7 @@ InlineMarkdown.args = {
 
 export const ComplexMarkdown = SingleTemplate.bind({});
 ComplexMarkdown.args = {
-  content: "Hello **world**\n\nThis is another paragraph.\n\n**Bold** *Italic* ~Strikethru~.\n\nThis is [a link](#)!",
+  content: "# Header\n\n## Subheader\n\n### Subsubheader\n\n####Subsubsubheader\n\nHello **world**\n\nThis is another paragraph.\n\n**Bold** *Italic* ~~Strikethru~~ <u>underlined</u> ***Bold Italic*** ~~***Bold Italic Strikethru***~~ <u>~~***Bold Italic Strikethru Underlined***~~</u>.\n\nThis is [a link](#)!\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 };
 
 export const OverrideParagraphSize = SingleTemplate.bind({});

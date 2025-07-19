@@ -1,18 +1,18 @@
 {
-  "name": "@code-dot-org/lab-maze",
+  "name": "@code-dot-org/lab-artist",
   "version": "0.1.0",
   "keywords": [
     "lab",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lab-maze/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lab-artist/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/lab-maze"
+    "directory": "frontend/packages/lab-artist"
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
@@ -51,7 +51,8 @@
     "@code-dot-org/blockly-workspace": "workspace:*",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",
-    "@code-dot-org/lab-blockly": "workspace:*"
+    "@code-dot-org/lab-blockly": "workspace:*",
+    "@code-dot-org/lab-maze": "workspace:*"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
