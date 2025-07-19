@@ -150,6 +150,7 @@ export default class AssetManager extends React.Component {
 
   onUploadStart = data => {
     this.setState({statusMessage: 'Uploading...'});
+    console.log('assetManager onUploadStart, data', data);
     data.submit();
   };
 

@@ -62,7 +62,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
     React.createElement(pickerType, {
       typeFilter: typeFilter,
       customAllowedExtensions: options.customAllowedExtensions,
-      uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(),
+      uploadsEnabled: !dashboard.project.exceedsAbuseThreshold(), // COPY THIS FROM ASSET MANAGER.
       useFilesApi: !!options.useFilesApi,
       assetChosen: showChoseImageButton
         ? function (fileWithPath, timestamp) {

@@ -306,6 +306,7 @@ export default class AnimationPickerBody extends React.Component {
                   shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
                   isBackgroundsTab={isBackgroundsTab}
                   appType={appType}
+                  // disabled={!this.props.uploadsEnabled} // Add disabled here if project flagged for abuse.
                 />
               </div>
             )}
