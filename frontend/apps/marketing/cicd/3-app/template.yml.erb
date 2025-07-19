@@ -756,8 +756,4 @@ Outputs:
     Description: Fully qualified domain name of the marketing site
     Value: !Sub "${SubdomainName}.${BaseDomainName}"
   CloudFrontDistributionId:
-    Value:
-      Ref: CloudFrontDistribution
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'
+    Value: !Ref CloudFrontDistribution
