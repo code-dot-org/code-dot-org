@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Position,
@@ -6,10 +7,19 @@ import {
   type Node,
   type NodeProps,
 } from '@xyflow/react';
-import React, {memo, useEffect, useState} from 'react';
+import React, {memo, useEffect, useState, ChangeEvent, useRef} from 'react';
+
+import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
+import {getAssetUrl} from '@cdo/apps/aichat/utils';
+import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
+import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import askAi from '../../../flow/askAi';
 import {useInputTexts} from '../../../flow/flowNodes';
+
+import styles from './AiNode.module.scss';
+export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];
 
 // This node asks the aichat service a question entered in its input field, and
 // sends the response to its output handle as text.  It acepts optional context
@@ -25,6 +35,48 @@ function AiNode({
   const contextString = useInputTexts().join('\n');
 
   const [isWorking, setIsWorking] = useState(false);
+
+  const channelId = useAppSelector(state => state.lab.channel?.id) || '';
+  const currentLevelId = useAppSelector(state =>
+    parseInt(state.progress.currentLevelId || '')
+  );
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+
+  const uploadedFiles = useRef<ChatAsset[]>([]);
+  const [uploadedFileCount, setUploadedFileCount] = useState(0);
+
+  const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files;
+    if (!files) {
+      return;
+    }
+
+    for (const file of files) {
+      const asset = {filename: file.name, source: AssetSource.PROJECT};
+      try {
+        await HttpClient.put(getAssetUrl(asset, channelId), file);
+        uploadedFiles.current.push(asset);
+        setUploadedFileCount(uploadedFiles.current.length);
+      } catch (error) {
+        const status =
+          error instanceof NetworkError && error.response.status === 413
+            ? 'sizeLimitExceeded'
+            : 'uploadFailed';
+        console.log('Error uploading file:', file.name, status);
+      }
+    }
+  };
+
+  const [openFileInput, FileInput] = useHiddenFileInput(
+    onUploadFiles,
+    ACCEPTED_FILE_TYPES.join(','),
+    true
+  );
+
+  const onDeviceUploadClick = (event: React.MouseEvent) => {
+    openFileInput();
+    event.stopPropagation();
+  };
 
   useEffect(() => {
     (async () => {
@@ -48,7 +100,13 @@ function AiNode({
         data.askedText;
       console.log('Ask chat:', text);
 
-      const response = await askAi(text);
+      const response = await askAi(
+        text,
+        currentLevelId,
+        scriptId,
+        channelId,
+        uploadedFiles.current
+      );
       console.log('Chat responded: ', response);
 
       const responseText =
@@ -59,7 +117,15 @@ function AiNode({
 
       setIsWorking(false);
     })();
-  }, [contextString, data.askedText, id, updateNodeData]);
+  }, [
+    channelId,
+    contextString,
+    currentLevelId,
+    data.askedText,
+    id,
+    scriptId,
+    updateNodeData,
+  ]);
 
   // This doesn't use useCallback because a dependency on data.fieldText
   // would trigger an AI request every time the user types in the input field.
@@ -82,6 +148,7 @@ function AiNode({
           <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         )}
       </div>
+
       <textarea
         onChange={evt => updateNodeData(id, {fieldText: evt.target.value})}
         onKeyDown={event => {
@@ -94,6 +161,22 @@ function AiNode({
         className="reactflow-textarea"
         rows={10}
       />
+      <div className={styles.fileUploadContainer}>
+        <Button
+          size="xs"
+          color="gray"
+          type="secondary"
+          text="Upload File"
+          onClick={onDeviceUploadClick}
+          className={styles.uploadButton}
+        />
+        <FileInput />
+        {uploadedFileCount > 0 && (
+          <span>
+            {uploadedFileCount} file{uploadedFileCount > 1 ? 's' : ''} uploaded
+          </span>
+        )}
+      </div>
       <Handle type="source" position={Position.Right} />
     </div>
   );

@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-16T20:11:43.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Digital Forensics Analyst",
+    "long_instructions": " ## Digital Forensics Analyst\r\n\r\nA **digital forensics analyst** investigates cyber incidents by collecting and analyzing digital evidence to uncover how an attack happened and who was responsible.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Chat with the digital forensics analyst about your scenario. Figure out how the threat works and what harm it can cause.\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> A major hospital experienced a security breach that locked access to all patient records, lab results and appointment systems. The hospital was instructed by hackers to pay $5 million in Bitcoin within 72 hours or lose all their data. Based on this scenario, how does a ransomware attack work and why is it harmful?\r\n\r\n:::\r\n\r\n2. Chat with the digital forensics analyst about **ways to prevent ransomware attacks.**\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> What are ways to prevent ransomware attacks?\r\n:::\r\n \r\n3. Chat with the digital forensics analyst about **ways to prevent ransomware attacks using AI.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How can AI help detect early signs of a ransomware attack before it starts?*\r\n> - *Can AI analyze file activity patterns to spot potential ransomware behavior?*\r\n> - *How does AI assist in blocking phishing emails that often deliver ransomware?*\r\n:::\r\n\r\n4. Chat with the digital forensics analyst about **ways that AI can make ransomware attacks more harmful.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How might bad actors use AI in cyberattacks, and what does that mean for defenders?*\r\n> - *How does AI change the threat landscape for ransomware as a cyber threat?*\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to maximum 3 bullet points or maximum one paragraph. \n\nYou are a digital forensics analyst specializing in investigating ransomware attacks and other cybercrimes. Your job is to uncover how attacks happened, what systems were affected, and who may be responsible.\n\nYou work on:\nAnalyzing infected devices and networks to trace the origin and impact of ransomware.\nRecovering encrypted data and preserving digital evidence for legal investigations.\nUsing specialized software tools to examine logs, file metadata, and attack patterns.\nCollaborating with incident response teams, law enforcement, and cybersecurity professionals.\n\nWhen asked, explain:\nHow ransomware spreads and locks up digital files.\nWhat steps you take to investigate and trace a ransomware attack.\nHow you gather digital evidence without damaging it.\nWhy your work is important in helping people and organizations recover from cyberattacks.\n\nYou may also discuss challenges like staying ahead of constantly evolving malware, working under time pressure, and balancing technical work with investigative thinking.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/7f7c45f9618af548e64b467692217094-image-1752764777618.05.51 AM.png",
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "bubble_choice_description": "Chat with a digital forensics analyst about your scenario."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-16T20:11:43.708+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson2-level6a\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson2-level6a\"},{\"changed_at\":\"2025-07-16 20:12:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 20:15:27 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:16:23 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:05:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:13:59 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:15:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:25:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:29:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:34:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:40:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:47:56 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 20:45:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 20:45:25 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

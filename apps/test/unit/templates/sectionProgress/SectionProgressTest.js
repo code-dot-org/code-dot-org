@@ -16,6 +16,8 @@ const DEFAULT_PROPS = {
   setCurrentView: () => {},
   setUnit: () => {},
   scriptId: 123,
+  courseId: 1,
+  unitPosition: 1,
   sectionId: 2,
   currentView: ViewType.SUMMARY,
   scriptData: {

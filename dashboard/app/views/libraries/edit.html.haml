@@ -18,13 +18,17 @@
         = f.submit class: 'btn', id: 'library_submit'
 
     - unless @library.new_record?
+      - protected_libraries = ['NativeSpriteLab', 'ValidationSetup']
+      - is_protected = protected_libraries.include?(@library.name)
       = form_for(@library,
         url: library_path(id: @library.name),
         html: {id: 'delete-library-form', method: 'delete'},
       ) do |f|
         = f.submit 'Delete Library',
-            data: {confirm: 'Are you sure you want to delete this library?'},
-            class: 'btn btn-danger'
+            data: {confirm: 'Are you sure you want to delete this library? Be sure it is not used in ANY published levels.'},
+            class: 'btn btn-danger',
+            disabled: is_protected,
+            title: (is_protected ? "#{@library.name} cannot be deleted." : nil)
 
 = link_to 'Back', libraries_path
 

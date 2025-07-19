@@ -28,8 +28,9 @@ class AichatRequestsController < ApplicationController
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
-    return render status: :forbidden, json: {user_type: current_user.user_type} unless can_access_aichat? || can_access_ai_tutor2?(params[:aichatContext][:currentLevelId])
-
+    unless can_access_aichat_chat_completion? || can_access_ai_tutor2_chat_completion?(params[:aichatContext][:currentLevelId])
+      return render status: :forbidden, json: {user_type: current_user.user_type}
+    end
     return head :too_many_requests if should_throttle_request_count?
 
     model_id = params[:modelParameters][:selectedModelId]
@@ -91,14 +92,14 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def can_access_ai_tutor2?(level_id)
-    # AiTutor2 requests only come from python lab levels.
-    return false if level_id.nil? || DCDO.get("block_ai_tutor2_chat_completion", false)
-    Level.find(level_id).is_a? Pythonlab
+  private def can_access_ai_tutor2_chat_completion?(level_id)
+    return false if DCDO.get("block_ai_tutor2_chat_completion", false)
+    current_user.can_access_ai_tutor2?(level_id)
   end
 
-  private def can_access_aichat?
-    !DCDO.get("block_aichat_chat_completion", false) && current_user.has_aichat_access?
+  private def can_access_aichat_chat_completion?
+    return false if DCDO.get("block_aichat_chat_completion", false)
+    current_user.has_aichat_access?
   end
 
   private def should_throttle_request_count?

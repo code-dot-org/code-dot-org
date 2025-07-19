@@ -2,6 +2,7 @@
 Feature: Using Modular Courses
   Background:
     Given I am on "http://studio.code.org/home"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   Scenario: Navigating within modular courses
     Given I create a teacher named "Teacher_Sally"
@@ -88,15 +89,21 @@ Feature: Using Modular Courses
     And I sign in as "Teacher_Sally" and go home
 
     And I click selector "a:contains(Course 2017)" once I see it to load a new page
-    And I wait until element ".progress-table" is visible
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "UI Test Shared Unit" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "UI Test Shared Unit" option in dropdown "unit-selector-v2"
+    And I wait until element "#ui-test-lesson-header-1" is visible
+    And I click selector "#ui-test-lesson-header-1"
+    And I wait until element "#ui-test-courses-ui-test-course-2017-units-3-lessons-1-levels-1-cell-data" is visible
     Then I see no difference for "modular course progress - first section"
 
     Then I select the "Course 2019" option in dropdown "uitest-sidebar-section-dropdown"
-    And I wait until element ".progress-table" is visible
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "UI Test Shared Unit" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#ui-test-progress-table-v2" is visible
+    And I wait until element "#unit-selector-v2" is visible
+    And I select the "UI Test Shared Unit" option in dropdown "unit-selector-v2"
+    And I wait until element "#ui-test-lesson-header-1" is visible
+    And I click selector "#ui-test-lesson-header-1"
+    And I wait until element "#ui-test-courses-ui-test-course-2019-units-3-lessons-1-levels-1-cell-data" is visible
     Then I see no difference for "modular course progress - second section"
 
     And I close my eyes

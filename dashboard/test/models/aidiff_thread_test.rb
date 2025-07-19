@@ -11,7 +11,8 @@ class AidiffThreadTest < ActiveSupport::TestCase
       external_id: 'openai_1234',
       llm_version: 'chatgpt3.4.5',
       title: 'Unit 3 differentiation thread',
-      unit_id: 3
+      unit_id: 3,
+      context_type: "unit"
     )
 
     assert thread.aidiff_messages.empty?

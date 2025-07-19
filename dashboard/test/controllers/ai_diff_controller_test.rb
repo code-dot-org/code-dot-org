@@ -209,7 +209,7 @@ class AiDiffControllerTest < ActionController::TestCase
 
     test "returns success when experiment is enabled and session_id is present" do
       sign_in @teacher
-      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       post :chat_completion, params: {
         context: {
@@ -239,7 +239,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success with unit context and session_id set" do
       sign_in @teacher
 
-      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, context_type: "unit")
 
       post :chat_completion, params: {
         context: {
@@ -269,7 +269,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "returns success with course context and session_id set" do
       sign_in @teacher
 
-      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, context_type: "course")
 
       post :chat_completion, params: {
         context: {
@@ -374,7 +374,7 @@ class AiDiffControllerTest < ActionController::TestCase
     test "return PII violation status if PII detected in the prompt" do
       sign_in @teacher
 
-      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
+      @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, context_type: "course")
 
       post :chat_completion, params: {
         context: {

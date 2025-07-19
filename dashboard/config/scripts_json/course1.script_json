@@ -8,9 +8,9 @@
         {
           "key": "409174a0-d76d-4992-8486-cfd9801c329e",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 1 content and course from Code.org , as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 1 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. ",
+          "details": "We are in the process of fully removing the Course 1 content and course from Code.org , as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 1 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on [new content offerings.](https://support.code.org/hc/en-us/articles/26001058366093-Teaching-Computer-Science-Fundamentals-Courses-A-F#faq)",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn more"
@@ -43,7 +43,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-18 17:21:36 UTC",
+    "serialized_at": "2025-07-17 15:56:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,

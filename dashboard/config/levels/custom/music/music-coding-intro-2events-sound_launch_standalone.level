@@ -164,7 +164,7 @@
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
-    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger the drums!\r\n1. [Connect](#clickable=flyout-up-id:sound---id:Trigger1) one sound block to each of the three trigger event blocks.\r\n2. Choose a different drum for each event.\r\n2. Press [Run](#clickable=run-button) to start the vocals.\r\n3. Then, press the [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code>](#clickable=trigger-button-1) , [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">2</code>](#clickable=trigger-button-2) or [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">3</code>](#clickable=trigger-button-1) button to play the drums.\r\n\r\n\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 1](#clickable=flyout-up-id:drum-toolbox---id:Trigger1)\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 4](#clickable=trigger-button-1)",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger the drums!\r\n\r\n1. [Connect](#clickable=flyout-up-id:sound---id:Trigger1) one sound block to each of the three when triggered event blocks.\r\n\r\n2. Choose a different drum for each event.\r\n\r\n2. Press [Run](#clickable=run-button) to start the vocals.\r\n\r\n3. Then, press the [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code>](#clickable=trigger-button-1) , [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">2</code>](#clickable=trigger-button-2) or [<code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">3</code>](#clickable=trigger-button-1) button to play the drums.\r\n\r\n\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 1](#clickable=flyout-up-id:drum-toolbox---id:Trigger1)\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint for step 4](#clickable=trigger-button-1)",
     "validations": [
       {
         "key": "music-coding-intro-event-sound_1f86fd90-3a5e-4101-a29a-1a64d1e53962",
@@ -231,9 +231,10 @@
       "playerEnabled": false,
       "validationEnabled": false
     },
+    "submittable": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:27.426+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-2events-sound_launch\\\"\"],\"cloned_from\":\"music-coding-intro-2events-sound_launch\"},{\"changed_at\":\"2025-05-23 16:08:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:27.426+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-2events-sound_launch\\\"\"],\"cloned_from\":\"music-coding-intro-2events-sound_launch\"},{\"changed_at\":\"2025-05-23 16:08:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 18:34:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -41,7 +41,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   showMaximizeButton = true,
   handleScaling,
 }) => {
-  const {labConfig, levelProperties} = useCodebridgeContext();
+  const {levelProperties} = useCodebridgeContext();
   const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
@@ -53,7 +53,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     setIsResetButtonDisabled(true);
   }, [levelProperties.id]);
 
-  const miniApp = labConfig?.miniApp?.name;
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
 
   const miniAppComponent = useMemo(() => {
     if (miniApp === MiniApps.Neighborhood) {
@@ -64,7 +66,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 
   const resetMiniApp = () => {
     setIsResetButtonDisabled(true);
-    if (labConfig?.miniApp.name === MiniApps.Neighborhood) {
+    if (miniApp === MiniApps.Neighborhood) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
     }
   };
