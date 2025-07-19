@@ -243,13 +243,12 @@ class SourcesTest < FilesApiTestBase
       assert not_found?
     end
 
-    # teacher cannot view
+    # teacher can view
     with_session(:teacher) do
       teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
       teacher_api.get_object(filename)
-      refute successful?
-      assert not_found?
+      assert successful?
       FilesApi.any_instance.unstub(:teaches_student?)
     end
 
