@@ -51,7 +51,8 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     'Availalbe sounds for a drum beat are: "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat".\n';
 
   const [text, setText] = useState(
-    'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.'
+    'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.\n' +
+      'Put this into a function and call this function from the main block.\n'
   );
 
   const selectPack = useCallback(
