@@ -90,6 +90,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     environment:
+      CI_JOB: 'unit_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -233,6 +234,7 @@ steps:
       - name: mysql
         path: /var/lib/mysql
     environment:
+      CI_JOB: 'ui_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/ui_tests.sh
       CLOUDFRONT_KEY_PAIR_ID:
         from_secret: CLOUDFRONT_KEY_PAIR_ID
@@ -311,6 +313,7 @@ steps:
     image: codedotorg/code-dot-org:1.16
     pull: always
     environment:
+      CI_JOB: 'ui_tests'
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:

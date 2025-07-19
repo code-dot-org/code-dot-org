@@ -5,8 +5,6 @@
 # you can use docker-compose to run locally using
 # `docker/unit-tests-compose.yml`. See instructions in that file.
 
-export CI_JOB=unit_tests
-
 source docker/ci/scripts/prepare_ci_tests.sh
 
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
