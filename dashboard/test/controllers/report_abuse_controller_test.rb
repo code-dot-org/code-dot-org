@@ -130,18 +130,24 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
-  test "update_abuse_image_moderation increments abuse score by 15 for signed in user" do
+  test "update_abuse_image_moderation with updates abuse score according to type for signed in user" do
     user = create(:student)
     sign_in user
 
     # Ensure initial score is 0
     assert_equal 0, Projects.get_abuse(@channel_id)
 
-    post :update_abuse_image_moderation, params: {channel_id: @channel_id}
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
 
-    assert response.ok?, "Response was not OK"
+    assert response.ok?
     assert_equal 15, JSON.parse(response.body)["abuse_score"]
     assert_equal 15, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'unflag'}
+
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)["abuse_score"]
+    assert_equal 0, Projects.get_abuse(@channel_id)
   end
 
   test "update_abuse_image_moderation requires login" do
