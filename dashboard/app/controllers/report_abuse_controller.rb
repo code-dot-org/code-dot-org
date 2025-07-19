@@ -99,11 +99,17 @@ class ReportAbuseController < ApplicationController
   end
 
   # POST /v3/channels/:channel_id/abuse/image
+  # ------------------------------------------
+  # Update the project abuse score as a result of image moderation.
+  # Amount is the value that is added to the project's abuse score.
+  # If an image is flagged, amount is 15. If all flagged images are removed from the project, then amount
+  # is -15.
+  # params are: :amount
   def update_abuse_image_moderation
     return head :unauthorized unless current_user
 
     begin
-      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], 15, current_user&.project_validator?)
+      value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], params[:amount], current_user&.project_validator?)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
