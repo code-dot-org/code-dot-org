@@ -4,11 +4,13 @@ require 'fileutils'
 require 'open3'
 require 'erb'
 require 'json'
-require_relative './config'
+
+# Load the MarketingSites::Configuration module
+require_relative '../config'
 
 # Hard-coded template paths
-MARKETING_SITE_TEMPLATE_FILE = '3-app/template.yml.erb'
-CERTIFICATE_TEMPLATE_FILE = '3-app/cloudfront-certificate.yml.erb'
+MARKETING_SITE_TEMPLATE_FILE = 'template.yml.erb'
+CERTIFICATE_TEMPLATE_FILE = 'cloudfront-certificate.yml.erb'
 
 # Default options
 options = {
