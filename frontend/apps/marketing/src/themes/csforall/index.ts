@@ -1,6 +1,8 @@
 'use client';
 import {createTheme} from '@mui/material';
 
+import {NOTO_FONT} from '@/themes/constants/fonts';
+
 const COLORS = {
   black: '#15092C',
 };
@@ -62,6 +64,9 @@ const theme = createTheme({
         }),
       },
     },
+  },
+  typography: {
+    fontFamily: ['Roboto Mono', 'Figtree', NOTO_FONT].join(','),
   },
 });
 
