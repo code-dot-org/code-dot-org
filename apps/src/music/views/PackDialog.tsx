@@ -50,6 +50,46 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     'Available sounds for a guitar are: "indie/guitar_chord_change", "indie/guitar_clean_arp", and "pop/guitar_clean_line".\n' +
     'Availalbe sounds for a drum beat are: "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat".\n';
 
+  const context1 = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
+
+when_run
+  play "hiphop/drum_beat_808"
+  play "electro/drum_beat_hyper"
+  play_together
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+  repeat 3
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+
+Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
+
+Let's try it out.  Can you generate a song that, when run, plays "indie/guitar_chord_change" followed by "indie/guitar_clean_arp"?
+
+And then it plays these three sounds together - "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat" - three times.
+`;
+
+  const context2 = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
+
+The psuedocode looks something like this:
+
+when_run
+  play "hiphop/drum_beat_808"
+  play "electro/drum_beat_hyper"
+  play_together
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+  repeat 3
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+
+Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
+
+And Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play togehter:
+
+  {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
+`;
+
   const [text, setText] = useState(
     'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.\n' +
       'Put this into a function and call this function from the main block.\n'
@@ -71,23 +111,41 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
   const setSongToDefault = useCallback(() => {}, []);
   const generateSong = useCallback(() => {
     console.log('starting ask');
-    askAi(context + text).then(result => {
+    askAi(
+      'here is the contxt:\n' +
+        context1 +
+        '\n and here is the request:\n' +
+        text
+    ).then(result => {
       console.log(result[1].chatMessageText);
 
-      // Trim the result so that anything before the first '{' and after the last '}' is removed.
-      const trimmedResult = result[1].chatMessageText.trim();
-      const firstBraceIndex = trimmedResult.indexOf('{');
-      const lastBraceIndex = trimmedResult.lastIndexOf('}');
-      const jsonString = trimmedResult.substring(
-        firstBraceIndex,
-        lastBraceIndex + 1
-      ); // Include the last brace
+      console.log('starting second ask');
 
-      console.log('JSON String:', jsonString);
-      selectPack(DEFAULT_PACK);
-      dispatch(setCodeToLoad(jsonString));
+      askAi(
+        'here is the contxt:\n' +
+          context2 +
+          '\n and here is the request:\n' +
+          result[1].chatMessageText
+      ).then(result2 => {
+        console.log(result2[1].chatMessageText);
+
+        // const jsonString = result2[1].chatMessageText;
+
+        // Trim the result so that anything before the first '{' and after the last '}' is removed.
+        const trimmedResult = result2[1].chatMessageText.trim();
+        const firstBraceIndex = trimmedResult.indexOf('{');
+        const lastBraceIndex = trimmedResult.lastIndexOf('}');
+        const jsonString = trimmedResult.substring(
+          firstBraceIndex,
+          lastBraceIndex + 1
+        ); // Include the last brace
+
+        console.log('JSON String:', jsonString);
+        selectPack(DEFAULT_PACK);
+        dispatch(setCodeToLoad(jsonString));
+      });
     });
-  }, [context, dispatch, selectPack, text]);
+  }, [context1, context2, dispatch, selectPack, text]);
 
   if (currentPackId) {
     return null;
