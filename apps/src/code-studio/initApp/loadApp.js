@@ -269,6 +269,14 @@ function loadProjectAndCheckAbuse(appOptions) {
     project
       .load()
       .then(() => {
+        if (project.hideBecauseAbusive()) {
+          renderAbusive(project, msg.tosLong({url: 'http://code.org/tos'}));
+          return;
+        }
+        if (project.hideBecausePrivacyViolationOrProfane()) {
+          renderAbusive(project, msg.policyViolation());
+          return;
+        }
         if (project.getSharingDisabled()) {
           renderAbusive(
             project,
