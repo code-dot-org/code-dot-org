@@ -185,11 +185,17 @@
     }
 
     pre {
-      text-align: left
+      text-align: left;
+      line-height: 1;
     }
 
     code {
-      font-size: 0.5rem;
+      font-size: 0.4rem;
+      line-height: 2;
+    }
+
+    pre > code {
+      line-height: 1;
     }
   }
 

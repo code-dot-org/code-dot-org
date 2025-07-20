@@ -32,11 +32,13 @@ function ResultNode({selected, width}: NodeProps) {
       className="nowheel"
       style={{
         width: '100%',
-        height: 'calc(100% - 15px)',
+        height: '100%',
         minWidth: 200,
         minHeight: 100,
-        maxWidth: 380,
-        maxHeight: 380,
+        maxWidth: 378,
+        maxHeight: 378,
+        display: 'flex',
+        flexDirection: 'column',
       }}
     >
       <NodeResizer
@@ -53,7 +55,7 @@ function ResultNode({selected, width}: NodeProps) {
         style={{
           overflowWrap: 'break-word',
           overflowY: 'scroll',
-          height: 'calc(100% - 35px)',
+          height: 'calc(100% - 45px)',
           maxWidth: '100%',
           marginBottom: 10,
         }}
@@ -61,14 +63,16 @@ function ResultNode({selected, width}: NodeProps) {
         {text || ''}
       </div>
       {combinedResultTexts.length > 0 && (
-        <Button
-          size="xs"
-          color="gray"
-          type="secondary"
-          text="Copy to clipboard"
-          onClick={onCopyToClipboard}
-          className={styles.copytoClipboardButton}
-        />
+        <div>
+          <Button
+            size="xs"
+            color="gray"
+            type="secondary"
+            text="Copy to clipboard"
+            onClick={onCopyToClipboard}
+            className={styles.copytoClipboardButton}
+          />
+        </div>
       )}
     </div>
   );
