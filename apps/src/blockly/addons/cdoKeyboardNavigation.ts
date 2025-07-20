@@ -2,8 +2,7 @@ import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 
 export function initializeKeyboardNavigation(
-  workspace: GoogleBlockly.WorkspaceSvg,
-  theme: GoogleBlockly.Theme
+  workspace: GoogleBlockly.WorkspaceSvg
 ) {
   unregisterShortcuts(['undo', 'redo']);
   backupShortcuts(['copy', 'paste', 'cut']);
@@ -22,8 +21,6 @@ export function initializeKeyboardNavigation(
   });
 
   enableShortcutModalEscape();
-  // Rerun user theme after Keyboard Experiment bug introduces incorrect theme
-  workspace.setTheme(Blockly.cdoUtils.getUserTheme(theme));
 }
 
 function unregisterShortcuts(shortcutNames: string[]) {

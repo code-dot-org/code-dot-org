@@ -1133,6 +1133,7 @@ __metadata:
     "@fontsource/noto-sans-myanmar": "npm:^5.1.1"
     "@fontsource/noto-sans-sc": "npm:^5.1.1"
     "@fontsource/noto-sans-tc": "npm:^5.1.1"
+    "@fontsource/roboto-mono": "npm:^5.2.6"
     eslint: "npm:^9.16.0"
     prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
@@ -2639,6 +2640,13 @@ __metadata:
   version: 5.1.1
   resolution: "@fontsource/noto-sans-tc@npm:5.1.1"
   checksum: 10c0/78657cf4c08cfdb311d94e6558d51df3d6042cc1dde625fd6c6b5e5975c7b27e7fd3933b1d14c3a335f5e6f33f39a6cba015732bedb4b1d58f3d55d451bd306e
+  languageName: node
+  linkType: hard
+
+"@fontsource/roboto-mono@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/roboto-mono@npm:5.2.6"
+  checksum: 10c0/a0ac77aacdce5b5fa4a1a4cdb364615e52a208040d5cfdf0537fcf9d84fd3130b7321e627969948430cc557599f4bdd89e38cd7ceaf13cf429b108f697c6a72e
   languageName: node
   linkType: hard
 

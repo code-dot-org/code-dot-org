@@ -1,10 +1,12 @@
 'use client';
 import {createTheme} from '@mui/material';
 
+import {NOTO_FONT} from '@/themes/constants/fonts';
+
 const BARLOW_FONT = 'Barlow Semi Condensed Semibold';
 const FIGTREE_FONT = 'Figtree';
-const NOTO_FONT =
-  'Noto Sans, Noto Sans Math, Noto Sans Arabic, Noto Sans Armenian, Noto Sans Bengali, Noto Sans SC, Noto Sans TC, Noto Sans Devanagari, Noto Sans Georgian, Noto Sans Hebrew, Noto Sans JP, Noto Sans Kannada, Noto Sans Khmer, Noto Sans KR, Noto Sans Myanmar, Noto Sans Sinhala, Noto Sans Tamil, Noto Sans Telugu, Noto Sans Thai, Noto Sans Thaana';
+
+const HEADING_FONT = [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', ');
 
 const theme = createTheme({
   cssVariables: true,
@@ -106,25 +108,25 @@ const theme = createTheme({
   typography: {
     fontFamily: [FIGTREE_FONT, NOTO_FONT, 'sans-serif'].join(', '),
     h1: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: HEADING_FONT,
       fontSize: '3rem', // 48px
       fontWeight: 500,
       lineHeight: 1.16,
     },
     h2: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: HEADING_FONT,
       fontSize: '2.125rem', // 34px
       fontWeight: 500,
       lineHeight: 1.24,
     },
     h3: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: HEADING_FONT,
       fontSize: '1.75rem', // 28px
       fontWeight: 500,
       lineHeight: 1.28,
     },
     h4: {
-      fontFamily: [BARLOW_FONT, NOTO_FONT, 'sans-serif'].join(', '),
+      fontFamily: HEADING_FONT,
       fontSize: '1.5rem', // 24px
       fontWeight: 500,
       lineHeight: 1.32,

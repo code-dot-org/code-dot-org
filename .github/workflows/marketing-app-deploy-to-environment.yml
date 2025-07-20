@@ -54,6 +54,9 @@ jobs:
             frontend/apps/marketing
 
       - uses: ruby/setup-ruby@eaecf785f6a34567a6d97f686bbb7bccc1ac1e5c # v1.237.0
+        with:
+          working-directory: ./frontend/apps/marketing/cicd
+          bundler-cache: true
 
       # Warning: Use minimal permissions for the deployer
       # See: https://github.com/aws-actions/amazon-ecs-deploy-task-definition?tab=readme-ov-file#permissions
@@ -85,9 +88,9 @@ jobs:
           aws s3 sync static/ "s3://$BUCKET_NAME/_next/static" --quiet
 
       - name: "[${{ inputs.GITHUB_ENVIRONMENT_NAME }}] Deploy Marketing App to AWS"
-        working-directory: ./frontend/apps/marketing/cicd
+        working-directory: ./frontend/apps/marketing/cicd/3-app
         run: |
-          ruby ./deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
+          bundle exec ruby deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
             --region ${{ vars.AWS_REGION }} \
             --hosted_zone_id ${{ secrets.ROOT_HOSTED_ZONE_ID }} \
             --base_domain_name ${{ vars.APPLICATION_BASE_DOMAIN }} \

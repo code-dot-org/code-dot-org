@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 
 import '@code-dot-org/component-library-styles/colors.scss';
-import '@code-dot-org/fonts/index.css';
 
 import './globals.css';
 
