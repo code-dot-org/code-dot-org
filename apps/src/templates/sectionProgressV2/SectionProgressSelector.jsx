@@ -102,7 +102,9 @@ function SectionProgressSelector({
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   // If a user has selected manually, show that version.
-  const isPreferenceSet = showProgressTableV2 !== undefined;
+  // A user has selected manually if the preference is set to true or false and is not null/undefined.
+  const isPreferenceSet =
+    showProgressTableV2 === true || showProgressTableV2 === false;
   const params = queryParams('view');
 
   // If there is a url pram, use that param to determine to show V2.
