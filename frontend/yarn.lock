@@ -1225,6 +1225,7 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@vercel/otel": "npm:^1.12.0"
     axios: "npm:^1.10.0"
+    bowser: "npm:^2.11.0"
     contentful: "npm:^11.7.3"
     contentful-management: "npm:^11.52.1"
     cookies-next: "npm:^5.1.0"
@@ -9486,6 +9487,13 @@ __metadata:
   version: 1.0.0
   resolution: "boolbase@npm:1.0.0"
   checksum: 10c0/e4b53deb4f2b85c52be0e21a273f2045c7b6a6ea002b0e139c744cb6f95e9ec044439a52883b0d74dedd1ff3da55ed140cfdddfed7fb0cccbed373de5dce1bcf
+  languageName: node
+  linkType: hard
+
+"bowser@npm:^2.11.0":
+  version: 2.11.0
+  resolution: "bowser@npm:2.11.0"
+  checksum: 10c0/04efeecc7927a9ec33c667fa0965dea19f4ac60b3fea60793c2e6cf06c1dcd2f7ae1dbc656f450c5f50783b1c75cf9dc173ba6f3b7db2feee01f8c4b793e1bd3
   languageName: node
   linkType: hard
 

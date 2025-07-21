@@ -1,7 +1,21 @@
+import {isWebKitEngine} from '@/selectors/getBrowser';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
   return asset?.fields?.file?.url;
+}
+
+export function getOptimizedImageFormat(imgUrl: string) {
+  const imgExt = imgUrl.split('.')?.[1]?.toLowerCase();
+  switch (imgExt) {
+    case undefined:
+      return undefined;
+    case 'gif':
+      // GIFs converted to AVIF do not display transparent backgrounds in WebKit
+      return isWebKitEngine() ? 'webp' : 'avif';
+    default:
+      return 'avif';
+  }
 }
 
 export function getAbsoluteImageUrl(
@@ -18,8 +32,9 @@ export function getAbsoluteImageUrl(
       imgUrl.startsWith('//') ? `https:${imgUrl}` : imgUrl,
     );
 
-    // Force AVIF format conversion for the image
-    absoluteImgUrl.searchParams.set('fm', 'avif');
+    // Force image format conversion for optimization
+    const imgFormat = getOptimizedImageFormat(imgUrl);
+    if (imgFormat) absoluteImgUrl.searchParams.set('fm', imgFormat);
 
     // Append additional parameters if provided
     if (additionalParams) {
