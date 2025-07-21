@@ -29,26 +29,24 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   ariaLabel,
   className,
 }) => {
-  return (
-    href && (
-      <MuiButton
-        className={classNames(`button--color-${type}`, className)}
-        variant={
-          type === 'emphasized' || type === 'primary' ? 'contained' : 'outlined'
-        }
-        size={size}
-        href={href}
-        target={isLinkExternal ? '_blank' : undefined}
-        rel={isLinkExternal ? 'noopener noreferrer' : undefined}
-        aria-label={ariaLabel}
-        endIcon={isLinkExternal ? <OpenInNew /> : undefined}
-        disableElevation
-        disableRipple
-      >
-        {text}
-      </MuiButton>
-    )
-  );
+  return href ? (
+    <MuiButton
+      className={classNames(`button--color-${type}`, className)}
+      variant={
+        type === 'emphasized' || type === 'primary' ? 'contained' : 'outlined'
+      }
+      size={size}
+      href={href}
+      target={isLinkExternal ? '_blank' : undefined}
+      rel={isLinkExternal ? 'noopener noreferrer' : undefined}
+      aria-label={ariaLabel}
+      endIcon={isLinkExternal ? <OpenInNew /> : undefined}
+      disableElevation
+      disableRipple
+    >
+      {text}
+    </MuiButton>
+  ) : null;
 };
 
 export default Button;
