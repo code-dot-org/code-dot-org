@@ -82,6 +82,14 @@ IconLinkButton.args = {
   size: 'm',
 };
 
+export const AnalyticsCallbackLinkButton = SingleTemplate.bind({});
+AnalyticsCallbackLinkButton.args = {
+  text: 'Button',
+  href: 'https://www.google.com',
+  size: 'm',
+  analyticsCallback: () => alert('Sending analytics event...'),
+};
+
 export const GroupOfColorsOfLinkButtons = MultipleTemplate.bind({});
 GroupOfColorsOfLinkButtons.args = {
   components: [

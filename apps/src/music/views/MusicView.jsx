@@ -10,17 +10,14 @@ import './small-footer-music-overrides.scss';
 
 import DCDO from '@cdo/apps/dcdo';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
-import {
-  isReadOnlyWorkspace,
-  setIsLoading,
-  setPageError,
-} from '@cdo/apps/lab2/lab2Redux';
+import {setIsLoading, setPageError} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -173,6 +170,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.isLevelLoadInProgress = false;
     this.exemplarPlaybackEvents = [];
+    this.triggers = [];
 
     MusicBlocklyWorkspace.setupBlocklyEnvironment(this.props.blockMode);
   }
@@ -735,7 +733,14 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
-    return this.musicBlocklyWorkspace.compileSong(this.props.blockMode);
+    const codeChanged = this.musicBlocklyWorkspace.compileSong(
+      this.props.blockMode
+    );
+    // Update the list of triggers that are available in the workspace.
+    this.triggers = Triggers.filter(trigger =>
+      this.musicBlocklyWorkspace.hasTrigger(trigger.id)
+    );
+    return codeChanged;
   };
 
   // Execute a song that has already been compiled from Blockly sources.
@@ -916,9 +921,7 @@ class UnconnectedMusicView extends React.Component {
           blocklyDivId={BLOCKLY_DIV_ID}
           setPlaying={this.setPlaying}
           playTrigger={this.playTrigger}
-          triggers={Triggers.filter(trigger =>
-            this.musicBlocklyWorkspace.hasTrigger(trigger.id)
-          )}
+          triggers={this.triggers}
           getCurrentPlayheadPosition={this.getCurrentPlayheadPosition}
           updateHighlightedBlocks={this.updateHighlightedBlocks}
           undo={this.undo}

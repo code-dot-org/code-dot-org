@@ -151,6 +151,7 @@ def main
       DEVICE_TYPES
       DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
+      NUMBERED_UNITS_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),

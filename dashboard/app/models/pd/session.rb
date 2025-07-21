@@ -55,8 +55,8 @@ class Pd::Session < ApplicationRecord
   end
 
   def valid_meeting_link_format
-    unless self.class.valid_url?(meeting_link, true)
-      errors.add(:meeting_link, "is not a valid URL")
+    unless self.class.valid_url?(meeting_link)
+      errors.add(:meeting_link, "is not valid or is missing http or https")
     end
   end
 

@@ -14,14 +14,14 @@
     "csa4-alt-2025",
     "csa5-alt-2025"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-alt",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "version_year": "2025"
   },
   "resources": [

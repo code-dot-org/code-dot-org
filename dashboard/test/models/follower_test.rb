@@ -107,17 +107,4 @@ class FollowerTest < ActiveSupport::TestCase
 
     assert_equal 'test', student.family_name
   end
-
-  test 'cannot create a follower for a PL section and a user with a family name' do
-    teacher = create(:teacher)
-    pl_section = create :section, :teacher_participants, user_id: teacher.id
-
-    pl_participant = create(:user)
-    pl_participant.family_name = 'TestFamName'
-    pl_participant.save!
-
-    assert_raises(ActiveRecord::RecordInvalid) do
-      create :follower, section: pl_section, student_user: pl_participant
-    end
-  end
 end

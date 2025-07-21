@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-16T18:37:47.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Generate A Phishing Email\r\n\r\nUse AI Chat to generate the text for a phishing email.\r\n\r\n### Do This:\r\n\r\n1. Use your classmates interest questionnaire to generate the text of a phishing email.\r\n\r\n\r\n**Try it out!**\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Generate a phishing email (e.g. a link to a birthday gift certificate) given the following information about the person: [insert info from questionnaire]\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Need help narrowing down which details to focus on?**]\r\nYou can ask AI Chat what vulnerabilities to attack based on your partner’s interests.\r\n:::\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a phishing email generator. Students should prompt you to generate text of an email based on characteristics they know about a person.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-16 18:47:02 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-17 17:09:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

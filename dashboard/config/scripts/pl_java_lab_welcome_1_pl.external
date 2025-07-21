@@ -1,0 +1,23 @@
+name 'pl-java-lab-welcome-1_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Lesson 1: Java Basics
+
+<img src="https://images.code.org/5027dc75a325f384f73ef02ec8a2a7d0-image-1747254226396.png" alt="Java logo" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### This is the first in a series of lessons to provide you with some practice using Java in Code.org’s Java IDE we call Java Lab. 
+
+
+## After this lesson, you will be able to:
+
+- #### Create a new file in the Java Lab IDE
+- #### Name Java files using conventions for naming
+- #### Know the basics of Java syntax
+- #### Print information to the console
+
+## Let’s get started with an introduction to the Java Lab IDE.
+
+![]()
+MARKDOWN

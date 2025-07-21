@@ -24,8 +24,8 @@ class Pd::ProfessionalLearningController < ApplicationController
       has_enrolled_in_workshop: Pd::Enrollment.for_user(current_user).any?,
       pl_courses_started: current_user.pl_units_started,
       user_permissions: current_user.permissions.map(&:permission),
-      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_without_students),
-      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_without_students),
+      joined_student_sections: current_user.sections_as_student_participant&.map(&:summarize_for_participant),
+      joined_pl_sections: current_user.sections_as_pl_participant&.map(&:summarize_for_participant),
       courses_as_facilitator: Pd::CourseFacilitator.where(facilitator: current_user).map(&:course).uniq,
     }.compact
   end

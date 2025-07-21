@@ -13,6 +13,10 @@
     position: absolute;
     opacity: 0;
 
+    &:disabled {
+      cursor: not-allowed;
+    }
+
     & + i {
       vertical-align: bottom;
 
@@ -20,38 +24,38 @@
         display: inline-block;
         content: ' ';
         text-align: center;
-        border: 2px solid var(--neutral-base-black);
+        border: 2px solid var(--borders-neutral-solid);
         border-radius: 4px;
       }
     }
 
     &:checked + i::before {
       content: '\f00c';
-      color: var(--neutral-base-white);
-      background: var(--brand-teal-50);
-      border: 2px solid var(--brand-teal-50);
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-brand-teal-primary);
+      border: 2px solid var(--borders-brand-teal-primary);
       border-radius: 4px;
     }
 
     &:indeterminate + i::before {
       content: '\e404';
-      color: var(--neutral-base-white);
-      background: var(--brand-teal-50);
-      border: 2px solid var(--brand-teal-50);
+      color: var(--text-neutral-white-fixed);
+      background: var(--background-brand-teal-primary);
+      border: 2px solid var(--borders-brand-teal-primary);
       border-radius: 4px;
     }
 
     // Focus styles
     &:focus-visible {
       + i::before {
-        outline: 2px solid var(--brand-teal-50);
+        outline: 2px solid var(--borders-brand-teal-primary);
         outline-offset: 2px;
         border-radius: 4px;
       }
       &:indeterminate + i::before {
-        color: var(--neutral-base-white);
-        background: var(--brand-teal-50);
-        border: 2px solid var(--brand-teal-50);
+        color: var(--text-neutral-white-fixed);
+        background: var(--background-brand-teal-primary);
+        border: 2px solid var(--borders-brand-teal-primary);
       }
     }
   }
@@ -63,15 +67,15 @@
     input[type='checkbox'] {
       & + i {
         &::before {
-          background-color: var(--brand-teal-5);
+          background-color: var(--background-brand-teal-extra-light);
         }
       }
 
       &:checked + i::before,
       &:indeterminate + i::before {
-        color: var(--neutral-base-white);
-        background: var(--brand-teal-70);
-        border-color: var(--brand-teal-70);
+        color: var(--text-neutral-white-fixed);
+        background: var(--background-brand-teal-strong);
+        border-color: var(--borders-brand-teal-strong);
       }
     }
   }
@@ -81,16 +85,16 @@
     input[type='checkbox'] {
       & + i {
         &::before {
-          background-color: var(--brand-teal-5);
-          border-color: var(--brand-teal-50);
+          background-color: var(--background-brand-teal-extra-light);
+          border-color: var(--borders-brand-teal-primary);
         }
       }
 
       &:checked + i::before,
       &:indeterminate + i::before {
-        color: var(--neutral-base-white);
-        background: var(--brand-teal-70);
-        border-color: var(--brand-teal-50);
+        color: var(--text-neutral-white-fixed);
+        background: var(--background-brand-teal-strong);
+        border-color: var(--borders-brand-teal-primary);
       }
     }
   }
@@ -98,18 +102,18 @@
   // Disabled styles
   &:has(input[type='checkbox']:disabled) {
     span {
-      color: var(--neutral-gray-20);
+      color: var(--text-neutral-disabled);
     }
 
     input[type='checkbox'] {
       & + i::before {
-        border-color: var(--neutral-gray-20);
+        border-color: var(--borders-neutral-disabled);
       }
 
       &:checked + i::before,
       &:indeterminate + i::before {
-        background: var(--neutral-gray-20);
-        color: var(--neutral-base-white);
+        background: var(--background-neutral-disabled);
+        color: var(--text-neutral-disabled-inverse);
       }
     }
 
@@ -118,14 +122,14 @@
 
       input[type='checkbox'] {
         & + i::before {
-          background: var(--neutral-base-white);
+          background: var(--background-neutral-primary);
         }
       }
 
       input[type='checkbox']:checked + i::before,
       input[type='checkbox']:indeterminate + i::before {
-        background: var(--neutral-gray-20);
-        border-color: var(--neutral-gray-20);
+        background: var(--background-neutral-disabled);
+        border-color: var(--borders-neutral-disabled);
       }
     }
   }

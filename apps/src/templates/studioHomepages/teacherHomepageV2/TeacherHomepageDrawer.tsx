@@ -79,8 +79,13 @@ export const TeacherHomepageDrawer: React.FC = () => {
     schoolZip: existingSchoolInfo?.school_zip,
     schoolType: existingSchoolInfo?.school_type,
   });
+
   const schoolName =
-    schoolInfo.schoolName || i18n.schoolInfoDialogDescriptionNoName();
+    schoolInfo.schoolsList.find(school => school.value === schoolInfo.schoolId)
+      ?.text ||
+    schoolInfo.schoolName ||
+    i18n.schoolInfoDialogDescriptionNoName();
+
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
       schoolInfo.schoolId && !NON_SCHOOL_OPTIONS.includes(schoolInfo.schoolId);

@@ -2,7 +2,7 @@ import React from 'react';
 
 import LevelsSkillsCreator from './LevelsSkillsCreator';
 import LevelsSkillsTable from './LevelsSkillsTable';
-import SkillsByConceptTable from './SkillsByConceptTable';
+import SkillsByConceptTable from './SkillsByConcept';
 import SkillsCreator from './SkillsCreator';
 import {SkillsByConcept, Levels} from './types';
 
@@ -25,7 +25,7 @@ const SkillsContainer: React.FC<SkillsContainerProps> = ({
       )}
       {canEditSkills && <SkillsCreator skills={skills} />}
       <SkillsByConceptTable skills={skills} />
-      <LevelsSkillsCreator />
+      {canEditSkills && <LevelsSkillsCreator />}
       <LevelsSkillsTable levels={levels} />
     </div>
   );

@@ -30,13 +30,11 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
-  const {
-    aiTutor2Context,
-    levelProperties: {aiTutor2Available},
-  } = useCodebridgeContext();
+  const {aiTutor2Context, levelProperties} = useCodebridgeContext();
 
   const showAiTutor2 =
-    aiTutor2Available || queryParams('show-ai-tutor2') === 'true';
+    levelProperties.aiTutor2Available ||
+    queryParams('show-ai-tutor2') === 'true';
 
   const {
     leftPanelWidth,

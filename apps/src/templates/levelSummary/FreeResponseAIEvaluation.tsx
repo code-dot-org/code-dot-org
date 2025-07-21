@@ -73,7 +73,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
             data =>
               data !== null &&
               !Array.isArray(data) &&
-              data.evaluation !== StudentWorkEvaluationStatus.NO_ATTEMPT
+              data.reasoning !== StudentWorkEvaluationStatus.NO_ATTEMPT
           )
           .map(({evaluation, reasoning, ...rest}) => ({
             ...rest,

@@ -12,7 +12,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "tesselementaryai",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2024"
   },
   "resources": [

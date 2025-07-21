@@ -70,6 +70,9 @@ export interface LinkButtonSpecificProps {
   /** (\<a> specific prop)
    * Button title */
   title?: string;
+  /** (\<a> specific prop)
+   * Analytics event handler (only use to send analytics events) */
+  analyticsCallback?: () => void;
 }
 
 export interface ButtonSpecificProps {
@@ -211,6 +214,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   target,
   download,
   title,
+  analyticsCallback,
   /** <button> specific props */
   onClick,
   value,
@@ -234,6 +238,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
           rel: target === '_blank' ? 'noopener noreferrer' : undefined,
           download,
           title,
+          onClick: analyticsCallback,
         }
       : {type: buttonTagTypeAttribute, onClick, value, name};
 
