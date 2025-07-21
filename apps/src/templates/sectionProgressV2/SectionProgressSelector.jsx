@@ -118,7 +118,7 @@ function SectionProgressSelector({
     displayV2FromUrl ||
     (isPreferenceSet
       ? showProgressTableV2 === V2_SETTING_KEY
-      : DCDO.get('progress-table-v2-default-v2', false));
+      : DCDO.get('progress-table-v2-default-v2', true));
 
   const ProgressV1OrV2ToggleLink = () => (
     <div className={styles.toggleViews}>
