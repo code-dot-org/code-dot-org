@@ -4,8 +4,8 @@ import React, {useEffect, useRef} from 'react';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
-import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
+import PredictQuestion from '@cdo/apps/lab2/views/components/Instructions/PredictQuestion';
+import PredictSummary from '@cdo/apps/lab2/views/components/Instructions/PredictSummary';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -149,12 +149,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   className={moduleStyles.markdownText}
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
-                <PredictQuestion
-                  predictSettings={predictSettings}
-                  predictResponse={predictResponse}
-                  setPredictResponse={setPredictResponse}
-                  predictAnswerLocked={predictAnswerLocked}
-                />
+                <PredictQuestion />
                 {predictSettings?.isPredictLevel && (
                   <InstructorsOnly>
                     <div

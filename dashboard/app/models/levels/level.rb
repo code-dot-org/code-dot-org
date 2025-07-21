@@ -102,6 +102,7 @@ class Level < ApplicationRecord
     skip_url
     stay_on_level_after_submit
     skill_keys
+    additional_ai_evaluation_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

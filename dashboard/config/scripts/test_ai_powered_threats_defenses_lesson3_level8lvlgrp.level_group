@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson3-level8lvlgrp'
+title 'Check Your Understanding: Password Attacks'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+level 'test-ai-powered-threats-defenses-lesson3-level8a'
+level 'test-ai-powered-threats-defenses-lesson3-level8b'

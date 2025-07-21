@@ -1,4 +1,5 @@
 import {STALE_WHILE_REVALIDATE_ONE_DAY} from '@/cache/constants';
+import {getStage} from '@/config/stage';
 import {getContentfulClient} from '@/contentful/client';
 import {getAllEntriesForContentType} from '@/contentful/get-entries';
 
@@ -15,6 +16,9 @@ jest.mock('@/cache/constants', () => ({
 }));
 jest.mock('@/config/locale', () => ({
   SUPPORTED_LOCALE_CODES: ['en', 'fr'],
+}));
+jest.mock('@/config/stage', () => ({
+  getStage: jest.fn(),
 }));
 
 const mockRequest = (host = 'code.marketing-sites.localhost') =>
@@ -58,7 +62,31 @@ describe('GET /sitemap.xml', () => {
     expect(response.headers.get('ETag')).toBe('mock-etag');
     const body = await response.text();
     expect(body).toContain('test');
-    expect(body).toContain('mysite.com');
+    expect(body).toContain('code.marketing-sites.localhost');
+  });
+
+  it('returns sitemap xml with canonical hostname', async () => {
+    (getContentfulClient as jest.Mock).mockReturnValue({});
+    (getAllEntriesForContentType as jest.Mock).mockResolvedValue([
+      {
+        fields: {
+          slug: '/test',
+          seoMetadata: {fields: {}},
+        },
+        sys: {updatedAt: '2024-01-01T00:00:00Z'},
+      },
+    ]);
+    (getStage as jest.Mock).mockReturnValue('production');
+
+    const response = await GET(mockRequest('mysite.com'));
+    expect(response.headers.get('Cache-Control')).toBe(
+      STALE_WHILE_REVALIDATE_ONE_DAY,
+    );
+    expect(response.headers.get('ETag')).toBe('mock-etag');
+    const body = await response.text();
+    expect(body).toContain('test');
+    expect(body).not.toContain('marketing-sites');
+    expect(body).toContain('code.org');
   });
 
   it('skips entries with hidePageFromSearchEnginesNoindex', async () => {
@@ -96,6 +124,7 @@ describe('GET /sitemap.xml', () => {
   });
 
   it('handles root slug "/" correctly', async () => {
+    jest.resetAllMocks();
     (getContentfulClient as jest.Mock).mockReturnValue({});
     (getAllEntriesForContentType as jest.Mock).mockResolvedValue([
       {
@@ -119,6 +148,7 @@ describe('GET /sitemap.xml', () => {
   });
 
   it('includes hreflang alternate links and x-default in sitemap entries', async () => {
+    jest.resetAllMocks();
     (getContentfulClient as jest.Mock).mockReturnValue({});
     (getAllEntriesForContentType as jest.Mock).mockResolvedValue([
       {

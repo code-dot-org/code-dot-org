@@ -10,7 +10,7 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create(:script, :in_unit_group, name: 'unit-1')
+    @script = create(:script, name: 'unit-1')
     @course = create(:single_unit_course, unit: @script)
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
@@ -57,34 +57,34 @@ class LessonsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'in-development-unit', include_student_lesson_plans: true
+    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', include_student_lesson_plans: true
     @in_development_course = create(:single_unit_course, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     @in_development_unit.reload
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'pilot-script', pilot_experiment: 'my-experiment', include_student_lesson_plans: true
+    @pilot_script = create :script, :with_lessons, lessons_count: 1, name: 'pilot-script', pilot_experiment: 'my-experiment', include_student_lesson_plans: true
     @pilot_course = create(:single_unit_course, unit: @pilot_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'my-experiment')
     @pilot_script.reload
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     @pilot_instructor = create :teacher, pilot_experiment: 'pl-my-experiment'
-    @pilot_pl_script = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', pilot_experiment: 'pl-my-experiment', include_student_lesson_plans: true
+    @pilot_pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', pilot_experiment: 'pl-my-experiment', include_student_lesson_plans: true
     @pilot_pl_course = create(:single_unit_course, unit: @pilot_pl_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'pl-my-experiment')
     @pilot_pl_script.reload
     @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_script
     @pilot_participant = create :teacher
     create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
 
-    @login_req_script = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'signed-in-script', include_student_lesson_plans: true, login_required: true
+    @login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-script', include_student_lesson_plans: true, login_required: true
     @login_req_course = create(:single_unit_course, unit: @login_req_script)
     @login_req_script.reload
 
-    @pl_login_req_script = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', include_student_lesson_plans: true, login_required: true
+    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', include_student_lesson_plans: true, login_required: true
     @pl_login_req_course = create(:single_unit_course, :pl_course, unit: @pl_login_req_script)
     @pl_login_req_script.reload
 
-    @pl_script = create :script, :in_unit_group, :with_lessons, lessons_count: 1, name: 'pl-unit-1'
+    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1'
     @pl_course = create(:single_unit_course, :pl_course, unit: @pl_script)
     @pl_script.reload
   end

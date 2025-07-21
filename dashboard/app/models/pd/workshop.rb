@@ -170,8 +170,8 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_registration_link_format
-    unless self.class.valid_url?(registration_link, true)
-      errors.add(:registration_link, "is not a valid URL")
+    unless self.class.valid_url?(registration_link)
+      errors.add(:registration_link, "is not valid or is missing http or https")
     end
   end
 
@@ -194,7 +194,7 @@ class Pd::Workshop < ApplicationRecord
 
   def set_registration_link
     if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-      self.registration_link = "/pd/application/teacher"
+      self.registration_link = Rails.application.routes.url_helpers.pd_application_teacher_url
     end
   end
 
@@ -662,20 +662,8 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  # Min number of days a teacher must attend for it to count.
-  # @return [Integer]
-  def min_attendance_days
-    [1, time_constraint(:min_days)].compact.max
-  end
-
-  # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
-  # @return [Integer] number of payment days, after applying constraints
-  def effective_num_days
-    [sessions.count, time_constraint(:max_days)].compact.min
-  end
-
-  # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
-  # @return [Integer] number of payment hours, after applying constraints
+  # Apply max # of hours for certificates, if applicable, to the number of scheduled session-hours.
+  # @return [Integer] number of pd hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.sum(&:hours)
     [actual_hours, time_constraint(:max_hours)].compact.min
@@ -961,17 +949,12 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def summarize_for_marketing_page
-    facilitators_info = facilitators.map do |facilitator|
-      # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-
-      bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-      image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
+    facilitators_info = facilitators.includes(:facilitator_info).map do |facilitator|
       {
         name: facilitator.name,
         email: facilitator.email,
-        bio: File.exist?(bio_file) ? File.read(bio_file) : nil,
-        image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil
+        bio: facilitator.facilitator_bio,
+        image_path: nil
       }
     end
 

@@ -1,0 +1,11 @@
+name 'music-lab-functions-synthesis-remixes'
+display_name '"Only What You Gave Me" Remix Examples'
+description 'Choose at least 2 remixes to listen to. Notice how different each song sounds compared to the original, even though they use the same sounds!'
+
+sublevels
+level 'music-lab-functions-synthesis-remix1'
+# level 'music-lab-functions-synthesis-remix2'
+level 'music-lab-functions-synthesis-remix3'
+level 'music-lab-functions-synthesis-remix4'
+level 'music-lab-functions-synthesis-remix5'
+uses_lab2

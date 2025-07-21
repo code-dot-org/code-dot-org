@@ -8,11 +8,12 @@ import {
 import React from 'react';
 
 import {
-  GetUserInfoForWorkshopResponse,
-  GetWorkshopInfoScriptDataResponse,
+  UserInfoForWorkshop,
+  WorkshopInfo,
 } from '@cdo/apps/code-studio/pd/workshops/types';
 
 import {useWorkshopEnrollment} from './../hooks/useWorkshopEnrollment';
+import UserPassport, {isMissingUserInfo} from './UserPassport';
 
 import moduleStyles from './../workshopMarketingPage.module.scss';
 
@@ -20,28 +21,28 @@ const WORKSHOP_ENROLL_SOURCE_PAGE = 'workshop enroll';
 
 interface EnrollInWorkshopProps
   extends Pick<
-      GetWorkshopInfoScriptDataResponse,
-      | 'custom_registration_link'
-      | 'num_enrollments'
+      WorkshopInfo,
+      | 'customRegistrationLink'
+      | 'numEnrollments'
       | 'capacity'
       | 'id'
-      | 'regional_partner_name'
+      | 'regionalPartnerName'
       | 'course'
       | 'sessions'
       | 'name'
       | 'format'
       | 'subject'
     >,
-    GetUserInfoForWorkshopResponse {}
+    UserInfoForWorkshop {}
 /** Component to display the enrollment information for a workshop. */
 const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   id,
-  custom_registration_link,
-  num_enrollments,
+  customRegistrationLink,
+  numEnrollments,
   capacity,
   sessions,
   userInfo,
-  regional_partner_name,
+  regionalPartnerName,
   course,
   format,
   name,
@@ -50,8 +51,8 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   const {handleClick, isSubmitting, alertState, setAlertState} =
     useWorkshopEnrollment({
       workshopId: id,
-      userInfo,
-      regional_partner_name,
+      userId: userInfo?.id,
+      regionalPartnerName,
       course,
       format,
       name,
@@ -59,18 +60,18 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       sessions,
     });
 
-  const is_student = userInfo?.is_student || false;
-  const is_signed_out = !userInfo;
-  const isFull = num_enrollments >= capacity;
+  const isStudent = userInfo?.isStudent || false;
+  const isSignedOut = !userInfo;
+  const isFull = numEnrollments >= capacity;
 
   const buildEnrollButtonLink = (enrollLink: string) => {
-    if (is_signed_out) {
+    if (isSignedOut) {
       return `/logged_out?source_page=${encodeURIComponent(
         WORKSHOP_ENROLL_SOURCE_PAGE
       )}&return_to=${encodeURIComponent(enrollLink)}`;
     }
 
-    if (is_student) {
+    if (isStudent) {
       return `/teacher_account_required?source_page=${encodeURIComponent(
         WORKSHOP_ENROLL_SOURCE_PAGE
       )}&return_to=${encodeURIComponent(enrollLink)}`;
@@ -92,15 +93,16 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       );
     }
 
-    if (custom_registration_link) {
+    if (customRegistrationLink) {
       return (
         <>
           <BodyThreeText>
-            This workshop’s registration is managed externally by the regional
+            This workshop's registration is managed externally by the regional
             partner.
           </BodyThreeText>
           <LinkButton
-            href={buildEnrollButtonLink(custom_registration_link)}
+            href={customRegistrationLink}
+            target="_blank"
             className={moduleStyles.fullWidthButton}
             type="primary"
             size="m"
@@ -111,44 +113,59 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
       );
     }
 
-    if (is_student || is_signed_out) {
+    if (isStudent || isSignedOut) {
       return (
         <LinkButton
           className={moduleStyles.fullWidthButton}
           type="primary"
           size="m"
           href={buildEnrollButtonLink(`/professional-learning/workshops/${id}`)}
-          text={is_student ? 'Switch to teacher account' : 'Sign-in to enroll'}
+          text={isStudent ? 'Switch to teacher account' : 'Sign-in to enroll'}
           iconRight={{iconName: 'right-to-bracket'}}
         />
       );
     }
 
     return (
-      <Button
-        className={moduleStyles.fullWidthButton}
-        type="primary"
-        size="m"
-        isPending={isSubmitting}
-        onClick={handleClick}
-        text="Enroll in this workshop"
-      />
+      <div className={moduleStyles.internalEnrollButton}>
+        {userInfo && (
+          <UserPassport
+            displayName={userInfo.displayName}
+            givenName={userInfo.givenName}
+            familyName={userInfo.familyName}
+            email={userInfo.email}
+            schoolName={userInfo.schoolInfo?.schoolName}
+            schoolType={userInfo.schoolInfo?.schoolType}
+            returnToHref={`/professional-learning/workshops/${id}`}
+            className={moduleStyles.userPassport}
+          />
+        )}
+        {alertState.show && (
+          <Alert
+            type={'danger'}
+            text={alertState.text}
+            link={alertState.link}
+            onClose={() =>
+              setAlertState({show: false, text: '', link: undefined})
+            }
+          />
+        )}
+        <Button
+          className={moduleStyles.fullWidthButton}
+          type="primary"
+          size="m"
+          isPending={isSubmitting}
+          onClick={handleClick}
+          text="Enroll in this workshop"
+          disabled={isMissingUserInfo(userInfo)}
+        />
+      </div>
     );
   };
 
   return (
     <div className={moduleStyles.card}>
       <Heading3 visualAppearance="heading-xs">Enroll in this workshop</Heading3>
-      {alertState.show && (
-        <Alert
-          type={'danger'}
-          text={alertState.text}
-          link={alertState.link}
-          onClose={() =>
-            setAlertState({show: false, text: '', link: undefined})
-          }
-        />
-      )}
       {renderEnrollmentAction()}
       <Link type="secondary" size="xs" href="#data-sharing-notice">
         Click to see data sharing notice

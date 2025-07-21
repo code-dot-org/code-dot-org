@@ -14,7 +14,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "data-science-beta",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

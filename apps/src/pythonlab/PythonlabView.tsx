@@ -16,7 +16,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -71,31 +71,37 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     widget: HorizontalLayout,
   },
-  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {
-    source,
-    setProject,
-    startSources,
-    projectVersion,
-    validationFile,
-    labConfig,
-  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
+  const {startSources} = useSource(
+    DEFAULT_PROJECT,
+    levelProperties,
+    initialSources
+  );
+  const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
-  const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
-
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+  const labConfig = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig
+  );
+  const hasSource = !!source;
   const isAiTutor2Enabled =
     levelProperties.aiTutor2Available ||
     queryParams('show-ai-tutor2') === 'true';
@@ -218,11 +224,7 @@ const PythonlabView: React.FunctionComponent<
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (
-      currentLevel &&
-      !isPredictLevel &&
-      currentLevel.status === LevelStatus.not_tried
-    ) {
+    if (!isPredictLevel && currentLevelStatus === LevelStatus.not_tried) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
       dispatch(
@@ -245,17 +247,13 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {source && (
+      {hasSource && (
         <Codebridge
-          source={source}
           config={config}
-          setProject={setProject}
           setConfig={setConfig}
           startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
-          projectVersion={projectVersion}
-          labConfig={labConfig}
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}

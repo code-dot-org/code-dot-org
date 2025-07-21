@@ -1,0 +1,41 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "❌ [ENG] Skinny Banner Test"
+      },
+      "heading": {
+        "en-US": "Skinny Banner Test"
+      },
+      "subheading": {
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      "description": {
+        "en-US": "Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit lectus."
+      },
+      "image": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6fdNRFZbNXpiXQd6v7fHen"
+            }
+          }
+        ]
+      },
+      "sectionCTAs": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "79dI2fR2dzbb0IN3dFQJ3t"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "section"
+}

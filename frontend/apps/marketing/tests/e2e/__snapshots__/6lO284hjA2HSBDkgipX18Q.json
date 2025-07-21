@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "internalName": {
-        "en-US": "Rich Text Test"
+        "en-US": "❌ [ENG] Rich Text Test"
       },
       "overline": {
         "en-US": "Rich Text Test"
@@ -12,374 +12,374 @@
       },
       "formattedSectionContent": {
         "en-US": {
-          "nodeType": "document",
           "data": {},
           "content": [
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
+                  "data": {},
+                  "marks": [],
                   "value": "Normal text",
-                  "marks": [],
-                  "data": {}
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
+                  "data": {},
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
                   "value": "Bold text",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ],
-                  "data": {}
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
+                  "data": {},
+                  "marks": [],
                   "value": "Multiline\n",
-                  "marks": [],
-                  "data": {}
+                  "nodeType": "text"
                 },
                 {
-                  "nodeType": "text",
+                  "data": {},
+                  "marks": [
+                    {
+                      "type": "bold"
+                    }
+                  ],
                   "value": "complex",
-                  "marks": [
-                    {
-                      "type": "bold"
-                    }
-                  ],
-                  "data": {}
+                  "nodeType": "text"
                 },
                 {
-                  "nodeType": "text",
+                  "data": {},
+                  "marks": [],
                   "value": " text",
-                  "marks": [],
-                  "data": {}
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 },
                 {
-                  "nodeType": "hyperlink",
                   "data": {
                     "uri": "https://code.org"
                   },
                   "content": [
                     {
-                      "nodeType": "text",
-                      "value": "Normal link",
+                      "data": {},
                       "marks": [],
-                      "data": {}
+                      "value": "Normal link",
+                      "nodeType": "text"
                     }
-                  ]
+                  ],
+                  "nodeType": "hyperlink"
                 },
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [
                     {
                       "type": "bold"
                     }
                   ],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 },
                 {
-                  "nodeType": "hyperlink",
                   "data": {
                     "uri": "https://code.org"
                   },
                   "content": [
                     {
-                      "nodeType": "text",
-                      "value": "Bold link",
+                      "data": {},
                       "marks": [
                         {
                           "type": "bold"
                         }
                       ],
-                      "data": {}
+                      "value": "Bold link",
+                      "nodeType": "text"
                     }
-                  ]
+                  ],
+                  "nodeType": "hyperlink"
                 },
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             },
             {
-              "nodeType": "unordered-list",
               "data": {},
               "content": [
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
+                          "data": {},
+                          "marks": [],
                           "value": "Unordered Item A",
-                          "marks": [],
-                          "data": {}
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
+                          "data": {},
+                          "marks": [
+                            {
+                              "type": "bold"
+                            }
+                          ],
                           "value": "Unordered Item B",
-                          "marks": [
-                            {
-                              "type": "bold"
-                            }
-                          ],
-                          "data": {}
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 }
-              ]
+              ],
+              "nodeType": "unordered-list"
             },
             {
-              "nodeType": "ordered-list",
               "data": {},
               "content": [
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
-                          "value": "Ordered Item 1",
+                          "data": {},
                           "marks": [],
-                          "data": {}
+                          "value": "Ordered Item 1",
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
-                          "value": "Ordered Item 2",
+                          "data": {},
                           "marks": [
                             {
                               "type": "bold"
                             }
                           ],
-                          "data": {}
+                          "value": "Ordered Item 2",
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 }
-              ]
+              ],
+              "nodeType": "ordered-list"
             },
             {
-              "nodeType": "table",
               "data": {},
               "content": [
                 {
-                  "nodeType": "table-row",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "table-header-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
+                              "data": {},
+                              "marks": [],
                               "value": "Header 1",
-                              "marks": [],
-                              "data": {}
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-header-cell"
                     },
                     {
-                      "nodeType": "table-header-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
+                              "data": {},
+                              "marks": [],
                               "value": "Header 2",
-                              "marks": [],
-                              "data": {}
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-header-cell"
                     }
-                  ]
+                  ],
+                  "nodeType": "table-row"
                 },
                 {
-                  "nodeType": "table-row",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "table-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
+                              "data": {},
+                              "marks": [],
                               "value": "Column 1-1",
-                              "marks": [],
-                              "data": {}
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-cell"
                     },
                     {
-                      "nodeType": "table-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
-                              "value": "Column 1-2",
+                              "data": {},
                               "marks": [],
-                              "data": {}
+                              "value": "Column 1-2",
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-cell"
                     }
-                  ]
+                  ],
+                  "nodeType": "table-row"
                 },
                 {
-                  "nodeType": "table-row",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "table-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
-                              "value": "Column 2-1",
+                              "data": {},
                               "marks": [],
-                              "data": {}
+                              "value": "Column 2-1",
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-cell"
                     },
                     {
-                      "nodeType": "table-cell",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "paragraph",
                           "data": {},
                           "content": [
                             {
-                              "nodeType": "text",
-                              "value": "Column 2-2",
+                              "data": {},
                               "marks": [],
-                              "data": {}
+                              "value": "Column 2-2",
+                              "nodeType": "text"
                             }
-                          ]
+                          ],
+                          "nodeType": "paragraph"
                         }
-                      ]
+                      ],
+                      "nodeType": "table-cell"
                     }
-                  ]
+                  ],
+                  "nodeType": "table-row"
                 }
-              ]
+              ],
+              "nodeType": "table"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             }
-          ]
+          ],
+          "nodeType": "document"
         }
       }
     }

@@ -21,7 +21,8 @@ const chalky = '#e5c07b',
   darkBackground = color.light_black,
   highlightBackground = '#2c313a',
   selection = '#484D57',
-  cursor = '#528bff';
+  cursor = '#528bff',
+  hotPink = '#FF69B4';
 
 /**
 The editor theme styles for dark mode.
@@ -60,6 +61,11 @@ export const darkTheme = EditorView.theme(
       backgroundColor: darkBackground,
       color: stone,
       border: 'none',
+    },
+    '.cm-lintRange-error': {
+      backgroundImage: 'none !important',
+      textDecoration: 'underline wavy',
+      textDecorationColor: hotPink,
     },
     '.cm-activeLineGutter': {
       backgroundColor: highlightBackground,

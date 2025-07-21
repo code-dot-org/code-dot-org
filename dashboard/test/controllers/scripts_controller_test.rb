@@ -84,7 +84,8 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test 'show includes correct SEO data' do
     get :show, params: {
-      id: Unit::TWENTY_HOUR_NAME,
+      course_course_name: Unit::TWENTY_HOUR_NAME,
+      position: 1,
     }
     assert_response :ok
     assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
@@ -92,7 +93,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'canonical url is added if it is a single unit course' do
-    unit = create :script, :in_unit_group, family_name: 'my-script'
+    unit = create :script, family_name: 'my-script'
     course = create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     get :show, params: {
@@ -119,17 +120,17 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of hoc" do
-    get :show, params: {id: Unit::HOC_NAME}
+    get :show, params: {course_course_name: Unit::HOC_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show of k-8" do
-    get :show, params: {id: Unit::TWENTY_HOUR_NAME}
+    get :show, params: {course_course_name: Unit::TWENTY_HOUR_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show of custom unit" do
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
   end
 
@@ -148,13 +149,13 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
     sign_in create(:student)
 
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
   end
 
   test "should not show link to Overview of Courses 1, 2, and 3 if not logged in" do
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
   end
@@ -162,48 +163,50 @@ class ScriptsControllerTest < ActionController::TestCase
   test "should show link to Overview of Courses 1, 2, and 3 if logged in as a teacher" do
     sign_in create(:teacher)
 
-    get :show, params: {id: 'course1'}
+    get :show, params: {course_course_name: 'course1', position: 1}
     assert_response :success
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
   test "show of hourofcode redirects to hoc" do
-    get :show, params: {id: 'hourofcode'}
+    get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
 
   test "should get show if not signed in" do
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {id: Unit::FLAPPY_NAME}
+    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :forbidden
   end
 
   test "should use unit name as param where unit name is words but looks like a number" do
-    unit = create(:script, name: '15-16')
+    unit = create(:script, :in_single_unit_course, name: '15-16')
     get :show, params: {id: "15-16"}
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to "/courses/#{unit.original_unit_group.name}/units/1"
     assert_equal unit, assigns(:script)
   end
 
   test "should use unit name as param where unit name is words" do
-    unit = create(:script, name: 'Heure de Code', skip_name_format_validation: true)
+    unit = create(:script, :in_single_unit_course, name: 'Heure de Code', skip_name_format_validation: true)
     get :show, params: {id: "Heure de Code"}
 
-    assert_response :success
+    assert_response :redirect
+    assert_redirected_to "/courses/#{unit.original_unit_group.name}/units/1"
     assert_equal unit, assigns(:script)
   end
 

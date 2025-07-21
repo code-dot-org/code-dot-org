@@ -1,0 +1,19 @@
+name 'test-ai-powered-threats-defenses-lesson2-level5c'
+title 'Scenario 3'
+bubble_choice_description 'An unauthorized student finds she can edit the Class President election results. Soon, other students start changing responses — throwing the entire election into chaos.'
+display_name 'Scenario 3'
+thumbnail_url 'https://images.code.org/8dc766dc9680e6d458cc2c44d218c559-image-1752771663262.00.40 PM.png'
+
+markdown <<MARKDOWN
+## Scenario 3
+
+The Secretary of the Student Government creates a Google Form for Class President elections. It’s stored in a folder with edit access for the whole grade instead of just the student government officers. 
+
+A curious 10th grader who is not on Student Government finds she can edit the form questions and responses. She tells her friends who decide to add joke candidates and change existing responses. 
+
+The integrity of the election is compromised.
+
+&nbsp;
+
+<img src="https://images.code.org/8dc766dc9680e6d458cc2c44d218c559-image-1752771663262.00.40 PM.png" alt="computer " width="300"/>
+MARKDOWN

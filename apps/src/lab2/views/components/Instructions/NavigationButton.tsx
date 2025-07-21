@@ -1,6 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
-import React from 'react';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import React, {useMemo} from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -26,6 +27,7 @@ interface NavigationButtonProps {
   hasEdited: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
+  requireRun?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -34,6 +36,7 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   hasEdited,
   className,
   size,
+  requireRun,
 }) => {
   if (levelProperties.submittable) {
     return (
@@ -51,7 +54,9 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
     <ContinueButton
       className={className}
       size={size}
+      hasRun={hasRun}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+      requireRun={requireRun}
     />
   );
 };
@@ -60,6 +65,8 @@ interface ContinueButtonProps {
   className?: string;
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
+  hasRun?: boolean;
+  requireRun?: boolean;
 }
 
 /**
@@ -69,6 +76,8 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   className,
   size,
   isPredictLevel,
+  hasRun,
+  requireRun,
 }) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
@@ -77,18 +86,33 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const passingValidation = useAppSelector(
-    state =>
-      !state.lab.validationState.hasConditions ||
-      state.lab.validationState.satisfied
+  const hasConditions = useAppSelector(
+    state => state.lab.validationState.hasConditions
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState.satisfied
   );
   const useSecondaryFinishButton =
     useAppSelector(
       state => state.lab.levelProperties?.useSecondaryFinishButton
     ) || queryParams('use-secondary-finish-button') === 'true';
 
-  const canShow =
-    (!isPredictLevel || hasSubmittedPredictResponse) && passingValidation;
+  const canShow = useMemo(() => {
+    if (isPredictLevel) {
+      return hasSubmittedPredictResponse;
+    } else if (hasConditions) {
+      return validationSatisfied;
+    } else {
+      return !requireRun || hasRun;
+    }
+  }, [
+    hasRun,
+    hasConditions,
+    isPredictLevel,
+    hasSubmittedPredictResponse,
+    validationSatisfied,
+    requireRun,
+  ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
 
@@ -96,6 +120,10 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     useSecondaryFinishButton && !hasNextLevel
       ? (['secondary', 'black'] as const)
       : (['primary', 'purple'] as const);
+
+  const iconRight: FontAwesomeV6IconProps | undefined = hasNextLevel
+    ? {iconName: 'arrow-right', iconStyle: 'solid'}
+    : undefined;
 
   if (!canShow) {
     return null;
@@ -106,6 +134,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
       id="instructions-continue-button"
       {...{className, size, text, type, color}}
       onClick={() => dispatch(continueOrFinishLesson())}
+      iconRight={iconRight}
     />
   );
 };
