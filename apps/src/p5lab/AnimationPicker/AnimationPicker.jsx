@@ -168,7 +168,7 @@ class AnimationPicker extends React.Component {
    */
   handleModeratedUploadStart = data => {
     const file = data.files[0];
-    HttpClient.post(`/v3/images/${this.props.channelId}/moderate`, file, true, {
+    HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type,
     })
       .then(response => response.json())

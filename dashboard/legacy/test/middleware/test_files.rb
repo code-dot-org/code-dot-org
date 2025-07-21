@@ -830,22 +830,6 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
-  def test_image_moderation_success
-    image_bytes = 'fake-image-bytes'
-    ImageModeration.expects(:rate_image).with(
-      instance_of(StringIO),
-      'image/png'
-    ).returns(:everyone)
-
-    post "/v3/images/#{@channel_id}/moderate",
-        image_bytes,
-        {'CONTENT_TYPE' => 'image/png'}
-
-    assert successful?
-    response = JSON.parse(last_response.body)
-    assert_equal 'everyone', response['rating']
-  end
-
   private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end

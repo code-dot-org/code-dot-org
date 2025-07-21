@@ -1052,16 +1052,14 @@ class FilesApi < Sinatra::Base
   end
 
   #
-  # POST /v3/images/<channel-id>/moderate
+  # POST /v3/images/moderate
   #
   # Moderate a custom image upload via ImageModeration and return a JSON rating.
   # Possible ratings: [:everyone|:racy|:adult|:unknown]
   #
-  post %r{/v3/images/([^/]+)/moderate$} do |encrypted_channel_id|
+  post %r{/v3/images/moderate$} do
     content_type :json
     dont_cache
-
-    not_authorized unless owns_channel?(encrypted_channel_id)
 
     # Read the raw bytes and wrap in an IO.
     raw = request.body.read
@@ -1069,6 +1067,13 @@ class FilesApi < Sinatra::Base
 
     # Determine MIME type (e.g. "image/png", "image/jpeg").
     content_type_header = request.content_type
+
+    # Validate allowed content types
+    unless ['image/png', 'image/jpeg'].include?(content_type_header)
+      status 400
+      return {error: 'Unsupported image type. Only PNG and JPEG files are allowed.'}.to_json
+    end
+
     # Optionally record the URL for metrics, if passed as a query param.
     image_url = params['image_url']
 
