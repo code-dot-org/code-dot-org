@@ -10,11 +10,6 @@ const FIGTREE_FONT = 'Figtree';
 
 const theme = createTheme({
   cssVariables: true,
-  palette: {
-    primary: {
-      main: '#000000',
-    },
-  },
   components: {
     MuiButton: {
       styleOverrides: {
@@ -81,6 +76,22 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: 'var(--text-neutral-primary)',
+          // Overline styles
+          ['&.MuiTypography-overline.overline--color-primary']: {
+            color: 'var(--text-brand-teal-primary)',
+          },
+          ['&.MuiTypography-overline.overline--color-secondary']: {
+            color: 'var(--text-neutral-quaternary)',
+          },
+          ['&.MuiTypography-overline.overline--size-s']: {
+            fontSize: '0.625rem', // 10px
+          },
+          ['&.MuiTypography-overline.overline--size-m']: {
+            fontSize: '0.75rem', // 12px
+          },
+          ['&.MuiTypography-overline.overline--size-l']: {
+            fontSize: '0.875rem', // 14px
+          },
         },
         gutterBottom: ({theme}) => ({
           '&.MuiTypography-h1': {
@@ -100,6 +111,9 @@ const theme = createTheme({
           },
           '&.MuiTypography-h6': {
             marginBottom: theme.spacing(1), // 8px
+          },
+          '&.MuiTypography-overline': {
+            marginBottom: theme.spacing(2), // 16px
           },
         }),
       },
@@ -142,6 +156,7 @@ const theme = createTheme({
       lineHeight: 1.48,
     },
     overline: {
+      fontWeight: 600,
       letterSpacing: '0.03rem', // 0.48px
       lineHeight: 1.4,
     },

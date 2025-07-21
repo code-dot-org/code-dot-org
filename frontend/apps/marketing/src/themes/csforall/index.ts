@@ -1,5 +1,6 @@
 'use client';
 import {createTheme} from '@mui/material';
+import {alpha} from '@mui/material/styles';
 
 import {NOTO_FONT} from '@/themes/constants/fonts';
 
@@ -16,10 +17,10 @@ const theme = createTheme({
   cssVariables: true,
   palette: {
     primary: {
-      main: '#D401F2',
+      main: '#2C079F',
     },
     secondary: {
-      main: '#2C079F',
+      main: '#D401F2',
     },
     text: {
       primary: COLORS.black,
@@ -73,6 +74,34 @@ const theme = createTheme({
       styleOverrides: {
         root: ({theme}) => ({
           color: theme.palette.text.primary,
+          // Overline styles
+          '&.MuiTypography-overline': {
+            display: 'inline-block',
+            paddingBlock: theme.spacing(0.5), // 4px
+            paddingInline: theme.spacing(1), // 8px
+            borderRadius: 8,
+          },
+          ['&.MuiTypography-overline.overline--color-primary']: {
+            color: theme.palette.primary.main,
+          },
+          ['&.MuiTypography-overline.overline--color-secondary']: {
+            color: theme.palette.secondary.dark,
+            backgroundColor: alpha(theme.palette.secondary.light, 0.1),
+          },
+          ['&.MuiTypography-overline.overline--size-s']: {
+            fontSize: '0.75rem', // 12px
+          },
+          ['&.MuiTypography-overline.overline--size-m']: {
+            fontSize: '0.875rem', // 14px
+          },
+          ['&.MuiTypography-overline.overline--size-l']: {
+            fontSize: '1rem', // 16px
+          },
+        }),
+        gutterBottom: ({theme}) => ({
+          '&.MuiTypography-overline': {
+            marginBottom: theme.spacing(2), // 16px
+          },
         }),
       },
     },
@@ -114,6 +143,12 @@ const theme = createTheme({
       fontSize: '1.5rem', // 24px
       fontWeight: 800,
       lineHeight: 1.25,
+    },
+    overline: {
+      fontWeight: 400,
+      lineHeight: 1.5,
+      textTransform: 'none',
+      border: '1px solid',
     },
   },
 });
