@@ -6,7 +6,11 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import logToCloud from '@cdo/apps/logToCloud';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  getSelectedCourseId,
+  getSelectedUnitPosition,
+  setUnit,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
@@ -43,6 +47,8 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    courseId: PropTypes.number,
+    unitPosition: PropTypes.number,
     sectionId: PropTypes.number,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
@@ -64,8 +70,13 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    if (this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+    if (this.props.scriptId && this.props.courseId && this.props.unitPosition) {
+      loadUnitProgress(
+        this.props.scriptId,
+        this.props.sectionId,
+        this.props.courseId,
+        this.props.unitPosition
+      )?.then(() => {
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,
@@ -77,9 +88,16 @@ class SectionProgress extends Component {
   componentDidUpdate(prevProps) {
     if (
       prevProps.scriptId !== this.props.scriptId ||
-      prevProps.sectionId !== this.props.sectionId
+      prevProps.sectionId !== this.props.sectionId ||
+      prevProps.courseId !== this.props.courseId ||
+      prevProps.unitPosition !== this.props.unitPosition
     ) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId)?.then(() => {
+      loadUnitProgress(
+        this.props.scriptId,
+        this.props.sectionId,
+        this.props.courseId,
+        this.props.unitPosition
+      )?.then(() => {
         this.setState(state => ({
           ...state,
           loadedSectionId: this.props.sectionId,
@@ -322,6 +340,8 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     courseVersionId: state.unitSelection.courseVersionId,
+    courseId: getSelectedCourseId(state),
+    unitPosition: getSelectedUnitPosition(state),
     sectionId: state.teacherSections.selectedSectionId,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),

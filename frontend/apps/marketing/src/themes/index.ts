@@ -12,3 +12,13 @@ export function getMuiTheme(brand: Brand) {
       return CDOTheme;
   }
 }
+
+export async function getCriticalFonts(brand: Brand) {
+  switch (brand) {
+    case Brand.CS_FOR_ALL:
+      return await import('@/themes/csforall/critical-fonts');
+    case Brand.CODE_DOT_ORG:
+    default:
+      return await import('@/themes/code.org/critical-fonts');
+  }
+}

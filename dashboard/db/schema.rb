@@ -1219,14 +1219,6 @@ ActiveRecord::Schema.define(version: 2025_07_16_223213) do
     t.index ["facilitator_id", "course"], name: "index_pd_course_facilitators_on_facilitator_id_and_course", unique: true
   end
 
-  create_table "pd_district_payment_terms", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "school_district_id"
-    t.string "course", null: false
-    t.string "rate_type", null: false
-    t.decimal "rate", precision: 8, scale: 2, null: false
-    t.index ["school_district_id", "course"], name: "index_pd_district_payment_terms_school_district_course"
-  end
-
   create_table "pd_enrollment_notifications", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -1332,18 +1324,6 @@ ActiveRecord::Schema.define(version: 2025_07_16_223213) do
     t.index ["form_id"], name: "index_pd_misc_surveys_on_form_id"
     t.index ["submission_id"], name: "index_pd_misc_surveys_on_submission_id", unique: true
     t.index ["user_id"], name: "index_pd_misc_surveys_on_user_id"
-  end
-
-  create_table "pd_payment_terms", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "regional_partner_id", null: false
-    t.date "start_date", null: false
-    t.date "end_date"
-    t.string "course"
-    t.string "subject"
-    t.text "properties"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["regional_partner_id"], name: "index_pd_payment_terms_on_regional_partner_id"
   end
 
   create_table "pd_post_course_surveys", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2661,7 +2641,6 @@ ActiveRecord::Schema.define(version: 2025_07_16_223213) do
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
   add_foreign_key "pd_application_tags_applications", "pd_applications"
-  add_foreign_key "pd_payment_terms", "regional_partners"
   add_foreign_key "pd_regional_partner_cohorts", "pd_workshops", column: "summer_workshop_id"
   add_foreign_key "pd_scholarship_infos", "pd_applications"
   add_foreign_key "pd_scholarship_infos", "pd_enrollments"

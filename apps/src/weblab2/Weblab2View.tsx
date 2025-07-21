@@ -6,6 +6,7 @@ import {Codebridge} from '@codebridge/Codebridge';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
+import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
@@ -20,11 +21,12 @@ import VerticalLayout from './layout/VerticalLayout';
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
+  js: javascript(),
 };
 
 const defaultConfig: ConfigType = {
   languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css'],
+  editableFileTypes: ['html', 'css', 'js'],
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,

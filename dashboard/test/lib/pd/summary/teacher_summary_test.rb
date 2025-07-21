@@ -26,6 +26,14 @@ module Pd::Summary
       assert_equal attendance.hours, 12
     end
 
+    test 'calculate_teacher_attendance returns correct days and hours for teachers without accounts' do
+      @enrollment.update(user_id: nil)
+      attendance = @teacher_summary.calculate_teacher_attendance
+      assert_kind_of TeacherSummary::TeacherAttendanceTotal, attendance
+      assert_equal attendance.days, 2
+      assert_equal attendance.hours, 12
+    end
+
     test 'generate_teacher_summary_line_item returns expected summary' do
       line_item = @teacher_summary.generate_teacher_summary_line_item
       assert_equal @enrollment.first_name, line_item[:teacher_first_name]

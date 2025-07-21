@@ -1,15 +1,19 @@
 name 'test-ai-powered-threats-defenses-lesson2-level5a'
 title 'Scenario 1'
-bubble_choice_description 'description goes here'
+bubble_choice_description 'Your friend sends you an email with a link to download Fortnite cheat codes. Is it too good to be true?'
 display_name 'Scenario 1'
-thumbnail_url 'https://images.code.org/63a7affcc5b4d3a905111756947ad6c1-image-1752695966233.59.17 PM.png'
+thumbnail_url 'https://images.code.org/f3a884a088b6a2684d0843feb382a98c-image-1752764308580.57.52 AM.png'
 
 markdown <<MARKDOWN
 ## Scenario 1
 
-Text here
+You receive an email from a classmate with a link that says, “Click here for 1000 free Fortnite v-bucks!”. 
 
-<div style="text-align: center; margin-top: 20px; width:300px">
-    <img src="https://images.code.org/63a7affcc5b4d3a905111756947ad6c1-image-1752695966233.59.17 PM.png">
-</div>
+You click the link and it downloads a file to your computer — hmmm, that was unexpected. Instead of giving you free v-bucks, the file you downloaded automatically sends the same fake email to everyone in your contacts list, making it look like you sent it! 
+
+The malicious file spreads to dozens of students, slowing devices and potentially stealing passwords.
+
+&nbsp;
+
+<img src="https://images.code.org/351687e403fac3c115b85fea72a6cb9d-image-1752764017862.jpg" alt="emails and virus particles being sent digitally" width="300"/>
 MARKDOWN

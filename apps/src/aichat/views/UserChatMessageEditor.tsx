@@ -5,11 +5,12 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitChatContents} from '../redux';
-import {ChatButton} from '../types';
+import {ChatButton, ModelParameters} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
+  modelParameters: ModelParameters;
   editorContainerClassName?: string;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
@@ -22,6 +23,7 @@ interface UserChatMessageEditorProps {
 const UserChatMessageEditor: React.FunctionComponent<
   UserChatMessageEditorProps
 > = ({
+  modelParameters,
   editorContainerClassName,
   chatButtons,
   hiddenContext,
@@ -48,6 +50,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         dispatch(
           submitChatContents({
             text: userMessage,
+            modelParameters,
             hiddenContext: hiddenContext,
             assets:
               multimodalAvailable && chatAssets.length > 0
@@ -63,6 +66,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       hiddenContext,
       multimodalAvailable,
       chatAssets,
+      modelParameters,
     ]
   );
 
