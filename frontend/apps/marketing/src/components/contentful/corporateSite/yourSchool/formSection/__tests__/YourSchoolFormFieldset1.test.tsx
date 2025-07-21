@@ -13,7 +13,7 @@ const school: School = {
   city: 'Test City',
   state: 'CA',
 };
-jest.mock('@/components/contentful/schoolSearchFieldset', () => ({
+jest.mock('@/components/contentful/corporateSite/schoolSearchFieldset', () => ({
   __esModule: true,
   default: ({
     onSelect,

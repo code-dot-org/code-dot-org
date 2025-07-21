@@ -6,7 +6,7 @@ import AFESchoolCheck from '../AFESchoolCheck';
 const mockSchoolId = '1234';
 const mockSchoolName = 'Test School';
 jest.mock(
-  '@/components/contentful/schoolSearchFieldset',
+  '@/components/contentful/corporateSite/schoolSearchFieldset',
   () =>
     (props: {onSelect: (school: {name: string; nces_id: string}) => void}) => (
       <label>
