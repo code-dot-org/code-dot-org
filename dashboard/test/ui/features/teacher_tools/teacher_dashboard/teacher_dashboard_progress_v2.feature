@@ -85,7 +85,10 @@ Scenario: Teacher can open and close lessons and see level data cells
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
+  And I wait until element "#ui-test-expanded-progress-column-header-2" is visible
+  # give more specific information in the most likely failure case
+  And element "#ui-test-courses-original-allthethings-course-units-1-lessons-2-levels-1-cell-data" is not visible
+  And element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
 
   # Teacher can close lesson so level data is no longer visible
   And I click selector "#ui-test-expanded-progress-column-header-2"
