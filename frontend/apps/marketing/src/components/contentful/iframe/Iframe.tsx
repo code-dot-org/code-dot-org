@@ -1,7 +1,4 @@
-import classNames from 'classnames';
 import {IframeHTMLAttributes} from 'react';
-
-import moduleStyles from './iframe.module.scss';
 
 export interface IframeProps extends IframeHTMLAttributes<HTMLIFrameElement> {
   /** URL of the embedded content */
@@ -16,19 +13,6 @@ export interface IframeProps extends IframeHTMLAttributes<HTMLIFrameElement> {
   width?: number | string;
 }
 
-/**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Iframe.test.tsx)
- *  * (✔) passes accessibility checks;
- *
- * ### Status: ```Ready for dev```
- *
- * Design System: Iframe Component.
- * Acts as a container for iframe embedded content.
- */
 const Iframe: React.FC<IframeProps> = ({
   src,
   title,
@@ -42,7 +26,8 @@ const Iframe: React.FC<IframeProps> = ({
     title={title}
     height={height}
     width={width}
-    className={classNames(moduleStyles.iframe, className)}
+    className={className}
+    style={{border: 'none'}}
     {...HTMLAttributes}
   />
 );
