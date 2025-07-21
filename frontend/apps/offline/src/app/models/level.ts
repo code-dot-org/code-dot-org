@@ -122,8 +122,6 @@ export interface LevelConfiguration {
     maze?: string;
     /** The skin identifier that associates a level with a set of image assets. */
     skin?: string;
-    /** A set of panels representing a slide show level (PanelsLevel). */
-    panels?: PanelData[];
     /** The project template which defines the workspace shared across a set of levels. */
     project_template_level_name?: string;
     /** The starting direction for certain levels. */
