@@ -37,12 +37,14 @@ describe('WorkshopEnrollmentPreSurvey', () => {
       const generateFakeEnrollment = survey => {
         userIndex++;
         return {
-          first_name: `Teacher${userIndex}`,
-          last_name: `LastName${userIndex}`,
-          email: `teacher${userIndex}@ex.net`,
-          district_name: 'A district',
-          school: 'A school',
           user_id: userIndex,
+          user_info: {
+            given_name: `Teacher${userIndex}`,
+            family_name: `LastName${userIndex}`,
+            email: `teacher${userIndex}@ex.net`,
+            school_name: 'A school',
+            district_name: 'A district',
+          },
           attended: true,
           pre_workshop_survey: survey,
         };
@@ -127,9 +129,9 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .map(td => td.text());
       expect(responseCellText).toEqual([
         `${ROW_FULL_RESPONSE + 1}`,
-        fakeEnrollments[ROW_FULL_RESPONSE].first_name,
-        fakeEnrollments[ROW_FULL_RESPONSE].last_name,
-        fakeEnrollments[ROW_FULL_RESPONSE].email,
+        fakeEnrollments[ROW_FULL_RESPONSE].user_info.given_name,
+        fakeEnrollments[ROW_FULL_RESPONSE].user_info.family_name,
+        fakeEnrollments[ROW_FULL_RESPONSE].user_info.email,
         'Unit 4 - the fourth unit',
         'Lesson 3 - the third lesson',
         'so many questions',
@@ -144,9 +146,9 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .map(td => td.text());
       expect(responseCellText).toEqual([
         `${ROW_NO_QUESTION + 1}`,
-        fakeEnrollments[ROW_NO_QUESTION].first_name,
-        fakeEnrollments[ROW_NO_QUESTION].last_name,
-        fakeEnrollments[ROW_NO_QUESTION].email,
+        fakeEnrollments[ROW_NO_QUESTION].user_info.given_name,
+        fakeEnrollments[ROW_NO_QUESTION].user_info.family_name,
+        fakeEnrollments[ROW_NO_QUESTION].user_info.email,
         'Unit 1 - the first unit',
         'Lesson 2 - the second lesson',
         'No response',
@@ -161,9 +163,9 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .map(td => td.text());
       expect(noResponseCellText).toEqual([
         `${ROW_NO_RESPONSE + 1}`,
-        fakeEnrollments[5].first_name,
-        fakeEnrollments[5].last_name,
-        fakeEnrollments[5].email,
+        fakeEnrollments[5].user_info.given_name,
+        fakeEnrollments[5].user_info.family_name,
+        fakeEnrollments[5].user_info.email,
         'No response',
         'No response',
         'No response',
