@@ -12,8 +12,8 @@ import {
   OverlineThreeText,
 } from '@code-dot-org/component-library/typography';
 
-import AFEForm from '@/components/contentful/afeEligibility/AFEForm';
-import AFESchoolCheck from '@/components/contentful/afeEligibility/AFESchoolCheck';
+import AFEForm from '@/components/contentful/corporateSite/afeEligibility/AFEForm';
+import AFESchoolCheck from '@/components/contentful/corporateSite/afeEligibility/AFESchoolCheck';
 import Link from '@/components/contentful/link';
 import {getStudioUrl} from '@/config/studio';
 

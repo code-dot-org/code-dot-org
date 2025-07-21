@@ -2,7 +2,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 
-import SchoolSearchFieldset from '@/components/contentful/schoolSearchFieldset';
+import SchoolSearchFieldset from '@/components/contentful/corporateSite/schoolSearchFieldset';
 
 import {YOUR_SCHOOL_ROLES, YOUR_SCHOOL_DEFAULT_FORM_DATA} from '../constants';
 import {YourSchoolFormData, School} from '../types';

@@ -10,8 +10,8 @@ import {
   Heading2,
 } from '@code-dot-org/component-library/typography';
 
-import AdoptionMap from '@/components/contentful/adoptionMap';
-import SchoolSearchFieldset from '@/components/contentful/schoolSearchFieldset';
+import AdoptionMap from '@/components/contentful/corporateSite/adoptionMap';
+import SchoolSearchFieldset from '@/components/contentful/corporateSite/schoolSearchFieldset';
 import Section from '@/components/contentful/section';
 import Spacer from '@/components/contentful/spacer';
 import cstaLogo from '@public/images/csta-logo.avif';

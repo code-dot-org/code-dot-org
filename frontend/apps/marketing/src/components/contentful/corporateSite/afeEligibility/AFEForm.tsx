@@ -18,9 +18,8 @@ import {
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
 
+import Divider from '@/components/contentful/divider';
 import {getStudioUrl} from '@/config/studio';
-
-import Divider from '../divider';
 
 import AFEContinueNotice from './AFEContinueNotice';
 import AFESuccessNotice from './AFESuccessNotice';

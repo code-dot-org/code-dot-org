@@ -8,12 +8,14 @@ jest.mock('@statsig/react-bindings', () => ({
 jest.mock('@/config/studio', () => ({
   getStudioUrl: (path: string) => `https://studio.code.org${path}`,
 }));
-jest.mock('@/components/contentful/afeEligibility/AFEForm', () => () => (
-  <div>Mock AFEForm</div>
-));
-jest.mock('@/components/contentful/afeEligibility/AFESchoolCheck', () => () => (
-  <div>Mock AFESchoolCheck</div>
-));
+jest.mock(
+  '@/components/contentful/corporateSite/afeEligibility/AFEForm',
+  () => () => <div>Mock AFEForm</div>,
+);
+jest.mock(
+  '@/components/contentful/corporateSite/afeEligibility/AFESchoolCheck',
+  () => () => <div>Mock AFESchoolCheck</div>,
+);
 
 describe('AFEEligibility', () => {
   const renderComponent = () => render(<AFEEligibility />);

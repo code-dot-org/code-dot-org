@@ -13,7 +13,7 @@ import {
   BodyFourText,
 } from '@code-dot-org/component-library/typography';
 
-import SchoolSearchFieldset from '@/components/contentful/schoolSearchFieldset';
+import SchoolSearchFieldset from '@/components/contentful/corporateSite/schoolSearchFieldset';
 import {getStudioUrl} from '@/config/studio';
 
 import type {AFESchoolCheckProps, AFESchoolCheckFormData} from './types';

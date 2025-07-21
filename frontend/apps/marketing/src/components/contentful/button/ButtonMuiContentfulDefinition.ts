@@ -1,7 +1,7 @@
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-export const ButtonContentfulComponentDefinition: ComponentDefinition = {
-  id: 'button',
+export const ButtonMuiContentfulComponentDefinition: ComponentDefinition = {
+  id: 'button-mui',
   name: 'Button',
   category: '03: Content Building Blocks',
   thumbnailUrl:
@@ -14,19 +14,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   },
   builtInStyles: ['cfTextAlign'],
   variables: {
-    color: {
-      displayName: 'Color',
-      type: 'Text',
-      defaultValue: 'purple',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'purple', displayName: 'Purple'},
-          {value: 'black', displayName: 'Black'},
-          {value: 'white', displayName: 'White'},
-        ],
-      },
-    },
     type: {
       displayName: 'Type',
       type: 'Text',
@@ -34,8 +21,22 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       validations: {
         in: [
+          {value: 'emphasized', displayName: 'Emphasized'},
           {value: 'primary', displayName: 'Primary'},
           {value: 'secondary', displayName: 'Secondary'},
+        ],
+      },
+    },
+    size: {
+      displayName: 'Size',
+      type: 'Text',
+      defaultValue: 'medium',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'small', displayName: 'Small'},
+          {value: 'medium', displayName: 'Medium'},
+          {value: 'large', displayName: 'Large'},
         ],
       },
     },
@@ -51,15 +52,14 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     href: {
       displayName: 'Link URL',
       type: 'Text',
-      defaultValue: 'https://code.org',
+      defaultValue: 'https://csforall.org',
       group: 'content',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
     isLinkExternal: {
-      displayName:
-        'Is this link external? (Does this link leave the code.org site?)',
+      displayName: 'Is this link external? (Does this link leave the site?)',
       description:
         'External links will be opened in a new tab, while internal links will be opened in the same tab.',
       type: 'Boolean',
@@ -76,12 +76,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
-    },
-    iconLeftName: {
-      displayName: 'Left Icon Name',
-      type: 'Text',
-      group: 'style',
-      defaultValue: '',
     },
   },
 };

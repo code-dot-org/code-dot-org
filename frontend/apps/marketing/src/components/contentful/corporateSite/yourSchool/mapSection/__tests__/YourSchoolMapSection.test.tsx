@@ -1,7 +1,7 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 
-import AdoptionMap from '@/components/contentful/adoptionMap';
-import SchoolSearchFieldset from '@/components/contentful/schoolSearchFieldset';
+import AdoptionMap from '@/components/contentful/corporateSite/adoptionMap';
+import SchoolSearchFieldset from '@/components/contentful/corporateSite/schoolSearchFieldset';
 
 import {School} from '../../types';
 import YourSchoolMapSection from '../YourSchoolMapSection';
