@@ -110,7 +110,6 @@ function SectionProgressSelector({
     showProgressTableV2 === V2_SETTING_KEY ||
     showProgressTableV2 === V1_SETTING_KEY;
   const params = queryParams('view');
-  console.log('lfm', {isPreferenceSet, showProgressTableV2});
 
   // If there is a url pram, use that param to determine to show V2.
   const displayV2FromUrl = params === 'v2';
