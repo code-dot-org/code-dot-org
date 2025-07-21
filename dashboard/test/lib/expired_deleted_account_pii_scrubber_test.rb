@@ -44,7 +44,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
     context 'when an error occurs' do
       before do
-        expect(described_instance).to receive(:scrub_user).and_raise(Exception.new('Test error'))
+        expect(described_instance).to receive(:scrub_user).and_raise(StandardError.new('Test error'))
       end
 
       it 'should increment num_errors' do
@@ -54,7 +54,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
       it 'should notify Honeybadger' do
         expect(Honeybadger).to receive(:notify).with(
-          instance_of(Exception),
+          instance_of(StandardError),
           context: {user_id: user.id}
         )
         scrub_pii

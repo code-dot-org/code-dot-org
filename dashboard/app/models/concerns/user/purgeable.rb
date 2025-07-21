@@ -6,6 +6,8 @@
 module User::Purgeable
   extend ActiveSupport::Concern
 
+  SOFT_DELETED_USER_TTL = 28.days
+
   included do
     SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
