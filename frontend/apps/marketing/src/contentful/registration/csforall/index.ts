@@ -64,9 +64,6 @@ import RichText, {
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/contentful/section';
-import SimpleList, {
-  SimpleListContentfulComponentDefinition,
-} from '@/components/contentful/simpleList';
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
 } from '@/components/contentful/skinnyBanner';
@@ -180,10 +177,6 @@ const contentfulRegistration = {
       options: {
         wrapContainerWidth: '100%',
       },
-    },
-    {
-      component: SimpleList,
-      definition: SimpleListContentfulComponentDefinition,
     },
     {
       component: SkinnyBanner,

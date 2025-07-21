@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-06-04T12:32:50.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "long_instructions": "#### Feather \r\n\r\nThis remix of Feather leans into a heavier rock sound with layered bass, distorted drums, and electric guitar. Listen for how the sections are split into parts like intro+verses1&2, verses3&4, choruses1&2, and end. The student used functions to break up the song into clear chunks and build a consistent, powerful rhythm across the whole remix.\r\n\r\n**Note from the creator:**\r\n> I wanted to make Feather sound way more intense, kind of like a rock anthem. I split the song into different sections using functions so it would be easier to build and change parts without starting over. Each function has a mix of bass, guitar, and drums to keep it loud and steady. I messed around with effects like fuzz and volume changes to make certain parts hit harder. It felt like putting together a full track instead of just a loop.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -1627,10 +1628,23 @@
     "display_name": "Feather",
     "bubble_choice_description": "A heavy metal punk remix of Feather with distorted guitars and crashing drums",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_espresso/sabrina_carpenter_espresso.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-genre-example-5_8e25799f-61c9-497f-9624-f90260dd28aa",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-04T12:32:50.504+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-4\\\"\"],\"cloned_from\":\"music-lab-genre-example-4\"},{\"changed_at\":\"2025-06-04 12:33:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 12:34:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:24:17 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:41:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:39:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-04T12:32:50.504+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-4\\\"\"],\"cloned_from\":\"music-lab-genre-example-4\"},{\"changed_at\":\"2025-06-04 12:33:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 12:34:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:24:17 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:41:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:39:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 14:01:09 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 14:03:20 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

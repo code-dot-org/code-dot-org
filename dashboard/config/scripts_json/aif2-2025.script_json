@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-09 14:23:06 UTC",
+    "serialized_at": "2025-07-18 20:42:48 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1540,7 +1540,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "You also have the option to have students do this matching activity digitally with the Digital Option Baking Cake Cards"
+            "markdown": "You also have the option to have students complete this matching activity digitally using the Baking Cake Cards Google Slides. This single resource can be used as-is on a device or printed and cut out for hands-on use."
           }
         ]
       },
@@ -11316,6 +11316,12 @@
     {
       "seeding_key": {
         "lesson.key": "Algorithms IRL",
+        "resource.key": "programming_fundamentals_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms IRL",
         "resource.key": "waymo_self-driving_car"
       }
     },
@@ -11569,6 +11575,12 @@
       "seeding_key": {
         "lesson.key": "Working with Objects",
         "resource.key": "_optional_umpire_strategy_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Working with Objects",
+        "resource.key": "programming_fundamentals_unit_guide"
       }
     },
     {
