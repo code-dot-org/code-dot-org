@@ -9,7 +9,12 @@ module Services
 
       def call
         return true if user.student?
-        user.update(user_type: ::User::TYPE_STUDENT, given_name: nil, family_name: nil)
+        user.update(
+          user_type: ::User::TYPE_STUDENT,
+          given_name: nil,
+          family_name: nil,
+          educator_role: nil
+        )
       end
     end
   end

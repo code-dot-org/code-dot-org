@@ -19,7 +19,12 @@ class Services::User::DowngradeToStudentTest < ActiveSupport::TestCase
     context 'when user is not a student' do
       it 'updates the user_type to student and clears given name, display name, and cleartext emails' do
         allow(user).to receive(:student?).and_return(false)
-        expect(user).to receive(:update).with(user_type: ::User::TYPE_STUDENT, given_name: nil, family_name: nil).and_return(true)
+        expect(user).to receive(:update).with(
+          user_type: ::User::TYPE_STUDENT,
+          given_name: nil,
+          family_name: nil,
+          educator_role: nil
+        ).and_return(true)
 
         _downgrade_to_student_call.must_equal true
         user.reload
@@ -32,7 +37,12 @@ class Services::User::DowngradeToStudentTest < ActiveSupport::TestCase
     context 'when update fails' do
       it 'returns false' do
         allow(user).to receive(:student?).and_return(false)
-        allow(user).to receive(:update).with(user_type: ::User::TYPE_STUDENT, given_name: nil, family_name: nil).and_return(false)
+        allow(user).to receive(:update).with(
+          user_type: ::User::TYPE_STUDENT,
+          given_name: nil,
+          family_name: nil,
+          educator_role: nil,
+        ).and_return(false)
 
         _downgrade_to_student_call.must_equal false
       end
