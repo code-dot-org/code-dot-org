@@ -60,8 +60,7 @@ export const ButtonCSforAllContentfulComponentDefinition: ComponentDefinition =
         },
       },
       isLinkExternal: {
-        displayName:
-          'Is this link external? (Does this link leave the csforall.org site?)',
+        displayName: 'Is this link external? (Does this link leave the site?)',
         description:
           'External links will be opened in a new tab, while internal links will be opened in the same tab.',
         type: 'Boolean',
