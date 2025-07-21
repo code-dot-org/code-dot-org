@@ -88,18 +88,35 @@ DiamondContainer.propTypes = {
   children: PropTypes.node,
 };
 
+const handleKeyDown = (event, clickEvent) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    clickEvent();
+  }
+};
+
 export function BubbleLink({url, onClick, children, a11y_description}) {
-  return (
-    <a
-      href={url}
-      onClick={onClick}
-      className="progress-bubble-link"
-      title={a11y_description}
-    >
+  const commonProps = {
+    onClick,
+    className: 'progress-bubble-link',
+    title: a11y_description,
+  };
+
+  return url ? (
+    <a href={url} {...commonProps}>
       {children}
     </a>
+  ) : (
+    <span
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => handleKeyDown(e, onClick)}
+      {...commonProps}
+    >
+      {children}
+    </span>
   );
 }
+
 BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,
