@@ -40,30 +40,30 @@ const theme = createTheme({
     MuiDivider: {
       styleOverrides: {
         root: ({theme}) => ({
-          ['&.MuiDivider-root.divider--color-primary']: {
+          '&.MuiDivider-root.divider--color-primary': {
             borderColor: theme.palette.divider,
           },
-          ['&.MuiDivider-root.divider--color-strong']: {
+          '&.MuiDivider-root.divider--color-strong': {
             borderColor: theme.palette.divider,
             borderStyle: 'dashed',
           },
-          ['&.MuiDivider-root.divider--margin-none']: {
+          '&.MuiDivider-root.divider--margin-none': {
             marginTop: 0,
             marginBottom: 0,
           },
-          ['&.MuiDivider-root.divider--margin-xs']: {
+          '&.MuiDivider-root.divider--margin-xs': {
             marginTop: theme.spacing(3),
             marginBottom: theme.spacing(3),
           },
-          ['&.MuiDivider-root.divider--margin-s']: {
+          '&.MuiDivider-root.divider--margin-s': {
             marginTop: theme.spacing(5),
             marginBottom: theme.spacing(5),
           },
-          ['&.MuiDivider-root.divider--margin-m']: {
+          '&.MuiDivider-root.divider--margin-m': {
             marginTop: theme.spacing(7),
             marginBottom: theme.spacing(7),
           },
-          ['&.MuiDivider-root.divider--margin-l']: {
+          '&.MuiDivider-root.divider--margin-l': {
             marginTop: theme.spacing(8),
             marginBottom: theme.spacing(8),
           },
@@ -81,24 +81,25 @@ const theme = createTheme({
             paddingInline: theme.spacing(1), // 8px
             borderRadius: 8,
           },
-          ['&.MuiTypography-overline.overline--color-primary']: {
+          '&.MuiTypography-overline.overline--color-primary': {
             color: theme.palette.primary.main,
             border: `1px solid ${theme.palette.primary.main}`,
           },
-          ['&.MuiTypography-overline.overline--color-secondary']: {
+          '&.MuiTypography-overline.overline--color-secondary': {
             color: theme.palette.secondary.dark,
             backgroundColor: alpha(theme.palette.secondary.main, 0.1),
             border: `1px solid ${theme.palette.secondary.dark}`,
           },
-          ['&.MuiTypography-overline.overline--size-s']: {
+          '&.MuiTypography-overline.overline--size-s': {
             fontSize: '0.75rem', // 12px
           },
-          ['&.MuiTypography-overline.overline--size-m']: {
+          '&.MuiTypography-overline.overline--size-m': {
             fontSize: '0.875rem', // 14px
           },
-          ['&.MuiTypography-overline.overline--size-l']: {
+          '&.MuiTypography-overline.overline--size-l': {
             fontSize: '1rem', // 16px
           },
+          // End Overline styles
         }),
         gutterBottom: ({theme}) => ({
           '&.MuiTypography-overline': {
