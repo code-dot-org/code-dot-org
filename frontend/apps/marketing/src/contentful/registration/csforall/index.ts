@@ -5,7 +5,7 @@ import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import Button, {
-  ButtonContentfulComponentDefinition,
+  ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
@@ -93,7 +93,10 @@ const contentfulRegistration = {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
-    {component: Button, definition: ButtonContentfulComponentDefinition},
+    {
+      component: Button,
+      definition: ButtonMuiContentfulComponentDefinition,
+    },
     {
       component: ActionBlockCollection,
       definition: ActionBlockCollectionContentfulComponentDefinition,

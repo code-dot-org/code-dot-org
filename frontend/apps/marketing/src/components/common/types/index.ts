@@ -1,3 +1,6 @@
+// Common component sizes
+export type ComponentSize = 'xs' | 's' | 'm' | 'l';
+
 // Can be used for components that require
 // spacing props like margin or padding.
 export interface SpacingProps {
