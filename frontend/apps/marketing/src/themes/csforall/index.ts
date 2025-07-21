@@ -83,10 +83,12 @@ const theme = createTheme({
           },
           ['&.MuiTypography-overline.overline--color-primary']: {
             color: theme.palette.primary.main,
+            border: `1px solid ${theme.palette.primary.main}`,
           },
           ['&.MuiTypography-overline.overline--color-secondary']: {
             color: theme.palette.secondary.dark,
-            backgroundColor: alpha(theme.palette.secondary.light, 0.1),
+            backgroundColor: alpha(theme.palette.secondary.main, 0.1),
+            border: `1px solid ${theme.palette.secondary.dark}`,
           },
           ['&.MuiTypography-overline.overline--size-s']: {
             fontSize: '0.75rem', // 12px
@@ -148,7 +150,6 @@ const theme = createTheme({
       fontWeight: 400,
       lineHeight: 1.5,
       textTransform: 'none',
-      border: '1px solid',
     },
   },
 });

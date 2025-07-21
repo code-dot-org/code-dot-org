@@ -10,6 +10,11 @@ const FIGTREE_FONT = 'Figtree';
 
 const theme = createTheme({
   cssVariables: true,
+  palette: {
+    primary: {
+      main: '#000000',
+    },
+  },
   components: {
     MuiButton: {
       styleOverrides: {

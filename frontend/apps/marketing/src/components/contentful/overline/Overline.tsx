@@ -19,9 +19,9 @@ type OverlineProps = RemoveMarginBottomProps & {
 };
 
 const Overline: React.FunctionComponent<OverlineProps> = ({
-  size,
   children,
-  color,
+  size = 'm',
+  color = 'primary',
   removeMarginBottom,
   className,
 }) => {
