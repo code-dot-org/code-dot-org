@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-06 21:58:40 UTC",
+    "serialized_at": "2025-07-18 15:47:20 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -228,7 +228,7 @@
       "key": "8dcead19-ce44-47cd-afe3-fba8667f64d0",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g351fe46eccc_1_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_90\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important to give computers instructions in the right order? What do you think would happen if we gave instructions out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question encourages students to think about how computers can’t think for themselves—they only follow each step exactly as written. It helps them realize that, unlike humans, computers can't guess or adjust if instructions are mixed up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_19\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_14\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click to reveal each step and then the picture of a successfully prepared bowl of cereal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_20\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now, have the class consider what would happen if those same steps were done in a different order such as pouring the milk before getting the bowl and spoon. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the difference when the order of these steps changes? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_31\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write the steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence. \n\t\t<br />\n\t\t<br />Teacher Tip: Have students discuss in groups, and then share out. Assign one person in each group to be the note taker (responsible for taking notes) and another to be the spokesperson (responsible for sharing the group's ideas with the class).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31fbcde91da_0_3\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Do any of your instructions happen more than once? How could we explain that some steps need to be repeated a certain amount of times?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/aeb1dc2e02a4864a6f4946e4119e9923-slide 4.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0ddc07619ff0c84174d6a786a7545f2a-Slide 5.png\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3fb000f21f24177824113c2826579bc2-slide 6.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important to give computers instructions in the right order? What do you think would happen if we gave instructions out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question encourages students to think about how computers can’t think for themselves—they only follow each step exactly as written. It helps them realize that, unlike humans, computers can't guess or adjust if instructions are mixed up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8141ecb712c34fb123b3b8150580d9be-slide 7.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8b036f0eb68b504d1cdef40b543b4f5f-slide 9.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click to reveal each step and then the picture of a successfully prepared bowl of cereal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bb0cbe0e54e336a96a2f471448add54e-slide 8.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now, have the class consider what would happen if those same steps were done in a different order such as pouring the milk before getting the bowl and spoon. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the difference when the order of these steps changes? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/53ca9652f9c6704c04732b5a6e8459ed-slide 10.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write the steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence. \n\t\t<br />\n\t\t<br />Teacher Tip: Have students discuss in groups, and then share out. Assign one person in each group to be the note taker (responsible for taking notes) and another to be the spokesperson (responsible for sharing the group's ideas with the class).\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/390d207ee90d55bc61bd363ec81e590e-slide 11.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Do any of your instructions happen more than once? How could we explain that some steps need to be repeated a certain amount of times?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/805877ed59ed86df5cc4bd1c126094cc-Slide 12.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "8dcead19-ce44-47cd-afe3-fba8667f64d0",
@@ -1879,6 +1879,42 @@
   ],
   "resources": [
     {
+      "name": "Anchor Chart - Organizing Music",
+      "url": "https://drive.google.com/file/d/1RDFizyrovrwzPzZEjapEur2H3mUzfqs4/view?usp=sharing",
+      "key": "anchor_chart_-_organizing_music",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "name": "Anchor Chart - Song Structure",
+      "url": "https://drive.google.com/file/d/18VrhTjB7wkv4rJxJIYHg7sPa-i4seZtQ/view?usp=drive_link",
+      "key": "anchor_chart_-_song_structure",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "anchor_chart_-_song_structure"
+      }
+    },
+    {
+      "name": "Anchor Chart - Track Types",
+      "url": "https://drive.google.com/file/d/16ONMCb6K-cWYW_WVRwYXJM6TXbCI6Okz/view?usp=drive_link",
+      "key": "anchor_chart_-_track_types",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "anchor_chart_-_track_types"
+      }
+    },
+    {
       "name": "Coding with Music Slides",
       "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
       "key": "coding_with_music_slides",
@@ -1905,6 +1941,18 @@
       }
     },
     {
+      "name": "Musical Terms Glossary",
+      "url": "https://docs.google.com/presentation/d/1wvllTFs0IBWJI8uzfUhuFW4mUYItUK5nmmVjArNRlCM/edit?slide=id.g33d63a1df26_0_86#slide=id.g33d63a1df26_0_86",
+      "key": "musical_terms_glossary",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "musical_terms_glossary"
+      }
+    },
+    {
       "name": "Quick Reference Teacher's Guide",
       "url": "https://drive.google.com/file/d/1M_jampRMM1ix6RdH6AWMXVrSa5pbCKdO/view?usp=drive_link",
       "key": "quick_reference_teacher_s_guide",
@@ -1921,7 +1969,19 @@
     {
       "seeding_key": {
         "lesson.key": "Producer Power",
+        "resource.key": "anchor_chart_-_song_structure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Producer Power",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {
@@ -1933,7 +1993,19 @@
     {
       "seeding_key": {
         "lesson.key": "Sound Designer's Studio",
+        "resource.key": "anchor_chart_-_track_types"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
         "resource.key": "lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sound Designer's Studio",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {
@@ -1945,7 +2017,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "anchor_chart_-_organizing_music"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "anchor_chart_-_track_types"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "coding_with_music_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "musical_terms_glossary"
       }
     },
     {

@@ -6208,3 +6208,29 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        teaching-intro-java-2025:
+          title: 'Introduction to Java for Teachers '
+          description_short: ''
+          description_student: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          description_teacher: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          version_title: ''

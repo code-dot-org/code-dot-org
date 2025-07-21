@@ -24977,3 +24977,35 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        teaching-java-basics:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-java-basics
+          title: Java Basics
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### **In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 2.5 hours
+          student_description: |-
+            ####**In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 2.5 hours
+        teaching-oop-java:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-oop-java
+          title: 'Object-Oriented Programming with Java '
+          description_audience: ''
+          description_short: ''
+          description: "####**In this unit, you will:** \n- #### Describe what a “class” and “object” are in Java\n- ####Call and write methods in Java\n- ####Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- ####Learn to create a class\n\n####**Estimated Time:** 2 hours"
+          student_description: "####**In this unit, you will:** \n- #### Describe what a “class” and “object” are in Java\n- ####Call and write methods in Java\n- ####Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- ####Learn to create a class\n\n####**Estimated Time:** 2 hours"

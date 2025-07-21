@@ -8,9 +8,9 @@
         {
           "key": "3ebb91a0-6267-47d0-b100-9814e663c96e",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Accelerated Intro to CS content and course from Code.org within the next 6-8 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Accelerated Intro to CS Course content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "details": "We are in the process of fully removing the Accelerated Intro to CS content from Code.org as we no longer support this older offering. The course will be removed from the site in September, 2025. Until that time, we have made the course unassignable, and no bugs or missing content will be addressed or fixed. Our recommended replacement course is the Express Course. ",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
@@ -24,11 +24,13 @@
       "supported_locales": [
         "de-DE"
       ],
+      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:06:14 UTC",
+    "serialized_at": "2025-07-19 02:28:39 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
