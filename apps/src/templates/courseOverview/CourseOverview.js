@@ -212,7 +212,7 @@ class CourseOverview extends Component {
         />
         <SafeMarkdown
           style={styles.description}
-          openExternalLinksInNewTab={true}
+          openLinksInNewTab={true}
           markdown={
             viewAs === ViewType.Participant
               ? descriptionStudent

@@ -121,7 +121,7 @@ class ConnectionInstructions extends React.Component {
         </ol>
         <SafeMarkdown
           markdown={applabI18n.makerSetupWebSerialSupportArticle()}
-          openExternalLinksInNewTab={true}
+          openLinksInNewTab={true}
         />
         {connectionState}
         <CPExpressInstallInstructions />

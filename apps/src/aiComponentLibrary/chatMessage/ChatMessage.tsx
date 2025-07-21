@@ -72,7 +72,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            <SafeMarkdown markdown={text} openExternalLinksInNewTab />
+            <SafeMarkdown markdown={text} openLinksInNewTab />
           </div>
         </div>
         <div

@@ -438,7 +438,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           tosLink: 'https://code.org/tos',
           privacyPolicyLink: 'https://code.org/privacy',
         })}
-        openExternalLinksInNewTab={true}
+        openLinksInNewTab={true}
       />
     </div>
   );

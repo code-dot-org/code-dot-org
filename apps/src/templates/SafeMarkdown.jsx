@@ -15,7 +15,7 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
-import externalLinks from './plugins/externalLinks';
+import newTabLinks from './plugins/newTabLinks';
 
 /**
  * Basic component for rendering a markdown string as HTML, with sanitization.
@@ -25,19 +25,19 @@ import externalLinks from './plugins/externalLinks';
 class SafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
-    openExternalLinksInNewTab: PropTypes.bool,
+    openLinksInNewTab: PropTypes.bool,
     unwrapped: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string,
   };
 
   render() {
-    // We only open external links in a new tab if it's explicitly specified
-    // that we do so; this is absolutely not something we want to do as a
-    // general practice, but unfortunately there are some situations in which
-    // it is currently a requirement.
-    const processor = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks
+    // We only open links in a new tab if it's explicitly specified
+    // that we do so; this is not something we want to do as a
+    // general practice, but there are some situations in which
+    // it is a requirement.
+    const processor = this.props.openLinksInNewTab
+      ? markdownToReactNewTabLinks
       : markdownToReact;
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
@@ -145,8 +145,6 @@ const markdownToReact = unified()
     components: blocklyComponentWrappers,
   });
 
-const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
-  links: 'all',
-});
+const markdownToReactNewTabLinks = markdownToReact().use(newTabLinks);
 
 export default SafeMarkdown;

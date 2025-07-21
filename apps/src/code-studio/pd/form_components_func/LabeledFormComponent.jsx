@@ -22,7 +22,7 @@ export const useLabelFor = name => {
     // on some CSS styling in pd.scss to set these elements to
     // "display: inline" to maintain backwards compatibility.
     <div className="inline_markdown">
-      <SafeMarkdown openExternalLinksInNewTab markdown={labels[name]} />
+      <SafeMarkdown openLinksInNewTab markdown={labels[name]} />
     </div>
   );
 };

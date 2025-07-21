@@ -185,7 +185,7 @@ class LevelDetailsDialog extends Component {
           markdown={i18n.noLevelPreviewAvailable({
             buttonText: i18n.seeFullLevel(),
           })}
-          openExternalLinksInNewTab
+          openLinksInNewTab
         />
       );
     }

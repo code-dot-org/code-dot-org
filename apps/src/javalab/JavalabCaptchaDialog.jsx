@@ -57,7 +57,7 @@ export function UnconnectedJavalabCaptchaDialog({
     >
       <SafeMarkdown
         markdown={javalabMsg.verificationDialogMessage({blogUrl: BLOG_URL})}
-        openExternalLinksInNewTab
+        openLinksInNewTab
       />
     </ReCaptchaDialog>
   );

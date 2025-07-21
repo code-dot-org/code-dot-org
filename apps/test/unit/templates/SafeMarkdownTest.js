@@ -206,10 +206,7 @@ describe('SafeMarkdown', () => {
 
   it('will open links in a new tab if specified', () => {
     const externalLink = shallow(
-      <SafeMarkdown
-        openExternalLinksInNewTab
-        markdown="[external link](example.com)"
-      />
+      <SafeMarkdown openLinksInNewTab markdown="[external link](example.com)" />
     );
     expect(
       externalLink.equals(
@@ -224,10 +221,7 @@ describe('SafeMarkdown', () => {
     ).toBe(true);
 
     const internalLink = shallow(
-      <SafeMarkdown
-        openExternalLinksInNewTab
-        markdown="[internal link](code.org)"
-      />
+      <SafeMarkdown openLinksInNewTab markdown="[internal link](code.org)" />
     );
     expect(
       internalLink.equals(

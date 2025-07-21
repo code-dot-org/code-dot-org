@@ -91,7 +91,7 @@ class JavalabConsole extends React.Component {
         lines[++currentLine] = '';
       } else if (log.type === 'markdown') {
         lines[++currentLine] = (
-          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+          <SafeMarkdown markdown={log.text} openLinksInNewTab={true} />
         );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
