@@ -44,7 +44,7 @@ class ExpiredDeletedAccountPiiScrubber
       batch.each do |user|
         scrub_user(user)
         @num_accounts_scrubbed += 1
-      rescue Exception => exception
+      rescue StandardError => exception
         @num_errors += 1
         Honeybadger.notify(exception, context: {user_id: user.id})
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
@@ -54,7 +54,7 @@ class ExpiredDeletedAccountPiiScrubber
     if dry_run?
       log_message("Dry run complete: would scrub #{@num_accounts_scrubbed} accounts. Encountered #{@num_errors} errors.")
     else
-      log_message("Scrubbed #{@num_accounts_scrubbed} accounts in #{Time.now - @start_time} seconds. Encountered #{@num_errors} errors.")
+      log_message(format("Scrubbed #{@num_accounts_scrubbed} accounts in %.2f seconds. Encountered #{@num_errors} errors.", (Time.now - @start_time)))
       upload_metrics
     end
 
