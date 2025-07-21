@@ -182,7 +182,7 @@ class AnimationPicker extends React.Component {
           body,
           true,
           {
-            'Content-Type': file.type,
+            'Content-Type': 'application/json; charset=UTF-8',
           }
         )
           .then(response => response.json())

@@ -11,6 +11,7 @@ import {
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
 
@@ -296,6 +297,25 @@ export default class P5Lab {
       // If we reset a puzzle, we should reset the selected poem on that project.
       project.sourceHandler.setSelectedPoem(null);
       this.studioApp_.resetButtonClick();
+      // Reset abuse score to 0 if abuse score == 15 (flagged for image moderation).
+      if (project.getAbuseScore() === 15) {
+        // call on unflag image moderation.
+        console.log('abuse score 15');
+        const body = JSON.stringify({
+          type: 'unflag',
+        });
+        HttpClient.post(
+          `/v3/channels/${this.props.channelId}/abuse/image`,
+          body,
+          true,
+          {
+            'Content-Type': 'application/json; charset=UTF-8',
+          }
+        )
+          .then(response => response.json())
+          .then(json => console.log('json', json))
+          .catch(err => console.log('update abuse error', err));
+      }
     }.bind(this);
 
     config.dropletConfig = dropletConfig;

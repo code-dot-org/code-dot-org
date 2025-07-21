@@ -106,6 +106,7 @@ class ReportAbuseController < ApplicationController
   def update_abuse_image_moderation
     return head :unauthorized unless current_user
     type = params[:type]
+    puts "type is #{type}"
     amount = type == 'flag' ? 15 : -15
     begin
       value = Projects.new(get_storage_id).increment_abuse(params[:channel_id], amount, current_user&.project_validator?)

@@ -586,6 +586,7 @@ class FilesApi < Sinatra::Base
     # form submission. IE9 will try to download the response if we have
     # content_type json
     content_type 'text/plain'
+    puts "post assets"
 
     bad_request unless request.POST['files'] && request.POST['files'][0]
 
@@ -622,6 +623,7 @@ class FilesApi < Sinatra::Base
     # form submission. IE9 will try to download the response if we have
     # content_type json
     content_type 'text/plain'
+    puts "post animations"
 
     bad_request unless request.POST['files'] && request.POST['files'][0]
 
