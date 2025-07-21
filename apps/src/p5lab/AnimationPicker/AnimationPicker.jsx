@@ -174,20 +174,24 @@ class AnimationPicker extends React.Component {
       .then(response => response.json())
       .then(json => {
         console.log('In AnimationPickerImage moderation rating:', json.rating);
-        const body = JSON.stringify({
-          type: 'flag',
-        });
-        HttpClient.post(
-          `/v3/channels/${this.props.channelId}/abuse/image`,
-          body,
-          true,
-          {
-            'Content-Type': 'application/json; charset=UTF-8',
-          }
-        )
-          .then(response => response.json())
-          .then(json => console.log('json', json))
-          .catch(err => console.log('update abuse error', err));
+        // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
+        if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+          const body = JSON.stringify({
+            type: 'flag',
+          });
+
+          HttpClient.post(
+            `/v3/channels/${this.props.channelId}/abuse/image`,
+            body,
+            true,
+            {
+              'Content-Type': 'application/json; charset=UTF-8',
+            }
+          )
+            .then(response => response.json())
+            .then(json => console.log('json', json))
+            .catch(err => console.log('update abuse error', err));
+        }
       })
       .catch(err => console.error('Moderation error:', err));
 
