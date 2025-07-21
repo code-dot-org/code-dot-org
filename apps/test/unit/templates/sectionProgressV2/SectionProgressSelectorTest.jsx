@@ -161,7 +161,7 @@ describe('SectionProgressSelector', () => {
     expect(postStub).toHaveBeenCalledWith(
       '/api/v1/users/show_progress_table_v2',
       {
-        show_progress_table_v2: true,
+        show_progress_table_v2: 'v2',
       }
     );
   });
