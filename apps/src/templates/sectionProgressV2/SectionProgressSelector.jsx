@@ -23,6 +23,9 @@ import SectionProgressV2 from './SectionProgressV2';
 
 import styles from './progress-header.module.scss';
 
+const V2_SETTING_KEY = 'v2';
+const V1_SETTING_KEY = 'legacy';
+
 function SectionProgressSelector({
   showProgressTableV2,
   setShowProgressTableV2,
@@ -36,9 +39,9 @@ function SectionProgressSelector({
   useEffect(() => {
     const params = queryParams('view');
     if (params === 'v2') {
-      setShowProgressTableV2(true);
+      setShowProgressTableV2(V2_SETTING_KEY);
       setHasJustToggledViews(true);
-      new UserPreferences().setShowProgressTableV2(true);
+      new UserPreferences().setShowProgressTableV2(V2_SETTING_KEY);
     }
   }, [setShowProgressTableV2, setHasJustToggledViews]);
 
@@ -52,12 +55,13 @@ function SectionProgressSelector({
   };
 
   const onShowProgressTableV2Change = useCallback(() => {
-    const shouldShowV2 = !showProgressTableV2;
-    new UserPreferences().setShowProgressTableV2(shouldShowV2);
-    setShowProgressTableV2(shouldShowV2);
+    const shouldShowString =
+      showProgressTableV2 === V2_SETTING_KEY ? V1_SETTING_KEY : V2_SETTING_KEY;
+    new UserPreferences().setShowProgressTableV2(shouldShowString);
+    setShowProgressTableV2(shouldShowString);
     setHasJustToggledViews(true);
 
-    if (shouldShowV2) {
+    if (shouldShowString === V2_SETTING_KEY) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
         sectionId: sectionId,
       });
@@ -102,10 +106,11 @@ function SectionProgressSelector({
 
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   // If a user has selected manually, show that version.
-  // A user has selected manually if the preference is set to true or false and is not null/undefined.
   const isPreferenceSet =
-    showProgressTableV2 === true || showProgressTableV2 === false;
+    showProgressTableV2 === V2_SETTING_KEY ||
+    showProgressTableV2 === V1_SETTING_KEY;
   const params = queryParams('view');
+  console.log('lfm', {isPreferenceSet, showProgressTableV2});
 
   // If there is a url pram, use that param to determine to show V2.
   const displayV2FromUrl = params === 'v2';
@@ -113,7 +118,7 @@ function SectionProgressSelector({
   const displayV2 =
     displayV2FromUrl ||
     (isPreferenceSet
-      ? showProgressTableV2
+      ? showProgressTableV2 === V2_SETTING_KEY
       : DCDO.get('progress-table-v2-default-v2', false));
 
   const ProgressV1OrV2ToggleLink = () => (
@@ -173,7 +178,7 @@ function SectionProgressSelector({
 }
 
 SectionProgressSelector.propTypes = {
-  showProgressTableV2: PropTypes.bool,
+  showProgressTableV2: PropTypes.string,
   progressTableV2ClosedBeta: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,

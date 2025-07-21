@@ -97,7 +97,7 @@ function InviteToV2ProgressModal({
     });
     setHasSeenProgressTableInviteData(true);
     setHasSeenProgressTableInvite(true);
-    setShowProgressTableV2(true);
+    setShowProgressTableV2('v2');
     setHasJustSwitchedToV2(true);
     closeModal();
   }, [

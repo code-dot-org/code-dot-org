@@ -49,7 +49,7 @@ describe('SectionProgressSelector', () => {
     });
 
     store = getStore();
-    store.dispatch(setShowProgressTableV2(false));
+    store.dispatch(setShowProgressTableV2('legacy'));
     store.dispatch(setUnit(1, 1));
 
     DCDO.set('progress-table-v2-enabled', true);
@@ -83,7 +83,7 @@ describe('SectionProgressSelector', () => {
   it('does not show toggle link if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
     expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
@@ -92,7 +92,7 @@ describe('SectionProgressSelector', () => {
   it('shows v1 if disabled', () => {
     DCDO.set('progress-table-v2-enabled', false);
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     // eslint-disable-next-line no-restricted-properties
     screen.getByTestId(V1_TEST_ID);
@@ -114,7 +114,7 @@ describe('SectionProgressSelector', () => {
 
   it('shows v2', () => {
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     screen.getByText(V2_PAGE_LINK_TEXT);
     // eslint-disable-next-line no-restricted-properties
@@ -247,7 +247,7 @@ describe('SectionProgressSelector', () => {
     store.dispatch(setHasSeenProgressTableInvite(false));
 
     renderDefault();
-    store.dispatch(setShowProgressTableV2(true));
+    store.dispatch(setShowProgressTableV2('v2'));
 
     // Click the link to switch to V1
     const link = screen.getByText(V2_PAGE_LINK_TEXT);
