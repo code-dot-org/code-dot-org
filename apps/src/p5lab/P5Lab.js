@@ -305,7 +305,7 @@ export default class P5Lab {
           type: 'unflag',
         });
         HttpClient.post(
-          `/v3/channels/${this.props.channelId}/abuse/image`,
+          `/v3/channels/${config.channel}/abuse/image`,
           body,
           true,
           {
