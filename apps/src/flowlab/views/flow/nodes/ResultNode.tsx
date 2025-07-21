@@ -63,7 +63,7 @@ function ResultNode({selected, width}: NodeProps) {
         {text || ''}
       </div>
       {combinedResultTexts.length > 0 && (
-        <div>
+        <div className={styles.copyToClipboardContainer}>
           <Button
             size="xs"
             color="gray"
