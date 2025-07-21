@@ -23,7 +23,7 @@ const Level: React.FunctionComponent<LevelProps> = ({level}) => (
     {level && level.type in levelRegistry && (
       <>
         {React.createElement(levelRegistry[level.type].default, {
-          levelData: level.FrequencyAnalysis,
+          levelData: level.data,
         })}
       </>
     )}

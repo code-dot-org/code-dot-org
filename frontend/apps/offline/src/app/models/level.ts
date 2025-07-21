@@ -42,7 +42,7 @@ export interface VideoData {
 }
 
 /** Describes a level */
-export interface LevelData {
+export interface LevelData<T = object> {
   /** Unique key for this level */
   key: string;
   /** The type of level (Maze, etc) */
@@ -69,6 +69,8 @@ export interface LevelData {
   multipleChoice?: MultipleChoiceData;
   /** The shared level template defining a potential 'workspace' */
   template?: LevelData;
+  /** Other level specific data */
+  data?: T;
 }
 
 export interface SpriteLabAnimationConfiguration {
@@ -394,7 +396,7 @@ export const parseLevelData: (
 
   // Parse level data via type
   if (ret.type === FrequencyAnalysisLab.key) {
-    ret[FrequencyAnalysisLab.name] = FrequencyAnalysisLab.load(config);
+    ret.data = FrequencyAnalysisLab.load(config);
   }
 
   // Is this a concept level?

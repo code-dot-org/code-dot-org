@@ -1,9 +1,14 @@
+export interface LevelProps<T extends object = object> {
+  levelData?: T;
+}
+
 export interface LevelModule {
   name: string;
   key: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   load: (config: {[key: string]: any}) => {[key: string]: any};
-  default: React.FunctionComponent<T>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  default: React.FunctionComponent<LevelProps<any>>;
 }
 
 export interface LevelRegistry {

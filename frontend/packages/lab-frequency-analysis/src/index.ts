@@ -8,4 +8,5 @@ const name = 'frequency';
 export {name};
 
 export * from './components/FrequencyLevel';
+export * from './types';
 export {default} from './components/FrequencyLevel';
