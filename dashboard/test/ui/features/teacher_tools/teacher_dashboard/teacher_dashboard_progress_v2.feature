@@ -97,9 +97,9 @@ Scenario: Teacher can open and close lessons and see level data cells
 @properties_encryption_key
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
 
   When I sign in as "Teacher_Sally" and go home
+  And I assign my section in row 1 to course "allthethingscourse" unit 1
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
 

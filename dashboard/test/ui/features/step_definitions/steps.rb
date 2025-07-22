@@ -1176,6 +1176,14 @@ Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a se
   )
 end
 
+Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |section_position, course_name, unit_position|
+  browser_request(
+    url: '/api/test/assign_section_to_course_and_unit',
+    method: 'POST',
+    body: {section_position: section_position, course_name: course_name, unit_position: unit_position}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end

@@ -148,6 +148,23 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def assign_section_to_course_and_unit
+    return unless (teacher = current_user)
+
+    unit_group = UnitGroup.find_by_name(params.require(:course_name))
+    unit_group_unit = unit_group.default_unit_group_units.find_by!(position: params.require(:unit_position))
+    raise "Unit #{params[:unit_position].inspect} not found in course #{params[:course_name].inspect}" unless unit_group_unit
+    unit = unit_group_unit.script
+
+    section = teacher.sections[params.require(:section_position).to_i - 1]
+    section.update!(unit_group: unit_group, script: unit)
+    section.students.each do |student|
+      UserScript.create!(script: unit, user: student, assigned_at: Time.now)
+    end
+
+    head :ok
+  end
+
   def get_i18n_t
     locale = params[:locale] || request.env['cdo.locale']
     render plain: I18n.t(params.require(:key), locale: locale)
