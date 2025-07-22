@@ -25,7 +25,7 @@ describe('aichatApi', () => {
   let chatMessage: PendingChatMessage,
     storedMessages: CompletedChatMessage[],
     modelParameters: ModelParameters,
-    apiContext: AichatContext,
+    aichatContext: AichatContext,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
 
@@ -60,7 +60,7 @@ describe('aichatApi', () => {
       systemPrompt: 'hello',
     };
 
-    apiContext = {
+    aichatContext = {
       client: AiChatClients.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
@@ -113,7 +113,7 @@ describe('aichatApi', () => {
         chatMessage,
         storedMessages,
         modelParameters,
-        apiContext,
+        aichatContext,
         maxPollingTime
       );
     }
@@ -144,7 +144,7 @@ describe('aichatApi', () => {
           newMessage: chatMessage,
           storedMessages,
           modelParameters,
-          aichatContext: apiContext,
+          aichatContext: aichatContext,
         })
       );
 

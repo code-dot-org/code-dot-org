@@ -9,7 +9,7 @@ import {
 
 describe('ChatEventLogger', () => {
   let userChatMessage: CompletedChatMessage;
-  let apiContext: AichatContext;
+  let aichatContext: AichatContext;
   let chatEventLogger: ChatEventLogger;
   let postLogChatEventSpy: jest.SpyInstance;
 
@@ -21,13 +21,13 @@ describe('ChatEventLogger', () => {
       status: AiInteractionStatus.OK,
       timestamp: Date.now(),
     };
-    apiContext = {
+    aichatContext = {
       client: AiChatClients.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
     };
-    chatEventLogger = new ChatEventLogger(apiContext);
+    chatEventLogger = new ChatEventLogger(aichatContext);
   });
 
   afterEach(() => {
