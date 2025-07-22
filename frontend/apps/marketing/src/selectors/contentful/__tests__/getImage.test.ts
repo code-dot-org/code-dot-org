@@ -39,22 +39,32 @@ describe('getRelativeImageUrl', () => {
 
 describe('getOptimizedImageFormat', () => {
   it('returns undefined for URLs without an extension', () => {
-    expect(getOptimizedImageFormat('image')).toBeUndefined();
+    expect(
+      getOptimizedImageFormat('https://test.example/image'),
+    ).toBeUndefined();
   });
 
   it('returns avif for non-gif image extensions', () => {
-    expect(getOptimizedImageFormat('image.JPG')).toBe('avif');
-    expect(getOptimizedImageFormat('image.png')).toBe('avif');
+    expect(getOptimizedImageFormat('https://test.example/image.JPG')).toBe(
+      'avif',
+    );
+    expect(getOptimizedImageFormat('https://test.example/image.png')).toBe(
+      'avif',
+    );
   });
 
   it('returns webp for gif images in WebKit browsers', () => {
     (isWebKitEngine as jest.Mock).mockReturnValue(true);
-    expect(getOptimizedImageFormat('image.gif')).toBe('webp');
+    expect(getOptimizedImageFormat('https://test.example/image.gif')).toBe(
+      'webp',
+    );
   });
 
   it('returns avif for gif images in non-WebKit browsers', () => {
     (isWebKitEngine as jest.Mock).mockReturnValue(false);
-    expect(getOptimizedImageFormat('image.gif')).toBe('avif');
+    expect(getOptimizedImageFormat('https://test.example/image.gif')).toBe(
+      'avif',
+    );
   });
 });
 

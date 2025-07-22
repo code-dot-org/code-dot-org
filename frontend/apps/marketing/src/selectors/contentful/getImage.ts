@@ -1,3 +1,5 @@
+import path from 'path';
+
 import {isWebKitEngine} from '@/selectors/getBrowser';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -6,11 +8,11 @@ export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
 }
 
 export function getOptimizedImageFormat(imgUrl: string) {
-  const imgExt = imgUrl.split('.')?.[1]?.toLowerCase();
+  const imgExt = path.extname(imgUrl.split('?')[0]).toLowerCase();
   switch (imgExt) {
-    case undefined:
+    case '':
       return undefined;
-    case 'gif':
+    case '.gif':
       // GIFs converted to AVIF do not display transparent backgrounds in WebKit
       return isWebKitEngine() ? 'webp' : 'avif';
     default:
