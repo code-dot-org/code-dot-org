@@ -1,6 +1,3 @@
-import path from 'path';
-
-import {isWebKitEngine} from '@/selectors/getBrowser';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
@@ -8,13 +5,15 @@ export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
 }
 
 export function getOptimizedImageFormat(imgUrl: string) {
-  const imgExt = path.extname(imgUrl.split('?')[0]).toLowerCase();
+  const imgExt = imgUrl.match(/\.(\w+)(?=[?#]|$)/i)?.[1]?.toLowerCase();
+
   switch (imgExt) {
-    case '':
+    case undefined:
+    case 'avif':
+    case 'webp':
       return undefined;
-    case '.gif':
-      // GIFs converted to AVIF do not display transparent backgrounds in WebKit
-      return isWebKitEngine() ? 'webp' : 'avif';
+    case 'gif': // GIFs converted to AVIF do not display transparent backgrounds in WebKit
+      return 'webp';
     default:
       return 'avif';
   }

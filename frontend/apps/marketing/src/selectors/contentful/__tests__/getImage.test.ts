@@ -1,4 +1,3 @@
-import {isWebKitEngine} from '@/selectors/getBrowser';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 import {
@@ -6,10 +5,6 @@ import {
   getOptimizedImageFormat,
   getAbsoluteImageUrl,
 } from '../getImage';
-
-jest.mock('@/selectors/getBrowser', () => ({
-  isWebKitEngine: jest.fn(),
-}));
 
 describe('getRelativeImageUrl', () => {
   it('should return undefined if asset is undefined', () => {
@@ -39,32 +34,38 @@ describe('getRelativeImageUrl', () => {
 
 describe('getOptimizedImageFormat', () => {
   it('returns undefined for URLs without an extension', () => {
+    const imageFormat = getOptimizedImageFormat('https://test.example/image');
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns undefined for avif image', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.avif',
+    );
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns undefined for webp image', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.webp',
+    );
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns avif for non-gif images', () => {
     expect(
-      getOptimizedImageFormat('https://test.example/image'),
-    ).toBeUndefined();
+      getOptimizedImageFormat('https://test.example/image.JPG#test-example'),
+    ).toBe('avif');
+    expect(
+      getOptimizedImageFormat('https://test.example/image.png?test=example'),
+    ).toBe('avif');
   });
 
-  it('returns avif for non-gif image extensions', () => {
-    expect(getOptimizedImageFormat('https://test.example/image.JPG')).toBe(
-      'avif',
+  it('returns webp for gif images', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.gif',
     );
-    expect(getOptimizedImageFormat('https://test.example/image.png')).toBe(
-      'avif',
-    );
-  });
-
-  it('returns webp for gif images in WebKit browsers', () => {
-    (isWebKitEngine as jest.Mock).mockReturnValue(true);
-    expect(getOptimizedImageFormat('https://test.example/image.gif')).toBe(
-      'webp',
-    );
-  });
-
-  it('returns avif for gif images in non-WebKit browsers', () => {
-    (isWebKitEngine as jest.Mock).mockReturnValue(false);
-    expect(getOptimizedImageFormat('https://test.example/image.gif')).toBe(
-      'avif',
-    );
+    expect(imageFormat).toBe('webp');
   });
 });
 
