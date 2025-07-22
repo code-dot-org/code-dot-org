@@ -67,6 +67,14 @@ export interface PanelData {
   fadeInOverPrevious?: boolean;
 }
 
+export interface ImageData {
+  filename: string;
+  /** Internal reference to the locally stored version of the image */
+  local?: string;
+  position: [number, number];
+  scale?: number;
+}
+
 /** Data for artist levels. */
 export interface ArtistData {
   skinId?: string;
@@ -74,13 +82,7 @@ export interface ArtistData {
   initialY?: number;
   startDirection?: number;
   predrawBlocks?: BlocklySerialization;
-  images: {
-    filename: string;
-    /** Internal reference to the locally stored version of the image */
-    local?: string;
-    position: [number, number];
-    scale?: number;
-  }[];
+  images: ImageData[];
 }
 
 /** Data for sprite lab levels. */
@@ -561,14 +563,16 @@ export const parseLevelData: (
             | undefined,
         ),
       ),
-      images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')).map(
-        info => ({
-          ...info,
-          local: info.filename.startsWith('http')
-            ? path.join('artist', urlToKey(info.filename))
-            : undefined,
-        }),
-      ),
+      images: (
+        JSON.parse(
+          sanitizeJSON(config.properties?.images || '[]'),
+        ) as ImageData[]
+      ).map(info => ({
+        ...info,
+        local: info.filename.startsWith('http')
+          ? path.join('artist', urlToKey(info.filename))
+          : undefined,
+      })),
     };
 
     // Fetch all referenced images to local disk
