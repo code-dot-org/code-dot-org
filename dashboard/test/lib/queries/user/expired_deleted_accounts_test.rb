@@ -21,32 +21,41 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
       _(expired_deleted_accounts).wont_include expected_user
     end
 
+    it 'returns an empty relation when no users meet the criteria' do
+        _(expired_deleted_accounts).must_be_empty
+      end
+    end
+
     context 'when user already scrubbed of PII' do
-      it 'does not return the user' do
+      before do
         expected_user.update(deleted_at: deleted_before - 1.day)
+        create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
+      end
+
+      it 'does not return the user' do
         create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
         _(expired_deleted_accounts).wont_include expected_user
       end
     end
 
     context 'when user already purged' do
+      before do
+        expected_user.update(deleted_at: deleted_before - 1.day, purged_at: Time.now)
+      end
+
       it 'does not return the user' do
-        expected_user.update(purged_at: Time.now, deleted_at: deleted_before - 1.day)
         _(expired_deleted_accounts).wont_include expected_user
       end
     end
 
     context 'when user already anonymized' do
-      it 'does not return the user' do
+      before do
         expected_user.update(deleted_at: deleted_before - 1.day)
         create :user_data_retention_status, user: expected_user, anonymized_at: Time.now
-        _(expired_deleted_accounts).wont_include expected_user
       end
-    end
 
-    context 'when no users match the criteria' do
-      it 'returns an empty relation' do
-        _(expired_deleted_accounts).must_be_empty
+      it 'does not return the user' do
+        _(expired_deleted_accounts).wont_include expected_user
       end
     end
 
