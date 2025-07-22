@@ -99,7 +99,6 @@ export const openSaveToBackpackPrompt = async ({
         contents: file.contents,
         folderId: DEFAULT_FOLDER_ID,
         language: 'py',
-        open: true,
         active: false,
       } as ProjectFile;
       backpackApi.savePythonlabFile(

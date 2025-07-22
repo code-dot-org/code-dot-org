@@ -146,7 +146,10 @@ export function getActiveFileForSource(source: MultiFileSource) {
 
   // Get the first active file, if no active file then the first open file,
   // or undefined if no files are open.
-  return visibleFiles.find(f => f.active) || visibleFiles.find(f => f.open);
+  return (
+    visibleFiles.find(f => f.active) ||
+    visibleFiles.find(f => source.openFiles?.includes(f.id))
+  );
 }
 
 /**

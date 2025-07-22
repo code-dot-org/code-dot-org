@@ -37,7 +37,6 @@ const createMockFile = (
   language: 'txt',
   contents: `Content of file ${id}`,
   folderId: DEFAULT_FOLDER_ID,
-  open: false,
   active: false,
   ...overrides,
 });

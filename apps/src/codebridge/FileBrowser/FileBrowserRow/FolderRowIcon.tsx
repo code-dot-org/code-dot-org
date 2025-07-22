@@ -1,6 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import {ProjectFolder} from '../../types';
+
 import {FileBrowserIconComponentType} from './types';
 
 import moduleStyles from '../styles/filebrowser.module.scss';
@@ -11,9 +13,10 @@ import moduleStyles from '../styles/filebrowser.module.scss';
  * @returns A FontAwesomeV6Icon component representing the file icon.
  */
 export const FolderRowIcon: FileBrowserIconComponentType = ({item}) => {
+  const folderItem = item as ProjectFolder;
   return (
     <FontAwesomeV6Icon
-      iconName={item.open ? 'caret-down' : 'caret-right'}
+      iconName={folderItem.open ? 'caret-down' : 'caret-right'}
       iconStyle={'solid'}
       className={moduleStyles.rowIcon}
     />

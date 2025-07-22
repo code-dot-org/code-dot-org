@@ -29,7 +29,6 @@ const project: ProjectSources = {
         id: '1',
         name: 'file1.py',
         active: false,
-        open: true,
         language: 'py',
         contents: '',
         folderId: '0',
@@ -38,13 +37,13 @@ const project: ProjectSources = {
         id: '2',
         name: 'file2.py',
         active: true,
-        open: true,
         language: 'py',
         contents: '',
         folderId: '0',
       },
     },
     folders: {},
+    openFiles: ['1', '2'],
   },
 };
 

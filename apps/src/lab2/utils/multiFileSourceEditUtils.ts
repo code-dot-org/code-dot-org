@@ -96,7 +96,7 @@ export const closeFileHelper = (
   // Choose the recent file before hand if possible, and otherwise after, alphabetically sorted.
   if (file.active) {
     // List of open files before we closed.
-    const oldSortedFiles = sortFilesByName(source.files, {
+    const oldSortedFiles = sortFilesByName(source, {
       mustBeOpen: true,
     });
     // Find our index.
