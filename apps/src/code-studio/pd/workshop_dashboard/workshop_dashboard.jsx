@@ -37,6 +37,10 @@ import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
 import Workshop from './workshop';
+import {WorkshopEnrollments} from './workshop/components/WorkshopEnrollments';
+import {WorkshopOverview} from './workshop/components/WorkshopOverview';
+import {WorkshopSurveys} from './workshop/components/WorkshopSurveys';
+import {WorkshopTabs} from './workshop/components/WorkshopTabs';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 import {WorkshopFormTemplate} from './WorkshopFormTemplate';
@@ -75,10 +79,34 @@ const routeConfigs = [
     props: {config},
     noRouter: true,
   })),
+  // replace with temp route when ready to switch over
   {
     path: 'workshops/:workshopId',
     breadcrumbs: 'Workshops,View Workshop',
     component: Workshop,
+  },
+  {
+    // remove /temp for switch over
+    path: 'workshops/:workshopId/temp',
+    breadcrumbs: 'Workshops,Workshop Overview',
+    noRouter: true,
+    component: WorkshopTabs,
+    children: [
+      {
+        index: true,
+        component: WorkshopOverview,
+      },
+      {
+        path: 'enrollments',
+        component: WorkshopEnrollments,
+        breadcrumbs: 'Workshops,Workshop Overview,Enrollments',
+      },
+      {
+        path: 'surveys',
+        component: WorkshopSurveys,
+        breadcrumbs: 'Workshops,Workshop Overview,Surveys',
+      },
+    ],
   },
   {
     path: 'workshops/:workshopId/edit',
@@ -167,7 +195,13 @@ const WorkshopDashboard = ({
             <Route path="/" element={<HeaderWrapper />}>
               <Route index element={<Navigate to="/workshops" replace />} />
               {routeConfigs.map(
-                ({path, component: Component, noRouter, props = {}}) => (
+                ({
+                  path,
+                  component: Component,
+                  noRouter,
+                  children,
+                  props = {},
+                }) => (
                   <Route
                     key={path}
                     path={path}
@@ -178,7 +212,18 @@ const WorkshopDashboard = ({
                         <WithRouterProps component={Component} {...props} />
                       )
                     }
-                  />
+                  >
+                    {children?.map(
+                      ({component: ChildComponent, path, index}) => (
+                        <Route
+                          key={path ?? 'index-route'}
+                          path={path}
+                          index={index}
+                          element={<ChildComponent />}
+                        />
+                      )
+                    )}
+                  </Route>
                 )
               )}
             </Route>
