@@ -16,22 +16,23 @@ require 'cdo/honeybadger'
 class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :scrub_accounts_deleted_since, :max_accounts_to_scrub, :num_accounts_scrubbed, :num_errors, :start_time
+  attr_reader :dry_run, :scrub_accounts_deleted_since, :max_accounts_to_scrub
   alias :dry_run? :dry_run
 
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
+  ACCOUNT_SCRUB_LIMIT = 8_000
 
   def initialize(options = {})
     @dry_run = options[:dry_run].nil? ? false : options[:dry_run]
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # The amount of time after being soft-deleted that an account should be scrubbed of PII.
-    @scrub_accounts_deleted_since = options[:scrub_accounts_deleted_since] || 28.days.ago
+    @scrub_accounts_deleted_since = options[:scrub_accounts_deleted_since] || ::User::SOFT_DELETED_USER_TTL.ago
     raise ArgumentError.new('scrub_accounts_deleted_since must be Time') unless @scrub_accounts_deleted_since.is_a? Time
 
     # Maximum number of accounts to scrub in a single run.
     # This is a safety limit to prevent accidental deletion of too many accounts.
-    @max_accounts_to_scrub = options[:max_accounts_to_scrub] || 8000
+    @max_accounts_to_scrub = options[:max_accounts_to_scrub] || ACCOUNT_SCRUB_LIMIT
     raise ArgumentError.new('max_accounts_to_scrub must be Integer') unless @max_accounts_to_scrub.is_a? Integer
 
     reset_metrics
@@ -40,15 +41,13 @@ class ExpiredDeletedAccountPiiScrubber
   def scrub_pii_from_expired_deleted_accounts!
     reset_metrics
 
-    accounts_to_scrub.in_batches(of: 1000).each do |batch|
-      batch.each do |user|
-        scrub_user(user)
-        @num_accounts_scrubbed += 1
-      rescue StandardError => exception
-        @num_errors += 1
-        Honeybadger.notify(exception, context: {user_id: user.id})
-        log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
-      end
+    accounts_to_scrub.find_each do |user|
+      scrub_user(user)
+      @num_accounts_scrubbed += 1
+    rescue StandardError => exception
+      @num_errors += 1
+      Honeybadger.notify(exception, context: {user_id: user.id})
+      log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
     end
 
     if dry_run?
@@ -64,8 +63,9 @@ class ExpiredDeletedAccountPiiScrubber
 
   def accounts_to_scrub
     accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: @scrub_accounts_deleted_since)
-    if accounts.count > @max_accounts_to_scrub
-      raise SafetyConstraintViolation, "Too many accounts to scrub: #{accounts.count} exceeds limit of #{@max_accounts_to_scrub}"
+    total_accounts = accounts.count
+    if total_accounts > @max_accounts_to_scrub
+      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{@max_accounts_to_scrub}"
     end
     accounts
   end
@@ -77,6 +77,8 @@ class ExpiredDeletedAccountPiiScrubber
     summary += "\nDry run, no accounts actually scrubbed" if dry_run?
     summary
   end
+
+  private attr_accessor :num_accounts_scrubbed, :num_errors, :start_time
 
   private def scrub_user(user)
     if dry_run?
@@ -123,8 +125,8 @@ class ExpiredDeletedAccountPiiScrubber
   end
 
   private def reset_metrics
-    @num_accounts_scrubbed = 0
-    @num_errors = 0
-    @start_time = Time.now
+    self.num_accounts_scrubbed = 0
+    self.num_errors = 0
+    self.start_time = Time.now
   end
 end

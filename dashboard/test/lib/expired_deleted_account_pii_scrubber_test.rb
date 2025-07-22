@@ -25,7 +25,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
     it 'should increment num_accounts_scrubbed' do
       scrub_pii
-      _(described_instance.num_accounts_scrubbed).must_equal 1
+      _(described_instance.send(:num_accounts_scrubbed)).must_equal 1
     end
 
     it 'should upload metrics' do
@@ -49,7 +49,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
 
       it 'should increment num_errors' do
         scrub_pii
-        _(described_instance.num_errors).must_equal 1
+        _(described_instance.send(:num_errors)).must_equal 1
       end
 
       it 'should notify Honeybadger' do

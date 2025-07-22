@@ -5,7 +5,7 @@ module Queries
     # Does not include accounts that have already been scrubbed of PII or purged/anonymized. These accounts are
     # "hard-deleted" from a functional perspective, and are present only for analytics and reporting purposes.
     class ExpiredDeletedAccounts < Queries::Base
-      def initialize(deleted_before: ::User::Purgeable::SOFT_DELETED_USER_TTL.ago)
+      def initialize(deleted_before: ::User::SOFT_DELETED_USER_TTL.ago)
         @deleted_before = deleted_before
         validate_deleted_before
       end
