@@ -8,7 +8,7 @@ module Services
       end
 
       def call
-        return true if user.student?
+        return true if user.student? # No-op if user is already a student
         user.update(
           user_type: ::User::TYPE_STUDENT,
           given_name: nil,

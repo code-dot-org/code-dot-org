@@ -18,7 +18,7 @@ module Services
         end
 
         unless user.migrated?
-          params[:provider] = nil
+          params[:provider] = nil # Set provider to nil to mark the account as self-managed
           return user.update(params)
         end
 
@@ -28,7 +28,7 @@ module Services
         end
         true
       rescue
-        false
+        false # Relevant errors are set on the user model, so we rescue and return false here.
       end
 
       private def contact_info_present?

@@ -1,7 +1,7 @@
 module Services
   module User
     class UpgradeToTeacher < Services::Base
-      attr_reader :user, :email, :email_preference
+      attr_reader :user, :email, :new_attributes
 
       def initialize(user:, email:, email_preference: nil)
         @user = user
@@ -10,11 +10,11 @@ module Services
       end
 
       def call
-        return true if user.teacher?
+        return true if user.teacher? # No-op if user is already a teacher
         return false if email.blank?
 
         user.user_type = ::User::TYPE_TEACHER
-        user.parent_email = nil
+        user.parent_email = nil # teachers do not need another adult to have access to their account.
 
         hashed_email = ::User.hash_email(email)
 
@@ -24,9 +24,9 @@ module Services
           if user.migrated?
             user.update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
           else
-            @new_attributes[:email] = email
+            new_attributes[:email] = email
           end
-          user.update!(@new_attributes)
+          user.update!(new_attributes)
 
           user
         end

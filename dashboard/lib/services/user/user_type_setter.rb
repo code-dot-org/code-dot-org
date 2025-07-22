@@ -17,7 +17,7 @@ module Services
         when ::User::TYPE_STUDENT
           Services::User::DowngradeToStudent.call(user: user)
         else
-          false
+          false # Unexpected user type
         end
       end
     end
