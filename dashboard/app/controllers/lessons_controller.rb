@@ -51,6 +51,20 @@ class LessonsController < ApplicationController
     render :show
   end
 
+  # GET /s/:script_name_or_id/lessons/:position/level_properties
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:position/level_properties
+  def level_properties
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    return render :forbidden unless script.is_migrated
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+
+    render json: @lesson.summarize_for_lab2_properties(script)
+  end
+
   # GET /s/:script_name_or_id/lessons/:lesson_position/student
   # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/student
   def student_lesson_plan

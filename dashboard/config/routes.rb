@@ -448,6 +448,7 @@ Dashboard::Application.routes.draw do
         get 'extras', to: 'script_levels#lesson_extras', format: false
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
+        get 'level_properties', to: 'lessons#level_properties', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
