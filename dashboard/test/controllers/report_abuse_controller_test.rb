@@ -130,6 +130,41 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert_equal 0, JSON.parse(response.body)['abuse_score']
   end
 
+  test "update_abuse_image_moderation with updates abuse score according to type for signed in user" do
+    user = create(:student)
+    sign_in user
+
+    # Ensure initial score is 0
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
+
+    assert response.ok?
+    assert_equal 15, JSON.parse(response.body)["abuse_score"]
+    assert_equal 15, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'unflag'}
+
+    assert response.ok?
+    assert_equal 0, JSON.parse(response.body)["abuse_score"]
+    assert_equal 0, Projects.get_abuse(@channel_id)
+  end
+
+  test "update_abuse_image_moderation requires login" do
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id}
+
+    assert_response :unauthorized
+  end
+
+  test "update_abuse_image_moderation raises bad request on bad channel_id" do
+    user = create(:student)
+    sign_in user
+
+    assert_raises(ActionController::BadRequest) do
+      post :update_abuse_image_moderation, params: {channel_id: "invalid-channel"}
+    end
+  end
+
   test "base64 error" do
     causes_argumenterror = "bT0zAyBvk"
     causes_ciphererror = "IMALITTLETEAPOTSHORTANDSTOUT"
