@@ -25,6 +25,10 @@ module LocaleHelper
     request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
   end
 
+  def region_options
+    Cdo::GlobalEdition.region_options
+  end
+
   def options_for_locale_code_select
     options = []
     I18n.available_locales.each do |locale|
