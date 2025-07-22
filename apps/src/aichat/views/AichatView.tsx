@@ -27,7 +27,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import {AiChatClients} from '@cdo/generated-scripts/sharedConstants';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getUserHasAichatAccess} from '../aichatApi';
 import {ModalTypes} from '../constants';
@@ -393,7 +393,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               {hasSetStartingCustomizations && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
-                  client={AiChatClients.AI_CHAT_LAB}
+                  clientType={AiChatClientTypes.AI_CHAT_LAB}
                   onClear={onClear}
                   levelName={levelName}
                   channelId={channelId}

@@ -833,7 +833,7 @@ module SharedConstants
     GEMINI_2_5_PRO: "gemini-2.5-pro",
   }
 
-  AI_CHAT_CLIENTS = {
+  AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: 0,
     AI_TUTOR: 1,
     FLOW_LAB: 2,

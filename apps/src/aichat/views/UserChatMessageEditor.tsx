@@ -11,7 +11,7 @@ import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
   modelParameters: ModelParameters;
-  client: AiChatClientType;
+  clientType: AiChatClientType;
   editorContainerClassName?: string;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
@@ -25,7 +25,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   UserChatMessageEditorProps
 > = ({
   modelParameters,
-  client,
+  clientType,
   editorContainerClassName,
   chatButtons,
   hiddenContext,
@@ -55,7 +55,7 @@ const UserChatMessageEditor: React.FunctionComponent<
           submitChatContents({
             text: userMessage,
             modelParameters,
-            client,
+            clientType,
             hiddenContext,
             assets:
               multimodalAvailable && chatAssets.length > 0
@@ -72,7 +72,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       multimodalAvailable,
       chatAssets,
       modelParameters,
-      client,
+      clientType,
     ]
   );
 

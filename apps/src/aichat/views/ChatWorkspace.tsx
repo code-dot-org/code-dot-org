@@ -40,7 +40,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
-  client: AiChatClientType;
+  clientType: AiChatClientType;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
   onClear: () => void;
@@ -66,7 +66,7 @@ const eraserIcon: FontAwesomeV6IconProps = {
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
-  client,
+  clientType,
   chatButtons,
   hiddenContext,
   onClear,
@@ -123,12 +123,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   // Initialize the ChatEventLogger with the current context, whenever it updates.
   useEffect(() => {
     ChatEventLogger.initialize({
-      client,
+      clientType,
       currentLevelId: parseInt(currentLevelId || ''),
       scriptId,
       channelId,
     });
-  }, [client, currentLevelId, scriptId, channelId]);
+  }, [clientType, currentLevelId, scriptId, channelId]);
 
   // This effect resets chat history and any staged uploads when:
   // a) a user switches levels, or
@@ -267,7 +267,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         )}
         {canChatWithModel && (
           <UserChatMessageEditor
-            client={client}
+            clientType={clientType}
             modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}

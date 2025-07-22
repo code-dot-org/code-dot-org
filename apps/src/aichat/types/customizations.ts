@@ -1,6 +1,6 @@
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
-  AiChatClients,
+  AiChatClientTypes,
   AiChatModelIds,
 } from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
@@ -48,13 +48,13 @@ export enum Visibility {
   EDITABLE = 'editable',
 }
 
-export type AiChatClientType = ValueOf<typeof AiChatClients>;
+export type AiChatClientType = ValueOf<typeof AiChatClientTypes>;
 
 /**
  * Context provided to AI chat API endpoints.
  */
 export type AichatContext = {
-  client: AiChatClientType;
+  clientType: AiChatClientType;
   currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;

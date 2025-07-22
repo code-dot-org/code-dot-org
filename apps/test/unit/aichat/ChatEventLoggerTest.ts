@@ -3,7 +3,7 @@ import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
-  AiChatClients,
+  AiChatClientTypes,
   AiInteractionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
 
@@ -22,7 +22,7 @@ describe('ChatEventLogger', () => {
       timestamp: Date.now(),
     };
     aichatContext = {
-      client: AiChatClients.AI_CHAT_LAB,
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
       currentLevelId: 123,
       scriptId: 321,
       channelId: 'abc123',
