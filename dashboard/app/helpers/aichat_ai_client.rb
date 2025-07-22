@@ -76,7 +76,7 @@ class AichatAiClient
   # type AiRequest = MessagePart[];
   #
   # // Context array (optional):
-  # // The previous (history) messages send to and from the model.
+  # // The previous (history) messages sent to and from the model.
   # // Each message has a role (user/model) to indicate the direction
   # // and each message has an array of message parts.
   # type AiContext = Message[];
