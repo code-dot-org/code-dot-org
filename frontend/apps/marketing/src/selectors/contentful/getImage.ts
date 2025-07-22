@@ -5,6 +5,14 @@ export function getRelativeImageUrl(asset: ExperienceAsset | undefined) {
 }
 
 export function getOptimizedImageFormat(imgUrl: string) {
+  // Extract file extension from a URL, handling various URL formats:
+  // /\.(\w+)(?=[?#]|$)/i
+  //   \.          - Matches the literal dot before the extension
+  //   (\w+)       - Captures one or more word chars (a-z, A-Z, 0-9, _) as the extension
+  //   (?=[?#]|$)  - Positive lookahead ensuring extension ends at ?, #, or end of string
+  //               - This prevents matching partial extensions (e.g., "file.png?size=100")
+  //   /i          - Case-insensitive flag to match extensions like .JPG or .Png
+  // Returns the image format in lowercase (e.g., "png", "jpg", "webp")
   const imgExt = imgUrl.match(/\.(\w+)(?=[?#]|$)/i)?.[1]?.toLowerCase();
 
   switch (imgExt) {
