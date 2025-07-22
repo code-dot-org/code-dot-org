@@ -93,7 +93,7 @@ const routeConfigs = [
     path: 'workshops/:workshopId/temp',
     breadcrumbs: 'Workshops,Workshop',
     component: WorkshopTabs,
-    children: [
+    childRoutes: [
       {
         index: true,
         component: WorkshopOverview,
@@ -167,7 +167,7 @@ const renderRoute = ({
   index,
   component: Component,
   withRouter,
-  children,
+  childRoutes,
   props = {},
 }) => (
   <Route
@@ -182,7 +182,7 @@ const renderRoute = ({
       )
     }
   >
-    {children?.map(renderRoute)}
+    {childRoutes?.map(renderRoute)}
   </Route>
 );
 

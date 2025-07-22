@@ -24,7 +24,7 @@ interface WithRouterPropsType {
 interface RouteConfig {
   path: string;
   breadcrumbs?: string;
-  children?: RouteConfig[];
+  childRoutes?: RouteConfig[];
 }
 
 export const WithRouterProps: React.FC<
@@ -53,8 +53,8 @@ export const WithRouterProps: React.FC<
       if (matchPath(joinedPath, location.pathname)) {
         return config.breadcrumbs;
       }
-      if (config.children) {
-        const childBreadcrumbs = getBreadcrumbs(config.children, joinedPath);
+      if (config.childRoutes) {
+        const childBreadcrumbs = getBreadcrumbs(config.childRoutes, joinedPath);
         if (childBreadcrumbs) {
           return childBreadcrumbs;
         }
