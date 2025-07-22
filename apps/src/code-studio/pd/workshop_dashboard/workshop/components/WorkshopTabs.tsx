@@ -24,13 +24,10 @@ export const WorkshopTabs = () => {
   const {workshopId} = useParams();
   const {pathname} = useLocation();
 
-  // Determine the current tab by matching the last segment of the URL path.
-  // This correctly handles nested routes.
-  const pathSegments = pathname.split('/');
-  const lastSegment = pathSegments[pathSegments.length - 1];
-  const currentTabValue = tabList.some(tab => tab.path === lastSegment)
-    ? lastSegment
-    : '';
+  const currentTabValue =
+    tabList.find(tab =>
+      pathname.endsWith(`/workshops/${workshopId}/${tab.path}`)
+    )?.path || '';
 
   return (
     <nav aria-label="Workshop sections">
