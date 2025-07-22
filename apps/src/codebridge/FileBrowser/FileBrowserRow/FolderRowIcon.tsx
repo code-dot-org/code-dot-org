@@ -1,7 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ProjectFolder} from '@codebridge/types';
 import React from 'react';
-
-import {ProjectFolder} from '../../types';
 
 import {FileBrowserIconComponentType} from './types';
 

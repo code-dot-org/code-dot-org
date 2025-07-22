@@ -62,6 +62,9 @@ export const useInitialSources = (
   };
 
   const repairedServerSource = useMemo(() => {
+    // We have some old sources that may have an "active" file that is not in the list
+    // of open files, due to duplication of the open property between the file and the openFiles array.
+    // We repair this by ensuring the open files list contains the active file.
     if (initialServerSource) {
       return {
         ...initialServerSource,
