@@ -122,29 +122,6 @@ const routeConfigs = [
     childRoutes: workshopChildRouteConfigs,
   },
   {
-    // remove /temp for switch over
-    path: 'workshops/:workshopId/temp',
-    breadcrumbs: 'Workshops,Workshop Overview',
-    noRouter: true,
-    component: WorkshopTabs,
-    children: [
-      {
-        index: true,
-        component: WorkshopOverview,
-      },
-      {
-        path: 'enrollments',
-        component: WorkshopEnrollments,
-        breadcrumbs: 'Workshops,Workshop Overview,Enrollments',
-      },
-      {
-        path: 'surveys',
-        component: WorkshopSurveys,
-        breadcrumbs: 'Workshops,Workshop Overview,Surveys',
-      },
-    ],
-  },
-  {
     path: 'workshops/:workshopId/edit',
     breadcrumbs: 'Workshops,Edit Workshop',
     component: WorkshopFormTemplate,
