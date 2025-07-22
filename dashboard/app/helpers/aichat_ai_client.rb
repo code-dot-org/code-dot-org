@@ -3,7 +3,7 @@
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
 class AichatAiClient
   # Create an instance of the appropriate derived class based on model id.
-  def self.create_instance(model_id, usage_reporter)
+  def self.create_instance(model_id, usage_reporter = nil)
     #TODO make model api mode and this check based on SharedConstants::AICHAT_MODEL_VERSION
     # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
     if model_id == "gpt-4o-mini"
@@ -106,7 +106,7 @@ class AichatAiClient
 
     # Disable metrics temporarily for gemini until reporter is customized for gemini.
     if is_a?(AichatOpenaiResponsesClient)
-      usage_reporter.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
+      usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
     end
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
@@ -121,7 +121,7 @@ class AichatAiClient
   attr_accessor :api_key, :model, :usage_reporter
 
   # Private initializer - all instances should be created with `create_instance` factory.
-  private def initialize(api_key, model, usage_reporter)
+  private def initialize(api_key, model, usage_reporter = nil)
     @api_key = api_key
     @model = model
     @usage_reporter = usage_reporter
