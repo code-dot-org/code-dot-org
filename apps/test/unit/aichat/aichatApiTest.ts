@@ -3,7 +3,7 @@ import {
   postAichatCompletionMessage,
 } from '@cdo/apps/aichat/aichatApi';
 import {
-  ApiContext,
+  AichatContext,
   ModelParameters,
   CompletedChatMessage,
   PendingChatMessage,
@@ -25,7 +25,7 @@ describe('aichatApi', () => {
   let chatMessage: PendingChatMessage,
     storedMessages: CompletedChatMessage[],
     modelParameters: ModelParameters,
-    apiContext: ApiContext,
+    apiContext: AichatContext,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
 

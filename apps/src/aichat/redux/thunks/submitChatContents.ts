@@ -18,7 +18,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {
-  ApiContext,
+  AichatContext,
   isCompletedChatMessage,
   PendingChatMessage,
   CompletedChatMessage,
@@ -56,7 +56,7 @@ export const submitChatContents = createAsyncThunk(
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
 
-    const apiContext: ApiContext = {
+    const aichatContext: AichatContext = {
       client,
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
@@ -85,7 +85,7 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
         modelParameters,
-        apiContext
+        aichatContext
       );
 
       const fileCount = newUserMessage.assets?.length || 0;

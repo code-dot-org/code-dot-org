@@ -1,6 +1,6 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
-import {ApiContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
+import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
   AiChatClients,
@@ -9,7 +9,7 @@ import {
 
 describe('ChatEventLogger', () => {
   let userChatMessage: CompletedChatMessage;
-  let apiContext: ApiContext;
+  let apiContext: AichatContext;
   let chatEventLogger: ChatEventLogger;
   let postLogChatEventSpy: jest.SpyInstance;
 

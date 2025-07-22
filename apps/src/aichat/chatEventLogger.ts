@@ -2,7 +2,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 import {postLogChatEvent} from './aichatApi';
-import {ChatEvent, ApiContext} from './types';
+import {ChatEvent, AichatContext} from './types';
 
 export default class ChatEventLogger {
   private queue: ChatEvent[];
@@ -10,7 +10,7 @@ export default class ChatEventLogger {
 
   private static instance: ChatEventLogger;
 
-  constructor(private readonly apiContext: ApiContext) {
+  constructor(private readonly aichatContext: AichatContext) {
     this.queue = [];
     this.sendingInProgress = false;
   }
@@ -22,7 +22,7 @@ export default class ChatEventLogger {
     return ChatEventLogger.instance;
   }
 
-  public static initialize(context: ApiContext) {
+  public static initialize(context: AichatContext) {
     ChatEventLogger.instance = new ChatEventLogger(context);
   }
 
@@ -40,7 +40,7 @@ export default class ChatEventLogger {
       if (chatEvent) {
         this.sendingInProgress = true;
         try {
-          await postLogChatEvent(chatEvent, this.apiContext);
+          await postLogChatEvent(chatEvent, this.aichatContext);
         } catch (error) {
           // Only send log report if not a 403 error.
           if (

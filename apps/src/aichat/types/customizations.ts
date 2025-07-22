@@ -53,7 +53,7 @@ export type AiChatClientType = ValueOf<typeof AiChatClients>;
 /**
  * Context provided to AI chat API endpoints.
  */
-export type ApiContext = {
+export type AichatContext = {
   client: AiChatClientType;
   currentLevelId: number | null;
   scriptId: number | null;
