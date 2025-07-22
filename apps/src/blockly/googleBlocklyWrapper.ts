@@ -767,19 +767,19 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.style.display = 'inline-block';
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
-    // We do not include hidden definitions in embedded workspaces
-    // because embedded workspaces are only used for displaying blocks.
-    const includeHiddenDefinitions = false;
-    Blockly.cdoUtils.loadBlocksToWorkspace(
-      workspace,
-      Blockly.Xml.domToText(xml),
-      includeHiddenDefinitions
-    );
 
     Blockly.cdoUtils
       .getUserTheme(workspace.getTheme())
       .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(workspace, theme, true);
+        workspace.setTheme(theme);
+        // We do not include hidden definitions in embedded workspaces
+        // because embedded workspaces are only used for displaying blocks.
+        const includeHiddenDefinitions = false;
+        Blockly.cdoUtils.loadBlocksToWorkspace(
+          workspace,
+          Blockly.Xml.domToText(xml),
+          includeHiddenDefinitions
+        );
         // Loop through all the parent blocks and remove vertical translation value
         // This makes the output more condensed and readable, while preserving
         // horizontal translation values for RTL rendering.

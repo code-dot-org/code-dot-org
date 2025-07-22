@@ -373,8 +373,7 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
  */
 export function setThemeAndRenderBlocks(
   workspace: GoogleBlockly.Workspace,
-  theme: GoogleBlockly.Theme,
-  forceRender = false
+  theme: GoogleBlockly.Theme
 ) {
   if (theme && workspace?.rendered) {
     const renderedWorkspace = workspace as GoogleBlockly.WorkspaceSvg;
@@ -383,10 +382,7 @@ export function setThemeAndRenderBlocks(
     // Re-render blocks if the font size changed.
     // Once https://github.com/google/blockly/issues/7782 is resolved,
     // we should be able to remove this.
-    if (
-      forceRender ||
-      theme.fontStyle?.size !== previousTheme.fontStyle?.size
-    ) {
+    if (theme.fontStyle?.size !== previousTheme.fontStyle?.size) {
       renderedWorkspace.getAllBlocks().map(block => {
         block.markDirty();
         block.render();
