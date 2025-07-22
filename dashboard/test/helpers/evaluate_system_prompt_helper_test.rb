@@ -45,4 +45,15 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     assert_includes system_prompt, @level_instructions
     refute_includes system_prompt, 'skillEvaluations'
   end
+
+  test "get_system_prompt includes additional_ai_evaluation_instructions if present" do
+    applab_level_with_directions = create(:applab, :with_instructions)
+    additional_instructions = "Please pay special attention to variable naming."
+    applab_level_with_directions.stubs(:additional_ai_evaluation_instructions).returns(additional_instructions)
+    create(:csp_script_level, levels: [applab_level_with_directions])
+    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(
+      applab_level_with_directions, SharedConstants::AI_EVALUATION_TYPES[:SINGLE_STUDENT]
+    )
+    assert_includes system_prompt, additional_instructions
+  end
 end

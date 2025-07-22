@@ -17,7 +17,7 @@ import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
-import {getMuiTheme} from '@/themes';
+import {getCriticalFonts, getMuiTheme} from '@/themes';
 
 export default async function Layout({
   children,
@@ -29,6 +29,7 @@ export default async function Layout({
   const syncParams = await params;
   const {brand, locale} = syncParams;
 
+  await getCriticalFonts(brand);
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);
   const statsigBootstrapValues = await generateBootstrapValues();
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;

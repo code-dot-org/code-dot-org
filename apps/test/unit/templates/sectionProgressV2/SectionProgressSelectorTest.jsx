@@ -24,8 +24,8 @@ import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/Secti
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
-const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
+const V1_PAGE_LINK_TEXT = 'Switch to the new progress view';
+const V2_PAGE_LINK_TEXT = 'Switch to legacy progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';
 

@@ -1,7 +1,5 @@
 import {render, screen} from '@testing-library/react';
 
-import {SpacingProps} from '@/components/common/types';
-
 import Divider, {DividerProps} from '../Divider';
 
 describe('Divider Component', () => {
@@ -10,21 +8,10 @@ describe('Divider Component', () => {
     expect(screen.getByRole('separator')).toBeInTheDocument();
   });
 
-  describe('renders margin based on margin prop', () => {
-    const marginTestCases = [
-      {margin: 'none', expected: 'margin: 0px 0px 0px 0px'},
-      {margin: 'xs', expected: 'margin: 8px 0px 8px 0px'},
-      {margin: 's', expected: 'margin: 16px 0px 16px 0px'},
-      {margin: 'm', expected: 'margin: 32px 0px 32px 0px'},
-      {margin: 'l', expected: 'margin: 64px 0px 64px 0px'},
-    ];
-
-    marginTestCases.forEach(({margin, expected}) => {
-      it(`applies ${margin} margin correctly`, () => {
-        render(<Divider margin={margin as keyof SpacingProps} />);
-        expect(screen.getByRole('separator')).toHaveStyle(expected);
-      });
-    });
+  it('applies the correct margin class based on the margin prop', () => {
+    render(<Divider margin="l" />);
+    const separator = screen.getByRole('separator');
+    expect(separator).toHaveClass('divider--margin-l');
   });
 
   describe('renders color based on color prop', () => {

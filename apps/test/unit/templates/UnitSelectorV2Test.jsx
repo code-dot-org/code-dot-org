@@ -5,6 +5,11 @@ import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teac
 import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
 
 jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
+  ...jest.requireActual('@cdo/apps/redux/unitSelectionRedux'),
+  getSelectedCourseId: jest.fn(() => 123),
+  getSelectedUnitPosition: jest.fn(() => 1),
+}));
 
 const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,

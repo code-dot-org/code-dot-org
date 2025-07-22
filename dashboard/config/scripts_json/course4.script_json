@@ -8,9 +8,9 @@
         {
           "key": "d79fdf44-5b59-4229-bca8-f8b4e2786ccb",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 4 content and course from Code.org, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 4 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "details": "We are in the process of fully removing all Course 4 content from Code.org as we no longer support this older offering. The course will be removed from the site in September, 2025. Until that time, we have made the course unassignable, and no bugs or missing content will be addressed or fixed. Our recommended replacement course is CS Fundamentals Course F. ",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-18 17:23:24 UTC",
+    "serialized_at": "2025-07-18 18:00:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
