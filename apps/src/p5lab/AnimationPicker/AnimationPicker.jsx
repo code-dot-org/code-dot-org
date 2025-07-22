@@ -8,6 +8,7 @@ import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
+import Modal from '@code-dot-org/component-library/modal';
 
 import {
   hide,
@@ -80,6 +81,8 @@ class AnimationPicker extends React.Component {
 
   state = {
     exitingDialog: false,
+    showFlaggedModal: false,
+    pendingUploadData: null,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -176,6 +179,13 @@ class AnimationPicker extends React.Component {
         console.log('In AnimationPickerImage moderation rating:', json.rating);
         // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
         if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+          // Display modal to inform user that their image is being flagged for moderation.
+          // They can accept and project will be blocked or cancel and return to the picker.
+                  // Save the upload data and show modal
+          this.setState({
+            showFlaggedModal: true,
+            pendingUploadData: data,
+          });
           const body = JSON.stringify({
             type: 'flag',
           });
@@ -191,12 +201,12 @@ class AnimationPicker extends React.Component {
             .then(response => response.json())
             .then(json => console.log('json', json))
             .catch(err => console.log('update abuse error', err));
+        } else {
+          // If the image is rated 'everyone' or 'unknown', continue with upload.
+          this.props.onUploadStart(data);
         }
       })
       .catch(err => console.error('Moderation error:', err));
-
-    // Continue upload start.
-    this.props.onUploadStart(data);
   };
 
   render() {
@@ -228,6 +238,21 @@ class AnimationPicker extends React.Component {
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
+        {this.state.showFlaggedModal && (<Modal
+            id="image-flagged-modal"
+            onClose={() => this.setState({showFlaggedModal: false, pendingUploadData: null})}
+            title={'Image flagged by moderation'}
+            primaryButtonProps={{
+              text: 'Accept and continue',
+              onClick: () => {``
+                this.setState({showFlaggedModal: false, pendingUploadData: null});
+              },
+            }}
+            secondaryButtonProps={{
+              text: 'Cancel',
+              onClick: () => this.setState({showFlaggedModal: false, pendingUploadData: null}),
+            }}
+        />)}
         {this.renderVisibleBody()}
       </BaseDialog>
     );
