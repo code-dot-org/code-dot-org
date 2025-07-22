@@ -6208,3 +6208,45 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        teaching-intro-java-2025:
+          title: 'Introduction to Java for Teachers '
+          description_short: ''
+          description_student: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          description_teacher: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          version_title: ''
+        foundations-generative-ai-unplugged:
+          title: Foundations of Generative AI (Unplugged)
+          description_short: Foundations of Generative AI (Unplugged)
+          description_student: Learn how chatbots and large-language models work behind the scenes!
+          description_teacher: |-
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+            This unit is the **fully unpluggedd** version of our Foundations of Generative AI unit. It is designed for classrooms where students do not have access to technology, but teachers are still expected to use technology to run slides, show videos, etc. To see the extended unit with additional lessons and on-device levels, [you can view the unit here](http://studio.code.org/courses/foundations-gen-ai?viewAs=Instructor).
+
+            ##Just Starting this Unit?
+
+            We recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
+          version_title: ''

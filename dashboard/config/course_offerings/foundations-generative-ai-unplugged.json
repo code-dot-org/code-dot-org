@@ -1,0 +1,23 @@
+{
+  "key": "foundations-generative-ai-unplugged",
+  "display_name": "Foundations of Generative AI (Unplugged)",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "9,10,11,12",
+  "header": "teacher_led",
+  "image": "https://images.code.org/22aba262b704ae8c27dbafa5b4cb93df-Foundations of Gen AI.png",
+  "cs_topic": "artificial_intelligence",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"ideal\"}",
+  "description": "An \"unplugged\" version of our Foundations of Generative AI course, designed for classrooms where students do not have reliable access to devices.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": "2025-07-23 07:00:00 UTC",
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

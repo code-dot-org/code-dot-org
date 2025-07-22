@@ -361,6 +361,7 @@ const marketingPaths = {
   "/about/it": true,
   "/events": true,
   "/events/conferences": true,
+  "/professional-learning/regional-partner-program/resources": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

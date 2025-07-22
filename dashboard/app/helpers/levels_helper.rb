@@ -771,7 +771,7 @@ module LevelsHelper
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
-    elsif @level.is_a?(Pythonlab) && current_user
+    elsif @level.uses_theme_preference? && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
       app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
     end
