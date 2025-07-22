@@ -76,27 +76,27 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
     sign_in(@user)
     assert_nil @user.show_progress_table_v2
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
     assert_response :success
     @user.reload
-    assert @user.show_progress_table_v2
+    assert_equal 'v2', @user.show_progress_table_v2
 
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
     assert_response :success
     @user.reload
-    refute @user.show_progress_table_v2
+    assert_equal 'legacy', @user.show_progress_table_v2
   end
 
   test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
     sign_in(@user)
     assert_nil @user.progress_table_v2_timestamp
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp
     assert_nil @user.progress_table_v1_timestamp
 
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp
