@@ -90,6 +90,7 @@ export const useInitialSources = (
           },
         };
       }
+      startCode = repairOpenFiles(startCode);
 
       const source = isStartMode
         ? combineStartSourcesAndValidation(startCode, validationFile)
