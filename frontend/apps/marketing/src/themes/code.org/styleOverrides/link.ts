@@ -10,7 +10,7 @@ export const LINK_OVERRIDES: Components<Theme>['MuiLink'] = {
     root: ({theme}) => ({
       fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
       color: 'var(--text-brand-purple-primary)',
-      fontWeight: 600,
+      fontWeight: 500,
       lineHeight: 1.4,
       marginBottom: theme.spacing(2),
       textDecoration: 'underline',
