@@ -8,7 +8,6 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
   @properties_encryption_key
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"

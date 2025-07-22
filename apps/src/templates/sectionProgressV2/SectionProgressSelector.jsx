@@ -36,6 +36,26 @@ function SectionProgressSelector({
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
+  const params = queryParams('view');
+
+  const displayV2 = React.useMemo(() => {
+    // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
+    // If a user has selected manually, show that version.
+    const isPreferenceSet =
+      showProgressTableV2 === V2_SETTING_KEY ||
+      showProgressTableV2 === V1_SETTING_KEY;
+
+    // If there is a url pram, use that param to determine to show V2.
+    const displayV2FromUrl = params === 'v2';
+
+    return (
+      displayV2FromUrl ||
+      (isPreferenceSet
+        ? showProgressTableV2 === V2_SETTING_KEY
+        : DCDO.get('progress-table-v2-default-v2', true))
+    );
+  }, [showProgressTableV2, params]);
+
   useEffect(() => {
     const params = queryParams('view');
     if (params === 'v2') {
@@ -55,8 +75,7 @@ function SectionProgressSelector({
   };
 
   const onShowProgressTableV2Change = useCallback(() => {
-    const shouldShowString =
-      showProgressTableV2 === V2_SETTING_KEY ? V1_SETTING_KEY : V2_SETTING_KEY;
+    const shouldShowString = displayV2 ? V1_SETTING_KEY : V2_SETTING_KEY;
     new UserPreferences().setShowProgressTableV2(shouldShowString);
     setShowProgressTableV2(shouldShowString);
     setHasJustToggledViews(true);
@@ -71,7 +90,7 @@ function SectionProgressSelector({
       });
       removeQueryParams();
     }
-  }, [showProgressTableV2, setShowProgressTableV2, sectionId]);
+  }, [displayV2, setShowProgressTableV2, sectionId]);
 
   const debouncedOnShowProgressTableV2Change = _.debounce(
     onShowProgressTableV2Change,
@@ -103,22 +122,6 @@ function SectionProgressSelector({
   if (!allowSelection) {
     return <SectionProgress />;
   }
-
-  // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
-  // If a user has selected manually, show that version.
-  const isPreferenceSet =
-    showProgressTableV2 === V2_SETTING_KEY ||
-    showProgressTableV2 === V1_SETTING_KEY;
-  const params = queryParams('view');
-
-  // If there is a url pram, use that param to determine to show V2.
-  const displayV2FromUrl = params === 'v2';
-
-  const displayV2 =
-    displayV2FromUrl ||
-    (isPreferenceSet
-      ? showProgressTableV2 === V2_SETTING_KEY
-      : DCDO.get('progress-table-v2-default-v2', true));
 
   const ProgressV1OrV2ToggleLink = () => (
     <div className={styles.toggleViews}>
