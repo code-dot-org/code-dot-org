@@ -142,9 +142,13 @@ class TestController < ApplicationController
     end
 
     section_name = params[:section_name] || "New Section"
-    section = Section.create(name: section_name, user: teacher_user, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    unit = course.single_unit_course? ? course.default_unit_group_units.first.script : nil
+    section = Section.create!(name: section_name, user: teacher_user, course_id: course.id, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
+
+    UserScript.create!(user: user, script: unit, assigned_at: Time.now) if unit
+
     head :ok
   end
 
