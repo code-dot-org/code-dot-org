@@ -22,8 +22,7 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
     end
 
     it 'returns an empty relation when no users meet the criteria' do
-        _(expired_deleted_accounts).must_be_empty
-      end
+      _(expired_deleted_accounts).must_be_empty
     end
 
     context 'when user already scrubbed of PII' do
