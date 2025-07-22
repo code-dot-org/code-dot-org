@@ -20,7 +20,6 @@ Dashboard::Application.configure do
   config.hosts << "localhost.code.org"
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
-  # From Molly: do we need to add this?
   config.hosts << "localhost.preview.codeprojects.org"
 
   # Do not eager load code on boot.
