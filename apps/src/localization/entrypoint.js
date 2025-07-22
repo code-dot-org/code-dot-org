@@ -23,13 +23,12 @@ const donor_prefixes = [
   '/courses/customizing-llms-2024',
   '/courses/self-paced-pl-ai-101-2024',
   '/courses/foundations-gen-ai-2024',
+  '/courses/foundations-gen-ai-2025',
+  '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
-  '/courses/elementaryai-2024',
   '/courses/elem-game-design-2024',
-  '/courses/3-5gamedesign-2024',
-  '/courses/foundations-gen-ai-2025',
 ];
 
 const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
