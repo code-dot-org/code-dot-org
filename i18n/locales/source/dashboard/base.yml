@@ -46,6 +46,10 @@ en:
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
             lockout_flow: "cannot be updated because you need parent or guardian permission first."
+        user/facilitator_info:
+          attributes:
+            user:
+              not_facilitator: "must have the facilitator permission"
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -85,7 +89,8 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
-
+      user/facilitator_info:
+        user: 'User'
   beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"

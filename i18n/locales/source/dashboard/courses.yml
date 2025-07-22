@@ -5269,9 +5269,14 @@ en:
           version_title: ''
         programming-with-music-lab-2025:
           title: Programming with Music Lab (2025)
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
+          description_student: Learn how to program by creating music!
+          description_teacher: |-
+            This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
+
+            ::: details [**Professional Development**]
+            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab][0]. The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
+            :::
           version_title: "'25-'26"
         allthelessonplans:
           title: All The Lesson Plans

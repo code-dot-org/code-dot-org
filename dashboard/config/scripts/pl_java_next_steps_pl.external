@@ -1,0 +1,79 @@
+name 'pl-java-next-steps_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<br>
+<br>
+
+
+<div style="background-color: #026C7A; color: #FFFFFF; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+    
+<p style="font-size: 44pt; font-weight: bold; margin: 0; text-align: center;margin-top: 15px;">🎉🎉🎉</p><br>
+<p style="font-size: 24pt; font-weight: bold; margin: 0; text-align: center; margin-top: 15px;">Congratulations!</p>
+
+<p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;text-align: center;">
+You have completed the Introduction to Java for Teachers!
+    </p>
+</div>
+
+
+
+# Next Steps
+
+<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2 style="text-align: center">Help Us Make this Module Better!</h2>
+    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Code.org values and is responsive to feedback. Please fill out this short survey to provide your feedback on this module.</p>
+    <p style="text-align: center;">
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the Survey</a>
+</p>
+
+</div>
+
+
+<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2 style="text-align: center">Start Teaching</h2>
+    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt"> Go to the <a href="https://studio.code.org/home" target="blank" rel="noopener noreferrer">teacher homepage</a> to make a section for your students and start teaching this course. Complete the Getting Started Module to learn more.</p>
+   <p style="text-align: center;">
+        <a class="btn btn-large btn-primary" 
+           href="https://studio.code.org/courses/getting-started-2025/" 
+           target="_blank" rel="noopener noreferrer" 
+           style="display: inline-block; background: #048899; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+            Getting Started with Code.org
+        </a>
+    </p>
+
+</div>
+
+
+<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    
+    <h2 style="text-align: center;">Learn More About Computer Science A</h2>
+    
+    <p style="list-style-type: disc; padding-left: 20px; font-size: 14pt;">
+        Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA).
+    </p>
+
+    
+   <p style="text-align: center;">
+        <a class="btn btn-large btn-primary" 
+           href="https://code.org/curriculum/csa" 
+           target="_blank" rel="noopener noreferrer" 
+           style="display: inline-block; background: #048899; color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+            Explore Curriculum
+        </a>
+    </p>
+
+</div>
+
+
+<div style="margin: 20px auto; width: 100%; max-width: 900px; background: #f7f8fa; padding: 5px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+    <h2 style="text-align: center">Stay Connected</h2>
+    <p style="padding-left: 20px; font-size: 14pt">
+    Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>.</p>
+    
+    <p style="padding-left: 20px; font-size: 14pt"> Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.</p>
+    
+    <p style="padding-left: 20px; font-size: 14pt">Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>.</p>
+</div>
+MARKDOWN

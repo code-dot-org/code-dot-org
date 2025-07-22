@@ -46,8 +46,7 @@ const styles = {
     borderRadius: '50%',
   },
   overline: {
-    // TODO: replace this w/ theme palette value
-    color: '#4C5661',
+    color: 'var(--text-neutral-quaternary)',
     marginTop: 1,
     marginBottom: 1.5,
   },

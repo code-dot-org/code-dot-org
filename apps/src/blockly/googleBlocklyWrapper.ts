@@ -124,7 +124,6 @@ import {
   strip,
   interpolateMsg,
   isDarkTheme,
-  setThemeAndRenderBlocks,
 } from './utils';
 
 const options = {
@@ -740,9 +739,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     xml,
     options = {}
   ) {
+    const theme = cdoUtils.getUserTheme(options.theme as GoogleBlockly.Theme);
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
-      theme: options.theme || CdoTheme,
+      theme: theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
@@ -767,6 +767,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.style.display = 'inline-block';
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
+    workspace.setTheme(theme);
     // We do not include hidden definitions in embedded workspaces
     // because embedded workspaces are only used for displaying blocks.
     const includeHiddenDefinitions = false;
@@ -776,11 +777,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       includeHiddenDefinitions
     );
 
-    Blockly.cdoUtils
-      .getUserTheme(workspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(workspace, theme, true);
-      });
     // Loop through all the parent blocks and remove vertical translation value
     // This makes the output more condensed and readable, while preserving
     // horizontal translation values for RTL rendering.
@@ -813,7 +809,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isJigsaw = optOptionsExtended.isJigsaw;
     const options = {
       ...optOptionsExtended,
-      theme: optOptionsExtended.theme || CdoTheme,
+      theme: cdoUtils.getUserTheme(
+        optOptionsExtended.theme as GoogleBlockly.Theme
+      ),
       trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
@@ -876,9 +874,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.toolboxBlocks = options.toolbox;
     blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
-    blocklyWrapper.isDarkTheme = isDarkTheme(
-      options.theme as GoogleBlockly.Theme | undefined
-    );
+    blocklyWrapper.isDarkTheme = isDarkTheme(options.theme);
 
     // Only allow toggling disabled blocks in start mode.
     // This is also important for ensuring that Blockly does not
@@ -889,11 +885,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
-    Blockly.cdoUtils
-      .getUserTheme(workspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(workspace, theme);
-      });
+
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},
@@ -916,7 +908,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         experiments.BLOCKLY_KEYBOARD_NAVIGATION
       )
     ) {
-      initializeKeyboardNavigation(workspace);
+      initializeKeyboardNavigation(workspace, options.theme);
     }
 
     // Typically, we need to handle disabling blocks that are not connected to an

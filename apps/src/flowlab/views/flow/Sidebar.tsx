@@ -49,10 +49,10 @@ export default () => {
       </div>
       <div
         className="dndnode"
-        onDragStart={event => onDragStart(event, 'output')}
+        onDragStart={event => onDragStart(event, 'result')}
         draggable
       >
-        Output
+        Result
       </div>
     </aside>
   );

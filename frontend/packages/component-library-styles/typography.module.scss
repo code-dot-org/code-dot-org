@@ -213,48 +213,127 @@ html {
 // Headings
 .heading-xxl {
   @include heading-xxl;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-xxl;
+    }
+  }
 }
-
 .heading-xl {
   @include heading-xl;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-xl;
+    }
+  }
 }
-
 .heading-lg {
   @include heading-lg;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-lg;
+    }
+  }
 }
-
 .heading-md {
   @include heading-md;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-md;
+    }
+  }
 }
-
 .heading-sm {
   @include heading-sm;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-sm;
+    }
+  }
 }
-
 .heading-xs {
   @include heading-xs;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include heading-xs;
+    }
+  }
 }
 
 // Paragraphs
 // Use on larger paragraphs
 .body-one {
   @include body-one;
+  &.wrapper {
+    p,
+    li {
+      @include body-one;
+    }
+  }
 }
 
 // Use on default paragraphs
 .body-two {
   @include body-two;
+  &.wrapper {
+    p,
+    li {
+      @include body-two;
+    }
+  }
 }
 
 // Use on course block descriptions or anywhere
 // else that needs smaller paragraph text
 .body-three {
   @include body-three;
+  &.wrapper {
+    p,
+    li {
+      @include body-three;
+    }
+  }
 }
 
 // Use on smallest paragraph text
 .body-four {
   @include body-four;
+  &.wrapper {
+    p,
+    li {
+      @include body-four;
+    }
+  }
 }
 
 // Overlines
@@ -262,33 +341,60 @@ html {
 // (Bigger size)
 .overline-one {
   @include overline-one;
+  &.wrapper {
+    p,
+    li {
+      @include overline-one;
+    }
+  }
 }
 
 // (Default size)
 .overline-two {
   @include overline-two;
+  &.wrapper {
+    p,
+    li {
+      @include overline-two;
+    }
+  }
 }
 
 // (Smaller size)
 .overline-three {
   @include overline-three;
+  &.wrapper {
+    p,
+    li {
+      @include overline-three;
+    }
+  }
 }
 
 // Use in paragraphs to bold text
 strong,
 .strong {
   @include strong;
+  &.wrapper strong {
+    @include strong;
+  }
 }
 
 // Use in paragraphs to italicize text
 
 .extra-strong {
   @include extra-strong;
+  &.wrapper strong {
+    @include extra-strong;
+  }
 }
 
 em,
 .em {
   @include em;
+  &.wrapper em {
+    @include em;
+  }
 }
 
 // Captions
@@ -296,9 +402,29 @@ em,
 figcaption,
 .figcaption {
   @include figcaption;
+  &.wrapper figcaption {
+    @include figcaption;
+  }
 }
 
 // Use with typography elements to remove margins
 .no-margin {
   margin: 0;
+  &.wrapper {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    li {
+      margin: 0;
+    }
+
+    ol,
+    ul {
+      margin-bottom: 0;
+    }
+  }
 }
