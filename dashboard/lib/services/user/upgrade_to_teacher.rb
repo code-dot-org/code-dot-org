@@ -1,7 +1,8 @@
 module Services
   module User
     class UpgradeToTeacher < Services::Base
-      attr_reader :user, :email, :new_attributes
+      attr_reader :user, :email
+      attr_accessor :new_attributes
 
       def initialize(user:, email:, email_preference: nil)
         @user = user
