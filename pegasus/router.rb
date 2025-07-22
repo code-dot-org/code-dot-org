@@ -479,6 +479,8 @@ class Documents < Sinatra::Base
       # Also look for shared items.
       found = MultipleExtnameFileUtils.find_with_extnames(content_dir('..', '..', 'shared', 'haml'), uri, extnames)
       return found.first unless found.empty?
+    rescue Errno::ENAMETOOLONG
+      # Just return nothing when the URL is malformed by being too long
     end
 
     # Scans the filesystem and finds all documents served by Pegasus CMS.

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-18 02:32:37 UTC",
+    "serialized_at": "2025-07-21 13:51:56 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -453,6 +453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-app1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -474,6 +477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-app2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,11 +501,14 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-misconfig-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app3"
+          "aif-ai-powered-threats-defenses-lesson2-misconfig-3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -507,7 +516,7 @@
         "activity_section.key": "80130a40-d561-4e2c-93ea-281729a858a4"
       },
       "level_keys": [
-        "aif-ai-powered-threats-defenses-lesson2-app3"
+        "aif-ai-powered-threats-defenses-lesson2-misconfig-3"
       ]
     },
     {
@@ -520,7 +529,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app4"
+          "aif-ai-powered-threats-defenses-lesson2-ddos-4"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -528,33 +537,12 @@
         "activity_section.key": "80130a40-d561-4e2c-93ea-281729a858a4"
       },
       "level_keys": [
-        "aif-ai-powered-threats-defenses-lesson2-app4"
+        "aif-ai-powered-threats-defenses-lesson2-ddos-4"
       ]
     },
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app-3"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "80130a40-d561-4e2c-93ea-281729a858a4"
-      },
-      "level_keys": [
-        "aif-ai-powered-threats-defenses-lesson2-app-3"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -577,8 +565,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 7,
+      "chapter": 7,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -601,7 +589,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -626,7 +614,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -651,7 +639,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -676,7 +664,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -701,7 +689,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -726,11 +714,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level6_choice"
+        ],
         "progression": "Password Attacks"
       },
       "bonus": false,
@@ -748,7 +739,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -773,11 +764,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson3-level8lvlgrp"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -795,11 +789,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson5-level1"
+        ],
         "progression": "Defense in Action"
       },
       "bonus": false,
@@ -817,11 +814,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson5-level2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -878,9 +878,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aif-ai-powered-threats-defenses-lesson2-app3",
+        "level.key": "aif-ai-powered-threats-defenses-lesson2-misconfig-3",
         "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app3"
+          "aif-ai-powered-threats-defenses-lesson2-misconfig-3"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -890,21 +890,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aif-ai-powered-threats-defenses-lesson2-app4",
+        "level.key": "aif-ai-powered-threats-defenses-lesson2-ddos-4",
         "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app4"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "80130a40-d561-4e2c-93ea-281729a858a4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "aif-ai-powered-threats-defenses-lesson2-app-3",
-        "script_level.level_keys": [
-          "aif-ai-powered-threats-defenses-lesson2-app-3"
+          "aif-ai-powered-threats-defenses-lesson2-ddos-4"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
