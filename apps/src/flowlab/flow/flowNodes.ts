@@ -3,10 +3,10 @@ import {type Node, useNodesData, useNodeConnections} from '@xyflow/react';
 export type AiNode = Node<{text: string}, 'ai'>;
 export type ConditionNode = Node<{text: string}, 'condition'>;
 export type TextNode = Node<{text: string}, 'text'>;
-export type OutputNode = Node<Record<string, never>, 'output'>;
+export type ResultNode = Node<Record<string, never>, 'result'>;
 export type WebNode = Node<{text: string}, 'web'>;
 
-export type MyNode = AiNode | TextNode | OutputNode | ConditionNode | WebNode;
+export type MyNode = AiNode | TextNode | ResultNode | ConditionNode | WebNode;
 
 export function useInputTexts(): string[] {
   // Find all incoming connections.

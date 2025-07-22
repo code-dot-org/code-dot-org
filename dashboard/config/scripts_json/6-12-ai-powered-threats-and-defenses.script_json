@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-19 00:35:52 UTC",
+    "serialized_at": "2025-07-21 13:51:56 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -501,6 +501,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-misconfig-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -526,7 +529,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson2-level4"
+          "aif-ai-powered-threats-defenses-lesson2-ddos-4"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -534,7 +537,7 @@
         "activity_section.key": "80130a40-d561-4e2c-93ea-281729a858a4"
       },
       "level_keys": [
-        "test-ai-powered-threats-defenses-lesson2-level4"
+        "aif-ai-powered-threats-defenses-lesson2-ddos-4"
       ]
     },
     {
@@ -887,9 +890,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson2-level4",
+        "level.key": "aif-ai-powered-threats-defenses-lesson2-ddos-4",
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson2-level4"
+          "aif-ai-powered-threats-defenses-lesson2-ddos-4"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

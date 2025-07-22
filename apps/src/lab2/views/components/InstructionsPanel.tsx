@@ -188,7 +188,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 <TextToSpeech text={useMessage} />
               )}
               {useMessage && (
-                <div id="focusable-message" ref={feedbackRef} tabIndex={-1}>
+                <div ref={feedbackRef} tabIndex={-1}>
                   <EnhancedSafeMarkdown
                     markdown={useMessage}
                     className={moduleStyles.markdownText}

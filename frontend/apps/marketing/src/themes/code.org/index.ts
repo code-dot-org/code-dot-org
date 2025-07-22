@@ -5,126 +5,12 @@ import {NOTO_FONT} from '@/themes/constants/fonts';
 
 import {createFontStack} from '../common/constants';
 
-const BARLOW_FONT = 'Barlow Semi Condensed Semibold';
-const FIGTREE_FONT = 'Figtree';
+import {BARLOW_FONT, FIGTREE_FONT} from './constants/fonts';
+import {STYLE_OVERRIDES} from './styleOverrides';
 
 const theme = createTheme({
   cssVariables: true,
-  palette: {
-    primary: {
-      main: '#000000',
-    },
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          '&.MuiButton-contained.MuiButton-colorPrimary': {
-            backgroundColor: 'var(--brand-purple-50)',
-          },
-        },
-      },
-    },
-    MuiDivider: {
-      styleOverrides: {
-        root: ({theme}) => ({
-          '&.MuiDivider-root.divider--color-primary': {
-            borderColor: 'var(--background-neutral-quaternary)',
-          },
-          '&.MuiDivider-root.divider--color-strong': {
-            borderColor: 'var(--background-neutral-senary)',
-          },
-          '&.MuiDivider-root.divider--margin-none': {
-            marginTop: 0,
-            marginBottom: 0,
-          },
-          '&.MuiDivider-root.divider--margin-xs': {
-            marginTop: theme.spacing(1),
-            marginBottom: theme.spacing(1),
-          },
-          '&.MuiDivider-root.divider--margin-s': {
-            marginTop: theme.spacing(2),
-            marginBottom: theme.spacing(2),
-          },
-          '&.MuiDivider-root.divider--margin-m': {
-            marginTop: theme.spacing(4),
-            marginBottom: theme.spacing(4),
-          },
-          '&.MuiDivider-root.divider--margin-l': {
-            marginTop: theme.spacing(8),
-            marginBottom: theme.spacing(8),
-          },
-        }),
-      },
-    },
-    MuiLink: {
-      styleOverrides: {
-        root: {
-          color: 'var(--text-brand-purple-primary)',
-          fontWeight: 500,
-          textDecoration: 'underline',
-          transition: 'color 0.2s ease-in-out',
-          '&:hover': {
-            color: 'var(--text-brand-purple-secondary)',
-            '& svg': {
-              color: 'var(--text-brand-purple-secondary)',
-            },
-          },
-          '& svg': {
-            color: 'var(--text-brand-purple-primary)',
-            transition: 'color 0.2s ease-in-out',
-          },
-        },
-      },
-    },
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          color: 'var(--text-neutral-primary)',
-          // Overline styles
-          '&.MuiTypography-overline.overline--color-primary': {
-            color: 'var(--text-brand-teal-primary)',
-          },
-          '&.MuiTypography-overline.overline--color-secondary': {
-            color: 'var(--text-neutral-quaternary)',
-          },
-          '&.MuiTypography-overline.overline--size-s': {
-            fontSize: '0.625rem', // 10px
-          },
-          '&.MuiTypography-overline.overline--size-m': {
-            fontSize: '0.75rem', // 12px
-          },
-          '&.MuiTypography-overline.overline--size-l': {
-            fontSize: '0.875rem', // 14px
-          },
-          // End Overline styles
-        },
-        gutterBottom: ({theme}) => ({
-          '&.MuiTypography-h1': {
-            marginBottom: theme.spacing(3), // 24px
-          },
-          '&.MuiTypography-h2': {
-            marginBottom: theme.spacing(2.125), // 16px
-          },
-          '&.MuiTypography-h3': {
-            marginBottom: theme.spacing(1.75), // 14px
-          },
-          '&.MuiTypography-h4': {
-            marginBottom: theme.spacing(1.5), // 12px
-          },
-          '&.MuiTypography-h5': {
-            marginBottom: theme.spacing(1.125), // 10px
-          },
-          '&.MuiTypography-h6': {
-            marginBottom: theme.spacing(1), // 8px
-          },
-          '&.MuiTypography-overline': {
-            marginBottom: theme.spacing(2), // 16px
-          },
-        }),
-      },
-    },
-  },
+  components: STYLE_OVERRIDES,
   typography: {
     fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
     h1: {
