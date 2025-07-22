@@ -16,16 +16,16 @@ const spacerStyles = {
   },
 };
 
-const spacerHeight: Record<ComponentSize, React.CSSProperties> = {
-  xs: {height: 16},
-  s: {height: 32},
-  m: {height: 48},
-  l: {height: 64},
+const spacerHeight: Record<ComponentSize, number> = {
+  l: 64,
+  m: 48,
+  s: 32,
+  xs: 16,
 };
 
 const Spacer: React.FC<SpacerProps> = ({size = 'm', className}) => (
   <Box
-    height={spacerHeight[size].height}
+    height={spacerHeight[size]}
     className={className}
     sx={spacerStyles.container}
     role="presentation"
