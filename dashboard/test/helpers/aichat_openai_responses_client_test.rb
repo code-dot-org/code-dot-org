@@ -76,11 +76,15 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
   end
 
   describe '#def get_response_text (unit)' do
-    subject {stub_request_and_get_response_test(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
+    subject {stub_request_and_get_response_text(new_message, endpoint_url, request_body, request_headers, stubbed_response_body, internal_model_id, level)}
 
     let(:input_with_level_system_prompt) do
       [
-        {role: "system", content: [{type: "input_text", text: "Be safe. test prompt test retrieval"}]},
+        {role: 'system', content: [
+          {type: 'input_text', text: "Be safe."},
+          {type: 'input_text', text: "test prompt"},
+          {type: 'input_text', text: "test retrieval"}
+        ]},
         {role: "user", content: [{type: "input_text", text: "hello from user"}]},
         {role: "assistant", content: [{type: "output_text", text: "assistant response"}]},
         {role: "user", content: [{type: "input_text", text: "new message from user"}]}
@@ -89,7 +93,10 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
 
     let(:input_without_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'input_text', text: "test prompt test retrieval"}]},
+        {role: 'system', content: [
+          {type: 'input_text', text: "test prompt"},
+          {type: 'input_text', text: "test retrieval"}
+        ]},
         {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
         {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
         {role: 'user', content: [{type: 'input_text', text: 'new message from user'}]}
@@ -98,7 +105,10 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
 
     let(:input_with_assets_and_without_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'input_text', text: "test prompt test retrieval"}]},
+        {role: 'system', content: [
+          {type: 'input_text', text: "test prompt"},
+          {type: 'input_text', text: "test retrieval"}
+        ]},
         {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
         {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
         {role: 'user', content: [
@@ -111,7 +121,11 @@ class AichatOpenaiResponsesClientTest < AichatAiClientTest
 
     let(:input_with_hidden_context_and_level_system_prompt) do
       [
-        {role: 'system', content: [{type: 'input_text', text: "Be safe. test prompt test retrieval"}]},
+        {role: 'system', content: [
+          {type: 'input_text', text: "Be safe."},
+          {type: 'input_text', text: "test prompt"},
+          {type: 'input_text', text: "test retrieval"}
+        ]},
         {role: 'user', content: [{type: 'input_text', text: 'hello from user'}]},
         {role: 'assistant', content: [{type: 'output_text', text: 'assistant response'}]},
         {role: 'user', content: [{type: 'input_text', text: "new message from user\nextra text"}]}
