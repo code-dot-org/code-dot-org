@@ -1,4 +1,5 @@
 import Modal from '@code-dot-org/component-library/modal';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -229,9 +230,18 @@ class AnimationPicker extends React.Component {
             onClose={() => {
               this.setState({showFlaggedModal: false, pendingUploadData: null});
             }}
-            title={'Image flagged by moderation'}
+            title={'Warning: Inappropriate Image'}
+            customContent={
+              <div>
+                <BodyTwoText>
+                  This image has been flagged as inappropriate. By including
+                  this image in your project, you will be unable to share the
+                  project with others.
+                </BodyTwoText>
+              </div>
+            }
             primaryButtonProps={{
-              text: 'Accept and continue',
+              text: 'Accept',
               onClick: () => {
                 const {pendingUploadData} = this.state;
                 if (!pendingUploadData) return;
