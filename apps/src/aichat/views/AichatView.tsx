@@ -12,6 +12,7 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useSources} from '@cdo/apps/lab2/experiment/SourcesContainer';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -59,7 +60,6 @@ import moduleStyles from './aichatView.module.scss';
 
 const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   levelProperties,
-  initialSources,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -92,8 +92,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     state => state.aichat.hasUpdatedCustomizations
   );
 
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
@@ -101,6 +99,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const hasSetStartingCustomizations = useAppSelector(
     state => state.aichat.hasSetStartingCustomizations
   );
+
+  const {sources, isLoading, channelId} = useSources();
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   // Attach save listeners whenever the project manager updates
@@ -122,8 +122,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [projectManager, dispatch]);
 
   useEffect(() => {
+    if (!sources || isLoading) {
+      return;
+    }
     const studentAiCustomizations = JSON.parse(
-      (initialSources?.source as string) || '{}'
+      (sources?.source as string) || '{}'
     );
     dispatch(
       setStartingAiCustomizations({
@@ -131,13 +134,16 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
         studentAiCustomizations,
       })
     );
+  }, [dispatch, sources, isLoading, levelAichatSettings]);
+
+  useEffect(() => {
     dispatch(
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
       })
     );
-  }, [dispatch, initialSources, levelAichatSettings]);
+  }, [levelProperties.id, dispatch]);
 
   useEffect(() => {
     if (signInState === SignInState.SignedIn) {
@@ -361,7 +367,11 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                       })
                     }
                   >
-                    <ModelCustomizationWorkspace />
+                    {isLoading ? (
+                      <div>Loading...</div>
+                    ) : (
+                      <ModelCustomizationWorkspace />
+                    )}
                   </PanelContainer>
                 </div>
               )}
@@ -389,7 +399,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              {hasSetStartingCustomizations && (
+              {hasSetStartingCustomizations && !isLoading && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   onClear={onClear}

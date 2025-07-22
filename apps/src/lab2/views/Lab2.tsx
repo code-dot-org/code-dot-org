@@ -7,15 +7,13 @@ import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {getStandaloneProjectId} from '@cdo/apps/lab2/projects/utils';
 import {getStore} from '@cdo/apps/redux';
 import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 
-import ProjectContainer from '../projects/ProjectContainer';
+import LabLevelManager from '../experiment/LabLevelManager';
 
 import DialogManager from './dialogs/DialogManager';
 import Lab2Wrapper from './Lab2Wrapper';
-import LabViewsRenderer from './LabViewsRenderer';
 import MetricsAdapter from './MetricsAdapter';
 
 const Lab2: React.FunctionComponent = () => {
@@ -26,9 +24,7 @@ const Lab2: React.FunctionComponent = () => {
           <Lab2Wrapper>
             <DialogManager>
               <MetricsAdapter />
-              <ProjectContainer channelId={getStandaloneProjectId()}>
-                <LabViewsRenderer />
-              </ProjectContainer>
+              <LabLevelManager />
             </DialogManager>
           </Lab2Wrapper>
         </ThemeProvider>

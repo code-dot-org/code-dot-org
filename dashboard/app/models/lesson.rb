@@ -595,6 +595,19 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_lab2_properties(script)
+    properties = {}
+    levels.each do |level|
+      next unless level.uses_lab2?
+      properties[level.id] = level.summarize_for_lab2_properties(script)
+      next unless level.is_a?(BubbleChoice)
+      level.sublevels.each do |sublevel|
+        properties[sublevel.id] = sublevel.summarize_for_lab2_properties(script)
+      end
+    end
+    properties
+  end
+
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans (Curriculum Builder)
   def summary_for_lesson_plans(unit_group_unit: nil)
