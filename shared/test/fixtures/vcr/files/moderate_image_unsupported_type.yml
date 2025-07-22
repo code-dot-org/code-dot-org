@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Jul 2025 00:48:16 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>C31PYQT0VN4PAZA3</RequestId><HostId>kfr1qxY+EyKhKISjFMvGDaXSqlAbmQcTDlvmQQcrAjOmmlbkDUVVLg0OZrX7Saa2se4kXajAhh8bXTqtRMV4ndAGsXo+wTGW</HostId></Error>
+  recorded_at: Tue, 22 Jul 2025 00:48:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-files.s3.amazonaws.com/files_test/1/1/manifest.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 22 Jul 2025 00:48:16 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>files_test/1/1/manifest.json</Key><RequestId>C31G4YD0TZMVRQJC</RequestId><HostId>Q0DCNC5tMgeIELgrU1f235ItcKpOkmdAgBLXLoz0aoDi9cMX9F8ty8hWCTk9WDzMCzYzpaTR6lhEfPO9ZTsAHcF6LHAvK2eB</HostId></Error>
+  recorded_at: Tue, 22 Jul 2025 00:48:16 GMT
+recorded_with: VCR 6.2.0
