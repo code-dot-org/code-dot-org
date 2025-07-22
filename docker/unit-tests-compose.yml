@@ -16,7 +16,6 @@
 # To clean up:
 # docker-compose -f unit-tests-compose.yml down
 
-version: "3"
 services:
   site:
     # TODO: switch to codedotorg/cdo-ci or other new image
@@ -28,6 +27,8 @@ services:
       - mysqldata:/var/lib/mysql
       - yarncache:/home/ci/.cache
       - gcloud_config:/home/ci/.config/gcloud
+    environment:
+      CI_JOB: 'unit_tests'
     env_file:
       - env.list
     command: /bin/sh -c "docker/ci/scripts/unit_tests.sh"
