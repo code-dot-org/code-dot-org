@@ -61,35 +61,37 @@ const routeConfigs = [
     path: 'reports',
     breadcrumbs: 'Reports',
     component: ReportView,
+    withRouter: true,
   },
   {
     path: 'workshops',
     breadcrumbs: 'Workshops',
     component: WorkshopIndex,
+    withRouter: true,
   },
   {
     path: 'workshops/filter',
     breadcrumbs: 'Workshops,Filter',
     component: WorkshopFilter,
+    withRouter: true,
   },
   ...WorkshopCourseConfigs.map(config => ({
     path: `workshops/new/${config.slug}`,
     breadcrumbs: `Workshops,${workshopLabel(`New ${config.label}`)}`,
     component: WorkshopFormTemplate,
     props: {config},
-    noRouter: true,
   })),
   // replace with temp route when ready to switch over
   {
     path: 'workshops/:workshopId',
     breadcrumbs: 'Workshops,View Workshop',
     component: Workshop,
+    withRouter: true,
   },
   {
     // remove /temp for switch over
     path: 'workshops/:workshopId/temp',
-    breadcrumbs: 'Workshops,Workshop Overview',
-    noRouter: true,
+    breadcrumbs: 'Workshops,Workshop',
     component: WorkshopTabs,
     children: [
       {
@@ -99,12 +101,12 @@ const routeConfigs = [
       {
         path: 'enrollments',
         component: WorkshopEnrollments,
-        breadcrumbs: 'Workshops,Workshop Overview,Enrollments',
+        breadcrumbs: 'Workshops,Workshop,Enrollments',
       },
       {
         path: 'surveys',
         component: WorkshopSurveys,
-        breadcrumbs: 'Workshops,Workshop Overview,Surveys',
+        breadcrumbs: 'Workshops,Workshop,Surveys',
       },
     ],
   },
@@ -112,32 +114,36 @@ const routeConfigs = [
     path: 'workshops/:workshopId/edit',
     breadcrumbs: 'Workshops,Edit Workshop',
     component: WorkshopFormTemplate,
-    noRouter: true,
   },
   {
     path: 'workshops/:workshopId/attendance',
     breadcrumbs: 'Workshops,Workshop,Take Attendance',
     component: WorkshopAttendance,
+    withRouter: true,
   },
   {
     path: 'workshops/:workshopId/attendance/:sessionId',
     breadcrumbs: 'Workshops,Workshop,Take Attendance',
     component: WorkshopAttendance,
+    withRouter: true,
   },
   {
     path: 'daily_survey_results/:workshopId',
     breadcrumbs: 'Survey Results',
     component: DailySurveyResultsLoader,
+    withRouter: true,
   },
   {
     path: 'workshop_daily_survey_results/:workshopId',
     breadcrumbs: 'Survey Results',
     component: FoormDailySurveyResultsLoader,
+    withRouter: true,
   },
   {
     path: 'legacy_survey_summaries',
     breadcrumbs: 'Legacy Facilitator Survey Summaries',
     component: LegacySurveySummaries,
+    withRouter: true,
   },
 ];
 
@@ -155,6 +161,30 @@ const HeaderWrapper = () => {
     </>
   );
 };
+
+const renderRoute = ({
+  path,
+  index,
+  component: Component,
+  withRouter,
+  children,
+  props = {},
+}) => (
+  <Route
+    key={index ? 'index-route' : path}
+    path={path}
+    index={index}
+    element={
+      withRouter ? (
+        <WithRouterProps component={Component} {...props} />
+      ) : (
+        <Component {...props} />
+      )
+    }
+  >
+    {children?.map(renderRoute)}
+  </Route>
+);
 
 const WorkshopDashboard = ({
   permissionList,
@@ -194,38 +224,7 @@ const WorkshopDashboard = ({
           <Routes>
             <Route path="/" element={<HeaderWrapper />}>
               <Route index element={<Navigate to="/workshops" replace />} />
-              {routeConfigs.map(
-                ({
-                  path,
-                  component: Component,
-                  noRouter,
-                  children,
-                  props = {},
-                }) => (
-                  <Route
-                    key={path}
-                    path={path}
-                    element={
-                      noRouter ? (
-                        <Component {...props} />
-                      ) : (
-                        <WithRouterProps component={Component} {...props} />
-                      )
-                    }
-                  >
-                    {children?.map(
-                      ({component: ChildComponent, path, index}) => (
-                        <Route
-                          key={path ?? 'index-route'}
-                          path={path}
-                          index={index}
-                          element={<ChildComponent />}
-                        />
-                      )
-                    )}
-                  </Route>
-                )
-              )}
+              {routeConfigs.map(renderRoute)}
             </Route>
           </Routes>
         </RouterProvider>
