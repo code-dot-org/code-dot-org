@@ -1312,25 +1312,41 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  test "add_skill adds a skill" do
+  test "add and remove skills" do
     level = create :level
     assert level.skills.empty?
-    skill = create :skill
-    post :add_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    refute level.skill_keys
+    # Add one skill, make sure it's as expected
+    skill_1 = create :skill
+    post :add_skill, params: {id: level.id, skillId: skill_1.id}
     assert_response :success
     level.reload
-    assert_equal [skill], level.skills
-  end
-
-  test "remove_skill removes a skill" do
-    level = create :level
-    skill = create :skill
-    create :levels_skill, level: level, skill: skill
-    assert_equal [skill], level.skills
-    post :remove_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_equal [skill_1], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys == [skill_1.key].to_json
+    # Add another skill, make sure both are expected
+    skill_2 = create :skill
+    post :add_skill, params: {id: level.id, skillId: skill_2.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_1, skill_2], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_1.key, skill_2.key].to_json
+    # Remove one skill, make sure it's gone but the other is still there
+    post :remove_skill, params: {id: level.id, skillId: skill_1.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_2], level.skills
+    refute level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_2.key].to_json
+    # Remove the last skill, make sure there are no skills left
+    post :remove_skill, params: {id: level.id, skillId: skill_2.id}
     assert_response :success
     level.reload
     assert level.skills.empty?
+    refute level.skill_keys
   end
 
   # Assert that the url is a real S3 url, and not a placeholder.

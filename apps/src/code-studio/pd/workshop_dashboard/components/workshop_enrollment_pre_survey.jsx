@@ -81,9 +81,9 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
               return (
                 <tr key={i}>
                   <td>{i + 1}</td>
-                  <td>{enrollment.first_name}</td>
-                  <td>{enrollment.last_name}</td>
-                  <td>{enrollment.email}</td>
+                  <td>{enrollment.user_info.given_name}</td>
+                  <td>{enrollment.user_info.family_name}</td>
+                  <td>{enrollment.user_info.email}</td>
                   <td>{survey && survey.unit ? survey.unit : 'No response'}</td>
                   <td>
                     {survey && survey.lesson ? survey.lesson : 'No response'}

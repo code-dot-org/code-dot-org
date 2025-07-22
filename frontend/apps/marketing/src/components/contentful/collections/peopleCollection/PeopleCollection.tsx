@@ -72,7 +72,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
 }) => {
   if (!people) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 People Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
@@ -118,13 +118,13 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               </Typography>
             )}
             {bio && (
-              <Typography variant="body2" component="p" sx={styles.bio}>
+              <Typography variant="body4" component="p" sx={styles.bio}>
                 {bio}
               </Typography>
             )}
             {personalLink && (
               <Link
-                variant="body2"
+                variant="body4"
                 href={personalLink?.fields?.primaryTarget}
                 target="_blank"
                 rel="noopener noreferrer"
