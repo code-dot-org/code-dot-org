@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useState} from 'react';
 
@@ -11,6 +12,7 @@ const CONFIRM_TIMEOUT_MS = 1500;
 
 const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
+  const {theme} = useTheme();
 
   return (
     <WithTooltip
@@ -19,6 +21,7 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
         direction: 'onRight',
         size: 'xs',
         text: showCopyConfirmation ? i18n.copied() : i18n.copy(),
+        theme,
         className: style.tooltip,
         iconLeft: showCopyConfirmation ? {iconName: 'check'} : undefined,
       }}
