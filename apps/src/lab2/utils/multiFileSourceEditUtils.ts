@@ -37,7 +37,7 @@ export const createNewFileHelper = (
   return activateFileHelper(newSource, fileId);
 };
 /**
- * Activate a file (open and make active).
+ * Activate a file (make active).
  */
 export const activateFileHelper = (
   source: MultiFileSource,
@@ -55,11 +55,11 @@ export const activateFileHelper = (
     newOpenFileIds.push(fileId);
   }
 
-  const newSource = {
+  const newSource: MultiFileSource = {
     ...source,
     files: {
       ...source.files,
-      [fileId]: {...source.files[fileId], active: true, open: true},
+      [fileId]: {...source.files[fileId], active: true},
     },
     openFiles: newOpenFileIds,
   };
@@ -83,11 +83,11 @@ export const closeFileHelper = (
 ): MultiFileSource => {
   const file = source.files[fileId];
 
-  const newSource = {
+  const newSource: MultiFileSource = {
     ...source,
     files: {
       ...source.files,
-      [fileId]: {...source.files[fileId], open: false, active: false},
+      [fileId]: {...source.files[fileId], active: false},
     },
     openFiles: source.openFiles?.filter(openFileId => openFileId !== fileId),
   };

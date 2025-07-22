@@ -1,6 +1,10 @@
 import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
 import {CodebridgeLevelProperties, MazeCell} from '@codebridge/types';
-import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
+import {
+  combineStartSourcesAndValidation,
+  findFile,
+  repairOpenFiles,
+} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -56,6 +60,16 @@ export const useInitialSources = (
       folderId: DEFAULT_FOLDER_ID,
     };
   };
+
+  const repairedServerSource = useMemo(() => {
+    if (initialServerSource) {
+      return {
+        ...initialServerSource,
+        source: repairOpenFiles(initialServerSource.source as MultiFileSource),
+      };
+    }
+    return initialServerSource;
+  }, [initialServerSource]);
 
   const generateProjectSourceFromStartSource = useCallback(
     (startCode: MultiFileSource) => {
@@ -164,7 +178,7 @@ export const useInitialSources = (
       return templateSources || startSources;
     }
 
-    const projectSources = initialServerSource;
+    const projectSources = repairedServerSource;
     return projectSources || templateSources || startSources;
   }, [
     levelStartSources,
@@ -175,7 +189,7 @@ export const useInitialSources = (
     predictSettings?.codeEditableAfterSubmit,
     isEditingExemplar,
     isViewingExemplar,
-    initialServerSource,
+    repairedServerSource,
     exemplarSources,
     serializedMaze,
   ]);

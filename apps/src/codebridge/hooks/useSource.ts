@@ -1,8 +1,5 @@
 import {CodebridgeLevelProperties} from '@codebridge/types';
-import {
-  prepareSourceForLevelbuilderSave,
-  repairOpenFiles,
-} from '@codebridge/utils';
+import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
@@ -93,13 +90,7 @@ export const useSource = (
       (levelId && previousLevelIdRef.current !== levelId) ||
       initialSources !== previousInitialSources.current
     ) {
-      const sourcesToSave: ProjectSources | null = initialSources
-        ? {
-            ...initialSources,
-            source: repairOpenFiles(initialSources.source as MultiFileSource),
-          }
-        : null;
-      if (sourcesToSave) {
+      if (initialSources) {
         // Set the last source in project manager to initial sources.
         // This prevents us from immediately saving the source on load,
         // as we only want to save when the user makes a change.
@@ -107,13 +98,13 @@ export const useSource = (
         // it again.
         Lab2Registry.getInstance()
           .getProjectManager()
-          ?.setLastSource(sourcesToSave);
-        setSourceHelper(sourcesToSave);
+          ?.setLastSource(initialSources);
+        setSourceHelper(initialSources);
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
-      previousInitialSources.current = sourcesToSave;
+      previousInitialSources.current = initialSources;
     }
   }, [initialSources, levelId, setSourceHelper]);
 
