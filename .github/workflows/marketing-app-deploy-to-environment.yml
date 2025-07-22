@@ -92,6 +92,7 @@ jobs:
         run: |
           bundle exec ruby deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
             --region ${{ vars.AWS_REGION }} \
+            --site_code ${{ vars.APPLICATION_SITE_CODE }} \
             --hosted_zone_id ${{ secrets.ROOT_HOSTED_ZONE_ID }} \
             --base_domain_name ${{ vars.APPLICATION_BASE_DOMAIN }} \
             --subdomain_name ${{ vars.APPLICATION_SUBDOMAIN_NAME }} \

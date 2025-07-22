@@ -37,6 +37,14 @@ opt_parser = OptionParser.new do |opts|
   end
 
   opts.on(
+    '--site_code SITE_CODE',
+    %w[corporate csforall],
+    "Site code (corporate csforall)",
+    ) do |site_code|
+    options[:site_code] = site_code
+  end
+
+  opts.on(
     '--region REGION',
     String,
     "AWS Region to deploy this marketing site",
@@ -218,6 +226,7 @@ begin
 
   missing_params = []
   missing_params << "hosted_zone_id" unless options[:hosted_zone_id]
+  missing_params << "site_code" unless options[:site_code]
   missing_params << "container_image_hash" unless options[:container_image_hash]
   missing_params << "web_application_server_secrets_arn" unless options[:web_application_server_secrets_arn]
   missing_params << "role_arn" unless options[:role_arn]

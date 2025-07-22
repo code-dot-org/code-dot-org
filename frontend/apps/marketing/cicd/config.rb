@@ -48,6 +48,24 @@ module MarketingSites
       us-west-2
     ].freeze
 
+    # Site configuration
+    SITES = {
+      # Code.org corporate website
+      corporate: {
+        env: {
+          CONTENTFUL_SPACE_ID: '90t6bu6vlf76',
+          CONTENTFUL_ENV_ID: 'master'
+        }
+      },
+      # CS For All
+      csforall: {
+        env: {
+          CONTENTFUL_SPACE_ID: '27jkibac934d',
+          CONTENTFUL_ENV_ID: 'master'
+        }
+      },
+    }
+
     class << self
       def regions
         @regions ||= build_dynamic_regions

@@ -2,6 +2,7 @@
 # Get region configuration and selected AZs from the new configuration structure
 region_config = MarketingSites::Configuration::regions[options[:region].to_sym]
 selected_azs = region_config[:selected_availability_zones]
+site_config = MarketingSites::Configuration::SITES[options[:site_code].to_sym]
 %>
 AWSTemplateFormatVersion: 2010-09-09
 
@@ -409,10 +410,6 @@ Resources:
             # such as the withRedirect middleware
             - Name: HOSTNAME
               Value: 0.0.0.0
-            - Name: CONTENTFUL_SPACE_ID
-              Value: 90t6bu6vlf76
-            - Name: CONTENTFUL_ENV_ID
-              Value: master
             - Name: CONTENTFUL_API_HOST
               Value: cdn.contentful.com
             - Name: CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID
@@ -438,6 +435,10 @@ Resources:
               Value: delta
             - Name: OTEL_EXPORTER_OTLP_ENDPOINT
               Value: https://otlp.nr-data.net
+<% site_config[:env].each do |environmentVariableName, value| %>
+            - Name: <%= environmentVariableName %>
+              Value: <%= value %>
+<% end %>
           Essential: true
           Image: !Sub "ghcr.io/code-dot-org/marketing@${ContainerImageHashDigest}"
           Name: web
