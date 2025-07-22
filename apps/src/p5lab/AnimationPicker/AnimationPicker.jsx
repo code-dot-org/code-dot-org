@@ -78,6 +78,7 @@ class AnimationPicker extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -137,6 +138,7 @@ class AnimationPicker extends React.Component {
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
+          uploadsEnabled={this.props.uploadsEnabled}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}

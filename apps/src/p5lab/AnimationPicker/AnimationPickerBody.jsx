@@ -44,6 +44,7 @@ export default class AnimationPickerBody extends React.Component {
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired, // default is false
   };
 
   state = {
@@ -245,6 +246,8 @@ export default class AnimationPickerBody extends React.Component {
         results.length === 0) &&
       !animationJsonMode;
 
+    const uploadsEnabled = this.props.uploadsEnabled;
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -257,7 +260,7 @@ export default class AnimationPickerBody extends React.Component {
         <h1 style={dialogStyles.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
         </h1>
-        {showDrawAndUploadButtons && (
+        {uploadsEnabled && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
@@ -301,13 +304,14 @@ export default class AnimationPickerBody extends React.Component {
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
-                <AnimationUploadButton
-                  onUploadClick={onUploadClick}
-                  shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
-                  isBackgroundsTab={isBackgroundsTab}
-                  appType={appType}
-                  // disabled={!this.props.uploadsEnabled} // Add disabled here if project flagged for abuse.
-                />
+                {uploadsEnabled && (
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+                    isBackgroundsTab={isBackgroundsTab}
+                    appType={appType}
+                  />
+                )}
               </div>
             )}
             {searchQuery === '' &&
