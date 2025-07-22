@@ -76,10 +76,6 @@ class AichatGeminiClient < AichatAiClient
 
   # Helper to format gemini "parts" array from internal representation.
   private def format_parts(internal_parts)
-    gemini_parts = []
-    internal_parts&.each do |internal_part|
-      gemini_parts << format_part(internal_part)
-    end
-    gemini_parts
+    internal_parts&.map {|internal_part| format_part(internal_part)}
   end
 end
