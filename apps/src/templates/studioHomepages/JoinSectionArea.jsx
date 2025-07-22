@@ -110,8 +110,8 @@ export default function JoinSectionArea({
 }
 
 JoinSectionArea.propTypes = {
-  initialJoinedStudentSections: shapes.sections,
-  initialJoinedPlSections: shapes.sections,
+  initialJoinedStudentSections: shapes.participantSections,
+  initialJoinedPlSections: shapes.participantSections,
   isTeacher: PropTypes.bool,
   isPlSections: PropTypes.bool,
 };

@@ -2,7 +2,7 @@
   "key": "course4",
   "display_name": "Course 4",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": "4,5",
@@ -17,5 +17,7 @@
   "published_date": "2016-05-06 09:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": null
+  "facilitator_course_permissions": [
+
+  ]
 }

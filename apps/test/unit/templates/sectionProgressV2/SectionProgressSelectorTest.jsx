@@ -11,7 +11,7 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowProgressTableV2,
   setProgressTableV2ClosedBeta,
@@ -24,8 +24,8 @@ import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/Secti
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
-const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
+const V1_PAGE_LINK_TEXT = 'Switch to the new progress view';
+const V2_PAGE_LINK_TEXT = 'Switch to legacy progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';
 
@@ -50,7 +50,7 @@ describe('SectionProgressSelector', () => {
 
     store = getStore();
     store.dispatch(setShowProgressTableV2(false));
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(1, 1));
 
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-default-v2', false);

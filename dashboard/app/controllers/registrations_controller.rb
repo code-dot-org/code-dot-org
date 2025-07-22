@@ -545,6 +545,7 @@ class RegistrationsController < Devise::RegistrationsController
       :username,
       :given_name,
       :family_name,
+      :educator_role,
       :password,
       :encrypted_password,
       :current_password,

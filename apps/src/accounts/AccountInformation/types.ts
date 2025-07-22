@@ -1,6 +1,7 @@
 interface UserProperties {
   gender_student_input?: string;
   us_state?: string;
+  educator_role?: string;
   [key: string]: unknown;
 }
 export interface AccountInformationProps {

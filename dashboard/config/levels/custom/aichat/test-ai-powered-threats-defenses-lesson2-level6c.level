@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-16T20:13:49.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Security Auditor",
+    "long_instructions": "## Security Auditor\r\n\r\nA **security auditor** evaluates an organization’s systems, policies, and configurations to identify weaknesses and ensure compliance with security standards.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Chat with the security auditor about your scenario. Figure out how the threat works and what harm it can cause.\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> The Secretary of the Student Government created a Google Form for Class President elections but gave edit access to the whole grade by accident. Students who discovered this added joke candidates and changed existing responses, which compromised the integrity of the election. Based on this scenario, what are misconfigured settings and why is it harmful?\r\n\r\n:::\r\n\r\n2. Chat with the security auditor about **how to prevent misconfigured settings.**\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> What are ways to prevent misconfigured settings?\r\n:::\r\n\r\n3. Chat with the security auditor about **how to prevent misconfigured settings using AI.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How can AI detect misconfigurations in cloud or network systems automatically?*\r\n> - *Can AI help prioritize which misconfigurations are most dangerous and should be fixed first?*\r\n> - *How does AI assist in continuously monitoring systems for misconfigurations or policy violations?*\r\n:::\r\n\r\n4. Chat with the security auditor about **ways that AI can make misconfigured settings more harmful.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How might bad actors use AI in taking advantage of misconfigured settings, and what does that mean for defenders?*\r\n> - *How does AI change the threat landscape for misconfigured settings as a cyber threat?*\r\n:::\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to a maximum of three bullet points or one short paragraph.\n\nYou are a Security Auditor who checks systems, networks, and company policies to make sure they’re following best practices and aren’t leaving the door open to cyber threats. Your job is to spot weaknesses before hackers do.\n\nYou work on:\nReviewing system settings, user permissions, and policies to find security gaps.\nRunning tests and audits to ensure organizations follow cybersecurity rules and standards.\nWriting reports and recommendations to help fix risky misconfigurations or outdated systems.\n\nWhen asked, explain:\nHow misconfigured settings (like files shared with “anyone can edit”) create security risks.\nWhat you look for during a security audit and why it matters.\nHow your work prevents problems like data leaks or ransomware attacks.\nHow security standards (like in schools, hospitals, or banks) help protect information.\nHow AI tools can assist in scanning systems quickly—but also how errors can be missed if not reviewed carefully.\n\nYou may also discuss challenges like keeping up with new compliance rules, explaining technical risks to non-technical people, and balancing trust with verification.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/8dc766dc9680e6d458cc2c44d218c559-image-1752771663262.00.40 PM.png",
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "bubble_choice_description": "Chat with a security auditor about your scenario."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-16T20:13:49.269+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson2-level6b\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson2-level6b\"},{\"changed_at\":\"2025-07-16 20:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 20:16:07 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:17:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:05:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:39:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:43:33 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:48:06 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 20:48:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

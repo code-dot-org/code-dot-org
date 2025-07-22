@@ -1,13 +1,35 @@
-import React from 'react';
+import MuiDivider from '@mui/material/Divider';
+import classNames from 'classnames';
+import React, {HTMLAttributes} from 'react';
 
-import DSCODivider, {
-  DividerProps,
-} from '@code-dot-org/component-library/divider';
+import type {SpacingProps} from '@/components/common/types';
 
-import moduleStyles from './divider.module.scss';
+export type DividerProps = HTMLAttributes<HTMLElement> & {
+  /** Divider color */
+  color?: 'primary' | 'strong';
+  /** Divider margin */
+  margin?: keyof SpacingProps;
+  /** Divider custom className */
+  className?: string;
+};
 
-const Divider: React.FC<DividerProps> = ({...props}) => {
-  return <DSCODivider {...props} className={moduleStyles.divider} />;
+const Divider: React.FC<DividerProps> = ({
+  color = 'primary',
+  margin = 'm',
+  className,
+}) => {
+  return (
+    <MuiDivider
+      className={classNames(
+        `divider--color-${color}`,
+        `divider--margin-${margin}`,
+        className,
+      )}
+      orientation="horizontal"
+      variant="fullWidth"
+      flexItem
+    />
+  );
 };
 
 export default Divider;

@@ -1,0 +1,54 @@
+name 'pl-java-class-design-instance-variable-info-9_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Declaring Instance Variables 
+
+## Instance Variables
+
+#### An instance variable is an attribute whose value is unique to each instance of the class. Take a look at this example of two instances of the Painter class. 
+
+<img src="https://images.code.org/cb0eb7706b1d58a98b4390c803a31fb5-image-1747670941479.png" alt="example of 2 instances of the painter class. Painter rosie and Painter amy" width="350px"  style="display: block; margin-left: auto; margin-right: auto;">
+
+
+
+## Creating an Instance Variable inside a class.
+
+   <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/b47cdebb252090176763c55b3b557c3c-image-1747671078597.png" alt="private int location;" width="150%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+            Sets the access of the instance variable to private so it cannot be accessed from outside of the class. 
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/9076be530a39c6e94a0acc40706dc675-image-1747671225974.png" alt="private int location;" width="150%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+              Defines the data type for the instance variable. If no value is assigned, a default value will be assigned.
+            </td>
+        </tr>
+        <tr>
+            <td width="33%">
+                <img src="https://images.code.org/44a883e98b107b9985af7f5735b80670-image-1747671175903.png" alt="private int location; " width="150%">
+            </td>
+            <td width="67%" style="font-size:14pt;">
+                Gives a name for the instance variable.
+            </td>
+        </tr>
+    </table>
+    
+<br>  
+
+## Sample class
+
+#### Here is an example of instance variables defined in a class titled Book. This indicates that each instance of a Book object will have a title, author, and year published. 
+
+<img src="https://images.code.org/ff791b18564ec10e88f4d26b804194f6-image-1747671502492.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;border-radius: 10px">
+
+## Let's practice! 
+MARKDOWN

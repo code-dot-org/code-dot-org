@@ -12,7 +12,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "gen-ai-spanish-test-a",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [

@@ -1,3 +1,5 @@
+// Validation helper file used in courseE_aboutme_3, courseE_aboutme_5, and their clones.
+
 /**
  * Checks if any sprite has active speech.
  *
