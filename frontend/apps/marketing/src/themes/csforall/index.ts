@@ -65,6 +65,28 @@ const theme = createTheme({
       fontWeight: 800,
       lineHeight: 1.25,
     },
+    body1: {
+      fontSize: '1.375rem', // 22px
+      fontWeight: 400,
+      lineHeight: 1.4,
+    },
+    body2: {
+      fontSize: '1.125rem', // 18px
+      fontWeight: 400,
+      lineHeight: 1.4,
+    },
+    body3: {
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontSize: '1rem', // 16px
+      fontWeight: 400,
+      lineHeight: 1.4,
+    },
+    body4: {
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontSize: '0.875rem', // 14px
+      fontWeight: 400,
+      lineHeight: 1.4,
+    },
     overline: {
       fontWeight: 400,
       lineHeight: 1.5,
