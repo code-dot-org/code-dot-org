@@ -26,6 +26,10 @@ Parameters:
     Type: String
     Default: development
     Description: Is this a 'development', 'test', or 'production' system?
+  SiteType:
+    Type: String
+    Default: corporate
+    Description: Code identifying the site type ('corporate', 'csforall', etc.)
   ContainerImageHashDigest:
     Type: String
     Description: The sha256sum of the marketing sites Next.js container image.
@@ -356,7 +360,7 @@ Resources:
   FargateServiceTaskDefTaskRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-role"
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SiteType}-${SubdomainName}-task"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -368,7 +372,7 @@ Resources:
   FargateServiceTaskDefExecutionRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-exec-role"
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SiteType}-${SubdomainName}-task-exec"
       AssumeRolePolicyDocument:
         Statement:
           - Action: sts:AssumeRole
@@ -409,10 +413,6 @@ Resources:
             # such as the withRedirect middleware
             - Name: HOSTNAME
               Value: 0.0.0.0
-            - Name: CONTENTFUL_SPACE_ID
-              Value: 90t6bu6vlf76
-            - Name: CONTENTFUL_ENV_ID
-              Value: master
             - Name: CONTENTFUL_API_HOST
               Value: cdn.contentful.com
             - Name: CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID
@@ -438,6 +438,10 @@ Resources:
               Value: delta
             - Name: OTEL_EXPORTER_OTLP_ENDPOINT
               Value: https://otlp.nr-data.net
+<% MarketingSites::Configuration.site_config(options[:site_type], options[:environment_type])[:environment_variables].each do |name, value| %>
+            - Name: <%= name %>
+              Value: <%= value %>
+<% end %>
           Essential: true
           Image: !Sub "ghcr.io/code-dot-org/marketing@${ContainerImageHashDigest}"
           Name: web

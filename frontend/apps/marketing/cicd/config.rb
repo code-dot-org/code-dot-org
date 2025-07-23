@@ -67,10 +67,18 @@ module MarketingSites
       # Site-specific configuration (applies to all environments for that site type)
       site_defaults: {
         corporate: {
-          contentful_space_id: '90t6bu6vlf76',
+          # Environment Variables to pass to the Next.js web application server.
+          environment_variables: {
+            CONTENTFUL_SPACE_ID: '90t6bu6vlf76',
+            CONTENTFUL_ENV_ID: 'master'
+          },
         }.freeze,
         csforall: {
-          contentful_space_id: '27jkibac934d',
+          # Environment Variables to pass to the Next.js web application server.
+          environment_variables: {
+            CONTENTFUL_SPACE_ID: '27jkibac934d',
+            CONTENTFUL_ENV_ID: 'master'
+          },
         }.freeze
       }.freeze,
 

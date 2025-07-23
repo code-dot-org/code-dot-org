@@ -106,6 +106,7 @@ jobs:
         working-directory: ./frontend/apps/marketing/cicd/3-app
         run: |
           bundle exec ruby deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
+            --site_type ${{ vars.SITE_TYPE }} \
             --region ${{ vars.AWS_REGION }} \
             --hosted_zone_id ${{ secrets.ROOT_HOSTED_ZONE_ID }} \
             --base_domain_name ${{ vars.APPLICATION_BASE_DOMAIN }} \
