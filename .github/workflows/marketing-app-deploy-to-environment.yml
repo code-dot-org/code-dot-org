@@ -39,7 +39,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: code-dot-org/marketing
-  GITHUB_ENVIRONMENT_NAME: marketing-sites-${{ input.ENVIRONMENT_TYPE }}-${{ input.SITE_TYPE }}
+  GITHUB_ENVIRONMENT_NAME: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
 
 concurrency:
   # Deployments are grouped by logical environment stages. For example, a push to staging will initiate deployment waves:
