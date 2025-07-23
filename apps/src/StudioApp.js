@@ -27,6 +27,7 @@ import {
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import msg from '@cdo/locale';
 
 import annotationList from './acemode/annotationList';
@@ -908,6 +909,25 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
+  }
+  // If a P5 project that allows custom uploaded images was flagged for abuse due to
+  // image moderation (abuse score == 15), starting the project over removes all
+  // user-uploaded images. Therefore, we unflag the project.
+  // Note: once a project is flagged for abuse, the user cannot upload additional custom images.
+  if (
+    ['spritelab', 'gamelab'].includes(
+      project.getStandaloneApp() && project.getAbuseScore() === 15
+    )
+  ) {
+    const body = JSON.stringify({
+      type: 'unflag',
+    });
+    HttpClient.post(
+      `/v3/channels/${this.props.channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    ).catch(err => console.error('Update abuse error', err));
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
