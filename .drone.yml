@@ -39,24 +39,27 @@ steps:
         bin/drone/vscode $hostname
         EOF
 
-  # We cache a clone of staging in the `cache-staging-clone` pipeline
-  - name: get-cached-staging
+  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  - name: get-cached-staging-build
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
     settings:
-      filename: cache-staging-clone.tar.gz
+      filename: cache-staging-full-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
-      mount:
-        - .
 
   - name: checkout
     image: bitnami/git
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'WARNING: get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -70,15 +73,6 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
-  # - name: restore-cache
-  #   image: plugins/s3-cache
-  #   settings:
-  #     endpoint: s3://cdo-drone
-  #     debug: true
-  #     pull: true
-  #     restore: true
-  #     filename: unit-tests-cache-ubuntu-20.tar.gz
-
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
@@ -87,8 +81,6 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     environment:
       CI_JOB: 'unit_tests'
       # Each Drone secret below must be explicitly written to locals.yml in /docker/ci/scripts/unit_tests.sh
@@ -97,10 +89,8 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
+      # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
-      - rm -rf "$(pwd)/home/ci/.rbenv"
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -126,8 +116,6 @@ steps:
 
 volumes:
   - name: rbenv
-    temp: {}
-  - name: mysql
     temp: {}
 
 trigger:
@@ -174,23 +162,28 @@ steps:
         EOF
 
   # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
-  - name: get-cached-staging-clone
+  - name: get-cached-staging-build
     image: plugins/s3-cache
+    volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
+      - name: rbenv
+        path: /drone/src/home/ci/.rbenv
+      - name: mysql
+        path: /drone/src/var/lib/mysql
     settings:
-      filename: cache-staging-clone.tar.gz
+      filename: cache-staging-full-build.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
-      mount:
-        - .
 
   - name: checkout
     image: bitnami/git
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
-      - "[ -d .git ] || (echo 'get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
       # Checkout our source branch (the PR's branch).
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
@@ -204,24 +197,6 @@ steps:
       - git config user.name "Drone"
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
-
-  # # We cache staging's rbenv and database in the
-  # # `cache-staging-build-artifacts` pipeline.
-  # - name: get-cached-staging-misc-build-artifacts
-  #   image: plugins/s3-cache
-  #   volumes:
-  #     # Even files cached with absolute paths will be restored into the
-  #     # workdir; so for this step, we mount the relevant volumes there, too.
-  #     - name: rbenv
-  #       path: /drone/src/home/ci/.rbenv
-  #     - name: mysql
-  #       path: /drone/src/var/lib/mysql
-  #   settings:
-  #     filename: cache-staging-misc-build-artifacts.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     restore: true
-  #     debug: true
-  #     pull: true
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
