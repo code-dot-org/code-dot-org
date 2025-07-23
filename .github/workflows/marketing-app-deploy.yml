@@ -119,7 +119,6 @@ jobs:
       CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
     strategy:
       fail-fast: true
-      max-parallel: 1
       matrix:
         SITE_TYPE: [ corporate ]
         ENVIRONMENT_TYPE: [ test, production ]
