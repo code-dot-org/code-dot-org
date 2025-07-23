@@ -30,7 +30,7 @@ const theme = createTheme({
       black: COLORS.black,
     },
     background: {
-      default: '#F4F3F2',
+      default: COLORS.backgroundPrimary,
     },
   },
   components: STYLE_OVERRIDES,
