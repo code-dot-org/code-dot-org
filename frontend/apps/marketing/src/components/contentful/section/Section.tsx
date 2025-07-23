@@ -51,10 +51,7 @@ export const sectionDivider: {
 export interface SectionProps {
   /** Background color */
   background?: SectionBackground;
-  /** Vertical spacing
-    This is using `margin` in the MUI theme overrides, but keeping this
-    as-is so it'll work with the legacy `padding` variable in Contentful.
-    */
+  /** Vertical padding */
   padding?: keyof Exclude<SpacingProps, 'none' | 'xs' | 's'>;
   /** Section theme */
   theme?: 'Light' | 'Dark';

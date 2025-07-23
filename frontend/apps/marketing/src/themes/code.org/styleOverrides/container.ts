@@ -11,30 +11,20 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
       },
       // Spacing styles
       '&.MuiContainer-root.container--spacing-l': {
-        marginTop: theme.spacing(8),
-        marginBottom: theme.spacing(8),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
       },
       '&.MuiContainer-root.container--spacing-m': {
-        marginTop: theme.spacing(5),
-        marginBottom: theme.spacing(5),
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
       },
       // Divider styles
       '&.MuiContainer-root.container--divider-primary': {
         borderBottom: `1px solid var(--background-neutral-quaternary)`,
-        marginBottom: 0,
       },
       '&.MuiContainer-root.container--divider-strong': {
         borderBottom: `1px solid var(--background-neutral-senary)`,
-        marginBottom: 0,
       },
-      '&.MuiContainer-root.container--spacing-l.container--divider-primary, &.MuiContainer-root.container--spacing-l.container--divider-strong':
-        {
-          paddingBottom: theme.spacing(8),
-        },
-      '&.MuiContainer-root.container--spacing-m.container--divider-primary, &.MuiContainer-root.container--spacing-m.container--divider-strong':
-        {
-          paddingBottom: theme.spacing(5),
-        },
       // Background styles
       '.section-background-primary:has(&.MuiContainer-root)': {
         backgroundColor: 'var(--background-neutral-primary)',

@@ -10,12 +10,12 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
       },
       // Spacing styles
       '&.MuiContainer-root.container--spacing-l': {
-        marginTop: theme.spacing(7),
-        marginBottom: theme.spacing(7),
+        paddingTop: theme.spacing(7),
+        paddingBottom: theme.spacing(7),
       },
       '&.MuiContainer-root.container--spacing-m': {
-        marginTop: theme.spacing(5),
-        marginBottom: theme.spacing(5),
+        paddingTop: theme.spacing(5),
+        paddingBottom: theme.spacing(5),
       },
       // Background styles
       '.section-background-primary:has(&.MuiContainer-root)': {
