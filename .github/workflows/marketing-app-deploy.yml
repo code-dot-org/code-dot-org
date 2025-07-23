@@ -120,5 +120,5 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        SITE_TYPE: [ corporate ]
+        SITE_TYPE: [ corporate, csforall ]
         ENVIRONMENT_TYPE: [ test, production ]
