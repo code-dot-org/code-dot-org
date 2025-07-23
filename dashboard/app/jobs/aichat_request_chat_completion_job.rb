@@ -127,6 +127,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_start(request)
     @start_time = Time.now
+
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
         {
@@ -146,30 +147,47 @@ class AichatRequestChatCompletionJob < ApplicationJob
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
-    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
-      [
-        {
-          metric_name: "#{self.class.name}.Finish",
-          value: 1,
-          unit: 'Count',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-            {name: 'ExecutionStatus', value: status_name},
-          ],
-        },
-        {
-          metric_name: "#{self.class.name}.ExecutionTime",
-          value: execution_time,
-          unit: 'Seconds',
-          timestamp: Time.now,
-          dimensions: [
-            {name: 'Environment', value: CDO.rack_env},
-            {name: 'ModelId', value: get_model_id(request)},
-          ],
-        }
-      ]
-    )
+
+    execution_time_metric_base = {
+      metric_name: "#{self.class.name}.ExecutionTime",
+      value: execution_time,
+      unit: 'Seconds',
+      timestamp: Time.now,
+      dimensions: [],
+    }
+
+    execution_time_dimensions_base = [
+      {name: 'Environment', value: CDO.rack_env},
+      {name: 'ModelId', value: get_model_id(request)},
+    ]
+
+    metrics = [
+      {
+        metric_name: "#{self.class.name}.Finish",
+        value: 1,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env},
+          {name: 'ModelId', value: get_model_id(request)},
+          {name: 'ExecutionStatus', value: status_name},
+        ],
+      },
+      execution_time_metric_base.merge({dimensions: execution_time_dimensions_base}),
+    ]
+
+    model_id = get_model_id(request)
+    if openai_or_gemini?(model_id)
+      multimodal_dimension = {name: 'Multimodal', value: request_multimodal?(request).to_s}
+      execution_time_metric_multimodal = execution_time_metric_base.merge({dimensions: execution_time_dimensions_base + [multimodal_dimension]})
+      metrics.push(execution_time_metric_multimodal)
+    end
+
+    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+  end
+
+  private def request_multimodal?(request)
+    (request.new_message['assets']&.length || 0) > 0 ||
+      request.stored_messages.any? {|message| (message['assets']&.length || 0) > 0}
   end
 end
