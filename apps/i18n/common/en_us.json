@@ -262,7 +262,7 @@
   "animationPicker_error": "Error: {message}",
   "animationPicker_failedToParseImage": "The image could not be parsed",
   "animationPicker_flaggedImageModalTitle": "Warning: Inappropriate Image",
-  "animationPicker_flaggedImageNoShare": "This image has been flagged as inappropriate. By accepting this image in your project, you will be unable to share the project with others.",
+  "animationPicker_flaggedImageNoShare": "This image has been flagged as inappropriate. By accepting this image in your project, you will be unable to share the project with others and uploading additional images will not be allowed.",
   "animationPicker_flaggedImageUndoStartOver": "If you change your mind after accepting this image, you can start over in Version History to undo this change.",
   "animationPicker_leaveSelectionText": "Any selected {contextName}s will not be added to your project.",
   "animationPicker_leaveSelectionTitle": "Leave the Library?",
