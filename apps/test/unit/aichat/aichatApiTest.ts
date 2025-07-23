@@ -144,7 +144,7 @@ describe('aichatApi', () => {
           newMessage: chatMessage,
           storedMessages,
           modelParameters,
-          aichatContext: aichatContext,
+          aichatContext,
         })
       );
 
