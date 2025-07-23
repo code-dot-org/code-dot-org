@@ -182,7 +182,6 @@ class AnimationPicker extends React.Component {
     })
       .then(response => response.json())
       .then(json => {
-        console.log('In AnimationPickerImage moderation rating:', json.rating);
         // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
         if (json.rating !== 'everyone' && json.rating !== 'unknown') {
           this.setState({
@@ -211,7 +210,7 @@ class AnimationPicker extends React.Component {
       .then(() => {
         this.props.onUploadStart(pendingUploadData);
       })
-      .catch(err => console.log('update abuse error', err))
+      .catch(err => console.error('Update abuse error:', err))
       .finally(() => {
         this.setState({
           showFlaggedModal: false,
