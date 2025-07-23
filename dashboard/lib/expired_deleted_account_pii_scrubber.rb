@@ -20,6 +20,8 @@ class ExpiredDeletedAccountPiiScrubber
   alias :dry_run? :dry_run
 
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
+  SLACK_CHANNEL_FOR_SUMMARY = 'cron-daily'
+  SLACK_CHANNEL_FOR_ERRORS = 'user-accounts'
   ACCOUNT_SCRUB_LIMIT = 8_000
 
   # @param dry_run [Boolean] If true, no accounts will actually be scrubbed.
@@ -64,7 +66,7 @@ class ExpiredDeletedAccountPiiScrubber
     end
 
     log_to_slack(summary)
-    log_to_slack(summary, 'user-accounts') if @num_errors.positive?
+    log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if @num_errors.positive?
   end
 
   def accounts_to_scrub
@@ -120,7 +122,7 @@ class ExpiredDeletedAccountPiiScrubber
     CDO.log.info({event: message, namespace: LOGGING_NAMESPACE})
   end
 
-  private def log_to_slack(message, channel = 'cron-daily', options = {})
+  private def log_to_slack(message, channel = SLACK_CHANNEL_FOR_SUMMARY, options = {})
     ChatClient.message(channel, prefixed(message), options)
   end
 
