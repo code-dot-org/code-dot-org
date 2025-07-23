@@ -20,6 +20,13 @@ inputs:
   GITHUB_ENVIRONMENT_NAME:
     description: "The name of the GitHub environment to use for this action"
     required: false
+  BRANCHED_TESTING_ENABLED:
+    description: "Whether branched testing is enabled. Defaults to false"
+    default: "false"
+    required: false
+  PR_HEAD_REF:
+    description: "The head ref of the pull request."
+    required: false
 
 runs:
   using: composite
@@ -43,6 +50,8 @@ runs:
         STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
         NEXT_PUBLIC_STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
         APPLICATION_BASE_ADDRESS: ${{ inputs.APPLICATION_BASE_ADDRESS }}
+        BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
+        PR_HEAD_REF: ${{ inputs.PR_HEAD_REF }}
       run: yarn workspace @code-dot-org/marketing test:ui:ci
       working-directory: ./frontend
 
