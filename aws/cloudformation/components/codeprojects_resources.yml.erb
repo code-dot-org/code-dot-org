@@ -4,7 +4,22 @@
 # 
 # This template component includes resources for the codeprojects.org
 # infrastructure. Currently this is mostly manually deployed.
+#
+# Notes during IaC adoption:
+#
+# Domains:
+# - staging.codeprojects.org
+# - test.codeprojects.org
+# - codeprojects.org
+# - www.codeprojects.org
+# - static.codeprojects.org
+# - bramble-download.codeprojects.org
+# - adhoc-bethany-nginx-update.codeprojects.org
+# - localhost.codeprojects.org
+# - localhost.preview.codeprojects.org
+# - localhost.staging.codeprojects.org
 # 
+# Therefore we're using <env>.codeprojects.org, except in prod, where we use the base domain.
 # -----------------------------------------------
 
 <%- if rack_env?(:staging) -%>
@@ -30,13 +45,36 @@ LocalhostPreviewCodeprojectsRecord:
       - 127.0.0.1
 <%- end -%>
 
+# Hosted Zone for <env>.codeprojects.org
+CodeprojectsHostedZone:
+  Type: AWS::Route53::HostedZone
+  Properties:
+    Name: !Sub ${AWS::StackName}.codeprojects.org
+
+# NS record in codeprojects.org to make the above hosted zone authoritative.
+# Alternatively, this could be manually created by an Admin.
+ZoneAuthorityRecord:
+  Type: AWS::Route53::RecordSet
+  Properties:
+    HostedZoneId: <%= CDO.codeprojects_hostedzone_id %> # TODO - no erb
+    Name: !Sub ${AWS::StackName}.codeprojects.org
+    Type: NS
+    TTL: 3600
+    ResourceRecords:
+      - !GetAtt CodeprojectsHostedZone.NameServers.0
+      - !GetAtt CodeprojectsHostedZone.NameServers.1
+      - !GetAtt CodeprojectsHostedZone.NameServers.2
+      - !GetAtt CodeprojectsHostedZone.NameServers.3
+
 CodeprojectsCertificate:
   Type: AWS::CertificateManager::Certificate
   Properties:
-    DomainName: <%= CDO.codeprojects_hostname %>
+    DomainName: !Sub ${AWS::StackName}.codeprojects.org
     <%- if rack_env?(:production) -%>
     SubjectAlternativeNames:
       - www.<%= CDO.codeprojects_hostname %>
+      - static.<%= CDO.codeprojects_hostname %>
+      - bramble-download.<%= CDO.codeprojects_hostname %>
     <%- end -%>
     ValidationMethod: DNS
     DomainValidationOptions:
