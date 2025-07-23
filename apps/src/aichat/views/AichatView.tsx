@@ -12,9 +12,11 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -36,6 +38,7 @@ import {
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
+  clearHasSetStartingCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
@@ -93,6 +96,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
+  );
+
+  const hasSetStartingCustomizations = useAppSelector(
+    state => state.aichat.hasSetStartingCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -274,6 +281,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     );
   }, [dispatch]);
 
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(clearHasSetStartingCustomizations());
+  });
+
   // Only recreate modelParameters when relevant customizations are updated.
   const modelParameters: ModelParameters = useMemo(() => {
     return {
@@ -378,16 +389,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              <ChatWorkspace
-                modelParameters={modelParameters}
-                onClear={onClear}
-                levelName={levelName}
-                channelId={channelId}
-                hasStarterAssets={
-                  starterAssets && Object.keys(starterAssets).length > 0
-                }
-                multimodalEnabled={levelAichatSettings?.multimodalEnabled}
-              />
+              {hasSetStartingCustomizations && (
+                <ChatWorkspace
+                  modelParameters={modelParameters}
+                  onClear={onClear}
+                  levelName={levelName}
+                  channelId={channelId}
+                  hasStarterAssets={
+                    starterAssets && Object.keys(starterAssets).length > 0
+                  }
+                  multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                />
+              )}
             </PanelContainer>
           </div>
         </div>

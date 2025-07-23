@@ -1,11 +1,10 @@
-import OpenInNew from '@mui/icons-material/OpenInNew';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import {EntryFields} from 'contentful';
 import {useMemo, useId} from 'react';
 
+import Link from '@/components/contentful/link';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -46,8 +45,7 @@ const styles = {
     borderRadius: '50%',
   },
   overline: {
-    // TODO: replace this w/ theme palette value
-    color: '#4C5661',
+    color: 'var(--text-neutral-quaternary)',
     marginTop: 1,
     marginBottom: 1.5,
   },
@@ -55,13 +53,7 @@ const styles = {
     textAlign: 'center',
   },
   personalLink: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 0.5,
-    marginTop: 1,
-    'html[dir="rtl"] & svg': {
-      transform: 'scaleX(-1)',
-    },
+    marginTop: 1.5,
   },
 };
 
@@ -73,7 +65,7 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
 }) => {
   if (!people) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 People Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
@@ -119,21 +111,21 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               </Typography>
             )}
             {bio && (
-              <Typography variant="body2" component="p" sx={styles.bio}>
+              <Typography variant="body4" component="p" sx={styles.bio}>
                 {bio}
               </Typography>
             )}
             {personalLink && (
-              <Link
-                variant="body2"
-                href={personalLink?.fields?.primaryTarget}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={styles.personalLink}
-              >
-                Visit personal page
-                <OpenInNew fontSize="small" color="primary" />
-              </Link>
+              <Box sx={styles.personalLink}>
+                <Link
+                  size="s"
+                  href={personalLink?.fields?.primaryTarget}
+                  isLinkExternal
+                  removeMarginBottom
+                >
+                  Visit personal page
+                </Link>
+              </Box>
             )}
           </Box>
         ),

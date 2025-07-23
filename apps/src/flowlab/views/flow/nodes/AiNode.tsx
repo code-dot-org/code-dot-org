@@ -4,6 +4,7 @@ import {
   Position,
   Handle,
   useReactFlow,
+  NodeResizer,
   type Node,
   type NodeProps,
 } from '@xyflow/react';
@@ -30,7 +31,8 @@ export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];
 function AiNode({
   id,
   data,
-}: NodeProps<Node<{fieldText: string; askedText: string}>>) {
+  selected,
+}: NodeProps<Node<{fieldText: string; askedText: string; selected: boolean}>>) {
   const {updateNodeData} = useReactFlow();
   const contextString = useInputTexts().join('\n');
 
@@ -136,7 +138,26 @@ function AiNode({
   };
 
   return (
-    <div>
+    <div
+      className="nowheel"
+      style={{
+        width: '100%',
+        height: '100%',
+        minWidth: 200,
+        minHeight: 100,
+        maxWidth: 380,
+        maxHeight: 380,
+      }}
+    >
+      <NodeResizer
+        color="#ff0071"
+        isVisible={selected}
+        minWidth={220}
+        minHeight={140}
+        maxWidth={400}
+        maxHeight={400}
+      />
+
       <Handle
         type="target"
         position={Position.Left}

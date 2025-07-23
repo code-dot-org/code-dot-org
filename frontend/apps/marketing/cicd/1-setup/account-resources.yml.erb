@@ -461,6 +461,7 @@ Resources:
                   - iam:TagRole
                   - iam:GetRolePolicy
                   - iam:ListRolePolicies
+                  - iam:PutRolePermissionsBoundary
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
 
               - Sid: AllowPermissionsBoundaryPolicyAccess

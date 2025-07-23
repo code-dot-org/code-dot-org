@@ -4,15 +4,6 @@ import ActionBlock, {
 import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
-import AdoptionMap, {
-  AdoptionMapContentfulComponentDefinition,
-} from '@/components/contentful/adoptionMap';
-import AFEEligibility, {
-  AFEEligibilityContentfulComponentDefinition,
-} from '@/components/contentful/afeEligibility';
-import Button, {
-  ButtonContentfulComponentDefinition,
-} from '@/components/contentful/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -31,11 +22,23 @@ import LogoCollection, {
 import PeopleCollection, {
   PeopleCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/peopleCollection';
+import AdoptionMap, {
+  AdoptionMapContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/adoptionMap';
+import AFEEligibility, {
+  AFEEligibilityContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/afeEligibility';
+import Button, {
+  ButtonLegacyContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/buttonLegacy';
+import {DoubleTheDonationContentfulComponentDefinition} from '@/components/contentful/corporateSite/doubleTheDonation';
+import DoubleTheDonation from '@/components/contentful/corporateSite/doubleTheDonation/DoubleTheDonation';
+import YourSchool, {
+  YourSchoolContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/yourSchool';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
-import {DoubleTheDonationContentfulComponentDefinition} from '@/components/contentful/doubleTheDonation';
-import DoubleTheDonation from '@/components/contentful/doubleTheDonation/DoubleTheDonation';
 import EditorialCard, {
   EditorialCardContentfulComponentDefinition,
 } from '@/components/contentful/editorialCard';
@@ -96,9 +99,6 @@ import Testimonial, {
 import Video, {
   VideoContentfulComponentDefinition,
 } from '@/components/contentful/video';
-import YourSchool, {
-  YourSchoolContentfulComponentDefinition,
-} from '@/components/contentful/yourSchool';
 
 const contentfulRegistration = {
   componentRegistrations: [
@@ -124,7 +124,10 @@ const contentfulRegistration = {
       component: AFEEligibility,
       definition: AFEEligibilityContentfulComponentDefinition,
     },
-    {component: Button, definition: ButtonContentfulComponentDefinition},
+    {
+      component: Button,
+      definition: ButtonLegacyContentfulComponentDefinition,
+    },
     {
       component: ActionBlockCollection,
       definition: ActionBlockCollectionContentfulComponentDefinition,

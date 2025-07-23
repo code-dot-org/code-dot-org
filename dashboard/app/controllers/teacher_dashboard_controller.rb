@@ -64,7 +64,7 @@ class TeacherDashboardController < ApplicationController
     render json: {
       showSchoolInfoInterstitial: show_school_info_interstitial,
       showSchoolInfoConfirmation: show_school_info_confirmation,
-      schoolInfo: school_info,
+      existingSchoolInfo: school_info,
     }
   end
 end

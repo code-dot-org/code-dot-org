@@ -39,7 +39,7 @@
     border-radius: var(--xy-node-border-radius-default);
     background-color: var(--xy-node-background-color-default);
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
     padding: 10px;
@@ -165,22 +165,37 @@
     pointer-events: all;
     transform-origin: center;
 
-    max-width: 200px;
-    max-height: 20px;
+    width: 50px;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
     font-size: 6px;
     line-height: 1.2em;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 4px;
     border-radius: 6px;
-    opacity: 0.9;
+    opacity: 1;
   }
 
-  .outputnode-markdown {
+  .resultnode-markdown {
     h1, h2, h3, h4, p, ol, ul, li {
       font-size: 0.5rem;
       text-align: initial;
       line-height: 1.2;
+    }
+
+    pre {
+      text-align: left;
+      line-height: 1;
+    }
+
+    code {
+      font-size: 0.4rem;
+      line-height: 2;
+    }
+
+    pre > code {
+      line-height: 1;
     }
   }
 
@@ -190,5 +205,9 @@
     resize: none;
     font-size: 0.5rem;
     line-height: 1.2;
+    box-sizing: border-box;
+    height: calc(100% - 45px);
+    width: 100%;
+    min-width: 200px;
   }
 }
