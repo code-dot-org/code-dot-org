@@ -55,7 +55,7 @@ jobs:
   # See: https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service
   deploy:
     runs-on: ubuntu-24.04
-    environment: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
 
     permissions:
       # Allows Github to retrieve AWS credentials via OIDC
