@@ -28,7 +28,6 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
             {i18n.animationPicker_flaggedImageNoShare()}
           </BodyTwoText>
           <BodyTwoText>
-            {' '}
             {i18n.animationPicker_flaggedImageUndoStartOver()}
           </BodyTwoText>
         </div>

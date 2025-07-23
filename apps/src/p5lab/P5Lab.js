@@ -302,7 +302,9 @@ export default class P5Lab {
       // user-uploaded images. Therefore, we unflag the project.
       // Note: once a project is flagged for abuse, the user cannot upload additional custom images.
       if (
-        ['spritelab', 'gamelab'].includes(project.getStandaloneApp()) &&
+        ['gamelab', 'poetry', 'spritelab'].includes(
+          project.getStandaloneApp()
+        ) &&
         project.getAbuseScore() === 15
       ) {
         const body = JSON.stringify({
