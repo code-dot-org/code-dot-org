@@ -1484,6 +1484,17 @@ class SectionTest < ActiveSupport::TestCase
     refute si.deleted?
   end
 
+  test 'section grants access to AI Chat when DCDO flag enabled' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    section = create :section, unit_group: unit_group
+
+    refute section.assigned_ai_chat?
+    DCDO.stubs(:get).with('aichat_access_units', []).returns([script.name])
+    assert section.assigned_ai_chat?
+  end
+
   def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
