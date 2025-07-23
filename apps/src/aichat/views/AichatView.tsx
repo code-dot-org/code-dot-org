@@ -30,6 +30,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getUserHasAichatAccess} from '../aichatApi';
+import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
@@ -94,6 +95,8 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   );
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
@@ -122,6 +125,16 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     });
   }, [projectManager, dispatch]);
 
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    ChatEventLogger.initialize({
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
+      currentLevelId: parseInt(currentLevelId || ''),
+      scriptId,
+      channelId,
+    });
+  }, [currentLevelId, scriptId, channelId]);
+
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(
       (initialSources?.source as string) || '{}'
@@ -130,12 +143,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       setStartingAiCustomizations({
         levelAichatSettings,
         studentAiCustomizations,
-      })
-    );
-    dispatch(
-      addChatEvent({
-        timestamp: Date.now(),
-        descriptionKey: 'LOAD_LEVEL',
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
