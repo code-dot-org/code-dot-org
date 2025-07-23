@@ -64,7 +64,7 @@ geocoder_redis_url: 'redis://ci-tests-redis:6379/0/geocoder'
 session_store_server: 'redis://ci-tests-redis:6379/0/session'
 no_https_store: true
 netsim_redis_groups:
-- master: redis://ui-tests-redis:6379
+- master: redis://ci-tests-redis:6379
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
 saucelabs_tunnel_name: cdo-tunnel-$CI_BUILD_NUMBER
