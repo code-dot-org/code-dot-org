@@ -22,17 +22,17 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       Honeybadger.stubs(:notify)
     end
 
-    it 'should run the PII scrub service on expired deleted accounts' do
+    it 'runs the PII scrub service on expired deleted accounts' do
       expect(Services::User::PiiScrubber).to receive(:call).with(user: user)
       scrub_pii
     end
 
-    it 'should increment num_accounts_scrubbed' do
+    it 'increments num_accounts_scrubbed' do
       scrub_pii
       _(described_instance.send(:num_accounts_scrubbed)).must_equal 1
     end
 
-    it 'should upload metrics' do
+    it 'uploads metrics' do
       expect(Cdo::Metrics).to receive(:push)
       scrub_pii
     end
@@ -40,7 +40,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     context 'when dry run' do
       let(:dry_run) {true}
 
-      it 'should not call the PII scrub service' do
+      it 'does not call the PII scrub service' do
         expect(Services::User::PiiScrubber).not_to receive(:call)
         scrub_pii
       end
@@ -51,12 +51,12 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
         expect(described_instance).to receive(:scrub_user).and_raise(StandardError.new('Test error'))
       end
 
-      it 'should increment num_errors' do
+      it 'increments num_errors' do
         scrub_pii
         _(described_instance.send(:num_errors)).must_equal 1
       end
 
-      it 'should notify Honeybadger' do
+      it 'notifies Honeybadger' do
         expect(Honeybadger).to receive(:notify).with(
           instance_of(StandardError),
           context: {user_id: user.id}
@@ -73,18 +73,18 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       user.update(deleted_at: older_than_ttl_date)
     end
 
-    it 'should return accounts deleted before the scrub cutoff' do
+    it 'returns accounts deleted before the scrub cutoff' do
       _(accounts_to_scrub).must_include user
     end
 
-    it 'should not return accounts deleted after the scrub cutoff' do
+    it 'does not return accounts deleted after the scrub cutoff' do
       user.update(deleted_at: newer_than_ttl_date)
       _(accounts_to_scrub).wont_include user
     end
 
     context 'when the number of accounts exceeds max_accounts_to_scrub' do
       let(:max_accounts_to_scrub) {0}
-      it 'should raise a SafetyConstraintViolation' do
+      it 'raises a SafetyConstraintViolation' do
         _(proc {accounts_to_scrub}).must_raise described_class::SafetyConstraintViolation
       end
     end
