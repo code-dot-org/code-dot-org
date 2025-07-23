@@ -7,7 +7,6 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 
 import * as blockUtils from '../../block_utils';
@@ -22,7 +21,6 @@ import {
   ToolboxType,
 } from '../constants';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
-import cdoDark from '../themes/cdoDark';
 import cdoTheme from '../themes/cdoTheme';
 import {
   BlockColor,
@@ -395,47 +393,37 @@ export function getField(type: string) {
 }
 
 /**
- * Returns a theme object, based on user preferences, localStorage, and the current theme.
- *
- * @param {Theme} currentTheme - A fallback theme provided by the caller.
- * @returns {Promise<GoogleBlockly.Theme>} A resolved Blockly theme object.
+ * Returns a theme object, based on the presence of an option in the browser's localStorage.
+ * @param {?Theme} themeOption
+ * @returns {?Blockly.Field}
  */
-export async function getUserTheme(
-  currentTheme: GoogleBlockly.Theme | undefined
-): Promise<GoogleBlockly.Theme> {
+export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
   if (Blockly.isJigsaw) {
     // Jigsaw uses its own custom theme with an extra large font size.
     // Blocks use hard-coded colors instead of styles, so switching
     // palettes is not possible.
     return Blockly.themes.jigsaw;
   }
-
-  const userPrefs = new UserPreferences();
-  const userThemePreference = await userPrefs.getBlocklyTheme(() => {});
   // Today we only store the theme's base name in localStorage, which never includes 'dark'.
   // Until March, 2024 we stored the full theme name, so we need to convert it now.
   // getBaseName strips the 'dark' suffix from a theme name, if present.
-  const browserThemePreference = getBaseName(localStorage.blocklyTheme);
+  const localStorageThemeBaseName = getBaseName(localStorage.blocklyTheme);
 
-  // Prioritize persistent user preference over local browser preference.
-  const themePreference = userThemePreference || browserThemePreference;
-
-  if (!themePreference) {
-    // The user has not indicated a preference, so we use the lab theme or a safe default.
-    return currentTheme || getDefaultTheme();
+  // For labs that use dark mode by default, ensure we are returning a dark theme.
+  if (themeOption?.name.endsWith(DARK_THEME_SUFFIX)) {
+    return localStorageThemeBaseName
+      ? Blockly.themes[
+          (localStorageThemeBaseName + DARK_THEME_SUFFIX) as Themes
+        ]
+      : themeOption;
+  } else {
+    // For all other labs, return a light mode theme.
+    return (
+      Blockly.themes[localStorageThemeBaseName as Themes] ||
+      themeOption ||
+      cdoTheme
+    );
   }
-
-  // The base theme name is the name of the theme, always without the 'dark' suffix.
-  // If the user is in dark mode, we append the 'dark' suffix to the base theme name.
-  const fullThemeName =
-    themePreference + (Blockly.isDarkTheme ? DARK_THEME_SUFFIX : '');
-  const userTheme = Blockly.themes[fullThemeName as Themes];
-  return userTheme || currentTheme || getDefaultTheme();
-}
-
-// Returns the default theme based on Blockly.isDarkTheme.
-export function getDefaultTheme() {
-  return Blockly.isDarkTheme ? cdoDark : cdoTheme;
 }
 
 /**

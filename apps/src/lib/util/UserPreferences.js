@@ -163,81 +163,31 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     }
   }
 
-  /**
-   * Fetches all user theme settings (e.g., global, blockly).
-   * @param {function} [errorCallback]
-   */
-  async getThemeSettings(errorCallback) {
+  async getGlobalTheme(errorCallback) {
     try {
       const themeResponse = await HttpClient.fetchJson(
         '/user_preference/theme'
       );
-      return themeResponse.value?.theme;
+      return themeResponse.value?.theme?.global;
     } catch (error) {
       // Don't call the error callback if 'Not found', as it just means the
       // user has not set a theme yet.
-      if (error?.response?.status !== 404) {
-        return errorCallback(error) ?? null;
+      if (error.response.status !== 404) {
+        errorCallback(error);
       }
       return null;
     }
   }
 
-  /**
-   * Fetches the user's global theme preference.
-   * @param {function} [errorCallback]
-   */
-  async getGlobalTheme(errorCallback) {
-    const theme = await this.getThemeSettings(errorCallback);
-    return theme?.global ?? null;
-  }
+  async setGlobalTheme(theme) {
+    const body = {
+      theme: {
+        global: theme,
+      },
+    };
 
-  /**
-   * Retrieves the user's Blockly theme preference.
-   * @param {function} [errorCallback]
-   */
-  async getBlocklyTheme(errorCallback) {
-    const theme = await this.getThemeSettings(errorCallback);
-    return theme?.blockly ?? null;
-  }
-
-  /**
-   * Sends new theme settings to the server.
-   * The server automatically merges them with any existing theme preferences.
-   *
-   * @param {Object} themeUpdate - A partial theme object to update (e.g., {global: 'Dark'}).
-   * @param {function} [errorCallback]
-   */
-  async updateThemeSettings(themeUpdate, errorCallback) {
-    try {
-      return await HttpClient.put(
-        '/user_preference',
-        JSON.stringify({theme: themeUpdate}),
-        true,
-        {'Content-Type': 'application/json'}
-      );
-    } catch (error) {
-      if (errorCallback) {
-        errorCallback(error);
-      }
-    }
-  }
-
-  /**
-   * Sets the user's global theme preference.
-   * @param {string} globalTheme - The name of the global theme to set (e.g., 'Dark').
-   */
-  async setGlobalTheme(globalTheme) {
-    return this.updateThemeSettings({global: globalTheme});
-  }
-
-  /**
-   * Sets the user's Blockly theme preference.
-   *
-   * @param {string} blocklyTheme - The name of the Blockly theme to set (e.g., 'cdodeutranopia').
-   * @param {function} [errorCallback] - Optional callback for handling errors, such as for signed out users.
-   */
-  async setBlocklyTheme(blocklyTheme, errorCallback) {
-    return this.updateThemeSettings({blockly: blocklyTheme}, errorCallback);
+    return HttpClient.put('/user_preference', JSON.stringify(body), true, {
+      'Content-Type': 'application/json',
+    });
   }
 }

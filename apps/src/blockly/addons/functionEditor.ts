@@ -17,7 +17,6 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
 
 import {BLOCK_TYPES} from '../constants';
-import CdoTheme from '../themes/cdoTheme';
 import {
   EditorWorkspaceSvg,
   ExtendedBlocklyOptions,
@@ -25,7 +24,6 @@ import {
   ProcedureBlockConfiguration,
   ProcedureType,
 } from '../types';
-import {setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
@@ -90,16 +88,11 @@ export default class FunctionEditor {
       readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
-      theme: options.theme || CdoTheme,
+      theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
     }) as EditorWorkspaceSvg;
-    Blockly.cdoUtils
-      .getUserTheme(this.editorWorkspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(this.editorWorkspace!, theme);
-      });
     this.editorWorkspace.registerToolboxCategoryCallback(
       'VARIABLE',
       variablesFlyoutCategory
