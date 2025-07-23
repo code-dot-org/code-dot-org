@@ -46,10 +46,11 @@ export const WithRouterProps: React.FC<
     parentPath = ''
   ): string | undefined => {
     for (const config of configs) {
-      const joinedPath = [parentPath, config.path]
+      const joinedPath = [`/${parentPath}`, config.path]
         .filter(Boolean)
         .join('/')
         .replace(/\/\/+/g, '/');
+
       if (matchPath(joinedPath, location.pathname)) {
         return config.breadcrumbs;
       }
