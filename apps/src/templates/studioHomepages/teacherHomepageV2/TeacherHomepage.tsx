@@ -29,6 +29,9 @@ interface TeacherHomepageProps {
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
+  const hasSeenHomepageWelcome = useAppSelector(
+    state => state.currentUser.hasSeenHomepageWelcome
+  );
 
   const dispatch = useAppDispatch();
 
@@ -73,9 +76,8 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        {DCDO.get('teacher-homepage-welcome', false) && (
-          <WelcomePopup teacherName={teacherName} />
-        )}
+        {DCDO.get('teacher-homepage-welcome', false) &&
+          !hasSeenHomepageWelcome && <WelcomePopup teacherName={teacherName} />}
         <Heading2>
           {teacherName
             ? i18n.welcome({teacherName: teacherName})

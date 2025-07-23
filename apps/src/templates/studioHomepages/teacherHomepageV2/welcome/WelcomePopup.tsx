@@ -2,6 +2,9 @@ import Modal from '@code-dot-org/component-library/modal';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setHasSeenHomepageWelcome} from '@cdo/apps/templates/currentUserRedux';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import slide1Image from './images/welcome-slide-0.png';
@@ -47,20 +50,26 @@ const SLIDE_4 = {
 
 const SLIDES = [SLIDE_0, SLIDE_1, SLIDE_2, SLIDE_3, SLIDE_4];
 
-const WelcomePopup: React.FC<WelcomePopupProps> = ({teacherName}) => {
+const WelcomePopup: React.FC<WelcomePopupProps> = () => {
   const [isOpen, setIsOpen] = React.useState(true);
 
   const [stepNum, setStepNum] = React.useState(0);
 
-  const handleNext = () => {
-    setStepNum(prev => prev + 1);
+  const dispatch = useAppDispatch();
+
+  const handleClose = () => {
+    setIsOpen(false);
+    new UserPreferences().setHasSeenProgressTableInvite(true);
+    dispatch(setHasSeenHomepageWelcome(true));
   };
 
-  React.useEffect(() => {
-    if (stepNum >= SLIDES.length || stepNum < 0) {
-      setIsOpen(false);
+  const handleNext = () => {
+    if (stepNum >= SLIDES.length - 1) {
+      handleClose();
+    } else {
+      setStepNum(prev => prev + 1);
     }
-  }, [stepNum]);
+  };
 
   if (!isOpen) return null;
 
@@ -69,13 +78,13 @@ const WelcomePopup: React.FC<WelcomePopupProps> = ({teacherName}) => {
   return (
     <Modal
       title={currentSlide.title}
-      onClose={() => setIsOpen(false)}
+      onClose={() => handleClose()}
       primaryButtonProps={{
-        text: 'Next',
+        text: stepNum === SLIDES.length - 1 ? i18n.done() : i18n.next(),
         onClick: handleNext,
       }}
       secondaryButtonProps={{
-        text: 'Back',
+        text: i18n.back(),
         onClick: () => setStepNum(prev => Math.max(prev - 1, 0)),
         disabled: stepNum === 0,
       }}
