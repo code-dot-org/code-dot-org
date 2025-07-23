@@ -7,8 +7,8 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
   let(:described_instance) {described_class.new(options)}
   let(:options) {{}}
   let(:user) {create(:user, :deleted)}
-  let(:older_than_ttl_date) {(User::SOFT_DELETED_USER_TTL + 1.day).ago}
-  let(:newer_than_ttl_date) {(User::SOFT_DELETED_USER_TTL - 1.day).ago}
+  let(:older_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL + 1.day).ago}
+  let(:newer_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL - 1.day).ago}
 
   describe '#scrub_pii_from_expired_deleted_accounts!' do
     subject(:scrub_pii) {described_instance.scrub_pii_from_expired_deleted_accounts!}

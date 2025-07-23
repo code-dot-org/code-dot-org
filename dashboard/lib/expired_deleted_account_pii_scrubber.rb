@@ -27,7 +27,7 @@ class ExpiredDeletedAccountPiiScrubber
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # The amount of time after being soft-deleted that an account should be scrubbed of PII.
-    @scrub_accounts_deleted_since = options[:scrub_accounts_deleted_since] || ::User::SOFT_DELETED_USER_TTL.ago
+    @scrub_accounts_deleted_since = options[:scrub_accounts_deleted_since] || ::User::SOFT_DELETED_RECORD_TTL.ago
     raise ArgumentError.new('scrub_accounts_deleted_since must be Time') unless @scrub_accounts_deleted_since.is_a? Time
 
     # Maximum number of accounts to scrub in a single run.
