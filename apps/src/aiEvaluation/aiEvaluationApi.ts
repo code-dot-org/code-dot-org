@@ -8,7 +8,7 @@ import {logStudentWorkEvaluations} from './studentWorkEvaluationsApi';
 export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
-  studentWork: string;
+  studentWork: string | Record<string, string>;
   codeVersion?: string;
   projectId?: string;
   updatedAt?: string;
@@ -87,12 +87,17 @@ type ValueOf<T> = T[keyof T];
 type EvaluationType = ValueOf<typeof AiEvaluationTypes>;
 
 export async function evaluationFromOpenAI(
-  studentWork?: string,
+  studentWork?: string | Record<string, string>,
   levelId?: number,
   evaluationType?: EvaluationType
 ): Promise<OpenaiChatCompletionMessage | null> {
   const payload = {
-    studentWork: studentWork,
+    studentWork:
+      typeof studentWork === 'string'
+        ? studentWork
+        : Object.entries(studentWork || {})
+            .map(([filename, contents]) => `${filename}:\n${contents}`)
+            .join('\n\n'),
     levelId: levelId,
     evaluationType: evaluationType,
   };

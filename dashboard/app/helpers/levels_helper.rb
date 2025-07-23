@@ -244,11 +244,8 @@ module LevelsHelper
     # In general, we need to allocate a channel if a level is channel-backed.
     # As an optimization, we can skip allocating the channel in the following
     # two special cases where we know the channel will not be written to:
-    # - For levels with contained levels, the outer level is read-only and does
-    #   not write to the channel. (We currently do not support inner levels that
-    #   are channel-backed.)
-    # - In edit_blocks mode, the source code is saved as a level property and
-    #   is not written to the channel.
+    # - For levels with contained levels, the outer level is read-only and does not write to the channel. (We currently do not support inner levels that are channel-backed.)
+    # - In edit_blocks mode, the source code is saved as a level property and is not written to the channel.
     level_requires_channel = (@level.channel_backed? &&
           @level.try(:contained_levels).blank? &&
           params[:action] != 'edit_blocks')
@@ -1055,6 +1052,7 @@ module LevelsHelper
     end
   end
 
+  # This is what we need to modify so that it returns either one text string OR a blob
   # Returns student code for a given level
   def get_student_code(user_id, level, unit_id, code_version = nil)
     s3 = AWS::S3.create_client
@@ -1077,7 +1075,22 @@ module LevelsHelper
         Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
-      student_code = body ? JSON.parse(body)['source'] : nil
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
+      puts "Getting student_code"
+      puts student_code
     end
     {
       project_id: channel_id,
