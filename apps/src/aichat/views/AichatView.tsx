@@ -145,6 +145,12 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
         studentAiCustomizations,
       })
     );
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'LOAD_LEVEL',
+      })
+    );
   }, [dispatch, initialSources, levelAichatSettings]);
 
   useEffect(() => {
