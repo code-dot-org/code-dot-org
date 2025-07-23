@@ -161,7 +161,6 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 Scenario: Teacher can view student work, ask student to keep working, on rubric level
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
 
   # Student submits project
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1?noautoplay=true"
@@ -172,6 +171,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher sees "needs feedback" in the table
   When I sign in as "Teacher_Sally" and go home
+  And I assign my section in row 1 to course "allthethingscourse" unit 1
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
 
