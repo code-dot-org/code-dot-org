@@ -726,6 +726,7 @@ class Section < ApplicationRecord
       the-fabric-of-the-internet-and-ai-2025
       cybersecurity-and-global-impacts-2025
       insights-from-data-and-ai-2025
+      problem-solving-with-ai-2025
     ]
 
     # In order to support an organizational event.
