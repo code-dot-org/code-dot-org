@@ -272,6 +272,7 @@ const marketingPaths = {
   "/global/fa/videos": true,
   "/global/fa/about": true,
   "/global/fa/teacher": true,
+  "/google6b89cac223982bf9": true,
   "/farsi": true,
   // Post Launch 1
   "/afe": true,
