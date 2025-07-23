@@ -46,7 +46,7 @@ const LocaleDropdown: React.FunctionComponent<LocaleDropdownProps> = ({
         size="s"
         name="locale"
         isLabelVisible={false}
-        labelText={selectedOption?.name || 'Select region...'}
+        labelText={selectedOption}
         selectedValue={selectedOption}
         items={options}
         onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
