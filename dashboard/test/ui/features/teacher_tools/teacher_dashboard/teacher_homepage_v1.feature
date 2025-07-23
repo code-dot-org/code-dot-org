@@ -5,47 +5,47 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org/home"
     Given I use a cookie to mock the DCDO key "teacher-homepage-v2" as "false"
 
-  # Scenario: Attempt to join a section you own redirects to dashboard with error message
-  #   Given I am a teacher
-  #   And I create a new student section and go home
-  #   And I attempt to join the section
-  #   Then I wait until element "div.alert" is visible
-  #   And element "div.alert" contains text matching "Sorry, you can't join your own section"
+  Scenario: Attempt to join a section you own redirects to dashboard with error message
+    Given I am a teacher
+    And I create a new student section and go home
+    And I attempt to join the section
+    Then I wait until element "div.alert" is visible
+    And element "div.alert" contains text matching "Sorry, you can't join your own section"
 
-  # Scenario: Attempt to join an invalid section through the homepage
-  #   Given I am a teacher and go home
-  #   And I wait until element "button.ui-test-join-section" is visible
-  #   And I press keys "INVALID" for element "input.ui-test-join-section"
-  #   And I click selector "button.ui-test-join-section"
-  #   Then I wait until element ".announcement-notification" is visible
-  #   And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
+  Scenario: Attempt to join an invalid section through the homepage
+    Given I am a teacher and go home
+    And I wait until element "button.ui-test-join-section" is visible
+    And I press keys "INVALID" for element "input.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
+    Then I wait until element ".announcement-notification" is visible
+    And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
 
-  # Scenario: Attempt to join a section you own from teacher dashboard provides notification
-  #   Given I am a teacher
-  #   And I create a new student section and go home
-  #   And I wait until element "button.ui-test-join-section" is visible
-  #   And I enter the section code into "input.ui-test-join-section"
-  #   And I click selector "button.ui-test-join-section"
-  #   Then I wait until element ".announcement-notification" is visible
-  #   And element ".announcement-notification" contains text matching "You are already an instructor for section"
+  Scenario: Attempt to join a section you own from teacher dashboard provides notification
+    Given I am a teacher
+    And I create a new student section and go home
+    And I wait until element "button.ui-test-join-section" is visible
+    And I enter the section code into "input.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
+    Then I wait until element ".announcement-notification" is visible
+    And element ".announcement-notification" contains text matching "You are already an instructor for section"
 
-  # Scenario: Decline invitation to new progress view
-  #   Given I am on "http://studio.code.org"
-  #   When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
-  #   Given I create an authorized teacher-associated student named "Sally"
-  #   Given I am assigned to course "allthethingscourse" unit 1
-  #   And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
+  Scenario: Decline invitation to new progress view
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
+    Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to course "allthethingscourse" unit 1
+    And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
-  #   When I sign in as "Teacher_Sally" and go home
-  #   And I get levelbuilder access
-  #   And I wait until element "a:contains('Untitled Section')" is visible
-  #   And I save the section id from row 0 of the section table
-  #   Then I navigate to teacher dashboard for the section I saved
-  #   Then I click selector "#ui-test-toggle-progress-view"
-  #   And I reload the page
-  #   Then I click selector "#ui-close-dialog"
-  #   And I wait until element "#uitest-course-dropdown" is visible
-  #   And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+    And I wait until element "a:contains('Untitled Section')" is visible
+    And I save the section id from row 0 of the section table
+    Then I navigate to teacher dashboard for the section I saved
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I reload the page
+    Then I click selector "#ui-close-dialog"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   Scenario: Accept invitation to new progress view and see new view immediately.
     Given I am on "http://studio.code.org"

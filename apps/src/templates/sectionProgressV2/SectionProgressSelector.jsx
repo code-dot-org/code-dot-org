@@ -50,9 +50,8 @@ function SectionProgressSelector({
 
     return (
       displayV2FromUrl ||
-      (isPreferenceSet
-        ? showProgressTableV2 === V2_SETTING_KEY
-        : DCDO.get('progress-table-v2-default-v2', true))
+      !isPreferenceSet ||
+      showProgressTableV2 === V2_SETTING_KEY
     );
   }, [showProgressTableV2, params]);
 

@@ -53,7 +53,6 @@ describe('SectionProgressSelector', () => {
     store.dispatch(setUnit(1, 1));
 
     DCDO.set('progress-table-v2-enabled', true);
-    DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
 
     postStub = jest.spyOn($, 'post').mockClear().mockImplementation();
@@ -102,6 +101,7 @@ describe('SectionProgressSelector', () => {
 
   it('shows v1', () => {
     renderDefault();
+    store.dispatch(setShowProgressTableV2('legacy'));
 
     screen.getByText(V1_PAGE_LINK_TEXT);
     // eslint-disable-next-line no-restricted-properties
@@ -125,21 +125,7 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByTestId(V1_TEST_ID)).toBeFalsy();
   });
 
-  it('shows default v1 if no user preference', () => {
-    renderDefault();
-    store.dispatch(setShowProgressTableV2(undefined));
-
-    screen.getByText(V1_PAGE_LINK_TEXT);
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId(V1_TEST_ID);
-
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
-  });
-
   it('shows default v2 if no user preference', () => {
-    DCDO.set('progress-table-v2-default-v2', true);
     store.dispatch(setShowProgressTableV2(undefined));
     renderDefault();
 
