@@ -78,8 +78,9 @@ module Cdo
 
         # Replace :region tag before freezing
         deep_replace(config, {
-          ':region': region,
-        })
+                       ':region': region,
+                     }
+        )
 
         deep_freeze(config)
       end
@@ -114,10 +115,24 @@ module Cdo
     def self.region_options
       # TODO: make 'root' the top option and otherwise sort by name
       @region_options ||= REGIONS.map do |region|
+        configuration = configuration_for(region)
         # Hide any regions that have 'hidden' set
-        return nil if configuration_for(region).fetch(:hidden, false)
-        # Then return the name of the region along with the region key
-        [configuration_for(region).fetch(:name, region), region == 'root' ? '' : region]
+        next nil if configuration.fetch(:hidden, false)
+
+        # And any that do not represent countries
+        next nil unless configuration.fetch(:country, nil)
+
+        # Then return the name of the countryy along with the region key
+        [
+          configuration.fetch(:name, region),
+          region == 'root' ? '' : region,
+          {
+            data: {
+              flag: "#{configuration[:country].downcase}.png",
+              globalName: configuration[:globalName] || configuration[:name] || configuration[:country],
+            },
+          },
+        ]
       end.compact
     end
 

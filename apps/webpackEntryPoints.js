@@ -64,6 +64,7 @@ const CODE_STUDIO_ENTRIES = {
   'gates/teacher_account_required': './src/sites/studio/pages/gates/teacher_account_required.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+  'layouts/_footer': './src/sites/studio/pages/layouts/_footer.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
   'layouts/_section_creation_celebration_dialog': './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',

@@ -1,0 +1,31 @@
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  margin: 0;
+
+  i {
+    min-width: 1rem;
+    text-align: center;
+    width: 1rem;
+  }
+}
+
+.localeDropdown {
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+
+  select {
+    max-width: 11.5rem;
+    min-width: 11.5rem;
+    padding: .25rem .5rem;
+    padding-inline-end: 1.75rem;
+    width: 11.5rem;
+
+    &::after {
+      font-weight: bold;
+      inset-inline-end: .5625rem;
+    }
+  }
+}

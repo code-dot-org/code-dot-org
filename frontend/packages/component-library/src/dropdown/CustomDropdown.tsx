@@ -61,6 +61,10 @@ export interface CustomDropdownProps extends AriaAttributes {
   isSomeValueSelected?: boolean;
   /** Custom icon to show for the dropdown button*/
   icon?: FontAwesomeV6IconProps;
+  /** Any content to come before the label on the button */
+  prologue?: React.ReactNode;
+  /** Any content to come before the label on the button */
+  epilogue?: React.ReactNode;
   /** Whether to use DSCO (Design System) Button component as DropdownTrigger or not */
   useDSCOButtonAsTrigger?: boolean;
   /** Dropdown Trigger DSCO (Design System) Button Props */
@@ -100,6 +104,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   children,
   isSomeValueSelected = false,
   icon,
+  prologue,
+  epilogue,
   disabled = false,
   readOnly = false,
   color = dropdownColors.black,
@@ -246,7 +252,11 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
               ],
             )}
           >
-            {styleAsFormField ? selectedValueText : labelText}
+            <>
+              {prologue}
+              {styleAsFormField ? selectedValueText : labelText}
+              {epilogue}
+            </>
           </span>
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
