@@ -1,3 +1,5 @@
+import Modal from '@code-dot-org/component-library/modal';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -6,6 +8,7 @@ import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {
@@ -75,10 +78,13 @@ class AnimationPicker extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   state = {
     exitingDialog: false,
+    showFlaggedModal: false,
+    pendingUploadData: null,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -132,6 +138,7 @@ class AnimationPicker extends React.Component {
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
+          uploadsEnabled={this.props.uploadsEnabled}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -162,6 +169,34 @@ class AnimationPicker extends React.Component {
     );
   }
 
+  /**
+   * Send the uploaded image file to be moderated. Then continue with uploadStart.
+   */
+  handleModeratedUploadStart = data => {
+    const file = data.files[0];
+    this.setState({
+      pendingUploadData: data,
+    });
+
+    HttpClient.post(`/v3/images/moderate`, file, true, {
+      'Content-Type': file.type,
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log('In AnimationPickerImage moderation rating:', json.rating);
+        // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
+        if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+          this.setState({
+            showFlaggedModal: true,
+          });
+        } else {
+          // If the image is rated 'everyone' or 'unknown', continue with upload.
+          this.props.onUploadStart(this.state.pendingUploadData);
+        }
+      })
+      .catch(err => console.error('Moderation error:', err));
+  };
+
   render() {
     if (!this.props.visible) {
       return null;
@@ -187,10 +222,64 @@ class AnimationPicker extends React.Component {
             '.png'
           }
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
+        {this.state.showFlaggedModal && (
+          <Modal
+            id="image-flagged-modal"
+            onClose={() => {
+              this.setState({showFlaggedModal: false, pendingUploadData: null});
+            }}
+            title={'Warning: Inappropriate Image'}
+            customContent={
+              <div>
+                <BodyTwoText>
+                  This image has been flagged as inappropriate. By including
+                  this image in your project, you will be unable to share the
+                  project with others.
+                </BodyTwoText>
+              </div>
+            }
+            primaryButtonProps={{
+              text: 'Accept',
+              onClick: () => {
+                const {pendingUploadData} = this.state;
+                if (!pendingUploadData) return;
+
+                const body = JSON.stringify({
+                  type: 'flag',
+                });
+                HttpClient.post(
+                  `/v3/channels/${this.props.channelId}/abuse/image`,
+                  body,
+                  true,
+                  {'Content-Type': 'application/json; charset=UTF-8'}
+                )
+                  .then(response => response.json())
+                  .then(json => {
+                    this.props.onUploadStart(pendingUploadData);
+                  })
+                  .catch(err => console.log('update abuse error', err))
+                  .finally(() => {
+                    this.setState({
+                      showFlaggedModal: false,
+                      pendingUploadData: null,
+                    });
+                  });
+              },
+            }}
+            secondaryButtonProps={{
+              text: 'Cancel',
+              onClick: () =>
+                this.setState({
+                  showFlaggedModal: false,
+                  pendingUploadData: null,
+                }),
+            }}
+          />
+        )}
         {this.renderVisibleBody()}
       </BaseDialog>
     );
