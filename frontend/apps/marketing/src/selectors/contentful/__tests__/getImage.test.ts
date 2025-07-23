@@ -1,6 +1,10 @@
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
-import {getRelativeImageUrl, getAbsoluteImageUrl} from '../getImage';
+import {
+  getRelativeImageUrl,
+  getOptimizedImageFormat,
+  getAbsoluteImageUrl,
+} from '../getImage';
 
 describe('getRelativeImageUrl', () => {
   it('should return undefined if asset is undefined', () => {
@@ -25,6 +29,43 @@ describe('getRelativeImageUrl', () => {
       },
     } as ExperienceAsset;
     expect(getRelativeImageUrl(asset)).toBeUndefined();
+  });
+});
+
+describe('getOptimizedImageFormat', () => {
+  it('returns undefined for URLs without an extension', () => {
+    const imageFormat = getOptimizedImageFormat('https://test.example/image');
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns undefined for avif image', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.avif',
+    );
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns undefined for webp image', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.webp',
+    );
+    expect(imageFormat).toBeUndefined();
+  });
+
+  it('returns avif for non-gif images', () => {
+    expect(
+      getOptimizedImageFormat('https://test.example/image.JPG#test-example'),
+    ).toBe('avif');
+    expect(
+      getOptimizedImageFormat('https://test.example/image.png?test=example'),
+    ).toBe('avif');
+  });
+
+  it('returns webp for gif images', () => {
+    const imageFormat = getOptimizedImageFormat(
+      'https://test.example/image.gif',
+    );
+    expect(imageFormat).toBe('webp');
   });
 });
 
