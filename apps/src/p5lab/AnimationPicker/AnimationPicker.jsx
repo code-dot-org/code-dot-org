@@ -1,5 +1,3 @@
-import Modal from '@code-dot-org/component-library/modal';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -22,6 +20,7 @@ import {
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
+import FlaggedImageModal from './FlaggedImageModal';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -197,6 +196,30 @@ class AnimationPicker extends React.Component {
       .catch(err => console.error('Moderation error:', err));
   };
 
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) return;
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        this.props.onUploadStart(pendingUploadData);
+      })
+      .catch(err => console.log('update abuse error', err))
+      .finally(() => {
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+        });
+      });
+  };
+
   render() {
     if (!this.props.visible) {
       return null;
@@ -227,56 +250,12 @@ class AnimationPicker extends React.Component {
           onUploadError={this.props.onUploadError}
         />
         {this.state.showFlaggedModal && (
-          <Modal
-            id="image-flagged-modal"
-            onClose={() => {
+          <FlaggedImageModal
+            isOpen
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={() => {
               this.setState({showFlaggedModal: false, pendingUploadData: null});
-            }}
-            title={'Warning: Inappropriate Image'}
-            customContent={
-              <div>
-                <BodyTwoText>
-                  This image has been flagged as inappropriate. By including
-                  this image in your project, you will be unable to share the
-                  project with others.
-                </BodyTwoText>
-              </div>
-            }
-            primaryButtonProps={{
-              text: 'Accept',
-              onClick: () => {
-                const {pendingUploadData} = this.state;
-                if (!pendingUploadData) return;
-
-                const body = JSON.stringify({
-                  type: 'flag',
-                });
-                HttpClient.post(
-                  `/v3/channels/${this.props.channelId}/abuse/image`,
-                  body,
-                  true,
-                  {'Content-Type': 'application/json; charset=UTF-8'}
-                )
-                  .then(response => response.json())
-                  .then(json => {
-                    this.props.onUploadStart(pendingUploadData);
-                  })
-                  .catch(err => console.log('update abuse error', err))
-                  .finally(() => {
-                    this.setState({
-                      showFlaggedModal: false,
-                      pendingUploadData: null,
-                    });
-                  });
-              },
-            }}
-            secondaryButtonProps={{
-              text: 'Cancel',
-              onClick: () =>
-                this.setState({
-                  showFlaggedModal: false,
-                  pendingUploadData: null,
-                }),
+              this.props.onClose(); // Close the entire AnimationPicker
             }}
           />
         )}
