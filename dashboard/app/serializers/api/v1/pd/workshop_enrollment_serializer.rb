@@ -1,13 +1,25 @@
 class Api::V1::Pd::WorkshopEnrollmentSerializer < ActiveModel::Serializer
   attributes :id, :first_name, :last_name, :email, :alternate_email, :application_id, :district_name, :school, :role,
     :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
-    :csf_courses_planned, :user_id, :attended,
+    :csf_courses_planned, :user_id, :user_info, :attended,
     :pre_workshop_survey, :previous_courses, :attendances,
     :scholarship_status, :enrolled_date, :years_teaching, :years_teaching_cs, :taught_ap_before, :planning_to_teach_ap
 
   def user_id
     user = object.resolve_user
     user&.id
+  end
+
+  def user_info
+    user = object.resolve_user
+    school_info = user&.try(:school_info)
+    {
+      given_name: user&.given_name,
+      family_name: user&.family_name,
+      email: user&.email,
+      school_name: school_info.present? ? (school_info.effective_school_name || "Does not teach in a school setting") : nil,
+      district_name: school_info&.try(:school_district).try(:name)
+    }
   end
 
   def application_id

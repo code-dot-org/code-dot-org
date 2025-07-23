@@ -65,12 +65,6 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
         type: 'Link',
         group: 'content',
         description: 'The primary button of the action block.',
-        defaultValue: {
-          fields: {
-            label: 'Primary button',
-            url: '#',
-          },
-        },
         validations: {
           bindingSourceType: ['entry'],
         },

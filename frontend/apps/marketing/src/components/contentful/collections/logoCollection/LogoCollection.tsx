@@ -43,6 +43,7 @@ const logoStyles = {
     justifyContent: 'center',
     width: 'fit-content',
     height: '100%',
+    marginBottom: 0,
     textDecoration: 'none',
     transition: 'opacity 0.3s ease-in-out',
     '&:hover': {
@@ -58,7 +59,7 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
 }) => {
   if (!logos) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Logo Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.

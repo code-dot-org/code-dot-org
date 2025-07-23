@@ -1,6 +1,6 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
-import {
+import Typography, {
   Heading2,
   Heading3,
   BodyTwoText,
@@ -11,6 +11,7 @@ import React from 'react';
 
 import {DATA_SHARING_NOTICE} from '@cdo/apps/code-studio/pd/constants';
 import {WorkshopInfo} from '@cdo/apps/code-studio/pd/workshops/types';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import WorkshopFacilitatorsList from './WorkshopFacilitatorsList';
 import WorkshopSessionsList from './WorkshsopSessionsList';
@@ -76,13 +77,17 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
 
       <section className={moduleStyles.workshopDetailsItem}>
         <Heading3 visualAppearance={'heading-xs'}>Description:</Heading3>
-        <BodyTwoText>{description}</BodyTwoText>
+        <Typography semanticTag="div" visualAppearance="body-two">
+          <SafeMarkdown unwrapped markdown={description} />
+        </Typography>
       </section>
 
       {notes && (
         <section className={moduleStyles.workshopDetailsItem}>
           <Heading3 visualAppearance={'heading-xs'}>Attendee Notes:</Heading3>
-          <BodyTwoText>{notes}</BodyTwoText>
+          <Typography semanticTag="div" visualAppearance="body-two">
+            <SafeMarkdown unwrapped markdown={notes} />
+          </Typography>
         </section>
       )}
 

@@ -1,6 +1,13 @@
+<%
+# Get region configuration and selected AZs from the new configuration structure
+region_config = MarketingSites::Configuration::regions[options[:region].to_sym]
+selected_azs = region_config[:selected_availability_zones]
+%>
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by our Next.js web application server and the Contentful cloud service.
+Description: >
+  Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by
+  our Next.js web application server and the Contentful cloud service.
 
 Parameters:
   CloudFrontTLSCertificateArn:
@@ -30,10 +37,7 @@ Parameters:
     Description: The IAM Policy that any Role created by this template must apply as a Permissions Boundary.
 
 Conditions:
-  IsProductionEnvironment:
-    Fn::Equals:
-      - !Ref EnvironmentType
-      - production
+  IsProductionEnvironment: !Equals [!Ref EnvironmentType, production]
 
 Mappings:
   # Cloudfront Mappings
@@ -73,144 +77,196 @@ Mappings:
       PrefixList: pl-82a045eb
 
 Resources:
-  ###########################
-  # Start AWS VPC Resources #
-  ###########################
+  #############################
+  # CloudFront Resources
+  #############################
 
-  # VPC for ECS and ALB
-  Vpc:
-    Type: AWS::EC2::VPC
+  CloudFrontDistributionDNS:
+    Type: AWS::Route53::RecordSet
     Properties:
-      CidrBlock: 10.0.0.0/16
-      EnableDnsHostnames: true
-      EnableDnsSupport: true
-      InstanceTenancy: default
-
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
-  VpcPublicSubnet<%= index %>:
-    Type: AWS::EC2::Subnet
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "${SubdomainName}.${BaseDomainName}"
+      Type: A
+  PreviewCloudFrontDistributionDNS:
+    Type: AWS::Route53::RecordSet
     Properties:
-      AvailabilityZone: <%= subnet[:availability_zone] %>
-      CidrBlock: <%= subnet[:cidr_block] %>
-      MapPublicIpOnLaunch: true
-      VpcId:
-        Ref: Vpc
-
-  VpcPublicSubnet<%= index %>RouteTable:
-    Type: AWS::EC2::RouteTable
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
+      Type: A
+  CloudFrontOriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
     Properties:
-      VpcId:
-        Ref: Vpc
-
-  VpcPublicSubnet<%= index %>RouteTableAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
+      OriginAccessControlConfig:
+        Name: !Sub "CloudFront-OAC-${SubdomainName}.${BaseDomainName}"
+        SigningBehavior: always
+        SigningProtocol: sigv4
+        OriginAccessControlOriginType: s3
+  ApplicationCachingPolicy:
+    Type: AWS::CloudFront::CachePolicy
     Properties:
-      RouteTableId:
-        Ref: VpcPublicSubnet<%= index %>RouteTable
-      SubnetId:
-        Ref: VpcPublicSubnet<%= index %>
-
-  VpcPublicSubnet<%= index %>DefaultRoute:
-    Type: AWS::EC2::Route
+      CachePolicyConfig:
+        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
+        DefaultTTL: 86400
+        MaxTTL: 31536000
+        MinTTL: 1
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: true
+          EnableAcceptEncodingBrotli: true
+          HeadersConfig:
+            HeaderBehavior: whitelist
+            Headers:
+              - RSC
+              - Next-Router-State-Tree
+              - Next-Router-Prefetch
+              - next-url
+              - Accept
+              - x-prerender-revalidate
+              - Host # Used in the withBrand middleware to determine tenant in multi-tenant setup
+              - Accept-Language # Used in the withLocale middleware to determine the user's locale
+          CookiesConfig:
+            CookieBehavior: whitelist
+            Cookies:
+              - __prerender_bypass # Next.js Draft mode
+              - language_ # Used in the withLocale middleware to determine the user's locale and shared with studio.code.org
+          QueryStringsConfig:
+            QueryStringBehavior: none
+        Comment: Cache policy for the marketing app
+  ViewerResponseCloudFrontFunction:
+    Type: AWS::CloudFront::Function
     Properties:
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId:
-        Ref: VpcIGW
-      RouteTableId:
-        Ref: VpcPublicSubnet<%= index %>RouteTable
-    DependsOn:
-      - VpcVPCGW
+      Name: !Sub '${AWS::StackName}-ViewerResponse'
+      AutoPublish: true
+      FunctionCode: |
+        function handler(event) {
+          let response = event.response;
 
-  # Elastic IP
-  VpcPublicSubnet<%= index %>EIP:
-    Type: AWS::EC2::EIP
+          // Set a default stale-while-revalidate cache control header if the origin does not send any cache-control header
+          // This is to workaround https://github.com/vercel/next.js/issues/73382
+          // Remove when the issue is fixed in Next.js (Cache-Control is consistently returned by the origin)
+          if (response.headers['cache-control'] === undefined) {
+              // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
+              response.headers['cache-control'] = {
+              value: `s-maxage=900, stale-while-revalidate=31535400`
+            }
+          }
+
+          return response;
+        }
+      FunctionConfig:
+        Comment: Adds Cache-Control if not present
+        Runtime: cloudfront-js-2.0
+  # For immutable static assets (hashed assets like JS/CSS files), ensure that the Cache-Control header is set to immutable
+  ImmutableStaticAssetsResponseHeadersPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
     Properties:
-      Domain: vpc
-
-  VpcPublicSubnet<%= index %>NATGateway:
-    Type: AWS::EC2::NatGateway
+      ResponseHeadersPolicyConfig:
+        Name: !Sub "${AWS::StackName}-Assets-ResponseHeader-Policy"
+        Comment: "Ensure immutable static assets have Cache-Control header set to immutable"
+        CustomHeadersConfig:
+          Items:
+            - Header: cache-control
+              Override: false # Do not override the cache control from the origin if it is available
+              Value: public, max-age=31536000, immutable
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
     Properties:
-      AllocationId:
-        Fn::GetAtt:
-          - VpcPublicSubnet<%= index %>EIP
-          - AllocationId
-      SubnetId:
-        Ref: VpcPublicSubnet<%= index %>
-    DependsOn:
-      - VpcPublicSubnet<%= index %>DefaultRoute
-      - VpcPublicSubnet<%= index %>RouteTableAssociation
+      DistributionConfig:
+        Enabled: true
+        Comment: Marketing Sites Application CloudFront Distribution
+        HttpVersion: http2
+        PriceClass: PriceClass_100
+        Aliases:
+          - !Sub "${SubdomainName}.${BaseDomainName}"
+          - !Sub "preview-${SubdomainName}.${BaseDomainName}"
+        Origins:
+          - Id: marketing-sites-application-origin
+            DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
+            CustomOriginConfig:
+              HTTPSPort: 443
+              OriginProtocolPolicy: https-only
+              OriginSSLProtocols:
+                - TLSv1.2
+          - Id: marketing-sites-static-assets-origin
+            DomainName: !GetAtt StaticAssetsBucket.RegionalDomainName
+            S3OriginConfig:
+              OriginAccessIdentity: ""
+            OriginAccessControlId: !Ref CloudFrontOriginAccessControl
+        DefaultCacheBehavior:
+          TargetOriginId: marketing-sites-application-origin
+          ViewerProtocolPolicy: redirect-to-https
+          Compress: true
+          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+          OriginRequestPolicyId: "216adef6-5c7f-47e4-b989-5492eafa07d3" # AllViewer
+          FunctionAssociations:
+            - EventType: viewer-response
+              FunctionARN: !GetAtt ViewerResponseCloudFrontFunction.FunctionARN
+        ViewerCertificate:
+          AcmCertificateArn: !Ref CloudFrontTLSCertificateArn
+          SslSupportMethod: sni-only
+        Restrictions:
+          GeoRestriction:
+            RestrictionType: none
 
-  VpcPrivateSubnet<%= index %>RouteTable:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId:
-        Ref: Vpc
+        # Temporary (and in production only) until distribution becomes the main one, after which Real Time Logging is
+        # enabled to avoid double counting between Pegasus and this distribution.
+        Logging: !If
+          - IsProductionEnvironment
+          - Bucket: "cdo-logs.s3.amazonaws.com"
+            Prefix: !Sub "AWSLogs/${AWS::AccountId}/CloudFront/${SubdomainName}.${BaseDomainName}/"
+            IncludeCookies: false
+          - !Ref "AWS::NoValue"
 
-  VpcPrivateSubnet<%= index %>RouteTableAssociation:
-    Type: AWS::EC2::SubnetRouteTableAssociation
-    Properties:
-      RouteTableId:
-        Ref: VpcPrivateSubnet<%= index %>RouteTable
-      SubnetId:
-        Ref: VpcPrivateSubnet<%= index %>
+        CacheBehaviors:
+          # Path: /api/*
+          # Description: Marketing application API routes
+          - AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+              - PUT
+              - POST
+              - PATCH
+              - DELETE
+            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (APIs are not cached)
+            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3 # AllViewer
+            PathPattern: /api/*
+            TargetOriginId: marketing-sites-application-origin
+            ViewerProtocolPolicy: redirect-to-https
+          # Path: /_next/*
+          # Description: Marketing _application_ static assets
+          - AllowedMethods:
+              - GET
+              - HEAD
+              - OPTIONS
+            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+            Compress: true
+            PathPattern: /_next/*
+            TargetOriginId: marketing-sites-static-assets-origin
+            ViewerProtocolPolicy: redirect-to-https
+            ResponseHeadersPolicyId: !Ref ImmutableStaticAssetsResponseHeadersPolicy
 
-  VpcPrivateSubnet<%= index %>DefaultRoute:
-    Type: AWS::EC2::Route
-    Properties:
-      DestinationCidrBlock: 0.0.0.0/0
-      NatGatewayId:
-        Ref: VpcPublicSubnet<%= index %>NATGateway
-      RouteTableId:
-        Ref: VpcPrivateSubnet<%= index %>RouteTable
-<% end %>
+  ####################################
+  # Load Balancer Resources          #
+  ####################################
 
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
-  VpcPrivateSubnet<%= index %>:
-    Type: AWS::EC2::Subnet
-    Properties:
-      AvailabilityZone: <%= subnet[:availability_zone] %>
-      CidrBlock: <%= subnet[:cidr_block] %>
-      MapPublicIpOnLaunch: false
-      VpcId:
-        Ref: Vpc
-<% end %>
-
-  VpcIGW:
-    Type: AWS::EC2::InternetGateway
-
-  VpcVPCGW:
-    Type: AWS::EC2::VPCGatewayAttachment
-    Properties:
-      InternetGatewayId:
-        Ref: VpcIGW
-      VpcId:
-        Ref: Vpc
-
-  #########################
-  # End AWS VPC Resources #
-  #########################
-
-  ###########################
-  # Start AWS ECS Resources #
-  ###########################
-
-  # TLS Cert for the ECS ALB
   TLSCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
       DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
       DomainValidationOptions:
         - DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
-          HostedZoneId:
-            Ref: HostedZoneId
+          HostedZoneId: !Ref HostedZoneId
       ValidationMethod: DNS
-
-  EcsCluster:
-    Type: AWS::ECS::Cluster
-
   FargateServiceLB:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
     Properties:
+      Name: !Sub "${SubdomainName}-${EnvironmentType}-alb"
       LoadBalancerAttributes:
         # Delete the load balancer if the CloudFormation stack is deleted
         - Key: deletion_protection.enabled
@@ -221,78 +277,52 @@ Resources:
       SecurityGroups:
         - !GetAtt FargateServiceLBSecurityGroup.GroupId
       Subnets:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-        - Ref: VpcPublicSubnet<%= index %>
+<% selected_azs.each_with_index do |_, index| %>
+        - !ImportValue MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
 <% end %>
       Type: application
-
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-alb"
   FargateServiceLBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Security Group for ELB MarketingStackStagingFargateService
+      GroupName: !Sub "${SubdomainName}-${EnvironmentType}-alb-sg"
+      GroupDescription: Security Group for ELB MarketingStackStagingFargateService (Shared VPC)
       SecurityGroupIngress:
         - Description: Allow HTTPS from com.amazonaws.global.cloudfront.origin-facing
           FromPort: 443
           IpProtocol: tcp
           ToPort: 443
-          SourcePrefixListId:  !FindInMap [CFRegionMap, !Ref 'AWS::Region', PrefixList]
-      VpcId:
-        Ref: Vpc
-
+          SourcePrefixListId: !FindInMap [CFRegionMap, !Ref 'AWS::Region', PrefixList]
+      VpcId: !ImportValue MarketingSitesRegionInfrastructure-VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-alb-sg"
   FargateServiceLBSecurityGrouptoMarketingStackStagingFargateServiceSecurityGroup:
     Type: AWS::EC2::SecurityGroupEgress
     Properties:
       Description: Load balancer to target
-      DestinationSecurityGroupId:
-        Fn::GetAtt:
-          - FargateServiceSecurityGroup
-          - GroupId
+      DestinationSecurityGroupId: !GetAtt FargateServiceSecurityGroup.GroupId
       FromPort: 3000
-      GroupId:
-        Fn::GetAtt:
-          - FargateServiceLBSecurityGroup
-          - GroupId
+      GroupId: !GetAtt FargateServiceLBSecurityGroup.GroupId
       IpProtocol: tcp
       ToPort: 3000
-
   FargateServiceLBPublicListener:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
       Certificates:
-        - CertificateArn:
-            Ref: TLSCertificate
+        - CertificateArn: !Ref TLSCertificate
       DefaultActions:
-        - TargetGroupArn:
-            Ref: FargateServiceLBPublicListenerECSGroup
+        - TargetGroupArn: !Ref FargateServiceLBPublicListenerECSGroup
           Type: forward
-      LoadBalancerArn:
-        Ref: FargateServiceLB
+      LoadBalancerArn: !Ref FargateServiceLB
       Port: 443
       Protocol: HTTPS
-
-  FargateServiceDNS:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      AliasTarget:
-        DNSName:
-          Fn::Join:
-            - ""
-            - - dualstack.
-              - Fn::GetAtt:
-                  - FargateServiceLB
-                  - DNSName
-        HostedZoneId:
-          Fn::GetAtt:
-            - FargateServiceLB
-            - CanonicalHostedZoneID
-      HostedZoneId:
-        Ref: HostedZoneId
-      Name: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
-      Type: A
-
   FargateServiceLBPublicListenerECSGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
+      Name: !Sub "${SubdomainName}-${EnvironmentType}-tg"
       Port: 80
       Protocol: HTTP
       HealthCheckPath: /api/health_check
@@ -303,9 +333,26 @@ Resources:
         - Key: stickiness.enabled
           Value: "false"
       TargetType: ip
-      VpcId:
-        Ref: Vpc
+      VpcId: !ImportValue MarketingSitesRegionInfrastructure-VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-tg"
+  FargateServiceDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName: !Sub "dualstack.${FargateServiceLB.DNSName}"
+        HostedZoneId: !GetAtt FargateServiceLB.CanonicalHostedZoneID
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
+      Type: A
 
+  ####################################
+  # Web Application Servers (ECS)    #
+  ####################################
+
+  EcsCluster:
+    Type: AWS::ECS::Cluster
   FargateServiceTaskDefTaskRole:
     Type: AWS::IAM::Role
     Properties:
@@ -318,7 +365,40 @@ Resources:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
       PermissionsBoundary: !Ref RoleBoundary
-
+  FargateServiceTaskDefExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-exec-role"
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+        Version: "2012-10-17"
+      Policies:
+        - PolicyName: Logging
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Action:
+                  - secretsmanager:DescribeSecret
+                  - secretsmanager:GetSecretValue
+                Effect: Allow
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
+              - Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Effect: Allow
+                Resource:
+                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
+              - Action:
+                  - logs:CreateLogGroup
+                Effect: Allow
+                Resource:
+                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
+                  - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
+      PermissionsBoundary: !Ref RoleBoundary
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -342,7 +422,7 @@ Resources:
             - Name: NEXT_PUBLIC_INSTRUMENTATION_ENABLED
               Value: "true"
             - Name: REDIS_URL
-              Value: !Sub rediss://${RedisCluster.PrimaryEndPoint.Address}:6379
+              Value: !Sub "rediss://${RedisCluster.PrimaryEndPoint.Address}:6379"
             # Do not verify that keyspace is available, as it is created by the RedisParameterGroup
             - Name: SKIP_KEYSPACE_CONFIG_CHECK
               Value: "true"
@@ -359,11 +439,7 @@ Resources:
             - Name: OTEL_EXPORTER_OTLP_ENDPOINT
               Value: https://otlp.nr-data.net
           Essential: true
-          Image:
-            Fn::Join:
-              - ""
-              - - ghcr.io/code-dot-org/marketing@
-                - Ref: ContainerImageHashDigest
+          Image: !Sub "ghcr.io/code-dot-org/marketing@${ContainerImageHashDigest}"
           Name: web
           PortMappings:
             - ContainerPort: 3000
@@ -397,18 +473,12 @@ Resources:
               awslogs-stream-prefix: next-js
       Cpu: "1024"
       Memory: "2048"
-      ExecutionRoleArn:
-        Fn::GetAtt:
-          - FargateServiceTaskDefExecutionRole
-          - Arn
+      ExecutionRoleArn: !GetAtt FargateServiceTaskDefExecutionRole.Arn
       Family: !Sub "${AWS::StackName}-FargateServiceTaskDef"
       NetworkMode: awsvpc
       RequiresCompatibilities:
         - FARGATE
-      TaskRoleArn:
-        Fn::GetAtt:
-          - FargateServiceTaskDefTaskRole
-          - Arn
+      TaskRoleArn: !GetAtt FargateServiceTaskDefTaskRole.Arn
       Volumes:
         # More details: https://nextjs.org/docs/app/building-your-application/caching#full-route-cache
         - Name: code-dot-org-full-page-router-cache
@@ -418,45 +488,10 @@ Resources:
               AccessPointId: !Ref CacheAccessPoint
               IAM: ENABLED
             TransitEncryption: ENABLED
-  FargateServiceTaskDefExecutionRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: !Sub "marketing-sites-${EnvironmentType}-${SubdomainName}-task-exec-role"
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: sts:AssumeRole
-            Effect: Allow
-            Principal:
-              Service: ecs-tasks.amazonaws.com
-        Version: "2012-10-17"
-      Policies:
-      - PolicyName: Logging
-        PolicyDocument:
-          Version: "2012-10-17"
-          Statement:
-          - Action:
-              - secretsmanager:DescribeSecret
-              - secretsmanager:GetSecretValue
-            Effect: Allow
-            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/*"
-          - Action:
-              - logs:CreateLogStream
-              - logs:PutLogEvents
-            Effect: Allow
-            Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:next-js/*"
-          - Action:
-              - logs:CreateLogGroup
-            Effect: Allow
-            Resource:
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}"
-              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/ecs/${AWS::StackName}:log-stream:*"
-      PermissionsBoundary: !Ref RoleBoundary
   FargateService:
     Type: AWS::ECS::Service
     Properties:
-      Cluster:
-        Ref: EcsCluster
+      Cluster: !Ref EcsCluster
       DeploymentConfiguration:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
@@ -468,26 +503,21 @@ Resources:
       LoadBalancers:
         - ContainerName: web
           ContainerPort: 3000
-          TargetGroupArn:
-            Ref: FargateServiceLBPublicListenerECSGroup
+          TargetGroupArn: !Ref FargateServiceLBPublicListenerECSGroup
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: DISABLED
           SecurityGroups:
-            - Fn::GetAtt:
-                - FargateServiceSecurityGroup
-                - GroupId
+            - !GetAtt FargateServiceSecurityGroup.GroupId
           Subnets:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-            - Ref: VpcPrivateSubnet<%= index %>
+<% selected_azs.each_with_index do |_, index| %>
+            - !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
 <% end %>
-      TaskDefinition:
-        Ref: FargateServiceTaskDef
+      TaskDefinition: !Ref FargateServiceTaskDef
     DependsOn:
       - FargateServiceLBPublicListenerECSGroup
       - FargateServiceLBPublicListener
       - FargateServiceTaskDefTaskRole
-
   FargateServiceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -496,29 +526,20 @@ Resources:
         - CidrIp: 0.0.0.0/0
           Description: Allow all outbound traffic by default
           IpProtocol: "-1"
-      VpcId:
-        Ref: Vpc
+      VpcId: !ImportValue MarketingSitesRegionInfrastructure-VpcId
     DependsOn:
       - FargateServiceTaskDefTaskRole
-
   FargateServiceSecurityGroupfromMarketingStackStagingFargateServiceLBSecurityGroup:
     Type: AWS::EC2::SecurityGroupIngress
     Properties:
       Description: Load balancer to target
       FromPort: 3000
-      GroupId:
-        Fn::GetAtt:
-          - FargateServiceSecurityGroup
-          - GroupId
+      GroupId: !GetAtt FargateServiceSecurityGroup.GroupId
       IpProtocol: tcp
-      SourceSecurityGroupId:
-        Fn::GetAtt:
-          - FargateServiceLBSecurityGroup
-          - GroupId
+      SourceSecurityGroupId: !GetAtt FargateServiceLBSecurityGroup.GroupId
       ToPort: 3000
     DependsOn:
       - FargateServiceTaskDefTaskRole
-
   ECSServiceScalableTarget:
     Type: AWS::ApplicationAutoScaling::ScalableTarget
     Properties:
@@ -531,7 +552,6 @@ Resources:
     DependsOn:
       - ECSAutoScalingRole
       - FargateService
-
   ECSServiceScalingPolicy:
     Type: AWS::ApplicationAutoScaling::ScalingPolicy
     Properties:
@@ -544,7 +564,6 @@ Resources:
           PredefinedMetricType: ECSServiceAverageCPUUtilization
         ScaleInCooldown: 60 # Wait 60 seconds before scaling up
         ScaleOutCooldown: 300 # Wait 5 minutes before scaling down
-
   ECSAutoScalingRole:
     Type: AWS::IAM::Role
     Properties:
@@ -578,6 +597,125 @@ Resources:
                 Resource: '*'
       PermissionsBoundary: !Ref RoleBoundary
 
+  ####################################
+  # Data / Cache Resources           #
+  ####################################
+
+  RedisSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Redis access from ECS (Shared VPC)
+      VpcId: !ImportValue MarketingSitesRegionInfrastructure-VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 6379
+          ToPort: 6379
+          SourceSecurityGroupId: !Ref FargateServiceSecurityGroup
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-redis-sg"
+  RedisSubnetGroup:
+    Type: AWS::ElastiCache::SubnetGroup
+    Properties:
+      CacheSubnetGroupName: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
+      Description: Marketing Sites Redis Cache Subnet Group (Shared VPC)
+      SubnetIds:
+<% selected_azs.each_with_index do |_, index| %>
+        - !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+<% end %>
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-subnet-group"
+  # This enables keyspace notifications for Redis, which is required for the Next.js caching.
+  # See: https://github.com/trieb-work/nextjs-turbo-redis-cache
+  RedisParameterGroup:
+    Type: AWS::ElastiCache::ParameterGroup
+    Properties:
+      CacheParameterGroupFamily: redis7
+      Description: Enable keyspace notifications (Shared VPC)
+      Properties:
+        notify-keyspace-events: Exe
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-params"
+  RedisCluster:
+    Type: AWS::ElastiCache::ReplicationGroup
+    Properties:
+      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group (Shared VPC)
+      Engine: redis
+      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
+      CacheParameterGroupName: !Ref RedisParameterGroup
+      EngineVersion: 7.1
+      CacheNodeType: !If
+        - IsProductionEnvironment
+        - cache.r7g.xlarge
+        - cache.t3.medium
+      NumNodeGroups: 1
+      ReplicasPerNodeGroup: 1
+      SecurityGroupIds:
+        - !Ref RedisSecurityGroup
+      CacheSubnetGroupName: !Ref RedisSubnetGroup
+      MultiAZEnabled: true
+      TransitEncryptionEnabled: true
+      AtRestEncryptionEnabled: true
+      AutomaticFailoverEnabled: true
+      AutoMinorVersionUpgrade: true
+      PreferredMaintenanceWindow: "sun:05:00-sun:06:00"
+      Tags:
+        - Key: Name
+          Value: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}-cluster"
+
+  CacheFileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      Encrypted: true
+      PerformanceMode: generalPurpose
+      ThroughputMode: bursting
+      LifecyclePolicies:
+        - TransitionToIA: AFTER_30_DAYS
+      FileSystemTags:
+        - Key: Name
+          Value: !Sub "Marketing-EFS-Cache-${SubdomainName}-${EnvironmentType}"
+
+<% selected_azs.each_with_index do |_, index| %>
+  CacheMountTarget<%= index %>:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref CacheFileSystem
+      SubnetId: !ImportValue MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+      SecurityGroups: [!Ref CacheEFSSecurityGroup]
+<% end %>
+  CacheAccessPoint:
+    Type: AWS::EFS::AccessPoint
+    Properties:
+      FileSystemId: !Ref CacheFileSystem
+      PosixUser:
+        Uid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
+        Gid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
+      RootDirectory:
+        Path: "/cache/code.org"
+        CreationInfo:
+          OwnerUid: "1001"
+          OwnerGid: "1001"
+          Permissions: "755"
+      AccessPointTags:
+        - Key: Name
+          Value: !Sub "Marketing-EFS-AccessPoint-${SubdomainName}-${EnvironmentType}"
+  CacheEFSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupName: !Sub "${SubdomainName}-${EnvironmentType}-efs-sg"
+      GroupDescription: Allow Marketing ECS to connect to EFS (Shared VPC)
+      VpcId: !ImportValue MarketingSitesRegionInfrastructure-VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 2049
+          ToPort: 2049
+          SourceSecurityGroupId: !GetAtt FargateServiceSecurityGroup.GroupId
+      Tags:
+        - Key: Name
+          Value: !Sub "${SubdomainName}-${EnvironmentType}-efs-sg"
+
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
     Properties:
@@ -599,82 +737,6 @@ Resources:
             Status: Enabled
             NoncurrentVersionExpiration:
               NoncurrentDays: 90
-
-  ###########################
-  # End AWS ECS Resources   #
-  ###########################
-
-  ###########################
-  # Start AWS EFS Resources #
-  ###########################
-
-  CacheFileSystem:
-    Type: AWS::EFS::FileSystem
-    Properties:
-      Encrypted: true
-      PerformanceMode: generalPurpose
-      ThroughputMode: bursting
-      LifecyclePolicies:
-        - TransitionToIA: AFTER_30_DAYS
-      FileSystemTags:
-        - Key: Name
-          Value: Marketing-EFS-Cache
-
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-  CacheMountTarget<%= index %>:
-    Type: AWS::EFS::MountTarget
-    Properties:
-      FileSystemId: !Ref CacheFileSystem
-      SubnetId: !Ref VpcPrivateSubnet<%= index %>
-      SecurityGroups: [!Ref CacheEFSSecurityGroup]
-<% end %>
-
-  CacheAccessPoint:
-    Type: AWS::EFS::AccessPoint
-    Properties:
-      FileSystemId: !Ref CacheFileSystem
-      PosixUser:
-        Uid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
-        Gid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
-      RootDirectory:
-        Path: "/cache/code.org"
-        CreationInfo:
-          OwnerUid: "1001"
-          OwnerGid: "1001"
-          Permissions: "755"
-
-  CacheEFSSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Allow Marketing ECS to connect to EFS
-      VpcId:
-        Ref: Vpc
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 2049
-          ToPort: 2049
-          SourceSecurityGroupId:
-            Fn::GetAtt:
-              - FargateServiceSecurityGroup
-              - GroupId
-
-  ###########################
-  # End AWS EFS Resources   #
-  ###########################
-
-  ####################################
-  # Start AWS Cloudfront Resources   #
-  ####################################
-
-  CloudFrontOriginAccessControl:
-    Type: AWS::CloudFront::OriginAccessControl
-    Properties:
-      OriginAccessControlConfig:
-        Name: !Sub "CLoudfront-OAC-${SubdomainName}.${BaseDomainName}"
-        SigningBehavior: always
-        SigningProtocol: sigv4
-        OriginAccessControlOriginType: s3
-
   StaticAssetsBucketCloudFrontPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -689,297 +751,9 @@ Resources:
             Condition:
               StringEquals:
                 AWS:SourceArn: !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}'
-
-  ApplicationCachingPolicy:
-    Type: AWS::CloudFront::CachePolicy
-    Properties:
-      CachePolicyConfig:
-        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
-        DefaultTTL: 86400
-        MaxTTL: 31536000
-        MinTTL: 1
-        ParametersInCacheKeyAndForwardedToOrigin:
-          EnableAcceptEncodingGzip: true
-          EnableAcceptEncodingBrotli: true
-          HeadersConfig:
-            HeaderBehavior: whitelist
-            Headers:
-              - RSC
-              - Next-Router-State-Tree
-              - Next-Router-Prefetch
-              - next-url
-              - Accept
-              - x-prerender-revalidate
-              - Host # Used in the withBrand middleware to determine tenant in multi-tenant setup
-              - Accept-Language # Used in the withLocale middleware to determine the user's locale
-          CookiesConfig:
-            CookieBehavior: whitelist
-            Cookies:
-              - __prerender_bypass # Next.js Draft mode
-              - language_ # Used in the withLocale middleware to determine the user's locale and shared with studio.code.org
-          QueryStringsConfig:
-            QueryStringBehavior: none
-        Comment: Cache policy for the marketing app
-
-  ViewerResponseCloudFrontFunction:
-    Type: AWS::CloudFront::Function
-    Properties:
-      Name: !Sub '${AWS::StackName}-ViewerResponse'
-      AutoPublish: true
-      FunctionCode: |
-        function handler(event) {
-          let response = event.response;
-
-          // Set a default stale-while-revalidate cache control header if the origin does not send any cache-control header
-          // This is to workaround https://github.com/vercel/next.js/issues/73382
-          // Remove when the issue is fixed in Next.js (Cache-Control is consistently returned by the origin)
-          if (response.headers['cache-control'] === undefined) {
-              // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
-              response.headers['cache-control'] = {
-              value: `s-maxage=900, stale-while-revalidate=31535400`
-            }
-          }
-
-          return response;
-        }
-      FunctionConfig:
-        Comment: Adds Cache-Control if not present
-        Runtime: cloudfront-js-2.0
-
-  # For immutable static assets (hashed assets like JS/CSS files), ensure that the Cache-Control header is set to immutable
-  ImmutableStaticAssetsResponseHeadersPolicy:
-    Type: AWS::CloudFront::ResponseHeadersPolicy
-    Properties:
-      ResponseHeadersPolicyConfig:
-        Name: !Sub "${AWS::StackName}-Assets-ResponseHeader-Policy"
-        Comment: "Ensure immutable static assets have Cache-Control header set to immutable"
-        CustomHeadersConfig:
-          Items:
-            - Header: cache-control
-              Override: false # Do not override the cache control from the origin if it is available
-              Value: public, max-age=31536000, immutable
-
-  CloudFrontDistribution:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig:
-        Enabled: true
-        Comment: Marketing Sites Application CloudFront Distribution
-        HttpVersion: http2
-        PriceClass: PriceClass_100
-
-        Aliases:
-          - !Sub "${SubdomainName}.${BaseDomainName}"
-          - !Sub "preview-${SubdomainName}.${BaseDomainName}"
-
-        Origins:
-          - Id: marketing-sites-application-origin
-            DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
-            CustomOriginConfig:
-              HTTPSPort: 443
-              OriginProtocolPolicy: https-only
-              OriginSSLProtocols:
-                - TLSv1.2
-          - Id: marketing-sites-static-assets-origin
-            DomainName: !GetAtt StaticAssetsBucket.RegionalDomainName
-            S3OriginConfig:
-              OriginAccessIdentity: ""
-            OriginAccessControlId: !Ref CloudFrontOriginAccessControl
-
-        DefaultCacheBehavior:
-          TargetOriginId: marketing-sites-application-origin
-          ViewerProtocolPolicy: redirect-to-https
-          Compress: true
-          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
-          OriginRequestPolicyId: "216adef6-5c7f-47e4-b989-5492eafa07d3" # AllViewer
-          FunctionAssociations:
-            - EventType: viewer-response
-              FunctionARN: !GetAtt ViewerResponseCloudFrontFunction.FunctionARN
-
-        ViewerCertificate:
-          AcmCertificateArn:
-            Ref: CloudFrontTLSCertificateArn
-          SslSupportMethod: sni-only
-
-        Restrictions:
-          GeoRestriction:
-            RestrictionType: none
-
-        # Temporary (and in production only) until distribution becomes the main one, after which Real Time Logging is
-        # enabled to avoid double counting between Pegasus and this distribution.
-        Logging: !If
-          - IsProductionEnvironment
-          - Bucket: "cdo-logs.s3.amazonaws.com"
-            Prefix: !Sub "AWSLogs/${AWS::AccountId}/CloudFront/${SubdomainName}.${BaseDomainName}/"
-            IncludeCookies: false
-          - !Ref "AWS::NoValue"
-
-        CacheBehaviors:
-          # Path: /api/*
-          # Description: Marketing application API routes
-          - AllowedMethods:
-              - GET
-              - HEAD
-              - OPTIONS
-              - PUT
-              - POST
-              - PATCH
-              - DELETE
-            CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (APIs are not cached)
-            OriginRequestPolicyId: 216adef6-5c7f-47e4-b989-5492eafa07d3 # AllViewer
-            PathPattern: /api/*
-            TargetOriginId: marketing-sites-application-origin
-            ViewerProtocolPolicy: redirect-to-https
-
-          # Path: /_next/*
-          # Description: Marketing _application_ static assets
-          - AllowedMethods:
-              - GET
-              - HEAD
-              - OPTIONS
-            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
-            Compress: true
-            PathPattern: /_next/*
-            TargetOriginId: marketing-sites-static-assets-origin
-            ViewerProtocolPolicy: redirect-to-https
-            ResponseHeadersPolicyId: !Ref ImmutableStaticAssetsResponseHeadersPolicy
-
-  CloudFrontDistributionDNS:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      AliasTarget:
-        DNSName: !GetAtt CloudFrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
-      HostedZoneId:
-        Ref: HostedZoneId
-      Name: !Sub "${SubdomainName}.${BaseDomainName}"
-      Type: A
-
-  PreviewCloudFrontDistributionDNS:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      AliasTarget:
-        DNSName: !GetAtt CloudFrontDistribution.DomainName
-        HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
-      HostedZoneId:
-        Ref: HostedZoneId
-      Name: !Sub "preview-${SubdomainName}.${BaseDomainName}"
-      Type: A
-
-  ################################
-  # End AWS Cloudfront Resources #
-  ################################
-
-  #########################
-  # Start Redis Resources #
-  #########################
-
-  RedisSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Redis access from ECS
-      VpcId: !Ref Vpc
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: 6379
-          ToPort: 6379
-          SourceSecurityGroupId: !Ref FargateServiceSecurityGroup
-
-  RedisSubnetGroup:
-    Type: AWS::ElastiCache::SubnetGroup
-    Properties:
-      Description: Marketing Sites Redis Cache Subnet Group
-      SubnetIds:
-<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
-        - Ref: VpcPrivateSubnet<%= index %>
-<% end %>
-
-  # This enables keyspace notifications for Redis, which is required for the Next.js caching.
-  # See: https://github.com/trieb-work/nextjs-turbo-redis-cache
-  RedisParameterGroup:
-    Type: AWS::ElastiCache::ParameterGroup
-    Properties:
-      CacheParameterGroupFamily: redis7
-      Description: Enable keyspace notifications
-      Properties:
-        notify-keyspace-events: Exe
-
-  RedisCluster:
-    Type: AWS::ElastiCache::ReplicationGroup
-    Properties:
-      ReplicationGroupDescription: Marketing Sites redis full router page and internal data cache replication group
-      Engine: redis
-      ReplicationGroupId: !Sub "marketing-sites-${SubdomainName}-${EnvironmentType}"
-      CacheParameterGroupName: !Ref RedisParameterGroup
-      EngineVersion: 7.1
-      CacheNodeType:
-        Fn::If:
-          - IsProductionEnvironment
-          - cache.r7g.xlarge
-          - cache.t3.medium
-      NumNodeGroups: 1
-      ReplicasPerNodeGroup: 1
-      SecurityGroupIds:
-        - !Ref RedisSecurityGroup
-      CacheSubnetGroupName: !Ref RedisSubnetGroup
-      MultiAZEnabled: true
-      TransitEncryptionEnabled: true
-      AtRestEncryptionEnabled: true
-      AutomaticFailoverEnabled: true
-      AutoMinorVersionUpgrade: true
-      PreferredMaintenanceWindow: "sun:05:00-sun:06:00"
-
-  #######################
-  # End Redis Resources #
-  #######################
-
 Outputs:
-  FargateServiceTaskDefExecutionRoleArn:
-    Value:
-      Fn::GetAtt:
-        - FargateServiceTaskDefExecutionRole
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceTaskDefExecutionRoleArn'
-  FargateServiceTaskDefTaskRoleArn:
-    Value:
-      Fn::GetAtt:
-        - FargateServiceTaskDefTaskRole
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceTaskDefTaskRoleArn'
-  FargateServiceArn:
-    Value:
-      Ref: FargateService
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceArn'
-  StaticAssetsBucketArn:
-    Value:
-      Fn::GetAtt:
-        - StaticAssetsBucket
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-StaticAssetsBucketArn'
-  ECSAutoScalingRoleArn:
-    Value:
-      Fn::GetAtt:
-        - ECSAutoScalingRole
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-ECSAutoScalingRoleArn'
-  FargateServiceLoadBalancerDNS:
-    Value:
-      Fn::GetAtt:
-        - FargateServiceLB
-        - DNSName
+  SiteDomainName:
+    Description: Fully qualified domain name of the marketing site
+    Value: !Sub "${SubdomainName}.${BaseDomainName}"
   CloudFrontDistributionId:
-    Value:
-      Ref: CloudFrontDistribution
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'
+    Value: !Ref CloudFrontDistribution

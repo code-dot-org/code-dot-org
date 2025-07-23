@@ -1,0 +1,98 @@
+name 'pl-java-class-structure-mutator-methods-info-29-2_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Mutator Methods
+
+#### Now that you've learned how to check the value of a variable in a class with accessor methods, let's see how to change the value. 
+---
+
+
+<img src="https://images.code.org/2450a45a8dca9e42950ca55b306fa075-image-1747853015750.png" alt="code for a mutator method called setName" width="350px" style="border-radius:10px; float:right; margin: 40px 0 0px 40px;">
+
+## Mutator Methods (Setters)
+
+#### A **mutator method** lets you change or "mutate" the value assigned to an instance variable.
+
+#### Think of it like giving a new instruction to the object. 
+
+- #### This method updates the value of `name`.
+
+- #### It usually starts with the word **set**.
+
+- #### But it doesn’t return a value — it just does a task (sets the value).
+
+#### That’s why the return type is `void` — it means “this method does not return anything.”
+
+<div style="clear:both;"></div>
+
+---
+## Writing a Mutator Method 
+
+<table border="1" width="100%" cellpadding="10">
+  <tr>
+   <td width="40%">
+                <img src="https://images.code.org/30ff3ecfe91058965186bcdadc27cd2c-image-1747931586962.png" alt="mutator method to setAge" width="150%">
+  </td>
+   <td width="60%" style="font-size:14pt;">
+            The method is public so it can be accessed from outside of the class.
+
+  </td>
+  </tr>
+ <tr>
+    <td width="40%">
+    <img src="https://images.code.org/ef48a036f7aedff4922f868dceeee5ae-image-1747931618389.png" alt="mutator method to setAge" width="150%">
+      </td>
+     <td width="60%" style="font-size:14pt;">
+              The return type is void since it doesn't return a value.
+      </td>
+      </tr>
+      <tr>
+      <td width="40%">
+                <img src="https://images.code.org/e58a7e7c0f0c97d6e225b276dd8ab036-image-1747931663122.png" alt="mutator method to setAge " width="150%">
+       </td>
+            <td width="60%" style="font-size:14pt;">
+                The name of the method is typically set followed by the name of the instance variable.
+      </td>
+    </tr>
+   <tr>
+    <td width="40%">
+                <img src="https://images.code.org/3fdb74a0d95c35f79ea17f9720eca0ab-image-1747931704763.png" alt="mutator method to setAge " width="150%">
+   </td>
+     <td width="60%" style="font-size:14pt;">
+                We specify a parameter that matches the type of the instance variable.
+
+   </td>
+  </tr>
+   <tr>
+  <td width="40%">
+                <img src="https://images.code.org/a13584f7ded6d571c1a170cbdad7f2ec-image-1747931740979.png" alt="mutator method to setAge " width="150%">
+   </td>
+  <td width="60%" style="font-size:14pt;">
+                Then we <b>assign the value</b> passed to the parameter to the instance variable.
+
+   </td>
+   </tr>
+</table>
+
+## Calling a Mutator Method 
+
+#### When we call the method, we pass the **new value** to assign the `age` instance variable. 
+
+
+<img src="https://images.code.org/1fd6feae0f02e0c8ee592ee50b92ffc2-image-1747931200834.png" alt="code for a mutator method called setName" width="350px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+## Class Example 
+#### Take a look at how these methods fit into a full class. 
+
+
+<img src="https://images.code.org/c9ca7ac174360e5749901e2be8fbdb22-image-1747853334028.png" alt="code for a mutator method called setName" width="550px" style="border-radius:10px;display: block; margin-left: auto; margin-right: auto;">
+
+
+
+
+## Let's practice mutator methods! 
+
+
+MARKDOWN

@@ -1,11 +1,8 @@
-// Making sure that css is first so that it is imported for other classes.
-// This might not be necessary.
-import './styles/Weblab2View.css';
-
 import {Codebridge} from '@codebridge/Codebridge';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
+import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
@@ -17,14 +14,17 @@ import {useAppSelector} from '../util/reduxHooks';
 import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
 
+import moduleStyles from './styles/weblab2-view.module.scss';
+
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
+  js: javascript(),
 };
 
 const defaultConfig: ConfigType = {
   languageMapping: weblabLangMapping,
-  editableFileTypes: ['html', 'css'],
+  editableFileTypes: ['html', 'css', 'js'],
   activeLayout: 'vertical',
   layoutComponents: {
     vertical: VerticalLayout,
@@ -123,17 +123,15 @@ const Weblab2View: React.FC<
   );
 
   return (
-    <div className="app-wrapper">
-      <div className="app-ide">
-        {hasSource && (
-          <Codebridge
-            config={config}
-            setConfig={setConfig}
-            startSources={startSources}
-            levelProperties={levelProperties}
-          />
-        )}
-      </div>
+    <div className={moduleStyles.weblab2Container}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          levelProperties={levelProperties}
+        />
+      )}
     </div>
   );
 };

@@ -12,16 +12,12 @@ module User::AiAccessible
 
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+    ai_tutor_permission? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
+    !ai_tutor_feature_globally_disabled? && (ai_tutor_permission? ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
   end
 
   def can_use_ai_iteration_tools?
@@ -47,11 +43,18 @@ module User::AiAccessible
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
   end
 
+  def can_access_ai_tutor2?(level_id)
+    # If the request is coming from a python lab level, trust the client to decide
+    # if it can access AiTutor2. This allows easy testing of AiTutor2 using a url param.
+    return false if level_id.nil?
+    Level.find(level_id).is_a? Pythonlab
+  end
+
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
   end
 
-  private def permission_for_ai_tutor?
+  private def ai_tutor_permission?
     permission?(UserPermission::AI_TUTOR_ACCESS)
   end
 

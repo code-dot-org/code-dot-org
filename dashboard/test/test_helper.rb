@@ -304,7 +304,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      refute_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using refute_equal with nil
+      if before[i].nil?
+        refute_nil(e.call, error)
+      else
+        refute_equal(before[i], e.call, error)
+      end
     end
   end
 
@@ -325,7 +330,12 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_equal(before[i], e.call, error)
+      # Avoid a deprecation notice when using assert_equal with nil
+      if before[i].nil?
+        assert_nil(e.call, error)
+      else
+        assert_equal(before[i], e.call, error)
+      end
     end
   end
 

@@ -19,15 +19,12 @@ const shapes = {
     linkToLesson: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
   }),
-  sections: PropTypes.arrayOf(
+  participantSections: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       teacherName: PropTypes.string.isRequired,
-      linkToProgress: PropTypes.string.isRequired,
       assignedTitle: PropTypes.string.isRequired,
       linkToAssigned: PropTypes.string.isRequired,
-      numberOfStudents: PropTypes.number.isRequired,
-      linkToStudents: PropTypes.string.isRequired,
       login_type: PropTypes.string,
       code: PropTypes.string.isRequired,
     })

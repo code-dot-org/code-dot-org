@@ -88,8 +88,6 @@ Dashboard::Application.routes.draw do
 
     get "/congrats", to: "congrats#index"
 
-    get "/flowlab", to: "flowlab#index"
-
     get "/incubator", to: redirect(CDO.code_org_url("/incubator"))
     get "/musiclab", to: redirect(CDO.code_org_url("/music"))
     get "/projectbeats", to: redirect(CDO.code_org_url("/music"))
@@ -830,7 +828,6 @@ Dashboard::Application.routes.draw do
         delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
         post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-        post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
         # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
@@ -957,7 +954,6 @@ Dashboard::Application.routes.draw do
 
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
-      get 'workshops/:workshop_id/enroll', to: redirect("/pd/workshops/%{workshop_id}/join")
       get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'

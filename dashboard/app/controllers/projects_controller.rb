@@ -456,7 +456,7 @@ class ProjectsController < ApplicationController
 
     @body_classes = @level.properties['background']
 
-    if @level.is_a?(Pythonlab)
+    if @level.uses_theme_preference?
       user_theme = current_user ? UserPreference.find_by(user_id: current_user.id)&.theme : nil
       theme_preference = user_theme['global'] if user_theme
       if theme_preference

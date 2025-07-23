@@ -14,7 +14,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "sandbox-csf",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2025"
   },
   "resources": [

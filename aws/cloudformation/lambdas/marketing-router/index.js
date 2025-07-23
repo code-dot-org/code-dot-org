@@ -361,6 +361,16 @@ const marketingPaths = {
   "/about/it": true,
   "/events": true,
   "/events/conferences": true,
+  "/professional-learning/regional-partner-program/resources": true,
+  "/index": true,
+  "/congrats": true,
+  "/educate": true,
+  "/international/about.es-mx": true,
+  "/student": true,
+  "/educate/regional-partner/612": true,
+  "/educate/regional-partner/general": true,
+  "/educate/regional-partner/k5": true,
+  "/educate/weblab-test": true,
 }
 
 const nextJsAssetsPath = '/_next/static/';

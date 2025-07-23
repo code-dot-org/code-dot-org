@@ -5,13 +5,6 @@
   "category_key": "play",
   "block_name": "play_sound_at_current_location_simple2",
   "content": "Putting several of these blocks together will play the sounds one after another. If you want to play samples simultaneously, put the blocks in the [`play together`(#94E4FF)](/docs/ide/music/expressions/play_together) block.\n\n---\n\n<img src=\"https://images.code.org/1ae2acdb2948ee8a8e6992f9818ab37a-image-1747943390706.png\" \n     alt=\"ADD ALT TEXT\" \n     style=\"width: 45%; border-radius: 10px; margin: 0px 20px 20px 0px; float: left;\">\n\n<br>\n\n#### <span style=\"color:teal\">❶</span> Click on the sound name to open the menu\n#### <span style=\"color:teal\">❷</span> In the first column you can choose a sound pack\n#### <span style=\"color:teal\">❸</span> Press the play button here for a sample of some of the sounds together or the artist's song\n#### <span style=\"color:teal\">❹</span> The icon shows which type of sound it is. \n#### <span style=\"color:teal\">❺</span> The name of the sound\n#### <span style=\"color:teal\">❻</span> This shows how many measures long the sound is",
-  "examples": [
-    {
-      "name": "Example 1",
-      "app": "https://studio.code.org/projects/music/C1ujhIHTZ_58KFZpkE_i0fU9tSFFnsO1Cpl6W3cwdZM",
-      "embed_app_with_code_height": "5"
-    }
-  ],
   "palette_params": [
     {
       "name": "sound",

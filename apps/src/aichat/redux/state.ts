@@ -47,6 +47,8 @@ export interface AichatState {
     | undefined;
   // If the user has a sent a message on this level
   hasSentMessage: boolean;
+  // If starting customizations have been set on this level
+  hasSetStartingCustomizations: boolean;
   // If the user has updated customizations on this level
   hasUpdatedCustomizations: boolean;
   // Error message to display if a save fails

@@ -102,6 +102,7 @@ class Level < ApplicationRecord
     skip_url
     stay_on_level_after_submit
     skill_keys
+    additional_ai_evaluation_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -1013,8 +1014,24 @@ class Level < ApplicationRecord
     skills.map {|skill| {id: skill.id, key: skill.key}}
   end
 
-  def skill_keys
-    skills.pluck(:key)
+  def remove_skill_key(skill_key)
+    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
+    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
+    save!
+  end
+
+  def add_skill_key(skill_key)
+    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
+                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
+                               else
+                                 [skill_key].to_json
+                               end
+    save!
+  end
+
+  def uses_theme_preference?
+    # Only python lab and web lab 2 set and use the theme preference in UserPreferences right now.
+    is_a?(Pythonlab) || is_a?(Weblab2)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

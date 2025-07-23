@@ -1001,14 +1001,13 @@ class Lesson < ApplicationRecord
   # and ai chat only supports light mode. Eventually, we would like all lab2 labs to support
   # both light and dark mode and a theme preference.
   def get_background_for_user(current_user)
-    # The recommended rubocop syntax does not work here.
-    has_python_levels = levels.any? {|level| level.is_a?(Pythonlab)} # rubocop:disable Performance/RedundantEqualityComparisonBlock
+    uses_theme_preference = levels.any?(&:uses_theme_preference?)
     theme_preference = nil
-    theme_default = has_python_levels ? 'dark' : nil
-    if has_python_levels && current_user
+    theme_default = uses_theme_preference ? 'dark' : nil
+    if uses_theme_preference && current_user
       user_theme = UserPreference.find_by(user_id: current_user.id)&.theme
       theme_preference = user_theme['global'] if user_theme
-    elsif !has_python_levels
+    elsif !uses_theme_preference
       music_count = levels.count {|level| level.is_a?(Music)}
       aichat_count = levels.count {|level| level.is_a?(Aichat)}
       if music_count > aichat_count

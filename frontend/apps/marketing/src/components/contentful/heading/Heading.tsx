@@ -20,6 +20,8 @@ export type HeadingProps = RemoveMarginBottomProps & {
   children: ReactNode;
   /** Heading visual appearance */
   visualAppearance: HeadingVisualAppearance;
+  /** Heading color */
+  color?: 'primary' | 'white';
   /** ClassName passed by Contentful to apply styles
    * that are set through Contentful native editor */
   className?: string;
@@ -40,13 +42,15 @@ const visualAppearanceToSemanticTagMap: Record<
 };
 
 const Heading: React.FunctionComponent<HeadingProps> = ({
-  visualAppearance,
   children,
+  visualAppearance,
+  color,
   removeMarginBottom,
   className,
 }) => (
   <Typography
     className={className}
+    color={color}
     component={visualAppearanceToSemanticTagMap[visualAppearance]}
     variant={visualAppearanceToSemanticTagMap[visualAppearance]}
     gutterBottom={!removeMarginBottom}

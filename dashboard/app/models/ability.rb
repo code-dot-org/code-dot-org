@@ -37,7 +37,6 @@ class Ability
       Pd::Workshop,
       Pd::Session,
       Pd::Enrollment,
-      Pd::DistrictPaymentTerm,
       :pd_teacher_attendance_report,
       :pd_workshop_summary_report,
       Pd::CourseFacilitator,
@@ -171,9 +170,10 @@ class Ability
       can :evaluate, :openai_evaluate
       can :evaluate_section, :openai_evaluate
 
-      # all signed in users can access the aichat_request endpoint
-      # additional permission logic lives in the controller itself
+      # all signed in users can access the aichat_request and aichat_events endpoints
+      # additional permission logic lives in the controllers themselves
       can [:start_chat_completion, :chat_request], :aichat_request
+      can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
         can :manage, Section do |s|
@@ -522,15 +522,6 @@ class Ability
 
       can :find_toxicity, :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
-      end
-
-      # Additional logic that confirms that a given teacher or student should have access
-      # to a given student (or their own, in the case of a student viewer) chat history is in aichat_events_controller.
-      can [:log_chat_event, :chat_history], :aichat_event do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
-      end
-      can :submit_teacher_feedback, :aichat_event do
-        user.teacher_can_access_ai_chat?
       end
 
       can :user_has_access, :aichat
