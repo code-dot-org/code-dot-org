@@ -131,7 +131,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-24.04
-    environment: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
     if: ${{ inputs.SITE_TYPE == 'corporate' }}
     needs:
       - deploy
