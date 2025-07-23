@@ -49,8 +49,6 @@ export const sectionDivider: {
 };
 
 export interface SectionProps {
-  /** Section width */
-  width?: string;
   /** Background color */
   background?: SectionBackground;
   /** Vertical spacing
@@ -80,7 +78,6 @@ const styles = {
 };
 
 const Section: React.FC<SectionProps> = ({
-  width,
   background = 'primary',
   padding = 'l',
   theme = 'Light',
@@ -122,7 +119,6 @@ const Section: React.FC<SectionProps> = ({
       <Container
         className={classNames(
           'container',
-          `container--width-${width}`,
           `container--spacing-${padding}`,
           divider !== 'none' && `container--divider-${divider}`,
         )}
