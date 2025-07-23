@@ -51,37 +51,37 @@ class ExpiredDeletedAccountPiiScrubber
 
     accounts_to_scrub.find_each do |user|
       scrub_user(user)
-      @num_accounts_scrubbed += 1
+      self.num_accounts_scrubbed += 1
     rescue StandardError => exception
-      @num_errors += 1
+      self.num_errors += 1
       Honeybadger.notify(exception, context: {user_id: user.id})
       log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
     end
 
     if dry_run?
-      log_message("Dry run complete: would scrub #{@num_accounts_scrubbed} accounts. Encountered #{@num_errors} errors.")
+      log_message("Dry run complete: would scrub #{num_accounts_scrubbed} accounts. Encountered #{num_errors} errors.")
     else
-      log_message(format("Scrubbed #{@num_accounts_scrubbed} accounts in %.2f seconds. Encountered #{@num_errors} errors.", (Time.now - @start_time)))
+      log_message(format("Scrubbed #{num_accounts_scrubbed} accounts in %.2f seconds. Encountered #{num_errors} errors.", (Time.now - start_time)))
       upload_metrics
     end
 
     log_to_slack(summary)
-    log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if @num_errors.positive?
+    log_to_slack(summary, SLACK_CHANNEL_FOR_ERRORS) if num_errors.positive?
   end
 
   def accounts_to_scrub
-    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: @scrub_accounts_deleted_since)
+    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: scrub_accounts_deleted_since)
     total_accounts = accounts.count
-    if total_accounts > @max_accounts_to_scrub
-      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{@max_accounts_to_scrub}"
+    if total_accounts > max_accounts_to_scrub
+      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{max_accounts_to_scrub}"
     end
     accounts
   end
 
   def summary
-    summary = "Removed PII from #{@num_accounts_scrubbed} accounts"
-    summary += "\nEncountered #{@num_errors} errors" if @num_errors.positive?
-    summary += "\nDuration #{Time.at(Time.now.to_i - @start_time.to_i).utc.strftime("%H:%M:%S")}"
+    summary = "Removed PII from #{num_accounts_scrubbed} accounts"
+    summary += "\nEncountered #{num_errors} errors" if num_errors.positive?
+    summary += "\nDuration #{Time.at(Time.now.to_i - start_time.to_i).utc.strftime("%H:%M:%S")}"
     summary += "\nDry run, no accounts actually scrubbed" if dry_run?
     summary
   end
@@ -102,14 +102,14 @@ class ExpiredDeletedAccountPiiScrubber
       [
         {
           metric_name: 'NumAccountsScrubbed',
-          value: @num_accounts_scrubbed,
+          value: num_accounts_scrubbed,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ]
         },
         {
           metric_name: 'NumErrors',
-          value: @num_errors,
+          value: num_errors,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ]
