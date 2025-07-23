@@ -106,6 +106,10 @@ const Section: React.FC<SectionProps> = ({
       className={classNames(`section-background-${background}`, className)}
       sx={{
         ...styles.section,
+        // Fallback dark bg color for older browsers that don't support CSS :has()
+        ...(useDarkTheme && {
+          backgroundColor: '#212121',
+        }),
         // This hardcoded bg pattern is used on the Corporate Site only
         ...(background === 'patternDark' || background === 'patternPrimary'
           ? {
