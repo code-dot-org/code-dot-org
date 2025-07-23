@@ -1,33 +1,91 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
+import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
+
+import i18n from '@cdo/locale';
+
+import slide1Image from './images/welcome-slide-0.png';
+import slide2Image from './images/welcome-slide-1.png';
+import slide3Image from './images/welcome-slide-2.png';
+import slide4Image from './images/welcome-slide-3.png';
+import slide5Image from './images/welcome-slide-4.png';
+
+import styles from './welcome-popup.module.scss';
 
 export interface WelcomePopupProps {
   teacherName?: string;
 }
 
+const SLIDE_0 = {
+  title: i18n.teacherHomepageWelcomeTitle0(),
+  body: i18n.teacherHomepageWelcomeBody0(),
+  image: slide1Image,
+};
+
+const SLIDE_1 = {
+  title: i18n.teacherHomepageWelcomeTitle1(),
+  body: i18n.teacherHomepageWelcomeBody1(),
+  image: slide2Image,
+};
+const SLIDE_2 = {
+  title: i18n.teacherHomepageWelcomeTitle2(),
+  body: i18n.teacherHomepageWelcomeBody2(),
+  image: slide3Image,
+};
+
+const SLIDE_3 = {
+  title: i18n.teacherHomepageWelcomeTitle3(),
+  body: i18n.teacherHomepageWelcomeBody3(),
+  image: slide4Image,
+};
+
+const SLIDE_4 = {
+  title: i18n.teacherHomepageWelcomeTitle4(),
+  body: i18n.teacherHomepageWelcomeBody4(),
+  image: slide5Image,
+};
+
+const SLIDES = [SLIDE_0, SLIDE_1, SLIDE_2, SLIDE_3, SLIDE_4];
+
 const WelcomePopup: React.FC<WelcomePopupProps> = ({teacherName}) => {
   const [isOpen, setIsOpen] = React.useState(true);
 
+  const [stepNum, setStepNum] = React.useState(0);
+
   const handleNext = () => {
-    setIsOpen(false);
+    setStepNum(prev => prev + 1);
   };
+
+  React.useEffect(() => {
+    if (stepNum >= SLIDES.length || stepNum < 0) {
+      setIsOpen(false);
+    }
+  }, [stepNum]);
 
   if (!isOpen) return null;
 
+  const currentSlide = SLIDES[stepNum];
+
   return (
     <Modal
-      title="Welcome to your new homepage!"
-      onClose={handleNext}
+      title={currentSlide.title}
+      onClose={() => setIsOpen(false)}
       primaryButtonProps={{
         text: 'Next',
         onClick: handleNext,
       }}
-    >
-      <div>
-        <FontAwesomeV6Icon iconName="robot" />
-      </div>
-    </Modal>
+      secondaryButtonProps={{
+        text: 'Back',
+        onClick: () => setStepNum(prev => Math.max(prev - 1, 0)),
+        disabled: stepNum === 0,
+      }}
+      customContent={
+        <div>
+          <img src={currentSlide.image} alt="" className={styles.image} />
+          <BodyTwoText>{currentSlide.body}</BodyTwoText>
+        </div>
+      }
+    />
   );
 };
 
