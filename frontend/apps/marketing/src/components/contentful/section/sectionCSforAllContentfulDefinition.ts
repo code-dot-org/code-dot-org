@@ -1,6 +1,11 @@
 // Creates a definition for the Section component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
+import {
+  sectionIdDefinition,
+  sectionPaddingDefinition,
+} from '@/components/common/definitions';
+
 export const SectionCSforAllContentfulComponentDefinition: ComponentDefinition =
   {
     id: 'section',
@@ -60,28 +65,7 @@ export const SectionCSforAllContentfulComponentDefinition: ComponentDefinition =
           ],
         },
       },
-      padding: {
-        displayName: 'Padding',
-        type: 'Text',
-        group: 'style',
-        description: 'Adds medium or large padding to the section.',
-        defaultValue: 'l',
-        validations: {
-          in: [
-            {value: 'm', displayName: 'Medium'},
-            {value: 'l', displayName: 'Large'},
-          ],
-        },
-      },
-      id: {
-        displayName: 'Section ID',
-        type: 'Text',
-        group: 'content',
-        description:
-          'Adds a custom ID to a section; can be used for skip links.',
-        validations: {
-          bindingSourceType: ['manual'],
-        },
-      },
+      ...sectionPaddingDefinition,
+      ...sectionIdDefinition,
     },
   };
