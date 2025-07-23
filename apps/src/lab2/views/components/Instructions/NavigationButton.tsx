@@ -43,6 +43,9 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
       <SubmitButton
         levelId={levelProperties.id}
         appName={levelProperties.appName}
+        disableEditRunForSubmission={
+          levelProperties.disableEditRunForSubmission
+        }
         hasRun={hasRun}
         hasEdited={hasEdited}
         className={className}
@@ -144,6 +147,7 @@ interface SubmitButtonProps {
   appName: string;
   hasRun: boolean;
   hasEdited: boolean;
+  disableEditRunForSubmission?: boolean;
   className?: string;
 }
 
@@ -155,6 +159,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   appName,
   hasRun,
   hasEdited,
+  disableEditRunForSubmission = false,
   className,
 }) => {
   const hasSubmitted = useAppSelector(
@@ -164,7 +169,8 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
     state => state.progress.scriptId || undefined
   );
 
-  const enabled = hasSubmitted || (hasRun && hasEdited);
+  const enabled =
+    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
 
   const dialogControl = useDialogControl();
