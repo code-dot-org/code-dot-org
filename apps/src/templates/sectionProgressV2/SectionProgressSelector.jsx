@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import Link from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import _ from 'lodash';
@@ -123,8 +124,8 @@ function SectionProgressSelector({
         id="ui-test-toggle-progress-view"
       >
         {displayV2
-          ? i18n.switchToOldProgressView()
-          : i18n.switchToNewProgressView()}
+          ? i18n.switchToOldProgressViewDeprecation()
+          : i18n.switchToNewProgressViewDeprecation()}
       </Link>
     </div>
   );
@@ -151,6 +152,13 @@ function SectionProgressSelector({
         !isInV1Navigaton && styles.navView
       )}
     >
+      {!displayV2 && (
+        <Alert
+          text={i18n.progressDeprecationWarning()}
+          type="warning"
+          className={styles.deprecationBanner}
+        />
+      )}
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}

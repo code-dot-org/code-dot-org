@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -86,6 +87,7 @@ const SkillsCreator: React.FC<SkillsCreatorProps> = ({skills}) => {
       }
     }
     alert('Skills created successfully!');
+    window.location.reload();
   };
 
   return (
@@ -94,8 +96,15 @@ const SkillsCreator: React.FC<SkillsCreatorProps> = ({skills}) => {
       <p>
         Upload a CSV of skills with the following columns: key, concept,
         description, evaluationCriteria. Key must be unique. After upload of
-        your CSV, reload the page and double-check the Skills Table to ensure
-        your newly created skills are as expected.
+        your CSV, double-check the Skills Table to ensure your newly created
+        skills are as expected. You can copy this{' '}
+        <Link
+          openInNewTab
+          href="https://docs.google.com/spreadsheets/d/1gRuwitEoPM3kXRPSPJUSIxoahnsqO-lPxDnx3eSqdLI/edit?usp=sharing"
+        >
+          template
+        </Link>{' '}
+        to get started.
       </p>
       <br />
       <div>

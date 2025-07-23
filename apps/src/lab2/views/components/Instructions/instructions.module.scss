@@ -81,10 +81,16 @@
 }
 
 .textContent {
-  height: 100%;
+  overflow: hidden;
+  gap: 8px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+.ttsContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .bubbleNoSlide {
@@ -221,12 +227,7 @@
   min-height: 70px;
 }
 
-.scrollingContentWithTTS {
-  @extend %scrolling-content;
-  margin-bottom: 15px;
-}
-
-.scrollingContentWithoutTTS {
+.scrollingContent {
   @extend %scrolling-content;
 }
 

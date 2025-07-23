@@ -752,6 +752,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end
@@ -828,7 +829,6 @@ Dashboard::Application.routes.draw do
         delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
         post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-        post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
         # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
