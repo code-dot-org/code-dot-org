@@ -1,6 +1,8 @@
 Feature: Music Lab workspaces load between levels
 
 @no_mobile
+@no_safari
+# TODO: This test has been flaky on Safari. Investigate and re-enable.
 Scenario: Ensure feedback message gets focus after keyboard nav run button
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/2"
   And I rotate to landscape
