@@ -1,19 +1,21 @@
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 // We used to have an 'open' attribute on files, but now we track open files
-// in source.openFiles to have a single source of truth.
+// in source.openFiles. This is a single the single source of truth which allows for tab ordering.
 // Some projects may not have an openFiles array due to legacy reasons but do
-// have an "active" file. In this case, we will set openFiles to be the active file.
+// have "active" and/or "open" files. In this case, we will set openFiles to be the
+// active and/or open files.
 export const repairOpenFiles = (source: MultiFileSource): MultiFileSource => {
   const openFiles = source.openFiles ? [...source.openFiles] : [];
-  let activeFileNotInOpen = false;
+  let updatedOpenList = false;
   Object.values(source.files).forEach(file => {
-    if (file.active && !openFiles.includes(file.id)) {
+    const isOpen = (file as unknown as {open: boolean}).open; // Legacy open attribute
+    if ((isOpen || file.active) && !openFiles.includes(file.id)) {
       openFiles.push(file.id);
-      activeFileNotInOpen = true;
+      updatedOpenList = true;
     }
   });
-  if (activeFileNotInOpen) {
+  if (updatedOpenList) {
     return {
       ...source,
       openFiles,
