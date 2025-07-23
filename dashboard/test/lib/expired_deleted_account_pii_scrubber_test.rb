@@ -7,12 +7,14 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
   let(:described_instance) {described_class.new(options)}
   let(:options) {{}}
   let(:user) {create(:user, :deleted)}
+  let(:older_than_ttl_date) {(User::SOFT_DELETED_USER_TTL + 1.day).ago}
+  let(:newer_than_ttl_date) {(User::SOFT_DELETED_USER_TTL - 1.day).ago}
 
   describe '#scrub_pii_from_expired_deleted_accounts!' do
     subject(:scrub_pii) {described_instance.scrub_pii_from_expired_deleted_accounts!}
 
     before do
-      user.update(deleted_at: 29.days.ago)
+      user.update(deleted_at: older_than_ttl_date)
       Cdo::Metrics.stubs(:push)
       ChatClient.stubs(:message)
       Honeybadger.stubs(:notify)
@@ -66,7 +68,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     subject(:accounts_to_scrub) {described_instance.accounts_to_scrub}
 
     before do
-      user.update(deleted_at: 29.days.ago)
+      user.update(deleted_at: older_than_ttl_date)
     end
 
     it 'should return accounts deleted before the scrub cutoff' do
@@ -74,7 +76,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
     end
 
     it 'should not return accounts deleted after the scrub cutoff' do
-      user.update(deleted_at: 27.days.ago)
+      user.update(deleted_at: newer_than_ttl_date)
       _(accounts_to_scrub).wont_include user
     end
 
