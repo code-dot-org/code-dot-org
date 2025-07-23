@@ -22,7 +22,7 @@ env:
 concurrency:
   # For pushes to staging, requests are grouped into the "deploy-marketing" concurrency group to queue them up
   # For pull requests, there are no limits to concurrency
-  group: ${{ github.event_name == 'push' && 'deploy-marketing' || github.run_id }}
+  group: ${{ github.run_id }}
   # For pushes to staging, multiple pushes are queued
   # For pull requests, multiple pushes to the same PR cancels previous executions
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
@@ -114,10 +114,12 @@ jobs:
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
     with:
-      GITHUB_ENVIRONMENT_NAME: ${{ matrix.GITHUB_ENVIRONMENT_NAME }}
+      ENVIRONMENT_TYPE: ${{ matrix.ENVIRONMENT_TYPE }}
+      SITE_TYPE: ${{ matrix.SITE_TYPE }}
       CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
     strategy:
       fail-fast: true
       max-parallel: 1
       matrix:
-        GITHUB_ENVIRONMENT_NAME: [ marketing-sites-test-corporate, marketing-sites-production-corporate ]
+        SITE_TYPE: [ corporate ]
+        ENVIRONMENT_TYPE: [ test, production ]
