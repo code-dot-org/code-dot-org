@@ -1,6 +1,7 @@
 require 'active_support'
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
+require 'active_support/core_ext/integer/time'
 require 'honeybadger/ruby'
 require 'dalli/elasticache'
 
@@ -27,6 +28,7 @@ module Cdo
         return nil unless memcached_hosts.present?
 
         ActiveSupport::Cache::MemCacheStore.new memcached_hosts, {
+          expires_in: 1.month, # prevent permanent entries, but let them stick around for a while
           value_max_bytes: 64.megabytes # max size of single value
         }
       end

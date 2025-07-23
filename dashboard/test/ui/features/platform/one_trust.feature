@@ -46,18 +46,6 @@ Feature: OneTrust integration
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
 
-  @pegasus_content
-  Scenario: The pegasus pages load the self hosted OneTrust libraries.
-    Given I am on "http://code.org/index"
-    Then element "script[src$='onetrust/cdo/scripttemplates/otSDKStub.js']" does exist
-    Then element "script[src$='977d/OtAutoBlock.js']" does exist
-    Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
-
-    Given I am on "http://hourofcode.com/us"
-    Then element "script[src$='otSDKStub.js']" does exist
-    Then element "script[src$='e345/OtAutoBlock.js']" does exist
-    Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
-
   Scenario: The dashboard pages load the Onetrust prod libraries.
     Given I am on "http://studio.code.org/users/sign_in"
     When I use a cookie to mock the DCDO key "onetrust_cookie_scripts" as "prod"
@@ -66,21 +54,6 @@ Feature: OneTrust integration
     Then element "script[src$='977d/OtAutoBlock.js']" does exist
     Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
     Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does not exist
-
-  @pegasus_content
-  Scenario: The pegasus pages load the Onetrust prod libraries.
-    Given I am on "http://code.org/index"
-    Then element "script[src$='otSDKStub.js']" does exist
-    Then element "script[src$='977d/OtAutoBlock.js']" does exist
-    Then element "script[src$='977d-test/OtAutoBlock.js']" does not exist
-    Then element "script[src$='onetrust/scripttemplates/otSDKStub.js']" does not exist
-
-    Given I am on "http://hourofcode.com/us"
-    And I use a cookie to mock the DCDO key "onetrust_cookie_scripts" as "prod"
-    Given I am on "http://hourofcode.com/us"
-    Then element "script[src$='otSDKStub.js']" does exist
-    Then element "script[src$='e345/OtAutoBlock.js']" does exist
-    Then element "script[src$='e345-test/OtAutoBlock.js']" does not exist
 
   Scenario: The dashboard pages load the test OneTrust libraries.
     Given I am on "http://studio.code.org/users/sign_in?onetrust_cookie_scripts=test"

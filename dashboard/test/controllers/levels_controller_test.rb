@@ -79,7 +79,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should return level_properties" do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other", offer_browser_tts: true}
 
     get :level_properties, params: {id: level}
     assert_response :success
@@ -101,7 +101,8 @@ class LevelsControllerTest < ActionController::TestCase
       "baseAssetUrl" => "/blockly/",
       "isAssessment" => nil,
       "progressionType" => nil,
-      "enableBlocklyKeyboardNavigation" => nil
+      "enableBlocklyKeyboardNavigation" => nil,
+      "offerBrowserTts" => true
     }
     assert_equal(expected_body, body)
   end

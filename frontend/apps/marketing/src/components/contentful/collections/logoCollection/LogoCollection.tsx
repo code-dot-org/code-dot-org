@@ -43,6 +43,7 @@ const logoStyles = {
     justifyContent: 'center',
     width: 'fit-content',
     height: '100%',
+    marginBottom: 0,
     textDecoration: 'none',
     transition: 'opacity 0.3s ease-in-out',
     '&:hover': {

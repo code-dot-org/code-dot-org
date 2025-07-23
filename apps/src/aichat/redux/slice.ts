@@ -52,6 +52,7 @@ const initialState: AichatState = {
   hasUpdatedCustomizations: false,
   saveError: undefined,
   showResetMessage: false,
+  hasSetStartingCustomizations: false,
 };
 
 const aichatSlice = createSlice({
@@ -198,6 +199,10 @@ const aichatSlice = createSlice({
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
+      state.hasSetStartingCustomizations = true;
+    },
+    clearHasSetStartingCustomizations: state => {
+      state.hasSetStartingCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -373,4 +378,5 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
+  clearHasSetStartingCustomizations,
 } = aichatSlice.actions;
