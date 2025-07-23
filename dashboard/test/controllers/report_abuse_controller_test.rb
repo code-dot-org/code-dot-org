@@ -151,7 +151,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "update_abuse_image_moderation requires login" do
-    post :update_abuse_image_moderation, params: {channel_id: @channel_id}
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'flag'}
 
     assert_response :unauthorized
   end
@@ -161,8 +161,25 @@ class ReportAbuseControllerTest < ActionController::TestCase
     sign_in user
 
     assert_raises(ActionController::BadRequest) do
-      post :update_abuse_image_moderation, params: {channel_id: "invalid-channel"}
+      post :update_abuse_image_moderation, params: {channel_id: "invalid-channel", type: 'flag'}
     end
+  end
+
+  test "update_abuse_image_moderation with invalid type returns bad request" do
+    user = create(:student)
+    sign_in user
+
+    # Ensure initial score is 0
+    assert_equal 0, Projects.get_abuse(@channel_id)
+
+    post :update_abuse_image_moderation, params: {channel_id: @channel_id, type: 'invalid_type'}
+
+    assert_response :bad_request
+    json = JSON.parse(response.body)
+    assert_equal "Invalid type parameter. Must be 'flag' or 'unflag'.", json["error"]
+
+    # Ensure abuse score was not changed
+    assert_equal 0, Projects.get_abuse(@channel_id)
   end
 
   test "base64 error" do
