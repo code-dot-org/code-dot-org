@@ -364,7 +364,6 @@ const marketingPaths = {
   "/events/conferences": true,
   "/professional-learning/regional-partner-program/resources": true,
   "/index": true,
-  "/congrats": true,
   "/educate": true,
   "/international/about.es-mx": true,
   "/student": true,
