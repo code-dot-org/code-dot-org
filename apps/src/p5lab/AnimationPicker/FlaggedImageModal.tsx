@@ -2,6 +2,8 @@ import Modal from '@code-dot-org/component-library/modal';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import i18n from '@cdo/locale';
+
 interface FlaggedImageModalProps {
   isOpen: boolean;
   onAccept: () => void;
@@ -19,22 +21,24 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
     <Modal
       id="image-flagged-modal"
       onClose={onCancel}
-      title="Warning: Inappropriate Image"
+      title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
         <div>
           <BodyTwoText>
-            This image has been flagged as inappropriate. By including this
-            image in your project, you will be unable to share the project with
-            others.
+            {i18n.animationPicker_flaggedImageNoShare()}
+          </BodyTwoText>
+          <BodyTwoText>
+            {' '}
+            {i18n.animationPicker_flaggedImageUndoStartOver()}
           </BodyTwoText>
         </div>
       }
       primaryButtonProps={{
-        text: 'Accept',
+        text: i18n.accept(),
         onClick: onAccept,
       }}
       secondaryButtonProps={{
-        text: 'Cancel',
+        text: i18n.cancel(),
         onClick: onCancel,
       }}
     />
