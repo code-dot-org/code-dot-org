@@ -36,12 +36,10 @@ class AidiffThread < ApplicationRecord
   end
 
   def summarize_with_messages
-    {
-      id: id,
-      title: title,
-      updated_at: updated_at,
-      context_type: context_type,
-      messages: aidiff_messages&.map(&:summarize)
-    }
+    summarize.merge(
+      {
+        messages: aidiff_messages&.map(&:summarize)
+      }
+    )
   end
 end
