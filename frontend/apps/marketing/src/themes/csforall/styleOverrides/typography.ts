@@ -19,6 +19,10 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         {
           color: theme.palette.text.secondary,
         },
+      '&.MuiTypography-body1.paragraph--color-white, &.MuiTypography-body2.paragraph--color-white, &.MuiTypography-body3.paragraph--color-white, &.MuiTypography-body4.paragraph--color-white':
+        {
+          color: theme.palette.common.white,
+        },
       // Overline styles
       '&.MuiTypography-overline': {
         display: 'inline-block',

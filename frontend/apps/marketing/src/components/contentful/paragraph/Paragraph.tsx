@@ -22,7 +22,7 @@ type ParagraphProps = RemoveMarginBottomProps & {
   /** Whether the paragraph text is strong */
   isStrong: boolean;
   /** Paragraph color */
-  color: 'primary' | 'secondary';
+  color: 'primary' | 'secondary' | 'white';
   /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
   className?: string;
 };
