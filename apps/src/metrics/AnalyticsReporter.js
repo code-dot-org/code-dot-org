@@ -1,119 +1,132 @@
-import {
-  init,
-  track,
-  Identify,
-  identify,
-  setUserId,
-} from '@amplitude/analytics-browser';
+import {StatsigClient} from '@statsig/js-client';
+import {runStatsigAutoCapture} from '@statsig/web-analytics';
 
-import DCDO from '@cdo/apps/dcdo';
 import logToCloud from '@cdo/apps/logToCloud';
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import experiments from '@cdo/apps/util/experiments';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 
 import {
   getEnvironment,
   isProductionEnvironment,
-  isStagingEnvironment,
   isDevelopmentEnvironment,
 } from '../utils';
 
-import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
+import {
+  getUserID,
+  getUserType,
+  getStableId,
+  formatUserId,
+} from './statsigHelpers';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
+const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 
-class AnalyticsReporter {
+class StatsigReporter {
   constructor() {
-    // Get the API key from the DOM. See application.html.haml layout.
-    const element = document.querySelector('script[data-amplitude-api-key]');
-    const api_key = element ? element.dataset.amplitudeApiKey : '';
-    // Let Amplitude handle missing/invalid keys.
+    // stable_id is set as a cookie in application_controller.rb. However in a
+    // the rare case we are running outside of the application layout,
+    // set stable_id as a cookie here if it doesn't exist.
+    this.stable_id = getStableId();
+    this.log(`Statsig Stable ID: ${this.stable_id}`);
+    let user = {
+      custom: {
+        enabledExperiments: experiments.getEnabledExperiments(),
+        geRegion: getGlobalEditionRegion(),
+      },
+      customIDs: {stableID: this.stable_id},
+    };
+
+    const user_id = getUserID();
+    const user_type = getUserType();
+
+    if (user_id) {
+      user.userID = formatUserId(user_id);
+      user.custom.userType = user_type;
+    }
+    this.user = user;
+
+    const api_element = document.querySelector(
+      'script[data-statsig-api-client-key]'
+    );
+    this.api_key = api_element ? api_element.dataset.statsigApiClientKey : '';
+
+    const managed_test_environment_element = document.querySelector(
+      'script[data-managed-test-server]'
+    );
+    const managed_test_environment = managed_test_environment_element
+      ? managed_test_environment_element.dataset.managedTestServer === 'true'
+      : false;
+    this.local_mode = !(
+      isProductionEnvironment() ||
+      managed_test_environment ||
+      process.env.STATSIG_LOCAL_MODE_OFF
+    );
+    this.options = {
+      environment: {tier: getEnvironment()},
+      localMode: this.local_mode,
+      disableErrorLogging: true,
+    };
+
+    this.initialize(this.api_key, this.user, this.options);
+  }
+
+  // This user object will potentially update via a setUserProperties call
+  // (below) from current user redux
+  async initialize(api_key, user, options) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      init(api_key);
+      this.statsigClient = new StatsigClient(api_key, user, options);
+      await this.statsigClient.initializeAsync();
     }
   }
 
-  setUserProperties(userId, userType, enabledExperiments) {
-    const identifyObj = new Identify();
-    const formattedUserId = this.formatUserId(userId);
-    // enabledExperiments sometimes has duplicates
-    const uniqueExperiments = [...new Set(enabledExperiments)].sort();
-    setUserId(formattedUserId);
-    identifyObj.set('userType', userType);
-    identifyObj.set('signInState', !!userId);
-    identifyObj.set('enabledExperiments', uniqueExperiments);
-
+  // Utilizes Statsig's function for updating a user once we've recognized a sign in
+  async setUserProperties({
+    userId,
+    userType,
+    isVerifiedInstructor,
+    enabledExperiments,
+    educatorRole,
+  }) {
+    const formattedUserId = formatUserId(userId);
+    const user = {
+      userID: formattedUserId,
+      custom: {
+        userType,
+        isVerifiedInstructor,
+        enabledExperiments,
+        educatorRole,
+      },
+    };
     if (!this.shouldPutRecord(ALWAYS_SEND)) {
       this.log(
-        `User properties: userId: ${formattedUserId}, userType: ${userType}, signInState: ${!!userId}, enabledExperiments: ${uniqueExperiments}`
+        `User properties: userId: ${formattedUserId}, userType: ${userType}, isVerifiedInstructor: ${isVerifiedInstructor}, signInState: ${!!userId}`
       );
-    }
-    identify(identifyObj);
-  }
-
-  /*
-   *  Allows us to temporarily send events to Amplitude, Statsig, or both
-   *  platforms without requiring a refactor of all events. If/when we move
-   *  entirely to Statsig, this file can be replaced with the contents of
-   *  StatsigReporter, or the files sending events can import that file instead
-   *  and we can delete this one.
-   */
-  sendEvent(eventName, payload, analyticsTool = PLATFORMS.BOTH) {
-    if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
-      statsigReporter.sendEvent(eventName, payload);
-    }
-    if ([PLATFORMS.AMPLITUDE, PLATFORMS.BOTH].includes(analyticsTool)) {
-      this.sendAnalyticsEvent(eventName, payload);
+    } else {
+      await this.statsigClient.updateUserAsync(user);
     }
   }
 
-  sendAnalyticsEvent(eventName, payload) {
-    //we can enable/disable sampling based upon the event's group, which is defined in the AnalyticsConstants
-    //file, in the EVENT_GROUPS variable. If an event is not listed in that mapping, it defaults to 'ungrouped'
-
-    // event groups can define a sample rate, as part of the 'amplitude-event-sample-rates' DCDO flag.
-    // e.g. { 'ungrouped' : 1, 'video-events' : 0.25, 'expensive-events' : -1 }
-    // which would, respectively, log:
-    //   all events w/o sampling for 'ungrouped'
-    //   video-events at a 25% sampling rate
-    //   and explicitly turn off expensive-events
-    // sample rate should be in the range (0,1), exclusive
-
-    // if a eventGroup is not defined or set to 0 or 1, then all events will be logged w/o sampling.
-    // if set to -1, then nothing will be logged.
-
-    const sampleRates = DCDO.get('amplitude-event-sample-rates', {});
-    const eventGroup = EVENT_GROUPS[eventName] || 'ungrouped';
-    const sampleRate = sampleRates[eventGroup] || 1;
-
-    const sampleRateString =
-      sampleRate !== 1 ? `[SAMPLE RATE ${sampleRate} for ${eventGroup}]` : '';
-    if (sampleRate < 0 || Math.random() > sampleRate) {
-      this.log(
-        `[SKIPPED SAMPLED EVENT]${sampleRateString}${eventName}. Payload: ${JSON.stringify(
-          {
-            payload,
-          }
-        )}`
-      );
-      return;
-    }
-
+  sendEvent(eventName, payload) {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
       if (!eventName) {
         logToCloud.addPageAction(
-          logToCloud.PageAction.NoValidAmplitudeEventNameError,
+          logToCloud.PageAction.NoValidStatsigEventNameError,
           {
             payload: payload,
           }
         );
-        track('NO_VALID_EVENT_NAME_LOG_ERROR', payload);
+        this.statsigClient.logEvent(NO_EVENT_NAME, NO_EVENT_NAME, payload);
       } else {
-        track(eventName, payload);
+        // Statsig expects a name, value and data. Because we are unifying this
+        // with our Amplitude logging, we are bypassing the 'value' and sending
+        // event name twice. If we want to use this field moving forward, we
+        // will need to refactor all AnalyticsReporting event calls accordingly.
+        this.statsigClient.logEvent(eventName, eventName, payload);
       }
     } else {
       this.log(
-        `${sampleRateString}${eventName}. Payload: ${JSON.stringify({
+        `${eventName}. Payload: ${JSON.stringify({
           payload,
         })}`
       );
@@ -122,21 +135,17 @@ class AnalyticsReporter {
 
   log(message) {
     if (isDevelopmentEnvironment() && !IN_UNIT_TEST) {
-      console.log(`[AMPLITUDE ANALYTICS EVENT]: ${message}`);
+      console.log(`[STATSIG ANALYTICS EVENT]: ${message}`);
     }
   }
 
-  formatUserId(userId) {
-    const userIdString = userId.toString() || 'none';
-    if (!userId) {
-      return userIdString;
+  getIsInExperiment(name, parameter, defaultValue) {
+    if (this.local_mode) {
+      return defaultValue ?? false;
     }
-    if (isProductionEnvironment()) {
-      return userIdString.padStart(5, '0');
-    } else {
-      const environment = getEnvironment();
-      return `${environment}-${userIdString}`;
-    }
+    return (
+      this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue
+    );
   }
 
   /**
@@ -149,13 +158,25 @@ class AnalyticsReporter {
     if (alwaysPut) {
       return true;
     }
-    if (isProductionEnvironment() || isStagingEnvironment()) {
+    if (!this.local_mode) {
       return true;
     }
     return false;
   }
+
+  /**
+   * Runs Web Analytics auto-capturing.
+   * @see https://docs.statsig.com/webanalytics/overview
+   */
+  async runAutoCapture() {
+    if (this.shouldPutRecord(ALWAYS_SEND)) {
+      const client = new StatsigClient(this.api_key, this.user, this.options);
+      runStatsigAutoCapture(client);
+      await client.initializeAsync();
+    }
+  }
 }
 
-const analyticsReporter = new AnalyticsReporter();
+const statsigReporter = new StatsigReporter();
 
-export default analyticsReporter;
+export default statsigReporter;

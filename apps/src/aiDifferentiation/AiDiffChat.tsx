@@ -14,7 +14,7 @@ import {
   AiDiffContext,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
@@ -161,11 +161,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         threadId: thread,
         url: window.location.href,
       };
-      analyticsReporter.sendEvent(
-        EVENTS.AI_DIFF_CHAT_EVENT,
-        responseEventData,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_EVENT, responseEventData);
     },
     [reportingData]
   );

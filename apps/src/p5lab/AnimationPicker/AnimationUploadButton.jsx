@@ -7,7 +7,7 @@ import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '@cdo/apps/code-studio/projectRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import msg from '@cdo/locale';
@@ -72,11 +72,10 @@ export function UnconnectedAnimationUploadButton({
     } else {
       onUploadClick();
       if (projectType) {
-        analyticsReporter.sendEvent(
-          EVENTS.UPLOAD_CUSTOM_IMAGE,
-          {UploaderType: 'Animation Picker', ProjectType: projectType},
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: projectType,
+        });
       }
     }
   };

@@ -11,7 +11,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Fragment} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -67,8 +67,7 @@ const RegionalWorkshopCatalogCard = ({
         workshop_course: course,
         workshop_subject: subject,
         workshop_format: format,
-      },
-      PLATFORMS.BOTH
+      }
     );
     navigateToHref(`/professional-learning/workshops/${id}`);
   };

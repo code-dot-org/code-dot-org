@@ -20,7 +20,7 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
+import {EVENTS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
 import {
@@ -225,11 +225,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
-      analyticsReporter.sendEvent(
-        statsigKey,
-        reportingContext,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(statsigKey, reportingContext);
       HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
         setShowWelcomeExperience(false);
       });
@@ -251,11 +247,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         return null;
       })();
       if (statsigKey) {
-        analyticsReporter.sendEvent(
-          statsigKey,
-          reportingContext,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(statsigKey, reportingContext);
       }
 
       setCurrentWelcomeState(nextState);
@@ -374,11 +366,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={classNames(style.optionRow, style.optionRowWithPic)}
             href="https://code.org/ai/pl/101"
             onClick={() =>
-              analyticsReporter.sendEvent(
-                EVENTS.AI_DIFF_101,
-                reportingContext,
-                PLATFORMS.STATSIG
-              )
+              analyticsReporter.sendEvent(EVENTS.AI_DIFF_101, reportingContext)
             }
           >
             <div className={style.optionWithPicTop}>

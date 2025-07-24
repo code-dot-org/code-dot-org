@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigation/images/CalendarEmptyStateIllustration.svg';
@@ -62,16 +62,12 @@ export default function RegionalWorkshopCatalog({
       handleSubmitZip(prepopulatedZip, true);
     } else {
       // Log page visit event with null info if there's no valid prepopulated zip
-      analyticsReporter.sendEvent(
-        EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED,
-        {
-          'zip code': null,
-          'regional partner': null,
-          'number of regional workshops': 0,
-          'number of national workshops': nationalWorkshops?.length || 0,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED, {
+        'zip code': null,
+        'regional partner': null,
+        'number of regional workshops': 0,
+        'number of national workshops': nationalWorkshops?.length || 0,
+      });
     }
   }, [zipFromSchoolInfo, handleSubmitZip, nationalWorkshops]);
 
@@ -142,8 +138,7 @@ export default function RegionalWorkshopCatalog({
               'number of regional workshops': newRegionalWorkshops?.length || 0,
               'number of national workshops':
                 availableNationalWorkshops?.length || 0,
-            },
-            PLATFORMS.BOTH
+            }
           );
         }
       } catch (error) {

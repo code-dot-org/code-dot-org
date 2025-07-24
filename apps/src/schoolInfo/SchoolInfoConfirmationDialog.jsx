@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import color from '@cdo/apps/util/color';
@@ -76,21 +76,13 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED, {});
     this.setState({isOpen: false});
     this.props.onClose();
   };
 
   handleClickYes = async () => {
-    analyticsReporter.sendEvent(
-      EVENTS.CONFIRM_SCHOOL_CLICKED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.CONFIRM_SCHOOL_CLICKED, {});
     const formData = new FormData();
     try {
       await fetch(
@@ -110,20 +102,12 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.UPDATE_SCHOOL_CLICKED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_CLICKED, {});
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN, {});
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;
     return (

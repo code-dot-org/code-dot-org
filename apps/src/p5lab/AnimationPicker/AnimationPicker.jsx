@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -236,14 +236,10 @@ class AnimationPicker extends React.Component {
               this.setState({
                 showFlaggedModal: true,
               });
-              analyticsReporter.sendEvent(
-                EVENTS.FLAGGED_CUSTOM_IMAGE,
-                {
-                  UploaderType: 'Animation Picker',
-                  ProjectType: this.props.projectType,
-                },
-                PLATFORMS.STATSIG
-              );
+              analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+                UploaderType: 'Animation Picker',
+                ProjectType: this.props.projectType,
+              });
             } else {
               // If the image is rated 'everyone' or 'unknown', continue with upload.
               this.props.onUploadStart(this.state.pendingUploadData);
@@ -284,8 +280,7 @@ class AnimationPicker extends React.Component {
           {
             UploaderType: 'Animation Picker',
             ProjectType: this.props.projectType,
-          },
-          PLATFORMS.STATSIG
+          }
         );
       })
       .catch(err => {
@@ -303,11 +298,10 @@ class AnimationPicker extends React.Component {
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(
-      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
-      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Animation Picker',
+      ProjectType: this.props.projectType,
+    });
     this.props.onClose(); // Close the entire AnimationPicker
   };
 

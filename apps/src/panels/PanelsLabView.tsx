@@ -3,6 +3,7 @@
 // This is a React client for a panels level.  Note that this is
 // only used for levels that use Lab2.
 
+// TODO: Remove Amplitude analytics here
 import {
   Identify,
   identify,

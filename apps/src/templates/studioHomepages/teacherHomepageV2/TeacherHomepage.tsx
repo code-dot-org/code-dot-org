@@ -1,7 +1,7 @@
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -62,19 +62,11 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     ) {
       trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-      analyticsReporter.sendEvent(
-        EVENTS.TEACHER_LOGIN_EVENT,
-        {
-          'user id': teacherId,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+        'user id': teacherId
+      });
     }
-    analyticsReporter.sendEvent(
-      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.NEW_TEACHER_HOMEPAGE_VISITED, {});
   }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
@@ -98,7 +90,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       value === 'teaching'
         ? EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED
         : EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED;
-    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(toggleEvent, {});
     setSelectedArchiveToggle(value);
   };
 

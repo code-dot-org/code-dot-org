@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
@@ -38,8 +38,7 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
       };
       analyticsReporter.sendEvent(
         EVENTS.AI_DIFF_FEEDBACK_EVENT,
-        feedbackEventData,
-        PLATFORMS.STATSIG
+        feedbackEventData
       );
     },
     [reportingData, message]

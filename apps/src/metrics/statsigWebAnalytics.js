@@ -1,4 +1,4 @@
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
-// Runs Statsig Web Analytics auto-capturing.
-statsigReporter.runAutoCapture();
+// Runs Web Analytics auto-capturing.
+analyticsReporter.runAutoCapture();
