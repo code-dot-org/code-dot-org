@@ -185,7 +185,7 @@ end
 def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [])
   temp_dir = File.join(Dir.pwd, 'tmp')
   FileUtils.mkdir_p(temp_dir)
-  parameter_path = nil  # Initialize to nil
+  parameter_path = nil
 
   # Build the AWS CLI command
   command_parts = [
