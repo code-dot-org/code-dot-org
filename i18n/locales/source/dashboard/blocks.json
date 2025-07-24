@@ -1,43 +1,4 @@
 {
-  "AmysBlocks_addTarget": {
-    "text": "{TARGET} {OPT} {SPRITE} ",
-    "options": {
-      "OPT": {
-        "\"follows\"": "follows",
-        "\"avoids\"": "avoids"
-      }
-    }
-  },
-  "AmysBlocks_goldilocks": {
-    "text": " if {CONDITION}{SPRITE}\n{STATEMENT}",
-    "options": {
-      "CONDITION": {
-        "\"too much\"": "too much",
-        "\"just right\"": "just right",
-        "\"too little\"": "too little"
-      }
-    }
-  },
-  "AmysBlocks_goldilocksElse": {
-    "text": " if too much{SPRITE}\n{STATEMENT}else if just right\n{STATEMENT3}else if too little\n{STATEMENT2}"
-  },
-  "AmysBlocks_makeNumSprites": {
-    "text": "make {NUM} new {ANIMATION_NAME} sprites {LOCATION}"
-  },
-  "AmysBlocks_playerBehaviors": {
-    "text": "{BEHAVIOR}",
-    "options": {
-      "BEHAVIOR": {
-        "new Behavior(moving_with_arrow_keys, [])": "moving NSEW with arrow keys"
-      }
-    }
-  },
-  "AmysBlocks_setPromptWithChoices": {
-    "text": "prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}"
-  },
-  "AmysBlocks_spriteSayVar": {
-    "text": "{SPRITE}say{TEXT1}"
-  },
   "BadGuys_makeNewBadGuysSprite": {
     "text": "make new {ANIMATION_NAME} sprite at {LOCATION}"
   },
@@ -369,24 +330,12 @@
       }
     }
   },
-  "Dancelab_eval": {
-    "text": "eval {CODE}"
-  },
   "Dancelab_everySeconds": {
     "text": "repeat every {N} {UNIT} ",
     "options": {
       "UNIT": {
         "\"measures\"": "measures",
         "\"seconds\"": "seconds"
-      }
-    }
-  },
-  "Dancelab_everyVerseChorus": {
-    "text": "every {UNIT} ",
-    "options": {
-      "UNIT": {
-        "\"verse\"": "verse",
-        "\"chorus\"": "chorus"
       }
     }
   },
@@ -397,20 +346,6 @@
         "\"low\"": "bass",
         "\"mid\"": "mid",
         "\"high\"": "treble"
-      }
-    }
-  },
-  "Dancelab_getProp": {
-    "text": "{SPRITE} {PROPERTY}",
-    "options": {
-      "PROPERTY": {
-        "\"scale\"": "size",
-        "\"width\"": "width",
-        "\"height\"": "height",
-        "\"rotation\"": "rotation",
-        "\"x\"": "horizontal position",
-        "\"y\"": "vertical position",
-        "\"tint\"": "tint"
       }
     }
   },
@@ -439,20 +374,6 @@
         "MOVES.ThisOrThat": "This or That",
         "MOVES.Thriller": "Zombie",
         "MOVES.Rest": "None"
-      }
-    }
-  },
-  "Dancelab_ifTime": {
-    "text": "if {UNIT} is {OP} {N}\n {DO1} {DO2}",
-    "options": {
-      "UNIT": {
-        "\"measures\"": "measures",
-        "\"seconds\"": "seconds"
-      },
-      "OP": {
-        "\">\"": ">",
-        "\"<\"": "<",
-        "\"=\"": "="
       }
     }
   },
@@ -685,18 +606,6 @@
   },
   "Dancelab_mixColors": {
     "text": "mix {COLOR1} and {COLOR2}"
-  },
-  "Dancelab_nMeasures": {
-    "text": "{N} measures"
-  },
-  "Dancelab_onPointerDown": {
-    "text": "on pointer down"
-  },
-  "Dancelab_onPointerDrag": {
-    "text": "on pointer drag"
-  },
-  "Dancelab_onPointerUp": {
-    "text": "on pointer up"
   },
   "Dancelab_randomColor": {
     "text": "random color"
@@ -2037,9 +1946,6 @@
       }
     }
   },
-  "gamelab_playSpeech": {
-    "text": "play speech {SOUND}"
-  },
   "gamelab_playerBehaviors": {
     "text": "{BEHAVIOR}",
     "options": {
@@ -2436,85 +2342,8 @@
   "gamelab_yLocationOf": {
     "text": "y coordinate of {SPRITE}"
   },
-  "KatiesBlocks_changeVelocity": {
-    "text": "{SPRITE} jump {PROPERTY} and {PROPERTY}",
-    "options": {
-      "PROPERTY": {
-        "\"velocityX\"": "short",
-        "\"velocityY\"": "long"
-      }
-    }
-  },
-  "KatiesBlocks_collide": {
-    "text": "{SPRITE} blocks {TARGET}"
-  },
-  "KatiesBlocks_glideTo": {
-    "text": "{SPRITE} glide to {LOCATION}"
-  },
-  "KatiesBlocks_goldilocks": {
-    "text": " if {CONDITION}{SPRITE}\n{STATEMENT}",
-    "options": {
-      "CONDITION": {
-        "\"solid\"": "solid",
-        "\"liquid\"": "liquid",
-        "\"gas\"": "gas"
-      }
-    }
-  },
-  "KatiesBlocks_katieCollide": {
-    "text": "{SPRITE} collides {TARGET}"
-  },
-  "KatiesBlocks_katiePushes": {
-    "text": "{SPRITE} bumps {TARGET}"
-  },
-  "KatiesBlocks_makeNumSpritesNear": {
-    "text": "make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}"
-  },
-  "KatiesBlocks_setVelocity": {
-    "text": "set {SPRITE} {PROPERTY} to {VAL}",
-    "options": {
-      "PROPERTY": {
-        "\"velocityX\"": "velocityX",
-        "\"velocityY\"": "velocityY",
-        "\"rotationSpeed\"": "rotationSpeed"
-      }
-    }
-  },
-  "KatiesBlocks_spriteBirdSay": {
-    "text": "{SPRITE} says {SPEECH}",
-    "options": {
-      "SPEECH": {
-        "\"My beak is pointy and strong to find insects in tree bark.\"": "My beak is pointy and strong to find insects in tree bark.",
-        "\"I have a beak like a scoop to catch fish.\"": "I have a beak like a scoop to catch fish."
-      }
-    }
-  },
-  "KatiesBlocks_tumbling": {
-    "text": "tumbling"
-  },
   "Mikelab_addBehaviorSimple": {
     "text": "sprite {SPRITE} begins {BEHAVIOR}"
-  },
-  "Mikelab_addTrainingData": {
-    "text": "add training data: {NAME},{LOCATION}",
-    "options": {
-      "NAME": {
-        "{x: 201, y: 100}": "object",
-        "{x: 200, y: 100}": "fish"
-      },
-      "LOCATION": {
-        "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": "fish",
-        "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": "not fish",
-        "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "my-label",
-        "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": "not my-label"
-      }
-    }
-  },
-  "Mikelab_allSpritesWithAnimation": {
-    "text": "{ANIMATION}"
-  },
-  "Mikelab_beginDataCollection": {
-    "text": "prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}"
   },
   "Mikelab_changeAnim": {
     "text": "set {SPRITE}'s to costume to {COSTUME}"
@@ -2554,17 +2383,8 @@
   "Mikelab_destroy": {
     "text": "remove {SPRITE}"
   },
-  "Mikelab_displace": {
-    "text": "{TARGET} blocks {SPRITE} from moving"
-  },
-  "Mikelab_eval": {
-    "text": "eval {CODE}"
-  },
   "Mikelab_getAnim": {
     "text": "{SPRITE}'s costume"
-  },
-  "Mikelab_getNext": {
-    "text": "get next object"
   },
   "Mikelab_getProp": {
     "text": "{SPRITE}'s {PROPERTY}",
@@ -2578,227 +2398,14 @@
       }
     }
   },
-  "Mikelab_groupChangeAnim": {
-    "text": "change {SELECT} {COSTUME} into {COSTUME2}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupChangePropBy": {
-    "text": "change {PROPERTY} of {SELECT} {COSTUME} by {VAL}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      },
-      "PROPERTY": {
-        "\"scale\"": "size",
-        "\"rotation\"": "rotation",
-        "\"x\"": "x position",
-        "\"y\"": "y position",
-        "\"direction\"": "movement direction"
-      }
-    }
-  },
-  "Mikelab_groupCreateNewSprite": {
-    "text": "make a new {COSTUME} at {LOCATION}",
-    "options": {
-      "LOCATION": {
-        "{x: 200, y: 100}": "top",
-        "{x: 200, y: 300}": "bottom",
-        "{x: 100, y: 200}": "left",
-        "{x: 300, y: 200}": "right",
-        "{x: 200, y: 200}": "center",
-        "{x: 100, y: 100}": "top left",
-        "{x: 300, y: 100}": "top right",
-        "{x: 100, y: 300}": "bottom left",
-        "{x: 300, y: 300}": "bottom right",
-        "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": "Random"
-      }
-    }
-  },
-  "Mikelab_groupDestroy": {
-    "text": "remove {SELECT} {COSTUME}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupDisplace": {
-    "text": "all {COSTUME} block {COSTUME2} from moving"
-  },
-  "Mikelab_groupEdgesDisplace": {
-    "text": "edges block {COSTUME} from moving"
-  },
-  "Mikelab_groupGetProp": {
-    "text": "{SELECT} {COSTUME}'s {PROPERTY}",
-    "options": {
-      "SELECT": {
-        "\"average\"": "average",
-        "\"this\"": "this"
-      },
-      "PROPERTY": {
-        "\"scale\"": "size",
-        "\"rotation\"": "rotation",
-        "\"x\"": "x position",
-        "\"y\"": "y position",
-        "\"direction\"": "movement direction"
-      }
-    }
-  },
-  "Mikelab_groupRemoveAllBehaviors": {
-    "text": "stop {SELECT} {COSTUME} behaviors",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupRemoveBehaviorSimple": {
-    "text": "{SELECT} {COSTUME} stops {BEHAVIOR}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupRemoveTint": {
-    "text": "remove color from {SELECT} {COSTUME}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupSetProp": {
-    "text": "set {PROPERTY} of {SELECT} {COSTUME} to {VAL}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      },
-      "PROPERTY": {
-        "\"scale\"": "size",
-        "\"rotation\"": "rotation",
-        "\"x\"": "x position",
-        "\"y\"": "y position",
-        "\"direction\"": "movement direction"
-      }
-    }
-  },
-  "Mikelab_groupSetTint": {
-    "text": "change color of {SELECT} {COSTUME} to {COLOR}",
-    "options": {
-      "SELECT": {
-        "\"all\"": "all",
-        "\"this\"": "this"
-      }
-    }
-  },
-  "Mikelab_groupWhenClickedOn": {
-    "text": "when {COSTUME} clicked"
-  },
-  "Mikelab_groupWhenXTouchesY": {
-    "text": "when{COSTUME} touches {COSTUME2}"
-  },
-  "Mikelab_groupWhileClicked": {
-    "text": "while clicking on {COSTUME}\n"
-  },
-  "Mikelab_groupWhileTouchingAny": {
-    "text": "while{COSTUME} is touching {COSTUME2}\n{STATEMENT}"
-  },
   "Mikelab_hasBehavior": {
     "text": "{SPRITE} is currently {BEHAVIOR}"
-  },
-  "Mikelab_hideFish": {
-    "text": "remove {TRASH}",
-    "options": {
-      "TRASH": {
-        "object": "object",
-        "fish": "fish"
-      }
-    }
-  },
-  "Mikelab_ifDanceIs": {
-    "text": "if {SPRITE} is doing {DANCE}\n {DO1} {DO2}",
-    "options": {
-      "DANCE": {
-        "MOVES.ClapHigh": "Clap High",
-        "MOVES.Clown": "Gangnam",
-        "MOVES.Dab": "Dab",
-        "MOVES.DoubleJam": "Double Down",
-        "MOVES.Drop": "Drop",
-        "MOVES.Floss": "Floss",
-        "MOVES.Fresh": "Fresh",
-        "MOVES.Roll": "Body Roll",
-        "MOVES.Kick": "Star",
-        "MOVES.ThisOrThat": "This or That",
-        "MOVES.Thriller": "Zombie",
-        "MOVES.Rest": "None"
-      }
-    }
-  },
-  "Mikelab_ifLabel": {
-    "text": "if {DANCE}\n do {DO1} else {DO2}",
-    "options": {
-      "DANCE": {
-        "MOVES.ClapHigh": "fish",
-        "MOVES.Clown": "my-label"
-      }
-    }
-  },
-  "Mikelab_ifRecognizeLabel": {
-    "text": "if recognize object as {DANCE}\n do {DO1} else {DO2}",
-    "options": {
-      "DANCE": {
-        "MOVES.ClapHigh": "fish",
-        "MOVES.Clown": "my-label"
-      }
-    }
-  },
-  "Mikelab_ifRecognizeLabelOnly": {
-    "text": "if recognize object as {DANCE}\n do {DO1}",
-    "options": {
-      "DANCE": {
-        "MOVES.ClapHigh": "fish",
-        "MOVES.Clown": "not my-label"
-      }
-    }
   },
   "Mikelab_isAnim": {
     "text": "{SPRITE}'s costume is {COSTUME}"
   },
-  "Mikelab_joinText": {
-    "text": "{TEXT} {NEXT}"
-  },
-  "Mikelab_locationAt": {
-    "text": "location x: {X} y: {Y}"
-  },
   "Mikelab_location_picker": {
     "text": "{LOCATION}"
-  },
-  "Mikelab_poemTextJoin": {
-    "text": "{TEXT1} {VAR} {TEXT2}",
-    "options": {
-      "TEXT1": {
-        "\"Balancing on the \"": "\"Balancing on the\"",
-        "\"A chubby cat \"": "\"A chubby cat\"",
-        "\"The \"": "\"The \""
-      },
-      "TEXT2": {
-        "\" fence\"": "\" fence\"",
-        "\"\"": "\"\"",
-        "\" breeze blows\"": "\" breeze blows\""
-      }
-    }
   },
   "Mikelab_randomColor": {
     "text": "random color"
@@ -2811,15 +2418,6 @@
   },
   "Mikelab_removeTint": {
     "text": "remove color from {SPRITE}"
-  },
-  "Mikelab_repeatUntilComplete": {
-    "text": "repeat forever\n"
-  },
-  "Mikelab_sendBad": {
-    "text": "move object left"
-  },
-  "Mikelab_sendGood": {
-    "text": "move object right"
   },
   "Mikelab_setBG": {
     "text": "set background to {BG}",
@@ -2861,15 +2459,6 @@
   },
   "Mikelab_setTint": {
     "text": "change color of {SPRITE} to {COLOR}"
-  },
-  "Mikelab_setupLevel": {
-    "text": "setup level with\n{A1}{A2}{A3}{A4}\n{A5}{A6}{A7}{A8}\n{B1}{B2}{B3}{B4}\n{B5}{B6}{B7}{B8}"
-  },
-  "Mikelab_setupOutbreak": {
-    "text": "outbreak setup\npopulation:{SPRITE2N}\n{TOGGLE}virus"
-  },
-  "Mikelab_setupSim": {
-    "text": "setup simulation with\n{SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}\ncollecting\n{SPRITE3N}{SPRITE3COSTUME}"
   },
   "Mikelab_showScoreboard": {
     "text": "scoreboard label {LABEL} text color {TEXTCOLOR} color {COLOR} value {VALUE} corner {CORNER}",
@@ -2950,15 +2539,6 @@
   "Mikelab_whenTouchesAny": {
     "text": "when{SPRITE} touches any sprite"
   },
-  "Mikelab_whenYesNoClicked": {
-    "text": "when {KEY} clicked",
-    "options": {
-      "KEY": {
-        "\"yes\"": "yes",
-        "\"no\"": "no"
-      }
-    }
-  },
   "Mikelab_whileClicked": {
     "text": "while clicking on{SPRITE}\n"
   },
@@ -2979,48 +2559,6 @@
   },
   "Mikelab_worldSeconds": {
     "text": "number of seconds"
-  },
-  "Mikelab_xLocationOf": {
-    "text": "x coordinate of {SPRITE}"
-  },
-  "Mikelab_yLocationOf": {
-    "text": "y coordinate of {SPRITE}"
-  },
-  "Outbreak_beginCongregating": {
-    "text": "monsters begin congregating"
-  },
-  "Outbreak_beginQuarantining": {
-    "text": "monsters begin quarantining when sick"
-  },
-  "Outbreak_beginSocialDistancing": {
-    "text": "monsters begin social distancing"
-  },
-  "Outbreak_beginWandering": {
-    "text": "monsters begin wandering"
-  },
-  "Outbreak_beginWearingMasks": {
-    "text": "monsters begin wearing masks"
-  },
-  "Outbreak_layoutBorder": {
-    "text": "layout monsters in a border"
-  },
-  "Outbreak_layoutClusters": {
-    "text": "layout monsters in clusters of {NUM}"
-  },
-  "Outbreak_layoutGrid": {
-    "text": "layout monsters as a grid"
-  },
-  "Outbreak_layoutRandom": {
-    "text": "layout monsters randomly"
-  },
-  "Outbreak_setSpeed": {
-    "text": "set monster speed to {VAL}"
-  },
-  "Outbreak_setupOutbreak": {
-    "text": "setup Monster Town with{COUNT}monsters"
-  },
-  "Outbreak_stopMoving": {
-    "text": "monsters stop moving"
   },
   "ParticlesBlocks_getMicroscope": {
     "text": "Microscope has {INPUT1}",
@@ -3182,26 +2720,6 @@
       }
     }
   },
-  "Poetry_playSoundOptionsSpace": {
-    "text": "play sound {SOUND}",
-    "options": {
-      "SOUND": {
-        "'sound://category_space/Blackhole_SFX.mp3'": "black hole",
-        "'sound://category_space/Bullet_cluster_SFX.mp3'": "bullet cluster",
-        "'sound://category_space/Carina_SFX.mp3'": "carina",
-        "'sound://category_space/Cassiopeia_SFX.mp3'": "cassiopeia",
-        "'sound://category_space/Crab_nebula_SFX.mp3'": "crab nebula",
-        "'sound://category_space/Galactic_center_SFX.mp3'": "galactic center",
-        "'sound://category_space/Launch_SFX.mp3'": "launch",
-        "'sound://category_space/Lift_Off.mp3'": "lift off",
-        "'sound://category_space/Pillars_SFX.mp3'": "pillars",
-        "'sound://category_space/Southern_ring_SFX.mp3'": "southern ring",
-        "'sound://category_space/Supernova_SFX.mp3'": "supernova",
-        "'sound://category_space/Tycho_SFX.mp3'": "tycho",
-        "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": "whirlpool galaxy"
-      }
-    }
-  },
   "Poetry_setAuthor": {
     "text": "set author {AUTHOR}"
   },
@@ -3276,12 +2794,6 @@
       }
     }
   },
-  "Poetry_setPrompt": {
-    "text": "prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}"
-  },
-  "Poetry_setPromptWithChoices": {
-    "text": "prompt user {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} for variable {VAR} with choices {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}"
-  },
   "Poetry_setSize": {
     "text": "set {SPRITE} size to {VAL}"
   },
@@ -3300,9 +2812,6 @@
   },
   "Poetry_setTitle": {
     "text": "set title {TITLE}"
-  },
-  "Poetry_showText": {
-    "text": "show text"
   },
   "Poetry_startBehavior": {
     "text": "sprite {ANIMATION_NAME} begins {BEHAVIOR} ",
@@ -3377,162 +2886,6 @@
       }
     }
   },
-  "Poetry_whenPromptAnswered": {
-    "text": "when {VAR} answered"
-  },
-  "RyanLab_moveForward": {
-    "text": "move forward"
-  },
-  "RyanLab_readSound": {
-    "text": "read with sound"
-  },
-  "RyanLab_readToConsole": {
-    "text": "read to console"
-  },
-  "RyanLab_turnLeft": {
-    "text": "turn left"
-  },
-  "RyanLab_turnRight": {
-    "text": "turn right"
-  },
-  "Vector_createSpriteWith": {
-    "text": "create sprite\ndo{STATEMENT}"
-  },
-  "Vector_log": {
-    "text": "log message {MESSAGE}"
-  },
-  "Vector_positionCenter": {
-    "text": "center"
-  },
-  "Vector_push": {
-    "text": "set velocity {VECTOR}"
-  },
-  "Vector_randomLocation": {
-    "text": "random location"
-  },
-  "Vector_setColor": {
-    "text": "set color to {COLOR}"
-  },
-  "Vector_setSize": {
-    "text": "set width {WIDTH} height {HEIGHT}"
-  },
-  "Vector_teleportTo": {
-    "text": "set position {POSITION}"
-  },
-  "Vector_vectorNorth": {
-    "text": "north"
-  },
-  "Vector_where": {
-    "text": "each sprite where {PROPERTY} is {VALUE} do{STATEMENT}",
-    "options": {
-      "PROPERTY": {
-        "'shapeColor'": "color"
-      }
-    }
-  },
-  "aalab_layoutSprites": {
-    "text": "layout monsters as a {FORMAT}",
-    "options": {
-      "FORMAT": {
-        "\"grid\"": "grid",
-        "\"border\"": "border",
-        "\"row\"": "row",
-        "\"random\"": "random"
-      }
-    }
-  },
-  "aalab_levelFailure": {
-    "text": "student {STATE} wtih key {KEY}",
-    "options": {
-      "STATE": {
-        "0": "passes",
-        "3": "fails"
-      }
-    }
-  },
-  "aalab_setSpeed": {
-    "text": "set monster speed to {VAL}"
-  },
-  "aalab_setupSim": {
-    "text": "setup Monster Town with{COUNT}monsters"
-  },
-  "aalab_someGraduallyStartIntervention": {
-    "text": "{PORTION} monsters {RATE} begin {BEHAVIOR}",
-    "options": {
-      "PORTION": {
-        "1": "all",
-        "0.75": "most",
-        "0.5": "half of",
-        "0.25": "few"
-      },
-      "RATE": {
-        "\"immediately\"": "immediately",
-        "\"quickly\"": "quickly",
-        "\"gradually\"": "gradually",
-        "\"slowly\"": "slowly"
-      },
-      "BEHAVIOR": {
-        "\"wandering\"": "wandering randomly",
-        "\"congregating\"": "congregating",
-        "\"quarantining\"": "quarantining when sick",
-        "\"avoiding\"": "social distancing",
-        "\"none\"": "staying still"
-      }
-    }
-  },
-  "aalab_someStartIntervention": {
-    "text": "{PORTION} monsters begin {BEHAVIOR}",
-    "options": {
-      "PORTION": {
-        "1": "all",
-        "0.75": "most",
-        "0.5": "half of",
-        "0.25": "few"
-      },
-      "BEHAVIOR": {
-        "\"wandering\"": "wandering randomly",
-        "\"congregating\"": "congregating",
-        "\"quarantining\"": "quarantining when sick",
-        "\"avoiding\"": "social distancing",
-        "\"none\"": "staying still"
-      }
-    }
-  },
-  "aalab_spriteSayChoices": {
-    "text": "{SPRITE} say {SPEECH}",
-    "options": {
-      "SPEECH": {
-        "\"I have spoken.\"": "I have spoken.",
-        "\"Bounty hunting is a complicated profession.\"": "Bounty hunting is a complicated profession.",
-        "\"I will initiate self-destruct.\"": "I will initiate self-destruct.",
-        "\"This is the way.\"": "This is the way.",
-        "\"People get built different. We don’t need to figure it out, we just need to respect it.\"": "People get built different. We don’t need to figure it out, we just need to respect it.",
-        "\"You don’t need a mirror to look good. You’re beautiful on the inside.\"": "You don’t need a mirror to look good. You’re beautiful on the inside.",
-        "\"Sometimes life is scary and dark. That is why we must find the light.\"": "Sometimes life is scary and dark. That is why we must find the light.",
-        "\"Everything small is just a smaller version of something big.\"": "Everything small is just a smaller version of something big.",
-        "\"Suckin’ at something is the first step to being sorta good at something.\"": "Suckin’ at something is the first step to being sorta good at something.",
-        "\"Life happens wherever you are, whether you make it or not.\"": "Life happens wherever you are, whether you make it or not.",
-        "\"You can’t knock me down!\"": "You can’t knock me down!",
-        "\"Roar!\"": "Roar!",
-        "\"My first girlfriend turned into the moon.\"": "My first girlfriend turned into the moon.",
-        "\"True humility is the only antidote to shame.\"": "True humility is the only antidote to shame.",
-        "\"You are stronger and wiser and freer than you have ever been.\"": "You are stronger and wiser and freer than you have ever been.",
-        "\"You have to try every time. You can't quit because you're afraid you might fail.\"": "You have to try every time. You can't quit because you're afraid you might fail."
-      }
-    }
-  },
-  "aalab_startIntervention": {
-    "text": "monsters begin {BEHAVIOR}",
-    "options": {
-      "BEHAVIOR": {
-        "wandering": "wandering randomly",
-        "\"congregating\"": "congregating",
-        "\"quarantining\"": "quarantining when sick",
-        "\"avoiding\"": "social distancing",
-        "\"none\"": "staying still"
-      }
-    }
-  },
   "adaptations_adaptationBehaviors": {
     "text": "{BEHAVIOR}",
     "options": {
@@ -3550,9 +2903,6 @@
   "adaptations_location_picker": {
     "text": "at:{LOCATION}"
   },
-  "adaptations_makeNumSpritesNear": {
-    "text": "make {NUM} new {ANIMATION_NAME} sprites near {LOCATION}"
-  },
   "adaptations_spriteBirdSay": {
     "text": "{SPRITE} says {SPEECH}",
     "options": {
@@ -3561,9 +2911,6 @@
         "\"I have a beak like a scoop to catch fish.\"": "I have a beak like a scoop to catch fish."
       }
     }
-  },
-  "adaptations_startFollowing": {
-    "text": "{SPRITE} begins following {TARGET}"
   },
   "adaptations_toggleBehaviorSimple": {
     "text": "sprite {SPRITE} {TOGGLE} {BEHAVIOR}",
@@ -3664,9 +3011,6 @@
         "'seaLantern'": "sea lantern"
       }
     }
-  },
-  "craft_log": {
-    "text": "log message {MESSAGE}"
   },
   "craft_moveForward": {
     "text": "move forward"
@@ -3771,33 +3115,12 @@
       }
     }
   },
-  "ecosystems_location_picker": {
-    "text": "at:{LOCATION}"
-  },
-  "ecosystems_makeNewSpriteBetween": {
-    "text": "make {N} new {GROUP} between location x: {X} y: {Y}"
-  },
-  "ecosystems_makeNumSpritesAtLocation": {
-    "text": "make {NUM} new {ANIMATION_NAME} sprites at {LOCATION_GENERATOR}"
-  },
   "ecosystems_makeNumSpritesWithinRange": {
     "text": "make {NUM} new {ANIMATION_NAME} sprites at {RANGE}",
     "options": {
       "RANGE": {
         "{x1:0, x2:400, y1:200, y2:400}": "Top",
         "{x1:0, x2:400, y1:150, y2:250}": "Middle",
-        "{x1:0, x2:400, y1:0, y2:200}": "Bottom"
-      }
-    }
-  },
-  "ecosystems_randomLocationWithinRange": {
-    "text": "x min{X1}x max{X2}y min{Y1}y max{Y2}"
-  },
-  "ecosystems_randomLocationWithinSelectedRange": {
-    "text": "{RANGE}",
-    "options": {
-      "RANGE": {
-        "{x1:0, x2:400, y1:200, y2:400}": "Top",
         "{x1:0, x2:400, y1:0, y2:200}": "Bottom"
       }
     }

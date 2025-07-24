@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -68,6 +69,7 @@ const LevelsSkillsCreator: React.FC = () => {
           }`
         );
       }
+      window.location.reload();
     }
   };
 
@@ -79,9 +81,16 @@ const LevelsSkillsCreator: React.FC = () => {
         are environment specific. You can check the Skills table on this page
         for skillId and the gray admin box on a level page for the levelId. The
         levelId is also in the url of the level edit page: /levels/levelId/edit.
-        After upload of your CSV, reload the page and double-check the Levels
-        Skills association table to ensure skills are associated with levels
-        correctly.
+        After upload of your CSV, double-check the Levels Skills association
+        table to ensure skills are associated with levels correctly. You can
+        copy this{' '}
+        <Link
+          openInNewTab
+          href="https://docs.google.com/spreadsheets/d/1avXwCQ2qK5V3hhmFm_yk1IHzF-tUA30Tm2ZA5rq31ww/edit?usp=sharing"
+        >
+          template
+        </Link>{' '}
+        to get started.
       </p>
       <br />
       <div>

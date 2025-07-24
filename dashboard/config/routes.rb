@@ -752,6 +752,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end
@@ -954,6 +955,7 @@ Dashboard::Application.routes.draw do
 
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
+      get 'workshops/:workshop_id/enroll', to: redirect("/professional-learning/workshops/%{workshop_id}")
       get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'

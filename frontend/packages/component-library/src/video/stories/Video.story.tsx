@@ -1,8 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import Section from '@/cms/section';
-
 import Video from '../index';
 
 export default {
@@ -50,11 +48,7 @@ export const VideoWithCaption: Story = {
     isYouTubeCookieAllowed: true,
   },
   decorators: Story => {
-    return (
-      <Section background={'dark'}>
-        <Story />
-      </Section>
-    );
+    return <Story />;
   },
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);

@@ -830,6 +830,32 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
+  def test_moderate_image_supported_types
+    png_data = 'fake-png-bytes'
+    jpeg_data = 'fake-jpeg-bytes'
+
+    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/png', nil).returns(:everyone)
+
+    header 'CONTENT_TYPE', 'image/png'
+    post '/v3/images/moderate', png_data
+    assert successful?
+    assert_equal({'rating' => 'everyone'}, JSON.parse(last_response.body))
+
+    ImageModeration.expects(:rate_image).with(instance_of(StringIO), 'image/jpeg', nil).returns(:racy)
+
+    header 'CONTENT_TYPE', 'image/jpeg'
+    post '/v3/images/moderate', jpeg_data
+    assert successful?
+    assert_equal({'rating' => 'racy'}, JSON.parse(last_response.body))
+  end
+
+  def test_moderate_image_unsupported_type
+    header 'CONTENT_TYPE', 'image/gif'
+    post '/v3/images/moderate', 'fake-gif-bytes'
+    assert_equal 400, last_response.status
+    assert_equal({'error' => 'Unsupported image type. Only PNG and JPEG files are allowed.'}, JSON.parse(last_response.body))
+  end
+
   private def delete_all_files(bucket)
     delete_all_objects(CDO.files_s3_bucket, bucket)
   end

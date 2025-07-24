@@ -21,4 +21,5 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
+  clearHasSetStartingCustomizations,
 } from './slice';
