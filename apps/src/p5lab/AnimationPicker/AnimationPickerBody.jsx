@@ -241,6 +241,8 @@ export default class AnimationPickerBody extends React.Component {
     // OR they are searching but there were no results,
     // AND they are not in animationJsonMode.
     // animationJsonMode is used for the Generate Animation JSON levelbuilder tool in SelectStartAnimations.
+    // Note that if the project is blocked for abuse, then uploadsEnabled is set to false and
+    // the upload button will be hidden.
     const showDrawAndUploadButtons =
       ((!searching && (!inCategory || isBackgroundsTab)) ||
         results.length === 0) &&

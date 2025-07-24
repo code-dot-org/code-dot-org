@@ -172,7 +172,11 @@ class AnimationPicker extends React.Component {
    * Send the uploaded image file to be moderated. Then continue with uploadStart.
    */
   handleModeratedUploadStart = data => {
-    const file = data.files[0];
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
     this.setState({
       pendingUploadData: data,
     });
