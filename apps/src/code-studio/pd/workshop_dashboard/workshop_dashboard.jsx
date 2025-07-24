@@ -93,6 +93,13 @@ const routeConfigs = [
     path: 'workshops/:workshopId/temp',
     breadcrumbs: 'Workshops,Workshop',
     component: WorkshopTabs,
+    props: {
+      tabList: [
+        {label: 'Overview', path: 'temp'},
+        {label: 'Enrollment', path: 'temp/enrollments'},
+        {label: 'Surveys', path: 'temp/surveys'},
+      ],
+    },
     childRoutes: [
       {
         index: true,

@@ -1,7 +1,7 @@
 import Link from '@mui/material/Link';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
-import React, {forwardRef} from 'react';
+import React, {FC, forwardRef} from 'react';
 import {
   Link as RouterLink,
   LinkProps,
@@ -10,17 +10,13 @@ import {
   useLocation,
 } from 'react-router-dom';
 
-const tabList = [
-  {label: 'Overview', path: ''},
-  {label: 'Enrollment', path: 'enrollments'},
-  {label: 'Surveys', path: 'surveys'},
-];
+import {WorkshopTabsProps} from '../types';
 
 const TabLink = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => (
   <Link ref={ref} {...props} component={RouterLink} />
 ));
 
-export const WorkshopTabs = () => {
+export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
   const {workshopId} = useParams();
   const {pathname} = useLocation();
 
@@ -38,9 +34,7 @@ export const WorkshopTabs = () => {
             label={tab.label}
             value={tab.path}
             component={TabLink}
-            to={`/workshops/${workshopId}/temp${
-              tab.path ? `/${tab.path}` : ''
-            }`}
+            to={`/workshops/${workshopId}${tab.path ? `/${tab.path}` : ''}`}
           />
         ))}
       </Tabs>
