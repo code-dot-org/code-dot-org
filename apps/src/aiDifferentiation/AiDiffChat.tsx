@@ -237,7 +237,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             isPreset,
             json.thread_id
           );
-          setThreadId(json.thread_id);
+          if (json.thread_id) {
+            setThreadId(json.thread_id);
+          }
           setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
         })
         .catch(error => console.log(error))

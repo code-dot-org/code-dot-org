@@ -16,26 +16,21 @@ class AidiffThreadsController < ApplicationController
     get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
 
     response_body = get_response_body(nil, context[:type])
-    # get or create thread obj
-    begin
-      @aidiff_thread = AidiffThread.find_or_create_by!(
-        user_id: current_user.id,
-        external_id: response_body[:session_id],
-        llm_version: AiDiffBedrockHelper::MODEL_ID,
-        unit_id: @unit&.id,
-        level_id: @level&.id,
-        course_id: @unit_group&.id,
-        lesson_id: @lesson&.id,
-        context_type: params[:context][:type]
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
-    end
 
-    # Log messages if the response was successful and not flagged for PII.
+    # Create thread and log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
-      # Add user message to thread
       begin
+        @aidiff_thread = AidiffThread.create!(
+          user_id: current_user.id,
+          external_id: response_body[:session_id],
+          llm_version: AiDiffBedrockHelper::MODEL_ID,
+          unit_id: @unit&.id,
+          level_id: @level&.id,
+          course_id: @unit_group&.id,
+          lesson_id: @lesson&.id,
+          context_type: params[:context][:type]
+        )
+        # Add user message to thread
         log_messages(response_body)
         response_body[:message_id] = @assistant_message.id
         response_body[:thread_id] = @aidiff_thread.id
