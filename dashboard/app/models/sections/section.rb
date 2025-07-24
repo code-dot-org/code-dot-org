@@ -733,7 +733,7 @@ class Section < ApplicationRecord
       codechella2025
     ]
 
-    # Note that as of May 2025, sc ript-specific assignment without course assignment
+    # Note that as of May 2025, script-specific assignment without course assignment
     # is not possible, so the first condition here is not necessary.
     if (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
         (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
