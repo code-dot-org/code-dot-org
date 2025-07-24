@@ -16,7 +16,7 @@ export type LinkProps = RemoveMarginBottomProps & {
   /** Link URL */
   href: string;
   /** Link color */
-  color: Exclude<TypographyColor, 'secondary'>;
+  color?: Exclude<TypographyColor, 'secondary'>;
   /** Link size */
   size: ComponentSize;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
