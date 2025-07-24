@@ -12,7 +12,7 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "pilot-pl-teaching-k5-music-lab",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "k5musiclabplpilot",
     "version_year": "unversioned"
   },

@@ -15,7 +15,7 @@ class ApiControllerTest < ActionController::TestCase
     @section = create(:section, user: @section_owner, login_type: 'word')
     create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
-    @script = create(:script, :with_levels, levels_count: 1)
+    @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
     @script_level = @script.script_levels[0]
     @level = @script_level.level
 
@@ -29,11 +29,13 @@ class ApiControllerTest < ActionController::TestCase
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
+    create(:single_unit_course, unit: @flappy)
     @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
+    create(:single_unit_course, unit: @allthings)
     @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
     @student_allthings = create(:student, name: 'student_allthings')
     create(:follower, section: @allthings_section, student_user: @student_allthings)
@@ -54,7 +56,8 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create :dance, :with_example_solutions
-    script_level = create :script_level, levels: [level]
+    script = create(:unit, :in_single_unit_course)
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
@@ -70,7 +73,8 @@ class ApiControllerTest < ActionController::TestCase
     sign_in teacher
 
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:unit, :in_single_unit_course)
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
@@ -87,7 +91,8 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create(:level, :blockly, :with_ideal_level_source)
-    script_level = create :script_level, levels: [level]
+    script = create(:unit, :in_single_unit_course)
+    script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
@@ -112,7 +117,7 @@ class ApiControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     # make sure our response has lesson from the specified script
-    assert /\/s\/#{@allthings.name}\// =~ response[0]['url']
+    assert /\/courses\/#{@allthings.original_unit_group.name}\// =~ response[0]['url']
   end
 
   test "should get text_responses for section with assigned course" do
@@ -158,7 +163,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get text_responses for section with script with text response" do
-    script = create :script, name: 'text-response-script'
+    script = create :script, :in_single_unit_course, name: 'text-response-script'
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, name: 'First Lesson', key: 'First Lesson', lesson_group: lesson_group
     lesson2 = create :lesson, script: script, name: 'Second Lesson', key: 'Second Lesson', lesson_group: lesson_group
@@ -1089,7 +1094,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return previous attempt with swapped level" do
     sign_in @student_1
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     level1a = create :maze, name: 'maze 1'
@@ -1111,7 +1116,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 6 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1300,7 +1305,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should get paired icons for paired user levels" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     sl = create :script_level, lesson: lesson, script: script
@@ -1342,7 +1347,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "should not return progress for bonus levels" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson
@@ -1941,8 +1946,119 @@ class ApiControllerTest < ActionController::TestCase
     end
   end
 
+  describe '#show_courses_with_progress' do
+    let(:call_api) do
+      get :show_courses_with_progress, params: {section_id: section.id}
+    end
+    let(:response) do
+      call_api
+      JSON.parse(@response.body, symbolize_names: true)
+    end
+    let(:context) {create :modular_course_context}
+    let(:new_unit_group) {context[:new_unit_group]}
+    let(:original_unit_group) {context[:original_unit_group]}
+    let(:teacher) {create :teacher}
+    let(:user) {teacher}
+    let(:section) {create :section, user: teacher, course_id: new_unit_group.id}
+
+    before do
+      sign_in user if user
+    end
+
+    context 'user is not signed in' do
+      let(:user) {nil}
+
+      it 'returns a 302 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated student' do
+      let(:user) {create :student}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'user is unaffiliated teacher' do
+      let(:user) {create :teacher}
+
+      it 'returns a 403 response' do
+        call_api
+        assert_response :forbidden
+      end
+    end
+
+    context 'section.course_id defined' do
+      let(:section) {create :section, user: user, course_id: new_unit_group.id}
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+    end
+
+    context 'student in section' do
+      let(:student) {create :student}
+
+      before do
+        section.add_student(student)
+      end
+
+      it 'returns a 200 response' do
+        assert_response :success
+      end
+
+      it 'returns a list of course summaries' do
+        _(response).must_be_instance_of Array
+        response.each do |course|
+          _(course).must_be_instance_of Hash
+        end
+      end
+
+      it 'returns the original_unit_group' do
+        _(response.find {|cv| cv[:id] == original_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      it 'returns the new_unit_group' do
+        _(response.find {|cv| cv[:id] == new_unit_group.course_version.id}).must_be_instance_of Hash
+      end
+
+      context 'student has progress in an unrelated course' do
+        let(:outside_unit_group) {create :single_unit_course, :stable}
+        let!(:outside_course_version) {create :course_version, content_root: outside_unit_group}
+
+        before do
+          # add progress for User in outside course
+          create :user_script, user: student, script: outside_unit_group.default_units.first
+        end
+
+        it 'returns the outside_unit_group' do
+          _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
+        end
+      end
+    end
+  end
+
   private def create_script_with_bonus_levels
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -1956,7 +2072,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   private def create_script_with_lockable_lesson
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.

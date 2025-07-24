@@ -71,8 +71,6 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
-
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
 export const studentSectionDataPropType = PropTypes.shape({
@@ -85,7 +83,7 @@ export const studentSectionDataPropType = PropTypes.shape({
   gender: PropTypes.string,
   genderTeacherInput: PropTypes.string,
   secretWords: PropTypes.string,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   sectionId: PropTypes.number,
   loginType: PropTypes.string,
   hasEverSignedIn: PropTypes.bool,
@@ -270,7 +268,7 @@ class ManageStudentsTable extends Component {
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
-                secretPicture={rowData.secretPicturePath}
+                secretPictureUrl={rowData.secretPictureUrl}
                 loginType={rowData.loginType}
                 id={rowData.id}
                 sectionId={sectionId}
@@ -761,7 +759,6 @@ class ManageStudentsTable extends Component {
     );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
-    const tableStyle = showV2TeacherDashboard() ? styles.v2TableWidth : {};
 
     const decoratedRows = this.props.studentData.map(rowData => ({
       ...rowData,
@@ -880,7 +877,7 @@ class ManageStudentsTable extends Component {
             sourceName="ManageStudentsTable"
           />
         </div>
-        <div style={tableStyle}>
+        <div style={styles.v2TableWidth}>
           <Table.Provider
             columns={columns}
             style={tableLayoutStyles.table}

@@ -1,5 +1,3 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-
 .layoutContainer {
   grid-area: content;
   display: flex;
@@ -52,8 +50,6 @@
   border-left: solid 1px var(--neutral-gray-80);
 
   .inside {
-    height: 100%;
-    padding: 10px 10px 0 10px;
-    overflow: hidden;
+    height: calc(100% - 30px);
   }
 }

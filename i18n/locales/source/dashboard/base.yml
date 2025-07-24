@@ -46,6 +46,12 @@ en:
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
             lockout_flow: "cannot be updated because you need parent or guardian permission first."
+        user/facilitator_info:
+          attributes:
+            bio:
+              has_profanity: contains profanity
+            user:
+              not_facilitator: must have the facilitator permission
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -85,7 +91,9 @@ en:
         user_type: 'Account Type'
         us_state: 'State'
         ai_rubrics_disabled: 'Disable AI Rubric Feature'
-
+      user/facilitator_info:
+        user: User
+        bio: Biography
   beta: "beta"
   hello: "Hello world"
   welcome_back: "Welcome back, %{name}"
@@ -471,6 +479,7 @@ en:
       gumball: 'The Amazing World of Gumball'
       iceage: 'Ice Age'
       infinity: 'Infinity'
+      javalab: 'Java Lab'
       makerlab: 'Maker Toolkit'
       minecraft_adventurer: 'Minecraft Adventurer'
       minecraft_aquatic: 'Minecraft Aquatic'
@@ -1245,10 +1254,13 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        albania: 'Albania'
         antigua_and_barbuda: 'Antigua and Barbuda'
+        austria: 'Austria'
         australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        bolivia: 'Bolivia'
         botswana: 'Botswana'
         brazil: 'Brazil'
         cambodia: 'Cambodia'
@@ -1284,9 +1296,12 @@ en:
         sri_lanka: 'Sri Lanka'
         thailand: 'Thailand'
         trinidad_and_tobago: 'Trinidad and Tobago'
+        turkey: 'Turkey'
+        united_kingdom: 'United Kingdom'
         uruguay: 'Uruguay'
         uzbekistan: 'Uzbekistan'
         vietnam: 'Vietnam'
+        venezuela: 'Venezuela'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'

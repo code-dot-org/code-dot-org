@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import unitSelection, {
   setCoursesWithProgress,
-  setScriptId,
+  setUnit,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
@@ -26,7 +26,8 @@ import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 // TODO: convert to @testing-library/react
 const DEFAULT_PROPS = {
-  scriptId: 2,
+  unitId: 2,
+  courseVersionId: 1,
   teacherName: 'Awesome Teacher',
   sectionName: 'Great Section',
   teacherComment: null as string | null,
@@ -37,15 +38,16 @@ const DEFAULT_PROPS = {
   setTeacherCommentForReport: (comment: string) => {
     DEFAULT_PROPS.teacherComment = comment;
   },
-  setScriptId: (scriptId: number) => {
-    DEFAULT_PROPS.scriptId = scriptId;
+  setUnit: (unitId: number, courseVersionId: number) => {
+    DEFAULT_PROPS.unitId = unitId;
+    DEFAULT_PROPS.courseVersionId = courseVersionId;
   },
   sectionId: 6,
   scriptData: {
     id: 1163,
     excludeCsfColumnInLegend: false,
     title: 'Express Course (2019)',
-    path: '//localhost-studio.code.org:3000/s/express-2019',
+    path: '//localhost-studio.code.org:3000/courses/express-2019/units/1',
     lessons: [],
   },
   scriptFriendlyName: 'Express Course (2019)',
@@ -54,7 +56,7 @@ const DEFAULT_PROPS = {
 const UNIT_DATA = {
   id: 1,
   title: 'Express Course (2019)',
-  path: '//localhost-studio.code.org:3000/s/express-2019',
+  path: '//localhost-studio.code.org:3000/courses/express-2019/units/1',
   lessons: [{id: 1, position: 1, title: 'Lesson 1', levels: []}],
   name: 'Express Course',
   description: 'description',
@@ -74,7 +76,7 @@ const SERVER_STUDENT = {
   ...STUDENT,
   family_name: STUDENT.familyName,
   secret_picture_name: 'secret_picture_name',
-  secret_picture_path: 'secret_picture_path',
+  secret_picture_url: 'secret_picture_path',
   secret_words: 'secret_words',
   sectionId: SECTION_ID,
   sharing_disabled: false,
@@ -99,6 +101,7 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
+        courseVersionId: 1,
         teacherComment: teacherComment,
       },
     });
@@ -119,7 +122,7 @@ describe('StandardsReport', () => {
       addDataByUnit({unitDataByUnit: {[UNIT_DATA.id]: UNIT_DATA}})
     );
 
-    store.dispatch(setScriptId(1));
+    store.dispatch(setUnit(UNIT_DATA.id, 1));
     store.dispatch(
       setCoursesWithProgress([
         {

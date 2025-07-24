@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2025-05-27 22:56:36 UTC",
+    "serialized_at": "2025-07-08 14:44:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -295,7 +295,7 @@
     },
     {
       "key": "Board Sensors",
-      "name": "Lesson 12: Board Sensors",
+      "name": "Lesson 11: Board Sensors",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -314,7 +314,7 @@
     },
     {
       "key": "Accelerometer",
-      "name": "Lesson 13: Accelerometer",
+      "name": "Lesson 12: Accelerometer",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -333,7 +333,7 @@
     },
     {
       "key": "Making Music",
-      "name": "Lesson 14: Making Music",
+      "name": "Lesson 13: Making Music",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -352,7 +352,7 @@
     },
     {
       "key": "Functions",
-      "name": "Lesson 15: Functions",
+      "name": "Lesson 14: Functions",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -371,7 +371,7 @@
     },
     {
       "key": "Mini-Project: Interactive Art",
-      "name": "Lesson 16: Mini-Project: Interactive Art",
+      "name": "Lesson 15: Mini-Project: Interactive Art",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -389,7 +389,7 @@
     },
     {
       "key": "Physical Outputs and LEDs",
-      "name": "Lesson 17: Physical Outputs and LEDs",
+      "name": "Lesson 16: Physical Outputs and LEDs",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -408,7 +408,7 @@
     },
     {
       "key": "Physical Inputs and Buttons",
-      "name": "Lesson 18: Physical Inputs and Buttons",
+      "name": "Lesson 17: Physical Inputs and Buttons",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -427,7 +427,7 @@
     },
     {
       "key": "Project - Prototype an Innovation",
-      "name": "Lesson 19: Project - Prototype an Innovation",
+      "name": "Lesson 18: Project - Prototype an Innovation",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,

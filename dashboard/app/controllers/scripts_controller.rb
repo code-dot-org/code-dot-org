@@ -12,7 +12,7 @@ class ScriptsController < ApplicationController
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
-  authorize_resource class: 'Unit', except: [:update]
+  before_action :authorize_script, except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
@@ -21,6 +21,8 @@ class ScriptsController < ApplicationController
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
+    #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
+    # will redirect to the redirect script's original unit group
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -345,7 +347,7 @@ class ScriptsController < ApplicationController
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
         UnitGroup.latest_stable_version(unit_name)
-      if unit_group.can_be_participant?(current_user)
+      if unit_group&.can_be_participant?(current_user)
         unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group
       end
       if unit_group&.single_unit_course?
@@ -380,7 +382,7 @@ class ScriptsController < ApplicationController
   end
 
   private def render_no_access
-    if current_user && !current_user.admin? && !can?(:read, @script)
+    if current_user && !current_user.admin? && !can?(:read, @script, @course)
       render :no_access
     end
   end
@@ -482,5 +484,15 @@ class ScriptsController < ApplicationController
     unit_name_or_id = params[:script_id] || params[:id]
     canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
     redirect_to canonical_path unless canonical_path == request.fullpath
+  end
+
+  # Authorize in a separate before_action rather than using CanCan's authorize_resource
+  # After the URL restructuring from /s/... to /courses/.../units/... the selected unit
+  # was no longer being authorized, and instead the Unit model was being authorized, leading
+  # some users to have access to certain courses they shouldn't have access to (see
+  # TEACH-1975 for more details).This solves the issue by explicitly calling authorize!
+  # on the @script if it is set.
+  private def authorize_script
+    authorize! params[:action].to_sym, @script || Unit, @course
   end
 end

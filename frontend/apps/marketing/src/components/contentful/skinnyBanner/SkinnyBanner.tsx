@@ -50,6 +50,7 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
   return (
     <DSCOSkinnyBanner
       data-theme={contentMode}
+      aria-label={heading}
       className={className}
       heading={heading}
       description={description}
@@ -72,6 +73,9 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
               ariaLabel: firstButtonLink.fields.ariaLabel,
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
+                : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
                 : undefined,
             }
           : undefined

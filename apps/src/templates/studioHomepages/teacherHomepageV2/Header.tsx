@@ -30,6 +30,11 @@ export const Header: React.FC<HeaderProps> = ({
   const [archiveAllModalOpen, setArchiveAllModalOpen] =
     React.useState<boolean>(false);
 
+  const searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.get('openAddSectionDialog') === 'true') {
+    dispatch(beginEditingSection());
+  }
+
   return (
     <div>
       <Heading4>{i18n.classSections()}</Heading4>
@@ -41,10 +46,12 @@ export const Header: React.FC<HeaderProps> = ({
           selectedButtonValue={selectedArchiveToggle}
           buttons={[
             {
+              id: 'ui-test-teaching',
               label: i18n.teaching(),
               value: 'teaching',
             },
             {
+              id: 'ui-test-archived',
               label: i18n.archived(),
               value: 'archived',
             },

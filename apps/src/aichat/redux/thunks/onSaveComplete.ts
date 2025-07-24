@@ -3,20 +3,11 @@ import {TestResults} from '@cdo/apps/constants';
 import {RootState} from '@cdo/apps/types/redux';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
-import {
-  saveTypeToAnalyticsEvent,
-  RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
-} from '../../constants';
-import {AiCustomizations, ViewMode} from '../../types';
-import {
-  endSave,
-  setNewChatSession,
-  setSavedAiCustomizations,
-  setViewMode,
-} from '../slice';
-import {findChangedProperties, getNewRemoveId} from '../utils';
+import {saveTypeToAnalyticsEvent} from '../../constants';
+import {ViewMode} from '../../types';
+import {endSave, setSavedAiCustomizations, setViewMode} from '../slice';
+import {findChangedProperties} from '../utils';
 
-import {addChatEvent} from './addChatEvent';
 import {sendAnalytics} from './sendAnalytics';
 
 // Thunk called after a save has completed successfully.
@@ -30,31 +21,15 @@ export const onSaveComplete =
       savedAiCustomizations,
       currentAiCustomizations
     );
-    if (
-      changedProperties.some(property =>
-        RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(property)
-      )
-    ) {
-      dispatch(setNewChatSession());
-    }
 
     changedProperties.forEach(property => {
-      const typedProperty = property as keyof AiCustomizations;
-      const modelUpdate = {
-        removeId: getNewRemoveId(),
-        updatedField: typedProperty,
-        updatedValue: currentAiCustomizations[typedProperty],
-        timestamp: Date.now(),
-      };
-      dispatch(addChatEvent(modelUpdate));
-
       // Report to analytics the changed value for only selected model id and temperature properties.
       // Do not include the free text changes (system prompt and retrieval contexts).
       const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
       const propertyChangedTo = propertiesChangedValueToReport.includes(
-        typedProperty
+        property
       )
-        ? currentAiCustomizations[typedProperty]
+        ? currentAiCustomizations[property]
         : 'NULL';
       if (currentSaveType) {
         dispatch(

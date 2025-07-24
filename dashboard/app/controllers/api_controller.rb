@@ -292,7 +292,16 @@ class ApiController < ApplicationController
 
   def show_courses_with_progress
     section = load_section
-    render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
+    unit_ids = section.participant_unit_ids
+    # Always include the Units assigned to the Section.
+    if section.course_id
+      unit_group = UnitGroup.get_from_cache(section.course_id)
+    elsif section.script_id
+      # Some older Sections only have a script_id defined.
+      unit_group = Unit.get_from_cache(section.script_id)&.unit_group
+    end
+    unit_ids.concat(unit_group.default_units.pluck(:id)).uniq! if unit_group
+    render json: CourseVersion.courses_for_unit_selector(unit_ids, current_user)
   end
 
   use_reader_connection_for_route(:section_level_progress)
@@ -609,6 +618,8 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
+    # TODO: TEACH-2042 default to original unit group unit if the unit is not part of the assigned course
+    # If unit_group_unit is nil, it returns the /s/ url instead of the correct /courses/ url
     unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
 
     text_response_levels = script.text_response_levels

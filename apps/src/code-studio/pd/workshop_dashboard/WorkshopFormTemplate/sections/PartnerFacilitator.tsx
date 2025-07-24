@@ -9,13 +9,13 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import {CourseBuildYourOwn} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useDebounce} from '@cdo/apps/util/hooks/useDebounce';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {MultiSelectInput, OptionId} from '../components/MultiSelectInput';
+import {MultiSelectInput, Option} from '../components/MultiSelectInput';
 import {
   Facilitator,
   PartnerFacilitatorProps,
@@ -44,12 +44,8 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
 
   const {data: facilitatorData} = useFetch<Facilitator[]>(facilitatorUrl);
 
-  const regionalPartnerData = useSelector(
-    ({
-      regionalPartners: {regionalPartners},
-    }: {
-      regionalPartners: {regionalPartners: RegionalPartner[]};
-    }) => regionalPartners
+  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
+    '/api/v1/regional_partners'
   );
 
   const debouncedCourseOfferings = useDebounce<
@@ -65,11 +61,10 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
         .join('&');
 
       url += '?' + courseOfferingsParams;
-      setFacilitatorUrl(url);
-    } else if (label) {
+    } else if (label && label !== CourseBuildYourOwn) {
       url += `?course=${encodeURIComponent(label)}`;
-      setFacilitatorUrl(url);
     }
+    setFacilitatorUrl(url);
   }, [label, debouncedCourseOfferings]);
 
   useEffect(() => {
@@ -117,10 +112,10 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
   );
 
   const handleFacilitators = useCallback(
-    (newFacilitators: OptionId[]) => {
+    (newFacilitators: Option[]) => {
       dispatchWorkshop({
         type: 'UPDATE_WORKSHOP',
-        payload: {facilitators: newFacilitators.map(Number)},
+        payload: {facilitators: newFacilitators},
       });
     },
     [dispatchWorkshop]

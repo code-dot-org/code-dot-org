@@ -1,4 +1,3 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -14,13 +13,13 @@ import moduleStyles from './../workshopMarketingPage.module.scss';
 
 type OrganizerInformationProps = {
   organizer: OrganizerInfo;
-  regional_partner_name?: string;
+  regionalPartnerName?: string;
 };
 
 /** Component to display the organizer information for a workshop. */
 const OrganizerInformation: React.FC<OrganizerInformationProps> = ({
   organizer,
-  regional_partner_name,
+  regionalPartnerName,
 }) => {
   return (
     <div className={moduleStyles.card}>
@@ -38,21 +37,13 @@ const OrganizerInformation: React.FC<OrganizerInformationProps> = ({
             {organizer.email}
           </Link>
         </BodyThreeText>
-        {regional_partner_name && (
+        {regionalPartnerName && (
           <BodyThreeText>
             <FontAwesomeV6Icon iconName="building" />
             <StrongText>Regional Partner:</StrongText>
-            {regional_partner_name}
+            {regionalPartnerName}
           </BodyThreeText>
         )}
-        <LinkButton
-          className={moduleStyles.fullWidthButton}
-          type="secondary"
-          color="gray"
-          size="s"
-          href="/professional-learning/contact-regional-partner"
-          text="Contact regional partner"
-        />
       </div>
     </div>
   );

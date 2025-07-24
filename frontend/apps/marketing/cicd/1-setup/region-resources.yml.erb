@@ -1,0 +1,202 @@
+<%
+# Get region configuration and selected AZs
+region_config = MarketingSites::Configuration.regions[options[:region].to_sym]
+selected_azs = region_config[:selected_availability_zones]
+
+# Get subnet configurations directly from the module
+public_subnets = region_config[:vpc][:public_subnets]
+private_subnets = region_config[:vpc][:private_subnets]
+%>
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: >
+  Provision a shared infrastructure (such as a VPC and Subnets) in a specific AWS Region to support provisioning one or
+  more development, test, and production marketing sites within the Region.
+
+Resources:
+  # VPC for ECS and ALB
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: MarketingSites-VPC
+
+<% public_subnets.each_with_index do |subnet, index| %>
+  VpcPublicSubnet<%= index %>:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: <%= subnet[:availability_zone] %>
+      CidrBlock: <%= subnet[:cidr_block] %>
+      MapPublicIpOnLaunch: true
+      VpcId:
+        Ref: Vpc
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PublicSubnet<%= index %>
+
+  VpcPublicSubnet<%= index %>RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: Vpc
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PublicSubnet<%= index %>RouteTable
+
+  VpcPublicSubnet<%= index %>RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VpcPublicSubnet<%= index %>RouteTable
+      SubnetId:
+        Ref: VpcPublicSubnet<%= index %>
+
+  VpcPublicSubnet<%= index %>DefaultRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: VpcIGW
+      RouteTableId:
+        Ref: VpcPublicSubnet<%= index %>RouteTable
+    DependsOn:
+      - VpcVPCGW
+
+  # Elastic IP for Marketing Sites NAT Gateway
+  VpcPublicSubnet<%= index %>EIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PublicSubnet<%= index %>EIP
+
+  VpcPublicSubnet<%= index %>NATGateway:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId:
+        Fn::GetAtt:
+          - VpcPublicSubnet<%= index %>EIP
+          - AllocationId
+      SubnetId:
+        Ref: VpcPublicSubnet<%= index %>
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PublicSubnet<%= index %>NATGateway
+    DependsOn:
+      - VpcPublicSubnet<%= index %>DefaultRoute
+      - VpcPublicSubnet<%= index %>RouteTableAssociation
+
+  VpcPrivateSubnet<%= index %>RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: Vpc
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PrivateSubnet<%= index %>RouteTable
+
+  VpcPrivateSubnet<%= index %>RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VpcPrivateSubnet<%= index %>RouteTable
+      SubnetId:
+        Ref: VpcPrivateSubnet<%= index %>
+
+  VpcPrivateSubnet<%= index %>DefaultRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId:
+        Ref: VpcPublicSubnet<%= index %>NATGateway
+      RouteTableId:
+        Ref: VpcPrivateSubnet<%= index %>RouteTable
+<% end %>
+
+<% private_subnets.each_with_index do |subnet, index| %>
+  VpcPrivateSubnet<%= index %>:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: <%= subnet[:availability_zone] %>
+      CidrBlock: <%= subnet[:cidr_block] %>
+      MapPublicIpOnLaunch: false
+      VpcId:
+        Ref: Vpc
+      Tags:
+        - Key: Name
+          Value: MarketingSites-PrivateSubnet<%= index %>
+<% end %>
+
+  VpcIGW:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: MarketingSites-IGW
+
+  VpcVPCGW:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId:
+        Ref: VpcIGW
+      VpcId:
+        Ref: Vpc
+
+Outputs:
+  VpcId:
+    Description: VPC ID for marketing sites infrastructure
+    Value: !Ref Vpc
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcId
+
+  VpcCidrBlock:
+    Description: VPC CIDR Block for marketing sites
+    Value: !GetAtt Vpc.CidrBlock
+    Export:
+      Name: MarketingSites-VpcCidrBlock
+
+  AvailabilityZones:
+    Description: Availability zones used for subnets
+    Value: '<%= selected_azs.join(',') %>'
+    Export:
+      Name: MarketingSitesRegionInfrastructure-AvailabilityZones
+
+  AvailabilityZoneCount:
+    Description: Number of availability zones used
+    Value: <%= selected_azs.length %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-AvailabilityZoneCount
+
+<% public_subnets.each_with_index do |subnet, index| %>
+  VpcPublicSubnet<%= index %>Id:
+    Description: Marketing Sites Public Subnet <%= index %> ID
+    Value: !Ref VpcPublicSubnet<%= index %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>Id
+
+  VpcPublicSubnet<%= index %>AvailabilityZone:
+    Description: Marketing Sites Public Subnet <%= index %> Availability Zone
+    Value: <%= subnet[:availability_zone] %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPublicSubnet<%= index %>AvailabilityZone
+<% end %>
+
+<% private_subnets.each_with_index do |subnet, index| %>
+  VpcPrivateSubnet<%= index %>Id:
+    Description: Marketing Sites Private Subnet <%= index %> ID
+    Value: !Ref VpcPrivateSubnet<%= index %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>Id
+
+  VpcPrivateSubnet<%= index %>AvailabilityZone:
+    Description: Marketing Sites Private Subnet <%= index %> Availability Zone
+    Value: <%= subnet[:availability_zone] %>
+    Export:
+      Name: MarketingSitesRegionInfrastructure-VpcPrivateSubnet<%= index %>AvailabilityZone
+<% end %>

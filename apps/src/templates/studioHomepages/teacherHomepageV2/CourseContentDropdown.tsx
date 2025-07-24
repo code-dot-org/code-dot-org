@@ -32,16 +32,19 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
 
-  // Retrieve units and lessons for the section
   useEffect(() => {
-    if (section.unitId) {
+    const fetchLessonList = async () => {
       HttpClient.fetchJson<UnitLessonOptions[]>(
         `/sections/${section.id}/retrieve_lessons_for_dropdown`
       )
         .then(response => setLessonList(response.value))
         .catch(error => console.error(error));
+    };
+
+    if (section.unitId && lessonList.length === 0) {
+      fetchLessonList();
     }
-  }, [section.id, section.unitId]);
+  }, [section, lessonList]);
 
   const dropdownOptions = useMemo(
     () =>
@@ -65,17 +68,21 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
 
   return (
     <div className={styles.courseContentDropdownContainer}>
-      <BodyThreeText>
+      <BodyThreeText
+        className={styles.courseTitleText}
+        id={`course-content-dropdown-${section.name.replaceAll(' ', '-')}`}
+      >
         <b>{`${i18n.course()}: `}</b>
         {section.courseDisplayName}
       </BodyThreeText>
       {section.unitId ? (
         <CustomDropdown
-          name="go-to-lesson-dropdown"
+          className={styles.courseContentDropdown}
+          name="go-to-lesson"
           labelText={i18n.jumpTo()}
           labelType="thin"
-          size="m"
           disabled={lessonList.length === 0}
+          size="m"
         >
           <ul>{dropdownOptions}</ul>
         </CustomDropdown>

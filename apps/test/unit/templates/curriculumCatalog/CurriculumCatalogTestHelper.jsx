@@ -8,7 +8,7 @@ const makerCurriculum = {
   duration: 'week',
   cs_topic: 'art_and_design,app_design,physical_computing,programming',
   school_subject: null,
-  course_version_path: '/s/course',
+  course_version_path: '/courses/devices',
   is_translated: false,
   device_compatibility: null,
   description: null,
@@ -30,7 +30,7 @@ const countingCurriculum = {
   school_subject: 'math',
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/counting-csc',
   is_translated: false,
   description: null,
   professional_learning_program: null,
@@ -51,7 +51,7 @@ const poemArtCurriculum = {
   school_subject: 'english_language_arts',
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/poem-art',
   is_translated: false,
   description: null,
   professional_learning_program: null,
@@ -73,7 +73,7 @@ const danceUnpluggedCurriculum = {
   school_subject: null,
   device_compatibility:
     '{"computer":"incompatible","chromebook":"incompatible","tablet":"incompatible","mobile":"incompatible","no_device":"ideal"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/dance-unplugged',
   is_translated: false,
   description: null,
   professional_learning_program: null,
@@ -94,7 +94,7 @@ const course1Curriculum = {
   school_subject: null,
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/course1',
   is_translated: true,
   description: null,
   professional_learning_program: null,
@@ -114,7 +114,7 @@ const course2Curriculum = {
   school_subject: null,
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/course2',
   is_translated: true,
   description: null,
   professional_learning_program: null,
@@ -134,7 +134,7 @@ const course3Curriculum = {
   school_subject: null,
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/course3',
   is_translated: true,
   description: null,
   professional_learning_program: null,
@@ -154,7 +154,7 @@ const course4Curriculum = {
   school_subject: null,
   device_compatibility:
     '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/course4',
   is_translated: true,
   description: null,
   professional_learning_program: null,
@@ -174,7 +174,7 @@ const noGradesCurriculum = {
   school_subject: 'math',
   device_compatibility:
     '{"computer":"not_recommended","chromebook":"not_recommended","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}',
-  course_version_path: '/s/course',
+  course_version_path: '/courses/no-grades',
   is_translated: false,
   description: null,
   professional_learning_program: null,

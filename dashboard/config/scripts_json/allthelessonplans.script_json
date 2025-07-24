@@ -1,0 +1,635 @@
+{
+  "script": {
+    "name": "allthelessonplans",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-06-11 18:59:13 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "allthelessonplans"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Lesson Group 1",
+        "description": "Lesson group 1 description",
+        "big_questions": "* Who?\n* What?\n* Where?"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Lesson Group 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "UI/Eyes Test Content",
+        "description": "All lessons which are examined by automated UI or Eyes tests."
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "First Lesson",
+      "name": "First Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "Teacher Notice",
+            "details": "Information for Teachers",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher-only"
+          },
+          {
+            "notice": "Student Notice",
+            "details": "Information for Students",
+            "link": "",
+            "type": "information",
+            "visibility": "Student-only"
+          },
+          {
+            "notice": "Student and Teacher",
+            "details": "Information for Students and Teachers",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher and student"
+          }
+        ],
+        "assessment_opportunities": "Assessment opportunities are everywhere",
+        "overview": "Teacher overview of the lesson",
+        "preparation": "* Do this\n* Now do this",
+        "purpose": "Purpose of this lesson is learning",
+        "student_overview": "Student overview of the lesson"
+      },
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "Second Lesson",
+      "name": "Second Lesson",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "Second Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "Third Lesson",
+      "name": "Third Lesson",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Third Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "Printable Lesson Plans",
+      "name": "Printable Lesson Plans",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "Announcements should not show up",
+            "details": "If this is visible in print mode, something is wrong.",
+            "link": "",
+            "type": "information",
+            "visibility": "Teacher and student"
+          }
+        ],
+        "assessment_opportunities": "assessment opp",
+        "overview": "This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.",
+        "preparation": "prep",
+        "purpose": "purpose"
+      },
+      "seeding_key": {
+        "lesson.key": "Printable Lesson Plans",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "Level Details Dialog Examples",
+      "name": "Level Details Dialog Examples",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ee299f36-5fa0-4941-9d57-c056a0e93139",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Activity 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139",
+        "lesson.key": "First Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b",
+        "lesson.key": "Second Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31",
+        "lesson.key": "Third Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "0449a400-4ddf-4381-93e6-101aaf14d0e7",
+      "position": 1,
+      "properties": {
+        "name": "Basic Example"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7",
+        "lesson.key": "Printable Lesson Plans",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans"
+      }
+    },
+    {
+      "key": "04334866-b95e-4788-96a8-28c096276714",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714",
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2330dbf8-5456-4404-82af-0834e9330546",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Do Levels",
+        "progression_name": "Levels are Cool"
+      },
+      "seeding_key": {
+        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546",
+        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139"
+      }
+    },
+    {
+      "key": "6fd90819-2c6c-4dbe-94ed-6ccaf526caed",
+      "position": 2,
+      "properties": {
+        "description": "Discuss the levels you just did",
+        "duration": "5",
+        "name": "Discuss",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Get students to talk"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fd90819-2c6c-4dbe-94ed-6ccaf526caed",
+        "lesson_activity.key": "ee299f36-5fa0-4941-9d57-c056a0e93139"
+      }
+    },
+    {
+      "key": "3261dff3-4e21-4b9c-83e7-5076927eae89",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3261dff3-4e21-4b9c-83e7-5076927eae89",
+        "lesson_activity.key": "8bf3b77a-eb01-471c-9470-b4bcdd97ca6b"
+      }
+    },
+    {
+      "key": "7dc3734a-54af-4b85-aab6-3630186b89b9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7dc3734a-54af-4b85-aab6-3630186b89b9",
+        "lesson_activity.key": "2fb25f30-6e17-4ee9-93c7-b5d92f0bee31"
+      }
+    },
+    {
+      "key": "e2b2d639-072c-4fb4-8329-9f86e315c891",
+      "position": 1,
+      "properties": {
+        "description": "We've just got in here examples of a bunch of the stuff you can include on the page.",
+        "name": "This is a basic example of UI content"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2b2d639-072c-4fb4-8329-9f86e315c891",
+        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+      }
+    },
+    {
+      "key": "b505347f-aab8-4fc4-b757-111b5ca162e0",
+      "position": 2,
+      "properties": {
+        "name": "callout",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A basic callout"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b505347f-aab8-4fc4-b757-111b5ca162e0",
+        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+      }
+    },
+    {
+      "key": "689ea393-84de-4181-adea-52617e57f5cc",
+      "position": 3,
+      "properties": {
+        "description": "![](https://images.code.org/d6f923cd0dac99c974331cd458d6684b-lorem-ipsum.jpg)",
+        "name": "image"
+      },
+      "seeding_key": {
+        "activity_section.key": "689ea393-84de-4181-adea-52617e57f5cc",
+        "lesson_activity.key": "0449a400-4ddf-4381-93e6-101aaf14d0e7"
+      }
+    },
+    {
+      "key": "b8278cca-5565-4e4d-b526-0bdaf996174d",
+      "position": 1,
+      "properties": {
+        "name": "Bubble Choice",
+        "progression_name": "Bubble Choice"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d",
+        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+      }
+    },
+    {
+      "key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662",
+      "position": 2,
+      "properties": {
+        "name": "Standalone Video",
+        "progression_name": "Standalone Video",
+        "tips": [
+          {
+            "type": "ethicsOpportunity",
+            "markdown": "This is a great time to talk about ethics."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662",
+        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+      }
+    },
+    {
+      "key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086",
+      "position": 3,
+      "properties": {
+        "name": "Level With Top Instructions",
+        "progression_name": "Level with Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086",
+        "lesson_activity.key": "04334866-b95e-4788-96a8-28c096276714"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Levels are Cool"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "First Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546"
+      },
+      "level_keys": [
+        "U3L2 Using Simple Commands"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Bubble Choice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ui_lesson_bubble_choice"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d"
+      },
+      "level_keys": [
+        "ui_lesson_bubble_choice"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Standalone Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ui_lesson_standalone_video"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662"
+      },
+      "level_keys": [
+        "ui_lesson_standalone_video"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Level with Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "uitest_lesson_applab"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086"
+      },
+      "level_keys": [
+        "uitest_lesson_applab"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "U3L2 Using Simple Commands",
+        "script_level.level_keys": [
+          "U3L2 Using Simple Commands"
+        ],
+        "lesson.key": "First Lesson",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "2330dbf8-5456-4404-82af-0834e9330546"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ui_lesson_bubble_choice",
+        "script_level.level_keys": [
+          "ui_lesson_bubble_choice"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "b8278cca-5565-4e4d-b526-0bdaf996174d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ui_lesson_standalone_video",
+        "script_level.level_keys": [
+          "ui_lesson_standalone_video"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "0a6d29e5-b697-45f0-8155-50cf3cdaa662"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "uitest_lesson_applab",
+        "script_level.level_keys": [
+          "uitest_lesson_applab"
+        ],
+        "lesson.key": "Level Details Dialog Examples",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "allthelessonplans",
+        "activity_section.key": "d86c30f9-ee2e-4816-84d4-3cffc74d9086"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Student Resource",
+      "url": "fake/url/",
+      "key": "student_resource",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "student_resource"
+      }
+    },
+    {
+      "name": "Teacher Resource",
+      "url": "fake/url/",
+      "key": "teacher_resource",
+      "properties": {
+        "assessment": true,
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_resource"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "resource.key": "student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "resource.key": "teacher_resource"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "word",
+      "word": "Word",
+      "definition": "This is a definition of the word word",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "word"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "vocabulary.key": "word"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "playSound"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "30a3a285-da92-4628-83de-176f48b91cd2",
+      "properties": {
+        "description": "Learn lots of stuff"
+      },
+      "seeding_key": {
+        "lesson.key": "First Lesson",
+        "objective.key": "30a3a285-da92-4628-83de-176f48b91cd2"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

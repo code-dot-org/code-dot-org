@@ -25,7 +25,7 @@ const defaultProps = {
       title: 'CSP Unit 1',
       name: 'csp1',
       description: 'desc',
-      path: '/s/csp1',
+      path: '/courses/csp/units/1',
     },
     {
       course_id: 30,
@@ -33,7 +33,7 @@ const defaultProps = {
       title: 'CSP Unit 2',
       name: 'csp2',
       description: 'desc',
-      path: '/s/csp2',
+      path: '/courses/csp/units/2',
     },
   ],
   isVerifiedInstructor: true,
@@ -113,13 +113,6 @@ describe('CourseOverview', () => {
     expect(wrapper.find('Announcements').props().announcements.length).toEqual(
       1
     );
-  });
-
-  it('renders a top row for instructors', () => {
-    const wrapper = shallow(
-      <CourseOverview {...defaultProps} isInstructor={true} />
-    );
-    expect(wrapper.find('CourseOverviewTopRow').length).toEqual(1);
   });
 
   it('renders a CourseScript for each script', () => {

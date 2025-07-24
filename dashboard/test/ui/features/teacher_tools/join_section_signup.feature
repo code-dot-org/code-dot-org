@@ -6,7 +6,7 @@ Feature: Using the join section page while not signed in
     Given I am on "http://studio.code.org/join"
     And I wait until element "a:contains(Create an account)" is visible
     Then I click selector "a:contains(Create an account)"
-    And I wait until I am on "http://studio.code.org/users/sign_up/login_type?user_type=student&user_return_to=/join"
+    And I wait until I am on "http://studio.code.org/users/sign_up/account_type?user_return_to=%2Fjoin"
 
   Scenario: Attempt to join section while signed in
     Given I am a teacher

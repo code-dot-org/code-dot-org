@@ -8,9 +8,9 @@
         {
           "key": "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 2 content and course from Code.org by Summer 2025, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 2 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "details": "We are in the process of fully removing all Course 2 content from Code.org as we no longer support this older offering. The course will be removed from the site in September, 2025. Until that time, we have made the course unassignable, and no bugs or missing content will be addressed or fixed. Our recommended replacement course is CS Fundamentals Course C or D (depending on the age of your students). ",
           "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn More"
@@ -20,7 +20,7 @@
           "notice": "CS Fundamentals now available in Filipino!",
           "details": "With generous support from HP, we translated CS Fundamentals into Filipino. We invite you to begin using the CS Fundamentals created for all elementary and beginner secondary students. Sa bukas na suporta mula sa HP, isinalin namin ang CS Fundamentals sa Filipino. Inaanyayahan namin kayong simulan ang paggamit ng CS Fundamentals sa Filipino.",
           "link": "https://studio.code.org/s/courseb-2021?lang=fil-PH",
-          "type": "bullhorn_yellow",
+          "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "CSF Kursong B "
@@ -38,11 +38,13 @@
       ],
       "project_widget_visible": true,
       "tts": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:06:09 UTC",
+    "serialized_at": "2025-07-18 17:58:05 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

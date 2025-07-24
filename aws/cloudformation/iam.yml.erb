@@ -17,6 +17,11 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleBillingIDs
     Description: SSM Parameter with a list of Google ID's for users granted Billing access.
+  # https://github.blog/changelog/2023-06-27-github-actions-update-on-oidc-integration-with-aws/
+  GitHubIntermediateCertificateThumbprintList:
+    Type: CommaDelimitedList
+    Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
+    Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -103,6 +108,7 @@ Resources:
               - iam:*
               - organizations:*
               - secretsmanager:*
+              - ecs:ExecuteCommand
             Resource: '*'
           - Sid: IAMReadOnlyAccess
             Effect: Allow
@@ -117,7 +123,7 @@ Resources:
           - Effect: Allow
             Action: iam:PassRole
             Resource: '*'
-          # Require CloudFormation Service Role on all stack operations.
+          # Require a CloudFormation Service Role on all stack operations.
           - Effect: Deny
             Action:
               - cloudformation:CreateStack
@@ -127,11 +133,23 @@ Resources:
             NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
-                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                cloudformation:RoleARN:
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesTestRole"
           # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
             Resource: '*'
+          # Allow ECS ExecuteCommand on test environment resources only
+          - Sid: AllowECSExecuteCommandOnTestResources
+            Effect: Allow
+            Action:
+              - ecs:ExecuteCommand
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: test
   # Permissions which grant the CurriculumBuilder project read-only acces to
   # the DCDO database, so select configuration variables can be shared between
   # the two projects.
@@ -214,7 +232,10 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to REDTeam_Analyst
+  # TODO: Migrate to REDTeam_Analyst
+  # These permissions also require applying the following SQL permissions on the Redshift cluster:
+  # GRANT ROLE sys:monitor TO "IAM:DataAnalyst";
+  # GRANT ROLE sys:operator TO "IAM:DataAnalyst";
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -508,6 +529,10 @@ roles.each do |name, config| %>
               - 'redshift:DescribeClusterSubnetGroups'
               - 'redshift:ViewQueriesInConsole'
               - 'redshift:ViewQueriesFromConsole'
+              - 'redshift:DescribeClusters'
+              - 'redshift:DescribeQuery'
+              - 'redshift:CancelQuery'
+              - 'redshift:GetClusterCredentialsWithIAM'
               - 'events:ListRules'
             Resource: '*'
 
@@ -835,6 +860,7 @@ roles.each do |name, config| %>
     Type: AWS::IAM::ServiceLinkedRole
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
+
 Outputs:
   DevPermissions:
     Description: Developer Permissions
@@ -852,3 +878,4 @@ Outputs:
     Description: Execution Role for GenAI Sagemaker Models
     Value: !GetAtt SagemakerModelExecutionRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
+

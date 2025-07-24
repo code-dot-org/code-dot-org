@@ -29,7 +29,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -47,7 +47,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -65,7 +65,7 @@ Feature: Using the teacher dashboard homepage (v1)
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -88,7 +88,7 @@ Feature: Using the teacher dashboard homepage (v1)
     # Add new courses so new tiles are visible on the teacher dashboard
     And I create a new "Hour of Code" student section named "Section 1" assigned to "AI for Oceans"
     And I press keys ":escape"
-    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'17-'18"
+    And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'25-'26"
     And I create a new "Hour of Code" student section named "Section 3" assigned to "Artist"
     And I create a new "Hour of Code" student section named "Section 4" assigned to "Classic Maze"
     And element ".ui-test-view-more-courses" is not visible

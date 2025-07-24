@@ -16,41 +16,41 @@ class CachingTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get /s/frozen" do
+  test "should get /courses/frozen/units/1" do
     assert_cached_queries(0) do
-      get '/s/frozen'
+      get '/courses/frozen/units/1'
     end
     assert_response :success
   end
 
   test "should get show of frozen level 1" do
     assert_cached_queries(0) do
-      get '/s/frozen/lessons/1/levels/1'
+      get '/courses/frozen/units/1/lessons/1/levels/1'
     end
     assert_response :success
   end
 
   test "should get show of frozen level 10 twice" do
     assert_cached_queries(0) do
-      get '/s/frozen/lessons/1/levels/10'
+      get '/courses/frozen/units/1/lessons/1/levels/10'
     end
     assert_response :success
   end
 
   test "should get show of frozen level 20 twice" do
     assert_cached_queries(0) do
-      get '/s/frozen/lessons/1/levels/20'
+      get '/courses/frozen/units/1/lessons/1/levels/20'
     end
     assert_response :success
   end
 
   test "should get show of frozen level 1 and then level 10" do
     skip 'not working'
-    get '/s/frozen/lessons/1/levels/1'
+    get '/courses/frozen/units/1/lessons/1/levels/1'
     assert_response :success
 
     assert_cached_queries(0) do
-      get '/s/frozen/lessons/1/levels/10'
+      get '/courses/frozen/units/1/lessons/1/levels/10'
     end
     assert_response :success
   end
@@ -83,7 +83,7 @@ class CachingTest < ActionDispatch::IntegrationTest
 
   test "should get show of course1 level 1 twice" do
     assert_cached_queries(0) do
-      get '/s/course1/lessons/3/levels/1'
+      get '/courses/course1/units/1/lessons/3/levels/1'
     end
     assert_response :success
   end
@@ -91,7 +91,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   test "should get show of course1 level 1 and then level 10" do
     skip 'not working'
     assert_cached_queries(0) do
-      get '/s/course1/lessons/3/levels/10'
+      get '/courses/course1/units/1/lessons/3/levels/10'
     end
     assert_response :success
   end
@@ -109,7 +109,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   test 'should cache script after initialization' do
     Unit.unit_cache_to_cache
     assert_queries(0, ignore_filters: [], capture_filters: [/script\.rb.*get_from_cache/]) do
-      get '/s/course1/lessons/3/levels/1'
+      get '/courses/course1/units/1/lessons/3/levels/1'
     end
   end
 
@@ -119,5 +119,7 @@ class CachingTest < ActionDispatch::IntegrationTest
     end
     assert_response :redirect
     assert_redirected_to '/s/course1/lessons/3/levels/1'
+    follow_redirect!
+    assert_redirected_to '/courses/course1/units/1/lessons/3/levels/1'
   end
 end

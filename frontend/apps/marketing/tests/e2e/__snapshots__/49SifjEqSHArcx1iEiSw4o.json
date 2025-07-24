@@ -2,7 +2,7 @@
   "entryContent": {
     "fields": {
       "linkName": {
-        "en-US": "⛔️ [ENGINEERING ONLY] Secondary button test"
+        "en-US": "❌ [ENG] Secondary button test"
       },
       "label": {
         "en-US": "Secondary button test"

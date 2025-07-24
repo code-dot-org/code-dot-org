@@ -43,14 +43,14 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
     href: {
       displayName: 'Link URL',
       type: 'Text',
+      defaultValue: 'https://code.org',
       group: 'content',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
     isLinkExternal: {
-      displayName:
-        'Is this link external? (Does this link leave the code.org site?)',
+      displayName: 'Is this link external? (Does this link leave the site?)',
       description:
         'External links will be opened in a new tab, while internal links will be opened in the same tab.',
       type: 'Boolean',

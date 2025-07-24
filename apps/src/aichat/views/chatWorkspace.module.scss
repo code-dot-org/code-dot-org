@@ -10,7 +10,7 @@ $tabs-default-spacing: 4px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: $light_white;
+  background-color: var(--background-neutral-primary);
   overflow: hidden;
 }
 
@@ -72,10 +72,6 @@ $tabs-default-spacing: 4px;
   > div[hidden] {
     display: none;
   }
-}
-
-.waitingForResponse {
-  width: 50px;
 }
 
 .buttonRow {

@@ -17,7 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 19:56:41 UTC",
+    "serialized_at": "2025-07-08 19:08:44 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -175,21 +176,10 @@
       }
     },
     {
-      "key": "abde6408-bf08-447b-886f-d4198e534b7b",
+      "key": "72066942-3eab-4df7-aa45-074a52121d8f",
       "position": 3,
       "properties": {
-        "progression_name": "About the Curriculum"
-      },
-      "seeding_key": {
-        "activity_section.key": "abde6408-bf08-447b-886f-d4198e534b7b",
-        "lesson_activity.key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7"
-      }
-    },
-    {
-      "key": "72066942-3eab-4df7-aa45-074a52121d8f",
-      "position": 4,
-      "properties": {
-        "progression_name": "Curriculum Pedagogy"
+        "progression_name": "Curriculum Structure"
       },
       "seeding_key": {
         "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f",
@@ -197,8 +187,41 @@
       }
     },
     {
-      "key": "1dce01b7-b0f0-4637-b076-f6b2aee35f83",
+      "key": "fa724655-7915-46f3-8145-90ded4a9c222",
+      "position": 4,
+      "properties": {
+        "progression_name": "Computational Thinking"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222",
+        "lesson_activity.key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7"
+      }
+    },
+    {
+      "key": "14310b9a-6924-46a6-9d16-52ec1031904b",
       "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "14310b9a-6924-46a6-9d16-52ec1031904b",
+        "lesson_activity.key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7"
+      }
+    },
+    {
+      "key": "db322bed-7841-4069-94d9-2fd9e7131554",
+      "position": 6,
+      "properties": {
+        "progression_name": "Career Spotlights"
+      },
+      "seeding_key": {
+        "activity_section.key": "db322bed-7841-4069-94d9-2fd9e7131554",
+        "lesson_activity.key": "1a195561-b4d8-486b-b6a7-269c2d3b83a7"
+      }
+    },
+    {
+      "key": "1dce01b7-b0f0-4637-b076-f6b2aee35f83",
+      "position": 7,
       "properties": {
         "progression_name": "Music Lab Coding Environment"
       },
@@ -209,7 +232,7 @@
     },
     {
       "key": "76403231-d6dc-44d2-990c-bebc3457b2bb",
-      "position": 6,
+      "position": 8,
       "properties": {
         "progression_name": "Closing"
       },
@@ -483,6 +506,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport"
+        ],
+        "progression": "Professional Learning Module Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "7b092349-de4a-4017-a83f-238fb123b3ce"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-PlatformSupport"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "self-paced-CSDMusicLab-L1-UnitOverview"
         ],
         "progression": "Professional Learning Module Overview"
@@ -502,9 +550,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -527,9 +575,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -552,8 +600,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -577,31 +625,6 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L1-lessonresources"
-        ],
-        "progression": "About the Curriculum"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L1-lessonresources"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "abde6408-bf08-447b-886f-d4198e534b7b"
-      },
-      "level_keys": [
-        "self-paced-CSDMusicLab-L1-lessonresources"
-      ]
-    },
-    {
       "chapter": 7,
       "position": 7,
       "activity_section_position": 1,
@@ -610,7 +633,7 @@
         "level_keys": [
           "self-paced-CSDMusicLab-L1-coursestructure"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Curriculum Structure"
       },
       "bonus": false,
       "seeding_key": {
@@ -635,7 +658,7 @@
         "level_keys": [
           "self-paced-CSDMusicLab-L1-EPS"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Curriculum Structure"
       },
       "bonus": false,
       "seeding_key": {
@@ -658,9 +681,34 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources"
+        ],
+        "progression": "Curriculum Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-lessonresources"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "self-paced-CSDMusicLab-L1-CT"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Computational Thinking"
       },
       "bonus": false,
       "seeding_key": {
@@ -670,22 +718,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-CT"
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 4,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-CT1"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Computational Thinking"
       },
       "bonus": false,
       "seeding_key": {
@@ -695,22 +743,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-CT1"
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 5,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-CT-CFU"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Computational Thinking"
       },
       "bonus": false,
       "seeding_key": {
@@ -720,22 +768,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-CT-CFU"
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 6,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-CT-CFU-Explanation"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Computational Thinking"
       },
       "bonus": false,
       "seeding_key": {
@@ -745,22 +793,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-CT-CFU-Explanation"
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
-      "activity_section_position": 7,
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-assessment"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
@@ -770,22 +818,47 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "14310b9a-6924-46a6-9d16-52ec1031904b"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-assessment"
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
-      "activity_section_position": 8,
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "14310b9a-6924-46a6-9d16-52ec1031904b"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L1-assessment2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-careerconnections"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Career Spotlights"
       },
       "bonus": false,
       "seeding_key": {
@@ -795,22 +868,22 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "db322bed-7841-4069-94d9-2fd9e7131554"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-careerconnections"
       ]
     },
     {
-      "chapter": 15,
-      "position": 15,
-      "activity_section_position": 9,
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "self-paced-CSDMusicLab-L1-careerspotlights2"
         ],
-        "progression": "Curriculum Pedagogy"
+        "progression": "Career Spotlights"
       },
       "bonus": false,
       "seeding_key": {
@@ -820,15 +893,15 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "db322bed-7841-4069-94d9-2fd9e7131554"
       },
       "level_keys": [
         "self-paced-CSDMusicLab-L1-careerspotlights2"
       ]
     },
     {
-      "chapter": 16,
-      "position": 16,
+      "chapter": 18,
+      "position": 18,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -852,8 +925,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
+      "chapter": 19,
+      "position": 19,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -877,20 +950,20 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
+      "chapter": 20,
+      "position": 20,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-CSDMusicLab-L1-leveltypes"
+          "self-paced-CSDMusicLab-L1-musiclabexplainer"
         ],
         "progression": "Music Lab Coding Environment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L1-leveltypes"
+          "self-paced-CSDMusicLab-L1-musiclabexplainer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -898,12 +971,12 @@
         "activity_section.key": "1dce01b7-b0f0-4637-b076-f6b2aee35f83"
       },
       "level_keys": [
-        "self-paced-CSDMusicLab-L1-leveltypes"
+        "self-paced-CSDMusicLab-L1-musiclabexplainer"
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -927,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -952,7 +1025,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -977,7 +1050,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1002,7 +1075,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1027,7 +1100,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1052,7 +1125,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -1077,7 +1150,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -1102,7 +1175,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -1127,8 +1200,30 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Sequencing & Play Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "ab33aadf-29e2-45cb-a2e7-afa01765b6f2"
+      },
+      "level_keys": [
+        "self-paced-CSDMusicLab-L2-playtogether5"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1152,8 +1247,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 10,
+      "chapter": 32,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1177,8 +1272,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 11,
+      "chapter": 33,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1202,8 +1297,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 12,
+      "chapter": 34,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1227,8 +1322,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 13,
+      "chapter": 35,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1252,8 +1347,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 14,
+      "chapter": 36,
+      "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1277,8 +1372,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 15,
+      "chapter": 37,
+      "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1302,8 +1397,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 16,
+      "chapter": 38,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1327,8 +1422,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 17,
+      "chapter": 39,
+      "position": 18,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1352,8 +1447,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 18,
+      "chapter": 40,
+      "position": 19,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1377,8 +1472,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 19,
+      "chapter": 41,
+      "position": 20,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1402,8 +1497,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 20,
+      "chapter": 42,
+      "position": 21,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1427,8 +1522,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 21,
+      "chapter": 43,
+      "position": 22,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1452,7 +1547,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1477,7 +1572,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1502,7 +1597,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1527,7 +1622,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1552,7 +1647,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1577,20 +1672,20 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
+          "self-paced-CSDMusicLab-L3-loops4_v2"
         ],
         "progression": "Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
+          "self-paced-CSDMusicLab-L3-loops4_v2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1598,11 +1693,11 @@
         "activity_section.key": "06bb7a75-fbf6-4514-8f8b-a9fc29e95235"
       },
       "level_keys": [
-        "self-paced-CSDMusicLab-L3-loops4"
+        "self-paced-CSDMusicLab-L3-loops4_v2"
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -1627,7 +1722,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1652,7 +1747,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -1677,7 +1772,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1702,7 +1797,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -1727,7 +1822,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -1752,7 +1847,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -1777,7 +1872,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1802,7 +1897,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -1827,7 +1922,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 16,
       "activity_section_position": 3,
       "assessment": false,
@@ -1852,7 +1947,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 17,
       "activity_section_position": 4,
       "assessment": false,
@@ -1877,7 +1972,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -1902,7 +1997,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -1927,7 +2022,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -1952,7 +2047,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1977,7 +2072,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2002,7 +2097,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2027,7 +2122,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2052,7 +2147,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2077,7 +2172,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -2102,7 +2197,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -2127,7 +2222,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2152,7 +2247,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2177,7 +2272,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -2202,7 +2297,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -2227,7 +2322,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -2252,7 +2347,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -2277,7 +2372,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -2302,20 +2397,17 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes2"
-        ],
         "progression": "Functions & Remixes"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes2"
+          "self-paced-CSDMusicLab-L4-remixes2v2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2323,24 +2415,21 @@
         "activity_section.key": "6aa0e50d-2071-498b-914a-44aa66712c4f"
       },
       "level_keys": [
-        "self-paced-CSDMusicLab-L4-remixes2"
+        "self-paced-CSDMusicLab-L4-remixes2v2"
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes3"
-        ],
         "progression": "Functions & Remixes"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes3"
+          "self-paced-CSDMusicLab-L4-remixes3v2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2348,11 +2437,11 @@
         "activity_section.key": "6aa0e50d-2071-498b-914a-44aa66712c4f"
       },
       "level_keys": [
-        "self-paced-CSDMusicLab-L4-remixes3"
+        "self-paced-CSDMusicLab-L4-remixes3v2"
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -2377,7 +2466,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 18,
       "activity_section_position": 2,
       "assessment": false,
@@ -2402,7 +2491,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 82,
       "position": 19,
       "activity_section_position": 1,
       "assessment": false,
@@ -2433,6 +2522,18 @@
         "level.key": "self-paced-CSDMusicLab-L1-Welcome",
         "script_level.level_keys": [
           "self-paced-CSDMusicLab-L1-Welcome"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "7b092349-de4a-4017-a83f-238fb123b3ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-PlatformSupport",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-PlatformSupport"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -2490,18 +2591,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L1-lessonresources",
-        "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L1-lessonresources"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "abde6408-bf08-447b-886f-d4198e534b7b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "self-paced-CSDMusicLab-L1-coursestructure",
         "script_level.level_keys": [
           "self-paced-CSDMusicLab-L1-coursestructure"
@@ -2526,6 +2615,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-lessonresources",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-lessonresources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-CSDMusicLab-L1-CT",
         "script_level.level_keys": [
           "self-paced-CSDMusicLab-L1-CT"
@@ -2533,7 +2634,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       }
     },
     {
@@ -2545,7 +2646,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       }
     },
     {
@@ -2557,7 +2658,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       }
     },
     {
@@ -2569,7 +2670,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "fa724655-7915-46f3-8145-90ded4a9c222"
       }
     },
     {
@@ -2581,7 +2682,19 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "14310b9a-6924-46a6-9d16-52ec1031904b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L1-assessment2",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L1-assessment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "14310b9a-6924-46a6-9d16-52ec1031904b"
       }
     },
     {
@@ -2593,7 +2706,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "db322bed-7841-4069-94d9-2fd9e7131554"
       }
     },
     {
@@ -2605,7 +2718,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
-        "activity_section.key": "72066942-3eab-4df7-aa45-074a52121d8f"
+        "activity_section.key": "db322bed-7841-4069-94d9-2fd9e7131554"
       }
     },
     {
@@ -2634,9 +2747,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L1-leveltypes",
+        "level.key": "self-paced-CSDMusicLab-L1-musiclabexplainer",
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L1-leveltypes"
+          "self-paced-CSDMusicLab-L1-musiclabexplainer"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -2745,6 +2858,18 @@
         "level.key": "self-paced-CSDMusicLab-L2-playtogether4",
         "script_level.level_keys": [
           "self-paced-CSDMusicLab-L2-playtogether4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-computer-science-discoveries-music-lab",
+        "activity_section.key": "ab33aadf-29e2-45cb-a2e7-afa01765b6f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-CSDMusicLab-L2-playtogether5",
+        "script_level.level_keys": [
+          "self-paced-CSDMusicLab-L2-playtogether5"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -2970,9 +3095,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L3-loops4",
+        "level.key": "self-paced-CSDMusicLab-L3-loops4_v2",
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L3-loops4"
+          "self-paced-CSDMusicLab-L3-loops4_v2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -3318,9 +3443,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L4-remixes2",
+        "level.key": "self-paced-CSDMusicLab-L4-remixes2v2",
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes2"
+          "self-paced-CSDMusicLab-L4-remixes2v2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -3330,9 +3455,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "self-paced-CSDMusicLab-L4-remixes3",
+        "level.key": "self-paced-CSDMusicLab-L4-remixes3v2",
         "script_level.level_keys": [
-          "self-paced-CSDMusicLab-L4-remixes3"
+          "self-paced-CSDMusicLab-L4-remixes3v2"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

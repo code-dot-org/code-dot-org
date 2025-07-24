@@ -7,10 +7,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Lab2Registry from '../../lab2/Lab2Registry';
-import {
-  RemoteSourcesStore,
-  SourcesStore,
-} from '../../lab2/projects/SourcesStore';
+import {SourcesStore} from '../../lab2/projects/SourcesStore';
 import {Channel} from '../../lab2/types';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
@@ -38,7 +35,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
     new MusicBlocklyWorkspace()
   );
 
-  const sourcesStoreRef = useRef<SourcesStore>(new RemoteSourcesStore());
+  const sourcesStoreRef = useRef<SourcesStore>(new SourcesStore());
   const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
   const [isLoading, setIsLoading] = useState(true);
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(

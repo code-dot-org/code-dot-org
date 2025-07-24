@@ -1,8 +1,8 @@
 import {useEffect} from 'react';
 
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -13,7 +13,10 @@ import AnalyticsReporter from '../../analytics/AnalyticsReporter';
  * A hook for updating the {@link AnalyticsReporter} when relevant redux state changes and attaching callbacks
  * to browser and lifecycle events.
  */
-function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
+function useUpdateAnalytics(
+  analyticsReporter: AnalyticsReporter,
+  isProjectLevel: boolean
+) {
   /**
    * Effect that runs on initial mount
    *   - Starts a new analytics session.
@@ -101,9 +104,7 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
       analyticsReporter.setProjectProperty('channelId', channelId);
   }, [sessionInProgress, channelId, analyticsReporter]);
 
-  const levelType = useAppSelector(state =>
-    state.lab.levelProperties?.isProjectLevel ? 'Standalone Project' : 'Level'
-  );
+  const levelType = isProjectLevel ? 'Standalone Project' : 'Level';
   useEffect(() => {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('levelType', levelType);

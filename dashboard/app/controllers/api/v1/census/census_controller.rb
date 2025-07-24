@@ -2,6 +2,7 @@ class Api::V1::Census::CensusController < ApplicationController
   include SchoolInfoDeduplicator
   require 'census_helper'
   skip_before_action :verify_authenticity_token
+  before_action :allow_cdo_cors, only: %i[create]
 
   CENSUS_FIELDS = [
     :submitter_email_address,
@@ -110,22 +111,16 @@ class Api::V1::Census::CensusController < ApplicationController
     case params[:form_version]
     when 'CensusYourSchool2017v7'
       submission = ::Census::CensusYourSchool2017v7.new census_params
-      template = 'census_form_receipt'
     when 'CensusYourSchool2017v6'
       submission = ::Census::CensusYourSchool2017v6.new census_params
-      template = 'census_form_receipt'
     when 'CensusYourSchool2017v5'
       submission = ::Census::CensusYourSchool2017v5.new census_params
-      template = 'census_form_receipt'
     when 'CensusYourSchool2017v4'
       submission = ::Census::CensusYourSchool2017v4.new census_params
-      template = 'census_form_receipt'
     when 'CensusHoc2017v3'
       submission = ::Census::CensusHoc2017v3.new census_params
-      template = 'hoc_census_2017_pledge_receipt' if submission.pledged
     when 'CensusTeacherBannerV1'
       submission = ::Census::CensusTeacherBannerV1.new census_params
-      template = nil # No email sent in this case
     else
       errors[:form_version] = "Invalid form_version"
     end
@@ -138,13 +133,7 @@ class Api::V1::Census::CensusController < ApplicationController
         school_info.save! if school_info&.new_record?
         submission.save!
       end
-      if template
-        recipient = Poste2.create_recipient(submission.submitter_email_address,
-          name: submission.submitter_name,
-          ip_address: request.remote_ip
-        )
-        Poste2.send_message(template, recipient)
-      end
+
       render json: {census_submission_id: submission.id}, status: :created
 
       if params[:opt_in]

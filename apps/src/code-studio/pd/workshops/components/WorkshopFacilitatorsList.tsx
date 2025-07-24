@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Image from '@code-dot-org/component-library/image';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -8,7 +9,7 @@ import {
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {FacilitatorInfo, GetWorkshopInfoScriptDataResponse} from './../types';
+import {FacilitatorInfo, WorkshopInfo} from './../types';
 
 import moduleStyles from './workshopFaccilitatorsList.module.scss';
 
@@ -21,7 +22,11 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
     <div className={moduleStyles.workshopFacilitatorItem}>
       <div className={moduleStyles.workshopFacilitatorItemHeader}>
         <div className={moduleStyles.workshopFacilitatorContactImage}>
-          <FontAwesomeV6Icon iconName="user" />
+          {facilitator.image_path ? (
+            <Image src={facilitator.image_path} />
+          ) : (
+            <FontAwesomeV6Icon iconName="user" />
+          )}
         </div>
         <div className={moduleStyles.workshopFacilitatorContactInfo}>
           <BodyTwoText>
@@ -34,6 +39,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
             <Button
               type="tertiary"
               size="s"
+              className={moduleStyles.showBioButton}
               text={showBio ? 'Hide biography' : 'Show biography'}
               iconRight={{iconName: showBio ? 'chevron-up' : 'chevron-down'}}
               onClick={() => handleShowBio(!showBio)}
@@ -57,7 +63,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
 };
 
 interface WorkshopSessionsListProps
-  extends Pick<GetWorkshopInfoScriptDataResponse, 'facilitators'> {}
+  extends Pick<WorkshopInfo, 'facilitators'> {}
 
 /** Component to render a list of workshop facilitators. */
 const WorkshopFacilitatorsList: React.FC<WorkshopSessionsListProps> = ({

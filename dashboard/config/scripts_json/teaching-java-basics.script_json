@@ -1,0 +1,3026 @@
+{
+  "script": {
+    "name": "teaching-java-basics",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-07-18 15:27:19 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "teaching-java-basics"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Java Lab",
+      "name": "Introduction to Java Lab",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this lesson, you will: \n\n-  Create a new file in the Java Lab IDE\n- Name Java files using conventions for naming\n-  Know the basics of Java syntax\n-  Print information to the console\n\n**Suggested Time:** 15 minutes",
+        "student_overview": "In this lesson, you will: \n\n-  Create a new file in the Java Lab IDE\n- Name Java files using conventions for naming\n-  Know the basics of Java syntax\n-  Print information to the console\n\n**Suggested Time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "Variables in Java",
+      "name": "Variables in Java",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Describe the different primitive data types covered in the AP subset\n- Declare and initialize variables\n- Use the assignment operator and compound assignment operators\n- Use variables in arithmetic operations\n- Print variables and text to the console\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Describe the different primitive data types covered in the AP subset\n- Declare and initialize variables\n- Use the assignment operator and compound assignment operators\n- Use variables in arithmetic operations\n- Print variables and text to the console\n\n**Estimated time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "Conditional Statements in Java",
+      "name": "Conditional Statements in Java",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Evaluate boolean expressions\n- Write and read if, if-else, if-else-if-else statements\n- Describe the difference between the assignment operator and the comparison operator\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Evaluate boolean expressions\n- Write and read if, if-else, if-else-if-else statements\n- Describe the difference between the assignment operator and the comparison operator\n\n**Estimated time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "Loops in Java",
+      "name": "Loops in Java",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Read, write, and debug for loops in Java\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Read, write, and debug for loops in Java\n\n**Estimated time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "Arrays in Java ",
+      "name": "Arrays in Java ",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Declare and initialize a 1D array of primitive data types\n- Access and modify elements in an array\n- Traverse an array\n\n**Estimated time:** 45 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Declare and initialize a 1D array of primitive data types\n- Access and modify elements in an array\n- Traverse an array\n\n**Estimated time:** 45 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "91f1a17d-777e-4b9d-9d23-367951421d0e",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "91f1a17d-777e-4b9d-9d23-367951421d0e",
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "b636d6fa-2a11-434e-bf0c-20615e4088a4",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4",
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "b9093ac0-f79f-41b7-bcc5-06af681e2082",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082",
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "4099e6aa-ce4c-490a-9d0b-8e47dc695ad5",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4099e6aa-ce4c-490a-9d0b-8e47dc695ad5",
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    },
+    {
+      "key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e",
+      "position": 1,
+      "properties": {
+        "duration": 45
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e",
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "76015f80-9fdf-42ab-af2e-53b88470798d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Java Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d",
+        "lesson_activity.key": "91f1a17d-777e-4b9d-9d23-367951421d0e"
+      }
+    },
+    {
+      "key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7",
+        "lesson_activity.key": "91f1a17d-777e-4b9d-9d23-367951421d0e"
+      }
+    },
+    {
+      "key": "0690ec68-415c-4387-8d24-79ac295da3fe",
+      "position": 3,
+      "properties": {
+        "progression_name": "Printing in Java"
+      },
+      "seeding_key": {
+        "activity_section.key": "0690ec68-415c-4387-8d24-79ac295da3fe",
+        "lesson_activity.key": "91f1a17d-777e-4b9d-9d23-367951421d0e"
+      }
+    },
+    {
+      "key": "d72129d4-d5ca-43e2-8d35-83069e7ee750",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging in Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750",
+        "lesson_activity.key": "91f1a17d-777e-4b9d-9d23-367951421d0e"
+      }
+    },
+    {
+      "key": "60db6a4d-8b6d-4628-b570-ae834199eecf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "60db6a4d-8b6d-4628-b570-ae834199eecf",
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4"
+      }
+    },
+    {
+      "key": "a83dd8cc-e631-4eeb-a20d-981d8780941b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b",
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4"
+      }
+    },
+    {
+      "key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Updating Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb",
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4"
+      }
+    },
+    {
+      "key": "106c730d-a3d4-4ced-863e-326a03473116",
+      "position": 4,
+      "properties": {
+        "progression_name": "Compound Assignment Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116",
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4"
+      }
+    },
+    {
+      "key": "93ac0559-b604-48a8-851e-9c148e96f91e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "93ac0559-b604-48a8-851e-9c148e96f91e",
+        "lesson_activity.key": "b636d6fa-2a11-434e-bf0c-20615e4088a4"
+      }
+    },
+    {
+      "key": "66b13204-7592-4ce5-9d7b-b37358cb2324",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "66b13204-7592-4ce5-9d7b-b37358cb2324",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Boolean expressions"
+      },
+      "seeding_key": {
+        "activity_section.key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "29e83a66-694c-4f82-b6f0-44881da5da89",
+      "position": 3,
+      "properties": {
+        "progression_name": "If statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "c2979ec7-e88d-4718-9329-3cbea55b6307",
+      "position": 4,
+      "properties": {
+        "progression_name": "If-else statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Else-if statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "1d58f702-20b1-44ed-945c-c5d3f2f01f81",
+      "position": 6,
+      "properties": {
+        "progression_name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d58f702-20b1-44ed-945c-c5d3f2f01f81",
+        "lesson_activity.key": "b9093ac0-f79f-41b7-bcc5-06af681e2082"
+      }
+    },
+    {
+      "key": "f45e1eb9-ab9b-4685-8559-1650fbec20e7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f45e1eb9-ab9b-4685-8559-1650fbec20e7",
+        "lesson_activity.key": "4099e6aa-ce4c-490a-9d0b-8e47dc695ad5"
+      }
+    },
+    {
+      "key": "db44fc74-b377-4a19-88c9-064f20953f2a",
+      "position": 2,
+      "properties": {
+        "progression_name": "For loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a",
+        "lesson_activity.key": "4099e6aa-ce4c-490a-9d0b-8e47dc695ad5"
+      }
+    },
+    {
+      "key": "3912ccde-2959-4a47-b7e4-7bc2b12e82ce",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3912ccde-2959-4a47-b7e4-7bc2b12e82ce",
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e"
+      }
+    },
+    {
+      "key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501",
+      "position": 2,
+      "properties": {
+        "progression_name": "Declaring and initializing arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501",
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e"
+      }
+    },
+    {
+      "key": "9d213696-1834-4892-a1f1-bc26f1bc17e7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Accessing and updating elements in an array"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7",
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e"
+      }
+    },
+    {
+      "key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972",
+      "position": 4,
+      "properties": {
+        "progression_name": "Traversing Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972",
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e"
+      }
+    },
+    {
+      "key": "64c3d41a-8fc7-4903-80f0-8950569d5ec4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "64c3d41a-8fc7-4903-80f0-8950569d5ec4",
+        "lesson_activity.key": "9541b7bd-911f-4c34-b4d2-a8554a3fd78e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Java Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-objectives-1_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      },
+      "level_keys": [
+        "pl-java-objectives-1_pl"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Java Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-certification-2_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      },
+      "level_keys": [
+        "pl-java-certification-2_pl"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Java Basics"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-module-overview-3_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      },
+      "level_keys": [
+        "pl-java-module-overview-3_pl"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-welcome-1_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      },
+      "level_keys": [
+        "pl-java-lab-welcome-1_pl"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-basics-video-2_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      },
+      "level_keys": [
+        "pl-java-lab-basics-video-2_pl"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-writing-a-program-video-3_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      },
+      "level_keys": [
+        "pl-java-lab-writing-a-program-video-3_pl"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-practice-main-4_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      },
+      "level_keys": [
+        "pl-java-lab-practice-main-4_pl"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing in Java"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-printing-video-5_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0690ec68-415c-4387-8d24-79ac295da3fe"
+      },
+      "level_keys": [
+        "pl-java-lab-printing-video-5_pl"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing in Java"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-practice-print-6_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0690ec68-415c-4387-8d24-79ac295da3fe"
+      },
+      "level_keys": [
+        "pl-java-lab-practice-print-6_pl"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging in Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-debugging-video-7_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      },
+      "level_keys": [
+        "pl-java-lab-debugging-video-7_pl"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging in Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-practice-debugging-8_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      },
+      "level_keys": [
+        "pl-java-lab-practice-debugging-8_pl"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging in Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-practice-error-9_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      },
+      "level_keys": [
+        "pl-java-lab-practice-error-9_pl"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging in Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-more-debugging-practice-10_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      },
+      "level_keys": [
+        "pl-java-lab-more-debugging-practice-10_pl"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging in Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-lab-chk-understanding-11_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      },
+      "level_keys": [
+        "pl-java-lab-chk-understanding-11_pl"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-overview-1_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "60db6a4d-8b6d-4628-b570-ae834199eecf"
+      },
+      "level_keys": [
+        "pl-java-variables-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-creating-video-2_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-creating-video-2_pl"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-datatypes-3-1_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-datatypes-3-1_pl"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-datatypes-3-2_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-datatypes-3-2_pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-types-3_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-chk-understanding-types-3_pl"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-predict-4_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-predict-4_pl"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-modify-5_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      },
+      "level_keys": [
+        "pl-java-variables-modify-5_pl"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-updating-6_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      },
+      "level_keys": [
+        "pl-java-variables-updating-6_pl"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-value-7_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      },
+      "level_keys": [
+        "pl-java-variables-chk-understanding-value-7_pl"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-practice-declaring-8_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      },
+      "level_keys": [
+        "pl-java-variables-practice-declaring-8_pl"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-concatenation-9_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      },
+      "level_keys": [
+        "pl-java-variables-concatenation-9_pl"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Updating Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-debugging-practice-10_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      },
+      "level_keys": [
+        "pl-java-variables-debugging-practice-10_pl"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound Assignment Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-assignment-op-11_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      },
+      "level_keys": [
+        "pl-java-variables-assignment-op-11_pl"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound Assignment Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-value-12_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      },
+      "level_keys": [
+        "pl-java-variables-chk-understanding-value-12_pl"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound Assignment Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-increment-13_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      },
+      "level_keys": [
+        "pl-java-variables-increment-13_pl"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound Assignment Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-practice-numbers-14_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      },
+      "level_keys": [
+        "pl-java-variables-practice-numbers-14_pl"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Compound Assignment Operators"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-index-15_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      },
+      "level_keys": [
+        "pl-java-variables-chk-understanding-index-15_pl"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-vocab-16_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "93ac0559-b604-48a8-851e-9c148e96f91e"
+      },
+      "level_keys": [
+        "pl-java-variables-chk-understanding-vocab-16_pl"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-overview-1_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "66b13204-7592-4ce5-9d7b-b37358cb2324"
+      },
+      "level_keys": [
+        "pl-java-conditionals-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-boolean-2_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c"
+      },
+      "level_keys": [
+        "pl-java-conditionals-boolean-2_pl"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Boolean expressions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-boolean-3_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c"
+      },
+      "level_keys": [
+        "pl-java-conditionals-chk-und-boolean-3_pl"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-statements-video-4_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-statements-video-4_pl"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-5_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-5_pl"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-assignment-comparison-6_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-assignment-comparison-6_pl"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-predict-7_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-predict-7_pl"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-if-8_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-if-8_pl"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "If statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-if-9_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      },
+      "level_keys": [
+        "pl-java-conditionals-chk-und-if-9_pl"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-2-way-selct-10_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      },
+      "level_keys": [
+        "pl-java-conditionals-2-way-selct-10_pl"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-if-else-11_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-if-else-11_pl"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-12_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-12_pl"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If-else statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-if-else-13_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      },
+      "level_keys": [
+        "pl-java-conditionals-chk-und-if-else-13_pl"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-multi-selection-video-14_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      },
+      "level_keys": [
+        "pl-java-conditionals-multi-selection-video-14_pl"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-multi-15_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-multi-15_pl"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Else-if statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-grad-16_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      },
+      "level_keys": [
+        "pl-java-conditionals-practice-grad-16_pl"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-vocab-17_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "1d58f702-20b1-44ed-945c-c5d3f2f01f81"
+      },
+      "level_keys": [
+        "pl-java-conditionals-chk-und-vocab-17_pl"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-overview-1_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f45e1eb9-ab9b-4685-8559-1650fbec20e7"
+      },
+      "level_keys": [
+        "pl-java-loops-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-for-loops-video-2_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-for-loops-video-2_pl"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-chk-und-terms-3_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-chk-und-terms-3_pl"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-debug-4_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-debug-4_pl"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-hello-5_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-hello-5_pl"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-even-6_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-even-6_pl"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-divided-7_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-divided-7_pl"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-integers-8_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-integers-8_pl"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "For loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-loops-practice-fizzbuzz-9_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      },
+      "level_keys": [
+        "pl-java-loops-practice-fizzbuzz-9_pl"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrays-overview-1_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "3912ccde-2959-4a47-b7e4-7bc2b12e82ce"
+      },
+      "level_keys": [
+        "pl-java-arrays-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrrays-1D-video-2_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrrays-1D-video-2_pl"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-modify-1D-video-3_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrray-modify-1D-video-3_pl"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-4_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrray-chk-und-4_pl"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-index-5_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrray-index-5_pl"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-ch-und-length-6_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrray-ch-und-length-6_pl"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Declaring and initializing arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-element-7_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      },
+      "level_keys": [
+        "pl-java-arrray-chk-und-element-7_pl"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessing and updating elements in an array"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-accessing-elements-8_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      },
+      "level_keys": [
+        "pl-java-arrray-accessing-elements-8_pl"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessing and updating elements in an array"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-food-9_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-food-9_pl"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessing and updating elements in an array"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-update-10_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-update-10_pl"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-traverse-video-11_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-traverse-video-11_pl"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-traverse-12_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-chk-und-traverse-12_pl"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-debug-traverse-13_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-debug-traverse-13_pl"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 14,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-traverse-14_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-traverse-14_pl"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 15,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-scores-15_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-scores-15_pl"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 16,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Traversing Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-class-16_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      },
+      "level_keys": [
+        "pl-java-arrray-practice-class-16_pl"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-vocab-17_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "64c3d41a-8fc7-4903-80f0-8950569d5ec4"
+      },
+      "level_keys": [
+        "pl-java-arrray-chk-und-vocab-17_pl"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-java-objectives-1_pl",
+        "script_level.level_keys": [
+          "pl-java-objectives-1_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-certification-2_pl",
+        "script_level.level_keys": [
+          "pl-java-certification-2_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-module-overview-3_pl",
+        "script_level.level_keys": [
+          "pl-java-module-overview-3_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "76015f80-9fdf-42ab-af2e-53b88470798d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-welcome-1_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-welcome-1_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-basics-video-2_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-basics-video-2_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-writing-a-program-video-3_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-writing-a-program-video-3_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-practice-main-4_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-practice-main-4_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f7039d0f-c5d8-4595-a0b4-896b087aa5b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-printing-video-5_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-printing-video-5_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0690ec68-415c-4387-8d24-79ac295da3fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-practice-print-6_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-practice-print-6_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0690ec68-415c-4387-8d24-79ac295da3fe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-debugging-video-7_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-debugging-video-7_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-practice-debugging-8_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-practice-debugging-8_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-practice-error-9_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-practice-error-9_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-more-debugging-practice-10_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-more-debugging-practice-10_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-lab-chk-understanding-11_pl",
+        "script_level.level_keys": [
+          "pl-java-lab-chk-understanding-11_pl"
+        ],
+        "lesson.key": "Introduction to Java Lab",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "d72129d4-d5ca-43e2-8d35-83069e7ee750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-overview-1_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "60db6a4d-8b6d-4628-b570-ae834199eecf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-creating-video-2_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-creating-video-2_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-datatypes-3-1_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-datatypes-3-1_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-datatypes-3-2_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-datatypes-3-2_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-chk-understanding-types-3_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-types-3_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-predict-4_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-predict-4_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-modify-5_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-modify-5_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "a83dd8cc-e631-4eeb-a20d-981d8780941b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-updating-6_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-updating-6_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-chk-understanding-value-7_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-value-7_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-practice-declaring-8_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-practice-declaring-8_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-concatenation-9_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-concatenation-9_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-debugging-practice-10_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-debugging-practice-10_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "cb0f5bf2-d07e-49b6-b351-c32eef3eaabb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-assignment-op-11_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-assignment-op-11_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-chk-understanding-value-12_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-value-12_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-increment-13_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-increment-13_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-practice-numbers-14_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-practice-numbers-14_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-chk-understanding-index-15_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-index-15_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "106c730d-a3d4-4ced-863e-326a03473116"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-variables-chk-understanding-vocab-16_pl",
+        "script_level.level_keys": [
+          "pl-java-variables-chk-understanding-vocab-16_pl"
+        ],
+        "lesson.key": "Variables in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "93ac0559-b604-48a8-851e-9c148e96f91e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-overview-1_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "66b13204-7592-4ce5-9d7b-b37358cb2324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-boolean-2_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-boolean-2_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-chk-und-boolean-3_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-boolean-3_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "de0f34b7-b82b-4ace-a492-dbaf81a8f50c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-statements-video-4_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-statements-video-4_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-5_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-5_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-assignment-comparison-6_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-assignment-comparison-6_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-predict-7_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-predict-7_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-if-8_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-if-8_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-chk-und-if-9_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-if-9_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "29e83a66-694c-4f82-b6f0-44881da5da89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-2-way-selct-10_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-2-way-selct-10_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-if-else-11_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-if-else-11_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-12_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-12_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-chk-und-if-else-13_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-if-else-13_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "c2979ec7-e88d-4718-9329-3cbea55b6307"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-multi-selection-video-14_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-multi-selection-video-14_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-multi-15_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-multi-15_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-practice-grad-16_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-practice-grad-16_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "2a67c68e-e8b3-4315-adb9-f5f0adf5593d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-conditionals-chk-und-vocab-17_pl",
+        "script_level.level_keys": [
+          "pl-java-conditionals-chk-und-vocab-17_pl"
+        ],
+        "lesson.key": "Conditional Statements in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "1d58f702-20b1-44ed-945c-c5d3f2f01f81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-overview-1_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "f45e1eb9-ab9b-4685-8559-1650fbec20e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-for-loops-video-2_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-for-loops-video-2_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-chk-und-terms-3_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-chk-und-terms-3_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-debug-4_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-debug-4_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-hello-5_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-hello-5_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-even-6_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-even-6_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-divided-7_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-divided-7_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-integers-8_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-integers-8_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-loops-practice-fizzbuzz-9_pl",
+        "script_level.level_keys": [
+          "pl-java-loops-practice-fizzbuzz-9_pl"
+        ],
+        "lesson.key": "Loops in Java",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "db44fc74-b377-4a19-88c9-064f20953f2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrays-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-arrays-overview-1_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "3912ccde-2959-4a47-b7e4-7bc2b12e82ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrrays-1D-video-2_pl",
+        "script_level.level_keys": [
+          "pl-java-arrrays-1D-video-2_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-modify-1D-video-3_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-modify-1D-video-3_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-chk-und-4_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-4_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-index-5_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-index-5_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-ch-und-length-6_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-ch-und-length-6_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-chk-und-element-7_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-element-7_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "0e7e48a5-e7a4-4507-8e24-ab583c4ab501"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-accessing-elements-8_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-accessing-elements-8_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-food-9_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-food-9_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-update-10_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-update-10_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "9d213696-1834-4892-a1f1-bc26f1bc17e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-traverse-video-11_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-traverse-video-11_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-chk-und-traverse-12_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-traverse-12_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-debug-traverse-13_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-debug-traverse-13_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-traverse-14_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-traverse-14_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-scores-15_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-scores-15_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-practice-class-16_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-practice-class-16_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "368aaebd-bcdb-4fd5-a7d6-cbcd8c74a972"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-arrray-chk-und-vocab-17_pl",
+        "script_level.level_keys": [
+          "pl-java-arrray-chk-und-vocab-17_pl"
+        ],
+        "lesson.key": "Arrays in Java ",
+        "lesson_group.key": "",
+        "script.name": "teaching-java-basics",
+        "activity_section.key": "64c3d41a-8fc7-4903-80f0-8950569d5ec4"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

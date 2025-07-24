@@ -1,0 +1,226 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-07-02T21:16:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Emotional Moments\r\n\r\n**Define:** Choose a song that moves through different emotional sections - maybe it starts calm and builds energy, or shifts from happy to dramatic. Your goal is to guide listeners through these emotional transitions using creative sequencing and instrument changes.\r\n\r\n**Prepare:** Pick a song and identify sounds that lead to a mood change. Think about how you'll use instruments and timing to support those shifts.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\n**Musical Suggestions:**\r\n\r\n- *\"Hallelujah\" – Rosa Linn* (moody and atmospheric, with emotional peaks)\r\n- *\"Tightrope\" – Tinashe* (fluid groove with space to shape energy)\r\n- *\"In The Stars\" – Benson Boone* (nostalgic build-ups and emotional weight)\r\n\r\n</div>\r\n\r\n**Try:** Build at least three different musical sections, each representing a different emotion. Use effects or instrument changes to highlight the transitions. Sequence your code carefully so each emotional shift is clear and musically interesting.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your remix guide the listener through different emotions? Do the transitions feel natural and expressive? In order to complete this level, your remix must include:\r\n\r\n- At least 3 different beat tracks\r\n- At least 3 different bass tracks\r\n- At least 3 different lead tracks\r\n- At least 3 different musical sections with emotional shifts",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false,
+      "validationTimeout": 1
+    },
+    "display_name": "Emotional Moments",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/electro/electro.png",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "validationSuccessMessage": "That was tricky! Good work using the rests with `play sequential` to get the timing just right. ",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "validationMode": "type",
+      "playerTitle": "Example"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpleEeoerSvfZ2JHZpm1GhsSDwCOxBL+fVO3bL+jSF8km\nL4XxYVd5eVPYcMjF1ldRCnpS+WroBrVKFLbOP6nnfqdt35gmboMSCAQxmBn3\n+uhq+uoSG0lbolkHC/cQN68v1B4v7RwQHzPSnXkOE+53flPLC4tcNL1jPmJr\n6ZUBvgMOIcQ5eE3ayGXonAB6ql4hA7hY9iOdWm6QOsYk7JeLYcTAOtRKzWCF\n00U79E0uZjHLYp5Z0Nuu74Y86Esx/IrT4iyDOm3Fx8F97uFlJJnN+5Ll13po\n6yzqrM/X14orPhtALfAsIFd0ex0KVmd3wrdcFBMte6YXIKhJFrkIU+/bCCIJ\nbewKoPDHENidn/KUHg0fr6a3k35XOWkpTKNat9nvphEJXrxQ04vLbdfL7WNI\nu4HVU+su8uWYveSE2Cgm2Tpa5WfuCmVfb4Veh3Y+Q8TWf5M6O55S0irhViyD\nfoQV4SwBN6H0g1iMQdzuKs/Hx9V8ssY9/PPO1SrDb1T6NP1AwGN+h5dSpm5w\nE0kUSmuRIyZxO0Ww091rH1T+aZzcgi2WYZUD6HmQiEnp2zkda1XI5itYVpMm\n1N6lA2kj5hqgjg//3M9U1bge/Pt/39/0UXhRPrS/JeFwaK/riF2jJOGV0dIO\nmWNW2SwxADgiontEPj9syKdrEabQlkC5Y838O6QYMgB7ZjlOyem7XXBBSb5j\nuO0AW64kvP6CtZydiCAniMxpJjyocCFpD+7X7p8sT1Ju5/udW6JZZpf4BIBs\nNJ3gl9V45gX1VrBbTy9cygMK54cTzDbp878Xx+szev91KgSHdIN6lNQBaGmg\nfLj2BapUWpTkl5D/gVJKtIn5I+Xs6RvTCDRXcZfhFucgr3HC8AFsCQ2Fq+TX\n/3A+GyLtMqCH4GoG51UYu8R/h0gxE/7dFZj3hiKyr28t4AyRzBGXiqo15EkS\n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\n",
+    "bubble_choice_description": "Choose a song that moves through different emotional sections. Your goal is to guide listeners through these emotional transitions using creative sequencing and instrument changes.",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_8c2e7a54-9dd1-41cd-9819-ef78bd6538bc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You Did It!\"\n✅ 3 unique beat tracks\n✅ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          }
+        ],
+        "comment": ""
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_39b4a41f-9661-40b2-844e-c0709b56a342",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n✅ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_02c08774-49c9-42f8-bc14-2474457dbd2c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n❌ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_e232c5e8-9d25-4b94-a025-ae1f718fa1a2",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n✅ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_3d7c2273-8c91-48a8-889d-4c0c4a218a9b",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n❌ 3 unique bass tracks\n✅ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_ff49621c-ed1b-4efa-a503-65c74fc27753",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n✅ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_9b730208-d29c-4bb8-bbb7-f8448c4dfe54",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n✅ 3 unique beat tracks\n❌ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_217b3df5-10a2-455f-a74f-66ff9c601edf",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for:\n❌ 3 unique beat tracks\n❌ 3 unique bass tracks\n❌ 3 unique lead tracks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ],
+        "comment": "At least enough blocks are in the workspace"
+      },
+      {
+        "key": "test-music-lab-sequences-practice-choice-c_v2_75726dd2-7dab-4a76-9135-8d0437cbf48f",
+        "message": "Make sure you have your beat, bass, and lead tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v3",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-07-02T21:16:31.863+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-choice-c_v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-choice-c_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -21,7 +21,7 @@ class SessionCookieTest < ActionDispatch::IntegrationTest
 
   test 'session cookie not set in publicly cached lesson plan' do
     ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
-    get '/s/jigsaw/lessons/1'
+    get '/courses/jigsaw/units/1/lessons/1'
     assert_nil cookies['_learn_session_test']
   end
 

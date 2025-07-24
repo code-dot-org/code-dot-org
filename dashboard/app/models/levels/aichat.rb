@@ -32,6 +32,8 @@ class Aichat < Level
     bot_description
     aichat_settings
     starter_assets
+    submittable
+    disable_edit_run_for_submission
   )
 
   def self.create_from_level_builder(params, level_params)

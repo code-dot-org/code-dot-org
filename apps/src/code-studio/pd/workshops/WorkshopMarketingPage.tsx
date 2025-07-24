@@ -7,14 +7,14 @@ import EnrollInWorkshop from './components/EnrollInWorkshop';
 import OrganizerInformation from './components/OrganizerInformation';
 import WorkshopDetails from './components/WorkshopDetails';
 import WorkshopEventJsonLdData from './components/WorkshopEventJsonLdData';
-import {GetWorkshopInfoScriptDataResponse} from './types';
+import {UserInfoForWorkshop, WorkshopInfo} from './types';
 
 import moduleStyles from './workshopMarketingPage.module.scss';
 
 const workshopMarketingBreadcrumbs: LinkWithText[] = [
   {
     text: 'Explore workshops',
-    href: '/pd/workshop_dashboard/workshops/',
+    href: '/professional-learning/workshops/',
   },
   {
     text: 'Workshop information',
@@ -23,27 +23,32 @@ const workshopMarketingBreadcrumbs: LinkWithText[] = [
 ];
 
 interface WorkshopMarketingPageProps
-  extends GetWorkshopInfoScriptDataResponse {}
+  extends WorkshopInfo,
+    UserInfoForWorkshop {}
 
 const WorkshopMarketingPage: React.FunctionComponent<
   WorkshopMarketingPageProps
 > = props => {
   const {
     id,
-    course_offerings,
+    courseOfferings,
     name,
+    course,
+    subject,
+    format,
     capacity,
-    num_enrollments,
-    grade_levels,
+    numEnrollments,
+    gradeLevels,
     sessions,
     fee,
     prereq,
     description,
     notes,
-    custom_registration_link,
-    regional_partner_name,
+    customRegistrationLink,
+    regionalPartnerName,
     organizer,
     facilitators,
+    userInfo,
   } = props;
 
   return (
@@ -53,7 +58,9 @@ const WorkshopMarketingPage: React.FunctionComponent<
           name="workShopMarketingPage-HeaderBreadcrumbs"
           size="l"
           showHomeIcon={true}
+          homeIconHref="/my-professional-learning"
           breadcrumbs={workshopMarketingBreadcrumbs}
+          className={moduleStyles.headerBreadcrumbs}
         />
         <Heading1>Register for a workshop</Heading1>
       </section>
@@ -61,27 +68,34 @@ const WorkshopMarketingPage: React.FunctionComponent<
         <div className={moduleStyles.bodyContainer}>
           <WorkshopDetails
             name={name}
-            grade_levels={grade_levels}
+            gradeLevels={gradeLevels}
             sessions={sessions}
             fee={fee}
             prereq={prereq}
             description={description}
             notes={notes}
-            course_offerings={course_offerings}
+            courseOfferings={courseOfferings}
             facilitators={facilitators}
           />
 
           <aside className={moduleStyles.sidebar}>
             <EnrollInWorkshop
               id={id}
-              custom_registration_link={custom_registration_link}
+              customRegistrationLink={customRegistrationLink}
               capacity={capacity}
-              num_enrollments={num_enrollments}
+              numEnrollments={numEnrollments}
+              regionalPartnerName={regionalPartnerName}
+              userInfo={userInfo}
+              course={course}
+              subject={subject}
+              name={name}
+              format={format}
+              sessions={sessions}
             />
 
             <OrganizerInformation
               organizer={organizer}
-              regional_partner_name={regional_partner_name}
+              regionalPartnerName={regionalPartnerName}
             />
           </aside>
         </div>

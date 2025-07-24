@@ -71,10 +71,8 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
         <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
-1. fix your database charset, collation, and timezone to match our servers
+1. fix your database timezone to match our servers
     - `bin/mysql-client-admin`
-    - `ALTER DATABASE dashboard_development CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
-    - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
     - `SET GLOBAL time_zone = '+00:00';` Set time zone for all new database connections
     - `SET PERSIST time_zone = '+00:00';` Save the setting to the mysqld-auto.cnf file which is read on restart
     - `SELECT @@global.time_zone;` Verify the setting
@@ -530,7 +528,7 @@ bundle config --local without staging test production levelbuilder
 
 #### Xcode Set Up
 
-OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, step 9 in the overview will not run correctly. In that case run the following command in the Terminal (found from
+OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031). If this doesn't work, `rake build` will not run correctly. In that case run the following command in the Terminal (found from
   <https://github.com/nodejs/node-gyp/issues/569>): `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`
 
 ### Recommended hardware

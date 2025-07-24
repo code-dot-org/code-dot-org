@@ -163,7 +163,6 @@ export default class WorkshopTable extends React.Component {
         property: 'regional_partner_name',
         header: {
           label: 'Regional Partner',
-          transforms: [sortable],
         },
       },
       {
@@ -288,7 +287,7 @@ export default class WorkshopTable extends React.Component {
   );
 
   formatSignupUrl = workshopId => {
-    const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
+    const signupUrl = `${location.origin}/professional-learning/workshops/${workshopId}`;
     return (
       <a href={signupUrl} target="_blank" rel="noopener noreferrer">
         {signupUrl}

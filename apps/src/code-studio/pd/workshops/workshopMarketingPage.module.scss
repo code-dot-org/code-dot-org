@@ -2,6 +2,7 @@
 
 @mixin inline-detail-p {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.38rem;
   align-items: baseline;
   margin: 0;
@@ -9,7 +10,7 @@
 
 $max-width: 60rem;
 $tablet-breakpoint: 1023px;
-$mobile-padding: 4rem;
+$mobile-padding: 4rem 1.5rem;
 
 .workshopMarketingPage {
   background-color: var(--background-neutral-secondary);
@@ -18,6 +19,11 @@ $mobile-padding: 4rem;
     max-width: $max-width;
     margin: 0 auto;
     padding-block: 4rem;
+
+    .headerBreadcrumbs {
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
 
     h1 {
       margin: 0;
@@ -84,6 +90,10 @@ $mobile-padding: 4rem;
               max-width: unset;
             }
           }
+
+          li {
+            margin: 0;
+          }
         }
       }
 
@@ -105,6 +115,21 @@ $mobile-padding: 4rem;
           border-radius: 0.25rem;
           border: 1px solid var(--borders-neutral-primary);
           background: var(--background-neutral-secondary);
+
+          .internalEnrollButton {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            .userPassport {
+              width: 100%;
+
+              > div {
+                background-color: var(--neutral-base-white);
+              }
+            }
+          }
 
           .underCardHeadingDetails {
             display: flex;

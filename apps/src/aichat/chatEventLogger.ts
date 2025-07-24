@@ -4,34 +4,30 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {postLogChatEvent} from './aichatApi';
 import {ChatEvent, AichatContext} from './types';
 
-interface LoggerPayload {
-  chatEvent: ChatEvent;
-  aichatContext: AichatContext;
-}
 export default class ChatEventLogger {
-  private queue: LoggerPayload[];
+  private queue: ChatEvent[];
   private sendingInProgress: boolean;
 
   private static instance: ChatEventLogger;
 
-  constructor() {
+  constructor(private readonly aichatContext: AichatContext) {
     this.queue = [];
     this.sendingInProgress = false;
   }
 
   public static getInstance(): ChatEventLogger {
     if (ChatEventLogger.instance === undefined) {
-      ChatEventLogger.create();
+      throw new Error('ChatEventLogger was not initialized with API context.');
     }
     return ChatEventLogger.instance;
   }
 
-  public static create(): void {
-    ChatEventLogger.instance = new ChatEventLogger();
+  public static initialize(context: AichatContext) {
+    ChatEventLogger.instance = new ChatEventLogger(context);
   }
 
-  public logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
-    this.queue.push({chatEvent, aichatContext});
+  public logChatEvent(chatEvent: ChatEvent) {
+    this.queue.push(chatEvent);
     if (!this.sendingInProgress) {
       this.sendChatEvent();
     }
@@ -40,12 +36,11 @@ export default class ChatEventLogger {
   private async sendChatEvent() {
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
-      const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
-      if (loggerPayload) {
-        const {chatEvent, aichatContext} = loggerPayload;
+      const chatEvent = this.queue.shift(); // Remove the first element from the queue.
+      if (chatEvent) {
         this.sendingInProgress = true;
         try {
-          await postLogChatEvent(chatEvent, aichatContext);
+          await postLogChatEvent(chatEvent, this.aichatContext);
         } catch (error) {
           // Only send log report if not a 403 error.
           if (

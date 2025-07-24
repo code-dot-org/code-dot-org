@@ -5,10 +5,7 @@ import React from 'react';
 import {Factory} from 'rosie';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import EnrollmentsPanel, {
-  MOVE_ENROLLMENT_BUTTON_NAME,
-  EDIT_ENROLLMENT_NAME_BUTTON_NAME,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/EnrollmentsPanel';
+import EnrollmentsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/EnrollmentsPanel';
 import './workshopFactory';
 
 describe('EnrollmentsPanel', () => {
@@ -124,22 +121,13 @@ describe('EnrollmentsPanel', () => {
       />
     );
 
-    wrapper.instance().handleClickChangeEnrollments({
-      target: {name: MOVE_ENROLLMENT_BUTTON_NAME},
-    });
+    wrapper.instance().handleClickChangeEnrollments();
     wrapper.update();
-    assert(
-      wrapper.state('enrollmentChangeDialogOpen') ===
-        MOVE_ENROLLMENT_BUTTON_NAME,
-      'Move enrollments dialog was not opened'
-    );
+    assert(wrapper.state('enrollmentChangeDialogOpen'));
 
     wrapper.instance().handleChangeEnrollmentsCanceled();
     wrapper.update();
-    assert(
-      wrapper.state('enrollmentChangeDialogOpen') === null,
-      'Move enrollments dialog was not closed'
-    );
+    assert(!wrapper.state('enrollmentChangeDialogOpen'));
   });
 
   it('move some enrollments', () => {
@@ -164,78 +152,21 @@ describe('EnrollmentsPanel', () => {
     );
 
     // Open the move enrollments dialog
-    wrapper.instance().handleClickChangeEnrollments({
-      target: {name: MOVE_ENROLLMENT_BUTTON_NAME},
-    });
+    wrapper.instance().handleClickChangeEnrollments();
     wrapper.update();
-    assert(
-      wrapper.state('enrollmentChangeDialogOpen') ===
-        MOVE_ENROLLMENT_BUTTON_NAME
-    );
+    assert(wrapper.state('enrollmentChangeDialogOpen'));
 
     // Confirm the move with a fake destination workshop
     const destinationWorkshopId = 5;
     wrapper.instance().handleMoveEnrollmentsConfirmed(destinationWorkshopId);
     wrapper.update();
-    assert(wrapper.state('enrollmentChangeDialogOpen') === null);
+    assert(!wrapper.state('enrollmentChangeDialogOpen'));
     assert.deepEqual([], wrapper.state('selectedEnrollments'));
 
     // Respond to the server request
     server.respondWith(
       'POST',
       `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollments[0].id}`,
-      [204, {}, '']
-    );
-    server.respond();
-    wrapper.update();
-    assert(loadEnrollments.calledOnce);
-  });
-
-  it('edit an enrollment', () => {
-    const workshop = Factory.build('workshop');
-    const enrollments = Factory.buildList('enrollment', 2);
-    const wrapper = shallow(
-      <EnrollmentsPanel
-        workshopId={String(workshop.id)}
-        workshop={workshop}
-        isLoadingEnrollments={false}
-        enrollments={enrollments}
-        isWorkshopAdmin
-        loadEnrollments={loadEnrollments}
-      />
-    );
-
-    // Select the first enrollment
-    wrapper.instance().handleClickSelect(enrollments[0]);
-    assert.deepEqual(
-      [_.pick(enrollments[0], ['id', 'email', 'first_name', 'last_name'])],
-      wrapper.state('selectedEnrollments')
-    );
-
-    wrapper.instance().handleClickChangeEnrollments({
-      target: {name: EDIT_ENROLLMENT_NAME_BUTTON_NAME},
-    });
-    wrapper.update();
-    assert(
-      wrapper.state('enrollmentChangeDialogOpen') ===
-        EDIT_ENROLLMENT_NAME_BUTTON_NAME
-    );
-
-    // Confirm the updated name and email
-    const updatedInfo = {
-      firstName: 'Rubeus',
-      lastName: 'Hagrid',
-      email: 'rubeushagrid@code.org',
-    };
-    wrapper.instance().handleEditEnrollmentConfirmed(updatedInfo);
-    wrapper.update();
-    assert(wrapper.state('enrollmentChangeDialogOpen') === null);
-    assert.deepEqual([], wrapper.state('selectedEnrollments'));
-
-    // Respond to the server request
-    server.respondWith(
-      'POST',
-      `/api/v1/pd/enrollment/${enrollments[0].id}/edit`,
       [204, {}, '']
     );
     server.respond();

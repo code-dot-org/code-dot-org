@@ -12,13 +12,20 @@ inputs:
     description: "Applitools API Key"
     required: true
   APPLICATION_BASE_ADDRESS:
-    description: "The base URL for the application. Defaults to http://localhost:3001"
-    default: "localhost:3001"
+    description: "The base URL for the application. Defaults to http://code.marketing-sites.localhost:3001"
+    default: "code.marketing-sites.localhost:3001"
   ENVIRONMENT_TYPE:
     description: "local, pr, test, or production"
     required: true
   GITHUB_ENVIRONMENT_NAME:
     description: "The name of the GitHub environment to use for this action"
+    required: false
+  BRANCHED_TESTING_ENABLED:
+    description: "Whether branched testing is enabled. Defaults to false"
+    default: "false"
+    required: false
+  PR_HEAD_REF:
+    description: "The head ref of the pull request."
     required: false
 
 runs:
@@ -41,7 +48,10 @@ runs:
       shell: bash
       env:
         STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
+        NEXT_PUBLIC_STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
         APPLICATION_BASE_ADDRESS: ${{ inputs.APPLICATION_BASE_ADDRESS }}
+        BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
+        PR_HEAD_REF: ${{ inputs.PR_HEAD_REF }}
       run: yarn workspace @code-dot-org/marketing test:ui:ci
       working-directory: ./frontend
 
@@ -54,9 +64,9 @@ runs:
         name: playwright-report
 
     - name: Run Google Lighthouse Audits
-      uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8
+      uses: treosh/lighthouse-ci-action@9917efea514615fb2ff2890f5b8be2d51e703b6e
       env:
-        HTTP_PROTOCOL: ${{ inputs.APPLICATION_BASE_ADDRESS == 'localhost:3001' && 'http' || 'https' }}
+        HTTP_PROTOCOL: ${{ inputs.APPLICATION_BASE_ADDRESS == 'code.marketing-sites.localhost:3001' && 'http' || 'https' }}
       with:
         urls: ${{ env.HTTP_PROTOCOL }}://${{ inputs.APPLICATION_BASE_ADDRESS }}/en-US/engineering/all-the-things
         uploadArtifacts: true

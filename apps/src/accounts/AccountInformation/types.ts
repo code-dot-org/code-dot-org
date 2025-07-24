@@ -1,6 +1,7 @@
 interface UserProperties {
   gender_student_input?: string;
   us_state?: string;
+  educator_role?: string;
   [key: string]: unknown;
 }
 export interface AccountInformationProps {
@@ -11,6 +12,7 @@ export interface AccountInformationProps {
   shouldSeeEditEmailLink: boolean;
   isPasswordRequired: boolean;
   isStudent: boolean;
+  isFacilitator: boolean;
   migrated: boolean;
   encryptedPasswordPresent: boolean;
   canEditPassword: boolean;
@@ -26,6 +28,9 @@ export interface AccountInformationProps {
   userAge?: string;
   userUsername?: string;
   userDisplayName?: string;
+  userGivenName?: string;
+  userFamilyName?: string;
   userEmail?: string;
   userProperties?: UserProperties;
+  userFacilitatorBio?: string;
 }

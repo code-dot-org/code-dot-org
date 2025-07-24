@@ -1,17 +1,4 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
-
-$default-spacing: 2px;
-
 .pythonlab {
-  position: relative;
-  background-color: var(--background-neutral-primary);
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  border-radius: 0s;
-  overflow: hidden;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  gap: $default-spacing;
 }

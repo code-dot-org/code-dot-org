@@ -66,7 +66,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:32.361+00:00\",\"changed\":[\"cloned from \\\"U4 L04 Variables Make Project Submit_2024\\\"\"],\"cloned_from\":\"U4 L04 Variables Make Project Submit_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:32.361+00:00\",\"changed\":[\"cloned from \\\"U4 L04 Variables Make Project Submit_2024\\\"\"],\"cloned_from\":\"U4 L04 Variables Make Project Submit_2024\"},{\"changed_at\":\"2025-06-11 21:50:25 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1193,\"changed_by_email\":\"tess@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

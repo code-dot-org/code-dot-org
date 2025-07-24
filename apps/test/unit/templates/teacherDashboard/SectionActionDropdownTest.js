@@ -4,7 +4,6 @@ import React from 'react';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -178,11 +177,6 @@ describe('SectionActionDropdown', () => {
   });
 
   it('sends selected user to the new teacher dashboard settings page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
@@ -193,15 +187,9 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
     );
-    jest.restoreAllMocks();
   });
 
   it('sends selected user to the new teacher dashboard roster page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
@@ -211,6 +199,5 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find('.manage-students-link').props().href).to.equal(
       expectedUrl
     );
-    jest.restoreAllMocks();
   });
 });

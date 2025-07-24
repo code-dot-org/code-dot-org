@@ -91,34 +91,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       options: {days_before: 3}
   end
 
-  def teacher_follow_up__csf_intro_with_rp
-    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
-    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
-
-    regional_partner = build :regional_partner, name: 'We Teach Code'
-    regional_partner.assign_attributes contact_name: 'Patty Partner', contact_email: 'patty@we_teach_code.ex.net'
-    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
-      workshop_params: {
-        facilitators: [facilitator1, facilitator2],
-        regional_partner: regional_partner
-      }
-  end
-
-  def teacher_follow_up__csf_intro_three_facilitators
-    facilitator1 = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
-    facilitator2 = build :facilitator, name: 'Fred Facilitator', email: 'fred_facilitator@example.net'
-    facilitator3 = build :facilitator, name: 'Frannie Facilitator', email: 'frannie_facilitator@example.net'
-
-    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
-      workshop_params: {
-        facilitators: [facilitator1, facilitator2, facilitator3]
-      }
-  end
-
-  def teacher_follow_up__csf_intro
-    mail :teacher_follow_up, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
-  end
-
   def organizer_enrollment_receipt
     mail :organizer_enrollment_receipt
   end
@@ -241,20 +213,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :organizer_cancel_receipt
   end
 
-  def detail_change_notification__csf_intro
-    mail :detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
-  end
-
-  def detail_change_notification__csf_deepdive
-    mail :detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
-  end
-
   def organizer_detail_change_notification__csf
     mail :organizer_detail_change_notification, Pd::Workshop::COURSE_CSF, target: :workshop
-  end
-
-  def facilitator_detail_change_notification__csf_intro
-    mail :facilitator_detail_change_notification, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101, target: :facilitator
   end
 
   def detail_change_notification__admin
@@ -264,19 +224,6 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
   # Exit survey has variations for CSF and for CSP for returning teachers. It's the same for all other courses.
   def exit_survey__general
     mail :exit_survey
-  end
-
-  def exit_survey__csf_intro
-    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101
-  end
-
-  def exit_survey__csf_deepdive
-    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_201
-  end
-
-  def exit_survey__csf_pre_foorm
-    mail :exit_survey, Pd::Workshop::COURSE_CSF, Pd::Workshop::SUBJECT_CSF_101,
-      workshop_params: {sessions_from: Date.new(2020, 5, 4)}
   end
 
   def exit_survey__csp_for_returning_teachers

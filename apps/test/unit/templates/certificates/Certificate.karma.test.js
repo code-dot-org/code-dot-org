@@ -118,11 +118,11 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
         {
           courseName: 'csd2-2023',
-          coursePath: '/s/csd2-2023',
+          coursePath: '/courses/csd-2023/units/2',
         },
       ],
       certificateId: 'sessionId',
@@ -132,7 +132,7 @@ describe('Certificate', () => {
     expect(wrapper.find('swiper-slide').length).to.equal(2);
 
     expect(wrapper.find('LargeChevronLink').props().link).to.equal(
-      '/s/csd1-2023'
+      '/courses/csd-2023/units/1'
     );
   });
 
@@ -141,7 +141,7 @@ describe('Certificate', () => {
       certificateData: [
         {
           courseName: 'csd1-2023',
-          coursePath: '/s/csd1-2023',
+          coursePath: '/courses/csd-2023/units/1',
         },
       ],
       certificateId: 'sessionId',

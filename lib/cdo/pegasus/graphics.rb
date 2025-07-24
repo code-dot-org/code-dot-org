@@ -33,6 +33,11 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
     else
       nil
     end
+
+    # Strip all profiles and comments from the resulting image.
+    # Particularly important for removing any modification timestamps added by
+    # resizing, which can otherwise make calculated cache keys inconsistent.
+    image.strip!
   end
   ilist
 end

@@ -25,7 +25,8 @@ class Pd::CourseFacilitator < ApplicationRecord
   end
 
   def self.all_facilitators
-    User.joins(:courses_as_facilitator).
+    User.joins("INNER JOIN user_permissions ON user_permissions.user_id = users.id").
+      where(user_permissions: {permission: 'facilitator'}).
       order(:name).
       distinct
   end

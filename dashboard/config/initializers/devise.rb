@@ -330,7 +330,7 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
-    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
+    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: Queries::User::EnabledExperiments.call(user).to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
@@ -371,7 +371,11 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = "/my_engine/users/auth"
 end
 
+require 'devise/models/custom_lockable'
+
 Rails.application.config.to_prepare do
   # See lib/devise/models/custom_lockable.rb
-  Devise::Models::Lockable.prepend Devise::Models::CustomLockable
+  unless Devise::Models::Lockable <= Devise::Models::CustomLockable
+    Devise::Models::Lockable.prepend(Devise::Models::CustomLockable)
+  end
 end

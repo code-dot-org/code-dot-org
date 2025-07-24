@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {UnconnectedPredictSolution} from '@cdo/apps/lab2/views/components/PredictSolution';
+import {UnconnectedPredictSolution} from '@cdo/apps/lab2/views/components/Instructions/PredictSolution';
 import {getStore} from '@cdo/apps/redux';
 import SummaryContainer from '@cdo/apps/templates/levelSummary/SummaryContainer.jsx';
 import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';

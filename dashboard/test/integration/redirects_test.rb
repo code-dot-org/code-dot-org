@@ -77,12 +77,18 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   test 'redirects urls with stage and puzzle to lessons and levels' do
     get '/s/allthethings/stage/1/puzzle/1'
     assert_redirected_to '/s/allthethings/lessons/1/levels/1'
+    follow_redirect!
+    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/1/levels/1'
 
     get '/s/allthethings/stage/40/puzzle/1/sublevel/1'
     assert_redirected_to '/s/allthethings/lessons/40/levels/1/sublevel/1'
+    follow_redirect!
+    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/1'
 
     get '/s/allthethings/stage/33/puzzle/1/page/1'
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
+    follow_redirect!
+    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/33/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.
@@ -96,6 +102,7 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
   test 'redirects urls with stage for lesson extras' do
     script = create :script, name: 'script-with-bonus', lesson_extras_available: true
+    create :single_unit_course, name: 'course-with-bonus', unit: script
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson
@@ -106,15 +113,18 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     sign_in(@teacher)
 
-    get '/s/script-with-bonus'
+    get '/courses/course-with-bonus/units/1'
     assert :success
 
     get '/s/script-with-bonus/stage/1/extras?section_id=999999'
     assert_redirected_to '/s/script-with-bonus/lessons/1/extras?section_id=999999'
+    follow_redirect!
+    assert_redirected_to '/courses/course-with-bonus/units/1/lessons/1/extras?section_id=999999'
   end
 
   test 'redirects urls with lockable and puzzle to lockable and levels' do
     @unit = create :script, name: 'test-script'
+    create :single_unit_course, unit: @unit, name: 'test-course'
     @lesson_group = create :lesson_group, script: @unit
     @lockable_lesson = create(:lesson, script: @unit, lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 1, relative_position: 1)
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
@@ -122,9 +132,13 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
     get '/s/test-script/lockable/1/puzzle/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1'
+    follow_redirect!
+    assert_redirected_to '/courses/test-course/units/1/lockable/1/levels/1'
 
     get '/s/test-script/lockable/1/puzzle/1/page/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1/page/1'
+    follow_redirect!
+    assert_redirected_to '/courses/test-course/units/1/lockable/1/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.
@@ -139,5 +153,16 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   test 'redirects weblab code studio share link to codeprojects' do
     get "http://#{CDO.dashboard_hostname}/projects/weblab/abcdef"
     assert_redirected_to "http://#{CDO.codeprojects_hostname}/abcdef/"
+  end
+
+  test 'redirects to /courses/ from /s/' do
+    single_unit_course = create :single_unit_course, name: 'single-unit-course'
+
+    get "/s/#{single_unit_course.first_unit.name}"
+    assert_redirected_to "/courses/#{single_unit_course.name}/units/1"
+
+    multi_unit_course = create :unit_group, :with_units, name: 'multi-unit-course'
+    get "/s/#{multi_unit_course.default_units.last.name}"
+    assert_redirected_to "/courses/#{multi_unit_course.name}/units/#{multi_unit_course.default_unit_group_units.last.position}"
   end
 end

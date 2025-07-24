@@ -23,6 +23,8 @@ import {
   PendingChatMessage,
   CompletedChatMessage,
   ChatAsset,
+  ModelParameters,
+  AiChatClientType,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -36,18 +38,26 @@ import {sendAnalytics} from './sendAnalytics';
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (
-    newUserMessageInput: {text: string; assets?: ChatAsset[]},
+    newUserMessageInput: {
+      text: string;
+      modelParameters: ModelParameters;
+      clientType: AiChatClientType;
+      hiddenContext?: string;
+      assets?: ChatAsset[];
+    },
     thunkAPI
   ) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
-      state.aichat;
+    const chatEventsCurrent = state.aichat.chatEventsCurrent;
+    const {text, hiddenContext, assets, modelParameters, clientType} =
+      newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
 
     const aichatContext: AichatContext = {
+      clientType,
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
@@ -56,8 +66,9 @@ export const submitChatContents = createAsyncThunk(
     const newUserMessage: PendingChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: newUserMessageInput.text,
-      assets: newUserMessageInput.assets,
+      chatMessageText: text,
+      hiddenContext,
+      assets,
       timestamp: Date.now(),
     };
     dispatch(setChatMessagePending(newUserMessage));
@@ -73,7 +84,7 @@ export const submitChatContents = createAsyncThunk(
       messages = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isCompletedChatMessage),
-        aiCustomizations,
+        modelParameters,
         aichatContext
       );
 
@@ -100,7 +111,7 @@ export const submitChatContents = createAsyncThunk(
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
         {
           name: 'ModelId',
-          value: aiCustomizations.selectedModelId,
+          value: modelParameters.selectedModelId,
         },
       ]);
 

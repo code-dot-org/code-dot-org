@@ -32,20 +32,28 @@
   }
 }
 
-@mixin icon-button($background, $selected, $active) {
+@mixin icon-button(
+  $default-background-color,
+  $hover-background-color,
+  $selected-color,
+  $active-color
+  ) {
+
+   background-color: $default-background-color;
+
   i {
     color: var(--text-neutral-tertiary);
   }
 
   &.selected i, &:hover i {
-    color: $selected;
+    color: $selected-color;
   }
 
   &:hover {
-    background-color: $background;
+    background-color: $hover-background-color;
   }
 
   &:active i {
-    color: $active;
+    color: $active-color;
   }
 }

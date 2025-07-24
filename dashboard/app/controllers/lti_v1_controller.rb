@@ -473,7 +473,7 @@ class LtiV1Controller < ApplicationController
       render(status: :bad_request, json: {error: I18n.t('lti.upgrade_to_teacher_account.error.missing_email')}) and return
     end
 
-    current_user.upgrade_to_teacher(params[:email])
+    Services::User::UpgradeToTeacher.call(user: current_user, email: params[:email])
     render status: :ok, json: {}
   end
 

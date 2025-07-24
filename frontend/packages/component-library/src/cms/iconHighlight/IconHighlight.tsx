@@ -46,7 +46,7 @@ const IconHighlight: React.FC<IconHighlightProps> = ({
   links = [],
   ...HTMLAttributes
 }: IconHighlightProps) => (
-  <aside
+  <div
     {...HTMLAttributes}
     className={classNames(moduleStyles.iconHighlight, className)}
   >
@@ -91,7 +91,7 @@ const IconHighlight: React.FC<IconHighlightProps> = ({
         ))}
       </ul>
     )}
-  </aside>
+  </div>
 );
 
 export default IconHighlight;
