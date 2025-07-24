@@ -23,7 +23,7 @@
 #
 # See upgrading guide for more information on how to build a rotator.
 # https://guides.rubyonrails.org/v7.0/upgrading_ruby_on_rails.html
-Rails.application.config.active_support.key_generator_hash_digest_class = OpenSSL::Digest::SHA256
+# Rails.application.config.active_support.key_generator_hash_digest_class = OpenSSL::Digest::SHA256
 
 # Change the digest class for ActiveSupport::Digest.
 # Changing this default means that for example Etags change and
@@ -118,7 +118,7 @@ Rails.application.config.action_dispatch.default_headers = {
 # have been converted to JSON. To keep using `:hybrid` long term, move this config to its own
 # initializer or to `config/application.rb`.
 #
-# Rails.application.config.action_dispatch.cookies_serializer = :hybrid
+Rails.application.config.action_dispatch.cookies_serializer = :hybrid
 #
 #
 # If your cookies can't yet be serialized to JSON, keep using `:marshal` for backward-compatibility.
