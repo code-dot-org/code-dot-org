@@ -99,43 +99,37 @@ yarn test:ui:fork
 - Any new content entries used in your component(s) should be prepended with "❌ [ENG]" to indicate they are for engineering/testing purposes only. These entries will be copied to Production in Step 9.
 - Make sure top level sections have a Fixed height in the Design sidebar in the Experiences editor, this can prevent page shifting in preparation to add Eyes tests in Step 11.
 
-3. Update the `development` snapshot with your forked version; the ID can be found at the end of the url on the forked experience in Contentful:
+3. Create a PR with the updates from steps 1-3. Label this PR with `All The Things` which will trigger the UI tests to test against the forked page.
 
-```bash
-yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development
-```
+4. Once the PR is merged, update your workspace with `staging`.
 
-4. Create a PR with the updates from steps 1-3.
-
-5. Once the PR is merged, update your workspace with `staging`.
-
-6. Publish the updated snapshot in the `development` environment:
+5. Publish the updated snapshot in the `development` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment development
 ```
 
-7. Open the development output link in the terminal in Contentful, and Publish the experience.
+6. Open the development output link in the terminal in Contentful, and Publish the experience.
 
-8. Publish the updated snapshot in the `test` environment:
+7. Publish the updated snapshot in the `test` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment test
 ```
 
-9. Publish the updated snapshot in the `production` environment:
+8. Publish the updated snapshot in the `production` environment:
 
 ```bash
 yarn test:ui:publish-snapshot --environment production
 ```
 
-10. Publish updated `production` version of the All The Things page in Contentful.
+9. Publish updated `production` version of the All The Things page in Contentful.
 
-11. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
+10. **If you're adding a new component:** add the component to the Section Types on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`. Create/merge a PR with these tests.
 
-12. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
+11. Eyes diffs may show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
 
-13. Approve Eyes diffs and rerun failed tests if needed.
+12. Approve Eyes diffs and rerun failed tests if needed.
 
 #### ⛔️ Troubleshooting
 

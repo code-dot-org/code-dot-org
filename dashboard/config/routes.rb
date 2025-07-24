@@ -752,6 +752,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end

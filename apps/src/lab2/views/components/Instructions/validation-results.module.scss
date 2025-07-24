@@ -42,12 +42,6 @@
   text-align: center;
 }
 
-// Using button to increase specificity of this class
-// (this allows it to take precedence over the component library button styles)
-button.validationButton {
-  margin-top: 8px;
-}
-
 .buttonInstruction {
   width: 100%;
   height: 32px;

@@ -62,7 +62,7 @@ import RichText, {
   RichTextContentfulComponentDefinition,
 } from '@/components/contentful/richText';
 import Section, {
-  SectionContentfulComponentDefinition,
+  SectionCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/section';
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
@@ -176,7 +176,7 @@ const contentfulRegistration = {
     },
     {
       component: Section,
-      definition: SectionContentfulComponentDefinition,
+      definition: SectionCSforAllContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },

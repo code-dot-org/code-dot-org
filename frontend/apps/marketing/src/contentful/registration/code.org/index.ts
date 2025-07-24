@@ -73,7 +73,7 @@ import RichText, {
   RichTextContentfulComponentDefinition,
 } from '@/components/contentful/richText';
 import Section, {
-  SectionContentfulComponentDefinition,
+  SectionCorporateSiteContentfulComponentDefinition,
 } from '@/components/contentful/section';
 import SimpleList, {
   SimpleListContentfulComponentDefinition,
@@ -216,7 +216,7 @@ const contentfulRegistration = {
     },
     {
       component: Section,
-      definition: SectionContentfulComponentDefinition,
+      definition: SectionCorporateSiteContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },
