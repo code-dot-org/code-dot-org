@@ -499,7 +499,6 @@ Dashboard::Application.routes.draw do
     end
 
     resources :potential_teachers, only: [:create]
-    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
