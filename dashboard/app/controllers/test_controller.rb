@@ -151,10 +151,12 @@ class TestController < ApplicationController
   def assign_section_to_course_and_unit
     return unless (teacher = current_user)
 
-    unit_group = UnitGroup.find_by_name(params.require(:course_name))
-    unit_group_unit = unit_group.default_unit_group_units.find_by!(position: params.require(:unit_position))
-    raise "Unit #{params[:unit_position].inspect} not found in course #{params[:course_name].inspect}" unless unit_group_unit
-    unit = unit_group_unit.script
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position)
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
 
     section = teacher.sections[params.require(:section_position).to_i - 1]
     section.update!(unit_group: unit_group, script: unit)
