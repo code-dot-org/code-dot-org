@@ -2,6 +2,16 @@ name: Marketing-CI
 
 on:
   workflow_call:
+    inputs:
+      BRANCHED_TESTING_ENABLED:
+        type: boolean
+        description: "Whether branched testing is enabled. Defaults to false"
+        default: false
+        required: false
+      PR_HEAD_REF:
+        type: string
+        description: "The head ref of the pull request."
+        required: false
 
 defaults:
   run:
@@ -82,7 +92,7 @@ jobs:
         shell: bash
         run: |
           echo "CONTENTFUL_SPACE_ID=${{ vars.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_ENV_ID=master
+          CONTENTFUL_ENV_ID=development
           CONTENTFUL_API_HOST=cdn.contentful.com
           CONTENTFUL_DELIVERY_TOKEN=${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
           CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
@@ -113,3 +123,5 @@ jobs:
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           DRAFT_MODE_TOKEN: ci-draft-mode
+          BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
+          PR_HEAD_REF: ${{ inputs.PR_HEAD_REF }}

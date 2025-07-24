@@ -130,20 +130,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               noTextAnimation && moduleStyles.noAnimation
             )}
           >
-            {offerBrowserTts && (
-              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
-            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div
-                className={
-                  offerBrowserTts
-                    ? moduleStyles.scrollingContentWithTTS
-                    : moduleStyles.scrollingContentWithoutTTS
-                }
-              >
+              <div className={moduleStyles.scrollingContent}>
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
@@ -163,6 +154,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </InstructorsOnly>
                 )}
               </div>
+              {offerBrowserTts && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={text} />
+                </div>
+              )}
               {bottomComponent && (
                 <div className={moduleStyles.bottomComponent}>
                   {bottomComponent}
@@ -188,7 +184,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 <TextToSpeech text={useMessage} />
               )}
               {useMessage && (
-                <div ref={feedbackRef} tabIndex={-1}>
+                <div id="focusable-feedback" ref={feedbackRef} tabIndex={-1}>
                   <EnhancedSafeMarkdown
                     markdown={useMessage}
                     className={moduleStyles.markdownText}

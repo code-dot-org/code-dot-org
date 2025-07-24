@@ -17,6 +17,15 @@ require "aws-sdk-ec2"
 #
 # # Check what AZs are available in a specific region
 # MarketingSites::Configuration.regions[:'us-west-1'][:availability_zones]
+#
+# # Get site configuration for specific site+environment combination
+# MarketingSites::Configuration.site_config(:corporate, :production)
+#
+# # Get all available site types
+# MarketingSites::Configuration.site_types
+#
+# # Get all available environment types
+# MarketingSites::Configuration.environment_types
 
 module MarketingSites
   module Configuration
@@ -48,7 +57,48 @@ module MarketingSites
       us-west-2
     ].freeze
 
+    # Unified site configuration using nested hash with deep merge approach
+    SITE_CONFIG = {
+      # Global defaults that apply to all site+environment combinations
+      defaults: {
+        contentful_env_id: 'master'
+      }.freeze,
+
+      # Site-specific configuration (applies to all environments for that site type)
+      site_defaults: {
+        corporate: {
+          contentful_space_id: '90t6bu6vlf76',
+        }.freeze,
+        csforall: {
+          contentful_space_id: '27jkibac934d',
+        }.freeze
+      }.freeze,
+
+      # Environment-specific configuration (applies to all sites in that environment)
+      environment_defaults: {
+        development: {
+          base_domain_name: 'marketing-sites.dev-code.org',
+        }.freeze,
+        test: {
+          base_domain_name: 'marketing-sites.test-code.org',
+        }.freeze,
+        production: {}.freeze
+      }.freeze,
+
+      # Specific overrides for site+environment combinations
+      # Use array keys [site_type, environment_type] for precise targeting
+      overrides: {
+        [:corporate, :production] => {
+          base_domain_name: 'code.org'
+        }.freeze,
+        [:csforall, :production] => {
+          base_domain_name: 'csforall.org'
+        }.freeze
+      }.freeze
+    }.freeze
+
     class << self
+      # AWS Regions functionality (unchanged)
       def regions
         @regions ||= build_dynamic_regions
       end
@@ -57,6 +107,79 @@ module MarketingSites
         @availability_zones_cache = nil
         @regions = nil
         regions
+      end
+
+      # Site configuration functionality
+      def site_config(site_type, environment_type)
+        site_type = site_type.to_sym
+        environment_type = environment_type.to_sym
+
+        # Start with global defaults
+        config = SITE_CONFIG[:defaults].dup
+
+        # Merge site-specific defaults
+        site_defaults = SITE_CONFIG[:site_defaults][site_type]
+        config.merge!(site_defaults) if site_defaults
+
+        # Merge environment-specific defaults
+        environment_defaults = SITE_CONFIG[:environment_defaults][environment_type]
+        config.merge!(environment_defaults) if environment_defaults
+
+        # Apply specific overrides for this combination
+        override_key = [site_type, environment_type]
+        overrides = SITE_CONFIG[:overrides][override_key]
+        config.merge!(overrides) if overrides
+
+        # Return as an OpenStruct for convenient access
+        OpenStruct.new(config)
+      end
+
+      # Get all available site types
+      def site_types
+        SITE_CONFIG[:site_defaults].keys
+      end
+
+      # Get all available environment types
+      def environment_types
+        SITE_CONFIG[:environment_defaults].keys
+      end
+
+      # Get site configuration as hash (for backwards compatibility or serialization)
+      def site_config_hash(site_type, environment_type)
+        site_config(site_type, environment_type).to_h
+      end
+
+      # Validate that a site+environment combination is supported
+      def valid_combination?(site_type, environment_type)
+        site_types.include?(site_type.to_sym) &&
+          environment_types.include?(environment_type.to_sym)
+      end
+
+      # Get base configuration for a site type (without environment specifics)
+      def site_base_config(site_type)
+        site_type = site_type.to_sym
+        config = SITE_CONFIG[:defaults].dup
+        site_defaults = SITE_CONFIG[:site_defaults][site_type]
+        config.merge!(site_defaults) if site_defaults
+        OpenStruct.new(config)
+      end
+
+      # Get base configuration for an environment type (without site specifics)
+      def environment_base_config(environment_type)
+        environment_type = environment_type.to_sym
+        config = SITE_CONFIG[:defaults].dup
+        environment_defaults = SITE_CONFIG[:environment_defaults][environment_type]
+        config.merge!(environment_defaults) if environment_defaults
+        OpenStruct.new(config)
+      end
+
+      # Legacy compatibility methods (to maintain backwards compatibility)
+      def contentful_space_id(site_type)
+        site_base_config(site_type).contentful_space_id
+      end
+
+      def base_domain_name(environment_type)
+        environment_base_config(environment_type).base_domain_name
       end
 
       private def availability_zones_cache
@@ -100,8 +223,8 @@ module MarketingSites
         )
 
         azs = response.availability_zones.
-                      map(&:zone_name).
-                      sort
+          map(&:zone_name).
+          sort
 
         availability_zones_cache[region] = azs
         azs

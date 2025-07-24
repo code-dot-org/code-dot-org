@@ -1,20 +1,18 @@
+import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
-import React, {ReactNode} from 'react';
-
-import {
-  default as Typography,
-  StrongText,
-  VisualAppearance,
-} from '@code-dot-org/component-library/typography';
+import {ReactNode} from 'react';
 
 import {RemoveMarginBottomProps} from '@/components/common/types';
 
-import moduleStyles from './paragraph.module.scss';
+type ParagraphSemanticTag = 'body1' | 'body2' | 'body3' | 'body4';
 
-type ParagraphVisualAppearance = Extract<
-  VisualAppearance,
-  'body-one' | 'body-two' | 'body-three' | 'body-four'
->;
+// Existing Contentful Paragraph visualAppearance values that
+// were set before using the MUI Typography component.
+type ParagraphVisualAppearance =
+  | 'body-one'
+  | 'body-two'
+  | 'body-three'
+  | 'body-four';
 
 type ParagraphProps = RemoveMarginBottomProps & {
   /** Paragraph content */
@@ -29,6 +27,18 @@ type ParagraphProps = RemoveMarginBottomProps & {
   className?: string;
 };
 
+// Maps Contentful Paragraph visualAppearance values with
+// MUI Typography `variant` prop values.
+const visualAppearanceToMuiTagMap: Record<
+  ParagraphVisualAppearance,
+  ParagraphSemanticTag
+> = {
+  'body-one': 'body1',
+  'body-two': 'body2',
+  'body-three': 'body3',
+  'body-four': 'body4',
+};
+
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   visualAppearance,
   isStrong,
@@ -38,16 +48,12 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   className,
 }) => (
   <Typography
-    semanticTag="p"
-    visualAppearance={visualAppearance}
-    className={classNames(
-      moduleStyles.paragraph,
-      moduleStyles[`paragraph-color-${color}`],
-      removeMarginBottom && moduleStyles['paragraph-removeMarginBottom'],
-      className,
-    )}
+    className={classNames(`paragraph--color-${color}`, className)}
+    variant={visualAppearanceToMuiTagMap[visualAppearance]}
+    gutterBottom={!removeMarginBottom}
+    sx={{fontWeight: isStrong ? 600 : 400}}
   >
-    {isStrong ? <StrongText>{children}</StrongText> : children}
+    {children}
   </Typography>
 );
 

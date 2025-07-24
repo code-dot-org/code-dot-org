@@ -19,10 +19,10 @@ GEM
     jmespath (1.6.2)
     logger (1.7.0)
     mini_portile2 (2.8.9)
-    nokogiri (1.18.8)
+    nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.8-arm64-darwin)
+    nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
     racc (1.8.1)
 
@@ -32,7 +32,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-ec2 (~> 1.0)
-  nokogiri (~> 1.15)
+  nokogiri (~> 1.18)
 
 RUBY VERSION
    ruby 3.1.0p0

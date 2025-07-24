@@ -47,6 +47,28 @@ const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.48,
     },
+    body1: {
+      fontSize: '1.25rem', // 20px
+      fontWeight: 400,
+      lineHeight: 1.4,
+    },
+    body2: {
+      fontSize: '1rem', // 16px
+      fontWeight: 400,
+      lineHeight: 1.48,
+    },
+    body3: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '1rem', // 16px
+      fontWeight: 400,
+      lineHeight: 1.54,
+    },
+    body4: {
+      fontFamily: createFontStack(FIGTREE_FONT, NOTO_FONT),
+      fontSize: '0.875rem', // 14px
+      fontWeight: 400,
+      lineHeight: 1.43,
+    },
     overline: {
       fontWeight: 600,
       letterSpacing: '0.03rem', // 0.48px

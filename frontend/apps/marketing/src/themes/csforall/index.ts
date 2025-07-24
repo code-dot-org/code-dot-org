@@ -12,11 +12,15 @@ import {STYLE_OVERRIDES} from './styleOverrides';
 const theme = createTheme({
   cssVariables: true,
   palette: {
+    mode: 'light',
     primary: {
-      main: COLORS.primary,
+      main: COLORS.brandPrimary,
     },
     secondary: {
-      main: COLORS.secondary,
+      main: COLORS.brandSecondary,
+    },
+    tertiary: {
+      main: COLORS.brandTertiary,
     },
     text: {
       primary: COLORS.black,
@@ -24,6 +28,9 @@ const theme = createTheme({
     divider: COLORS.black,
     common: {
       black: COLORS.black,
+    },
+    background: {
+      default: COLORS.backgroundPrimary,
     },
   },
   components: STYLE_OVERRIDES,
@@ -64,6 +71,28 @@ const theme = createTheme({
       fontSize: '1.5rem', // 24px
       fontWeight: 800,
       lineHeight: 1.25,
+    },
+    body1: {
+      fontSize: '1.375rem', // 22px
+      fontWeight: 400,
+      lineHeight: 1.45,
+    },
+    body2: {
+      fontSize: '1.125rem', // 18px
+      fontWeight: 400,
+      lineHeight: 1.44,
+    },
+    body3: {
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontSize: '1rem', // 16px
+      fontWeight: 400,
+      lineHeight: 1.5,
+    },
+    body4: {
+      fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
+      fontSize: '0.875rem', // 14px
+      fontWeight: 400,
+      lineHeight: 1.57,
     },
     overline: {
       fontWeight: 400,

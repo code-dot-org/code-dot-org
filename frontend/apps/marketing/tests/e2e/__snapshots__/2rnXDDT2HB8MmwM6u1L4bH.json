@@ -205,6 +205,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -500,6 +506,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -535,6 +547,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -623,6 +641,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -707,6 +731,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -839,8 +869,8 @@
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
                     "desktop": "2022px",
-                    "tablet": "1981px",
-                    "mobile": "3989px"
+                    "tablet": "1975px",
+                    "mobile": "3975px"
                   }
                 },
                 "cfMaxWidth": {
@@ -957,6 +987,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -991,6 +1027,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -1552,6 +1594,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -2109,6 +2157,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -2875,9 +2929,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1312px",
-                    "tablet": "1391px",
-                    "mobile": "1408px"
+                    "desktop": "1325px",
+                    "tablet": "1404px",
+                    "mobile": "1421px"
                   }
                 },
                 "cfMaxWidth": {
@@ -2992,6 +3046,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -3026,6 +3086,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -3106,6 +3172,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -3212,9 +3284,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "709px",
-                    "tablet": "695px",
-                    "mobile": "1549px"
+                    "desktop": "707px",
+                    "tablet": "693px",
+                    "mobile": "1545px"
                   }
                 },
                 "cfMaxWidth": {
@@ -3329,6 +3401,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -3363,6 +3441,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -4159,6 +4243,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -4193,6 +4283,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -4874,7 +4970,7 @@
                   "valuesByBreakpoint": {
                     "desktop": "1378px",
                     "tablet": "2557px",
-                    "mobile": "2046px"
+                    "mobile": "2040px"
                   }
                 },
                 "cfMaxWidth": {
@@ -4991,6 +5087,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -5025,6 +5127,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -5155,6 +5263,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -5281,6 +5395,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -5665,6 +5785,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -6115,9 +6241,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "2823px",
-                    "tablet": "4355px",
-                    "mobile": "8065px"
+                    "desktop": "2855px",
+                    "tablet": "4371px",
+                    "mobile": "8070px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6232,6 +6358,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -6266,6 +6398,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -6360,6 +6498,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -6450,6 +6594,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -6568,9 +6718,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "638px",
-                    "tablet": "638px",
-                    "mobile": "1522px"
+                    "desktop": "654px",
+                    "tablet": "654px",
+                    "mobile": "1538px"
                   }
                 },
                 "cfMaxWidth": {
@@ -6685,6 +6835,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -6719,6 +6875,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -6799,6 +6961,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -6905,9 +7073,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "2318px",
-                    "tablet": "2439px",
-                    "mobile": "5619px"
+                    "desktop": "2361px",
+                    "tablet": "2471px",
+                    "mobile": "5651px"
                   }
                 },
                 "cfMaxWidth": {
@@ -7022,6 +7190,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -7056,6 +7230,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -7144,6 +7324,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -7228,6 +7414,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -7453,6 +7645,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -8269,6 +8467,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -8543,6 +8747,12 @@
                                     "desktop": "heading-xxl"
                                   }
                                 },
+                                "color": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "primary"
+                                  }
+                                },
                                 "removeMarginBottom": {
                                   "type": "DesignValue",
                                   "valuesByBreakpoint": {
@@ -8748,6 +8958,12 @@
                                     "desktop": "heading-xxl"
                                   }
                                 },
+                                "color": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "primary"
+                                  }
+                                },
                                 "removeMarginBottom": {
                                   "type": "DesignValue",
                                   "valuesByBreakpoint": {
@@ -8951,6 +9167,12 @@
                                   "type": "DesignValue",
                                   "valuesByBreakpoint": {
                                     "desktop": "heading-xxl"
+                                  }
+                                },
+                                "color": {
+                                  "type": "DesignValue",
+                                  "valuesByBreakpoint": {
+                                    "desktop": "primary"
                                   }
                                 },
                                 "removeMarginBottom": {
@@ -9200,6 +9422,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -9453,6 +9681,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -9487,6 +9721,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -10194,6 +10434,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -10760,6 +11006,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -11465,6 +11717,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -11680,6 +11938,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -11715,6 +11979,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -11754,6 +12024,12 @@
                             "desktop": "heading-lg"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -11789,6 +12065,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-md"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -11828,6 +12110,12 @@
                             "desktop": "heading-sm"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -11863,6 +12151,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xs"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -13886,6 +14180,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -13921,6 +14221,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -14152,6 +14458,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -15289,6 +15601,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -15580,6 +15898,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -15906,6 +16230,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -16299,6 +16629,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -16403,9 +16739,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "4664px",
-                    "tablet": "5016px",
-                    "mobile": "6794px"
+                    "desktop": "4807px",
+                    "tablet": "5159px",
+                    "mobile": "6937px"
                   }
                 },
                 "cfMaxWidth": {
@@ -16520,6 +16856,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -17183,6 +17525,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -17479,6 +17827,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -17601,6 +17955,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -17681,6 +18041,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -17753,6 +18119,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -17839,6 +18211,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -18057,6 +18435,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -18255,6 +18639,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -18450,6 +18840,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -18940,6 +19336,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -19182,9 +19584,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "896px",
+                    "desktop": "912px",
                     "tablet": "fit-content",
-                    "mobile": "1618px"
+                    "mobile": "1634px"
                   }
                 },
                 "cfMaxWidth": {
@@ -19301,6 +19703,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -19335,6 +19743,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -19445,6 +19859,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -19690,6 +20110,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -19724,6 +20150,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -19824,8 +20256,9 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "499px",
-                    "mobile": "499px"
+                    "desktop": "fit-content",
+                    "mobile": "499px",
+                    "tablet": "fit-content"
                   }
                 },
                 "cfMaxWidth": {
@@ -19940,6 +20373,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -20627,6 +21066,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -20889,6 +21334,12 @@
                             "desktop": "heading-xxl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -20924,6 +21375,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -21004,6 +21461,12 @@
                             "desktop": "heading-xl"
                           }
                         },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
                         "removeMarginBottom": {
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
@@ -21080,6 +21543,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {
@@ -21319,6 +21788,12 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "heading-xxl"
+                          }
+                        },
+                        "color": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
                           }
                         },
                         "removeMarginBottom": {

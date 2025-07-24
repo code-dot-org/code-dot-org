@@ -121,11 +121,11 @@ export function getToolbox(
 }
 
 /**
- * Localizes the category names in the toolbox. Required for levels
- * with categorized toolboxes that were defined in levelbuilder's
- * toolbox mode.
+ * Localizes the category names in the toolbox and adds our css configuration.
+ * Required for levels with categorized toolboxes that were defined in
+ * levelbuilder's toolbox mode.
  */
-export function localizeCategoryNames(
+export function prepareToolboxCategories(
   toolbox: GoogleBlockly.utils.toolbox.ToolboxInfo
 ): GoogleBlockly.utils.toolbox.ToolboxInfo {
   return {
@@ -140,6 +140,7 @@ export function localizeCategoryNames(
         return {
           ...staticCategory,
           name: localizedName || staticCategory.name,
+          cssconfig: baseCategoryCssConfig,
         };
       }
       return toolboxItem;
@@ -242,9 +243,9 @@ export function getNewStaticCategory(
     kind: 'category',
     // name is not localized upon saving, because levelbuilder is English only.
     // Instead, we localize the category names when loading the toolbox.
-    // See localizeCategoryNames().
+    // See prepareToolboxCategories().
     name,
-    cssconfig: baseCategoryCssConfig,
+    cssconfig: undefined,
     contents: [] as GoogleBlockly.utils.toolbox.ToolboxItemInfo[],
     id: name,
     categorystyle: undefined,
@@ -266,9 +267,9 @@ export function getNewDynamicCategory(
     custom: dynamicCategoryLabels[name as Category],
     // name is not localized upon saving, because levelbuilder is English only.
     // Instead, we localize the category names when loading the toolbox.
-    // See localizeCategoryNames().
+    // See prepareToolboxCategories().
     name,
-    cssconfig: baseCategoryCssConfig,
+    cssconfig: undefined,
     id: name,
     categorystyle: undefined,
     colour: undefined,
