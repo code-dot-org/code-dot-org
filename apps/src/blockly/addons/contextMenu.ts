@@ -586,7 +586,7 @@ function setAllWorkspacesTheme(
   Blockly.Workspace.getAll().forEach(baseWorkspace => {
     // Headless workspaces do not have the ability to set the theme.
     const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
-    setThemeAndRenderBlocks(workspace, newTheme);
+    setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
   });
 }
 /**

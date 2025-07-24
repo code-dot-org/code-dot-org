@@ -740,9 +740,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     xml,
     options = {}
   ) {
+    const theme = options.theme || CdoTheme;
     const workspace = new Blockly.WorkspaceSvg({
       readOnly: true,
-      theme: options.theme || CdoTheme,
+      theme,
       plugins: {},
       RTL: options.rtl,
       renderer: options.renderer || Renderers.DEFAULT,
@@ -768,37 +769,33 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     container.appendChild(svg);
     svg.appendChild(workspace.createDom());
 
-    Blockly.cdoUtils
-      .getUserTheme(workspace.getTheme())
-      .then((theme: GoogleBlockly.Theme) => {
-        workspace.setTheme(theme);
-        // We do not include hidden definitions in embedded workspaces
-        // because embedded workspaces are only used for displaying blocks.
-        const includeHiddenDefinitions = false;
-        Blockly.cdoUtils.loadBlocksToWorkspace(
-          workspace,
-          Blockly.Xml.domToText(xml),
-          includeHiddenDefinitions
-        );
-        // Loop through all the parent blocks and remove vertical translation value
-        // This makes the output more condensed and readable, while preserving
-        // horizontal translation values for RTL rendering.
-        const blocksInWorkspace = workspace.getAllBlocks();
-        blocksInWorkspace
-          .filter(block => block.getParent() === null)
-          .forEach(block => {
-            const svgTransformList = block.getSvgRoot().transform.baseVal;
-            const svgTransform = svgTransformList.getItem(0);
-            const svgTranslationX = svgTransform.matrix.e;
-            svgTransform.setTranslate(svgTranslationX, 0);
-            block.render();
-          });
-
-        // Shrink SVG to size of the block
-        const bbox = (svg as SVGGraphicsElement).getBBox();
-        svg.setAttribute('height', `${bbox.height + bbox.y}`);
-        svg.setAttribute('width', `${bbox.width + bbox.x}`);
+    workspace.setTheme(theme as GoogleBlockly.Theme);
+    // We do not include hidden definitions in embedded workspaces
+    // because embedded workspaces are only used for displaying blocks.
+    const includeHiddenDefinitions = false;
+    Blockly.cdoUtils.loadBlocksToWorkspace(
+      workspace,
+      Blockly.Xml.domToText(xml),
+      includeHiddenDefinitions
+    );
+    // Loop through all the parent blocks and remove vertical translation value
+    // This makes the output more condensed and readable, while preserving
+    // horizontal translation values for RTL rendering.
+    const blocksInWorkspace = workspace.getAllBlocks();
+    blocksInWorkspace
+      .filter(block => block.getParent() === null)
+      .forEach(block => {
+        const svgTransformList = block.getSvgRoot().transform.baseVal;
+        const svgTransform = svgTransformList.getItem(0);
+        const svgTranslationX = svgTransform.matrix.e;
+        svgTransform.setTranslate(svgTranslationX, 0);
+        block.render();
       });
+
+    // Shrink SVG to size of the block
+    const bbox = (svg as SVGGraphicsElement).getBBox();
+    svg.setAttribute('height', `${bbox.height + bbox.y}`);
+    svg.setAttribute('width', `${bbox.width + bbox.x}`);
     return workspace;
   };
 
@@ -892,7 +889,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     Blockly.cdoUtils
       .getUserTheme(workspace.getTheme())
       .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(workspace, theme);
+        setThemeAndRenderBlocks(
+          workspace,
+          theme,
+          options.theme as GoogleBlockly.Theme
+        );
       });
     workspace.defs = Blockly.createSvgElement(
       'defs',

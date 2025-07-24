@@ -53,6 +53,7 @@ export default class FunctionEditor {
   }
 
   init(options: ExtendedBlocklyOptions) {
+    const defaultTheme = (options.theme || CdoTheme) as GoogleBlockly.Theme;
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
     if (!modalEditor) {
@@ -98,7 +99,7 @@ export default class FunctionEditor {
     Blockly.cdoUtils
       .getUserTheme(this.editorWorkspace.getTheme())
       .then((theme: GoogleBlockly.Theme) => {
-        setThemeAndRenderBlocks(this.editorWorkspace!, theme);
+        setThemeAndRenderBlocks(this.editorWorkspace!, theme, defaultTheme);
       });
     this.editorWorkspace.registerToolboxCategoryCallback(
       'VARIABLE',
