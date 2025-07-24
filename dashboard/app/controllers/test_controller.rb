@@ -161,7 +161,7 @@ class TestController < ApplicationController
     section = teacher.sections[params.require(:section_position).to_i - 1]
     section.update!(unit_group: unit_group, script: unit)
     section.students.each do |student|
-      UserScript.create!(script: unit, user: student, assigned_at: Time.now)
+      student.assign_script(unit)
     end
 
     head :ok
