@@ -7,7 +7,7 @@ type ButtonProps = {
   /** Button text */
   text?: string;
   /** Button type (semantic) */
-  type: 'emphasized' | 'primary' | 'secondary';
+  type: 'emphasized' | 'primary' | 'secondary' | 'white';
   /** Button size */
   size: 'small' | 'medium' | 'large';
   /** Button link href */
@@ -29,12 +29,12 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   ariaLabel,
   className,
 }) => {
+  const containedButtons = ['emphasized', 'primary', 'white'];
+
   return href ? (
     <MuiButton
       className={classNames(`button--color-${type}`, className)}
-      variant={
-        type === 'emphasized' || type === 'primary' ? 'contained' : 'outlined'
-      }
+      variant={containedButtons.includes(type) ? 'contained' : 'outlined'}
       size={size}
       href={href}
       target={isLinkExternal ? '_blank' : undefined}
