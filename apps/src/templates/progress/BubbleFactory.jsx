@@ -106,14 +106,14 @@ export function BubbleLink({url, onClick, children, a11y_description}) {
       {children}
     </a>
   ) : (
-    <span
+    <a
       role="button"
       tabIndex={0}
       onKeyDown={e => handleKeyDown(e, onClick)}
       {...commonProps}
     >
       {children}
-    </span>
+    </a>
   );
 }
 
