@@ -27,7 +27,7 @@
 
     &::after {
       font-weight: bold;
-      inset-inline-end: .5625rem;
+      inset-inline-end: .5625rem !important;
     }
   }
 }

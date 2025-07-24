@@ -1,7 +1,7 @@
 # This is the configuration for the main code.org/ root
 
 name: United States
-locales: [en-US]
+locales: [en-US, es-MX]
 country: US
 
 header:

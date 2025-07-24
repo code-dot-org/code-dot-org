@@ -2,6 +2,7 @@
 
 name: Chile
 country: CL
+locales: [es-MX, en-US]
 
-# We just inherit from the International-Spanish global edition
-inherit: es
+# We will eventually just inherit from the International-Spanish global edition
+inherit: root
