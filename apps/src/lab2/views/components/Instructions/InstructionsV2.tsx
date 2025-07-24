@@ -195,50 +195,38 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         <div
           key={levelProperties.longInstructions}
           id="instructions-text"
-          className={classNames(moduleStyles.bubble)}
+          className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
         >
+          <div className={moduleStyles.scrollingContent}>
+            <MainInstructionsContent
+              instructionsText={levelProperties.longInstructions}
+              handleInstructionsTextClick={handleInstructionsTextClick}
+            />
+            <PredictQuestion className={moduleStyles.predictQuestion} />
+          </div>
           {offerBrowserTts && (
-            <TextToSpeech
-              text={levelProperties.longInstructions}
-              higherPosition={!!bottomComponent}
+            <div className={moduleStyles.ttsContainer}>
+              <TextToSpeech text={levelProperties.longInstructions} />
+            </div>
+          )}
+          {validationSettings && (
+            <ValidationButton
+              onValidate={validationSettings.onValidate}
+              onStopValidation={validationSettings.onStopValidation}
+              isValidating={validationSettings.isValidating}
+              isValidateDisabled={validationSettings.isValidateDisabled}
             />
           )}
-          <div
-            id="instructions-text-content"
-            className={moduleStyles.textContent}
-          >
-            <div
-              className={
-                offerBrowserTts
-                  ? moduleStyles.scrollingContentWithTTS
-                  : moduleStyles.scrollingContentWithoutTTS
-              }
-            >
-              <MainInstructionsContent
-                instructionsText={levelProperties.longInstructions}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              <PredictQuestion className={moduleStyles.predictQuestion} />
+          {bottomComponent && (
+            <div className={moduleStyles.bottomComponent}>
+              {bottomComponent}
             </div>
-            {validationSettings && (
-              <ValidationButton
-                onValidate={validationSettings.onValidate}
-                onStopValidation={validationSettings.onStopValidation}
-                isValidating={validationSettings.isValidating}
-                isValidateDisabled={validationSettings.isValidateDisabled}
-              />
-            )}
-            {bottomComponent && (
-              <div className={moduleStyles.bottomComponent}>
-                {bottomComponent}
-              </div>
-            )}
-          </div>
+          )}
         </div>
         {validationResults && (
           <div className={moduleStyles.bubble}>
             <div className={moduleStyles.textContent}>
-              <div className={moduleStyles.scrollingContentWithoutTTS}>
+              <div className={moduleStyles.scrollingContent}>
                 <ValidationResults />
               </div>
             </div>

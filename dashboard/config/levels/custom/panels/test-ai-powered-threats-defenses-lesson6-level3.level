@@ -1,0 +1,55 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-22T17:32:19.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "A **Privacy Engineer** protects **confidentiality**, which means keeping private information secret and safe.\n\n",
+        "imageUrl": "https://images.code.org/2572849d9d043eb54fa4f50731aaf7f2-CIA Careers (2).png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "They stop personal info from being seen by the wrong people. If **confidentiality** is broken, private data can leak, and that can cause big problems like **data breaches** and **legal trouble**.",
+        "imageUrl": "https://images.code.org/2572849d9d043eb54fa4f50731aaf7f2-CIA Careers (2).png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "A **Forensics Analyst** helps protect **integrity**, which means making sure information hasn’t been changed or messed with.",
+        "imageUrl": "https://images.code.org/d0e036e1613173ad40aa760cbe9dd850-CIA Careers (3).png",
+        "key": "test-ai-powered-threats-defenses-lesson6-level3-dc7c3b55-aff2-4031-bd63-72f96c8c4e50",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "They look for signs that something was changed in a sneaky or incorrect way. If **integrity** is lost, it could lead to **misinformation** or even **fraud**.",
+        "imageUrl": "https://images.code.org/d0e036e1613173ad40aa760cbe9dd850-CIA Careers (3).png",
+        "key": "test-ai-powered-threats-defenses-lesson6-level3-475200d8-f187-48e4-950b-441088553dcd",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "A **Site Reliability Engineer** works to protect **availability**, which means making sure systems and websites are always up and working.",
+        "imageUrl": "https://images.code.org/7008cc8d4dad5584a3315bfc4f652410-CIA Careers (4).png",
+        "key": "test-ai-powered-threats-defenses-lesson6-level3-badbb4fb-41c9-4df5-98ff-d8eb03fff8a5"
+      },
+      {
+        "text": "They help prevent crashes or slowdowns. If **availability** fails, important tools or services could stop working, causing **lost time** and **missed work**.",
+        "imageUrl": "https://images.code.org/7008cc8d4dad5584a3315bfc4f652410-CIA Careers (4).png",
+        "key": "test-ai-powered-threats-defenses-lesson6-level3-25f01c77-e1f2-4704-a744-6095c8d40a84",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-22T17:32:19.880+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level3\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level3\"},{\"changed_at\":\"2025-07-22 17:32:23 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-22 18:49:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-22 19:01:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-07-22 22:28:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Panels>

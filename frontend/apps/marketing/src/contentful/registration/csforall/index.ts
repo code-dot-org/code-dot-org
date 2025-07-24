@@ -5,7 +5,7 @@ import FullWidthActionBlock, {
   FullWidthActionBlockContentfulComponentDefinition,
 } from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import Button, {
-  ButtonContentfulComponentDefinition,
+  ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
@@ -62,11 +62,8 @@ import RichText, {
   RichTextContentfulComponentDefinition,
 } from '@/components/contentful/richText';
 import Section, {
-  SectionContentfulComponentDefinition,
+  SectionCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/section';
-import SimpleList, {
-  SimpleListContentfulComponentDefinition,
-} from '@/components/contentful/simpleList';
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
 } from '@/components/contentful/skinnyBanner';
@@ -96,7 +93,10 @@ const contentfulRegistration = {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
-    {component: Button, definition: ButtonContentfulComponentDefinition},
+    {
+      component: Button,
+      definition: ButtonMuiContentfulComponentDefinition,
+    },
     {
       component: ActionBlockCollection,
       definition: ActionBlockCollectionContentfulComponentDefinition,
@@ -176,14 +176,10 @@ const contentfulRegistration = {
     },
     {
       component: Section,
-      definition: SectionContentfulComponentDefinition,
+      definition: SectionCSforAllContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },
-    },
-    {
-      component: SimpleList,
-      definition: SimpleListContentfulComponentDefinition,
     },
     {
       component: SkinnyBanner,

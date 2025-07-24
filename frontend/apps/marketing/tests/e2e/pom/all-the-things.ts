@@ -1,5 +1,7 @@
 import {type Locator, type Page} from '@playwright/test';
 
+import {getAllTheThingsPagePath} from '../config/path';
+
 import {MarketingPage, MarketingPageOptions} from './marketing';
 
 export type Section =
@@ -54,7 +56,7 @@ export class AllTheThingsPage extends MarketingPage {
 
   async goto(path?: string) {
     if (!path) {
-      return await super.goto('/engineering/all-the-things?otgeo=us');
+      return await super.goto(`${await getAllTheThingsPagePath()}?otgeo=us`);
     }
 
     return await super.goto(path);

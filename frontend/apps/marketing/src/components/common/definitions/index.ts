@@ -111,3 +111,37 @@ export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
       group: 'style',
     },
   };
+
+// Used in the Section component
+export const sectionPaddingDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  padding: {
+    displayName: 'Padding',
+    type: 'Text',
+    group: 'style',
+    description: 'Adds medium or large padding to the section.',
+    defaultValue: 'l',
+    validations: {
+      in: [
+        {value: 'm', displayName: 'Medium'},
+        {value: 'l', displayName: 'Large'},
+      ],
+    },
+  },
+};
+
+// Used in the Section component
+export const sectionIdDefinition: Record<string, ComponentDefinitionVariable> =
+  {
+    id: {
+      displayName: 'Section ID',
+      type: 'Text',
+      group: 'content',
+      description: 'Adds a custom ID to a section; can be used for skip links.',
+      validations: {
+        bindingSourceType: ['manual'],
+      },
+    },
+  };

@@ -1,0 +1,32 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-07-23T17:30:02.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Assessment 2\r\n\r\n> This level does **not** require you to edit and run your code before submitting. Good luck!\r\n\r\nCreate a song using multiple sounds! Each part of your song should include a different type of sound.\r\n\r\nExperiment and have fun!\r\n\r\n_Tips_:\r\n- Try using blocks from different packs.\r\n- Try using the Play Together and repeat blocks.\r\n- Try factoring your song using functions.",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "submittable": "true",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "carly_rae_jepsen_call_me_maybe"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "disable_edit_run_for_submission": "true",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-23T17:30:02.496+00:00\",\"changed\":[\"cloned from \\\"Submittable Music Level 1\\\"\"],\"cloned_from\":\"Submittable Music Level 1\"},{\"changed_at\":\"2025-07-23 17:32:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

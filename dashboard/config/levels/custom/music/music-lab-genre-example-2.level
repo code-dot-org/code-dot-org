@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-06-03T22:55:32.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "long_instructions": "#### Espresso Mash-Up\r\n\r\nListen to this remix of Espresso with added distortion, guitar riffs, and synth sounds. As you listen, notice how the song builds over time using layers like organ, bass, and drum fills. Pay attention to how each section is stored in its own function and reused to build intensity.\r\n\r\n**Note from the student creator:**\r\n\r\n>I wanted to take Espresso and give it a bold, rock-inspired twist. I made a bunch of functions like `verse1`, `prechorus1`, and `final chorus 2` so I could control each part of the song without making my code too long or messy. Inside those functions, I used repeat blocks to loop key sounds like the distorted guitar and organ grind, and I adjusted the filters and volume to help different sections feel more powerful or pulled back. It made the whole remix easier to manage and more fun to customize.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -2163,10 +2164,23 @@
     "display_name": "Espresso",
     "bubble_choice_description": "Espresso with distortion and guitar riffs",
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/sabrina_carpenter_espresso/sabrina_carpenter_espresso.jpg",
+    "submittable": "false",
+    "validations": [
+      {
+        "key": "music-lab-genre-example-2_df0ad3fc-f9ad-442f-8b8a-9bd412a68fe8",
+        "message": "",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 10
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:50:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:37:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-06-03T22:55:32.452+00:00\",\"changed\":[\"cloned from \\\"music-lab-genre-example-1\\\"\"],\"cloned_from\":\"music-lab-genre-example-1\"},{\"changed_at\":\"2025-06-03 22:55:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-03 22:57:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:16:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-04 19:20:27 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:50:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 17:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-03 20:37:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 13:49:04 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-18 13:51:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

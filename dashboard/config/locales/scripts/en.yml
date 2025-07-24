@@ -12855,7 +12855,7 @@ en:
             lessonGroup-6:
               display_name: Data
           name: nevada-standards-aligned-kindergarten-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course A'
+          title: 'Nevada Standards Aligned: CSF Kindergarten'
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: 'Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
@@ -12882,7 +12882,7 @@ en:
             lessonGroup-8:
               display_name: Data
           name: nevada-standards-aligned-first-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course B'
+          title: 'Nevada Standards Aligned: CSF 1st Grade'
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
@@ -12907,7 +12907,7 @@ en:
             lessonGroup-8:
               display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course C'
+          title: 'Nevada Standards Aligned: CSF 2nd Grade'
           description_audience: ''
           description_short: " Learn the basics of computer science and create your own art, stories, and games."
           description: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
@@ -12930,7 +12930,7 @@ en:
             lessonGroup-8:
               display_name: End of Course Project
           name: nevada-standards-aligned-third-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course D'
+          title: 'Nevada Standards Aligned: CSF 3rd Grade'
           description_audience: 'Ages: 7-11'
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
@@ -12949,7 +12949,7 @@ en:
             lessonGroup-6:
               display_name: End of Course Project
           name: nevada-standards-aligned-fourth-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course E'
+          title: 'Nevada Standards Aligned: CSF 4th Grade'
           description_audience: 'Ages: 8-12'
           description_short: Learn the basics of sprites, nested loops, and functions.
           description: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
@@ -12981,7 +12981,7 @@ en:
             lessonGroup-7:
               display_name: End of Course Project
           name: nevada-standards-aligned-fifth-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course F'
+          title: 'Nevada Standards Aligned: CSF 5th Grade'
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
@@ -21025,12 +21025,12 @@ en:
               name: Cybersecurity and Global Impacts
           lesson_groups: {}
           name: sandbox-csaif-pl-cyber
-          title: Cybersecurity and Global Impacts
+          title: AI-Powered Threats and Defenses
           description_audience: ''
           description_short: ''
           description: |-
             ##Welcome!
-            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.
 
             #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
 
@@ -24880,7 +24880,7 @@ en:
           title: Programming with Music Lab
           description_audience: ''
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
-          description: |+
+          description: |-
             This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
 
             ::: details [**Implementation Guidance for Programming with Music Lab**]
@@ -24890,6 +24890,8 @@ en:
             If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
             :::
 
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data[unit_number]=3b) to let the Code.org curriculum team know how the unit went.
           student_description: Learn how to program by creating music!
         6-12-ai-powered-threats-and-defenses:
           lessons:
@@ -24977,3 +24979,71 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        teaching-java-basics:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-java-basics
+          title: Java Basics
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #### **In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 2.5 hours
+          student_description: |-
+            ####**In this unit, you will:**
+            - #### Learn Java programming basics in Code.org's Java Lab.
+            - #### Understand Variables in Java.
+            - #### Practice making conditional statements in Java.
+            - #### Read, write, and debug for loops in Java.
+
+            #### **Estimated time:** 2.5 hours
+        teaching-oop-java:
+          lessons: {}
+          lesson_groups: {}
+          name: teaching-oop-java
+          title: 'Object-Oriented Programming with Java '
+          description_audience: ''
+          description_short: ''
+          description: "####**In this unit, you will:** \n- #### Describe what a “class” and “object” are in Java\n- ####Call and write methods in Java\n- ####Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- ####Learn to create a class\n\n####**Estimated Time:** 2 hours"
+          student_description: "####**In this unit, you will:** \n- #### Describe what a “class” and “object” are in Java\n- ####Call and write methods in Java\n- ####Use The Neighborhood, Code.org's interactive IDE,  to introduce classes and objects\n- ####Learn to create a class\n\n####**Estimated Time:** 2 hours"
+        self-paced-pl-teaching-ai-powered-threats-and-defenses:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-ai-powered-threats-and-defenses
+          title: Teaching AI Powered Threats and Defenses
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        foundations-generative-ai-unplugged:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-3:
+              display_name: Optional Lessons
+          name: foundations-generative-ai-unplugged
+          title: Foundations of Generative AI (Unplugged)
+          description_audience: Builds a foundational understanding of text-based generative AI models
+          description_short: ''
+          description: |-
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+            This unit is the **fully unpluggedd** version of our Foundations of Generative AI unit. It is designed for classrooms where students do not have access to technology, but teachers are still expected to use technology to run slides, show videos, etc. To see the extended unit with additional lessons and on-device levels, [you can view the unit here](http://studio.code.org/courses/foundations-gen-ai?viewAs=Instructor).
+
+            ##Just Starting this Unit?
+
+            We recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Optional Lessons
+
+            This unit includes two optional lessons that provide a deeper technical understanding of how Embeddings and Neural Networks are created "from scratch" to be used in language models. These lessons are not required to complete the final project of the unit, but can provide a deeper technical understanding of these topics for programs with a technical or career-ready focus.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
+          student_description: Learn how chatbots and large-language models work behind the scenes!
