@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 70,
-  "created_at": "2025-02-27T16:43:38.000Z",
+  "created_at": "2025-06-27T16:11:06.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -17,9 +17,18 @@
       "packId": "default"
     },
     "project_template_level_name": "Music Template Level",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-27T11:43:38.207-05:00\",\"changed\":[\"cloned from \\\"music project 1\\\"\"],\"cloned_from\":\"music project 1\"},{\"changed_at\":\"2025-02-27 11:44:22 -0500\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:46:10 -0500\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:47:40 -0500\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-27T11:43:38.207-05:00\",\"changed\":[\"cloned from \\\"music project 1\\\"\"],\"cloned_from\":\"music project 1\"},{\"changed_at\":\"2025-02-27 11:44:22 -0500\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:46:10 -0500\",\"changed\":[\"name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-02-27 11:47:40 -0500\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-07-23 18:55:11 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -81,7 +81,7 @@ export default function RubricContent({
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
+            reloadOnChange={false}
             sectionId={sectionId}
             reportingData={reportingData}
           />

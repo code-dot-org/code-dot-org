@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-23 17:30:22 UTC",
+    "serialized_at": "2025-07-23 23:22:01 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -9954,7 +9954,7 @@
   ],
   "rubrics": [
     {
-      "level_name": "Submittable Music Level 1",
+      "level_name": "Music Project Level 2",
       "seeding_key": {
         "lesson.key": "lesson-49",
         "lesson_group.key": "",
@@ -9974,7 +9974,7 @@
     {
       "key": "4152d63a-af5c-40ea-a15f-b0a3ebd7414c",
       "position": 1,
-      "learning_goal": "Test Rubric",
+      "learning_goal": "Concept 1",
       "ai_enabled": false,
       "tips": null,
       "seeding_key": {
@@ -9993,6 +9993,19 @@
       "seeding_key": {
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+      "position": 2,
+      "learning_goal": "Concept 2",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -10027,7 +10040,7 @@
   "learning_goal_evidence_levels": [
     {
       "understanding": 0,
-      "teacher_description": "4",
+      "teacher_description": "Nothing",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -10039,7 +10052,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "3",
+      "teacher_description": "This is limited",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -10051,7 +10064,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "2",
+      "teacher_description": "This is convincing",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -10063,7 +10076,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "1",
+      "teacher_description": "This is extensive",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -10117,6 +10130,54 @@
         "understanding": 3,
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Nothing again",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "This is limited again",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "This is convincing again",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "This is extensive again",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
