@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-22 17:33:21 UTC",
+    "serialized_at": "2025-07-23 16:53:41 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -559,6 +559,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-ai-powered-threats-defenses-lesson2-ddos-4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -878,6 +881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level1"
+        ],
         "progression": "Investigate a CIA Scenario"
       },
       "bonus": false,
@@ -900,6 +906,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level2"
+        ],
         "progression": "Investigate a CIA Scenario"
       },
       "bonus": false,
@@ -922,6 +931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level3"
+        ],
         "progression": "Who Protects CIA?"
       },
       "bonus": false,
@@ -936,6 +948,28 @@
       },
       "level_keys": [
         "test-ai-powered-threats-defenses-lesson6-level3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Who Protects CIA?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level4"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "8879ddd1-9deb-4b07-94c7-de1e7f2fa980"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson6-level4"
       ]
     }
   ],
@@ -1173,6 +1207,18 @@
         "level.key": "test-ai-powered-threats-defenses-lesson6-level3",
         "script_level.level_keys": [
           "test-ai-powered-threats-defenses-lesson6-level3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "8879ddd1-9deb-4b07-94c7-de1e7f2fa980"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson6-level4",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level4"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",

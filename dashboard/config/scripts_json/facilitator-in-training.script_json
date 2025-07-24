@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-17 18:46:22 UTC",
+    "serialized_at": "2025-07-23 21:28:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -47,13 +48,29 @@
 
   ],
   "resources": [
-
+    {
+      "name": "2025-2026 Facilitator Handbook",
+      "url": "https://www.google.com/url?q=https://docs.google.com/document/d/1bul786Lvq-o-aYd0rr75WPd7fS_TgZVOwQg4sylPfkE/preview?",
+      "key": "2025-2026_facilitator_handbook",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "2025-2026_facilitator_handbook"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2025-2026_facilitator_handbook",
+        "script.name": "facilitator-in-training"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -51,10 +51,8 @@ describe('Section Component', () => {
       .getByText('This is content.')
       .closest('.container')?.parentElement;
 
-    let divider = section?.querySelector('hr');
-    expect(divider).toBeInTheDocument();
-    expect(divider).toHaveStyle(
-      'border-top-color: var(--background-neutral-quaternary)',
+    expect(section).toHaveStyle(
+      'border-bottom-color: var(--background-neutral-quaternary)',
     );
 
     // change divider prop to strong
@@ -68,10 +66,8 @@ describe('Section Component', () => {
       .getByText('This is content.')
       .closest('.container')?.parentElement;
 
-    divider = section?.querySelector('hr');
-    expect(divider).toBeInTheDocument();
-    expect(divider).toHaveStyle(
-      'border-top-color: var(--background-neutral-senary)',
+    expect(section).toHaveStyle(
+      'border-bottom-color: var(--background-neutral-senary)',
     );
 
     // change divider prop to none
@@ -85,8 +81,7 @@ describe('Section Component', () => {
       .getByText('This is content.')
       .closest('.container')?.parentElement;
 
-    divider = section?.querySelector('hr');
-    expect(divider).not.toBeInTheDocument();
+    expect(section).toHaveStyle('border-bottom-color: ');
   });
 
   it('applies a custom ID to the section', () => {
