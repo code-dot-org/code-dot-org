@@ -12,9 +12,8 @@ export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
 
   const currentTabValue = useMemo(
     () =>
-      // filter out index path
-      tabList.filter(t => t.path).find(tab => pathname.includes(tab.path))
-        ?.path ?? '',
+      // exclude index path as it's the default
+      tabList.find(tab => tab.path && pathname.includes(tab.path))?.path ?? '',
     [pathname, tabList]
   );
 
