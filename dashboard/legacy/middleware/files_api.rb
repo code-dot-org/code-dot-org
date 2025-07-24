@@ -427,7 +427,7 @@ class FilesApi < Sinatra::Base
     # The "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java and .py files, since in this use case
     # the files are only being used by a single user.
-    if (endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)) || profanity_project_type?(project_type)
+    if endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
