@@ -11,7 +11,7 @@ interface ThemeContextProps {
   setTheme: (theme: Theme) => void;
 }
 
-/** Same as `ThemeContextProps` but where all properties are optional.  For `useOptionalTheme` */
+/** Same as `ThemeContextProps` but where all properties are optional.  For `useTheme(true)` */
 type OptionalThemeContextProps = Partial<ThemeContextProps>;
 
 /**
