@@ -12,7 +12,7 @@ module AichatSafetyHelper
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
     # We currently use OpenAI for content moderation, but we built this to originally support multiple services,
     # and may add more in the future.
-    def find_toxicity(role, text, locale, level_id)
+    def find_toxicity(text, level_id)
       details = openai_safety_check(text, level_id)
       {text: text, blocked_by: 'openai', details: details} if details
     end
@@ -184,10 +184,10 @@ module AichatSafetyHelper
     end
   end
 
-  def self.find_toxicity(role, text, locale, level_id)
+  def self.find_toxicity(text, level_id)
     # Stubbed toxicity detection allows UI tests (without the roundtrip to third-party moderation services) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_external_services) && Rails.application.config.stub_aichat_external_services ?
-      StubbedToxicityDetector.new.find_toxicity(nil, text, nil, nil) :
-      ToxicityDetector.new.find_toxicity(role, text, locale, level_id)
+      StubbedToxicityDetector.new.find_toxicity(text, nil) :
+      ToxicityDetector.new.find_toxicity(text, level_id)
   end
 end
