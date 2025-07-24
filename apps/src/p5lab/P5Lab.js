@@ -11,7 +11,6 @@ import {
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
 
@@ -297,26 +296,6 @@ export default class P5Lab {
       // If we reset a puzzle, we should reset the selected poem on that project.
       project.sourceHandler.setSelectedPoem(null);
       this.studioApp_.resetButtonClick();
-      // If a P5 lab project/level that allows custom uploaded images via AnimationPicker was flagged
-      // for abuse due to image moderation (abuse score == 15), starting the project over removes all
-      // user-uploaded images. Therefore, we unflag the project.
-      // Note: once a project is flagged for abuse, the user cannot upload additional custom images.
-      if (
-        ['gamelab', 'poetry', 'spritelab'].includes(
-          project.getStandaloneApp()
-        ) &&
-        project.getAbuseScore() === 15
-      ) {
-        const body = JSON.stringify({
-          type: 'unflag',
-        });
-        HttpClient.post(
-          `/v3/channels/${project.getCurrentId()}/abuse/image`,
-          body,
-          true,
-          {'Content-Type': 'application/json; charset=UTF-8'}
-        ).catch(err => console.error('Update abuse error', err));
-      }
     }.bind(this);
 
     config.dropletConfig = dropletConfig;
