@@ -13,7 +13,7 @@ type OverlineProps = RemoveMarginBottomProps & {
   /** Overline size */
   size: Exclude<ComponentSize, 'xs'>;
   /** Overline color */
-  color: 'primary' | 'secondary';
+  color: 'primary' | 'secondary' | 'white';
   /** ClassName passed by Contentful to apply styles that are set through Contentful native editor*/
   className?: string;
 };

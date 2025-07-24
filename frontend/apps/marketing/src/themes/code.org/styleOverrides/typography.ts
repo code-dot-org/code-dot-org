@@ -26,6 +26,9 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
       '&.MuiTypography-overline.overline--color-secondary': {
         color: 'var(--text-neutral-quaternary)',
       },
+      '&.MuiTypography-overline.overline--color-white': {
+        color: 'var(--neutral-base-white)',
+      },
       '&.MuiTypography-overline.overline--size-s': {
         fontSize: '0.625rem', // 10px
       },

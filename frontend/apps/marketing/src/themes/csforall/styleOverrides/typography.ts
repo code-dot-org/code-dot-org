@@ -35,6 +35,11 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         backgroundColor: alpha(theme.palette.secondary.main, 0.1),
         border: `1px solid ${theme.palette.secondary.dark}`,
       },
+      '&.MuiTypography-overline.overline--color-white': {
+        color: theme.palette.common.white,
+        backgroundColor: alpha(theme.palette.common.white, 0.1),
+        border: `1px solid ${theme.palette.common.white}`,
+      },
       '&.MuiTypography-overline.overline--size-s': {
         fontSize: '0.75rem', // 12px
       },
