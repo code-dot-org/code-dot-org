@@ -149,7 +149,7 @@ class TestController < ApplicationController
     section.students << user
     section.save!
 
-    UserScript.create!(user: user, script: unit, assigned_at: Time.now) if unit
+    user.assign_script(unit) if unit
 
     head :ok
   end
