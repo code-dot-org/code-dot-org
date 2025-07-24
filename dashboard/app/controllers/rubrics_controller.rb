@@ -3,7 +3,7 @@ class RubricsController < ApplicationController
   include SharedConstants
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
-  load_resource only: [:get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
+  load_resource only: [:show, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
   load_and_authorize_resource except: [:submit_evaluations, :get_ai_evaluations, :get_teacher_evaluations, :get_teacher_evaluations_for_all, :ai_evaluation_status_for_user, :ai_evaluation_status_for_all, :run_ai_evaluations_for_user, :run_ai_evaluations_for_all, :get_ai_rubrics_tour_seen, :update_ai_rubrics_tour_seen]
 
   # GET /rubrics/:rubric_id/edit
@@ -41,6 +41,11 @@ class RubricsController < ApplicationController
     else
       render json: @rubric.errors, status: :bad_request
     end
+  end
+
+  # GET /rubrics/:id
+  def show
+    render json: {rubric: @rubric.summarize, canShowTaScoresAlert: can_show_ta_scores_alert?}
   end
 
   # POST /rubrics/:id/submit_evaluations
@@ -381,5 +386,12 @@ class RubricsController < ApplicationController
     else
       'NOT_STARTED'
     end
+  end
+
+  private def can_show_ta_scores_alert?
+    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
+    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
+    return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
+    !seen_ta_scores_map[@rubric.lesson.id.to_s]
   end
 end

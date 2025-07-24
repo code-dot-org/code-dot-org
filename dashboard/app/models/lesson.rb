@@ -315,6 +315,7 @@ class Lesson < ApplicationRecord
         lessonStartUrl: start_url(unit_group_unit: unit_group_unit),
         duration: total_lesson_duration,
         background: background,
+        rubric: rubric,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -1035,5 +1036,13 @@ class Lesson < ApplicationRecord
       position: activity['position'],
       key: SecureRandom.uuid
     )
+  end
+
+  private def can_show_ta_scores_alert?
+    puts "checking ta scores #{current_user.id}"
+    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
+    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
+    return false if seen_ta_scores_map.keys.length >= ScriptLevelsController::MAX_SHOW_TA_SCORES_ALERT
+    !seen_ta_scores_map[id.to_s]
   end
 end

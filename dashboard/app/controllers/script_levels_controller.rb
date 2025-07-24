@@ -233,32 +233,6 @@ class ScriptLevelsController < ApplicationController
     present_level
   end
 
-  # Get student progress information on this level for rubrics.
-  def rubric_student_level_info
-    @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
-    authorize! :read, ScriptLevel
-    unit_context = ScriptLevelsController.get_unit_context(request)
-    @script = unit_context[:unit]
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
-    @level = select_level
-
-    view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
-    view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
-
-    if @script_level.lesson.rubric && view_as_other
-      viewing_user_level = view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
-      student_level_info = {
-        user_id: view_as_user.id,
-        name: view_as_user.name,
-        attempts: viewing_user_level&.attempts,
-        timeSpent: viewing_user_level&.time_spent,
-        lastAttempt: viewing_user_level&.updated_at,
-      }
-      return render json: student_level_info
-    end
-    render json: {}
-  end
-
   def self.get_script_level(script, params)
     if params[:chapter]
       script.get_script_level_by_chapter(params[:chapter])

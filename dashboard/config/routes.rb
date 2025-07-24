@@ -455,7 +455,6 @@ Dashboard::Application.routes.draw do
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
             # Get the level's properties via JSON.
             get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
-            get '(sublevel/:sublevel_position)/rubric_student_level_info', to: 'script_levels#rubric_student_level_info'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -522,7 +521,6 @@ Dashboard::Application.routes.draw do
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
-        get :rubric
         post :clone
       end
     end
@@ -1253,7 +1251,7 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
+    resources :rubrics, only: [:create, :edit, :new, :update, :show] do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'

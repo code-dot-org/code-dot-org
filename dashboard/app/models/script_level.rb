@@ -381,7 +381,6 @@ class ScriptLevel < ApplicationRecord
         uses_lab2: level.uses_lab2?,
         is_validated: level.validated?,
         can_have_feedback: level.can_have_feedback?,
-        name: level.display_name || level.name,
       }
 
       if progression
@@ -395,9 +394,9 @@ class ScriptLevel < ApplicationRecord
         summary[:progression_display_name] = localized_progression_name
       end
 
-      # if named_level
-      #   summary[:name] = level.display_name || level.name
-      # end
+      if named_level
+        summary[:name] = level.display_name || level.name
+      end
 
       if bubble_choice?
         summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
@@ -590,6 +589,8 @@ class ScriptLevel < ApplicationRecord
     if user_level
       teacher_panel_summary[:userLevelId] = user_level.id
       teacher_panel_summary[:updatedAt] = user_level.updated_at
+      teacher_panel_summary[:attempts] = user_level.attempts
+      teacher_panel_summary[:timeSpent] = user_level.time_spent
     end
 
     teacher_panel_summary

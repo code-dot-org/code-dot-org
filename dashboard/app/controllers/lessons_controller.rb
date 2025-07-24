@@ -89,19 +89,6 @@ class LessonsController < ApplicationController
     setup_edit
   end
 
-  # GET /lessons/:id/rubric
-  def rubric
-    view_as_other = params[:user_id] && current_user && params[:user_id] != current_user.id
-    view_as_user = view_as_other ? User.find(params[:user_id]) : current_user
-
-    ai_rubrics_enabled_for_user = view_as_user&.verified_teacher? || view_as_user&.teachers&.any?(&:verified_teacher?)
-    return render json: {} unless @lesson.rubric && ai_rubrics_enabled_for_user
-
-    rubric_data = {rubric: @lesson.rubric.summarize}
-    rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?
-    render json: rubric_data
-  end
-
   # PATCH/PUT /lessons/:id
   def update
     if params[:originalLessonData]
@@ -286,12 +273,5 @@ class LessonsController < ApplicationController
     unit_name_or_id = params[:script_id]
     canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
     redirect_to canonical_path unless canonical_path == request.fullpath
-  end
-
-  private def can_show_ta_scores_alert?
-    return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
-    seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
-    return false if seen_ta_scores_map.keys.length >= ScriptLevelsController::MAX_SHOW_TA_SCORES_ALERT
-    !seen_ta_scores_map[@lesson.id.to_s]
   end
 end

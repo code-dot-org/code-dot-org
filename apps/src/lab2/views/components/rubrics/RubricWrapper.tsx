@@ -1,88 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
-import {
-  getCurrentLesson,
-  getCurrentLevel,
-  levelById,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {getCurrentLesson} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
-import {RootState} from '@cdo/apps/types/redux';
+import {RubricData} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-// TODO: Can we dedupe these with rubricShapes.js?
-interface EvidenceLevel {
-  understanding: number;
-  teacherDescription: string;
-}
-
-interface LearningGoal {
-  key: string;
-  learningGoal: string;
-  aiEnabled: boolean;
-  tips: string | null;
-  evidenceLevels: EvidenceLevel[];
-}
-
-interface Rubric {
-  learningGoals: LearningGoal[];
-  script: {id: number};
-  lesson: {
-    position: number;
-    name: string;
-  };
-  level: {id: number};
-}
-
-interface StudentLevelInfo {
-  name: string;
-  attempts: number;
-  timeSpent: number;
-  lastAttempt: string;
-  user_id: number;
-}
-
-interface RubricResponse {
-  rubric: Rubric;
-  canShowTaScoresAlert: boolean;
-}
-
-// TODO: Dedupe with progressReduxSelectors.js
-const getStudentLevelInfoPath = (state: RootState) => {
-  if (!state.progress.lessons || !state.progress.viewAsUserId) {
-    return;
-  }
-  const viewAsUserId = state.progress.viewAsUserId;
-  const scriptName = state.progress.scriptName;
-  const currentLesson = getCurrentLesson(state);
-  if (!currentLesson) {
-    return;
-  }
-  const lessonPosition = currentLesson.relative_position;
-
-  let levelPosition, sublevelPosition;
-  const currentLevel = getCurrentLevel(state);
-  levelPosition = currentLevel.levelNumber;
-
-  // Use the sublevel position if we're on a sublevel
-  if (currentLevel.parentLevelId) {
-    const parentLevel = levelById(
-      state.progress,
-      state.progress.currentLessonId,
-      currentLevel.parentLevelId
-    );
-    levelPosition = parentLevel.levelNumber;
-    sublevelPosition = currentLevel.levelNumber;
-  }
-
-  const sublevelSegment =
-    sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`;
-
-  // TODO: TEACH-1864
-  // use /courses/:course_name/units/:unit_position/... instead of /s/
-  return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${sublevelSegment}rubric_student_level_info?user_id=${viewAsUserId}`;
-};
 
 function useFetchData<T>(path?: string) {
   const [data, setData] = useState<T>();
@@ -109,31 +33,54 @@ function useFetchData<T>(path?: string) {
 }
 
 const RubricWrapper: React.FC = () => {
-  const rubricPath = useAppSelector(state =>
-    state.progress.currentLessonId
-      ? `/lessons/${state.progress.currentLessonId}/rubric`
-      : undefined
-  );
-  const studentLevelInfoPath = useAppSelector(getStudentLevelInfoPath);
+  const rubricPath = useAppSelector(state => {
+    const rubricId = getCurrentLesson(state)?.rubric?.id;
+    if (rubricId) {
+      return `/rubrics/${rubricId}`;
+    }
+  });
   const currentLevelName = useAppSelector(
-    state => getCurrentLevel(state)?.name
+    state => state.lab.levelProperties?.name
   );
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const showRubric = useAppSelector(
     state => state.lab.levelProperties?.showRubric
   );
+  const labLoading = useAppSelector(isLabLoading);
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const levelsWithProgress = useAppSelector(
+    state => state.teacherPanel.levelsWithProgress
+  );
+  const students = useAppSelector(
+    state => state.teacherSections.selectedStudents
+  );
+  const studentLevelInfo = useMemo(() => {
+    const userLevel = levelsWithProgress?.find(
+      ul => ul.userId === viewAsUserId
+    );
+    const selectedStudent = students?.find(s => s.id === viewAsUserId);
+
+    if (!viewAsUserId || !userLevel || !selectedStudent) {
+      return;
+    }
+
+    return {
+      name: selectedStudent.name,
+      user_id: viewAsUserId,
+      timeSpent: userLevel.timeSpent,
+      attempts: userLevel.attempts,
+      lastAttempt: userLevel.updatedAt,
+    };
+  }, [viewAsUserId, levelsWithProgress, students]);
 
   const {data: rubricData, isLoading: isLoadingRubric} =
-    useFetchData<RubricResponse>(rubricPath);
-
-  const {data: studentLevelInfo, isLoading: isLoadingStudentLevelInfo} =
-    useFetchData<StudentLevelInfo>(studentLevelInfoPath);
+    useFetchData<RubricData>(rubricPath);
 
   if (
     !isTeacher ||
     !showRubric ||
+    labLoading ||
     isLoadingRubric ||
-    isLoadingStudentLevelInfo ||
     !rubricData
   ) {
     return null;
@@ -155,7 +102,7 @@ const RubricWrapper: React.FC = () => {
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
         currentLevelName={currentLevelName}
-        aiEnabled={rubric.learningGoals.some(lg => lg.aiEnabled)}
+        aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
         canShowTaScoresAlert={canShowTaScoresAlert}
       />
     </div>
