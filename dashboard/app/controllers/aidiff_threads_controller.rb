@@ -11,12 +11,11 @@ class AidiffThreadsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    session_id = params[:sessionId].presence
     context = params[:context]
 
     get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
 
-    response_body = get_response_body(session_id, context[:type])
+    response_body = get_response_body(nil, context[:type])
     # get or create thread obj
     begin
       @aidiff_thread = AidiffThread.find_or_create_by!(
@@ -45,9 +44,9 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :session_id, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
 
-    render(status: :ok, json: return_body)
+    render(json: return_body)
   end
 
   # GET /aidiff_threads
@@ -79,7 +78,7 @@ class AidiffThreadsController < ApplicationController
       courses.push(*(@unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name, @unit&.family_name] if @unit.present?)))
     end
 
-    render(status: :ok, json: {courses: courses})
+    render(json: {courses: courses})
   end
 
   # params are
@@ -113,9 +112,9 @@ class AidiffThreadsController < ApplicationController
       end
     end
 
-    return_body = response_body.slice(:role, :status, :chat_message_text, :session_id, :message_id, :thread_id)
+    return_body = response_body.slice(:role, :status, :chat_message_text, :message_id, :thread_id)
 
-    render(status: :ok, json: return_body)
+    render(json: return_body)
   end
 
   # Certain types of PII detected by Amazon Comprehend are actually allowed
