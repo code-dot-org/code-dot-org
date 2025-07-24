@@ -3,7 +3,6 @@ require 'test_helper'
 class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
-  include Curriculum::SharedCourseConstants
 
   setup do
     @coursez_2017 = create :script, name: 'coursez-2017'
