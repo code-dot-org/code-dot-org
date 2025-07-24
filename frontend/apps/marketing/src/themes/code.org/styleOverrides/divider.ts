@@ -9,6 +9,9 @@ export const DIVIDER_OVERRIDES: Components<Theme>['MuiDivider'] = {
       '&.MuiDivider-root.divider--color-strong': {
         borderColor: 'var(--background-neutral-senary)',
       },
+      '&.MuiDivider-root.divider--color-white': {
+        borderColor: theme.palette.common.white,
+      },
       '&.MuiDivider-root.divider--margin-none': {
         marginTop: 0,
         marginBottom: 0,

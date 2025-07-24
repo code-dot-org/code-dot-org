@@ -1,4 +1,4 @@
-import {Components, Theme} from '@mui/material/styles';
+import {alpha, Components, Theme} from '@mui/material/styles';
 
 export const DIVIDER_OVERRIDES: Components<Theme>['MuiDivider'] = {
   styleOverrides: {
@@ -9,6 +9,9 @@ export const DIVIDER_OVERRIDES: Components<Theme>['MuiDivider'] = {
       '&.MuiDivider-root.divider--color-strong': {
         borderColor: theme.palette.divider,
         borderStyle: 'dashed',
+      },
+      '&.MuiDivider-root.divider--color-white': {
+        borderColor: alpha(theme.palette.common.white, 0.9),
       },
       '&.MuiDivider-root.divider--margin-none': {
         marginTop: 0,
