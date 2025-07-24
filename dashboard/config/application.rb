@@ -45,6 +45,10 @@ module Dashboard
     # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
     config.action_dispatch.use_cookies_with_metadata = false
 
+    # Set some values which must be configured here
+    # Added in 7.0
+    config.active_support.disable_to_s_conversion = true
+
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
