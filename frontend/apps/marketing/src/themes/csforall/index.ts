@@ -12,11 +12,15 @@ import {STYLE_OVERRIDES} from './styleOverrides';
 const theme = createTheme({
   cssVariables: true,
   palette: {
+    mode: 'light',
     primary: {
-      main: COLORS.primary,
+      main: COLORS.brandPrimary,
     },
     secondary: {
-      main: COLORS.secondary,
+      main: COLORS.brandSecondary,
+    },
+    tertiary: {
+      main: COLORS.brandTertiary,
     },
     text: {
       primary: COLORS.black,
@@ -24,6 +28,9 @@ const theme = createTheme({
     divider: COLORS.black,
     common: {
       black: COLORS.black,
+    },
+    background: {
+      default: COLORS.backgroundPrimary,
     },
   },
   components: STYLE_OVERRIDES,

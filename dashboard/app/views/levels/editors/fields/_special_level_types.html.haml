@@ -13,6 +13,12 @@
       grading. Submitting a solution means that it is marked as
       submitted and they can no longer edit it (unless a teacher returns
       it).
+    - if @level.is_a?(Pythonlab) || @level.is_a?(Music) || @level.is_a?(Aichat)
+      = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :disable_edit_run_for_submission, description: "Disable Edit and Run Requirement for Submission"}
+      %p
+        By default, submittable levels require the student to edit and
+        run their code before they can submit it. Check this box to
+        disable this requirement.
   - if @level.respond_to? :free_play
     .field
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :embed, description: "Embed"}
