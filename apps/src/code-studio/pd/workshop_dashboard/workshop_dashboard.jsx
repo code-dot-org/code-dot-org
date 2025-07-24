@@ -56,6 +56,26 @@ const store = createStore(
   })
 );
 
+const workshopChildRouteConfigs = [
+  {
+    label: 'Overview',
+    index: true,
+    component: WorkshopOverview,
+  },
+  {
+    label: 'Enrollment',
+    path: 'enrollments',
+    component: WorkshopEnrollments,
+    breadcrumbs: 'Workshops,Workshop,Enrollments',
+  },
+  {
+    label: 'Surveys',
+    path: 'surveys',
+    component: WorkshopSurveys,
+    breadcrumbs: 'Workshops,Workshop,Surveys',
+  },
+];
+
 const routeConfigs = [
   {
     path: 'reports',
@@ -94,28 +114,12 @@ const routeConfigs = [
     breadcrumbs: 'Workshops,Workshop',
     component: WorkshopTabs,
     props: {
-      tabList: [
-        {label: 'Overview', path: ''},
-        {label: 'Enrollment', path: 'enrollments'},
-        {label: 'Surveys', path: 'surveys'},
-      ],
+      tabList: workshopChildRouteConfigs.map(({label, path}) => ({
+        label,
+        path,
+      })),
     },
-    childRoutes: [
-      {
-        index: true,
-        component: WorkshopOverview,
-      },
-      {
-        path: 'enrollments',
-        component: WorkshopEnrollments,
-        breadcrumbs: 'Workshops,Workshop,Enrollments',
-      },
-      {
-        path: 'surveys',
-        component: WorkshopSurveys,
-        breadcrumbs: 'Workshops,Workshop,Surveys',
-      },
-    ],
+    childRoutes: workshopChildRouteConfigs,
   },
   {
     path: 'workshops/:workshopId/edit',

@@ -1,6 +1,6 @@
 export interface Tab {
   label: string;
-  path: string;
+  path?: string;
 }
 
 export interface WorkshopTabsProps {

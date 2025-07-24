@@ -33,7 +33,7 @@ export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
           // tabContent is null because Outlet will render appropriate components based on route
           tabContent: null,
           text: tab.label,
-          value: tab.path,
+          value: tab.path ?? '',
         }))}
       />
       <Outlet />
