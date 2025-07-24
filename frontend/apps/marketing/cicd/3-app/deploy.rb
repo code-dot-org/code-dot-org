@@ -222,7 +222,7 @@ def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn:
   begin
     execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
   ensure
-    # Clean up the parameter file if it was created
+    # Clean up the parameter file if the parameter_path was set and the file exists
     if parameter_path && File.exist?(parameter_path)
       FileUtils.rm_f(parameter_path)
     end
