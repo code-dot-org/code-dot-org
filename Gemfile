@@ -24,7 +24,7 @@ gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgr
 gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -116,7 +116,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
-  gem 'minitest-rails', '~> 6.1', require: false
+  gem 'minitest-rails', '~> 7.0', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -308,7 +308,7 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
-gem 'composite_primary_keys', '~> 13.0'
+gem 'composite_primary_keys', '~> 14.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
