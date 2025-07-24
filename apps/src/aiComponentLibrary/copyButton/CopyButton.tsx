@@ -1,5 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {useOptionalTheme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useState} from 'react';
 
@@ -12,7 +12,12 @@ const CONFIRM_TIMEOUT_MS = 1500;
 
 const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
   const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
-  const {theme} = useTheme();
+
+  /**
+   * Get the theme, if available.  If not within a `ThemeProvider`, theme will be `undefined`
+   *  which will then be ignored by `Tooltip`.
+   **/
+  const {theme} = useOptionalTheme();
 
   return (
     <WithTooltip
