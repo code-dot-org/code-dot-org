@@ -1,5 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import {useOptionalTheme} from '@code-dot-org/component-library/common/contexts';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useState} from 'react';
 
@@ -17,7 +17,7 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
    * Get the theme, if available.  If not within a `ThemeProvider`, theme will be `undefined`
    *  which will then be ignored by `Tooltip`.
    **/
-  const {theme} = useOptionalTheme();
+  const {theme} = useTheme(true);
 
   return (
     <WithTooltip

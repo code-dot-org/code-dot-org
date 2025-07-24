@@ -27,43 +27,44 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 /**
  * Provides code with values of `ThemeContext` inside of a React component.
  *
- * Note: in order to work correctly, it requires the component you're working in to be wrapped by
- * `ThemeProvider` anywhere on a higher level.
+ * Default behavior: by default `isThemeOptional` is set to `false`, which means `useTheme` requires
+ * the component you're working in to be wrapped by `ThemeProvider` anywhere on a higher level.  If
+ * your component is not wrapped in a `ThemeProvider`, `useTheme` will throw an error.
  *
- * Usage example:
+ * Usage example (default use):
  *    const {theme, toggleTheme} = useTheme();
- * */
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider');
-  }
-  return context;
-};
-
-/**
- * Provides code with values of `ThemeContext` inside of a React component, but unlike `useTheme`, it does not
- * require the component you're working in to be wrapped by `ThemeProvider`. If no theme is provided, `theme`
- * will result in a value of `undefined`.
  *
- * Note: `toggleTheme` or `setTheme` will also be undefined if `theme` is undefined so you must account for
- * this in your code.
+ * Advanced: setting `isThemeOptional` to `true` changes this default behavior and does not
+ * require the component you're working in to be wrapped by a `ThemeProvider`. If `isThemeOptional`
+ * is `true` and no theme is provided, `theme` will result in a value of `undefined`. In this case
+ * `toggleTheme` or `setTheme` will also be undefined if `theme` is undefined, so you must account
+ * for this in your code.
  *
  * Usage example:
- *    const {theme, toggleTheme} = useOptionalTheme();
+ *    const {theme, toggleTheme} = useTheme(true);
  *    const handleClick = () => {
  *      if(toggleTheme){
  *        toggleTheme()
  *      }
  *    };
+ *
  * */
-export const useOptionalTheme = (): OptionalThemeContextProps => {
+export function useTheme(isThemeOptional: true): OptionalThemeContextProps;
+export function useTheme(isThemeOptional?: false): ThemeContextProps;
+export function useTheme(
+  isThemeOptional = false,
+): ThemeContextProps | OptionalThemeContextProps {
   const context = useContext(ThemeContext);
   if (!context) {
-    return {};
+    if (isThemeOptional) {
+      return {};
+    } else {
+      throw new Error('useTheme must be used within a ThemeProvider');
+    }
   }
   return context;
-};
+}
+
 /**
  * Provides code with theme context. Can be used on the higher level (e.g. React app entry point)
  * or on any level you need.
