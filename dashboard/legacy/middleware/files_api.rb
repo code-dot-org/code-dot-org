@@ -21,9 +21,6 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
-  # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
-
   # These file types are not used in Applab, so they are safe to skip during the
   # profanity check for libraries in put_file.
   BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
@@ -432,12 +429,7 @@ class FilesApi < Sinatra::Base
     # the files are only being used by a single user.
     if (endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)) || profanity_project_type?(project_type)
       begin
-        if profanity_project_type?(project_type)
-          locale_code = request.locale.to_s.split('-').first
-          share_failure = find_project_profanity(project_type, body, locale_code)
-        else
-          share_failure = ShareFiltering.find_failure(body, request.locale)
-        end
+        share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
@@ -1094,31 +1086,5 @@ class FilesApi < Sinatra::Base
   private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
-  end
-
-  private def profanity_project_type?(project_type)
-    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
-  end
-
-  private def get_toxicity_threshold_user_sources
-    DCDO.get("aichat_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
-  end
-
-  private def find_project_profanity(project_type, body, locale_code)
-    # Currently, only AI Chat is checked for profanity
-    if project_type == 'aichat'
-      source = JSON.parse(body)['source']
-      source_json = JSON.parse(source)
-      text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
-      # Nothing to check if there is no system prompt or retrieval
-      return nil if text.blank?
-      # Use AWS Comprehend to check AI Chat contents for toxicity.
-      # get_toxicity returns an object with the following fields:
-      # text: string, toxicity: number, and max_category {name: string, score: number}
-      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale_code)
-      if comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
-        return ShareFailure.new(ShareFiltering::FailureType::PROFANITY, comprehend_response)
-      end
-    end
   end
 end
