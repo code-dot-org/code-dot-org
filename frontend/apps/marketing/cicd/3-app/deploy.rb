@@ -307,7 +307,10 @@ begin
       parameters: cert_parameters,
       region: 'us-east-1',
       role_arn: options[:role_arn],
-      tags: {'environment-type' => options[:environment_type], 'site-type' => options[:site_type]}
+      tags: {
+        'environment-type' => options[:environment_type],
+        'site-type' => options[:site_type]
+      }
     )
 
     # Step 3: Get certificate ARN from stack output.
@@ -342,7 +345,10 @@ begin
       parameters: marketing_site_stack_parameters,
       region: options[:region],
       role_arn: options[:role_arn],
-      tags: {'environment-type' => options[:environment_type], 'site-type' => options[:site_type]},
+      tags: {
+        'environment-type' => options[:environment_type],
+        'site-type' => options[:site_type]
+      },
       capabilities: %w(CAPABILITY_IAM CAPABILITY_NAMED_IAM) # Marketing Sites templates creates ECS Task / Task Exec Roles.
     )
 
