@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {act, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
@@ -43,9 +43,7 @@ describe('WorkshopTabs', () => {
     renderWithRouter();
     const user = userEvent.setup();
     const surveysTab = screen.getByRole('tab', {name: 'Surveys'});
-    await act(async () => {
-      await user.click(surveysTab);
-    });
+    await user.click(surveysTab);
     expect(screen.getByRole('tab', {name: 'Surveys'})).toHaveAttribute(
       'aria-selected',
       'true'
