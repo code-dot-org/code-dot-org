@@ -47,7 +47,7 @@ module Dashboard
 
     # Set some values which must be configured here
     # Added in 7.0
-    config.active_support.disable_to_s_conversion = true
+    config.active_support.cache_format_version = 7.0
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
