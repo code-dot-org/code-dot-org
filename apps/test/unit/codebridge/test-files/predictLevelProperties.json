@@ -8,8 +8,7 @@
         "language": "py",
         "contents": "print('Hello start!')",
         "folderId": "1",
-        "active": true,
-        "open": true
+        "active": true
       }
     },
     "folders": {
@@ -19,7 +18,8 @@
         "parentId": "0",
         "open": true
       }
-    }
+    },
+    "openFiles": ["0"]
   },
   "longInstructions": "##Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
   "hideShareAndRemix": true,
