@@ -1,7 +1,7 @@
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 // We used to have an 'open' attribute on files, but now we track open files
-// in source.openFiles. This is a single the single source of truth which allows for tab ordering.
+// in source.openFiles. This is the single source of truth which allows for tab ordering.
 // Some projects may not have an openFiles array due to legacy reasons but do
 // have "active" and/or "open" files. In this case, we will set openFiles to be the
 // active and/or open files.

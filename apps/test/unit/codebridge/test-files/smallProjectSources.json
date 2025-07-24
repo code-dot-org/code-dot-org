@@ -7,8 +7,7 @@
         "language": "py",
         "contents": "print('Hello world!')",
         "folderId": "0",
-        "active": true,
-        "open": true
+        "active": true
       }
     },
     "folders": {},
