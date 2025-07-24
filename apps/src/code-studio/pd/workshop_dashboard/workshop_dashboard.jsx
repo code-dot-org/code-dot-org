@@ -95,9 +95,9 @@ const routeConfigs = [
     component: WorkshopTabs,
     props: {
       tabList: [
-        {label: 'Overview', path: 'temp'},
-        {label: 'Enrollment', path: 'temp/enrollments'},
-        {label: 'Surveys', path: 'temp/surveys'},
+        {label: 'Overview', path: ''},
+        {label: 'Enrollment', path: 'enrollments'},
+        {label: 'Surveys', path: 'surveys'},
       ],
     },
     childRoutes: [
