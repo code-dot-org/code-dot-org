@@ -25,10 +25,24 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
       customContent={
         <div>
           <BodyTwoText>
-            {i18n.animationPicker_flaggedImageNoShare()}
-          </BodyTwoText>
-          <BodyTwoText>
-            {i18n.animationPicker_flaggedImageUndoStartOver()}
+            {i18n.animationPicker_flaggedImage()}
+            <ul>
+              <li>
+                <BodyTwoText>
+                  {i18n.animationPicker_flaggedImageNoShare()}
+                </BodyTwoText>
+              </li>
+              <li>
+                <BodyTwoText>
+                  {i18n.animationPicker_flaggedImageNoUpload()}
+                </BodyTwoText>
+              </li>
+              <li>
+                <BodyTwoText>
+                  {i18n.animationPicker_flaggedImageTOS()}
+                </BodyTwoText>
+              </li>
+            </ul>
           </BodyTwoText>
         </div>
       }
