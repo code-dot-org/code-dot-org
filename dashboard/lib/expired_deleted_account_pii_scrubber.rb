@@ -46,7 +46,7 @@ class ExpiredDeletedAccountPiiScrubber
     reset_metrics
   end
 
-  def scrub_pii_from_expired_deleted_accounts!
+  def call
     reset_metrics
 
     accounts_to_scrub.find_each do |user|
