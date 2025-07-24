@@ -20,7 +20,6 @@
    `marketing-sites/[environment type]/[base domain name of the marketing site]/[subdomain of the site]`
 
    **Populate the secret with the following keys:**
-
    - CONTENTFUL_DELIVERY_TOKEN
    - CONTENTFUL_PREVIEW_TOKEN
    - CONTENTFUL_REVALIDATE_TOKEN

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-07-23T16:53:11.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "title": "CIA Careers",
+    "long_instructions": "Of the careers on the previous level, which career do you think makes the biggest difference? Why?",
+    "teacher_markdown": "If time allows, use the [View Student Responses](https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels#:~:text=From%20the%20dropdown%20menu%20in,the%20top%20of%20the%20instructions.) to run a discussion.\r\n\r\nStudents should begin to see how different cybersecurity careers play critical roles in protecting systems and people. By considering which career makes the biggest difference, students reflect on how these roles prevent harm, support reliability, and align with the pillars of the CIA Triad. This builds awareness that security is a human-driven effort, not just a technical one.\r\n\r\nEncourage students to use reasoning tied to the CIA Triad: “This job helps make sure systems stay available,” or “This one stops private info from leaking.” Push them to think beyond job titles and into the impact of the work.",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-23 16:53:16 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

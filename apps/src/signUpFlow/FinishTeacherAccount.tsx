@@ -40,6 +40,12 @@ import {
 
 import style from './signUpFlowStyles.module.scss';
 
+export const NAME_TYPES = {
+  GivenName: locale.first_name(),
+  FamilyName: locale.last_name(),
+  DisplayName: locale.display_name(),
+};
+
 export const roleItemGroups = [
   {
     label: '',
@@ -62,8 +68,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
   redirectUrl?: string;
 }> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
-  const [name, setName] = useState('');
-  const [nameErrorMessage, setNameErrorMessage] = useState(null);
+  const [givenName, setGivenName] = useState('');
+  const [familyName, setFamilyName] = useState('');
+  const [displayName, setDisplayName] = useState('');
+  const [givenNameErrorMessage, setGivenNameErrorMessage] = useState('');
+  const [familyNameErrorMessage, setFamilyNameErrorMessage] = useState('');
+  const [displayNameErrorMessage, setDisplayNameErrorMessage] = useState('');
   const [educatorRole, setEducatorRole] = useState('');
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
@@ -134,28 +144,68 @@ const FinishTeacherAccount: React.FunctionComponent<{
 
   const formDisabled = useMemo(
     () =>
-      name?.trim() === '' ||
-      name?.length > MAX_DISPLAY_NAME_LENGTH ||
+      givenName.trim() === '' ||
+      givenName.length > MAX_DISPLAY_NAME_LENGTH ||
+      familyName.trim() === '' ||
+      familyName.length > MAX_DISPLAY_NAME_LENGTH ||
+      displayName.trim() === '' ||
+      displayName.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
       schoolInfoInvalid(schoolInfo) ||
       !educatorRole,
-    [gdprValid, name, schoolInfo, educatorRole]
+    [gdprValid, givenName, familyName, displayName, schoolInfo, educatorRole]
   );
 
-  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const setName = (nameType: string, newName: string) => {
+    switch (nameType) {
+      case NAME_TYPES.GivenName:
+        setGivenName(newName);
+        break;
+      case NAME_TYPES.FamilyName:
+        setFamilyName(newName);
+        break;
+      default:
+        setDisplayName(newName);
+        break;
+    }
+  };
+
+  const setNameError = (nameType: string, errorMessage: string) => {
+    switch (nameType) {
+      case NAME_TYPES.GivenName:
+        setGivenNameErrorMessage(errorMessage);
+        break;
+      case NAME_TYPES.FamilyName:
+        setFamilyNameErrorMessage(errorMessage);
+        break;
+      default:
+        setDisplayNameErrorMessage(errorMessage);
+        break;
+    }
+  };
+
+  const onNameChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    nameType: string
+  ): void => {
     const newName = e.target.value;
-    setName(newName);
+    setName(nameType, newName);
 
     if (newName.trim() === '') {
-      setNameErrorMessage(locale.display_name_error_message());
+      setNameError(
+        nameType,
+        locale.name_error_message({nameType: nameType.toLowerCase()})
+      );
     } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
-      setNameErrorMessage(
-        locale.display_name_too_long_error_message({
+      setNameError(
+        nameType,
+        locale.name_too_long_error_message({
+          nameType: nameType,
           maxLength: MAX_DISPLAY_NAME_LENGTH,
         })
       );
     } else {
-      setNameErrorMessage(null);
+      setNameError(nameType, '');
     }
   };
 
@@ -171,7 +221,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
       user: {
         user_type: UserTypes.TEACHER,
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
-        name: name,
+        given_name: givenName,
+        family_name: familyName,
+        name: displayName,
         email_preference_opt_in: emailOptInChecked,
         school_info_attributes: buildSchoolData({
           schoolId: schoolInfo.schoolId,
@@ -230,7 +282,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'user type': 'teacher',
         'has school': hasSchool,
         'has marketing value selected': true,
-        'has display name': !nameErrorMessage,
+        'has display name': !displayNameErrorMessage,
         'educator role': educatorRole,
         country: countryCode,
       },
@@ -269,23 +321,41 @@ const FinishTeacherAccount: React.FunctionComponent<{
           </div>
         )}
         <fieldset className={style.inputContainer}>
+          <div className={style.firstAndLastNameContainer}>
+            <div className={style.firstAndLastNameField}>
+              <TextField
+                name="givenName"
+                id="uitest-given-name"
+                label={locale.first_name()}
+                value={givenName}
+                onChange={e => onNameChange(e, NAME_TYPES.GivenName)}
+                errorMessage={givenNameErrorMessage}
+              />
+            </div>
+            <div className={style.firstAndLastNameField}>
+              <TextField
+                name="familyName"
+                id="uitest-family-name"
+                label={locale.last_name()}
+                value={familyName}
+                onChange={e => onNameChange(e, NAME_TYPES.FamilyName)}
+                errorMessage={familyNameErrorMessage}
+              />
+            </div>
+          </div>
           <div>
             <TextField
               name="displayName"
               id="uitest-display-name"
               label={locale.what_do_you_want_to_be_called()}
-              value={name}
+              value={displayName}
               placeholder={locale.msCoder()}
-              onChange={onNameChange}
+              onChange={e => onNameChange(e, NAME_TYPES.DisplayName)}
+              errorMessage={displayNameErrorMessage}
             />
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}
             </BodyThreeText>
-            {nameErrorMessage && (
-              <BodyThreeText className={style.errorMessage}>
-                {nameErrorMessage}
-              </BodyThreeText>
-            )}
           </div>
           <SimpleDropdown
             id="uitest-educator-role"

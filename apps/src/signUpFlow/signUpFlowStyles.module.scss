@@ -471,6 +471,26 @@ span {
     justify-self: center;
     gap: 1.125rem;
 
+    .firstAndLastNameContainer {
+      width: 400px;
+      display: flex;
+      justify-self: center;
+
+      @media (min-width: ($width-sm + 1px)) {
+        flex-direction: row;
+        gap: 0.75rem;
+
+        .firstAndLastNameField > label {
+          min-width: 0;
+        }
+      }
+
+      @media (max-width: $width-sm) {
+        flex-direction: column;
+        gap: 1.125rem;
+      }
+    }
+
     .displayNameInput {
       margin: 0.375rem 0 !important;
     }

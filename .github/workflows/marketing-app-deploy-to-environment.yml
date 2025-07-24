@@ -8,8 +8,12 @@ name: Marketing-App-Deploy-To-Environment
 on:
   workflow_dispatch:
     inputs:
-      GITHUB_ENVIRONMENT_NAME:
-        description: "The name of the Github environment to deploy to."
+      ENVIRONMENT_TYPE:
+        description: "The type of environment to deploy to, e.g. 'test' or 'production'."
+        required: true
+        type: string
+      SITE_TYPE:
+        description: "The type of site to deploy, e.g. 'csforall' or 'corporate'."
         required: true
         type: string
       CONTAINER_IMAGE_DIGEST:
@@ -18,8 +22,12 @@ on:
         type: string
   workflow_call:
     inputs:
-      GITHUB_ENVIRONMENT_NAME:
-        description: "The name of the Github environment to deploy to."
+      ENVIRONMENT_TYPE:
+        description: "The type of environment to deploy to, e.g. 'test' or 'production'."
+        required: true
+        type: string
+      SITE_TYPE:
+        description: "The type of site to deploy, e.g. 'csforall' or 'corporate'."
         required: true
         type: string
       CONTAINER_IMAGE_DIGEST:
@@ -31,6 +39,13 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: code-dot-org/marketing
+  GITHUB_ENVIRONMENT_NAME: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
+
+concurrency:
+  # Deployments are grouped by logical environment stages. For example, a push to staging will initiate deployment waves:
+  # 1. Deploy to "test" CSForAll & Corporate Website concurrently
+  # 2. Deploy to "production" CSForAll & Corporate Website concurrently (only when all 'test' deployments are successful)
+  group: ${{ inputs.ENVIRONMENT_TYPE }}
 
 # There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
 jobs:
@@ -40,7 +55,7 @@ jobs:
   # See: https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service
   deploy:
     runs-on: ubuntu-24.04
-    environment: ${{ inputs.GITHUB_ENVIRONMENT_NAME }}
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
 
     permissions:
       # Allows Github to retrieve AWS credentials via OIDC
@@ -64,7 +79,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@f24d7193d98baebaeacc7e2227925dd47cc267f5 # v4.2.0
         with:
           role-to-assume: ${{ secrets.GH_ACTIONS_DEPLOYER_IAM_ROLE_ARN }}
-          role-session-name: GithubActions-${{ inputs.GITHUB_ENVIRONMENT_NAME }}
+          role-session-name: GithubActions-${{ env.GITHUB_ENVIRONMENT_NAME }}
           aws-region: ${{ vars.AWS_REGION }}
 
       - name: "Download Built Docker Image"
@@ -76,7 +91,7 @@ jobs:
         run: |
           docker cp temp:/app/apps/marketing/.next/static/ ./static
 
-      - name: "[${{ inputs.GITHUB_ENVIRONMENT_NAME }}] Upload Static Assets to S3"
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Upload Static Assets to S3"
         env:
           BASE_DOMAIN: ${{ vars.APPLICATION_BASE_DOMAIN }}
           SUBDOMAIN_NAME: ${{ vars.APPLICATION_SUBDOMAIN_NAME }}
@@ -87,7 +102,7 @@ jobs:
 
           aws s3 sync static/ "s3://$BUCKET_NAME/_next/static" --quiet
 
-      - name: "[${{ inputs.GITHUB_ENVIRONMENT_NAME }}] Deploy Marketing App to AWS"
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Deploy Marketing App to AWS"
         working-directory: ./frontend/apps/marketing/cicd/3-app
         run: |
           bundle exec ruby deploy.rb --environment_type ${{ vars.ENVIRONMENT_TYPE }} \
@@ -100,7 +115,7 @@ jobs:
             --web_application_server_secrets_arn ${{ secrets.APPLICATION_SERVER_SECRETS_ARN }} \
             --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }}
 
-      - name: "[${{ inputs.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
+      - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
         env:
           AWS_REGION: ${{ vars.AWS_REGION }}
           STACK_NAME: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}-${{ vars.APPLICATION_BASE_DOMAIN }}"
@@ -116,7 +131,8 @@ jobs:
 
   tests:
     runs-on: ubuntu-24.04
-    environment: ${{ inputs.GITHUB_ENVIRONMENT_NAME }}
+    environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
+    if: ${{ inputs.SITE_TYPE == 'corporate' }}
     needs:
       - deploy
 
@@ -143,4 +159,4 @@ jobs:
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           APPLICATION_BASE_ADDRESS: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}.${{ vars.APPLICATION_BASE_DOMAIN }}"
           DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
-          GITHUB_ENVIRONMENT_NAME: ${{ inputs.GITHUB_ENVIRONMENT_NAME }}
+          GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
