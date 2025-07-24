@@ -37,6 +37,9 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:hover': {
           backgroundColor: alpha(theme.palette.common.white, 0.9),
         },
+        '&:focus-visible': {
+          outlineColor: alpha(theme.palette.common.white, 0.8),
+        },
       },
       '&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall':
         {

@@ -42,6 +42,9 @@ export const LINK_OVERRIDES: Components<Theme>['MuiLink'] = {
             color: alpha(theme.palette.common.white, 0.8),
           },
         },
+        '&:focus-visible': {
+          outlineColor: alpha(theme.palette.common.white, 0.8),
+        },
         '& svg': {
           color: theme.palette.common.white,
         },
