@@ -391,7 +391,7 @@ class RubricsController < ApplicationController
   private def can_show_ta_scores_alert?
     return false if LearningGoalTeacherEvaluation.where(teacher_id: current_user.id).where.not(understanding: nil).exists?
     seen_ta_scores_map = current_user&.seen_ta_scores_map || {}
-    return false if seen_ta_scores_map.keys.length >= MAX_SHOW_TA_SCORES_ALERT
+    return false if seen_ta_scores_map.keys.length >= ScriptLevelsController::MAX_SHOW_TA_SCORES_ALERT
     !seen_ta_scores_map[@rubric.lesson.id.to_s]
   end
 end

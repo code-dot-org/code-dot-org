@@ -281,6 +281,8 @@ class Ability
         can :curriculum_courses, :ai_diff
         can :submit_feedback, AidiffMessage
       end
+
+      can :show, Rubric
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
