@@ -1,7 +1,6 @@
 require 'cdo/aws/metrics'
 
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
-# Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
@@ -10,8 +9,7 @@ module AichatSafetyHelper
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
 
     # Returns {text: input (string), blocked_by: serviced that detected toxicity (string), details: filtering details (hash)}
-    # We currently use OpenAI for content moderation, but we built this to originally support multiple services,
-    # and may add more in the future.
+    # We currently use OpenAI for content moderation.
     def find_toxicity(text, level_id)
       details = openai_safety_check(text, level_id)
       {text: text, blocked_by: 'openai', details: details} if details
