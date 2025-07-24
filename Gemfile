@@ -33,6 +33,7 @@ gem 'rails-controller-testing', '~> 1.0.5'
 # Ref: https://github.com/rails/sprockets/pull/469
 # Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
 gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
+gem 'sprockets-rails'
 
 # Rails depends on zeitwerk ~>2.3, but cpath support added in 2.6.9 plays a bit
 # nicer with some of our more convoluted model names (eg, LevelsScriptLevel).

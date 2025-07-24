@@ -1163,6 +1163,7 @@ DEPENDENCIES
   spring (~> 3.1.1)
   spring-commands-testunit
   sprockets!
+  sprockets-rails
   sshkit
   statsig (~> 2.5.5)
   stringex (~> 2.5.2)
