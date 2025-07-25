@@ -14,7 +14,7 @@ export interface ImageProps
   altText?: string;
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
-  /** Has rounded corners */
+  /** Image has rounded corners */
   hasRoundedCorners?: boolean;
   /** Image width */
   width?: string | number;
