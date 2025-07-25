@@ -19,6 +19,15 @@ interface DrawerData {
   existingSchoolInfo: SchoolInfo;
 }
 
+/**
+ * This component handles all popups, drawers, modals and floating action buttons
+ * on the teacher homepage.
+ * If we need to show the Drawer with school info confirmations, we will always show that.
+ * If we don't show the drawer and should show the welcome popup, we will show that.
+ * Otherwise, we will allow the AiDiffFloatingActionButton to pulse and start open.
+ *
+ * If either the drawer or welcome popup is shown, the AiDiffFloatingActionButton will not pulse or start open.
+ */
 const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
