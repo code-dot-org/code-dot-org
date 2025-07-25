@@ -103,6 +103,7 @@ let newSourceVersionInterval = 15 * 60 * 1000; // 15 minutes
 var currentAbuseScore = 0;
 var sharingDisabled = false;
 var currentHasPrivacyProfanityViolation = false;
+var isTeacherOfProjectOwner = false;
 var currentShareFailureEnglish = '';
 var currentShareFailureIntl = '';
 var intlLanguage = false;
@@ -495,10 +496,13 @@ var projects = (module.exports = {
     // NOTE: appOptions.canResetAbuse is not a security setting as it can be
     // manipulated by the user. In this case that's okay, since all that does
     // is allow them to view a project that was marked as abusive.
-    const hasEditPermissions = this.isOwner() || appOptions.canResetAbuse;
+    // If current user is teacher of project's owner, then allow them to view as well.
+    const hasEditOrViewPermissions =
+      this.isOwner() || appOptions.canResetAbuse || isTeacherOfProjectOwner;
+
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return hasEditPermissions && isEditOrViewPage;
+    return hasEditOrViewPermissions && isEditOrViewPage;
   },
 
   channelNotFound() {
@@ -1968,6 +1972,19 @@ function fetchShareFailure(resolve) {
   });
 }
 
+function fetchIsTeacherOfProjectOwner(resolve) {
+  channels.fetch(current.id + '/is_teacher_of_project_owner', (err, data) => {
+    isTeacherOfProjectOwner =
+      (data && !!data.is_teacher_of_project_owner) || isTeacherOfProjectOwner;
+    resolve();
+    if (err) {
+      // Throw an error so that things like New Relic see this. This shouldn't
+      // affect anything else.
+      throw err;
+    }
+  });
+}
+
 function fetchPrivacyProfanityViolations(resolve) {
   channels.fetch(current.id + '/privacy-profanity', (err, data) => {
     // data.has_violation is 0 or true, coerce to a boolean.
@@ -1990,6 +2007,7 @@ function fetchAbuseScoreAndPrivacyViolations(project) {
   const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure),
+    new Promise(fetchIsTeacherOfProjectOwner),
   ];
 
   if (OPEN_ENDED_PROJECTS_YOUNG_AGE.includes(project.getStandaloneApp())) {
