@@ -7,6 +7,7 @@ import {useSelector} from 'react-redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
+import ChatEventLogger from '../chatEventLogger';
 import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
@@ -21,7 +22,12 @@ import {
   setNewChatSession,
 } from '../redux';
 import {findChangedProperties, getNewRemoveId} from '../redux/utils';
-import {ChatAsset, ChatButton, ModelParameters} from '../types';
+import {
+  AiChatClientType,
+  ChatAsset,
+  ChatButton,
+  ModelParameters,
+} from '../types';
 import {getAssetUrl, getShortName} from '../utils';
 
 import StagedFilesPreview from './assets/StagedFilesPreview';
@@ -34,6 +40,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
   modelParameters: ModelParameters;
+  clientType: AiChatClientType;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
   onClear: () => void;
@@ -59,6 +66,7 @@ const eraserIcon: FontAwesomeV6IconProps = {
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   modelParameters,
+  clientType,
   chatButtons,
   hiddenContext,
   onClear,
@@ -81,6 +89,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     state => state.aichat.studentChatHistory
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
   const visibleItems = useSelector(selectAllVisibleMessages);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
@@ -110,6 +119,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   const dispatch = useAppDispatch();
+
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    ChatEventLogger.initialize({
+      clientType,
+      currentLevelId: parseInt(currentLevelId || ''),
+      scriptId,
+      channelId,
+    });
+  }, [clientType, currentLevelId, scriptId, channelId]);
 
   // This effect resets chat history and any staged uploads when:
   // a) a user switches levels, or
@@ -248,6 +267,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         )}
         {canChatWithModel && (
           <UserChatMessageEditor
+            clientType={clientType}
             modelParameters={modelParameters}
             editorContainerClassName={moduleStyles.messageEditorContainer}
             chatButtons={chatButtons}

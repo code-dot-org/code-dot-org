@@ -19,6 +19,10 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         {
           color: theme.palette.text.secondary,
         },
+      '&.MuiTypography-body1.paragraph--color-white, &.MuiTypography-body2.paragraph--color-white, &.MuiTypography-body3.paragraph--color-white, &.MuiTypography-body4.paragraph--color-white':
+        {
+          color: theme.palette.common.white,
+        },
       // Overline styles
       '&.MuiTypography-overline': {
         display: 'inline-block',
@@ -34,6 +38,11 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         color: theme.palette.secondary.dark,
         backgroundColor: alpha(theme.palette.secondary.main, 0.1),
         border: `1px solid ${theme.palette.secondary.dark}`,
+      },
+      '&.MuiTypography-overline.overline--color-white': {
+        color: theme.palette.common.white,
+        backgroundColor: alpha(theme.palette.common.white, 0.1),
+        border: `1px solid ${theme.palette.common.white}`,
       },
       '&.MuiTypography-overline.overline--size-s': {
         fontSize: '0.75rem', // 12px

@@ -4,6 +4,7 @@ import {clearChatMessages} from '@cdo/apps/aichat/redux';
 import {ModelParameters} from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {aiTutorModelId} from '../../ai/AiTutorModelId';
 
@@ -46,6 +47,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
+        clientType={AiChatClientTypes.AI_TUTOR}
         modelParameters={MODEL_PARAMETERS}
         chatButtons={CHAT_BUTTONS}
         hiddenContext={hiddenContext}

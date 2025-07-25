@@ -833,6 +833,12 @@ module SharedConstants
     GEMINI_2_5_PRO: "gemini-2.5-pro",
   }
 
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: 0,
+    AI_TUTOR: 1,
+    FLOW_LAB: 2,
+  }
+
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   AI_CHAT_TEACHER_FEEDBACK = {

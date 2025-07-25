@@ -1,4 +1,4 @@
-import {Components, Theme} from '@mui/material/styles';
+import {alpha, Components, Theme} from '@mui/material/styles';
 
 import {createFontStack} from '@/themes/common/constants';
 import {NOTO_FONT} from '@/themes/constants/fonts';
@@ -15,20 +15,41 @@ export const LINK_OVERRIDES: Components<Theme>['MuiLink'] = {
       marginBottom: theme.spacing(2),
       textDecoration: 'underline',
       transition: 'color 0.2s ease-in-out',
-      '&:hover': {
-        color: theme.palette.secondary.main,
-        '& svg': {
-          color: theme.palette.secondary.main,
-        },
-      },
       '& svg': {
-        color: theme.palette.text.primary,
         transition: 'color 0.2s ease-in-out',
+        marginTop: theme.spacing(0.4),
       },
       '&:focus-visible': {
         outline: `2px solid ${theme.palette.primary.main}`,
         outlineOffset: '2px',
         borderRadius: theme.spacing(0.5),
+      },
+      '&.MuiLink-root.link--color-primary': {
+        color: theme.palette.text.primary,
+        '&:hover': {
+          color: theme.palette.secondary.main,
+          '& svg': {
+            color: theme.palette.secondary.main,
+          },
+        },
+        '& svg': {
+          color: theme.palette.text.primary,
+        },
+      },
+      '&.MuiLink-root.link--color-white': {
+        color: theme.palette.common.white,
+        '&:hover': {
+          color: alpha(theme.palette.common.white, 0.8),
+          '& svg': {
+            color: alpha(theme.palette.common.white, 0.8),
+          },
+        },
+        '&:focus-visible': {
+          outlineColor: alpha(theme.palette.common.white, 0.8),
+        },
+        '& svg': {
+          color: theme.palette.common.white,
+        },
       },
       '&.MuiLink-root.link--size-l': {
         fontSize: '1.375rem', // 22px
