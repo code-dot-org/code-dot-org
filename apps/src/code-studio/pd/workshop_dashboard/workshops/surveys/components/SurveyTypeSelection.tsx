@@ -20,6 +20,7 @@ export const SurveyTypeSelection: FC<SurveyTypeSelectionProps> = ({
 
   return (
     <SimpleDropdown
+      size="s"
       name="survey type selection"
       items={surveyTypeOptions}
       dropdownTextThickness="thin"

@@ -4,6 +4,8 @@ import {useLocation, useNavigate} from 'react-router-dom';
 
 import {SurveyCategorySelectionProps} from '../../types';
 
+import styles from '../../workshop.module.scss';
+
 export const SurveyCategorySelection: FC<SurveyCategorySelectionProps> = ({
   buttons,
 }) => {
@@ -20,10 +22,14 @@ export const SurveyCategorySelection: FC<SurveyCategorySelectionProps> = ({
   };
 
   return (
-    <SegmentedButtons
-      buttons={buttons}
-      selectedButtonValue={selectedValue}
-      onChange={handleChange}
-    />
+    <div className={styles.categorySelectionContainer}>
+      <span>Dashboard view:</span>
+      <SegmentedButtons
+        size="s"
+        buttons={buttons}
+        selectedButtonValue={selectedValue}
+        onChange={handleChange}
+      />
+    </div>
   );
 };

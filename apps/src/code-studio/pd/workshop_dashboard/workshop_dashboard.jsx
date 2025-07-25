@@ -66,24 +66,28 @@ const postSurveyCategoryChildRoutes = [
   {
     label: 'Implementation',
     path: 'implementation',
+    icon: 'rocket',
     component: Implementation,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Implementation',
   },
   {
     label: 'Engagement',
     path: 'engagement',
+    icon: 'heart',
     component: Engagement,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Engagement',
   },
   {
     label: 'Logistics',
     path: 'logistics',
+    icon: 'calendar-check',
     component: Logistics,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Logistics',
   },
   {
     label: 'Facilitator Feedback',
     path: 'facilitators',
+    icon: 'star',
     component: Facilitators,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Facilitators',
     childRoutes: [
@@ -98,6 +102,7 @@ const postSurveyCategoryChildRoutes = [
   {
     label: 'Other',
     path: 'other',
+    icon: 'ellipsis',
     component: Other,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Other',
   },
@@ -109,9 +114,10 @@ const surveyTypeChildRoutes = [
     path: 'post',
     component: PostSurvey,
     props: {
-      buttons: postSurveyCategoryChildRoutes.map(({label, path}) => ({
+      buttons: postSurveyCategoryChildRoutes.map(({label, path, icon}) => ({
         label,
         value: path,
+        iconLeft: {iconName: icon},
       })),
     },
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post',
