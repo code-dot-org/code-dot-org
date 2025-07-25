@@ -118,7 +118,7 @@ describe('AiDiffContainer', () => {
       const newPosition = element.style.transform;
       expect(newPosition).toEqual(`translate(1000px,1000px)`);
     });
-    
+
     userEvent.pointer([
       {keys: '[MouseLeft>]', target: handle},
       {keys: '[MouseLeft>]', target: handle, coords: {x: -50000, y: -50000}},
