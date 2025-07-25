@@ -12,12 +12,14 @@ export interface ImageProps
   src: string;
   /** Image alt text */
   altText?: string;
-  /** Image loading attribute */
-  loading?: 'eager' | 'lazy';
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
   /** Has rounded corners */
   hasRoundedCorners?: boolean;
+  /** Image width */
+  width?: string | number;
+  /** Image height */
+  height?: string | number;
   /** Custom className */
   className?: string;
 }
