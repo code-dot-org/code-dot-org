@@ -9,7 +9,7 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 export interface ImageProps
   extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'> {
   /** Image source */
-  src: string;
+  src?: string;
   /** Image alt text */
   altText?: string;
   /** Image decoration */
@@ -74,7 +74,7 @@ const Image: React.FC<ImageProps> = ({
         className,
       )}
     >
-      <ImageElement alt={altText} loading="lazy" src={imageSource} />
+      <ImageElement alt={altText || ''} loading="lazy" src={imageSource} />
     </ImageRoot>
   );
 };
