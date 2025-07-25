@@ -33,6 +33,11 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.1
 
+    # Manually configure some values to match defaults for the next version of
+    # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
+    # TODO infra: remove these values once we're loading defaults for 7.0 above
+    config.active_support.disable_to_s_conversion = true
+
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
     #
@@ -44,10 +49,6 @@ module Dashboard
     config.active_support.use_authenticated_message_encryption = false
     # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
     config.action_dispatch.use_cookies_with_metadata = false
-
-    # Set some values which must be configured here
-    # Added in 7.0
-    config.active_support.cache_format_version = 7.0
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
