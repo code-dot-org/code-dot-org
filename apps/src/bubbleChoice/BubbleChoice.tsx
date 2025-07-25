@@ -4,10 +4,11 @@
 // only used for levels that use Lab2.  For levels that don't use Lab2,
 // they will get an older-style level.
 import {Button} from '@code-dot-org/component-library/button';
+import Dialog from '@code-dot-org/component-library/dialog';
 import {Heading4} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -28,11 +29,11 @@ import styles from './BubbleChoice.module.scss';
 
 const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
   // The image has a 4:3 aspect ratio.
-  const imageAspectRatio = 4 / 3;
+  const imageAspectRatio = 1;
 
   // The aspect ratio of each sublevel button.  It has an image above a text area,
   // each with the same aspect ratio.
-  const aspectRatio = imageAspectRatio / 2;
+  const aspectRatio = imageAspectRatio / 1.2;
 
   // The gap (in pixels) between each sublevel button.
   const gap = 15;
@@ -57,6 +58,10 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
   const [containerHeight, setContainerHeight] = React.useState(0);
 
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const [selectedSublevel, setSelectedSublevel] = useState<
+    BubbleChoiceSublevel | undefined
+  >(undefined);
 
   const numSubLevels = levelBubbleChoice.sublevels.length;
 
@@ -133,6 +138,34 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
 
   return (
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
+      {selectedSublevel && (
+        <Dialog
+          //imageUrl={selectedSublevel.thumbnail_url}
+          title={selectedSublevel.display_name}
+          customContent={
+            <div className={styles.selectedSublevelContent}>
+              <img
+                alt=""
+                src={selectedSublevel.thumbnail_url}
+                className={styles.sublevelImage}
+              />
+              <EnhancedSafeMarkdown
+                markdown={selectedSublevel.description}
+                className={styles.sublevelDescriptionMarkdown}
+              />
+            </div>
+          }
+          primaryButtonProps={{
+            text: 'select',
+            onClick: () => {
+              navigateToSublevel(selectedSublevel);
+              setSelectedSublevel(undefined);
+            },
+          }}
+          onClose={() => setSelectedSublevel(undefined)}
+        />
+      )}
+
       <div>
         {levelBubbleChoice.displayName && (
           <Heading4 className={styles.heading}>
@@ -166,7 +199,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
                 width: imageWidth,
                 height: imageWidth / aspectRatio,
               }}
-              onClick={() => navigateToSublevel(sublevel)}
+              onClick={() => setSelectedSublevel(sublevel)}
             >
               <div
                 className={styles.sublevelImageContainer}

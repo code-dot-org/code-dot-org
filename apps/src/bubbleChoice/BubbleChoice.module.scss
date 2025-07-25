@@ -1,5 +1,17 @@
 @import 'color.scss';
 
+.selectedSublevelContent {
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  gap: 1.5rem;
+  font-size: 16px;
+
+  img {
+    width: 50%;
+  }
+}
+
 .bubbleChoiceContainer {
   display: flex;
   flex-direction: column;
@@ -95,28 +107,6 @@
             text-align: initial;
             margin: 0;
           }
-
-          .sublevelDescriptionMarkdown{
-            text-align: initial;
-            overflow-y: auto;
-
-            p {
-              margin-bottom: 1cqw;
-              font-size: 6cqw;
-              line-height: 1.4em;
-            }
-
-            ol, ul {
-              font-size: 6cqw;
-              line-height: 0;
-              margin: 0 0 4cqw 8cqw;
-            }
-
-            li {
-              margin-bottom: 1cqw;
-              line-height: 1.4em;
-            }
-          }
         }
       }
     }
@@ -127,5 +117,27 @@
       position: absolute;
       inset-inline-end: 0;
     }
+  }
+}
+
+.sublevelDescriptionMarkdown{
+  text-align: initial;
+  overflow-y: auto;
+
+  p {
+    margin-bottom: 1cqw;
+    font-size: 16px;
+    line-height: 1.4em;
+  }
+
+  ol, ul {
+    font-size: 6cqw;
+    line-height: 0;
+    margin: 0 0 4cqw 8cqw;
+  }
+
+  li {
+    margin-bottom: 1cqw;
+    line-height: 1.4em;
   }
 }
