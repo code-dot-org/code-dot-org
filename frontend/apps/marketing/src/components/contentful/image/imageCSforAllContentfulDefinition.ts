@@ -1,7 +1,7 @@
 // Creates a definition for the Image component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-export const ImageContentfulComponentDefinition: ComponentDefinition = {
+export const ImageCSforAllContentfulComponentDefinition: ComponentDefinition = {
   id: 'image',
   name: 'Image',
   category: '03: Content Building Blocks',
@@ -42,7 +42,6 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
         in: [
           {value: 'none', displayName: 'None'},
           {value: 'border', displayName: 'Border'},
-          {value: 'shadow', displayName: 'Shadow'},
         ],
       },
     },

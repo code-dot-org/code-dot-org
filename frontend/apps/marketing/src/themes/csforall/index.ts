@@ -34,6 +34,9 @@ const theme = createTheme({
     },
   },
   components: STYLE_OVERRIDES,
+  shape: {
+    borderRadius: 32,
+  },
   typography: {
     fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
     h1: {

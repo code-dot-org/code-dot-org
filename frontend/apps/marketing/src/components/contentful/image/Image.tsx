@@ -1,47 +1,86 @@
-import React, {useMemo} from 'react';
-
-import DSCOImage from '@code-dot-org/component-library/image';
+'use client';
+import {styled} from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import classNames from 'classnames';
+import React, {useMemo, ImgHTMLAttributes} from 'react';
 
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 
-type ImageProps = {
-  /** Image URL */
-  src?: string | null;
+export interface ImageProps
+  extends Omit<ImgHTMLAttributes<HTMLElement>, 'width' | 'height'> {
+  /** Image source */
+  src: string;
   /** Image alt text */
   altText?: string;
+  /** Image loading attribute */
+  loading?: 'eager' | 'lazy';
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
-  /** Image has rounded corners */
+  /** Has rounded corners */
   hasRoundedCorners?: boolean;
-};
+  /** Custom className */
+  className?: string;
+}
+
+const ImageRoot = styled('figure', {
+  name: 'MuiImage',
+  slot: 'root',
+})(() => ({
+  position: 'relative',
+  width: '100%',
+  height: '100%',
+  overflow: 'hidden',
+  margin: 0,
+}));
+
+const ImageElement = styled('img', {
+  name: 'MuiImage',
+  slot: 'imageElement',
+})(() => ({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  margin: 0,
+  padding: 0,
+}));
 
 const Image: React.FC<ImageProps> = ({
   src,
   altText,
   decoration,
   hasRoundedCorners,
+  className,
 }) => {
   const imgSrc = useMemo(() => src && getAbsoluteImageUrl(src), [src]);
 
   // Show placeholder text until a content entry is added
   if (!imgSrc) {
     return (
-      <div style={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>🖼️ Image placeholder.</strong> Please add an "Image" content
           type or image asset entry in the Content sidebar.
         </em>
-      </div>
+      </Typography>
     );
   }
 
   return (
-    <DSCOImage
-      src={imgSrc}
-      altText={altText}
-      decoration={decoration}
-      hasRoundedCorners={hasRoundedCorners}
-    />
+    <ImageRoot
+      className={classNames(
+        decoration === 'border' && `image--hasBorder`,
+        decoration === 'shadow' && `image--hasShadow`,
+        hasRoundedCorners && `image--hasRoundedCorners`,
+        className,
+      )}
+    >
+      <ImageElement
+        alt={altText}
+        loading="lazy"
+        src={getAbsoluteImageUrl(src)}
+      />
+    </ImageRoot>
   );
 };
 
