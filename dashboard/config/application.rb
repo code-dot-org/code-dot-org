@@ -42,8 +42,6 @@ module Dashboard
     config.action_dispatch.use_authenticated_cookie_encryption = false
     # added in Rails 5.2 (https://github.com/rails/rails/pull/29263)
     config.active_support.use_authenticated_message_encryption = false
-    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
-    config.action_dispatch.use_cookies_with_metadata = false
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
