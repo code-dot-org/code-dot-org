@@ -125,7 +125,9 @@ jobs:
 
   # Deploy production environments in parallel, after test environments completes successfully
   deploy-production:
-    needs: deploy-test
+    needs:
+      - build-and-push-image
+      - deploy-test
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
     # Do not allow other deployments to deploy while this deployment is in progress.

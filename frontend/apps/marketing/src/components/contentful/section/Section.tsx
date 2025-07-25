@@ -38,7 +38,7 @@ export const sectionBackground: {
   transparent: 'transparent',
 };
 
-export type SectionDivider = 'none' | DividerProps['color'];
+export type SectionDivider = Exclude<'none' | DividerProps['color'], 'white'>;
 
 export const sectionDivider: {
   [key in Exclude<SectionDivider, undefined>]: SectionDivider;
