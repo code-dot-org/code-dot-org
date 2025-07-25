@@ -4,10 +4,10 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   let(:described_class) {ExpiredDeletedAccountPiiScrubber}
-  let(:described_instance) {described_class.new(dry_run: dry_run, scrub_accounts_deleted_since: scrub_accounts_deleted_since, max_accounts_to_scrub: max_accounts_to_scrub)}
+  let(:described_instance) {described_class.new(dry_run: dry_run, deleted_since: deleted_since, limit: limit)}
   let(:dry_run) {false}
-  let(:scrub_accounts_deleted_since) {User::SOFT_DELETED_RECORD_TTL.ago}
-  let(:max_accounts_to_scrub) {described_class::ACCOUNT_SCRUB_LIMIT}
+  let(:deleted_since) {User::SOFT_DELETED_RECORD_TTL.ago}
+  let(:limit) {described_class::ACCOUNT_SCRUB_LIMIT}
   let(:user) {create(:user, :deleted)}
   let(:older_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL + 1.day).ago}
   let(:newer_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL - 1.day).ago}
@@ -82,8 +82,8 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       _(accounts_to_scrub).wont_include user
     end
 
-    context 'when the number of accounts exceeds max_accounts_to_scrub' do
-      let(:max_accounts_to_scrub) {0}
+    context 'when the number of accounts exceeds limit' do
+      let(:limit) {0}
       it 'raises a SafetyConstraintViolation' do
         _(proc {accounts_to_scrub}).must_raise described_class::SafetyConstraintViolation
       end
