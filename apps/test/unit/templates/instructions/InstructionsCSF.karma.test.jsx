@@ -33,6 +33,10 @@ describe('InstructionsCSF', () => {
         longInstructions: 'Use this new block.',
       })
     );
+    // Mock getUserTheme to resolve with a basic Blockly theme
+    Blockly.cdoUtils = Blockly.cdoUtils || {};
+    Blockly.cdoUtils.getUserTheme = () =>
+      Promise.resolve(Blockly.Themes.Classic);
   });
 
   afterEach(() => {

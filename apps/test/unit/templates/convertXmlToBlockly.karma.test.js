@@ -9,6 +9,10 @@ describe('convertXmlToBlockly', function () {
     // Make sure Blockly is setup in the global namespace because convertXmlToBlockly
     // depends on it.
     setupBlocklyGlobal();
+    // Mock getUserTheme to resolve with a basic Blockly theme
+    Blockly.cdoUtils = Blockly.cdoUtils || {};
+    Blockly.cdoUtils.getUserTheme = () =>
+      Promise.resolve(Blockly.Themes.Classic);
   });
 
   it("does nothing if there's no xml", function () {
