@@ -12,18 +12,18 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import style from './courses/selfPacedPLCatalog.module.scss';
+import style from './selfPacedPLCatalog.module.scss';
 
 const SelfPacedPLCatalogExpandedCard: React.FunctionComponent<{
   courseKey: string;
   displayName: string;
-  gradeLevels?: string;
-  duration?: number;
-  csTopics?: string;
-  description?: string;
+  gradeLevels: string;
+  duration: number;
+  csTopics: string;
+  description: string;
   image?: string;
   video?: string;
-  pathToCourse?: string;
+  pathToCourse: string;
   onClose: () => void;
 }> = ({
   courseKey,

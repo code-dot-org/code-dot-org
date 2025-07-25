@@ -1,3 +1,36 @@
+.catalogFiltersContainer {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.catalogDropdownFiltersTopRow {
+  display: flex;
+  align-items: baseline;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 1em 0 0 0;
+
+  button {
+    margin: 0;
+  }
+}
+
+.catalogDropdownFilters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
+
+  button {
+    margin: 0;
+  }
+}
+
 .catalogLanguageFilterRow {
   display: flex;
   justify-content: space-between;
@@ -22,6 +55,17 @@
 .catalogLanguageFilterRowNumAvailable {
   display: flex;
   flex: start;
+}
+
+button.catalogClearFiltersButton {
+  font-size: 16px;
+  margin-left: auto;
+}
+
+[dir="rtl"] button.catalogClearFiltersButton {
+  font-size: 16px;
+  margin-right: auto;
+  margin-left: 0;
 }
 
 .iconVerticalCenter {

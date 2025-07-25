@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SelfPacedPLCatalog from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalog';
+import SelfPacedPLCatalog from '@cdo/apps/code-studio/pd/professional_learning/SelfPacedPLCatalog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
