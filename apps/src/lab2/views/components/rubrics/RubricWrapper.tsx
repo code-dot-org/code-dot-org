@@ -8,30 +8,11 @@ import {RubricData} from '@cdo/apps/types/rubricTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-function useFetchData<T>(path?: string) {
-  const [data, setData] = useState<T>();
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    if (!path) {
-      return;
-    }
-
-    setData(undefined);
-    setIsLoading(true);
-    HttpClient.fetchJson<T>(path)
-      .then(response => setData(response.value))
-      .catch(error =>
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(`Error fetching data from ${path}`, error)
-      )
-      .finally(() => setIsLoading(false));
-  }, [path]);
-
-  return {data, isLoading};
-}
-
+/**
+ * Lab2 wrapper around the teacher-facing rubrics entrypoint {@link RubricFloatingActionButton}
+ * which loads the lesson rubric asynchronously and provides student progress information from
+ * redux (as opposed to page script data which is only refreshed on page load.)
+ */
 const RubricWrapper: React.FC = () => {
   const rubricPath = useAppSelector(state => {
     const rubricId = getCurrentLesson(state)?.rubric?.id;
@@ -56,6 +37,7 @@ const RubricWrapper: React.FC = () => {
   );
   const courseName = useAppSelector(state => state.progress.courseName);
   const unitName = useAppSelector(state => state.progress.scriptName);
+
   const studentLevelInfo = useMemo(() => {
     const userLevel = levelsWithProgress?.find(
       ul => ul.userId === viewAsUserId
@@ -75,8 +57,34 @@ const RubricWrapper: React.FC = () => {
     };
   }, [viewAsUserId, levelsWithProgress, students]);
 
-  const {data: rubricData, isLoading: isLoadingRubric} =
-    useFetchData<RubricData>(rubricPath);
+  const reportingData = useMemo(
+    () => ({
+      unitName,
+      courseName,
+      levelName: currentLevelName,
+    }),
+    [unitName, courseName, currentLevelName]
+  );
+
+  const [rubricData, setRubricData] = useState<RubricData>();
+  const [isLoadingRubric, setIsLoadingRubric] = useState(false);
+
+  useEffect(() => {
+    if (!rubricPath) {
+      return;
+    }
+
+    setRubricData(undefined);
+    setIsLoadingRubric(true);
+    HttpClient.fetchJson<RubricData>(rubricPath)
+      .then(response => setRubricData(response.value))
+      .catch(error =>
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError(`Error fetching rubric data`, error)
+      )
+      .finally(() => setIsLoadingRubric(false));
+  }, [rubricPath]);
 
   if (
     !isTeacher ||
@@ -90,12 +98,6 @@ const RubricWrapper: React.FC = () => {
 
   const {rubric, canShowTaScoresAlert} = rubricData;
 
-  const reportingData = {
-    unitName,
-    courseName,
-    levelName: currentLevelName,
-  };
-
   return (
     <div data-theme="Light">
       <RubricFloatingActionButton
@@ -105,6 +107,7 @@ const RubricWrapper: React.FC = () => {
         currentLevelName={currentLevelName}
         aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
         canShowTaScoresAlert={canShowTaScoresAlert}
+        reloadOnStudentChange={false}
       />
     </div>
   );
