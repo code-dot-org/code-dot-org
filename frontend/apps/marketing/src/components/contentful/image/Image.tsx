@@ -7,7 +7,7 @@ import React, {ImgHTMLAttributes} from 'react';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 
 export interface ImageProps
-  extends Omit<ImgHTMLAttributes<HTMLElement>, 'width' | 'height'> {
+  extends Omit<ImgHTMLAttributes<HTMLImageElement>, 'width' | 'height'> {
   /** Image source */
   src: string;
   /** Image alt text */
@@ -16,10 +16,6 @@ export interface ImageProps
   decoration?: 'none' | 'border' | 'shadow';
   /** Image has rounded corners */
   hasRoundedCorners?: boolean;
-  /** Image width */
-  width?: string | number;
-  /** Image height */
-  height?: string | number;
   /** Custom className */
   className?: string;
 }
