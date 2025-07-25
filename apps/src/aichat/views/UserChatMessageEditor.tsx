@@ -5,12 +5,13 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {submitChatContents} from '../redux';
-import {ChatButton, ModelParameters} from '../types';
+import {AiChatClientType, ChatButton, ModelParameters} from '../types';
 
 import moduleStyles from './UserChatMessageEditor.module.scss';
 
 interface UserChatMessageEditorProps {
   modelParameters: ModelParameters;
+  clientType: AiChatClientType;
   editorContainerClassName?: string;
   chatButtons?: ChatButton[];
   hiddenContext?: string;
@@ -24,6 +25,7 @@ const UserChatMessageEditor: React.FunctionComponent<
   UserChatMessageEditorProps
 > = ({
   modelParameters,
+  clientType,
   editorContainerClassName,
   chatButtons,
   hiddenContext,
@@ -44,14 +46,17 @@ const UserChatMessageEditor: React.FunctionComponent<
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
+
   const handleSubmit = useCallback(
     (userMessage: string) => {
-      if (!isWaitingForChatResponse) {
+      if (!disabled) {
         dispatch(
           submitChatContents({
             text: userMessage,
             modelParameters,
-            hiddenContext: hiddenContext,
+            clientType,
+            hiddenContext,
             assets:
               multimodalAvailable && chatAssets.length > 0
                 ? chatAssets
@@ -61,16 +66,15 @@ const UserChatMessageEditor: React.FunctionComponent<
       }
     },
     [
-      isWaitingForChatResponse,
+      disabled,
       dispatch,
       hiddenContext,
       multimodalAvailable,
       chatAssets,
       modelParameters,
+      clientType,
     ]
   );
-
-  const disabled = isWaitingForChatResponse || saveInProgress || uploadsPending;
 
   useEffect(() => {
     if (!disabled) {

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-23 16:53:41 UTC",
+    "serialized_at": "2025-07-24 20:42:19 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -279,6 +279,18 @@
       }
     },
     {
+      "key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses"
+      }
+    },
+    {
       "key": "03e4b1bb-a907-4542-8bfc-6dc52021ea94",
       "position": 1,
       "properties": {
@@ -388,6 +400,27 @@
       "seeding_key": {
         "activity_section.key": "db417df2-3210-4080-9201-cf3b6356ca50",
         "lesson_activity.key": "ed844817-2dc3-4307-8dbf-bd29660e5cfc"
+      }
+    },
+    {
+      "key": "c3ec8f3f-78f9-4ecd-bd24-1abe34d2fcce",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3ec8f3f-78f9-4ecd-bd24-1abe34d2fcce",
+        "lesson_activity.key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0"
+      }
+    },
+    {
+      "key": "c8a5950d-5b8e-437f-b794-104214b8c5f1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Phishing Scams"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1",
+        "lesson_activity.key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0"
       }
     },
     {
@@ -831,6 +864,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson4-level1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson4-level2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Phishing Scams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson4-level3"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-ai-powered-threats-defenses-lesson5-level1"
         ],
@@ -851,7 +950,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -876,7 +975,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -901,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -926,7 +1025,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -951,11 +1050,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson6-level4"
+        ],
         "progression": "Who Protects CIA?"
       },
       "bonus": false,
@@ -1152,6 +1254,42 @@
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
         "activity_section.key": "db417df2-3210-4080-9201-cf3b6356ca50"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson4-level1",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson4-level2",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson4-level3",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
       }
     },
     {

@@ -9,6 +9,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -31,6 +32,7 @@ export default async function askAi(
   };
 
   const aichatContext: AichatContext = {
+    clientType: AiChatClientTypes.FLOW_LAB,
     currentLevelId,
     scriptId,
     channelId,

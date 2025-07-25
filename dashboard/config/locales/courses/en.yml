@@ -5593,7 +5593,7 @@ en:
           version_title: ''
         teaching-csd-unit1-2025:
           title: Teaching Problem Solving and Computing
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Problem Solving and Computing. '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'25-'26"
@@ -5628,7 +5628,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-unit2-2025:
           title: Teaching Web Development
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Web Development. '
           description_student: |-
             ## Welcome
             Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 2- Teaching Web Development** with your students.
@@ -5645,13 +5645,13 @@ en:
             * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 2 - Teaching Web Development. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
-          version_title: ''
+          version_title: "'25-'26"
         teaching-csd-unit3-2025:
           title: Preparing to Teach Interactive Animations and Games
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Interactive Animations & Games. '
           description_student: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_teacher: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          version_title: 25-26
+          version_title: "'25-'26"
         teaching-csd-unit4-2025:
           title: Teaching the Design Process
           description_short: ''
@@ -5660,7 +5660,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-unit5-2025:
           title: Teaching Data and Society
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Teaching Data and Society.
           description_student: |-
             ## Welcome
             Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 5 - Teaching Data and Society** with your students.
@@ -5680,7 +5680,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-physical-computing-2025:
           title: Teaching Creating Apps with Devices (Circuit Playground)
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Creating Apps with Devices (Circuit Playground). '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'25-'26"
@@ -5720,7 +5720,7 @@ en:
           version_title: 25-26
         teaching-csd-aiml-2025:
           title: Teaching AI and Machine Learning
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s AI and Machine Learning. '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'25-'26"
@@ -5860,7 +5860,7 @@ en:
           version_title: "'25-'26"
         teaching-foundations-ai-programming-2025:
           title: Teaching Foundations of AI Programming
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Foundations of AI Programming unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
 
@@ -5881,7 +5881,7 @@ en:
             #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
 
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
-          version_title: ''
+          version_title: "'25-'26"
         idaho-digital-literacy-2025:
           title: Idaho Digital Literacy
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
@@ -5938,13 +5938,13 @@ en:
           version_title: "'25-'26"
         teaching-fabric-of-internet-2025:
           title: Teaching Fabric of the Internet
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: 25 - 26
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          description_student: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          description_teacher: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          version_title: "'25 - '26"
         teaching-ai-systems-that-power-it-2025:
           title: Teaching AI and the Systems that Power It
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's AI and the Systems that Power It unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
 
@@ -5992,7 +5992,7 @@ en:
           version_title: ''
         teaching-insights-from-data-and-ai-2025:
           title: Teaching Insights from Data and AI
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Insights from Data and AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
 
@@ -6016,7 +6016,7 @@ en:
           version_title: ''
         teaching-problem-solving-with-ai-2025:
           title: Teaching Problem-Solving with AI
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Problem Solving with AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
 
@@ -6210,7 +6210,7 @@ en:
           version_title: ''
         teaching-intro-java-2025:
           title: 'Introduction to Java for Teachers '
-          description_short: ''
+          description_short: This professional learning module is designed to introduce you to basic Java concepts.
           description_student: |-
             ##Welcome!
             #### This professional learning module is designed to introduce you to basic Java concepts.
@@ -6233,7 +6233,7 @@ en:
             #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
 
             #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
-          version_title: ''
+          version_title: "'25-'26"
         foundations-generative-ai-unplugged:
           title: Foundations of Generative AI (Unplugged)
           description_short: Foundations of Generative AI (Unplugged)
