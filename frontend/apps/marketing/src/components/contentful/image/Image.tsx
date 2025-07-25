@@ -2,7 +2,7 @@
 import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
-import React, {useMemo, ImgHTMLAttributes} from 'react';
+import React, {ImgHTMLAttributes} from 'react';
 
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 
@@ -54,10 +54,8 @@ const Image: React.FC<ImageProps> = ({
   hasRoundedCorners,
   className,
 }) => {
-  const imgSrc = useMemo(() => src && getAbsoluteImageUrl(src), [src]);
-
   // Show placeholder text until a content entry is added
-  if (!imgSrc) {
+  if (!src) {
     return (
       <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
