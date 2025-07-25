@@ -27,13 +27,11 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffFloatingActionButtonProps {
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
   scriptName,
-  unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
   const localStorageOpenedKey = 'AiDiffHasOpenedKey';
@@ -70,7 +68,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const body = JSON.stringify({
       context: context,
     });
-    HttpClient.post(`/ai_diff/curriculum_courses`, body, true, {
+    HttpClient.post(`/aidiff_threads/curriculum_courses`, body, true, {
       'Content-Type': 'application/json',
     })
       .then(response => response.json())
@@ -94,7 +92,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const eventData = {
       aiDiffChatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
     const eventName = isOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
@@ -132,7 +129,6 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         context={context}
         closeTutor={handleClick}
         scriptName={scriptName}
-        unitDisplayName={unitDisplayName}
         curriculumCourses={curriculumCourses}
       />
     </div>

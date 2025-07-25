@@ -69,12 +69,12 @@ const GENERAL_SUGGESTED_PROMPTS = [
   ADDITIONAL_HELP_PROMPT,
 ];
 
-const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
+const AIDIFF_THREADS_ENDPOINT = '/aidiff_threads';
+const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 
 interface AiDiffChatProps {
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
@@ -85,7 +85,6 @@ interface AiDiffChatProps {
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
   scriptName,
-  unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
   suggestedPrompts = context.type === AiDiffContext.GENERAL
@@ -98,15 +97,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     return {
       chatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
-  }, [context, scriptName, unitDisplayName]);
-
-  const [sessionId, setSessionId] = useState(null);
+  }, [context, scriptName]);
 
   const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
 
   const [suggestionPage, setSuggestionPage] = useState(0);
+
+  const [threadId, setThreadId] = useState(null);
 
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
@@ -118,7 +116,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }
   if (context.type === AiDiffContext.LEVEL) {
     additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
-    context.viewAsUserId = viewAsUserId;
   }
 
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
@@ -138,7 +135,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     };
 
     setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message, false);
+    getAIResponse(message, false, null);
   };
 
   const onPromptSelect = (prompt: ChatPrompt) => {
@@ -159,7 +156,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       ]);
     }
     if (!prompt.followUpPrompts && !prompt.response) {
-      getAIResponse(prompt.prompt, true);
+      getAIResponse(prompt.prompt, true, prompt.label);
     }
   };
 
@@ -177,13 +174,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   };
 
   const sendChatEvent = React.useCallback(
-    (role: string, prompt: string, preset: boolean, session: string) => {
+    (role: string, prompt: string, preset: boolean, thread: number) => {
       const responseEventData = {
         ...reportingData,
         role: role,
         isPreset: preset,
         text: prompt,
-        sessionId: session,
+        threadId: thread,
         url: window.location.href,
       };
       analyticsReporter.sendEvent(
@@ -196,21 +193,27 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   );
 
   const getAIResponse = React.useCallback(
-    (prompt: string, isPreset: boolean) => {
+    (prompt: string, isPreset: boolean, presetChipText: string | null) => {
       setIsWaitingForResponse(true);
 
-      if (sessionId !== null) {
-        sendChatEvent(Role.USER, prompt, isPreset, sessionId);
+      if (threadId !== null) {
+        sendChatEvent(Role.USER, prompt, isPreset, threadId);
       }
 
+      const endpoint =
+        threadId === null
+          ? `${AIDIFF_THREADS_ENDPOINT}`
+          : `${AIDIFF_THREADS_ENDPOINT}/${threadId}/${AIDIFF_CHAT_COMPLETION}`;
+
       const body = JSON.stringify({
-        context,
         inputText: prompt,
-        unitDisplayName,
-        sessionId,
         isPreset,
+        presetChipText,
+        ...(threadId === null ? {context} : {}),
+        ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
       });
-      HttpClient.post(`${AI_DIFF_CHAT_MESSAGE_ENDPOINT}`, body, true, {
+
+      HttpClient.post(endpoint, body, true, {
         'Content-Type': 'application/json',
       })
         .then(response => response.json())
@@ -219,22 +222,24 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             role: Role.ASSISTANT,
             chatMessageText: json.chat_message_text,
             status: json.status,
-            id: json.messageId,
+            id: json.message_id,
           };
 
-          // logging here because on the first user message the sessionId is null
-          // we only get a sessionID initialized in the response
-          if (sessionId === null) {
-            sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
+          // logging here because on the first user message the threadID is null
+          // we only get a threadID initialized in the response
+          if (threadId === null) {
+            sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
           }
 
           sendChatEvent(
             Role.ASSISTANT,
             json.chat_message_text,
             isPreset,
-            json.session_id
+            json.thread_id
           );
-          setSessionId(json.session_id);
+          if (json.thread_id) {
+            setThreadId(json.thread_id);
+          }
           setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
         })
         .catch(error => console.log(error))
@@ -243,7 +248,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           chatResponseCallback();
         });
     },
-    [context, unitDisplayName, sessionId, chatResponseCallback, sendChatEvent]
+    [context, threadId, viewAsUserId, chatResponseCallback, sendChatEvent]
   );
 
   // Scroll to bottom of content when a new message comes in
