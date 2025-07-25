@@ -12,6 +12,7 @@ import showProjectAdmin from '../showProjectAdmin';
  * @param {string} tosText
  */
 export default (project, tosText) => {
+  console.log('project.getCurrentId', project.getCurrentId());
   ReactDOM.render(
     React.createElement(AbuseExclamation, {
       i18n: {
@@ -22,9 +23,13 @@ export default (project, tosText) => {
           )}`,
         }),
         edit_project: msg.editProject(),
+        view_project: msg.viewProject(),
         go_to_code_studio: msg.goToCodeStudio(),
       },
       isOwner: project.isOwner(),
+      canViewFlaggedProject:
+        project.isTeacherOfProjectOwnerOrProjectValidator(),
+      channelId: project.getCurrentId(),
     }),
     document.getElementById('codeApp')
   );

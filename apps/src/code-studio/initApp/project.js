@@ -416,6 +416,13 @@ var projects = (module.exports = {
     return !!(current && current.isOwner);
   },
 
+  /**
+   * @returns {boolean}
+   */
+  isTeacherOfProjectOwnerOrProjectValidator() {
+    return !!isTeacherOfProjectOwner || appOptions.canResetAbuse;
+  },
+
   isPublished() {
     return !!(current && current.publishedAt);
   },
@@ -497,12 +504,12 @@ var projects = (module.exports = {
     // manipulated by the user. In this case that's okay, since all that does
     // is allow them to view a project that was marked as abusive.
     // If current user is teacher of project's owner, then allow them to view as well.
-    const hasEditOrViewPermissions =
-      this.isOwner() || appOptions.canResetAbuse || isTeacherOfProjectOwner;
+    const hasViewPermissions =
+      appOptions.canResetAbuse || isTeacherOfProjectOwner;
 
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
-    return hasEditOrViewPermissions && isEditOrViewPage;
+    return (this.isOwner() || hasViewPermissions) && isEditOrViewPage;
   },
 
   channelNotFound() {

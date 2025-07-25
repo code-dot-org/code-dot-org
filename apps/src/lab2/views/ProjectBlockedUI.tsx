@@ -19,8 +19,10 @@ export const ProjectBlockedUI: React.FunctionComponent<{
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const shareUrl = projectManager ? projectManager.getShareUrl() : null;
   const isOwner = useAppSelector(state => state.lab.channel?.isOwner || false);
+  const channelId = useAppSelector(state => state.lab.channel?.id) || '';
   const abuseExclamationProps = {
     isOwner,
+    channelId,
     i18n:
       blockedType === 'projectAbuse'
         ? {

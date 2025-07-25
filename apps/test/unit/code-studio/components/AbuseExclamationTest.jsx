@@ -13,7 +13,8 @@ describe('AbuseExclamation', () => {
           edit_project: 'edit project',
           go_to_code_studio: 'go to code studio',
         }}
-        isOwner
+        isOwner={false}
+        channelId="test-channel-id"
       />
     );
     expect(wrapper.find('AbuseError').length).toBe(1);
@@ -29,7 +30,8 @@ describe('AbuseExclamation', () => {
           edit_project: 'edit project',
           go_to_code_studio: 'go to code studio',
         }}
-        isOwner
+        isOwner={true}
+        channelId="test-channel-id"
       />
     );
     expect(wrapper.find('a').text()).toContain('edit project');
@@ -45,6 +47,7 @@ describe('AbuseExclamation', () => {
           go_to_code_studio: 'go to code studio',
         }}
         isOwner={false}
+        channelId="test-channel-id"
       />
     );
     expect(wrapper.find('a').text()).toContain('go to code studio');
