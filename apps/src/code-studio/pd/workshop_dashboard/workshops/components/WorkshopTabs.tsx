@@ -26,7 +26,7 @@ export const WorkshopTabs: FC<WorkshopProps> = ({tabList}) => {
       <Tabs
         defaultSelectedTabValue={currentTabValue}
         tabsContainerClassName={styles.tabList}
-        name="default_tabs"
+        name="workshop section tabs"
         onChange={handleChange}
         onTabClose={() => {}}
         tabs={tabList.map(tab => ({
