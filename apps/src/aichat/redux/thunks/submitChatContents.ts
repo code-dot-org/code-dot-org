@@ -24,6 +24,7 @@ import {
   CompletedChatMessage,
   ChatAsset,
   ModelParameters,
+  AiChatClientType,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -40,6 +41,7 @@ export const submitChatContents = createAsyncThunk(
     newUserMessageInput: {
       text: string;
       modelParameters: ModelParameters;
+      clientType: AiChatClientType;
       hiddenContext?: string;
       assets?: ChatAsset[];
     },
@@ -48,12 +50,14 @@ export const submitChatContents = createAsyncThunk(
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const chatEventsCurrent = state.aichat.chatEventsCurrent;
-    const {text, hiddenContext, assets, modelParameters} = newUserMessageInput;
+    const {text, hiddenContext, assets, modelParameters, clientType} =
+      newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
     thunkAPI.dispatch(clearStagedFiles());
 
     const aichatContext: AichatContext = {
+      clientType,
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,

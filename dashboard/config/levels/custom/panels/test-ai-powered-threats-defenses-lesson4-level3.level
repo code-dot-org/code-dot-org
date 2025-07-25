@@ -1,0 +1,45 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-07-24T20:41:31.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Would You Believe This?\n\nImagine getting a **video message** from your principal, your favorite celebrity—or even your mom.\n\nThey ask for help, or money, or login info.\n\nBut it's not really them.\n\nIt's a **deepfake.**",
+        "imageUrl": "",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##What Is a Deepfake?\n\nA **deepfake** is a video (or audio) that uses AI to make someone look or sound like they’re saying or doing something they never did.\n\nIt can be convincing—even to trained professionals.\n\nMost are created with free tools and just a few photos or clips.",
+        "imageUrl": "",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "##Deepfakes in Impersonation Scams\n\nScammers use deepfakes to pretend to be bosses, government officials, or even family members.\nThese videos can be used to trick people into:\n* Sending money\n* Sharing private data\n* Downloading malware",
+        "imageUrl": "",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##AI Makes It Easier and Scarier\n\nAI has made deepfakes easier than ever to create.\n\nYou don’t need a Hollywood studio—just a computer and some clips from social media.\n\nThese tools make scams faster, cheaper, and harder to detect.",
+        "imageUrl": "",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca"
+      },
+      {
+        "text": "##Real-Life Example\n\nTime to investigate! Open a new tab and do a quick search: “Recent video deepfake impersonation scam”\n\nFind a real-world example that looks interesting and answer:\n* Who was impersonated?\n* What was the goal of the scam?\n* How was AI used to pull it off?\n",
+        "imageUrl": "",
+        "key": "test-ai-powered-threats-defenses-lesson4-level3-53d0b6b9-67d0-46e9-b015-38e105be9b4f"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-24T20:41:31.117+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson4-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson4-level2\"},{\"changed_at\":\"2025-07-24 20:41:33 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-24 23:35:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

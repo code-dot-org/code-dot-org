@@ -257,8 +257,12 @@ class FilesApi < Sinatra::Base
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
+    #
+    # Use Sinatra's attachment helper to set Content-Disposition header
+    #  NOTE: this protects against header injection attacks by escaping the filename
+    #  See Jira task: BC-72
     unless code_projects_domain_root_route || safely_viewable_file_type?(type)
-      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+      attachment(filename)
     end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])

@@ -6,6 +6,7 @@ import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {
@@ -19,6 +20,7 @@ import {
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
+import FlaggedImageModal from './FlaggedImageModal';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -75,10 +77,13 @@ class AnimationPicker extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   state = {
     exitingDialog: false,
+    showFlaggedModal: false,
+    pendingUploadData: null,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -132,6 +137,7 @@ class AnimationPicker extends React.Component {
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
+          uploadsEnabled={this.props.uploadsEnabled}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -162,6 +168,61 @@ class AnimationPicker extends React.Component {
     );
   }
 
+  /**
+   * Send the uploaded image file to be moderated. Then continue with uploadStart.
+   */
+  handleModeratedUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
+    this.setState({
+      pendingUploadData: data,
+    });
+
+    HttpClient.post(`/v3/images/moderate`, file, true, {
+      'Content-Type': file.type,
+    })
+      .then(response => response.json())
+      .then(json => {
+        // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
+        if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+          this.setState({
+            showFlaggedModal: true,
+          });
+        } else {
+          // If the image is rated 'everyone' or 'unknown', continue with upload.
+          this.props.onUploadStart(this.state.pendingUploadData);
+        }
+      })
+      .catch(err => console.error('Moderation error:', err));
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) return;
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        this.props.onUploadStart(pendingUploadData);
+      })
+      .catch(err => console.error('Update abuse error:', err))
+      .finally(() => {
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+        });
+      });
+  };
+
   render() {
     if (!this.props.visible) {
       return null;
@@ -187,10 +248,20 @@ class AnimationPicker extends React.Component {
             '.png'
           }
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            isOpen
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={() => {
+              this.setState({showFlaggedModal: false, pendingUploadData: null});
+              this.props.onClose(); // Close the entire AnimationPicker
+            }}
+          />
+        )}
         {this.renderVisibleBody()}
       </BaseDialog>
     );

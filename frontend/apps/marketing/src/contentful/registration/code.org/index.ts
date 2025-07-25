@@ -58,7 +58,7 @@ import Iframe, {
   IframeContentfulComponentDefinition,
 } from '@/components/contentful/iframe';
 import Image, {
-  ImageContentfulComponentDefinition,
+  ImageCorporateSiteContentfulComponentDefinition,
 } from '@/components/contentful/image';
 import Link, {
   LinkContentfulComponentDefinition,
@@ -191,7 +191,7 @@ const contentfulRegistration = {
     },
     {
       component: Image,
-      definition: ImageContentfulComponentDefinition,
+      definition: ImageCorporateSiteContentfulComponentDefinition,
     },
     {
       component: ImageCarousel,

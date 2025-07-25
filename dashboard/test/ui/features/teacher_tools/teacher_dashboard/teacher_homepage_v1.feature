@@ -1,6 +1,10 @@
 @no_mobile
 Feature: Using the teacher dashboard homepage (v1)
 
+  Background:
+    Given I am on "http://studio.code.org/home"
+    Given I use a cookie to mock the DCDO key "teacher-homepage-v2" as "false"
+
   Scenario: Attempt to join a section you own redirects to dashboard with error message
     Given I am a teacher
     And I create a new student section and go home

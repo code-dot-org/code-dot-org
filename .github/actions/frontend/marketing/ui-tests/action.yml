@@ -32,27 +32,30 @@ runs:
   using: composite
 
   steps:
-    - name: Install Playwright
-      shell: bash
-      run: yarn playwright install --with-deps
-      working-directory: ./frontend/apps/marketing
-
     - name: Prepare UI Test Environment
       shell: bash
       working-directory: ./frontend/apps/marketing
       run: |
         echo "APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
-        DRAFT_MODE_TOKEN=${{ inputs.DRAFT_MODE_TOKEN }}" >> .env
+        DRAFT_MODE_TOKEN=${{ inputs.DRAFT_MODE_TOKEN }}
+        CI=true
+        STAGE=${{ inputs.ENVIRONMENT_TYPE }}
+        NEXT_PUBLIC_STAGE=${{ inputs.ENVIRONMENT_TYPE }}
+        APPLICATION_BASE_ADDRESS=${{ inputs.APPLICATION_BASE_ADDRESS }}
+        BRANCHED_TESTING_ENABLED=${{ inputs.BRANCHED_TESTING_ENABLED }}
+        PR_HEAD_REF=${{ inputs.PR_HEAD_REF }}
+        " >> .env
 
     - name: UI Tests
       shell: bash
-      env:
-        STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
-        NEXT_PUBLIC_STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
-        APPLICATION_BASE_ADDRESS: ${{ inputs.APPLICATION_BASE_ADDRESS }}
-        BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
-        PR_HEAD_REF: ${{ inputs.PR_HEAD_REF }}
-      run: yarn workspace @code-dot-org/marketing test:ui:ci
+      # If updating playwright, also update the version in package.json
+      run: |
+        docker run --network host \
+          --env-file ./apps/marketing/.env \
+          -v $PWD:/workspace \
+          -w /workspace/frontend \
+          mcr.microsoft.com/playwright:v1.49.1-noble \
+          bash -c "corepack enable && yarn build --filter @code-dot-org/marketing && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci"
       working-directory: ./frontend
 
     - name: Upload Playwright reports

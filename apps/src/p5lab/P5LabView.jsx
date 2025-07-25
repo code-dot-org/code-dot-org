@@ -70,6 +70,7 @@ class P5LabView extends React.Component {
     this.state = {
       libraryManifest: {},
       projectType,
+      uploadsEnabled: true,
     };
   }
 
@@ -90,6 +91,10 @@ class P5LabView extends React.Component {
     getManifest(app, locale).then(libraryManifest => {
       this.setState({libraryManifest});
     });
+    if (window.dashboard?.project) {
+      const project = window.dashboard?.project;
+      this.setState({uploadsEnabled: !project.exceedsAbuseThreshold()});
+    }
   }
 
   // Users of non-Blockly labs should always be allowed to upload animations
@@ -165,6 +170,7 @@ class P5LabView extends React.Component {
                   ? PICKER_TYPE.backgrounds
                   : this.state.projectType
               }
+              uploadsEnabled={this.state.uploadsEnabled}
             />
           )}
         </div>
@@ -214,6 +220,7 @@ class P5LabView extends React.Component {
             : this.state.projectType
         }
         interfaceMode={interfaceMode}
+        uploadsEnabled={this.state.uploadsEnabled}
       />
     ) : undefined;
   }

@@ -105,7 +105,8 @@ jobs:
       - name: Run Docker Container
         run: |
           docker run -d --env-file .env --rm --name marketing \
-            -p 3001:3000 \
+            --network=host \
+            -e PORT=3001 \
             marketing:test
           
           # Tail the docker logs

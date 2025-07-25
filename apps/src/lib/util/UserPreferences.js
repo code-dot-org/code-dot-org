@@ -53,7 +53,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
 
   /**
    * Save the preference to show v1 or v2 progress table.
-   * @param {boolean} showProgressTableV2: True if showing progress table v2, false otherwise.
+   * @param {string} showProgressTableV2: 'v2' if showing progress table v2, 'legacy' if showing v1.
    */
   setShowProgressTableV2(showProgressTableV2) {
     return $.post(`/api/v1/users/show_progress_table_v2`, {

@@ -1,7 +1,13 @@
 // Creates a definition for the Image component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-export const ImageContentfulComponentDefinition: ComponentDefinition = {
+import {
+  imageSrcDefinition,
+  imageAltTextDefinition,
+  imageHasRoundedCornersDefinition,
+} from '@/components/common/definitions';
+
+export const ImageCSforAllContentfulComponentDefinition: ComponentDefinition = {
   id: 'image',
   name: 'Image',
   category: '03: Content Building Blocks',
@@ -15,24 +21,8 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
       'https://contentful-images.code.org/90t6bu6vlf76/2Yl2LTZiEjpF9cTPzzC4TS/f6d57839806b1d310d1f527042c49e8b/component_image_tooltip.png',
   },
   variables: {
-    src: {
-      displayName: 'Image source',
-      type: 'Media',
-      defaultValue: undefined,
-      group: 'content',
-      validations: {
-        bindingSourceType: ['asset', 'manual'],
-      },
-    },
-    altText: {
-      displayName: 'Alt text',
-      type: 'Text',
-      defaultValue: '',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['asset', 'manual', 'entry'],
-      },
-    },
+    ...imageSrcDefinition,
+    ...imageAltTextDefinition,
     decoration: {
       displayName: 'Decoration',
       type: 'Text',
@@ -42,15 +32,9 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
         in: [
           {value: 'none', displayName: 'None'},
           {value: 'border', displayName: 'Border'},
-          {value: 'shadow', displayName: 'Shadow'},
         ],
       },
     },
-    hasRoundedCorners: {
-      displayName: 'Rounded corners',
-      type: 'Boolean',
-      defaultValue: true,
-      group: 'style',
-    },
+    ...imageHasRoundedCornersDefinition,
   },
 };

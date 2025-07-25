@@ -736,8 +736,19 @@ class Section < ApplicationRecord
 
     # Note that as of May 2025, script-specific assignment without course assignment
     # is not possible, so the first condition here is not necessary.
-    (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
-      (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+    if (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
+        (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+      return true
+    end
+
+    # In case we overlook a course that should have access,
+    # allow levelbuilders to dynamically allow access to AI Chat via DCDO.
+    # Note that levelbuilders should specify UNIT slugs (eg, aif1-2025),
+    # not COURSE slugs (eg, problem-solving-with-ai-2025)
+    dcdo_scripts = DCDO.get('aichat_access_units', [])
+    dcdo_scripts.flat_map do |name|
+      Unit.find_by(name: name)&.unit_groups || []
+    end.map(&:name).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

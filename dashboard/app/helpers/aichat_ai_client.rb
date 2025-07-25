@@ -154,8 +154,7 @@ class AichatAiClient
 
     messages.each do |message|
       if message['assets'].is_a?(Array)
-
-        messages_with_assets_count +=1 if message['assets'].size > 1
+        messages_with_assets_count +=1 unless message['assets'].empty?
 
         message['assets'].each do |asset|
           filename = asset['filename']

@@ -7,6 +7,7 @@ import {
   logAiInteractionFeedback,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -52,6 +53,7 @@ export default class AiTutor2Manager {
     };
 
     const aichatContext: AichatContext = {
+      clientType: AiChatClientTypes.AI_TUTOR,
       currentLevelId: this.currentLevelId
         ? parseInt(this.currentLevelId)
         : null,
