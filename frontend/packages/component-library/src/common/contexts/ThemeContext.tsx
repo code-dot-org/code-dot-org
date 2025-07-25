@@ -35,10 +35,13 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
  *    const {theme, toggleTheme} = useTheme();
  *
  * Advanced: setting `isThemeOptional` to `true` changes this default behavior and does not
- * require the component you're working in to be wrapped by a `ThemeProvider`. If `isThemeOptional`
- * is `true` and no theme is provided, `theme` will result in a value of `undefined`. In this case
- * `toggleTheme` or `setTheme` will also be undefined if `theme` is undefined, so you must account
- * for this in your code.
+ * require the component you're working in to be wrapped by a `ThemeProvider`. This is useful for
+ * parent components that need to pass the theme to a component rendered in a portal (e.g. `Tooltip`)
+ * but where the parent isn't always rendered in a provider (e.g. aiComponentLibrary's `CopyButton`).
+ *
+ * Note: if `isThemeOptional` is `true` and no theme is provided, `theme` will result in a value of
+ * `undefined`. In this case `toggleTheme` or `setTheme` will also be undefined if `theme` is
+ * `undefined`, so you must account for this in your code.
  *
  * Usage example:
  *    const {theme, toggleTheme} = useTheme(true);
