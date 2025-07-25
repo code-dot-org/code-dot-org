@@ -158,6 +158,7 @@ class LevelsController < ApplicationController
     any_parent_in_script = bubble_choice_parents.any? {|pl| pl.script_levels.any?}
     @in_script = @level.script_levels.any? || any_parent_in_script
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+    @skills = @level.skills.map {|skill| skill.attributes.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
     if @level.is_a? Applab
       @dataset_library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
     end
@@ -536,17 +537,26 @@ class LevelsController < ApplicationController
     if @level.level_concept_difficulty && !@level.level_concept_difficulty.concept_difficulties_as_string.empty?
       links[@level.name] << {text: "LCD: #{@level.level_concept_difficulty.concept_difficulties_as_string}", url: ''}
     end
+
+    if params[:scriptLevelId]
+      script_level = ScriptLevel.find_by(id: params[:scriptLevelId].to_i)
+    end
+
     is_standalone_project = ProjectsController::STANDALONE_PROJECTS.values.pluck(:name).include?(@level.name)
+
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     # We allow editing from the test environment to enable UI testing of the edit page.
     if (Rails.application.config.levelbuilder_mode || rack_env?(:test)) && !is_standalone_project
       can_edit_level = can? :edit, @level
+
       if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
+
         if [Javalab, Music, Pythonlab, Weblab2].include?(@level.class)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
           links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
+
           if [Music].include?(@level.class)
             links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
           end
@@ -554,6 +564,7 @@ class LevelsController < ApplicationController
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}
       end
+
       if @level.is_a?(LevelGroup)
         links["Sublevels"] = @level.levels.map {|sublevel| {text: sublevel.name, url: level_path(sublevel)}}
       end
@@ -563,30 +574,26 @@ class LevelsController < ApplicationController
         links["Template Level"] = [
           {text: project_template_level_name, url: level_path(project_template_level)}
         ]
-        template_level_edit_link =
-          if can_edit_level
-            {text: 'Edit', url: edit_level_path(project_template_level)}
-          else
-            {text: '(Cannot edit)', url: ''}
-          end
+        template_level_edit_link = can_edit_level ?
+          {text: 'Edit', url: edit_level_path(project_template_level)} :
+          {text: '(Cannot edit)', url: ''}
         links["Template Level"] << template_level_edit_link
       end
-
-    elsif @script_level
+    elsif script_level
       links[@level.name] << {
         text: 'edit on levelbuilder',
-        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(@script_level, @extra_params)).to_s
+        url: URI.join("https://levelbuilder-studio.code.org/", build_script_level_path(script_level)).to_s
       }
     end
 
     script_level_path_links = []
     script_levels = @level.script_levels.includes(:script)
 
-    script_levels.each do |script_level|
-      script_level_path = build_script_level_path(script_level)
+    script_levels.each do |sl|
+      script_level_path = build_script_level_path(sl)
 
       script_level_path_links << {
-        script: script_level.script.name,
+        script: sl.script.name,
         path: script_level_path
       }
     end
@@ -612,6 +619,60 @@ class LevelsController < ApplicationController
       script_level_path_links: script_level_path_links,
       parent_level_path_links: parent_level_path_links
     }
+  end
+
+  def add_skill
+    level_id = params[:id].to_i
+    skill_id  = params[:skillId].to_i
+
+    begin
+      @level = Level.find(level_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "No level with id #{level_id}"
+    end
+
+    begin
+      @skill = Skill.find(skill_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "No skill with id #{skill_id}"
+    end
+
+    unless @level.skills.include?(@skill)
+      @level.skills << @skill
+      @level.add_skill_key(@skill.key)
+    end
+
+    if @level.save
+      render json: {status: 'success', message: "Skill #{@skill.id} successfully added to #{@level.id}"}, status: :created
+    else
+      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
+    end
+  end
+
+  def remove_skill
+    level_id = params[:id].to_i
+    skill_id  = params[:skillId].to_i
+
+    begin
+      @level = Level.find(level_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "No level with id #{level_id}"
+    end
+
+    begin
+      @skill = Skill.find(skill_id)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: "No skill with id #{skill_id}"
+    end
+
+    @level.skills.delete(@skill)
+    @level.remove_skill_key(@skill.key)
+
+    if @level.save
+      render json: {status: 'success', message: "Skill #{@skill.id} successfully removed from #{@level.id}"}, status: :ok
+    else
+      render json: {status: 'error', message: @level.errors.full_messages.to_sentence}, status: :bad_request
+    end
   end
 
   # Use callbacks to share common setup or constraints between actions.

@@ -83,11 +83,16 @@ module Services
     end
 
     def self.lti_user_type(current_user, lti_integration, nrps_section)
-      lti_user_id = Queries::Lti.lti_user_id(current_user, lti_integration)
-      member_roles = lti_user_roles(nrps_section, lti_user_id)
+      lti_user_ids = Queries::Lti.lti_user_ids(current_user, lti_integration)
 
-      if Policies::Lti.lti_teacher?(member_roles)
-        return ::User::TYPE_TEACHER
+      return ::User::TYPE_STUDENT unless lti_user_ids
+
+      # Check if any of the user's LTI IDs have teacher roles
+      lti_user_ids.each do |lti_user_id|
+        member_roles = lti_user_roles(nrps_section, lti_user_id)
+        if Policies::Lti.lti_teacher?(member_roles)
+          return ::User::TYPE_TEACHER
+        end
       end
 
       return ::User::TYPE_STUDENT

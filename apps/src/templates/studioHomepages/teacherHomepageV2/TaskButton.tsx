@@ -42,6 +42,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
 
   return (
     <NavLink
+      id={`task-button-${buttonText.replaceAll(' ', '-')}`}
       className={styles.taskButtons}
       onClick={sendEvent}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}

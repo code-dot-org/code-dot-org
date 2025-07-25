@@ -9,7 +9,7 @@ test.describe('Caching Tests', () => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     const response = await allTheThingsPage.goto();
 
     const cacheControlHeader = response?.headers()['cache-control'];
@@ -25,7 +25,7 @@ test.describe('Caching Tests', () => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     const response = await allTheThingsPage.enableDraftMode(
       process.env.DRAFT_MODE_TOKEN,
     );
@@ -52,6 +52,36 @@ test.describe('Caching Tests', () => {
     );
   });
 
+  test('should disable cache if on preview site', async ({
+    page,
+    browserName,
+  }) => {
+    test.skip(browserName !== 'chromium', 'Only runs in Chromium');
+    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
+
+    const allTheThingsPage = new AllTheThingsPage(page, {
+      locale: 'en-US',
+      isPreview: true,
+    });
+    await allTheThingsPage.goto();
+
+    const cookieHeader = await allTheThingsPage.page.context().cookies();
+
+    const prerenderBypassCookie = cookieHeader.find(
+      cookie => cookie.name === '__prerender_bypass',
+    );
+
+    expect(prerenderBypassCookie).toEqual(
+      expect.objectContaining({
+        name: '__prerender_bypass',
+        path: '/',
+        httpOnly: true,
+        secure: true, // Needed for SameSite=none
+        sameSite: 'None', // Allow cookie in cross-origin iframes
+      }),
+    );
+  });
+
   test('should not render experiences if draft mode is enabled with search param expEditor=true', async ({
     page,
     browserName,
@@ -59,7 +89,7 @@ test.describe('Caching Tests', () => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.enableDraftMode(process.env.DRAFT_MODE_TOKEN);
 
     // Go to the same page with the expEditor=true query param
@@ -80,7 +110,7 @@ test.describe('Caching Tests', () => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     const response = await allTheThingsPage.enableDraftMode('invalid-token');
 
     expect(response?.status()).toEqual(401);

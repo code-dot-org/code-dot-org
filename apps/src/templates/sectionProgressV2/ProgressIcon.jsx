@@ -35,8 +35,10 @@ export default function ProgressIcon({itemType}) {
         <FontAwesome
           id={'uitest-' + itemType['icon']}
           icon={itemType['icon']}
-          style={{color: itemType['color']}}
-          className={styles.fontAwesomeIcon}
+          className={classNames(
+            styles.fontAwesomeIcon,
+            styles[`icon-${itemType['color']}`]
+          )}
           aria-label={itemType['title']}
         />
       )}

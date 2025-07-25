@@ -17,7 +17,7 @@ const defaultButton: LinkButtonProps = {
 
 const defaultImage: ImageProps = {
   src: 'https://via.placeholder.com/150',
-  alt: 'Placeholder Image',
+  alt: '',
 };
 
 const defaultTabs: TabGroupTabModel[] = [
@@ -91,7 +91,7 @@ describe('TabGroup', () => {
       name: 'Tab 1',
     });
 
-    const image = within(activeTabPanel).getByAltText('Placeholder Image');
+    const image = within(activeTabPanel).getByAltText('');
     expect(image).toBeVisible();
 
     const title = within(activeTabPanel).getByText('Track Your Progress');

@@ -52,9 +52,7 @@ function initPage() {
     );
   }
 
-  const differentiationContext = {
-    type: AiDiffContext.LEVEL,
-  };
+  const differentiationContext = {type: AiDiffContext.LEVEL};
 
   if (hasScriptData('script[data-aitutordata]')) {
     const aiTutorData = getScriptData('aitutordata');
@@ -116,7 +114,6 @@ function initPage() {
             context={differentiationContext}
             scriptId={reportingData.unitName}
             scriptName={reportingData.unitName}
-            unitDisplayName={reportingData.unitName}
           />
         </Provider>,
         aiDiffFabMountPoint

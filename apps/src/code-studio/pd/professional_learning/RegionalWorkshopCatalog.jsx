@@ -8,9 +8,11 @@ import {
   OverlineTwoText,
 } from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
-import React, {useEffect, useCallback, useState} from 'react';
+import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigation/images/CalendarEmptyStateIllustration.svg';
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
@@ -21,7 +23,7 @@ import RegionalWorkshopCatalogCard from './RegionalWorkshopCatalogCard';
 import style from './regionalWorkshopCatalog.module.scss';
 
 export default function RegionalWorkshopCatalog({
-  availableNationalWorkshops,
+  nationalWorkshops,
   zipFromSchoolInfo,
 }) {
   const [zipCode, setZipCode] = useState('');
@@ -35,20 +37,52 @@ export default function RegionalWorkshopCatalog({
   const [availableRegionalWorkshops, setAvailableRegionalWorkshops] = useState(
     []
   );
+  // Don't show national workshops run by the given regional partner under
+  // the "National workshops" section since they'll show up under the
+  // "Upcoming local workshops" section.
+  const availableNationalWorkshops = useMemo(() => {
+    if (!availableRegionalWorkshops) {
+      return nationalWorkshops;
+    }
+    const availableRegionalWorkshopIds = new Set(
+      availableRegionalWorkshops.map(ws => ws.id)
+    );
+    return nationalWorkshops?.filter(
+      ws => !availableRegionalWorkshopIds.has(ws.id)
+    );
+  }, [nationalWorkshops, availableRegionalWorkshops]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Load workshops for the given zip if one is present in the URL or is passed in as a prop
   useEffect(() => {
     const zipFromUrl = queryParams()['zip'];
     const prepopulatedZip = zipFromUrl ? zipFromUrl : zipFromSchoolInfo;
-    if (prepopulatedZip) {
+    if (prepopulatedZip && ZIP_REGEX.test(prepopulatedZip)) {
       setZipCode(prepopulatedZip);
-      handleSubmitZip(prepopulatedZip);
+      handleSubmitZip(prepopulatedZip, true);
+    } else {
+      // Log page visit event with null info if there's no valid prepopulated zip
+      analyticsReporter.sendEvent(
+        EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED,
+        {
+          'zip code': null,
+          'regional partner': null,
+          'number of regional workshops': 0,
+          'number of national workshops': nationalWorkshops?.length || 0,
+        },
+        PLATFORMS.BOTH
+      );
     }
-  }, [zipFromSchoolInfo, handleSubmitZip]);
+  }, [zipFromSchoolInfo, handleSubmitZip, nationalWorkshops]);
+
+  const submitOnEnter = event => {
+    if (event.key === 'Enter') {
+      handleSubmitZip(zipCode, false);
+    }
+  };
 
   const handleSubmitZip = useCallback(
-    async submittedZip => {
+    async (submittedZip, prepopulatingZip) => {
       if (isSubmitting) {
         return;
       }
@@ -66,13 +100,16 @@ export default function RegionalWorkshopCatalog({
       setIsSubmitting(true);
       try {
         updateQueryParam('zip', submittedZip, true);
-        const response = await fetch(`regional_workshop_data/${submittedZip}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRF-Token': await getAuthenticityToken(),
-          },
-        });
+        const response = await fetch(
+          `/professional-learning/regional_workshop_data/${submittedZip}`,
+          {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-Token': await getAuthenticityToken(),
+            },
+          }
+        );
 
         if (response.ok) {
           const jsonData = await response.json();
@@ -87,8 +124,26 @@ export default function RegionalWorkshopCatalog({
             setRegionalPartnerName('');
             setRegionalPartnerInfo('');
           }
-          setAvailableRegionalWorkshops(
-            jsonData.regional_workshop_data.available_regional_workshops
+
+          const newRegionalWorkshops =
+            jsonData.regional_workshop_data.available_regional_workshops;
+          setAvailableRegionalWorkshops(newRegionalWorkshops);
+
+          // Log regional partner and workshop data as the page visit event if
+          // this query is triggered by a prepopulated zip (from the user info
+          // or from a URL param), otherwise log the data as the zip enter event.
+          analyticsReporter.sendEvent(
+            prepopulatingZip
+              ? EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED
+              : EVENTS.REGIONAL_WS_CATALOG_ZIP_ENTERED,
+            {
+              'zip code': submittedZip,
+              'regional partner': regionalPartner.name,
+              'number of regional workshops': newRegionalWorkshops?.length || 0,
+              'number of national workshops':
+                availableNationalWorkshops?.length || 0,
+            },
+            PLATFORMS.BOTH
           );
         }
       } catch (error) {
@@ -100,7 +155,7 @@ export default function RegionalWorkshopCatalog({
         setIsSubmitting(false);
       }
     },
-    [isSubmitting]
+    [isSubmitting, availableNationalWorkshops]
   );
 
   const RenderUpcomingLocalWorkshopsHeading = () => {
@@ -156,7 +211,7 @@ export default function RegionalWorkshopCatalog({
               <Button
                 text="Submit"
                 color="purple"
-                onClick={() => handleSubmitZip(zipCode)}
+                onClick={() => handleSubmitZip(zipCode, false)}
               />
             </div>
           </div>
@@ -232,8 +287,6 @@ export default function RegionalWorkshopCatalog({
           location_name,
           fee,
           has_prereq,
-          description,
-          custom_registration_link,
         }) => (
           <RegionalWorkshopCatalogCard
             id={id}
@@ -249,8 +302,6 @@ export default function RegionalWorkshopCatalog({
             locationName={location_name}
             fee={fee || ''}
             hasPrereq={has_prereq}
-            description={description}
-            customRegistrationLink={custom_registration_link}
           />
         )
       )}
@@ -287,15 +338,17 @@ export default function RegionalWorkshopCatalog({
               aria-label="zipSearch"
               label="School ZIP Code:"
               onChange={e => setZipCode(e.target.value)}
+              onKeyDown={submitOnEnter}
               value={zipCode}
               maxLength={255}
               placeholder="12345"
+              color="gray"
             />
             <Button
               aria-label="submitZip"
               text="Submit"
               color="purple"
-              onClick={() => handleSubmitZip(zipCode)}
+              onClick={() => handleSubmitZip(zipCode, false)}
               isPending={isSubmitting}
             />
           </div>
@@ -322,6 +375,7 @@ export default function RegionalWorkshopCatalog({
                   disabled={!regionalPartnerName}
                 />
                 <LinkButton
+                  id="rpContactLink"
                   text="Contact"
                   target="_blank"
                   color="black"
@@ -360,6 +414,6 @@ export default function RegionalWorkshopCatalog({
 }
 
 RegionalWorkshopCatalog.propTypes = {
-  availableNationalWorkshops: PropTypes.arrayOf(PropTypes.object),
+  nationalWorkshops: PropTypes.arrayOf(PropTypes.object),
   zipFromSchoolInfo: PropTypes.string,
 };

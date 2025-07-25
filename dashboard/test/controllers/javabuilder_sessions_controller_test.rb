@@ -130,7 +130,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'student not in the authorized teachers csa section cannot get access token' do
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     teacher = create(:authorized_teacher)
     section = create(:section, user: teacher, login_type: 'word')
     create(:section, user: teacher, login_type: 'word', script: csa_script)
@@ -142,7 +142,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
   test 'student of authorized teacher in csa section can get access token' do
     teacher = create(:authorized_teacher)
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
@@ -204,7 +204,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'student of verified teacher has correct verified_teachers parameter' do
-    csa_script = create(:csa_script)
+    csa_script = create(:csa_script, :in_single_unit_course)
     verified_teacher_1 = create(:authorized_teacher)
     csa_section = create(:section, user: verified_teacher_1, login_type: 'word', script: csa_script)
     verified_teacher_2 = create(:authorized_teacher)

@@ -7,6 +7,10 @@ import {
 import {ProjectFolder} from '@codebridge/types';
 import React from 'react';
 
+import {toggleOpenFolderThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {FolderRowIcon} from './FolderRowIcon';
 import {FolderRowName} from './FolderRowName';
 import {useFolderRowOptions} from './hooks';
@@ -29,10 +33,11 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
   enableMenu,
 }) => {
   const {
-    source: {files},
     config: {validMimeTypes},
   } = useCodebridgeContext();
-
+  const files = useAppSelector(
+    state => (state.lab2Project.projectSources?.source as MultiFileSource).files
+  );
   const handleFileUpload = useHandleFileUpload(files);
   const fileUploadErrorCallback = useFileUploadErrorCallback();
   const {startFileUpload, FileUploaderComponent} = useFileUploader(
@@ -43,8 +48,8 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
     },
     item.id
   );
-  const {toggleOpenFolder} = useCodebridgeContext();
   const dropdownOptions = useFolderRowOptions(item, startFileUpload);
+  const dispatch = useAppDispatch();
 
   return (
     <>
@@ -55,7 +60,7 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
         dropdownOptions={dropdownOptions}
         IconComponent={FolderRowIcon}
         NameComponent={FolderRowName}
-        openFunction={toggleOpenFolder}
+        openFunction={id => dispatch(toggleOpenFolderThunk(id))}
       />
     </>
   );

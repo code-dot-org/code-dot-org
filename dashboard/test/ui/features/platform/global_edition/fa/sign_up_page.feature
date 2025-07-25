@@ -1,8 +1,9 @@
 @chrome
+@pegasus_content
 Feature: Global Edition - Farsi MVP - Sign Up page
 
   Background:
-    Given I am on "http://code.org"
+    Given I am on "http://studio.code.org"
     And I use a cookie to mock the DCDO key "global_edition_enabled" as "true"
 
   @eyes

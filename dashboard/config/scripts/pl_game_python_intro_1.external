@@ -1,0 +1,14 @@
+name 'pl-game-python-intro-1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<br><br>
+<img src="https://images.code.org/c794834da281ac9150f50756a1d6589a-image-1749145609569.png" alt="Banner saying Welcome to the Neighborhood a teacher's path to Python" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<br><br>
+
+<img src="https://images.code.org/a95d02239d03841d70d6eee07a619465-image-1749145530587.png" alt="overhead map of street scene from the Neighborhood IDE" width="850px" style="display: block; margin: 30px auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+
+
+MARKDOWN

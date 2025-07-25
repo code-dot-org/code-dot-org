@@ -58,7 +58,7 @@ module User::EmailValidations
   def teacher_email_required?
     return false if Policies::Lti.lti? self
     # non-teachers are not relevant to this method.
-    return false unless teacher? && purged_at.nil?
+    return false unless teacher? && purged_at.nil? && pii_scrubbed_at.nil?
 
     # new teacher accounts should always require an email
     return true if created_at.blank?

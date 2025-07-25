@@ -3,7 +3,7 @@ Feature: BubbleChoice
   @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Alice"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"
 
     # Go to BubbleChoice sublevel
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/1"
@@ -26,7 +26,6 @@ Feature: BubbleChoice
     When I sign in as "Teacher_Alice"
 
     # View progress from script overview page
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1"
     And I wait until element "#uitest-view-as-student-selector" is visible
     Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
@@ -39,6 +38,7 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1"
     And I wait until element ".teacher-panel" is visible
     # Teacher has not completed level, so make sure it is not shown as complete
+    And I wait for jquery to load
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
     And I wait for 5 seconds
@@ -50,9 +50,11 @@ Feature: BubbleChoice
   # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
   @no_mobile
   @no_firefox
+  @no_safari
   @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Alice"
 
     # Go to Lab2 BubbleChoice sublevel
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
@@ -78,8 +80,8 @@ Feature: BubbleChoice
 
     # View progress from script overview page
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1"
-    And I wait until element ".teacher-panel" is visible
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
+    And I wait until element "#uitest-view-as-student-selector" is visible
+    Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
     And I wait until current URL contains "user_id="
     And I wait until element "td:contains(Lesson Name)" is visible
     And I wait until element "td:contains(Lab2 Showcase)" is visible
@@ -88,6 +90,8 @@ Feature: BubbleChoice
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/52/levels/8"
     And I wait until element ".teacher-panel" is visible
+    And I wait for jquery to load
+    And I select the "New Section" option in dropdown with class "uitest-sectionselect"
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
@@ -101,6 +105,8 @@ Feature: BubbleChoice
     And I wait until element "#ui-close-dialog" is not visible
 
     # Teacher has not completed level, so make sure it is not shown as complete
+    And I wait until element ".teacher-panel" is visible
+    Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element "#lab2-aichat" is visible
@@ -125,4 +131,3 @@ Feature: BubbleChoice
     And I go back
     And I wait until element "#lab2-aichat" is visible
     And check that the url contains "/courses/allthethingscourse/units/1/lessons/52/levels/8/sublevel/1"
-

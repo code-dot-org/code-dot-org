@@ -306,13 +306,17 @@ function LandingPage({
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
       'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop id': sessionStorage.getItem('workshopId', null),
       'workshop course': workshopCourse,
       'workshop subject': sessionStorage.getItem('workshopSubject', null),
+      'workshop format': sessionStorage.getItem('workshopFormat', null),
     });
     [
+      'workshopId',
       'workshopCourse',
       'workshopSubject',
       'workshopName',
+      'workshopFormat',
       'sessionTimeInfo',
       'rpName',
     ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
@@ -410,7 +414,7 @@ function LandingPage({
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-learning/middle-high'),
+            url: '/professional-learning/workshops',
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
@@ -736,8 +740,8 @@ LandingPage.propTypes = {
   plCoursesInstructed: PropTypes.array,
   plCoursesStarted: PropTypes.array,
   userPermissions: PropTypes.arrayOf(PropTypes.string),
-  joinedStudentSections: shapes.sections,
-  joinedPlSections: shapes.sections,
+  joinedStudentSections: shapes.participantSections,
+  joinedPlSections: shapes.participantSections,
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),

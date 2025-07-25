@@ -1,0 +1,951 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:39.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Karma Beats\r\n\r\nDrew made a remix of Karma using a custom backing track with the Clap effect and some rests. Now that he knows about functions, he wants to turn that beat into a function he can reuse:\r\n\r\n> I keep using this same code over and over, and it's so long. I want to make a function so it's easier to know what the code is doing everywhere I use it!\r\n\r\nDrew is using **abstraction** to hide the details of his repeating beat behind a simple function name, so his code is easier to read and reuse.\r\n\r\n**Your task:** Use abstraction to define a function that captures Drew's Clap beat, then replace repeated code in the remix by calling the function instead:\r\n\r\n1) **Define** a new function in your workspace. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:procedures_defnoreturn)\r\n2) Drag Drew's clap beat into the new function. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id-up-inside:repeat_workspace) \r\n3) **Call** the function in Drew's original code. You'll need to call it more than once! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:play_workspace)\r\n\r\nAll of the blocks you need are already in the workspace. Some of the blocks are locked, but you can replace parts of his old code with new functions you create by dragging-and-dropping on top of it!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+        },
+        "type": "flyout",
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "packId": "denzel_kennedy_karma",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "#Bp,zN^m]Q}AV,8w(-6V",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_workspace",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "denzel_kennedy_karma/verse_1"
+                        },
+                        "next": {
+                          "shadow": {
+                            "type": "repeat_simple2",
+                            "id": "repeat_simple2",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 2
+                            },
+                            "inputs": {
+                              "code": {
+                                "shadow": {
+                                  "type": "set_effect_at_current_location_simple2",
+                                  "id": "set_effect_at_current_location_simple2",
+                                  "deletable": false,
+                                  "movable": false,
+                                  "editable": false,
+                                  "fields": {
+                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                    "effects_value": "<field name=\"effects_value\">low</field>"
+                                  },
+                                  "next": {
+                                    "shadow": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "deletable": false,
+                                      "movable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "pop/clap_short"
+                                      },
+                                      "next": {
+                                        "shadow": {
+                                          "type": "play_rest_at_current_location_simple2",
+                                          "id": "play_rest_at_current_location_simple2",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "fields": {
+                                            "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "k-lE}kh?DK0Ja@_rC4n2",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "pop/clap_short"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_rest_at_current_location_simple2",
+                                                  "id": "}hOdT{m84hm}pTA/;Neq",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                  },
+                                                  "next": {
+                                                    "shadow": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "4(CHQ5`,K?bwyy!5)0[i",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "pop/clap_short"
+                                                      },
+                                                      "next": {
+                                                        "shadow": {
+                                                          "type": "set_effect_at_current_location_simple2",
+                                                          "id": "G.ehpz!5zn._)VHygQnQ",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "fields": {
+                                                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                          },
+                                                          "next": {
+                                                            "shadow": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "E$]V*Uv%M$a}pbxLomQ[",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "pop/clap_short"
+                                                              },
+                                                              "next": {
+                                                                "shadow": {
+                                                                  "type": "set_effect_at_current_location_simple2",
+                                                                  "id": ".01wdq(kv7KDx3{LS?eU",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "fields": {
+                                                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                  },
+                                                                  "next": {
+                                                                    "shadow": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "mG}_|2EzpYC*d_s2;Ni)",
+                                                                      "deletable": false,
+                                                                      "movable": false,
+                                                                      "editable": false,
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "pop/clap_short"
+                                                                      },
+                                                                      "next": {
+                                                                        "shadow": {
+                                                                          "type": "play_rest_at_current_location_simple2",
+                                                                          "id": "hFO}SeF%]Wf0kfQJ/uzp",
+                                                                          "deletable": false,
+                                                                          "movable": false,
+                                                                          "editable": false,
+                                                                          "extraState": {
+                                                                            "disableNextConnection": false
+                                                                          },
+                                                                          "fields": {
+                                                                            "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "7nJ@_!zJ1[[itA!B57f]",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": ")[,v._vcgB=gU6/mR{4P",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "denzel_kennedy_karma/verse_2"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "(yII-Dw]}TW;*SaKDs3m",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "denzel_kennedy_karma/sub_bass"
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "repeat_simple2",
+                                    "id": "}~z{4M3?hjLhm9pQj#2}",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "shadow": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "OO3q4ZN{D92ylgLOIt]L",
+                                          "deletable": false,
+                                          "movable": false,
+                                          "editable": false,
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                                            "effects_value": "<field name=\"effects_value\">low</field>"
+                                          },
+                                          "next": {
+                                            "shadow": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "kx)!{-v33W8QhuWsSmkv",
+                                              "deletable": false,
+                                              "movable": false,
+                                              "editable": false,
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
+                                              "fields": {
+                                                "sound": "pop/clap_short"
+                                              },
+                                              "next": {
+                                                "shadow": {
+                                                  "type": "play_rest_at_current_location_simple2",
+                                                  "id": "a.f7_Z@:3NNFP|rY~i1H",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "extraState": {
+                                                    "disableNextConnection": false
+                                                  },
+                                                  "fields": {
+                                                    "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                  },
+                                                  "next": {
+                                                    "shadow": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "X|)MfoTU[gN=lq)]JTtv",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "pop/clap_short"
+                                                      },
+                                                      "next": {
+                                                        "shadow": {
+                                                          "type": "play_rest_at_current_location_simple2",
+                                                          "id": "P^_oK.stg+vp6jWZKxQj",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                          },
+                                                          "next": {
+                                                            "shadow": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "w9RL2GT,M-tWeEbNlcQy",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "pop/clap_short"
+                                                              },
+                                                              "next": {
+                                                                "shadow": {
+                                                                  "type": "set_effect_at_current_location_simple2",
+                                                                  "id": "LQx9M#f{9+`b29E12124",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "fields": {
+                                                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                    "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                                  },
+                                                                  "next": {
+                                                                    "shadow": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "B69#I-dLVosb%Qve7WA)",
+                                                                      "deletable": false,
+                                                                      "movable": false,
+                                                                      "editable": false,
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "pop/clap_short"
+                                                                      },
+                                                                      "next": {
+                                                                        "shadow": {
+                                                                          "type": "set_effect_at_current_location_simple2",
+                                                                          "id": "~YO_i9H~9xcO;!:osCdj",
+                                                                          "deletable": false,
+                                                                          "movable": false,
+                                                                          "editable": false,
+                                                                          "fields": {
+                                                                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                            "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                          },
+                                                                          "next": {
+                                                                            "shadow": {
+                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                              "id": "`76ahec/vybF{ed|e*LF",
+                                                                              "deletable": false,
+                                                                              "movable": false,
+                                                                              "editable": false,
+                                                                              "extraState": {
+                                                                                "disableNextConnection": false
+                                                                              },
+                                                                              "fields": {
+                                                                                "sound": "pop/clap_short"
+                                                                              },
+                                                                              "next": {
+                                                                                "shadow": {
+                                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                                  "id": ";:%FX!hXDo6ysm.e92+E",
+                                                                                  "deletable": false,
+                                                                                  "movable": false,
+                                                                                  "editable": false,
+                                                                                  "extraState": {
+                                                                                    "disableNextConnection": false
+                                                                                  },
+                                                                                  "fields": {
+                                                                                    "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "avhBQ/zj*3M.9}/tXzyj",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "/0*XJp:cWh|;siInUSR*",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "denzel_kennedy_karma/verse_3"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "Gb]a`Sd9?{2]$X#gCnS2",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "denzel_kennedy_karma/sub_bass"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "tg]f:#_Y36}nALPB:rSc",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "denzel_kennedy_karma/guitar"
+                                        },
+                                        "next": {
+                                          "shadow": {
+                                            "type": "repeat_simple2",
+                                            "id": "!}VmHrErvaPh}jeKCKRW",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "times": 2
+                                            },
+                                            "inputs": {
+                                              "code": {
+                                                "shadow": {
+                                                  "type": "set_effect_at_current_location_simple2",
+                                                  "id": "sJcn`8VzVi-aQjZ;a6[r",
+                                                  "deletable": false,
+                                                  "movable": false,
+                                                  "editable": false,
+                                                  "fields": {
+                                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                    "effects_value": "<field name=\"effects_value\">low</field>"
+                                                  },
+                                                  "next": {
+                                                    "shadow": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": "Ii2}(wq:!=L@_y])/NoX",
+                                                      "deletable": false,
+                                                      "movable": false,
+                                                      "editable": false,
+                                                      "extraState": {
+                                                        "disableNextConnection": false
+                                                      },
+                                                      "fields": {
+                                                        "sound": "pop/clap_short"
+                                                      },
+                                                      "next": {
+                                                        "shadow": {
+                                                          "type": "play_rest_at_current_location_simple2",
+                                                          "id": "w6K9$ZatX3zs)/EHr5UB",
+                                                          "deletable": false,
+                                                          "movable": false,
+                                                          "editable": false,
+                                                          "extraState": {
+                                                            "disableNextConnection": false
+                                                          },
+                                                          "fields": {
+                                                            "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                          },
+                                                          "next": {
+                                                            "shadow": {
+                                                              "type": "play_sound_at_current_location_simple2",
+                                                              "id": "2vobB$bK?YM[V!ALNk[j",
+                                                              "deletable": false,
+                                                              "movable": false,
+                                                              "editable": false,
+                                                              "extraState": {
+                                                                "disableNextConnection": false
+                                                              },
+                                                              "fields": {
+                                                                "sound": "pop/clap_short"
+                                                              },
+                                                              "next": {
+                                                                "shadow": {
+                                                                  "type": "play_rest_at_current_location_simple2",
+                                                                  "id": "F$*L=g*KA!vphG3.YLZ6",
+                                                                  "deletable": false,
+                                                                  "movable": false,
+                                                                  "editable": false,
+                                                                  "extraState": {
+                                                                    "disableNextConnection": false
+                                                                  },
+                                                                  "fields": {
+                                                                    "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                                  },
+                                                                  "next": {
+                                                                    "shadow": {
+                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                      "id": "6@k42#6Pz(g@#Jp|tg!;",
+                                                                      "deletable": false,
+                                                                      "movable": false,
+                                                                      "editable": false,
+                                                                      "extraState": {
+                                                                        "disableNextConnection": false
+                                                                      },
+                                                                      "fields": {
+                                                                        "sound": "pop/clap_short"
+                                                                      },
+                                                                      "next": {
+                                                                        "shadow": {
+                                                                          "type": "set_effect_at_current_location_simple2",
+                                                                          "id": "1X9m7;E:|CS63?0)8jXd",
+                                                                          "deletable": false,
+                                                                          "movable": false,
+                                                                          "editable": false,
+                                                                          "fields": {
+                                                                            "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                                                          },
+                                                                          "next": {
+                                                                            "shadow": {
+                                                                              "type": "play_sound_at_current_location_simple2",
+                                                                              "id": "x(r{5Vu~,criBnRDAhM5",
+                                                                              "deletable": false,
+                                                                              "movable": false,
+                                                                              "editable": false,
+                                                                              "extraState": {
+                                                                                "disableNextConnection": false
+                                                                              },
+                                                                              "fields": {
+                                                                                "sound": "pop/clap_short"
+                                                                              },
+                                                                              "next": {
+                                                                                "shadow": {
+                                                                                  "type": "set_effect_at_current_location_simple2",
+                                                                                  "id": "WlMv;A(iWpnUdddi!7a`",
+                                                                                  "deletable": false,
+                                                                                  "movable": false,
+                                                                                  "editable": false,
+                                                                                  "fields": {
+                                                                                    "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                                                    "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                                                  },
+                                                                                  "next": {
+                                                                                    "shadow": {
+                                                                                      "type": "play_sound_at_current_location_simple2",
+                                                                                      "id": "Q(dlf53ts`DN_Aa$BvKf",
+                                                                                      "deletable": false,
+                                                                                      "movable": false,
+                                                                                      "editable": false,
+                                                                                      "extraState": {
+                                                                                        "disableNextConnection": false
+                                                                                      },
+                                                                                      "fields": {
+                                                                                        "sound": "pop/clap_short"
+                                                                                      },
+                                                                                      "next": {
+                                                                                        "shadow": {
+                                                                                          "type": "play_rest_at_current_location_simple2",
+                                                                                          "id": "O|7X3`{]#D$.8zq3?f}M",
+                                                                                          "deletable": false,
+                                                                                          "movable": false,
+                                                                                          "editable": false,
+                                                                                          "extraState": {
+                                                                                            "disableNextConnection": false
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_workspace",
+              "x": 450,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 2
+              },
+              "inputs": {
+                "code": {
+                  "block": {
+                    "type": "set_effect_at_current_location_simple2",
+                    "id": "9ce9FIc2j++r`.1hY|92",
+                    "disabledReasons": [
+                      "MANUALLY_DISABLED"
+                    ],
+                    "deletable": false,
+                    "movable": false,
+                    "editable": false,
+                    "fields": {
+                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                      "effects_value": "<field name=\"effects_value\">low</field>"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "o)v8Jx]@3BvCF{QK1JAe",
+                        "disabledReasons": [
+                          "MANUALLY_DISABLED"
+                        ],
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "pop/clap_short"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_rest_at_current_location_simple2",
+                            "id": "F$6}u+U{!6?48jex_bfG",
+                            "disabledReasons": [
+                              "MANUALLY_DISABLED"
+                            ],
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "=bCcQ_N2|l`0W^?RN%zQ",
+                                "disabledReasons": [
+                                  "MANUALLY_DISABLED"
+                                ],
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "pop/clap_short"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_rest_at_current_location_simple2",
+                                    "id": "kF0-R3v8+U}U,Y-.09+d",
+                                    "disabledReasons": [
+                                      "MANUALLY_DISABLED"
+                                    ],
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "3fcewAngCa~!P(NOuBWT",
+                                        "disabledReasons": [
+                                          "MANUALLY_DISABLED"
+                                        ],
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "pop/clap_short"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "set_effect_at_current_location_simple2",
+                                            "id": "!A4|*i?,,Vz0elh}q2{Q",
+                                            "disabledReasons": [
+                                              "MANUALLY_DISABLED"
+                                            ],
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "fields": {
+                                              "effects_name": "<field name=\"effects_name\">volume</field>",
+                                              "effects_value": "<field name=\"effects_value\">medium</field>"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "P|9t}Z4m=fGVnn%rAYl8",
+                                                "disabledReasons": [
+                                                  "MANUALLY_DISABLED"
+                                                ],
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "pop/clap_short"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "set_effect_at_current_location_simple2",
+                                                    "id": "EfryYPigMeO+y[.qp~hW",
+                                                    "disabledReasons": [
+                                                      "MANUALLY_DISABLED"
+                                                    ],
+                                                    "deletable": false,
+                                                    "movable": false,
+                                                    "editable": false,
+                                                    "fields": {
+                                                      "effects_name": "<field name=\"effects_name\">volume</field>",
+                                                      "effects_value": "<field name=\"effects_value\">normal</field>"
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "play_sound_at_current_location_simple2",
+                                                        "id": "mqMh{~d(Q5T?C+d3R6E9",
+                                                        "disabledReasons": [
+                                                          "MANUALLY_DISABLED"
+                                                        ],
+                                                        "deletable": false,
+                                                        "movable": false,
+                                                        "editable": false,
+                                                        "extraState": {
+                                                          "disableNextConnection": false
+                                                        },
+                                                        "fields": {
+                                                          "sound": "pop/clap_short"
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "play_rest_at_current_location_simple2",
+                                                            "id": "}FFIx%Hd`B:(FH=QS-Fv",
+                                                            "disabledReasons": [
+                                                              "MANUALLY_DISABLED"
+                                                            ],
+                                                            "deletable": false,
+                                                            "movable": false,
+                                                            "editable": false,
+                                                            "extraState": {
+                                                              "disableNextConnection": false
+                                                            },
+                                                            "fields": {
+                                                              "rest_duration": "<field name=\"rest_duration\">0.25</field>"
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "toolboxDefinition": {
+        "contents": [
+
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-modify-2_99acf886-d323-4a10-a01a-97f7f2855ed0",
+        "message": "[replace with checking for function]",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Karma Remix"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help Drew simplify his code for a remix of Karma that he made",
+    "display_name": "Karma Remix",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/denzel_kennedy_karma/denzel_kennedy_karma.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:39.540+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-explore-practice-y\\\"\"],\"cloned_from\":\"music-lab-functions-explore-practice-y\"},{\"changed_at\":\"2025-06-12 21:05:07 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-24 21:06:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

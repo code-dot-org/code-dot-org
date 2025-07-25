@@ -435,6 +435,19 @@ pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
+# Whether most pegasus content is present in the sites and sites.v3 directories.
+# This flag should be set to false if this content has been omitted from the
+# local git client via git-sparse-checkout.
+#
+# When set to false, application features and tests which depend on most
+# pegasus content will be disabled. A small subset of pegasus content will still
+# be available to support certain features used by dashboard, such as
+# certificates, dcdo flags, and image optimization.
+#
+# It is recommended to control this flag via the `HAS_PEGASUS_CONTENT`
+# environment variable, since that will also be picked up by the apps build.
+has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
+
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
 
@@ -546,9 +559,13 @@ devinternal_db_writer: !Secret
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
 db_cluster_id: !StackSecret
 db_endpoint_writer: !StackSecret
+db_endpoint_writer_port: !StackSecret
 db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_writer_port: !StackSecret
 db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reader_port: !StackSecret
 db_endpoint_proxy_reporting: !StackSecret
+db_endpoint_proxy_reporting_port: !StackSecret
 
 # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
 # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
@@ -574,8 +591,6 @@ dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
 pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
 pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
-dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%>'
-dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
 pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
 pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
@@ -627,6 +642,9 @@ jwk_private_key_data: !Secret
 openai_evaluate_rubric_api_key: !Secret
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
+
+# Credentials for Google Gemini API
+google_gemini_student_learning_api_key: !Secret
 
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org

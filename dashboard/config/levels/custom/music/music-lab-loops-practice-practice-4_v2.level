@@ -1,0 +1,208 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:45.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_together_workspace",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_sequential",
+                        "id": "play_sequential_workspace",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false,
+      "packId": "denzel_kennedy_karma",
+      "sounds": {
+        "denzel_kennedy_karma": [
+          "track_track_track",
+          "stack_stack_stack",
+          "fact_fact_fact",
+          "cap_cap_cap",
+          "guitar",
+          "sub_bass",
+          "snare"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "denzel_kennedy_karma/track_track_track"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "id": "repeat_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "validationTimeout": 1
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "validationMode": "type"
+    },
+    "encrypted_exemplar_sources": "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\nPnGAg/ilnIjTugdXMJpkSR3XRo5X9qAebojlnA==\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Karma",
+    "long_instructions": "### Karma\r\n\r\nRecreate the chorus for Karma by Denzel Kennedy. There are 4 different vocal lyrics - use all 4 in any order you want!\r\n\r\nHere are some tips for re-creating this code:\r\n- Make sure all your vocals are in the `play sequential` block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sequential_workspace)\r\n- You'll need three `repeat` blocks - one for the beats, one for the bass, one for the lead. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:repeat_toolbox---id:play_sequential_workspace)\r\n\r\nYour final song should look like the example below\r\n\r\n![](https://images.code.org/f912b3c60bc7476b6be0a66c84221761-image-1744323448206.png)",
+    "bubble_choice_description": "Recreate the chorus to Karma by Denzel Kennedy",
+    "validations": [
+      {
+        "key": "music-lab-loops-practice-practice-4_911d27ee-500a-465e-b2f0-47fba332fce9",
+        "message": "[exemplar validation]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sound_type",
+            "value": "beat"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "bass"
+          },
+          {
+            "name": "played_sound_type",
+            "value": "lead"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-practice-practice-4_e73af878-13c6-4fcf-962f-3dc56e915177",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Be sure to add 3 new tracks - beats, bass, and leads",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ],
+        "callout": "flyout-id:play_toolbox"
+      },
+      {
+        "key": "music-lab-loops-practice-practice-4_e90ec0cd-23da-4b8b-9881-0a33e76ebb6e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Make sure you use loops! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:repeat_toolbox---id:play_sequential_workspace))",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          }
+        ],
+        "callout": "flyout-id:repeat_toolbox---id:play_sequential_workspace"
+      },
+      {
+        "key": "music-lab-loops-practice-practice-4_02fd772a-22e3-4129-8f9d-0b2bfef208f6",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: Put your vocals inside a play sequential block! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id-up-inside:play_sequential_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "flyout-id:play_toolbox---id-up-inside:play_sequential_workspace"
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.435+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-practice-4\\\"\"],\"cloned_from\":\"music-lab-loops-practice-practice-4\"}]"
+}]]></config>
+  <blocks/>
+</Music>

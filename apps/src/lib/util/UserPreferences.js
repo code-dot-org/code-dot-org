@@ -53,7 +53,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
 
   /**
    * Save the preference to show v1 or v2 progress table.
-   * @param {boolean} showProgressTableV2: True if showing progress table v2, false otherwise.
+   * @param {string} showProgressTableV2: 'v2' if showing progress table v2, 'legacy' if showing v1.
    */
   setShowProgressTableV2(showProgressTableV2) {
     return $.post(`/api/v1/users/show_progress_table_v2`, {
@@ -163,21 +163,17 @@ export default class UserPreferences extends Record({userId: 'me'}) {
     }
   }
 
-  async getGlobalTheme() {
+  async getGlobalTheme(errorCallback) {
     try {
       const themeResponse = await HttpClient.fetchJson(
         '/user_preference/theme'
       );
       return themeResponse.value?.theme?.global;
     } catch (error) {
-      // Don't log error if 'Not found', as it just means the
+      // Don't call the error callback if 'Not found', as it just means the
       // user has not set a theme yet.
       if (error.response.status !== 404) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError('Error fetching theme', undefined, {
-            message: error.response,
-          });
+        errorCallback(error);
       }
       return null;
     }

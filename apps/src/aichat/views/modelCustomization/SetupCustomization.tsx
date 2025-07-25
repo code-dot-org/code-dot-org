@@ -5,11 +5,12 @@ import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
-import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {ModelDescription} from '@cdo/apps/aichat/types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
+import {useLevelProperties} from '../../levelPropertiesContext';
 import aichatI18n from '../../locale';
 import {setAiCustomizationProperty} from '../../redux';
 
@@ -43,11 +44,8 @@ const SetupCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const availableModelIds = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.availableModelIds
-  );
+  const availableModelIds =
+    useLevelProperties().aichatSettings?.availableModelIds;
 
   // Handle the possibility that modelDescription can change but levels
   // may be using outdated model ids. Fall back to first modelDescription.

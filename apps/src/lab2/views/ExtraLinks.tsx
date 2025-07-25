@@ -13,6 +13,7 @@ import moduleStyles from './extra-links.module.scss';
 
 interface ExtraLinksProps {
   levelId: number;
+  scriptLevelId?: string;
   positionRightOfFooter?: boolean;
 }
 
@@ -24,6 +25,7 @@ interface ExtraLinksData {
 async function fetchExtraLinksData(
   permissions: string[],
   levelId: number,
+  scriptLevelId?: string,
   channelId?: string
 ): Promise<ExtraLinksData> {
   // Fetch level link data.
@@ -32,10 +34,13 @@ async function fetchExtraLinksData(
     permissions.includes(PERMISSIONS.LEVELBUILDER) ||
     permissions.includes(PERMISSIONS.PROJECT_VALIDATOR)
   ) {
+    let url = `/levels/${levelId}/extra_links`;
+    if (scriptLevelId) {
+      url += `?scriptLevelId=${scriptLevelId}`;
+    }
+
     const levelLinkDataResponse =
-      await HttpClient.fetchJson<ExtraLinksLevelData>(
-        `/levels/${levelId}/extra_links`
-      );
+      await HttpClient.fetchJson<ExtraLinksLevelData>(url);
     levelLinkData = levelLinkDataResponse.value;
   }
 
@@ -60,6 +65,7 @@ async function fetchExtraLinksData(
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
+  scriptLevelId,
   positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -76,11 +82,13 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 
   useEffect(() => {
     setIsLoading(true);
-    fetchExtraLinksData(permissions, levelId, channelId).then(data => {
-      setExtraLinksData(data);
-      setIsLoading(false);
-    });
-  }, [permissions, levelId, channelId]);
+    fetchExtraLinksData(permissions, levelId, scriptLevelId, channelId).then(
+      data => {
+        setExtraLinksData(data);
+        setIsLoading(false);
+      }
+    );
+  }, [permissions, levelId, scriptLevelId, channelId]);
   const {levelLinkData, projectLinkData} = extraLinksData || {};
 
   if (isLoading || (!levelLinkData && !projectLinkData)) {

@@ -2,6 +2,7 @@
 -require '../shared/middleware/helpers/experiments'
 %html{dir: locale_dir, lang: locale}
   %head
+    %script{src: webpack_asset_path("js/localization.js"), 'data-ot-ignore' => ''}
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
@@ -26,7 +27,6 @@
     /[if IE 9]
       %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=Edge'}
     = stylesheet_link_tag    'css/code-studio', media: 'all'
-    = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/google_analytics'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is

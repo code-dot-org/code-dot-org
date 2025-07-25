@@ -76,27 +76,27 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
     sign_in(@user)
     assert_nil @user.show_progress_table_v2
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
     assert_response :success
     @user.reload
-    assert @user.show_progress_table_v2
+    assert_equal 'v2', @user.show_progress_table_v2
 
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
     assert_response :success
     @user.reload
-    refute @user.show_progress_table_v2
+    assert_equal 'legacy', @user.show_progress_table_v2
   end
 
   test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
     sign_in(@user)
     assert_nil @user.progress_table_v2_timestamp
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp
     assert_nil @user.progress_table_v1_timestamp
 
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
     assert_response :success
     @user.reload
     assert @user.progress_table_v2_timestamp
@@ -354,7 +354,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_nil teacher.seen_ta_scores_map
     sign_in(teacher)
 
-    unit = create :unit, :with_lessons
+    unit = create :unit, :with_lessons, :in_single_unit_course
     lesson = unit.lessons.first
     params = {lesson_id: lesson.id}
 
@@ -393,13 +393,26 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
       _(json_response).must_equal({'is_signed_in' => true})
     end
 
-    it 'allows CDO CORS' do
+    it 'allows CDO CORS from code.org by default' do
       get :signed_in
 
       _(response.headers['Access-Control-Allow-Origin']).must_equal 'http://test.code.org'
       _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
       _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
       _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+    end
+
+    CDO.marketing_sites_hosts.each do |marketing_site_host|
+      it "allows CDO CORS from #{marketing_site_host}" do
+        request.headers['Origin'] = marketing_site_host
+
+        get :signed_in
+
+        _(response.headers['Access-Control-Allow-Origin']).must_equal marketing_site_host
+        _(response.headers['Access-Control-Allow-Methods']).must_equal 'GET'
+        _(response.headers['Access-Control-Allow-Headers']).must_equal '*'
+        _(response.headers['Access-Control-Allow-Credentials']).must_equal 'true'
+      end
     end
 
     context 'when no signed-in user' do

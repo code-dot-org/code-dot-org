@@ -3,4 +3,4 @@
 
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}
 %link{href: asset_path('css/pd.css'), rel: "stylesheet"}
-%script{src: webpack_asset_path('js/pd/professional_learning/regional_workshop_catalog.js'), data: {availableNationalWorkshops: @available_national_workshops.to_json, zipFromSchoolInfo: @zip_from_school_info.to_json}}
+%script{src: webpack_asset_path('js/pd/professional_learning/regional_workshop_catalog.js'), data: {nationalWorkshops: @national_workshops.to_json, zipFromSchoolInfo: @zip_from_school_info.to_json}}

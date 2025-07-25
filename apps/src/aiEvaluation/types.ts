@@ -12,7 +12,7 @@ export interface Evaluation {
 
 export interface UserLevelSkillEvaluation extends Evaluation {
   type: 'UserLevelSkillEvaluation';
-  // TODO: Add skillId
+  skillId: number;
 }
 
 export interface UserLevelEvaluation extends Evaluation {

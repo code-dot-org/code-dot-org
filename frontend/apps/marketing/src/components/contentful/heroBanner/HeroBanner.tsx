@@ -5,6 +5,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import Video from '@/components/contentful/video';
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
@@ -13,8 +14,6 @@ type HeroBannerProps = {
   contentMode: Theme;
   /** HeroBanner image size (whether show with wide text (text is wider than image)) */
   imageSize: 'Small' | 'Big';
-  /** Whether to show the background color */
-  removeBackground?: boolean;
   /** HeroBanner cf styles*/
   className?: string;
   /** HeroBanner heading */
@@ -74,7 +73,6 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   partnerLogo,
   partnerCallout,
   backgroundImage,
-  removeBackground = false,
   className,
 }) => {
   const firstSectionImage = sectionImages?.[0];
@@ -103,19 +101,24 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
                     href: firstAnnouncementBannerLink.fields.primaryTarget,
                     external:
                       firstAnnouncementBannerLink.fields.isThisAnExternalLink,
+                    openInNewTab:
+                      firstAnnouncementBannerLink.fields.isThisAnExternalLink,
                   }
                 : undefined,
             }
           : undefined
       }
-      imageProps={
-        firstSectionImage?.fields?.file?.url
+      imageProps={(() => {
+        const firstSectionImageSrc =
+          firstSectionImage && getAbsoluteImageUrl(firstSectionImage);
+
+        return firstSectionImageSrc
           ? {
-              src: firstSectionImage.fields.file.url,
+              src: firstSectionImageSrc,
               altText: firstSectionImage.fields.description || '',
             }
-          : undefined
-      }
+          : undefined;
+      })()}
       hideImageOnSmallScreen={hideImageOnSmallScreen}
       buttonProps={
         firstButtonLink
@@ -126,18 +129,23 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
               iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
+              target: firstButtonLink.fields.isThisAnExternalLink
+                ? '_blank'
+                : undefined,
             }
           : undefined
       }
-      partner={
-        partnerLogo
+      partner={(() => {
+        const partnerLogoSrc = partnerLogo && getAbsoluteImageUrl(partnerLogo);
+
+        return partnerLogoSrc
           ? {
               title: partnerCallout || 'In partnership with:',
-              logo: {src: partnerLogo},
+              logo: {src: partnerLogoSrc},
             }
-          : undefined
-      }
-      backgroundImageUrl={backgroundImage}
+          : undefined;
+      })()}
+      backgroundImageUrl={getAbsoluteImageUrl(backgroundImage)}
       videoProps={
         sectionVideoYouTubeId || sectionVideoFallback
           ? {
@@ -149,7 +157,6 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
           : undefined
       }
       VideoComponent={Video}
-      removeBackground={removeBackground}
     />
   );
 };

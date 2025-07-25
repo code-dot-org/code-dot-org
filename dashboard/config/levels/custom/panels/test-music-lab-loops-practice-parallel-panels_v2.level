@@ -1,0 +1,51 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-05-31T02:59:45.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Loops and Lyrics\n\nMost songs have lyrics that need to be played in a specific order, like the Verse of a song\n",
+        "imageUrl": "https://images.code.org/41536b0a02f5e82793f483ed72b7071f-Slide24.PNG",
+        "key": "test-music-lab-loops-practice-parallel-panels-85cb8c21-00f5-4adc-8211-2a5cc3b71962",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Loops and Lyrics\n\nYou can use loops to repeat a backing track underneath the lyrics\n",
+        "imageUrl": "https://images.code.org/21b966df306ef90357b6098dcf66f4c4-Slide25.PNG",
+        "key": "test-music-lab-loops-practice-parallel-panels-4a54cf96-402b-4b28-849b-39ce2108afa9",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Loops and Lyrics\n\nIf tracks have different lengths, they'll need different loops\n",
+        "imageUrl": "https://images.code.org/4d4f38744fff9c3a8d49a14c2786e318-Slide26.PNG",
+        "key": "test-music-lab-loops-practice-parallel-panels-c5e66c79-2ba5-48c1-b6d6-0bb3484683fe",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Loops and Lyrics\n\nIf they have the same length, you can play them together in the same loop\n",
+        "imageUrl": "https://images.code.org/5b059c6b2f349a34130d5f86f74aea9f-Slide27.PNG",
+        "key": "test-music-lab-loops-practice-parallel-panels-c124f868-dc69-4e9a-a2c9-992717c34f86",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Key Takeaway: Use loops to create backing tracks for your lyrics. Use different loops when tracks have different lengths.\n",
+        "imageUrl": "https://images.code.org/76c1e2fb6c3dd264a296f968d8372512-Slide28.PNG",
+        "key": "test-music-lab-loops-practice-parallel-panels-3a2fda8a-40d8-4541-8e47-429e2d6bdf6a",
+        "fadeInOverPrevious": true,
+        "typing": true
+      }
+    ],
+    "bubble_choice_description": "Review how to use loops with lyrics to construct songs",
+    "display_name": "Loops and Lyrics",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/3df2816cd7dfa12f7911ee52f3e04138-Screenshot 2025-04-02 at 7.44.05 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.017+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parallel-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parallel-panels\"},{\"changed_at\":\"2025-06-21 23:42:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

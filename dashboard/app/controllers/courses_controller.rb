@@ -39,11 +39,10 @@ class CoursesController < ApplicationController
   def show
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
-      if Policies::Courses.modularity_enabled?
-        redirect_to course_unit_path(@unit_group, 1)
-      else
-        redirect_to script_path(@unit_group.first_unit)
-      end
+      redirect_path = Policies::Courses.modularity_enabled? ?
+                        course_unit_path(@unit_group, 1) :
+                        script_path(@unit_group.first_unit)
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
       return
     end
 
@@ -87,7 +86,7 @@ class CoursesController < ApplicationController
       instruction_type: params[:instruction_type] ? params[:instruction_type] : Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
       instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       participant_audience: params[:participant_audience] ? params[:participant_audience] : Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-      has_numbered_units: true
+      numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto,
     )
     if @unit_group.save
       @unit_group.write_serialization
@@ -106,6 +105,12 @@ class CoursesController < ApplicationController
     if @unit_group.has_migrated_unit? && @unit_group.course_version
       @unit_group.resources = params[:resourceIds].map {|id| Resource.find(id)} if params.key?(:resourceIds)
       @unit_group.student_resources = params[:studentResourceIds].map {|id| Resource.find(id)} if params.key?(:studentResourceIds)
+    end
+
+    if @unit_group.numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+      @unit_group.default_unit_group_units.each do |ugu|
+        ugu.update!(unit_prefix: params[:unit_prefixes][ugu.position-1])
+      end
     end
 
     @unit_group.reload
@@ -219,7 +224,7 @@ class CoursesController < ApplicationController
   end
 
   private def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 

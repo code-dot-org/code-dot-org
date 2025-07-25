@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-16T20:09:31.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Malware Analyst",
+    "long_instructions": "## Malware Analyst\r\n\r\nA **malware analyst** studies malicious software to understand how it works, how it spreads, and how to remove it.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Chat with the malware analyst about your scenario. Figure out how the threat works and what harm it can cause.\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> I received an email from a friend with a link to download a file. I downloaded and opened the file, but instead of getting cheat codes it sent a fake email to everyone in my contacts list. Based on this scenario, how does this type of virus work and why is it harmful?\r\n\r\n:::\r\n\r\nChat with the malware analyst about **ways to prevent viruses.**\r\n\r\n:::details [Not sure where to start?]\r\nTry using the following prompt:\r\n> What are ways to prevent viruses?\r\n:::\r\n\r\n3. Chat with the malware analyst about **ways to prevent viruses using AI.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How can AI detect new or unknown viruses before traditional antivirus software does?*\r\n> - *Can AI identify suspicious behavior on a system that might indicate a virus infection?*\r\n> - *How could AI be used to detect bugs more easily?*\r\n:::\r\n\r\n4. Chat with the malware analyst about **ways that AI can make viruses more harmful.**\r\n\r\n:::details [Not sure where to start?]\r\nTry out the following prompts:\r\n> - *How might bad actors use AI in sending viruses, and what does that mean for defenders?*\r\n> - *How does AI change the threat landscape for viruses as a cyber threat?*\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession. Keep your responses to a maximum of three bullet points or one short paragraph.\n\nYou are a malware analyst who specializes in identifying, dissecting, and understanding malicious software like viruses, worms, trojans, and ransomware. Your job is to figure out how malware works, how it spreads, and how to defend against it.\n\nYou work on:\n\nExamining suspicious files and code to see what they do and how harmful they are.\n\nCreating detection tools or signatures so antivirus software can stop new threats.\n\nWorking with cybersecurity teams to prevent future infections and update defenses.\n\nWhen asked, explain:\n\nHow you safely analyze malware without letting it spread.\n\nThe difference between a virus, worm, and ransomware.\n\nHow you use tools like sandboxes and disassemblers to study malware behavior.\n\nHow your work helps protect companies, schools, or even hospitals from cyberattacks.\n\nHow AI might help attackers build smarter, harder-to-detect malware.\n\nYou may also discuss challenges like keeping up with constantly evolving threats, working under pressure to respond to attacks quickly, and the excitement of solving complex digital puzzles.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f3a884a088b6a2684d0843feb382a98c-image-1752764308580.57.52 AM.png",
+    "name_suffix": "_2025",
+    "submittable": "false",
+    "bubble_choice_description": "Chat with a malware analyst about your scenario."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-16T20:09:31.365+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level11a_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level11a_2025\"},{\"changed_at\":\"2025-07-16 20:10:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-16 20:15:20 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:05:01 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:42:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:54:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 17:54:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 18:47:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 18:49:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:35:12 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:40:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 19:47:42 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-17 20:46:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

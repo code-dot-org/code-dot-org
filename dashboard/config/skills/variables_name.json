@@ -1,0 +1,6 @@
+{
+  "key": "variables_name",
+  "concept": "variables",
+  "description": "Name variables according to conventions",
+  "evaluation_criteria": "Are there any spaces in variable names? Are there any misspelled variable names? Do variable names follow casing conventions?"
+}

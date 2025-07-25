@@ -3,14 +3,13 @@
 Feature: Using the V2 teacher dashboard local navigation - Eyes
   Background:
     Given I am on "http://studio.code.org/home"
-    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
   @properties_encryption_key
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "allthethingscourse" unit 1
 
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
     Then I wait for 3 seconds
@@ -23,7 +22,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
 
-    And I create a new student section assigned to "interactive-games-animations-2024" and save the section
+    And I create a new student section assigned to course "interactive-games-animations-2024" unit 1 and save the section
     Given I create a student named "Talia"
     And I join the section
 
@@ -50,7 +49,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access

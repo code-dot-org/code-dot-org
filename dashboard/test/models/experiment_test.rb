@@ -7,7 +7,7 @@ class ExperimentTest < ActiveSupport::TestCase
     @section = create :section, first_activity_at: DateTime.now, teacher: @teacher
     @student = create :student
     create :follower, section: @section, student_user: @student
-    @script = create :script
+    @script = create :script, :in_single_unit_course
   end
 
   test "no experiments" do
@@ -101,7 +101,7 @@ class ExperimentTest < ActiveSupport::TestCase
   test "teacher based experiment is disabled if other script assigned" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      script: create(:script)
+      script: create(:script, :in_single_unit_course)
     assert_empty Experiment.get_all_enabled(script: @script)
     refute Experiment.enabled?(script: @script, experiment_name: experiment.name)
   end

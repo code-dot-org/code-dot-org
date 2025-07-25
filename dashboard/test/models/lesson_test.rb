@@ -46,7 +46,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "summary for single page long assessment" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :text_match, name: 'level_free_response', type: 'TextMatch'
     create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
     level_group_dsl = <<~DSL
@@ -67,7 +67,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "summary for lesson with extras" do
-    script = create :script, lesson_extras_available: true
+    script = create :script, :in_single_unit_course, lesson_extras_available: true
     level = create :level
     lesson = create :lesson, script: script
     create :script_level, script: script, lesson: lesson, levels: [level]
@@ -76,7 +76,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "summary for lesson with extras where include_bonus_levels is true" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     level = create :level
     lesson = create :lesson, script: script
     create :script_level, lesson: lesson, levels: [level], bonus: true
@@ -87,7 +87,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test "summary of levels for lesson plan" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     level = create :level
     lesson = create :lesson, script: script, name: 'My Lesson'
     script_level = create :script_level, script: script, lesson: lesson, levels: [level]
@@ -117,7 +117,7 @@ class LessonTest < ActiveSupport::TestCase
     student = create :student
     teacher = create :teacher
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
     lesson.objectives.push(create(:objective))
@@ -162,7 +162,7 @@ class LessonTest < ActiveSupport::TestCase
   # on the path for the next level. LessonExtras may need to be updated if
   # there are changes to what next_level_path_for_lesson_extras returns.
   test "next_level_path_for_lesson_extras" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
     create :script_level, script: script, lesson: lesson1
@@ -171,12 +171,12 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
-    assert_equal "/s/#{script.name}", lesson2.next_level_path_for_lesson_extras(@student)
+    assert_match /\/courses\/bogus-single-unit-course-\d+\/units\/1\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student, unit_group_unit: script.original_unit_group_unit)
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1", lesson2.next_level_path_for_lesson_extras(@student, unit_group_unit: script.original_unit_group_unit)
   end
 
   test "next_level_path_for_lesson_extras show unit overview" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     script.stubs(:show_unit_overview_between_lessons?).returns true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, script: script, lesson_group: lesson_group
@@ -186,12 +186,12 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_equal "/s/#{script.name}", lesson1.next_level_path_for_lesson_extras(@student)
-    assert_equal "/s/#{script.name}", lesson2.next_level_path_for_lesson_extras(@student)
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1", lesson1.next_level_path_for_lesson_extras(@student, unit_group_unit: script.original_unit_group_unit)
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1", lesson2.next_level_path_for_lesson_extras(@student, unit_group_unit: script.original_unit_group_unit)
   end
 
   test 'can summarize lesson with no levels' do
-    unit = create :script
+    unit = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: unit
     create :lesson, lesson_group: lesson_group, key: 'Lesson1', name: 'Lesson 1'
 
@@ -200,7 +200,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson with and without lesson plan in unmigrated unit' do
-    script = create :script, name: 'test-script', is_migrated: false
+    script = create :script, :in_single_unit_course, name: 'test-script', is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false
@@ -212,25 +212,25 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson with code studio lesson plans in migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true
+    script = create :script, :in_single_unit_course, name: 'test-script', is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
     lesson3 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: false
     lesson4 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: false
 
-    lesson1_summary = lesson1.summarize
-    lesson2_summary = lesson2.summarize
-    lesson3_summary = lesson3.summarize
-    lesson4_summary = lesson4.summarize
-    assert_equal "/s/#{script.name}/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
+    lesson1_summary = lesson1.summarize(unit_group_unit: script.original_unit_group_unit)
+    lesson2_summary = lesson2.summarize(unit_group_unit: script.original_unit_group_unit)
+    lesson3_summary = lesson3.summarize(unit_group_unit: script.original_unit_group_unit)
+    lesson4_summary = lesson4.summarize(unit_group_unit: script.original_unit_group_unit)
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1/lessons/#{lesson1.relative_position}", lesson1_summary[:lesson_plan_html_url]
     assert_nil lesson2_summary[:lesson_plan_html_url]
-    assert_equal "/s/#{script.name}/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1/lessons/#{lesson3.relative_position}", lesson3_summary[:lesson_plan_html_url]
     assert_nil lesson4_summary[:lesson_plan_html_url]
   end
 
   test 'can summarize lesson with legacy lesson plan link in migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, use_legacy_lesson_plans: true
+    script = create :script, :in_single_unit_course, name: 'test-script', is_migrated: true, use_legacy_lesson_plans: true
     lesson_group = create :lesson_group, script: script
     lesson1 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true, lockable: true
     lesson2 = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: false, lockable: true
@@ -248,7 +248,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson for lesson plan' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create(
       :lesson,
@@ -274,7 +274,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson for student lesson plan' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create(
       :lesson,
@@ -298,7 +298,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize lesson for student lesson plan does not include teacher announcements' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create(
       :lesson,
@@ -367,7 +367,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize lesson for student lesson plan combines student and for all resources' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create(
       :lesson,
@@ -443,29 +443,29 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'can summarize lesson for lesson plan dropdown' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
 
-    summary = lesson.summarize_for_lesson_dropdown
+    summary = lesson.summarize_for_lesson_dropdown(unit_group_unit: script.original_unit_group_unit)
     assert_equal 'lesson-1', summary[:key]
-    assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}", summary[:link]
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1/lessons/#{lesson.relative_position}", summary[:link]
     assert_equal 1, summary[:position]
   end
 
   test 'can summarize lesson for student lesson plan dropdown' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1
 
-    summary = lesson.summarize_for_lesson_dropdown(true)
+    summary = lesson.summarize_for_lesson_dropdown(true, unit_group_unit: script.original_unit_group_unit)
     assert_equal 'lesson-1', summary[:key]
-    assert_equal "/s/#{script.name}/lessons/#{lesson.relative_position}/student", summary[:link]
+    assert_equal "/courses/#{script.original_unit_group.name}/units/1/lessons/#{lesson.relative_position}/student", summary[:link]
     assert_equal 1, summary[:position]
   end
 
   test 'summarize for script edit includes bonus levels' do
-    script = create :script, :with_levels
+    script = create :script, :in_single_unit_course, :with_levels
     lesson = script.lessons.first
     lesson.script_levels.last.update!(bonus: true)
     lesson.reload
@@ -477,7 +477,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize uses unplugged property' do
-    script = create :script, is_migrated: true
+    script = create :script, :in_single_unit_course, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
 
@@ -486,7 +486,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_calendar adds durations of all activities' do
-    script = create :script, is_migrated: false
+    script = create :script, :in_single_unit_course, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script, name: 'Lesson 1', key: 'lesson-1', relative_position: 1, absolute_position: 1, unplugged: true
     activity1 = create :lesson_activity, lesson: lesson, duration: 20
@@ -528,29 +528,34 @@ class LessonTest < ActiveSupport::TestCase
     course_offering = create :course_offering
 
     # lesson to find related lessons for
-    script1 = create :script, name: 'script1', curriculum_umbrella: 'CSF', version_year: '2999'
-    create :course_version, course_offering: course_offering, content_root: script1, key: '2999'
+    script1 = create :script, name: 'script1', curriculum_umbrella: 'CSF'
+    course1 = create :single_unit_course, unit: script1, version_year: '2999'
+    create :course_version, course_offering: course_offering, content_root: course1, key: '2999'
     lesson1 = create :lesson, script: script1, key: 'foo'
 
-    script2 = create :script, name: 'script2', curriculum_umbrella: 'CSF', version_year: '3000'
-    create :course_version, course_offering: course_offering, content_root: script2, key: '3000'
+    script2 = create :script, name: 'script2', curriculum_umbrella: 'CSF'
+    course2 = create :single_unit_course, unit: script2, version_year: '3000'
+    create :course_version, course_offering: course_offering, content_root: course2, key: '3000'
     lesson2 = create :lesson, script: script2, key: 'foo'
 
     # lesson with different key is excluded
     course_offering3 = create :course_offering
-    script3 = create :script, name: 'script3', curriculum_umbrella: 'CSF', version_year: '2999'
-    create :course_version, course_offering: course_offering3, content_root: script3, key: '2999'
+    script3 = create :script, name: 'script3', curriculum_umbrella: 'CSF'
+    course3 = create :single_unit_course, unit: script3, version_year: '2999'
+    create :course_version, course_offering: course_offering3, content_root: course3, key: '2999'
     create :lesson, script: script3, key: 'bar'
 
     # lesson in different curriculum umbrella is excluded
     course_offering4 = create :course_offering
-    script4 = create :script, name: 'script4', curriculum_umbrella: 'other', version_year: '2999'
-    create :course_version, course_offering: course_offering4, content_root: script4, key: '2999'
+    script4 = create :script, name: 'script4', curriculum_umbrella: 'other'
+    course4 = create :single_unit_course, unit: script4, version_year: '2999'
+    create :course_version, course_offering: course_offering4, content_root: course4, key: '2999'
     create :lesson, script: script4, key: 'foo'
 
     course_offering5 = create :course_offering
-    script5 = create :script, name: 'script5', curriculum_umbrella: 'CSF', version_year: '2999'
-    create :course_version, course_offering: course_offering5, content_root: script5, key: '2999'
+    script5 = create :script, name: 'script5', curriculum_umbrella: 'CSF'
+    course5 = create :single_unit_course, unit: script5, version_year: '2999'
+    create :course_version, course_offering: course_offering5, content_root: course5, key: '2999'
     lesson5 = create :lesson, script: script5, key: 'foo'
 
     # lesson without course version / version year must still work properly
@@ -558,71 +563,10 @@ class LessonTest < ActiveSupport::TestCase
     lesson6 = create :lesson, script: script6, key: 'foo'
 
     course_offering0 = create :course_offering
-    script0 = create :script, name: 'script0', curriculum_umbrella: 'CSF', version_year: '2999'
-    create :course_version, course_offering: course_offering0, content_root: script0, key: '2999'
+    script0 = create :script, name: 'script0', curriculum_umbrella: 'CSF'
+    course0 = create :single_unit_course, unit: script0, version_year: '2999'
+    create :course_version, course_offering: course_offering0, content_root: course0, key: '2999'
     lesson0 = create :lesson, script: script0, key: 'foo'
-
-    # measure the query count of the summarize method before checking the result
-    # of related_lessons, so that the count is not artificially reduced by
-    # anything being cached from the call to related_lessons.
-    summaries = nil
-    assert_queries(2) do
-      summaries = lesson1.summarize_related_lessons
-    end
-
-    assert_queries(1) do
-      assert_equal [lesson6, lesson0, lesson5, lesson2], lesson1.related_lessons
-    end
-
-    assert_equal 4, summaries.count
-    expected_summary = {
-      unitTitle: "script6",
-      versionYear: nil,
-      lockable: false,
-      relativePosition: 1,
-      id: lesson6.id,
-      editUrl: "/lessons/#{lesson6.id}/edit"
-    }
-    assert_equal expected_summary, summaries[0]
-
-    expected_summary = {
-      unitTitle: "script0",
-      versionYear: "2999",
-      lockable: false,
-      relativePosition: 1,
-      id: lesson0.id,
-      editUrl: "/lessons/#{lesson0.id}/edit"
-    }
-    assert_equal expected_summary, summaries[1]
-
-    assert_equal '2999', summaries[2][:versionYear]
-    assert_equal '3000', summaries[3][:versionYear]
-  end
-
-  test 'find related lessons within a course offering without unit groups' do
-    course_offering = create :course_offering
-
-    script1 = create :script, name: 'script1', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script1, key: '3000'
-    lesson1 = create :lesson, script: script1, key: 'foo'
-
-    script2 = create :script, name: 'script2', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script2, key: '3001'
-    lesson2 = create :lesson, script: script2, key: 'foo'
-
-    script3 = create :script, name: 'script3', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script3, key: '3002'
-    create :lesson, script: script3, key: 'bar'
-
-    script4 = create :script, name: 'script4', is_course: true
-    create :course_version, course_offering: course_offering, content_root: script4, key: '2999'
-    lesson4 = create :lesson, script: script4, key: 'foo'
-
-    other_course_offering = create :course_offering
-
-    script5 = create :script, name: 'script5', is_course: true
-    create :course_version, course_offering: other_course_offering, content_root: script5, key: '3000'
-    create :lesson, script: script5, key: 'foo'
 
     # measure the query count of the summarize method before checking the result
     # of related_lessons, so that the count is not artificially reduced by
@@ -632,18 +576,34 @@ class LessonTest < ActiveSupport::TestCase
       summaries = lesson1.summarize_related_lessons
     end
 
-    assert_equal [lesson4, lesson2], lesson1.related_lessons
+    assert_queries(1) do
+      assert_equal [lesson0, lesson2, lesson5, lesson6], lesson1.related_lessons
+    end
 
-    assert_equal 2, summaries.count
+    assert_equal 4, summaries.count
+
     expected_summary = {
-      unitTitle: "script4",
+      unitTitle: "script0",
       versionYear: "2999",
       lockable: false,
       relativePosition: 1,
-      id: lesson4.id,
-      editUrl: "/lessons/#{lesson4.id}/edit"
+      id: lesson0.id,
+      editUrl: "/lessons/#{lesson0.id}/edit"
     }
-    assert_equal expected_summary, summaries.first
+    assert_equal expected_summary, summaries[0]
+
+    expected_summary = {
+      unitTitle: "script6",
+      versionYear: nil,
+      lockable: false,
+      relativePosition: 1,
+      id: lesson6.id,
+      editUrl: "/lessons/#{lesson6.id}/edit"
+    }
+    assert_equal expected_summary, summaries[3]
+
+    assert_equal '2999', summaries[2][:versionYear]
+    assert_equal '3000', summaries[1][:versionYear]
   end
 
   test 'find related lessons within a course offering with unit groups' do
@@ -722,14 +682,14 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'no related lessons without course offering' do
-    script1 = create :script
+    script1 = create :script, :in_single_unit_course
     lesson1 = create :lesson, script: script1, key: 'foo'
 
-    script2 = create :script
+    script2 = create :script, :in_single_unit_course
     create :lesson, script: script2, key: 'foo'
 
     lesson1.reload
-    assert_queries(3) do
+    assert_queries(4) do
       assert_equal [], lesson1.related_lessons
     end
   end
@@ -749,7 +709,7 @@ class LessonTest < ActiveSupport::TestCase
       old_lesson.lesson_plan_pdf_url
     )
 
-    script = create :script, is_migrated: true
+    script = create :script, :in_single_unit_course, is_migrated: true
     new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.lesson_plan_pdf_url)
 
@@ -761,7 +721,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'student_lesson_plan_pdf_url gets url for migrated script with student lesson plans' do
-    script = create :script, is_migrated: true, include_student_lesson_plans: true
+    script = create :script, :in_single_unit_course, is_migrated: true, include_student_lesson_plans: true
     new_lesson = create :lesson, script: script, name: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
@@ -773,7 +733,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
-    script = create :script, include_student_lesson_plans: true, is_migrated: false
+    script = create :script, :in_single_unit_course, include_student_lesson_plans: true, is_migrated: false
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
     assert_nil(new_lesson.student_lesson_plan_pdf_url)
 
@@ -782,26 +742,26 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'start_url returns correct lockable lesson url' do
-    new_script = create :script, include_student_lesson_plans: false, is_migrated: true
+    new_script = create :script, :in_single_unit_course, include_student_lesson_plans: false, is_migrated: true
     new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: false, lockable: true
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
     create :script_level, script: new_script, levels: [level1], assessment: true, lesson: new_lesson
 
     assert_equal(
-      new_lesson.start_url,
-      CDO.studio_url("/s/#{new_script.name}/lockable/1/levels/1", CDO.default_scheme)
+      new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lockable/1/levels/1", CDO.default_scheme)
     )
   end
 
   test 'start_url returns correct lesson start url' do
-    new_script = create :script, include_student_lesson_plans: true, is_migrated: true
+    new_script = create :script, :in_single_unit_course, include_student_lesson_plans: true, is_migrated: true
     new_lesson = create :lesson, script: new_script, key: 'Fancy Name', has_lesson_plan: true
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
     create :script_level, script: new_script, levels: [level1], assessment: false, lesson: new_lesson
 
     assert_equal(
-      new_lesson.start_url,
-      CDO.studio_url("/s/#{new_script.name}/lessons/1/levels/1", CDO.default_scheme)
+      new_lesson.start_url(unit_group_unit: new_script.original_unit_group_unit),
+      CDO.studio_url("/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1", CDO.default_scheme)
     )
   end
 
@@ -824,7 +784,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   def create_swapped_lockable_lesson
-    script = create :script
+    script = create :script, :in_single_unit_course
     level1 = create :level_group, name: 'level1', title: 'title1', submittable: true
     level2 = create :level_group, name: 'level2', title: 'title2', submittable: true
     lesson = create :lesson, name: 'lesson1', script: script, lockable: true
@@ -834,7 +794,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'course_version_standards_url returns nil without course version' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
     refute script.get_course_version
@@ -862,36 +822,22 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_url, lesson.course_version_standards_url
   end
 
-  test 'course_version_standards_url in standalone script returns script path' do
-    script = create :script, is_course: true, family_name: 'my-family', version_year: '1999'
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script
-
-    CourseOffering.add_course_offering(script)
-    assert script.get_course_version
-    assert_equal script, script.get_course_version.content_root
-
-    expected_url = "/s/#{script.name}/standards"
-    assert_equal expected_url, lesson.course_version_standards_url
-  end
-
   test 'should give URL for script level curriculum PDF in unmigrated unit' do
-    script = create :script, is_migrated: false
+    script = create :script, :in_single_unit_course, is_migrated: false
     lesson = create(:lesson, script: script, absolute_position: 5, relative_position: 5)
     assert_includes(lesson.lesson_plan_html_url, "curriculum/#{lesson.script.name}/5/Teacher")
     assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
   end
 
   test 'uncached lesson path helpers' do
-    skip 'enable when we re enable CACHED_UNITS_MAP'
-    hoc_unit = create :script, name: 'dance-ai-2023'
+    hoc_unit = create :script, :in_single_unit_course, name: 'dance-ai-2023'
     hoc_lesson_group = create :lesson_group, script: hoc_unit
     hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
 
     assert_equal "/lessons/#{hoc_lesson.id}", hoc_lesson.get_uncached_show_path
     assert_equal "/lessons/#{hoc_lesson.id}/edit", hoc_lesson.get_uncached_edit_path
 
-    other_unit = create :script
+    other_unit = create :script, :in_single_unit_course
     other_lesson_group = create :lesson_group, script: other_unit
     lesson_without_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 1, has_lesson_plan: false
     lesson_with_plan = create :lesson, script: other_unit, lesson_group: other_lesson_group, relative_position: 1, absolute_position: 2, has_lesson_plan: true
@@ -909,16 +855,25 @@ class LessonTest < ActiveSupport::TestCase
 
   test 'get_background_for_user returns user preference for python lab lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, background: 'dark', script: script
     python_level = create :pythonlab
     create :script_level, lesson: lesson, levels: [python_level], script: script
     assert_equal 'light', lesson.get_background_for_user(@student)
   end
 
+  test 'get_background_for_user returns user preference for web lab 2 lesson' do
+    UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
+    script = create :script, :in_single_unit_course
+    lesson = create :lesson, background: 'dark', script: script
+    weblab2_level = create :weblab2
+    create :script_level, lesson: lesson, levels: [weblab2_level], script: script
+    assert_equal 'light', lesson.get_background_for_user(@student)
+  end
+
   test 'get_background_for_user returns default for music lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     music_level = create :music
     create :script_level, lesson: lesson, levels: [music_level], script: script
@@ -928,7 +883,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test 'get_background_for_user returns default for aichat lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Dark'})
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     aichat_level = create :aichat
     create :script_level, lesson: lesson, levels: [aichat_level], script: script
@@ -938,7 +893,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test 'get_background_for_user returns preference for mixed lesson' do
     UserPreference.create!(user_id: @student.id, theme: {'global' => 'Light'})
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, background: 'dark', script: script
     python_level = create :pythonlab
     music_level = create :music
@@ -947,7 +902,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'get_background_for_user uses majority background for aichat and music lesson' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     aichat_level = create :aichat
     music_level = create :music
@@ -962,24 +917,24 @@ class LessonTest < ActiveSupport::TestCase
       Unit.any_instance.stubs(:write_script_json)
       Unit.stubs(:merge_and_write_i18n)
 
-      @original_script = create :script, is_migrated: true
+      @original_script = create :script, :in_single_unit_course, is_migrated: true
       @original_script.expects(:write_script_json).never
       course_offering = create :course_offering
-      @original_course_version = create :course_version, course_offering: course_offering, content_root: @original_script, version_year: 2021
+      @original_course_version = create :course_version, course_offering: course_offering, content_root: @original_script.original_unit_group, version_year: 2021
       @original_lesson_group = create :lesson_group, script: @original_script
       @original_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_script, has_lesson_plan: true
 
-      @destination_script = create :script, is_migrated: true
+      @destination_script = create :script, :in_single_unit_course, is_migrated: true
       course_offering = create :course_offering
-      @destination_course_version = create :course_version, course_offering: course_offering, content_root: @destination_script, version_year: 2021
+      @destination_course_version = create :course_version, course_offering: course_offering, content_root: @destination_script.original_unit_group, version_year: 2021
       @destination_lesson_group = create :lesson_group, script: @destination_script
 
-      @original_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp'
+      @original_dlp_script = create :script, :in_single_unit_course, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp'
       @original_dlp_script.expects(:write_script_json).never
       @original_dlp_lesson_group = create :lesson_group, script: @original_dlp_script
       @original_dlp_lesson = create :lesson, lesson_group: @original_lesson_group, script: @original_dlp_script, has_lesson_plan: true
 
-      @destination_dlp_script = create :script, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp-2'
+      @destination_dlp_script = create :script, :in_single_unit_course, is_migrated: true, professional_learning_course: 'my-plc-course-for-dlp-2'
       @destination_dlp_lesson_group = create :lesson_group, script: @destination_dlp_script
     end
 
@@ -1217,15 +1172,15 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test "can clone lesson without course version to a script with a course version" do
-      original_script = create :script, is_migrated: true, is_course: true
+      original_script = create :script
       original_script.reload
 
       original_script.expects(:write_script_json).never
       original_lesson_group = create :lesson_group, script: original_script
       original_lesson = create :lesson, lesson_group: original_lesson_group, script: original_script, has_lesson_plan: true
 
-      destination_script = create :script, is_migrated: true, is_course: true
-      create :course_version, content_root: destination_script
+      destination_script = create :script, :in_single_unit_course
+      create :course_version, content_root: destination_script.original_unit_group
       create :lesson_group, script: destination_script
 
       destination_script.expects(:write_script_json).once
@@ -1318,7 +1273,7 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test 'unit cannot have two lessons with the same key' do
-      unit = create :script, :with_lessons, name: 'unit-name'
+      unit = create :script, :in_single_unit_course, :with_lessons, name: 'unit-name'
       e = assert_raises do
         unit.lessons.last.update!(key: unit.lessons.first.key)
       end

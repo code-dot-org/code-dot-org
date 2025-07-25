@@ -82,7 +82,7 @@ steps:
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
@@ -225,7 +225,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:1.16
     pull: always
     volumes:
       - name: rbenv
@@ -307,7 +307,7 @@ steps:
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
   - name: prepare-ui-tests
-    image: codedotorg/code-dot-org:1.15
+    image: codedotorg/code-dot-org:1.16
     pull: always
     environment:
       PROPERTIES_ENCRYPTION_KEY:
@@ -353,6 +353,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 6646bfda5cd973eb102725e17d3dade6b986b372da0ebb87c687d40e29655dfc
+hmac: d706a958430c49a672f3c7c5a42209f54dd4cc1aada7d68e2489307e2d98b275
 
 ...

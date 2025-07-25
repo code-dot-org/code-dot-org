@@ -80,15 +80,17 @@ export default function JoinSectionArea({
             updateSections={setJoinedStudentSections}
           />
         )}
-        {isPlSections && joinedPlSections?.length > 0 && isTeacher && (
-          <ParticipantSections
-            sections={joinedPlSections}
-            isTeacher={isTeacher}
-            isPlSections={true}
-            updateSectionsResult={updateSectionsResult}
-            updateSections={setJoinedPlSections}
-          />
-        )}
+        {isPlSections &&
+          (joinedPlSections?.length > 0 || joinedStudentSections?.length > 0) &&
+          isTeacher && (
+            <ParticipantSections
+              sections={joinedPlSections.concat(joinedStudentSections)}
+              isTeacher={isTeacher}
+              isPlSections={true}
+              updateSectionsResult={updateSectionsResult}
+              updateSections={setJoinedPlSections}
+            />
+          )}
       </>
     );
   };
@@ -108,8 +110,8 @@ export default function JoinSectionArea({
 }
 
 JoinSectionArea.propTypes = {
-  initialJoinedStudentSections: shapes.sections,
-  initialJoinedPlSections: shapes.sections,
+  initialJoinedStudentSections: shapes.participantSections,
+  initialJoinedPlSections: shapes.participantSections,
   isTeacher: PropTypes.bool,
   isPlSections: PropTypes.bool,
 };

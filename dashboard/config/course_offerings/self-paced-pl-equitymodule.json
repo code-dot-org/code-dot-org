@@ -5,16 +5,19 @@
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "K,1,2,3,4,5,6,7,8,9,10,11,12",
   "header": "self_paced",
-  "image": null,
+  "image": "https://images.code.org/f0e2f1113bfcb175e69f7279ac27f977-diversity.avif",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This self-paced professional learning module is designed to empower educators to create equitable and inclusive computer science classrooms. It focuses on foundational concepts of equity and provides practical strategies for implementation.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-05-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

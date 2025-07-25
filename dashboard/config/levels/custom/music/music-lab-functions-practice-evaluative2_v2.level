@@ -1,0 +1,127 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:59.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "aloe_blacc_wake_me_up",
+      "sounds": {
+        "aloe_blacc_wake_me_up": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "main_beat",
+          "rim",
+          "tambourine",
+          "shaker",
+          "bass_intro",
+          "bass_verse",
+          "bass_chorus_1",
+          "bass_chorus_2",
+          "piano_intro",
+          "piano_verse",
+          "piano_chorus",
+          "piano_melody",
+          "guitar_intro",
+          "guitar_verse",
+          "guitar_chorus",
+          "strings_1",
+          "strings_2",
+          "strings_melody"
+        ]
+      },
+      "showSoundFilters": true
+    },
+    "long_instructions": "### Assessment\r\n\r\nMake a song with an intro, verse, and chorus. All of your play blocks must be within functions. You can only use function calls, `play together`, and `repeat` blocks under When Run.\r\n\r\nThe intro should not contain any vocals, and then you must use at least 2 verse vocals and at least 2 chorus vocals.\r\n\r\nHere is an example of what your `when run` code could look like:\r\n\r\n![](https://images.code.org/3abeb26093f627c7e20dac5e514b7f48-image-1745877347079.png)\r\n\r\nThis is an **Assessment** level, which means it covers the key parts of this lesson. Here is a **rubric** describing how this level will be judged - click each of the rows below to expand the rubric\r\n\r\n<details open>\r\n  <summary><strong>Extensive Evidence</strong></summary>\r\n  The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. Each function layers several tracks that have been intentionally chosen to compliment the vocals in creative ways.\r\n</details>\r\n<details>\r\n  <summary><strong>Convincing Evidence</strong></summary>\r\n  The song contains at least 3 functions that separate the song into individual intro, verse, and chorus parts. The functions themselves may be simplistic or the tracks chosen appear disparate or random.\r\n</details>\r\n<details>\r\n  <summary><strong>Limited Evidence</strong></summary>\r\n  The song does not contain 3 functions or functions are not used exclusively under when run\r\n</details>\r\n<details>\r\n  <summary><strong>No Evidence</strong></summary>\r\n  There are no functions\r\n</details>\r\n",
+    "encrypted_exemplar_sources": "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\nDmI=\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-evaluative2_d8596bc5-f917-49d8-b1c8-44090f52e1bb",
+        "message": "It looks like your song is on the right track! Make sure you're met all the other requirements before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_defnoreturn:3"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "procedures_callnoreturn:3"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-evaluative2_8d3faf66-6ca9-4a51-ac6e-0755cc067a23",
+        "message": "Make sure to define and call at least 3 functions",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:59.200+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-evaluative2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-evaluative2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

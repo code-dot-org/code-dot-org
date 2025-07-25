@@ -2,6 +2,7 @@ import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
+import {isOption, Option} from './components/MultiSelectInput';
 import {
   Workshop,
   WorkshopFormState,
@@ -19,7 +20,13 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   course: data.course ?? '',
   capacity: data.capacity?.toString() ?? '',
   description: data.description ?? '',
-  facilitators: data.facilitators?.map(({id}) => id) ?? [],
+  facilitators:
+    data.facilitators?.map(({id, name, email}) => ({
+      id,
+      label: name,
+      secondaryLabel: email,
+      searchText: [name, email],
+    })) ?? [],
   fee: data.fee ?? '',
   grades: data.grades ?? [],
   hidden: data.hidden ?? false,
@@ -70,7 +77,7 @@ export const workshopStateToApi = (
       ? Number(workshop.capacity)
       : null,
   description: workshop.description || null,
-  facilitators: workshop.facilitators,
+  facilitators: workshop.facilitators.map(({id}) => Number(id)),
   fee: workshop.fee || null,
   grades: workshop.grades,
   hidden: workshop.hidden,
@@ -143,12 +150,17 @@ export const emptyValue = (
     | undefined
     | string
     | number
+    | Option
     | string[]
     | number[]
+    | Option[]
     | boolean
     | Record<string, string>
 ): boolean => {
   if (value === null) return true;
+  if (isOption(value)) {
+    return false;
+  }
   switch (typeof value) {
     case 'undefined':
       return true;

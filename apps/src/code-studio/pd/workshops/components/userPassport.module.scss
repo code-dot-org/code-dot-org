@@ -1,0 +1,77 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+.userInfoContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: $regular-border-radius;
+  overflow: hidden;
+
+  .userInfoHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.625rem;
+    background-color: var(--background-neutral-secondary);
+    border-bottom: 1px solid var(--neutral-gray-20);
+
+    .displayName {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+
+      i {
+        margin: auto 0;
+      }
+
+      p {
+        font-weight: 600;
+      }
+    }
+
+    .editButton {
+      background-color: var(--background-neutral-secondary);
+      color: var(--brand-purple-50);
+    }
+
+    .editButton:hover {
+      background-color: var(--background-neutral-secondary);
+    }
+  }
+
+  .userInfoContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 0.5rem 0.625rem;
+
+    .userInfoRow {
+      display: flex;
+      flex-direction: column;
+      
+      .userInfoLabel {
+        font-size: 0.625rem;
+        color: var(--neutral-gray-70);
+      }
+
+      .errorMessage {
+        display: flex;
+        flex-direction: row;
+        gap: 0.125rem;
+        align-items: center;
+
+        i {
+          color: var(--sentiment-error-50);
+        }
+  
+        p {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

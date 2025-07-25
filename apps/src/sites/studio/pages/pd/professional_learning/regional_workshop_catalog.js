@@ -6,13 +6,11 @@ import RegionalWorkshopCatalog from '@cdo/apps/code-studio/pd/professional_learn
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
-  const availableNationalWorkshops = getScriptData(
-    'availableNationalWorkshops'
-  );
+  const nationalWorkshops = getScriptData('nationalWorkshops');
   const zipFromSchoolInfo = getScriptData('zipFromSchoolInfo');
   ReactDOM.render(
     <RegionalWorkshopCatalog
-      availableNationalWorkshops={availableNationalWorkshops}
+      nationalWorkshops={nationalWorkshops}
       zipFromSchoolInfo={zipFromSchoolInfo}
     />,
     document.getElementById('regional-workshop-catalog')

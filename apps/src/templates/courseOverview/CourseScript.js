@@ -153,23 +153,21 @@ class CourseScript extends Component {
             {confirmationMessageOpen && (
               <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
             )}
-            {viewAs === ViewType.Instructor &&
-              showAssignButton &&
-              selectedSection && (
-                <div className={styles.assignButton}>
-                  <MultipleAssignButton
-                    courseOfferingId={courseOfferingId}
-                    courseVersionId={courseVersionId}
-                    courseId={courseId}
-                    scriptId={id}
-                    assignmentName={title}
-                    reassignConfirm={this.onReassignConfirm}
-                    isAssigningCourseOnly={false}
-                    isAssigningUnitOnly={false}
-                    participantAudience={participantAudience}
-                  />
-                </div>
-              )}
+            {viewAs === ViewType.Instructor && showAssignButton && (
+              <div className={styles.assignButton}>
+                <MultipleAssignButton
+                  courseOfferingId={courseOfferingId}
+                  courseVersionId={courseVersionId}
+                  courseId={courseId}
+                  scriptId={id}
+                  assignmentName={title}
+                  reassignConfirm={this.onReassignConfirm}
+                  isAssigningCourseOnly={false}
+                  isAssigningUnitOnly={false}
+                  participantAudience={participantAudience}
+                />
+              </div>
+            )}
           </span>
         </div>
         {viewAs === ViewType.Instructor && !hasNoSections && (

@@ -1,0 +1,127 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Fade Out\r\n\r\nRosa wants to create a \"fade out\" effect where the song gradually stops playing certain tracks:\r\n\r\n> First I want the vocals to stop after 2 measures. Then the guitar should stop, and then the bass. Then the beat stops so all that's playing is the flute for one last measure. I love the flute part!\r\n\r\nRosa is focusing on the essential layers of her song to shape the mood, using **abstraction** to highlight just the flute in the end.\r\n\r\n**Your task**: Create this remix by identifying which tracks should continue or stop at each stage. Use loops to simplify your code so the flute alone in the last measure. When you're finished, your timeline should look like this:\r\n\r\n![](https://images.code.org/ad443c960e5d186f910a6e922b41a1f6-image-1743189322873.png)\r\n",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "shakira_whenever_wherever",
+      "sounds": {
+        "shakira_whenever_wherever": [
+          "vocals_chorus_backups_2",
+          "acoustic_hook",
+          "bass_hook_2",
+          "drum_beat_no_sample",
+          "flute_hook"
+        ]
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true
+    },
+    "display_name": "Fade Out",
+    "encrypted_exemplar_sources": "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\n",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Fade Out Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "bubble_choice_description": "Help create a \"fade out\" effect for the end of a song.",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practice-f_2091d7f1-af0e-4f75-b55d-0b355d8d7415",
+        "message": "[exemplar validation]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:5"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-f_6adb592e-8337-4264-b26c-b26f5fda891d",
+        "message": "Your code should use a loop for each track!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-f_5db2da71-245f-4114-81ef-b47b15892def",
+        "message": "Make sure you use at least 5 different tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/shakira_whenever_wherever/shakira_whenever_wherever.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.487+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-f\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-f\"},{\"changed_at\":\"2025-06-10 18:07:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:52:33 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 15:59:14 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 21:07:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -115,17 +115,11 @@ function updateSectionCourse(updateCourse, course) {
   }
 
   const courseVersion = courseVersions[courseVersionId];
-  const isStandaloneUnit = courseVersion.type === 'Unit';
 
-  let hasLessonExtras;
-  let hasTextToSpeech;
-
-  if (isStandaloneUnit) {
-    hasLessonExtras = Object.values(courseVersion.units)[0]
-      .lesson_extras_available;
-    hasTextToSpeech = Object.values(courseVersion.units)[0]
-      .text_to_speech_enabled;
-  }
+  const hasLessonExtras = Object.values(courseVersion.units)[0]
+    .lesson_extras_available;
+  const hasTextToSpeech = Object.values(courseVersion.units)[0]
+    .text_to_speech_enabled;
 
   updateCourse({
     displayName: course.display_name,

@@ -12,7 +12,7 @@ class ScriptsController < ApplicationController
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
-  authorize_resource class: 'Unit', except: [:update]
+  before_action :authorize_script, except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
@@ -21,6 +21,8 @@ class ScriptsController < ApplicationController
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
+    #TODO: TEACH-2050 Modularity support redirect to property. Currently this redirects to the script path, which
+    # will redirect to the redirect script's original unit group
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -61,7 +63,8 @@ class ScriptsController < ApplicationController
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
       # location during the unit renaming process.
-      redirect_to canonical_path
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{canonical_path}#{redirect_query_string}"
       return
     end
 
@@ -72,9 +75,14 @@ class ScriptsController < ApplicationController
 
     # Attempt to redirect user if we think they ended up on the wrong unit overview page.
     override_redirect = VersionRedirectOverrider.override_unit_redirect?(session, @script)
-    if !override_redirect && redirect_unit = redirect_unit(@script, request.locale, @course)
-      redirect_to script_path(redirect_unit) + "?redirect_warning=true"
-      return
+    if !override_redirect && redirect_info = get_redirect_info(@script, request.locale, @course)
+      if redirect_info[:redirect_ugu]
+        redirect_to course_unit_path(redirect_info[:redirect_ugu].unit_group, redirect_info[:redirect_ugu].position) + "?redirect_warning=true"
+        return
+      elsif redirect_info[:redirect_unit]
+        redirect_to script_path(redirect_info[:redirect_unit]) + "?redirect_warning=true"
+        return
+      end
     end
 
     # Lastly, if user is assigned to newer version of this unit, we will
@@ -327,24 +335,24 @@ class ScriptsController < ApplicationController
       Unit.get_without_cache(unit_name, with_associated_models: true) :
       Unit.get_from_cache(unit_name, raise_exceptions: false)
 
-    return script if script
+    return {script: script} if script
 
     if Unit.family_names.include?(unit_name)
       script = Unit.get_unit_family_redirect_for_user(unit_name, user: current_user, locale: request.locale)
       Unit.log_redirect(unit_name, script.redirect_to, request, 'unversioned-script-redirect', current_user&.user_type) if script.present?
-      return script
+      return {script: script}
     end
 
     # Redirect to the latest version or the assigned version of a single-unit course
     if UnitGroup.family_names.include?(unit_name)
       unit_group = UnitGroup.latest_stable_version(unit_name, locale: request.locale) ||
         UnitGroup.latest_stable_version(unit_name)
-      if unit_group.can_be_participant?(current_user)
+      if unit_group&.can_be_participant?(current_user)
         unit_group = UnitGroup.latest_assigned_version(unit_name, current_user) || unit_group
       end
       if unit_group&.single_unit_course?
         script = unit_group.units_for_user(current_user).first
-        return script
+        return {script: script, unit_group: unit_group}
       end
     end
 
@@ -362,9 +370,11 @@ class ScriptsController < ApplicationController
         @script = context[:unit]
       end
     else
-      @script = get_unit_by_name
-      raise ActiveRecord::RecordNotFound unless @script
-      @course = @script.original_unit_group
+      result = get_unit_by_name
+      raise ActiveRecord::RecordNotFound unless result && result[:script]
+      @script = result[:script]
+      # Use the unit_group from the result if it's a single unit course, otherwise fall back to original logic
+      @course = result[:unit_group] || @script.original_unit_group
       @unit_group_unit = @script.unit_group_units.find {|ugu| ugu.unit_group == @course}
       @unit_position = @unit_group_unit&.position
     end
@@ -372,7 +382,7 @@ class ScriptsController < ApplicationController
   end
 
   private def render_no_access
-    if current_user && !current_user.admin? && !can?(:read, @script)
+    if current_user && !current_user.admin? && !can?(:read, @script, @course)
       render :no_access
     end
   end
@@ -447,7 +457,7 @@ class ScriptsController < ApplicationController
     end
   end
 
-  private def redirect_unit(unit, locale, course)
+  private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
     return nil if !unit || unit.can_view_version?(current_user, locale: locale)
 
@@ -465,7 +475,8 @@ class ScriptsController < ApplicationController
     # Do not redirect if we are already on the correct unit.
     return nil if redirect_unit == unit
 
-    redirect_unit
+    ugu = Queries::Courses.unit_group_unit(redirect_unit, redirect_unit_group)
+    {redirect_unit: redirect_unit, redirect_ugu: ugu}
   end
 
   # Redirect /s/... to /courses/.../units/...
@@ -473,5 +484,15 @@ class ScriptsController < ApplicationController
     unit_name_or_id = params[:script_id] || params[:id]
     canonical_path = Services::Courses.canonical_path(request.fullpath, unit_name_or_id)
     redirect_to canonical_path unless canonical_path == request.fullpath
+  end
+
+  # Authorize in a separate before_action rather than using CanCan's authorize_resource
+  # After the URL restructuring from /s/... to /courses/.../units/... the selected unit
+  # was no longer being authorized, and instead the Unit model was being authorized, leading
+  # some users to have access to certain courses they shouldn't have access to (see
+  # TEACH-1975 for more details).This solves the issue by explicitly calling authorize!
+  # on the @script if it is set.
+  private def authorize_script
+    authorize! params[:action].to_sym, @script || Unit, @course
   end
 end

@@ -1,10 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
 
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {HTMLPreview} from './HTMLPreview';
 
@@ -35,9 +36,11 @@ const getPreviewComponent = (
 
 export const FilePreview = () => {
   const {
-    source: {files},
     config: {previewFileTypes, PreviewComponents},
   } = useCodebridgeContext();
+  const files = useAppSelector(
+    state => (state.lab2Project.projectSources?.source as MultiFileSource).files
+  );
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
       (f: ProjectFile) => f.name === 'index.html' && !f.folderId
@@ -72,7 +75,6 @@ export const FilePreview = () => {
     <PanelContainer
       id="editor-workspace"
       headerContent={headerContent}
-      rightHeaderContent={<SwapLayoutDropdown />}
       className={moduleStyles.filePreview}
     >
       <select

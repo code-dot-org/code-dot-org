@@ -218,7 +218,7 @@ export const studentFromServerStudent = (serverStudent, sectionId) => ({
   name: serverStudent.name,
   familyName: serverStudent.family_name,
   sharingDisabled: serverStudent.sharing_disabled,
-  secretPicturePath: serverStudent.secret_picture_path,
+  secretPictureUrl: serverStudent.secret_picture_url,
   secretPictureName: serverStudent.secret_picture_name,
   secretWords: serverStudent.secret_words,
   userType: serverStudent.user_type,
@@ -414,7 +414,7 @@ export const studentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   familyName: PropTypes.string,
   sharingDisabled: PropTypes.bool,
-  secretPicturePath: PropTypes.string,
+  secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
 });
 

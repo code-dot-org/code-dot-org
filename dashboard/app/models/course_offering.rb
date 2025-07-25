@@ -23,6 +23,7 @@
 #  published_date                   :datetime
 #  self_paced_pl_course_offering_id :integer
 #  ai_teaching_assistant_available  :boolean          default(FALSE), not null
+#  facilitator_course_permissions   :json
 #
 # Indexes
 #
@@ -187,9 +188,21 @@ class CourseOffering < ApplicationRecord
 
   def self.all_course_offerings
     if should_cache?
-      @@course_offerings ||= CourseOffering.all.includes(course_versions: :content_root)
+      @@course_offerings ||= CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     else
-      CourseOffering.all.includes(course_versions: :content_root)
+      CourseOffering.all.includes(
+        course_versions: {
+          content_root: {
+            default_unit_group_units: {}
+          }
+        }
+      )
     end
   end
 
@@ -210,13 +223,26 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.professional_learning_and_self_paced_course_offerings
-    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}.map do |co|
+    all_course_offerings.select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
+  end
+
+  def self.professional_learning_and_self_paced_course_offerings_basic_info
+    professional_learning_and_self_paced_course_offerings.map do |co|
       {
         id: co.id,
         key: co.key,
         display_name: co.display_name,
       }
     end
+  end
+
+  def self.self_paced_course_offerings_for_catalog
+    all_course_offerings.select do |co|
+      co.get_participant_audience == 'teacher' &&
+        co.instruction_type == 'self_paced' &&
+        co.assignable? &&
+        co.any_version_is_in_published_state?
+    end.map(&:summarize_for_catalog)
   end
 
   def summarize_for_unit_selector(unit_ids)
@@ -286,11 +312,20 @@ class CourseOffering < ApplicationRecord
     localized_name || display_name
   end
 
-  def duration
+  def duration_in_minutes
     return nil unless latest_published_version
     co_units = latest_published_version.units
-    co_duration_in_minutes = co_units.sum(&:duration_in_minutes)
-    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| co_duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
+    co_units.sum(&:duration_in_minutes)
+  end
+
+  def duration_in_hours
+    return nil unless duration_in_minutes
+    duration_in_minutes > 60 ? duration_in_minutes / 60 : 1
+  end
+
+  def duration
+    return nil unless duration_in_minutes
+    DURATION_LABEL_TO_MINUTES_CAP.keys.find {|dur| duration_in_minutes <= DURATION_LABEL_TO_MINUTES_CAP[dur]}
   end
 
   def translated?(locale_code = 'en-us')
@@ -321,6 +356,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions || [],
     }
   end
 
@@ -332,6 +368,7 @@ class CourseOffering < ApplicationRecord
       marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
+      duration_in_hours: duration_in_hours,
       image: image,
       cs_topic: cs_topic,
       school_subject: school_subject,
@@ -372,6 +409,7 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      facilitator_course_permissions: facilitator_course_permissions
     }
   end
 

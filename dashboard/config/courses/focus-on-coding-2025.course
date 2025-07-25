@@ -4,13 +4,14 @@
     "csd1-2025",
     "csd2-2025",
     "csd3-2025",
+    "programming-with-music-lab-2025",
     "csd6a-2025",
     "csd6b-2025"
   ],
   "original_script_names": [
 
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

@@ -1,5 +1,6 @@
 @import 'color';
 @import '@code-dot-org/component-library-styles/font';
+@import '@code-dot-org/component-library-styles/colors';
 
 .iconKey {
   margin-bottom: 24px;
@@ -160,4 +161,16 @@
   h6 {
     margin-bottom: 0;
   }
+}
+
+.icon-green {
+  color: var(--sentiment-success-60);
+}
+
+.icon-black {
+  color: var(--neutral-base-black);
+}
+
+.icon-gray {
+  color: var(--neutral-gray-60);
 }

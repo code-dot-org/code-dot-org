@@ -409,16 +409,12 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to course_unit_path(single_unit_course, 1)
   end
 
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
-    experiment_course = create :unit_group, name: 'experiment-course', family_name: 'experiment-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+  test "show: query params are preserved in redirect to unit for single-unit course" do
+    single_unit_course = create :single_unit_course
 
-    sign_in experiment_teacher
-
-    get :show, params: {course_name: 'experiment-course'}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}"
+    sign_in create(:teacher)
+    get :show, params: {course_name: single_unit_course.name, viewAs: 'Instructor'}
+    assert_redirected_to course_unit_path(single_unit_course, 1, viewAs: 'Instructor')
   end
 
   no_access_msg = "You don&#39;t have access to this course."
@@ -464,18 +460,18 @@ class CoursesControllerTest < ActionController::TestCase
     assert_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
+  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_teacher},
                               params: -> {{course_name: @pilot_unit_group.name, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot course'
   ) do
-    refute_includes(response.body, no_access_msg)
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_section.id}/courses/#{@pilot_unit_group.name}"
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_facilitator},
+  test_user_gets_response_for(:show, response: :redirect, user: -> {@pilot_facilitator},
                               params: -> {{course_name: @pilot_pl_unit_group.name, section_id: @pilot_pl_section.id}},
                               name: 'pilot instructor can view pilot course'
   ) do
-    refute_includes(response.body, no_access_msg)
+    assert_redirected_to "http://test.host/teacher_dashboard/sections/#{@pilot_pl_section.id}/courses/#{@pilot_pl_unit_group.name}"
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
@@ -916,5 +912,57 @@ class CoursesControllerTest < ActionController::TestCase
         end
       end
     end
+  end
+
+  test "update: updates the course to have auto-numbered units" do
+    course = create :unit_group, :with_units
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: 'auto'}
+    course.reload
+    assert course.numbered_units?
+    assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto, course.numbered_units
+
+    ugu1 = course.default_unit_group_units.first
+    assert_nil ugu1.unit_prefix
+  end
+
+  test "update: updates the course to have custom-numbered units" do
+    course = create :unit_group, :with_units
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: 'custom', unit_prefixes: %w[1a 1b]}
+    course.reload
+    assert course.numbered_units?
+    assert_equal ::Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom, course.numbered_units
+
+    ugu1 = course.default_unit_group_units.first
+    ugu2 = course.default_unit_group_units.second
+    assert_equal '1a', ugu1.unit_prefix
+    assert_equal '1b', ugu2.unit_prefix
+  end
+
+  test "update: updates the course to not have numbered units" do
+    course = create :unit_group, :with_units
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: false}
+    course.reload
+    refute course.numbered_units?
+  end
+
+  test "update: saves unit prefixes but does not show them when switching from custom numbering to no numbering" do
+    course = create :unit_group, :with_units, numbered_units: Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+    ugu1 = course.default_unit_group_units.first
+    ugu2 = course.default_unit_group_units.second
+    ugu1.update!(unit_prefix: '1a')
+    ugu2.update!(unit_prefix: '1b')
+
+    sign_in create(:levelbuilder)
+    post :update, params: {course_name: course.name, numbered_units: false}
+    course.reload
+    ugu1.reload
+    ugu2.reload
+
+    refute course.numbered_units?
+    assert_equal '1a', ugu1.unit_prefix
+    assert_equal '1b', ugu2.unit_prefix
   end
 end

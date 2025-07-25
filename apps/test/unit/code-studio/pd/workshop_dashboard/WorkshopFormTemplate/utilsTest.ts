@@ -1,5 +1,5 @@
+import {Option} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/MultiSelectInput';
 import {
-  Facilitator,
   Organizer,
   Session,
   SessionFormState,
@@ -81,7 +81,18 @@ describe('workshopDataToState', () => {
       course: 'Test Course',
       capacity: 10,
       description: 'Test Description',
-      facilitators: [{id: 1} as Facilitator, {id: 2} as Facilitator],
+      facilitators: [
+        {
+          id: 1,
+          name: 'Facilitator 1',
+          email: 'facilitator1@mail.com',
+        },
+        {
+          id: 2,
+          name: 'Facilitator 2',
+          email: 'facilitator2@mail.com',
+        },
+      ],
       fee: '100',
       grades: ['K', '1'],
       hidden: true,
@@ -102,7 +113,20 @@ describe('workshopDataToState', () => {
       course: 'Test Course',
       capacity: '10',
       description: 'Test Description',
-      facilitators: [1, 2],
+      facilitators: [
+        {
+          id: 1,
+          label: 'Facilitator 1',
+          secondaryLabel: 'facilitator1@mail.com',
+          searchText: ['Facilitator 1', 'facilitator1@mail.com'],
+        },
+        {
+          id: 2,
+          label: 'Facilitator 2',
+          secondaryLabel: 'facilitator2@mail.com',
+          searchText: ['Facilitator 2', 'facilitator2@mail.com'],
+        },
+      ],
       fee: '100',
       grades: ['K', '1'],
       hidden: true,
@@ -322,7 +346,7 @@ describe('workshopStateToApi', () => {
       course: 'Test Course',
       capacity: '25',
       description: 'Test Description',
-      facilitators: [1, 2, 3],
+      facilitators: [{id: 1} as Option, {id: 2} as Option, {id: 3} as Option],
       fee: '100',
       grades: ['K', '1', '2'],
       hidden: true,
@@ -546,5 +570,16 @@ describe('emptyValue', () => {
 
   it('should return false for false', () => {
     expect(emptyValue(false)).toBe(false);
+  });
+
+  // Option
+  it('should return false for an option', () => {
+    expect(emptyValue({id: 1, label: 'option 1', searchText: []})).toBe(false);
+  });
+
+  it('should return false for an array of options', () => {
+    expect(emptyValue([{id: 1, label: 'option 1', searchText: []}])).toBe(
+      false
+    );
   });
 });

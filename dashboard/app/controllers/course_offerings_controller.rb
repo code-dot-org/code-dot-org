@@ -6,7 +6,7 @@ class CourseOfferingsController < ApplicationController
 
   def edit
     @course_offering = CourseOffering.find_by!(key: params[:key])
-    @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings
+    @self_paced_pl_course_offerings = CourseOffering.professional_learning_and_self_paced_course_offerings_basic_info
     @professional_learning_program_paths = CourseOffering::PROFESSIONAL_LEARNING_PROGRAM_PATHS
     @videos = Video.videos_for_course_offering_editor
     render :not_found unless @course_offering
@@ -44,6 +44,15 @@ class CourseOfferingsController < ApplicationController
   end
 
   private def course_offering_params
-    params.permit(:display_name, :is_featured, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :image, :cs_topic, :school_subject, :device_compatibility, :description, :professional_learning_program, :self_paced_pl_course_offering_id, :video, :published_date, :ai_teaching_assistant_available).to_h
+    permitted = [
+      :display_name, :is_featured, :assignable, :grade_levels, :curriculum_type, :header, :marketing_initiative, :image, :cs_topic, :school_subject, :device_compatibility, :description, :professional_learning_program, :self_paced_pl_course_offering_id, :video, :published_date, :ai_teaching_assistant_available, {facilitator_course_permissions: []}
+    ]
+    if params[:course_offering]
+      # rails convention is to use nested strong parameter
+      params.require(:course_offering).permit(*permitted).to_h
+    else
+      # retain backwards compatibility
+      params.permit(*permitted).to_h
+    end
   end
 end

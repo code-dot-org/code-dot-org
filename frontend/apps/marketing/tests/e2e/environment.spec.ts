@@ -12,7 +12,7 @@ test.describe('Environment Variable Tests', () => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
     test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.goto();
 
     // The window['__ENV'] variable should be set to the appropriate environment variables

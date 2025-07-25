@@ -48,11 +48,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const thumbnailUrl = null;
   // TODO: support abuse reporting.
   const exceedsAbuseThreshold = false;
-  // TODO: When we support publishing, we can use this logic to determine if we can publish
-  // const canPublish = isSignedIn && projectType && AllPublishableProjectTypes.includes(projectType);
-  const canPublish = false;
-  // TODO: this should come from labRedux once we support publishing.
-  const isPublished = false;
   const canShareSocial = isSignedIn && is13Plus;
 
   const [submissionStatus, setSubmissionStatus] = useState<
@@ -145,8 +140,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
       thumbnailUrl={thumbnailUrl}
       isAbusive={exceedsAbuseThreshold}
       canPrint={projectType === 'artist'}
-      canPublish={canPublish}
-      isPublished={isPublished}
       channelId={channelId}
       appType={projectType}
       onClickPopup={popupWindow}

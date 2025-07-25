@@ -1,0 +1,163 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:59:48.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "rosa_linn_snap",
+      "sounds": {
+        "rosa_linn_snap": [
+          "backup_ohs_1",
+          "backup_ohs_2",
+          "kick",
+          "rhythm_soft",
+          "rhythm_full",
+          "soft_bass",
+          "chorus_bass",
+          "verse_bass",
+          "piano",
+          "soft_piano",
+          "dramatic_piano",
+          "driving_piano",
+          "guitar",
+          "soft_guitar",
+          "driving_guitar",
+          "guitar_and_banjo",
+          "lead_in_guitar",
+          "synth"
+        ]
+      },
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "#### Assessment\r\n\r\n**Define:** Create an arrangement of SNAP by Rosa Linn that incorporates a \"build\" and \"fade\" effect. Use loops and rests to control when each track starts and ends to create this effect.\r\n\r\n**Prepare:** Listen to the example song to hear how different instruments enter and leave at different times. Think about how to use loops and timing to shape the flow of your own version. For example, here's one example of how the \"build\" section of the timeline could look:\r\n\r\n![](https://images.code.org/870f2e6a5519fc27a282dc4c0d8758f2-image-1744149631195.png)\r\n\r\n**Try:** Build your backing track layering your different. Make sure the timing and layering work well with the vocals!\r\n\r\n**Reflect:** This is an **Assessment** level, which means it checks the most important skills from this lesson. A **rubric** is provided to show how your work will be evaluated — click each row below to see the details.\r\n\r\n---\r\n\r\n<details open>\r\n  <summary><strong>Extensive Evidence</strong></summary>\r\n  The song contains at least 4 different tracks that are looped and layered together to create a complex song. All tracks stop and start at different times on the timeline.\r\n</details>\r\n<details>\r\n  <summary><strong>Convincing Evidence</strong></summary>\r\n  The song contains at least 4 different tracks that are looped and layered together, but some tracks stop and start at the same time.\r\n</details>\r\n<details>\r\n  <summary><strong>Limited Evidence</strong></summary>\r\n  The song does not use at least 4 tracks or the majority of the tracks start and stop at the same time.\r\n</details>\r\n<details>\r\n  <summary><strong>No Evidence</strong></summary>\r\n  The song does not contain loops or does not contain rests.\r\n</details>",
+    "encrypted_exemplar_sources": "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\nFfj/tt6ZgxqC6z8hQg==\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-practice-summative_8b8ef762-812f-418e-a70a-e3ac84889f0c",
+        "message": "It looks like your song is on the right track! Make sure you're met all the other requirements before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-summative_bec5d63b-7975-46dc-9611-0a25acc6b167",
+        "message": "Be sure to use rests in your song!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-summative_c4db806f-2b3d-470d-b0af-8d7ba306d60b",
+        "message": "Be sure to use loops in your code!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_rest_at_current_location_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-summative_45bb9a73-06fa-42b6-b6e4-9bee001563b0",
+        "message": "Use loops and rests so your tracks start and stop at different times!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:4"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-practice-summative_eac771f8-1d56-43db-b716-c6ac0434431f",
+        "message": "Make sure you use at least 4 tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:48.960+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-summative\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-summative\"},{\"changed_at\":\"2025-06-26 20:03:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 21:02:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 21:20:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 23:01:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

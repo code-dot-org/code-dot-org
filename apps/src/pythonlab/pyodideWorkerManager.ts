@@ -8,7 +8,7 @@ import {
 } from '@codebridge/Console/MessageHelpers';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {
   setHasError,
   setLoadedCodeEnvironment,
@@ -34,6 +34,7 @@ let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
 let outputToNeighborhood = false;
+let isPyodideLoading = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -61,8 +62,8 @@ const getMessageHandlers = (
     };
   } else {
     return {
-      writeConsoleMessage: () => {},
-      writePartialLine: () => {},
+      writeConsoleMessage: (message: string) => console.log(message),
+      writePartialLine: (message: string) => console.log(message),
     };
   }
 };
@@ -95,6 +96,12 @@ const setUpPyodideWorker = () => {
     switch (type) {
       case 'sysout':
       case 'syserr':
+        // Write messages to the dev console if we are still loading pyodide.
+        // These messages are confusing to students, as they are part of the pyodide loading process.
+        if (isPyodideLoading) {
+          console.log(message);
+          break;
+        }
         // We currently treat sysout and syserr the same, but we may want to
         // change this in the future. Test output goes to syserr by default.
         if (message.startsWith(MessageTag.MATPLOTLIB_IMG)) {
@@ -158,9 +165,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
+        isPyodideLoading = true;
         getStore().dispatch(setLoadedCodeEnvironment(false));
         break;
       case 'loaded_pyodide':
+        isPyodideLoading = false;
         getStore().dispatch(setLoadedCodeEnvironment(true));
         if (message && parseInt(message)) {
           Lab2Registry.getInstance()
@@ -189,7 +198,7 @@ const registerServiceWorker = async () => {
   if (canSupportInput()) {
     try {
       // Do not move the url into a variable, because webpack needs it to be passed as
-      // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      // a parameter to register() directly in order to set up inputServiceWorker as a service worker.
       // The service worker is versioned to ensure the correct version is loaded.
       // Update the version if you update the service worker.
       const registration = await navigator.serviceWorker.register(

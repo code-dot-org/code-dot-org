@@ -5,14 +5,14 @@ Feature: Viewing and Printing Standards Progress
   @properties_encryption_key
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "coursea-2019"
-    Given I am assigned to unit "allthethings"
+    Given I am assigned to course "coursea-2019" unit 1
+    Given I am assigned to course "allthethingscourse" unit 1
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    And I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"

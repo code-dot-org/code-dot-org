@@ -19,12 +19,15 @@ function showCourseOfferingEditor() {
 
   const videos = getScriptData('videos');
 
+  const facilitatorsCourses = getScriptData('facilitatorsCourses');
+
   ReactDOM.render(
     <CourseOfferingEditor
       initialCourseOffering={courseOfferingEditorData}
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
       professionalLearningProgramPaths={professionalLearningProgramPaths}
       videos={videos}
+      facilitatorsCourses={facilitatorsCourses}
     />,
     document.getElementById('course_offering_editor')
   );

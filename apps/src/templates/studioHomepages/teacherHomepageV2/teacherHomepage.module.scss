@@ -41,10 +41,6 @@
   gap: 6px;
 }
 
-.feedbackAlert {
-  margin-bottom: 20px;
-}
-
 // SectionList
 .sectionList {
   display: flex;
@@ -180,8 +176,10 @@
 .sectionCardBodyLeft {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 
 .sectionCardBodyRight {
@@ -189,8 +187,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 16px;
-  flex-grow: 1;
-  flex-basis: 0;
+  flex: 1 1 0;
 }
 
 .studentsAddedAlert {
@@ -250,16 +247,29 @@
 .courseContentDropdownContainer {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   background-color: var(--neutral-base-white);
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
   gap: 8px;
   height: 100%;
+}
 
-  p {
-    margin: 0;
+.courseContentDropdownContainer .courseTitleText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.courseContentDropdownContainer .courseContentDropdown {
+  width: 100%;
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -409,4 +419,58 @@
   min-height: 50px;
   height: fit-content;
   margin-inline-start: 8px;
+}
+
+// Drawer Component
+.drawer :global(.MuiDrawer-paperAnchorBottom) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 10px 48px 10px;
+  gap: 10px;
+  background-color: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-strong);
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 100%;
+}
+
+.drawerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+}
+
+.drawerContent {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  justify-content: center;
+  padding: 24px 30px;
+}
+
+.drawerFooter {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+
+.drawerImage {
+  width: 192px;
 }

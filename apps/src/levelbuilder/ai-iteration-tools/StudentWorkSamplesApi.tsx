@@ -1,9 +1,10 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 interface StudentWorkRequest {
-  numSamples: number;
+  numSamples?: number;
   unitId: number;
   levelId: number;
+  studentIds?: string[];
 }
 
 export async function fetchStudentCodeSamples(

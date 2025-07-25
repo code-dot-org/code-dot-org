@@ -46,6 +46,8 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
 
   switch (node.nodeType) {
     case 'text': {
+      if (!node.value) return [];
+
       return [
         node.marks.reduce((value: ReactNode, {type}: Mark) => {
           switch (type) {
@@ -79,20 +81,41 @@ const richTextRenderOptions: Options = {
       const paragraphContent = extractNodeContent(paragraphNode);
       // The Rich Text Editor wraps each line in a <p> tag, which acts as a spacer.
       // Replaces empty paragraphs with a <br /> To comply with HTML a11y guidelines.
-      return paragraphContent.length ? (
-        <BodyTwoText>{paragraphContent}</BodyTwoText>
+      return paragraphContent.some(content => content) ? (
+        <BodyTwoText className={moduleStyles.richTextParagraph}>
+          {paragraphContent}
+        </BodyTwoText>
       ) : (
         <br />
       );
     },
     [BLOCKS.UL_LIST]: (listNode: Block | Inline) => (
-      <SimpleList
-        items={listNode.content.map(
-          (itemNode: RichTextNode, index): SimpleListItem => {
-            return {key: index, label: extractNodeContent(itemNode)};
-          },
-        )}
-      />
+      <>
+        <SimpleList
+          className={moduleStyles.richTextList}
+          items={listNode.content.map(
+            (itemNode: RichTextNode, index): SimpleListItem => ({
+              key: index,
+              label: extractNodeContent(itemNode),
+            }),
+          )}
+        />
+        <br />
+      </>
+    ),
+    [BLOCKS.OL_LIST]: (listNode: Block | Inline) => (
+      <>
+        <ol>
+          {listNode.content.map((itemNode: RichTextNode, index) => (
+            <li key={index}>
+              <BodyTwoText className={moduleStyles.richTextParagraph}>
+                {extractNodeContent(itemNode)}
+              </BodyTwoText>
+            </li>
+          ))}
+        </ol>
+        <br />
+      </>
     ),
   },
 };

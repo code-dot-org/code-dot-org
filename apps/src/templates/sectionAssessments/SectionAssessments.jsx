@@ -4,7 +4,7 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -62,8 +62,9 @@ class SectionAssessments extends Component {
     isLoading: PropTypes.bool.isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     assessmentId: PropTypes.number,
-    setScriptId: PropTypes.func.isRequired,
+    setUnit: PropTypes.func.isRequired,
     setAssessmentId: PropTypes.func.isRequired,
     asyncLoadAssessments: PropTypes.func.isRequired,
     multipleChoiceSurveyResults: PropTypes.array,
@@ -86,10 +87,10 @@ class SectionAssessments extends Component {
     asyncLoadAssessments(sectionId, scriptId);
   }
 
-  onSelectScript = newScriptId => {
-    const {setScriptId, asyncLoadAssessments, scriptId, sectionId} = this.props;
+  onSelectScript = (newScriptId, newCourseVersionId) => {
+    const {setUnit, asyncLoadAssessments, scriptId, sectionId} = this.props;
     asyncLoadAssessments(sectionId, newScriptId);
-    setScriptId(newScriptId);
+    setUnit(newScriptId, newCourseVersionId);
 
     this.logEvent('select_script', {
       old_script_id: scriptId,
@@ -182,6 +183,7 @@ class SectionAssessments extends Component {
     const {
       sectionName,
       scriptId,
+      courseVersionId,
       assessmentList,
       assessmentId,
       isLoading,
@@ -203,7 +205,11 @@ class SectionAssessments extends Component {
             <div style={{...h3Style, ...styles.header}}>
               {i18n.selectACourse()}
             </div>
-            <UnitSelector scriptId={scriptId} onChange={this.onSelectScript} />
+            <UnitSelector
+              scriptId={scriptId}
+              courseVersionId={courseVersionId}
+              onChange={this.onSelectScript}
+            />
           </div>
           {!isLoading && assessmentList.length > 0 && (
             <div style={styles.assessmentSelection}>
@@ -367,6 +373,7 @@ export default connect(
     isLoading: !!state.sectionAssessments.isLoading,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
+    courseVersionId: state.unitSelection.courseVersionId,
     assessmentId: state.sectionAssessments.assessmentId,
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
@@ -375,8 +382,8 @@ export default connect(
     studentList: state.teacherSections.selectedStudents,
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setUnit(scriptId, courseVersionId) {
+      dispatch(setUnit(scriptId, courseVersionId));
     },
     asyncLoadAssessments(sectionId, scriptId) {
       return dispatch(asyncLoadAssessments(sectionId, scriptId));

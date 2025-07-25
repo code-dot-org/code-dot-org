@@ -3,7 +3,7 @@ import {
   ObservableProcedureModel,
 } from '@blockly/block-shareable-procedures';
 import {FieldColour} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-experiment';
+import {KeyboardNavigation} from '@blockly/keyboard-navigation';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -83,7 +83,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   selected: GoogleBlockly.BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
-  readOnly: boolean;
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
@@ -138,6 +137,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   SNAP_RADIUS: number;
   Variables: ExtendedVariables;
   hasLoadedBlocks: boolean;
+  showBlockHelp: boolean;
 
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
@@ -184,6 +184,9 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     [originalBlockId: string]: string;
   };
   KeyboardNavigation?: typeof KeyboardNavigation;
+  shortcutBackups: {
+    [name: string]: GoogleBlockly.ShortcutRegistry.KeyboardShortcut | undefined;
+  };
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -298,6 +301,7 @@ export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
   analyticsData: AnalyticsData;
   isJigsaw: boolean;
   enableKeyboardNavigation: boolean;
+  showBlockHelp: boolean;
 }
 
 export interface ExtendedWorkspace extends GoogleBlockly.Workspace {

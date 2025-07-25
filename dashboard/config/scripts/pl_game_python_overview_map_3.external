@@ -1,0 +1,13 @@
+name 'pl-game-python-overview-map-3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Road Through the Neighborhood
+
+#### This map lays out your journey, guiding you from your first line of code to classroom confidence—one neighborhood stop at a time.
+
+<img src="https://images.code.org/2c487b6939d95854c41c125e027edf70-image-1749146371875.png" alt="map with icons laying out the challenges: hitting the road, fueling up at the coffee shop, exploring the library of learning, unlocking project park, and stepping int the classroom" width="850px" style="display: block; margin-left: auto; margin-right: auto;">
+
+
+MARKDOWN

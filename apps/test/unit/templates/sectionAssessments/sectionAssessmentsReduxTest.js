@@ -1,4 +1,4 @@
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setUnit} from '@cdo/apps/redux/unitSelectionRedux';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -44,7 +44,7 @@ describe('sectionAssessmentsRedux', () => {
           1: [{question: 'a question', puzzle: 2}],
         },
       };
-      const action = setScriptId(2);
+      const action = setUnit(2, 99);
       const nextState = sectionAssessments(currentState, action);
       expect(nextState.studentId).toEqual(0);
       expect(nextState.assessmentResponsesByScript).toEqual(
@@ -183,6 +183,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
+          courseVersionId: 321,
           coursesWithProgress: [
             {
               id: 321,
@@ -221,6 +222,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
+          courseVersionId: 321,
           coursesWithProgress: [
             {
               id: 321,
@@ -286,6 +288,7 @@ describe('sectionAssessmentsRedux', () => {
         sectionAssessments: initialState,
         unitSelection: {
           scriptId: 3,
+          courseVersionId: 321,
         },
       };
     });
@@ -735,6 +738,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
             coursesWithProgress: [
               {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]},
             ],
@@ -749,6 +753,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
             coursesWithProgress: [
               {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]},
             ],
@@ -1482,6 +1487,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
+            courseVersionId: 321,
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,

@@ -3,7 +3,6 @@
 @no_firefox
 @no_safari
 Feature: Using the teacher homepage sections feature
-
   Scenario: See a section creation dialog when logging for the first time
     # After a teacher creates an account, they see the section create dialog
     Given I create a teacher who has never signed in named "Ariel" and go home
@@ -20,7 +19,7 @@ Feature: Using the teacher homepage sections feature
     Given I create a teacher named "Belle" and go home
     And I wait until I am on "http://studio.code.org/home"
     And element ".modal" is not visible
-  
+
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
     When I create a new student section and go home
@@ -34,98 +33,22 @@ Feature: Using the teacher homepage sections feature
     Then the student section table should have 2 rows
 
   @properties_encryption_key
-  Scenario: Navigate to course and unit pages
-    # No sections, ensure that levels load correctly after navigating from MiniView
-    Given I am on "http://studio.code.org/courses/csp-2017/units/2/lessons/1/levels/1"
-    And I wait to see ".header_popup_link"
-    When I wait for jquery to load
-    And I click selector ".header_popup_link"
-    And I wait until element "a:contains(View Unit Overview)" is visible
-    Then I click selector "a:contains(View Unit Overview)"
-    And I wait until current URL contains "/courses/csp-2017/units/2"
-    Then I press the first ".uitest-ProgressPill" element
-    And I wait until current URL contains "/courses/csp-2017/units/2/lessons/1/levels/1"
-
-    Given I am on "http://studio.code.org/home"
-    When I see the section set up box
-    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
-    And I create a new student section and go home
-    Then the student section table should have 2 rows
-
-    # save the older section id, from the last row of the table
-    And I save the section id from row 1 of the section table
-    And I wait until element ".uitest-owned-sections" contains text "Computer Science Principles"
-    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
-
-    When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
-    And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
-    And I wait until current URL contains "/courses/csp-2017"
-
-    When I click selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" to load a new page
-    And I wait to see ".uitest-script-next-banner"
-    Then the url contains the section id
-
-    And the href of selector ".uitest-script-next-banner" contains the section id
-    And I wait for 3 seconds
-    And the href of selector ".progress-bubble-link:first" contains the section id
-    And the href of selector "a:contains(Computer Science Principles)" contains the section id
-
-    # navigate to a script level
-    When I click selector ".uitest-script-next-banner" to load a new page
-    And I wait to see ".header_popup_link"
-    Then the url contains the section id
-
-    # open the More menu in the progress bar
-    When I wait for jquery to load
-    And I click selector ".header_popup_link"
-    And I wait until element "a:contains(View Unit Overview)" is visible
-    And the href of selector "a:contains(View Unit Overview)" contains the section id
-    And I wait until element ".header_popup_body .progress-bubble-link:first" is visible
-    And the href of selector ".header_popup_body .progress-bubble-link:first" contains the section id
-
-    # Save the newer section id
-    Given I am on "http://studio.code.org/home"
-    Then the student section table should have 2 rows
-    And I save the section id from row 0 of the section table
-
-    # Test that the overview pages add the newer section id to the url
-
-    When I am on "http://studio.code.org/courses/csp-2019"
-    And I wait until element ".uitest-CourseScript" is visible
-    Then the url contains the section id
-
-    When I am on "http://studio.code.org/courses/csp-2019/units/1"
-    And I wait until element "#script-title" is visible
-    Then the url contains the section id
-
-    When I am on "http://studio.code.org/courses/coursea-2019/units/1"
-    And I wait until element "#script-title" is visible
-    Then the url contains the section id
-
-    # loading non-existent section succeeds, with no section selected
-    When I am on "http://studio.code.org/courses/coursea-2019/units/1?section_id=99999"
-    And I wait until element "#script-title" is visible
-    And element ".uitest-sectionselect" has value ""
-
-  @properties_encryption_key
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
-    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    And I create a new "High School" student section with course "Computer Science Principles", version "'25-'26" and unit "Digital Information"
     Then the student section table should have 1 rows
     And I save the section id from row 0 of the section table
 
-    When I am on "http://studio.code.org/courses/csp-2017"
+    When I am on "http://studio.code.org/courses/csp-2025"
     And I wait until element ".uitest-CourseScript" is visible
-    Then the url contains the section id
+    Then the teacher_dashboard url contains the section id
 
     # Hide a unit from the section
-    When I hide unit "CSP Unit 2 - Digital Information ('17-'18)"
-    And unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as not visible
+    When I hide unit "The Internet"
+    And unit "The Internet" is marked as not visible
 
     # Verify hidden unit warning banner appears
-    When I am on "http://studio.code.org/courses/csp-2017/units/2"
+    When I am on "http://studio.code.org/courses/csp-2025/units/2"
     And I wait until element "#script-title" is visible
     Then I wait until element ".announcement-notification:contains(unit is hidden)" is visible
 
@@ -134,9 +57,9 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
+    And I select the "The Internet" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible 
+    And I wait until element "h1:contains(Progress)" is visible
 
     # TODO: TEACH-537 If we add in this confirmation dialogue later, uncomment this test
     # Then I wait to see a dialog containing text "unit is currently hidden"
@@ -144,26 +67,28 @@ Feature: Using the teacher homepage sections feature
     # Confirm the assignment
     # When I press "confirm-assign"
     # And I wait for the dialog to close
-    
+
     # Verify the unit was unhidden
-    When I am on "http://studio.code.org/courses/csp-2017"
+    When I am on "http://studio.code.org/courses/csp-2025"
     And I wait until element ".uitest-CourseScript" is visible
-    Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
+    Then unit "The Internet" is marked as visible
 
   @skip
   # TODO TEACH-538: Reenable with new section setup flow
   Scenario: Assign a Course assigns first Unit in Course by default
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18"
+    And I create a new "High School" student section with course "Computer Science Principles", version "'25-'26"
     Then the student section table should have 1 rows
-    And the section table row at index 0 has secondary assignment path "/courses/csp-2017/units/1"
+    And the section table row at index 0 has secondary assignment path "/courses/csp-2025/units/1"
 
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
     And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
+
+    Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/courses/coursea-2017"
 
@@ -174,6 +99,8 @@ Feature: Using the teacher homepage sections feature
     And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first "#uitest-save-section-changes" element to load a new page
+    And I wait until element "h1:contains(Progress)" is visible
+    Given I am on "http://studio.code.org/home"
     And I wait until element "#classroom-sections" is visible
     And I wait until element ".uitest-owned-sections" is visible
     And the section table row at index 0 has primary assignment path "/courses/coursea-2019"
@@ -181,28 +108,25 @@ Feature: Using the teacher homepage sections feature
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new "High School" student section with course "Computer Science Principles", version "'19-'20" and unit "CSP Unit 1 - The Internet ('19-'20)"
+    And I create a new "High School" student section with course "Computer Science Principles", version "'25-'26" and unit "Digital Information"
     Then the student section table should have 1 rows
 
     # save the older section id, from the last row of the table
     And I save the section id from row 0 of the section table
 
-    And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
-    And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
+    And the teacher_dashboard href of selector ".uitest-owned-sections a:contains('Digital Information')" contains the section id
 
     When I click selector ".uitest-owned-sections a:contains('Computer Science Principles')" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
-    And check that the URL contains "/courses/csp-2019"
+    Then the teacher_dashboard url contains the section id
+    And check that the URL contains "/courses/csp-2025"
 
     And element "#uitest-version-selector" is visible
     And I click selector "#assignment-version-year" once I see it
     And I wait until element ".assignment-version-title" is visible
-    When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
+    When I click selector ".assignment-version-title:contains('24-'25)" to load a new page
     And I wait to see ".uitest-CourseScript"
-    Then the url contains the section id
-
-    And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
   Scenario: Loading the print certificates page for a section
     Given I create a teacher-associated student named "Sally"
@@ -217,7 +141,7 @@ Feature: Using the teacher homepage sections feature
 
   Scenario: Do not see the unit when a section is assigned a single-unit course
     Given I create a teacher-associated student named "Sally"
-    Given I am assigned to course "ui-test-single-unit-course-2025" and unit "ui-test-single-unit-2025" with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" unit 1 with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     Then the student section table should have 2 rows
@@ -225,4 +149,4 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-owned-sections" does not contain text "Current unit:"
 
     When I click selector ".uitest-owned-sections a:contains('Single Unit Course 2025')" to load a new page
-    Then check that the URL contains "/courses/ui-test-single-unit-course-2025/units/1"
+    Then check that the URL contains "/unit/ui-test-single-unit-2025"

@@ -16,7 +16,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {changeProjectType} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {submitPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -35,7 +35,7 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
 import {useAiTutor2} from '../lab2/views/components/aiTutor2/useAiTutor2';
 
-import getAiTutor2FullPromptFromData from './aiTutorHelper';
+import getAiTutor2Context from './aiTutorHelper';
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -71,29 +71,45 @@ const defaultConfig: ConfigType = {
     share: ShareView,
     widget: HorizontalLayout,
   },
-  showFileBrowser: true,
 };
 
 const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {
-    source,
-    setProject,
-    startSources,
-    projectVersion,
-    validationFile,
-    labConfig,
-  } = useSource(DEFAULT_PROJECT, levelProperties, initialSources);
+  const {startSources} = useSource(
+    DEFAULT_PROJECT,
+    levelProperties,
+    initialSources
+  );
+  const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
 
-  const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const currentLevelStatus = useAppSelector(
+    state => getCurrentLevel(state)?.status
+  );
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
+  );
+  const source = useAppSelector(
+    state =>
+      state.lab2Project.projectSources?.source as MultiFileSource | undefined
+  );
+  const labConfig = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig
+  );
+  const hasSource = !!source;
+  const isAiTutor2Enabled =
+    levelProperties.aiTutor2Available ||
+    queryParams('show-ai-tutor2') === 'true';
+
+  const isAiTutor2HintEnabled = queryParams('show-ai-tutor2-hint') === 'true';
+
+  const [aiTutor2Context, setAiTutor2Context] = useState<string | undefined>(
+    undefined
   );
 
   const dispatch = useAppDispatch();
@@ -175,17 +191,18 @@ const PythonlabView: React.FunctionComponent<
     dispatch(setWidgetViewShowCode(false));
   });
 
-  const getAiTutor2FullPrompt = (question: string) => {
-    return getAiTutor2FullPromptFromData(
-      question,
-      source,
-      validationFile,
-      levelProperties.longInstructions
+  useEffect(() => {
+    setAiTutor2Context(
+      getAiTutor2Context(
+        source,
+        validationFile,
+        levelProperties.longInstructions
+      )
     );
-  };
+  }, [levelProperties.longInstructions, source, validationFile]);
 
   const [askAiTutor2, AiTutor2Response] = useAiTutor2(
-    getAiTutor2FullPrompt,
+    isAiTutor2HintEnabled,
     'hint'
   );
 
@@ -207,11 +224,7 @@ const PythonlabView: React.FunctionComponent<
       progressManager,
       isStartMode ? undefined : validationFile
     );
-    if (
-      currentLevel &&
-      !isPredictLevel &&
-      currentLevel.status === LevelStatus.not_tried
-    ) {
+    if (!isPredictLevel && currentLevelStatus === LevelStatus.not_tried) {
       // If this is not a predict level and the current status is not tried,
       // send a level started progress report.
       dispatch(
@@ -223,32 +236,28 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    if (
-      levelProperties.aiTutor2Available ||
-      queryParams('show-ai-tutor2') === 'true'
-    ) {
+    if (isAiTutor2Enabled) {
       // Ask a question to AITutor2.
-      askAiTutor2("What's wrong with my code, if anything?");
+      askAiTutor2(
+        "What's wrong with my code, if anything?",
+        aiTutor2Context || ''
+      );
     }
   };
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {source && (
+      {hasSource && (
         <Codebridge
-          source={source}
           config={config}
-          setProject={setProject}
           setConfig={setConfig}
           startSources={levelStartSources}
           onRun={onRun}
           onStop={stopPythonCode}
-          projectVersion={projectVersion}
-          labConfig={labConfig}
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          getAiTutor2FullPrompt={getAiTutor2FullPrompt}
+          aiTutor2Context={aiTutor2Context}
           AiTutor2ResponseView={AiTutor2Response}
         />
       )}

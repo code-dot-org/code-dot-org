@@ -8,7 +8,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @section = create :section, user: @teacher
     @lesson = create :lesson
     @lesson_2 = create :lesson
-    @script = create :script
+    @script = create(:unit, :in_single_unit_course)
   end
 
   test 'score_lesson_for_section is forbidden if signed out' do
@@ -39,7 +39,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     section.students << create(:student)
     sign_in teacher
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     script_level = create(
       :script_level,
       script: script,
@@ -61,7 +61,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     section.students << create(:student)
     sign_in teacher
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     create(
@@ -97,7 +97,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     section.students << student
     sign_in teacher
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, unplugged: true
     script_level = create(
@@ -127,7 +127,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     end
     sign_in teacher
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     script_level = create(

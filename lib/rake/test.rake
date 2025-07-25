@@ -310,6 +310,8 @@ namespace :test do
           'shared/js/**/*',
           'shared/css/**/*',
           'frontend/**/*',
+          'lib/cdo/shared_constants/**/*',
+          'lib/cdo/shared_constants.rb',
         ]
       ) do
         TestRunUtils.run_apps_tests

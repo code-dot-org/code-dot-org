@@ -123,8 +123,6 @@ const TeacherCourseOverview: React.FC = () => {
   const params = useParams();
   const [searchParams] = useSearchParams();
 
-  const sections = useAppSelector(state => state.teacherSections.sections);
-
   const selectedSection = useAppSelector(selectedSectionSelector);
 
   React.useEffect(() => {
@@ -248,7 +246,6 @@ const TeacherCourseOverview: React.FC = () => {
       courseVersionId={courseSummary.course_version_id}
       descriptionStudent={courseSummary.description_student}
       descriptionTeacher={courseSummary.description_teacher}
-      sectionsInfo={Object.values(sections)}
       teacherResources={courseSummary.teacher_resources}
       studentResources={courseSummary.student_resources}
       scripts={courseSummary.scripts}

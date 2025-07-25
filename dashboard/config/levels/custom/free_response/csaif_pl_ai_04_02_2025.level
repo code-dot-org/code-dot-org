@@ -1,11 +1,12 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-05-23T14:35:18.000Z",
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "# Unit Project Exemplar\r\n\r\n## 📝 To Do\r\n####  Review the <a href=\"https://forum.code.org/t/student-logins-reflection/40539\" target=\"_blank\" rel=\"noopener noreferrer\">Exemplar Project</a> and the project rubric below on the last page of the <a href=\"https://docs.google.com/document/d/12VXXPQ0xTHpdgdLEj09K2nOwTRoiprEszM5QESP2SXk/edit?tab=t.0#heading=h.g4fwmbaeynch\" target=\"_blank\" rel=\"noopener noreferrer\">Activity Guide</a>.\r\n\r\n#### In the reflection space below, explain how you would rate the exemplar. Provide not only the rating, but evidence for your rating for each row.\r\n\r\n#### When you're done, review the <a href=\"https://docs.google.com/document/d/1C0sQDyrgocK_I1BhlVw1cVCHZhEkri4ukFKPRvgAdSc/edit?tab=t.0\" target=\"_blank\" rel=\"noopener noreferrer\">Exemplar Project Description</a> to see how your review compares to the one provided.\r\n\r\n\r\n",
+    "long_instructions": "# Unit Project Exemplar\r\n\r\n## 📝 To Do\r\n####  Review the <a href=\"https://drive.google.com/file/d/180dIgV9g3UfwKRbvF08D4Yw-iiKQIuE8/view\" target=\"_blank\" rel=\"noopener noreferrer\">Exemplar Project</a> and the project rubric below on the last page of the <a href=\"https://docs.google.com/document/d/12VXXPQ0xTHpdgdLEj09K2nOwTRoiprEszM5QESP2SXk/edit?tab=t.0#heading=h.g4fwmbaeynch\" target=\"_blank\" rel=\"noopener noreferrer\">Activity Guide</a>.\r\n\r\n#### In the reflection space below, explain how you would rate the exemplar. Provide not only the rating, but evidence for your rating for each row.\r\n\r\n#### When you're done, review the <a href=\"https://docs.google.com/document/d/1C0sQDyrgocK_I1BhlVw1cVCHZhEkri4ukFKPRvgAdSc/edit?tab=t.0\" target=\"_blank\" rel=\"noopener noreferrer\">Exemplar Project Description</a> to see how your review compares to the one provided.\r\n\r\n\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "true",
     "stay_on_level_after_submit": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-05-23T14:35:17.996+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_04_02\\\"\"],\"cloned_from\":\"csaif_pl_ai_04_02\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-23T14:35:17.996+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_04_02\\\"\"],\"cloned_from\":\"csaif_pl_ai_04_02\"},{\"changed_at\":\"2025-06-02 16:45:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

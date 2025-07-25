@@ -9,6 +9,7 @@ export const translatedCourseOfferingCsTopics = {
   data: i18n.courseOfferingCsTopicData(),
   digital_literacy: i18n.courseOfferingCsTopicDigitalLiteracy(),
   games_and_animations: i18n.courseOfferingCsTopicGamesAndAnimations(),
+  hardware: i18n.courseOfferingCsTopicHardware(),
   internet: i18n.courseOfferingCsTopicInternet(),
   physical_computing: i18n.courseOfferingCsTopicPhysicalComputing(),
   programming: i18n.courseOfferingCsTopicProgramming(),
@@ -67,6 +68,7 @@ export const translatedCourseOfferingDurationsWithTime = {
 };
 
 export const translatedCourseOfferingMarketingInitiatives = {
+  aif: i18n.marketingInitiativeAIF(),
   csa: i18n.marketingInitiativeCSA(),
   csc: i18n.marketingInitiativeCSC(),
   csd: i18n.marketingInitiativeCSD(),
@@ -123,6 +125,7 @@ export const subjectsAndTopicsOrder = [
   'art_and_design',
   'data',
   'programming',
+  'hardware',
 ];
 
 export const translatedAvailableResources = {

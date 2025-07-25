@@ -5,6 +5,8 @@ import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {memo, useEffect, useRef, useState} from 'react';
 
+import lab2I18n from '@cdo/apps/lab2/locale';
+
 import {getFileUrl} from './api';
 import {IMAGE_DIMENSION_WARNING, PDF_PAGE_WARNING} from './constants';
 import {AssetData} from './types';
@@ -57,6 +59,8 @@ const FileIcon: React.FC<FileIconProps> = ({
   };
   const [width, height] = dimensions || [];
 
+  // Large PDF and image warnings are currently levelbuilder only,
+  // so they are not translated.
   return (
     <div className={styles.fileIconWrapper}>
       {onSelect && !loadingMetadata && (
@@ -106,7 +110,8 @@ const FileIcon: React.FC<FileIconProps> = ({
           {pageCount && (
             <div className={styles.fileInfoRow}>
               <BodyThreeText className={styles.fileDetail}>
-                {pageCount} Pages
+                {pageCount}{' '}
+                {pageCount === 1 ? lab2I18n.page() : lab2I18n.pages()}
               </BodyThreeText>
               {showWarnings && pageCount > PDF_PAGE_WARNING && (
                 <WarningIcon text="This PDF has many pages and may result in degraded performance." />

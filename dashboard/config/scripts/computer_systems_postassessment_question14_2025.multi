@@ -1,8 +1,8 @@
 name 'computer-systems-postassessment-question14_2025'
 title 'Computer Systems and Devices Post-Assessment: Question 14'
 
-right 'Storage → Output → Processing → Input'
-wrong 'Input → Processing → Storage → Output'
+wrong 'Storage → Output → Processing → Input'
+right 'Input → Processing → Storage → Output'
 wrong 'Output → Input → Processing → Storage'
 wrong 'Processing → Storage → Input → Output'
 

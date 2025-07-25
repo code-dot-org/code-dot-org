@@ -87,6 +87,14 @@ RUN yarn turbo run build
 FROM base AS runner
 WORKDIR /app
 
+# When deploying Next.js behind a downstream proxy (e.g. a load-balancer like AWS ELB/ALB), it's important to configure
+# Next's underlying HTTP server with keep-alive timeouts that are larger than the downstream proxy's timeouts.
+# Otherwise, once a keep-alive timeout is reached for a given TCP connection, Node.js will immediately terminate that
+# connection without notifying the downstream proxy. This results in a proxy error whenever it attempts to reuse a
+# connection that Node.js has already terminated.
+# See: https://nextjs.org/docs/app/api-reference/cli/next#configuring-a-timeout-for-downstream-proxies
+ENV KEEP_ALIVE_TIMEOUT 70000
+
 # Don't run production as root
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs

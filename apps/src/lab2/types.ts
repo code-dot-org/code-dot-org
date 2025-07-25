@@ -53,6 +53,7 @@ export interface ProjectAndSources {
   sources?: ProjectSources;
   channel: Channel;
   abuseScore?: number;
+  sharingDisabled?: boolean;
 }
 
 /// ------ SOURCES ------ ///
@@ -201,6 +202,7 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  disableEditRunForSubmission?: boolean;
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
@@ -352,14 +354,10 @@ export interface Validation {
   callout?: string;
   next: boolean;
   key: string;
+  comment?: string;
 }
 
 /// ------ MISC ------ ///
-
-export enum ProjectManagerStorageType {
-  LOCAL = 'LOCAL',
-  REMOTE = 'REMOTE',
-}
 
 export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};

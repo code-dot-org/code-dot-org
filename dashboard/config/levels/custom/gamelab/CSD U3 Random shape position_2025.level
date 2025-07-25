@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2025-03-12T20:56:39.000Z",
   "level_num": "custom",
@@ -21,7 +22,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<img src=\"https://images.code.org/982d42328e2a44db4f1643df805a37ff-image-1569352188898.gif\" style=\"width:200px;float:right;\">\r\n\r\n# Debug: Random Shape Movement\r\n\r\nIsaac wrote a program that created three rectangles in the same position, using a variable `xPosition`. He tried to update his code to have the rectangles still appear together, but in a random position. But, his code doesn't work - instead, each rectangle appears at a different position.\r\n\r\nCan we fix his code so the animation appears like the image on the right?\r\n\r\n# Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) Read the code and run the program a few times to understand how it works\r\n2) ::: details [Update the code so the rectangles appear stacked at random x positions]\r\n\t- Hint: You will need to add one new [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block to your code\r\n    - Hint: You will need to update the code to use `xPosition` in several places\r\n:::",
+    "long_instructions": "# Debug: Random Shape Movement\r\n\r\nIsaac wrote a program that created three rectangles in the same position, using a variable `xPosition`. He tried to update his code to have the rectangles still appear together, but in a random position. But, his code doesn't work - instead, each rectangle appears at a different position.\r\n\r\nCan we fix his code so the animation appears like the image on the right?\r\n\r\n# Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) Read the code and run the program a few times to understand how it works\r\n2) ::: details [Update the code so the rectangles appear stacked at random x positions]\r\n\t- Hint: You will need to add one new [`randomNumber()`(#FFB74D)](/docs/ide/gamelab/expressions/randomNumber) block to your code\r\n    - Hint: You will need to update the code to use `xPosition` in several places\r\n:::\r\n\r\n<img src=\"https://images.code.org/982d42328e2a44db4f1643df805a37ff-image-1569352188898.gif\" style=\"width:200px;float:left;\"> ",
     "instructions_important": "false",
     "display_name": "Debug: Random Shape Position",
     "hide_share_and_remix": "false",
@@ -76,9 +77,8 @@
     "validation_enabled": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:39.166+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random shape position_2024\\\"\"],\"cloned_from\":\"CSD U3 Random shape position_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T20:56:39.166+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random shape position_2024\\\"\"],\"cloned_from\":\"CSD U3 Random shape position_2024\"},{\"changed_at\":\"2025-06-25 22:18:20 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 22:20:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

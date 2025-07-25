@@ -1,11 +1,11 @@
 const assertions = {
   'bf-cache': 'off',
   'color-contrast': 'off',
-  'errors-in-console': ['error', {maxLength: 3}],
+  'errors-in-console': ['error', {maxLength: 4}],
   'inspector-issues': 'off',
-  'offscreen-images': ['error', {minScore: 0.5, maxLength: 3}],
+  'offscreen-images': ['error', {minScore: 0.5, maxLength: 4}],
   'total-byte-weight': ['error', {minScore: 0.5}],
-  'unused-css-rules': ['error', {maxLength: 5}],
+  'unused-css-rules': ['error', {maxLength: 30}],
   'unused-javascript': ['error', {maxLength: 10}],
   'uses-text-compression': ['error', {maxLength: 5}],
   'third-party-cookies': 'off',
@@ -13,6 +13,15 @@ const assertions = {
   'link-text': 'off', // re-enable after CMS-497
   'meta-description': 'off', // Substituted by equivalent test in 'All The Things' UI Test.
   'uses-responsive-images': ['error', {maxLength: 1}], // re-enable after CMS-516
+  'valid-source-maps': ['error', {minScore: 0}], // One Trust script has no source map
+  'font-display-insight': 'off',
+  'forced-reflow-insight': 'off',
+  'image-delivery-insight': ['error', {minScore: 0.5}],
+  'legacy-javascript-insight': 'off',
+  'modern-http-insight': 'off',
+  'network-dependency-tree-insight': 'off',
+  'crawlable-anchors': ['error', {minScore: 0}], // Localizejs has invalid anchor tags
+  'unsized-images': ['error', {maxLength: 6}],
 };
 
 if (process.env.STAGE !== 'production') {

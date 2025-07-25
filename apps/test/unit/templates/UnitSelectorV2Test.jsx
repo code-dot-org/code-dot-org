@@ -5,12 +5,17 @@ import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teac
 import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
 
 jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+jest.mock('@cdo/apps/redux/unitSelectionRedux', () => ({
+  ...jest.requireActual('@cdo/apps/redux/unitSelectionRedux'),
+  getSelectedCourseId: jest.fn(() => 123),
+  getSelectedUnitPosition: jest.fn(() => 1),
+}));
 
 const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,
   scriptId: 2, // Course A (2018)
   sectionId: 1,
-  setScriptId: () => {},
+  setUnit: () => {},
   onChange: () => {},
   asyncLoadCoursesWithProgress: () => {},
   isLoadingCourses: false,
@@ -35,17 +40,15 @@ describe('UnitSelector', () => {
   });
 
   it('sets scriptId on change', () => {
-    const setScriptId = jest.fn();
-    render(
-      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setScriptId={setScriptId} />
-    );
+    const setUnit = jest.fn();
+    render(<UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setUnit={setUnit} />);
     const dropdown = screen.getByRole('combobox');
     fireEvent.click(dropdown);
 
     const option = screen.getByRole('option', {name: 'Flappy'});
     fireEvent.change(dropdown, {target: {value: option.value}});
 
-    expect(setScriptId).toHaveBeenCalledTimes(1);
+    expect(setUnit).toHaveBeenCalledTimes(1);
   });
 
   it('loads courses on initial render', () => {

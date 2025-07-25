@@ -47,8 +47,8 @@ class FollowersControllerTest < ActionController::TestCase
   test "student_user_new when signed out with section code shows link account view" do
     get :student_user_new, params: {section_code: @chris_section.code}
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin%2F#{@chris_section.code}"
 
     refute assigns(:user)
   end
@@ -56,8 +56,8 @@ class FollowersControllerTest < ActionController::TestCase
   test "student_user_new when signed out without section code shows link account view" do
     get :student_user_new
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin"
 
     refute assigns(:user)
   end
@@ -277,8 +277,8 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: @chris_section.code}
     end
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin%2F#{@chris_section.code}"
   end
 
   test "student_register with no section when signed in" do
@@ -296,8 +296,8 @@ class FollowersControllerTest < ActionController::TestCase
       post :student_register, params: {section_code: ''}
     end
 
-    assert_response :success
-    assert_template :join_logged_out
+    assert_response :redirect
+    assert_redirected_to "/logged_out?source_page=join%20section&return_to=%2Fjoin"
   end
 
   test "student_register in section with script" do
@@ -354,13 +354,14 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
-  test 'student_register renders students_cannot_join page when a student tries to join a teacher section' do
+  test 'student_register sends user to Teacher Account Required page when a student tries to join a teacher section' do
     sign_in @student
     section = create(:section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"])
 
     get :student_register, params: {section_code: section.code}
 
-    assert_template 'followers/students_cannot_join'
+    assert_response :redirect
+    assert_redirected_to "/teacher_account_required?source_page=join%20section&return_to=%2Fjoin%2F#{section.code}"
   end
 
   test 'student_register redirects admins to admin_directory' do

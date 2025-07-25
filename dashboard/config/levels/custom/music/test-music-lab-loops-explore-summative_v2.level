@@ -1,0 +1,207 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "MRd5tAv$G^W*kv)k4]YX",
+              "x": 390,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": ".8z=Nq;Mbd[^*Pwg{-[`",
+              "x": 550,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 0
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "9V4%2IZ@lU8DDTre{Swc",
+              "x": 190,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/vocals_move_it"
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "bwq:sz5|5-!?)RX,HaMN",
+              "x": 390,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "/_0BUN_`4$(s6Ljcg^[K",
+              "x": 190,
+              "y": 110,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "D`kJ1,J%m|qltl0e^wRu",
+              "x": 550,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 0
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "h(Gmvd3Nz|Ei`7Wa}0(f",
+              "x": 190,
+              "y": 270,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/synth_stutter"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "}fO/LHKxk9,(!o4HEJ%{",
+              "x": 190,
+              "y": 190,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "will_i_am_i_like_to_move_it/bass_guitar"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "will_i_am_i_like_to_move_it",
+      "sounds": {
+        "will_i_am_i_like_to_move_it": [
+          "vocals_move_it",
+          "drums_main_beat",
+          "bass_guitar",
+          "synth_stutter"
+        ]
+      }
+    },
+    "long_instructions": "### Check-In\r\nYour goal is to use loops to make all the sounds in the workspace play together in sync. When you're done, your timeline should look like the example below.\r\n\r\n![](https://images.code.org/7b3089fd3a7cc114f629152ecb20da6c-image-1741020219686.png)\r\n",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pA4ZaI42ZFDthlu3biOexWm0\nNNxw4UqbS/Gd0wtlEmLSthRCU8a6ihqiDTTS6pY6gqFksIPwhmpiAAs4sd67\nazJNwYGwC84ay0Ka1MaKaSXDiTZr2WRFb+iil7GK+jqzILTllFZgHF/QqFka\n+k/gAF8g0dWYB9HSo3qsBIMLQ2zpm94WZm8fGxO/7SzRyRHEj20E6u3jdOIk\n7jqRP3M4iuvt4uJ9LRBMUloI1bd14Dvox7Lg8rvqCRdlvL34LoME44+iobAU\nJlg51RPg7GDGf+JzCFcogn/1Dti+DSrEqDGKBvprEz0O2zEL96/ZbX4nHGF2\nUuLbqZpnmb+kX/hsMv2lLyTp59CCAtxncCZTTVZ09uSHhQ8q+C8gGKbLCZdd\nNWJzmKxuqr/JfFuhCMHa8QOdDiorxIVvrE2mZDp4hfyHqjMCee8WWPnxZIwU\nHgNsHVcU0e5GPZ4UxQUEG+22xkjpKeM32MC6Hcur/azXZd8kroY7fUO7dHMn\nnXUmO29c95HwrsT82Jv/grkRekdwKO22XRYfvAUklilu//stmnl5kobUjHTL\nHLmdvMlf77mEypJjM4cLnP/QdY1dc/IYkjqYIebho+9eA0ENeKBuGCXbbTj3\nVkO56x4MT67grWSVdEFdie+PsUBz7IRWfzUJk+qiDsGn3FpeMvqkcn4wG7FA\nGyGk6comDZFuDV8gS34kE1Y65XafF9vM0vxafVA4460WatzlvuLDr6GR3rDQ\napxJz9y+hpj9ooRyIG6Il2ahXj16KlC5ow2hdmE/8JhLlfyb22HyMvCjdp/s\nk5EeIjtvfNDyxzVNiG0r9LqqtO9ljUsmtolQXMw9s13WYhv/nMIFYECJN1rb\nAq0+3H0o6Xym+p5buKLV4vrQl1nlj5nGkyKHC10P/V57VOqwapcu+Ph3v3EF\noif5ZUl951ddIw/0DAY7jyqJlAP1wObLvP/aKLRbJadbuhdu/T2MnUjDTweu\ne4hDSTgRsXEdn+kcnAa8ZtMBoMy0XIZEIP7fG3BxSHCoclyXu6Iz/j/klmdr\n77e0kpMiow/N5sGbEDkyOAQwteFIOlXQmc414jugGj92o+tk651gvn+7dKzD\nxzOAVFMkCdkuYzWHRqIUo4dDnGpJ6/GXWUimcsMeo9qhZnm9ATMplNtEi2p0\njo7uE6UF2z/Oc8j9niowZDupXAaYUfibW1kFf/WuyoDfwB4EHUCfoncOzK16\nTHxRqHa0D5VmqASjOpKkihedpZjkKirEErPuXhBtwiW88bUUz6q/BRA0+crF\nbLGWDAqFSpczNdRWKxqWQbXLE2dRZ6suuq8O6Xr5dvaZRjWLNUItfLl+OiiH\npU6kS+6fMtx1ywcJu2K1b+Q=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-summative_878c26cb-0500-4d03-ac82-87e49514ba45",
+        "message": "auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example"
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:37.911+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-summative\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-summative\"},{\"changed_at\":\"2025-06-26 19:56:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 22:22:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

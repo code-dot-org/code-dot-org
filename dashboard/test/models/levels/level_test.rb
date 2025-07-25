@@ -128,7 +128,7 @@ class LevelTest < ActiveSupport::TestCase
     parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
     child = create :level
     parent.child_levels << child
-    script = create :script
+    script = create :script, :in_single_unit_course
     create :script_level, script: script, levels: [parent]
     assert_equal [parent], child.parent_levels
 

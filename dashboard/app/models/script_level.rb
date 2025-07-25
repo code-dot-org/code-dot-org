@@ -80,6 +80,7 @@ class ScriptLevel < ApplicationRecord
     challenge
     level_keys
     instructor_in_training
+    show_ai_analysis
   )
 
   def script
@@ -410,6 +411,7 @@ class ScriptLevel < ApplicationRecord
         summary[:assessment] = !!assessment
         summary[:challenge] = !!challenge
         summary[:instructor_in_training] = !!instructor_in_training
+        summary[:show_ai_analysis] = !!show_ai_analysis
       end
 
       if include_prev_next
@@ -747,7 +749,7 @@ class ScriptLevel < ApplicationRecord
       else
         # Otherwise, exemplar link should look like
         # csa1/lessons/2/levels/1?exemplar=true
-        path = build_script_level_path(self)
+        path = build_script_level_path(self, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
@@ -778,7 +780,7 @@ class ScriptLevel < ApplicationRecord
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
       unless ScriptConfig.allows_public_caching_for_script(script.name)
-        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {})))
+        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {}), unit_group_unit: unit_group_unit))
       end
     end
 

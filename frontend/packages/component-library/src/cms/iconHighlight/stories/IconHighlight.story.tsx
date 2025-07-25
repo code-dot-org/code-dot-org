@@ -29,10 +29,10 @@ export const Playground: Story = {
   play: ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
 
-    const card = canvas.getByRole('complementary');
+    const card = canvas.getByText('IconHighlight Heading').closest('div');
     expect(card).toHaveStyle('display: grid;');
 
-    const cardIcon = card.firstElementChild;
+    const cardIcon = card?.firstElementChild;
     expect(cardIcon).toHaveStyle('grid-column-start: 1;');
     expect(cardIcon).toHaveStyle('font-size: 32px;');
     expect(cardIcon).toHaveStyle('font-weight: 900;');
@@ -40,10 +40,10 @@ export const Playground: Story = {
       `color: ${getComputedStylePropValue('--text-neutral-primary')};`,
     );
 
-    const cardHeading = within(card).getByRole('heading');
+    const cardHeading = canvas.getByText('IconHighlight Heading');
     expect(cardHeading).toHaveStyle('grid-column-start: 2;');
 
-    const cardText = within(card).getByRole('paragraph');
+    const cardText = canvas.getByText('IconHighlight Multiline Text');
     expect(cardText).toHaveStyle('grid-column-start: 2;');
   },
 };

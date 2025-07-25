@@ -141,7 +141,7 @@ class StatsigReporter {
 
   getIsInExperiment(name, parameter, defaultValue) {
     if (this.local_mode) {
-      return false;
+      return defaultValue ?? false;
     }
     return (
       this.statsigClient.getExperiment(name).value[parameter] ?? defaultValue

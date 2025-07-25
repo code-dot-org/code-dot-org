@@ -20,7 +20,8 @@ module Pd
       SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_post_survey',
-      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call'
+      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call',
+      COURSE_BUILD_YOUR_OWN => 'surveys/pd/build_your_own_workshop_teachers_post_survey'
     }
 
     PRE_SURVEY_CONFIG_PATHS = {

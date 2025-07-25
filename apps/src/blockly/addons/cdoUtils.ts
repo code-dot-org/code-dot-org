@@ -8,7 +8,6 @@ import {
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import experiments from '@cdo/apps/util/experiments';
 
 import * as blockUtils from '../../block_utils';
 import {parseElement as parseXmlElement} from '../../xml';
@@ -425,20 +424,6 @@ export function getUserTheme(themeOption: GoogleBlockly.Theme | undefined) {
       cdoTheme
     );
   }
-}
-
-/**
- * Returns a cursor type, based on the presence of an option in the browser's localStorage.
- * @param {string} type
- * @returns {string} one of 'default', 'basic', or 'line'
- */
-export function getUserCursorType() {
-  const defaultCursorType = experiments.isEnabled(
-    experiments.KEYBOARD_NAVIGATION
-  )
-    ? 'line'
-    : 'default';
-  return localStorage.blocklyCursor || defaultCursorType;
 }
 
 /**

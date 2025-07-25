@@ -1,0 +1,162 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:34.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "lady_gaga_born_this_way/drums_glitch_fill"
+                  },
+                  "next": {
+                    "shadow": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "t[Eb`D9;lmkK@wnrimn8",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "lady_gaga_born_this_way/drums_glitch_fill"
+                      },
+                      "next": {
+                        "shadow": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "*@_[J}?VQy%$M;xME5IY",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "lady_gaga_born_this_way/drums_glitch_fill"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_workspace",
+              "x": 330,
+              "y": 50,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 3
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "Z5rzDdo$o^r`-$:XK%!C",
+              "x": 330,
+              "y": 150,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "lady_gaga_born_this_way/drums_glitch_fill"
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "packId": "lady_gaga_born_this_way"
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41yZYvWe3Ubip/cJLgjkQQshRWK0+vxQhoaEzS6ixxF8mW\nyn3gz2QAHr5BZMmuLLGA7mfBCfr7akD07iATc2M8W0poXD9ObIsGkh710ACA\nr1Sar+LCZwEmfrtn6jFswx1LAtMDF12MFMOi34WG27pSvcW9H8K5e2mvL3/d\nDmVZtr1/L4fidKBf1VMpsajnfX2hPuOqJzpnBJ7dDPeR489A7tsL+jdiNBs+\npiFDJsaEh5YHngXHh7TOiXHMC6QZRnFbNzvU1nI9awuZ9CC3pyOxkQhc6wz7\ndU+rZ/GNnx71LW439Ybo8Zp9itE88lvVnX6NMZKP6PB3pz2PBFiPNHj4lEEO\nz3TAPQhGMXc4xEFb6GTrYSM3wvgzGEc0z/ucF9YqGeAfh61ggztoA8XKKOYa\nZbKawCdKUGYS5QJWIYiSIlwnSiTlxmmXKq80LayGnQCpY/EFfpaD5EbRsiNc\n8O7x1LtGIUODfaGq2sa0gG6Si+nSvoZWydtAZlVHq7rGa2iDUzh+1uuWtbIx\n09mtwQdFmtoLQbGPTYB1yDmX4oWDo+GrZXcKVOhtgW7Q/rNVF93Ryu29YHJk\nHzcPWs+iA2I3dNbBX+TbCLmikqzYWRwsLKpG7Wms4rPYeVzeuZIqF/ZXrA1f\nJZ7BwTqopADyUf9mwrMIqfSfPEyMEs3KanBbCC74uf+gfY4CNohF1BCIURlP\nd96/C3MCc2VmXSIw8pvgath0EtLSJ2BPNoESOm9PlI8eBKX5mhNn+3z1astR\n17kT+PlD+4XRuEX9uMa0Wwzr2x+8xJ8fJsOhw+EuTOr7o682P1MtaX4a2op6\nLa8S1xhX09WDO8rkGbee3znDD+nYlBtK99vojUmYbpX2ScD9KuHfBo+HVOXH\nyrEgLu+vlwT3efpFjxC7P0Oq2ELPx+Z1JI7vVTXwNe3cXCUVeTo8JikE4D+H\nG1h4JIIOKewnZCeNXPK5e5zLK6qH51dBRY4eZ7hZ2CSE1znI0ZUDrY1JgPkf\nfce7BCtLkB4wLxNgncOtIF9JhRQAaTkO37Z1gunH6dWbRKYURuA38A14j/6/\n8s1MUBvOEkIGX+yyxIO3SPjo\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "#### Investigate\r\n\r\nOscar made a similar remix of Born This Way by Lady Gaga, but he did it before he knew about loops and the <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code> block. Now he wants to update his code to use loops instead - for example, Oscar noticed that the three <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Glitch Fill </span> blocks could be replaced with a repeat block!\r\n\r\nA _shadow_ of Oscar's original code is already in the workspace - your goal is to replace it with new coding blocks. As soon as you drag new blocks on top of the shadow, they'll disappear!\r\n\r\n**Do This:**\r\n1) Update Oscar's code to use a <code style=\"background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">repeat</code> block. All of the blocks you need are already in the workspace - you just need to drag them to the correct places! - [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:repeat_workspace)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! The song should sound the same, but be easier to read and use less blocks!\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-1_7d55d405-a98f-4a33-b566-64da51d97e4b",
+        "message": "[exemplar validation]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-2_c213bc29-9caf-4285-ad46-2239ee039643",
+        "message": "Use the repeat block instead of the original code! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:repeat_workspace)",
+        "next": false,
+        "conditions": [
+
+        ],
+        "callout": "id:repeat_workspace"
+      }
+    ],
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:34.793+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-2\\\"\"],\"cloned_from\":\"music-lab-loops-explore-2\"}]"
+}]]></config>
+  <blocks/>
+</Music>

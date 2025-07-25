@@ -5,7 +5,6 @@ import {
 import React from 'react';
 
 import styles from './teacher-navigation.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 export interface EmptyStateProps {
   headline: string;
@@ -20,10 +19,8 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
   button,
 }) => {
   return (
-    <div className={dashboardStyles.emptyClassroomDiv}>
-      <div className={dashboardStyles.emptyClassroomImage}>
-        {imageComponent}
-      </div>
+    <div className={styles.emptyClassroomDiv}>
+      <div className={styles.emptyClassroomImage}>{imageComponent}</div>
       <Heading3 className={styles.topPadding}>{headline}</Heading3>
       <BodyTwoText>{descriptionText}</BodyTwoText>
       {button}

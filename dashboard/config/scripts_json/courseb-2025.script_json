@@ -21,7 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 17:01:57 UTC",
+    "serialized_at": "2025-06-13 18:37:49 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6918,16 +6919,15 @@
       }
     },
     {
-      "name": "CSF Change Log 23-24 to 24-25",
-      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/",
-      "key": "csf_change_log_23-24_to_24-25",
+      "name": "CSF Change Log 2025-26",
+      "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
+      "key": "csf_change_log_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_change_log_23-24_to_24-25"
+        "resource.key": "csf_change_log_2025-26"
       }
     },
     {
@@ -7871,7 +7871,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_change_log_23-24_to_24-25",
+        "resource.key": "csf_change_log_2025-26",
         "script.name": "courseb-2025"
       }
     },

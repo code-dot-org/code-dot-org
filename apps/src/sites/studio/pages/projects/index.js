@@ -15,14 +15,12 @@ import projects, {
   setPublicProjects,
   setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
   registerReducers({
     projects,
-    publishDialog: publishDialogReducer,
     deleteDialog: deleteDialogReducer,
   });
   const store = getStore();

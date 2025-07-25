@@ -41,16 +41,13 @@ class DeleteAccountsHelper
 
   # Deletes all project-backed progress associated with a user.
   # @param [User] user The user to delete the project-backed progress of.
-  def delete_project_backed_progress(user)
+  def remove_pii_from_projects(user)
     return unless user.user_storage_id
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
+    project_ids = get_project_ids(user)
     channel_count = project_ids.count
-    encrypted_channel_ids = project_ids.map do |project_id|
-      storage_encrypt_channel_id user.user_storage_id, project_id
-    end
 
     # Clear potential PII from user's channels
     DASHBOARD_DB[:projects].
@@ -64,22 +61,34 @@ class DeleteAccountsHelper
     project_commits.each {|version| version.update!(comment: nil)}
     @log.puts "Cleared #{project_commits.count} ProjectCommit comments" if project_commits.count > 0
 
-    # Clear S3 contents for user's channels
+    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
+  end
+
+  # Deletes all S3-stored contents associated with the user's project channels.
+  # @param [User] user The user whose S3 content will be deleted.
+  def delete_s3_contents(user)
+    project_ids = get_project_ids(user)
+    channel_count = project_ids.count
+    encrypted_channel_ids = project_ids.map do |project_id|
+      storage_encrypt_channel_id user.user_storage_id, project_id
+    end
     @log.puts "Deleting S3 contents for #{channel_count} channels"
     buckets = [SourceBucket, AssetBucket, AnimationBucket, FileBucket].map(&:new)
     buckets.product(encrypted_channel_ids).each do |bucket, encrypted_channel_id|
       bucket.hard_delete_channel_content encrypted_channel_id
     end
+  end
 
-    # Clear Datablock Storage contents for user's projects
+  # Deletes all Datablock Storage contents associated with the user's projects.
+  # @param [User] user The user whose Datablock Storage content will be deleted.
+  def delete_datablock_storage(user)
+    project_ids = get_project_ids(user)
     @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
     project_ids.each do |project_id|
       DatablockStorageTable.where(project_id: project_id).delete_all
       DatablockStorageKvp.where(project_id: project_id).delete_all
       DatablockStorageRecord.where(project_id: project_id).delete_all
     end
-
-    @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
   # Removes the link between the user's level-backed progress and the progress itself.
@@ -472,7 +481,7 @@ class DeleteAccountsHelper
     remove_email_preferences(user_email) if user_email&.present?
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
-    delete_project_backed_progress(user)
+    remove_pii_from_projects(user)
     delete_ai_tutor_interactions(user.id)
     delete_rubric_ai_evaluations(user.id)
     delete_learning_goal_teacher_evaluations(user.id)
@@ -510,7 +519,7 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private def clean_pegasus_forms_for_user(user)
+  def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
@@ -541,6 +550,10 @@ class DeleteAccountsHelper
         processed_data: nil,
         hashed_email: nil,
       )
+  end
+
+  private def get_project_ids(user)
+    DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
   end
 end
 # rubocop:enable CustomCops/PegasusDbUsage

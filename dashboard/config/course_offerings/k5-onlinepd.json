@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSF",
+  "grade_levels": "K,1,2,3,4,5",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/5a0866005fa3bc0fec359d0c23e99346-self-paced-pl-tile-csf.avif",
+  "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This self-paced online professional learning module will help prepare you to teach the Computer Science Fundamentals curriculum!",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2023-05-31 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

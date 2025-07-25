@@ -76,6 +76,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     unit_context = ScriptLevelsController.get_unit_context(request)
     @unit_group_unit = unit_context[:unit_group_unit]
+    @unit_group = unit_context[:unit_group]
     @script = unit_context[:unit]
     @script_level = ScriptLevelsController.get_script_level(@script, params)
 
@@ -92,6 +93,7 @@ class ScriptLevelsController < ApplicationController
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
     # a path helper, so use a regex to compute the new path.
+    # TODO: TEACH-2050 Modularity support for redirects. Currently doesn't redirect for courses/.../units/... urls.
     if @script.redirect_to?
       new_script = Unit.get_from_cache(@script.redirect_to)
       new_path = request.fullpath.sub(%r{^/s/#{params[:script_id]}/}, "/s/#{new_script.name}/")
@@ -101,8 +103,10 @@ class ScriptLevelsController < ApplicationController
       end
 
       # avoid a redirect loop if the string substitution failed
+      # TODO: TEACH-2050 Modularity support for redirects. This redirects to the current script. Redirect to the new script's
+      # original unit group for now.
       if new_path == request.fullpath
-        redirect_to build_script_level_path(new_script.starting_level, unit_group_unit: @unit_group_unit)
+        redirect_to build_script_level_path(new_script.starting_level, unit_group_unit: new_script.original_unit_group_unit)
         return
       end
 
@@ -129,9 +133,9 @@ class ScriptLevelsController < ApplicationController
         authenticate_user!
       end
     end
-    authenticate_user! unless can?(:read, @script)
+    authenticate_user! unless can?(:read, @script, @unit_group)
 
-    return render 'levels/no_access' unless can?(:read, @script_level)
+    return render 'levels/no_access' unless can?(:read, @script_level, {context_unit_group: @unit_group})
 
     if current_user&.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -190,7 +194,7 @@ class ScriptLevelsController < ApplicationController
         end
 
       # TODO: Change/remove this check as we add support for more level types.
-      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0].predict_level? || levels[0].is_a?(LevelGroup)
+      if levels[0].is_a?(FreeResponse) || levels[0].is_a?(Multi) || levels[0]&.predict_level? || levels[0].is_a?(LevelGroup)
         @responses = levels.map do |sublevel|
           UserLevel.where(level: sublevel, user: @section&.students)
         end
@@ -557,6 +561,8 @@ class ScriptLevelsController < ApplicationController
     # All database look-ups should have already been cached by Unit::unit_cache_from_db
     @game = @level.game
     @lesson ||= @script_level.lesson
+    unit_context = ScriptLevelsController.get_unit_context(request)
+    unit_group = unit_context[:unit_group]
 
     load_level_source
 
@@ -576,6 +582,7 @@ class ScriptLevelsController < ApplicationController
 
     @callback = milestone_script_level_url(
       user_id: current_user.try(:id) || 0,
+      course_id: unit_group&.id,
       script_level_id: @script_level.id,
       level_id: @level.id
     )
@@ -586,6 +593,7 @@ class ScriptLevelsController < ApplicationController
     if @level.game&.level_group? || @level.try(:contained_levels).present?
       @sublevel_callback = milestone_script_level_url(
         user_id: current_user.try(:id) || 0,
+        course_id: unit_group&.id,
         script_level_id: @script_level.id,
         level_id: ''
       )
@@ -666,6 +674,7 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound if is_id
   end
 
+  # TODO: TEACH-1557 Modularity support for version redirects. Currently redirects to /s/... missing course context
   private def redirect_script(script, locale)
     return nil unless script
 

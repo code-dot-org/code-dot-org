@@ -1,11 +1,10 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
+import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -13,7 +12,6 @@ import {getBaseAssetUrl} from '../appConfig';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
-import {MusicState} from '../redux/musicRedux';
 
 import moduleStyles from './HeaderButtons.module.scss';
 
@@ -21,19 +19,6 @@ interface CurrentPackProps {
   packFolder: SoundFolder;
   noRightPadding: boolean;
 }
-
-const TEACHER_FEEDBACK_LINK =
-  'https://docs.google.com/forms/d/e/1FAIpQLSflGeMmY_ff1QllJfpTsWGZdn_xv6dKpPba_evTMwfbvG3FTA/viewform';
-const STUDENT_FEEDBACK_LINK =
-  'https://docs.google.com/forms/d/e/1FAIpQLSeZGNgX4wDvA29stId_Q2toofJN-r12zSP8yBMZ-E9KW5XPWg/viewform';
-
-const useFeedbackLink = () => {
-  const {userType, signInState} = useAppSelector(state => state.currentUser);
-  const isSignedIn = signInState === SignInState.SignedIn;
-  const feedbackLink =
-    userType === 'teacher' ? TEACHER_FEEDBACK_LINK : STUDENT_FEEDBACK_LINK;
-  return {isSignedIn, feedbackLink};
-};
 
 const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
@@ -94,13 +79,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   hideChaff,
 }) => {
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
-  const {canUndo, canRedo} = useSelector(
-    (state: {music: MusicState}) => state.music.undoStatus
-  );
+  const canUndo = useAppSelector(state => state.music.canUndo);
+  const canRedo = useAppSelector(state => state.music.canRedo);
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
   const dialogControl = useDialogControl();
-  const {isSignedIn, feedbackLink} = useFeedbackLink();
 
   const library = MusicLibrary.getInstance();
 
@@ -221,15 +204,16 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
-          {isSignedIn && (
+          {Blockly.showBlockHelp && (
             <button
-              onClick={() => window.open(feedbackLink, '_blank')}
+              onClick={() => window.open('/docs/ide/music', '_blank')}
               type="button"
+              id="documentation-button"
               className={classNames(moduleStyles.button)}
             >
               <FontAwesome
-                title={musicI18n.feedback()}
-                icon="commenting"
+                title={musicI18n.documentation()}
+                icon="book"
                 className={'icon'}
               />
             </button>
@@ -254,4 +238,4 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
 };
 
-export default HeaderButtons;
+export default memo(HeaderButtons);

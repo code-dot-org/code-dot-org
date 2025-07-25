@@ -224,7 +224,6 @@ class UnitOverview extends React.Component {
           <UnitOverviewTopRow
             teacherResources={teacherResources}
             studentResources={studentResources}
-            showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
             showCalendar={showCalendar}
             weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -232,8 +231,6 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
-            courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
             publishedState={publishedState}

@@ -1,6 +1,8 @@
 import {Dispatch} from 'react';
 
-export interface Option {
+import {Option} from './components/MultiSelectInput';
+
+export interface FieldOption {
   value: string;
   label: string;
 }
@@ -10,7 +12,7 @@ export interface FieldConfig<T extends WorkshopFormState | SessionFormState> {
   stateKey: keyof T;
   label: string;
   helperMessage?: string;
-  options?: Option[];
+  options?: FieldOption[];
 }
 export interface SessionFields {
   date: FieldConfig<SessionFormState>;
@@ -148,7 +150,7 @@ export interface WorkshopFormState {
   course: string;
   capacity: string;
   description: string;
-  facilitators: number[];
+  facilitators: Option[];
   fee: string;
   grades: string[];
   hidden: boolean;
@@ -184,7 +186,8 @@ type BasicsKeys =
 type PartnerFacilitatorKeys =
   | 'facilitators'
   | 'regionalPartnerId'
-  | 'organizerId';
+  | 'organizerId'
+  | 'courseOfferings';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 

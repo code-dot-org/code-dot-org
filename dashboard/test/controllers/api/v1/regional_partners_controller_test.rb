@@ -282,7 +282,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       create :workshop,
         course: course,
         subject: subject,
-        enrolled_unattending_users: index,
+        enrolled_absent_users: index,
         sessions_from: application_year_start_date,
         regional_partner: @regional_partner
     end

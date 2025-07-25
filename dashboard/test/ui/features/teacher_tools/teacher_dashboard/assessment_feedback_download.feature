@@ -18,20 +18,16 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('19-'20)" once I see it
+    And I click selector ".assignment-version-title:contains('25-'26)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
+    And I select the "Intro to App Design" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible
 
     # Progress tab
-    And I wait until element "a:contains('Untitled Section')" is visible
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "#assessment-selector" is visible
     And I select the "All teacher feedback in this unit" option in dropdown "assessment-selector"
@@ -49,11 +45,10 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I click selector "button:contains(Hour of Code)"
     And I press the first "input[name='Artist']" element
     And I press the first "#uitest-save-section-changes" element
+    And I wait until element "h1:contains(Progress)" is visible
 
     # Assessments tab
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
-    And I wait until element "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" is visible
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I wait until element "#ui-test-teacher-sidebar a:contains(Assessments)" is visible
+    And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     Then I wait until element "div:contains(It looks like there are no multi-question assessments or surveys in this course)" is visible
 

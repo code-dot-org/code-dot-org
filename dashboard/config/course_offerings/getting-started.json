@@ -5,16 +5,19 @@
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "K,1,2,3,4,5,6,7,8,9,10,11,12",
   "header": "self_paced",
-  "image": null,
+  "image": "https://images.code.org/5ce16d7982434a1cfc0ec5beb8b91fcf-gettingstarted.avif",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-05-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

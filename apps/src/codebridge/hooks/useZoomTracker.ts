@@ -39,7 +39,6 @@ export const useZoomTracker = (appName: string) => {
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_ZOOM, appName, {
         zoomPercent: zoomPercent,
         direction,
-        levelPath: window.location.pathname,
       });
     };
 

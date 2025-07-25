@@ -1,0 +1,38 @@
+name 'self-paced-CSDMusicLab-L1-assessment2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Assessing Projects
+
+#### In the previous level, you learned how you might use **check-in** and **assessment** levels to guide your instruction. 
+
+#### The Programming with Music Lab curriculum also provides **project rubrics** to help you summatively assessment students' work on projects.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img 
+    src="https://images.code.org/885618e5046b154d6142f792c9683612-image-1751492570512.42.45 PM.png" 
+    alt="The Lesson 5: Mini-Project Walk up Songs lesson plan" 
+    style="width: 70%; border-radius: 10px;">
+  <p style="font-size: 12pt; margin-top: 5px;">You can find project rubrics in the "Links" section on the right side of lesson plans.</p>
+</div>
+
+## Project Overview
+
+#### There are three projects in the Programming with Music Lab curriculum, one for each coding concept: sequencing, loops, and functions. Below is the rubric and a short description for each project. **Briefly** review the rubric to get a sense of what students will do, but don't go too in-depth - we'll explore these projects later in this module.
+
+### ⚾️ **Sequencing Project: Walk Up Songs**
+
+#### <a href="https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0" target="blank" rel="noopener noreferrer">Project Rubric</a>
+#### Students create walk-up songs for characters from books or shows using triggers for dramatic effect and precise timing. This project introduces triggers as a tool for musical structure.
+
+### 🐱 **Loops Project: Cat GIF Loops**
+
+#### <a href="https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0" target="blank" rel="noopener noreferrer">Project Rubric</a>
+#### Students select a looping cat GIF and create a looping backing track that matches its mood. They explore how to use random blocks to make their music less predictable and more expressive.
+
+### 🎶 **Functions Project: Genre Mash-Up**
+
+#### <a href="https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0" target="blank" rel="noopener noreferrer">Project Rubric</a>
+#### Students remix an existing song into a new genre by using functions to define musical sections. They apply abstraction to organize code and explore how genre changes impact musical style and emotion.
+MARKDOWN

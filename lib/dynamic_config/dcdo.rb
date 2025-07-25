@@ -37,8 +37,6 @@ class DCDOBase < DynamicConfigBase
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether to allow the user to toggle between the v1 and v2 progress tables.
       'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
-      # Whether to show the v1 or v2 progress table by default.
-      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
       # Whether to allow users with `progress_table_v2_closed_beta` user preference to toggle between v1 and v2.
       'progress-table-v2-closed-beta-enabled': DCDO.get('progress-table-v2-closed-beta-enabled', false),
       # Whether the scholarship dropdown is locked on the application dashboard.
@@ -51,7 +49,7 @@ class DCDOBase < DynamicConfigBase
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
-      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
+      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', true),
       'teacher-homepage-v2': DCDO.get('teacher-homepage-v2', false),
       'teacher-homepage-v2-announcement': DCDO.get('teacher-homepage-v2-announcement', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
@@ -63,10 +61,10 @@ class DCDOBase < DynamicConfigBase
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
       'ai-tutor-teacher-nav-v2': DCDO.get('ai-tutor-teacher-nav-v2', true),
       'music-lab-banner': DCDO.get('music-lab-banner', false),
-      'show-download-progress-csv': DCDO.get('show-download-progress-csv', false),
       modularity: DCDO.get('modularity', true),
       # Remove this as part of Pegasus cleanup after the move to the CMS
       'aif-launch': DCDO.get('aif-launch', false),
+      'skills-dashboard': DCDO.get('skills-dashboard', false),
     }
   end
 end

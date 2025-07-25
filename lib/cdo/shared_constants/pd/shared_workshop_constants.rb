@@ -1,17 +1,17 @@
 module Pd
   module SharedWorkshopConstants
     ACTIVE_COURSES = [
-      COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_CSP = 'CS Principles'.freeze,
       COURSE_CSD = 'CS Discoveries'.freeze,
       COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
-      COURSE_AIF = 'AI Fundamentals'.freeze,
+      COURSE_AIF = 'AI Foundations'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
+      COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_ECS = 'Exploring Computer Science'.freeze,
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
@@ -450,13 +450,6 @@ module Pd
           course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
           participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
         )
-      },
-      {
-        slug: COURSE_CSF.parameterize(separator: "_"),
-        label: COURSE_CSF,
-        icon: 'book',
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),

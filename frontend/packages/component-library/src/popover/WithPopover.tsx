@@ -50,7 +50,6 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
         setPositionedElementDirection: setActualDirection,
         tailOffset,
         tailLength,
-        isPositionFixed: true,
       }),
     [nodePosition, popoverRef, setPopoverStyles, popoverProps, tailLength],
   );

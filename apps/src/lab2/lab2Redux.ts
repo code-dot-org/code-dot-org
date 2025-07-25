@@ -12,6 +12,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@cdo/apps/constants';
 import {
   getPublicCaching,
   getAppOptionsEditBlocks,
@@ -22,10 +23,8 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {setLevel} from '../aiTutor/redux/aiTutorRedux';
-import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {
   setProjectUpdatedAt,
   setProjectUpdatedError,
@@ -46,11 +45,11 @@ import ProjectManager from './projects/ProjectManager';
 import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
+import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
 import {LevelPropertiesValidator} from './responseValidators';
 import {
   Channel,
   LevelProperties,
-  ProjectManagerStorageType,
   ProjectSources,
   PartialUserAppOptions,
   Validation,
@@ -100,7 +99,9 @@ export interface LabState {
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
-  isBlocked: boolean | undefined;
+  isBlockedAbuse: boolean | undefined;
+  // If this lab/project is blocked for project non-owners (excluding owner's teacher).
+  projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
   permissions: string[];
 }
@@ -116,7 +117,8 @@ const initialState: LabState = {
   levelProperties: undefined,
   scriptId: undefined,
   isShareView: undefined,
-  isBlocked: undefined,
+  isBlockedAbuse: undefined,
+  projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
 };
@@ -231,11 +233,10 @@ export const setUpWithLevel = createAsyncThunk<
     const projectManager =
       payload.channelId && isProjectLevel
         ? ProjectManagerFactory.getProjectManager(
-            ProjectManagerStorageType.REMOTE,
-            payload.channelId
+            payload.channelId,
+            thunkAPI.getState().lab.isShareView
           )
         : await ProjectManagerFactory.getProjectManagerForLevel(
-            ProjectManagerStorageType.REMOTE,
             payload.levelId,
             payload.userId,
             payload.scriptId,
@@ -268,12 +269,16 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel, abuseScore} = await setUpAndLoadProject(
-      projectManager,
-      thunkAPI.dispatch
-    );
+    const {sources, channel, abuseScore, sharingDisabled} =
+      await setUpAndLoadProject(projectManager, thunkAPI.dispatch);
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties, abuseScore},
+      {
+        initialSources: sources,
+        channel,
+        levelProperties,
+        abuseScore,
+        sharingDisabled,
+      },
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -282,65 +287,6 @@ export const setUpWithLevel = createAsyncThunk<
     return thunkAPI.rejectWithValue(error);
   }
 });
-
-// Selectors
-
-// If any load is currently in progress.
-export const isLabLoading = (state: {lab: LabState}) =>
-  state.lab.isLoadingProjectOrLevel ||
-  state.lab.isLoading ||
-  state.lab.isLoadingTheme;
-
-// This may depend on more factors, such as share.
-export const isReadOnlyWorkspace = (state: RootState) => {
-  const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplar = getAppOptionsEditingExemplar();
-  const isViewingExemplar = getAppOptionsViewingExemplar();
-  const isWidgetView = !!state.lab.levelProperties?.widgetView;
-
-  // Exemplar and block edit modes do not have a channel.
-  if (isEditMode || isEditingExemplar) {
-    return false;
-  } else if (isViewingExemplar) {
-    return true;
-  }
-  // Otherwise, we are in read only mode if we are not the owner of the channel,
-  // the level is frozen, the level is a read only predict level, the level has been submitted.
-  // or this is a lab that should be read only while running and the code is currently running.
-  const isOwner = state.lab.channel?.isOwner;
-  const isFrozen = !!state.lab.channel?.frozen;
-  const readonlyPredictLevel = isReadonlyPredictLevel(state);
-  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
-  const isViewingOldVersion = state.lab2Project.viewingOldVersion;
-  const isRunningAndReadonly =
-    (state.lab2System.isRunning || state.lab2System.isValidating) &&
-    shouldBeReadonlyWhileRunning(state);
-
-  return (
-    !isOwner ||
-    isFrozen ||
-    readonlyPredictLevel ||
-    hasSubmitted ||
-    isRunningAndReadonly ||
-    isViewingOldVersion ||
-    isWidgetView
-  );
-};
-
-// If there is an error present on the page.
-export const hasPageError = (state: {lab: LabState}) => {
-  return state.lab.pageError !== undefined;
-};
-
-// If the share and remix buttons should be hidden for the lab. Defaults to true (hidden)
-// if not specified.
-export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
-  const hideShareAndRemix = state.lab.levelProperties?.hideShareAndRemix;
-  return hideShareAndRemix === undefined ? true : hideShareAndRemix;
-};
-
-export const isProjectTemplateLevel = (state: {lab: LabState}) =>
-  !!state.lab.levelProperties?.projectTemplateLevelName;
 
 // SLICE
 
@@ -385,14 +331,19 @@ const labSlice = createSlice({
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
         abuseScore?: number;
+        sharingDisabled?: boolean;
       }>
     ) {
+      const levelProperties = action.payload.levelProperties;
       state.channel = action.payload.channel;
-      state.levelProperties = action.payload.levelProperties;
+      state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
       if (typeof action.payload.abuseScore === 'number') {
-        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+        state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
       }
+      state.projectSharingDisabled =
+        action.payload.sharingDisabled &&
+        OPEN_ENDED_LAB2_PROJECT_TYPES.includes(levelProperties.appName);
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -524,6 +475,7 @@ function setProjectAndLevelData(
     channel?: Channel;
     initialSources?: ProjectSources;
     abuseScore?: number;
+    sharingDisabled?: boolean;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -544,7 +496,8 @@ function setProjectAndLevelData(
       data.channel,
       data.initialSources,
       data.abuseScore,
-      isReadOnlyWorkspace(getState())
+      isReadOnlyWorkspace(getState()),
+      data.sharingDisabled
     );
 }
 
@@ -575,31 +528,6 @@ async function cleanUpProjectManager() {
   // saves from the existing project manager.
   await existingProjectManager?.cleanUp();
   Lab2Registry.getInstance().clearProjectManager();
-}
-
-// Returns if the current state represents a predict level that should be read only.
-// If the predict level code is not editable after submit or the user has not submitted a response,
-// the predict level is read only.
-function isReadonlyPredictLevel(state: RootState) {
-  const isPredictLevel =
-    state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
-  let isReadonlyPredictLevel = isPredictLevel;
-  if (isPredictLevel) {
-    const isEditableAfterSubmit =
-      state.lab.levelProperties?.predictSettings?.codeEditableAfterSubmit ||
-      false;
-    const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
-    // If the predict level code is not editable after submit or the user has not submitted a response,
-    // the predict level is read only.
-    isReadonlyPredictLevel =
-      !isEditableAfterSubmit || !hasSubmittedPredictResponse;
-  }
-  return isReadonlyPredictLevel;
-}
-
-// Currently only Python Lab disables editing while code is running.
-function shouldBeReadonlyWhileRunning(state: RootState) {
-  return state.lab.levelProperties?.appName === 'pythonlab';
 }
 
 // This is an action that other reducers (specifically predictLevelRedux) can respond to.

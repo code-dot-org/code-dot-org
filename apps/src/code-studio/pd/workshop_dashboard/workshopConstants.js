@@ -5,7 +5,7 @@ const COURSE_CSF = 'CS Fundamentals';
 const COURSE_CSD = 'CS Discoveries';
 const COURSE_CSP = 'CS Principles';
 const COURSE_CSA = 'Computer Science A';
-const COURSE_AIF = 'AI Fundamentals';
+const COURSE_AIF = 'AI Foundations';
 const COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop';
 
 const MAX_SESSIONS = 10;

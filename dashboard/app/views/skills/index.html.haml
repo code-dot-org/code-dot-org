@@ -1,0 +1,9 @@
+:ruby
+    skills_data = {}
+    skills_data[:canEditSkills] = current_user.levelbuilder?
+    skills_data[:skills] = @skills_by_concept
+    skills_data[:levels] = @levels_skills
+
+%script{src: webpack_asset_path('js/skills/index.js'), data: {skillsData: skills_data.to_json}}
+
+#skills

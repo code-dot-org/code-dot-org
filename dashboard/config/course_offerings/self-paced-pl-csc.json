@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSC",
+  "grade_levels": "K,1,2,3,4,5",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
-  "school_subject": null,
+  "image": "https://images.code.org/2aca55b6390d6a9f144a0f9bd1169f56-self-paced-pl-tile-csc.avif",
+  "cs_topic": "programming",
+  "school_subject": "math,science,english_language_arts,history",
   "device_compatibility": null,
-  "description": null,
+  "description": "This professional learning module is designed to help you prepare to teach Code.org's CS Connections curriculum.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2023-05-31 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

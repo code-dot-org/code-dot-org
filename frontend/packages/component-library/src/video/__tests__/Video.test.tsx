@@ -84,6 +84,9 @@ describe('Video Component', () => {
     });
     expect(downloadButton).toBeInTheDocument();
     expect(downloadButton).toHaveAttribute('href', defaultProps.videoFallback);
+
+    // check that the download button opens in a new tab
+    expect(downloadButton).toHaveAttribute('target', '_blank');
   });
 
   it('renders native video player when YouTube video fails and fallback is valid', () => {

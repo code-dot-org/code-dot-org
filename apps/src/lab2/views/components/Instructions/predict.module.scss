@@ -1,0 +1,104 @@
+@import 'color.scss';
+
+.multipleChoiceContainer {
+  display: flex;
+  align-items: start;
+}
+
+.multipleChoiceLetter {
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.disabledNotSelectedLabel {
+  opacity: 0.5;
+  color: var(--text-neutral-placeholder);
+}
+
+.multipleChoiceText {
+  margin-left: 6px;
+}
+
+.freeResponseTextArea {
+  width: 100%;
+  box-sizing: border-box;
+
+  // We use static colors for the scrollbar because textarea's background is always white.
+  // Chrome(>=v121), Edge and Firefox use scrollbar-color.
+  scrollbar-color: var(--neutral-gray-30) var(--neutral-base-white);
+
+  // webkit-scrollbar is used by Safari.
+  &::-webkit-scrollbar {
+    background: var(--neutral-base-white);
+    width: 10px;
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--neutral-gray-30);
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: var(--neutral-base-white);
+  }
+}
+
+.predictQuestionContainer {
+  margin-bottom: 8px;
+}
+
+.predictSolutionContainer {
+  margin: 10px;
+  padding: 5px;
+  background-color: $light_white;
+  border-radius: 5px;
+}
+
+.resetError {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.resetButton {
+  flex-grow: 1;
+  // We use important here because the disabled styles used by Button
+  // are more specific than a single class.
+  &:disabled {
+    background-color: $light_black !important;
+    color: $light_gray_800 !important;
+    border: none;
+  }
+}
+
+.resetButtonRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.resetButtonRowSpace {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.runPromptContainer {
+  color: var(--text-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  border-radius: .25em;
+}
+
+.runPrompt {
+  padding: 9px 12px 1px 12px;
+}
+
+.successAlert {
+  margin-bottom: 10px;
+}

@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    @script = create(:script)
+    @script = create(:unit, :in_single_unit_course)
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
@@ -57,6 +57,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @milestone_params = {
       user_id: @user,
       script_level_id: @script_level.id,
+      course_id: @script.original_unit_group_id,
       attempt: '1',
       result: 'true',
       testResult: '100',
@@ -110,9 +111,9 @@ class ActivitiesControllerTest < ActionController::TestCase
       '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
-  def build_expected_response(options = {})
+  def build_expected_response(options = {}, unit_group: nil)
     {
-      redirect: build_script_level_path(@script_level_next),
+      redirect: build_script_level_path(@script_level_next, unit_group_unit: Queries::Courses.unit_group_unit(@script, unit_group)),
     }.merge options
   end
 
@@ -134,7 +135,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -158,6 +159,21 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     post :milestone, params: params
     assert_response :success
+  end
+
+  test "successful milestone with modular course" do
+    secondary_course = create(:single_unit_course, unit: @script)
+
+    params = @milestone_params
+    params[:course_id] = secondary_course.id
+    params[:result] = 'true'
+
+    post :milestone, params: params
+    assert_response :success
+
+    puts JSON.parse(@response.body)
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"}, unit_group: secondary_course)
+    assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
   test "unsuccessful milestone does not require script_level_id" do
@@ -376,7 +392,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -412,7 +428,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -442,7 +458,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -474,7 +490,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -506,7 +522,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal level_source, assigns(:level_source)
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -539,7 +555,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    expected_response = build_expected_response({level_source: "http://test.host/c/#{assigns(:level_source).id}"})
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -610,7 +626,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -633,7 +649,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -685,7 +701,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      {level_source: "http://test.host/c/#{assigns(:level_source).id}"}
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -717,10 +733,13 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
+    script = create(:unit, :in_single_unit_course)
+
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
         user_id: @user.id,
-        script_level_id: create(:script_level, :playlab).id,
+        script_level_id: create(:script_level, :playlab, script: script).id,
+        course_id: script.original_unit_group_id,
         program: studio_program_with_text('shit')
       }
     end
@@ -868,7 +887,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
+    script = create :script, :in_single_unit_course, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
@@ -886,7 +905,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
@@ -1027,7 +1046,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     student_1 = create(:follower, section: section).student_user
     sign_in student_1
 
-    script = create :script
+    script = create :script, :in_single_unit_course
 
     # Create a LevelGroup level.
     level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'

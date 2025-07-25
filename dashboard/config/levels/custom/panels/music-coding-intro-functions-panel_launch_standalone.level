@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-05-19T21:15:01.000Z",
   "level_num": "custom",
@@ -14,7 +15,7 @@
         "key": "music-coding-intro-functions-panel_launch-74f7ebef-5a9e-48eb-88a7-25b2ea7a3cec"
       },
       {
-        "text": "##<i class=\"fa-duotone fa-solid fa-file-signature\"></i> **Name** you function. \n**Step 1:** Use a name that describes the code.\n\n---\n####Music Term\n\n<i class=\"fa-solid fa-list-music\"></i>**Chorus:** The part of a song that repeats and is usually the most catchy.",
+        "text": "##<i class=\"fa-duotone fa-solid fa-file-signature\"></i> **Name** your function. \n**Step 1:** Use a name that describes the code.\n\n---\n####Music Term\n\n<i class=\"fa-solid fa-list-music\"></i>**Chorus:** The part of a song that repeats and is usually the most catchy.",
         "imageUrl": "https://images.code.org/acd51a1368d85cdf97e9ddad37913e6f-PanelName.gif",
         "key": "music-coding-intro-functions-panel-c494188a-95c3-4c6a-bee1-130500907756",
         "typing": false,
@@ -44,7 +45,6 @@
     ],
     "name_suffix": "_standalone"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.889+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-19T21:15:01.889+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel_launch\"},{\"changed_at\":\"2025-06-02 15:18:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-02 20:49:17 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-10 19:32:51 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -6,6 +6,7 @@ import React, {useRef, useState, useCallback, useMemo, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BaseOutput from './BaseOutput';
 import {
@@ -31,8 +32,11 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
   setOutputHeight,
   className,
 }) => {
-  const {labConfig, levelProperties} = useCodebridgeContext();
-  const miniApp = labConfig?.miniApp?.name;
+  const {levelProperties} = useCodebridgeContext();
+
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
   const style = {
     height,
   };
@@ -110,7 +114,8 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         const newHeight = desiredHeight || DEFAULT_MINI_APP_SIZE;
         const newWidth = newMiniAppWidth;
 
-        scaleMiniApp(newHeight, newWidth);
+        const scale = scaleMiniApp(newHeight, newWidth);
+        CodebridgeRegistry.getInstance().setNeighborhoodThumbnailScale(scale);
 
         setWaitingForResize(false);
       }

@@ -18,11 +18,11 @@ Feature: Creating and Editing Modular Courses
     And I click "button[type='submit']" to load a new page
 
     Then I wait for the temp course overview page to load
-    And element ".uitest-CourseScript" contains text "ui-test-shared-unit"
+    And element ".uitest-CourseScript" contains text "UI Test Shared Unit"
 
     # Make sure 'ui-test-shared-unit' is still in 'ui-test-course-2017'
     Then I am on "http://studio.code.org/courses/ui-test-course-2017"
-    And element ".uitest-CourseScript" contains text "ui-test-shared-unit"
+    And element ".uitest-CourseScript" contains text "UI Test Shared Unit"
 
     And I delete the temp unit with lessons
     And I delete the temp course

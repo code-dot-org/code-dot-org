@@ -11,6 +11,7 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import localization from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
@@ -61,6 +62,8 @@ export default class SmallFooter extends React.Component {
     menuState: MenuState.MINIMIZED,
     baseWidth: 0,
     baseHeight: 0,
+    currentLocale: this.props.currentLocale,
+    localeOptions: this.props.localeOptions,
   };
 
   componentDidMount() {
@@ -69,13 +72,22 @@ export default class SmallFooter extends React.Component {
       'resize',
       debounce(this.captureBaseElementDimensions, 100)
     );
+
+    localization.on('change', info => {
+      debounce(() => {
+        this.setState({
+          localeOptions: localization.locales,
+          currentLocale: info.locale,
+        });
+      }, 100);
+    });
   }
 
   captureBaseElementDimensions = () => {
     const base = this.refs.base;
     this.setState({
-      baseWidth: base.offsetWidth,
-      baseHeight: base.offsetHeight,
+      baseWidth: base?.offsetWidth || 0,
+      baseHeight: base?.offsetHeight || 0,
     });
   };
 
@@ -179,8 +191,8 @@ export default class SmallFooter extends React.Component {
           {this.props.i18nDropdownInBase && (
             <I18nDropdown
               localeUrl={this.props.localeUrl}
-              selected={this.props.currentLocale}
-              options={this.props.localeOptions}
+              selected={this.state.currentLocale}
+              options={this.state.localeOptions}
             />
           )}
           {this.props.copyrightInBase && this.renderCopyright()}

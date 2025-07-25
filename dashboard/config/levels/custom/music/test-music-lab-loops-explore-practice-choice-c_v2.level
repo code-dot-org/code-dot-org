@@ -1,0 +1,416 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:36.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Snap Remix\r\n\r\nJuan is excited about a remix he made for Snap. He recognized a **pattern** in his music and used that pattern to build his remix efficiently:\r\n\r\n> It starts with two sets of beats and effects, then it explodes into three sets of bass, beats, and leads. With loops, I was able to do it with just 9 blocks!\r\n\r\n**Your task:** Identify the patterns in Juan's remix by examining the code for repeating sounds. Use loops to recreate the remix using the provided tracks. When you're finished, the timeline should look like this:\r\n\r\n![](https://images.code.org/fca6d5ce6f4e1ba782c508cd6f4e0805-image-1741895798503.56.32 PM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "sounds": {
+        "groove": [
+          "crash_reverse"
+        ],
+        "rosa_linn_snap": [
+          "kick",
+          "soft_bass",
+          "rhythm_soft",
+          "driving_guitar",
+          "soft_piano",
+          "dramatic_piano"
+        ],
+        "electro": [
+          "crackle"
+        ],
+        "indie": [
+          "hey"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "rosa_linn_snap",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "shadow": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "shadow": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "rosa_linn_snap/kick"
+                        },
+                        "next": {
+                          "shadow": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "CgG_:3Bkc1Y)G:24+cK`",
+                            "deletable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "electro/crackle"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "shadow": {
+                      "type": "play_sounds_together",
+                      "id": "3gS0hk[gu$X])bA+6))k",
+                      "deletable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "shadow": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "_1,5hj}?#go|e+NjT[Pu",
+                            "deletable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "rosa_linn_snap/kick"
+                            },
+                            "next": {
+                              "shadow": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "{yuqP1VScOytM_Wr2En/",
+                                "deletable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "electro/crackle"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "shadow": {
+                          "type": "play_sounds_together",
+                          "id": "a|A)(7nM_*XEX%(DCOoh",
+                          "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "shadow": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "5lKW~w6e:B[g|nBsk$UW",
+                                "deletable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "rosa_linn_snap/soft_bass"
+                                },
+                                "next": {
+                                  "shadow": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "2p[M#f]#Fx=(g_iN4309",
+                                    "deletable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/rhythm_soft"
+                                    },
+                                    "next": {
+                                      "shadow": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "~#(LGM9Ztk|A*sc%^=)(",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "rosa_linn_snap/dramatic_piano"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "shadow": {
+                              "type": "play_sounds_together",
+                              "id": "a]D[emqwnGbId7dd~4j#",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "shadow": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "-1))P,;[TIAKu#LG;:^D",
+                                    "deletable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "rosa_linn_snap/soft_bass"
+                                    },
+                                    "next": {
+                                      "shadow": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "|XFh.#_//puqTU]QY[@R",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "rosa_linn_snap/rhythm_soft"
+                                        },
+                                        "next": {
+                                          "shadow": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "~bXfNl.[qcSq3vmq9y}g",
+                                            "deletable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "rosa_linn_snap/dramatic_piano"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "shadow": {
+                                  "type": "play_sounds_together",
+                                  "id": "lywld!TV@+~84d_8(g$/",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "shadow": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "@4I=,KaPRIYYXJ!;R~Np",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "rosa_linn_snap/soft_bass"
+                                        },
+                                        "next": {
+                                          "shadow": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "Na@RQ`]$SEM.+kDUZ@gF",
+                                            "deletable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "rosa_linn_snap/rhythm_soft"
+                                            },
+                                            "next": {
+                                              "shadow": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "V%vl):w)!KU?cU99-YDM",
+                                                "deletable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "rosa_linn_snap/dramatic_piano"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "EyIp^|A2mjdXL]h}*kPb",
+              "x": 510,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "play_sounds_together",
+              "id": "!3?:Z#Rgslq):.7HCgRa",
+              "x": 510,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "repeat_simple2",
+              "x": 330,
+              "y": 30,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            },
+            {
+              "type": "repeat_simple2",
+              "id": "(3BP_Z9k5xhswO-Au;:d",
+              "x": 330,
+              "y": 130,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "times": 1
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rosa_linn_snap/kick"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "display_name": "Snap Remix",
+    "bubble_choice_description": "Juan made a remix of SNAP and is challenging you to recreate it",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-c_0a2b9176-64f5-48e6-b4e7-cab391f9d494",
+        "message": "[add loop counting validation, and validate against type not exact]",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-c_b47c3928-a618-4c4d-8e9e-76e29dad8f0f",
+        "message": "You need to use 2 loops to solve this level!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example",
+      "validationMode": "type"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pLlAvVJUickbslXR6gBTiaSL\n878vXaHXRyVaP528Ow65fb8wWQABISE4NYxojllQQ/jcCBMDezAQm1wSy6N0\nbXGal1QIgU0dyDJokwGCJNQKRUR6Oa0txiTZ2wtAyZ69Y7OnHesyLVcoL/Zz\n1zKbiP8TPwTpeGB6GVpdoLiX2VOa7Px4HdGjO2c7dJn4cqIQ+Pr+2QYUZG9K\nGNsXagR1FdibC12DqFeEfijZTUxvjtPRe4qzvHcFRXeJTYasKKhLcYzwQraH\n8leLb3YV7zT7iZHvMWw+/eLWdIk4SX/NBLqUKx7YnIkJO/N/DPfzjSx4Agde\n6hjYRF0ttMV2ApFOgZy6G6K3X02OCra5mQKIlA5b/tycjetRU4XGLMgxIz1C\n9vfgfyVwZJcDBGoZDo/SEZ2xy+AbEldSJLdXm0v7d3pT7IvgF8gUclMg0rah\n1zCCCRl9mYJwNwjRNfr4f2X4+RQ9BNRUykIC50mSGSwUm7QtCRz3TxzJIVBn\nt/YeMTUmzxRqrhjsVAO/CFGyEiwIIWG1Uw9wWDoxe3Fbgc9Wr3s9Ju2rqh71\nD0CNOs02LRNhJEc7BwHAyqvG/4mv1N2arYK56YFJJmVvvK1ByP153BS/5StH\nuxexTsBKFqB7TQoWO2Js04FsimjQEVOcZr8/mZFN7RNsdZlpcU2DZmHCgS1y\nDir08vHBYO9//pkxtwNnkE0RryIMHx48N1INS6zxe3iR7Fk9FdIdcHms1FCp\nO83gOxoIwTQ0O25EMB1kBjyZstzSSYYLRW9NZCbwSOEz4Dxy1PM58GUS5cqr\nqCse4HJoQhUHxb+dK/UBr+ZeOnmb47s0A8owEuATTAA2oO2ox3/4r65Il/ie\neJd7DRSmTAlXtt4N1iNAxYA1Zvke1S9ubqd6Wh7eP6O6IgLvD3b9RWLcjk0D\nupnvSRUdKIRP68Ktbou5wFIeMuXLAe2TUHbByw3aVEqSZ9L7qPfVxTOMLsfQ\nzVBJrIR4U+DapLMV2fmKr+b8HOZFXOrWzu5pMzQJipRcPXcPn9ZbM9BuqtPu\nd7Tp+NR1Y34Tm3xAYrF/AtNjpy6rGxKSes8odhEB4ydz1zW5cVZM2qzHEBe6\naOjV5VT+6mvmkJwHCfKDlLZAcBdn2nrhbXvphI3DXXSbyf/R9iHem/G1tMEa\nZdYX5eC/b6VnODw1969lMKlCuDChDweqQVoTM3c8CMEHMCOi4C2EcYTL5auv\nY8jYvt3taD7CE55rOAsxK2mlbg71sg4+7WaQGW8smfYmtqXAdi1KNfjowP76\nVcfmBONifYMZn4Qk+O+i0haRzDqhIdhCJ6B/THb3aipDIE3rXajzzx9BlycW\nX5QgUyadCIV49I9/KpD8b7CDGfc5YkoTymKjT0r7qrbCBcLa5a1GakfGJ6ky\nWSa7eA==\n",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/rosa_linn_snap/rosa_linn_snap.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:36.962+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-c\"},{\"changed_at\":\"2025-06-10 18:05:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-12 15:58:00 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-13 20:47:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-13 21:03:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

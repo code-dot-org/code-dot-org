@@ -5,6 +5,7 @@ require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
 require 'cdo/image_moderation'
+require 'stringio'
 require 'nokogiri'
 
 class FilesApi < Sinatra::Base
@@ -256,8 +257,12 @@ class FilesApi < Sinatra::Base
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
+    #
+    # Use Sinatra's attachment helper to set Content-Disposition header
+    #  NOTE: this protects against header injection attacks by escaping the filename
+    #  See Jira task: BC-72
     unless code_projects_domain_root_route || safely_viewable_file_type?(type)
-      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+      attachment(filename)
     end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
@@ -267,7 +272,10 @@ class FilesApi < Sinatra::Base
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
+    project = Projects.new(get_storage_id).get(encrypted_channel_id)
+    project_type = project[:projectType]&.downcase
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
@@ -1017,11 +1025,6 @@ class FilesApi < Sinatra::Base
     get_file('files', encrypted_channel_id, "#{METADATA_PATH}/#{filename}")
   end
 
-  MODERATE_THUMBNAILS_FOR_PROJECT_TYPES = %w(
-    applab
-    gamelab
-  )
-
   #
   # GET /v3/files-public/<channel-id>/.metadata/<filename>?version=<version-id>
   #
@@ -1030,38 +1033,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
-
-    if filename == THUMBNAIL_FILENAME
-      project = Projects.new(get_storage_id)
-      project_type = project.project_type_from_channel_id(encrypted_channel_id)
-      if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
-        file_mime_type = mime_type(File.extname(filename.downcase))
-        rating = ImageModeration.rate_image(file, file_mime_type, request.fullpath)
-
-        case rating
-        when :adult, :racy
-          # Incrementing abuse score by 15 to differentiate from manually reported projects.
-          new_score = project.increment_abuse(encrypted_channel_id, 15, true) # Automatic moderation can be applied to frozen projects.
-          FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
-          response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
-          not_found
-          return
-        when :unknown
-          # Content moderation was unable to scan the image, usually because we've exceeded
-          # the moderation service's request limit.  Return the default image for now and
-          # cache for 1-2 minutes to spread out future requests to the moderation service.
-          cache_for rand(60..120).seconds
-          send_file apps_dir('/static/projects/project_default.png'), type: 'image/png'
-          return
-        end
-      end
-    end
-
-    cache_for 1.hour
-    # Because we _might_ have already read from this IO object during image
-    # moderation, rewind to the start of the file before responding with it.
-    file.seek(0, IO::SEEK_SET)
     file
   end
 
@@ -1080,6 +1052,37 @@ class FilesApi < Sinatra::Base
 
     FileBucket.new.delete(encrypted_channel_id, filename)
     no_content
+  end
+
+  #
+  # POST /v3/images/moderate
+  #
+  # Moderate an image upload via ImageModeration and return a JSON rating.
+  # Possible ratings: [:everyone|:racy|:adult|:unknown]
+  #
+  post %r{/v3/images/moderate$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    image_stream = StringIO.new(raw)
+
+    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    content_type_header = request.content_type
+
+    # Validate allowed content types
+    unless ['image/png', 'image/jpeg'].include?(content_type_header)
+      status 400
+      return {error: 'Unsupported image type. Only PNG and JPEG files are allowed.'}.to_json
+    end
+
+    # Optionally record the URL for metrics, if passed as a query param.
+    image_url = params['image_url']
+
+    rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+
+    {rating: rating.to_s}.to_json
   end
 
   #

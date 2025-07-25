@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:10:42 UTC",
+    "serialized_at": "2025-07-09 14:24:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6695,8 +6695,21 @@
       }
     },
     {
+      "name": "Insights from Data and AI Unit Guide",
+      "url": "https://docs.google.com/document/d/1c5tjo_8CpnWJJMgW-5ineLV5BknwnGzecyJSqiYgILw/edit?usp=drivesdk",
+      "key": "insights_from_data_and_ai_unit_guide_pdf",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "insights_from_data_and_ai_unit_guide_pdf"
+      }
+    },
+    {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1IzfzxF4S1cT-t4r5h8MBB1378duO71zzw5UVpcVJSM8/edit?usp=drivesdk",
+      "url": "https://docs.google.com/presentation/d/1pQYxYQZlE9Kl7H_a8yxVp7Y2H3W5gDAETPWR7PGa1u4/edit?usp=sharing",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
@@ -7257,13 +7270,13 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Science",
-        "resource.key": "introduction_to_data_science"
+        "resource.key": "insights_from_data_and_ai_unit_guide_pdf"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Science",
-        "resource.key": "unit_guide"
+        "resource.key": "introduction_to_data_science"
       }
     },
     {

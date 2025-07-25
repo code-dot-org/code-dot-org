@@ -18,7 +18,6 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import microBit from '../maker/microBitRedux';
 import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import projects from '../templates/projects/projectsRedux';
-import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';
 
 import app from './appRedux';
 import calendar from './calendarRedux';
@@ -46,7 +45,6 @@ registerReducers({
   hiddenLesson,
   isRtl,
   responsive,
-  publishDialog,
   frozenProjectInfoDialog,
   projects,
   verifiedInstructor,

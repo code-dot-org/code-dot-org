@@ -12,3 +12,23 @@ export function injectFont(locale: InternationalFontLocale) {
     document.head.appendChild(fontMount);
   });
 }
+
+export function injectFontAwesome() {
+  const stylesheets = [
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/fontawesome.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/brands.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/solid.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/regular.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/v4-font-face.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/v4-shims.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/duotone.min.css',
+    'https://dsco.code.org/assets/font-awesome-pro/1728421354/css/custom-icons.min.css',
+  ];
+
+  stylesheets.forEach(stylesheetHref => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = stylesheetHref;
+    document.head.appendChild(link);
+  });
+}

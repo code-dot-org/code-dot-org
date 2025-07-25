@@ -133,7 +133,7 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
@@ -214,7 +214,7 @@ describe('LessonMaterialsContainer', () => {
         name: 'First lesson',
         id: 1,
         position: 1,
-        lessonPlanHtmlUrl: '/s/unit/lessons/1',
+        lessonPlanHtmlUrl: '/courses/course/units/1/lessons/1',
         lessonPlanPdfUrl: 'https://lesson-plans.code.org/lesson-plan.pdf',
         standardsUrl: 'studio.code.org/standards',
         vocabularyUrl: 'studio.code.org/vocab',
@@ -495,7 +495,7 @@ describe('LessonMaterialsContainer', () => {
       await renderDefault();
       viewResource('Lesson Plan: First lesson', 'View');
       expect(windowOpenMock).toHaveBeenCalledWith(
-        '/s/unit/lessons/1',
+        '/courses/course/units/1/lessons/1',
         '_blank',
         'noopener,noreferrer'
       );

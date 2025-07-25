@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
-  "header": null,
-  "image": null,
-  "cs_topic": null,
+  "marketing_initiative": "AIF",
+  "grade_levels": "9,10,11,12",
+  "header": "self_paced",
+  "image": "https://images.code.org/04172528f7eed1349fb14b449e4c3b76-aif3.jpg",
+  "cs_topic": "artificial_intelligence",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-05-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

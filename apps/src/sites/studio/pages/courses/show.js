@@ -92,7 +92,6 @@ function showCourseOverview() {
         courseVersionId={courseSummary.course_version_id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
-        sectionsInfo={scriptData.sections}
         teacherResources={courseSummary.teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}
@@ -129,7 +128,6 @@ function displayDifferentiationChat(scriptData) {
             courseId: scriptData.course_summary.id,
           }}
           scriptName={scriptData.course_summary.name}
-          unitDisplayName={scriptData.course_summary.title}
         />
       </Provider>,
       aiDiffFabMountPoint

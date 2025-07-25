@@ -32,15 +32,25 @@ export async function logStudentWorkEvaluations(
           codeVersion: studentWorkSample.codeVersion,
           levelId: levelId,
           unitId: unitId,
+          skillId: skillEvaluation.skillId,
           evaluator: 'AI',
           evaluationCriteria: skillEvaluation.evaluationCriteria,
           evaluation: skillEvaluation.aiEvaluation,
           reasoning: skillEvaluation.aiReasoning,
         });
-        logStudentWorkEvaluationSummary({
-          studentWorkEvaluationId: ulse.id,
-          studentWorkEvaluationSummaryId: ule.id,
-        });
+        try {
+          await logStudentWorkEvaluationSummary({
+            studentWorkEvaluationId: ulse.id,
+            studentWorkEvaluationSummaryId: ule.id,
+          });
+        } catch (error) {
+          MetricsReporter.logError({
+            event: MetricEvent.STUDENT_WORK_EVALUATION_SUMMARY_SAVE_FAIL,
+            errorMessage:
+              (error as Error).message ||
+              `Failed to save StudentWorkEvaluationSummary for ULSE ID ${ulse.id} and ULE ID ${ule.id}`,
+          });
+        }
       })
     );
   }
@@ -106,4 +116,35 @@ export async function logStudentWorkEvaluationSummary(summaryData: SummaryIds) {
         'Failed to save StudentWorkEvaluationSummary',
     });
   }
+}
+
+/**
+ * Fetches existing StudentWorkEvaluations for a given user, level, and unit.
+ * @param userId - The ID of the user/student.
+ * @param levelId - The ID of the level.
+ * @param unitId - The ID of the unit.
+ * @returns A promise resolving to the most recent UserLevelEvaluation.
+ */
+export async function fetchMostRecentUserLevelEvaluation(
+  userId: number,
+  levelId: number,
+  unitId: number
+) {
+  const response = await fetch(
+    `/student_work_evaluations/${userId}/${levelId}/${unitId}`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    }
+  );
+  if (!response.ok) {
+    console.info(
+      `No StudentWorkEvaluations found for user ${userId}, level ${levelId}, unit ${unitId}.`
+    );
+    return;
+  }
+  return await response.json();
 }

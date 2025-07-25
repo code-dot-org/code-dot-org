@@ -41,6 +41,13 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
   disconnect: jest.fn(),
 }));
 
+global.speechSynthesis = {
+  speak: jest.fn(),
+  cancel: jest.fn(),
+  getVoices: jest.fn(() => []),
+  addEventListener: jest.fn(),
+};
+
 Range.prototype.getBoundingClientRect = () => ({
   bottom: 0,
   height: 0,

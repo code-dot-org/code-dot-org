@@ -34,6 +34,7 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
+  has_many :levels_skills
   has_many :skills, through: :levels_skills
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
@@ -101,6 +102,7 @@ class Level < ApplicationRecord
     skip_url
     stay_on_level_after_submit
     skill_keys
+    additional_ai_evaluation_instructions
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -832,6 +834,10 @@ class Level < ApplicationRecord
     script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
+  def grade_levels
+    script_levels.map {|script_level| script_level.script&.get_course_version&.course_offering&.grade_levels}.flatten.compact.uniq.join(', ')
+  end
+
   # Define search filter fields
   def self.search_options
     {
@@ -907,6 +913,8 @@ class Level < ApplicationRecord
     properties_camelized[:isAssessment] = script_level&.assessment
     properties_camelized[:progressionType] = script_level&.primm_progression_type
     properties_camelized[:enableBlocklyKeyboardNavigation] = script&.enable_blockly_keyboard_navigation
+    # Enable browser TTS if the script has TTS enabled, or if the level itself has it enabled.
+    properties_camelized[:offerBrowserTts] = offer_browser_tts || script&.tts
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
@@ -993,6 +1001,39 @@ class Level < ApplicationRecord
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
     end
+  end
+
+  def summarize_for_levels_skills
+    {
+      level_id: id,
+      level_name: name,
+      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      skills: skill_identifiers,
+    }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  def skill_identifiers
+    skills.map {|skill| {id: skill.id, key: skill.key}}
+  end
+
+  def remove_skill_key(skill_key)
+    leftover_skill_keys = JSON.parse(skill_keys)&.delete_if {|sk| sk == skill_key} if skill_keys
+    properties['skill_keys'] = leftover_skill_keys.empty? ? nil : leftover_skill_keys.to_json
+    save!
+  end
+
+  def add_skill_key(skill_key)
+    properties['skill_keys'] = if skill_keys && JSON.parse(skill_keys).is_a?(Array)
+                                 JSON.parse(skill_keys).push(skill_key).uniq.to_json
+                               else
+                                 [skill_key].to_json
+                               end
+    save!
+  end
+
+  def uses_theme_preference?
+    # Only python lab and web lab 2 set and use the theme preference in UserPreferences right now.
+    is_a?(Pythonlab) || is_a?(Weblab2)
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

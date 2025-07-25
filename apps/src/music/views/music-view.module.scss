@@ -19,6 +19,11 @@ $default-spacing: 2px;
   display: flex;
   flex-direction: column;
   gap: $default-spacing;
+
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
 }
 
 .workArea {
@@ -30,6 +35,9 @@ $default-spacing: 2px;
   overflow: hidden;
   &.toolboxMode {
     max-height: 100%; // Allow the work area to take full height
+  }
+  &.reverse {
+    flex-direction: row-reverse;
   }
 }
 

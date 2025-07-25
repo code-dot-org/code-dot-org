@@ -1,5 +1,9 @@
 import React, {useEffect, useRef} from 'react';
 
+const clamp = (number: number, min: number, max: number) => {
+  return Math.min(Math.max(number, min), max);
+};
+
 const animationFramesPerSecond = 60;
 
 // EaseIntoView: This component does an eased scroll of the container's content,
@@ -19,6 +23,8 @@ interface EaseIntoViewProps {
   scrollStart: number;
   /** Scroll position to stop scrolling at */
   scrollEnd?: number;
+  /** Aria label for the container */
+  ariaLabel?: string;
   children: React.ReactNode;
 }
 
@@ -30,6 +36,7 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   frames,
   scrollStart,
   scrollEnd = 0,
+  ariaLabel = 'Scrollable content',
   children,
 }) => {
   const scrollStep = useRef<number | undefined>(0);
@@ -72,12 +79,28 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
             0,
             (scrollStep.current - delayFrames) / frames
           );
-          const scrollPosition =
+          const desiredScrollPosition =
             scrollStart - (scrollStart - scrollEnd) * easeOutSine(progress);
 
-          containerRef.current?.scroll(0, scrollPosition);
+          const maxScrollPosition =
+            containerRef.current?.scrollHeight -
+            containerRef.current?.clientHeight;
 
-          lastScrollPosition.current = scrollPosition;
+          // Avoid attempting to over-scroll, which will be misinterpeted as the user scrolling
+          // manually by a check above.
+          const clampedScrollPosition = clamp(
+            desiredScrollPosition,
+            -maxScrollPosition,
+            maxScrollPosition
+          );
+
+          containerRef.current?.scroll({
+            top: clampedScrollPosition,
+            left: 0,
+            behavior: 'instant',
+          });
+
+          lastScrollPosition.current = clampedScrollPosition;
 
           scrollStep.current++;
 
@@ -92,7 +115,14 @@ const EaseIntoView: React.FunctionComponent<EaseIntoViewProps> = ({
   }, [delayFrames, scrollStart, scrollEnd, doEase, frames]);
 
   return (
-    <div id={id} className={className} ref={containerRefCallback}>
+    <div
+      id={id}
+      role="tablist"
+      tabIndex={0}
+      aria-label={ariaLabel}
+      className={className}
+      ref={containerRefCallback}
+    >
       {children}
     </div>
   );

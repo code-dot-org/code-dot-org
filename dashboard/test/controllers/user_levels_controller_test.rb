@@ -97,7 +97,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     test "teacher can delete own progress on #{level_type} level" do
       user = create :teacher
       sign_in user
-      script = create :script
+      script = create(:unit, :in_single_unit_course)
       level = create :level, type: level_type
       create :user_level, user: user, script: script, level: level
 
@@ -114,7 +114,7 @@ class UserLevelsControllerTest < ActionController::TestCase
       user = create :teacher
       other_user = create :teacher
       sign_in user
-      script = create :script
+      script = create(:unit, :in_single_unit_course)
       level = create :level, type: level_type
       create :user_level, user: other_user, script: script, level: level
 
@@ -130,7 +130,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     test "student cannot delete their own progress on #{level_type} level" do
       user = create :student
       sign_in user
-      script = create :script
+      script = create(:unit, :in_single_unit_course)
       level = create :level, type: level_type
       create :user_level, user: user, script: script, level: level
 
@@ -147,7 +147,7 @@ class UserLevelsControllerTest < ActionController::TestCase
   test "teacher can delete own progress on a Python Lab predict level" do
     user = create :teacher
     sign_in user
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}}
     create :user_level, user: user, script: script, level: level
 
@@ -163,7 +163,7 @@ class UserLevelsControllerTest < ActionController::TestCase
   test "teacher cannot delete own progress on a regular Python Lab level" do
     user = create :teacher
     sign_in user
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level, type: "Pythonlab"
     create :user_level, user: user, script: script, level: level
 
@@ -179,7 +179,7 @@ class UserLevelsControllerTest < ActionController::TestCase
   test "teacher cannot delete own progress on an unsupported level" do
     user = create :teacher
     sign_in user
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level, type: 'Blockly'
     create :user_level, user: user, script: script, level: level
 
@@ -196,7 +196,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level
     level_source_data = 'my level source'
     level_source = create :level_source, level: @level, data: level_source_data
@@ -211,7 +211,7 @@ class UserLevelsControllerTest < ActionController::TestCase
 
   test "signed out user cannot get level source data" do
     other_user = create :user
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level
 
     level_source_data = 'my level source'
@@ -228,7 +228,7 @@ class UserLevelsControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    script = create :script
+    script = create(:unit, :in_single_unit_course)
     level = create :level
 
     get :get_level_source, params: {script_id: script.id, level_id: level.id}

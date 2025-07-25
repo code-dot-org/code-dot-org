@@ -192,6 +192,7 @@ export default class MusicBlocklyWorkspace {
         appType: EVENTS.BLOCKLY_APP_TYPE_MUSIC,
       },
       enableKeyboardNavigation,
+      showBlockHelp: true,
     } as GoogleBlockly.BlocklyOptions);
 
     this.resizeBlockly();
@@ -211,6 +212,16 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace = new GoogleBlockly.Workspace();
     this.headlessMode = true;
+  }
+
+  setIsReadOnly(isReadOnlyWorkspace: boolean) {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'setIsReadOnlyWorkspace called before workspace initialized.'
+      );
+      return;
+    }
+    this.workspace.setIsReadOnly(isReadOnlyWorkspace);
   }
 
   /**
@@ -681,6 +692,7 @@ export default class MusicBlocklyWorkspace {
       );
       return;
     }
+    this.workspace.clear();
     this.workspace.clearUndo();
 
     // Clear the record of the last executed code so that if the new code

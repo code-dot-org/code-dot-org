@@ -14,7 +14,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   setup do
-    @workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create :byo_workshop, organizer: @organizer, num_sessions: 1
     @workshop.facilitators << @facilitator
     @existing_enrollment = create :pd_enrollment, workshop: @workshop
 
@@ -23,174 +23,76 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     @organizer_workshop_existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
   end
 
-  test 'enroll get route' do
-    assert_routing(
-      {path: "http://#{CDO.dashboard_hostname}/pd/workshops/#{@workshop.id}/enroll", method: :get},
-      {controller: 'pd/workshop_enrollment', action: 'new', workshop_id: @workshop.id.to_s}
-    )
+  test 'join sends signed out users to sign in gate' do
+    get :join, params: {workshop_id: @workshop.id}
+    assert_redirected_to "/logged_out?source_page=workshop%20join&return_to=%2Fpd%2Fworkshops%2F#{@workshop.id}%2Fjoin"
   end
 
-  test 'non-logged-in users cannot enroll in csf workshop' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
-  end
-
-  test 'non-logged-in users cannot enroll in csd workshop' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
-  end
-
-  test 'non-logged-in users cannot enroll in csp workshop' do
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :logged_out
-  end
-
-  test 'logged-in users can enroll in csf workshop' do
-    sign_in @teacher
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-  end
-
-  test 'logged-in users can enroll in csd workshop' do
-    sign_in @teacher
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-  end
-
-  test 'logged-in users can enroll in csp workshop' do
-    sign_in @teacher
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-  end
-
-  test 'students are shown students_cannot_enroll view' do
+  test 'join sends student users to account upgrade gate' do
     student = create :student
     sign_in student
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :students_cannot_enroll
+
+    get :join, params: {workshop_id: @workshop.id}
+    assert_redirected_to "/teacher_account_required?source_page=workshop%20join&return_to=%2Fpd%2Fworkshops%2F#{@workshop.id}%2Fjoin"
   end
 
-  test 'teacher with missing application gets missing application view' do
-    teacher = create :teacher
+  test 'join has Not Found status with invalid workshop id' do
+    sign_in @teacher
 
-    # see Pd::Workshop#require_application? for the logic that determines whether a workshop requires an application
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
+    get :join, params: {workshop_id: 'invalid-id'}
     assert_response :success
-    assert_template :missing_application
+    assert_template :join
+    assert_equal "not found", prop('workshop_enrollment_status')
   end
 
-  test 'teacher with old application gets new view' do
-    teacher = create :teacher
-    old_year = Pd::SharedApplicationConstants::YEAR_18_19
-    create :pd_teacher_application, user: teacher, application_year: old_year
+  test 'join has Closed status with closed workshop' do
+    closed_workshop = create :workshop, :ended
+    sign_in @teacher
 
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
+    get :join, params: {workshop_id: closed_workshop.id}
     assert_response :success
-    assert_template :missing_application
+    assert_template :join
+    assert_equal "closed", prop('workshop_enrollment_status')
   end
 
-  test 'teacher with incomplete application gets missing application view' do
-    teacher = create :teacher
-    create :pd_teacher_application, user: teacher, status: 'incomplete'
+  test 'join has Full status with full workshop' do
+    full_workshop = create :workshop, capacity: 1, num_enrollments: 1
+    sign_in @teacher
 
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
+    get :join, params: {workshop_id: full_workshop.id}
     assert_response :success
-    assert_template :missing_application
+    assert_template :join
+    assert_equal "full", prop('workshop_enrollment_status')
   end
 
-  test 'teacher already enrolled in workshop cannot enroll again' do
-    teacher = create :teacher
-    application = create :pd_teacher_application, user: teacher, status: 'accepted'
-    workshop = create :workshop
-    create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :already_enrolled
-  end
-
-  test 'teacher with required application gets new view' do
-    teacher = create :teacher
-    create :pd_teacher_application, user: teacher, status: 'accepted'
-
-    rp = create :regional_partner
-    workshop = create :summer_workshop, regional_partner: rp
-    assert workshop.require_application?
-
-    sign_in teacher
-    get :new, params: {workshop_id: workshop.id}
-    assert_response :success
-    assert_template :new
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'workshop organizers can see enrollment form' do
-    # Note - organizers can see the form, but cannot enroll in their own workshops.
-    # This is tested in 'creating an enrollment with email match from organizer renders own view'
+  test 'join has Own status if user tries to join their own workshop' do
     sign_in @workshop_organizer
-    get :new, params: {workshop_id: @organizer_workshop.id}
-    assert_template :new
+
+    get :join, params: {workshop_id: @organizer_workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "own", prop('workshop_enrollment_status')
   end
 
-  test 'program manager workshop organizers can see enrollment form' do
-    # Note - organizers can see the form, but cannot enroll in their own workshops.
-    # This is tested in 'creating an enrollment with email match from organizer renders own view'
-    sign_in @organizer
-    get :new, params: {workshop_id: @workshop.id}
-    assert_template :new
+  test 'join has Duplicate status if user is already enrolled in the workshop' do
+    already_enrolled_teacher = create :teacher
+    workshop_with_enrollment = create :workshop
+    create :pd_enrollment, workshop: workshop_with_enrollment, user: already_enrolled_teacher
+    sign_in already_enrolled_teacher
+
+    get :join, params: {workshop_id: workshop_with_enrollment.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "duplicate", prop('workshop_enrollment_status')
   end
 
-  test 'facilitators can see enrollment form' do
-    # Note - facilitators can see the form, but cannot enroll in their own workshops.
-    # This is tested in 'creating an enrollment with email match from facilitator renders own view'
-    sign_in @facilitator
-    get :new, params: {workshop_id: @workshop.id}
-    assert_template :new
-  end
+  test 'join has Unsubmitted status if user is able to join the workshop' do
+    sign_in @teacher
 
-  test 'unrelated organizers and facilitators can enroll' do
-    unrelated_super_user = @teacher
-    unrelated_super_user.permission = UserPermission::WORKSHOP_ORGANIZER
-    unrelated_super_user.permission = UserPermission::FACILITATOR
-
-    sign_in unrelated_super_user
-    get :new, params: {workshop_id: @workshop.id}
-    assert_template :new
-  end
-
-  test 'unknown workshop id responds with 404' do
-    get :new, params: {workshop_id: 'nonsense'}
-    assert_response 404
+    get :join, params: {workshop_id: @workshop.id}
+    assert_response :success
+    assert_template :join
+    assert_equal "unsubmitted", prop('workshop_enrollment_status')
   end
 
   test 'show route' do
@@ -328,34 +230,6 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
     # Still a student
     assert student.reload.student?
     assert_redirected_to controller: 'pd/session_attendance', action: 'upgrade_account'
-  end
-
-  test 'demographic questions added (for teachers, without application, for local summer workshop)' do
-    sign_in @teacher
-    workshop = create :summer_workshop
-
-    get :new, params: {workshop_id: workshop.id}
-    assert_template :new
-    assert prop('collect_demographics')
-  end
-
-  test 'demographic questions not added (for teachers, with application, for local summer workshop)' do
-    sign_in @teacher
-    workshop = create :workshop
-    create Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_FACTORY, user: @teacher
-
-    get :new, params: {workshop_id: workshop.id}
-    assert_template :new
-    refute prop('collect_demographics')
-  end
-
-  test 'demographic questions not added (for teachers, without application, for non-local summer workshop)' do
-    sign_in @teacher
-    workshop = create :workshop
-
-    get :new, params: {workshop_id: workshop.id}
-    assert_template :new
-    refute prop('collect_demographics')
   end
 
   private def enrollment_test_params(teacher = nil)

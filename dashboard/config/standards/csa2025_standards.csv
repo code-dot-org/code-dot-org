@@ -19,14 +19,14 @@ csa2025,1.3.B,1.3.B.1,A literal is the code representation of a fixed value.
 csa2025,1.3.B,1.3.B.2,A string literal is a sequence of characters enclosed in double quotes.
 csa2025,1.3.B,1.3.B.3,"Escape sequences are special sequences of characters that can be included in a string. They start with a \ and have a special meaning in Java. Escape sequences used in this course include double quote \"", backslash \\, and newline \n."
 csa2025,1.3.C,1.3.C.1,"Arithmetic expressions, which consist of numeric values, variables, and operators, include expressions of type int and double."
-csa2025,1.3.C,1.3.C.2,"The arithmetic operators consist of addition +, subtraction -, multiplication *, division /, and remainder (modulo) %. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.
+csa2025,1.3.C,1.3.C.2,"The arithmetic operators consist of addition +, subtraction -, multiplication *, division /, and remainder %. An arithmetic operation that uses two int values will evaluate to an int value. An arithmetic operation that uses at least one double value will evaluate to a double value.
 EXCLUSION STATEMENT
 Expressions that result in special double values (e.g., infinities and NaN) are outside the scope of the AP Computer Science A course and exam."
 csa2025,1.3.C,1.3.C.3,"When dividing numeric values that are both int values, the result is only the integer portion of the quotient. When dividing numeric values that use at least one double value, the result is the quotient."
 csa2025,1.3.C,1.3.C.4,"The remainder (modulo) operator % is used to compute the remainder when one number is divided by another number.
 EXCLUSION STATEMENT
 The use of values less than 0 for a and the use of values less than or equal to 0 for b is outside the scope of the AP Computer Science A course and exam."
-csa2025,1.3.C,1.3.C.5,"Operators can be used to construct compound expressions. At compile time, numeric values are associated with operators according to operator precedence to determine how they are grouped. Parentheses can be used to modify operator precedence. Multiplication, division, and remainder (modulo) have precedence over addition and subtraction. Operators with the same precedence are evaluated from left to right."
+csa2025,1.3.C,1.3.C.5,Operators can be used to construct compound expressions. At compile time, numeric values are associated with operators according to operator precedence to determine how they are grouped. Parentheses can be used to modify operator precedence. Multiplication, division, and remainder have precedence over addition and subtraction. Operators with the same precedence are evaluated from left to right.
 csa2025,1.3.C,1.3.C.6,"An attempt to divide an integer by the integer zero will result in an ArithmeticException.
 EXCLUSION STATEMENT
 The use of dividing by zero when one numeric value is a double is outside the scope of the AP Computer Science A course and exam."
@@ -53,7 +53,7 @@ csa2025,1.6.A,1.6.A.2,"The post-increment operator ++ and post-decrement operato
 EXCLUSION STATEMENT
 The use of increment and decrement operators in prefix form (i.e., ++x) is outside the scope of the AP Computer Science A course and exam. The use of increment and decrement operators inside other expressions (i.e., arr[x++]) is outside the scope of the AP Computer Science A course and exam."
 csa2025,1.7.A,1.7.A.1,Libraries are collections of classes. An Application Programming Interface (API) specification informs the programmer how to use those classes. Documentation found in API specifications and libraries is essential to understanding the attributes and behaviors of a class defined by the API. A class defines a specific reference type. Classes in the APIs and libraries are grouped into packages. Existing classes and class libraries can be utilized to create objects.
-csa2025,1.7.A,1.7.A.2,Attributes refer to the data related to the class and are stored in variables. Behaviors refer to what instances of the class can do (or what can be done with it) and are defined by methods.
+csa2025,1.7.A,1.7.A.2,Attributes refer to the data related to the class and are stored in variables. Behaviors refer to what instances of the class can do (or what can be done with them) and are defined by methods.
 csa2025,1.8.A,1.8.A.1,"Comments are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run. Three types of comments in Java include /* */, which generates a block of comments, //, which generates a comment on one line, and /** */, which are Javadoc comments and are used to create API documentation."
 csa2025,1.8.A,1.8.A.2,A precondition is a condition that must be true just prior to the execution of a method in order for it to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.
 csa2025,1.8.A,1.8.A.3,A postcondition is a condition that must always be true after the execution of a method. Postconditions describe the outcome of the execution in terms of what is being returned or the current value of the attributes of an object.
@@ -71,7 +71,7 @@ csa2025,1.11.A,1.11.A.2,"The Math class contains only class methods. The followi
 • static int abs(int x) returns the absolute value of an int value.
 • static double abs(double x) returns the absolute value of a double value.
 • static double pow(double base, double exponent) returns the value of the first parameter raised to the power of the second parameter.
-• static double sqrt(double x) returns the positive square root of a double value.
+• static double sqrt(double x) returns the nonnegative square root of a double value.
 • static double random() returns a double value greater than or equal to 0.0 and less than 1.0."
 csa2025,1.11.A,1.11.A.3,"The values returned from Math.random() can be manipulated using arithmetic and casting operators to produce a random int or double in a defined range based on specified criteria. Each endpoint of the range can be inclusive, meaning the value is included, or exclusive, meaning the value is not included."
 csa2025,1.12.A,1.12.A.1,"An object is a specific instance of a class with defined attributes. A class is the formal implementation, or blueprint, of the attributes and behaviors of an object."
@@ -90,14 +90,14 @@ csa2025,1.13.C,1.13.C.3,"A constructor argument is a value that is passed into a
 csa2025,1.13.C,1.13.C.4,"A constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called."
 csa2025,1.14.A,1.14.A.1,Instance methods are called on objects of the class. The dot operator is used along with the object name to call instance methods.
 csa2025,1.14.A,1.14.A.2,A method call on a null reference will result in a NullPointerException.
-csa2025,1.15.A,1.15.A.1,A String object represents a sequence of characters and can be created by using a string literal.
+csa2025,1.15.A,1.15.A.1,A String object represents a sequence of characters and can be created by using a string literal or by calling the String class constructor.
 csa2025,1.15.A,1.15.A.2,The String class is part of the java.lang package. Classes in the java.lang package are available by default.
 csa2025,1.15.A,1.15.A.3,"A String object is immutable, meaning once a String object is created, its attributes cannot be changed. Methods called on a String object do not change the content of the String object."
 csa2025,1.15.A,1.15.A.4,"Two String objects can be concatenated together or combined using the + or += operator, resulting in a new String object. A primitive value can be concatenated with a String object. This causes the implicit conversion of the primitive value to a String object."
 csa2025,1.15.A,1.15.A.5,"A String object can be concatenated with any object, which implicitly calls the object’s toString method (a behavior which is guaranteed to exist by the inheritance relationship every class has with the Object class). An object’s toString method returns a string value representing the object. Subclasses of Object often override the toString method with class-specific implementation. Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass, but the behavior of the method is specific to the subclass.
 EXCLUSION STATEMENT
 Overriding the toString method of a class is outside the scope of the AP Computer Science A course and exam."
-csa2025,1.15.B,1.15.B.1,A String object has index values from 0 to one less than the length of the string. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+csa2025,1.15.B,1.15.B.1,A String object has index values from 0 to one less than the length of the string. Attempting to access indices outside this range will result in a StringIndexOutOfBoundsException.
 csa2025,1.15.B,1.15.B.2,"The following String methods—including what they do and when they are used—are part of the AP Java Quick Reference:
 • int length() returns the number of characters in a String object.
 • String substring(int from, int to) returns the substring beginning at index from and ending at index to – 1.
@@ -138,7 +138,7 @@ csa2025,2.7.A,2.7.A.3,The loop body of an iterative statement will not execute i
 csa2025,2.7.A,2.7.A.4,"""Off by one"" errors occur when the iteration statement loops one time too many or one time too few."
 csa2025,2.7.B,2.7.B.1,"A while loop is a type of iterative statement. In while loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the Boolean expression evaluates to false, whereupon the iteration terminates."
 csa2025,2.8.A,2.8.A.1,"A for loop is a type of iterative statement. There are three parts in a for loop header—the initialization, the Boolean expression, and the update."
-csa2025,2.8.A,2.8.A.2,"In a for loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a loop control variable. The Boolean expression is evaluated immediately after the loop control variable is initialized and then followed by each execution of the increment statement until it is false. In each iteration, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again."
+csa2025,2.8.A,2.8.A.2,In a for loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a loop control variable. The Boolean expression is evaluated immediately after the loop control variable is initialized and then following each execution of the increment statement until it is false. In each iteration, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
 csa2025,2.8.A,2.8.A.3,A for loop can be rewritten into an equivalent while loop (and vice versa).
 csa2025,2.9.A,2.9.A.1,"There are standard algorithms to
 • identify if an integer is or is not evenly divisible by another integer.
@@ -233,6 +233,17 @@ csa2025,4.6.A,4.6.A.3,"A file can be opened by creating a File object, using the
 • File(String str) is the File constructor that accepts a String file name to open for reading, where str is the pathname for the file."
 csa2025,4.6.A,4.6.A.4,"When using the File class, it is required to indicate what to do if the file with the provided name cannot be opened. One way to accomplish this is to add throws IOException to the header of the method that uses the file. If the file name is invalid, the program will terminate."
 csa2025,4.6.A,4.6.A.5,The File and IOException classes are part of the java.io package. An import statement must be used to make these classes available for use in the program.
+csa2025,4.6.A,4.6.A.6,"The following Scanner methods and constructor—including what they do and when they are used—are part of the Java Quick Reference:
+• Scanner(File f) is the Scanner constructor that accepts a File for reading.
+• int nextInt() returns the next int read from the file or input source if available. If the next int does not exist or is out of range, it will result in an InputMismatchException.
+• double nextDouble() returns the next double read from the file or input source. If the next double does not exist, it will return an InputMismatchException.
+• boolean nextBoolean() returns the next boolean read from the file or input source. If the next boolean does not exist, it will result in an InputMismatchException.
+• String nextLine() returns the next line of text as a String read from the file or input source; can return the empty string if called immediately after another Scanner method that is reading from the file or input source.
+• String next() returns the next String read from the file or input source.
+• boolean hasNext() returns true if there is a next item to read in the file or input source; false otherwise.
+• void close() closes this scanner.
+EXCLUSION STATEMENT
+Accepting input from the keyboard is outside the scope of the AP Computuer Science A course and exam."
 csa2025,4.7.A,4.7.A.1,"The Integer class and Double class are part of the java.lang package. An Integer object is immutable, meaning once an Integer object is created, its attributes cannot be changed. A Double object is immutable, meaning once a Double object is created, its attributes cannot be changed."
 csa2025,4.7.A,4.7.A.2,"Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an int to an Integer and a double to a Double. The Java compiler applies autoboxing when a primitive value is
 • passed as a parameter to a method that expects an object of the corresponding wrapper class.
@@ -241,13 +252,13 @@ csa2025,4.7.A,4.7.A.3,"Unboxing is the automatic conversion that the Java compil
 • passed as a parameter to a method that expects a value of the corresponding primitive type.
 • assigned to a variable of the corresponding primitive type."
 csa2025,4.7.A,4.7.A.4,"The following class Integer method—including what it does and when it is used—is part of the AP Java Quick Reference:
-• static int parseInt(String s) returns the String argument as a signed int."
+• static int parseInt(String s) returns the String argument as an int."
 csa2025,4.7.A,4.7.A.5,"The following class Double method—including what it does and when it is used—is part of the AP Java Quick Reference:
-• static double parseDouble(String s) returns the String argument as a signed double."
+• static double parseDouble(String s) returns the String argument as a double."
 csa2025,4.8.A,4.8.A.1,An ArrayList object is mutable in size and contains object references.
 csa2025,4.8.A,4.8.A.2,The ArrayList constructor ArrayList() constructs an empty list.
 csa2025,4.8.A,4.8.A.3,"Java allows the generic type ArrayList <E>, where the type parameter E specifies the type of the elements. When ArrayList <E> is specified, the types of the reference parameters and return type when using the ArrayList methods are type E. ArrayList <E> is preferred over ArrayList. For example, ArrayList <String> names = new ArrayList <String>(); allows the compiler to find errors that would otherwise be found at run-time."
-csa2025,4.8.A,4.8.A.4,The ArrayList class is part of the java.util package. An import statement can be used to make this class available for use in the program.
+csa2025,4.8.A,4.8.A.4,The ArrayList class is part of the java.util package. An import statement must be used to make this class available for use in the program.
 csa2025,4.8.A,4.8.A.5,"The following ArrayList methods—including what they do and when they are used—are part of the AP Java Quick Reference:
 • int size() returns the number of elements in the list.
 • boolean add(E obj) appends obj to end of list; returns true.

@@ -66,56 +66,21 @@ class HttpCache
   ].freeze
 
   # A list of script levels that should not be cached, even though they are
-  # in a cacheable script
-  # TODO: re enable after moving to /courses/ paths
+  # in a cacheable script. prediction levels are not cacheable.
   UNCACHED_UNIT_LEVEL_PATHS = [
-    # '/s/dance-2019/lessons/1/levels/10',
-    # '/s/dance-ai-2023/lessons/1/levels/10',
-    # '/s/poem-art-2021/lessons/1/levels/9',
-    # '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
-    # '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
-    # '/s/hello-world-food-2021/lessons/1/levels/11',
-    # '/s/hello-world-animals-2021/lessons/1/levels/11',
-    # '/s/hello-world-retro-2021/lessons/1/levels/11',
-    # '/s/hello-world-emoji-2021/lessons/1/levels/11',
-    # '/s/hello-world-space-2022/lessons/1/levels/11',
-    # '/s/hello-world-soccer-2022/lessons/1/levels/11',
-    # '/s/outbreak/lessons/1/levels/10'
+    '/courses/dance-ai-2023/units/1/lessons/1/levels/10',
   ]
 
   # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = {}
-  # TODO: re enable cached unit map after moving to /courses/ paths
-  # CACHED_UNITS_MAP = %w(
-  #   aquatic
-  #   starwars
-  #   starwarsblocks
-  #   mc
-  #   frozen
-  #   minecraft
-  #   hero
-  #   sports
-  #   basketball
-  #   dance-2019
-  #   dance-ai-2023
-  #   oceans
-  #   poem-art-2021
-  #   hello-world-food-2021
-  #   hello-world-animals-2021
-  #   hello-world-retro-2021
-  #   hello-world-emoji-2021
-  #   hello-world-space-2022
-  #   hello-world-soccer-2022
-  #   music-jam-2024
-  #   outbreak
-  # ).map do |script_name|
-  #   # Most scripts use the default route pattern.
-  #   [script_name, "/s/#{script_name}/lessons/*"]
-  # end.to_h.merge(
-  #   # Add the "special case" routes here.
-  #   'hourofcode' => '/hoc/*',
-  #   'flappy' => '/flappy/*'
-  # ).freeze
+  CACHED_UNITS_MAP = %w(
+    aquatic
+    dance-ai-2023
+    mc
+    music-jam-2024
+  ).map do |script_name|
+    # Assume all cached units are in single unit courses.
+    [script_name, "/courses/#{script_name}/units/1/lessons/*"]
+  end.to_h.freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
@@ -244,7 +209,8 @@ class HttpCache
             ),
             query: false,
             headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
           },
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
@@ -304,17 +270,16 @@ class HttpCache
           # should not be cached in CloudFront. Use CloudFront Behavior
           # precedence rules to not cache these paths, but all paths in
           # CACHED_UNITS_MAP that don't match this path will be cached.
-          # TODO: re-enable these behaviors after moving to /courses/ paths
-          # {
-          #   path: UNCACHED_UNIT_LEVEL_PATHS,
-          #   headers: ALLOWLISTED_HEADERS,
-          #   cookies: allowlisted_cookies
-          # },
-          # {
-          #   path: CACHED_UNITS_MAP.values,
-          #   headers: ALLOWLISTED_HEADERS,
-          #   cookies: default_cookies
-          # },
+          {
+            path: UNCACHED_UNIT_LEVEL_PATHS,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
+          },
+          {
+            path: CACHED_UNITS_MAP.values,
+            headers: ALLOWLISTED_HEADERS,
+            cookies: default_cookies
+          },
           {
             path: '/api/v1/projects/gallery/public/*',
             headers: [],

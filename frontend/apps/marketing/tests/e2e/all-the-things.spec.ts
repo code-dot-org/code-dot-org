@@ -10,7 +10,7 @@ import {MarketingPage} from './pom/marketing';
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
-      const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
 
       const accessibilityScanResults = await new AxeBuilder({page}).analyze();
@@ -33,15 +33,30 @@ test.describe('All the things UI e2e test', () => {
   test.describe('locale-less redirect', () => {
     test('should redirect from localeless paths to english localized paths when no language cookie is set', async ({
       page,
+      context,
+      browserName,
     }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+
       const allTheThingsPage = new MarketingPage(page);
       await allTheThingsPage.goto('/engineering/all-the-things');
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
+
+      // Should set the language cookie to en-US
+      expect(await context.cookies()).toContainEqual(
+        expect.objectContaining({
+          name: 'language_',
+          value: 'en-US',
+        }),
+      );
     });
 
     // Re-enable when locales other than English are supported
-    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
+    test('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,
@@ -56,17 +71,21 @@ test.describe('All the things UI e2e test', () => {
         {
           name: 'language_',
           path: '/',
-          domain: `.${allTheThingsPage.getBaseDomain()}`,
-          value: 'zh-CN',
+          domain: `.${allTheThingsPage.getCookieDomain()}`,
+          value: 'zh-TW',
         },
       ]);
 
       await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/zh-CN/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized english when language cookie is invalid', async ({
+    test.use({
+      locale: 'completely-invalid',
+    });
+
+    test('should redirect from localeless paths to localized english when language cookie is invalid and no accept-header', async ({
       page,
       browserName,
       context,
@@ -81,7 +100,7 @@ test.describe('All the things UI e2e test', () => {
         {
           name: 'language_',
           path: '/',
-          domain: `.${allTheThingsPage.getBaseDomain()}`,
+          domain: `.${allTheThingsPage.getCookieDomain()}`,
           value: 'invalid',
         },
       ]);
@@ -90,14 +109,51 @@ test.describe('All the things UI e2e test', () => {
 
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
+
+    test('should stay on the same locale if starting from a localized page', async ({
+      page,
+      browserName,
+    }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+      const allTheThingsPage = new MarketingPage(page);
+
+      await allTheThingsPage.goto('/zh-TW/engineering/all-the-things');
+
+      // The middleware should send us back to /zh-TW with the language_ cookie set via the previous visit
+      await allTheThingsPage.goto('/engineering/all-the-things');
+      await page.waitForURL('**/zh-TW/engineering/all-the-things');
+    });
+
+    test.describe('accept-language header', () => {
+      test.use({
+        locale: 'zh-TW',
+      });
+
+      test('redirects to localized page via accept-language', async ({
+        page,
+        browserName,
+      }) => {
+        test.skip(
+          browserName !== 'chromium',
+          'This test only needs to run once on Chromium',
+        );
+        const allTheThingsPage = new MarketingPage(page);
+        await allTheThingsPage.goto('/engineering/all-the-things');
+
+        await page.waitForURL('**/zh-TW/engineering/all-the-things');
+      });
+    });
   });
 
   test('should have the correct top level SEO metadata', async ({page}) => {
-    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
     await allTheThingsPage.goto();
 
     expect(await allTheThingsPage.pageTitle).toBe(
-      '⛔️ [ENGINEERING ONLY] UI Integration Testing - SEO',
+      '❌ [ENGINEERING ONLY] UI Integration Testing - SEO',
     );
     expect(await allTheThingsPage.description).toBe('SEO Description');
     expect(await allTheThingsPage.robots).toBe('noindex, nofollow');
@@ -109,8 +165,8 @@ test.describe('All the things UI e2e test', () => {
     expect(await allTheThingsPage.getOpenGraph('description')).toBe(
       'OpenGraph Description',
     );
-    expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
+    expect(await allTheThingsPage.getOpenGraph('image')).toMatch(
+      /https:\/\/contentful-images\.code\.org\/90t6bu6vlf76\/4hXiOPiRlCXpmtypRNOZqc\/(.*)\/engineering-only-opengraph-default\.png\?fm=webp/,
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
@@ -120,10 +176,12 @@ test.describe('All the things UI e2e test', () => {
       let component: Locator;
 
       test.beforeEach(async ({page}) => {
-        const allTheThingsPage = new AllTheThingsPage(page, locale);
+        const allTheThingsPage = new AllTheThingsPage(page, {locale});
         await allTheThingsPage.goto();
 
-        component = allTheThingsPage.getSectionLocator('Localization');
+        component = allTheThingsPage.getSectionLocator(
+          entry.heading as Section,
+        );
         await component.scrollIntoViewIfNeeded();
       });
 
@@ -151,7 +209,7 @@ test.describe('All the things UI e2e test', () => {
     let allTheThingsPage: AllTheThingsPage;
 
     test.beforeEach(async ({page}) => {
-      allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+      allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
       await allTheThingsPage.goto();
     });
 
@@ -165,7 +223,7 @@ test.describe('All the things UI e2e test', () => {
 
       test('renders action block', async () => {
         const overline = component.getByText('K-12 Teachers');
-        const title = component.getByText('TEST - Self-Paced PL');
+        const title = component.getByText('❌ [ENG] Self-Paced PL 1');
         const description = component.getByText(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
         );
@@ -190,6 +248,36 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('action block pattern default', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Default',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('action block pattern hidden elements', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Action Block Pattern Hidden Elements',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('full width action block', () => {
       let component: Locator;
 
@@ -202,7 +290,7 @@ test.describe('All the things UI e2e test', () => {
 
       test('renders full width action block', async () => {
         const overline = component.getByText('K-12 Teachers');
-        const title = component.getByText('TEST - Self-Paced PL');
+        const title = component.getByText('❌ [ENG] Self-Paced PL 1');
         const description = component.getByText(
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
         );
@@ -295,6 +383,26 @@ test.describe('All the things UI e2e test', () => {
       },
     );
 
+    ['Action Block Collection', 'Logo Collection', 'People Collection'].forEach(
+      carousel => {
+        test.describe(carousel.toLowerCase(), () => {
+          let component: Locator;
+
+          test.beforeEach(async () => {
+            component = allTheThingsPage.getSectionLocator(carousel as Section);
+            await component.scrollIntoViewIfNeeded();
+          });
+
+          test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+            await eyes.check(testInfo.title, {
+              region: component,
+              fully: true,
+            });
+          });
+        });
+      },
+    );
+
     test.describe('divider', () => {
       let component: Locator;
 
@@ -349,6 +457,34 @@ test.describe('All the things UI e2e test', () => {
       });
     });
 
+    test.describe('faq accordion', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('FAQ Accordion');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const dialogLocator = component.getByRole('group');
+
+        await expect(dialogLocator).toHaveCount(3);
+
+        for (const dialog of await dialogLocator.all()) {
+          await expect(dialog).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        for (const dialog of await component.getByRole('group').all()) {
+          await dialog.click();
+          await expect(dialog).toHaveAttribute('open');
+        }
+
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
     test.describe('heading', () => {
       let component: Locator;
 
@@ -367,6 +503,175 @@ test.describe('All the things UI e2e test', () => {
         for (const header of headerLocators) {
           await expect(header).toBeVisible();
         }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner basic', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Hero Banner Basic');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        const heading = component.getByText('Hero Banner Basic');
+        const subheading = component.getByText('Hero banner subheading');
+        const description = component.getByText(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
+        );
+        const button = component.getByText('Primary Button');
+        await expect(heading).toBeVisible();
+        await expect(subheading).toBeVisible();
+        await expect(description).toBeVisible();
+        await expect(button).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with background color', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Background Color',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with background image', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Background Image',
+        );
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with image big', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Image Big',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const image = component.locator('img[alt=""]');
+        await expect(image).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with image small', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Image Small',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const image = component.locator('img[alt=""]');
+        await expect(image).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with video', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Video',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const playButton = component.getByAltText(
+          "Play video What Most Schools Don't Teach",
+        );
+        await expect(playButton).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with partner callout', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Partner Callout',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const partnerCallout = component.getByText('In partnership with');
+        await expect(partnerCallout).toBeVisible();
+        const partnerLogo = component.locator('img[alt=""]');
+        await expect(partnerLogo).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('hero banner with announcement banner', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator(
+          'Hero Banner with Announcement Banner',
+        );
+        await component.scrollIntoViewIfNeeded();
+
+        const announcementBannerText = component.getByText(
+          'This is an announcement banner!',
+        );
+        const announcementBannerLink = component.getByText(
+          'Announcement banner link',
+        );
+        await expect(announcementBannerText).toBeVisible();
+        await expect(announcementBannerLink).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('icon highlight', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Icon Highlight');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
@@ -443,6 +748,128 @@ test.describe('All the things UI e2e test', () => {
           component.getByText('Paragraph Secondary Bold'),
         ).toBeVisible();
         await expect(component.getByText('Lorem ipsum')).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('rich text', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Rich Text');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('renders', async () => {
+        await expect(component.getByText('Normal text')).toBeVisible();
+        await expect(component.getByText('Bold text')).toBeVisible();
+        await expect(
+          component.getByText('Multiline complex text'),
+        ).toBeVisible();
+
+        await expect(component.getByText('Normal link')).toBeVisible();
+        await expect(component.getByText('Bold link')).toBeVisible();
+
+        await expect(component.getByRole('list')).toHaveCount(2);
+
+        await expect(component.getByRole('table')).toBeVisible();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    [
+      'Section - Dark Gray',
+      'Section - Pattern Dark',
+      'Section - Pattern Teal',
+    ].forEach(carousel => {
+      test.describe(carousel.toLowerCase(), () => {
+        let component: Locator;
+
+        test.beforeEach(async () => {
+          component = allTheThingsPage.getSectionLocator(carousel as Section);
+          await component.scrollIntoViewIfNeeded();
+        });
+
+        test('eyes', {tag: '@eyes'}, async ({eyes, browserName}, testInfo) => {
+          // Skip the test on Safari for 'Section - Dark Gray' since it's taking
+          // too long to render and causing timeouts.
+          test.skip(
+            carousel === 'Section - Dark Gray' && browserName === 'webkit',
+            'Skipping Section - Dark Gray on Safari',
+          );
+
+          await eyes.check(testInfo.title, {
+            region: component,
+            fully: true,
+          });
+        });
+      });
+    });
+
+    test.describe('simple list', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Simple List');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('skinny banner', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Skinny Banner');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('snapshot', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Snapshot');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('tab group', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Tab Group');
+        await component.scrollIntoViewIfNeeded();
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('testimonial', () => {
+      let component: Locator;
+
+      test.beforeEach(async () => {
+        component = allTheThingsPage.getSectionLocator('Testimonial');
+        await component.scrollIntoViewIfNeeded();
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {

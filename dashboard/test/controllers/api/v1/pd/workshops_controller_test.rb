@@ -463,36 +463,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     params: -> {{pd_workshop: workshop_params}}
   )
 
-  test 'csf facilitators can create csf workshops' do
-    sign_in(@csf_facilitator)
-
-    assert_creates(Pd::Workshop) do
-      post :create, params: {pd_workshop: workshop_params}
-      assert_response :success
-    end
-  end
-
-  test 'csf facilitators can not create non-csf workshops' do
-    sign_in(@csf_facilitator)
-
-    params = workshop_params.merge(
-      {course: Pd::Workshop::COURSE_CSD}
-    )
-
-    assert_does_not_create(Pd::Workshop) do
-      post :create, params: {pd_workshop: params}
-      assert_response :forbidden
-    end
-  end
-
-  test 'non-csf facilitators cannot create workshops' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    sign_in(facilitator)
-
-    post :create, params: {pd_workshop: workshop_params}
-    assert_response :forbidden
-  end
-
   test 'can create a workshop with suppressed email' do
     sign_in @organizer
     post :create, params: {pd_workshop: workshop_params.merge(suppress_email: true)}
@@ -524,27 +494,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       delete :destroy, params: {id: @workshop.id}
     end
     assert_response :success
-  end
-
-  test 'CSF facilitator can delete a workshop where they are the organizer' do
-    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer], organizer: csf_facilitator_organizer
-    sign_in csf_facilitator_organizer
-    assert_destroys(Pd::Workshop) do
-      delete :destroy, params: {id: workshop.id}
-    end
-    assert_response :success
-  end
-
-  test 'CSF facilitator can not delete a workshop where they are not the organizer' do
-    csf_facilitator_organizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    csf_facilitator_nonorganizer = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    workshop = create :pd_workshop, facilitators: [csf_facilitator_organizer, csf_facilitator_nonorganizer], organizer: csf_facilitator_organizer
-    sign_in csf_facilitator_nonorganizer
-    assert_does_not_destroy(Pd::Workshop) do
-      delete :destroy, params: {id: workshop.id}
-    end
-    assert_response :forbidden
   end
 
   test_user_gets_response_for(
@@ -626,19 +575,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     sign_in(@facilitator)
 
     workshop = create :workshop, organizer: @facilitator
-    put :update, params: {
-      id: workshop.id,
-      pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
-    }
-    assert_response :success
-    workshop.reload
-    assert_nil workshop.regional_partner_id
-  end
-
-  test 'CSF Facilitators can update workshops they are assigned to' do
-    sign_in(@csf_facilitator)
-
-    workshop = create :workshop, facilitators: [@csf_facilitator]
     put :update, params: {
       id: workshop.id,
       pd_workshop: workshop_params.merge({regional_partner_id: @regional_partner.id})
@@ -1106,11 +1042,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @organizer_workshop.id}}
   end
 
-  test 'anyone can see the K5 public map index' do
-    get :k5_public_map_index
-    assert_response :success
-  end
-
   test_user_gets_response_for(
     :summary,
     name: 'facilitators can get summary for their workshops',
@@ -1312,8 +1243,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     session_end = session_start + 8.hours
     {
       location_address: 'Seattle, WA',
-      course: Pd::Workshop::COURSE_CSF,
-      subject: Pd::Workshop::SUBJECT_CSF_101,
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1,
       capacity: 10,
       virtual: false,
       suppress_email: false,

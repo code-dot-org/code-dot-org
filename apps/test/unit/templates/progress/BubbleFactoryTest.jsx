@@ -240,12 +240,12 @@ describe('BubbleFactory', () => {
 
     it('if input url has levelname as a query parameter', () => {
       const bubbleUrl = getBubbleUrl(
-        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024',
+        '//localhost-studio.code.org:3000/courses/coursec-2024/units/1/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024',
         1,
         2
       );
       expect(bubbleUrl).to.equal(
-        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024&section_id=2&user_id=1'
+        '//localhost-studio.code.org:3000/courses/coursec-2024/units/1/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024&section_id=2&user_id=1'
       );
     });
 

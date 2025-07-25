@@ -59,17 +59,31 @@ module AiDiffBedrockHelper
     prompt
   end
 
-  def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts, level_instructions)
+  def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts, level_instructions, student_code)
     case context
     when SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
-      prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
-      The current lesson this teacher is working on is %{course_name} %{unit_name}, %{lesson_name}.
+      prompt =
+        if student_code.present?
+          format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+            The current lesson this teacher is working on is %{course_name} %{unit_name}, %{lesson_name}.
 
-      The teacher is currently working on a level within that lesson. The instructions for this task are: %{level_instructions}
+            The teacher is currently working on a level within that lesson. The instructions for this task are: %{level_instructions}
 
-      Here are the search results in numbered order:
-      $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name, level_instructions: level_instructions
-      )
+            The student code the teacher is viewing is: %{student_code}
+
+            Here are the search results in numbered order:
+            $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name, level_instructions: level_instructions, student_code: student_code[:student_code]
+          )
+        else
+          format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+            The current lesson this teacher is working on is %{course_name} %{unit_name}, %{lesson_name}.
+
+            The teacher is currently working on a level within that lesson. The instructions for this task are: %{level_instructions}
+
+            Here are the search results in numbered order:
+            $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name, level_instructions: level_instructions
+          )
+        end
     when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
       prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current lesson this teacher is working on is %{course_name} %{unit_name}, %{lesson_name}.
@@ -140,7 +154,8 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(config, lesson_number, unit_num, course_names, section_contexts)
+  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+    filter_config = {}
     and_all_filters = []
     or_all_filters = []
     unless lesson_number.nil?
@@ -180,19 +195,20 @@ module AiDiffBedrockHelper
 
     #can't use "or_all" if there is only 1 expression to filter on, only 2+
     if or_all_filters.length > 1
-      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = {
+      filter_config = {
         or_all: or_all_filters
       }
     elsif or_all_filters.length == 1
-      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = or_all_filters[0]
+      filter_config = or_all_filters[0]
     end
-    config
+    filter_config
   end
 
   def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts)
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
-    config = filter_for_context(config, lesson_number, unit_num, course_name, section_contexts)
+    filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts)
+    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
 
     response = create_bedrock_client.retrieve_and_generate(
       config
@@ -202,7 +218,7 @@ module AiDiffBedrockHelper
   end
 
   def self.format_rag_response(response)
-    text = response.output.text
+    text = response.output.text.dup
 
     # Remove useless references such as '(Sources 1 and 7)' from the response
     text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
@@ -220,7 +236,11 @@ module AiDiffBedrockHelper
         text << "\n- [Link #{index+1}](#{url})"
       end
     end
-
-    response
+    {
+      content: text,
+      raw_content: response.output.text,
+      links: reference_urls.any? ? reference_urls : nil,
+      session_id: response.session_id,
+    }
   end
 end

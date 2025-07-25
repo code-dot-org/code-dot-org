@@ -1,6 +1,4 @@
 /**
- * This file contains the SourcesStore interface and the local (saved to browser local storage)
- * and remote (saved to the server) implementations of the SourcesStore.
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -8,7 +6,6 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   ProjectSources,
   ProjectType,
-  ProjectVersion,
   SaveSourceOptions,
   UpdateSourceOptions,
 } from '../types';
@@ -17,42 +14,7 @@ import * as sourcesApi from './sourcesApi';
 
 const {getTabId} = require('@cdo/apps/utils');
 
-export interface SourcesStore {
-  load: (key: string, versionId?: string) => Promise<ProjectSources>;
-
-  save: (
-    key: string,
-    sources: ProjectSources,
-    appType?: ProjectType,
-    forceNewVersion?: boolean
-  ) => Promise<Response>;
-
-  getVersionList: (key: string) => Promise<ProjectVersion[]>;
-
-  restore: (key: string, versionId: string) => Promise<void>;
-}
-
-export class LocalSourcesStore implements SourcesStore {
-  load(key: string) {
-    const source = {source: localStorage.getItem(key) || ''};
-    return Promise.resolve(source);
-  }
-
-  save(key: string, sources: ProjectSources) {
-    localStorage.setItem(key, JSON.stringify(sources));
-    return Promise.resolve(new Response());
-  }
-
-  getVersionList(key: string) {
-    return Promise.resolve([]);
-  }
-
-  restore() {
-    return Promise.resolve();
-  }
-}
-
-export class RemoteSourcesStore implements SourcesStore {
+export class SourcesStore {
   private readonly newVersionInterval: number = 15 * 60 * 1000; // 15 minutes
   private currentVersionId: string | null = null;
   private firstSaveTime: string | null = null;

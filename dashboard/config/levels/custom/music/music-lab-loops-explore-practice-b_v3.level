@@ -1,0 +1,593 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-06-26T22:53:20.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### I Like to Move It Remix\r\nZara was given the background music for \"I Like to Move It\" by will.i.am and noticed it already had a strong beat and energetic vibe. Now, it’s her job to decide how to bring the vocals in:\r\n\r\n> \"The music already gets you moving—I just had to figure out how to drop in the vocals in a way that keeps the energy up and makes the whole thing pop!\"\r\n\r\nZara is using **abstraction** by focusing on the essential structure of the remix: choosing where and when to place vocals on top of a steady beat, bass, and other background layers.\r\n\r\n**Your Task:**\r\nUse abstraction to organize your code and decide how to arrange the vocals over the background track. The music is already there—your job is to:\r\n\r\n- Add the vocals by choosing their order and timing.\r\n\r\n- Use loops to create structure and avoid repeating code.\r\n\r\n- Include at least 10 unique tracks (these can be different vocal clips or other sounds layered in).\r\n\r\nUse the example remix as inspiration, but make your version your own!",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "repeat_simple2",
+            "play_sounds_together"
+          ]
+        },
+        "type": "flyout"
+      },
+      "packId": "will_i_am_i_like_to_move_it",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 2
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "+{l,kA=(_?6qxi.F8qDr",
+                              "deletable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "deletable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "will_i_am_i_like_to_move_it/drums_kick_perc_snare"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "UgM7jU=:.pf+|ows7Guq",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "will_i_am_i_like_to_move_it/bass_synth"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "1{Y1gSR-p}v8-2#}hL-m",
+                      "deletable": false,
+                      "movable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "{_{H?oIViz[AF6Sk#SNI",
+                            "deletable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 2
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "@_U61*P6+iAMwvL$V`p9",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "Jui=phGk/w5D;#j^:dUg",
+                                        "deletable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "will_i_am_i_like_to_move_it/drums_kick_perc"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "B+B1t#$0~(S5O3D!|e;P",
+                                            "deletable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "will_i_am_i_like_to_move_it/bass_guitar"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "rh_Di7Fxmg5gdtf[dH#C",
+                          "deletable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": ")g7y-W;s%.QQ[Ful.tio",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "will_i_am_i_like_to_move_it/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "repeat_simple2",
+                                    "id": "vTjcU66[XHyQ;;M8E~r-",
+                                    "deletable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "times": 2
+                                    },
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "play_sounds_together",
+                                          "id": "VaA6P#3h+*?zz$KdT$Wm",
+                                          "deletable": false,
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
+                                          "inputs": {
+                                            "code": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "C/JG@zMuMpp,~ink31s#",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
+                                                "fields": {
+                                                  "sound": "will_i_am_i_like_to_move_it/bass_guitar_slap"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": true,
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop",
+          "synth_airhorn",
+          "synth_cave",
+          "synth_sleek",
+          "synth_wiggle",
+          "guitar_code",
+          "guitar_melody",
+          "guitar_moment",
+          "guitar_reveal",
+          "guitar_shimmy",
+          "guitar_shine"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down",
+          "guitar_chord_change",
+          "guitar_clean_arp",
+          "guitar_clean_phrase",
+          "guitar_clean_strum",
+          "guitar_indie_riff",
+          "guitar_lick",
+          "guitar_low_riff",
+          "guitar_octave_line",
+          "guitar_slap_line",
+          "guitar_tremolo_line",
+          "rhythm_guitar",
+          "synth_call",
+          "synth_faucet",
+          "synth_hook",
+          "synth_hope",
+          "synth_story",
+          "synth_theme"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave",
+          "guitar_clean_line",
+          "guitar_drive_line",
+          "guitar_funky_wah",
+          "guitar_plastic_line",
+          "guitar_short_phrase",
+          "guitar_slap_phrase",
+          "guitar_stabs",
+          "piano_announcement",
+          "piano_ascot",
+          "piano_darts",
+          "piano_greeting",
+          "piano_plink",
+          "piano_run"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip",
+          "guitar_fit",
+          "guitar_pocket",
+          "horns",
+          "piano_chords",
+          "piano_clout",
+          "piano_fresh",
+          "piano_round",
+          "piano_slice",
+          "piano_warble",
+          "string_burst",
+          "synth_brass",
+          "synth_whistle"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass",
+          "ghost_choir",
+          "guitar_buzz_riff",
+          "riff_guitar",
+          "guitar_fast_chop",
+          "guitar_high_riff",
+          "power_guitar",
+          "guitar_punctuation",
+          "shredded_guitar",
+          "guitar_tag",
+          "organ_grind",
+          "piano_fuzz",
+          "synth_drive",
+          "synth_fuzz_blip",
+          "synth_screech"
+        ],
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins"
+        ],
+        "will_i_am_i_like_to_move_it": [
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_verse_3",
+          "vocals_verse_4",
+          "vocals_move_it",
+          "vocals_little_dance",
+          "vocals_ants_pants",
+          "drums_kick_perc_snare",
+          "drums_kick_perc",
+          "drums_kick",
+          "drums_main_beat",
+          "bass_guitar_slap",
+          "bass_guitar_stutter",
+          "bass_guitar",
+          "bass_synth",
+          "guitar_delay",
+          "guitar_upbeats",
+          "synth_stutter",
+          "camera",
+          "laser"
+        ]
+      }
+    },
+    "display_name": "I Like to Move It",
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "playerTitle": "Example Song"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorWmuhUkAIVY+XukQp4DM2XMzfX7Iw9nysbrAUKR+/ZiMD\nwOXibygA3jE411nSsBHm/YBkd2uJ4qqbrkFTkwLLyk2vqVFTH8EQuuu1X1+A\n7OqG3ZF0NobIvgX0SFFDJ6aD5ZNlvdODLL+w9fofla2FinF2D0XVebIS53Tt\nE5Kg3pGsOEKeuTYK9hvnusu5VC84hgZ+6M/b0OpTHJaBxq1rx2E3NLZTjE8W\nTf4PWlo6Yf2PN9uNHJ4awHi0HUuUVKfxhHlxHSibzHRB9Dq05TnPz+2zWcb+\nSl8R3OC4j5TnWPkLP6HuFBA14eN8yvwunqmTDiDPoFIup8DK2xbUUtBlCru8\nR/IeqlyutWrVGwdipnpgdk3CClSEF7FY27CbP0axluMrs3BOfgb+tIASoMxe\nz35bdGYtzgibLVBa+ovwQteGLcCWwIAhXOoFs0v+RahTmNjrFof7J9N+Eqgm\ndyhemjE2CAJX/EE0jA3cbDF6ByaypV9GbOiWXOt9ZIilnjc2ok1if/Dozfd4\nHkJgiwe44cqeTZQhdS4JgwIFh39lcgfCCMSEMK0ch0O4/IV6Vi8o/c9WMzrd\nVoTHrFLHpOOMSa++Uga8tCmVIBYG3ZMYiAgpInQAYcon6lEBnbPFcG1gk1DG\nr/GFQhvmONGdImGfkog5GKebZvxf4He2mzKpBxs7LIUMq2jdx/RJJga8KRL1\n5QaLg3xdXm7fzT5yHukIJTCBA/WDeAti2EpSvRYWZxVS0vfrSA88LDQIyYGR\nrr3sZEY8/C3h3CPzgfn+P8ZBU29Orvx9pyiZtKtZ3GszZ9kcoZ9NcNJolYse\n7QJZkvVa91gzeWxfTpRy6QDodPxam75VObm8Ou9BavplofJzg9g+IIp9QM6P\nXQuXJbMgis0PkNpKiR1G/5pRFCLSBXbeADMkcpcn8naEqH0pGp5JlbQmSy9p\nPcwLQ/Ogl27JlxRPasJ3KP4HNVLcQeCNo97SeqMF8gDoPpp0eKGlzZ9H1zwL\nhGSFysNEPxhpEPsj2V8WWc3boEBjwg4o4wf3cGCaCCogCRUt2vPl1d00DuDc\nM3PI4VDiGlOiF5qwLBPKlKc+oDpSoRBqZWdPKTkWcNmSm6I0ZaotYSjZDB/C\nVZyzKYCjLssrBdUBVrbBAAgkCcnt5/8FWaELBmbjB1tgIR/QAq3zbb3D5hLJ\np6obhVDEjNc5zCCavoVpL9+Ft/jy8pPVfbze0l1jdxC2Mf1RatqvCDw4W223\n1nA7SK/r1/WK+R++FX0kocNgEHWKSEB1RQao5D09H0OjZVz4d5+mu5Nwr7Cf\nOgETUKfZ5jFSh/JYeEAbCTlQyiojQeUTYiltS1KzMWmZheOY/UfK3LgRkb3i\nrLkDjr0GBU87o0hApmCsI/O2jZGevNJl2hhtKUrfEwdagUSpCXLYVXMgZxoc\nKAowE3fSuTe5fxCFJd08BJsF6WYVOSsqDzAfU9mKDDt7PCBU6/7DnLY4hEDn\nnBNsXYmNQr0wEGIbyHrX/zOqqiK0xjgGvX5rKgKX+rrJGNSVMRfccOv3JWtJ\nstMDhir+R2h+Ph2ISD4O/X/0L6CGgPEa9CoRaOOD8eU/JzwidPPoGovHpDjE\nzsglwpONHFWolCnlJCF4sct8fSDYMv2W6wcQJUh8c+TXBvg3OwvKY+VXwuFf\nTg6Hl+hr0ISZ8UhdidIXgAzii3Ni/XHSJVeyZJu9v3MHwUoyOBaIbCgKHafi\nltzF+U0wc3g1kWOBAyaF0tfXXslLvPucC7iMNIW+XciwAQhUHVhHJnJGjSEn\nuRitUPDao0KuBEEDAiwRsi0u3G58xHUU1uuSJoFXJaKmITpz4qJZmXTVbzdP\nPHtzoWPF6gPWpxCD/ssVPuloQgIVqoXZ12HdOfHDyR21w/3Pd4SxUX3Vk4Cz\nZpR2MfU6dYBhhp8JvrAQjlSxtUG+my2vCFjMcoAzRnkE9njFXQQV/dSE6neo\nBhugGzLgi7BJ0Jaz489yx4lDoqamTDnPCLN9SeQeLk5IkWtmq9ahRRYuGMCe\n65WS82aq/Wnv5HdxYJ6NibhwObN7E2Emrg2G8xoAv9t1SBHUmIcUAPZHXWB/\nhj01zwK2AU6il1foVV+CM/m2gC1TEHhV56xJ446GIVrGgvbRBxLBj01vwH1B\nwA3F1gG3kCoHahb/T4BBQamXnB1s8T40ltfuAeU560CpBsGsicndwm/YHdP1\nm5X9jN7tntQ4Hf2dJvmCvOKnxusrzBxp9EmtAPIBk2iICBHppM21vOr9up0H\nPsCpsJqUBvxuiHCO93K3Csla8c3iC+GhEG2CT0Kv/PaK96ZR2lbOBT+SHyla\n0zJchjJQAUZrqhVj3asILsisOaRgWlM2yhHplR4QPKQMqPeYuS9I76OgYiPa\nvfggrKozf2M573dQh8d7vRMkfdPs3uKrttsmkGxRaZ76Ruj6Dxsdfxqfq0Ce\n+kuki06Vg+tP9RLv+J2Oxy4ZUjf7FACtxiqmSgSOkwMBtJW/kgasDpQ/z+y8\nB7nKyAQihSV6Fy5gbcLLGtsokPn5n2FT4hbvK9tVUxZ7JOoPwGEmHpE1jFl+\neWOXstct4WvNoavFj9PlsHDVEPw6mRjQfIHnhMniRUaNn0Wyfw+OM9RyjCn8\n/aFzLS9xHyoE5rNpUyKWviNF24iJ2ZOe76ssmfi4xrrZRiNBkKary+kpf3y8\nNcyZFrMPzMvjtqG87/jE1kz3oMEH3lhECY3CWfgoZuR+3ISZVpwNn2iskzdK\nOWGK7jMcpTKKNBpVwOvNKJfs/gGEZypx2SE6waxu+KR+Kd3S/qHwJp615HPy\n8ViLA5G3wf50EYS4fYS+GBDeS6DI9VmOQLaoA3piI1kDwkGTMbtHHE3kpAsI\nNMtm/ZwgQsh5BqvtyMyec4K8iviN4vy4WgZ8jfH93gAKdPzoM+e7P3WOTgOp\nCJiQSz+7Wcb/4qLldnYTqFhuwJ6QKuLra6hsa/ZGAM4KR4DcbmCanqQC22hV\n8OD6Sfr2sbooTCKopPXFUXjkQEmu3Q+o69fHHQzy1+NFdvFEwtS9ZwC+095O\ndvk7nM/0IO6P5km07PWpD9iOvROvE2h7pqqe35ZAMaXS+QrUsA==\n",
+    "bubble_choice_description": "Help Zara focus on adding vocals to I Like to Move It",
+    "validations": [
+      {
+        "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
+        "message": "You did it - you've played at least 10 different tracks!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_f8001f85-b5b3-4b9b-acbe-71ff0dc6c28e",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 8 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-explore-practice-choice-b_bb94584f-ed8d-4b7a-aeab-9df0cdadea5f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 5 different tracks so far - make sure to play at least 10!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_fc36406a-2cf1-4583-ae97-d2352fe439e3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear **10 unique tracks**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/will_i_am_i_like_to_move_it/will_i_am_i_like_to_move_it.jpg",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-06-26T22:53:20.971+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e_v2\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e_v2\"},{\"changed_at\":\"2025-06-27 17:23:06 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:32:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:36:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:38:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:42:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:46:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 17:49:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 18:01:35 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 18:04:10 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

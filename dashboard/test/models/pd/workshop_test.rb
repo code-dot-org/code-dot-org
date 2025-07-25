@@ -445,63 +445,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.send_exit_surveys
   end
 
-  test 'send_follow_up only teachers attended workshop get follow up emails' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
-
-    teacher_attended = create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true)
-
-    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
-      with(Pd::Enrollment.for_user(teacher_attended).first)
-
-    Pd::Workshop.send_follow_up_after_days(30)
-  end
-
-  test 'send_follow_up all teachers attended workshop get follow up emails' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
-
-    teacher_count = 3
-    create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
-
-    assert_emails teacher_count do
-      Pd::Workshop.send_follow_up_after_days(30)
-    end
-  end
-
-  test 'send_follow_up exception in email delivery raises honeybadger but does not stop batch' do
-    workshop = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
-
-    teacher_count = 3
-    create_list :pd_workshop_participant, teacher_count, workshop: workshop, enrolled: true, attended: true
-
-    mock_mail = stub
-    mock_mail.stubs(:deliver_now).raises(RuntimeError, 'deliver_now failed').then.returns(nil).then.returns(nil)
-
-    # Expect teacher_follow_up() to be called 3 times with 1 HoneyBadger error (mock_mail stubs order is important),
-    # and send_follow_up_after_days() raises exception
-    Pd::WorkshopMailer.expects(:teacher_follow_up).returns(mock_mail).times(teacher_count)
-
-    Honeybadger.expects(:notify).once
-    assert_raises RuntimeError do
-      Pd::Workshop.send_follow_up_after_days(30)
-    end
-  end
-
-  test 'send_follow_up only workshop ended exactly 30 days ago get follow up emails' do
-    workshop_31d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 31.days
-    workshop_30d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 30.days
-    workshop_29d = create :csf_intro_workshop, :ended, sessions_from: Time.zone.today - 29.days
-
-    create(:pd_workshop_participant, workshop: workshop_31d, enrolled: true, attended: true)
-    teacher_30d = create(:pd_workshop_participant, workshop: workshop_30d, enrolled: true, attended: true)
-    create(:pd_workshop_participant, workshop: workshop_29d, enrolled: true, attended: true)
-
-    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
-      with(Pd::Enrollment.for_user(teacher_30d).first)
-
-    Pd::Workshop.send_follow_up_after_days(30)
-  end
-
   # an issue with this test failing is fixed by prepending TZ=UTC to the test command
   test 'soft delete' do
     workshop = create :pd_workshop, num_sessions: 0
@@ -696,34 +639,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal ids.reverse, Pd::Workshop.where(id: ids).order_by_state(desc: true).pluck(:id)
   end
 
-  test 'min_attendance_days with no min_days constraint returns 1' do
-    @workshop.expects(:time_constraint).with(:min_days).returns(nil)
-    assert_equal 1, @workshop.min_attendance_days
-  end
-
-  test 'min_attendance_days with min_days constraint returns that constraint' do
-    @workshop.expects(:time_constraint).with(:min_days).returns(100)
-    assert_equal 100, @workshop.min_attendance_days
-  end
-
-  test 'effective_num_days with no max_days constraint returns the session count' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(nil)
-    assert_equal 10, @workshop.effective_num_days
-  end
-
-  test 'effective_num_days with max_days constraint lower than the session count returns the constraint' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(5)
-    assert_equal 5, @workshop.effective_num_days
-  end
-
-  test 'effective_num_days with max_days constraint greater than the session count returns the session count' do
-    @workshop.sessions.expects(:count).returns(10)
-    @workshop.expects(:time_constraint).with(:max_days).returns(50)
-    assert_equal 10, @workshop.effective_num_days
-  end
-
   test 'effective_num_hours with no max_hours constraint returns the total session hours' do
     @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
     @workshop.expects(:time_constraint).with(:max_hours).returns(nil)
@@ -783,12 +698,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF 101 workshops are capped at 7 hours' do
-    workshop = create :csf_intro_workshop, each_session_hours: 8
+    workshop = build :csf_intro_workshop, each_session_hours: 8
     assert_equal 7, workshop.effective_num_hours
   end
 
   test 'CSF 201 workshops are capped at 6 hours' do
-    workshop_csf_201 = create :csf_deep_dive_workshop, each_session_hours: 7
+    workshop_csf_201 = build :csf_deep_dive_workshop, each_session_hours: 7
     assert_equal 6, workshop_csf_201.effective_num_hours
   end
 
@@ -888,18 +803,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     mock_mail.stubs(:deliver_now).returns(nil)
 
     workshop = create :academic_year_workshop, num_facilitators: 2
-    create_list :pd_enrollment, 3, workshop: workshop
-    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
-
-    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
-    Pd::Workshop.send_reminder_for_upcoming_in_days(10)
-  end
-
-  test '10 day reminder for csf workshop sends pre email to facilitators' do
-    mock_mail = stub
-    mock_mail.stubs(:deliver_now).returns(nil)
-
-    workshop = create :csf_deep_dive_workshop, num_facilitators: 2
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
@@ -1019,8 +922,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'teachers_attending_all_sessions with a teacher who deleted their account' do
-    workshop = create :workshop,
-      course: Pd::Workshop::COURSE_CSF
+    workshop = create :workshop
 
     workshop_participant = create :pd_workshop_participant,
       enrolled: true,
@@ -1126,7 +1028,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'pre_survey?' do
     csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
     csp_workshop = create :workshop, course: Pd::Workshop::COURSE_CSP
-    other_workshop = create :workshop, course: Pd::Workshop::COURSE_CSF
+    other_workshop = create :byo_workshop
 
     assert csd_workshop.pre_survey?
     assert csp_workshop.pre_survey?
@@ -1346,7 +1248,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     csd_facilitator = create :facilitator, course: COURSE_CSD
 
     # csf workshop has workshop admins, program managers, and other csf facilitators in list
-    csf_workshop = create :workshop, course: COURSE_CSF
+    csf_workshop = build :workshop, course: COURSE_CSF
     potential_organizer_ids = csf_workshop.potential_organizers.ids
 
     assert_includes(potential_organizer_ids, workshop_admin.id)
@@ -1408,7 +1310,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'CSF workshop must not require teacher application' do
-    workshop = create :csf_workshop, regional_partner: @regional_partner
+    workshop = build :csf_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 
@@ -1424,7 +1326,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'send_automated_emails sends pre-workshop 10 days before' do
-    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today + 10.days
+    workshop = create :csd_academic_year_workshop, sessions_from: Time.zone.today + 10.days
 
     facilitator = create(:facilitator)
     workshop.facilitators = [facilitator]
@@ -1434,17 +1336,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       with(facilitator, workshop)
     Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop).
       never
-
-    Pd::Workshop.send_automated_emails
-  end
-
-  test 'send_automated_emails sends post-workshop 30 days after' do
-    workshop = create :csf_intro_workshop, sessions_from: Time.zone.today - 30.days, enrolled_and_attending_users: 1
-
-    Pd::WorkshopMailer.any_instance.expects(:facilitator_pre_workshop).
-      never
-    Pd::WorkshopMailer.any_instance.expects(:teacher_follow_up).
-      with(workshop.enrollments.first)
 
     Pd::Workshop.send_automated_emails
   end
@@ -1468,10 +1359,22 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes workshop.errors.full_messages, 'Description is required'
   end
 
+  test 'valid_registration_link_format validation passes' do
+    workshop = build :workshop, registration_link: 'https://good/url/here'
+    assert workshop.valid?
+  end
+
+  test 'valid_registration_link_format validation error' do
+    workshop = build :workshop, registration_link: 'bad/url here'
+    refute workshop.valid?
+    assert_equal 1, workshop.errors.messages.count
+    assert_equal 'Registration link is not valid or is missing http or https', workshop.errors.full_messages[0]
+  end
+
   test 'registration_link defaults to teacher app link if applications are required' do
     workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
 
-    assert_equal "/pd/application/teacher", workshop.registration_link
+    assert_equal Rails.application.routes.url_helpers.pd_application_teacher_url, workshop.registration_link
   end
 
   test 'registration_link does not default to anything if applications are not required' do

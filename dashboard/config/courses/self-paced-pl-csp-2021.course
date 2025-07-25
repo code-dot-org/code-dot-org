@@ -18,7 +18,7 @@
   "instructor_audience": "universal_instructor",
   "properties": {
     "family_name": "self-paced-pl-csp-2021",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "2021"
   },
   "resources": [

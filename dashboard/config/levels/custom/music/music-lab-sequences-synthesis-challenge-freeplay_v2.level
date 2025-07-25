@@ -1,0 +1,116 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:07.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Choose Any Song!\r\n\r\nChoose any song from the Track List and make it your own. Explore different sound packs in the drop down menu to mix and match sounds from the song and sounds from different genres of music.\r\n\r\nTo pass this level, use at least **8 different sounds** and **5 effects**\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n![](https://images.code.org/4d1ceadcf2e11d837b7a698c79fb1722-image-1741388705634.05.02 PM.png)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "display_name": "Choose a Song",
+    "thumbnail_url": "https://images.code.org/29cb1aedae82a94699222cb5126a9694-musical-note.png",
+    "validations": [
+      {
+        "key": "music-lab-sequences-synthesis-challenge-freeplay_82178781-cfa3-4858-8c97-e4677674d2f1",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says \"You did it!\"\n- ✅ At least 8 unique tracks\n- ✅ At least 5 effects",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:5"
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequences-synthesis-challenge-freeplay_f745efce-ac18-4c29-ac6f-b4aa2dc63e1d",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ❌ At least 8 unique tracks\n- ✅ At least 5 effects",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:5"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_90876d3d-830b-4f7f-bea0-dda4927c0fcb",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ✅ At least 8 unique tracks\n- ❌ At least 5 effects",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-explore-song-choice-level-c_d110c82e-ee1d-4594-afb3-b5f212c4621c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for...\n- ❌ At least 8 unique tracks\n- ❌ At least 5 effects",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "bubble_choice_description": "Choose a song to recreate using what you've learned so far!",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.812+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequences-synthesis-challenge-freeplay\\\"\"],\"cloned_from\":\"music-lab-sequences-synthesis-challenge-freeplay\"},{\"changed_at\":\"2025-06-26 20:18:25 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

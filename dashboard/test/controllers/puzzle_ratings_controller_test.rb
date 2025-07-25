@@ -4,7 +4,7 @@ class PuzzleRatingsControllerTest < ActionController::TestCase
   setup do
     PuzzleRating.stubs(:enabled?).returns true
     @student = create :student
-    @script = create :script
+    @script = create :script, :in_single_unit_course
   end
 
   test 'creation requires script, level, and rating' do

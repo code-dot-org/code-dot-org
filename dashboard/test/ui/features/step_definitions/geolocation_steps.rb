@@ -17,6 +17,6 @@ Given "I am in Europe" do
 end
 
 Given 'I am in Iran' do
-  iran_ip_address = '103.215.223.255'
+  iran_ip_address = '185.113.112.255'
   steps %Q[Given I use a cookie to mock my IP address as "#{iran_ip_address}"]
 end

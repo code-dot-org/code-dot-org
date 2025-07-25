@@ -502,7 +502,7 @@
         {
           "type": "comment",
           "name": "self_paced_pl_other_feedback",
-          "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
         },
         {
           "type": "rating",

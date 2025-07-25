@@ -1,0 +1,9 @@
+name 'test-ai-powered-threats-defenses-lesson2-level6'
+display_name 'Interview A Cybersecurity Professional'
+description 'Cybersecurity professionals play an essential role in keeping systems secure and eliminating vulnerabilities. Select the level that corresponds to your scenario to conduct an AI interview.'
+
+sublevels
+level 'test-ai-powered-threats-defenses-lesson2-level6a'
+level 'test-ai-powered-threats-defenses-lesson2-level6b'
+level 'test-ai-powered-threats-defenses-lesson2-level6c'
+level 'test-ai-powered-threats-defenses-lesson2-level6d'

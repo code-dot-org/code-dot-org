@@ -1,0 +1,27 @@
+name 'music-lab-functions-explore-formative-multi_v2'
+title 'Check-In'
+
+wrong '![](https://images.code.org/1414a88ef94ffbb0d7a170e7000055a4-image-1741989574994.png)'
+wrong '![](https://images.code.org/948808893360aceebce26069dadb549b-image-1741989596191.png)'
+wrong '![](https://images.code.org/2da61d7955d458537b056712c90b1850-image-1741989584933.png)'
+right '![](https://images.code.org/22f8af916cef816e95e42754a15af801-image-1741989512442.png)'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+Lupita was looking at a song she made earlier and noticed that the same chunk of code for the Chorus appears in between each of the Verses. Now that she knows about functions, she wants to **define** a chorus function and **call** it in her code.
+
+Which of these choices shows Lupita correctly **defining** her function and **calling** it to recreate this song?
+
+![](https://images.code.org/c12ce362cda68bc784b781b3852bf88b-image-1741989387047.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Use this formative assessment as opportunity to emphasize the terms "define" and "call" in relation to functions.
+
+One of the options incorrectly **defines** the function using the verse instead of the chorus, but still **calls** the function in the correct place
+
+Two of the options **define** the function correctly, but either **call** it in the wrong places or don't **call** it enough times
+
+Only one option correctly **defines** the function and correctly **calls** it in the program.
+MARKDOWN

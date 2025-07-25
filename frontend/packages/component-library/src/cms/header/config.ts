@@ -71,7 +71,7 @@ export function getDefaultHeaderProps({
       {
         key: 'incubator',
         label: 'Incubator',
-        href: `${studioUrl}/incubator`,
+        href: '/incubator',
         hasDisplayLogic: true,
       },
       {

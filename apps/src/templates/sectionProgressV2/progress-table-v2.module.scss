@@ -1,6 +1,7 @@
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
 @import 'color.scss';
+@import 'style-constants';
 
 .progressV2Page {
   background-color: white;
@@ -376,7 +377,7 @@ $level-cell-width: 52;
       }
 
       &Unexpanded {
-        background-color: $brand_teal_5;
+        background-color: var(--background-brand-teal-extra-light);
       }
     }
 
@@ -502,7 +503,6 @@ $level-cell-width: 52;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  background-color: $light_gray_50;
 
   &:active {
     border-bottom: 0 !important;
@@ -512,6 +512,14 @@ $level-cell-width: 52;
   &Caret {
     margin-inline-end: 12px;
   }
+}
+
+.darkerBackground {
+  background-color: var(--background-neutral-secondary);
+}
+
+.lighterBackground {
+  background-color: var(--background-neutral-primary);
 }
 
 .studentColumnExpandedHeader {

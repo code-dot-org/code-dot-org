@@ -7,7 +7,6 @@ import * as GoogleBlockly from 'blockly/core';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
 import {
@@ -489,8 +488,7 @@ function registerHelp(weight: number) {
     },
     preconditionFn(scope: GoogleBlockly.ContextMenuRegistry.Scope) {
       const block = scope.block;
-      // This option is limited to an experiment until SL documentation is updated.
-      if (!experiments.isEnabled(experiments.SPRITE_LAB_DOCS) || !block) {
+      if (!Blockly.showBlockHelp || !block) {
         return 'hidden';
       }
       const url =

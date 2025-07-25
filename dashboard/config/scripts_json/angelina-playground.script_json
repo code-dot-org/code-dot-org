@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 20:20:11 UTC",
+    "serialized_at": "2025-06-02 15:47:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -142,12 +142,27 @@
       }
     },
     {
-      "key": "lesson-3",
-      "name": "CTF Flash Talk",
+      "key": "lesson-10",
+      "name": "Widget Playground",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "CTF Flash Talk",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -159,10 +174,10 @@
     {
       "key": "lesson-4",
       "name": "CSS Flex & Grid",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -174,10 +189,10 @@
     {
       "key": "lesson-5",
       "name": "Assessments",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -189,10 +204,10 @@
     {
       "key": "lesson-6",
       "name": "Lesson 1",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -204,10 +219,10 @@
     {
       "key": "Introduction to Creating Apps with Devices ",
       "name": "Introduction to Creating Apps with Devices ",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
@@ -221,10 +236,10 @@
     {
       "key": "Experiment with Inputs and Outputs",
       "name": "Experiment with Inputs and Outputs",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes",
         "student_overview": "**You will:**\n\n* Use board inputs such as buttons and toggle switches to control app events and board outputs. \n* Program apps to control board outputs such as the buzzer and LED lights. \n\n**Suggested time:** 35 minutes"
@@ -238,10 +253,10 @@
     {
       "key": "Engage with Prototypes",
       "name": "Engage with Prototypes",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Explore sample apps and prototypes. \n\n**Suggested time:** 20 minutes"
@@ -255,10 +270,10 @@
     {
       "key": "Teaching Creating Apps for Devices ",
       "name": "Teaching Creating Apps for Devices ",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
         "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
@@ -272,10 +287,10 @@
     {
       "key": "lesson-2",
       "name": "OG States of Matter",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -287,10 +302,10 @@
     {
       "key": "lesson-1",
       "name": "States of Matter",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -334,6 +349,18 @@
         "lesson_activity.key": "4ce29709-b445-4505-a891-c13ec256169f",
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-7",
+        "script.name": "angelina-playground"
+      }
+    },
+    {
+      "key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "angelina-playground"
       }
     },
@@ -566,6 +593,72 @@
       "seeding_key": {
         "activity_section.key": "6a1bf096-15c9-4d84-943e-dc2cff195276",
         "lesson_activity.key": "4ce29709-b445-4505-a891-c13ec256169f"
+      }
+    },
+    {
+      "key": "59da0272-bf8f-456b-b4f6-f7dc904ba784",
+      "position": 1,
+      "properties": {
+        "progression_name": "Caesar Cipher"
+      },
+      "seeding_key": {
+        "activity_section.key": "59da0272-bf8f-456b-b4f6-f7dc904ba784",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
+      }
+    },
+    {
+      "key": "6b7ba505-47e7-4404-8b49-bef763dd51ba",
+      "position": 2,
+      "properties": {
+        "progression_name": "Substitution Cipher"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b7ba505-47e7-4404-8b49-bef763dd51ba",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
+      }
+    },
+    {
+      "key": "4d095b0d-454c-4c82-9db3-b876285d240e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Frequency Analysis"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d095b0d-454c-4c82-9db3-b876285d240e",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
+      }
+    },
+    {
+      "key": "ba10c1cd-95aa-4283-9cf2-04c81ef450e4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Vigenere Cipher"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba10c1cd-95aa-4283-9cf2-04c81ef450e4",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
+      }
+    },
+    {
+      "key": "3e793b0d-65e6-48c4-8b1a-2b3ff56eb41c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Modulo Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e793b0d-65e6-48c4-8b1a-2b3ff56eb41c",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
+      }
+    },
+    {
+      "key": "0b6e7589-ca63-4909-9932-367920ad6c53",
+      "position": 6,
+      "properties": {
+        "progression_name": "Alice, Bob, & Eve - Public Key"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b6e7589-ca63-4909-9932-367920ad6c53",
+        "lesson_activity.key": "55532d82-ed6a-4949-88ce-b7e44b9bcaab"
       }
     },
     {
@@ -945,6 +1038,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "demo-painter-validation2-ang"
+        ],
         "progression": "Neighborhood Practice"
       },
       "bonus": false,
@@ -1783,6 +1879,138 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Caesar Cipher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample-cipher-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59da0272-bf8f-456b-b4f6-f7dc904ba784"
+      },
+      "level_keys": [
+        "ang-sample-cipher-1"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Substitution Cipher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample-cipher-2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "6b7ba505-47e7-4404-8b49-bef763dd51ba"
+      },
+      "level_keys": [
+        "ang-sample-cipher-2"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Frequency Analysis"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample-fa-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "4d095b0d-454c-4c82-9db3-b876285d240e"
+      },
+      "level_keys": [
+        "ang-sample-fa-1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vigenere Cipher"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "ba10c1cd-95aa-4283-9cf2-04c81ef450e4"
+      },
+      "level_keys": [
+        "ang-sample1"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modulo Clock"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample-pk-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "3e793b0d-65e6-48c4-8b1a-2b3ff56eb41c"
+      },
+      "level_keys": [
+        "ang-sample-pk-1"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Alice, Bob, & Eve - Public Key"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ang-sample-pk-2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "0b6e7589-ca63-4909-9932-367920ad6c53"
+      },
+      "level_keys": [
+        "ang-sample-pk-2"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CTF Trivia 22"
         ],
@@ -1803,7 +2031,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1828,7 +2056,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1853,7 +2081,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1877,7 +2105,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1901,7 +2129,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1925,7 +2153,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1950,7 +2178,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1975,7 +2203,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -2000,7 +2228,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -2025,7 +2253,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2050,7 +2278,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2075,7 +2303,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 53,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -2100,7 +2328,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 54,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2125,7 +2353,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 55,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -2150,7 +2378,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2174,7 +2402,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2198,7 +2426,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2222,7 +2450,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2246,7 +2474,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2270,7 +2498,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2294,7 +2522,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2318,7 +2546,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2343,7 +2571,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2368,7 +2596,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2393,7 +2621,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2418,7 +2646,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -2443,7 +2671,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2468,7 +2696,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -2493,7 +2721,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -2518,7 +2746,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 71,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -2543,7 +2771,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2568,7 +2796,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2593,7 +2821,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2618,7 +2846,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2643,7 +2871,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2668,7 +2896,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 77,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2693,7 +2921,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 78,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -2718,7 +2946,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 79,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2743,7 +2971,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 80,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2768,7 +2996,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 81,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -2793,7 +3021,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 82,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2818,7 +3046,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 83,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -2843,7 +3071,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 84,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -2868,7 +3096,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 85,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -2893,7 +3121,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 86,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -2918,7 +3146,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2943,7 +3171,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2968,7 +3196,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2993,7 +3221,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3018,7 +3246,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3043,7 +3271,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3068,7 +3296,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3093,7 +3321,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3118,7 +3346,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3143,7 +3371,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3168,7 +3396,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3193,7 +3421,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3218,7 +3446,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3243,7 +3471,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3268,7 +3496,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -3293,7 +3521,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -3318,7 +3546,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -3343,7 +3571,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -3368,7 +3596,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -3393,7 +3621,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 7,
       "assessment": false,
@@ -3418,7 +3646,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 8,
       "assessment": false,
@@ -3443,7 +3671,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -3468,7 +3696,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -3493,7 +3721,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 110,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -3518,7 +3746,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 111,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -3543,7 +3771,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 112,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -3568,7 +3796,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 113,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -3593,7 +3821,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 114,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -3618,7 +3846,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3642,7 +3870,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3666,7 +3894,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3690,7 +3918,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3714,7 +3942,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3738,7 +3966,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -3762,7 +3990,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -3786,7 +4014,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -3810,7 +4038,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 123,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -3834,7 +4062,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 124,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -3858,7 +4086,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 125,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -3882,7 +4110,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 126,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -3906,7 +4134,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 127,
       "position": 13,
       "activity_section_position": 13,
       "assessment": false,
@@ -3930,7 +4158,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 128,
       "position": 14,
       "activity_section_position": 14,
       "assessment": false,
@@ -3954,7 +4182,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 129,
       "position": 15,
       "activity_section_position": 15,
       "assessment": false,
@@ -3978,7 +4206,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 130,
       "position": 16,
       "activity_section_position": 16,
       "assessment": false,
@@ -4002,7 +4230,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 131,
       "position": 17,
       "activity_section_position": 17,
       "assessment": false,
@@ -4026,7 +4254,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4050,7 +4278,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 133,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4074,7 +4302,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 134,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4098,7 +4326,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 135,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4122,7 +4350,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 136,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4146,7 +4374,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 137,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4170,7 +4398,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 138,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -4194,7 +4422,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 139,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -4218,7 +4446,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 140,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -4242,7 +4470,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 141,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -4266,7 +4494,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 142,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -4290,7 +4518,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 143,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -4314,7 +4542,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 144,
       "position": 13,
       "activity_section_position": 13,
       "assessment": false,
@@ -4745,6 +4973,78 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "angelina-playground",
         "activity_section.key": "6a1bf096-15c9-4d84-943e-dc2cff195276"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample-cipher-1",
+        "script_level.level_keys": [
+          "ang-sample-cipher-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "59da0272-bf8f-456b-b4f6-f7dc904ba784"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample-cipher-2",
+        "script_level.level_keys": [
+          "ang-sample-cipher-2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "6b7ba505-47e7-4404-8b49-bef763dd51ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample-fa-1",
+        "script_level.level_keys": [
+          "ang-sample-fa-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "4d095b0d-454c-4c82-9db3-b876285d240e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample1",
+        "script_level.level_keys": [
+          "ang-sample1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "ba10c1cd-95aa-4283-9cf2-04c81ef450e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample-pk-1",
+        "script_level.level_keys": [
+          "ang-sample-pk-1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "3e793b0d-65e6-48c4-8b1a-2b3ff56eb41c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ang-sample-pk-2",
+        "script_level.level_keys": [
+          "ang-sample-pk-2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "angelina-playground",
+        "activity_section.key": "0b6e7589-ca63-4909-9932-367920ad6c53"
       }
     },
     {

@@ -1,0 +1,91 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:07.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "long_instructions": "### Loud & Quiet\r\n\r\n**The Scenario:**\r\n\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement. Your job is to create a remix that highlights that dynamic range — not just with volume, but with timing and layers too.\r\n\r\n**Do This:**\r\n\r\n- Use volume settings to make some parts of your song whisper quiet and others bold and loud.\r\n- Sequence those shifts so they happen in a pattern — for example, a quiet part after every 8 beats.\r\n- Layer sounds with **rests** to emphasize when something cuts out or surges in.\r\n- Try using effects like filters or fades to make the volume transitions feel smoother or more dramatic.\r\n\r\n**Musical Suggestions:**\r\n\r\n- “Something Just Like This” – The Chainsmokers & Coldplay *(builds into explosive choruses from calm openings)*\r\n- “Tightrope” – Tinashe *(delicate moments mixed with big dynamic peaks)*\r\n- “Angel” – Halle *(soft vocals that can contrast beautifully with louder beats)*\r\n\r\n**To pass this level, your song must include at least 2 quiet sections and 2 loud sections, clearly sequenced and layered to show contrast using volume changes, rests, or effects.**",
+    "display_name": "Loud & Quiet",
+    "bubble_choice_description": "Help an artist create a song that plays with extreme quiet and loud contrasts to build tension and excitement.",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-effects-practice-choice-a_0398a267-5b96-4aa2-9d19-bf963bcd008a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says “Sounds great! You can continue to a new level, or keep working on this song!”",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_different_sounds",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-effects-practice-choice-a_08a58f59-f242-4962-aa58-4b2ca1b37408",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear **8 unique sounds**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/9ba4f79572fcec4fb4176114a2b51f7b-volume.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:07.092+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a\"},{\"changed_at\":\"2025-06-12 16:00:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:07:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:08:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 20:17:26 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-27 22:14:11 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

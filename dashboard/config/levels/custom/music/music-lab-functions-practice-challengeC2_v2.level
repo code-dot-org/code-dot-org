@@ -1,0 +1,92 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:01:00.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": true,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false,
+      "playerTitle": "Example",
+      "validationMode": "default"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6dATAqvqCNBaL7gcusy6Gy2fnwYBnaYjrEyWA22GQe18mHEDAVVuD+erp\n6+LrpK8JgB2eI/Ulu4eZqf6lTA7dPl8pyRY44SThBAixCQO2uPGvaLHvevoP\n2haLZw8WVSPfmTdT1IEQdUAYuaZdIu3NQIBRui+78JkvN9iuKfCrdA4=\n",
+    "long_instructions": "### Focus on Composition\r\n\r\n**Define:** Choose a song to remix focusing on **composing functions** - creating many small functions and combining them inside larger functions. This keeps your code compact and easy to understand.\r\n\r\n**Prepare:** Pick a song and look for consistent small parts, like backing beats or effects, that can each be written in their own function. Then plan how you'll combine those smaller functions into bigger sections of your song.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\n**Musical Suggestions:**\r\n\r\n- *Can’t Touch This* – MC Hammer\r\n- *Call Me Maybe* – Carly Rae Jepsen\r\n- *I Like to Move It* – will.i.am\r\n- *Something Just Like This* – Chainsmokers & Coldplay\r\n- *Angel* – Halle\r\n\r\n</div>\r\n\r\n**Try:** Write at least 6 different functions, and make sure none of them use more than 6 blocks of code. Use these small functions as building blocks by calling them inside other functions to shape your remix.\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Does your code feel well-organized and easy to follow? Did composing functions help you simplify your remix? In order to complete this level, your remix must include:\r\n\r\n- At least 6 different functions\r\n- No function with more than 6 blocks of code\r\n- Small functions composed together to build larger sections of your song",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-challengeA_de2a2de8-279c-4c4f-b954-be368ba56afc",
+        "message": "Your code has at least 6 functions - make sure they all have 6 blocks or less before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-challengeA_3dcc609d-d952-4e9d-97eb-8ff95d38cb2f",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for you to call **6 different functions**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Focus on Composition",
+    "bubble_choice_description": "Choose a song to create a remix of. Design your code so it emphasizes **composing functions** - calling functions within other functions to keep the code of your song compact and easy to understand.",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/f4d529e4d13b5fc7769d637e76080bb6-purple.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:00.427+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-challengeC2\\\"\"],\"cloned_from\":\"music-lab-functions-practice-challengeC2\"},{\"changed_at\":\"2025-06-12 21:13:21 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 21:59:13 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-12 22:04:57 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 20:29:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 16:47:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

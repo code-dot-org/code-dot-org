@@ -23,10 +23,12 @@ import _ from 'lodash';
 import React, {useState} from 'react';
 
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {AgeGatedSectionsBanner} from '@cdo/apps/templates/policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   removeSectionOrThrow,
   setSectionOrder,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -66,6 +68,18 @@ export const SectionList: React.FC<SectionListProps> = ({
   showHiddenOnly,
 }) => {
   const dispatch = useAppDispatch();
+
+  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
+  const toggleCAPModal = () => {
+    setCAPModalOpen(!CAPmodalOpen);
+  };
+
+  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
+
+  const shouldDisplayAtRiskAgeGatedWarning = () => {
+    return ageGatedSections?.length > 0;
+  };
+
   const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
   const sections: SectionMap = useAppSelector(
     state => state.teacherSections.sections
@@ -164,6 +178,13 @@ export const SectionList: React.FC<SectionListProps> = ({
     <div id="ui-test-section-list">
       {sectionsAreLoaded ? (
         <>
+          {shouldDisplayAtRiskAgeGatedWarning() && (
+            <AgeGatedSectionsBanner
+              toggleModal={toggleCAPModal}
+              modalOpen={CAPmodalOpen}
+              ageGatedSections={ageGatedSections}
+            />
+          )}
           <CoteacherInviteNotification isForPl={false} destructiveLoad={true} />
           <DndContext
             sensors={sensors}

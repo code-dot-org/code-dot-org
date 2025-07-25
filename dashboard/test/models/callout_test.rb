@@ -6,8 +6,8 @@ class CalloutTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @level = create(:level, :blockly, level_num: 'level1_2_3')
-    @script = create(:script, name: 'run-button-callout-script')
-    @script2 = create(:script, name: 'repeat-button-callout-script')
+    @script = create(:script, :in_single_unit_course, name: 'run-button-callout-script')
+    @script2 = create(:script, :in_single_unit_course, name: 'repeat-button-callout-script')
     @script_level = create(:script_level, script: @script, levels: [@level])
     @script_level2 = create(:script_level, script: @script2, levels: [@level])
     @csv_callouts = Callout.find_or_create_all_from_tsv!('test/fixtures/callouts.tsv')

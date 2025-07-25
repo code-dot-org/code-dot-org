@@ -27,9 +27,14 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
+  # This domain name needs to be referenced both in Cloudformation and in the code for MarketingRouterLambda.
+  # As a result, it is declared here in Ruby so that it can be passed to the Lambda function.
+  # WARNING: Changing this value is NOT sufficient to change the value in the stack. It ONLY changes the default value.
+  # The value must be changed manually in the AWS Console or CLI, followed by an update to the stack. 
+  <% INTERNAL_MARKETING_DOMAIN_NAME = "code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'test-code.org'}" %>
   InternalMarketingDomainName:
     Type: String
-    Default: <%="code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'dev-code.org'}"%>
+    Default: <%=INTERNAL_MARKETING_DOMAIN_NAME %>
     Description: Interim domain name of the Contentful CMS-based marketing site. The DNS record for code.org still points to Pegasus, which dynamically routes some requests to the new Contentful site. This parameter is intended for internal routing and should not be used outside that context.
   HourOfCodeBaseDomainName:
     Type: String
@@ -405,14 +410,18 @@ Resources:
 
 <%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
+<%
+       marketing_router_package = zip_directory(
+         'marketing-router',
+         environment_variables: {marketingDomain: INTERNAL_MARKETING_DOMAIN_NAME}
+       )
+%>
   MarketingRouterLambda:
     Type: AWS::Lambda::Function
     Properties:
-      Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
+      Description: 'Lambda for dynamically routing Corporate website traffic to new NextJS/Contentful system based on the URL path.'
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
-      Code: 
-        ZipFile: !Sub <%=inline_js('lambdas/marketing-router/index.js', uglify: false) %>
+      Code: <%= marketing_router_package[:s3_location].to_json %>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn
@@ -423,6 +432,14 @@ Resources:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref MarketingRouterLambda
+      Description: "Code hash: <%= marketing_router_package[:content_hash] %>"
+  # Create an Alias to make it easier to monitor Metrics in CloudWatch.
+  MarketingRouterAlias:
+    Type: AWS::Lambda::Alias
+    Properties:
+      FunctionName: !Ref MarketingRouterLambda
+      FunctionVersion: !GetAtt MarketingRouterVersion.Version
+      Name: LIVE
   MarketingRouterLambdaRole:
     Type: AWS::IAM::Role
     Properties:

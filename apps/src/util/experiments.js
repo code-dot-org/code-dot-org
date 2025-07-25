@@ -44,10 +44,8 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
-experiments.SPRITE_LAB_DOCS = 'sl_docs';
-// Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
-experiments.KEYBOARD_NAVIGATION = 'blockly_keyboard';
+// Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
+experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard
 experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 // Allows the playspace to be dragged to take up a larger portion of the screen
@@ -62,8 +60,10 @@ experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 experiments.BLOCKLY_KEYBOARD_NAVIGATION = 'blockly-keyboard-navigation';
 // Use nested course URLs like /courses/csd-2024/units/1/...
 experiments.MODULARITY = 'modularity';
-// Allows users to view the download progress CSV button on the section progress page
-experiments.DOWNLOAD_PROGRESS_CSV = 'download-progress-csv';
+// LocalizeJS
+experiments.LOCALIZEJS = 'localizejs';
+// Use the new lab2 instructions panel
+experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

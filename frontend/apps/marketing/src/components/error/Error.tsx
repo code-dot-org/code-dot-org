@@ -106,6 +106,7 @@ export default function Error(props: ErrorProps) {
           className={errorStyles.sadBeeContainer}
           src={sadBeeImage.src}
           alt=""
+          style={{width: '7.125rem'}}
         />
       )}
       <Overline removeMarginBottom={false} size={'l'} color={'primary'}>

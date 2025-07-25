@@ -30,6 +30,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
+    @custom_unit_group = create(:single_unit_course, unit: @custom_script, name: 'laurel')
     @custom_lesson_group = create(:lesson_group, script: @custom_script)
     @custom_lesson_1 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Lesson 1', name: 'Laurel Lesson 1', absolute_position: 1, relative_position: '1')
     @custom_lesson_2 = create(:lesson, script: @custom_script, lesson_group: @custom_lesson_group, key: 'Laurel Lesson 2', name: 'Laurel Lesson 2', absolute_position: 2, relative_position: '2')
@@ -58,12 +59,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @script_level = @custom_s1_l1
     @level = @script_level.level
 
-    in_development_unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    in_development_unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development).first_unit
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
     in_development_lesson = create(:lesson, script: in_development_unit, lesson_group: in_development_lesson_group)
     @in_development_script_level = create :script_level, script: in_development_unit, lesson: in_development_lesson
 
-    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
+    pilot_script = create(:single_unit_course, pilot_experiment: 'pilot-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).first_unit
     pilot_lesson_group = create(:lesson_group, script: pilot_script)
     pilot_lesson = create(:lesson, script: pilot_script, lesson_group: pilot_lesson_group)
     @pilot_script_level = create :script_level, script: pilot_script, lesson: pilot_lesson
@@ -73,7 +74,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :section_instructor, instructor: @pilot_teacher, section: pilot_section
     @pilot_student = create(:follower, section: pilot_section).student_user
 
-    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pilot_pl_script = create(:single_unit_course, :pl_course, pilot_experiment: 'pl-pilot-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).first_unit
     pilot_pl_lesson_group = create(:lesson_group, script: pilot_pl_script)
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
@@ -84,7 +85,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
 
-    pl_script = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_script = create(:single_unit_course, :pl_course).first_unit
     pl_lesson_group = create(:lesson_group, script: pl_script)
     pl_lesson = create(:lesson, script: pl_script, lesson_group: pl_lesson_group)
     @pl_script_level = create :script_level, script: pl_script, lesson: pl_lesson
@@ -100,8 +101,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     AzureTextToSpeech.unstub(:get_voices)
   end
 
-  test "should return level_properties " do
-    script = create(:script)
+  test "should return level_properties" do
+    script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
@@ -129,11 +130,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal body["usesProjects"], false
     assert_equal body["exampleSolutions"], []
     assert_equal body["helpVideos"], []
-    assert_match Regexp.new("^/s/bogus-script-[0-9]+"), body["finishUrl"]
+    assert_equal body["offerBrowserTts"], true
+    assert_match Regexp.new("^/courses/bogus-single-unit-course-[0-9]+/units/1"), body["finishUrl"]
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
-    @unit = create :script, name: 'csp1-2020'
+    @unit = create :script, :in_single_unit_course, name: 'csp1-2020'
+    unit_group_name = @unit.original_unit_group.name
     @lesson_group = create :lesson_group, script: @unit
     @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
     @external = create(:external, name: 'markdown level')
@@ -142,34 +145,38 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position - 1,
       id: @external_sl.position
     }
 
     assert_response :success
-    assert_includes @response.body, '/s/csp1-2020/lessons/14/'
+    assert_includes @response.body, "/courses/#{unit_group_name}/units/1/lessons/14/"
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position - 1,
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
+    assert_redirected_to "/courses/#{unit_group_name}/units/1/lessons/14/levels/2/page/1"
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position - 1,
       id: @lockable_level_group_sl.position,
       puzzle_page: 1
     }
 
-    assert_redirected_to '/s/csp1-2020/lessons/14/levels/2/page/1'
+    assert_redirected_to "/courses/#{unit_group_name}/units/1/lessons/14/levels/2/page/1"
   end
 
   test 'should show script level for csp2-2020 lockable lesson with lesson plan' do
-    @unit = create :script, name: 'csp2-2020'
+    @unit = create :script, :in_single_unit_course, name: 'csp2-2020'
+    unit_group_name = @unit.original_unit_group.name
     @lesson_group = create :lesson_group, script: @unit
     @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
     @external = create(:external, name: 'markdown level')
@@ -178,30 +185,33 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position,
       id: @external_sl.position
     }
 
     assert_response :success
-    assert_includes @response.body, '/s/csp2-2020/lessons/9/'
+    assert_includes @response.body, "/courses/#{unit_group_name}/units/1/lessons/9/"
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position,
       id: @lockable_level_group_sl.position
     }
 
-    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
+    assert_redirected_to "/courses/#{unit_group_name}/units/1/lessons/9/levels/2/page/1"
 
     get :show, params: {
-      script_id: @unit.name,
+      course_course_name: unit_group_name,
+      unit_position: 1,
       lesson_position: @lockable_lesson.absolute_position,
       id: @lockable_level_group_sl.position,
       puzzle_page: 1
     }
 
-    assert_redirected_to '/s/csp2-2020/lessons/9/levels/2/page/1'
+    assert_redirected_to "/courses/#{unit_group_name}/units/1/lessons/9/levels/2/page/1"
   end
 
   test 'should show script level for twenty hour' do
@@ -213,7 +223,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should show script level by script name' do
     params = {
-      script_id: @script_level.script.name,
+      course_course_name: @script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: @script_level.lesson.absolute_position,
       id: @script_level.position
     }
@@ -272,7 +283,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   def script_level_params(script_level)
     {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson.absolute_position,
       id: script_level.position
     }
@@ -281,8 +293,10 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should not log an activity monitor start for netsim' do
     netsim_level = create(:level, :with_script, game: Game.netsim)
     netsim_script_level = netsim_level.script_levels.first
+    create(:single_unit_course, unit: netsim_script_level.script)
     get :show, params: {
-      script_id: netsim_script_level.script,
+      course_course_name: netsim_script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: netsim_script_level.lesson.relative_position,
       id: netsim_script_level.position
     }
@@ -306,6 +320,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     user = create(:user)
     level = create(:free_response, :with_script, peer_reviewable: true)
     script_level = level.script_levels.first
+    create(:single_unit_course, unit: script_level.script)
     level_source = create(:level_source)
     create(:user_level, user: user, script: script_level.script, level: level, level_source: level_source)
 
@@ -328,7 +343,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     sign_in user
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson.relative_position,
       id: script_level.position,
     }
@@ -337,7 +353,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:bubble_choice_level, :with_sublevels)
@@ -345,7 +361,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sublevel_position = 1
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson.relative_position,
       id: script_level.position,
       sublevel_position: sublevel_position
@@ -355,7 +372,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start blocks when defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -369,7 +386,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start blocks comes from project_level not real_level
@@ -378,7 +400,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start blocks when not defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -391,7 +413,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start blocks comes from real_level not project_level
@@ -400,7 +427,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start html when defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -414,7 +441,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start html comes from project_level not real_level
@@ -423,7 +455,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start html when not defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -436,7 +468,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start html comes from real_level not project_level
@@ -445,7 +482,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets data tables when defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -461,7 +498,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # data tables comes from project_level not real_level
@@ -471,7 +513,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set data tables when not defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -485,7 +527,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # data tables comes from real_level not project_level
@@ -495,7 +542,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets start animations when defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -511,7 +558,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start animations comes from project_level not real_level
@@ -520,7 +572,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set start animations when not defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -534,7 +586,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # start animations comes from real_level not project_level
@@ -543,7 +600,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level sets toolbox blocks when defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -557,7 +614,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
 
     assert_response :success
     # toolbox blocks comes from project_level not real_level
@@ -566,7 +628,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'project template level does not set toolbox blocks when not defined' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
@@ -579,8 +641,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     real_level.save!
 
     sl = create :script_level, levels: [real_level], lesson: lesson, script: script
-    get :show, params: {script_id: sl.script, lesson_position: '1', id: '1'}
-
+    get :show, params: {
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '1'
+    }
     assert_response :success
     # toolbox blocks comes from real_level not project_level
     level_options = assigns(:level).blockly_level_options
@@ -588,7 +654,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not show concept video for non-legacy script level' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     non_legacy_script_level = create(:script_level, lesson: lesson, script: script)
@@ -596,7 +662,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     non_legacy_script_level.level.concepts = [concept_with_video]
 
     get :show, params: {
-      script_id: non_legacy_script_level.script,
+      course_course_name: non_legacy_script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -606,13 +673,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should show specified video for script level with video' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     non_legacy_script_level = create(:script_level, :with_autoplay_video, lesson: lesson, script: script)
     assert_empty(non_legacy_script_level.level.concepts)
     get :show, params: {
-      script_id: non_legacy_script_level.script,
+      course_course_name: non_legacy_script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -622,12 +690,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should have autoplay video when never_autoplay_video is false on level' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level_with_autoplay_video = create(:script_level, :never_autoplay_video_false, lesson: lesson, script: script)
     get :show, params: {
-      script_id: level_with_autoplay_video.script,
+      course_course_name: level_with_autoplay_video.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -637,12 +706,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'should not have autoplay video when never_autoplay_video is true on level' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level_with_autoplay_video = create(:script_level, :never_autoplay_video_true, lesson: lesson, script: script)
     get :show, params: {
-      script_id: level_with_autoplay_video.script,
+      course_course_name: level_with_autoplay_video.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -652,13 +722,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "shouldn't show autoplay video when already seen" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     non_legacy_script_level = create(:script_level, :with_autoplay_video, lesson: lesson, script: script)
     client_state.add_video_seen(non_legacy_script_level.level.video_key)
     get :show, params: {
-      script_id: non_legacy_script_level.script,
+      course_course_name: non_legacy_script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -668,14 +739,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'non-legacy script level with concepts should have related but not autoplay video' do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
     non_legacy_script_level = create(:script_level, lesson: lesson, script: script)
     non_legacy_script_level.level.concepts = [create(:concept, :with_video)]
     get :show, params: {
-      script_id: non_legacy_script_level.script,
+      course_course_name: non_legacy_script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: '1',
       id: '1'
     }
@@ -684,10 +756,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
+  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "ridiculous chapter number throws NotFound instead of RangeError" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Unit.twenty_hour_unit,
+        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        unit_position: '1',
         lesson_position: '99999999999999999999999999',
         id: '1'
       }
@@ -695,7 +769,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {
-        script_id: Unit.twenty_hour_unit,
+        course_course_name: Unit.twenty_hour_unit.original_unit_group.name,
+        unit_position: '1',
         lesson_position: '1',
         id: '99999999999999999999999999'
       }
@@ -703,16 +778,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable script version in family for logged out user if one exists" do
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2019 = create :script, name: 'courseg-2019', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
     courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
     courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
-      script_id: courseg_2017.name,
+      course_course_name: courseg_2017.original_unit_group.name,
+      unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
     }
@@ -723,16 +802,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for student if one exists" do
     sign_in @student
 
-    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'courseg-2019', family_name: 'courseg', version_year: '2019'
+    courseg_2017 = create :script, name: 'courseg-2017', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2017, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2018 = create :script, name: 'courseg-2018', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2018, family_name: 'courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    courseg_2019 = create :script, name: 'courseg-2019', family_name: 'courseg'
+    create :single_unit_course, unit: courseg_2019, family_name: 'courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     courseg_2017_lesson_group_1 = create :lesson_group, script: courseg_2017
     courseg_2017_lesson_1 = create :lesson, script: courseg_2017, lesson_group: courseg_2017_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
     courseg_2017_lesson_1_script_level = create :script_level, script: courseg_2017, lesson: courseg_2017_lesson_1, position: 1
 
     get :show, params: {
-      script_id: courseg_2017.name,
+      course_course_name: courseg_2017.original_unit_group.name,
+      unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
     }
@@ -740,7 +823,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     # Does not redirect if no_redirect query param is provided.
     get :show, params: {
-      script_id: courseg_2017.name,
+      course_course_name: courseg_2017.original_unit_group.name,
+      unit_position: 1,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
       no_redirect: "true"
@@ -751,16 +835,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show: redirect to latest assigned script version in family for participant if one exists" do
     sign_in @student
 
-    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'pl-courseg-2018', family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg', version_year: '2019'
+    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg'
+    create :single_unit_course, unit: pl_courseg_2017, family_name: 'pl-courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    pl_courseg_2018 = create :script,  name: 'pl-courseg-2018', family_name: 'pl-courseg'
+    create :single_unit_course, unit: pl_courseg_2018, family_name: 'pl-courseg', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    pl_courseg_2019 = create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg'
+    create :single_unit_course, unit: pl_courseg_2019, family_name: 'pl-courseg', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     pl_courseg_2017_lesson_group_1 = create :lesson_group, script: pl_courseg_2017
     pl_courseg_2017_lesson_1 = create :lesson, script: pl_courseg_2017, lesson_group: pl_courseg_2017_lesson_group_1, name: 'PL Course G Lesson 1', absolute_position: 1, relative_position: '1'
     pl_courseg_2017_lesson_1_script_level = create :script_level, script: pl_courseg_2017, lesson: pl_courseg_2017_lesson_1, position: 1
 
     get :show, params: {
-      script_id: pl_courseg_2017.name,
+      course_course_name: pl_courseg_2017.original_unit_group.name,
+      unit_position: 1,
       lesson_position: pl_courseg_2017_lesson_1.relative_position,
       id: pl_courseg_2017_lesson_1_script_level.position,
     }
@@ -768,7 +856,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     # Does not redirect if no_redirect query param is provided.
     get :show, params: {
-      script_id: pl_courseg_2017.name,
+      course_course_name: pl_courseg_2017.original_unit_group.name,
+      unit_position: 1,
       lesson_position: pl_courseg_2017_lesson_1.relative_position,
       id: pl_courseg_2017_lesson_1_script_level.position,
       no_redirect: "true"
@@ -777,14 +866,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show: directs to script if script and family name match" do
-    courseg = create :script, name: 'courseg', family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(courseg)
+    courseg = create :script, name: 'courseg'
+    courseg_course = create :single_unit_course, unit: courseg, family_name: 'courseg', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(courseg_course)
     courseg_lesson_group_1 = create :lesson_group, script: courseg
     courseg_lesson_1 = create :lesson, script: courseg, lesson_group: courseg_lesson_group_1, name: 'Course G Lesson 1', absolute_position: 1, relative_position: '1'
     courseg_lesson_1_script_level = create :script_level, script: courseg, lesson: courseg_lesson_1, position: 1
 
     get :show, params: {
-      script_id: courseg.name,
+      course_course_name: courseg.original_unit_group.name,
+      unit_position: 1,
       lesson_position: courseg_lesson_1.relative_position,
       id: courseg_lesson_1_script_level.position,
       no_redirect: "true"
@@ -792,6 +883,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "updated routing for 20 hour script" do
     sl = ScriptLevel.find_by script: Unit.twenty_hour_unit, chapter: 3
     assert_equal '/s/20-hour/lessons/2/levels/2', build_script_level_path(sl)
@@ -831,58 +923,63 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "routing for custom scripts with lesson" do
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/1/levels/1"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "1", id: "1"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/lessons/1/levels/1"},
+      {controller: "script_levels", action: "show", course_course_name: 'laurel', unit_position: "1", lesson_position: "1", id: "1"}
     )
-    assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "/courses/laurel/units/1/lessons/1/levels/1",
+                 build_script_level_path(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
 
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/2/levels/1"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "1"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/lessons/2/levels/1"},
+      {controller: "script_levels", action: "show", course_course_name: 'laurel', unit_position: "1", lesson_position: "2", id: "1"}
     )
-    assert_equal "/s/laurel/lessons/2/levels/1", build_script_level_path(@custom_s2_l1)
+    assert_equal "/courses/laurel/units/1/lessons/2/levels/1",
+                 build_script_level_path(@custom_s2_l1, unit_group_unit: @custom_script.original_unit_group_unit)
 
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/lessons/2/levels/2"},
-      {controller: "script_levels", action: "show", script_id: 'laurel', lesson_position: "2", id: "2"}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/lessons/2/levels/2"},
+      {controller: "script_levels", action: "show", course_course_name: 'laurel', unit_position: "1", lesson_position: "2", id: "2"}
     )
-    assert_equal "/s/laurel/lessons/2/levels/2", build_script_level_path(@custom_s2_l2)
+    assert_equal "/courses/laurel/units/1/lessons/2/levels/2",
+                 build_script_level_path(@custom_s2_l2, unit_group_unit: @custom_script.original_unit_group_unit)
   end
 
   test "build_script_level_url" do
     assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
+    assert_equal "/courses/laurel/units/1/lessons/1/levels/1", build_script_level_path(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
     assert_equal "//test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "//test-studio.code.org/courses/laurel/units/1/lessons/1/levels/1", build_script_level_url(@custom_s1_l1, unit_group_unit: @custom_script.original_unit_group_unit)
   end
 
   test "next routing for custom scripts" do
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/next"},
-      {controller: "script_levels", action: "next", script_id: 'laurel'}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/next"},
+      {controller: "script_levels", action: "next", course_course_name: 'laurel', unit_position: "1"}
     )
-    assert_equal "/s/laurel/next", script_next_path(@custom_script)
+    assert_equal "/courses/laurel/units/1/next", course_unit_next_path(@custom_script.original_unit_group, 1)
   end
 
   test "next redirects to next level for custom scripts" do
-    get :next, params: {script_id: 'laurel'}
-    assert_redirected_to "/s/laurel/lessons/#{@custom_s1_l1.lesson.absolute_position}/levels/#{@custom_s1_l1.position}"
+    get :next, params: {course_course_name: 'laurel', unit_position: "1"}
+    assert_redirected_to "/courses/laurel/units/1/lessons/#{@custom_s1_l1.lesson.absolute_position}/levels/#{@custom_s1_l1.position}"
   end
 
   test "next redirects to first non-unplugged level for custom scripts" do
-    custom_script = create(:script, name: 'coolscript')
+    custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
     lesson_group = create(:lesson_group, script: custom_script)
     unplugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'unplugged lesson', absolute_position: 1)
     create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: unplugged_lesson, position: 1)
     plugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'plugged lesson', absolute_position: 2)
     create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
-    get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lessons/2/levels/1"
+    get :next, params: {course_course_name: custom_script.original_unit_group.name, unit_position: 1}
+    assert_redirected_to "/courses/#{custom_script.original_unit_group.name}/units/1/lessons/2/levels/1"
   end
 
   test "next when logged in redirects to first non-unplugged non-finished level" do
     sign_in @student
 
-    custom_script = create(:script, name: 'coolscript')
+    custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
     lesson_group = create(:lesson_group, script: custom_script)
     custom_lesson_1 = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'neat lesson', absolute_position: 1)
     first_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 1)
@@ -892,12 +989,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: custom_lesson_1, position: 3)
     last_level = create(:script_level, script: custom_script, lesson: custom_lesson_1, position: 4)
 
-    get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lessons/#{last_level.lesson.absolute_position}/levels/#{last_level.position}"
+    get :next, params: {course_course_name: custom_script.original_unit_group.name, unit_position: 1}
+    assert_redirected_to "/courses/#{custom_script.original_unit_group.name}/units/1/lessons/#{last_level.lesson.absolute_position}/levels/#{last_level.position}"
   end
 
   test "next skips entire unplugged lesson" do
-    custom_script = create(:script, name: 'coolscript')
+    custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
     lesson_group = create(:lesson_group, script: custom_script)
     unplugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'unplugged lesson', absolute_position: 1)
     create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: unplugged_lesson, position: 1)
@@ -906,24 +1003,25 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     plugged_lesson = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'plugged lesson', absolute_position: 2)
     create(:script_level, script: custom_script, lesson: plugged_lesson, position: 1)
 
-    get :next, params: {script_id: 'coolscript'}
-    assert_redirected_to "/s/coolscript/lessons/2/levels/1"
+    get :next, params: {course_course_name: custom_script.original_unit_group.name, unit_position: 1}
+    assert_redirected_to "/courses/#{custom_script.original_unit_group.name}/units/1/lessons/2/levels/1"
   end
 
   test "next when only unplugged level goes back to home" do
-    custom_script = create(:script, name: 'coolscript')
+    custom_script = create(:script, :in_single_unit_course, name: 'coolscript')
     lesson_group = create(:lesson_group, script: custom_script)
     custom_lesson_1 = create(:lesson, script: custom_script, lesson_group: lesson_group, name: 'neat lesson', absolute_position: 1)
     create(:script_level, levels: [create(:unplugged)], script: custom_script, lesson: custom_lesson_1, position: 1)
 
     assert_raises RuntimeError do
-      get :next, params: {script_id: 'coolscript'}
+      get :next, params: {course_course_name: custom_script.original_unit_group.name, unit_position: 1}
     end
   end
 
   test "show redirects to canonical url for hoc" do
     get :show, params: {
-      script_id: Unit::HOC_NAME,
+      course_course_name: Unit::HOC_NAME,
+      unit_position: 1,
       lesson_position: '1',
       id: '2'
     }
@@ -945,7 +1043,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects to canonical url for special scripts" do
     get :show, params: {
-      script_id: Unit::FLAPPY_NAME,
+      course_course_name: Unit::FLAPPY_NAME,
+      unit_position: 1,
       lesson_position: '1',
       id: '2'
     }
@@ -958,7 +1057,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should show script level by lesson and puzzle position" do
     # this works for custom scripts
 
-    get :show, params: {script_id: @custom_script, lesson_position: 2, id: 1}
+    get :show, params: {course_course_name: @custom_script.original_unit_group.name, unit_position: 1, lesson_position: 2, id: 1}
 
     assert_response :success
 
@@ -968,6 +1067,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show new style unplugged level with PDF link' do
     level = create(:unplugged, :with_script)
     script_level = level.script_levels.first
+    create(:single_unit_course, unit: script_level.script)
     script_level.lesson.update(has_lesson_plan: true)
 
     custom_i18n = {
@@ -983,7 +1083,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson.absolute_position,
       id: script_level.position
     }
@@ -1001,9 +1102,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "show with the login_required param should redirect when not logged in" do
     level = create(:level, :with_script)
     script_level = level.script_levels.first
+    create(:single_unit_course, unit: script_level.script)
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson.absolute_position,
       id: script_level.position,
       login_required: "true"
@@ -1012,6 +1115,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
+  #TODO: TEACH-1788 This will need to be updated when we change the test fixtures
   test "reset redirects admins to root" do
     sign_in create(:admin)
     get :reset, params: {script_id: Unit::HOC_NAME}
@@ -1022,8 +1126,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
 
-    script = create(:script, :with_levels, levels_count: 2)
-    get :reset, params: {script_id: script.name}
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
+    get :reset, params: {course_course_name: script.original_unit_group.name, unit_position: 1}
 
     assert_response 200
 
@@ -1032,8 +1136,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "show with the reset param should destroy the storage_id cookie when not logged in" do
-    script = create(:script, :with_levels, levels_count: 2)
-    get :reset, params: {script_id: script.name}
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
+    get :reset, params: {course_course_name: script.original_unit_group.name, unit_position: 1}
     assert_response 200
     # Ensure storage_id is set to empty value and domain is correct
     cookie_header = response.header['Set-Cookie']
@@ -1043,8 +1147,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not create a new storage_id cookie when logged in" do
     sign_in(create(:user))
-    script = create(:script, :with_levels, levels_count: 2)
-    get :reset, params: {script_id: script.name}
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
+    get :reset, params: {course_course_name: script.original_unit_group.name, unit_position: 1}
     assert_response 302
     # Ensure storage_id is not being set
     cookie_header = response.header['Set-Cookie']
@@ -1053,17 +1157,17 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show with the reset param should not reset session when logged in" do
     sign_in(create(:user))
-    script = create(:script, :with_levels, levels_count: 2)
-    get :reset, params: {script_id: script.name}
-    assert_redirected_to build_script_level_path(script.script_levels.first)
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
+    get :reset, params: {course_course_name: script.original_unit_group.name, unit_position: 1}
+    assert_redirected_to build_script_level_path(script.script_levels.first, unit_group_unit: script.original_unit_group_unit)
     # still logged in
     assert signed_in_user_id
   end
 
   test "reset routing for custom scripts" do
     assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/s/laurel/reset"},
-      {controller: "script_levels", action: "reset", script_id: 'laurel'}
+      {method: "get", path: "http://#{CDO.dashboard_hostname}/courses/laurel/units/1/reset"},
+      {controller: "script_levels", action: "reset", course_course_name: 'laurel', unit_position: "1"}
     )
   end
 
@@ -1071,7 +1175,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     client_state.set_level_progress(create(:script_level), 10)
     refute client_state.level_progress_is_empty_for_test
 
-    get :reset, params: {script_id: 'laurel'}
+    get :reset, params: {course_course_name: 'laurel', unit_position: 1}
     assert_response 200
 
     assert client_state.level_progress_is_empty_for_test
@@ -1081,19 +1185,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "reset redirects for custom scripts for signed in users" do
     sign_in(create(:user))
 
-    get :reset, params: {script_id: 'laurel'}
-    assert_redirected_to '/s/laurel/lessons/1/levels/1'
+    get :reset, params: {course_course_name: 'laurel', unit_position: 1}
+    assert_redirected_to '/courses/laurel/units/1/lessons/1/levels/1'
   end
 
   test "should render blockly partial for blockly levels" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     level = create(:level, :blockly)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create(:script_level, script: script, levels: [level], lesson: lesson)
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: lesson.absolute_position,
       id: script_level.position
     }
@@ -1104,7 +1209,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "with callout defined should define callout JS" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     level = create :deprecated_blockly_level
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
@@ -1113,7 +1218,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:callout, script_level: script_level)
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: lesson.absolute_position,
       id: script_level.position
     }
@@ -1123,7 +1229,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'should render title for puzzle in custom script' do
     get :show, params: {
-      script_id: @custom_script.name,
+      course_course_name: @custom_script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: @custom_s2_l1.lesson,
       id: @custom_s2_l1.position
     }
@@ -1202,7 +1309,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for frozen chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Unit::FROZEN_NAME,
+      course_course_name: Unit::FROZEN_NAME,
+      unit_position: 1,
       lesson_position: 1,
       id: 1
     }
@@ -1218,7 +1326,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'should show tracking pixel for playlab chapter 1 in prod' do
     set_env :production
     get :show, params: {
-      script_id: Unit::PLAYLAB_NAME,
+      course_course_name: Unit::PLAYLAB_NAME,
+      unit_position: 1,
       lesson_position: 1,
       id: 1
     }
@@ -1233,13 +1342,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should 404 for invalid lesson for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', lesson_position: 4000, id: 1}
+      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 4000, id: 1}
     end
   end
 
   test "should 404 for invalid puzzle for course1" do
     assert_raises(ActiveRecord::RecordNotFound) do # renders a 404 in prod
-      get :show, params: {script_id: 'course1', lesson_position: 1, id: 4000}
+      get :show, params: {course_course_name: 'course1', unit_position: 1, lesson_position: 1, id: 4000}
     end
   end
 
@@ -1255,7 +1364,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     UserLevel.create!(script: script, level: level, user: @student, level_source: level_source)
 
     get :show, params: {
-      script_id: @custom_script,
+      course_course_name: @custom_script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position
     }
@@ -1273,7 +1383,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     UserLevel.create!(script: @custom_script, level: level, user: @student, level_source: level_source)
 
     get :show, params: {
-      script_id: @custom_script,
+      course_course_name: @custom_script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position,
       user_id: @student.id,
@@ -1290,7 +1401,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     user_storage_id = fake_storage_id_for_user_id(@student.id)
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1305,7 +1416,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
@@ -1322,7 +1434,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     user_storage_id = fake_storage_id_for_user_id(@teacher.id)
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1337,7 +1449,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       version: 'some-version'
@@ -1351,7 +1464,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     user_storage_id = fake_storage_id_for_user_id(@teacher.id)
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1366,7 +1479,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       version: ''
@@ -1382,7 +1496,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     user_storage_id = fake_storage_id_for_user_id(@student.id)
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1397,7 +1511,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
@@ -1417,7 +1532,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1432,7 +1547,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create :channel_token, level: level, storage_id: user_storage_id
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: other_student.id,
@@ -1449,7 +1565,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :applab
@@ -1462,7 +1578,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     )
 
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: script_level.lesson,
       id: script_level.position,
       user_id: @student.id,
@@ -1481,7 +1598,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     get :show, params: {
-      script_id: @custom_script,
+      course_course_name: @custom_script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: @custom_lesson_1.absolute_position,
       id: @custom_s1_l1.position
     }
@@ -1492,7 +1610,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'teacher cannot view solution to plc script' do
     sign_in @teacher
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     script.update(professional_learning_course: true)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
@@ -1500,7 +1618,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level = create(:script_level, script: script, lesson: lesson, levels: [level])
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: lesson,
       id: script_level,
       solution: true
@@ -1509,7 +1628,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test 'student cannot view solution' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:level, :with_ideal_level_source)
@@ -1518,7 +1637,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: lesson,
       id: script_level,
       solution: true
@@ -1529,11 +1649,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'under 13 gets redirected when trying to access applab' do
     level = create(:applab, :with_script)
     sl = level.script_levels.first
+    create(:single_unit_course, unit: sl.script)
 
     sign_in @young_student
 
     get :show, params: {
-      script_id: sl.script,
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: sl.lesson,
       id: sl
     }
@@ -1544,11 +1666,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'over 13 does not get redirected when trying to access applab' do
     level = create(:applab, :with_script)
     sl = level.script_levels.first
+    create(:single_unit_course, unit: sl.script)
 
     sign_in @student
 
     get :show, params: {
-      script_id: sl.script,
+      course_course_name: sl.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: sl.lesson,
       id: sl
     }
@@ -1560,7 +1684,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @student
 
     last_attempt_data = 'test'
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create(:applab, submittable: true)
@@ -1569,7 +1693,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     ul = UserLevel.create!(level: level, script: script_level.script, user: @student, best_result: ActivityConstants::FREE_PLAY_RESULT, submitted: true)
 
     get :show, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: lesson,
       id: script_level
     }
@@ -1594,7 +1719,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   test "should present single available level for single-level scriptlevels" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze
@@ -1604,7 +1729,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should present first available level if missing properties" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze
@@ -1615,7 +1740,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should present first level if active" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
@@ -1633,7 +1758,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should present second level if first is inactive" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
@@ -1651,7 +1776,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should raise if all levels inactive" do
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
@@ -1671,7 +1796,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present level with activity" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
@@ -1694,7 +1819,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present level with most recent activity" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'maze 1'
@@ -1720,7 +1845,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in the experiment" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_user_experiment, min_user_id: @student.id
@@ -1741,7 +1866,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in the section experiment" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_section_experiment, section: @section, script: script
@@ -1762,7 +1887,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should present experiment level if in one of the experiments" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment1 = create :single_user_experiment, min_user_id: @student.id + 1
@@ -1785,7 +1910,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "should not present experiment level if not in the experiment" do
     sign_in @student
-    script = create(:script)
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     experiment = create :single_user_experiment, min_user_id: @student.id + 1
@@ -1897,7 +2022,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher can't hide lessons if script has hideable_lessons false" do
-    script = create(:script, hideable_lessons: false)
+    script = create(:script, :in_single_unit_course, hideable_lessons: false)
     lesson = create(:lesson, script: script)
 
     teacher = create :teacher
@@ -1980,8 +2105,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should redirect when script has a redirect_to property" do
-    script = create :script
-    new_script = create :script
+    script = create(:script, :in_single_unit_course)
+    new_script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     new_lesson_group = create(:lesson_group, script: new_script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
@@ -1991,24 +2116,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     create(:script_level, script: new_script, lesson: new_lesson)
     script.update(redirect_to: new_script.name)
 
-    get :show, params: {script_id: script.name, lesson_position: '1', id: '2'}
-    assert_redirected_to "/s/#{new_script.name}/lessons/1/levels/2"
+    get :show, params: {
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
+      lesson_position: '1',
+      id: '2'
+    }
+    assert_redirected_to "/courses/#{new_script.original_unit_group.name}/units/1/lessons/1/levels/1"
   end
 
   test 'should redirect to 2017 version in script family' do
-    cats1 = create :script, name: 'cats1', family_name: 'cats', version_year: '2017', is_course: true
-    CourseOffering.add_course_offering(cats1)
+    cats1 = create :script, :with_levels, name: 'cats1', family_name: 'cats', version_year: '2017'
+    cats1_course = create :single_unit_course, unit: cats1, name: 'cats1', family_name: 'cats', version_year: '2017'
+    CourseOffering.add_course_offering(cats1_course)
+    Unit.stubs(:family_names).returns(['cats'])
 
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     end
 
-    cats1.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    cats1_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats1/lessons/1/levels/1"
 
-    cats2 = create :script, name: 'cats2', family_name: 'cats', version_year: '2018', is_course: true, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(cats2)
+    cats2 = create :script, :with_levels, name: 'cats2', family_name: 'cats', version_year: '2018'
+    cats2_course = create :single_unit_course, unit: cats2, family_name: 'cats', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(cats2_course)
     get :show, params: {script_id: 'cats', lesson_position: 1, id: 1}
     assert_redirected_to "/s/cats2/lessons/1/levels/1"
 
@@ -2018,13 +2151,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should indicate challenge levels as challenge levels" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script,
       properties: {challenge: true}
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       id: '1',
     }
@@ -2033,12 +2167,13 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should not indicate non-challenge levels as challenge levels" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
     get :show, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       id: '1',
     }
@@ -2047,14 +2182,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "lesson_extras redirects admins to root" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script, bonus: true
 
     sign_in create(:admin)
     get :lesson_extras, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       level_name: script_level.level.name
     }
@@ -2063,14 +2199,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "specifying a bonus level name will direct to that level" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
     script_level.bonus = true
     script_level.save!
     get :lesson_extras, params: {
-      script_id: script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       level_name: script_level.level.name
     }
@@ -2079,7 +2216,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "a bonus scriptlevel id takes precedence over level name" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level_by_id = create :script_level, lesson: lesson, script: script
@@ -2089,7 +2226,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level_by_id.save!
     script_level_by_name.save!
     get :lesson_extras, params: {
-      script_id: script_level_by_id.script,
+      course_course_name: script_level_by_id.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       id: script_level_by_id.id,
       level_name: script_level_by_name.level.name
@@ -2099,7 +2237,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "a bad bonus level name shows extras page" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level_by_id = create :script_level, lesson: lesson, script: script
@@ -2109,7 +2247,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level_by_id.save!
     script_level_by_name.save!
     get :lesson_extras, params: {
-      script_id: script_level_by_id.script,
+      course_course_name: script_level_by_id.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       id: script_level_by_id.id,
       level_name: script_level_by_name.level.name + "!!!"
@@ -2119,7 +2258,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows progress for current user if no section and user id" do
     sign_in @student
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
@@ -2127,7 +2266,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1
     }
     assert_response :success
@@ -2140,7 +2280,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows teacher no progress if no section and user id" do
     sign_in @teacher
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
@@ -2148,7 +2288,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1
     }
     assert_response :success
@@ -2161,15 +2302,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows instructor no progress if no section and user id" do
     sign_in @facilitator
-    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    lesson_group = create(:lesson_group, script: pl_course)
-    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
-    script_level = create :script_level, lesson: lesson, script: pl_course
+    pl_unit = create(:single_unit_course, :pl_course).first_unit
+    lesson_group = create(:lesson_group, script: pl_unit)
+    lesson = create(:lesson, script: pl_unit, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_unit
     script_level.bonus = true
     script_level.save!
-    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    create :user_level, user: @teacher, script: pl_unit, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1
     }
     assert_response :success
@@ -2182,7 +2324,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows teacher progress for student if section and user id" do
     sign_in @teacher
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
@@ -2190,7 +2332,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       section_id: @section.id,
       user_id: @student.id
@@ -2205,15 +2348,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "lesson extras shows progress to instructor for participant if section and user id" do
     sign_in @facilitator
-    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    lesson_group = create(:lesson_group, script: pl_course)
-    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
-    script_level = create :script_level, lesson: lesson, script: pl_course
+    pl_unit = create(:single_unit_course, :pl_course).first_unit
+    lesson_group = create(:lesson_group, script: pl_unit)
+    lesson = create(:lesson, script: pl_unit, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_unit
     script_level.bonus = true
     script_level.save!
-    create :user_level, user: @teacher, script: pl_course, level: script_level.level, best_result: 100
+    create :user_level, user: @teacher, script: pl_unit, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       section_id: @pl_section.id,
       user_id: @teacher.id
@@ -2229,15 +2373,16 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "lesson extras does not show teacher participant in pl course progress for participant even if section and user id" do
     teacher2 = create :teacher
     sign_in @teacher
-    pl_course = create(:script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    lesson_group = create(:lesson_group, script: pl_course)
-    lesson = create(:lesson, script: pl_course, lesson_group: lesson_group)
-    script_level = create :script_level, lesson: lesson, script: pl_course
+    pl_unit = create(:single_unit_course, :pl_course).first_unit
+    lesson_group = create(:lesson_group, script: pl_unit)
+    lesson = create(:lesson, script: pl_unit, lesson_group: lesson_group)
+    script_level = create :script_level, lesson: lesson, script: pl_unit
     script_level.bonus = true
     script_level.save!
-    create :user_level, user: teacher2, script: pl_course, level: script_level.level, best_result: 100
+    create :user_level, user: teacher2, script: pl_unit, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       section_id: @pl_section.id,
       user_id: teacher2.id
@@ -2251,7 +2396,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "lesson extras shows no progress if no current user" do
-    script = create :script
+    script = create(:script, :in_single_unit_course)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create :script_level, lesson: lesson, script: script
@@ -2259,7 +2404,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script_level.save!
     create :user_level, user: @student, script: script, level: script_level.level, best_result: 100
     get :lesson_extras, params: {
-      script_id: script_level.script,
+      course_course_name: script_level.script.original_unit_group.name,
+      unit_position: 1,
       lesson_position: 1,
       section_id: @section.id,
       user_id: @student.id
@@ -2434,6 +2580,85 @@ class ScriptLevelsControllerTest < ActionController::TestCase
         get :show, params: {course_course_name: course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}
         assert_response :success
       end
+    end
+  end
+  describe 'authorizing modular courses' do
+    let(:unit) {create :unit, :with_levels}
+    let(:original_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:modular_course) {create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development}
+    let(:unit_position) {1}
+    let(:lesson) {unit.lessons.first}
+    let(:lesson_position) {lesson.relative_position}
+    let(:level) {unit.lessons.first.script_levels.first}
+
+    let(:pilot_teacher) {create :teacher, pilot_experiment: "test-pilot"}
+
+    context 'when the modular course is stable' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user can view stable modular course'
+    end
+
+    context 'when the original course is stable' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      end
+      test_user_gets_response_for :show, response: :success, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user can view stable original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development modular course'
+    end
+
+    context 'when the original course is a pilot' do
+      before do
+        original_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view pilot original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development modular course'
+
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher can view pilot original_course'
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher cannot view in-development modular course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+    end
+
+    context 'when the modular course is a pilot' do
+      before do
+        modular_course.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'test-pilot')
+      end
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view in-development original course'
+      test_user_gets_response_for :show, response: :redirect, user: nil,
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'signed out user cannot view pilot modular course'
+
+      test_user_gets_response_for(:show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: original_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher cannot view in-development original course'
+      ) do
+        assert_includes(response.body, no_access_msg)
+      end
+      test_user_gets_response_for :show, response: :success, user: -> {pilot_teacher},
+                                  params: -> {{course_course_name: modular_course.name, unit_position: unit_position, lesson_position: lesson_position, id: level.position}},
+                                  name: 'pilot teacher can view pilot modular course'
     end
   end
 end

@@ -28,6 +28,7 @@ const {
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
+  LOCALIZATION_ENTRIES,
 } = require('./webpackEntryPoints');
 
 const WEBPACK_DEV_SERVER_PORT = 9000;
@@ -399,18 +400,21 @@ function createWebpackConfig({
     // Don't output >1000 lines of webpack build stats to the CI logs
     stats: envConstants.DEV ? 'normal' : 'errors-only',
     devtool: devtool({minify}),
-    entry: addPollyfillsToEntryPoints(
-      {
-        ...appsEntries,
-        ...CODE_STUDIO_ENTRIES,
-        ...INTERNAL_ENTRIES,
-        ...PEGASUS_ENTRIES,
-        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-        ...SHARED_ENTRIES,
-        ...OTHER_ENTRIES,
-      },
-      ['@babel/polyfill/noConflict', 'whatwg-fetch']
-    ),
+    entry: {
+      ...addPollyfillsToEntryPoints(
+        {
+          ...appsEntries,
+          ...CODE_STUDIO_ENTRIES,
+          ...INTERNAL_ENTRIES,
+          ...PEGASUS_ENTRIES,
+          ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+          ...SHARED_ENTRIES,
+          ...OTHER_ENTRIES,
+        },
+        ['@babel/polyfill/noConflict', 'whatwg-fetch']
+      ),
+      ...LOCALIZATION_ENTRIES,
+    },
     externals: [
       {
         jquery: 'var $',

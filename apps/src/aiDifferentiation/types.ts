@@ -23,4 +23,5 @@ export type Context = {
   lessonId?: number;
   unitId?: number;
   courseId?: number;
+  viewAsUserId?: number;
 };

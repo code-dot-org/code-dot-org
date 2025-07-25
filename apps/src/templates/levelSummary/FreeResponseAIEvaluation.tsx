@@ -5,8 +5,10 @@ import {
   StudentWorkEvaluation,
   evaluateStudentWork,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
@@ -30,11 +32,70 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
 > = ({responses, levelData, totalNumberOfStudents}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
-  const [evaluationCount, setEvaluationCount] = useState<number>(0);
   const [showDetailedAnalysis, setShowDetailedAnalysis] =
     useState<boolean>(false);
-  const evaluationComplete =
-    evaluationCount > 0 && responses.length === evaluationCount;
+  const [evaluationComplete, setEvaluationComplete] = useState<boolean>(false);
+  const [loadingExistingEvaluations, setLoadingExistingEvaluations] =
+    useState<boolean>(true);
+
+  useEffect(() => {
+    if (responses.length > 0) {
+      const addStudentNameAndResponseToEvaluations = (
+        evaluations: StudentWorkEvaluation[]
+      ): StudentWorkEvaluation[] => {
+        return evaluations.map(evaluation => ({
+          ...evaluation,
+          studentDisplayName:
+            responses.find(
+              response => response.studentId === evaluation.studentId
+            )?.studentDisplayName || '',
+          studentWork:
+            responses.find(
+              response => response.studentId === evaluation.studentId
+            )?.studentWork || '',
+        }));
+      };
+      const loadExistingEvaluations = async () => {
+        const promises = responses.map(response =>
+          fetchMostRecentUserLevelEvaluation(
+            response.studentId,
+            levelData.levelId,
+            levelData.unitId
+          ).catch(error => {
+            console.warn(`Failed for student ${response.studentId}`, error);
+            return null;
+          })
+        );
+        const loadedEvaluations = await Promise.all(promises);
+
+        const allExistingEvaluations = loadedEvaluations
+          .filter(
+            data =>
+              data !== null &&
+              !Array.isArray(data) &&
+              data.reasoning !== StudentWorkEvaluationStatus.NO_ATTEMPT
+          )
+          .map(({evaluation, reasoning, ...rest}) => ({
+            ...rest,
+            aiEvaluation: evaluation,
+            aiReasoning: reasoning,
+          }));
+
+        return allExistingEvaluations;
+      };
+
+      const fetchAndSetEvaluations = async () => {
+        setLoadingExistingEvaluations(true);
+        const evaluations = await loadExistingEvaluations();
+        const completeEvaluations =
+          addStudentNameAndResponseToEvaluations(evaluations);
+        setEvaluations(completeEvaluations);
+        setLoadingExistingEvaluations(false);
+      };
+
+      fetchAndSetEvaluations();
+    }
+  }, [responses, levelData.levelId, levelData.unitId]);
 
   const getAIEvaluations = async () => {
     analyticsReporter.sendEvent(
@@ -46,11 +107,34 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       PLATFORMS.BOTH
     );
     setEvaluationsPending(true);
-    const responsePromises = responses.map(async studentResponse => {
-      return evaluateStudentResponse(studentResponse);
+    // Filter responses to only those without an existing evaluation or where the prior evaluation is older than the response
+    const responsesWithoutUpdatedAiEvaluation = responses.filter(response => {
+      const evaluation = evaluations.find(
+        evaluation => evaluation.studentId === response.studentId
+      );
+      if (!evaluation) {
+        return true;
+      }
+      if (
+        response.updatedAt &&
+        evaluation.updatedAt &&
+        new Date(response.updatedAt) > new Date(evaluation.updatedAt)
+      ) {
+        return true;
+      }
+      return false;
     });
 
+    const responsePromises = responsesWithoutUpdatedAiEvaluation.map(
+      async studentResponse => {
+        return evaluateStudentResponse(studentResponse);
+      }
+    );
+
     await Promise.allSettled(responsePromises);
+
+    setEvaluationComplete(true);
+    setEvaluationsPending(false);
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
@@ -68,8 +152,19 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       unitId: levelData.unitId,
       id: aiResponse.id,
     };
-    setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
-    setEvaluationCount(prevCount => prevCount + 1);
+    // if there is an existing evaluation for this student, replace it
+    const existingEvaluationIndex = evaluations.findIndex(
+      evaluation => evaluation.studentId === studentAnswer.studentId
+    );
+    if (existingEvaluationIndex !== -1) {
+      setEvaluations(prevEvaluations => {
+        const updatedEvaluations = [...prevEvaluations];
+        updatedEvaluations[existingEvaluationIndex] = evaluation;
+        return updatedEvaluations;
+      });
+    } else {
+      setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
+    }
   };
 
   const openDetailedAnalysisHandler = () => {
@@ -84,17 +179,13 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
     setShowDetailedAnalysis(true);
   };
 
-  useEffect(() => {
-    if (evaluationComplete) {
-      setEvaluationsPending(false);
-    }
-  }, [evaluationComplete]);
-
   return (
     <div>
       <FreeResponseAiSummaryBox
         aiEvaluationHandler={getAIEvaluations}
-        disabled={!responses.length || evaluationsPending}
+        disabled={
+          !responses.length || evaluationsPending || loadingExistingEvaluations
+        }
         isPending={evaluationsPending}
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}

@@ -2,28 +2,6 @@
 
 [
   {
-    "name": "Chrome",
-    "browserName": "chrome",
-    "browserVersion": "109",
-    "platformName": "Windows 10",
-    "sauce:options": {
-      "screenResolution": "1280x1024",
-      "extendedDebugging": true
-    }
-  },
-  {
-    "name": "Safari",
-    "browserName": "Safari",
-    "browserVersion": "14",
-    "platformName": "macOS 11.00"
-  },
-  {
-    "name": "Firefox",
-    "browserName": "firefox",
-    "browserVersion": "115",
-    "platformName": "Windows 11"
-  },
-  {
     "name": "iPhone",
     "platformName": "iOS",
     "appium:platformVersion": "16.2",
@@ -46,5 +24,27 @@
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
+  },
+  {
+    "name": "Chrome",
+    "browserName": "chrome",
+    "browserVersion": "109",
+    "platformName": "Windows 10",
+    "sauce:options": {
+      "screenResolution": "1280x1024",
+      "extendedDebugging": true
+    }
+  },
+  {
+    "name": "Safari",
+    "browserName": "Safari",
+    "browserVersion": "14",
+    "platformName": "macOS 11.00"
+  },
+  {
+    "name": "Firefox",
+    "browserName": "firefox",
+    "browserVersion": "115",
+    "platformName": "Windows 11"
   }
 ]

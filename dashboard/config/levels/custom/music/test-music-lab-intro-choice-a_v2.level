@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:02.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice A\r\n\r\nFind the example music player that says \"Choice A\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice A"
+    },
+    "thumbnail_url": "https://images.code.org/b1ebaf0d4b0a26a9cdfb654ea8293917-Frame 1 (9).png",
+    "display_name": "Choice A",
+    "encrypted_exemplar_sources": "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\n",
+    "bubble_choice_description": "Click this option to hear a song with a **\"lo-fi groove\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:02.506+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-a\"},{\"changed_at\":\"2025-06-26 22:09:22 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-06-26 22:09:56 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-06-26 22:13:11 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

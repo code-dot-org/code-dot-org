@@ -5,9 +5,13 @@ dashboard_enable_pegasus: true
 
 db_cluster_id: localhost
 db_endpoint_writer: localhost
+db_endpoint_writer_port: 3306
 db_endpoint_proxy_writer: localhost
+db_endpoint_proxy_writer_port: 3306
 db_endpoint_proxy_reader: localhost
+db_endpoint_proxy_reader_port: 3306
 db_endpoint_proxy_reporting: localhost
+db_endpoint_proxy_reporting_port: 3306
 
 db_credential_admin: {"username":"root", "password":""}
 db_credential_writer: {"username":"root", "password":""}
@@ -65,6 +69,8 @@ jwk_private_key_data:
 openai_evaluate_rubric_api_key:
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
+
+google_gemini_student_learning_api_key: !Secret
 
 # Mapbox
 mapbox_upload_tileset:    'censustiles-dev'

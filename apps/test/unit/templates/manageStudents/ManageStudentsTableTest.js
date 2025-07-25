@@ -509,7 +509,7 @@ describe('ManageStudentsTable', () => {
             name: 'new student',
             age: 17,
             gender: 'f',
-            secretPicturePath: '/wizard.jpg',
+            secretPictureUrl: '/wizard.jpg',
             loginType: 'picture',
             isEditing: false,
           };

@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import DSCOImage from '@code-dot-org/component-library/image';
+
+import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 
 type ImageProps = {
   /** Image URL */
@@ -19,8 +21,10 @@ const Image: React.FC<ImageProps> = ({
   decoration,
   hasRoundedCorners,
 }) => {
+  const imgSrc = useMemo(() => src && getAbsoluteImageUrl(src), [src]);
+
   // Show placeholder text until a content entry is added
-  if (src == null) {
+  if (!imgSrc) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
@@ -33,7 +37,7 @@ const Image: React.FC<ImageProps> = ({
 
   return (
     <DSCOImage
-      src={src}
+      src={imgSrc}
       altText={altText}
       decoration={decoration}
       hasRoundedCorners={hasRoundedCorners}

@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSD",
+  "grade_levels": "6,7,8,9,10",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/0ff73f0d55b996203777d67222e55fe4-programming-with-music-lab.jpg",
+  "cs_topic": "art_and_design",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "This professional learning module is designed to prepare you to teach Code.org's Programming with Music Lab curriculum. This curriculum is an engaging, hands-on dive into the worlds of computer science, music, and problem solving.",
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

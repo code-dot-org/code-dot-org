@@ -92,28 +92,22 @@ module Pd
       # remove / from agenda url so module/1 => module1
       agenda&.tr!("/", "")
 
-      survey_name = survey_names[workshop.subject]
+      survey_name = survey_names[workshop.subject || workshop.course]
       render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: day, workshop_agenda: agenda)
     end
 
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
-    # If Build Your Own, redirect to its specific survey link. Otherwise, use Foorm.
     def new_post
-      course = Pd::Enrollment.find_by(code: params[:enrollment_code], user: current_user)&.workshop&.course
-      if course == COURSE_BUILD_YOUR_OWN
-        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
-      else
-        # If the post-survey has been already completed, will redirect to thanks page.
-        return new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
-      end
+      # If the post-survey has been already completed, will redirect to thanks page.
+      return new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
     def new_facilitator_post
       workshop = Pd::Workshop.find(params[:workshop_id])
       if workshop.course == COURSE_BUILD_YOUR_OWN
-        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
+        redirect_to CDO.studio_url BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY, CDO.default_scheme
       else
         new_facilitator_post_foorm(workshop)
       end

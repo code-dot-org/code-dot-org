@@ -20,7 +20,7 @@ import EndWorkshopPanel from './EndWorkshopPanel';
 import EnrollmentsPanel from './EnrollmentsPanel';
 import IntroPanel from './IntroPanel';
 import {PermissionPropType, WorkshopAdmin} from './permission';
-import SignUpPanel from './SignUpPanel';
+import WorkshopLinks from './WorkshopLinks';
 
 export class Workshop extends React.Component {
   static contextType = RouterContext;
@@ -137,7 +137,10 @@ export class Workshop extends React.Component {
           isWorkshopAdmin={isWorkshopAdmin}
         />
         {workshopState === 'Not Started' && (
-          <SignUpPanel workshopId={workshopId} />
+          <WorkshopLinks
+            workshopId={workshopId}
+            hasCustomRegistrationLink={!!workshop['registration_link']}
+          />
         )}
         <IntroPanel
           workshopId={workshopId}

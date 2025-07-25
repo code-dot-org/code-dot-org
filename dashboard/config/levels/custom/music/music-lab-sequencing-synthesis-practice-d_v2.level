@@ -1,0 +1,439 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T02:57:03.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "zb=55A:+ru%ksm$Qm{F6",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "chainsmokers_347aidan_up_and_down/bass_verse"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "twa`pvg@cjrQBe(r8hG?",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_347aidan_up_and_down/drums_main_beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "-}Cdx_PSJVfZ8Ol-b}g]",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_347aidan_up_and_down/guitar_main"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "VFeu,5Bh)2@a0y%/bk:/",
+                      "deletable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "=-QJcBx`hMZnAkZKfh[R",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_347aidan_up_and_down/synth_intro"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_347aidan_up_and_down/vocals_chop_1"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "i7?N7p/wOA.{VFCuANS=",
+                          "deletable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "4B?EnXL]DA`QhTdbi$!z",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_347aidan_up_and_down/bass_verse"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "=q]K4kH~CNr69Hf9#3/b",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_347aidan_up_and_down/drums_main_beat"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "#b7=~5wi.JU#!,@i].)M",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_347aidan_up_and_down/guitar_main"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "0;JUq),JbtqQ9t^VQ}oe",
+                              "deletable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "+)2W4j/meS]?gd4ml4/H",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_347aidan_up_and_down/synth_break"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "(mVWB:^^*w0UkJ?@6KRh",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_347aidan_up_and_down/vocals_chop_2"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sounds_together",
+                                  "id": "iUD@-M{,8upUoS#.cbU1",
+                                  "deletable": false,
+                                  "editable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "inputs": {
+                                    "code": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "j]!X2u;c63O#X$`]D6w-",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "chainsmokers_347aidan_up_and_down/bass_verse"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "2$`7|9B1M:GB=/*NAo%a",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_347aidan_up_and_down/drums_main_beat"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "gcO#Gw1A}*6AQvJ(temx",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "chainsmokers_347aidan_up_and_down/guitar_main"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sounds_together",
+                                      "id": ",P.W_{RmGsUG:r~xYUZ)",
+                                      "deletable": false,
+                                      "editable": false,
+                                      "extraState": {
+                                        "disableNextConnection": true
+                                      },
+                                      "inputs": {
+                                        "code": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "mMU?}EwQMb,7;z%/Q7#p",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
+                                            "fields": {
+                                              "sound": "chainsmokers_347aidan_up_and_down/synth_sustain"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "%=01:/Ki,Bj_R6o92/Jd",
+                                                "deletable": false,
+                                                "movable": false,
+                                                "editable": false,
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
+                                                "fields": {
+                                                  "sound": "chainsmokers_347aidan_up_and_down/vocals_chop_3"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "chainsmokers_347aidan_up_and_down",
+      "showSoundFilters": true,
+      "validationTimeout": 1
+    },
+    "long_instructions": "### Up & Down Remix\r\n\r\n**Define:** You've been hired to add effects to this remix of Up and Down by the Chainsmokers and 347aidan. Your requirements are:\r\n- The beat, bass, and guitar part must sound the same every time\r\n- The vocal and synth combinations must sound different each time\r\n\r\nYou will only need to add blocks between the `play together` blocks - the rest of the song is locked!\r\n\r\n**Prepare:** Plan what you want the beat, bass, and guitar section to sound like. Plan what you want the vocal and synth to sound like each time\r\n\r\n**Try:** Code your song! Listen to the example for an idea of what it could sound like!\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Make sure your code has:\r\n\r\n- At least 6 effect blocks",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6lfe2BzN4biKVeTvfD80/YL+3G5Bj3YmNK3/UM/xNlM4UFpxqaM8r0Ju1\nAECRzcycDraxxDvwhRR3E1WGqwBVYl2igtUE+clNUhMch5zn39NedMm86QQD\nSNE/vqliphrufSGnbbJ7q2y+Nx6eM5RXJ+lZZk4sqapSH+vKD0pDXXdgOc+W\nOubeIkjQXgAlbS41Zryd0OBtFrr6KBsLWVi2pCeqUOgXQU2VJNa6CcNbuhUA\nuKRPXjBGTcGCDU8dKQER1Qmb9HGbLhRAqTGQpmAI1AZO9nmPom/Pef7OXOL4\nRX/Z9C1TqOJsf25fplwjW/L5cad97UvZSTIUh/WrblV/Clfipzh1A9YJNurC\nBAK+WmiDixlkMlfWNLsuSBLee7QaGALUbKU5t8LtJDX8ZE3ZLiwbP4IpCyTS\n8lcADU7gSRsYNTnS2uNS7RFGIvFbfmGe0VjvMrohE2W0mRBH+9dP1WVjbrDp\nV3vvej7oOBGTkUFLxGJHPUBmgS8joQ99NyyqPTvWORacjbvKALa8OKL9oOtA\nUbFz5S2dPxsr0F02edHtaHrTdog8WnFMTZXPMi7HSfQQ3B1iZ1O7+zPHJ3Xm\nGmT2j4ysgSDSaBSiG4nTh/P2prwcevqwqHTD06jMvzh9vl7r8qhbyZlhtq14\np1sRg8iwIED7+cuAThUXb3WL0lENndvCoDtXXbxQOlpBfvFP9ngcVLc4swoU\n0OtVGohaceNDh9nBXzaToJ+TrMATi/wo+LHbz3wg+Clujo+qoZ65u4HsofjI\n84EhgF+28mdo92q8BKMow4lbmApEPuFmW+eKlX1H+gAClN+61m6AAWi4RgB/\nwSwXzqlltU1rx4WCN75UiNh/79/ONzhJgpPn7jOANBEtFALs3gab05MfrSrC\nMZ3dXlcGrURAvfk2wdeAvqEMNJAJpmUZ1xhJKI7QbTkvvEZOMtPdLsj37Blc\ns5LX+symy9X4ab36qqio1ZOoMnbffBYCT40Hv58DQh0fU4bc2VN2OS1Cxvyz\nBO2Q7fitvay5EGBgNxnfAt5aNZfgVswjs83zcGpu76/0Y9v4WJy4Z3/Pa+SZ\nedOrqemTmzBtRN2ndVlI1b+Ri/ShdCRUxC7ERuDy0fCuuT5O3T4tJv78oqSP\n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\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "display_name": "Up & Down Remix",
+    "bubble_choice_description": "You've been hired to add effects to this remix of Up and Down by the Chainsmokers and 347aidan",
+    "validations": [
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_89468262-3db1-4391-8cbd-712d91a40411",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot **breaks into a dance**! Nice job!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 14
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_64b030e2-b55f-47c8-8de5-967a0cce2625",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is **vibing** to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 9
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_3df0bf9c-134c-403f-a8ee-d2608a517daa",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is **grooving** to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          },
+          {
+            "name": "played_sounds",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_91cc81e6-ecb7-412d-b067-6ff6f96a620c",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "set_effect_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-sequencing-synthesis-practice-d_134a6341-e0b4-43ff-9fcc-f899f0b92ce1",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for:\n- ❌ at least 6 effects",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/chainsmokers_347aidan_up_and_down/chainsmokers_347aidan_up_and_down.jpg",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:03.859+00:00\",\"changed\":[\"cloned from \\\"music-lab-sequencing-synthesis-practice-d\\\"\"],\"cloned_from\":\"music-lab-sequencing-synthesis-practice-d\"},{\"changed_at\":\"2025-06-12 16:13:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 17:00:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

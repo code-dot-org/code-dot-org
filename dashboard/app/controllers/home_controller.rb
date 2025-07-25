@@ -141,8 +141,6 @@ class HomeController < ApplicationController
     @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
     @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
-    student_sections = current_user.sections_as_student.map(&:summarize_without_students)
-
     # Students and teachers will receive a @top_course for their primary
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
@@ -216,7 +214,7 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
+      @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_for_participant)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
@@ -248,7 +246,7 @@ class HomeController < ApplicationController
       end
     else
       @homepage_data[:isTeacher] = false
-      @homepage_data[:sections] = student_sections
+      @homepage_data[:sections] = current_user.sections_as_student.map(&:summarize_for_participant)
       @homepage_data[:studentId] = current_user.id
       @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
       @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)

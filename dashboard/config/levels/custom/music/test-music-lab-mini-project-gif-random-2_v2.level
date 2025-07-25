@@ -1,0 +1,389 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:21.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Random Block\r\n\r\nPenny used `play random` to choose different beat tracks as the song played. Let's try to make the bass and lead tracks random as well:\r\n\r\n1) Drag a <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play random</code> block inside the second `repeat` loop. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox---id:repeat_workspace_1)\r\n2) Move the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> track inside, then add two more tracks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id:repeat_workspace_1)\r\n\r\n![](https://images.code.org/cec44314121a7784b6e127f3e3113976-image-1751981482218.png)\r\n\r\n3) Drag another <code style=\"background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">play random</code> block inside the third `repeat` loop. [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox---id:repeat_workspace_2)\r\n4) Move the <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A; margin-right: 2px\"></i> Lead </span> track inside, then add two more tracks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox---id:repeat_workspace_2)\r\n\r\nPress the <code style=\"background-color: #fca401; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">Run</code> button! You should a different selection of beat, bass, and lead tracks as the song plays!\r\n\r\n![](https://images.code.org/72853e7ec0dd384e1d5699a2398ac7e0-image-1745344961777.png)\r\n\r\n",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_random"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "repeat_simple2",
+                        "id": "repeat_simple2",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "times": 10
+                        },
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sounds_random",
+                              "id": "play_sounds_random",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "acoustic_arcade/drum_beat_cabana"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "O0j#JH{C7l%6uP@2nw~P",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "acoustic_arcade/drum_beat_conga"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "~IF~:x$Mrtn_#0fcYy=N",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "acoustic_arcade/drum_beat_hands"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "repeat_simple2",
+                            "id": "repeat_workspace_1",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "times": 10
+                            },
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "g!1$Q!L;7--F9j@gx02:",
+                                  "deletable": false,
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
+                                  "fields": {
+                                    "sound": "acoustic_arcade/bass_elevator"
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "repeat_simple2",
+                                "id": "repeat_workspace_2",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "times": 10
+                                },
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "k`pZ`)c^;U7-((waHAed",
+                                      "deletable": false,
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
+                                      "fields": {
+                                        "sound": "acoustic_arcade/synth_cloud"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "validationTimeout": 1,
+      "sortUnrestrictedPacksByType": false,
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "acoustic_arcade/drum_beat_cabana"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_random_toolbox",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_40f521c7-3d6e-46d0-b843-5be27637aee1",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot's head explodes - it's just so RANDOM!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          },
+          {
+            "name": "played_sounds",
+            "value": 55
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_19123c1f-00a0-4ea1-9054-127d88edadb9",
+        "message": "sparks are flying out of <i class=\"fa-solid fa-robot\"></i> DJ Robot's head...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          },
+          {
+            "name": "played_sounds",
+            "value": 28
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_ebf47408-645a-43d4-9e26-517b724bec01",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:3"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "lead:3"
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_2acf7d41-e9c5-40f6-b04c-e164d8dcdc01",
+        "message": "Make sure you add your different bass, beat, and lead tracks! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_toolbox)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:3"
+          }
+        ],
+        "callout": "flyout-id:play_toolbox"
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_529e2188-050f-4128-8dfd-86a6626b8e79",
+        "message": "Make sure your your code has two play random blocks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:2"
+          }
+        ],
+        "callout": "flyout-id:play_random_toolbox"
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-random-2_df62a875-5e37-4aa0-8cc2-2d8a8bca75f3",
+        "message": "Not sure where to start? Try adding a play random block to your Bass loop [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_random_toolbox---id:repeat_workspace_1)",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sounds_random:1"
+          }
+        ],
+        "callout": "flyout-id:play_random_toolbox---id:repeat_workspace_1"
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "encrypted_exemplar_sources": "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\n1fYjUJ25sVm8MPm0XNAIJ7ml0uTkdT9f+q8=\n",
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:21.176+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-random-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-random-2\"},{\"changed_at\":\"2025-07-08 13:28:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:31:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

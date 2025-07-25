@@ -1,0 +1,61 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-05-31T02:56:03.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Choice G\r\n\r\nFind the example music player that says \"Choice G\" below these instructions. Press the Play button on the player to hear the song.\r\n\r\nRefer to your activity guide to see if it would work for any client's needs.\r\n\r\nOnce you're done, press Continue to return back to your choices and pick a different song.\r\n\r\n",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "beethoven_symphony_no_6",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+        }
+      },
+      "showSoundFilters": true,
+      "showSoundsPanelInSoundsMode": true,
+      "sortUnrestrictedPacksByType": true,
+      "allowChangeStartingPlayheadPosition": true,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": false,
+      "validationMode": "default",
+      "playerTitle": "Choice G"
+    },
+    "display_name": "Choice G",
+    "thumbnail_url": "https://images.code.org/7b4d46640230aa16863cc2819604d75e-Screenshot 2025-04-02 at 7.41.41 AM.png",
+    "encrypted_exemplar_sources": "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\ncdqmXZ3UttO/s2v+PLlrDg==\n",
+    "bubble_choice_description": "Click this option to hear a song with a **\"hip-hop remix of classical music\"** from your Song Portfolio. After listening to the song, you can decide if it would meet the needs of one of your clients",
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:03.912+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-choice-g\\\"\"],\"cloned_from\":\"test-music-lab-intro-choice-g\"}]"
+}]]></config>
+  <blocks/>
+</Music>

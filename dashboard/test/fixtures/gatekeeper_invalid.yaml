@@ -1,11 +1,3 @@
-milestone:
-  - rule:
-  - rule:
-    where:
-      script_id: 38
-    value: true
-
-feature2:
-  - rule:
-    value: true
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:156d22edc6a34a07dff2f00a79b80d65f6a29b99afb35646ce72ec72a6d13451
+size 116

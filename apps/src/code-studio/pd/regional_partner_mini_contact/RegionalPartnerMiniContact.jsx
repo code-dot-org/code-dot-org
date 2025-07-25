@@ -103,11 +103,22 @@ export class RegionalPartnerMiniContact extends React.Component {
           errors: results.responseJSON.errors.form_data,
           submitting: false,
         });
+
+        if (
+          results.responseJSON.errors.form_data.length === 1 &&
+          results.responseJSON.errors.form_data.includes('regionalPartner')
+        ) {
+          analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
+            'source page id': this.props.sourcePageId,
+            'regional partner': null,
+          });
+        }
       }
     } else if (results.responseJSON) {
       this.setState({submitted: true, submitting: false});
       analyticsReporter.sendEvent(EVENTS.SUBMIT_RP_CONTACT_FORM_EVENT, {
         'source page id': this.props.sourcePageId,
+        'regional partner': results.responseJSON['regional_partner_name'],
       });
     } else {
       this.setState({submitted: false, submitting: false});

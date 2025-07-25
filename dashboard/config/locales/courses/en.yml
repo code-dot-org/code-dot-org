@@ -4342,7 +4342,9 @@ en:
           version_title: "'25-'26"
         self-paced-pl-csp-2025:
           title: Teaching CS Principles
-          description_short: ''
+          description_short: 'Welcome to Code.org''s free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you''ll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            '
           description_student: |-
             ## Welcome
 
@@ -4367,7 +4369,7 @@ en:
             ### Pick your content
 
             ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
-          version_title: ''
+          version_title: "'25-'26"
         vpl-csa-2025:
           title: CSA Virtual Professional Learning '25-'26
           description_short: ''
@@ -5468,11 +5470,11 @@ en:
           description_teacher: ''
           version_title: '2025'
         pre-express-2025:
-          title: pre-express-2025
+          title: Pre Express 2025
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         artificial-intelligence-foundations-2025:
           title: AI Foundations (AIF)
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
@@ -5497,19 +5499,21 @@ en:
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
         self-paced-pl-ai-foundations-2025:
-          title: Teaching AI Foundations
+          title: EARLY ACCESS - Teaching AI Foundations
           description_short: ''
-          description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
-          description_teacher: |-
+          description_student: |+
+            This is an **EARLY ACCESS** version of the PL for AI Foundations. The updated self-paced PL modules can be found at https://studio.code.org/courses/teaching-ai-foundations-2025/.
+            <br>
+            <br>
+
+          description_teacher: |+
+            This is an **EARLY ACCESS** version of the PL for AI Foundations. The updated self-paced PL modules can be found at https://studio.code.org/courses/teaching-ai-foundations-2025/.
+            <br>
+            <br>
+
+
             AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
 
-            ## Prerequisites
-            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
-
-            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
-
-            ## Did you know?
-            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
           version_title: ''
         teaching-k5-music-lab-2025:
           title: teaching-k5-music-lab-2025
@@ -5522,7 +5526,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: 25 - 26
+          version_title: "'25 - '26"
         codechella2025:
           title: Codechella 2025
           description_short: ''
@@ -5589,7 +5593,7 @@ en:
           version_title: ''
         teaching-csd-unit1-2025:
           title: Teaching Problem Solving and Computing
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Problem Solving and Computing. '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'25-'26"
@@ -5624,7 +5628,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-unit2-2025:
           title: Teaching Web Development
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Web Development. '
           description_student: |-
             ## Welcome
             Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 2- Teaching Web Development** with your students.
@@ -5641,13 +5645,13 @@ en:
             * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 2 - Teaching Web Development. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
-          version_title: ''
+          version_title: "'25-'26"
         teaching-csd-unit3-2025:
           title: Preparing to Teach Interactive Animations and Games
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Interactive Animations & Games. '
           description_student: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           description_teacher: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
-          version_title: 25-26
+          version_title: "'25-'26"
         teaching-csd-unit4-2025:
           title: Teaching the Design Process
           description_short: ''
@@ -5656,7 +5660,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-unit5-2025:
           title: Teaching Data and Society
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Teaching Data and Society.
           description_student: |-
             ## Welcome
             Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 5 - Teaching Data and Society** with your students.
@@ -5676,7 +5680,7 @@ en:
           version_title: "'25-'26"
         teaching-csd-physical-computing-2025:
           title: Teaching Creating Apps with Devices (Circuit Playground)
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s Creating Apps with Devices (Circuit Playground). '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'25-'26"
@@ -5710,13 +5714,13 @@ en:
           version_title: ''
         teaching-csd-microbit-2025:
           title: Preparing to Teach Creating Apps for Devices (micro:bit)
-          description_short: ''
+          description_short: " After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students."
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: 25-26
         teaching-csd-aiml-2025:
           title: Teaching AI and Machine Learning
-          description_short: ''
+          description_short: 'This professional learning module is designed to help you prepare to teach Code.org''s AI and Machine Learning. '
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           version_title: "'25-'26"
@@ -5796,10 +5800,10 @@ en:
           version_title: "'25-'26"
         teaching-coding-with-music-2025:
           title: Teaching Coding with Music
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: 25 - 26
+          description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music course.\n\n##### Coding with Music is a creative, engaging way to introduce core computer science concepts using music as the hook. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers for grade 3-5 students. Coding with Music can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**"
+          description_student: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music curricula.\n\n##### Coding with Music is designed as standalone coursework for grade 3-5 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n"
+          description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Coding in Music curricula.\n\n##### Coding with Music is designed as standalone coursework for grade 3-5 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n"
+          version_title: "'25-'26"
         career-journeys-for-elementary-2025:
           title: Career Journeys for Elementary
           description_short: In this lesson, students explore CS and AI careers and create a personalized project in Sprite Lab that shows how technology is used in a job they care about.
@@ -5853,10 +5857,10 @@ en:
 
             ## Did you know?
             This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-foundations-ai-programming-2025:
           title: Teaching Foundations of AI Programming
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Foundations of AI Programming unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Foundations of AI Programming unit.
 
@@ -5877,7 +5881,7 @@ en:
             #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
 
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Foundations of AI Programming unit. However, you can engage with the content in the order that best meets your needs.
-          version_title: ''
+          version_title: "'25-'26"
         idaho-digital-literacy-2025:
           title: Idaho Digital Literacy
           description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
@@ -5931,16 +5935,16 @@ en:
           description_short: Welcome to Code.org's free self-paced online educator course for getting started with Computer Science Fundamentals!
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
-          version_title: 25 - 26
+          version_title: "'25-'26"
         teaching-fabric-of-internet-2025:
           title: Teaching Fabric of the Internet
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: 25 - 26
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          description_student: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          description_teacher: This professional learning module is designed to help you prepare to teach Code.org's Fabric of the Internet and AI unit. This is a part of the AI Foundations curriculum.
+          version_title: "'25 - '26"
         teaching-ai-systems-that-power-it-2025:
           title: Teaching AI and the Systems that Power It
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's AI and the Systems that Power It unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
 
@@ -5988,7 +5992,7 @@ en:
           version_title: ''
         teaching-insights-from-data-and-ai-2025:
           title: Teaching Insights from Data and AI
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Insights from Data and AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
 
@@ -6012,7 +6016,7 @@ en:
           version_title: ''
         teaching-problem-solving-with-ai-2025:
           title: Teaching Problem-Solving with AI
-          description_short: ''
+          description_short: This professional learning module is designed to help you prepare to teach Code.org's Problem Solving with AI unit. This is a part of the AI Foundations curriculum.
           description_student: |-
             #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from the Teaching Problem-Solving with AI Unit.
 
@@ -6034,6 +6038,17 @@ en:
 
             #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Teaching Problem-Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
           version_title: ''
+        ui-test-course-2017:
+          title: ui-test-course-2017
+          description_short: This is a short description.
+          description_student: This is a student description.
+          description_teacher: This is a teacher description.
+          version_title: ''
+        ui-test-course-2019:
+          title: ui-test-course-2019
+          description_short: This is a short description.
+          description_student: This is a student description.
+          description_teacher: This is a teacher description.
         focus-on-hardware-2025:
           title: Focus on Hardware '25-'26 (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that explore how computers and smaller physical devices work
@@ -6157,4 +6172,81 @@ en:
           description_short: ''
           description_student: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
           description_teacher: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **Circuit Playground** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **micro:bit** devices by assigning the [Creating Apps with Devices - micro:bit unit](/s/microbit). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to Circuit Playground's - [click here](https://code.org/maker/circuitplayground) for more information about using Circuit Playground's in your classroom\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          version_title: ''
+        programming-with-music-lab-2025:
+          title: Programming with Music Lab (2025)
+          description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
+          description_student: Learn how to program by creating music!
+          description_teacher: |-
+            This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
+
+            ::: details [**Professional Development**]
+            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab](https://studio.code.org/courses/self-paced-pl-teaching-computer-science-discoveries-music-lab/units/1?section_id=5963300). The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
+            :::
+          version_title: "'25-'26"
+        allthelessonplans:
+          title: All The Lesson Plans
+          description_short: ''
+          description_student: Student overview of the course.
+          description_teacher: Teacher overview of the course.
+          version_title: '2020'
+        original-allthettsthings-course:
+          title: original-allthettsthings-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        facilitator-onboarding-2025:
+          title: Facilitator Onboarding
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        facilitator-training-2025:
+          title: 'Facilitator Training '
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-intro-java-2025:
+          title: 'Introduction to Java for Teachers '
+          description_short: This professional learning module is designed to introduce you to basic Java concepts.
+          description_student: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          description_teacher: |-
+            ##Welcome!
+            #### This professional learning module is designed to introduce you to basic Java concepts.
+
+            #### Whether you're brand new to Java or just need a refresher, you'll find resources and activities to help build your confidence and skills.
+
+            ### **Find the learning that works for you**
+
+            #### **Go at your own pace:**  This self-paced learning experience puts you in control. Suggested times are provided for each lesson, but feel free to spend more or less time as needed.
+
+            #### **Pick your content:** While the lessons are arranged in a recommended sequence for teachers new to Code.org and Java, you’re encouraged to explore them in the order that works best for you.
+          version_title: "'25-'26"
+        foundations-generative-ai-unplugged:
+          title: Foundations of Generative AI (Unplugged)
+          description_short: Foundations of Generative AI (Unplugged)
+          description_student: Learn how chatbots and large-language models work behind the scenes!
+          description_teacher: |-
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+            This unit is the **fully unpluggedd** version of our Foundations of Generative AI unit. It is designed for classrooms where students do not have access to technology, but teachers are still expected to use technology to run slides, show videos, etc. To see the extended unit with additional lessons and on-device levels, [you can view the unit here](http://studio.code.org/courses/foundations-gen-ai?viewAs=Instructor).
+
+            ##Just Starting this Unit?
+
+            We recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           version_title: ''

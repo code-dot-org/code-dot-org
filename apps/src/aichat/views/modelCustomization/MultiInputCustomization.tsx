@@ -74,7 +74,7 @@ const MultiInputCustomization: React.FunctionComponent<{
               size="s"
               onClick={onAdd}
               iconLeft={{iconName: 'plus'}}
-              disabled={!newItem || isReadOnly}
+              disabled={!newItem.trim() || isReadOnly}
             />
           </div>
         </>

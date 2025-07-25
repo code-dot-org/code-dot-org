@@ -40,7 +40,7 @@ describe('EditorialCard component', () => {
     const img = document.querySelector('img');
 
     expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute('src', image);
+    expect(img).toHaveAttribute('src', image + '?fm=avif');
   });
 
   it('renders card in "vertical_with_image" layout with image', () => {
@@ -51,7 +51,7 @@ describe('EditorialCard component', () => {
     const img = document.querySelector('img');
 
     expect(img).toBeInTheDocument();
-    expect(img).toHaveAttribute('src', image);
+    expect(img).toHaveAttribute('src', image + '?fm=avif');
   });
 
   it('renders card in "vertical_with_icon" layout with icon', () => {

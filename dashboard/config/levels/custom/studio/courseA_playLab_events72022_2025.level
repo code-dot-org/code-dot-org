@@ -67,7 +67,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:28:10.434+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2024\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:28:10.434+00:00\",\"changed\":[\"cloned from \\\"courseA_playLab_events72022_2024\\\"\"],\"cloned_from\":\"courseA_playLab_events72022_2024\"},{\"changed_at\":\"2025-06-25 14:12:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -130,50 +130,49 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="when_run"/>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" id="{wCB8@gv^]e]F0v5YGQ*" x="0" y="81">
           <field name="VALUE">up</field>
         </block>
-        <block type="studio_whenSpriteClicked">
+        <block type="studio_whenSpriteClicked" id="N,eR].o#)p:NMh1{hcvK" x="0" y="176">
           <field name="SPRITE">1</field>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" id="bIOurD:7C=XN#%g9+Tw@" x="0" y="274">
           <field name="SPRITE1">1</field>
           <field name="SPRITE2">0</field>
         </block>
-        <block type="studio_setBackground">
+        <block type="studio_setBackground" id="x6:6LE)3474vHZR-.tR$" x="0" y="372">
           <field name="VALUE">random</field>
         </block>
-        <block type="studio_setSprite">
+        <block type="studio_setSprite" id="i^@;};7Mcm_nVdBNRqa=" x="0" y="470">
           <field name="VALUE">"visible"</field>
           <field name="SPRITE">0</field>
         </block>
-        <block type="studio_move">
+        <block type="studio_move" id="6j5F?%;z1I9TTbvF`=c0" x="0" y="568">
           <field name="SPRITE">1</field>
           <field name="DIR">1</field>
         </block>
-        <block type="studio_playSound">
+        <block type="studio_playSound" id="6[,*RUyuIaEr[gzdvoS^" x="0" y="666">
           <field name="SOUND">random</field>
         </block>
-        <block type="studio_wait">
+        <block type="studio_wait" id=".=K,!BB1N26Hh*C_#vO?" x="0" y="745">
           <field name="VALUE">1000</field>
         </block>
-        <block type="studio_setSpriteEmotion">
+        <block type="studio_setSpriteEmotion" id="284H=FrU-Y8.y,0tXbn0" x="0" y="824">
           <field name="SPRITE">0</field>
           <field name="VALUE">0</field>
         </block>
-        <block type="studio_changeScore"/>
-        <block type="studio_saySpriteChoices">
+        <block type="studio_changeScore" id="(0|:,.sQW..U[%NijO+^" x="0" y="922"/>
+        <block type="studio_saySpriteChoices" id="tT(MN2o/.@9N:yX{=3m!" x="0" y="1001">
           <field name="SPRITE">0</field>
           <field name="VALUE">Hi there.</field>
         </block>
-        <block type="studio_vanish">
+        <block type="studio_vanish" id="@4cv6W+-%0#Mn%PyL_?Y" x="0" y="1099">
           <field name="SPRITE">0</field>
         </block>
-        <block type="controls_repeat_simplified_dropdown">
+        <block type="controls_repeat_simplified_dropdown" id="ak_NrzWhVU2%pOkDKE3u" x="0" y="1197">
           <field name="TIMES" config="3-10">5</field>
         </block>
-        <block type="comment">
+        <block type="comment" id="^1G}5=Rr+r[D([^;p36E" x="0" y="1303">
           <field name="TEXT"/>
         </block>
       </xml>

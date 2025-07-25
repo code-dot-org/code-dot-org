@@ -27,6 +27,8 @@ class ActivitiesController < ApplicationController
     solved = (params[:result] == 'true')
     script_name = ''
 
+    @unit_group = UnitGroup.get_from_cache(params[:course_id]) if params[:course_id]
+
     if params[:script_level_id]
       @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
       @level = params[:level_id] ? Unit.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
@@ -54,9 +56,13 @@ class ActivitiesController < ApplicationController
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     if params[:program] && sharing_allowed
       share_failure = nil
+      # True if STUDIO game. The other open-ended 'game's geared for young users
+      # are channel-backed and filtered in loadProjectBackedLevel_ in project.js.
+      # Note that STUDIO games also include Star Wars (droplet) which is not a Blockly lab.
       if @level.game.sharing_filtered?
+        project_type = 'playlab'
         begin
-          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
+          share_failure = ShareFiltering.find_share_failure(params[:program], locale, project_type)
         rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
@@ -144,6 +150,7 @@ class ActivitiesController < ApplicationController
       script_level: @script_level,
       level: @level,
       solved?: solved,
+      unit_group: @unit_group,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
       new_level_completed: @new_level_completed,

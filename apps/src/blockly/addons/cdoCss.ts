@@ -12,10 +12,6 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
       padding: 0px;
       margin: 0px;
     }
-    .blocklyDropdownField:focus {
-      outline: -webkit-focus-ring-color auto 5px;
-      border-radius: 2px;
-    }
     .blocklyFieldGrid .blocklyFieldGridItem img {
       opacity: 1;
       object-fit: contain;

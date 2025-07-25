@@ -14,7 +14,8 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     @sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
-    @script_level = create :script_level, levels: [@bubble_choice]
+    script = create(:script, :in_single_unit_course)
+    @script_level = create :script_level, script: script, levels: [@bubble_choice]
 
     @sublevel_with_contained = create :level, name: 'sublevel_with_contained', display_name: 'Sublevel with contained', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
     @sublevel_contained_level = create :free_response, name: 'Sublevel contained level'
@@ -296,7 +297,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
-    script_with_examples = create(:script)
+    script_with_examples = create(:script, :in_single_unit_course)
     lesson_group_with_examples = create(:lesson_group, script: script_with_examples)
     lesson_with_examples = create(:lesson, lesson_group: lesson_group_with_examples, script: script_with_examples)
     sublevel1_with_examples = create :dance, :with_example_solutions

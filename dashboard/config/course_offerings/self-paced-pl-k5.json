@@ -5,16 +5,19 @@
   "assignable": true,
   "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
-  "grade_levels": null,
+  "grade_levels": "K,1,2,3,4,5",
   "header": "self_paced",
-  "image": null,
-  "cs_topic": null,
+  "image": "https://images.code.org/d85c9deb959479b9d0a7155056dd7d8f-KIDS.avif",
+  "cs_topic": "programming",
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "After completing this professional learning experience, you'll be comfortable with basic K-5 grade coding concepts.",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2024-04-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": "self-paced-pl-k5",
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

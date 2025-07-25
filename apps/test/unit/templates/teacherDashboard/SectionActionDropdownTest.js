@@ -4,7 +4,6 @@ import React from 'react';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -154,7 +153,8 @@ describe('SectionActionDropdown', () => {
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
     const sectionId = wrapper.instance().props.sectionData.id;
-    const expectedUrl = '/sections/' + sectionId + '/edit';
+    const expectedUrl =
+      '/teacher_dashboard/sections/' + sectionId + '/settings';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
@@ -167,9 +167,9 @@ describe('SectionActionDropdown', () => {
     );
     const sectionId = wrapper.instance().props.sectionData.id;
     const expectedUrl =
-      '/sections/' +
+      '/teacher_dashboard/sections/' +
       sectionId +
-      '/edit?redirectToPage=my-professional-learning';
+      '/settings?redirectToPage=my-professional-learning';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
@@ -177,11 +177,6 @@ describe('SectionActionDropdown', () => {
   });
 
   it('sends selected user to the new teacher dashboard settings page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
@@ -192,15 +187,9 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl
     );
-    jest.restoreAllMocks();
   });
 
   it('sends selected user to the new teacher dashboard roster page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
@@ -210,6 +199,5 @@ describe('SectionActionDropdown', () => {
     expect(wrapper.find('.manage-students-link').props().href).to.equal(
       expectedUrl
     );
-    jest.restoreAllMocks();
   });
 });

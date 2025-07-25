@@ -108,6 +108,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       />,
       <li key={'certificates'}>
         <button
+          id="ui-test-print-certificates"
           type="button"
           className={styles.dropdownMenuItem}
           onClick={onClickPrintCerts}
@@ -118,6 +119,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       </li>,
       <li key={'archive'}>
         <button
+          id="ui-test-archive-section"
           type="button"
           className={styles.dropdownMenuItem}
           onClick={() => onArchiveClick(dispatch, section)}
@@ -137,6 +139,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       options.push(
         <li key={'delete'}>
           <button
+            id="ui-test-delete-section"
             type="button"
             className={styles.dropdownMenuItem}
             onClick={() => onDeleteClick(onDeleteClickCallback, section.id)}

@@ -2,7 +2,7 @@ name 'self-paced-equity-U1L1-CFU'
 title 'Check for Understanding'
 description 'These examples are specific to computer science. Match the correct example to each term.'
 height'300'
-width'450'
+width'600'
 
 
 question 'Inequality'

@@ -103,7 +103,7 @@ group :development, :test do
   gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'timecop'
+  gem 'timecop', '>= 0.9.4' # required for Ruby 3.1 support
 
   # For UI testing.
   gem 'cucumber'
@@ -189,7 +189,7 @@ gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -210,8 +210,13 @@ gem 'retryable' # retry code blocks when they throw exceptions
 
 # Used by `uglifier` to minify JS assets in the Asset Pipeline.
 gem 'execjs'
+
 # JavaScript runtime used by ExecJS.
-gem 'mini_racer'
+# TODO: Either resume installing in all environments once Ubuntu and Mac OS
+# support the same version of mini_racer, or remove this dependency entirely
+# once node is installed in production. For more details, see
+# https://codedotorg.atlassian.net/browse/INF-708
+gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
 gem 'jwt', '~> 2.7.0'
 
@@ -236,7 +241,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 gem 'aws-sdk-acm'
 gem 'aws-sdk-applicationautoscaling'
 gem 'aws-sdk-autoscaling'
-gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
+gem 'aws-sdk-bedrockagentruntime'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -333,7 +338,8 @@ require_pg = lambda do
 end
 
 install_if require_pg do
-  gem 'pg', require: false
+  # v1.3.0 required to support Postgres 14
+  gem 'pg', '~> 1.3.0', require: false
 end
 
 gem 'activerecord-import', '~> 1.0.3'
@@ -379,6 +385,8 @@ gem "csv"
 gem "async", "~> 1.32"
 
 gem "webrick", "~> 1.9"
+
+gem 'rubyzip'
 
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|

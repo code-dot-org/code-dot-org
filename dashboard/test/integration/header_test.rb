@@ -36,7 +36,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
           'Districts'  => '//test.code.org/administrators',
           'Stats'      => '//test.code.org/promote',
           'Donate'     => '//test.code.org/donate',
-          'Incubator'  => '//test-studio.code.org/incubator',
+          'Incubator'  => '//test.code.org/incubator',
           'About'      => '//test.code.org/about'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
@@ -92,7 +92,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
             'Districts'        => '//test.code.org/administrators',
             'Stats'            => '//test.code.org/promote',
             'Donate'           => '//test.code.org/donate',
-            'Incubator'        => '//test-studio.code.org/incubator',
+            'Incubator'        => '//test.code.org/incubator',
             'Help and support' => 'https://support.code.org',
             'Report a problem' => 'https://support.code.org/hc/en-us/requests/new',
           }.each do |text, href|
@@ -195,7 +195,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
           'Course Catalog'        => '//test-studio.code.org/catalog',
           'Projects'              => '//test-studio.code.org/projects',
           'Professional Learning' => '//test-studio.code.org/my-professional-learning',
-          'Incubator'             => '//test-studio.code.org/incubator'
+          'Incubator'             => '//test.code.org/incubator'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
         end
@@ -270,7 +270,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
           'My Dashboard'          => '//test-studio.code.org/home',
           'Course Catalog'        => '//test.code.org/students',
           'Projects'              => '//test-studio.code.org/projects',
-          'Incubator'             => '//test-studio.code.org/incubator'
+          'Incubator'             => '//test.code.org/incubator'
         }.each do |text, href|
           must_select 'a[href=?]', href, text
         end

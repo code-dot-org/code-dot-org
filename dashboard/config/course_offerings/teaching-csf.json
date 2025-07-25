@@ -1,20 +1,23 @@
 {
   "key": "teaching-csf",
-  "display_name": "teaching-csf",
+  "display_name": "Teaching Computer Science Fundamentals",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "curriculum_type": "Professional Learning",
+  "marketing_initiative": "CSF",
+  "grade_levels": "K,1,2,3,4,5",
   "header": null,
-  "image": null,
+  "image": "https://images.code.org/dc5432fab8338bcc1fecf293920f8cd1-self-paced-pl-tile-csf.avif",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
+  "description": "Free self-paced online course for educators for getting started with Computer Science Fundamentals!",
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
+  "published_date": "2025-06-30 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

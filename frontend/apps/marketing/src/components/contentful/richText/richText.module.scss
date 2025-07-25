@@ -1,7 +1,13 @@
 @use '@code-dot-org/component-library-styles/font.scss' as font;
 
 .richText {
-  & > * {
+  & > br:last-child {
+    display: none;
+  }
+
+  & > *,
+  .richTextParagraph,
+  .richTextList {
     margin: 1rem 0 0;
 
     &:first-child,
@@ -9,7 +15,8 @@
       margin: 0;
     }
 
-    p {
+    p,
+    .richTextParagraph {
       margin: 0;
     }
   }
@@ -22,12 +29,17 @@
     font-weight: font.$semi-bold-font-weight;
   }
 
-  p {
+  p,
+  .richTextParagraph {
     white-space: pre-wrap;
   }
 
+  .richTextList {
+    display: inline-flex;
+  }
+
   ol {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
@@ -64,6 +76,7 @@
         td {
           border-collapse: collapse;
           padding: 0.75rem 1rem;
+          vertical-align: top;
           text-align: start;
         }
 

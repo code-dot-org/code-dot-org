@@ -4,16 +4,17 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import aichatI18n from '../locale';
-import {ChatEvent} from '../types';
+import {ChatAsset, ChatEvent} from '../types';
 
 import ChatEventView from './ChatEventView';
+import WaitingAnimation from './WaitingAnimation';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
   events: ChatEvent[];
   isTeacherView?: boolean;
+  buildAssetUrl?: (asset: ChatAsset) => string;
 }
 
 /**
@@ -22,6 +23,7 @@ interface ChatEventsListProps {
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
+  buildAssetUrl,
 }) => {
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
@@ -105,6 +107,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             event={event}
             key={event.timestamp}
             isTeacherView={isTeacherView}
+            buildAssetUrl={buildAssetUrl}
           />
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
@@ -124,23 +127,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     </div>
   );
-};
-
-// Exported for AI Tutor 2 (experimental). Pull this out into a separate component if needed.
-export const WaitingAnimation: React.FunctionComponent<{
-  shouldDisplay: boolean;
-  className?: string;
-}> = ({shouldDisplay, className}) => {
-  if (shouldDisplay) {
-    return (
-      <img
-        src="/blockly/media/aichat/typing-animation.gif"
-        alt={aichatI18n.chatEventDescriptions_waitForResponse()}
-        className={classNames(moduleStyles.waitingForResponse, className)}
-      />
-    );
-  }
-  return null;
 };
 
 export default ChatEventsList;

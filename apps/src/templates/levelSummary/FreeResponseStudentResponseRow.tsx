@@ -7,6 +7,7 @@ import {
   FeedbackData,
   logAiInteractionFeedback as logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
+import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
@@ -27,8 +28,10 @@ const FreeResponseStudentResponseRow: React.FC<
   // used to create the tag for the response
   const analysisTag = () => {
     if (
-      studentWorkEvaluation?.aiEvaluation === 'Great' ||
-      studentWorkEvaluation?.aiEvaluation === 'Ok'
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.ALL_COMPLETE_CORRECT ||
+      studentWorkEvaluation?.aiEvaluation ===
+        StudentWorkEvaluationStatus.PARTIAL_COMPLETE_CORRECT
     ) {
       return (
         <Tags
@@ -47,7 +50,10 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.proficientStudentTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'Needs revision') {
+    } else if (
+      studentWorkEvaluation?.aiEvaluation ===
+      StudentWorkEvaluationStatus.INCOMPLETE_INCORRECT
+    ) {
       return (
         <Tags
           tagsList={[
@@ -65,7 +71,10 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.needsReviewStudentTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'No attempt') {
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.NO_ATTEMPT
+    ) {
       return (
         <Tags
           tagsList={[
@@ -83,7 +92,12 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.noAttemptTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'Profanity detected') {
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+        StudentWorkEvaluationStatus.STUDENT_PROFANITY ||
+      studentWorkEvaluation?.aiReasoning ===
+        StudentWorkEvaluationStatus.STUDENT_PII
+    ) {
       return (
         <Tags
           tagsList={[
@@ -121,6 +135,26 @@ const FreeResponseStudentResponseRow: React.FC<
     }
   };
 
+  const getReasoningText = () => {
+    if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.NO_ATTEMPT
+    ) {
+      return `The student's response was blank.`;
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.STUDENT_PROFANITY
+    ) {
+      return 'The response contains profanity and could not be evaluated.';
+    } else if (
+      studentWorkEvaluation?.aiReasoning ===
+      StudentWorkEvaluationStatus.STUDENT_PII
+    ) {
+      return 'The response could not be evaluated because it contains personal information that is not safe for your student to share.';
+    }
+    return studentWorkEvaluation?.aiReasoning || '';
+  };
+
   return (
     <div className={styles.rowContainer}>
       <BodyThreeText className={styles.aiAnalysisNameColumn}>
@@ -130,9 +164,9 @@ const FreeResponseStudentResponseRow: React.FC<
         {studentWorkEvaluation?.studentWork}
       </BodyThreeText>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
-      <BodyThreeText
-        className={styles.aiAnalysisReasoningColumn}
-      >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
+      <BodyThreeText className={styles.aiAnalysisReasoningColumn}>
+        {getReasoningText()}
+      </BodyThreeText>
       <div>
         <FeedbackToggle
           onThumbsUpClick={() => handleFeedbackClick(true)}

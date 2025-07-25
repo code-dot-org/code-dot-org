@@ -7,6 +7,7 @@ Feature: Unit overview page
   @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     # Make progress as student
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
@@ -23,9 +24,9 @@ Feature: Unit overview page
     When I sign in as "Teacher_Sally"
     And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1"
-    And I wait until element ".teacher-panel" is visible
+    And I wait until element "#uitest-view-as-student-selector" is visible
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
-    When I click selector ".teacher-panel table td:contains(Sally)" once I see it
+    Then I select the "Sally" option in dropdown "uitest-view-as-student-selector"
     And I wait until element "td:contains(Maze)" is visible
     # verify name format in summary view
     And element "td:contains(2. Maze)" is visible
@@ -61,45 +62,37 @@ Feature: Unit overview page
   Scenario: Unit overview end-of-lesson
     Given I create a student named "Jean"
     # On last level of the lesson
-    And I am on "http://studio.code.org/courses/csp-2019/units/3/lessons/3/levels/1"
+    And I am on "http://studio.code.org/courses/csp-2025/units/1/lessons/7/levels/8"
     And I click selector ".submitButton"
-    And I wait until I am on "http://studio.code.org/courses/csp-2019/units/3"
+    And I wait until I am on "http://studio.code.org/courses/csp-2025/units/1"
     And I wait for jquery to load
-    And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is visible
+    And I wait until element ".uitest-end-of-lesson-header:contains(You finished Lesson 7!)" is visible
     And I reload the page
-    And  element ".uitest-end-of-lesson-header:contains(You finished Lesson 3!)" is not visible
-
-  Scenario: Unit overview lesson plan
-    Given I create an authorized teacher-associated student named "Blake"
-    When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/csp-2019/units/3?no_redirect=true"
-    And I click selector "#uitest-lesson-plan" once I see it
-    When I switch tabs
-    And I wait until current URL contains "curriculum.code.org/csp-19/unit3/1/"
+    And  element ".uitest-end-of-lesson-header:contains(You finished Lesson 7!)" is not visible
 
   Scenario: Unit overview new lesson plan
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector "#uitest-lesson-plan" once I see it
     When I switch tabs
-    And I wait until current URL contains "/courses/allthemigratedthings/units/1/lessons/1"
+    And I wait until current URL contains "/courses/allthelessonplans/units/1/lessons/1"
 
   Scenario: Unit overview student resources as teacher
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Teacher_Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector "#uitest-student-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthemigratedthings/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
 
   Scenario: Unit overview student resources as student
     Given I create an authorized teacher-associated student named "Blake"
     When I sign in as "Blake"
-    And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
+    And I am on "http://studio.code.org/courses/allthelessonplans/units/1?no_redirect=true"
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthemigratedthings/units/1/lessons/1/student"
+    And I wait until current URL contains "courses/allthelessonplans/units/1/lessons/1/student"
 
   Scenario: Unit overview for unit in single-unit course
     Given I create an authorized teacher-associated student named "Blake"

@@ -67,7 +67,7 @@ class MultipleAssignButton extends React.Component {
           text={i18n.assignToMultipleSections()}
           icon="plus"
           onClick={this.handleClick}
-          className={'uitest-assign-button'}
+          id="uitest-multi-assign-button"
         />
         {assignmentChoiceDialogOpen && (
           <MultipleSectionsAssigner

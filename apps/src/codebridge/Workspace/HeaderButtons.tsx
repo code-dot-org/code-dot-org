@@ -58,9 +58,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         type: DialogType.Skip,
         handleConfirm: () => {
           if (skipUrl) {
-            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName, {
-              levelPath: window.location.pathname,
-            });
+            sendCodebridgeAnalyticsEvent(EVENTS.SKIP_TO_PROJECT, appName);
             window.location.href = skipUrl;
           }
         },
@@ -137,6 +135,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             type={'tertiary'}
             target="_blank"
             color={'black'}
+            aria-label={commonI18n.documentation()}
           />
         </WithTooltip>
       )}

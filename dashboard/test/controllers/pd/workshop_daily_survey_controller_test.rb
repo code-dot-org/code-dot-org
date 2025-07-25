@@ -81,13 +81,14 @@ module Pd
       assert_response :success
     end
 
-    test 'post-workshop special survey link shows for Build Your Own workshops when enrolled and attended' do
+    test 'post-workshop foorm survey displays foorm for Build Your Own workshops when enrolled and attended' do
       setup_build_your_own_ended_workshop
 
       sign_in @enrolled_byo_teacher
       create :pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment
       get "/pd/workshop_survey/post/#{@byo_enrollment.code}"
-      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
+      assert_template :new_general_foorm
+      assert_response :success
     end
 
     test 'post-workshop special facilitator survey link shows for ended Build Your Own workshops' do
@@ -95,7 +96,7 @@ module Pd
 
       sign_in @facilitator
       get "/pd/workshop_survey/new_facilitator_post?workshop_id=#{@byo_workshop.id}"
-      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
+      assert_redirected_to CDO.studio_url BUILD_YOUR_OWN_FACILITATOR_POST_SURVEY, CDO.default_scheme
     end
 
     test 'daily workshop survey displays not enrolled message when not enrolled' do
@@ -508,32 +509,36 @@ module Pd
 
     private def setup_csf201_not_started_workshop
       @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = create :csf_deep_dive_workshop,
+      @csf201_not_started_workshop = build :csf_deep_dive_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
+      @csf201_not_started_workshop.save(validate: false)
     end
 
     private def setup_csf201_in_progress_workshop
       @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = create :csf_deep_dive_workshop,
+      @csf201_in_progress_workshop = build :csf_deep_dive_workshop,
         :in_progress,
         regional_partner: @regional_partner,
         num_facilitators: 2
+      @csf201_in_progress_workshop.save(validate: false)
     end
 
     private def setup_csf201_ended_workshop
       @regional_partner = create :regional_partner
-      @csf201_ended_workshop = create :csf_deep_dive_workshop,
+      @csf201_ended_workshop = build :csf_deep_dive_workshop,
         :ended,
         regional_partner: @regional_partner,
         num_facilitators: 2
+      @csf201_ended_workshop.save(validate: false)
     end
 
     private def setup_csf101_workshop
       @regional_partner = create :regional_partner
-      @csf101_workshop = create :csf_intro_workshop,
+      @csf101_workshop = build :csf_intro_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
+      @csf101_workshop.save(validate: false)
 
       @csf101_enrollment = create :pd_enrollment, :from_user, workshop: @csf101_workshop
       @enrolled_csf101_teacher = @csf101_enrollment.user

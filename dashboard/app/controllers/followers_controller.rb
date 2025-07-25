@@ -15,7 +15,10 @@ class FollowersController < ApplicationController
       render 'student_user_new', formats: [:html]
     else
       @section_code = params[:section_code]
-      render 'join_logged_out', formats: [:html]
+      source_page = ERB::Util.url_encode('join section')
+      return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
     end
   end
 
@@ -31,7 +34,10 @@ class FollowersController < ApplicationController
       end
     else
       @section_code = params[:section_code]
-      render 'join_logged_out', formats: [:html]
+      source_page = ERB::Util.url_encode('join section')
+      return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+
+      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
       return
     end
 
@@ -56,7 +62,10 @@ class FollowersController < ApplicationController
           elsif !@section.can_join_section_as_participant?(@user)
             # check if student is joining a teacher section
             if @section.student_joining_teacher_course?(@user)
-              render :students_cannot_join, locals: {section_code: params[:section_code]}
+              @section_code = params[:section_code]
+              source_page = ERB::Util.url_encode('join section')
+              return_to = ERB::Util.url_encode(@section_code.present? ? "/join/#{@section_code}" : "/join")
+              redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
             else
               redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
             end

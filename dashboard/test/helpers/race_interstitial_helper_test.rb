@@ -6,72 +6,108 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     Geocoder.stubs(:search).returns([mock_us_object])
   end
 
-  def setup
-    mock_geocoder_result('US')
+  describe '.show?' do
+    subject(:show?) {RaceInterstitialHelper.show?(user)}
+    let(:user) {create(:student, current_sign_in_ip: '127.0.0.1')}
+    let!(:sign_in) {create(:sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 8.days)}
+    let!(:geocoder_result) {mock_geocoder_result('US')}
 
-    # Create a student over 13 with an account that was first
-    # signed into more than a week ago and an associated IP address.
-    # We expect that such a user would see the race interstitial helper.
-    @user = create :student
-    @user.current_sign_in_ip = "127.0.0.1"
+    context 'when teacher' do
+      let(:user) {create(:teacher)}
 
-    SignIn.create(
-      user_id: @user.id,
-      sign_in_count: 1,
-      sign_in_at: DateTime.now - 8.days
-    )
-  end
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
 
-  test 'do not show race interstitial to teacher' do
-    @user.user_type = User::TYPE_TEACHER
-    refute RaceInterstitialHelper.show?(@user)
-  end
+    context 'when under 13' do
+      let(:user) {create(:student, age: 8)}
 
-  test 'do not show race interstitial to user accounts under 13' do
-    @user.age = 8
-    refute RaceInterstitialHelper.show?(@user)
-  end
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
 
-  test 'do not show race interstitial to user if we do not have sign in information' do
-    SignIn.find_by(
-      user_id: @user.id,
-      sign_in_count: 1
-    ).delete
+    context 'when no sign in information' do
+      let(:sign_in) {nil}
 
-    refute RaceInterstitialHelper.show?(@user)
-  end
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
 
-  test 'do not show race interstitial to user accounts who signed in for the first time less than a week ago' do
-    sign_in = SignIn.find_by(
-      user_id: @user.id,
-      sign_in_count: 1
-    )
-    sign_in.update(sign_in_at: DateTime.now - 3.days)
+    context 'when signed in for the first time less than a week ago' do
+      let(:sign_in) {create(:sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 3.days)}
 
-    refute RaceInterstitialHelper.show?(@user)
-  end
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
 
-  test 'do not show race interstitial to user accounts that have already entered race information' do
-    @user.update_columns(races: 'white,black')
-    refute RaceInterstitialHelper.show?(@user)
-  end
+    context 'when race already present' do
+      let(:user) {create(:student, current_sign_in_ip: '127.0.0.1', races: 'white,black')}
 
-  test 'do not show race interstitial to user accounts that have closed the dialog already' do
-    @user.update_columns(races: 'closed_dialog')
-    refute RaceInterstitialHelper.show?(@user)
-  end
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
 
-  test 'do not show race interstitial if IP address is nil' do
-    @user.current_sign_in_ip = nil
-    refute RaceInterstitialHelper.show?(@user)
-  end
+    context 'when closed dialog already' do
+      let(:user) {create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog')}
 
-  test 'do not show race interstitial to non-US users' do
-    mock_geocoder_result('CA')
-    refute RaceInterstitialHelper.show?(@user)
-  end
+      # These tests reference a bug that affected users between May 2023 and February 2024.
+      # PR with the fix: https://github.com/code-dot-org/code-dot-org/pull/56729
+      context 'when created after bug was fixed' do
+        it 'returns false' do
+          _(show?).must_equal false
+        end
+      end
 
-  test 'show race interstitial to US users' do
-    assert RaceInterstitialHelper.show?(@user)
+      context 'when created before bug was introduced' do
+        let(:user) do
+          create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
+            u.created_at = Time.new(2023, 4, 1)
+          end
+        end
+
+        it 'returns false' do
+          _(show?).must_equal false
+        end
+      end
+
+      context 'when created during bug-affected time period' do
+        let(:user) do
+          create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
+            u.created_at = Time.new(2023, 6, 1)
+          end
+        end
+
+        it 'returns true' do
+          _(show?).must_equal true
+        end
+      end
+    end
+
+    context 'when IP address is nil' do
+      let(:user) {create(:student, current_sign_in_ip: nil)}
+
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
+
+    context 'when non-US user' do
+      let(:geocoder_result) {mock_geocoder_result('CA')}
+
+      it 'returns false' do
+        _(show?).must_equal false
+      end
+    end
+
+    context 'when US user' do
+      it 'returns true' do
+        _(show?).must_equal true
+      end
+    end
   end
 end

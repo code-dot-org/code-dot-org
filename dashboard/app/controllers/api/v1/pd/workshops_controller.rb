@@ -1,8 +1,4 @@
 class Api::V1::Pd::WorkshopsController < ApplicationController
-  # There are 2 workshops_controllers. The other controller (/controllers/pd/workshops_controller.rb)
-  # handles the workshop marketing page (i.e. navigating to studio.code.org/pd/workshops/:workshop_id),
-  # while this controller handles everything else (creating, updating, destroying, etc.).
-
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
@@ -109,58 +105,6 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     render json: workshops, each_serializer: Api::V1::Pd::WorkshopSerializer
   rescue ArgumentError => exception
     render json: {error: exception.message}, status: :bad_request
-  end
-
-  def to_geojson(workshops)
-    locations = []
-    grouped_workshops = workshops.group_by do |w|
-      location = JSON.parse(w.processed_location)
-      [location['longitude'].round(3), location['latitude'].round(3)]
-    end
-    grouped_workshops.each do |location, workshop_list|
-      next if location.blank?
-      next unless location.length == 2
-      properties = {
-        show_deep_dive_marker: workshop_list.any? {|w| w.subject == Pd::Workshop::SUBJECT_CSF_201}.to_s,
-        workshop_count: workshop_list.count
-      }
-      properties['workshops'] = workshop_list.map do |w|
-        {
-          id: w.id,
-          location_name: w.location_name,
-          subject: w.subject,
-          sessions: w.sessions.map(&:formatted_date_with_start_and_end_times)
-        }
-      end
-      locations.append(
-        {
-          type: "Feature",
-          geometry: {type: "Point", coordinates: location},
-          properties: properties
-        }
-      )
-    end
-    {type: 'FeatureCollection', features: locations}.to_json
-  end
-
-  # Upcoming (not started) public CSF workshops.
-  def k5_public_map_index
-    conditions = {
-      course: Pd::Workshop::COURSE_CSF,
-      on_map: true
-    }
-
-    if params['deep_dive_only']
-      conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
-    end
-
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
-      where(conditions).where.not(processed_location: nil)
-    if params['geojson']
-      render json: to_geojson(@workshops)
-    else
-      render json: @workshops, each_serializer: Api::V1::Pd::WorkshopK5MapSerializer
-    end
   end
 
   # GET /api/v1/pd/workshops/1

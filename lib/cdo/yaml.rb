@@ -15,6 +15,13 @@ module Cdo
 
     # Return +nil+ if file not found.
     def load_file(path)
+      # Temporarily accommodate both Psych 3 and Psych 4 syntax while we
+      # navigate the transition from Ruby 3.0 to Ruby 3.1.
+      # See: https://stackoverflow.com/a/71192990/1810460
+      # TODO infra: simplify down to just the Psych 4 case once we're fully
+      # upgraded to Ruby 3.1.
+      super(path, aliases: true)
+    rescue ArgumentError
       super
     rescue Errno::ENOENT
       nil
@@ -28,8 +35,19 @@ module Cdo
     # dangerous things in the various `config.yml.erb` files loaded by this
     # method, we need to do so.
     def load_erb_file(path, binding = nil)
+      # Temporarily accommodate both Psych 3 and Psych 4 syntax while we
+      # navigate the transition from Ruby 3.0 to Ruby 3.1.
+      # See: https://stackoverflow.com/a/71192990/1810460
+      # TODO infra: simplify down to just the Psych 4 case once we're fully
+      # upgraded to Ruby 3.1.
       # rubocop:disable Security/YAMLLoad
-      YAML.load(erb_file_to_string(path, binding))
+      begin
+        # Psych 4 compatibility
+        YAML.load(erb_file_to_string(path, binding), aliases: true)
+      rescue ArgumentError
+        # Psych 3 compatibility
+        YAML.load(erb_file_to_string(path, binding))
+      end
       # rubocop:enable Security/YAMLLoad
     rescue Errno::ENOENT
       nil

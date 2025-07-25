@@ -1,6 +1,6 @@
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-// Non-Gen AI endpoint constants
+// Non-Gen AI endpoint constants.
 export const AI_TUTOR_ENDPOINT = 'ai-tutor';
 export const LLM_GUARD_ENDPOINT = 'llm-guard';
 
@@ -35,6 +35,22 @@ const genAIEndpoints = [
   {
     id: AiChatModelIds.CHATGPT,
     name: 'ChatGPT + Webpurify',
+  },
+  {
+    id: AiChatModelIds.GEMINI_2_0_FLASH,
+    name: 'Google Gemini 2.0 Flash + Webpurify',
+  },
+  {
+    id: AiChatModelIds.GEMINI_2_5_FLASH,
+    name: 'Google Gemini 2.5 Flash + Webpurify',
+  },
+  {
+    id: AiChatModelIds.GEMINI_2_5_PRO,
+    name: 'Google Gemini 2.0 Pro + Webpurify',
+  },
+  {
+    id: AiChatModelIds.LEARNLM,
+    name: 'Google LearnLM + Webpurify',
   },
 ];
 

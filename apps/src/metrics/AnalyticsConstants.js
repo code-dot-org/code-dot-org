@@ -12,6 +12,7 @@ const EVENTS = {
   ACCOUNT_TYPE_PICKED_EVENT: 'Account Type Picked',
   SIGN_UP_STARTED_EVENT: 'Sign Up Started',
   SIGN_UP_LOGIN_TYPE_PICKED_EVENT: 'User Login Type Picked',
+  SIGN_UP_SSO_SHOW_MORE_OPTIONS: 'SSO Show More Options Clicked',
   SIGN_UP_FINISHED_EVENT: 'Sign Up Finished',
   SECTION_SETUP_SIGN_IN_EVENT: 'Section Setup Sign In',
   ABANDON_SECTION_SETUP_SIGN_IN_EVENT: 'Abandon Section Setup Sign In',
@@ -30,6 +31,8 @@ const EVENTS = {
   FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
   SECTION_SETUP_STARTED: 'Section Setup Started',
   LINK_ACCOUNT_PAGE_VISITED_EVENT: 'Link Account Page Visited',
+  UPGRADE_TO_TEACHER_ACCOUNT_PAGE_VISITED_EVENT:
+    'Upgrade To Teacher Account Page Visited',
 
   // School Association
   // Update School Info Dialog
@@ -108,7 +111,14 @@ const EVENTS = {
   LESSON_OVERVIEW_PAGE_VISITED_EVENT: 'Lesson Overview Page Visited',
   LESSON_RESOURCE_LINK_VISITED_EVENT: 'Lesson Resource Link Visited',
 
+  // Regional Workshop Catalog
+  REGIONAL_WS_CATALOG_PAGE_VISITED: 'Regional Workshop Catalog Page Visited',
+  REGIONAL_WS_CATALOG_ZIP_ENTERED: 'Regional Workshop Catalog Zip Entered',
+  REGIONAL_WS_CATALOG_LEARN_MORE_CLICK_EVENT:
+    'Regional Workshop Catalog Learn More Button Clicked',
+
   // Workshop enrollment
+  WORKSHOP_ENROLLMENT_PAGE_VISITED_EVENT: 'Workshop Enrollment Page Visited',
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
@@ -127,7 +137,6 @@ const EVENTS = {
   APP_STATUS_CHANGE_EVENT: 'Application Status Changed',
   ADMIN_APPROVAL_RECEIVED_EVENT: 'Administrator Approval Received',
   SUBMIT_RP_CONTACT_FORM_EVENT: 'Submit Regional Partner Contact Form',
-  RP_LANDING_PAGE_VISITED_EVENT: 'Regional Partner Landing Page Visited',
 
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
@@ -430,6 +439,10 @@ const EVENTS = {
   SHARING_DIALOG_SUBMIT_TO_BE_FEATURED:
     'User Clicks Submit To Be Featured In Share Dialog',
   SUBMIT_PROJECT_DIALOG_SUBMIT: 'User Clicks Submit In Submit Project Dialog',
+
+  // Add custom image to project
+  UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
+  SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',

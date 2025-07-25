@@ -42,3 +42,6 @@ export const MAX_NUM_FILES = 5;
 export const MAX_FILE_SIZE_MB = 5;
 // Allowed file types for upload in multimodal mode.
 export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];
+
+export const FAQ_LINK =
+  'https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ';

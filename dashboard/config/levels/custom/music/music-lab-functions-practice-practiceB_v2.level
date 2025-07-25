@@ -1,0 +1,235 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:58.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": true
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "{_po4uENudzyyBm80Rnt",
+              "x": 350,
+              "y": 30,
+              "extraState": {
+                "procedureId": "(B*z4uJ+wMG6Xm]Tq@gv",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "firstLayer"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "function_workspace",
+              "x": 350,
+              "y": 170,
+              "extraState": {
+                "procedureId": "bc_0XC36mh0gMAkfUlKr",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "secondLayer"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "kUbCced8Rx)u@f]nG#3`",
+              "x": 590,
+              "y": 30,
+              "extraState": {
+                "procedureId": "iZ.AiwHH{gO$B|qkpvwO",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "thirdLayer"
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "({=[1atEZV[jOJ=jW-2v",
+              "x": 590,
+              "y": 170,
+              "extraState": {
+                "procedureId": "PYR_A}i6zm;CzwijD3c^",
+                "initialDeleteConfig": true,
+                "initialEditConfig": true,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "fourthLayer"
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "(B*z4uJ+wMG6Xm]Tq@gv",
+            "name": "firstLayer",
+            "returnTypes": null
+          },
+          {
+            "id": "bc_0XC36mh0gMAkfUlKr",
+            "name": "secondLayer",
+            "returnTypes": null
+          },
+          {
+            "id": "iZ.AiwHH{gO$B|qkpvwO",
+            "name": "thirdLayer",
+            "returnTypes": null
+          },
+          {
+            "id": "PYR_A}i6zm;CzwijD3c^",
+            "name": "fourthLayer",
+            "returnTypes": null
+          }
+        ]
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "packId": "default",
+      "sounds": {
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll",
+          "clav_bounce",
+          "guitar_bird",
+          "guitar_cloud",
+          "guitar_funnel",
+          "guitar_high_riff",
+          "guitar_rainbow",
+          "guitar_thread",
+          "organ_walker",
+          "rhodes_bounce",
+          "rhodes_chipper",
+          "rhodes_startup",
+          "rhodes_surprise",
+          "synth_funk",
+          "blart",
+          "crash_reverse",
+          "laser",
+          "sidechain_crash",
+          "reverse_blip",
+          "strings",
+          "strings_short"
+        ]
+      }
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "playerTitle": "Example",
+      "validationSuccessMessage": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
+      "validationFailureMessage": "Something's not quite right! Try listening to the example again!",
+      "validationMode": "type"
+    },
+    "encrypted_exemplar_sources": "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\ncgC3JUoU9M8aIdlh\n",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Layering with Functions",
+    "long_instructions": "### Layering with Functions\r\n\r\n**Define:** You've been asked to create a song that builds over time,adding a new layer with each section. You'll use functions to structure your music so that each part builds on the one before it.\r\n\r\n**Prepare:** Plan out which beat, bass, leads, and effect you want to use. Think about how each new layer will change the sound of your song and what order they should come in. Listen to the example below for what this could sound like!\r\n\r\n![](https://images.code.org/79caadc704861380cac4cfe38459889d-image-1744950487285.png)\r\n\r\n**Try:** Create your functions in this order:\r\n\r\n1. `firstLayer`: plays a beat and bass together\r\n2. `secondLayer`: calls `firstLayer` and adds a lead\r\n3. `thirdLayer`: calls `secondLayer` and adds a different lead\r\n4. `fourthLayer`: calls `thirdLayer` and adds an effect\r\n\r\nOnce you have all your functions, call them in order in your code:\r\n\r\n![](https://images.code.org/7dca0992b1859ec9330a8ad7e0a5c29a-image-1750879316803.png)\r\n\r\n<div style=\"background:#ebe8f1; border: 0; border-radius: 10px; clear:both; padding: 5px\">\r\n\r\nNeed some help? Try the [<i class=\"fa-solid fa-book\"></i> Docs](#clickable=documentation-button) in the upper-right corner!\r\n\r\n</div>\r\n\r\n**Reflect:** Listen to your song. Do the layers build smoothly? Does each new sound add something interesting? In order to complete this level, your remix must include:\r\n\r\n- Four functions, one for each layer\r\n- Functions that call each other in the correct order to build the song layer by layer",
+    "bubble_choice_description": "Create a song that \"builds\" by adding new tracks to your song with each layer.",
+    "validations": [
+      {
+        "key": "music-lab-functions-practice-practiceB_ad8f08d4-9dfe-4477-85ba-186c39bc6191",
+        "message": "It looks like you have too many play blocks in your code. Instead of adding play blocks to each function, **call** the previous function inside the next one",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceB_56bd6890-4e1c-47e0-982c-875d048b13a4",
+        "message": "exemplar validation",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-practice-practiceB_9dc8a9ce-6ef0-44dc-bca8-ae3914073b58",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and checking you **called each of your functions**",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/groove/groove.png",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:58.125+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-practiceB\\\"\"],\"cloned_from\":\"music-lab-functions-practice-practiceB\"},{\"changed_at\":\"2025-06-25 19:18:34 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:19:38 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-25 19:22:04 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-26 19:45:58 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-30 16:48:22 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,0 +1,298 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:02.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "showSoundFilters": true,
+      "sounds": {
+        "electro": [
+          "drum_beat_cowbell",
+          "drum_beat_club",
+          "drum_beat_edm",
+          "drum_beat_hyper",
+          "drum_beat_fashion",
+          "drum_beat_noise",
+          "drum_beat_pause",
+          "drum_beat_shake",
+          "drum_beat_sharp",
+          "drum_beat_strobe",
+          "drum_beat_swirl",
+          "drum_beat_sync",
+          "drum_beat_tom",
+          "bass_synth_blocks",
+          "bass_synth_candy",
+          "bass_synth_chips",
+          "bass_synth_duct_tape",
+          "bass_synth_foam",
+          "bass_synth_glitter",
+          "bass_synth_hammer",
+          "bass_synth_nails",
+          "bass_synth_pop_rocks",
+          "bass_synth_sand",
+          "bass_synth_soda_pop"
+        ],
+        "groove": [
+          "drum_beat_congas",
+          "drum_beat_flam",
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "drum_beat_plexi",
+          "drum_kit_disco",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "drum_beat_knock",
+          "reggaeton_beat",
+          "reggaeton_alternate_beat",
+          "syncopated_beat",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "reggaeton_alternate_bass",
+          "bass_sub_bike",
+          "bass_sub_boat",
+          "bass_sub_bus",
+          "bass_sub_compact",
+          "bass_sub_pogo",
+          "bass_sub_saunter",
+          "bass_sub_snowshoe",
+          "bass_sub_stroll"
+        ],
+        "indie": [
+          "drum_beat_fan",
+          "drum_beat_jangle",
+          "drum_beat_lid",
+          "drum_beat_nod",
+          "drum_beat_ping",
+          "drum_beat_straight",
+          "drum_beat_swish",
+          "drum_beat_tap",
+          "bold_beat",
+          "bold_alternate_beat",
+          "drum_kit_indie",
+          "drum_kit_northern",
+          "acoustic_bass",
+          "acoustic_alternate_bass",
+          "bass_home_coast",
+          "bass_home_sway_down",
+          "bass_lifted_coast_down"
+        ],
+        "pop": [
+          "drum_beat_action",
+          "drum_beat_cosmos",
+          "drum_kit_dizzy",
+          "drum_kit_jumpy",
+          "drum_beat_pump",
+          "drum_beat_relax",
+          "drum_beat_salt",
+          "drum_kit_pop",
+          "shake_beat",
+          "sugar_beat",
+          "drum_kit_surf",
+          "sugar_alternate_beat",
+          "bass_eel",
+          "bass_flounder",
+          "bass_glider",
+          "bass_home_steady",
+          "bass_jelly",
+          "bass_lifted_steady_1",
+          "bass_lifted_steady_2",
+          "bass_raised_steady",
+          "bass_runner",
+          "bass_shake",
+          "bass_whale",
+          "sub_bass_wave"
+        ],
+        "hiphop": [
+          "drum_beat_808",
+          "drum_beat_bounce",
+          "relaxed_alternate_beat",
+          "drum_beat_cuts",
+          "hats_beat",
+          "drum_beat_knock",
+          "drum_beat_lofi",
+          "relaxed_beat",
+          "drum_beat_slow",
+          "sub_beat",
+          "drum_beat_trap",
+          "vinyl_beat",
+          "bass_flow",
+          "bass_fly",
+          "bass_stress",
+          "bass_sub_bathrobe",
+          "bass_sub_bracelet",
+          "bass_sub_button_down",
+          "bass_sub_hoodie",
+          "bass_sub_jacket",
+          "bass_sub_jogger",
+          "bass_sub_jumpsuit",
+          "bass_sub_tank",
+          "bass_trip"
+        ],
+        "rock": [
+          "arena_beat",
+          "arena_alternate_beat",
+          "drum_kit_basement",
+          "drum_kit_can",
+          "drum_kit_crash",
+          "drum_kit_crusher",
+          "gutter_beat",
+          "drum_kit_hands",
+          "drum_kit_interlude",
+          "punk_beat",
+          "punk_alternate_beat",
+          "drum_kit_roll",
+          "amped_bass",
+          "bass_chonk",
+          "bass_down_steady_up",
+          "bass_freeze",
+          "bass_fuzz_climb",
+          "bass_fuzz_drop",
+          "bass_fuzz_slide",
+          "bass_fuzz_wave",
+          "bass_hook",
+          "bass_jam",
+          "bass_lifted_steady_up",
+          "amped_alternate_bass"
+        ]
+      },
+      "showSoundsPanelInSoundsMode": false,
+      "sortUnrestrictedPacksByType": false
+    },
+    "long_instructions": "### Check-In: Dueling Genres\r\n\r\n**Genre** means the style of music like hip-hop, pop, jazz, or rock.\r\n\r\nSanchit wants to create a dueling genres effect in his song.\r\n\r\nHe says:\r\n> I want the beat and bass to sound like one genre for 4 measures, then switch to a different genre for the next 4. Then repeat the whole thing like they're clapping back at each other!\r\n\r\n![](https://images.code.org/2586dbe1a0945ffb9949b4fbcb21714c-image-1745019436109.png)\r\n\r\nTry it out! Listen to the example and build your own.\r\n\r\n**Specific Requirements:**\r\n- Each **beat + bass** combo lasts **4 measures**\r\n- The whole song is **24 measures long**\r\n- Use a **nested loop** to repeat the pattern",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB94z1YKLgBXkR7XAwG3SHjrg\n0fedp1jjT2IfuDnM8uQy9xxmRhCB7QPNQp/SfY1DiPv2IAgV2UOMViOdBu54\nUO/t6DNebkutu424JvRO07M01nG6gzHgjoThPdp3d3eHQQTrJILCKE0YrDx2\ndGsEGuCRuTQCKB/LVkmj5vh9Cqz+OyMBqEIqRL2pKWTeuu8/oLQOHgTx+Epw\nYPDPqXqjSG75q++pZhD9uS6jHWFe+VFNjJ2kU7R5cnv1NBgWXp9cchjXJMK4\n/v+wOEEcWXzjAe66ZoHavazCL41McZMQ+BZGLbDKxUt+SuTjVFIHe6yl6mJ1\n8BjQpk6qmFtu8x6M3W0gE7npuPxvChy/eQgvOVm5ogqgknalPCUwVhA+x7On\nqTPVII3350uxJvC2RvkJ+ggoEfOpARjSUDeTuoebW2exmCH3G/btlx993PDB\nKtQrPPzpJkzEDB4l3+AAPwFfzONA7gNB1WYhrBXjh4KXdZ+VuS+0OMiFNElg\nfD7FHiepSKy/zKQJpS1KqYEfMnQm7jb1SgI28L3O5tV/evo9xkTYNHvH8axj\niL6qB0+LKwSSt3MTYw47pYXhiIKRSUplioKkK7mrtj4QLLQ6OtcmAPGYuX2j\nL4RhowrQltNDO7ThDxNk72tQxC+pPUa74kA2isAaea7aF8OAwfKaCnlXe8Sv\ny9vOw6dhMsy4eUCR8VPPNZ45tT8v81qTrzLJXP0/6KO7UDUqQp3p5lMDeq3S\nW7JLb0Jes4OWrH7bui55whC5wFtiwiqMs67SqYJMZxBN2x53VdgWSjFTYLuv\nO0PJpqImqG/TOZCarLOoBFUJveMEeMk/iYZs87Y5BcnsepzDKzyeRKw/7UNx\nJkt9p/xG5+Ki2WVzIpQ1pRKNF+E/fEMGi7pMMj5eU3lO2OMnY5mwMxkAY6Rd\n5wF03y9ZRSSGtYcaCQUCvnGjKQ6YRO+TngI7bBT4z7u21q/xiAV4JJc6cLJR\n0TdBgZRxBvi4Ybp61B8M2I7tONJiPniv53TPVMYR3xGUSxRfMzYXITU0ug97\nxuEA7J0OhBjfKUbz0EUc9fXGzle4A0r3DAJOonGx9EMetXngznuQigwbEoAJ\n/a28PK5CPD3wl3FTzgtKGShv21vqX3myIoMg5VBNLcLneZED3bXK/5bToWyF\n3P9QG6s9glrF1BHrKNO/uiGbc6nCnWgNYh9aMjS/4HgNcWNTmjZkRodV6nkn\nHIGt/7BDt4ugz9pqV5n/1t3kSICJC/PiW2EoGLbvkK6zztJ5uOyhEK8tkZxD\nGBFIrv/v3i+J4b0nwkA=\n",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-synthesis-formative_89bac5c1-e390-4775-bf67-0e38c1033212",
+        "message": "exemplar",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_anything_in_same_nested_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-formative_79bc77b6-d0df-4b1e-aea7-8bcca3a1c6d4",
+        "message": "Looks like you're on the right track! Make sure to use a nested loop!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "beat:2"
+          },
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "bass:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-formative_fbf0d228-a50f-4c98-a784-b7c3b65e66ad",
+        "message": "Looks like you're on the right track! <i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for a new set of tracks to start playing...",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 2
+          },
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-formative_7ba0bd58-678f-4dca-a15d-85c3b0b90ddf",
+        "message": "Play your beat and bass tracks together, then make them loop!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "You did it! The song matches the example!",
+      "validationFailureMessage": "Something's not quite right! Try reading the requirements again!",
+      "validationMode": "type",
+      "playerTitle": "Example"
+    },
+    "name_suffix": "_v2",
+    "submittable": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:02.826+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-formative\"},{\"changed_at\":\"2025-07-03 16:48:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

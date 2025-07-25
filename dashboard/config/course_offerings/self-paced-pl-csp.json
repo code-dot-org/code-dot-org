@@ -4,17 +4,20 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
-  "marketing_initiative": null,
-  "grade_levels": null,
+  "marketing_initiative": "CSP",
+  "grade_levels": "9,10,11,12",
   "header": "self_paced",
-  "image": null,
+  "image": "https://images.code.org/39cc407572610b8277f2fc2e8c5d2278-self-paced-pl-tile-csp.avif",
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": null,
-  "professional_learning_program": null,
+  "description": "Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.",
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
-  "published_date": null,
+  "published_date": "2024-05-31 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null,
-  "ai_teaching_assistant_available": false
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
 }

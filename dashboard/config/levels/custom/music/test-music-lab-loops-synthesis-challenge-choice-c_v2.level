@@ -1,0 +1,103 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-05-31T03:00:09.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_rest_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together",
+            "play_sounds_sequential",
+            "repeat_simple2",
+            "triggered_at_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "addFunctionDefinition": false,
+        "addFunctionCalls": false
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true
+    },
+    "long_instructions": "### Choose a Song\r\n\r\nNow it's your turn to take everything you've learned and make it your own! In this level, you'll explore, experiment, and build a live performance using loops, triggers, and effects.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n**Do This**:\r\n- Set up your sound - Create a backing track or start from scratch.\r\n- Use triggers - Add sounds, loops, or effects in real-time to shape your performance.\r\n- Create variations - Experiment with filters, timing, and layering to make your music dynamic.\r\n- Perform live! Play around, improvise, and see where the music takes you.\r\n\r\n",
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "display_name": "Choose a Song",
+    "thumbnail_url": "https://images.code.org/cc11d0d9910b9be176a0287cb43efc45-Screenshot 2025-03-07 at 3.11.36 PM.png",
+    "bubble_choice_description": "Choose a song to use with your live coding!",
+    "validations": [
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-c_87c2f363-0c6f-46c4-8d1c-f7469abd19fc",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_loop",
+            "value": 1
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          },
+          {
+            "name": "played_different_sounds",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-synthesis-challenge-choice-c_ea372659-8dcf-4837-ad2c-757f9ae829d4",
+        "message": "Your song must include a loop, a trigger, and at least 6 unique sounds!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_v2",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:09.179+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-c\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-c\"},{\"changed_at\":\"2025-06-30 22:15:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -76,7 +76,11 @@ export const useFetch = <T>(
     // setFetchState calls are asynchronous so state that is set here isn't
     // returned to the caller until (at least) the next render cycle.
     (async () => {
-      setFetchState({...baseFetchState, loading: true});
+      setFetchState(prevState => ({
+        ...baseFetchState,
+        data: prevState.data,
+        loading: true,
+      }));
       let status = null;
       try {
         const response = await fetch(url, calculatedOptions);

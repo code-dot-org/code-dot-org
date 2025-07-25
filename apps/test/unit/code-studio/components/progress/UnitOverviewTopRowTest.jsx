@@ -16,7 +16,6 @@ import teacherSections, {
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 import i18n from '@cdo/locale';
 
 import {testLessons} from './unitCalendarTestData';
@@ -25,7 +24,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   scriptId: 42,
   scriptName: 'test-script',
-  scriptPath: '/s/test-script',
+  scriptPath: '/courses/test-course/units/1',
   unitTitle: 'Unit test script title',
   unitAllowsHiddenLessons: true,
   viewAs: ViewType.Participant,
@@ -112,7 +111,7 @@ describe('UnitOverviewTopRow', () => {
         <div>
           <Button
             __useDeprecatedTag
-            href="/s/test-script/next"
+            href="/courses/test-course/units/1/next"
             text={i18n.tryNow()}
             size={Button.ButtonSize.large}
           />
@@ -138,7 +137,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.tryNow()}
           size={Button.ButtonSize.large}
         />
@@ -160,7 +159,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.continue()}
           size={Button.ButtonSize.large}
         />
@@ -181,7 +180,7 @@ describe('UnitOverviewTopRow', () => {
       wrapper.containsMatchingElement(
         <Button
           __useDeprecatedTag
-          href="/s/test-script/next"
+          href="/courses/test-course/units/1/next"
           text={i18n.printCertificate()}
           size={Button.ButtonSize.large}
         />
@@ -309,13 +308,7 @@ describe('UnitOverviewTopRow', () => {
     expect(wrapper.find(DropdownButton).length).toBe(0);
   });
 
-  it('renders student select dropdown if user is teacher and in teacher-local-nav-v2 experiment', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
-
+  it('renders student select dropdown if user is teacher', () => {
     render(
       <Provider store={store}>
         <UnitOverviewTopRow

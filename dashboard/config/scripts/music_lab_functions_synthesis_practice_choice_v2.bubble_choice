@@ -1,0 +1,9 @@
+name 'music-lab-functions-synthesis-practice-choice_v2'
+display_name 'Practice'
+description 'Choose at least 2 options below to practice'
+
+sublevels
+level 'music-lab-functions-synthesis-practiceA_v2'
+level 'music-lab-functions-synthesis-practiceB_v2'
+level 'music-lab-functions-synthesis-practiceC_v2'
+uses_lab2

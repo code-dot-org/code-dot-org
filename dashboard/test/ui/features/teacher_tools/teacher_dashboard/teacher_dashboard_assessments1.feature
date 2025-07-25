@@ -15,19 +15,15 @@ Feature: Using the assessments tab in the teacher dashboard
     And I press the first "input[name='Computer Science Principles']" element
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('17-'18)" once I see it
+    And I click selector ".assignment-version-title:contains('24-'25)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Student Post-Course Survey ('17-'18)" option in dropdown "uitest-secondary-assignment"
+    And I select the "CS Principles Post-Course Survey" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    And I wait until element "#classroom-sections" is visible
 
     # Progress tab
-    And I wait until element "a:contains('Untitled Section')" is visible
-    And I save the section id from row 0 of the section table
-    Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-course-dropdown" is visible
 
     # Assessments tab
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Assessments)" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     Then I wait until element "div:contains(this survey is anonymous)" is visible
