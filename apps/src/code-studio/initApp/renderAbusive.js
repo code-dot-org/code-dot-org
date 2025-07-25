@@ -12,7 +12,6 @@ import showProjectAdmin from '../showProjectAdmin';
  * @param {string} tosText
  */
 export default (project, tosText) => {
-  console.log('project.getCurrentId', project.getCurrentId());
   ReactDOM.render(
     React.createElement(AbuseExclamation, {
       i18n: {

@@ -209,8 +209,6 @@ class Projects
   def get_is_teacher_of_project_owner(channel_id, current_user_id)
     owner_storage_id, __ = storage_decrypt_channel_id(channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
-    # A project can always be shared with a project owner's teacher, even
-    # if the project is flagged for privacy/profanity or abuse.
     teaches_student?(owner_user_id, current_user_id)
   end
 
