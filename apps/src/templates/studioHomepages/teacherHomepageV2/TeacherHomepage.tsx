@@ -1,7 +1,6 @@
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -17,7 +16,6 @@ import {Header} from './Header';
 import {SectionList} from './SectionList';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import TeacherPromotions from './TeacherPromotions';
-import WelcomePopup from './welcome/WelcomePopup';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -29,9 +27,6 @@ interface TeacherHomepageProps {
 
 const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
-  const hasSeenHomepageWelcome = useAppSelector(
-    state => state.currentUser.hasSeenHomepageWelcome
-  );
 
   const dispatch = useAppDispatch();
 
@@ -76,8 +71,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        {DCDO.get('teacher-homepage-welcome', false) &&
-          !hasSeenHomepageWelcome && <WelcomePopup teacherName={teacherName} />}
         <Heading2>
           {teacherName
             ? i18n.welcome({teacherName: teacherName})
