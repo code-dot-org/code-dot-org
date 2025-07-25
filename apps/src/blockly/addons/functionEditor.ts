@@ -91,7 +91,7 @@ export default class FunctionEditor {
       readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
-      theme: options.theme || CdoTheme,
+      theme: defaultTheme,
       toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
