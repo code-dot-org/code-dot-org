@@ -106,6 +106,8 @@ export function BubbleLink({url, onClick, children, a11y_description}) {
       {children}
     </a>
   ) : (
+    // Anchor tags without href attributes are not recognizable by assistive tech.
+    // Adding additional props to make it tab navigable and screen reader accessible.
     <a
       role="button"
       tabIndex={0}
