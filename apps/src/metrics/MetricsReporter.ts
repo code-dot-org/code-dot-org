@@ -1,3 +1,7 @@
+import {datadogLogs} from '@datadog/browser-logs';
+import {datadogRum} from '@datadog/browser-rum';
+
+import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 
@@ -100,6 +104,15 @@ class MetricsReporter {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
     }
+
+    // Send to DataDog RUM as a custom action
+    if (DCDO.get('datadog-rum-enabled', false)) {
+      datadogRum.addAction(name, {
+        value,
+        unit,
+      });
+    }
+
     // Send a version of the metric with and without the browser version dimension
     this.sendMetrics([
       metric,
@@ -117,6 +130,11 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
+    // Send to DataDog Logs in parallel, independently of isReportingEnabled
+    if (DCDO.get('datadog-rum-enabled', false)) {
+      this.sendToDataDogLogs(level, message);
+    }
+
     if (!this.isReportingEnabled()) {
       this.fallbackLog(payload);
       return;
@@ -127,6 +145,19 @@ class MetricsReporter {
     } catch (error) {
       this.fallbackLog(payload);
       this.handleError(error as Error);
+    }
+  }
+
+  private sendToDataDogLogs(level: LogLevel, message: string | object) {
+    const msgStr =
+      typeof message === 'string' ? message : JSON.stringify(message);
+    const context = this.getDeviceInfo();
+    if (level === 'INFO') {
+      datadogLogs.logger.info(msgStr, context);
+    } else if (level === 'WARNING') {
+      datadogLogs.logger.warn(msgStr, context);
+    } else {
+      datadogLogs.logger.error(msgStr, context);
     }
   }
 
