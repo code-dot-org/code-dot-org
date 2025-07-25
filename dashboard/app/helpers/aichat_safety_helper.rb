@@ -62,7 +62,6 @@ module AichatSafetyHelper
 
       if evaluation == 'INAPPROPRIATE'
         details = {evaluation: evaluation}
-
       end
 
       report_openai_safety_check("Finish", attempts)
