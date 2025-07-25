@@ -271,7 +271,7 @@ frontend_device_name ||= '/dev/sda1'
         instances. Further investigation is required to identify the cause.
       ActionsEnabled: true
       AlarmActions:
-          - !Ref <% rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
+          - !Ref <%=rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
       MetricName: mem_used_percent
       Namespace: CWAgent
       Statistic: Maximum
