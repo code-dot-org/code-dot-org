@@ -16,7 +16,7 @@ require 'cdo/honeybadger'
 class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
-  attr_reader :dry_run, :scrub_accounts_deleted_since, :max_accounts_to_scrub
+  attr_reader :dry_run, :deleted_since, :limit
   alias :dry_run? :dry_run
 
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
@@ -25,23 +25,23 @@ class ExpiredDeletedAccountPiiScrubber
   ACCOUNT_SCRUB_LIMIT = 8_000
 
   # @param dry_run [Boolean] If true, no accounts will actually be scrubbed.
-  # @param scrub_accounts_deleted_since [Time] The time before which accounts should be scrubbed of PII.
+  # @param deleted_since [Time] The time before which accounts should be scrubbed of PII.
   #   Defaults to 28 days ago, which is the current grace period before rendering accounts
   #   unrecoverable during the PII purge process.
-  # @param max_accounts_to_scrub [Integer] The maximum number of accounts to scrub in a single run.
+  # @param limit [Integer] The maximum number of accounts to scrub in a single run.
   #   This is a safety limit to prevent accidental deletion of too many accounts.
-  def initialize(dry_run: false, scrub_accounts_deleted_since: nil, max_accounts_to_scrub: ACCOUNT_SCRUB_LIMIT)
+  def initialize(dry_run: false, deleted_since: nil, limit: ACCOUNT_SCRUB_LIMIT)
     @dry_run = dry_run.nil? ? false : dry_run
     raise ArgumentError.new('dry_run must be boolean') unless [true, false].include? @dry_run
 
     # The amount of time after being soft-deleted that an account should be scrubbed of PII.
-    @scrub_accounts_deleted_since = scrub_accounts_deleted_since || ::User::SOFT_DELETED_RECORD_TTL.ago
-    raise ArgumentError.new('scrub_accounts_deleted_since must be Time') unless @scrub_accounts_deleted_since.is_a? Time
+    @deleted_since = deleted_since || ::User::SOFT_DELETED_RECORD_TTL.ago
+    raise ArgumentError.new('deleted_since must be Time') unless @deleted_since.is_a? Time
 
     # Maximum number of accounts to scrub in a single run.
     # This is a safety limit to prevent accidental deletion of too many accounts.
-    @max_accounts_to_scrub = max_accounts_to_scrub || ACCOUNT_SCRUB_LIMIT
-    raise ArgumentError.new('max_accounts_to_scrub must be Integer') unless @max_accounts_to_scrub.is_a? Integer
+    @limit = limit || ACCOUNT_SCRUB_LIMIT
+    raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
 
     reset_metrics
   end
@@ -70,10 +70,10 @@ class ExpiredDeletedAccountPiiScrubber
   end
 
   def accounts_to_scrub
-    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: scrub_accounts_deleted_since)
+    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since)
     total_accounts = accounts.count
-    if total_accounts > max_accounts_to_scrub
-      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{max_accounts_to_scrub}"
+    if total_accounts > limit
+      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{limit}"
     end
     accounts
   end

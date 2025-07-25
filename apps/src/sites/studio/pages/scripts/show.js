@@ -204,7 +204,6 @@ function displayDifferentiationChat(scriptData) {
             unitId: scriptData.id,
           }}
           scriptName={scriptData.name}
-          unitDisplayName={scriptData.title}
         />
       </Provider>,
       aiDiffFabMountPoint
