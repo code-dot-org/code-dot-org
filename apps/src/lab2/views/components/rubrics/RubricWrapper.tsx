@@ -54,6 +54,8 @@ const RubricWrapper: React.FC = () => {
   const students = useAppSelector(
     state => state.teacherSections.selectedStudents
   );
+  const courseName = useAppSelector(state => state.progress.courseName);
+  const unitName = useAppSelector(state => state.progress.scriptName);
   const studentLevelInfo = useMemo(() => {
     const userLevel = levelsWithProgress?.find(
       ul => ul.userId === viewAsUserId
@@ -88,10 +90,9 @@ const RubricWrapper: React.FC = () => {
 
   const {rubric, canShowTaScoresAlert} = rubricData;
 
-  // FIX
   const reportingData = {
-    unitName: 'config.script_name',
-    courseName: 'config.course_name',
+    unitName,
+    courseName,
     levelName: currentLevelName,
   };
 
