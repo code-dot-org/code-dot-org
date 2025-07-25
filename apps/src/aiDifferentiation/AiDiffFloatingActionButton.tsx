@@ -27,11 +27,15 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffFloatingActionButtonProps {
   context: Context;
   scriptName?: string;
+  canShowPulse?: boolean;
+  canStartOpen?: boolean;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
   scriptName,
+  canShowPulse = true,
+  canStartOpen = true,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
   const localStorageOpenedKey = 'AiDiffHasOpenedKey';
@@ -57,10 +61,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   // Keeps FAB open/closed on new pages in the same tab or window
   // New tab or window is default closed if they have previously opened/closed the FAB
   // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
-      isFirstSession
-  );
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  React.useEffect(() => {
+    console.log('lfm', {canStartOpen, isFirstSession});
+    setIsOpen(
+      canStartOpen &&
+        (JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
+          isFirstSession)
+    );
+  }, [canStartOpen, isFirstSession]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -83,7 +93,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
-  const showPulse = !hasOpened && isFabImageLoaded;
+  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -103,11 +113,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       trySetLocalStorage(localStorageClosedKey, true.toString());
     }
     setIsOpen(!isOpen);
+    trySetSessionStorage(sessionStorageKey, (!isOpen).toString());
   };
-
-  useEffect(() => {
-    trySetSessionStorage(sessionStorageKey, isOpen);
-  }, [isOpen]);
 
   return (
     <div id="fab-contained">

@@ -1,17 +1,17 @@
 import React from 'react';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {SchoolInfo} from './TeacherHomepageConstants';
 import TeacherHomepageDrawer from './TeacherHomepageDrawer';
 import WelcomePopup from './welcome/WelcomePopup';
 
-export interface TeacherHomepagePopupsProps {
-  teacherName?: string;
-}
+export interface TeacherHomepagePopupsProps {}
 
 interface DrawerData {
   showSchoolInfoInterstitial: boolean;
@@ -19,9 +19,7 @@ interface DrawerData {
   existingSchoolInfo: SchoolInfo;
 }
 
-const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = ({
-  teacherName,
-}) => {
+const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
     React.useState(false);
@@ -30,6 +28,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = ({
   const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
     SchoolInfo | undefined
   >(undefined);
+
+  const [hasSeenPopup, setHasSeenPopup] = React.useState(false);
 
   const hasSeenHomepageWelcome = useAppSelector(
     state => state.currentUser.hasSeenHomepageWelcome
@@ -46,11 +46,13 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = ({
     return lastSeenDate >= oneDayAgo;
   }, []);
 
-  const onClosePopup = () =>
+  const onClosePopup = React.useCallback(() => {
+    setHasSeenPopup(true);
     trySetLocalStorage(
       'teacher-homepage-popup-last-seen',
       new Date().toISOString()
     );
+  }, []);
 
   // Load school data and set the drawer state based on the response.
   React.useEffect(() => {
@@ -83,27 +85,53 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = ({
     setSchoolInfoConfirmationOpen,
   ]);
 
-  if (isLoading || hasSeenPopupInLastDay) {
+  const popup = React.useMemo(() => {
+    if (isLoading || hasSeenPopupInLastDay || hasSeenPopup) {
+      return null;
+    } else if (schoolInfoInterstitialOpen || schoolInfoConfirmationOpen) {
+      return (
+        <TeacherHomepageDrawer
+          existingSchoolInfo={existingSchoolInfo}
+          schoolInfoConfirmationOpenInitially={schoolInfoConfirmationOpen}
+          schoolInfoInterstitialOpenInitially={schoolInfoInterstitialOpen}
+          onCloseCallback={onClosePopup}
+        />
+      );
+    } else if (
+      DCDO.get('teacher-homepage-welcome', false) &&
+      (!hasSeenHomepageWelcome ||
+        new URLSearchParams(window.location.search).get(
+          'showHomepageWelcome'
+        ) === 'true')
+    ) {
+      return <WelcomePopup onCloseCallback={onClosePopup} />;
+    }
     return null;
-  } else if (schoolInfoInterstitialOpen || schoolInfoConfirmationOpen) {
-    return (
-      <TeacherHomepageDrawer
-        existingSchoolInfo={existingSchoolInfo}
-        schoolInfoConfirmationOpenInitially={schoolInfoConfirmationOpen}
-        schoolInfoInterstitialOpenInitially={schoolInfoInterstitialOpen}
-        onCloseCallback={onClosePopup}
-      />
-    );
-  } else if (
-    DCDO.get('teacher-homepage-welcome', false) &&
-    (!hasSeenHomepageWelcome ||
-      new URLSearchParams(window.location.search).get('showHomepageWelcome') ===
-        'true')
-  ) {
-    return <WelcomePopup onCloseCallback={onClosePopup} />;
-  }
+  }, [
+    isLoading,
+    hasSeenPopupInLastDay,
+    schoolInfoInterstitialOpen,
+    schoolInfoConfirmationOpen,
+    existingSchoolInfo,
+    onClosePopup,
+    hasSeenHomepageWelcome,
+    hasSeenPopup,
+  ]);
 
-  return null;
+  return (
+    <>
+      {popup}
+      <AiDiffFloatingActionButton
+        context={{type: AiDiffContext.GENERAL}}
+        canShowPulse={
+          !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+        }
+        canStartOpen={
+          !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+        }
+      />
+    </>
+  );
 };
 
 export default TeacherHomepagePopups;
