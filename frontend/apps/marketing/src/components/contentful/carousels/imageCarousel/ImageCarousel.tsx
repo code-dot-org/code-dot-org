@@ -42,7 +42,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
           return {
             id: title,
-            slide: <Image src={file?.url} altText={description} />,
+            slide: <Image src={file?.url ?? ''} altText={description ?? ''} />,
           };
         }),
     [slides],
