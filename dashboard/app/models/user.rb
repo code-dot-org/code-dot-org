@@ -316,10 +316,10 @@ class User < ApplicationRecord
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
-  validates :data_transfer_agreement_request_ip, presence: {if: -> {data_transfer_agreement_accepted.present?}}
-  validates :data_transfer_agreement_source, inclusion: {in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}}
-  validates :data_transfer_agreement_kind, presence: {if: -> {data_transfer_agreement_accepted.present?}}
-  validates :data_transfer_agreement_at, presence: {if: -> {data_transfer_agreement_accepted.present?}}
+  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
@@ -367,10 +367,10 @@ class User < ApplicationRecord
     user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
   end
 
-  validates :user_type, presence: true
-  validates :user_type, inclusion: {in: USER_TYPE_OPTIONS, if: :user_type?}
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
-  validates :educator_role, inclusion: {in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?}
+  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
 
   ## Callback Macros
 
@@ -379,19 +379,11 @@ class User < ApplicationRecord
     before_create :generate_secret_words
   end
 
-  before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
-  before_validation :normalize_parent_email
-  before_validation :update_share_setting
-  # NOTE: Order is important here.
-  before_save :make_teachers_21,
-    :normalize_email,
-    :hash_email,
-    :sanitize_race_data_set_urm,
-    :fix_by_user_type
-  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
   before_create :update_default_share_setting
 
   before_create :save_show_progress_table_v2
+
+  before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender_teacher_input)
@@ -406,20 +398,36 @@ class User < ApplicationRecord
     self.gender = Services::User::GenderNormalizer.call(raw_input: gender)
   end
 
-  after_create :associate_with_potential_pd_enrollments
-  after_create :migrate_to_multi_auth
+  before_validation :normalize_parent_email
+
+  before_validation :update_share_setting
+
+  # NOTE: Order is important here.
+  before_save :make_teachers_21,
+    :normalize_email,
+    :hash_email,
+    :sanitize_race_data_set_urm,
+    :fix_by_user_type
+
+  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
   before_destroy :soft_delete_channels
+
+  after_create :associate_with_potential_pd_enrollments
 
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
 
+  after_create :migrate_to_multi_auth
+
   after_update if: -> {cap_status? && property_previously_changed?(:us_state)} do
     Services::ChildAccount.remove_compliance(self)
   end
 
-  after_destroy :record_soft_delete
   after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
+
+  after_destroy :record_soft_delete
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
   # Include default Devise modules. Others available are:
@@ -1429,12 +1437,12 @@ class User < ApplicationRecord
 
   def associate_with_potential_pd_enrollments
     if teacher?
-      Pd::Enrollment.where(email: email, user: nil).find_each do |enrollment|
+      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
 
       if alternate_email.present?
-        Pd::Enrollment.where(email: alternate_email, user: nil).find_each do |enrollment|
+        Pd::Enrollment.where(email: alternate_email, user: nil).each do |enrollment|
           enrollment.update(user: self)
         end
       end
@@ -1619,7 +1627,7 @@ class User < ApplicationRecord
     return unless teacher?
 
     {
-      locale: self[:locale],
+      locale: read_attribute(:locale),
       account_age_in_years: account_age_in_years,
       grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
       curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
