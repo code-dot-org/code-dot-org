@@ -35,7 +35,7 @@ export interface TooltipProps extends HTMLAttributes<HTMLDivElement> {
    *  will not have `data-theme` set on an ancester element even when it
    *  is "logically" within a theme provider.
    **/
-  theme?: Theme;
+  'data-theme'?: Theme;
 }
 
 export interface TooltipOverlayProps {
@@ -81,7 +81,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       className,
       size = 'm',
       style = {},
-      theme,
       hideTail = false,
       ...HTMLAttributes
     },
@@ -99,7 +98,6 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
           hideTail && moduleStyles.noTail,
           className,
         )}
-        data-theme={theme || undefined}
         style={style}
         role="tooltip"
         {...HTMLAttributes}

@@ -26,9 +26,9 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
         direction: 'onRight',
         size: 'xs',
         text: showCopyConfirmation ? i18n.copied() : i18n.copy(),
-        theme,
         className: style.tooltip,
         iconLeft: showCopyConfirmation ? {iconName: 'check'} : undefined,
+        'data-theme': theme,
       }}
     >
       <Button
