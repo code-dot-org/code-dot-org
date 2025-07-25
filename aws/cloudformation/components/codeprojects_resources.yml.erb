@@ -27,8 +27,8 @@
 LocalhostCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
-    HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
-    Name: localhost.<%= CDO.codeprojects_hostname %>
+    HostedZoneId: !Ref CodeprojectsHostedZoneId
+    Name: !Sub localhost.${CodeprojectsBaseDomainName}
     Type: A
     TTL: 3600
     ResourceRecords:
@@ -37,80 +37,201 @@ LocalhostCodeprojectsRecord:
 LocalhostPreviewCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
-    HostedZoneId: <%= CDO.preview_codeprojects_hostedzone_id %>
-    Name: localhost.<%= CDO.preview_codeprojects_hostname %>
+    HostedZoneId: !Ref CodeprojectsHostedZoneId
+    Name: !Sub localhost.preview.${CodeprojectsBaseDomainName}
     Type: A
     TTL: 3600
     ResourceRecords:
       - 127.0.0.1
 <%- end -%>
 
-# Hosted Zone for <env>.codeprojects.org
-CodeprojectsHostedZone:
-  Type: AWS::Route53::HostedZone
-  Properties:
-    Name: !Sub ${AWS::StackName}.codeprojects.org
-
-# NS record in codeprojects.org to make the above hosted zone authoritative.
-# Alternatively, this could be manually created by an Admin.
-ZoneAuthorityRecord:
-  Type: AWS::Route53::RecordSet
-  Properties:
-    HostedZoneId: <%= CDO.codeprojects_hostedzone_id %> # TODO - no erb
-    Name: !Sub ${AWS::StackName}.codeprojects.org
-    Type: NS
-    TTL: 3600
-    ResourceRecords:
-      - !GetAtt CodeprojectsHostedZone.NameServers.0
-      - !GetAtt CodeprojectsHostedZone.NameServers.1
-      - !GetAtt CodeprojectsHostedZone.NameServers.2
-      - !GetAtt CodeprojectsHostedZone.NameServers.3
-
 CodeprojectsCertificate:
   Type: AWS::CertificateManager::Certificate
   Properties:
-    DomainName: !Sub ${AWS::StackName}.codeprojects.org
-    <%- if rack_env?(:production) -%>
+    DomainName: !Ref CodeprojectsBaseDomainName
     SubjectAlternativeNames:
-      - www.<%= CDO.codeprojects_hostname %>
-      - static.<%= CDO.codeprojects_hostname %>
-      - bramble-download.<%= CDO.codeprojects_hostname %>
-    <%- end -%>
+      - !Sub preview.${CodeprojectsBaseDomainName}
+      - !Sub www.${CodeprojectsBaseDomainName}
+      - !Sub static.${CodeprojectsBaseDomainName}
+      - !Sub bramble-download.${CodeprojectsBaseDomainName}
     ValidationMethod: DNS
     DomainValidationOptions:
-      - DomainName: <%= CDO.codeprojects_hostname %>
-        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
-      <%- if rack_env?(:production) -%>
-      - DomainName: www.<%= CDO.codeprojects_hostname %>
-        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
-      - DomainName: static.<%= CDO.codeprojects_hostname %>
-        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
-      <%- end -%>
+      - DomainName: !Ref CodeprojectsBaseDomainName
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
+      - DomainName: !Sub preview.${CodeprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
+      - DomainName: !Sub www.${CodeprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
+      - DomainName: !Sub static.${CodeprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
+      - DomainName: !Sub bramble-download.${CodeprojectsBaseDomainName}
+        HostedZoneId: !Ref CodeprojectsHostedZoneId
 
-CodeprojectsCertificate:
-  Type: AWS::CertificateManager::Certificate
+CodeprojectsRecords:
+  Type: AWS::Route53::RecordSetGroup
   Properties:
-    DomainName: <%= CDO.preview_codeprojects_hostname %>
-    <%- if rack_env?(:production) -%>
-    SubjectAlternativeNames:
-      - www.<%= CDO.preview_codeprojects_hostname %>
-    <%- end -%>
-    ValidationMethod: DNS
-    DomainValidationOptions:
-      - DomainName: <%= CDO.preview_codeprojects_hostname %>
-        HostedZoneId: <%= CDO.preview_codeprojects_hostedzone_id %>
-      <%- if rack_env?(:production) -%>
-      - DomainName: www.<%= CDO.preview_codeprojects_hostname %>
-        HostedZoneId: <%= CDO.preview_codeprojects_hostedzone_id %>
-      - DomainName: static.<%= CDO.preview_codeprojects_hostname %>
-        HostedZoneId: <%= CDO.preview_codeprojects_hostedzone_id %>
-      <%- end -%>
+    HostedZoneId: !Ref CodeprojectsHostedZoneId
+    RecordSets:
+      # NOTE: today this points directly to a manually created codeprojects load balancer, this changes it to point to the main code.org load balancer.
+      # Comment this out to avoid changing the existing codeprojects base domain stack.
+      - Name: !Ref CodeprojectsBaseDomainName
+        Type: A
+        AliasTarget:
+          DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
+          HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
+      # NOTE: this record is new
+      - Name: !Sub preview.${CodeprojectsBaseDomainName}
+        Type: A
+        AliasTarget:
+          DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
+          HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
+      # NOTE: today this points directly to the manually created codeprojects load balancer, this changes it to point to the www redirect distribution below.
+      # Comment this out to avoid changing the existing codeprojects base domain stack (though this is safer than changing the base domain)
+      - Name: !Sub www.${CodeprojectsBaseDomainName}
+        Type: A
+        AliasTarget:
+          DNSName: !GetAtt CodeprojectsWwwRedirectDistribution.DomainName
+          HostedZoneId: !GetAtt CodeprojectsWwwRedirectDistribution.HostedZoneId
 
-# Import/Recreate Additional Resources - TODO
-#   - Route53 DNS RecordSets
-#   - S3-Backed Cloudfront Distributions
-#   - Classic Load Balancers
-#   - S3 Buckets
+# Codeprojects CloudFront Distribution
+# TODO:
+#   - handle bramble-download and static subdomains
+CodeprojectsCloudFrontDistribution:
+  Type: AWS::CloudFront::Distribution
+  Properties:
+    DistributionConfig:
+      Enabled: true
+      Comment: !Sub ${CodeprojectsBaseDomainName} main distribution
+      PriceClass: PriceClass_100
+      Aliases:
+        - !Ref CodeprojectsBaseDomainName
+        - !Sub preview.${CodeprojectsBaseDomainName}
+      Origins:
+        - Id: DashboardOrigin
+          DomainName: origin-autoscale-prod.code.org
+          CustomOriginConfig:
+            OriginProtocolPolicy: https-only
+            OriginSSLProtocols:
+              - TLSv1.2
+      DefaultCacheBehavior:
+        TargetOriginId: DashboardOrigin
+        ViewerProtocolPolicy: redirect-to-https
+        CachePolicyId: !Ref CodeprojectsCachePolicy
+        OriginRequestPolicyId: !Ref CodeprojectsOriginRequestPolicy
+        Compress: true
+      ViewerCertificate:
+        AcmCertificateArn: !Ref CodeprojectsCertificate
+        MinimumProtocolVersion: TLSv1.2_2021
+        SslSupportMethod: sni-only
+
+# Cache policy for the main distribution
+CodeprojectsCachePolicy:
+  Type: AWS::CloudFront::CachePolicy
+  Properties:
+    CachePolicyConfig:
+      Name: !Sub ${AWS::StackName}-codeprojects-cache-policy
+      MinTTL: 0
+      MaxTTL: 31536000
+      DefaultTTL: 0
+      ParametersInCacheKeyAndForwardedToOrigin:
+        EnableAcceptEncodingGzip: true
+        CookiesConfig: 
+          CookieBehavior: all
+        HeadersConfig: 
+          HeaderBehavior: whitelist
+          Headers:
+            - Authorization
+            - CloudFront-Forwarded-Proto
+            - Host
+            - Origin
+            - Referer
+            - User-Agent
+        QueryStringsConfig: 
+          QueryStringBehavior: all
+
+# Origin request policy for the main distribution
+CodeprojectsOriginRequestPolicy:
+  Type: AWS::CloudFront::OriginRequestPolicy
+  Properties:
+    OriginRequestPolicyConfig:
+      Name: !Sub ${AWS::StackName}-codeprojects-origin-request-policy
+      CookiesConfig:
+        CookieBehavior: all
+      HeadersConfig:
+        HeaderBehavior: whitelist
+        Headers:
+          - Authorization
+          - CloudFront-Forwarded-Proto
+          - Host
+          - Origin
+          - Referer
+          - User-Agent
+      QueryStringsConfig:
+        QueryStringBehavior: all
+
+# Dedicated CloudFront distribution for www redirects
+CodeprojectsWwwRedirectDistribution:
+  Type: AWS::CloudFront::Distribution
+  Properties:
+    DistributionConfig:
+      Enabled: true
+      Comment: !Sub www.${CodeprojectsBaseDomainName} redirect
+      PriceClass: PriceClass_100
+      Aliases:
+        - !Sub www.${CodeprojectsBaseDomainName}
+      Origins:
+        # An origin is required, but will never receive traffic
+        - Id: PrimaryOrigin
+          DomainName: example.com
+          CustomOriginConfig:
+            OriginProtocolPolicy: match-viewer
+      DefaultCacheBehavior:
+        TargetOriginId: PrimaryOrigin
+        FunctionAssociations:
+          - EventType: viewer-request
+            FunctionARN: !GetAtt CodeprojectsWwwRedirectFunction.FunctionARN
+        ViewerProtocolPolicy: allow-all
+      ViewerCertificate:
+        AcmCertificateArn: !Ref CodeprojectsCertificate
+        MinimumProtocolVersion: TLSv1.2_2021
+        SslSupportMethod: sni-only
+
+# CloudFront function to redirect www to non-www with 301 status
+CodeprojectsWwwRedirectFunction:
+  Type: AWS::CloudFront::Function
+  Properties:
+    Name: !Sub ${AWS::StackName}-codeprojects-www-redirect
+    FunctionCode: |
+      function handler(event) {
+          var request = event.request;
+          var host = request.headers.host.value;
+          var newHost = host.substring(4); // Remove 'www.' prefix
+          var newUrl = 'https://' + newHost + request.uri;
+          
+          // Add query string if present
+          if (request.querystring && Object.keys(request.querystring).length > 0) {
+              var queryParams = [];
+              for (var key in request.querystring) {
+                  if (request.querystring[key].value) {
+                      queryParams.push(key + '=' + encodeURIComponent(request.querystring[key].value));
+                  } else {
+                      queryParams.push(key);
+                  }
+              }
+              newUrl += '?' + queryParams.join('&');
+          }
+          
+          return {
+              statusCode: 301,
+              statusDescription: 'Moved Permanently',
+              headers: {
+                  'location': { value: newUrl }
+              }
+          };
+      }
+    FunctionConfig:
+      Comment: Redirects www subdomain to non-www with 301 status
+      Runtime: cloudfront-js-1.0
 
 # -----------------------------------------------
 # End codeprojects.org resources
