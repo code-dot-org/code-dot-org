@@ -33,14 +33,6 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.1
 
-    # Temporarily disable some default values that we aren't yet ready for.
-    # Right now, these changes to cookie functionality break projects
-    #
-    # TODO infra: Figure out why, fix, and reenable.
-    #
-    # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
-    config.action_dispatch.use_cookies_with_metadata = false
-
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins CDO.pegasus_site_host
