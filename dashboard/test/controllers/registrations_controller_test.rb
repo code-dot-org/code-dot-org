@@ -325,6 +325,22 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
   end
 
+  test "create as teacher allows chinese in given name" do
+    params_with_chinese_name = set_up_partial_registration(@default_params.update(user_type: 'teacher', given_name: '樊瑞'))
+
+    assert_creates(User) do
+      post :create, params: {user: params_with_chinese_name}
+    end
+  end
+
+  test "create as teacher allows chinese in family name" do
+    params_with_chinese_name = set_up_partial_registration(@default_params.update(user_type: 'teacher', family_name: '樊瑞'))
+
+    assert_creates(User) do
+      post :create, params: {user: params_with_chinese_name}
+    end
+  end
+
   test "create as teacher automatically sets age" do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', age: '', email_preference_opt_in: true))
 
