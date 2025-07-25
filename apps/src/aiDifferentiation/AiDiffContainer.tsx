@@ -53,10 +53,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
+  const MIN_VISIBLE = 40;
+
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (window.innerWidth < positionX + 100) {
-        setPositionX(window.innerWidth - 100);
+      const boxWidth = parseInt(style.containerWidth);
+      const originX = parseInt(style.fabOriginX);
+      const minX = MIN_VISIBLE - originX - boxWidth;
+      const maxX = document.documentElement.clientWidth - originX - MIN_VISIBLE;
+      if (positionX < minX) {
+        setPositionX(minX);
+      } else if (positionX > maxX) {
+        setPositionX(maxX);
       }
     };
     ensureDraggableIsVisible();
@@ -69,8 +77,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
-      if (positionY + window.innerHeight < 760) {
-        setPositionY(760 - window.innerHeight);
+      const boxHeight = parseInt(style.containerHeight);
+      const originY = parseInt(style.fabOriginY);
+      const minY = originY - document.documentElement.clientHeight + boxHeight;
+      const maxY = originY + boxHeight - MIN_VISIBLE;
+      if (positionY < minY) {
+        setPositionY(minY);
+      } else if (positionY > maxY) {
+        setPositionY(maxY);
       }
     };
     ensureDraggableIsVisible();
