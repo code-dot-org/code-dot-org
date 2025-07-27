@@ -8,14 +8,13 @@ export default function AbuseExclamation({
   i18n,
   isOwner,
   canViewFlaggedProject,
-  channelId,
 }) {
   let finalLink, finalLinkText;
   if (isOwner) {
-    finalLink = `${channelId}/edit`;
+    finalLink = `${window.location.href}/edit`;
     finalLinkText = i18n.edit_project;
   } else if (canViewFlaggedProject) {
-    finalLink = `${channelId}/view`;
+    finalLink = `${window.location.href}/view`;
     finalLinkText = i18n.view_project;
   } else {
     finalLink = 'https://studio.code.org';
@@ -48,5 +47,4 @@ AbuseExclamation.propTypes = {
   }).isRequired,
   isOwner: PropTypes.bool.isRequired,
   canViewFlaggedProject: PropTypes.bool, // Make required once we add different view for teacher of project owner in lab2.
-  channelId: PropTypes.string.isRequired,
 };

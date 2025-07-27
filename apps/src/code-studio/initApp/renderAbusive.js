@@ -28,7 +28,6 @@ export default (project, tosText) => {
       isOwner: project.isOwner(),
       canViewFlaggedProject:
         project.isTeacherOfProjectOwnerOrProjectValidator(),
-      channelId: project.getCurrentId(),
     }),
     document.getElementById('codeApp')
   );
