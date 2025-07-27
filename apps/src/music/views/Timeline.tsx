@@ -111,9 +111,58 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
     return eventHeight > 8 ? 3 : eventHeight > 6 ? 2 : 1;
   }, []);
 
+  const timelineElements = Array.from(
+    document.querySelectorAll<HTMLElement>('#timeline-element')
+  );
+
+  const onKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      const currentIndex = timelineElements.indexOf(event.currentTarget);
+
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+        // Move focus to the next element
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < timelineElements.length) {
+          timelineElements[nextIndex].focus();
+        }
+      } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+        // Move focus to the previous element
+        const previousIndex = currentIndex - 1;
+        if (previousIndex >= 0) {
+          timelineElements[previousIndex].focus();
+        }
+      } else if (event.key === 'Escape') {
+        // Move focus back to the timeline container
+        const timelineContainer = document.getElementById('timeline');
+        if (timelineContainer) {
+          timelineContainer.focus();
+        }
+      } else if (event.key === 'Tab') {
+        // Prevent default tab behavior to avoid moving focus out of the timeline
+        event.preventDefault();
+      }
+    },
+    [timelineElements]
+  );
+
+  const enterExitTimeline = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      // Focus the first element if it exists
+      if (timelineElements.length > 0) {
+        timelineElements[0].focus();
+      }
+    }
+    if (event.key === 'Tab') {
+      // If Tab is pressed, we want to exit the timeline.
+      // This allows users to navigate away from the timeline using keyboard.
+      (event.currentTarget as HTMLElement).blur();
+    }
+  };
+
   const timelineElementProps = {
     paddingOffset,
     barWidth,
+    onKeyDown,
     getEventHeight,
     getEventVerticalSpace,
   };
@@ -201,6 +250,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
         isPlaying && moduleStyles.timelinePlaying
       )}
       onClick={onTimelineClick}
+      onKeyDown={enterExitTimeline}
       ref={timelineRef}
       tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
     >
