@@ -234,4 +234,35 @@ class ProjectsTest < Minitest::Test
 
     assert_equal expected_thumbnail_url, project.get(channel_id)['thumbnailUrl']
   end
+
+  def test_get_is_teacher_of_project_owner_returns_true_when_user_is_teacher
+    student_user_id = 100
+    teacher_user_id = 200
+    student_storage_id = create_storage_id_for_user(student_user_id)
+
+    project = Projects.new(student_storage_id)
+    channel_id = project.create({projectType: 'spritelab'}, ip: 123)
+
+    # Stub storage_decrypt_channel_id to return the correct owner storage ID.
+    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
+    project.expects(:teaches_student?).with(student_user_id, teacher_user_id).returns(true)
+
+    assert_equal true, project.get_is_teacher_of_project_owner(channel_id, teacher_user_id)
+  end
+
+  def test_get_is_teacher_of_project_owner_returns_false_when_user_is_not_teacher
+    student_user_id = 100
+    non_teacher_user_id = 300
+    student_storage_id = create_storage_id_for_user(student_user_id)
+
+    project = Projects.new(student_storage_id)
+    channel_id = project.create({projectType: 'spritelab'}, ip: 123)
+
+    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
+    project.expects(:teaches_student?).with(student_user_id, non_teacher_user_id).returns(false)
+
+    assert_equal false, project.get_is_teacher_of_project_owner(channel_id, non_teacher_user_id)
+  end
 end
