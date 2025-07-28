@@ -8,9 +8,12 @@ import React, {useCallback, useRef, useState} from 'react';
 
 import commonI18n from '@cdo/locale';
 
-import SettingsDropdown from './SettingsDropdown';
+import SettingsDropdowns, {Setting} from './SettingsDropdowns';
 
-const SettingsButton: React.FunctionComponent = () => {
+interface SettingsButtonProps {
+  settings: Setting[];
+}
+const SettingsButton: React.FC<SettingsButtonProps> = ({settings}) => {
   const [isOpen, setIsOpen] = useState(false);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<WithTooltipHandle>(null);
@@ -42,9 +45,10 @@ const SettingsButton: React.FunctionComponent = () => {
         />
       </WithTooltip>
       {isOpen && (
-        <SettingsDropdown
+        <SettingsDropdowns
           closeDropdown={closeSettings}
           buttonRef={buttonContainerRef}
+          settings={settings}
         />
       )}
     </div>

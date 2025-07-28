@@ -12,6 +12,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import {useCodeBridgeSettings} from '../Settings/settings';
 
 import ConsoleManager from './ConsoleManager';
 
@@ -43,6 +44,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
+  const settings = useCodeBridgeSettings();
 
   useEffect(() => {
     if (!consoleManager) {
@@ -92,7 +94,9 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           color={'black'}
         />
       </WithTooltip>
-      {isWidgetView && !widgetViewShowCode && <SettingsButton />}
+      {isWidgetView && !widgetViewShowCode && (
+        <SettingsButton settings={settings} />
+      )}
     </div>
   );
 };
