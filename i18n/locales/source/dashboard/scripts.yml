@@ -12158,7 +12158,7 @@ en:
             lessonGroup-6:
               display_name: Data
           name: nevada-standards-aligned-kindergarten-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course A'
+          title: 'Nevada Standards Aligned: CSF Kindergarten'
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Developed specifically for Nevada standards alignment. This course offers a computer science curriculum for beginning readers in kindergarten. Students will learn to program using commands with sequencing and loops. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety.
@@ -12183,7 +12183,7 @@ en:
             lessonGroup-8:
               display_name: Data
           name: nevada-standards-aligned-first-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course B'
+          title: 'Nevada Standards Aligned: CSF 1st Grade'
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description: Developed specifically for Nevada standards alignment.  This course for first graders moves students to learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation, critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
@@ -12208,7 +12208,7 @@ en:
             lessonGroup-8:
               display_name: Computing Systems
           name: nevada-standards-aligned-second-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course C'
+          title: 'Nevada Standards Aligned: CSF 2nd Grade'
           description_audience: ''
           description_short: " Learn the basics of computer science and create your own art, stories, and games."
           description: Developed specifically for Nevada standards alignment.  In this course, second-grade students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
@@ -12231,7 +12231,7 @@ en:
             lessonGroup-8:
               display_name: End of Course Project
           name: nevada-standards-aligned-third-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course D'
+          title: 'Nevada Standards Aligned: CSF 3rd Grade'
           description_audience: 'Ages: 7-11'
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description: Developed specifically for Nevada standards alignment.  In this course, students in third grade will increase their knowledge of some concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, and more.
@@ -12250,7 +12250,7 @@ en:
             lessonGroup-6:
               display_name: End of Course Project
           name: nevada-standards-aligned-fourth-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course E'
+          title: 'Nevada Standards Aligned: CSF 4th Grade'
           description_audience: 'Ages: 8-12'
           description_short: Learn the basics of sprites, nested loops, and functions.
           description: Developed specifically for Nevada standards alignment.  Fourth graders begin this course with an introduction to the Sprite Lab programming tool. Following these lessons, students will engage in more complex coding. Students will learn about nested loops and functions. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
@@ -12282,7 +12282,7 @@ en:
             lessonGroup-7:
               display_name: End of Course Project
           name: nevada-standards-aligned-fifth-grade-2023
-          title: 'Nevada Standards Aligned: Beta - CSF Course F'
+          title: 'Nevada Standards Aligned: CSF 5th Grade'
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Fifth graders begin this course by learning to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about conditionals and variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
@@ -17526,8 +17526,8 @@ en:
           title: Game Design
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n-   #### Learn the basic elements of game design.\n-   #### Use variables to keep score.\n-   #### Code environment and player sprites.\n-   #### Learn how to host a game jam in your classroom.\n-   #### Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes"
-          student_description: "#### **You will:**\n\n-   #### Learn the basic elements of game design.\n-   #### Use variables to keep score.\n-   #### Code environment and player sprites.\n-   #### Learn how to host a game jam in your classroom.\n-   #### Learn how to access Code.org curricula.\n\n#### **Suggested time:** 80 minutes"
+          description: "##### **You will:**\n\n-   ##### Learn the basic elements of game design.\n-   ##### Use variables to keep score.\n-   ##### Code environment and player sprites.\n-   ##### Learn how to host a game jam in your classroom.\n-   ##### Learn how to access Code.org curricula.\n\n##### **Suggested time:** 80 minutes"
+          student_description: "##### **You will:**\n\n-   ##### Learn the basic elements of game design.\n-   ##### Use variables to keep score.\n-   ##### Code environment and player sprites.\n-   ##### Learn how to host a game jam in your classroom.\n-   ##### Learn how to access Code.org curricula.\n\n##### **Suggested time:** 80 minutes"
         k5gettingstarted:
           lessons: {}
           lesson_groups:
@@ -17717,8 +17717,8 @@ en:
           title: Getting Started [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n-   #### Get an introduction to Code.org’s mission.\n-   #### Learn how to navigate the Code.org website and teacher tools.\n-   #### Set up a classroom section.\n-   #### Locate and use course lesson plans and teacher resources.\n-   #### Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes"
-          student_description: "#### **You will:**\n\n#### \\* Get an introduction to Code.org’s mission.\n\n#### \\* Learn how to navigate the Code.org website and teacher tools.\n\n#### \\* Set up a classroom section.\n\n#### \\* Locate and use course lesson plans and teacher resources.\n\n#### \\* Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes"
+          description: "##### **You will:**\n\n-   ##### Get an introduction to Code.org’s mission.\n-   ##### Learn how to navigate the Code.org website and teacher tools.\n-   ##### Set up a classroom section.\n-   ##### Locate and use course lesson plans and teacher resources.\n-   ##### Learn how to access support while teaching Code.org curricula.\n\n##### **Suggested time:** 80 minutes"
+          student_description: "##### **You will:**\n\n-   ##### Get an introduction to Code.org’s mission.\n-   ##### Learn how to navigate the Code.org website and teacher tools.\n-   ##### Set up a classroom section.\n-   ##### Locate and use course lesson plans and teacher resources.\n-   ##### Learn how to access support while teaching Code.org curricula.\n\n##### **Suggested time:** 80 minutes"
         k5-unplugged:
           lessons: {}
           lesson_groups:
@@ -19703,10 +19703,10 @@ en:
               name: Cybersecurity and Global Impacts
           lesson_groups: {}
           name: sandbox-csaif-pl-cyber
-          title: Cybersecurity and Global Impacts
+          title: AI-Powered Threats and Defenses
           description_audience: ''
           description_short: ''
-          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.\n\n#### The Cybersecurity and Global Impacts unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
+          description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s AI-Powered Threats and Defenses Unit.\n\n#### The Cybersecurity and Global Impacts unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
           student_description: "## Welcome!\n\n#### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.\n\n#### The Cybersecurity and Global Impacts unit is part of the **_AI Foundations_** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.\n\n#### **Find the learning that works for you**\n\n#### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n#### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs."
         sandbox-csaif-pl-networks:
           lessons:
@@ -23107,15 +23107,7 @@ en:
           title: Programming with Music Lab
           description_audience: ''
           description_short: This unit uses music to introduce core programming concepts, guiding students through creative coding projects that build problem-solving skills, computational thinking, and creativity in musical expression.
-          description: |-
-            This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.
-
-            ::: details [**Implementation Guidance for Programming with Music Lab**]
-            You can view the [Implementation Guide][0]for more information about this unit.
-            :::
-            ::: details [**Professional Development**]
-            If you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab][1]. The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.
-            :::
+          description: "This unit is an engaging, hands-on dive into the worlds of computer science, music, and problem solving. Students are introduced to foundational programming concepts through music, using code to build, remix, and perform original songs. The unit gradually moves students from exposure to mastery to creativity, as they apply the Problem Solving Process and practice Computational Thinking like pattern recognition, algorithmic thinking, and debugging to design, test, and refine their musical ideas. Through sequencing, loops, and functions, students learn to think like programmers and create like musicians. The unit culminates in a genre mash-up project that brings together all their skills in code, creativity, and musical expression.\n\n::: details [**Implementation Guidance for Programming with Music Lab**]\nYou can view the [Implementation Guide][0]for more information about this unit.\n:::\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Teaching Programming with Music Lab][1]. The module is designed to take 2 hours to complete. No previous experience with coding or music is assumed.\n:::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][2] to let the Code.org curriculum team know how the unit went."
           student_description: Learn how to program by creating music!
         6-12-ai-powered-threats-and-defenses:
           lessons:
