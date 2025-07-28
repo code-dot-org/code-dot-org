@@ -33,6 +33,8 @@ const defaultCoursesResponse = {
 describe('AIDiffFloatingActionButton', () => {
   let fetchStub;
 
+  let store;
+
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
@@ -48,10 +50,12 @@ describe('AIDiffFloatingActionButton', () => {
     sessionStorage.clear();
     localStorage.clear();
     jest.restoreAllMocks();
+
+    store = null;
   });
 
   function renderDefault(propOverrides = {}) {
-    const store = getStore();
+    store = getStore();
 
     registerReducers({
       currentUser,
@@ -64,7 +68,7 @@ describe('AIDiffFloatingActionButton', () => {
       })
     );
 
-    render(
+    return render(
       <Provider store={store}>
         <AiDiffFloatingActionButton {...DEFAULT_PROPS} {...propOverrides} />
       </Provider>
@@ -211,6 +215,61 @@ describe('AIDiffFloatingActionButton', () => {
         name: i18n.openOrCloseTeachingAssistant(),
       });
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
+    });
+  });
+
+  describe('canStartOpen prop behavior', () => {
+    it('starts closed and opens when canStartOpen is false then becomes true', async () => {
+      const {rerender} = renderDefault({canStartOpen: false});
+
+      await waitFor(() => {
+        expect(fetchStub).toHaveBeenCalled();
+      });
+
+      expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+
+      rerender(
+        <Provider store={store}>
+          <AiDiffFloatingActionButton {...DEFAULT_PROPS} canStartOpen={true} />
+        </Provider>
+      );
+
+      await waitFor(() => {
+        expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+      });
+    });
+
+    it('starts closed and opens and closes manually then does not open when canStartOpen starts false and becomes true', async () => {
+      const {rerender} = renderDefault({canStartOpen: false});
+
+      await waitFor(() => {
+        expect(fetchStub).toHaveBeenCalled();
+      });
+
+      expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+
+      const fabButton = screen.getByRole('button', {
+        name: i18n.openOrCloseTeachingAssistant(),
+      });
+      fireEvent.click(fabButton);
+
+      await waitFor(() => {
+        expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+      });
+
+      fireEvent.click(fabButton);
+
+      await waitFor(() => {
+        expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+      });
+
+      rerender(
+        <Provider store={store}>
+          <AiDiffFloatingActionButton {...DEFAULT_PROPS} canStartOpen={true} />
+        </Provider>
+      );
+
+      expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
     });
   });
 });

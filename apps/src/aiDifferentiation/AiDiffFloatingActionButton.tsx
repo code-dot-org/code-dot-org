@@ -50,27 +50,27 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     JSON.parse(tryGetLocalStorage(localStorageClosedKey, false.toString())) ||
     false;
 
-  // Open the chat window if this is the first time the user has seen the FAB in this
-  // session and they haven't interacted with the FAB yet.
-  // Depends on other logic which sets the open state in session storage.
-  const isFirstSession =
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null &&
-    !hasOpened &&
-    !hasClosed;
-
-  // Keeps FAB open/closed on new pages in the same tab or window
-  // New tab or window is default closed if they have previously opened/closed the FAB
-  // Default open if they have never opened/closed the fab before (i.e. first time on the site)
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   React.useEffect(() => {
-    console.log('lfm', {canStartOpen, isFirstSession});
-    setIsOpen(
-      canStartOpen &&
-        (JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
-          isFirstSession)
-    );
-  }, [canStartOpen, isFirstSession]);
+    // If the user has manually opened or closed the FAB, we should not open it automatically.
+    if (!hasOpened && !hasClosed) {
+      // Open the chat window if this is the first time the user has seen the FAB in this
+      // session and they haven't interacted with the FAB yet.
+      // Depends on other logic which sets the open state in session storage.
+      const isFirstSession =
+        JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null;
+
+      // Keeps FAB open/closed on new pages in the same tab or window
+      // New tab or window is default closed if they have previously opened/closed the FAB
+      // Default open if they have never opened/closed the fab before (i.e. first time on the site)
+      setIsOpen(
+        canStartOpen &&
+          (isFirstSession ||
+            JSON.parse(tryGetSessionStorage(sessionStorageKey, false)))
+      );
+    }
+  }, [canStartOpen, hasOpened, hasClosed]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -132,7 +132,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         />
       </button>
       <AiDiffContainer
-        open={isOpen || isFirstSession}
+        open={isOpen}
         context={context}
         closeTutor={handleClick}
         scriptName={scriptName}
