@@ -26,8 +26,9 @@ module AiEvaluationOpenaiHelper
               type: "object",
               properties: {
                 evaluationCriteria: {type: "string"},
-                aiEvaluation: {type: "string"},
+                observations: {type: "string"},
                 aiReasoning: {type: "string"},
+                aiEvaluation: {type: "string"},
                 skillEvaluations: {type: "array", items: {type: "object"}},
               },
             }
