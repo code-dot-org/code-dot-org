@@ -11,6 +11,11 @@ import * as GoogleBlockly from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+// We are transitioning off of a standalone Amplitude project for Music Lab
+// and onto Code.org's main Statsig project.
+// In the short term, we log to both projects to establish parity between the two logging systems.
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import cdoAnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {
   getEnvironment,
@@ -258,6 +263,7 @@ export default class AnalyticsReporter {
       this.log(logMessage);
     }
 
+    cdoAnalyticsReporter.sendEvent(eventType, payload, PLATFORMS.STATSIG);
     track(eventType, payload).promise;
   }
 
@@ -338,6 +344,7 @@ export default class AnalyticsReporter {
 
     this.session = undefined;
 
+    cdoAnalyticsReporter.sendEvent('Session end', payload, PLATFORMS.STATSIG);
     track('Session end', payload);
     flush();
 
