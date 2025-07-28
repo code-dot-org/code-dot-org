@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
@@ -85,6 +87,9 @@ class AnimationPicker extends React.Component {
     showFlaggedModal: false,
     pendingUploadData: null,
   };
+
+  appType =
+    this.props.pickerType === PICKER_TYPE.gamelab ? 'gamelab' : 'spritelab';
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
 
@@ -191,6 +196,11 @@ class AnimationPicker extends React.Component {
           this.setState({
             showFlaggedModal: true,
           });
+          analyticsReporter.sendEvent(
+            EVENTS.FLAGGED_CUSTOM_IMAGE,
+            {LabType: this.appType},
+            PLATFORMS.STATSIG
+          );
         } else {
           // If the image is rated 'everyone' or 'unknown', continue with upload.
           this.props.onUploadStart(this.state.pendingUploadData);
@@ -220,7 +230,22 @@ class AnimationPicker extends React.Component {
           showFlaggedModal: false,
           pendingUploadData: null,
         });
+        analyticsReporter.sendEvent(
+          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
+          {LabType: this.appType},
+          PLATFORMS.STATSIG
+        );
       });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({showFlaggedModal: false, pendingUploadData: null});
+    analyticsReporter.sendEvent(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {LabType: this.appType},
+      PLATFORMS.STATSIG
+    );
+    this.props.onClose(); // Close the entire AnimationPicker
   };
 
   render() {
@@ -256,10 +281,7 @@ class AnimationPicker extends React.Component {
           <FlaggedImageModal
             isOpen
             onAccept={this.handleAcceptFlaggedImage}
-            onCancel={() => {
-              this.setState({showFlaggedModal: false, pendingUploadData: null});
-              this.props.onClose(); // Close the entire AnimationPicker
-            }}
+            onCancel={this.handleCancelFlaggedImage}
           />
         )}
         {this.renderVisibleBody()}
