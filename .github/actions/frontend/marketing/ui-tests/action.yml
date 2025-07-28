@@ -55,7 +55,7 @@ runs:
           -v $PWD:/workspace \
           -w /workspace/frontend \
           mcr.microsoft.com/playwright:v1.49.1-noble \
-          bash -c "corepack enable && yarn build --filter @code-dot-org/marketing && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci"
+          bash -c "corepack enable && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci"
       working-directory: ./frontend
 
     - name: Upload Playwright reports

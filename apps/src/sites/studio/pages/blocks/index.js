@@ -37,11 +37,14 @@ function renderBlock(element) {
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   const blocksDom = parseElement(`<block type='${blockName}' />`);
-  const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
-    noScrolling: true,
-    inline: false,
+  Blockly.cdoUtils.getUserTheme().then(theme => {
+    const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
+      noScrolling: true,
+      inline: false,
+      theme,
+    });
+    shrinkBlockSpaceContainer(blockSpace, true);
   });
-  shrinkBlockSpaceContainer(blockSpace, true);
 }
 
 $(document).ready(() => {
