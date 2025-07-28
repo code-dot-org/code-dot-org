@@ -210,6 +210,7 @@ class AnimationPicker extends React.Component {
       .catch(err => {
         console.error('Moderation error:', err);
         this.setState({
+          showFlaggedModal: true,
           flaggedModalError: msg.animationPicker_uploadingError(),
         });
       });
@@ -229,14 +230,6 @@ class AnimationPicker extends React.Component {
       .then(response => response.json())
       .then(() => {
         this.props.onUploadStart(pendingUploadData);
-      })
-      .catch(err => {
-        console.error('Update abuse error:', err);
-        this.setState({
-          flaggedModalError: msg.animationPicker_uploadingError(),
-        });
-      })
-      .finally(() => {
         this.setState({
           showFlaggedModal: false,
           pendingUploadData: null,
@@ -246,6 +239,13 @@ class AnimationPicker extends React.Component {
           {LabType: this.appType},
           PLATFORMS.STATSIG
         );
+      })
+      .catch(err => {
+        console.error('Update abuse error:', err);
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
       });
   };
 
