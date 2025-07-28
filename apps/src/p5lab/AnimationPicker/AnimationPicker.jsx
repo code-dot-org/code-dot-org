@@ -86,6 +86,7 @@ class AnimationPicker extends React.Component {
     exitingDialog: false,
     showFlaggedModal: false,
     pendingUploadData: null,
+    flaggedModalError: null,
   };
 
   appType =
@@ -206,7 +207,12 @@ class AnimationPicker extends React.Component {
           this.props.onUploadStart(this.state.pendingUploadData);
         }
       })
-      .catch(err => console.error('Moderation error:', err));
+      .catch(err => {
+        console.error('Moderation error:', err);
+        this.setState({
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+      });
   };
 
   handleAcceptFlaggedImage = () => {
@@ -224,7 +230,12 @@ class AnimationPicker extends React.Component {
       .then(() => {
         this.props.onUploadStart(pendingUploadData);
       })
-      .catch(err => console.error('Update abuse error:', err))
+      .catch(err => {
+        console.error('Update abuse error:', err);
+        this.setState({
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+      })
       .finally(() => {
         this.setState({
           showFlaggedModal: false,
@@ -239,7 +250,11 @@ class AnimationPicker extends React.Component {
   };
 
   handleCancelFlaggedImage = () => {
-    this.setState({showFlaggedModal: false, pendingUploadData: null});
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
     analyticsReporter.sendEvent(
       EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
       {LabType: this.appType},
@@ -282,6 +297,7 @@ class AnimationPicker extends React.Component {
             isOpen
             onAccept={this.handleAcceptFlaggedImage}
             onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
           />
         )}
         {this.renderVisibleBody()}

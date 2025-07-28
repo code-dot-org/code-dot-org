@@ -268,6 +268,7 @@
   "animationPicker_flaggedImageTOS": "This project will be considered in violation of Code.org's Terms of Service.",
   "animationPicker_leaveSelectionText": "Any selected {contextName}s will not be added to your project.",
   "animationPicker_leaveSelectionTitle": "Leave the Library?",
+  "animationPicker_uploadingError": "There was an error uploading your image. Please try again.",
   "animationPicker_noResultsFound": "Sorry, no results found.",
   "animationPicker_restrictedShareRulesHeader": "To upload images, you must agree to these rules:",
   "animationPicker_returnToLibrary": "Return to library",

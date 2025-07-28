@@ -8,12 +8,14 @@ interface FlaggedImageModalProps {
   isOpen: boolean;
   onAccept: () => void;
   onCancel: () => void;
+  errorMessage?: string;
 }
 
 const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   isOpen,
   onAccept,
   onCancel,
+  errorMessage,
 }) => {
   if (!isOpen) return null;
 
@@ -42,6 +44,9 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
               </BodyTwoText>
             </li>
           </ul>
+          {errorMessage && (
+            <BodyTwoText style={{color: 'red'}}>{errorMessage}</BodyTwoText>
+          )}
         </div>
       }
       primaryButtonProps={{
