@@ -87,11 +87,11 @@ class AidiffThreadsController < ApplicationController
     end
 
     if @aidiff_thread.session_created.nil? || @aidiff_thread.session_created < 1.day.ago
-      session_id = @aidiff_thread.external_id
-      input = params[:inputText]
-    else
       session_id = nil
       input = AiDiffBedrockHelper.populate_new_session_messages(@aidiff_thread.aidiff_messages, params[:inputText])
+    else
+      session_id = @aidiff_thread.external_id
+      input = params[:inputText]
     end
 
     get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, @aidiff_thread.context_type)
