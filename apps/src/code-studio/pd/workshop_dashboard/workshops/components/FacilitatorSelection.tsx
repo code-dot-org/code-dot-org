@@ -2,7 +2,7 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useEffect, useMemo} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
-import styles from '../../../../workshop.module.scss';
+import styles from '../workshop.module.scss';
 
 const fakeFacilitators = [
   {id: 123, name: 'Andy Bernard'},

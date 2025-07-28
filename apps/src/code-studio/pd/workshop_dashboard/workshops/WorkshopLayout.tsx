@@ -2,10 +2,10 @@ import {Button} from '@code-dot-org/component-library/button';
 import React, {FC} from 'react';
 import {Outlet, useLocation} from 'react-router-dom';
 
+import {FacilitatorSelection} from './components/FacilitatorSelection';
+import {SurveyCategorySelection} from './components/SurveyCategorySelection';
+import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
-import {SurveyCategorySelection} from './surveys/components/SurveyCategorySelection';
-import {SurveyTypeSelection} from './surveys/components/SurveyTypeSelection';
-import {FacilitatorSelection} from './surveys/post/facilitators/components/FacilitatorSelection';
 import {WorkshopLayoutProps} from './types';
 
 import styles from './workshop.module.scss';

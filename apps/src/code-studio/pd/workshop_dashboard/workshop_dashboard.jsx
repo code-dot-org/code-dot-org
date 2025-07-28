@@ -43,10 +43,11 @@ import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 import {workshopLabel} from './WorkshopFormTemplate/utils';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
-import {Engagement} from './workshops/surveys/post/engagement/Engagement';
-import {Implementation} from './workshops/surveys/post/implementation/Implementation';
-import {Logistics} from './workshops/surveys/post/logistics/Logistics';
-import {Other} from './workshops/surveys/post/other/Other';
+import {Engagement} from './workshops/surveys/post/components/Engagement';
+import {FacilitatorFeedback} from './workshops/surveys/post/components/FacilitatorFeedback';
+import {Implementation} from './workshops/surveys/post/components/Implementation';
+import {Logistics} from './workshops/surveys/post/components/Logistics';
+import {Other} from './workshops/surveys/post/components/Other';
 import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
@@ -90,7 +91,7 @@ const postSurveyCategoryChildRoutes = [
     childRoutes: [
       {
         path: ':facilitatorId',
-        component: () => <div>Individual Facilitator Feedback</div>,
+        component: FacilitatorFeedback,
         breadcrumbs:
           'Workshops,Workshop,Temp,Surveys,Post,Facilitators,Facilitator',
       },

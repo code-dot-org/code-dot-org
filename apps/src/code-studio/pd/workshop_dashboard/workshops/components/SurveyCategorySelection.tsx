@@ -2,9 +2,9 @@ import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import React, {FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import {SurveyCategorySelectionProps} from '../../types';
+import {SurveyCategorySelectionProps} from '../types';
 
-import styles from '../../workshop.module.scss';
+import styles from '../workshop.module.scss';
 
 export const SurveyCategorySelection: FC<SurveyCategorySelectionProps> = ({
   questionCategoryButtons,
