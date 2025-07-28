@@ -43,7 +43,7 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
 
   const shouldDisplayAtRiskAgeGatedWarning = () => {
-    return ageGatedSections?.length > 0 || true; // DO NOT MERGE || true
+    return ageGatedSections?.length > 0;
   };
 
   React.useEffect(() => {
