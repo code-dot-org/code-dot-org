@@ -1095,11 +1095,6 @@ class FilesApi < Sinatra::Base
     MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
   end
 
-  private def moderate_channel?(encrypted_channel_id)
-    project = Projects.new(get_storage_id)
-    !project.content_moderation_disabled?(encrypted_channel_id)
-  end
-
   private def profanity_project_type?(project_type)
     LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
   end
