@@ -1,30 +1,35 @@
 require 'test_helper'
 
 class TermsOfServiceTest < ActiveSupport::TestCase
-  include Minitest::RSpecMocks
-
-  let(:teacher) {build(:teacher, :with_terms_of_service)}
+  let(:teacher_tos_version) {User.latest_terms_version}
+  let(:teacher) {build(:teacher, terms_of_service_version: teacher_tos_version)}
   let(:latest_tos_version) {User::TermsOfService::TERMS_OF_SERVICE_VERSIONS.last}
 
   describe '#accepted_latest_terms?' do
-    it 'returns true if user accepted the latest version' do
-      _(teacher.accepted_latest_terms?).must_equal true
+    context 'when user accepted the latest version' do
+      it 'returns true' do
+        expect(teacher.accepted_latest_terms?).must_equal true
+      end
     end
 
-    it 'returns false if user accepted an older version' do
-      teacher.terms_of_service_version = latest_tos_version - 1
-      _(teacher.accepted_latest_terms?).must_equal false
+    context 'when user accepted an older version' do
+      let(:teacher_tos_version) {User.latest_terms_version - 1}
+      it 'returns false' do
+        _(teacher.accepted_latest_terms?).must_equal false
+      end
     end
 
-    it 'returns false if user has no accepted version' do
-      teacher.terms_of_service_version = nil
-      _(teacher.accepted_latest_terms?).must_equal false
+    context 'when user has no accepted version' do
+      let(:teacher_tos_version) {nil}
+      it 'returns false if user has no accepted version' do
+        _(teacher.accepted_latest_terms?).must_equal false
+      end
     end
   end
 
   describe '#latest_terms_version' do
     it 'returns the latest version' do
-      _(teacher.latest_terms_version).must_equal(latest_tos_version)
+      _(User.latest_terms_version).must_equal(latest_tos_version)
     end
   end
 
