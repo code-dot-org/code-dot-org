@@ -2,18 +2,18 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
   def self.get_system_prompt(level, evaluation_type)
     evaluation_criteria = get_evaluation_criteria(level)
     evaluation_summary = get_evaluation_criteria_summary(level)
-    skill_evaluations = get_skill_evaluations(level)
+    # skill_evaluations = get_skill_evaluations(level)
     skills = level.skills
     variable_skill_levels = [{
       skillId: 2,
       skillKey: 'variables_declare',
       evaluationCriteria: ['Beginning: Variables are missing or contain syntax errors (example: missing var, invalid characters)', 'Approaching: Some variables declared correctly, some with syntax errors', 'Developing: Declares variables with var and mostly correct syntax', 'Meeting/Exceeding: Declares all variables using var with clear, valid names']
     },
-    {
-      skillId: 4,
-      skillKey: 'variables_name',
-      evaluationCriteria: ['Beginning: Uses unclear or inconsistent names (example:  x1, abc)', 'Approaching: Some names are meaningful, but inconsistently', 'Developing: Most variable names are descriptive and consistent', 'Meeting/Exceeding: All variable names are clear, descriptive, and consistent']
-    }]
+                             {
+                               skillId: 4,
+                               skillKey: 'variables_name',
+                               evaluationCriteria: ['Beginning: Uses unclear or inconsistent names (example:  x1, abc)', 'Approaching: Some names are meaningful, but inconsistently', 'Developing: Most variable names are descriptive and consistent', 'Meeting/Exceeding: All variable names are clear, descriptive, and consistent']
+                             }]
     structure_with_skills = <<~TEXT
       Your task is to review the student's work. Respond in correctly formatted JSON\n
       evaluationCriteria should be a copy of #{evaluation_summary}.\n
