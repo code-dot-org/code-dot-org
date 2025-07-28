@@ -45,7 +45,7 @@ class AidiffThread < ApplicationRecord
 
   def generate_title
     msg = aidiff_messages.first
-    msg_title = msg.is_preset && msg.preset_chip_text ? msg.preset_chip_text : msg.content
+    msg_title = msg&.is_preset && msg&.preset_chip_text ? msg&.preset_chip_text : msg&.content
     msg_title
   end
 end
