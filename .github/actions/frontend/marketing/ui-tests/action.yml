@@ -17,6 +17,12 @@ inputs:
   ENVIRONMENT_TYPE:
     description: "local, pr, test, or production"
     required: true
+  SHARD_INDEX:
+    description: "The shard index to use for the tests."
+    required: true
+  SHARD_TOTAL:
+    description: "The total number of shards to use for the tests."
+    required: true
   GITHUB_ENVIRONMENT_NAME:
     description: "The name of the GitHub environment to use for this action"
     required: false
@@ -55,19 +61,21 @@ runs:
           -v $PWD:/workspace \
           -w /workspace/frontend \
           mcr.microsoft.com/playwright:v1.49.1-noble \
-          bash -c "corepack enable && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci"
+          bash -c "corepack enable && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci --shard ${{ inputs.SHARD_INDEX }}/${{ inputs.SHARD_TOTAL }}"
       working-directory: ./frontend
 
-    - name: Upload Playwright reports
-      if: failure()
-      id: deployment
-      uses: actions/upload-pages-artifact@v3
+    - name: Upload shard blob report to GitHub Actions Artifacts
+      if: ${{ !cancelled() }}
+      uses: actions/upload-artifact@v4
       with:
-        path: frontend/apps/marketing/playwright-report
-        name: playwright-report
+        name: blob-report-${{ inputs.SHARD_INDEX }}
+        path: frontend/apps/marketing/blob-report
+        retention-days: 1
 
     - name: Run Google Lighthouse Audits
       uses: treosh/lighthouse-ci-action@9917efea514615fb2ff2890f5b8be2d51e703b6e
+      # Only run lighthouse audits once
+      if: inputs.SHARD_INDEX == '1'
       env:
         HTTP_PROTOCOL: ${{ inputs.APPLICATION_BASE_ADDRESS == 'code.marketing-sites.localhost:3001' && 'http' || 'https' }}
       with:

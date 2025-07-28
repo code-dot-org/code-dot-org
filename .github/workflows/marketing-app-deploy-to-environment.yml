@@ -124,12 +124,19 @@ jobs:
             --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
             --paths "/*"
 
-  tests:
+  ui-tests:
     runs-on: ubuntu-24.04
     environment: marketing-sites-${{ inputs.ENVIRONMENT_TYPE }}-${{ inputs.SITE_TYPE }}
     if: ${{ inputs.SITE_TYPE == 'corporate' }}
     needs:
       - deploy
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4]
+        # shardTotal is used to determine how many shards there are in total.
+        shardTotal: [4]
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -155,3 +162,20 @@ jobs:
           APPLICATION_BASE_ADDRESS: "${{ vars.APPLICATION_SUBDOMAIN_NAME }}.${{ vars.APPLICATION_BASE_DOMAIN }}"
           DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
           GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
+          SHARD_INDEX: ${{ matrix.shardIndex }}
+          SHARD_TOTAL: ${{ matrix.shardTotal }}
+
+  merge-reports:
+    needs: [ ui-tests ]
+
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Merge Playwright Reports
+        uses: ./.github/actions/frontend/merge-playwright-reports
