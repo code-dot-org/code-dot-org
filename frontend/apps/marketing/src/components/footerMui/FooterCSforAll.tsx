@@ -19,15 +19,15 @@ export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
     ],
     socialLinks: [
       {
-        key: 'twitter',
-        label: 'Twitter',
-        href: 'https://twitter.com/codeorg',
+        key: 'x-twitter',
+        label: 'X',
+        href: 'https://x.com/codeorg',
         icon: <XIcon />,
       },
       {
-        key: 'facebook',
-        label: 'Facebook',
-        href: 'https://facebook.com/codeorg',
+        key: 'linkedin',
+        label: 'LinkedIn',
+        href: 'https://linkedin.com/company/code-org',
         icon: <Linkedin />,
       },
     ],
@@ -46,10 +46,10 @@ const FooterCSforAll = ({locale}: GlobalFooterProps) => {
       /^\/([a-z]{2}(-[A-Z]{2})?)(?=\/|$)/,
       `/${localeCode}`,
     );
-
     router.push(newPathName);
     Localize.setLanguage(localeCode);
   };
+
   return (
     <FooterMui
       {...defaultProps}
