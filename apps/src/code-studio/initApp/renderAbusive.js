@@ -26,8 +26,7 @@ export default (project, tosText) => {
         go_to_code_studio: msg.goToCodeStudio(),
       },
       isOwner: project.isOwner(),
-      canViewFlaggedProject:
-        project.isTeacherOfProjectOwnerOrProjectValidator(),
+      canViewFlaggedProject: project.canViewFlaggedProject(),
     }),
     document.getElementById('codeApp')
   );

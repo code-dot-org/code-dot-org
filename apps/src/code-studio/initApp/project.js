@@ -417,9 +417,10 @@ var projects = (module.exports = {
   },
 
   /**
-   * @returns {boolean}
+   * @returns {boolean} true if the current user is a teacher of the owner of the project or
+   * a project validator.
    */
-  isTeacherOfProjectOwnerOrProjectValidator() {
+  canViewFlaggedProject() {
     return !!isTeacherOfProjectOwner || appOptions.canResetAbuse;
   },
 

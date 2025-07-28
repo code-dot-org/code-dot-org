@@ -243,7 +243,7 @@ class SourcesTest < FilesApiTestBase
       assert not_found?
     end
 
-    # teacher or project owner can view
+    # teacher can view
     with_session(:teacher) do
       teacher_api = FilesApiTestHelper.new(current_session, 'sources', @channel)
       FilesApi.any_instance.stubs(:teaches_student?).returns(true)
