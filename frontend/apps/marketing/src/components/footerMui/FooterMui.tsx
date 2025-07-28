@@ -114,6 +114,7 @@ const FooterMui: React.FC<FooterProps> = ({
           {/* Language Selector */}
           <FormControl variant="standard">
             <NativeSelect
+              className="notranslate"
               disableUnderline
               name="language-select"
               IconComponent={KeyboardArrowDownIcon}

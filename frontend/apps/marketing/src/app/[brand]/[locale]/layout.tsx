@@ -38,7 +38,7 @@ export default async function Layout({
   const theme = getMuiTheme(brand);
   const isDraftModeEnabled = (await draftMode()).isEnabled;
   // Get Footer component based on brand
-  const showFooter = () => {
+  const getFooter = () => {
     switch (brand) {
       case Brand.CS_FOR_ALL:
         return <FooterCSforAll locale={locale} />;
@@ -72,7 +72,7 @@ export default async function Layout({
               >
                 <Header />
                 {children}
-                {showFooter()}
+                {getFooter()}
               </StatsigProvider>
             </OneTrustProvider>
 
