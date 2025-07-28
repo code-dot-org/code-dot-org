@@ -10,6 +10,7 @@ import FocusTrap from 'focus-trap-react';
 import React, {useMemo, useState} from 'react';
 import {createPortal} from 'react-dom';
 
+import {useCodebridgeContext} from '@cdo/apps/codebridge';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
@@ -24,8 +25,7 @@ import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
-import {lab2EntryPoints} from '../../../lab2EntryPoints';
-import {useCodebridgeContext} from '../codebridgeContext';
+import {lab2EntryPoints} from '../../../../../lab2EntryPoints';
 
 import moduleStyles from './settings-dropdown.module.scss';
 

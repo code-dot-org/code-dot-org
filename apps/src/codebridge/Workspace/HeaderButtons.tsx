@@ -3,13 +3,13 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';

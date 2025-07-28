@@ -4,10 +4,10 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
