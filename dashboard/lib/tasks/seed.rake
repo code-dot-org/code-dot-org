@@ -122,6 +122,7 @@ namespace :seed do
     focus-on-creativity3-2024
     focus-on-coding3-2024
     customizing-llms-2024
+    csd3-2025
     csp-ap
     csp1-2024
     csp2-2024
