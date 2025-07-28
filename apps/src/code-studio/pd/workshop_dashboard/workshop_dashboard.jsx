@@ -44,13 +44,10 @@ import {workshopLabel} from './WorkshopFormTemplate/utils';
 import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
 import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
 import {Engagement} from './workshops/surveys/post/engagement/Engagement';
-import {Facilitators} from './workshops/surveys/post/facilitators/Facilitators';
 import {Implementation} from './workshops/surveys/post/implementation/Implementation';
 import {Logistics} from './workshops/surveys/post/logistics/Logistics';
 import {Other} from './workshops/surveys/post/other/Other';
-import {PostSurvey} from './workshops/surveys/post/PostSurvey';
-import {WorkshopSurveys} from './workshops/surveys/WorkshopSurveys';
-import {Workshop as WorkshopTemp} from './workshops/Workshop';
+import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
 
@@ -88,7 +85,7 @@ const postSurveyCategoryChildRoutes = [
     label: 'Facilitator Feedback',
     path: 'facilitators',
     icon: 'star',
-    component: Facilitators,
+    component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Facilitators',
     childRoutes: [
       {
@@ -112,14 +109,7 @@ const surveyTypeChildRoutes = [
   {
     label: 'Post-workshop survey',
     path: 'post',
-    component: PostSurvey,
-    props: {
-      buttons: postSurveyCategoryChildRoutes.map(({label, path, icon}) => ({
-        label,
-        value: path,
-        iconLeft: {iconName: icon},
-      })),
-    },
+    component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post',
     childRoutes: [
       // this makes "implementation" the default
@@ -148,18 +138,12 @@ const workshopChildRouteConfigs = [
     label: 'Enrollment',
     path: 'enrollments',
     component: WorkshopEnrollments,
-    breadcrumbs: 'Workshops,Workshop,Enrollments',
+    breadcrumbs: 'Workshops,Workshop,Temp,Enrollments',
   },
   {
     label: 'Surveys',
     path: 'surveys',
-    component: WorkshopSurveys,
-    props: {
-      surveyTypeOptions: surveyTypeChildRoutes.map(({label, path}) => ({
-        text: label,
-        value: path,
-      })),
-    },
+    component: Outlet,
     breadcrumbs: 'Workshops,Workshop,Temp,Surveys',
     childRoutes: [
       // this makes "post" the default
@@ -207,13 +191,24 @@ const routeConfigs = [
   {
     // remove /temp for switch over
     path: 'workshops/:workshopId/temp',
-    breadcrumbs: 'Workshops,Workshop',
-    component: WorkshopTemp,
+    breadcrumbs: 'Workshops,Workshop,Temp',
+    component: WorkshopLayout,
     props: {
       tabList: workshopChildRouteConfigs.map(({label, path}) => ({
         label,
         path,
       })),
+      surveyTypeOptions: surveyTypeChildRoutes.map(({label, path}) => ({
+        text: label,
+        value: `surveys/${path}`,
+      })),
+      questionCategoryButtons: postSurveyCategoryChildRoutes.map(
+        ({label, path, icon}) => ({
+          label,
+          value: `surveys/post/${path}`,
+          iconLeft: {iconName: icon},
+        })
+      ),
     },
     childRoutes: workshopChildRouteConfigs,
   },

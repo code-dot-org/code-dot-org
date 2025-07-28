@@ -10,7 +10,7 @@ export interface Option {
   value: string;
 }
 
-export interface WorkshopProps {
+export interface WorkshopTabsProps {
   tabList: Tab[];
 }
 
@@ -19,5 +19,9 @@ export interface SurveyTypeSelectionProps {
 }
 
 export interface SurveyCategorySelectionProps {
-  buttons: SegmentedButtonsProps['buttons'];
+  questionCategoryButtons: SegmentedButtonsProps['buttons'];
 }
+
+export type WorkshopLayoutProps = WorkshopTabsProps &
+  SurveyTypeSelectionProps &
+  SurveyCategorySelectionProps;

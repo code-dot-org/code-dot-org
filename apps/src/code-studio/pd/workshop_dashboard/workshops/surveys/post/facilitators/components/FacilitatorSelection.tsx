@@ -12,14 +12,15 @@ export const FacilitatorSelection: FC = () => {
   const navigate = useNavigate();
 
   const facilitatorOptions = fakeFacilitators.map(({id, name}) => ({
-    value: id.toString(),
+    value: `surveys/post/facilitators/${id}`,
     text: name,
   }));
 
   const selectedValue = useMemo(
     () =>
-      facilitatorOptions.find(opt => opt.value === facilitatorId)?.value ??
-      facilitatorOptions[0]?.value,
+      facilitatorOptions.find(
+        opt => opt.value === `surveys/post/facilitators/${facilitatorId}`
+      )?.value ?? facilitatorOptions[0]?.value,
     [facilitatorId, facilitatorOptions]
   );
 

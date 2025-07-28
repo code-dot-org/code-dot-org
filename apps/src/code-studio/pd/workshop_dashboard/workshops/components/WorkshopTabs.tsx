@@ -2,11 +2,11 @@ import Tabs from '@code-dot-org/component-library/tabs';
 import React, {FC, useMemo} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 
-import {WorkshopProps} from '../types';
+import {WorkshopTabsProps} from '../types';
 
 import styles from '../workshop.module.scss';
 
-export const WorkshopTabs: FC<WorkshopProps> = ({tabList}) => {
+export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
   const {pathname} = useLocation();
   const navigate = useNavigate();
 
@@ -22,20 +22,18 @@ export const WorkshopTabs: FC<WorkshopProps> = ({tabList}) => {
   };
 
   return (
-    <nav aria-label="Workshop sections">
-      <Tabs
-        defaultSelectedTabValue={currentTabValue}
-        tabsContainerClassName={styles.tabList}
-        name="workshop section tabs"
-        onChange={handleChange}
-        onTabClose={() => {}}
-        tabs={tabList.map(tab => ({
-          // tabContent is null because Outlet will render appropriate components based on route
-          tabContent: null,
-          text: tab.label,
-          value: tab.path ?? '',
-        }))}
-      />
-    </nav>
+    <Tabs
+      defaultSelectedTabValue={currentTabValue}
+      tabsContainerClassName={styles.tabList}
+      name="workshop section tabs"
+      onChange={handleChange}
+      onTabClose={() => {}}
+      tabs={tabList.map(tab => ({
+        // tabContent is null because Outlet will render appropriate components based on route
+        tabContent: null,
+        text: tab.label,
+        value: tab.path ?? '',
+      }))}
+    />
   );
 };

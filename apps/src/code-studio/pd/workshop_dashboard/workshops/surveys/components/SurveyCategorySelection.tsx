@@ -7,14 +7,16 @@ import {SurveyCategorySelectionProps} from '../../types';
 import styles from '../../workshop.module.scss';
 
 export const SurveyCategorySelection: FC<SurveyCategorySelectionProps> = ({
-  buttons,
+  questionCategoryButtons,
 }) => {
   const {pathname} = useLocation();
   const navigate = useNavigate();
 
   const selectedValue = useMemo(
-    () => buttons.find(button => pathname.includes(button.value))?.value ?? '',
-    [pathname, buttons]
+    () =>
+      questionCategoryButtons.find(button => pathname.includes(button.value))
+        ?.value ?? '',
+    [pathname, questionCategoryButtons]
   );
 
   const handleChange = (value: string) => {
@@ -26,7 +28,7 @@ export const SurveyCategorySelection: FC<SurveyCategorySelectionProps> = ({
       <span>Dashboard view:</span>
       <SegmentedButtons
         size="s"
-        buttons={buttons}
+        buttons={questionCategoryButtons}
         selectedButtonValue={selectedValue}
         onChange={handleChange}
       />
