@@ -34,6 +34,7 @@ export const WorkshopTabs: FC<WorkshopTabsProps> = ({tabList}) => {
         text: tab.label,
         value: tab.path ?? '',
       }))}
+      hidePanels
     />
   );
 };

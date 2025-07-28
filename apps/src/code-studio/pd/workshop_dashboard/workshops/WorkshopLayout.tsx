@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {FC} from 'react';
 import {Outlet, useLocation} from 'react-router-dom';
 
@@ -7,6 +8,8 @@ import {SurveyTypeSelection} from './surveys/components/SurveyTypeSelection';
 import {FacilitatorSelection} from './surveys/post/facilitators/components/FacilitatorSelection';
 import {WorkshopLayoutProps} from './types';
 
+import styles from './workshop.module.scss';
+
 export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   tabList,
   surveyTypeOptions,
@@ -14,23 +17,41 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
 }) => {
   const {pathname} = useLocation();
 
-  const showSurveyTypeSelection = pathname.includes('/surveys');
-  const showCategorySelection = pathname.includes('/surveys/post');
+  const showSurveyElements = pathname.includes('/surveys');
+  const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
   const showFacilitatorSelection = pathname.includes(
     '/surveys/post/facilitators'
   );
+
+  // TODO: https://codedotorg.atlassian.net/browse/ACQ-3438
+  const handleDownload = () => {};
+
   return (
     <>
-      <nav aria-label="Workshop sections">
+      <nav aria-label="Workshop sections" className={styles.navContainer}>
         <WorkshopTabs tabList={tabList} />
-        {showSurveyTypeSelection && (
-          <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
-        )}
-        {showCategorySelection && (
-          <SurveyCategorySelection
-            questionCategoryButtons={questionCategoryButtons}
-          />
-        )}
+        <div className={styles.navRow}>
+          {showSurveyElements && (
+            <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
+          )}
+          {showPostSurveyCategorySelection && (
+            <>
+              <div className={styles.divider} />
+              <SurveyCategorySelection
+                questionCategoryButtons={questionCategoryButtons}
+              />
+            </>
+          )}
+          {showSurveyElements && (
+            <Button
+              className={styles.exportButton}
+              iconLeft={{iconName: 'download'}}
+              onClick={handleDownload}
+              text="Export survey results"
+              size="s"
+            />
+          )}
+        </div>
         {showFacilitatorSelection && <FacilitatorSelection />}
       </nav>
       <main>

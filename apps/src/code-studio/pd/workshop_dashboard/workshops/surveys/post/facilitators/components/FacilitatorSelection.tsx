@@ -2,6 +2,8 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {ChangeEvent, FC, useEffect, useMemo} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
+import styles from '../../../../workshop.module.scss';
+
 const fakeFacilitators = [
   {id: 123, name: 'Andy Bernard'},
   {id: 456, name: 'Jane Doe'},
@@ -35,16 +37,16 @@ export const FacilitatorSelection: FC = () => {
   };
 
   return (
-    <div>
-      <SimpleDropdown
-        size="s"
-        name="facilitator selection"
-        items={facilitatorOptions}
-        dropdownTextThickness="thin"
-        labelText="Viewing feedback for:"
-        selectedValue={selectedValue}
-        onChange={handleChange}
-      />
-    </div>
+    <SimpleDropdown
+      size="s"
+      name="facilitator selection"
+      items={facilitatorOptions}
+      dropdownTextThickness="thin"
+      labelText="Viewing feedback for:"
+      selectedValue={selectedValue}
+      onChange={handleChange}
+      iconLeft={{iconName: 'user'}}
+      className={styles.navDropdown}
+    />
   );
 };

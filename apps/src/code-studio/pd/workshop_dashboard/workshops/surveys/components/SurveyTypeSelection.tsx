@@ -4,6 +4,8 @@ import {useLocation, useNavigate} from 'react-router-dom';
 
 import {SurveyTypeSelectionProps} from '../../types';
 
+import styles from '../../workshop.module.scss';
+
 export const SurveyTypeSelection: FC<SurveyTypeSelectionProps> = ({
   surveyTypeOptions,
 }) => {
@@ -27,6 +29,7 @@ export const SurveyTypeSelection: FC<SurveyTypeSelectionProps> = ({
       labelText="Viewing results for:"
       selectedValue={selectedValue}
       onChange={handleChange}
+      className={styles.navDropdown}
     />
   );
 };
