@@ -19,9 +19,7 @@ module User::TermsOfService
 
   # Updates user's most recently accepted Terms of Service version to the latest version
   def update_user_tos_version_accept
-    terms_of_service_version = latest_terms_version
-    self.terms_of_service_version = terms_of_service_version
-
+    self.terms_of_service_version = latest_terms_version
     save!
   end
 end
