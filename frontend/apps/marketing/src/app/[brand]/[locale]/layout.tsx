@@ -45,7 +45,6 @@ export default async function Layout({
       case Brand.CODE_DOT_ORG:
         return <Footer locale={locale} />;
     }
-    return <Footer locale={locale} />;
   };
 
   return (

@@ -86,14 +86,13 @@ const FooterMui: React.FC<FooterProps> = ({
     <FooterRoot className={className}>
       <FooterGrid container spacing={2}>
         <Grid
+          className="top-section"
           size={12}
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          alignContent="start"
           flexWrap="wrap-reverse"
           gap={4}
-          className="top-section"
         >
           {/* Site Links */}
           <FooterLinks className="site-links" aria-label="Site links">
@@ -117,9 +116,9 @@ const FooterMui: React.FC<FooterProps> = ({
             <NativeSelect
               disableUnderline
               name="language-select"
-              aria-label="Language selection dropdown"
               IconComponent={KeyboardArrowDownIcon}
               value={selectedLocaleCode}
+              inputProps={{'aria-label': 'Language selection dropdown'}}
               onChange={e => onLanguageChange(e.target.value)}
             >
               {languages.map(lang => (
@@ -138,14 +137,11 @@ const FooterMui: React.FC<FooterProps> = ({
           gap={2}
         >
           {/* Copyright */}
-          <Copyright
-            variant="body4"
-            sx={{display: 'flex', alignItems: 'center', gap: 1}}
-          >
+          <Copyright variant="body4">
             <CopyrightIcon fontSize="small" />
             {copyright}
           </Copyright>
-          {/* Site Links */}
+          {/* Social Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
               <IconButton

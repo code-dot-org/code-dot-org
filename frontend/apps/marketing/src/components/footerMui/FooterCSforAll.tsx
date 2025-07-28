@@ -8,6 +8,7 @@ import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
 
 export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
   {
+    // TODO - Update these links to point to the correct CSforAll pages
     siteLinks: [
       {key: 'issues', label: 'Issues', href: '/'},
       {key: 'take-action', label: 'Take Action', href: '/'},

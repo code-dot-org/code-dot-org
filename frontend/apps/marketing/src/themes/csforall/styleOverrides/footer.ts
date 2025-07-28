@@ -43,7 +43,6 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         },
       },
       '& .MuiNativeSelect-select': {
-        paddingRight: '12px !important',
         paddingInlineStart: theme.spacing(1.5),
         paddingInlineEnd: theme.spacing(4),
         borderRadius: 12,
@@ -103,6 +102,9 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     }),
     copyright: ({theme}) => ({
       color: alpha(theme.palette.common.white, 0.8),
+      display: 'flex',
+      alignItems: 'center',
+      gap: theme.spacing(1),
     }),
   },
 };
