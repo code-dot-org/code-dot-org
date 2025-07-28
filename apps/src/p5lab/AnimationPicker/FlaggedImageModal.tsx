@@ -23,27 +23,25 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
       onClose={onCancel}
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
-        <div>
-          <BodyTwoText>
-            {i18n.animationPicker_flaggedImage()}
-            <ul>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageNoShare()}
-                </BodyTwoText>
-              </li>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageNoUpload()}
-                </BodyTwoText>
-              </li>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageTOS()}
-                </BodyTwoText>
-              </li>
-            </ul>
-          </BodyTwoText>
+        <div id="dsco-dialog-description">
+          <BodyTwoText>{i18n.animationPicker_flaggedImage()}</BodyTwoText>
+          <ul>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageNoShare()}
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageNoUpload()}
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageTOS()}
+              </BodyTwoText>
+            </li>
+          </ul>
         </div>
       }
       primaryButtonProps={{
