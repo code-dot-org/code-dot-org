@@ -3,13 +3,16 @@ import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
 } from '../../teacherDashboard/teacherSectionsRedux';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
@@ -31,6 +34,17 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
   const dispatch = useAppDispatch();
+
+  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
+  const toggleCAPModal = () => {
+    setCAPModalOpen(!CAPmodalOpen);
+  };
+
+  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
+
+  const shouldDisplayAtRiskAgeGatedWarning = () => {
+    return ageGatedSections?.length > 0 || true; // DO NOT MERGE || true
+  };
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -85,6 +99,18 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
 
+            {shouldDisplayAtRiskAgeGatedWarning() && (
+              <AgeGatedSectionsBanner
+                toggleModal={toggleCAPModal}
+                modalOpen={CAPmodalOpen}
+                ageGatedSections={ageGatedSections}
+              />
+            )}
+
+            <CoteacherInviteNotification
+              isForPl={false}
+              destructiveLoad={true}
+            />
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (
