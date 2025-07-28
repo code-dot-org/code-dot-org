@@ -4,6 +4,7 @@ import {GoogleAnalytics} from '@next/third-parties/google';
 import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
+import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
 import Header from '@/components/header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
@@ -37,6 +38,16 @@ export default async function Layout({
   const theme = getMuiTheme(brand);
   const isDraftModeEnabled = (await draftMode()).isEnabled;
 
+  const showFooter = () => {
+    switch (brand) {
+      case Brand.CS_FOR_ALL:
+        return <FooterCSforAll />;
+      case Brand.CODE_DOT_ORG:
+        return <Footer locale={locale} />;
+    }
+    return <Footer locale={locale} />;
+  };
+
   return (
     <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
       <body>
@@ -62,8 +73,7 @@ export default async function Layout({
               >
                 <Header />
                 {children}
-
-                <Footer locale={locale} />
+                {showFooter()}
               </StatsigProvider>
             </OneTrustProvider>
 
