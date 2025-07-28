@@ -37,11 +37,11 @@ export default async function Layout({
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
   const theme = getMuiTheme(brand);
   const isDraftModeEnabled = (await draftMode()).isEnabled;
-
+  // Get Footer component based on brand
   const showFooter = () => {
     switch (brand) {
       case Brand.CS_FOR_ALL:
-        return <FooterCSforAll />;
+        return <FooterCSforAll locale={locale} />;
       case Brand.CODE_DOT_ORG:
         return <Footer locale={locale} />;
     }

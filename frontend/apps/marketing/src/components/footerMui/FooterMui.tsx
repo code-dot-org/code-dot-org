@@ -1,10 +1,13 @@
 'use client';
 import CopyrightIcon from '@mui/icons-material/Copyright';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import FormControl from '@mui/material/FormControl';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import NativeSelect from '@mui/material/NativeSelect';
 import Stack from '@mui/material/Stack';
 import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -23,6 +26,11 @@ export interface SocialLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   icon: ReactNode;
 }
 
+export interface LanguageOption {
+  value: string;
+  text: string;
+}
+
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
   /** Footer links */
   siteLinks?: SiteLink[];
@@ -30,6 +38,12 @@ export interface FooterProps extends HTMLAttributes<HTMLElement> {
   socialLinks?: SocialLink[];
   /** Footer copyright */
   copyright?: string;
+  /** Footer language options */
+  languages: LanguageOption[];
+  /** Callback for language change */
+  onLanguageChange: (args: string) => void;
+  /** The selected locale code for the language dropdown */
+  selectedLocaleCode?: string;
   /** Footer class */
   className?: string;
 }
@@ -63,22 +77,67 @@ const FooterMui: React.FC<FooterProps> = ({
   siteLinks,
   socialLinks,
   copyright,
+  languages,
+  selectedLocaleCode,
+  onLanguageChange,
+  className,
 }) => {
   return (
-    <FooterRoot>
+    <FooterRoot className={className}>
       <FooterGrid container spacing={2}>
-        <Grid size={12} display="flex" justifyContent="space-between">
+        <Grid
+          size={12}
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          alignContent="start"
+          flexWrap="wrap-reverse"
+          gap={4}
+          className="top-section"
+        >
+          {/* Site Links */}
           <FooterLinks className="site-links" aria-label="Site links">
             {siteLinks?.map(({key, label, href}) => (
               <ListItem key={key}>
-                <FooterLink href={href} variant="body3">
+                <FooterLink
+                  href={href}
+                  variant="body4"
+                  target={href.startsWith('https') ? '_blank' : undefined}
+                  rel={
+                    href.startsWith('https') ? 'noopener noreferrer' : undefined
+                  }
+                >
                   {label}
                 </FooterLink>
               </ListItem>
             ))}
           </FooterLinks>
+          {/* Language Selector */}
+          <FormControl variant="standard">
+            <NativeSelect
+              disableUnderline
+              name="language-select"
+              aria-label="Language selection dropdown"
+              IconComponent={KeyboardArrowDownIcon}
+              value={selectedLocaleCode}
+              onChange={e => onLanguageChange(e.target.value)}
+            >
+              {languages.map(lang => (
+                <option key={lang.value} value={lang.value}>
+                  {lang.text}
+                </option>
+              ))}
+            </NativeSelect>
+          </FormControl>
         </Grid>
-        <Grid size={12} display="flex" justifyContent="space-between">
+        <Grid
+          size={12}
+          display="flex"
+          justifyContent="space-between"
+          flexWrap="wrap"
+          gap={2}
+        >
+          {/* Copyright */}
           <Copyright
             variant="body4"
             sx={{display: 'flex', alignItems: 'center', gap: 1}}
@@ -86,6 +145,7 @@ const FooterMui: React.FC<FooterProps> = ({
             <CopyrightIcon fontSize="small" />
             {copyright}
           </Copyright>
+          {/* Site Links */}
           <Stack direction="row" spacing={1} aria-label="Social links">
             {socialLinks?.map(({key, label, icon, href}) => (
               <IconButton

@@ -6,6 +6,7 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
       backgroundColor: theme.palette.common.black,
       paddingBlock: theme.spacing(5),
       paddingInline: theme.spacing(4),
+      // Social icon styles
       '.social-icon': {
         color: theme.palette.common.white,
         fontSize: '1.5rem',
@@ -19,6 +20,45 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
           background: 'none',
         },
       },
+      // Language dropdown styles
+      '& .MuiFormControl-root': {
+        borderColor: theme.palette.common.white,
+        [`@media (max-width: ${theme.breakpoints.values.sm}px)`]: {
+          width: '100%',
+        },
+      },
+      '& .MuiFormLabel-root': {
+        color: theme.palette.common.white,
+        fontSize: '1rem',
+      },
+      '& .MuiInputBase-root': {
+        color: theme.palette.common.white,
+        fontSize: '0.875rem',
+        border: `1px solid ${theme.palette.common.white}`,
+        borderRadius: 12,
+        '& .MuiSvgIcon-root': {
+          color: theme.palette.common.white,
+          right: 'unset',
+          insetInlineEnd: 4,
+        },
+      },
+      '& .MuiNativeSelect-select': {
+        paddingRight: '12px !important',
+        paddingInlineStart: theme.spacing(1.5),
+        paddingInlineEnd: theme.spacing(4),
+        borderRadius: 12,
+        '&:focus-visible': {
+          outline: `1px solid ${theme.palette.common.white}`,
+          outlineOffset: 4,
+          borderRadius: 12,
+        },
+      },
+      // Top section styles
+      '.top-section': {
+        [`@media (max-width: ${theme.breakpoints.values.lg}px)`]: {
+          alignItems: 'start',
+        },
+      },
     }),
     grid: ({theme}) => ({
       maxWidth: '1200px',
@@ -28,9 +68,13 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
     links: ({theme}) => ({
       margin: 0,
       padding: 0,
+      height: 'min-content',
       display: 'flex',
       flexDirection: 'row',
       gap: theme.spacing(2),
+      [`@media (max-width: ${theme.breakpoints.values.lg}px)`]: {
+        flexDirection: 'column',
+      },
       '& > li': {
         margin: 0,
         padding: 0,
@@ -38,6 +82,9 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         borderInlineEnd: `1px solid ${alpha(theme.palette.common.white, 0.2)}`,
         paddingInlineEnd: theme.spacing(2),
         '&:last-of-type': {
+          borderInlineEnd: 'none',
+        },
+        [`@media (max-width: ${theme.breakpoints.values.lg}px)`]: {
           borderInlineEnd: 'none',
         },
       },
