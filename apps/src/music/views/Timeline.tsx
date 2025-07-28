@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, {
+  memo,
   MouseEvent,
   useCallback,
   useEffect,
@@ -18,7 +19,6 @@ import {
   getBlockMode,
   setStartingPlayheadPosition,
 } from '../redux/musicRedux';
-import {MusicLevelData} from '../types';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -36,10 +36,18 @@ const playheadScrollThreshold = 0.75;
 // How many extra measures to show at the end.
 const extraMeasures = 8;
 
+interface TimelineProps {
+  allowChangeStartingPlayheadPosition?: boolean;
+  isPredictLevel?: boolean;
+}
+
 /**
  * Renders the music playback timeline.
  */
-const Timeline: React.FunctionComponent = () => {
+const Timeline: React.FunctionComponent<TimelineProps> = ({
+  allowChangeStartingPlayheadPosition,
+  isPredictLevel,
+}) => {
   const isPlaying = useMusicSelector(state => state.music.isPlaying);
 
   const blockMode = useSelector(getBlockMode);
@@ -51,12 +59,8 @@ const Timeline: React.FunctionComponent = () => {
     state => state.music.startingPlayheadPosition
   );
 
-  const allowChangeStartingPlayheadPosition =
-    (useAppSelector(
-      state =>
-        (state.lab.levelProperties?.levelData as MusicLevelData | undefined)
-          ?.allowChangeStartingPlayheadPosition
-    ) ||
+  const canChangeStartingPlayheadPosition =
+    (allowChangeStartingPlayheadPosition ||
       appConfig.getValue('allow-change-starting-playhead-position') ===
         'true') &&
     !isPlaying;
@@ -81,28 +85,31 @@ const Timeline: React.FunctionComponent = () => {
   const [availableHeight, setAvailableHeight] = useState(0);
 
   // Get the height that each event should occupy.  This is inclusive of empty vertical space at the bottom.
-  const getEventHeight = (numUniqueRows: number) => {
-    // While we might not actually have this many rows to show,
-    // we will limit each row's height to the size that would allow
-    // this many to be shown at once.
-    const minVisible = 5;
+  const getEventHeight = useCallback(
+    (numUniqueRows: number) => {
+      // While we might not actually have this many rows to show,
+      // we will limit each row's height to the size that would allow
+      // this many to be shown at once.
+      const minVisible = 5;
 
-    const maxVisible = 45;
+      const maxVisible = 45;
 
-    // We might not actually have this many rows to show, but
-    // we will size the bars so that this many rows would show.
-    const numSoundsToShow = Math.max(
-      Math.min(numUniqueRows, maxVisible),
-      minVisible
-    );
+      // We might not actually have this many rows to show, but
+      // we will size the bars so that this many rows would show.
+      const numSoundsToShow = Math.max(
+        Math.min(numUniqueRows, maxVisible),
+        minVisible
+      );
 
-    return Math.floor(availableHeight / numSoundsToShow);
-  };
+      return Math.floor(availableHeight / numSoundsToShow);
+    },
+    [availableHeight]
+  );
 
   // How how much of the event height should be left as empty vertical space at the bottom.
-  const getEventVerticalSpace = (eventHeight: number) => {
+  const getEventVerticalSpace = useCallback((eventHeight: number) => {
     return eventHeight > 8 ? 3 : eventHeight > 6 ? 2 : 1;
-  };
+  }, []);
 
   const timelineElementProps = {
     paddingOffset,
@@ -117,12 +124,9 @@ const Timeline: React.FunctionComponent = () => {
     (_, i) => i + 1
   );
 
-  const currentlyAllowChangeStartingPlayheadPosition =
-    !isPlaying && allowChangeStartingPlayheadPosition;
-
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      if (!currentlyAllowChangeStartingPlayheadPosition) {
+      if (!canChangeStartingPlayheadPosition) {
         return;
       }
       const offset =
@@ -134,17 +138,17 @@ const Timeline: React.FunctionComponent = () => {
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartingPlayheadPosition(roundedMeasure));
     },
-    [dispatch, currentlyAllowChangeStartingPlayheadPosition]
+    [dispatch, canChangeStartingPlayheadPosition]
   );
 
   const onMeasureNumberClick = useCallback(
     (measureNumber: number) => {
-      if (!currentlyAllowChangeStartingPlayheadPosition) {
+      if (!canChangeStartingPlayheadPosition) {
         return;
       }
       dispatch(setStartingPlayheadPosition(measureNumber));
     },
-    [dispatch, currentlyAllowChangeStartingPlayheadPosition]
+    [dispatch, canChangeStartingPlayheadPosition]
   );
 
   const onTimelineClick = useCallback(() => {
@@ -171,9 +175,6 @@ const Timeline: React.FunctionComponent = () => {
 
   usePlaybackUpdate(scrollPlayheadForward, scrollToPlayhead, scrollToPlayhead);
   const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
-  const isPredictLevel = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
-  );
   const canPopulateTimeline = !isPredictLevel || predictResponseSubmitted;
 
   const firstBarLineRef = useRef<HTMLDivElement>(null);
@@ -208,7 +209,7 @@ const Timeline: React.FunctionComponent = () => {
         className={classNames(
           moduleStyles.measuresBackground,
           moduleStyles.fullWidthOverlay,
-          currentlyAllowChangeStartingPlayheadPosition &&
+          canChangeStartingPlayheadPosition &&
             moduleStyles.measuresBackgroundClickable
         )}
         style={{width: paddingOffset + measuresToDisplay * barWidth}}
@@ -229,7 +230,7 @@ const Timeline: React.FunctionComponent = () => {
                   moduleStyles.barNumber,
                   measure === Math.floor(currentPlayheadPosition) &&
                     moduleStyles.barNumberCurrent,
-                  currentlyAllowChangeStartingPlayheadPosition &&
+                  canChangeStartingPlayheadPosition &&
                     moduleStyles.barNumberClickable
                 )}
                 onClick={() => onMeasureNumberClick(measure)}
@@ -311,4 +312,4 @@ const LoopMarkers: React.FunctionComponent<{
   );
 };
 
-export default Timeline;
+export default memo(Timeline);

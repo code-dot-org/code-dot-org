@@ -6,6 +6,7 @@ import React, {
   useMemo,
   useState,
 } from 'react';
+import FocusLock from 'react-focus-lock';
 
 import {TICKS_PER_MEASURE} from '../constants';
 import MusicRegistry from '../MusicRegistry';
@@ -153,51 +154,53 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [currentValue.instrument, setIsLoading]);
 
   return (
-    <div className={styles.patternPanel}>
-      <select value={currentValue.instrument} onChange={handleFolderChange}>
-        {availableKits.map(folder => (
-          <option key={folder.id} value={folder.id}>
-            {folder.name}
-          </option>
-        ))}
-      </select>
-      <LoadingOverlay show={isLoading} />
-      {currentFolder.sounds.map(({name, note}, index) => {
-        return (
-          <div className={styles.row} key={note}>
-            <div className={styles.nameContainer}>
-              <span
-                className={styles.name}
-                onClick={() => previewNote(note || index)}
-              >
-                {name}
-              </span>
-            </div>
-            {arrayOfTicks.map(tick => {
-              return (
-                <div
-                  className={classNames(
-                    styles.outerCell,
-                    tick === currentPreviewTick && styles.outerCellPlaying
-                  )}
-                  onClick={() => toggleEvent(tick, note || index)}
-                  key={tick}
+    <FocusLock>
+      <div className={styles.patternPanel}>
+        <select value={currentValue.instrument} onChange={handleFolderChange}>
+          {availableKits.map(folder => (
+            <option key={folder.id} value={folder.id}>
+              {folder.name}
+            </option>
+          ))}
+        </select>
+        <LoadingOverlay show={isLoading} />
+        {currentFolder.sounds.map(({name, note}, index) => {
+          return (
+            <div className={styles.row} key={note}>
+              <div className={styles.nameContainer}>
+                <span
+                  className={styles.name}
+                  onClick={() => previewNote(note || index)}
                 >
-                  <div className={getCellClasses(note || index, tick)} />
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
-      <PreviewControls
-        enabled={currentValue.events.length > 0}
-        playPreview={startPreview}
-        onClickClear={onClear}
-        cancelPreviews={stopPreview}
-        isPlayingPreview={currentPreviewTick > 0}
-      />
-    </div>
+                  {name}
+                </span>
+              </div>
+              {arrayOfTicks.map(tick => {
+                return (
+                  <div
+                    className={classNames(
+                      styles.outerCell,
+                      tick === currentPreviewTick && styles.outerCellPlaying
+                    )}
+                    onClick={() => toggleEvent(tick, note || index)}
+                    key={tick}
+                  >
+                    <div className={getCellClasses(note || index, tick)} />
+                  </div>
+                );
+              })}
+            </div>
+          );
+        })}
+        <PreviewControls
+          enabled={currentValue.events.length > 0}
+          playPreview={startPreview}
+          onClickClear={onClear}
+          cancelPreviews={stopPreview}
+          isPlayingPreview={currentPreviewTick > 0}
+        />
+      </div>
+    </FocusLock>
   );
 };
 

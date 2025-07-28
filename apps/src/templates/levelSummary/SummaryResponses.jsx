@@ -138,6 +138,7 @@ const SummaryResponses = ({
     studentId: response.user_id,
     studentDisplayName: response.student_display_name,
     studentWork: response.text,
+    updatedAt: response.updated_at,
   }));
 
   const hasAiAnalysis = scriptData.show_ai_analysis;

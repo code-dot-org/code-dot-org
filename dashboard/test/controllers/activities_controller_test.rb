@@ -37,7 +37,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     @admin = create(:admin)
 
-    @script = create(:single_unit_course).first_unit
+    @script = create(:unit, :in_single_unit_course)
     @script_level_prev = create(:script_level, script: @script)
     @script_level = create(:script_level, script: @script)
     @script_level_next = create(:script_level, script: @script)
@@ -733,7 +733,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
-    script = create(:single_unit_course).first_unit
+    script = create(:unit, :in_single_unit_course)
 
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
@@ -887,7 +887,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test 'milestone changes to next lesson in custom script' do
     ScriptLevel.class_variable_set(:@@script_level_map, nil)
-    script = create :script, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
+    script = create :script, :in_single_unit_course, :with_levels, lessons_count: 2, name: 'Milestone Unit', skip_name_format_validation: true
     script.lessons.first.update!(key: 'Milestone Lesson 1', name: 'Milestone Lesson 1')
     script.reload
 
@@ -905,7 +905,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone post respects level_id for active level' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     level1a = create :maze, name: 'maze 1'
     level1b = create :maze, name: 'maze 1 new'
@@ -1046,7 +1046,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     student_1 = create(:follower, section: section).student_user
     sign_in student_1
 
-    script = create :script
+    script = create :script, :in_single_unit_course
 
     # Create a LevelGroup level.
     level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'

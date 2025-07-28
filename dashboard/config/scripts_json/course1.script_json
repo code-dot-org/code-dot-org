@@ -8,9 +8,9 @@
         {
           "key": "409174a0-d76d-4992-8486-cfd9801c329e",
           "notice": "Course Warning",
-          "details": "We are in the process of fully removing the Course 1 content and course from Code.org by Summer 2025, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Course 1 content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings. ",
-          "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
-          "type": "warning",
+          "details": "We are in the process of fully removing all Course 1 content from Code.org as we no longer support this older offering. The course will be removed from the site in September, 2025. Until that time, we have made the course unassignable, and no bugs or missing content will be addressed or fixed. Our recommended replacement course is CS Fundamentals Course A",
+          "link": "https://support.code.org/hc/en-us/articles/16268528601101-Alternatives-to-deprecated-or-non-supported-Code-org-courses",
+          "type": "failure",
           "visibility": "Teacher-only",
           "dismissible": false,
           "buttonText": "Learn more"
@@ -38,11 +38,13 @@
       ],
       "project_widget_visible": true,
       "tts": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:06:12 UTC",
+    "serialized_at": "2025-07-18 17:55:34 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

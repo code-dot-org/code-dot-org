@@ -98,23 +98,23 @@ describe('CourseContentDropdown', () => {
   const lessons = [
     {
       text: "Unit 3 - Interactive Animations and Games ('24-'25)",
-      value: '/unit/csd3-2024',
+      value: '/courses/csd-2024/units/3',
     },
     {
       text: '1: Programming for a Purpose',
-      value: '/s/csd3-2024/lessons/1/levels/1',
+      value: '/courses/csd-2024/units/3/lessons/1/levels/1',
     },
     {
       text: '2: Plotting Shapes',
-      value: '/s/csd3-2024/lessons/2/levels/1',
+      value: '/courses/csd-2024/units/3/lessons/2/levels/1',
     },
     {
       text: '3: Drawing in Game Lab',
-      value: '/s/csd3-2024/lessons/3/levels/1',
+      value: '/courses/csd-2024/units/3/lessons/3/levels/1',
     },
     {
       text: '4: Shapes and Parameters',
-      value: '/s/csd3-2024/lessons/4/levels/1',
+      value: '/courses/csd-2024/units/3/lessons/4/levels/1',
     },
   ];
 
@@ -180,7 +180,7 @@ describe('CourseContentDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED,
       {
-        lesson: '/s/csd3-2024/lessons/4/levels/1',
+        lesson: '/courses/csd-2024/units/3/lessons/4/levels/1',
       },
       PLATFORMS.BOTH
     );
@@ -192,7 +192,7 @@ describe('CourseContentDropdown', () => {
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
       {
-        lesson: '/unit/csd3-2024',
+        lesson: '/courses/csd-2024/units/3',
       },
       PLATFORMS.BOTH
     );

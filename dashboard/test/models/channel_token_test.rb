@@ -6,7 +6,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     @level = create :level
     create :script_level, script: @script, levels: [@level]
     @fake_ip = '127.0.0.1'

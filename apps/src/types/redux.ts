@@ -74,7 +74,7 @@ export interface Student {
   gender?: string;
   genderTeacherInput?: string;
   secretWords: string;
-  secretPicturePath: string;
+  secretPictureUrl: string;
   loginType: string;
   sectionId?: number;
   sharingDisabled: boolean;

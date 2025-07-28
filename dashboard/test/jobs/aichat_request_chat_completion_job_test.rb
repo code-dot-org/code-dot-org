@@ -23,7 +23,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
     request = create :aichat_request, user_id: @student.id
     user_message = request.new_message['chatMessageText']
-    AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale, request.level_id).returns(@toxic_response)
+    AichatSafetyHelper.expects(:find_toxicity).with(user_message, request.level_id).returns(@toxic_response)
 
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
@@ -34,9 +34,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test "execution status is set to MODEL_PROFANITY if toxicity detected in model output" do
-    AichatSafetyHelper.stubs(:find_toxicity).with('user', anything, anything, anything).returns(nil)
+    AichatSafetyHelper.stubs(:find_toxicity).with(@new_message['chatMessageText'], anything).returns(nil)
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
-    AichatSafetyHelper.stubs(:find_toxicity).with('assistant', anything, anything, anything).returns(@toxic_response)
+    AichatSafetyHelper.stubs(:find_toxicity).with('response', anything).returns(@toxic_response)
 
     request = create :aichat_request, user_id: @student.id
 
@@ -63,7 +63,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test 'execution status is set to SUCCESS if no profanity is detected using gpt-4o-mini' do
     model_response = 'response'
-    AichatOpenaiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
+    AichatAiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
     chatgpt_model_customizations = @model_customizations.merge({selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]})
 
     request = create :aichat_request, user_id: @student.id, model_customizations: chatgpt_model_customizations

@@ -2,7 +2,7 @@ import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 
 import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
-import '@code-dot-org/fonts/index.css';
+import '@code-dot-org/fonts/brands/code.org/index.css';
 import './preview.module.scss';
 
 injectFontAwesome();

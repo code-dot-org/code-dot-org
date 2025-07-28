@@ -76,7 +76,7 @@ module Pd::Foorm
     end
 
     test 'summarizes facilitator results' do
-      workshop = create :csf_101_workshop
+      workshop = create :workshop
       facilitator = create :facilitator
       create :csf_intro_post_facilitator_workshop_submission,
         :answers_low,
@@ -112,7 +112,7 @@ module Pd::Foorm
     end
 
     test 'summarizes facilitator results for multiple facilitators' do
-      workshop = create :csf_101_workshop
+      workshop = create :workshop
       facilitator1 = create :facilitator
       facilitator2 = create :facilitator
       create :csf_intro_post_facilitator_workshop_submission,

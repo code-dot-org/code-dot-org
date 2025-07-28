@@ -57,16 +57,26 @@ module Cdo::CloudFormation
       RakeUtils.system("cd #{absolute_directory} && npm ci --only=prod")
     end
 
-    # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
-    # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
+    # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return both the S3 location
+    # and content hash to assist in populating CloudFormation template resources for AWS::Lambda::Function and AWS::Lambda::Version.
     # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
     # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
     # @param environment_variables [Hash] Environment variables to write to `env.json` in the zip package. This is intended
     # for use in Lambda@Edge functions greater than 4KB in size, which cannot be inlined and do not support Lambda environment variables.
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
-    # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
+    # @return [Hash] Hash containing:
+    #   - :s3_location [Hash] S3 deployment package with :S3Bucket and :S3Key for CloudFormation Code property
+    #   - :content_hash [String] MD5 hash of directory contents for Lambda version tracking
+    # @example
+    #   result = zip_directory('my-lambda', environment_variables: {API_URL: 'https://api.example.com'})
+    #   # result[:s3_location] => {S3Bucket: 'cdo-dist', S3Key: 'lambda-my-lambda-abc123.zip'}
+    #   # result[:content_hash] => 'abc123def456...'
+    #
+    #   # Usage in CloudFormation template:
+    #   Code: <%= result[:s3_location].to_json %>
+    #   Description: "Code hash: <%= result[:content_hash] %>"
     def zip_directory(relative_directory, environment_variables: {}, key_prefix: 'lambda')
-      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
+      absolute_directory = aws_dir(File.join('cloudformation/lambdas', relative_directory))
       raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
 
       env_json_path = File.join(absolute_directory, 'env.json')
@@ -124,7 +134,8 @@ module Cdo::CloudFormation
           raise "Generated Lambda zip is empty! Directory: #{absolute_directory}"
         end
 
-        key = "#{key_prefix}-#{hash}.zip"
+        # Include relative_directory in the S3 key for better debugging
+        key = "#{key_prefix}-#{relative_directory}-#{hash}.zip"
 
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
         object_exists = begin
@@ -138,10 +149,14 @@ module Cdo::CloudFormation
           s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
         end
 
+        # Return both S3 location and hash of source code.
         {
-          S3Bucket: S3_LAMBDA_BUCKET,
-          S3Key: key
-        }.to_json
+          s3_location: {
+            S3Bucket: S3_LAMBDA_BUCKET,
+            S3Key: key
+          },
+          content_hash: hash
+        }
       ensure
         # Clean up env.json file if we created it
         File.delete(env_json_path) if env_json_created && File.exist?(env_json_path)

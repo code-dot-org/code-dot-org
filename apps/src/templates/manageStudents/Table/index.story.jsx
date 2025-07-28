@@ -9,6 +9,7 @@ import manageStudents, {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import wizardPng from '@cdo/static/skins/studio/wizard_thumb.png';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import {UnconnectedManageStudentsTable} from './index';
@@ -62,7 +63,7 @@ const passwordAccountData = [
     loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -78,7 +79,7 @@ const passwordAccountData = [
     loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -94,7 +95,7 @@ const passwordAccountData = [
     loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -110,8 +111,7 @@ const passwordAccountData = [
     loginType: SectionLoginType.email,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.TEACHER,
@@ -130,7 +130,7 @@ const wordAccountData = [
     loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -145,7 +145,7 @@ const wordAccountData = [
     loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -160,7 +160,7 @@ const wordAccountData = [
     loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath: '/wizard.jpg',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     rowType: RowType.STUDENT,
   },
@@ -174,8 +174,7 @@ const wordAccountData = [
     loginType: SectionLoginType.word,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.TEACHER,
@@ -193,8 +192,7 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -209,8 +207,7 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -225,8 +222,7 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.STUDENT,
@@ -241,8 +237,7 @@ const pictureAccountData = [
     loginType: SectionLoginType.picture,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     isEditing: false,
     rowType: RowType.TEACHER,
@@ -260,8 +255,7 @@ const googleData = [
     loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     rowType: RowType.STUDENT,
   },
@@ -275,8 +269,7 @@ const googleData = [
     loginType: SectionLoginType.google_classroom,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     rowType: RowType.STUDENT,
   },
@@ -293,8 +286,7 @@ const cleverData = [
     loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     rowType: RowType.STUDENT,
   },
@@ -308,8 +300,7 @@ const cleverData = [
     loginType: SectionLoginType.clever,
     secretWords: 'wizard',
     secretPictureName: 'wizard',
-    secretPicturePath:
-      'http://code.org/images/password_images/pirate_thumb@2x.png',
+    secretPictureUrl: wizardPng,
     sectionId: 53,
     rowType: RowType.STUDENT,
   },

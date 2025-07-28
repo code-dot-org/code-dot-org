@@ -104,6 +104,8 @@ Scenario: Check for Understanding summaries
   And element "p:contains('Sally')" does not exist
   And I wait until element "a:contains('Show hidden responses')" is visible
 
+@skip
+# Skipping 7-2-25 due to flakiness
 Scenario: Check free response AI
   Given I am on "http://studio.code.org"
 

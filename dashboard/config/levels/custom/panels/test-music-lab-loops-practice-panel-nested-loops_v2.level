@@ -54,9 +54,10 @@
     ],
     "bubble_choice_description": "Review how to use nested loops when making songs",
     "display_name": "Nested Loops",
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5eae9fd9cc2c8f31d93c1504b0b333be-Screenshot 2025-04-02 at 7.43.31 AM.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.716+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-panel-nested-loops\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-panel-nested-loops\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:45.716+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-panel-nested-loops\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-panel-nested-loops\"},{\"changed_at\":\"2025-06-21 23:43:09 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

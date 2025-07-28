@@ -6,6 +6,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import BaseOutput from './BaseOutput';
 import {
@@ -29,8 +30,10 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
   width,
   setOutputWidth,
 }) => {
-  const {labConfig, levelProperties} = useCodebridgeContext();
-  const miniApp = labConfig?.miniApp?.name;
+  const {levelProperties} = useCodebridgeContext();
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
   const style = {
     width,
   };

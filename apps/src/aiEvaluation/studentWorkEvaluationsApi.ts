@@ -117,3 +117,34 @@ export async function logStudentWorkEvaluationSummary(summaryData: SummaryIds) {
     });
   }
 }
+
+/**
+ * Fetches existing StudentWorkEvaluations for a given user, level, and unit.
+ * @param userId - The ID of the user/student.
+ * @param levelId - The ID of the level.
+ * @param unitId - The ID of the unit.
+ * @returns A promise resolving to the most recent UserLevelEvaluation.
+ */
+export async function fetchMostRecentUserLevelEvaluation(
+  userId: number,
+  levelId: number,
+  unitId: number
+) {
+  const response = await fetch(
+    `/student_work_evaluations/${userId}/${levelId}/${unitId}`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    }
+  );
+  if (!response.ok) {
+    console.info(
+      `No StudentWorkEvaluations found for user ${userId}, level ${levelId}, unit ${unitId}.`
+    );
+    return;
+  }
+  return await response.json();
+}

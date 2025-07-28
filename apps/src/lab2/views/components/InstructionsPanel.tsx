@@ -1,15 +1,18 @@
-import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
-import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
+import PredictQuestion from '@cdo/apps/lab2/views/components/Instructions/PredictQuestion';
+import PredictSummary from '@cdo/apps/lab2/views/components/Instructions/PredictSummary';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import {LevelProperties} from '../../types';
+
+import NavigationButton from './Instructions/NavigationButton';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/instructions.module.scss';
 
@@ -38,9 +41,12 @@ interface InstructionsPanelProps {
   canShowNextButton: boolean;
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
-  onContinueOrFinish: () => void;
   bottomComponent?: React.ReactNode;
   noTextAnimation?: boolean;
+  isRunning?: boolean;
+  levelProperties: LevelProperties;
+  hasRun: boolean;
+  hasEdited: boolean;
 }
 
 /**
@@ -64,9 +70,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   canShowNextButton,
   hasNextLevel,
   useSecondaryFinishButton,
-  onContinueOrFinish,
   bottomComponent,
   noTextAnimation,
+  isRunning,
+  levelProperties,
+  hasRun,
+  hasEdited,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -83,34 +92,16 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
   const feedbackRef = useRef<HTMLDivElement>(null);
-  const runButton = document.querySelector('#run-button');
 
   useEffect(() => {
-    const checkRunButton = () => {
-      if (feedbackRef.current && runButton?.textContent === 'Run') {
-        feedbackRef.current.focus();
-        return true;
-      }
-      return false;
-    };
-
-    const observer = new MutationObserver(mutations => {
-      if (checkRunButton()) {
-        // Stop observing once the run button is found and has the text 'Run'
-        observer.disconnect();
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    // Cleanup observer on component unmount
-    return () => {
-      observer.disconnect();
-    };
-  }, [useMessage, canShowNextButton, runButton?.textContent]);
+    // Focus on the feedback message when it first becomes present and the program is not running.
+    // This ensures it will be read by screen readers.
+    // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
+    // the program.
+    if (message && !isRunning) {
+      feedbackRef.current?.focus();
+    }
+  }, [message, isRunning]);
 
   return (
     <div
@@ -139,31 +130,17 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               noTextAnimation && moduleStyles.noAnimation
             )}
           >
-            {offerBrowserTts && (
-              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
-            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div
-                className={
-                  offerBrowserTts
-                    ? moduleStyles.scrollingContentWithTTS
-                    : moduleStyles.scrollingContentWithoutTTS
-                }
-              >
+              <div className={moduleStyles.scrollingContent}>
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
-                <PredictQuestion
-                  predictSettings={predictSettings}
-                  predictResponse={predictResponse}
-                  setPredictResponse={setPredictResponse}
-                  predictAnswerLocked={predictAnswerLocked}
-                />
+                <PredictQuestion />
                 {predictSettings?.isPredictLevel && (
                   <InstructorsOnly>
                     <div
@@ -177,6 +154,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </InstructorsOnly>
                 )}
               </div>
+              {offerBrowserTts && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={text} />
+                </div>
+              )}
               {bottomComponent && (
                 <div className={moduleStyles.bottomComponent}>
                   {bottomComponent}
@@ -198,29 +180,29 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
-              {offerBrowserTts && useMessage && !canShowNextButton && (
-                <TextToSpeech text={useMessage} />
-              )}
-              {useMessage && (
-                <div ref={feedbackRef} tabIndex={-1}>
-                  <EnhancedSafeMarkdown
-                    markdown={useMessage}
-                    className={moduleStyles.markdownText}
-                    handleInstructionsTextClick={handleInstructionsTextClick}
+              <div className={moduleStyles.messageContent}>
+                {useMessage && (
+                  <div id="focusable-feedback" ref={feedbackRef} tabIndex={-1}>
+                    <EnhancedSafeMarkdown
+                      markdown={useMessage}
+                      className={moduleStyles.markdownText}
+                      handleInstructionsTextClick={handleInstructionsTextClick}
+                    />
+                  </div>
+                )}
+                <div className={moduleStyles.navigationContainer}>
+                  <NavigationButton
+                    levelProperties={levelProperties}
+                    hasRun={hasRun}
+                    hasEdited={hasEdited}
+                    className={moduleStyles.buttonInstruction}
                   />
                 </div>
-              )}
-              {canShowNextButton && (
-                <Button
-                  id="instructions-continue-button"
-                  text={
-                    hasNextLevel ? commonI18n.continue() : commonI18n.finish()
-                  }
-                  onClick={onContinueOrFinish}
-                  className={moduleStyles.buttonInstruction}
-                  type={showSecondaryFinishButton ? 'secondary' : 'primary'}
-                  color={showSecondaryFinishButton ? 'black' : 'purple'}
-                />
+              </div>
+              {offerBrowserTts && useMessage && !canShowNextButton && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={useMessage} />
+                </div>
               )}
             </div>
           </div>

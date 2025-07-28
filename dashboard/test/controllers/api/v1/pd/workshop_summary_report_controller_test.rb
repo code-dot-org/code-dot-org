@@ -9,8 +9,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     organizer_email
     regional_partner_name
     workshop_dates
-    on_map
-    funded
     attendance_url
     facilitators
     num_facilitators
@@ -23,27 +21,16 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     days
     num_hours
     num_scholarship_teachers_attending_all_sessions
+    num_teachers_attending_all_sessions
   ).tap do |fields|
-    (1..Pd::Payment::WorkshopSummary::REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
+    (1..Pd::Summary::WorkshopSummary::REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
       fields << "facilitator_name_#{n}"
       fields << "facilitator_email_#{n}"
     end
-    (1..Pd::Payment::WorkshopSummary::REPORT_ATTENDANCE_DAY_COUNT).each do |n|
+    (1..Pd::Summary::WorkshopSummary::REPORT_ATTENDANCE_DAY_COUNT).each do |n|
       fields << "attendance_day_#{n}"
     end
   end.freeze
-
-  EXPECTED_PAYMENT_FIELDS = %w(
-    pay_period
-    payment_type
-    qualified
-    teacher_attendance_days
-    food_payment
-    facilitator_payment
-    staffer_payment
-    venue_payment
-    payment_total
-  ).freeze
 
   self.use_transactional_test_case = true
   setup do
@@ -52,11 +39,13 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     @program_manager = create :program_manager
 
     # CSF workshop for this regional partner
-    @workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop = build :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop.save(validate: false)
     create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
 
     # CSF workshop for this organizer.
-    @organizer_workshop = create :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop = build :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop.save(validate: false)
     create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
 
     # Non-CSF workshop from a different organizer
@@ -69,7 +58,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
   test_user_gets_response_for :index, response: :forbidden, user: :teacher
 
-  test 'workshop admins get payment info' do
+  test 'workshop admins get summary info' do
     sign_in @workshop_admin
 
     get :index
@@ -78,10 +67,9 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
     assert response.first
     assert_common_fields response.first
-    assert_payment_fields response.first
   end
 
-  test 'organizers do not get payment info' do
+  test 'organizers get summary info' do
     sign_in @organizer
 
     get :index
@@ -90,10 +78,9 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
     assert response.first
     assert_common_fields response.first
-    refute_payment_fields response.first
   end
 
-  test 'program managers do not get payment info' do
+  test 'program managers get summary info' do
     sign_in @program_manager
 
     get :index
@@ -102,7 +89,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
     assert response.first
     assert_common_fields response.first
-    refute_payment_fields response.first
   end
 
   test 'workshop admins see all workshops' do
@@ -188,6 +174,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     sign_in @workshop_admin
 
     # @workshop and @organizer_workshop are CSF; @other_workshop is not
+    # despite csf being deprecated, the workshop filters only apply to csf presently
     {
       'csf' => [@workshop.id, @organizer_workshop.id],
       '-csf' => [@other_workshop.id]
@@ -207,39 +194,12 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
     # 4 rows (header + workshop rows)
     assert_equal 4, response.count
-    assert_equal EXPECTED_COMMON_FIELDS.count + EXPECTED_PAYMENT_FIELDS.count, response.first.count
-  end
-
-  test 'includes unpaid workshops' do
-    unpaid_workshop = create :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSD
-    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
-
-    sign_in @workshop_admin
-    get :index
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert_equal 4, response.count
-    unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
-    refute_nil unpaid_report
-    refute unpaid_report['qualified']
-    assert_nil unpaid_report['payment_total']
+    assert_equal EXPECTED_COMMON_FIELDS.count, response.first.count
   end
 
   private def assert_common_fields(line)
     EXPECTED_COMMON_FIELDS.each do |field_name|
       assert line.key?(field_name), "Expected common field #{field_name} not found in report line: #{line}"
-    end
-  end
-
-  private def assert_payment_fields(line)
-    EXPECTED_PAYMENT_FIELDS.each do |field_name|
-      assert line.key?(field_name), "Expected payment field #{field_name} not found in report line: #{line}"
-    end
-  end
-
-  private def refute_payment_fields(line)
-    EXPECTED_PAYMENT_FIELDS.each do |field_name|
-      refute line.key?(field_name), "Unexpected payment field #{field_name} found in report line: #{line}"
     end
   end
 end

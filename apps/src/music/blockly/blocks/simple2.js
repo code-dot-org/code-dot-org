@@ -364,10 +364,15 @@ export const playSoundsRandom = {
   },
 };
 
+// This definition is passed to block documentation before Blockly's
+// translations are loaded, so we need to provide a fallback for each message.
+// TODO: Determine why Blockly.Msg is not loaded before this file in documentation.
 export const repeatSimple2 = {
   definition: {
     type: BlockTypes.REPEAT_SIMPLE2,
-    message0: Blockly.Msg['CONTROLS_REPEAT_TITLE'],
+    message0:
+      Blockly.Msg['CONTROLS_REPEAT_TITLE'] ||
+      musicI18n.blockly_controlsRepeatTitle(),
     args0: [
       {
         type: 'field_number',
@@ -377,7 +382,10 @@ export const repeatSimple2 = {
         max: 100,
       },
     ],
-    message1: `${Blockly.Msg['CONTROLS_REPEAT_INPUT_DO']} %1`,
+    message1: `${
+      Blockly.Msg['CONTROLS_REPEAT_INPUT_DO'] ||
+      musicI18n.blockly_controlsRepeatInputDo()
+    } %1`,
     args1: [
       {
         type: 'input_statement',
@@ -388,7 +396,9 @@ export const repeatSimple2 = {
     previousStatement: null,
     nextStatement: null,
     style: 'loop_blocks',
-    tooltip: Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'],
+    tooltip:
+      Blockly.Msg['CONTROLS_REPEAT_TOOLTIP'] ||
+      musicI18n.blockly_controlsRepeatTooltip(),
     helpUrl: DOCS_BASE_URL + 'repeat',
     mutator: NEXT_CONNECTION_MUTATOR,
   },

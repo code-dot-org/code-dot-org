@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:57:03.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Start and End Effects \r\n\r\nUse the tracks you have to create a song that has at least 5 tracks and experiments with different effects. \r\n\r\nUse at least 5 effects throughout your song. You can apply multiple effects to the same sound! You choose which ones you want to apply!\r\n\r\nWhen the song ends, all effects should be turned off and the volume set back to \"full.\" ",
+    "long_instructions": "### Start and End Effects \r\n\r\nNow you are the music producer! You’re in charge of shaping the sound and feel of a complete track. Use the tools in your studio to mix, layer, and enhance the music with creative effects.\r\n\r\n**Goals:** \r\n- Build a song with at least 5 tracks. Think like a producer: how can each track add to the overall sound?\r\n\r\n- Use at least 5 effects throughout your song. Feel free to use multiple effects on the same sound to create something unique.\r\n\r\n- When your song ends, make sure all effects are turned off and the volume is reset to full.",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -162,8 +163,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:03.159+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:57:03.159+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-2\"},{\"changed_at\":\"2025-06-26 20:28:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

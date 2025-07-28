@@ -90,14 +90,32 @@ const richTextRenderOptions: Options = {
       );
     },
     [BLOCKS.UL_LIST]: (listNode: Block | Inline) => (
-      <SimpleList
-        className={moduleStyles.richTextList}
-        items={listNode.content.map(
-          (itemNode: RichTextNode, index): SimpleListItem => {
-            return {key: index, label: extractNodeContent(itemNode)};
-          },
-        )}
-      />
+      <>
+        <SimpleList
+          className={moduleStyles.richTextList}
+          items={listNode.content.map(
+            (itemNode: RichTextNode, index): SimpleListItem => ({
+              key: index,
+              label: extractNodeContent(itemNode),
+            }),
+          )}
+        />
+        <br />
+      </>
+    ),
+    [BLOCKS.OL_LIST]: (listNode: Block | Inline) => (
+      <>
+        <ol>
+          {listNode.content.map((itemNode: RichTextNode, index) => (
+            <li key={index}>
+              <BodyTwoText className={moduleStyles.richTextParagraph}>
+                {extractNodeContent(itemNode)}
+              </BodyTwoText>
+            </li>
+          ))}
+        </ol>
+        <br />
+      </>
     ),
   },
 };

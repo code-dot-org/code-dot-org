@@ -2,7 +2,7 @@ require "test_helper"
 
 class PotentialTeachersControllerTest < ActionDispatch::IntegrationTest
   test "should create a potential teacher" do
-    script = create :script, name: "test"
+    script = create :script, :in_single_unit_course, name: "test"
     assert_difference('PotentialTeacher.count', 1) do
       post potential_teachers_url, params: {
         name: 'foosbars',
@@ -14,7 +14,7 @@ class PotentialTeachersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "show returns correct information for a potential teacher" do
-    script = create :script, name: "test"
+    script = create :script, :in_single_unit_course, name: "test"
     example_potential_teacher = create :potential_teacher, script_id: script.id
 
     get "/potential_teachers/#{example_potential_teacher.id}"

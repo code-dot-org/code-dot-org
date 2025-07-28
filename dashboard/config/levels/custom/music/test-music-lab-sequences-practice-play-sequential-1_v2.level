@@ -291,7 +291,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:45.473+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-1\"},{\"changed_at\":\"2025-06-13 16:05:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:56:45.473+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-play-sequential-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-play-sequential-1\"},{\"changed_at\":\"2025-06-13 16:05:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:08:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:10:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-27 23:12:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

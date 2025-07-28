@@ -16,13 +16,17 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @unit_in_course.reload
     @script_level_teacher_instructed_in_course = create(:script_level, script: @unit_in_course)
 
-    @teacher_instructed_unit = create(:script, name: 'teacher-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
+    @teacher_instructed_unit = create(:script, name: 'teacher-instructed-unit')
+    create(:single_unit_course, unit: @teacher_instructed_unit, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
     @script_level_teacher_instructed = create(:script_level, script: @teacher_instructed_unit)
-    @facilitator_instructed_unit = create(:script, name: 'facilitator-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
+    @facilitator_instructed_unit = create(:script, name: 'facilitator-instructed-unit')
+    create(:single_unit_course, unit: @facilitator_instructed_unit, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
     @script_level_facilitator_instructed = create(:script_level, script: @facilitator_instructed_unit)
-    @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
+    @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit')
+    create(:single_unit_course, unit: @plc_reviewer_instructed_unit, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
     @script_level_plc_reviewer_instructed = create(:script_level, script: @plc_reviewer_instructed_unit)
-    @universal_instructor_instructed_unit = create(:script, name: 'universal-instructor-instructed-unit', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor)
+    @universal_instructor_instructed_unit = create(:script, name: 'universal-instructor-instructed-unit')
+    create(:single_unit_course, unit: @universal_instructor_instructed_unit, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor)
     @script_level_universal_instructor_instructed = create(:script_level, script: @universal_instructor_instructed_unit)
 
     @plc_models_script = create(:script, name: 'old-style-pl-course', professional_learning_course: true)
@@ -87,7 +91,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_script_level? returns true for all kinds of users if the lesson is in readonly mode for that user' do
-    unit_with_readonly = create(:script, name: 'unit-with-readonly')
+    unit_with_readonly = create(:script, :in_single_unit_course,  name: 'unit-with-readonly')
     script_level = create(:script_level, script: unit_with_readonly)
     create(:user_level, user: @student, level: script_level.level, script: unit_with_readonly, submitted: true, readonly_answers: true)
     assert Policies::InlineAnswer.visible_for_script_level?(@student, script_level)

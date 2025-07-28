@@ -209,7 +209,8 @@ class HttpCache
             ),
             query: false,
             headers: ALLOWLISTED_HEADERS,
-            cookies: default_cookies
+            cookies: default_cookies,
+            include_marketing_router_lambda: true,
           },
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.

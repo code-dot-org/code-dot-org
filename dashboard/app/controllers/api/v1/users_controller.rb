@@ -226,10 +226,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.show_progress_table_v2 = show_v2_arg
+    if params[:show_progress_table_v2] != 'legacy' && params[:show_progress_table_v2] != 'v2'
+      return head :bad_request
+    end
 
-    if show_v2_arg
+    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
+
+    if params[:show_progress_table_v2] == 'v2'
       current_user.progress_table_v2_timestamp = DateTime.now
     else
       current_user.progress_table_v1_timestamp = DateTime.now

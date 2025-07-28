@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:47.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Make another Offbeat Song\r\n\r\nRecreate the song shown in this timeline using what you know about loops and rests. \r\n\r\n![](https://images.code.org/be22c02a63103fc636577f77e9e48e29-image-1741994669927.24.27 PM.png)",
+    "long_instructions": "### Make another Offbeat Song\r\n\r\nRecreate the song shown in this timeline using what you know about loops and rests. \r\n\r\n![](https://images.code.org/be22c02a63103fc636577f77e9e48e29-image-1741994669927.24.27 PM.png)\r\n\r\n::: details [**Want an addtional hint? Click here.**]\r\nThis is what the code could look like: \r\n![](https://images.code.org/d2ab6ed31cea36e8e02cf9bc5e1fb65e-image-1750961593834.png)\r\n:::\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -176,8 +177,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.106+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-offbeat-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-offbeat-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:47.106+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-offbeat-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-offbeat-2\"},{\"changed_at\":\"2025-06-26 18:14:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-26 18:27:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

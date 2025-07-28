@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
+import {within, expect, userEvent, fn} from '@storybook/test';
 
 import Footer, {FooterProps} from '../Footer';
 
@@ -107,6 +107,13 @@ const defaultArgs: FooterProps = {
       },
     },
   ],
+  languages: [
+    {value: 'en-US', text: 'English'},
+    {value: 'es', text: 'Spanish'},
+    {value: 'zh-CN', text: 'Chinese'},
+  ],
+  selectedLocaleCode: 'es',
+  onLanguageChange: fn(),
 };
 
 //
@@ -156,5 +163,14 @@ export const MobileFooter: Story = {
     for (const link of mobileLinks) {
       await expect(link).toBeVisible();
     }
+
+    // check that language dropdown can be used
+    const languageDropdown = await canvas.findByRole('combobox', {
+      name: 'Language selection dropdown',
+    });
+
+    await expect(languageDropdown).toBeVisible();
+    await userEvent.selectOptions(languageDropdown, 'zh-CN');
+    await expect(defaultArgs.onLanguageChange).toHaveBeenCalledWith('zh-CN');
   },
 };

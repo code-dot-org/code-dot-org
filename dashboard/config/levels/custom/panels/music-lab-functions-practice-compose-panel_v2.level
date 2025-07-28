@@ -41,9 +41,10 @@
       }
     ],
     "display_name": "Composing Functions",
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/5c956be7df7ba95cf4dc917a5e68cd6e-Screenshot 2025-04-02 at 7.44.16 AM.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.999+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-compose-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-compose-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:56.999+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-compose-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-compose-panel\"},{\"changed_at\":\"2025-06-21 23:44:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

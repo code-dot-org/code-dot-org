@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:22.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Create Version 1\r\n\r\n**Do This:**\r\n- Choose one of the moods you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it under `when run`. **Your sounds must last at least 6 measures!**\r\n- Use `1 triggered immediately` to code one sound effect that goes with your GIF.\r\n\r\nWhen you are finished, you should have one backtrack underneath the `when run` block and a `trigger` block with a sound effect. Here is an example of what this could look like\r\n\r\n![](https://images.code.org/38cbdf49784908ebdb36e8f93456cfea-image-1745527719822.png)",
+    "long_instructions": "### Create Version 1\r\n\r\n**Do This:**\r\n- Choose one of the moods you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it under `when run`. **Your sounds must last at least 6 measures!**\r\n- Use `1 triggered immediately` to code one sound effect that goes with your GIF.\r\n\r\nWhen you are finished, you should have one backing track underneath the `when run` block and a `trigger` block with a sound effect. Here is an example of what this could look like\r\n\r\n![](https://images.code.org/38cbdf49784908ebdb36e8f93456cfea-image-1745527719822.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -187,8 +188,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:22.015+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:22.015+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-06-30 22:10:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -23,7 +23,6 @@ const registerReducers = require('@cdo/apps/redux').registerReducers;
  */
 
 export enum InstructionsPosition {
-  TOP = 'TOP',
   LEFT = 'LEFT',
   RIGHT = 'RIGHT',
 }
@@ -61,10 +60,8 @@ export interface MusicState {
   soundLoadingProgress: number;
   /** The 1-based playhead position to start playback from, scaled to measures */
   startingPlayheadPosition: number;
-  undoStatus: {
-    canUndo: boolean;
-    canRedo: boolean;
-  };
+  canUndo: boolean;
+  canRedo: boolean;
   /** A callout that's currently being shown.  The index lets the same callout be
    * reshown multiple times in a row.
    */
@@ -99,10 +96,8 @@ const initialState: MusicState = {
   // This is to prevent the progress bar from showing if there are no sounds to load initially.
   soundLoadingProgress: 1,
   startingPlayheadPosition: 1,
-  undoStatus: {
-    canUndo: false,
-    canRedo: false,
-  },
+  canUndo: false,
+  canRedo: false,
   currentCallout: {
     id: undefined,
     index: 0,
@@ -224,7 +219,8 @@ const musicSlice = createSlice({
       state,
       action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
     ) => {
-      state.undoStatus = action.payload;
+      state.canUndo = action.payload.canUndo;
+      state.canRedo = action.payload.canRedo;
     },
     showCallout: (state, action: PayloadAction<string>) => {
       state.currentCallout.id = action.payload;

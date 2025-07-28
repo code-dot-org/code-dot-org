@@ -8,6 +8,8 @@ import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
+import {shrinkBlockSpaceContainer} from '../templates/instructions/utils';
+
 import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
 import {ExtendedBlock} from './types';
 
@@ -362,5 +364,46 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
     }
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
+  }
+}
+
+/**
+ * Sets the theme for the workspace and re-renders blocks if the font size changed.
+ *
+ * @param {GoogleBlockly.Workspace} workspace - The Blockly workspace to set the theme for.
+ * @param {GoogleBlockly.Theme} theme - The theme to apply to the workspace.
+ */
+export function setThemeAndRenderBlocks(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  theme: GoogleBlockly.Theme,
+  previousTheme?: GoogleBlockly.Theme
+) {
+  if (theme && workspace?.rendered) {
+    // Update the main workspace's flyout if it exists.
+    if (workspace.getFlyout()) {
+      setThemeAndRenderBlocks(
+        workspace.getFlyout()!.getWorkspace(),
+        theme,
+        previousTheme
+      );
+    }
+    workspace.setTheme(theme);
+    // Re-render blocks if the font size changed.
+    // Once https://github.com/google/blockly/issues/7782 is resolved,
+    // we should be able to remove this.
+    if (theme.fontStyle?.size !== previousTheme?.fontStyle?.size) {
+      workspace.getAllBlocks().map(block => {
+        block.markDirty();
+        block.render();
+      });
+      // If this is an embedded workspace, we resize its container to avoid cropping or excess padding.
+      if (Blockly.embeddedWorkspaces.includes(workspace.id)) {
+        shrinkBlockSpaceContainer(workspace, true);
+      }
+      // Adjust the width of the vertical flyout if it exists.
+      if (workspace.getFlyout()) {
+        workspace.getFlyout()!.reflow();
+      }
+    }
   }
 }

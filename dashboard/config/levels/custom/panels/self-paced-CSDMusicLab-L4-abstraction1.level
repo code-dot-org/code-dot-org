@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-04-15T21:51:29.000Z",
   "level_num": "custom",
@@ -15,13 +16,13 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Abstraction\n\nYou can use functions to reduce the complexity of your code by replacing large chunks of code with a single function instead.\n\nThis makes the code easier to read while still preserving the \"purpose\" of the code.\n",
+        "text": "### Abstraction\n\nYou can use functions to make your code shorter and easier to understand.\nA **function** lets you group a bunch of blocks together and give them a name.\n\nInstead of repeating the same blocks again and again, you just call the function!\n",
         "imageUrl": "https://images.code.org/9fda0b75a3c4f2b3397334391718c12f-abstraction-2.png",
         "key": "music-lab-functions-practice-abstract-panel-8f50f7d3-3094-4668-a19c-270d329eb794",
         "fadeInOverPrevious": true
       },
       {
-        "text": "### Abstraction\n\nThis is an example of **abstraction** - focusing on the big–picture rather than the details.\n\nUsing functions makes this song easier to understand as three chorus parts.\n",
+        "text": "### Abstraction\n\nThis is called **abstraction**. It means looking at the big picture instead of getting stuck in all the tiny details.\n",
         "imageUrl": "https://images.code.org/ebb59173c8da834a0561faa33129b3aa-abstraction-3.png",
         "key": "music-lab-functions-practice-abstract-panel-116b0983-9ba7-465e-b2a1-20cd51dbf0d2",
         "fadeInOverPrevious": true,
@@ -29,20 +30,20 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "### Abstraction\n\nMost songs have a structure that can be represented with functions\n",
+        "text": "### Abstraction\n\nMost songs are built with different parts, like an intro, verse, prechorus, and chorus.\nYou can use functions to name and group the code for each part.\n\nThis makes your program easier to read.\n\nIn this example, the code runs each part just one time, in the order you hear them in the song.\n\n---\n\n<i class=\"fa-solid fa-pencil\"></i> **Intro** – the beginning of the song\n\n<i class=\"fa-solid fa-pencil\"></i> **Verse** – tells the story, usually changes each time\n\n<i class=\"fa-solid fa-pencil\"></i> **Prechorus** – builds up to the chorus\n\n<i class=\"fa-solid fa-pencil\"></i> **Chorus** – the catchy part that repeats and stays the same\n",
         "imageUrl": "https://images.code.org/ede2ff50a24e5cc093d8d2425ac09cf5-abstraction-4.png",
         "key": "music-lab-functions-practice-abstract-panel-b8617e7a-7fb2-46df-aa71-bac3b2c15033",
         "fadeInOverPrevious": true,
         "layout": "text-bottom-center"
       },
       {
-        "text": "### Abstraction\n\nAnd Abstraction is what lets you focus on the big picture once you've finalized the details.\n",
+        "text": "### Abstraction\n\nAbstraction helps you focus on the big picture once the small pieces are working.\n\nYou don’t have to think about every line of code — just call the function!\n",
         "imageUrl": "https://images.code.org/5199b9bda791dbf3d0503d15af9679f3-abstraction-5.png",
         "key": "music-lab-functions-practice-abstract-panel-a57edcca-9cb5-4509-bd9e-d50865070b2e",
         "fadeInOverPrevious": true
       },
       {
-        "text": "Key Takeaway: use functions to represent chunks of code with the same purpose. This makes it easier to understand the bigger structure of your song without getting lost in the details.\n",
+        "text": "Key Takeaway: use functions to represent chunks of code with the same purpose. This makes your project easier to read and helps you see the structure of your song without getting lost in the details.",
         "imageUrl": "https://images.code.org/bcaf2ebea09528c166cc1e9573519fbe-abstraction-6.png",
         "key": "music-lab-functions-practice-abstract-panel-3151bd7f-59fd-4ab8-b40f-f2806bfedbca",
         "fadeInOverPrevious": true,
@@ -51,7 +52,6 @@
     ],
     "display_name": "Abstraction"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-15T21:51:29.616+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:51:29.616+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practice-abstract-panel\\\"\"],\"cloned_from\":\"music-lab-functions-practice-abstract-panel\"},{\"changed_at\":\"2025-07-08 17:11:30 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Panels>

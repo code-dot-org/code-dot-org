@@ -198,20 +198,6 @@ export const WithBackgroundImage: Story = {
   },
 };
 
-export const WithoutBackground: Story = {
-  args: {
-    heading: 'No Background Example',
-    subHeading: 'This hero has no background color or image',
-    description:
-      'The content should be clearly visible without any background distractions.',
-    removeBackground: true,
-    VideoComponent: Video,
-  },
-  parameters: {
-    layout: 'fullscreen',
-  },
-};
-
 export const WithWideText: Story = {
   args: {
     heading: 'Wide Text Example',

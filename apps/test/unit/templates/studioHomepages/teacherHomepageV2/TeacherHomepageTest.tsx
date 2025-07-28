@@ -27,7 +27,6 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -263,11 +262,5 @@ describe('TeacherHomepage', () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText('Accept');
-  });
-
-  it('renders feedback alert', async () => {
-    renderComponent();
-    await act(async () => await new Promise(process.nextTick));
-    screen.getByText(i18n.teacherHomePageFeedback());
   });
 });

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Make it Random\r\n\r\nIt's time to add the random element to make your song choose between each of your backing tracks!\r\n\r\n**Do This**:\r\n- Double-check your backtracks are inside a parent block like `repeat` or `play sequential` or `play together`\r\n- Drag out a `play random` block and put _all_ of your code inside of it\r\n  - Your timeline should update so all of the backtracks are stacked on top of each other!\r\n- Drag out a `repeat` block and put _all_ if your code inside! Then make the song repeat at least 5 times\r\n  - This gives your song enough time to choose each backtrack a random amount of times\r\n  \r\nRun your code! Each time you press run, it should select a different combination of your backtracks! Here is an example of what your code could look like inside the `repeat` and `play random` blocks:\r\n\r\n![](https://images.code.org/0f99ecf0ba3a816dd902f1ded001ee94-image-1745529017930.png)",
+    "long_instructions": "### Make it Random\r\n\r\nIt's time to add the random element to make your song choose between each of your backing tracks!\r\n\r\n**Do This**:\r\n- Double-check your backing tracks are inside a parent block like `repeat` or `play sequential` or `play together`\r\n- Drag out a `play random` block and put _all_ of your code inside of it\r\n  - Your timeline should update so all of the backing tracks are stacked on top of each other!\r\n- Drag out a `repeat` block and put _all_ if your code inside! Then make the song repeat at least 5 times\r\n  - This gives your song enough time to choose each backting rack a random amount of times\r\n  \r\nRun your code! Each time you press run, it should select a different combination of your backing tracks! Here is an example of what your code could look like inside the `repeat` and `play random` blocks:\r\n\r\n![](https://images.code.org/0f99ecf0ba3a816dd902f1ded001ee94-image-1745529017930.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -188,7 +188,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:23.012+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-5\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-5\"},{\"changed_at\":\"2025-06-06 00:35:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:23.012+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-5\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-5\"},{\"changed_at\":\"2025-06-06 00:35:46 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-06-30 22:13:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

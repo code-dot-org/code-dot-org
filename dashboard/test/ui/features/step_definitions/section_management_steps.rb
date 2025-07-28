@@ -56,11 +56,11 @@ Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
   )
 end
 
-Given(/^I create a new student section assigned to "([^"]*)"( and save the section)?$/) do |script_name, save|
+Given(/^I create a new student section assigned to course "([^"]*)" unit (\d+)( and save the section)?$/) do |course_name, unit_position, save|
   response = JSON.parse(browser_request(
-                          url: '/api/test/create_student_section_assigned_to_script',
+                          url: '/api/test/create_student_section_assigned_to_course_and_unit',
                           method: 'POST',
-                          body: {script_name: script_name}
+                          body: {course_name: course_name, unit_position: unit_position}
     )
   )
   if save

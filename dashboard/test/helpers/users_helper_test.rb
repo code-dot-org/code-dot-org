@@ -41,7 +41,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_summarize_user_progress
-    script = create(:script, :with_levels, levels_count: 3)
+    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 3)
     user = create :user
 
     # Verify results for no completed levels.
@@ -89,7 +89,7 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress_with_pages
     user = create :user
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -153,7 +153,7 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress_with_bubble_choice
     user = create :user
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -191,7 +191,7 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress_with_locked
     user = create :user
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
@@ -284,7 +284,7 @@ class UsersHelperTest < ActionView::TestCase
 
   def test_summarize_user_progress_non_lockable
     user = create :user
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
 
     # Create a LevelGroup level.
@@ -335,7 +335,7 @@ class UsersHelperTest < ActionView::TestCase
     section.students << user_3
 
     # set up progress
-    script = create :script
+    script = create :script, :in_single_unit_course
 
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group

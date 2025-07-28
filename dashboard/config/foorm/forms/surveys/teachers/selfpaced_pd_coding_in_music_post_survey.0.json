@@ -38,7 +38,30 @@
         {
           "type": "rating",
           "name": "comfort_supporting_students_learn_coding_music",
+          "visibleIf": "{module} = 'Coding in Music'",
           "title": "After completing this module, I am more comfortable in my ability to support students in exploring computer science concepts through music.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDITED TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM: DONE"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_6_10_programming_music",
+          "visibleIf": "{module} = 'Programming in Music Lab for grades 6-10'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in exploring programming concepts through music.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident",
+          "natalia_comment": "EDITED TO INCLUDE THE LEARNING OBJECTIVE(S) OF THE CURRICULUM: DONE"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_supporting_students_learn_6_10_music_terminology",
+          "visibleIf": "{module} = 'Programming in Music Lab for grades 6-10'",
+          "title": "After completing this module, I am more comfortable in my ability to support students in learning and understanding the relevant musical terminology.",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less confident",
@@ -50,7 +73,7 @@
           "library_name": "surveys/pd/self_paced_pl_standards",
           "library_version": 0,
           "name": "know_what_students_learn",
-          "natalia_comment": "INCLUDE ONLY if module is about one CURRICULUM (instead of one unit, if so use know_what_students_learn_module instead)"
+          "natalia_comment": "INCLUDE ONLY if module is about one CURRICULUM (instead of one unit, if so use know_what_studentslearn_module instead)"
         },
         {
           "type": "library_item",

@@ -25,6 +25,7 @@ class LessonsController < ApplicationController
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
     unit_group_unit = unit_context[:unit_group_unit]
+    unit_group = unit_context[:unit_group]
     return render :forbidden unless script.is_migrated
 
     if script.is_deprecated
@@ -35,8 +36,7 @@ class LessonsController < ApplicationController
       l.has_lesson_plan && l.relative_position == params[:position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
-    return render :forbidden unless can?(:read, @lesson)
-
+    return render :forbidden unless can?(:read, @lesson, unit_group)
     lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script), unit_group_unit: unit_group_unit)
 
     @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
@@ -57,13 +57,14 @@ class LessonsController < ApplicationController
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
     unit_group_unit = unit_context[:unit_group_unit]
+    unit_group = unit_context[:unit_group]
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
     raise ActiveRecord::RecordNotFound unless @lesson
-    return render :forbidden unless can?(:read, @lesson)
+    return render :forbidden unless can?(:read, @lesson, unit_group)
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan(unit_group_unit: unit_group_unit)
     @script_name = script.name

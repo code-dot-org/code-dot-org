@@ -20,4 +20,10 @@
 
 %script{src: webpack_asset_path('js/teacher_dashboard/show.js'), data: {dashboard: teacher_dashboard_data.to_json}}
 
+- if current_user
+  - if current_user.admin
+    = render partial: 'home/admin'
+  - if Policies::Ai.ai_differentiation_enabled?(current_user)
+    %div#ai-differentiation-fab-mount-point
+
 #teacher-dashboard

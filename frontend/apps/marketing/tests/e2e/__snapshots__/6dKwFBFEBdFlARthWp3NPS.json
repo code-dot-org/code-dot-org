@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "linkName": {
+        "en-US": "❌ [ENG] Amazon Link TEST"
+      },
+      "label": {
+        "en-US": "Amazon"
+      },
+      "primaryTarget": {
+        "en-US": "https://amazon.com"
+      },
+      "isThisAnExternalLink": {
+        "en-US": true
+      }
+    }
+  },
+  "contentType": "link"
+}

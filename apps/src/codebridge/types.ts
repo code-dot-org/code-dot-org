@@ -38,7 +38,6 @@ export type ConfigType = {
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
-  showFileBrowser: boolean;
   validMimeTypes?: string[];
   layoutComponents: {
     horizontal: React.FunctionComponent<LayoutProps>;

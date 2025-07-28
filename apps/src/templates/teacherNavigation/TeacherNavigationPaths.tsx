@@ -22,6 +22,7 @@ export const TEACHER_NAVIGATION_PATHS = {
   unitOverview: 'unit/:unitName?',
   settings: 'settings',
   home: 'home',
+  skills: 'skills_in_dev',
 };
 
 const getAbsolutePath = (name: string) =>
@@ -143,5 +144,11 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.settings),
     label: i18n.settings(),
     icon: 'gear',
+  },
+  skills: {
+    url: TEACHER_NAVIGATION_PATHS.skills,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.skills),
+    label: 'Skills (In Development)',
+    icon: 'brain',
   },
 };

@@ -3,9 +3,6 @@ require 'cdo/geocoder'
 require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
-USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-PLAYLAB_APP_INDICATOR = 'studio_'.freeze
-
 # This is raised if there is any violation and you query with exceptions
 # enabled.
 class ShareFilterException < StandardError
@@ -42,6 +39,10 @@ module ShareFiltering
     PROFANITY = 'profanity'.freeze
   end
 
+  USER_ENTERED_TEXT_FIELDS = ['SPEECH', 'TEXT', 'TEXT1', 'TITLE'].freeze
+  FILTERED_PROJECT_TYPES = ['spritelab', 'playlab', 'poetry', 'starwarsblocks'].freeze
+  JSON_MAX_DEPTH = 999
+
   # Searches for a sharing failure given a program and locale.
   # Returns both the error type and the offending text snippet.
   #
@@ -50,19 +51,98 @@ module ShareFiltering
   #
   # @param [String] program the student's program text
   # @param [String] locale a two-character ISO 639-1 language code
-  def self.find_share_failure(program, locale, exceptions: false)
-    return nil unless should_filter_program(program)
+  # @param [String] project_type
+  def self.find_share_failure(program, locale, project_type, exceptions: false)
+    # Filter projects geared for young students that accept user-generated text.
+    return nil unless should_filter_program(program, project_type)
 
-    xml_tag_regexp = /<[^>]*>/
-    program_tags_removed = program.gsub(xml_tag_regexp, "\n")
+    texts = extract_text_blockly(program)
+    program_text = texts.join(" ")
 
-    find_failure(program_tags_removed, locale, exceptions: exceptions)
+    find_failure(program_text, locale, exceptions: exceptions)
   end
 
-  def self.should_filter_program(program)
-    Gatekeeper.allows('webpurify', default: true) &&
-      program =~ /#{PLAYLAB_APP_INDICATOR}/o &&
-      program =~ /(#{USER_ENTERED_TEXT_INDICATORS.join('|')})/
+  # Parses a Blockly program (XML or JSON) and returns an array of text entries.
+  # @param program [String] Blockly program (XML or JSON).
+  # @return [Array<String>] Text values found in the program. If JSON depth overflow error occurs, returns an empty array.
+  def self.extract_text_blockly(program)
+    stripped = program.lstrip # Removes all leading whitespace.
+    unless stripped.start_with?("{", "[")
+      # XML, not JSON. These programs are from Play Lab activity levels.
+      # Replace <...> tags with newlines,
+      # convert to array of lines split at newline,
+      # strip leading/trailing whitespace from each line,
+      # drop any blank lines.
+      return stripped.gsub(/<[^>]*>/, "\n").split("\n").map(&:strip).reject(&:empty?)
+    end
+
+    # Texts will include user-generated block text field values.
+    texts = []
+    begin
+      json = JSON.parse(stripped, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', JSON_MAX_DEPTH))
+    rescue JSON::NestingError
+      CDO.log.warn "ShareFiltering.extract_text_blockly: JSON too deep after #{JSON_MAX_DEPTH} levels"
+      return texts
+    end
+
+    # Traverse each block recursively extracting user-generated field string values via traverse_block.
+    json.dig("blocks", "blocks")&.each do |block|
+      traverse_block(block, texts)
+    end
+
+    # Return a list of all extracted text (no duplicates).
+    texts.compact.uniq
+  end
+
+  # Clean string values from XML-wrapped field values.
+  def self.clean_text_value(value)
+    return nil unless value.is_a?(String)
+
+    # Extracts text inside a <field> tag if present and removes all double quotes.
+    # Removes double quotes if no field tag is found
+    if value =~ /<field name=.*?>(.*?)<\/field>/m
+      $1.delete('"')
+    else
+      value.delete('"')
+    end
+  end
+
+  # This function recursively traverses a Blockly block, extracting any user-entered text,
+  # 'cleans' the text value (strips XML tags & quotes), and then adds the text value
+  # to the texts array.
+  # For each block it:
+  #   1. Iterates through block fields, cleaning and collecting user-generated strings.
+  #   2. Recurses into both normal and shadow inputs.
+  #   3. Handles sequenced blocks by following the 'next' chain of connections.
+  def self.traverse_block(block, texts)
+    return unless block.is_a?(Hash)
+
+    fields = block["fields"] || {}
+    inputs = block["inputs"] || {}
+
+    fields.each do |key, value|
+      if USER_ENTERED_TEXT_FIELDS.include?(key)
+        cleaned = clean_text_value(value)
+        texts << cleaned if cleaned && !cleaned.strip.empty?
+      end
+    end
+
+    inputs.each_value do |input|
+      traverse_block(input["block"], texts) if input["block"]
+      traverse_block(input["shadow"], texts) if input["shadow"]
+    end
+
+    # Recurse into the 'next' chain.
+    traverse_block(block.dig("next", "block"), texts)
+  end
+
+  def self.should_filter_program(program, project_type)
+    # Return false early if filtering is disabled or project type not in filter list.
+    return false unless Gatekeeper.allows('webpurify', default: true)
+    return false unless FILTERED_PROJECT_TYPES.include?(project_type)
+
+    # Only filter if program contains fields that accept user-entered strings.
+    return program.match?(/(?:#{USER_ENTERED_TEXT_FIELDS.join('|')})/)
   end
 
   # Searches for a sharing failure given a program name and locale.

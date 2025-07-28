@@ -32,9 +32,12 @@ const Console: React.FunctionComponent = () => {
   const [consoleManager, setConsoleManager] = useState<ConsoleManager | null>(
     null
   );
-  const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
+  const {sendConsoleInput, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
-  const hasMiniApp = !!labConfig?.miniApp?.name;
+
+  const hasMiniApp = useAppSelector(
+    state => !!state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
   const fontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );

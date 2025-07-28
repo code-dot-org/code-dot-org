@@ -2,165 +2,165 @@
   "entryContent": {
     "fields": {
       "internalName": {
-        "en-US": "FAQ Lists"
+        "en-US": "❌ [ENG] FAQ Lists"
       },
       "question": {
         "en-US": "FAQ Lists"
       },
       "answer": {
         "en-US": {
-          "nodeType": "document",
           "data": {},
           "content": [
             {
-              "nodeType": "unordered-list",
               "data": {},
               "content": [
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
+                          "data": {},
+                          "marks": [],
                           "value": "Unordered Item A",
-                          "marks": [],
-                          "data": {}
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
+                          "data": {},
+                          "marks": [
+                            {
+                              "type": "bold"
+                            }
+                          ],
                           "value": "Unordered Item B",
-                          "marks": [
-                            {
-                              "type": "bold"
-                            }
-                          ],
-                          "data": {}
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
+                          "data": {},
+                          "marks": [
+                            {
+                              "type": "italic"
+                            }
+                          ],
                           "value": "Unordered Item C",
-                          "marks": [
-                            {
-                              "type": "italic"
-                            }
-                          ],
-                          "data": {}
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 }
-              ]
+              ],
+              "nodeType": "unordered-list"
             },
             {
-              "nodeType": "ordered-list",
               "data": {},
               "content": [
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
-                          "value": "Ordered Item 1",
+                          "data": {},
                           "marks": [],
-                          "data": {}
+                          "value": "Ordered Item 1",
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
-                          "value": "Ordered Item 2",
+                          "data": {},
                           "marks": [
                             {
                               "type": "bold"
                             }
                           ],
-                          "data": {}
+                          "value": "Ordered Item 2",
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 },
                 {
-                  "nodeType": "list-item",
                   "data": {},
                   "content": [
                     {
-                      "nodeType": "paragraph",
                       "data": {},
                       "content": [
                         {
-                          "nodeType": "text",
-                          "value": "Ordered Item 3",
+                          "data": {},
                           "marks": [
                             {
                               "type": "italic"
                             }
                           ],
-                          "data": {}
+                          "value": "Ordered Item 3",
+                          "nodeType": "text"
                         }
-                      ]
+                      ],
+                      "nodeType": "paragraph"
                     }
-                  ]
+                  ],
+                  "nodeType": "list-item"
                 }
-              ]
+              ],
+              "nodeType": "ordered-list"
             },
             {
-              "nodeType": "paragraph",
               "data": {},
               "content": [
                 {
-                  "nodeType": "text",
-                  "value": "",
+                  "data": {},
                   "marks": [],
-                  "data": {}
+                  "value": "",
+                  "nodeType": "text"
                 }
-              ]
+              ],
+              "nodeType": "paragraph"
             }
-          ]
+          ],
+          "nodeType": "document"
         }
       }
     }

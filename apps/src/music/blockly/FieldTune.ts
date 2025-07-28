@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {DEFAULT_KEY} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import {
   InstrumentEventValue,
@@ -119,7 +120,13 @@ export default class FieldTune extends GoogleBlockly.Field {
     );
 
     const {events, scaleMode, relative} = this.getValue();
-    const key = MusicRegistry.player.getKey();
+    const workspace = this.getSourceBlock()?.workspace;
+
+    // Embedded workspaces do not use a player, so we use the default key.
+    let key = DEFAULT_KEY;
+    if (workspace && !Blockly.isEmbeddedWorkspace(workspace)) {
+      key = MusicRegistry.player.getKey();
+    }
 
     const mapFn = relative
       ? (event: InstrumentTickEvent) => ({

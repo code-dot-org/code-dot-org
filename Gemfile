@@ -241,7 +241,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 gem 'aws-sdk-acm'
 gem 'aws-sdk-applicationautoscaling'
 gem 'aws-sdk-autoscaling'
-gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
+gem 'aws-sdk-bedrockagentruntime'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -338,7 +338,8 @@ require_pg = lambda do
 end
 
 install_if require_pg do
-  gem 'pg', require: false
+  # v1.3.0 required to support Postgres 14
+  gem 'pg', '~> 1.3.0', require: false
 end
 
 gem 'activerecord-import', '~> 1.0.3'
@@ -384,6 +385,8 @@ gem "csv"
 gem "async", "~> 1.32"
 
 gem "webrick", "~> 1.9"
+
+gem 'rubyzip'
 
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|

@@ -11,3 +11,7 @@ if (typeof window !== 'undefined') {
 }
 
 global.TextEncoder = TextEncoder;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+(global as any).Localize = {
+  setLanguage: jest.fn(),
+};

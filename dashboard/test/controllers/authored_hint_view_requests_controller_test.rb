@@ -3,7 +3,7 @@ require 'test_helper'
 class AuthoredHintViewRequestsControllerTest < ActionController::TestCase
   setup do
     AuthoredHintViewRequest.stubs(:enabled?).returns true
-    @script = create :script
+    @script = create :script, :in_single_unit_course
     @level = create :level
     @user = create :user
     sign_in @user

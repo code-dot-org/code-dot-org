@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:22.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Create Version 2\r\n\r\n**Do This**:\r\n- Choose the second mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your first sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the second backtrack.\r\n- Create a second trigger with a new sound effect to go with your new backtrack. \r\n\r\nWhen you are finished, you should have two backtracks that play sequentially underneath the `when run` block and two `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/3a6477583a3a3dfa7a74d7402e1ad5b4-image-1745528231537.png)",
+    "long_instructions": "### Create Version 2\r\n\r\n**Do This**:\r\n- Choose the second mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your first sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the second backing track.\r\n- Create a second trigger with a new sound effect to go with your new backing track. \r\n\r\nWhen you are finished, you should have two backing tracks that play sequentially underneath the `when run` block and two `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/3a6477583a3a3dfa7a74d7402e1ad5b4-image-1745528231537.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -187,8 +188,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:22.487+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:22.487+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-2\"},{\"changed_at\":\"2025-06-30 22:12:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

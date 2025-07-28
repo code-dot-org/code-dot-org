@@ -5,7 +5,7 @@ Feature: Lesson materials page - Eyes
   Scenario: Lesson materials page
     When I open my eyes to test "lesson materials"
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "allthethingscourse" and unit "allthethings" with teacher "Teacher_Sally"
+    Given I am assigned to course "allthethingscourse" unit 1 with teacher "Teacher_Sally"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access

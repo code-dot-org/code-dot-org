@@ -4,14 +4,16 @@ import {ProjectFile} from '../codebridge/types';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 
-// Given a question for the AITutor2, return the full question to ask, which means
-// appending all the relevant context.
-const getAiTutor2FullPromptFromData = (
-  question: string,
-  source: MultiFileSource,
+// Return additional context for AiTutor2.
+const getAiTutor2Context = (
+  source: MultiFileSource | undefined,
   validationFile: ProjectFile | undefined,
   longInstructions: string | undefined
 ) => {
+  if (!source) {
+    return '';
+  }
+
   const sourceCode = Object.entries(source.files)
     .filter(
       ([_, file]) =>
@@ -27,8 +29,7 @@ const getAiTutor2FullPromptFromData = (
     PythonValidationTracker.getInstance().getValidationResults()
   );
 
-  const fullQuestion = [
-    question,
+  const context = [
     'Here is my code:',
     sourceCode,
     ...(validationContents
@@ -44,7 +45,7 @@ const getAiTutor2FullPromptFromData = (
     longInstructions,
   ].join('\n\n');
 
-  return fullQuestion;
+  return context;
 };
 
-export default getAiTutor2FullPromptFromData;
+export default getAiTutor2Context;

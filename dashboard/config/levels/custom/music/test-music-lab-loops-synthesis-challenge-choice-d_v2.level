@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:00:06.000Z",
   "level_num": "custom",
@@ -48,7 +49,7 @@
       "packId": "default",
       "showSoundFilters": true
     },
-    "long_instructions": "### Alternating Patterns\r\n\r\nYou can use nested loops to switch between different parts of your code, allowing you to tweak one loop while the other plays. This is similar to when a DJ uses a turntable to play one record while they setup the next song.\r\n\r\n**Do This**:\r\n- Create a loop that repeats 3 times, layering a drum, bass, and lead part using play together.\r\n- Create a second loop that also repeats 3 times with a different set of drum, bass, and lead layers.\r\n- Nest both loops inside another loop that plays 3 times.\r\n- Press \"Run\" - while one loop plays, the other is silent. Use that time to edit and experiment!\r\n\r\n![](https://images.code.org/d72b72550ef9788958d1e0a8449e8530-image-1745295546774.png)",
+    "long_instructions": "### Alternating Patterns\r\n\r\n**Define:** DJs often play one track while preparing the next one, switching smoothly between songs during a performance. In this challenge, you'll use nested loops to switch between two musical sections, giving you time to experiment and make live edits.\r\n\r\n**Prepare:** Plan two different musical sections. Each one should include a drum, bass, and lead part. Think about how they'll sound different from each other and how you want them to alternate. Decide how to layer each section using `play together`.\r\n\r\n**Try:**\r\n\r\n- Create your first loop to repeat 3 times with a drum, bass, and lead using `play together`.\r\n- Create your second loop the same way, using different tracks.\r\n- Nest both loops inside a larger loop that repeats 3 times.\r\n\r\nRun your code and experiment! While one loop plays, the other is silent so you can make live changes.\r\n\r\n![](https://images.code.org/d72b72550ef9788958d1e0a8449e8530-image-1745295546774.png)\r\n\r\n**Reflect:** Did switching between the loops feel smooth? Were you able to edit or tweak one loop while the other played? In order to complete this level, your remix must include:\r\n\r\n- Two different loops that each repeat 3 times\r\n- Each loop includes a drum, bass, and lead layered with `play together`\r\n- Both loops nested inside another loop that repeats at least 3 times",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -229,8 +230,7 @@
     "thumbnail_url": "https://curriculum.code.org/media/musiclab/library-launch2024/packs/pop/pop.png",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:06.124+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-d\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-d\"},{\"changed_at\":\"2025-06-12 20:42:33 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T03:00:06.124+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-synthesis-challenge-choice-d\\\"\"],\"cloned_from\":\"test-music-lab-loops-synthesis-challenge-choice-d\"},{\"changed_at\":\"2025-06-12 20:42:33 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-06-25 18:41:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

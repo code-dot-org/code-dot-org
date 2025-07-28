@@ -44,9 +44,6 @@ class CreateHeader
     dance: {
       image: "header-dance-party-icon.png"
     },
-    pythonlab: {
-      image: "header-python-lab-icon.png"
-    },
   }.freeze
 
   # project info data can be inferred from the key, except when otherwise

@@ -88,9 +88,11 @@ module Api::V1::Pd
 
     test 'successfully create rollup with facilitator data' do
       sign_in @workshop_admin
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
-        ended_at: Time.now.utc - 1.hour
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      csf_workshop.save(validate: false)
       facilitator_ids = csf_workshop.facilitators.pluck(:id)
       create_surveys_for_csf_workshop(csf_workshop, facilitator_ids, 3, 2)
       facilitator_id = facilitator_ids[0]
@@ -119,9 +121,11 @@ module Api::V1::Pd
 
     test 'if there are no facilitator surveys still create csf rollup' do
       sign_in @workshop_admin
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
-        ended_at: Time.now.utc - 1.hour
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      csf_workshop.save(validate: false)
       facilitator_id = csf_workshop.facilitators.pick(:id)
       create_list :csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id
       create_list :csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id
@@ -143,12 +147,16 @@ module Api::V1::Pd
 
     test 'calculates averages across multiple workshops correctly' do
       sign_in @workshop_admin
-      csf_workshop_1 = create :csf_workshop,
+      csf_workshop_1 = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
-        ended_at: Time.now.utc - 1.hour
-      csf_workshop_2 = create :csf_workshop,
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      csf_workshop_1.save(validate: false)
+      csf_workshop_2 = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
-        ended_at: Time.now.utc - 1.hour
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      csf_workshop_2.save(validate: false)
       create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_1.facilitators.pluck(:id), 3, 2)
       create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_2.facilitators.pluck(:id), 5, 1)
 
@@ -166,10 +174,11 @@ module Api::V1::Pd
       other_facilitator = create :facilitator
       program_manager = create :program_manager
       workshop_organizer = create :workshop_organizer
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
-        ended_at: Time.now.utc - 1.hour
-
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      csf_workshop.save(validate: false)
       this_facilitator = csf_workshop.facilitators[0]
 
       expected_authorization = [
@@ -190,10 +199,11 @@ module Api::V1::Pd
     end
 
     test 'omits surveys submitted by facilitators' do
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            num_facilitators: 2
+                            facilitators: [create(:facilitator), create(:facilitator)]
+      csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
 
       # included in report
@@ -216,10 +226,11 @@ module Api::V1::Pd
     end
 
     test 'filters facilitator data if facilitator is signed in' do
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
-        num_facilitators: 2
+        facilitators: [create(:facilitator), create(:facilitator)]
+      csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]
       facilitator_2 = csf_workshop.facilitators[1]
       create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
@@ -252,10 +263,11 @@ module Api::V1::Pd
     end
 
     test 'participant and facilitator post surveys are available for download' do
-      csf_workshop = create :csf_workshop,
+      csf_workshop = build :csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
-                            num_facilitators: 2
+                            facilitators: [create(:facilitator), create(:facilitator)]
+      csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
       csf_workshop.facilitators[1]
       create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)

@@ -41,7 +41,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test "by_lesson" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     script_level = create :script_level, script: script, lesson: lesson
     level = script_level.levels.first
@@ -54,7 +54,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test "by_lesson will find all levels for each script_level" do
-    script = create :script
+    script = create :script, :in_single_unit_course
     lesson = create :lesson, script: script
     first_level = create :level
     second_level = create :level
@@ -338,7 +338,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test 'unsubmitting destroys unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
-    script = create :script
+    script = create :script, :in_single_unit_course
     level_source = create :level_source
 
     ul = UserLevel.create(
@@ -363,7 +363,7 @@ class UserLevelTest < ActiveSupport::TestCase
 
   test 'other changes do not destroy unclaimed peer reviews' do
     level = create(:free_response, peer_reviewable: true)
-    script = create :script
+    script = create :script, :in_single_unit_course
     level_source = create :level_source
 
     ul = UserLevel.create(
@@ -408,7 +408,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'update_best_result sets best_result to the given value' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
 
     new_best_result = 100
@@ -418,7 +418,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'update_best_result does not change the updated_at date if touch_updated_at=false' do
-    script = create :script
+    script = create :script, :in_single_unit_course
     ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
     original_updated_at = ul.reload.updated_at
 

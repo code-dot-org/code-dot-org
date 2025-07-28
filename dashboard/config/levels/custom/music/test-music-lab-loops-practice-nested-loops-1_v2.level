@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:46.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Nested Loops\r\n\r\nColin noticed this song had two sections that repeat and realized he could use a **nested loop** to simplify his code.\r\n\r\n![](https://images.code.org/202b3dbd1c35dfa7ee594f8e2c8d79fa-image-1745009401512.png)\r\n\r\nCan you re-create his code using a **nested loop**? Not all of the code will go inside the loop! All of the blocks you'll need are already in the workspace!\r\n\r\nYou can use **pattern recognition** to help prepare for this level:\r\n- What parts of this song repeat? Can you identify it in the code?\r\n- Where do you see the same blocks used more than once?\r\n- Do any instruments or tracks create a repeating structure in this song?",
+    "long_instructions": "### Nested Loops\r\n\r\nColin noticed that this song has two repeating sections. Instead of writing the same code over and over, he could use a **nested loop** to make his code simpler and more efficient!\r\n\r\n![](https://images.code.org/202b3dbd1c35dfa7ee594f8e2c8d79fa-image-1745009401512.png)\r\n\r\nCan you recreate Colin’s code using a nested loop? All the blocks you need are already in the workspace.\r\n\r\n> ***Hint:*** Not all of the code belongs inside the loop. Take a look at what repeats and where!\r\n\r\nUse **pattern recognition** to prepare:\r\n- What sections of the song repeat? Try to spot them in the code.\r\n- Which blocks appear more than once?\r\n- Do any instruments or tracks follow the same pattern over and over?",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -405,8 +406,7 @@
     "name_suffix": "_v2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.158+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.158+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-nested-loops-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-nested-loops-1\"},{\"changed_at\":\"2025-06-26 17:26:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

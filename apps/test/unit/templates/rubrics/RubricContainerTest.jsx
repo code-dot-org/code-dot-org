@@ -241,7 +241,9 @@ describe('RubricContainer', () => {
     expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
-    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    const dropdownOption = screen
+      .getByRole('button', {name: `${studentAlice.name} Not started`})
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.notStarted());
   });
 
@@ -279,7 +281,11 @@ describe('RubricContainer', () => {
     expect(button).toBeDisabled();
 
     // Verify status bubble in student selector
-    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    const dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.readyToReview()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
@@ -316,7 +322,11 @@ describe('RubricContainer', () => {
     expect(button).not.toBeDisabled();
 
     // Verify status bubble in student selector
-    const dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    const dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.inProgress()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.inProgress());
   });
 
@@ -364,7 +374,11 @@ describe('RubricContainer', () => {
     let button = screen.getByRole('button', {name: i18n.runAiAssessment()});
     expect(button).not.toBeDisabled();
 
-    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    let dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.inProgress()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.inProgress());
 
     // 2. User clicks button to run analysis
@@ -429,7 +443,11 @@ describe('RubricContainer', () => {
     expect(button).toBeDisabled();
     screen.getByText(i18n.aiEvaluationStatus_success());
 
-    dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.readyToReview()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.readyToReview());
   });
 
@@ -474,7 +492,11 @@ describe('RubricContainer', () => {
     await wait();
 
     // Verify status bubble for selected student
-    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    let dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.submitted()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.submitted());
   });
 
@@ -518,7 +540,11 @@ describe('RubricContainer', () => {
     await wait();
 
     // Verify status bubble for selected student
-    let dropdownOption = screen.getByText(studentAlice.name).closest('div');
+    let dropdownOption = screen
+      .getByRole('button', {
+        name: `${studentAlice.name} ${i18n.evaluated()}`,
+      })
+      .closest('div');
     expect(dropdownOption.textContent).toContain(i18n.evaluated());
   });
 
@@ -1256,6 +1282,36 @@ describe('RubricContainer', () => {
         {}
       )
     );
+  });
+
+  it('shows "Rubric" title when teacherHasEnabledAi is false', async () => {
+    stubFetch({
+      evalStatusForUser: {},
+      evalStatusForAll: {},
+      aiEvals: [],
+      teacherEvals: noEvals,
+      tourStatus: {seen: true},
+    });
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={false}
+          onLevelForEvaluation={true}
+          reportingData={{}}
+          open
+        />
+      </Provider>
+    );
+    await wait();
+
+    expect(screen.queryByText(i18n.rubricAiHeaderText())).toBeNull();
+    // Verify AI-specific elements are not present
+    expect(
+      screen.queryByRole('img', {name: i18n.rubricAiHeaderText()})
+    ).toBeNull();
   });
 
   it('sanitizes all intro text rendered by introjs', () => {

@@ -27,10 +27,4 @@ markdown <<MARKDOWN
     <!-- Image on the right -->
     <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
 </div>
-
-<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #009EB0; display: inline-block; width: 100%;">
-Looking for a more general overview of this curriculum? Navigate to the first section of this professional learning module, 
-<a href="https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/5" target="blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold;">
-Introduction to Programming with Music Lab</a>.
-</p>
 MARKDOWN

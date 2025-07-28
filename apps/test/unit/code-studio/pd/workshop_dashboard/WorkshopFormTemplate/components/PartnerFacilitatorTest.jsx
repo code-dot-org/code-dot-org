@@ -1,8 +1,5 @@
-import {configureStore} from '@reduxjs/toolkit';
-import '@testing-library/jest-dom';
 import {render} from '@testing-library/react';
 import React, {useReducer} from 'react';
-import {Provider} from 'react-redux';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import {workshopReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/workshopReducer';
@@ -25,25 +22,17 @@ const byoCourseName = 'Build Your Own Workshop';
 
 const config = WorkshopCourseConfigs.find(c => c.label === byoCourseName);
 const errors = {};
-const store = configureStore({
-  reducer: {
-    regionalPartners: () => ({regionalPartners: [{id: 1, name: 'Partner 1'}]}),
-  },
-  preloadedState: {},
-});
 
 const PartnerFacilitatorWithState = (props = {}) => {
   const [state, dispatch] = useReducer(workshopReducer, initialWorkshopState);
   return (
-    <Provider store={store}>
-      <PartnerFacilitator
-        config={config}
-        errors={errors}
-        dispatchWorkshop={dispatch}
-        {...state}
-        {...props}
-      />
-    </Provider>
+    <PartnerFacilitator
+      config={config}
+      errors={errors}
+      dispatchWorkshop={dispatch}
+      {...state}
+      {...props}
+    />
   );
 };
 
@@ -119,6 +108,13 @@ describe('PartnerFacilitator', () => {
       expect(mockedUseFetch).toHaveBeenCalledWith(
         `/api/v1/pd/course_facilitators?course_offerings=1&course_offerings=2`
       );
+    });
+  });
+
+  describe('Regional partners', () => {
+    it('fetches regional partners', async () => {
+      render(<PartnerFacilitatorWithState />);
+      expect(mockedUseFetch).toHaveBeenCalledWith('/api/v1/regional_partners');
     });
   });
 });

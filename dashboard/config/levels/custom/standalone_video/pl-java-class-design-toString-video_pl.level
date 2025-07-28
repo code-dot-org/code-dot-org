@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:19:25.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa_the_tostring_method",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "## Printing Objects \r\n\r\n#### Finally, the `toString()` method is used to easily display information about an object.\r\n\r\n#### The `toString()` method is **automatically called** when an object reference is passed to a **print statement** or when an object reference is concatenated with a String.\r\n\r\n#### Watch the video below to learn more about the `toString()` method."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:19:25.472+00:00\",\"changed\":[\"cloned from \\\"pl-java-class-design-toString-video\\\"\"],\"cloned_from\":\"pl-java-class-design-toString-video\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

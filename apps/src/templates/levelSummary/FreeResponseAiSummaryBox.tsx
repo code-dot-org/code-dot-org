@@ -101,16 +101,30 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ).length;
   };
 
+  const countEvaluationsByReason = (
+    evaluations: StudentWorkEvaluation[],
+    types: StudentWorkEvaluation['aiReasoning'][]
+  ): number => {
+    return evaluations.filter(evaluation =>
+      types.includes(evaluation.aiReasoning)
+    ).length;
+  };
+
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.ALL_COMPLETE_CORRECT,
+        StudentWorkEvaluationStatus.PARTIAL_COMPLETE_CORRECT,
+      ])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, [
+        StudentWorkEvaluationStatus.INCOMPLETE_INCORRECT,
+      ])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, [
+    ? countEvaluationsByReason(studentWorkEvaluations, [
         StudentWorkEvaluationStatus.STUDENT_PII,
         StudentWorkEvaluationStatus.STUDENT_PROFANITY,
       ])
@@ -119,7 +133,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   // A student can have "no response" if they have not started the level yet OR
   // if they have submitted a response but it is empty.
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, [
+    ? countEvaluationsByReason(studentWorkEvaluations, [
         StudentWorkEvaluationStatus.NO_ATTEMPT,
       ]) +
       (totalNumberOfStudents - studentWorkEvaluations.length)

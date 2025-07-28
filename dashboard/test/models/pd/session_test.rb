@@ -22,11 +22,16 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal 'End must occur after the start', session.errors.full_messages[0]
   end
 
+  test 'valid_meeting_link_format validation passes' do
+    session = build :pd_session, meeting_link: 'https://good/url/here'
+    assert session.valid?
+  end
+
   test 'valid_meeting_link_format validation error' do
     session = build :pd_session, meeting_link: 'bad/url here'
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'Meeting link is not a valid URL', session.errors.full_messages[0]
+    assert_equal 'Meeting link is not valid or is missing http or https', session.errors.full_messages[0]
   end
 
   test 'formatted_date' do
@@ -97,10 +102,10 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session = create(
       :pd_session,
       session_format: 'virtual',
-      meeting_link: 'example.com',
+      meeting_link: 'https://example.com',
     )
 
-    assert_equal 'Virtual meeting: example.com', session.formatted_location_details
+    assert_equal 'Virtual meeting: https://example.com', session.formatted_location_details
   end
 
   test 'formatted_location_details for virtual session without meeting_link' do

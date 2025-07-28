@@ -123,8 +123,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
               onClick={handleChange}
               size={size}
               onClose={handleTabClose}
-              tabPanelId={`${nameStripped}-panel-${tab.value}`}
-              tabButtonId={`${nameStripped}-tab-${tab.value}`}
+              tabPanelId={`${nameStripped}-panel-${tab.value.replace(/\s+/g, '-')}`}
+              tabButtonId={`${nameStripped}-tab-${tab.value.replace(/\s+/g, '-')}`}
             />
           ))}
         </ul>
@@ -138,8 +138,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
             key={tab.value}
             content={tab.tabContent}
             isActive={tab.value === selectedTabValue}
-            id={`${nameStripped}-panel-${tab.value}`}
-            labelledBy={`${nameStripped}-tab-${tab.value}`}
+            id={`${nameStripped}-panel-${tab.value.replace(/\s+/g, '-')}`}
+            labelledBy={`${nameStripped}-tab-${tab.value.replace(/\s+/g, '-')}`}
           />
         ))}
       </div>

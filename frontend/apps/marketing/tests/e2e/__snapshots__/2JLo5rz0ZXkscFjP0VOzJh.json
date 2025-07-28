@@ -1,0 +1,31 @@
+{
+  "entryContent": {
+    "fields": {
+      "name": {
+        "en-US": "❌ [ENG] F Person"
+      },
+      "image": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "6fdNRFZbNXpiXQd6v7fHen"
+          }
+        }
+      },
+      "title": {
+        "en-US": "F Person Title"
+      },
+      "personalLink": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Entry",
+            "id": "5CznPyR4ZsbIkhpwSaUxoe"
+          }
+        }
+      }
+    }
+  },
+  "contentType": "person"
+}

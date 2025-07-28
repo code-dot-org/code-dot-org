@@ -154,7 +154,8 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(config, lesson_number, unit_num, course_names, section_contexts)
+  def self.filter_for_context(lesson_number, unit_num, course_names, section_contexts)
+    filter_config = {}
     and_all_filters = []
     or_all_filters = []
     unless lesson_number.nil?
@@ -194,19 +195,20 @@ module AiDiffBedrockHelper
 
     #can't use "or_all" if there is only 1 expression to filter on, only 2+
     if or_all_filters.length > 1
-      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = {
+      filter_config = {
         or_all: or_all_filters
       }
     elsif or_all_filters.length == 1
-      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = or_all_filters[0]
+      filter_config = or_all_filters[0]
     end
-    config
+    filter_config
   end
 
   def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts)
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
-    config = filter_for_context(config, lesson_number, unit_num, course_name, section_contexts)
+    filter_config = filter_for_context(lesson_number, unit_num, course_name, section_contexts)
+    config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = filter_config
 
     response = create_bedrock_client.retrieve_and_generate(
       config
@@ -216,7 +218,7 @@ module AiDiffBedrockHelper
   end
 
   def self.format_rag_response(response)
-    text = response.output.text
+    text = response.output.text.dup
 
     # Remove useless references such as '(Sources 1 and 7)' from the response
     text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
@@ -234,7 +236,11 @@ module AiDiffBedrockHelper
         text << "\n- [Link #{index+1}](#{url})"
       end
     end
-
-    response
+    {
+      content: text,
+      raw_content: response.output.text,
+      links: reference_urls.any? ? reference_urls : nil,
+      session_id: response.session_id,
+    }
   end
 end

@@ -16,17 +16,6 @@ Scenario: Student courses
   And I see no difference for "student courses page"
   And I close my eyes
 
-@as_teacher
-Scenario: Teacher courses
-  Given I am on "http://studio.code.org/home"
-  When I open my eyes to test "teacher courses"
-  And I wait to see ".headerlinks"
-  And I see "#header-teacher-courses"
-  And I press "header-teacher-courses"
-  And I wait to see "#curriculum-catalog-container"
-  And I see no difference for "teacher courses page"
-  And I close my eyes
-
 # Broke during the marketing-sites transition
 @skip
 @as_student

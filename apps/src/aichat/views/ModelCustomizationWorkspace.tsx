@@ -3,10 +3,10 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useLevelProperties} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
 
 import PublishNotes from './modelCustomization/PublishNotes';
@@ -28,11 +28,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
 
   const isReadOnly = useSelector(isReadOnlyWorkspace);
 
-  const hidePresentationPanel = useAppSelector(
-    state =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)
-        ?.aichatSettings?.hidePresentationPanel
-  );
+  const hidePresentationPanel =
+    useLevelProperties().aichatSettings?.hidePresentationPanel;
 
   const showSetupCustomization =
     isVisible(temperature) ||

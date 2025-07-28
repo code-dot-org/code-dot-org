@@ -8,11 +8,13 @@ class AbilityTest < ActiveSupport::TestCase
       @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student').tap do |script|
+      create(:single_unit_course, unit: script)
       @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
-    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher').tap do |script|
+      create(:single_unit_course, :pl_course, unit: script)
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
@@ -21,25 +23,30 @@ class AbilityTest < ActiveSupport::TestCase
       @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
     end
 
-    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator').tap do |script|
+      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
       @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
     end
 
-    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher').tap do |script|
+      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
       @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required').tap do |script|
+      create(:single_unit_course, unit: script)
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
         @login_required_script_level = create(:script_level, script: script, lesson: lesson)
       end
     end
 
-    @pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot).tap do |script|
+    @pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
       @pilot_course_script_level = create(:script_level, script: script)
     end
 
-    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer).tap do |script|
+    @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
+      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
       @pl_pilot_course_script_level = create(:script_level, script: script)
     end
 
@@ -294,6 +301,10 @@ class AbilityTest < ActiveSupport::TestCase
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
+
+    refute ability.can?(:create, Pd::Workshop)
+    refute ability.can?(:destroy, Pd::Workshop)
+    assert ability.can?(:read, Pd::Workshop)
 
     assert ability.can?(:read, Section)
 
@@ -717,7 +728,7 @@ class AbilityTest < ActiveSupport::TestCase
     # Create two javalab levels that share the same project template level.
     # The first one will be used to create the code review and the second one
     # will be used to check the ability.
-    script = create :script
+    script = create :script, :in_single_unit_course
     template_level = create :javalab
     javalab_level_1 = create :javalab, project_template_level_name: template_level.name
     javalab_level_2 = create :javalab, project_template_level_name: template_level.name
@@ -958,37 +969,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
-  test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(teacher).can? :log_chat_event, :aichat_event
-    assert Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(teacher).can? :log_chat_event, :aichat_event
-    refute Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'student meeting AI Chat access requirements can perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(student).can? :log_chat_event, :aichat_event
-    assert Ability.new(student).can? :chat_history, :aichat_event
-  end
-
-  test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(student).can? :log_chat_event, :aichat_event
-    refute Ability.new(student).can? :chat_history, :aichat_event
-  end
+  # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create :code_review_group, section: section

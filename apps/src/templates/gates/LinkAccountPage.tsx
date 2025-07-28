@@ -6,6 +6,8 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
 
+import {processAccountUrlParams} from './processAccountUrlParams';
+
 import styles from './gate-pages.module.scss';
 
 const SOURCE_PAGE_TEXT: {
@@ -32,11 +34,12 @@ const SOURCE_PAGE_TEXT: {
   },
 };
 
-const LinkAccountPage: React.FunctionComponent<{
-  sourcePage: string;
-  newAccountUrl: string;
-  existingAccountUrl: string;
-}> = ({sourcePage, newAccountUrl, existingAccountUrl}) => {
+const LinkAccountPage: React.FunctionComponent = () => {
+  const {sourcePage, returnToUrlParam} = processAccountUrlParams();
+  const sourcePageTextKey = Object.keys(SOURCE_PAGE_TEXT).includes(sourcePage)
+    ? sourcePage
+    : 'default';
+
   useEffect(() => {
     analyticsReporter.sendEvent(
       EVENTS.LINK_ACCOUNT_PAGE_VISITED_EVENT,
@@ -44,10 +47,6 @@ const LinkAccountPage: React.FunctionComponent<{
       PLATFORMS.BOTH
     );
   }, [sourcePage]);
-
-  const sourcePageTextKey = Object.keys(SOURCE_PAGE_TEXT).includes(sourcePage)
-    ? sourcePage
-    : 'default';
 
   return (
     <main>
@@ -65,7 +64,7 @@ const LinkAccountPage: React.FunctionComponent<{
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].newAccountDesc}
             buttonText={i18n.createAccount()}
             buttonType="secondary"
-            href={newAccountUrl}
+            href={`/users/sign_up/account_type${returnToUrlParam}`}
           />
           <AccountCard
             id={'existing-account-card'}
@@ -74,7 +73,7 @@ const LinkAccountPage: React.FunctionComponent<{
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].existingAccountDesc}
             buttonText={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
             buttonType="primary"
-            href={existingAccountUrl}
+            href={`/users/sign_in${returnToUrlParam}`}
           />
         </div>
       </div>

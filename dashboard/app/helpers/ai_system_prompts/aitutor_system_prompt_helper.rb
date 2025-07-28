@@ -1,10 +1,8 @@
 module AiSystemPrompts::AitutorSystemPromptHelper
   def self.get_system_prompt(level_id, unit_id)
     level = AiSystemPrompts::SystemPromptHelper.get_level(level_id)
-    unit = AiSystemPrompts::SystemPromptHelper.get_unit(unit_id)
 
     system_prompt = get_base_system_prompt
-    system_prompt << get_programming_language_system_prompt(unit) if unit
     system_prompt << AiSystemPrompts::SystemPromptHelper.get_level_instructions(level) if level
     system_prompt << AiSystemPrompts::SystemPromptHelper.get_validated_level_test_file_contents(level) if level
 
@@ -72,8 +70,7 @@ module AiSystemPrompts::AitutorSystemPromptHelper
   end
 
   def self.get_programming_language_system_prompt(unit)
-    language = AiSystemPrompts::SystemPromptHelper.get_programming_language(unit)
     "\n Specific Exclusions: Refrain from discussing topics not explicitly related to computer
-    science or #{language} programming."
+    science or programming."
   end
 end

@@ -102,8 +102,11 @@ class User < ApplicationRecord
   include ProviderFlags
   include Verifiable
   include Age
+  include AiAccessible
   include SectionParticipation
   include PartialRegistration
+  include Purgeable
+  include Facilitator
   include TermsOfService
   include Rails.application.routes.url_helpers
 
@@ -147,7 +150,6 @@ class User < ApplicationRecord
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
 
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
@@ -193,14 +195,18 @@ class User < ApplicationRecord
     gender_third_party_input
     us_state
     country_code
+    given_name
     family_name
     ai_rubrics_disabled
     ai_rubrics_tour_seen
+    ai_tutor_access_denied
+    ai_differentiation_toggled_off
+    has_seen_ai_assessments_announcement
+    has_completed_ai_differentiation_welcome
     sort_by_family_name
     show_progress_table_v2
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
-    ai_tutor_access_denied
     progress_table_v2_timestamp
     progress_table_v1_timestamp
     has_seen_progress_table_v2_invitation
@@ -209,12 +215,9 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
-    has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
     educator_role
-    ai_differentiation_toggled_off
-    has_completed_ai_differentiation_welcome
   )
 
   attr_accessor(
@@ -712,79 +715,6 @@ class User < ApplicationRecord
     success
   end
 
-  def upgrade_to_personal_login(params)
-    return false unless student?
-
-    if secret_word_account? && !valid_secret_words?(params[:secret_words])
-      error = params[:secret_words].blank? ? :blank_plural : :invalid_plural
-      errors.add(:secret_words, error)
-      return false
-    end
-
-    unless migrated?
-      params[:provider] = nil # Set provider to nil to mark the account as self-managed
-      return update(params)
-    end
-
-    email = params.delete(:email)
-    hashed_email = params.delete(:hashed_email)
-    should_update_contact_info = email.present? || hashed_email.present?
-    transaction do
-      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
-      update!(params)
-    end
-  rescue
-    false # Relevant errors are set on the user model, so we rescue and return false here.
-  end
-
-  def set_user_type(user_type, email = nil, email_preference = nil)
-    case user_type
-    when TYPE_TEACHER
-      upgrade_to_teacher(email, email_preference)
-    when TYPE_STUDENT
-      downgrade_to_student
-    else
-      false # Unexpected user type
-    end
-  end
-
-  def downgrade_to_student
-    return true if student? # No-op if user is already a student
-    update(user_type: TYPE_STUDENT)
-  end
-
-  def upgrade_to_teacher(email, email_preference = nil)
-    return true if teacher? # No-op if user is already a teacher
-    return false if email.blank?
-
-    # Remove family name, in case it was set on the student account.
-    # Must do this before updating user_type, to prevent validation failure.
-    self.family_name = nil
-
-    hashed_email = User.hash_email(email)
-    self.user_type = TYPE_TEACHER
-    # teachers do not need another adult to have access to their account.
-    self.parent_email = nil
-
-    new_attributes = email_preference.nil? ? {} : email_preference
-    if Policies::Lti.lti? self
-      self.lti_roster_sync_enabled = true
-    end
-
-    transaction do
-      if migrated?
-        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
-      else
-        new_attributes[:email] = email
-      end
-      update!(new_attributes)
-
-      self
-    end
-  rescue
-    false # Relevant errors are set on the user model, so we rescue and return false here.
-  end
-
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
@@ -913,43 +843,6 @@ class User < ApplicationRecord
       permission?(UserPermission::WORKSHOP_ADMIN)
   end
 
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
-  end
-
-  def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
-  end
-
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
-  end
-
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
-  end
-
-  def teacher_can_access_ai_chat?
-    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
-  end
-
-  def student_can_access_ai_chat?
-    teachers.any?(&:teacher_can_access_ai_chat?) &&
-      sections_as_student.any?(&:assigned_ai_chat?)
-  end
-
-  def has_aichat_access?
-    teacher_can_access_ai_chat? || student_can_access_ai_chat?
-  end
-
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -1025,20 +918,6 @@ class User < ApplicationRecord
       self.secret_words = new_secret_words
       break
     end
-  end
-
-  # Returns an array of experiment name strings
-  def get_active_experiment_names
-    Experiment.get_all_enabled(user: self).pluck(:name)
-  end
-
-  # Returns an array of experiment name strings that a student's teachers are enrolled in
-  def get_active_experiment_names_by_teachers
-    experiments = []
-    teachers.each do |teacher|
-      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
-    end
-    experiments.uniq
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
@@ -1224,6 +1103,8 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
+  # TODO: TEACH-1528 Update this to use a new UserCourses table. For now, this returns a /s/ url for each unit, displayed
+  # on the student home page course tiles
   def recent_student_courses_and_units(exclude_primary_script)
     primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
 
@@ -1322,6 +1203,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      given_name: given_name,
       family_name: family_name,
       email: email,
       hashed_email: hashed_email,
@@ -1331,7 +1213,7 @@ class User < ApplicationRecord
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
-      secret_picture_path: secret_picture&.path,
+      secret_picture_url: secret_picture && ApplicationController.helpers.image_url(secret_picture.path),
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
@@ -1341,6 +1223,18 @@ class User < ApplicationRecord
       child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
       us_state: us_state,
+    }
+  end
+
+  def summarize_for_workshop
+    {
+      id: id,
+      email: email,
+      is_student: user_type == TYPE_STUDENT,
+      display_name: name,
+      given_name: given_name,
+      family_name: family_name,
+      school_info: Queries::SchoolInfo.current_school(self),
     }
   end
 
@@ -1513,42 +1407,6 @@ class User < ApplicationRecord
     # Must have an NCES school to show the banner
     users_school = school_info_school
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
-  end
-
-  # Removes PII and other information from the user and marks the user as having been purged.
-  # WARNING: This (permanently) destroys data and cannot be undone.
-  # WARNING: This does not purge the user, only marks them as such.
-  def clear_user_and_mark_purged
-    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
-
-    authentication_options.with_deleted.each(&:really_destroy!)
-    self.primary_contact_info = nil
-
-    self.studio_person_id = nil
-    self.name = nil
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
-    self.current_sign_in_ip = nil
-    self.last_sign_in_ip = nil
-    self.email = ''
-    self.hashed_email = ''
-    self.parent_email = nil
-    self.encrypted_password = nil
-    self.uid = nil
-    self.reset_password_token = nil
-    self.full_address = nil
-    self.secret_picture_id = nil
-    self.secret_words = nil
-    self.school = nil
-    self.school_info_id = nil
-    self.properties = {}
-    unless within_united_states?
-      self.urm = nil
-      self.races = nil
-    end
-
-    self.purged_at = Time.zone.now
-
-    save!
   end
 
   def within_united_states?
@@ -2317,19 +2175,6 @@ class User < ApplicationRecord
     unless teacher?
       errors.add(:educator_role, "can only be assigned to teachers")
     end
-  end
-
-  private def ai_tutor_feature_globally_disabled?
-    DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
-  private def in_ai_tutor_experiment_with_enabled_section?
-    get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled)
   end
 
   # Called before_destroy.

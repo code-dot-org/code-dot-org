@@ -1,0 +1,240 @@
+@import 'font.scss';
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.instructions {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 200%;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  overflow: hidden;
+
+  &.vertical {
+    flex-direction: column;
+  }
+}
+
+.fixedDarkBackground {
+  background-color: var( --background-neutral-black-fixed);
+}
+
+.standardBackground {
+  background-color: var(--background-neutral-primary);
+}
+
+.item {
+  display: flex;
+  pointer-events: auto;
+  flex: 1;
+  opacity: 1;
+  height: 100%;
+
+  &.itemVertical {
+    flex-direction: column;
+  }
+}
+
+.mainInstructions {
+  white-space: normal;
+}
+
+.bubble {
+  position: relative;
+  padding: 12px;
+  border-radius: 4px;
+  animation: slidein 0.5s;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+
+  h1, h2, h3, h4 {
+    color: var(--text-brand-teal-primary);
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  a:link, a {
+    color: var(--text-brand-purple-primary);
+    text-decoration: underline;
+    &:hover {
+      color: var(--text-brand-purple-secondary);
+    }
+  }
+}
+
+.textContent {
+  overflow: hidden;
+  gap: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.ttsContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bubbleNoSlide {
+  animation: none;
+}
+
+.buttonInstruction {
+  width: 100%;
+  height: 32px;
+}
+
+.markdownText {
+  line-height: 0;
+  user-select: text;
+  word-break: break-word;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.75em;
+    line-height: 1.2em;
+
+    &, em, strong {
+      font-family: $barlowSemiCondensed-semibold;
+    }
+  }
+
+  ol, ul {
+    line-height: 0;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  code, pre {
+    color: var(--text-info-secondary);
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-strong);
+  }
+
+  pre code {
+    border: none;
+  }
+
+  code {
+    // Allow code to wrap.
+    white-space: pre-wrap;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  details {
+    line-height: 1.2;
+    summary {
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 4px 0;
+
+      &:hover {
+        background-color: var(--background-neutral-quaternary);
+      }
+    }
+  }
+}
+
+.validationIcon {
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.predictQuestion {
+  width: auto;
+  margin: 4px;
+}
+
+.button {
+  padding: 12px;
+}
+
+.imageContainer {
+  text-align: center;
+
+  &.horizontal {
+    text-align: left;
+    width: 140px;
+  }
+
+  .image {
+    cursor: pointer;
+    max-height: 120px;
+
+    &.fixedHeight {
+      height: 70px;
+    }
+  }
+
+  .bigImage {
+    position: absolute;
+    width: 440px;
+    text-align: left;
+    top: 0;
+    left: 0;
+
+    &Left {
+      left: auto;
+      right: 0;
+    }
+
+    img {
+      width: 100%;
+      position: absolute;
+      border: 10px var(--background-neutral-lab) solid;
+      z-index: 80;
+      cursor: pointer;
+    }
+  }
+}
+
+.feedback {
+  &Bottom {
+    margin-top: auto;
+  }
+}
+
+%scrolling-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContent {
+  @extend %scrolling-content;
+}
+
+.bottomComponent {
+  overflow: hidden;
+}
+
+.predictSummaryBubble {
+  flex-shrink: 0; // Ensure the contents always fits in the bubble.
+}

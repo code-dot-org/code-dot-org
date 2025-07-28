@@ -27,13 +27,17 @@ $alert-span-vertical-top-spacing: 2px;
 // Types (colors)
 .alert-primary {
   background-color: var(--background-brand-purple-light);
+
+  .alertContentContainer i {
+    color: var(--text-brand-purple-primary-fixed);
+  }
 }
 
 .alert-success {
   background-color: var(--background-success-extra-light);
 
   .alertContentContainer i {
-    color: var(--text-success-primary);
+    color: var(--text-success-primary-fixed);
   }
 }
 
@@ -41,7 +45,7 @@ $alert-span-vertical-top-spacing: 2px;
   background-color: var(--background-error-extra-light);
 
   .alertContentContainer i {
-    color: var(--text-error-primary);
+    color: var(--text-error-primary-fixed);
   }
 }
 
@@ -49,7 +53,7 @@ $alert-span-vertical-top-spacing: 2px;
   background-color: var(--background-warning-extra-light);
 
   .alertContentContainer i {
-    color: var(--text-warning-primary);
+    color: var(--text-warning-primary-fixed);
   }
 }
 
@@ -57,12 +61,20 @@ $alert-span-vertical-top-spacing: 2px;
   background-color: var(--background-info-extra-light);
 
   .alertContentContainer i {
-    color: var(--text-info-primary);
+    color: var(--text-info-primary-fixed);
   }
 }
 
 .alert-gray {
   background-color: var(--background-neutral-tertiary);
+}
+
+.alert-aqua {
+  background-color: var(--background-brand-aqua-extra-light);
+
+  .alertContentContainer i {
+    color: var(--text-brand-aqua-primary-fixed);
+  }
 }
 
 // Sizes

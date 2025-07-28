@@ -14,7 +14,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-pilot-extra",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "pilot_experiment": "csa-pilot-extra",
     "version_year": "unversioned"
   },

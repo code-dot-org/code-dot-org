@@ -6,8 +6,9 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
-    @unit = create(:csp_script, :with_levels, version_year: '2024', family_name: 'csp', is_course: true)
-    CourseOffering.add_course_offering(@unit)
+    @unit = create(:csp_script, :with_levels)
+    @unit_group = create(:single_unit_course, name: 'csp-2024', family_name: 'csp', version_year: '2024', unit: @unit)
+    CourseOffering.add_course_offering(@unit_group)
     @level = @unit.levels.first
     @skill = create(:skill)
     create(:levels_skill, level: @level, skill: @skill)
