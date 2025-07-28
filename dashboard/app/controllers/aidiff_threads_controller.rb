@@ -16,22 +16,6 @@ class AidiffThreadsController < ApplicationController
     get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
 
     response_body = get_response_body(nil, context[:type], params[:inputText])
-    # get or create thread obj
-    begin
-      @aidiff_thread = AidiffThread.find_or_create_by!(
-        user_id: current_user.id,
-        external_id: response_body[:session_id],
-        llm_version: AiDiffBedrockHelper::MODEL_ID,
-        unit_id: @unit&.id,
-        level_id: @level&.id,
-        course_id: @unit_group&.id,
-        lesson_id: @lesson&.id,
-        context_type: params[:context][:type],
-        session_created: DateTime.now,
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
-    end
 
     # Create thread and log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
@@ -102,7 +86,7 @@ class AidiffThreadsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    if @aidiff_thread.session_created < 1.day.ago
+    if @aidiff_thread.session_created.nil? || @aidiff_thread.session_created < 1.day.ago
       session_id = @aidiff_thread.external_id
       input = params[:inputText]
     else
