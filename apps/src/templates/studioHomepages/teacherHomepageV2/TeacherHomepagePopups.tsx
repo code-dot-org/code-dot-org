@@ -2,6 +2,7 @@ import React from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
@@ -130,15 +131,17 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
   return (
     <>
       {popup}
-      <AiDiffFloatingActionButton
-        context={{type: AiDiffContext.GENERAL}}
-        canShowPulse={
-          !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-        }
-        canStartOpen={
-          !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
-        }
-      />
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={{type: AiDiffContext.GENERAL}}
+          canShowPulse={
+            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+          }
+          canStartOpen={
+            !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
+          }
+        />
+      )}
     </>
   );
 };
