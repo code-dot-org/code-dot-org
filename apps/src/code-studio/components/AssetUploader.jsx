@@ -21,6 +21,7 @@ export default class AssetUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     api: PropTypes.object.isRequired,
+    projectType: PropTypes.string.isRequired,
   };
 
   /**
@@ -29,9 +30,12 @@ export default class AssetUploader extends React.Component {
    */
   fileUploadClicked = () => {
     this.refs.uploader.openFileChooser();
+    // LabType: 'applab' is actually a misnomer here and maps to all labs that use 'Asset Manager' (as opposed to Animation Picker).
+    // projectType is used to differentiate App Lab, Web Lab, and Java Lab for analytics purposes.
+    // Although Game Lab technically uses the Asset Manager, the asset manager is used to upload audio files.
     analyticsReporter.sendEvent(
       EVENTS.UPLOAD_CUSTOM_IMAGE,
-      {LabType: 'applab'},
+      {LabType: 'applab', ProjectType: this.props.projectType},
       PLATFORMS.STATSIG
     );
   };

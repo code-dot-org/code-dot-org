@@ -78,6 +78,7 @@ export default class AssetManager extends React.Component {
       statusMessage: props.uploadsEnabled ? '' : errorUploadDisabled,
       recordingAudio: false,
       audioErrorType: AudioErrorType.NONE,
+      projectType: '',
     };
   }
 
@@ -103,6 +104,10 @@ export default class AssetManager extends React.Component {
       api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
     } else {
       this.setState({assets: []});
+    }
+    const projectType = api.getProjectType();
+    if (projectType) {
+      this.setState({projectType: api.getProjectType()});
     }
   }
 
@@ -332,6 +337,7 @@ export default class AssetManager extends React.Component {
           statusMessage={this.state.statusMessage}
           recordDisabled={this.state.recordingAudio}
           hideAudioRecording={this.props.disableAudioRecording}
+          projectType={this.state.projectType}
         />
       </div>
     );
