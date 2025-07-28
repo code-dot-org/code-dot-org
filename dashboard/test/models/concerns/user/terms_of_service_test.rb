@@ -30,8 +30,8 @@ class TermsOfServiceTest < ActiveSupport::TestCase
 
   describe '#update_user_tos_version_accept' do
     it 'updates the terms_of_service_version to the latest and saves' do
-      teacher.save!
       teacher.terms_of_service_version = nil
+      teacher.save!
       teacher.update_user_tos_version_accept
       _(teacher.terms_of_service_version).must_equal(latest_tos_version)
     end
