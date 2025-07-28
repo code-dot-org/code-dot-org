@@ -190,12 +190,14 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                     />
                   </div>
                 )}
-                <NavigationButton
-                  levelProperties={levelProperties}
-                  hasRun={hasRun}
-                  hasEdited={hasEdited}
-                  className={moduleStyles.buttonInstruction}
-                />
+                <div className={moduleStyles.navigationContainer}>
+                  <NavigationButton
+                    levelProperties={levelProperties}
+                    hasRun={hasRun}
+                    hasEdited={hasEdited}
+                    className={moduleStyles.buttonInstruction}
+                  />
+                </div>
               </div>
               {offerBrowserTts && useMessage && !canShowNextButton && (
                 <div className={moduleStyles.ttsContainer}>
