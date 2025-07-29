@@ -30,13 +30,9 @@ export default class AssetUploader extends React.Component {
    */
   fileUploadClicked = () => {
     this.refs.uploader.openFileChooser();
-    // LabType: 'applab' is actually a misnomer here and maps to all labs that use 'Asset Manager' (as opposed to Animation Picker).
-    // ProjectType is used to differentiate App Lab, Web Lab, Java Lab, and Game Lab for analytics purposes.
-    // FYI, Game Lab uses both the Animation Picker and AssetManager. If Animation Picker is used in Game Lab, then LabType is 'gamelab'.
-    // If Asset Manager is used in Game Lab, then LabType is 'applab' and projectType is 'gamelab'.
     analyticsReporter.sendEvent(
       EVENTS.UPLOAD_CUSTOM_IMAGE,
-      {LabType: 'applab', ProjectType: this.props.projectType},
+      {UploaderType: 'Asset Uploader', ProjectType: this.props.projectType},
       PLATFORMS.STATSIG
     );
   };
