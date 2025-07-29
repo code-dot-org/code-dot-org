@@ -2,20 +2,16 @@
 @import "font";
 
 .teacher-panel {
-  position: fixed;
   top: 85px;
   bottom: 20px;
   right: 0;
-  width: 200px;
+  width: 100%;
+  height: 100%;
   transition: right 0.5s;
 
   background: $lightest_cyan;
 
   opacity: 0.9;
-
-  border: 5px solid $cyan;
-  border-right: none;
-  border-radius: 10px 0 0 10px;
 
   /* Must appear in front of <Overlay/>, whose z-index is 1020. */
   z-index: 1021;
