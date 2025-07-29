@@ -179,3 +179,5 @@ jobs:
 
       - name: Merge Playwright Reports
         uses: ./.github/actions/frontend/merge-playwright-reports
+        with:
+          GITHUB_ENVIRONMENT_NAME: ${{ env.GITHUB_ENVIRONMENT_NAME }}
