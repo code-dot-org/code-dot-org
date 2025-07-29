@@ -23,6 +23,7 @@ import {
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import FlaggedImageModal from './FlaggedImageModal';
+import MetricsReporter from './metrics/MetricsReporter';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -208,11 +209,11 @@ class AnimationPicker extends React.Component {
         }
       })
       .catch(err => {
-        console.error('Moderation error:', err);
         this.setState({
           showFlaggedModal: true,
           flaggedModalError: msg.animationPicker_uploadingError(),
         });
+        MetricsReporter.logError('Azure image moderation error: ' + err);
       });
   };
 
