@@ -15,7 +15,6 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
-#    -- NOTE: skip_content_moderation is currently not used in the codebase.
 #
 # Indexes
 #
@@ -26,6 +25,7 @@
 #  storage_apps_storage_id_state_index  (storage_id,state)
 #
 class Project < ApplicationRecord
+  # NOTE: skip_content_moderation is currently not used in the codebase.
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
