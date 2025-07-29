@@ -1,6 +1,6 @@
 name 'test-ai-powered-threats-defenses-lesson2-level6'
-display_name 'Interview A Cybersecurity Professional'
-description 'Cybersecurity professionals play an essential role in keeping systems secure and eliminating vulnerabilities. Select the level that corresponds to your scenario to conduct an AI interview.'
+display_name 'Investigate a Cybersecurity Threat'
+description 'Viruses, DDoS attacks, misconfigured settings, and ransomware all show how technology can break down when systems aren\’t protected. Explore one of the four scenarios to understand how digital threats spread, disrupt, or expose information.'
 
 sublevels
 level 'test-ai-powered-threats-defenses-lesson2-level6a'

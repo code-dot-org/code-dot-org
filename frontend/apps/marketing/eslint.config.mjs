@@ -20,6 +20,22 @@ export default [
       },
     },
   },
+  {
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['**/*.png', '**/*.jpg', '**/*.jpeg'],
+              message:
+                'Use modern web formats: Please convert to lossless webp',
+            },
+          ],
+        },
+      ],
+    },
+  },
   ...cdoReactConfig,
   ...cdoJestConfig,
 ];

@@ -9,7 +9,7 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
-import placeholderImage from '@public/images/person-placeholder.png';
+import placeholderImage from '@public/images/person-placeholder.webp';
 
 import {CollectionProps} from '../types';
 
