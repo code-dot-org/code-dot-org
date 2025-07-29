@@ -1,7 +1,7 @@
 import {draftMode} from 'next/headers';
 import {NextRequest, NextResponse} from 'next/server';
 
-import {getBrandFromHostname} from '@/config/brand';
+import {getBrandFromHostname, getBrandFromString} from '@/config/brand';
 import {PREVIEW_HOSTNAMES} from '@/config/preview';
 
 import {MiddlewareFactory} from './types';
@@ -21,8 +21,11 @@ export const withBrand: MiddlewareFactory = () => {
     const url = request.nextUrl;
 
     // Get hostname of request (e.g. test.code.org, code.org, localhost.code.org:3001)
+    const brandOverride = request.headers.get('x-brand-override');
     const hostname = request.headers.get('host');
-    const brand = getBrandFromHostname(hostname);
+
+    const brand =
+      getBrandFromString(brandOverride) ?? getBrandFromHostname(hostname);
     const isPreviewHostname = PREVIEW_HOSTNAMES.has(hostname);
 
     if (isPreviewHostname) {

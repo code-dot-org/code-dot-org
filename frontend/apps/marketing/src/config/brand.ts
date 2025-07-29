@@ -72,3 +72,16 @@ export function getBrandFromHostname(hostname: string | null) {
     Brand.CODE_DOT_ORG
   );
 }
+
+export function getBrandFromString(brandString: string | null) {
+  switch (brandString) {
+    case Brand.CODE_DOT_ORG:
+      return Brand.CODE_DOT_ORG;
+    case Brand.HOUR_OF_CODE:
+      return Brand.HOUR_OF_CODE;
+    case Brand.CS_FOR_ALL:
+      return Brand.CS_FOR_ALL;
+    default:
+      return undefined;
+  }
+}
