@@ -137,7 +137,8 @@ const TeacherHomepagePopups: React.FC<TeacherHomepagePopupsProps> = () => {
           canShowPulse={
             !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
           }
-          canStartOpen={
+          canStartOpen={!isLoading && !hasSeenPopup && !popup}
+          canDefaultOpen={
             !isLoading && !hasSeenPopup && !popup && !hasSeenPopupInLastDay
           }
         />

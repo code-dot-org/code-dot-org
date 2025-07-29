@@ -29,26 +29,37 @@ interface AiDiffFloatingActionButtonProps {
   scriptName?: string;
   canShowPulse?: boolean;
   canStartOpen?: boolean;
+  canDefaultOpen?: boolean;
 }
+
+const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
+const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
+const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
   scriptName,
   canShowPulse = true,
+  /**
+   * Prevents the FAB opening without direct user click.
+   */
   canStartOpen = true,
+  /**
+   * Whether the FAB can start open if a user has never interacted with it.
+   * Does not prevent auto-opening if the user has interacted with the FAB before.
+   */
+  canDefaultOpen = true,
 }) => {
-  const sessionStorageKey = 'AiDiffFabOpenStateKey';
-  const localStorageOpenedKey = 'AiDiffHasOpenedKey';
-  const localStorageClosedKey = 'AiDiffHasClosedKey';
-
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
-    JSON.parse(tryGetLocalStorage(localStorageOpenedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_OPENED_KEY, false.toString())
+    ) || false;
 
   const hasClosed =
-    JSON.parse(tryGetLocalStorage(localStorageClosedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, false.toString())
+    ) || false;
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -59,18 +70,18 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       // session and they haven't interacted with the FAB yet.
       // Depends on other logic which sets the open state in session storage.
       const isFirstSession =
-        JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null;
+        JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, null)) === null;
 
       // Keeps FAB open/closed on new pages in the same tab or window
       // New tab or window is default closed if they have previously opened/closed the FAB
       // Default open if they have never opened/closed the fab before (i.e. first time on the site)
       setIsOpen(
         canStartOpen &&
-          (isFirstSession ||
-            JSON.parse(tryGetSessionStorage(sessionStorageKey, false)))
+          ((isFirstSession && canDefaultOpen) ||
+            JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
       );
     }
-  }, [canStartOpen, hasOpened, hasClosed]);
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -108,12 +119,12 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
-      trySetLocalStorage(localStorageOpenedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
-      trySetLocalStorage(localStorageClosedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
     setIsOpen(!isOpen);
-    trySetSessionStorage(sessionStorageKey, (!isOpen).toString());
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
   };
 
   return (
