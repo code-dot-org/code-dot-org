@@ -1,7 +1,3 @@
-// Making sure that css is first so that it is imported for other classes.
-// This might not be necessary.
-import './styles/Weblab2View.css';
-
 import {Codebridge} from '@codebridge/Codebridge';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
@@ -17,6 +13,8 @@ import {useAppSelector} from '../util/reduxHooks';
 
 import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
+
+import moduleStyles from './styles/weblab2-view.module.scss';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
@@ -57,7 +55,6 @@ const defaultSource: MultiFileSource = {
   </body>
 </html>
 `,
-      open: true,
       active: true,
       folderId: '0',
     },
@@ -66,7 +63,6 @@ const defaultSource: MultiFileSource = {
       name: 'styles.css',
       language: 'css',
       contents: '.foo { color : red}',
-      open: true,
       folderId: '0',
     },
     '3': {
@@ -75,7 +71,6 @@ const defaultSource: MultiFileSource = {
       language: 'html',
       contents:
         '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      open: false,
       folderId: '0',
     },
     '4': {
@@ -84,7 +79,6 @@ const defaultSource: MultiFileSource = {
       language: 'html',
       contents:
         '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
       folderId: '2',
     },
     '5': {
@@ -93,7 +87,6 @@ const defaultSource: MultiFileSource = {
       language: 'html',
       contents:
         '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
       folderId: '4',
     },
     '6': {
@@ -102,10 +95,10 @@ const defaultSource: MultiFileSource = {
       language: 'html',
       contents:
         '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
       folderId: '1',
     },
   },
+  openFiles: ['1', '2'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};
@@ -125,17 +118,15 @@ const Weblab2View: React.FC<
   );
 
   return (
-    <div className="app-wrapper">
-      <div className="app-ide">
-        {hasSource && (
-          <Codebridge
-            config={config}
-            setConfig={setConfig}
-            startSources={startSources}
-            levelProperties={levelProperties}
-          />
-        )}
-      </div>
+    <div className={moduleStyles.weblab2Container}>
+      {hasSource && (
+        <Codebridge
+          config={config}
+          setConfig={setConfig}
+          startSources={startSources}
+          levelProperties={levelProperties}
+        />
+      )}
     </div>
   );
 };

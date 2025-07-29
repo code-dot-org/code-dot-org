@@ -96,6 +96,24 @@ export const AllTypographyElements: Story = {
       <Typography semanticTag="figcaption" visualAppearance="figcaption">
         This is a Typography Component. (figcaption)
       </Typography>
+      <Typography semanticTag="div" visualAppearance="body-two">
+        <p>
+          This is a Typography Component that wraps text elements. (div)
+          <br />
+          Use this when:
+        </p>
+        <ul>
+          <li>
+            You want to apply typography styles to child html text elements
+          </li>
+          <li>...but you don't have control over the child elements</li>
+          <li>
+            which can happen, say when using SafeMarkdown and the markdown
+            contains multiple paragraphs or lists
+          </li>
+          <li>or when using dangerouslySetInnerHTML if you really must 😉</li>
+        </ul>
+      </Typography>
     </>
   ),
 };
@@ -154,6 +172,30 @@ export const OtherTexts: Story = {
     </>
   ),
 };
+
+export const TextWrapper: Story = {
+  render: () => (
+    <>
+      <Typography semanticTag="div" visualAppearance="heading-lg">
+        <h1>h1 child styled as an h3</h1>
+      </Typography>
+      <Typography semanticTag="div" visualAppearance="body-one">
+        <p>paragraph element child, styled as body-one</p>
+        <ul>
+          <li>child list items</li>
+          <li>are also styled as body-one</li>
+        </ul>
+      </Typography>
+      <Typography semanticTag="div" visualAppearance="body-three">
+        <p>
+          paragraph element child here containing <strong>bold</strong> and{' '}
+          <em>emphasized</em> inline elements, styled as body-three
+        </p>
+      </Typography>
+    </>
+  ),
+};
+
 export const CustomUsageExamples: Story = {
   render: () => (
     <>

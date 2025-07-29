@@ -131,6 +131,7 @@ const initialState = {
   inSection: null,
   userCreatedAt: null,
   userSharingDisabled: false,
+  showProgressTableV2: 'v2',
 };
 
 export default function currentUser(state = initialState, action) {

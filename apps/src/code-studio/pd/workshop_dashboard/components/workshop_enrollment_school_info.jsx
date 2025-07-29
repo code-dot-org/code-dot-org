@@ -186,9 +186,9 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
             style={styles.clickTarget}
             onClick={this.handleClickDelete}
             data-id={enrollment.id}
-            data-first_name={enrollment.first_name}
-            data-last_name={enrollment.last_name}
-            data-email={enrollment.email}
+            data-first_name={enrollment.user_info.given_name}
+            data-last_name={enrollment.user_info.family_name}
+            data-email={enrollment.user_info.email}
           >
             <i className="fa fa-minus" />
           </td>
@@ -206,10 +206,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
           {this.props.permissionList.has(WorkshopAdmin) &&
             this.renderSelectCell(enrollment)}
           <td>{i + 1}</td>
-          <td>{enrollment.first_name}</td>
-          <td>{enrollment.last_name}</td>
+          <td>{enrollment.user_info.given_name}</td>
+          <td>{enrollment.user_info.family_name}</td>
           <td>
-            {enrollment.email}
+            {enrollment.user_info.email}
             {application_url && (
               <p>
                 <Button bsSize="xsmall" href={application_url} target="_blank">
@@ -218,8 +218,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
               </p>
             )}
           </td>
-          <td>{enrollment.district_name}</td>
-          <td>{enrollment.school}</td>
+          <td>{enrollment.user_info.district_name}</td>
+          <td>{enrollment.user_info.school_name}</td>
           {this.props.workshopCourse === CSF && (
             <td>{enrollment.role ? enrollment.role : NA}</td>
           )}

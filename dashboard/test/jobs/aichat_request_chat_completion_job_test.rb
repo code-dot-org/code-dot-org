@@ -23,7 +23,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
     request = create :aichat_request, user_id: @student.id
     user_message = request.new_message['chatMessageText']
-    AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale, request.level_id).returns(@toxic_response)
+    AichatSafetyHelper.expects(:find_toxicity).with(user_message, request.level_id).returns(@toxic_response)
 
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
@@ -34,9 +34,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test "execution status is set to MODEL_PROFANITY if toxicity detected in model output" do
-    AichatSafetyHelper.stubs(:find_toxicity).with('user', anything, anything, anything).returns(nil)
+    AichatSafetyHelper.stubs(:find_toxicity).with(@new_message['chatMessageText'], anything).returns(nil)
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns('response')
-    AichatSafetyHelper.stubs(:find_toxicity).with('assistant', anything, anything, anything).returns(@toxic_response)
+    AichatSafetyHelper.stubs(:find_toxicity).with('response', anything).returns(@toxic_response)
 
     request = create :aichat_request, user_id: @student.id
 

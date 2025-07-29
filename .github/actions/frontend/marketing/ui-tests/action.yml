@@ -17,45 +17,65 @@ inputs:
   ENVIRONMENT_TYPE:
     description: "local, pr, test, or production"
     required: true
+  SHARD_INDEX:
+    description: "The shard index to use for the tests."
+    required: true
+  SHARD_TOTAL:
+    description: "The total number of shards to use for the tests."
+    required: true
   GITHUB_ENVIRONMENT_NAME:
     description: "The name of the GitHub environment to use for this action"
+    required: false
+  BRANCHED_TESTING_ENABLED:
+    description: "Whether branched testing is enabled. Defaults to false"
+    default: "false"
+    required: false
+  PR_HEAD_REF:
+    description: "The head ref of the pull request."
     required: false
 
 runs:
   using: composite
 
   steps:
-    - name: Install Playwright
-      shell: bash
-      run: yarn playwright install --with-deps
-      working-directory: ./frontend/apps/marketing
-
     - name: Prepare UI Test Environment
       shell: bash
       working-directory: ./frontend/apps/marketing
       run: |
         echo "APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
-        DRAFT_MODE_TOKEN=${{ inputs.DRAFT_MODE_TOKEN }}" >> .env
+        DRAFT_MODE_TOKEN=${{ inputs.DRAFT_MODE_TOKEN }}
+        CI=true
+        STAGE=${{ inputs.ENVIRONMENT_TYPE }}
+        NEXT_PUBLIC_STAGE=${{ inputs.ENVIRONMENT_TYPE }}
+        APPLICATION_BASE_ADDRESS=${{ inputs.APPLICATION_BASE_ADDRESS }}
+        BRANCHED_TESTING_ENABLED=${{ inputs.BRANCHED_TESTING_ENABLED }}
+        PR_HEAD_REF=${{ inputs.PR_HEAD_REF }}
+        " >> .env
 
     - name: UI Tests
       shell: bash
-      env:
-        STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
-        NEXT_PUBLIC_STAGE: ${{ inputs.ENVIRONMENT_TYPE }}
-        APPLICATION_BASE_ADDRESS: ${{ inputs.APPLICATION_BASE_ADDRESS }}
-      run: yarn workspace @code-dot-org/marketing test:ui:ci
+      # If updating playwright, also update the version in package.json
+      run: |
+        docker run --network host \
+          --env-file ./apps/marketing/.env \
+          -v $PWD:/workspace \
+          -w /workspace/frontend \
+          mcr.microsoft.com/playwright:v1.49.1-noble \
+          bash -c "corepack enable && HOME=/root yarn workspace @code-dot-org/marketing test:ui:ci --shard ${{ inputs.SHARD_INDEX }}/${{ inputs.SHARD_TOTAL }}"
       working-directory: ./frontend
 
-    - name: Upload Playwright reports
-      if: failure()
-      id: deployment
-      uses: actions/upload-pages-artifact@v3
+    - name: Upload shard blob report to GitHub Actions Artifacts
+      if: ${{ !cancelled() }}
+      uses: actions/upload-artifact@v4
       with:
-        path: frontend/apps/marketing/playwright-report
-        name: playwright-report
+        name: blob-report-${{ inputs.GITHUB_ENVIRONMENT_NAME || 'pr' }}-${{ inputs.SHARD_INDEX }}
+        path: frontend/apps/marketing/blob-report
+        retention-days: 1
 
     - name: Run Google Lighthouse Audits
       uses: treosh/lighthouse-ci-action@9917efea514615fb2ff2890f5b8be2d51e703b6e
+      # Only run lighthouse audits once
+      if: inputs.SHARD_INDEX == '1'
       env:
         HTTP_PROTOCOL: ${{ inputs.APPLICATION_BASE_ADDRESS == 'code.marketing-sites.localhost:3001' && 'http' || 'https' }}
       with:

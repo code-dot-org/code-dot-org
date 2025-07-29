@@ -6,10 +6,15 @@ import {
 } from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {
+  AiChatClientTypes,
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
+// This type is the union of all the valid AI Model IDs.
+export type AiChatModelIdType = ValueOf<typeof AiChatModelIds>;
 
 export default async function askAi(
   message: string,
@@ -27,14 +32,22 @@ export default async function askAi(
   };
 
   const aichatContext: AichatContext = {
+    clientType: AiChatClientTypes.FLOW_LAB,
     currentLevelId,
     scriptId,
     channelId,
   };
 
+  const modelQueryParam = queryParams('ai-model');
+  const aiTutorModelId = Object.values(AiChatModelIds).includes(
+    modelQueryParam as AiChatModelIdType
+  )
+    ? (modelQueryParam as AiChatModelIdType)
+    : AiChatModelIds.GEMINI_2_5_FLASH;
+
   const aiCustomizations = {
     ...EMPTY_AI_CUSTOMIZATIONS,
-    selectedModelId: AiChatModelIds.CHATGPT,
+    selectedModelId: aiTutorModelId,
     systemPrompt: '',
   };
 

@@ -83,7 +83,7 @@ export const FileTabs = React.memo(() => {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
     // it in this case.
-    if (source.files[event.active.id as string].open) {
+    if (source.openFiles?.includes(event.active.id as string)) {
       setDraggingFileId(event.active.id as string);
       dispatch(setActiveFileThunk(event.active.id as string));
     }

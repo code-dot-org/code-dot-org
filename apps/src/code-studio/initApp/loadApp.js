@@ -258,10 +258,11 @@ function tryToUploadShareImageToS3({image, level}) {
 }
 
 /**
- * Loads project and checks to see if it is abusive or if sharing is disabled
- * for the owner.
+ * Loads project and checks to see if sharing is disabled for the owner.
+ * If the project is flagged for abuse or privacy/profanity, 'not found' is returned and caught
+ * for users who are not the owner nor the owner's teacher. See can_view_flagged_assets in files_api.rb.
  * @returns {Promise.<AppOptionsConfig>} Resolves when project has loaded and is
- * not abusive. Never resolves if abusive.
+ * not flagged. Never resolves if flagged.
  */
 function loadProjectAndCheckAbuse(appOptions) {
   return new Promise((resolve, reject) => {
