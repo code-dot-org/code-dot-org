@@ -37,7 +37,6 @@ jobs:
   # This job builds a docker image for the frontend repository and pushes the docker image to Github Packages.
   # More information: https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images
   build-and-push-image:
-    needs: ci
     runs-on: ubuntu-24.04
 
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
@@ -107,7 +106,9 @@ jobs:
 
   # Deploy test environments in parallel
   deploy-test:
-    needs: build-and-push-image
+    needs:
+      - ci
+      - build-and-push-image
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
     # Do not allow other deployments to deploy while this deployment is in progress.
@@ -126,6 +127,7 @@ jobs:
   # Deploy production environments in parallel, after test environments completes successfully
   deploy-production:
     needs:
+      - ci
       - build-and-push-image
       - deploy-test
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
