@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
@@ -23,7 +24,6 @@ import {
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import FlaggedImageModal from './FlaggedImageModal';
-import MetricsReporter from './metrics/MetricsReporter';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
