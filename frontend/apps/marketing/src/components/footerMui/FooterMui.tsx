@@ -13,8 +13,8 @@ import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import {AnchorHTMLAttributes, HTMLAttributes, Key, ReactNode} from 'react';
 
+import {isExternalLink} from '@/components/common/utils';
 import {Brand} from '@/config/brand';
-import {isExternalLink} from '@/config/utils';
 
 export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
