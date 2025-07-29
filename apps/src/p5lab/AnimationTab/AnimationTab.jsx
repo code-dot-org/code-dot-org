@@ -35,6 +35,7 @@ class AnimationTab extends React.Component {
       P5LabInterfaceMode.ANIMATION,
       P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -100,6 +101,7 @@ class AnimationTab extends React.Component {
             pickerType={pickerType}
             defaultQuery={defaultQuery}
             shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+            uploadsEnabled={this.props.uploadsEnabled}
           />
         )}
       </div>

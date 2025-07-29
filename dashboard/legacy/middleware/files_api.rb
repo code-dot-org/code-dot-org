@@ -21,9 +21,6 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
-  # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
-
   # These file types are not used in Applab, so they are safe to skip during the
   # profanity check for libraries in put_file.
   BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
@@ -47,7 +44,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def can_view_abusive_assets?(encrypted_channel_id)
+  def can_view_flagged_assets?(encrypted_channel_id)
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
@@ -70,10 +67,6 @@ class FilesApi < Sinatra::Base
   # Default to cannot view if there is an error
   rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
-  end
-
-  def can_view_profane_or_pii_assets?(encrypted_channel_id)
-    owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
   end
 
   def file_too_large(quota_type)
@@ -257,8 +250,12 @@ class FilesApi < Sinatra::Base
     # will not render potential HTML content inline. User-generated content can
     # contain script that we don't want to host as authentic web content from
     # our domain.
+    #
+    # Use Sinatra's attachment helper to set Content-Disposition header
+    #  NOTE: this protects against header injection attacks by escaping the filename
+    #  See Jira task: BC-72
     unless code_projects_domain_root_route || safely_viewable_file_type?(type)
-      response.headers['Content-Disposition'] = "attachment; filename=\"#{filename}\""
+      attachment(filename)
     end
 
     result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
@@ -270,8 +267,8 @@ class FilesApi < Sinatra::Base
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     project = Projects.new(get_storage_id).get(encrypted_channel_id)
     project_type = project[:projectType]&.downcase
-    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_abusive_assets?(encrypted_channel_id)
-    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_profane_or_pii_assets?(encrypted_channel_id)
+    not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
+    not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
@@ -430,14 +427,9 @@ class FilesApi < Sinatra::Base
     # The "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java and .py files, since in this use case
     # the files are only being used by a single user.
-    if (endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)) || profanity_project_type?(project_type)
+    if endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)
       begin
-        if profanity_project_type?(project_type)
-          locale_code = request.locale.to_s.split('-').first
-          share_failure = find_project_profanity(project_type, body, locale_code)
-        else
-          share_failure = ShareFiltering.find_failure(body, request.locale)
-        end
+        share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
@@ -1094,31 +1086,5 @@ class FilesApi < Sinatra::Base
   private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
-  end
-
-  private def profanity_project_type?(project_type)
-    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
-  end
-
-  private def get_toxicity_threshold_user_sources
-    DCDO.get("aichat_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
-  end
-
-  private def find_project_profanity(project_type, body, locale_code)
-    # Currently, only AI Chat is checked for profanity
-    if project_type == 'aichat'
-      source = JSON.parse(body)['source']
-      source_json = JSON.parse(source)
-      text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
-      # Nothing to check if there is no system prompt or retrieval
-      return nil if text.blank?
-      # Use AWS Comprehend to check AI Chat contents for toxicity.
-      # get_toxicity returns an object with the following fields:
-      # text: string, toxicity: number, and max_category {name: string, score: number}
-      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale_code)
-      if comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
-        return ShareFailure.new(ShareFiltering::FailureType::PROFANITY, comprehend_response)
-      end
-    end
   end
 end

@@ -44,6 +44,7 @@ export default class AnimationPickerBody extends React.Component {
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -240,10 +241,13 @@ export default class AnimationPickerBody extends React.Component {
     // OR they are searching but there were no results,
     // AND they are not in animationJsonMode.
     // animationJsonMode is used for the Generate Animation JSON levelbuilder tool in SelectStartAnimations.
+    // Note that if the project is blocked for abuse, then uploadsEnabled is set to false and
+    // the upload button will be hidden.
     const showDrawAndUploadButtons =
       ((!searching && (!inCategory || isBackgroundsTab)) ||
         results.length === 0) &&
       !animationJsonMode;
+    const uploadsEnabled = this.props.uploadsEnabled;
 
     return (
       <div style={{marginBottom: 10}}>
@@ -257,7 +261,7 @@ export default class AnimationPickerBody extends React.Component {
         <h1 style={dialogStyles.title}>
           {!animationJsonMode && msg.animationPicker_title({assetType})}
         </h1>
-        {showDrawAndUploadButtons && (
+        {uploadsEnabled && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
@@ -301,12 +305,14 @@ export default class AnimationPickerBody extends React.Component {
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
-                <AnimationUploadButton
-                  onUploadClick={onUploadClick}
-                  shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
-                  isBackgroundsTab={isBackgroundsTab}
-                  appType={appType}
-                />
+                {uploadsEnabled && (
+                  <AnimationUploadButton
+                    onUploadClick={onUploadClick}
+                    shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+                    isBackgroundsTab={isBackgroundsTab}
+                    appType={appType}
+                  />
+                )}
               </div>
             )}
             {searchQuery === '' &&
