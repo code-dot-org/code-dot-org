@@ -7,11 +7,25 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   # Use student_id, level_id, and teacher_id to lookup the feedback for a student on a particular level and provide the
   # most recent feedback left by that teacher
   def get_feedback_from_teacher
+    student_id = params.require(:student_id)
+    level_id = params.require(:level_id)
+    teacher_id = params.require(:teacher_id)
+    script_id = params.require(:script_id)
+
+    # Authorization check: ensure the current user can access feedback for this student
+    # Students can only access their own feedback
+    # Teachers can access feedback for students in their sections
+    unless current_user.id == student_id.to_i ||
+        (current_user.teacher? && current_user.students.exists?(id: student_id))
+      head :forbidden
+      return
+    end
+
     @feedback = TeacherFeedback.get_latest_feedback_given(
-      params.require(:student_id),
-      params.require(:level_id),
-      params.require(:teacher_id),
-      params.require(:script_id)
+      student_id,
+      level_id,
+      teacher_id,
+      script_id
     )
 
     # Setting custom header here allows us to access the csrf-token and manually use for create
@@ -32,10 +46,23 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
+    student_id = params.require(:student_id)
+    level_id = params.require(:level_id)
+    script_id = params.require(:script_id)
+
+    # Authorization check: ensure the current user can access feedback for this student
+    # Students can only access their own feedback
+    # Teachers can access feedback for students in their sections
+    unless current_user.id == student_id.to_i ||
+        (current_user.teacher? && current_user.students.exists?(id: student_id))
+      head :forbidden
+      return
+    end
+
     @level_feedbacks = TeacherFeedback.get_latest_feedbacks_received(
-      params.require(:student_id),
-      params.require(:level_id),
-      params.require(:script_id)
+      student_id,
+      level_id,
+      script_id
     ).map {|feedback| feedback.summarize(true)}
 
     render json: @level_feedbacks
@@ -73,6 +100,16 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   # Records metrics for student viewing teacher feedback.
   def increment_visit_count
     feedback = TeacherFeedback.find(params[:id])
+
+    # Authorization check: ensure the current user can access this feedback
+    # Students can only access their own feedback
+    # Teachers can access feedback for students in their sections
+    unless feedback && (current_user.id == feedback.student_id ||
+                       (current_user.teacher? && current_user.students.exists?(id: feedback.student_id)))
+      head :forbidden
+      return
+    end
+
     if feedback&.increment_visit_count
       head :no_content
     else
