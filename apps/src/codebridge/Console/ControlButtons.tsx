@@ -34,7 +34,7 @@ import moduleStyles from './console.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties} = useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
   const levelPath =
@@ -58,7 +58,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
-  const miniApp = labConfig?.miniApp?.name;
+  const miniApp = useAppSelector(
+    state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
+  );
 
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));

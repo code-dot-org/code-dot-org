@@ -15,15 +15,40 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       given_name: 'John',
       family_name: 'Doe',
       full_address: '123 Main St, Springfield, USA',
-    ).destroy
+    )
   end
   let(:described_instance) {described_class.new(user: user)}
 
   describe '#call' do
     subject(:scrub_pii) {described_instance.call}
 
+    let(:delete_accounts_helper_stub) {stub(:delete_accounts_helper)}
+    let(:soft_deleted_user) {true}
+
+    before do
+      delete_accounts_helper_stub.stubs(:remove_census_submissions)
+      delete_accounts_helper_stub.stubs(:clean_pegasus_forms_for_user)
+      delete_accounts_helper_stub.stubs(:remove_poste_data)
+      delete_accounts_helper_stub.stubs(:clean_and_destroy_pd_content)
+      delete_accounts_helper_stub.stubs(:purge_contact_rollups)
+      DeleteAccountsHelper.stubs(:new).with(bypass_safety_constraints: true).returns(delete_accounts_helper_stub)
+
+      user.destroy if soft_deleted_user
+    end
+
+    it 'removes data from deprecated tables' do
+      expect(delete_accounts_helper_stub).to receive(:remove_census_submissions).with(email)
+      expect(delete_accounts_helper_stub).to receive(:clean_pegasus_forms_for_user).with(user)
+      expect(delete_accounts_helper_stub).to receive(:remove_poste_data).with(email)
+      expect(delete_accounts_helper_stub).to receive(:clean_and_destroy_pd_content).with(user.id, email)
+      expect(delete_accounts_helper_stub).to receive(:purge_contact_rollups).with(email)
+      expect(described_instance).to receive(:scrub_external_data)
+      scrub_pii
+    end
+
     context 'when user is not soft-deleted' do
-      let(:user) {create(:teacher)}
+      let(:soft_deleted_user) {false}
+
       it 'raises an error' do
         _ {scrub_pii}.must_raise ArgumentError
       end
@@ -37,16 +62,6 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     end
 
     context 'when migrated' do
-      before do
-        delete_accounts_helper = described_instance.send(:delete_accounts_helper)
-        expect(delete_accounts_helper).to receive(:remove_census_submissions).with(email)
-        expect(delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
-        expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
-        expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
-        expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
-        expect(described_instance).to receive(:scrub_external_data)
-      end
-
       it 'removes user email and authentication data' do
         _(user.read_attribute(:email)).must_be :present?
         _(user.read_attribute(:hashed_email)).must_be :present?
@@ -92,16 +107,6 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     end
 
     context 'when not migrated' do
-      before do
-        delete_accounts_helper = described_instance.send(:delete_accounts_helper)
-        expect(delete_accounts_helper).to receive(:remove_census_submissions).with(email)
-        expect(delete_accounts_helper).to receive(:clean_pegasus_forms_for_user).with(user)
-        expect(delete_accounts_helper).to receive(:remove_poste_data).with(email)
-        expect(delete_accounts_helper).to receive(:clean_and_destroy_pd_content).with(user.id, email)
-        expect(delete_accounts_helper).to receive(:purge_contact_rollups).with(email)
-        expect(described_instance).to receive(:scrub_external_data)
-      end
-
       let(:user) do
         create(
           :teacher,
@@ -129,6 +134,16 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
         user.reload
         _(user.email).must_equal ''
         _(user.hashed_email).must_be_nil
+      end
+    end
+
+    context 'when user is facilitator' do
+      let(:user) {user_facilitator_info.user}
+
+      let!(:user_facilitator_info) {create(:user_facilitator_info)}
+
+      it 'destroys associated facilitator info record' do
+        _ {scrub_pii}.must_change -> {user_facilitator_info.destroyed?}, from: false, to: true
       end
     end
   end

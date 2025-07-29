@@ -5,110 +5,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:join_session, :confirm_join_session]
 
-  # GET /pd/workshops/1/enroll
-  def new
-    view_options(no_footer: true, answerdash: true)
-    @workshop = ::Pd::Workshop.find_by_id params[:workshop_id]
-
-    if @workshop.nil?
-      render_404
-    elsif workshop_closed?
-      @script_data = {
-        props: {
-          workshop: {
-            organizer: @workshop.organizer
-          },
-          workshop_enrollment_status: "closed"
-        }.to_json
-      }
-    elsif workshop_full?
-      @script_data = {
-        props: {
-          workshop: {
-            organizer: @workshop.organizer
-          },
-          workshop_enrollment_status: "full"
-        }.to_json
-      }
-    elsif !current_user
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/logged_out?source_page=#{source_page}&return_to=#{return_to}"
-    elsif current_user.user_type == 'student'
-      source_page = ERB::Util.url_encode('workshop enroll')
-      return_to = ERB::Util.url_encode("/pd/workshops/#{@workshop.id}/enroll")
-
-      redirect_to "/teacher_account_required?source_page=#{source_page}&return_to=#{return_to}"
-    elsif missing_application?
-      render :missing_application
-    elsif current_user.teacher? && current_user.email.blank?
-      render '/pd/application/teacher_application/no_teacher_email'
-    elsif @workshop.enrollments.any? {|enrollment| enrollment.user_id == current_user.id}
-      @user_email = current_user.email
-      render :already_enrolled
-    else
-      @enrollment = ::Pd::Enrollment.new workshop: @workshop
-      @enrollment.full_name = current_user.name
-      @enrollment.email = current_user.email
-
-      session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
-      session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
-
-      facilitators = @workshop.facilitators.map do |facilitator|
-        # TODO [CMS-65]: Come up with more permanent solution that doesn't require cross-project file dependency.
-        bio_file = pegasus_dir("sites.v3/code.org/views/workshop_affiliates/#{facilitator.id}_bio.md")
-        image_file = pegasus_dir("sites.v3/code.org/public/images/affiliate-images/#{facilitator.id}.jpg")
-
-        {
-          id: facilitator.id,
-          name: facilitator.name,
-          email: facilitator.email,
-          image_path: File.exist?(image_file) ? CDO.code_org_url("/images/affiliate-images/fit-150/#{facilitator.id}.jpg") : nil,
-          bio: File.exist?(bio_file) ? File.read(bio_file) : nil
-        }
-      end
-
-      # We only want to ask each signed-in teacher about demographics once a year.
-      # In this enrollment, we'll only ask if they haven't already submitted a
-      # teacher application for the current year (since it asks the same), and if
-      # this enrollment is for a local summer workshop (since this means it's for
-      # CSD/CSP, and they will only apply for one local summer workshop a year).
-      collect_demographics = !!current_user &&
-        Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.
-          where(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR).
-          where(user: current_user).empty? &&
-        @workshop.local_summer?
-
-      @script_data = {
-        props: {
-          user_id: current_user.id,
-          workshop: @workshop.attributes.merge(
-            {
-              organizer: @workshop.organizer,
-              regional_partner: @workshop.regional_partner,
-              course_url: @workshop.course_url,
-              fee: @workshop.fee,
-              properties: nil,
-              location_name: @workshop.location_name,
-              virtual: @workshop.virtual?,
-              format: @workshop.format,
-              course_offerings: @workshop.course_offerings
-            }
-          ),
-          session_dates: session_dates,
-          session_info_for_calendar: session_info_for_calendar,
-          enrollment: @enrollment,
-          facilitators: facilitators,
-          workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
-          collect_demographics: collect_demographics,
-          school_info: Queries::SchoolInfo.current_school(current_user)
-        }.to_json
-      }
-    end
-  end
-
   # GET /pd/workshops/1/join
   # This is for users who have registered for an external workshop. They'll receive a link to complete their
   # enrollment in our system via this join workshop page.
@@ -125,9 +21,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       enroll_status =
         if @workshop.nil?
           "not found"
-        elsif workshop_closed?
+        elsif @workshop.state == ::Pd::Workshop::STATE_ENDED
           "closed"
-        elsif workshop_full?
+        elsif @workshop.enrollments.count >= @workshop.capacity
           "full"
         elsif @workshop.organizer_or_facilitator? current_user
           "own"
@@ -141,15 +37,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       @script_data = {
         props: {
           workshop_enrollment_status: enroll_status,
-          workshop_info: {
-            id: @workshop.try(:id),
-            course: @workshop.try(:course),
-            subject: @workshop.try(:subject),
-            name: @workshop.try(:name),
-            format: @workshop.try(:format),
-            rp_name: @workshop.try(:regional_partner).try(:name),
-            session_info_for_calendar: @workshop.try(:sessions)&.map(&:session_info_for_calendar)
-          },
+          workshop_info: @workshop&.summarize_for_marketing_page,
           user_info: current_user&.summarize_for_workshop
         }.to_json
       }
@@ -201,7 +89,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     if current_user.student?
       if User.hash_email(@enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.upgrade_to_teacher(@enrollment.email)
+        Services::User::UpgradeToTeacher.call(user: current_user, email: @enrollment.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
@@ -222,14 +110,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
 
   private def mark_attended(user_id, session_id)
     Pd::Attendance.find_or_create_by!(teacher_id: user_id, pd_session_id: session_id)
-  end
-
-  private def workshop_closed?
-    @workshop.state == ::Pd::Workshop::STATE_ENDED
-  end
-
-  private def workshop_full?
-    @workshop.enrollments.count >= @workshop.capacity
   end
 
   private def workshop_owned_by?(user)
@@ -281,16 +161,5 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       :school_name,
       :full_address,
     )
-  end
-
-  private def missing_application?
-    @workshop.require_application? && !has_application?
-  end
-
-  private def has_application?
-    Pd::Application::TeacherApplication.where(
-      user: current_user,
-      status: 'accepted'
-      ).any?
   end
 end

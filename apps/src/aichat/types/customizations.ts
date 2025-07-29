@@ -1,20 +1,27 @@
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+import {
+  AiChatClientTypes,
+  AiChatModelIds,
+} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
-/** Model customizations and model card information for aichat levels.
- *  selectedModelId is a foreign key to ModelDescription.id */
-export interface AiCustomizations {
+/**
+ * Model parameters provided to the LLM chat endpoint.
+ */
+export interface ModelParameters {
   selectedModelId: ValueOf<typeof AiChatModelIds>;
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
-  modelCardInfo: ModelCardInfo;
 }
 
-// Model customizations sent to backend for aichat levels - excludes modelCardInfo.
-// The customizations will be included in request to LLM endpoint.
-export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
+/**
+ * Model customizations a student can make on an AI Chat Lab level.
+ * These include model parameters and model card information.
+ */
+export interface AiCustomizations extends ModelParameters {
+  modelCardInfo: ModelCardInfo;
+}
 
 export type FieldVisibilities = {[key in keyof AiCustomizations]: Visibility};
 
@@ -41,7 +48,13 @@ export enum Visibility {
   EDITABLE = 'editable',
 }
 
+export type AiChatClientType = ValueOf<typeof AiChatClientTypes>;
+
+/**
+ * Context provided to AI chat API endpoints.
+ */
 export type AichatContext = {
+  clientType: AiChatClientType;
   currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;

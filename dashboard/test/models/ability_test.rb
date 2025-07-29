@@ -969,37 +969,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
-  test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(teacher).can? :log_chat_event, :aichat_event
-    assert Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(teacher).can? :log_chat_event, :aichat_event
-    refute Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'student meeting AI Chat access requirements can perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(student).can? :log_chat_event, :aichat_event
-    assert Ability.new(student).can? :chat_history, :aichat_event
-  end
-
-  test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(student).can? :log_chat_event, :aichat_event
-    refute Ability.new(student).can? :chat_history, :aichat_event
-  end
+  # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create :code_review_group, section: section

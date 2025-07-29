@@ -8,7 +8,15 @@ import {getLocalizePath, getProjectId} from '@/config/localize';
 /**
  * Loads Localize in an SSR & CSR environment.
  */
-const LocalizeLoader = ({brand, locale}: {brand: Brand; locale: string}) => (
+const LocalizeLoader = ({
+  brand,
+  locale,
+  isDraftMode,
+}: {
+  brand: Brand;
+  locale: string;
+  isDraftMode: boolean;
+}) => (
   <>
     {/* Localize script for their widget from our CDN. */}
     <Script
@@ -69,6 +77,7 @@ const LocalizeLoader = ({brand, locale}: {brand: Brand; locale: string}) => (
                 'error-overlay-pagination',
                 'nextjs-container-build-error-version-status',
               ],
+              saveNewPhrases: isDraftMode,
             } as LocalizeJS.Context.Options);
           } else {
             console.warn('Localize project ID was not valid.');

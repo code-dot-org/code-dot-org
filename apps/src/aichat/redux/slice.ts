@@ -52,6 +52,7 @@ const initialState: AichatState = {
   hasUpdatedCustomizations: false,
   saveError: undefined,
   showResetMessage: false,
+  hasSetStartingCustomizations: false,
 };
 
 const aichatSlice = createSlice({
@@ -198,6 +199,10 @@ const aichatSlice = createSlice({
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
+      state.hasSetStartingCustomizations = true;
+    },
+    clearHasSetStartingCustomizations: state => {
+      state.hasSetStartingCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -245,20 +250,6 @@ const aichatSlice = createSlice({
       state.saveError = undefined;
       state.showResetMessage = false;
     },
-    setSavedAiCustomizationProperty: <T extends keyof AiCustomizations>(
-      state: AichatState,
-      action: PayloadAction<{
-        property: T;
-        value: AiCustomizations[T];
-      }>
-    ) => {
-      const {property, value} = action.payload;
-      const updatedAiCustomizations = {
-        ...state.savedAiCustomizations,
-        [property]: value,
-      };
-      state.savedAiCustomizations = updatedAiCustomizations;
-    },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
       action: PayloadAction<{
@@ -272,6 +263,7 @@ const aichatSlice = createSlice({
         [property]: value,
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
+      state.showResetMessage = false;
     },
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
@@ -371,7 +363,6 @@ export const {
   removeUpdateMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
-  setSavedAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
   setShowModalType,
@@ -387,4 +378,5 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
+  clearHasSetStartingCustomizations,
 } = aichatSlice.actions;

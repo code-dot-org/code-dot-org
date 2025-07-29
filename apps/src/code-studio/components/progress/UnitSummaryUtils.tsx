@@ -172,7 +172,7 @@ interface UnitData {
   wrapupVideo: string | null;
   calendarLessons: CalendarLesson[];
   redirect_unit_url: string | null;
-  unit_position: string | null;
+  unit_position: number | null;
 }
 
 export const setUnitSummaryReduxData = (
@@ -215,6 +215,8 @@ export const setUnitSummaryReduxData = (
   dispatch(
     setCalendarData({
       unitName: unitData.name,
+      unitPosition: unitData.unit_position,
+      courseName: unitData.course_name,
       showCalendar: !!unitData.showCalendar,
       calendarLessons: unitData.calendarLessons,
       versionYear: unitData.version_year

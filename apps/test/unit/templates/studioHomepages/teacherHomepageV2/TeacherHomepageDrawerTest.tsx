@@ -28,7 +28,7 @@ import i18n from '@cdo/locale';
 describe('TeacherHomepageDrawer', () => {
   const schoolInfo: SchoolInfo = {
     country: 'US',
-    school_name: '',
+    school_name: 'School One',
     school_zip: '12345',
     school_id: '1',
     school_type: 'public',
@@ -50,6 +50,13 @@ describe('TeacherHomepageDrawer', () => {
     setSchoolName: jest.fn(),
     setSchoolZip: jest.fn(),
     reset: jest.fn(),
+  };
+
+  const customSchoolInfo: SchoolInfo = {
+    country: 'US',
+    school_name: 'Test School',
+    school_zip: '12345',
+    school_type: undefined,
   };
 
   const mockSchoolInfoCustomSchool = {
@@ -101,13 +108,17 @@ describe('TeacherHomepageDrawer', () => {
     );
   }
 
-  function fetchSpySetup(showInterstitial: boolean, showConfirmation: boolean) {
+  function fetchSpySetup(
+    showInterstitial: boolean,
+    showConfirmation: boolean,
+    existingSchoolInfo: SchoolInfo
+  ) {
     fetchSpy.mockImplementation((url: string) => {
       return Promise.resolve({
         value: {
           showSchoolInfoInterstitial: showInterstitial,
           showSchoolInfoConfirmation: showConfirmation,
-          existingSchoolInfo: schoolInfo,
+          existingSchoolInfo: existingSchoolInfo,
         },
         response: new Response(),
       });
@@ -115,7 +126,7 @@ describe('TeacherHomepageDrawer', () => {
   }
 
   it('renders the correct title, subtitle, and school data inputs when showSchoolInfoInterstitial is true', async () => {
-    fetchSpySetup(true, false);
+    fetchSpySetup(true, false, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
@@ -125,7 +136,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event when the secondary button is clicked', async () => {
-    fetchSpySetup(true, false);
+    fetchSpySetup(true, false, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
@@ -135,7 +146,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event and calls updateSchoolInfo when the school data entry submit button is clicked', async () => {
-    fetchSpySetup(true, false);
+    fetchSpySetup(true, false, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
@@ -146,7 +157,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('displays success message after school data entry submit button is clicked', async () => {
-    fetchSpySetup(true, false);
+    fetchSpySetup(true, false, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
@@ -157,7 +168,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('renders the correct title and subtitle when showSchoolInfoConfirmation is true', async () => {
-    fetchSpySetup(false, true);
+    fetchSpySetup(false, true, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     const schoolName = 'School One';
     renderComponent();
@@ -175,7 +186,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('displays a custom school name on the confirmation first page when the teacher has entered one', async () => {
-    fetchSpySetup(false, true);
+    fetchSpySetup(false, true, customSchoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfoCustomSchool);
     const schoolName = 'Test School';
     renderComponent();
@@ -193,7 +204,7 @@ describe('TeacherHomepageDrawer', () => {
   });
 
   it('sends analytics event and displays the school data inputs after clicking the primary button when showSchoolInfoConfirmation is true', async () => {
-    fetchSpySetup(false, true);
+    fetchSpySetup(false, true, schoolInfo);
     schoolInfoSpy.mockReturnValue(mockSchoolInfo);
     renderComponent();
     await act(async () => await new Promise(process.nextTick));

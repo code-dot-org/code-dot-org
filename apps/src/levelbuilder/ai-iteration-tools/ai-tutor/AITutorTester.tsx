@@ -99,7 +99,7 @@ const AITutorTester: React.FC = () => {
         <br />
         <br />
         <br />
-        <AITutorTesterSampleColumns endpoint={'ai-tutor'} />
+        <AITutorTesterSampleColumns />
         <div>
           <div className={styles.buttonSpacing}>
             <input

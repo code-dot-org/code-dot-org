@@ -68,6 +68,10 @@ FactoryBot.define do
     participant_audience {"student"}
     instructor_audience {"teacher"}
 
+    trait :stable do
+      published_state {Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+    end
+
     trait :pl_course do
       participant_audience {"teacher"}
       instructor_audience {"facilitator"}
@@ -770,7 +774,7 @@ FactoryBot.define do
 
   factory :user_facilitator_info, class: User::FacilitatorInfo do
     association :user, factory: :facilitator
-    bio {Faker::Lorem.paragraph}
+    bio {Faker::Lorem.paragraph(sentence_count: 5).truncate(User::FacilitatorInfo::BIO_MAX_LENGTH)}
   end
 
   factory :authentication_option do
@@ -1079,6 +1083,11 @@ FactoryBot.define do
 
   factory :aichat, parent: :level, class: Aichat do
     game {Game.aichat}
+    level_num {'custom'}
+  end
+
+  factory :weblab2, parent: :level, class: Weblab2 do
+    game {Game.weblab2}
     level_num {'custom'}
   end
 
@@ -2241,9 +2250,9 @@ FactoryBot.define do
 
   factory :aichat_request do
     association :user
-    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}.to_json}
-    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
-    stored_messages {[].to_json}
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}}
+    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}}
+    stored_messages {[]}
     level_id {1}
     script_id {1}
     project_id {1}
@@ -2253,8 +2262,7 @@ FactoryBot.define do
     association :user
     external_id {"1234"}
     llm_version {"dummy_llm"}
-    unit_id {1}
-    level_id {1}
+    context_type {"general"}
   end
 
   factory :aidiff_message do
@@ -2263,6 +2271,30 @@ FactoryBot.define do
     role {:assistant}
     content {"Lorem ipsum"}
     is_preset {false}
+  end
+
+  factory :modular_course_context, class: Hash do
+    skip_create
+    initialize_with do
+      original_unit_group = create :unit_group, :stable
+      new_unit_group = create :unit_group, :stable
+      unit_a = create :unit, :with_levels
+      unit_b = create :unit, :with_levels
+
+      [original_unit_group, new_unit_group].each do |unit_group|
+        create :course_version, content_root: unit_group
+        [unit_a, unit_b].each_with_index do |unit, index|
+          create :unit_group_unit, unit_group: unit_group, script: unit, position: index + 1
+        end
+      end
+
+      {
+        original_unit_group: original_unit_group,
+        new_unit_group: new_unit_group,
+        unit_a: unit_a,
+        unit_b: unit_b,
+      }
+    end
   end
 
   factory :sign_in do

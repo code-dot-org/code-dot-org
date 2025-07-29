@@ -11,7 +11,7 @@ import {chatHistoryValidator} from './api/validators';
 import {
   AiCustomizations,
   AichatContext,
-  AichatModelCustomizations,
+  ModelParameters,
   ChatEvent,
   DetectToxicityResponse,
   FeedbackValue,
@@ -43,34 +43,6 @@ interface UserHasAichatAccessResponse {
   userHasAccess: boolean;
 }
 
-/**
- * This function formats chat completion messages and aichatParameters, sends a POST request
- * to the aichat completion backend controller, then returns the status of the response
- * and assistant message if successful.
- */
-export async function postAichatCompletionMessage(
-  newMessage: PendingChatMessage,
-  storedMessages: CompletedChatMessage[],
-  aiCustomizations: AiCustomizations,
-  aichatContext: AichatContext,
-  // Configurable for testing.
-  maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<CompletedChatMessage[]> {
-  const aichatModelCustomizations: AichatModelCustomizations = {
-    selectedModelId: aiCustomizations.selectedModelId,
-    temperature: aiCustomizations.temperature,
-    retrievalContexts: aiCustomizations.retrievalContexts,
-    systemPrompt: aiCustomizations.systemPrompt,
-  };
-
-  return postChatCompletionAsyncPolling(
-    newMessage,
-    storedMessages,
-    aichatModelCustomizations,
-    aichatContext,
-    maxPollingTimeMs
-  );
-}
 /**
  * @param eventId
  * @param feedback
@@ -177,19 +149,21 @@ export interface GetChatRequestResponse {
 }
 
 /**
- * Perform chat completion by initiating an asynchronous request and polling for the response.
+ * This function formats chat completion messages and aichatParameters, sends a POST request
+ * to the aichat completion backend controller, then returns the status of the response
+ * and assistant message if successful.
  */
-async function postChatCompletionAsyncPolling(
+export async function postAichatCompletionMessage(
   newMessage: PendingChatMessage,
   storedMessages: CompletedChatMessage[],
-  aichatModelCustomizations: AichatModelCustomizations,
+  modelParameters: ModelParameters,
   aichatContext: AichatContext,
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
     storedMessages,
-    aichatModelCustomizations,
+    modelParameters,
     aichatContext,
   };
 

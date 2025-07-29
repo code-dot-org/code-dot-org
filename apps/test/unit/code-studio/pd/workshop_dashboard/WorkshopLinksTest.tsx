@@ -4,7 +4,7 @@ import React from 'react';
 
 import WorkshopLinks from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopLinks';
 
-describe('EnrollInWorkshop', () => {
+describe('WorkshopLinks', () => {
   const renderDefault = (hasCustomRegistrationLink: boolean) => {
     render(
       <WorkshopLinks

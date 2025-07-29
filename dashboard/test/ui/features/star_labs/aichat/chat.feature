@@ -49,7 +49,7 @@ Feature: Model customizations and interactions in AI Chat Lab
     And I click selector "#uitest-add-example-topic"
     And I wait until element "#uitest-publish-notes-save" is enabled
     And I click selector "#uitest-publish-notes-save"
-    Then I wait until element ".uitest-aichat-chat-alert" contains text "Model card information has been updated"
+    Then I wait until element "#uitest-aichat-save-alert" contains text "Saved"
 
     Given element "#uitest-view-mode-toggle-container" is not visible
     And element "#uitest-presentation-view-container" is not visible

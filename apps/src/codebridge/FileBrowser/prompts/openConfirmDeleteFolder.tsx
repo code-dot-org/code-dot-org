@@ -1,9 +1,12 @@
-import {findFiles, findSubFolders} from '@codebridge/codebridgeContext';
 import {DeleteFolderFunction} from '@codebridge/codebridgeContext/types';
 import {ProjectFolder} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  findFiles,
+  findSubFolders,
+} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 

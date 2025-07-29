@@ -35,18 +35,19 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit = create :script, pilot_experiment: 'my-experiment'
-    create(:single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42')
+    create(:single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment')
 
     @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
     @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment'
-    create(:single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52')
+    create(:single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment')
 
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
-    create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112')
+    create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112', pilot_experiment: 'my-editor-experiment')
   end
+
   test 'get courses with participant progress for student should return no courses' do
-    assert_equal CourseVersion.courses_for_unit_selector([]).length, 0
+    assert_equal 0, CourseVersion.courses_for_unit_selector([], @student).length
   end
 
   test 'get courses with participant progress for levelbuilder should return all courses where followers in section have progress' do
@@ -72,7 +73,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).pluck(:display_name).sort, expected_course_info
+    assert_equal expected_course_info, CourseVersion.courses_for_unit_selector(student_unit_ids, @levelbuilder).pluck(:display_name).sort
   end
 
   test 'get courses with participant progress for pilot teacher should return courses where pilot teacher can be instructor' do
@@ -80,7 +81,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @pilot_unit.original_unit_group.name + " *",
     ].sort
 
-    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id]).pluck(:display_name).sort, expected_course_info
+    assert_equal expected_course_info, CourseVersion.courses_for_unit_selector([@pilot_unit.id], @pilot_teacher).pluck(:display_name).sort
   end
 
   test 'get courses with participant progress for teacher should only return courses where they can be the instructor' do
@@ -94,7 +95,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_teacher_to_students.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).pluck(:display_name).sort, expected_course_info
+    assert_equal expected_course_info, CourseVersion.courses_for_unit_selector(student_unit_ids, @teacher).pluck(:display_name).sort
   end
 
   test 'get courses with participant progress for facilitator should return all courses, amd units where facilitator can be instructor and followers in section have progress' do
@@ -116,7 +117,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids)
+    courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids, @facilitator)
 
     assert_equal expected_course_info, courses_with_progress.pluck(:display_name).sort
 

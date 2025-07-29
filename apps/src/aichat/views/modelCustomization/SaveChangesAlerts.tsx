@@ -78,7 +78,12 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
   return !isReadOnly ? (
     <div className={styles.saveAlertContainer}>
       {alert && !saveInProgress && (
-        <Alert {...alert} size="s" className={styles.saveAlert} />
+        <Alert
+          id="uitest-aichat-save-alert"
+          {...alert}
+          size="s"
+          className={styles.saveAlert}
+        />
       )}
     </div>
   ) : null;

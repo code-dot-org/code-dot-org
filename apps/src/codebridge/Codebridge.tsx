@@ -1,13 +1,7 @@
-import {
-  CodebridgeContextProvider,
-  sourceReducer,
-  SOURCE_REDUCER_ACTIONS,
-  useSourceUtilities,
-} from '@codebridge/codebridgeContext';
-import {useReducerWithCallback, useZoomTracker} from '@codebridge/hooks';
+import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
+import {useZoomTracker} from '@codebridge/hooks';
 import {
   ConfigType,
-  SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
   SendConsoleInputFunction,
@@ -15,11 +9,11 @@ import {
   ProjectPickerSettings,
 } from '@codebridge/types';
 import classNames from 'classnames';
-import React, {useEffect, useMemo, useReducer, useRef} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -32,15 +26,11 @@ const EDITOR_ID = '#uitest-codebridge-editor';
 const CONSOLE_CLASS = '.xterm-helper-textarea';
 
 type CodebridgeProps = {
-  source: MultiFileSource;
   config: ConfigType;
-  setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
   startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
-  projectVersion: number;
-  labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
@@ -50,34 +40,20 @@ type CodebridgeProps = {
 
 export const Codebridge = React.memo(
   ({
-    source,
     config,
-    setProject,
     setConfig,
     startSources,
     onRun,
     onStop,
-    projectVersion,
-    labConfig,
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
     AiTutor2ResponseView,
     aiTutor2Context,
   }: CodebridgeProps) => {
-    const reducerWithCallback = useReducerWithCallback(
-      sourceReducer,
-      (source: MultiFileSource) => setProject({source, labConfig}),
-      new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
-    );
-    const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-
-    const sourceUtilities = useSourceUtilities(dispatch);
-
-    const currentProjectVersion = useRef(projectVersion);
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -131,13 +107,6 @@ export const Codebridge = React.memo(
       };
     }, []);
 
-    useEffect(() => {
-      if (projectVersion !== currentProjectVersion.current) {
-        sourceUtilities.replaceSource(source);
-        currentProjectVersion.current = projectVersion;
-      }
-    }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
-
     const InnerLayout = useMemo(() => {
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
@@ -171,15 +140,11 @@ export const Codebridge = React.memo(
     return (
       <CodebridgeContextProvider
         value={{
-          source: internalSource,
           config,
-          setProject,
           setConfig,
           startSources,
           onRun,
           onStop,
-          ...sourceUtilities,
-          labConfig,
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,

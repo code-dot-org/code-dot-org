@@ -193,7 +193,7 @@ export default class IntroPanel extends React.Component {
         break;
       }
       case 'In Progress': {
-        const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
+        const signupUrl = `${location.origin}/professional-learning/workshops/${workshopId}`;
         if (isAccountRequiredForAttendance) {
           contents = (
             <div>

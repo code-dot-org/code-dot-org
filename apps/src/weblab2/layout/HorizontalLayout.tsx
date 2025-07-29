@@ -7,7 +7,6 @@ import React from 'react';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
-import weblab2Styles from './weblab2Layout.module.scss';
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
@@ -16,7 +15,7 @@ const MIN_EDITOR_HEIGHT = 200;
 const MIN_PREVIEW_HEIGHT = 200;
 const INITIAL_PREVIEW_HEIGHT = 400;
 const MIN_RIGHT_PANEL_WIDTH = 300;
-const PROJECT_FOOTER_HEIGHT = 64;
+const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
@@ -52,7 +51,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     <div
       className={
         isProjectLevel
-          ? weblab2Styles.containerWithFooter
+          ? moduleStyles.containerWithFooter
           : moduleStyles.defaultContainer
       }
     >

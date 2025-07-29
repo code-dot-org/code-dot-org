@@ -499,7 +499,6 @@ Dashboard::Application.routes.draw do
     end
 
     resources :potential_teachers, only: [:create]
-    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -752,6 +751,7 @@ Dashboard::Application.routes.draw do
         get    'channels/:channel_id/abuse', action: :show_abuse
         delete 'channels/:channel_id/abuse', action: :reset_abuse
         post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        post   'channels/:channel_id/abuse/image', action: :update_abuse_image_moderation
         patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
                constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
       end
@@ -828,7 +828,6 @@ Dashboard::Application.routes.draw do
         delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
         post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
         post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
-        post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
         get 'legacy_survey_summaries', action: :legacy_survey_summaries, controller: 'legacy_survey_summaries'
 
         # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
@@ -955,7 +954,7 @@ Dashboard::Application.routes.draw do
 
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
-      get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
+      get 'workshops/:workshop_id/enroll', to: redirect("/professional-learning/workshops/%{workshop_id}")
       get 'workshops/:workshop_id/join', action: 'join', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
@@ -1063,6 +1062,7 @@ Dashboard::Application.routes.draw do
         post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
         post 'users/date_progress_table_invitation_last_delayed', to: 'users#post_date_progress_table_invitation_last_delayed'
         post 'users/has_seen_progress_table_v2_invitation', to: 'users#post_has_seen_progress_table_v2_invitation'
+        post 'users/has_seen_homepage_welcome', to: 'users#post_has_seen_homepage_welcome'
         post 'users/ai_rubrics_disabled', to: 'users#post_ai_rubrics_disabled'
         post 'users/ai_differentiation_enabled', to: 'users#post_ai_differentiation_enabled'
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
@@ -1305,15 +1305,26 @@ Dashboard::Application.routes.draw do
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
-    post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
-    post 'ai_diff/curriculum_courses', to: 'ai_diff#curriculum_courses'
-    post 'aidiff_messages/:aidiff_message_id/submit_feedback', to: 'aidiff_messages#submit_feedback'
-
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end
 
     resources :ai_interaction_feedback, only: [:create]
+
+    resources :aidiff_threads, only: [:create, :index, :show] do
+      collection do
+        post :curriculum_courses
+      end
+      member do
+        post :chat_completion
+      end
+    end
+
+    resources :aidiff_messages, only: [] do
+      member do
+        post :submit_feedback
+      end
+    end
 
     # Policy Compliance
     namespace :policy_compliance do

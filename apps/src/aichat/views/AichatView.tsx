@@ -9,9 +9,14 @@ import React, {useCallback, useEffect, useMemo} from 'react';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
+import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -22,8 +27,10 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {getUserHasAichatAccess} from '../aichatApi';
+import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
 import aichatI18n from '../locale';
@@ -33,6 +40,7 @@ import {
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
+  clearHasSetStartingCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
@@ -42,7 +50,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {AichatLevelProperties, ViewMode} from '../types';
+import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -60,12 +68,20 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
-  const levelAichatSettings = levelProperties.aichatSettings;
+  const {
+    name: levelName,
+    aichatSettings: levelAichatSettings,
+    starterAssets,
+  } = levelProperties;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
-
-  const {currentAiCustomizations, viewMode, showModalType} = useAppSelector(
-    state => state.aichat
+  const currentAiCustomizations = useAppSelector(
+    state => state.aichat.currentAiCustomizations
   );
+  const savedAiCustomizations = useAppSelector(
+    state => state.aichat.savedAiCustomizations
+  );
+  const viewMode = useAppSelector(state => state.aichat.viewMode);
+  const showModalType = useAppSelector(state => state.aichat.showModalType);
 
   const signInState = useAppSelector(state => state.currentUser.signInState);
 
@@ -76,6 +92,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const hasSentMessage = useAppSelector(state => state.aichat.hasSentMessage);
   const hasUpdatedCustomizations = useAppSelector(
     state => state.aichat.hasUpdatedCustomizations
+  );
+
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.progress.scriptId);
+
+  const isLevelbuilder = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
+  );
+
+  const hasSetStartingCustomizations = useAppSelector(
+    state => state.aichat.hasSetStartingCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -96,6 +124,16 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       dispatch(onSaveFail());
     });
   }, [projectManager, dispatch]);
+
+  // Initialize the ChatEventLogger with the current context, whenever it updates.
+  useEffect(() => {
+    ChatEventLogger.initialize({
+      clientType: AiChatClientTypes.AI_CHAT_LAB,
+      currentLevelId: parseInt(currentLevelId || ''),
+      scriptId,
+      channelId,
+    });
+  }, [currentLevelId, scriptId, channelId]);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(
@@ -257,6 +295,29 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     );
   }, [dispatch]);
 
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(clearHasSetStartingCustomizations());
+  });
+
+  // Only recreate modelParameters when relevant customizations are updated.
+  const modelParameters: ModelParameters = useMemo(() => {
+    return {
+      selectedModelId: savedAiCustomizations.selectedModelId,
+      temperature: savedAiCustomizations.temperature,
+      retrievalContexts: savedAiCustomizations.retrievalContexts,
+      systemPrompt: savedAiCustomizations.systemPrompt,
+    };
+  }, [
+    savedAiCustomizations.selectedModelId,
+    savedAiCustomizations.temperature,
+    savedAiCustomizations.retrievalContexts,
+    savedAiCustomizations.systemPrompt,
+  ]);
+
+  if (queryParams('show-flow-lab') === 'true' && isLevelbuilder) {
+    return <FlowLab />;
+  }
+
   return (
     <LevelPropertiesContext.Provider value={levelProperties}>
       <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -342,10 +403,19 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
-              <ChatWorkspace
-                onClear={onClear}
-                levelProperties={levelProperties}
-              />
+              {hasSetStartingCustomizations && (
+                <ChatWorkspace
+                  modelParameters={modelParameters}
+                  clientType={AiChatClientTypes.AI_CHAT_LAB}
+                  onClear={onClear}
+                  levelName={levelName}
+                  channelId={channelId}
+                  hasStarterAssets={
+                    starterAssets && Object.keys(starterAssets).length > 0
+                  }
+                  multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                />
+              )}
             </PanelContainer>
           </div>
         </div>

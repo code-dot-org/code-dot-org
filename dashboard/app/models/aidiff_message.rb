@@ -10,6 +10,9 @@
 #  is_preset        :boolean          not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  preset_chip_text :text(65535)
+#  raw_content      :text(65535)
+#  source_links     :json
 #
 # Indexes
 #
@@ -23,4 +26,15 @@ class AidiffMessage < ApplicationRecord
     user: 1,
     assistant: 2,
   }
+
+  def summarize
+    {
+      id: id,
+      role: role,
+      content: content,
+      updated_at: updated_at,
+      is_preset: is_preset,
+      preset_chip_text: preset_chip_text,
+    }
+  end
 end

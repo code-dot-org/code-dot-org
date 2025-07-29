@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/code-studio/pd/sessionDateUtils';
 import {TIME_FORMAT} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 
-import {GetWorkshopInfoScriptDataResponse, SessionInfo} from './../types';
+import {WorkshopInfo, SessionInfo} from './../types';
 
 import moduleStyles from './workshopSessionsList.module.scss';
 
@@ -52,8 +52,7 @@ const renderSessionsListItem = (session: SessionInfo) => {
     </li>
   );
 };
-interface WorkshopSessionsListProps
-  extends Pick<GetWorkshopInfoScriptDataResponse, 'sessions'> {}
+interface WorkshopSessionsListProps extends Pick<WorkshopInfo, 'sessions'> {}
 
 /** Component to render a list of workshop sessions. */
 const WorkshopSessionsList: React.FC<WorkshopSessionsListProps> = ({

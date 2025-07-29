@@ -21,5 +21,5 @@ export {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   clearStagedFiles,
-  setSavedAiCustomizationProperty,
+  clearHasSetStartingCustomizations,
 } from './slice';

@@ -38,14 +38,17 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
         status: :not_found
+    elsif params[:user_id].nil? || !User.exists?(params[:user_id])
+      return render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'User cannot be found.'}
     end
 
-    enrollment_email = params[:email]
     user = User.find(params[:user_id])
+    previous_enrollment = @workshop.enrollments.find_by(user_id: user.id)
 
-    # See if a previous enrollment exists for this email
-    previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
-    if previous_enrollment
+    if user.user_type == User::TYPE_STUDENT
+      return render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'Students cannot enroll in workshops.'}
+    elsif previous_enrollment
+      # See if a previous enrollment exists for this user
       cancel_url = url_for action: :cancel, controller: '/pd/workshop_enrollment', code: previous_enrollment.code
       render_unsuccessful RESPONSE_MESSAGES[:DUPLICATE], {cancel_url: cancel_url}
     elsif workshop_owned_by? user
@@ -57,14 +60,16 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
     else
       ActiveRecord::Base.transaction do
-        enrollment = ::Pd::Enrollment.new workshop: @workshop
-
-        if @workshop.course == COURSE_BUILD_YOUR_OWN
-          enrollment.update!(enrollment_params)
-        else
-          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
-          user&.update_school_info(enrollment.school_info)
-        end
+        school_info = user.school_info
+        enrollment = ::Pd::Enrollment.create!(
+          workshop: @workshop,
+          user_id: user.id,
+          first_name: user.given_name,
+          last_name: user.family_name,
+          email: user.email,
+          school: school_info&.school&.id || school_info&.school_id,
+          school_info_id: school_info&.id
+        )
 
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
@@ -132,29 +137,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       Pd::Attendance.where(pd_enrollment_id: enrollments).delete_all
       enrollments.each {|e| e.update!(pd_workshop_id: params[:destination_workshop_id])}
     end
-  end
-
-  # POST /api/v1/pd/enrollments/edit
-  def edit
-    return head :forbidden unless current_user.workshop_admin?
-    enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
-  end
-
-  private def enrollment_params
-    params.require(:user_id)
-    params.permit(:user_id, :first_name, :last_name, :email).to_h.tap do |p|
-      p[:first_name] = p[:first_name]&.strip_utf8mb4
-      p[:last_name] = p[:last_name]&.strip_utf8mb4
-      p[:email] = p[:email]&.strip_utf8mb4
-    end
-  end
-
-  private def school_info_params
-    params.require(:school_info).
-      permit(:school_type, :zip, :school_id, :school_name, :country).to_h.tap do |p|
-        p[:school_name] = p[:school_name]&.strip_utf8mb4
-      end
   end
 
   private def render_unsuccessful(error_message, options = {})

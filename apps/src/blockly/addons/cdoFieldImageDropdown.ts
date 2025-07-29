@@ -8,17 +8,6 @@ interface ButtonConfig {
   action: () => void;
 }
 
-/**
- * Definition of a human-readable image dropdown option.
- * TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
- */
-interface ImageProperties {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
-
 // Note that this class *does not* inherit from CdoFieldDropdown
 export class CdoFieldImageDropdown extends FieldGridDropdown {
   private buttons_: ButtonConfig[] | undefined;
@@ -167,6 +156,6 @@ export function fixMenuGenerator(
     return [
       {src: url, width: width, height: height, alt: code_id},
       code_id,
-    ] as [ImageProperties, string];
+    ] as [GoogleBlockly.ImageProperties, string];
   });
 }

@@ -8,7 +8,14 @@ import Link, {LinkProps} from '@/link';
 
 import moduleStyles from './alert.module.scss';
 
-type AlertType = 'primary' | 'success' | 'danger' | 'warning' | 'info' | 'gray';
+type AlertType =
+  | 'primary'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
+  | 'gray'
+  | 'aqua';
 
 export const alertTypes: {[key in AlertType]: AlertType} = {
   primary: 'primary',
@@ -17,6 +24,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
   warning: 'warning',
   info: 'info',
   gray: 'gray',
+  aqua: 'aqua',
 };
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {

@@ -2568,13 +2568,13 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   describe '#title_for_display' do
-    let(:has_numbered_units) {false}
-    let(:unit_group) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:numbered_units) {nil}
+    let(:unit_group) {create :unit_group, numbered_units: numbered_units}
     let(:unit_title) {'my_unit_title'}
     let(:unit) {create :unit, original_unit_group: unit_group}
     let(:position) {2}
     let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position}
-    let(:unit_group_other) {create :unit_group, has_numbered_units: has_numbered_units}
+    let(:unit_group_other) {create :unit_group, numbered_units: numbered_units}
     let(:position_other) {1}
     let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group_other.id, position: position_other}
 
@@ -2587,19 +2587,28 @@ class UnitTest < ActiveSupport::TestCase
     context 'default unit_group_unit' do
       let(:subject) {unit.title_for_display}
 
-      context 'has_numbered_units is false' do
-        let(:has_numbered_units) {false}
+      context 'numbered_units is nil' do
+        let(:numbered_units) {nil}
 
         it 'returns the unit title' do
           _(subject).must_equal 'my_unit_title'
         end
       end
 
-      context 'has_numbered_units is true' do
-        let(:has_numbered_units) {true}
+      context 'numbered_units is auto' do
+        let(:numbered_units) {'auto'}
 
         it 'returns the unit title with prefix' do
           _(subject).must_equal 'Unit 2 - my_unit_title'
+        end
+      end
+
+      context 'numbered_units is custom' do
+        let(:numbered_units) {'custom'}
+        let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position, unit_prefix: '1a'}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1a - my_unit_title'
         end
       end
     end
@@ -2607,47 +2616,64 @@ class UnitTest < ActiveSupport::TestCase
     context 'unit_group_unit is the original' do
       let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit)}
 
-      context 'has_numbered_units is false' do
-        let(:has_numbered_units) {false}
+      context 'numbered_units is nil' do
+        let(:numbered_units) {nil}
 
         it 'returns the unit title' do
           _(subject).must_equal 'my_unit_title'
         end
       end
 
-      context 'has_numbered_units is true' do
-        let(:has_numbered_units) {true}
+      context 'numbered_units is auto' do
+        let(:numbered_units) {'auto'}
 
         it 'returns the unit title with prefix' do
           _(subject).must_equal 'Unit 2 - my_unit_title'
         end
       end
 
-      context 'unit_group_unit is the other' do
-        let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
+      context 'numbered_units is custom' do
+        let(:numbered_units) {'custom'}
+        let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position, unit_prefix: '1a'}
 
-        context 'has_numbered_units is false' do
-          let(:has_numbered_units) {false}
-
-          it 'returns the unit title' do
-            _(subject).must_equal 'my_unit_title'
-          end
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1a - my_unit_title'
         end
+      end
+    end
 
-        context 'has_numbered_units is true' do
-          let(:has_numbered_units) {true}
+    context 'unit_group_unit is the other' do
+      let(:subject) {unit.title_for_display(unit_group_unit: unit_group_unit_other)}
+
+      context 'numbered_units is nil' do
+        let(:numbered_units) {nil}
+
+        it 'returns the unit title' do
+          _(subject).must_equal 'my_unit_title'
+        end
+      end
+
+      context 'numbered_units is auto' do
+        let(:numbered_units) {'auto'}
+
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1 - my_unit_title'
+        end
+        context 'position_other is 3' do
+          let(:position_other) {3}
 
           it 'returns the unit title with prefix' do
-            _(subject).must_equal 'Unit 1 - my_unit_title'
+            _(subject).must_equal 'Unit 3 - my_unit_title'
           end
+        end
+      end
 
-          context 'position_other is 3' do
-            let(:position_other) {3}
+      context 'numbered_units is custom' do
+        let(:numbered_units) {'custom'}
+        let!(:unit_group_unit_other) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: position, unit_prefix: '1a'}
 
-            it 'returns the unit title with prefix' do
-              _(subject).must_equal 'Unit 3 - my_unit_title'
-            end
-          end
+        it 'returns the unit title with prefix' do
+          _(subject).must_equal 'Unit 1a - my_unit_title'
         end
       end
     end

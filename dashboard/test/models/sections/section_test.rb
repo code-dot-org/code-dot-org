@@ -847,6 +847,29 @@ class SectionTest < ActiveSupport::TestCase
     assert summarized_section[:script][:project_sharing]
   end
 
+  test 'summarize_for_participant: section with a course assigned' do
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: unit_group
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      teacherName: section.teacher.name,
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
+      currentUnitTitle: '',
+      linkToCurrentUnit: '',
+      code: section.code,
+      login_type: "email",
+      grades: nil,
+      is_assigned_single_unit_course: false,
+    }
+
+    assert_equal expected, section.summarize_for_participant
+  end
+
   test 'summarize: section with a course assigned' do
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
@@ -1459,6 +1482,17 @@ class SectionTest < ActiveSupport::TestCase
     si.reload
 
     refute si.deleted?
+  end
+
+  test 'section grants access to AI Chat when DCDO flag enabled' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
+    section = create :section, unit_group: unit_group
+
+    refute section.assigned_ai_chat?
+    DCDO.stubs(:get).with('aichat_access_units', []).returns([script.name])
+    assert section.assigned_ai_chat?
   end
 
   def set_up_code_review_groups

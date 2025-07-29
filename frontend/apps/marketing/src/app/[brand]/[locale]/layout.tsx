@@ -1,8 +1,10 @@
 import {ThemeProvider} from '@mui/material';
 import {AppRouterCacheProvider} from '@mui/material-nextjs/v15-appRouter';
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
+import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
 import Header from '@/components/header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
@@ -16,7 +18,7 @@ import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
-import {getMuiTheme} from '@/themes';
+import {getCriticalFonts, getMuiTheme} from '@/themes';
 
 export default async function Layout({
   children,
@@ -28,11 +30,22 @@ export default async function Layout({
   const syncParams = await params;
   const {brand, locale} = syncParams;
 
+  await getCriticalFonts(brand);
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);
   const statsigBootstrapValues = await generateBootstrapValues();
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
   const theme = getMuiTheme(brand);
+  const isDraftModeEnabled = (await draftMode()).isEnabled;
+  // Get Footer component based on brand
+  const getFooter = () => {
+    switch (brand) {
+      case Brand.CS_FOR_ALL:
+        return <FooterCSforAll locale={locale} />;
+      case Brand.CODE_DOT_ORG:
+        return <Footer locale={locale} />;
+    }
+  };
 
   return (
     <html lang={locale} dir={localeConfig?.isRTL ? 'rtl' : 'ltr'}>
@@ -42,7 +55,11 @@ export default async function Layout({
             <EnvironmentLoader />
             <NewRelicLoader />
             <OneTrustLoader brand={brand} />
-            <LocalizeLoader brand={brand} locale={locale} />
+            <LocalizeLoader
+              brand={brand}
+              locale={locale}
+              isDraftMode={isDraftModeEnabled}
+            />
 
             <OneTrustProvider>
               {googleAnalyticsMeasurementId && (
@@ -55,8 +72,7 @@ export default async function Layout({
               >
                 <Header />
                 {children}
-
-                <Footer locale={locale} />
+                {getFooter()}
               </StatsigProvider>
             </OneTrustProvider>
 

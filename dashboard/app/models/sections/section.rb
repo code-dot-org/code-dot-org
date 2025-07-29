@@ -483,38 +483,16 @@ class Section < ApplicationRecord
     ActiveRecord::Base.connected_to(role: :reading) do
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
-      title = ''
-      link_to_assigned = base_url
-      title_of_current_unit = ''
-      link_to_current_unit = ''
-      course_version_name = nil
-
-      if unit_group
-        title = unit_group.localized_title
-        link_to_assigned = course_path(unit_group)
-        course_version_name = unit_group.name
-        if script_id
-          title_of_current_unit = script.title_for_display
-          link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
-                                   course_unit_path(unit_group, unit_group_unit.position)
-                                 else
-                                   script_path(script)
-                                 end
+      course_version_name =
+        if unit_group
+          unit_group.name
+        elsif script_id
+          if unit_group_unit
+            unit_group_unit.unit_group.name
+          else
+            script.name
+          end
         end
-      elsif script_id
-        title = script.title_for_display
-        if unit_group_unit
-          link_to_assigned = if Policies::Courses.modularity_enabled?
-                               course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
-                             else
-                               script_path(script)
-                             end
-          course_version_name = unit_group_unit.unit_group.name
-        else
-          course_version_name = script.name
-          link_to_assigned = script_path(script)
-        end
-      end
 
       selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
@@ -539,57 +517,95 @@ class Section < ApplicationRecord
         issuer = lti_course.lti_integration.issuer
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
+      summarize_for_participant.merge(
+        {
+          createdAt: created_at,
+          sectionInstructors: serialized_section_instructors,
+          primaryInstructor: primary_instructor,
+          linkToProgress: "#{base_url}#{id}/progress",
+          courseVersionName: course_version_name,
+          numberOfStudents: num_students,
+          linkToStudents: manage_students_url,
+          lesson_extras: lesson_extras,
+          pairing_allowed: pairing_allowed,
+          tts_autoplay_enabled: tts_autoplay_enabled,
+          sharing_disabled: sharing_disabled?,
+          login_type_name: login_type_name,
+          participant_type: participant_type,
+          course_display_name: course_display_name,
+          course_offering_id: course_offering_id,
+          course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+          unit_id: unit_group ? script_id : nil,
+          unitPosition: unit_group_unit&.position,
+          course_id: course_id,
+          script: {
+            id: selected_unit&.id,
+            name: selected_unit&.name,
+            project_sharing: selected_unit&.project_sharing
+          },
+          studentCount: num_students,
+          providerManaged: provider_managed?,
+          hidden: hidden,
+          students: include_students ? unique_students.map(&:summarize) : nil,
+          restrict_section: restrict_section,
+          is_assigned_csa: assigned_csa?,
+          # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+          post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+          code_review_expires_at: code_review_expires_at,
+          sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+          ai_tutor_enabled: ai_tutor_enabled,
+          at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
+          at_risk_age_gated_us_state: at_risk_student&.us_state,
+          avatar_color: avatar_color,
+          avatar_emoji: avatar_emoji,
+        }
+      )
+    end
+  end
+
+  # A very abridged version of summarize that shows only information needed by participants.
+  def summarize_for_participant
+    ActiveRecord::Base.connected_to(role: :reading) do
+      base_url = CDO.studio_url('/teacher_dashboard/sections/')
+
+      title = ''
+      link_to_assigned = base_url
+      title_of_current_unit = ''
+      link_to_current_unit = ''
+
+      if unit_group
+        title = unit_group.localized_title
+        link_to_assigned = course_path(unit_group)
+        if script_id
+          title_of_current_unit = script.title_for_display
+          link_to_current_unit = if Policies::Courses.modularity_enabled? && unit_group_unit
+                                   course_unit_path(unit_group, unit_group_unit.position)
+                                 else
+                                   script_path(script)
+                                 end
+        end
+      elsif script_id
+        title = script.title_for_display
+        link_to_assigned =
+          if unit_group_unit && Policies::Courses.modularity_enabled?
+            course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+          else
+            script_path(script)
+          end
+      end
+
       {
         id: id,
         name: name,
-        createdAt: created_at,
         teacherName: teacher.name,
-        sectionInstructors: serialized_section_instructors,
-        primaryInstructor: primary_instructor,
-        linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
         currentUnitTitle: title_of_current_unit,
         linkToCurrentUnit: link_to_current_unit,
-        courseVersionName: course_version_name,
-        numberOfStudents: num_students,
-        linkToStudents: manage_students_url,
         code: code,
-        lesson_extras: lesson_extras,
-        pairing_allowed: pairing_allowed,
-        tts_autoplay_enabled: tts_autoplay_enabled,
-        sharing_disabled: sharing_disabled?,
         login_type: login_type,
-        login_type_name: login_type_name,
-        participant_type: participant_type,
-        course_display_name: course_display_name,
-        course_offering_id: course_offering_id,
-        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-        unit_id: unit_group ? script_id : nil,
-        unitPosition: unit_group_unit&.position,
-        course_id: course_id,
-        script: {
-          id: selected_unit&.id,
-          name: selected_unit&.name,
-          project_sharing: selected_unit&.project_sharing
-        },
-        studentCount: num_students,
         grades: grades,
-        providerManaged: provider_managed?,
-        hidden: hidden,
-        students: include_students ? unique_students.map(&:summarize) : nil,
-        restrict_section: restrict_section,
-        is_assigned_csa: assigned_csa?,
         is_assigned_single_unit_course: unit_group&.single_unit_course?,
-        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
-        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-        code_review_expires_at: code_review_expires_at,
-        sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-        ai_tutor_enabled: ai_tutor_enabled,
-        at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
-        at_risk_age_gated_us_state: at_risk_student&.us_state,
-        avatar_color: avatar_color,
-        avatar_emoji: avatar_emoji,
       }
     end
   end
@@ -654,7 +670,7 @@ class Section < ApplicationRecord
   def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
   end
 
   def code_review_enabled?
@@ -710,6 +726,7 @@ class Section < ApplicationRecord
       the-fabric-of-the-internet-and-ai-2025
       cybersecurity-and-global-impacts-2025
       insights-from-data-and-ai-2025
+      problem-solving-with-ai-2025
     ]
 
     # In order to support an organizational event.
@@ -719,8 +736,19 @@ class Section < ApplicationRecord
 
     # Note that as of May 2025, script-specific assignment without course assignment
     # is not possible, so the first condition here is not necessary.
-    (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
-      (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+    if (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
+        (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+      return true
+    end
+
+    # In case we overlook a course that should have access,
+    # allow levelbuilders to dynamically allow access to AI Chat via DCDO.
+    # Note that levelbuilders should specify UNIT slugs (eg, aif1-2025),
+    # not COURSE slugs (eg, problem-solving-with-ai-2025)
+    dcdo_scripts = DCDO.get('aichat_access_units', [])
+    dcdo_scripts.flat_map do |name|
+      Unit.find_by(name: name)&.unit_groups || []
+    end.map(&:name).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

@@ -285,6 +285,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           scrollStart={scrollStart}
           scrollEnd={scrollEnd}
           className={classNames(styles[`sequence-editor-${interfaceMode}`])}
+          ariaLabel="Instrument Grid"
         >
           {allNotes.map(({note, name}) => {
             const {

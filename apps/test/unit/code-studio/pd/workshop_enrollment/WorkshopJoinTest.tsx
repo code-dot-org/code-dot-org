@@ -12,29 +12,29 @@ jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
 }));
 
 const DEFAULT_PROPS = {
-  workshop_enrollment_status: SUBMISSION_STATUSES.UNSUBMITTED,
-  workshop_info: {
+  workshopInfo: {
     id: 1,
     course: 'Build Your Own Workshop',
     name: 'My Sick Workshop',
-    format: 'Virtual',
-    rp_name: 'Reggie Partner',
-    session_info_for_calendar: [],
+    format: 'virtual' as const,
+    regionalPartnerName: 'Reggie Partner',
+    sessions: [],
   },
-  user_info: {
+  userInfo: {
     id: 1,
-    display_name: 'Ms. McEntire',
-    first_name: 'Reba',
-    last_name: 'McEntire',
+    displayName: 'Ms. McEntire',
+    givenName: 'Reba',
+    familyName: 'McEntire',
     email: 'reba@mcentire.com',
-    school_info: {
-      school_id: 1,
+    schoolInfo: {
+      schoolId: 1,
       country: 'United States',
-      school_name: 'Sample School Name',
-      school_zip: '11111',
-      school_type: undefined,
+      schoolName: 'Sample School Name',
+      schoolZip: '11111',
+      schoolType: undefined,
     },
   },
+  workshopEnrollmentStatus: SUBMISSION_STATUSES.UNSUBMITTED,
 };
 
 const renderDefault = (overrideProps = {}) => {
@@ -44,42 +44,42 @@ const renderDefault = (overrideProps = {}) => {
 
 describe('WorkshopJoin', () => {
   it('enrollment status of Duplicate tells user they are already enrolled', () => {
-    renderDefault({workshop_enrollment_status: SUBMISSION_STATUSES.DUPLICATE});
+    renderDefault({workshopEnrollmentStatus: SUBMISSION_STATUSES.DUPLICATE});
     screen.getByText('Duplicate enrollment');
   });
 
   it('enrollment status of Own tells user they cannot enroll in their own workshop', () => {
-    renderDefault({workshop_enrollment_status: SUBMISSION_STATUSES.OWN});
+    renderDefault({workshopEnrollmentStatus: SUBMISSION_STATUSES.OWN});
     screen.getByText('Your own workshop');
   });
 
   it('enrollment status of Closed tells user the workshop is closed', () => {
-    renderDefault({workshop_enrollment_status: SUBMISSION_STATUSES.CLOSED});
+    renderDefault({workshopEnrollmentStatus: SUBMISSION_STATUSES.CLOSED});
     screen.getByText('Closed');
   });
 
   it('enrollment status of Full tells user the workshop is full', () => {
-    renderDefault({workshop_enrollment_status: SUBMISSION_STATUSES.FULL});
+    renderDefault({workshopEnrollmentStatus: SUBMISSION_STATUSES.FULL});
     screen.getByText('Full');
   });
 
   it('enrollment status of Not Found tells user the workshop cannot be found', () => {
-    renderDefault({workshop_enrollment_status: SUBMISSION_STATUSES.NOT_FOUND});
+    renderDefault({workshopEnrollmentStatus: SUBMISSION_STATUSES.NOT_FOUND});
     screen.getByText('Not found');
   });
 
   it('enrollment status of Unsubmitted shows user the info to enroll and their UserPassport', () => {
     renderDefault({
-      workshop_enrollment_status: SUBMISSION_STATUSES.UNSUBMITTED,
+      workshopEnrollmentStatus: SUBMISSION_STATUSES.UNSUBMITTED,
     });
 
     screen.getByText('Review your information');
-    screen.getByText(DEFAULT_PROPS.user_info.display_name);
+    screen.getByText(DEFAULT_PROPS.userInfo.displayName);
     screen.getByText(
-      `${DEFAULT_PROPS.user_info.first_name} ${DEFAULT_PROPS.user_info.last_name}`
+      `${DEFAULT_PROPS.userInfo.givenName} ${DEFAULT_PROPS.userInfo.familyName}`
     );
-    screen.getByText(DEFAULT_PROPS.user_info.email);
-    screen.getByText(DEFAULT_PROPS.user_info.school_info.school_name);
+    screen.getByText(DEFAULT_PROPS.userInfo.email);
+    screen.getByText(DEFAULT_PROPS.userInfo.schoolInfo.schoolName);
   });
 
   it('enroll button is enabled and no errors are shown if all UserPassport fields are present', () => {
@@ -94,13 +94,13 @@ describe('WorkshopJoin', () => {
 
   it('enroll button is enabled and no errors are shown if user does not teach in a school setting', () => {
     const noSchoolSettingSchoolInfo = {
-      ...DEFAULT_PROPS.user_info.school_info,
-      school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
+      ...DEFAULT_PROPS.userInfo.schoolInfo,
+      schoolType: NonSchoolOptions.NO_SCHOOL_SETTING,
     };
     renderDefault({
-      user_info: {
-        ...DEFAULT_PROPS.user_info,
-        school_info: noSchoolSettingSchoolInfo,
+      userInfo: {
+        ...DEFAULT_PROPS.userInfo,
+        schoolInfo: noSchoolSettingSchoolInfo,
       },
     });
 
@@ -113,9 +113,9 @@ describe('WorkshopJoin', () => {
 
   it('enroll button is disabled and errors are shown if there are missing UserPassport fields', () => {
     renderDefault({
-      user_info: {
-        first_name: '',
-        school_info: {},
+      userInfo: {
+        givenName: '',
+        schoolInfo: {},
       },
     });
 
@@ -144,7 +144,7 @@ describe('WorkshopJoin', () => {
       screen.getByText('Error submitting');
 
       expect(fetchStub).toHaveBeenCalledWith(
-        `/api/v1/pd/workshops/${DEFAULT_PROPS.workshop_info.id}/enrollments`,
+        `/api/v1/pd/workshops/${DEFAULT_PROPS.workshopInfo.id}/enrollments`,
         {
           method: 'POST',
           headers: {
@@ -152,11 +152,7 @@ describe('WorkshopJoin', () => {
             'X-CSRF-Token': 'authToken',
           },
           body: JSON.stringify({
-            user_id: DEFAULT_PROPS.user_info.id,
-            email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.first_name,
-            last_name: DEFAULT_PROPS.user_info.last_name,
-            school_info: DEFAULT_PROPS.user_info.school_info,
+            user_id: DEFAULT_PROPS.userInfo.id,
           }),
         }
       );
@@ -185,7 +181,7 @@ describe('WorkshopJoin', () => {
 
     await waitFor(() => {
       expect(fetchStub).toHaveBeenCalledWith(
-        `/api/v1/pd/workshops/${DEFAULT_PROPS.workshop_info.id}/enrollments`,
+        `/api/v1/pd/workshops/${DEFAULT_PROPS.workshopInfo.id}/enrollments`,
         {
           method: 'POST',
           headers: {
@@ -193,11 +189,7 @@ describe('WorkshopJoin', () => {
             'X-CSRF-Token': 'authToken',
           },
           body: JSON.stringify({
-            user_id: DEFAULT_PROPS.user_info.id,
-            email: DEFAULT_PROPS.user_info.email,
-            first_name: DEFAULT_PROPS.user_info.first_name,
-            last_name: DEFAULT_PROPS.user_info.last_name,
-            school_info: DEFAULT_PROPS.user_info.school_info,
+            user_id: DEFAULT_PROPS.userInfo.id,
           }),
         }
       );

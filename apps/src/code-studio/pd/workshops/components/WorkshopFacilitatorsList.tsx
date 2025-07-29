@@ -9,7 +9,7 @@ import {
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
-import {FacilitatorInfo, GetWorkshopInfoScriptDataResponse} from './../types';
+import {FacilitatorInfo, WorkshopInfo} from './../types';
 
 import moduleStyles from './workshopFaccilitatorsList.module.scss';
 
@@ -63,7 +63,7 @@ const FacilitatorItem: React.FC<{facilitator: FacilitatorInfo}> = ({
 };
 
 interface WorkshopSessionsListProps
-  extends Pick<GetWorkshopInfoScriptDataResponse, 'facilitators'> {}
+  extends Pick<WorkshopInfo, 'facilitators'> {}
 
 /** Component to render a list of workshop facilitators. */
 const WorkshopFacilitatorsList: React.FC<WorkshopSessionsListProps> = ({

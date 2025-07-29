@@ -208,6 +208,7 @@ class User < ApplicationRecord
     has_completed_ai_differentiation_welcome
     sort_by_family_name
     show_progress_table_v2
+    has_seen_homepage_welcome
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     progress_table_v2_timestamp
@@ -718,75 +719,6 @@ class User < ApplicationRecord
     success
   end
 
-  def upgrade_to_personal_login(params)
-    return false unless student?
-
-    if secret_word_account? && !valid_secret_words?(params[:secret_words])
-      error = params[:secret_words].blank? ? :blank_plural : :invalid_plural
-      errors.add(:secret_words, error)
-      return false
-    end
-
-    unless migrated?
-      params[:provider] = nil # Set provider to nil to mark the account as self-managed
-      return update(params)
-    end
-
-    email = params.delete(:email)
-    hashed_email = params.delete(:hashed_email)
-    should_update_contact_info = email.present? || hashed_email.present?
-    transaction do
-      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
-      update!(params)
-    end
-  rescue
-    false # Relevant errors are set on the user model, so we rescue and return false here.
-  end
-
-  def set_user_type(user_type, email = nil, email_preference = nil)
-    case user_type
-    when TYPE_TEACHER
-      upgrade_to_teacher(email, email_preference)
-    when TYPE_STUDENT
-      downgrade_to_student
-    else
-      false # Unexpected user type
-    end
-  end
-
-  def downgrade_to_student
-    return true if student? # No-op if user is already a student
-    update(user_type: TYPE_STUDENT, given_name: nil, family_name: nil)
-  end
-
-  def upgrade_to_teacher(email, email_preference = nil)
-    return true if teacher? # No-op if user is already a teacher
-    return false if email.blank?
-
-    hashed_email = User.hash_email(email)
-    self.user_type = TYPE_TEACHER
-    # teachers do not need another adult to have access to their account.
-    self.parent_email = nil
-
-    new_attributes = email_preference.nil? ? {} : email_preference
-    if Policies::Lti.lti? self
-      self.lti_roster_sync_enabled = true
-    end
-
-    transaction do
-      if migrated?
-        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
-      else
-        new_attributes[:email] = email
-      end
-      update!(new_attributes)
-
-      self
-    end
-  rescue
-    false # Relevant errors are set on the user model, so we rescue and return false here.
-  end
-
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
@@ -1285,11 +1217,7 @@ class User < ApplicationRecord
       birthday: birthday,
       secret_words: secret_words,
       secret_picture_name: secret_picture&.name,
-
-      # DEPRECATED: +secret_picture_path+ will be removed in future releases. Use +secret_picture_url+ instead.
-      secret_picture_path: secret_picture&.path,
       secret_picture_url: secret_picture && ApplicationController.helpers.image_url(secret_picture.path),
-
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
@@ -1308,8 +1236,8 @@ class User < ApplicationRecord
       email: email,
       is_student: user_type == TYPE_STUDENT,
       display_name: name,
-      first_name: given_name,
-      last_name: family_name,
+      given_name: given_name,
+      family_name: family_name,
       school_info: Queries::SchoolInfo.current_school(self),
     }
   end

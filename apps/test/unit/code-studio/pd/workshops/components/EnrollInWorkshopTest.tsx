@@ -6,28 +6,28 @@ import {SessionFormat} from '@cdo/apps/code-studio/pd/workshop_dashboard/Worksho
 import EnrollInWorkshop from '@cdo/apps/code-studio/pd/workshops/components/EnrollInWorkshop';
 
 const baseUserInfo = {
-  is_student: false,
+  isStudent: false,
   id: 123,
   email: 'sample@google.com',
-  display_name: 'Mr. Doe',
-  first_name: 'John',
-  last_name: 'Doe',
-  school_info: {
-    school_id: 1,
+  displayName: 'Mr. Doe',
+  givenName: 'John',
+  familyName: 'Doe',
+  schoolInfo: {
+    schoolId: 1,
     country: 'United States',
-    school_name: 'School Academy',
+    schoolName: 'School Academy',
     zip: '11111',
-    school_type: undefined,
+    schoolType: undefined,
   },
 };
 
 const baseProps = {
   id: 1,
-  custom_registration_link: undefined,
-  num_enrollments: 0,
+  customRegistrationLink: undefined,
+  numEnrollments: 0,
   capacity: 10,
   userInfo: baseUserInfo,
-  regional_partner_name: 'Sample Partner',
+  regionalPartnerName: 'Sample Partner',
   course: 'CS Principles',
   name: 'Sample Workshop',
   format: 'hybrid' as const,
@@ -55,13 +55,13 @@ describe('EnrollInWorkshop', () => {
   });
 
   it('shows "Workshop is full" button if full', () => {
-    render(<EnrollInWorkshop {...baseProps} num_enrollments={10} />);
+    render(<EnrollInWorkshop {...baseProps} numEnrollments={10} />);
     const fullButton = screen.getByRole('button', {name: /Workshop is full/i});
     expect(fullButton).toBeDisabled();
   });
 
   it('enroll button is disabled if user information is missing', () => {
-    const missingFirstNameUserInfo = {...baseUserInfo, first_name: ''};
+    const missingFirstNameUserInfo = {...baseUserInfo, givenName: ''};
     render(
       <EnrollInWorkshop {...baseProps} userInfo={missingFirstNameUserInfo} />
     );
@@ -81,7 +81,7 @@ describe('EnrollInWorkshop', () => {
     expect(enrollButton).toBeEnabled();
   });
 
-  it('enroll button sends logged out users to logged out gate if workshop has no custom_registration_link', () => {
+  it('enroll button sends logged out users to logged out gate if workshop has no customRegistrationLink', () => {
     render(<EnrollInWorkshop {...baseProps} userInfo={null} />);
     const linkButton = screen.getByRole('link', {
       name: /Sign-in to enroll/i,
@@ -94,11 +94,11 @@ describe('EnrollInWorkshop', () => {
     );
   });
 
-  it('enroll button sends students to update account type gate if workshop has no custom_registration_link', () => {
+  it('enroll button sends students to update account type gate if workshop has no customRegistrationLink', () => {
     render(
       <EnrollInWorkshop
         {...baseProps}
-        userInfo={{...baseUserInfo, is_student: true}}
+        userInfo={{...baseUserInfo, isStudent: true}}
       />
     );
     const linkButton = screen.getByRole('link', {
@@ -112,7 +112,7 @@ describe('EnrollInWorkshop', () => {
     );
   });
 
-  it('shows internal enrollment button to teachers if workshop has no custom_registration_link', () => {
+  it('shows internal enrollment button to teachers if workshop has no customRegistrationLink', () => {
     render(<EnrollInWorkshop {...baseProps} />);
     const enrollButton = screen.getByRole('button', {
       name: /Enroll in this workshop/i,
@@ -121,13 +121,13 @@ describe('EnrollInWorkshop', () => {
     expect(enrollButton).toBeEnabled();
   });
 
-  it('enroll button sends signed-out users to partner registration link if custom_registration_link is present', () => {
+  it('enroll button sends signed-out users to partner registration link if customRegistrationLink is present', () => {
     const customLink = 'https://partner.org/enroll';
     render(
       <EnrollInWorkshop
         {...baseProps}
         userInfo={null}
-        custom_registration_link={customLink}
+        customRegistrationLink={customLink}
       />
     );
 
@@ -141,13 +141,13 @@ describe('EnrollInWorkshop', () => {
     expect(linkButton).toHaveAttribute('href', customLink);
   });
 
-  it('enroll button sends student users to partner registration link if custom_registration_link is present', () => {
+  it('enroll button sends student users to partner registration link if customRegistrationLink is present', () => {
     const customLink = 'https://partner.org/enroll';
     render(
       <EnrollInWorkshop
         {...baseProps}
-        userInfo={{...baseUserInfo, is_student: true}}
-        custom_registration_link={customLink}
+        userInfo={{...baseUserInfo, isStudent: true}}
+        customRegistrationLink={customLink}
       />
     );
 
@@ -161,10 +161,10 @@ describe('EnrollInWorkshop', () => {
     expect(linkButton).toHaveAttribute('href', customLink);
   });
 
-  it('enroll button sends teachers users to partner registration link if custom_registration_link is present', () => {
+  it('enroll button sends teachers users to partner registration link if customRegistrationLink is present', () => {
     const customLink = 'https://partner.org/enroll';
     render(
-      <EnrollInWorkshop {...baseProps} custom_registration_link={customLink} />
+      <EnrollInWorkshop {...baseProps} customRegistrationLink={customLink} />
     );
 
     expect(
