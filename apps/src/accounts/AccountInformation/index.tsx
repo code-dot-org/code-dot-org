@@ -353,22 +353,20 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
           )}
 
           {/* username */}
-          {userUsername && (
-            <TextField
-              id="user_username"
-              className={commonStyles.input}
-              label={i18n.username()}
-              onChange={e => {
-                setUsername(e.target.value);
-                clearError('username');
-              }}
-              value={username}
-              name="user[username]"
-              maxLength={20}
-              minLength={5}
-              errorMessage={getError('username')}
-            />
-          )}
+          <TextField
+            id="user_username"
+            className={commonStyles.input}
+            label={i18n.username()}
+            onChange={e => {
+              setUsername(e.target.value);
+              clearError('username');
+            }}
+            value={username}
+            name="user[username]"
+            maxLength={20}
+            minLength={5}
+            errorMessage={getError('username')}
+          />
 
           {/* educator_role */}
           {!isStudent && (
