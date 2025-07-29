@@ -171,6 +171,7 @@ class P5LabView extends React.Component {
                   : this.state.projectType
               }
               uploadsEnabled={this.state.uploadsEnabled}
+              projectType={this.props.labType.toLowerCase()}
             />
           )}
         </div>

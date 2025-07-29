@@ -65,6 +65,7 @@ class AnimationPicker extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    projectType: PropTypes.string,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -89,9 +90,6 @@ class AnimationPicker extends React.Component {
     pendingUploadData: null,
     flaggedModalError: null,
   };
-
-  appType =
-    this.props.pickerType === PICKER_TYPE.gamelab ? 'gamelab' : 'spritelab';
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
 
@@ -145,6 +143,7 @@ class AnimationPicker extends React.Component {
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
           uploadsEnabled={this.props.uploadsEnabled}
+          projectType={this.props.projectType}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -200,7 +199,10 @@ class AnimationPicker extends React.Component {
           });
           analyticsReporter.sendEvent(
             EVENTS.FLAGGED_CUSTOM_IMAGE,
-            {LabType: this.appType},
+            {
+              UploaderType: 'Animation Picker',
+              ProjectType: this.props.projectType,
+            },
             PLATFORMS.STATSIG
           );
         } else {
@@ -237,16 +239,19 @@ class AnimationPicker extends React.Component {
         });
         analyticsReporter.sendEvent(
           EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
-          {LabType: this.appType},
+          {
+            UploaderType: 'Animation Picker',
+            ProjectType: this.props.projectType,
+          },
           PLATFORMS.STATSIG
         );
       })
       .catch(err => {
-        console.error('Update abuse error:', err);
         this.setState({
           showFlaggedModal: true,
           flaggedModalError: msg.animationPicker_uploadingError(),
         });
+        MetricsReporter.logError('Update project abuse error: ' + err);
       });
   };
 
@@ -258,7 +263,7 @@ class AnimationPicker extends React.Component {
     });
     analyticsReporter.sendEvent(
       EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
-      {LabType: this.appType},
+      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
       PLATFORMS.STATSIG
     );
     this.props.onClose(); // Close the entire AnimationPicker
