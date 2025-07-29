@@ -15,6 +15,7 @@
 #  standalone              :boolean          default(TRUE)
 #  remix_parent_id         :integer
 #  skip_content_moderation :boolean
+#    -- NOTE: skip_content_moderation is currently not used in the codebase.
 #
 # Indexes
 #
