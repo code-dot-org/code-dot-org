@@ -161,8 +161,6 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
-  SYSTEM_DELETED_USERNAME = 'sys_deleted'
-
   serialized_attrs %w(
     ops_first_name
     ops_last_name
