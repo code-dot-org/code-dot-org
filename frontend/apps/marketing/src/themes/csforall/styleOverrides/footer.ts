@@ -46,6 +46,10 @@ export const FOOTER_OVERRIDES: Components<Theme>['MuiFooter'] = {
         paddingInlineStart: theme.spacing(1.5),
         paddingInlineEnd: theme.spacing(4),
         borderRadius: 12,
+        '& option': {
+          background: theme.palette.common.white,
+          color: theme.palette.text.primary,
+        },
         '&:focus-visible': {
           outline: `1px solid ${theme.palette.common.white}`,
           outlineOffset: 4,
