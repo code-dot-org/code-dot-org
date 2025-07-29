@@ -14,6 +14,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import appConfig from '../appConfig';
 import {BlockMode, MIN_NUM_MEASURES} from '../constants';
+import musicI18n from '../locale';
 import {
   clearSelectedBlockId,
   getBlockMode,
@@ -246,7 +247,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   return (
     <div
       id="timeline"
-      aria-label="Timeline"
+      aria-label={musicI18n.timelineContainer()}
       className={classNames(
         moduleStyles.timeline,
         isPlaying && moduleStyles.timelinePlaying
