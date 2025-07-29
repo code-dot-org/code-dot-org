@@ -7,7 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import NativeSelect from '@mui/material/NativeSelect';
+import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -125,8 +125,9 @@ const FooterMui: React.FC<FooterProps> = ({
           </FooterLinks>
           {/* Language Selector */}
           <FormControl variant="standard">
-            <NativeSelect
+            <Select
               className="notranslate"
+              native
               disableUnderline
               name="language-select"
               IconComponent={KeyboardArrowDownIcon}
@@ -139,7 +140,7 @@ const FooterMui: React.FC<FooterProps> = ({
                   {lang.text}
                 </option>
               ))}
-            </NativeSelect>
+            </Select>
           </FormControl>
         </Grid>
         <Grid
