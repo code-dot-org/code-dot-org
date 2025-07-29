@@ -4,7 +4,7 @@ class Lti::V1::FeedbackControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @user = create(:teacher)
+    @user = create :teacher
   end
 
   setup do
@@ -53,7 +53,7 @@ class Lti::V1::FeedbackControllerTest < ActionController::TestCase
   end
 
   test 'show - returns the LTI Feedback for the current user' do
-    lti_feedback = create(:lti_feedback, user: @user)
+    lti_feedback = create :lti_feedback, user: @user
 
     get :show, format: :json
 

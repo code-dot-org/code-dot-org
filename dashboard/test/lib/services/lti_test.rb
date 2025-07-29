@@ -411,7 +411,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     section = create :section, user: user
 
     lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -496,7 +496,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     section = create :section, user: user
 
     lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -527,7 +527,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     lti_deployment = create :lti_deployment, lti_integration: @lti_integration
     lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -576,7 +576,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     lti_deployment = create :lti_deployment, lti_integration: @lti_integration
     lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -594,7 +594,7 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     lti_deployment = create :lti_deployment, lti_integration: @lti_integration
     lti_course = create :lti_course, lti_integration: @lti_integration, lti_deployment: lti_deployment
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -615,7 +615,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     section = create :section, user: user, hidden: true
 
     lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -637,10 +637,10 @@ class Services::LtiTest < ActiveSupport::TestCase
     create :lti_user_identity, lti_integration: @lti_integration, user: co_teacher, subject: 'student-0'
 
     section = create :section, user: user
-    co_teacher_si = create(:section_instructor, section: section, instructor: co_teacher, status: :active)
+    co_teacher_si = create :section_instructor, section: section, instructor: co_teacher, status: :active
 
     lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]
@@ -666,7 +666,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     section.add_student(student)
 
     lti_course = create :lti_course, lti_integration: @lti_integration
-    lti_section = create(:lti_section, lti_course: lti_course, section: section)
+    lti_section = create :lti_section, lti_course: lti_course, section: section
     Policies::Lti.stubs(:issuer_accepts_resource_link?).returns(true)
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response, @id_token[:iss])
     nrps_section = parsed_response[@lms_section_ids.first.to_s]

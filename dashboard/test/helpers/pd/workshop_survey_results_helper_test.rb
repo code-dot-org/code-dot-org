@@ -40,11 +40,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'averaging across multiple surveys' do
-    workshop_1 = build(:workshop, :teachercon, num_sessions: 1, num_facilitators: 2)
+    workshop_1 = build :workshop, :teachercon, num_sessions: 1, num_facilitators: 2
     # workshop subject is deprecated so validation must be skipped
     workshop_1.save(validate: false)
 
-    workshop_2 = build(:workshop, :teachercon, num_sessions: 1, num_facilitators: 3)
+    workshop_2 = build :workshop, :teachercon, num_sessions: 1, num_facilitators: 3
     # workshop subject is deprecated so validation must be skipped
     workshop_2.save(validate: false)
 
@@ -53,13 +53,13 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     # Manually create surveys for the workshops
     5.times do
-      enrollment = create(:pd_enrollment, workshop: workshop_1)
-      create(:pd_teachercon_survey, pd_enrollment: enrollment)
+      enrollment = create :pd_enrollment, workshop: workshop_1
+      create :pd_teachercon_survey, pd_enrollment: enrollment
     end
 
     10.times do
-      enrollment = create(:pd_enrollment, workshop: workshop_2)
-      create(:pd_teachercon_survey, pd_enrollment: enrollment)
+      enrollment = create :pd_enrollment, workshop: workshop_2
+      create :pd_teachercon_survey, pd_enrollment: enrollment
     end
 
     workshop_1.survey_responses.each do |response|

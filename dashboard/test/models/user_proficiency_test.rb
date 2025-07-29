@@ -44,7 +44,7 @@ class UserProficiencyTest < ActiveSupport::TestCase
   test 'increment_level_count' do
     # The factory creates user_proficiency with sequencing_d2_count = 0
     # and repeat_loops_d2_count = 2;
-    user_proficiency = create(:user_proficiency)
+    user_proficiency = create :user_proficiency
 
     user_proficiency.increment_level_count(ConceptDifficulties::SEQUENCING, 2)
     assert_equal 1, user_proficiency.sequencing_d2_count

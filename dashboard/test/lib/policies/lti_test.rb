@@ -125,7 +125,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   test 'account_linking returns false if session initialized, with multiple LTI auth' do
     user = create_opted_out_user
-    google_auth = create(:google_authentication_option, user: user)
+    google_auth = create :google_authentication_option, user: user
     user.authentication_options << google_auth
     user.save
 
@@ -168,25 +168,25 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   class FeedbackAvailabilityTest < ActiveSupport::TestCase
     test 'returns true when user is a teacher, LTI user and created more than 2 days ago' do
-      user = create(:teacher, :with_lti_auth, created_at: 3.days.ago)
+      user = create :teacher, :with_lti_auth, created_at: 3.days.ago
 
       assert Policies::Lti.feedback_available?(user)
     end
 
     test 'returns false when user is not a teacher' do
-      user = create(:student, :with_lti_auth, created_at: 3.days.ago)
+      user = create :student, :with_lti_auth, created_at: 3.days.ago
 
       refute Policies::Lti.feedback_available?(user)
     end
 
     test 'returns false when user is not an LTI user' do
-      user = create(:teacher, created_at: 3.days.ago)
+      user = create :teacher, created_at: 3.days.ago
 
       refute Policies::Lti.feedback_available?(user)
     end
 
     test 'returns false when user is created less than 2 days ago' do
-      user = create(:teacher, :with_lti_auth, created_at: 1.day.ago)
+      user = create :teacher, :with_lti_auth, created_at: 1.day.ago
 
       refute Policies::Lti.feedback_available?(user)
     end

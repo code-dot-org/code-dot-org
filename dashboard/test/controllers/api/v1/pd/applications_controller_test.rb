@@ -39,7 +39,8 @@ module Api::V1::Pd
         role: 'csd_teachers'
       }
 
-      @serializing_teacher = create(:teacher,
+      @serializing_teacher = create(
+        :teacher,
         email: 'minerva@hogwarts.edu',
         school_info: create(
           :school_info,

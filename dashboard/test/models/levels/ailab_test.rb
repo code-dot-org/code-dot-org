@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AilabTest < ActiveSupport::TestCase
   test 'non_blockly_puzzle_level_options returns translated dynamic_instructions when necessary' do
-    level = create(:ailab, name: 'ailab_test')
+    level = create :ailab, name: 'ailab_test'
     dynamic_instructions = {
       "selectDataset" => "Original selectDataset",
       "uploadedDataset" => "Original uploadedDataset",

@@ -4,23 +4,23 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @teacher = create(:teacher)
+    @teacher = create :teacher
     @teacher.permission = UserPermission::AUTHORIZED_TEACHER
-    @section = create(:section, user: @teacher, login_type: 'word')
+    @section = create :section, user: @teacher, login_type: 'word'
 
     # Set of students in section.
     @students = []
     5.times do |i|
-      student = create(:student, name: "student_#{i}")
+      student = create :student, name: "student_#{i}"
       @students << student
-      create(:follower, section: @section, student_user: student)
+      create :follower, section: @section, student_user: student
     end
     @student_1, @student_2, @student_3, @student_4, @student_5 = @students
 
-    @teacher_other = create(:teacher)
+    @teacher_other = create :teacher
     @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
 
-    @unit = create(:unit, :in_single_unit_course)
+    @unit = create :unit, :in_single_unit_course
   end
 
   # index tests - gets assessment questions and answers
@@ -36,8 +36,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test 'non-verified teacher cannot get assessment questions and answers' do
-    non_verified_teacher = create(:teacher)
-    section = create(:section, user: non_verified_teacher, login_type: 'word')
+    non_verified_teacher = create :teacher
+    section = create :section, user: non_verified_teacher, login_type: 'word'
     create(:follower, section: section).student_user
 
     sign_in non_verified_teacher
@@ -55,7 +55,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "verified teacher should get assessments structure" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -151,7 +151,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test "don't show assessment responses to teacher who doesn't own that section" do
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     sign_in @teacher_other
 
     get :section_responses, params: {
@@ -177,7 +177,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "verified teacher should get assessments responses" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -287,7 +287,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "multi choose 2 questions are only correct if both answers are correct" do
     # Sign in and create a new script.
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -367,7 +367,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   test "gets no anonymous survey data via assessment responses call" do
     # Sign in as teacher and create a new script.
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -442,7 +442,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
   end
 
   test "don't show survey responses to teacher who doesn't own that section" do
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     sign_in @teacher_other
 
     get :section_surveys, params: {
@@ -471,7 +471,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     srand 1
 
     # Create a script with an anonymous assessment.
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
@@ -630,7 +630,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test "no anonymous survey data when less than five students" do
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -703,7 +703,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test "section_feedback assert query count" do
     sign_in @teacher
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     weblab_level = create :weblab

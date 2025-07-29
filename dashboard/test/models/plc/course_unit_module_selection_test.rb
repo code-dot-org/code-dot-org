@@ -5,26 +5,26 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     @user = create :teacher
     plc_course = create :plc_course
 
-    @course_unit = create(:plc_course_unit, plc_course: plc_course)
+    @course_unit = create :plc_course_unit, plc_course: plc_course
 
-    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @course_unit.script)
-    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @course_unit.script)
+    @content_lesson_group = create :lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @course_unit.script
+    @practice_lesson_group = create :lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @course_unit.script
 
-    @lesson_cliffs = create(:lesson, name: 'Cliff lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
-    @lesson_ornithology = create(:lesson, name: 'Ornithology lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
-    @lesson_ignorance = create(:lesson, name: 'Ignorance lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
-    @lesson_blue = create(:lesson, name: 'Blue lesson', script: @course_unit.script, lesson_group: @content_lesson_group)
+    @lesson_cliffs = create :lesson, name: 'Cliff lesson', script: @course_unit.script, lesson_group: @content_lesson_group
+    @lesson_ornithology = create :lesson, name: 'Ornithology lesson', script: @course_unit.script, lesson_group: @content_lesson_group
+    @lesson_ignorance = create :lesson, name: 'Ignorance lesson', script: @course_unit.script, lesson_group: @content_lesson_group
+    @lesson_blue = create :lesson, name: 'Blue lesson', script: @course_unit.script, lesson_group: @content_lesson_group
 
-    @lesson_honesty = create(:lesson, name: 'Honesty lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
-    @lesson_no_nickname = create(:lesson, name: 'No nickname lesson', script: @course_unit.script, lesson_group: @practice_lesson_group)
+    @lesson_honesty = create :lesson, name: 'Honesty lesson', script: @course_unit.script, lesson_group: @practice_lesson_group
+    @lesson_no_nickname = create :lesson, name: 'No nickname lesson', script: @course_unit.script, lesson_group: @practice_lesson_group
 
-    @module_cliffs = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: @lesson_cliffs.lesson_group.key, lesson: @lesson_cliffs)
-    @module_ornithology = create(:plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: @lesson_ornithology.lesson_group.key, lesson: @lesson_ornithology)
-    @module_ignorance = create(:plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: @lesson_ignorance.lesson_group.key, lesson: @lesson_ignorance)
-    @module_blue = create(:plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: @lesson_blue.lesson_group.key, lesson: @lesson_blue)
+    @module_cliffs = create :plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: @lesson_cliffs.lesson_group.key, lesson: @lesson_cliffs
+    @module_ornithology = create :plc_learning_module, name: 'Ornithology', plc_course_unit: @course_unit, module_type: @lesson_ornithology.lesson_group.key, lesson: @lesson_ornithology
+    @module_ignorance = create :plc_learning_module, name: 'Admitting Ignorance', plc_course_unit: @course_unit, module_type: @lesson_ignorance.lesson_group.key, lesson: @lesson_ignorance
+    @module_blue = create :plc_learning_module, name: 'Blue', plc_course_unit: @course_unit, module_type: @lesson_blue.lesson_group.key, lesson: @lesson_blue
 
-    @module_honesty = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: @lesson_honesty.lesson_group.key, lesson: @lesson_honesty)
-    @module_no_nickname = create(:plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: @lesson_no_nickname.lesson_group.key, lesson: @lesson_no_nickname)
+    @module_honesty = create :plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: @lesson_honesty.lesson_group.key, lesson: @lesson_honesty
+    @module_no_nickname = create :plc_learning_module, name: 'Not revealing your nickname', plc_course_unit: @course_unit, module_type: @lesson_no_nickname.lesson_group.key, lesson: @lesson_no_nickname
 
     q1_dsl = <<-DSL.strip_heredoc.chomp
     name 'Question 1'
@@ -86,9 +86,9 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
     DSL
 
     @evaluation = LevelGroup.create_from_level_builder({name: 'evaluation'}, {dsl_text: levelgroup_dsl})
-    create(:script_level, script: @course_unit.script, levels: [@evaluation], lesson: @lesson_honesty)
-    @user_level = create(:user_level, user: @user, script: @course_unit.script, level: @evaluation)
-    @activity = create(:activity, user: @user, level: @evaluation)
+    create :script_level, script: @course_unit.script, levels: [@evaluation], lesson: @lesson_honesty
+    @user_level = create :user_level, user: @user, script: @course_unit.script, level: @evaluation
+    @activity = create :activity, user: @user, level: @evaluation
   end
 
   test 'submit evaluation enrolls user in appropriate modules' do
@@ -140,7 +140,7 @@ class CourseUnitModuleSelectionTest < ActionView::TestCase
       answers_data[evaluation_multi.id] = {result: evaluation_multi.answers.find_index {|x| x['text'] == answer}.to_s}
     end
 
-    level_source = create(:level_source, level: @evaluation, data: answers_data.to_json)
+    level_source = create :level_source, level: @evaluation, data: answers_data.to_json
     @user_level.update(level_source: level_source)
     @activity.update(level_source: level_source)
     @user_level.update(level_source: level_source)

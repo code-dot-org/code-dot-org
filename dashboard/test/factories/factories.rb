@@ -13,10 +13,10 @@ FactoryBot.define do
 
     trait :with_unit_groups do
       after(:create) do |course_offering|
-        create(:course_version, :with_unit_group, course_offering: course_offering)
-        create(:course_version, :with_unit_group, course_offering: course_offering)
-        create(:course_version, :with_unit_group, course_offering: course_offering)
-        create(:course_version, :with_unit_group, course_offering: course_offering)
+        create :course_version, :with_unit_group, course_offering: course_offering
+        create :course_version, :with_unit_group, course_offering: course_offering
+        create :course_version, :with_unit_group, course_offering: course_offering
+        create :course_version, :with_unit_group, course_offering: course_offering
       end
     end
 
@@ -28,7 +28,7 @@ FactoryBot.define do
 
       trait :with_unit_group do
         after(:create) do |csp_course_offering|
-          create(:course_version, :with_csp_unit_group, course_offering: csp_course_offering)
+          create :course_version, :with_csp_unit_group, course_offering: csp_course_offering
         end
       end
     end
@@ -397,15 +397,15 @@ FactoryBot.define do
 
         factory :young_student_with_tos_teacher do
           after(:create) do |user|
-            section = create(:section, user: create(:terms_of_service_teacher))
-            create(:follower, section: section, student_user: user)
+            section = create :section, user: create(:terms_of_service_teacher)
+            create :follower, section: section, student_user: user
           end
         end
 
         factory :young_student_with_teacher do
           after(:create) do |user|
-            section = create(:section, user: create(:teacher))
-            create(:follower, section: section, student_user: user)
+            section = create :section, user: create(:teacher)
+            create :follower, section: section, student_user: user
           end
         end
 
@@ -428,8 +428,8 @@ FactoryBot.define do
         provider {'sponsored'}
 
         after(:create) do |user|
-          word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
-          create(:follower, student_user: user, section: word_section)
+          word_section = create :section, login_type: Section::LOGIN_TYPE_WORD
+          create :follower, student_user: user, section: word_section
           user.reload
         end
       end
@@ -446,8 +446,8 @@ FactoryBot.define do
 
       trait :in_picture_section do
         after(:create) do |user|
-          picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
-          create(:follower, student_user: user, section: picture_section)
+          picture_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
+          create :follower, student_user: user, section: picture_section
           user.reload
         end
       end
@@ -602,10 +602,10 @@ FactoryBot.define do
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
         user.reload
-        lti_user_id = create(:lti_user_identity, user: user)
+        lti_user_id = create :lti_user_identity, user: user
         user.lti_user_identities << lti_user_id
         auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
-        lti_auth = create(:lti_authentication_option, user: user, authentication_id: auth_id)
+        lti_auth = create :lti_authentication_option, user: user, authentication_id: auth_id
         user.authentication_options << lti_auth
         user.lti_roster_sync_enabled = true
         user.save!
@@ -667,7 +667,8 @@ FactoryBot.define do
 
     trait :with_facebook_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -684,7 +685,8 @@ FactoryBot.define do
 
     trait :with_google_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -702,7 +704,8 @@ FactoryBot.define do
 
     trait :with_microsoft_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -720,7 +723,8 @@ FactoryBot.define do
 
     trait :with_clever_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -736,7 +740,7 @@ FactoryBot.define do
 
     trait :with_lti_authentication_option do
       after(:create) do |user|
-        create(:lti_authentication_option, user: user)
+        create :lti_authentication_option, user: user
       end
     end
 
@@ -836,8 +840,8 @@ FactoryBot.define do
   end
 
   factory :section_instructor do
-    instructor {create(:teacher)}
-    section {create(:section)}
+    instructor {create :teacher}
+    section {create :section}
     status {:active}
   end
 
@@ -880,16 +884,16 @@ FactoryBot.define do
     end
 
     trait :spelling_bee do
-      game {create(:game, app: "maze", name: "Maze")}
+      game {create :game, app: "maze", name: "Maze"}
       skin {'letters'}
     end
 
     trait :blockly do
-      game {create(:game, app: "maze", name: "Maze")}
+      game {create :game, app: "maze", name: "Maze"}
     end
 
     trait :unplugged do
-      game {create(:game, app: "unplug")}
+      game {create :game, app: "unplug"}
     end
 
     trait :with_ideal_level_source do
@@ -901,8 +905,8 @@ FactoryBot.define do
 
     trait :with_script do
       after :create do |level|
-        script_level = create(:script_level, levels: [level])
-        create(:lesson_group, lessons: [script_level.lesson], script: script_level.script)
+        script_level = create :script_level, levels: [level]
+        create :lesson_group, lessons: [script_level.lesson], script: script_level.script
       end
     end
 
@@ -930,16 +934,16 @@ FactoryBot.define do
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
-    game {create(:game, app: "unplug")}
+    game {create :game, app: "unplug"}
   end
 
   factory :match, parent: :level, class: Match do
-    game {create(:game, app: "match")}
+    game {create :game, app: "match"}
     properties {{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
   factory :text_match, parent: :level, class: TextMatch do
-    game {create(:game, app: "textmatch")}
+    game {create :game, app: "textmatch"}
     properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
@@ -988,7 +992,7 @@ FactoryBot.define do
   end
 
   factory :playlab, parent: :level, class: Studio do
-    game {create(:game, app: Game::PLAYLAB)}
+    game {create :game, app: Game::PLAYLAB}
     level_num {'custom'}
   end
 
@@ -1003,7 +1007,7 @@ FactoryBot.define do
   end
 
   factory :multi, parent: :level, class: Multi do
-    game {create(:game, app: "multi")}
+    game {create :game, app: "multi"}
     transient do
       submittable {false}
     end
@@ -1024,7 +1028,7 @@ FactoryBot.define do
   end
 
   factory :evaluation_multi, parent: :level, class: EvaluationMulti do
-    game {create(:game, app: 'evaluation_multi')}
+    game {create :game, app: 'evaluation_multi'}
   end
 
   factory :external, parent: :level, class: External do
@@ -1123,7 +1127,7 @@ FactoryBot.define do
     level
     data {'<xml/>'}
     trait :with_image do
-      level {create(:level, game: Game.find_by_app(Game::ARTIST))}
+      level {create :level, game: Game.find_by_app(Game::ARTIST)}
       after :create do |level_source, _|
         create :level_source_image, level_source: level_source
       end
@@ -1164,7 +1168,7 @@ FactoryBot.define do
       participant_audience {nil}
       instructor_audience {nil}
       after(:create) do |unit|
-        create(:single_unit_course, unit: unit)
+        create :single_unit_course, unit: unit
       end
     end
 
@@ -1192,7 +1196,7 @@ FactoryBot.define do
         evaluator.lessons_count.times do
           lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
           evaluator.levels_count.times do
-            level = create(:level)
+            level = create :level
             create :script_level, levels: [level], activity_section: lesson.activity_sections.first
           end
         end
@@ -1498,7 +1502,7 @@ FactoryBot.define do
     sequence(:name) {|n| "Algorithm #{n}"}
     trait :with_video do
       after(:create) do |concept|
-        video = create(:video)
+        video = create :video
         concept.video_key = video.key
         concept.save!
       end
@@ -1561,7 +1565,7 @@ FactoryBot.define do
   end
 
   factory :level_group, class: LevelGroup do
-    game {create(:game, app: "level_group")}
+    game {create :game, app: "level_group"}
     sequence(:name) {|n| "Level_Group_Level_#{n}"}
     transient do
       title {'title'}
@@ -1586,7 +1590,7 @@ FactoryBot.define do
   end
 
   factory :bubble_choice_level, class: BubbleChoice do
-    game {create(:game, app: "bubble_choice")}
+    game {create :game, app: "bubble_choice"}
     sequence(:name) {|n| "Bubble_Choice_Level_#{n}"}
     display_name {'display_name'}
     properties do
@@ -1607,7 +1611,7 @@ FactoryBot.define do
 
     # Also allow specifying a trait to automatically create sublevels
     trait :with_sublevels do
-      sublevels {create_list(:level, 3)}
+      sublevels {create_list :level, 3}
     end
   end
 

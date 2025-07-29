@@ -8,7 +8,7 @@ module Api::V1::Pd
     setup_all do
       @facilitator = create :facilitator
       @program_manager = create :program_manager
-      @workshop = create(:workshop, organizer: @program_manager, facilitators: [@facilitator])
+      @workshop = create :workshop, organizer: @program_manager, facilitators: [@facilitator]
       @admin = create :workshop_admin
     end
 

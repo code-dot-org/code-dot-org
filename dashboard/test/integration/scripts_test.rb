@@ -18,9 +18,9 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @unit = create :script, name: 'csp1-2020'
     create :single_unit_course, unit: @unit, name: 'csp-2020'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14)
-    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_lesson = create :lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 15, relative_position: 14
+    @level_group = create :level_group, :with_sublevels, name: 'assessment 1'
+    @lockable_level_group_sl = create :script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true
 
     get build_script_level_path(@lockable_level_group_sl, unit_group_unit: @unit.unit_group_units.first)
     assert_includes @response.body, '/courses/csp-2020/units/1/lessons/14/'
@@ -37,9 +37,9 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @unit = create :script, name: 'csp2-2020'
     create :single_unit_course, unit: @unit, name: 'csp-2020'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
-    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_lesson = create :lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9
+    @level_group = create :level_group, :with_sublevels, name: 'assessment 1'
+    @lockable_level_group_sl = create :script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true
 
     get build_script_level_path(@lockable_level_group_sl, unit_group_unit: @unit.unit_group_units.first)
     assert_includes @response.body, '/courses/csp-2020/units/1/lessons/9/'
@@ -52,7 +52,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
 
   test 'assigned student can follow single-unit course family redirect' do
     unit = create :script, name: 'coursez-2020'
-    single_unit_course = create(:single_unit_course, name: 'coursez-2020', family_name: 'coursez', version_year: '2020', unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    single_unit_course = create :single_unit_course, name: 'coursez-2020', family_name: 'coursez', version_year: '2020', unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(single_unit_course)
 
     teacher = create :teacher
@@ -76,9 +76,9 @@ class ScriptsTest < ActionDispatch::IntegrationTest
     @unit = create :script, name: 'csp2-2020'
     create :single_unit_course, unit: @unit, name: 'csp-2020'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9)
-    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_lesson = create :lesson, script: @unit, name: 'Assessment Day', lockable: true, lesson_group: @lesson_group, has_lesson_plan: true, absolute_position: 9, relative_position: 9
+    @level_group = create :level_group, :with_sublevels, name: 'assessment 1'
+    @lockable_level_group_sl = create :script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true
 
     get "/s/#{@unit.name}/instructions"
     assert_response :success
@@ -119,7 +119,7 @@ class ScriptsTest < ActionDispatch::IntegrationTest
       has_lesson_plan: true
     )
     @level = create :maze
-    @level2 = create(:level, long_instructions: 'foo', short_instructions: 'bar')
+    @level2 = create :level, long_instructions: 'foo', short_instructions: 'bar'
     @level3 = create :multi
     @script_level1 = create(
       :script_level,

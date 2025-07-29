@@ -246,7 +246,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
 
     ProjectsController.stub_const(:STANDALONE_PROJECTS, {'expected_project_key' => {'name' => 'expected_project_name', 'i18n' => true}}) do
       sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
-      level = FactoryBot.build(:level)
+      level = FactoryBot.build :level
 
       expected_i18n_source_dir_path = CDO.dir('i18n/locales/source/course_content')
       expected_i18n_source_file_path = File.join(expected_i18n_source_dir_path, 'projects.json')
@@ -294,7 +294,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_untranslatable_project_content_preparation
     ProjectsController.stub_const(:STANDALONE_PROJECTS, {'expected_project_key' => {'name' => 'expected_project_name', 'i18n' => false}}) do
       sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
-      level = FactoryBot.build(:level)
+      level = FactoryBot.build :level
 
       expected_i18n_source_file_path = CDO.dir('i18n/locales/source/course_content/projects.json')
       expected_block_categories = {'expected_block_category_key' => 'expected_block_category_value'}
@@ -322,7 +322,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_levels_tree
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:bubble_choice_level, name: 'expected_level')
+    level = FactoryBot.build :bubble_choice_level, name: 'expected_level'
     blockly_sublevel = FactoryBot.build(
       :level,
       name:                      'expected_blockly_sublevel_name',
@@ -339,7 +339,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
       title:       'expected_free_response_sublevel_title',
       placeholder: 'expected_free_response_sublevel_placeholder',
     )
-    contained_level_group_level = FactoryBot.build(:level_group, name: 'expected_contained_level_group_level')
+    contained_level_group_level = FactoryBot.build :level_group, name: 'expected_contained_level_group_level'
     contained_level_group_child_level = FactoryBot.build(
       :level,
       name:                      'expected_contained_level_group_child_level_name',
@@ -395,7 +395,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_authored_hints
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
 
     level.authored_hints = [
       {
@@ -438,7 +438,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_callout_json
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
 
     level.callout_json = [
       {
@@ -490,7 +490,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_dynamic_instructions
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
 
     level.dynamic_instructions = {'expected_dynamic_instruction_key' => 'expected_dynamic_instruction_value'}.to_json
     expected_result = {'dynamic_instructions' => {'expected_dynamic_instruction_key' => 'expected_dynamic_instruction_value'}}
@@ -504,7 +504,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_short_instructions
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
     level.short_instructions = <<~XML.strip
       <xml>
         <block type="text">
@@ -537,7 +537,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_long_instructions
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
     level.long_instructions = <<~XML.strip
       <xml>
         <block type="text">
@@ -570,7 +570,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_start_libraries
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:level)
+    level = FactoryBot.build :level
 
     level.start_libraries = JSON.generate(
       [{name: "I18N_library",
@@ -598,7 +598,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_validations
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:music)
+    level = FactoryBot.build :music
 
     level.validations = [
       {
@@ -632,7 +632,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
   def test_i18n_strings_collection_for_level_panels
     sync_in_instance = I18n::Resources::Dashboard::CourseContent::SyncIn.new
 
-    level = FactoryBot.build(:panels)
+    level = FactoryBot.build :panels
 
     level.panels = [
       {
@@ -764,7 +764,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     end
 
     context 'when level has Functions' do
-      let(:level) {FactoryBot.build(:level, solution_blocks: solution_blocks)}
+      let(:level) {FactoryBot.build :level, solution_blocks: solution_blocks}
 
       let(:solution_blocks) do
         <<~XML.strip
@@ -843,7 +843,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     end
 
     context 'when level has Spritelab behaviors' do
-      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+      let(:level) {FactoryBot.build :level, start_blocks: start_blocks}
 
       let(:start_blocks) do
         <<~XML.strip
@@ -908,7 +908,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     end
 
     context 'when level has Variable gets' do
-      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+      let(:level) {FactoryBot.build :level, start_blocks: start_blocks}
 
       let(:start_blocks) do
         <<~XML.strip
@@ -960,7 +960,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     end
 
     context 'when level has Variable sets' do
-      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+      let(:level) {FactoryBot.build :level, start_blocks: start_blocks}
 
       let(:start_blocks) do
         <<~XML.strip
@@ -1012,7 +1012,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     end
 
     context 'when level has Parameter gets' do
-      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+      let(:level) {FactoryBot.build :level, start_blocks: start_blocks}
 
       let(:start_blocks) do
         <<~XML.strip

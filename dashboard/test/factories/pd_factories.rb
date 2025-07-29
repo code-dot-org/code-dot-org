@@ -173,7 +173,7 @@ FactoryBot.define do
 
     trait :with_attendance do
       after(:create) do |enrollment|
-        create_list(:pd_attendance, 1, enrollment: enrollment)
+        create_list :pd_attendance, 1, enrollment: enrollment
       end
     end
   end
@@ -350,7 +350,7 @@ FactoryBot.define do
 
     # Make sure school gets persisted; otherwise we might return a school_id
     # for a school that doesn't exist
-    school {create(:school)}
+    school {create :school}
 
     initialize_with do
       attributes.dup.tap do |hash|

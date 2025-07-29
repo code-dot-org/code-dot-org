@@ -19,7 +19,7 @@ class CoursesControllerTest < ActionController::TestCase
     @pilot_pl_unit_group = create :unit_group, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     @pilot_pl_section = create :section, user: @pilot_facilitator, unit_group: @pilot_pl_unit_group
     @pilot_participant = create :teacher
-    create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
+    create :follower, section: @pilot_pl_section, student_user: @pilot_participant
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
@@ -271,12 +271,12 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "show: redirect to latest stable version in course family and language for student" do
     csp_2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['en-US', 'es-MX'])
-    csp2_2017 = create(:script, name: 'csp2-2017', supported_locales: ['en-US', 'es-MX'])
+    csp1_2017 = create :script, name: 'csp1-2017', supported_locales: ['en-US', 'es-MX']
+    csp2_2017 = create :script, name: 'csp2-2017', supported_locales: ['en-US', 'es-MX']
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
     create :unit_group_unit, unit_group: csp_2017, script: csp2_2017, position: 2
     csp_2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['en-US'])
+    csp1_2018 = create :script, name: 'csp1-2018', supported_locales: ['en-US']
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
     csp_2019 = create :unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 

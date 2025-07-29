@@ -6,22 +6,22 @@ class AiSystemPrompts::SystemPromptHelperTest < ActionView::TestCase
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
-    @unit = create(:script, :in_single_unit_course, :with_levels)
+    @unit = create :script, :in_single_unit_course, :with_levels
     @level = @unit.levels.first
 
     # Sample Applab level
-    @applab_level = create(:applab, :with_instructions)
-    @csp_unit = create(:csp_script, :in_single_unit_course)
-    create(:csp_script_level, levels: [@applab_level])
+    @applab_level = create :applab, :with_instructions
+    @csp_unit = create :csp_script, :in_single_unit_course
+    create :csp_script_level, levels: [@applab_level]
 
     # Sample Javalab level
     @level_instructions = "Write a loop."
-    @csa_unit = create(:csa_script, :in_single_unit_course)
-    @javalab_level = create(:javalab, :with_instructions)
-    create(:csa_script_level, levels: [@javalab_level])
+    @csa_unit = create :csa_script, :in_single_unit_course
+    @javalab_level = create :javalab, :with_instructions
+    create :csa_script_level, levels: [@javalab_level]
 
     # Creating a Pythonlab level with a validation_file
-    @pythonlab_level = create(:pythonlab, :with_instructions)
+    @pythonlab_level = create :pythonlab, :with_instructions
   end
 
   test "get_level_instructions" do

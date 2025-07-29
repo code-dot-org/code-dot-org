@@ -4,7 +4,7 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @user = create(:teacher)
+    @user = create :teacher
   end
 
   setup do
@@ -66,7 +66,7 @@ class NewFeatureFeedbackControllerTest < ActionController::TestCase
 
   test 'show - returns the Feedback for the current user' do
     expected_satisfied = true
-    feedback = create(:new_feature_feedback, user: @user, satisfied: expected_satisfied)
+    feedback = create :new_feature_feedback, user: @user, satisfied: expected_satisfied
 
     get :show, params: {form_key: 'progress_v2'}, format: :json
 

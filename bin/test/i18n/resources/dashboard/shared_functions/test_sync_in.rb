@@ -26,9 +26,9 @@ describe I18n::Resources::Dashboard::SharedFunctions::SyncIn do
     before do
       SharedBlocklyFunction.destroy_all
 
-      FactoryBot.create(:shared_blockly_function, level_type: 'GamelabJr', name: shared_function_2_name)
-      FactoryBot.create(:shared_blockly_function, level_type: 'Unexpected', name: 'unexpected-shared-function')
-      FactoryBot.create(:shared_blockly_function, level_type: 'GamelabJr', name: shared_function_1_name)
+      FactoryBot.create :shared_blockly_function, level_type: 'GamelabJr', name: shared_function_2_name
+      FactoryBot.create :shared_blockly_function, level_type: 'Unexpected', name: 'unexpected-shared-function'
+      FactoryBot.create :shared_blockly_function, level_type: 'GamelabJr', name: shared_function_1_name
     end
 
     it 'prepares the i18n source file' do

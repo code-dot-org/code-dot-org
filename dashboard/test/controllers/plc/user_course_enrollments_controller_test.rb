@@ -4,9 +4,9 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @admin = create :admin
     sign_in(@admin)
-    @plc_course = create(:plc_course, name: 'Test Course')
-    @user_course_enrollment = create(:plc_user_course_enrollment, user: @admin, plc_course: @plc_course)
-    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
+    @plc_course = create :plc_course, name: 'Test Course'
+    @user_course_enrollment = create :plc_user_course_enrollment, user: @admin, plc_course: @plc_course
+    @course_unit = create :plc_course_unit, plc_course: @plc_course
     @enrollment_unit_assignment = create(
       :plc_enrollment_unit_assignment,
       plc_course_unit: @course_unit,
@@ -165,8 +165,8 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
   end
 
   test 'index includes users enrolled courses' do
-    other_course = create(:plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next)
-    create(:plc_user_course_enrollment, user: @admin, plc_course: other_course)
+    other_course = create :plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next
+    create :plc_user_course_enrollment, user: @admin, plc_course: other_course
 
     get :index
     response = assigns(:summarized_course_enrollments)

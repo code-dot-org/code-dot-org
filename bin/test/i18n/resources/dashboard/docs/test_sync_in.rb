@@ -19,7 +19,7 @@ describe I18n::Resources::Dashboard::Docs::SyncIn do
     let(:run_process) {described_instance.process}
 
     let(:programming_env_name) {'expected_programming_env_name'}
-    let(:programming_env) {FactoryBot.build_stubbed(:programming_environment, name: programming_env_name)}
+    let(:programming_env) {FactoryBot.build_stubbed :programming_environment, name: programming_env_name}
     let(:programming_env_i18n_data) {'expected_programming_env_i18n_data'}
 
     let(:i18n_source_file_path) {CDO.dir("i18n/locales/source/docs/#{programming_env_name}.json")}
@@ -54,9 +54,9 @@ describe I18n::Resources::Dashboard::Docs::SyncIn do
   describe '#programming_envs' do
     let(:programming_envs) {described_instance.send(:programming_envs)}
 
-    let(:translatable_programming_env_a) {FactoryBot.create(:programming_environment, name: 'a')}
-    let(:translatable_programming_env_b) {FactoryBot.create(:programming_environment, name: 'b')}
-    let(:untranslatable_programming_env) {FactoryBot.create(:programming_environment)}
+    let(:translatable_programming_env_a) {FactoryBot.create :programming_environment, name: 'a'}
+    let(:translatable_programming_env_b) {FactoryBot.create :programming_environment, name: 'b'}
+    let(:untranslatable_programming_env) {FactoryBot.create :programming_environment}
 
     before do
       # Creates ProgrammingEnvironment records

@@ -25,7 +25,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test "teacher with assigned course/script redirected to index" do
     teacher = create :teacher
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     sign_in teacher
     teacher.assign_script(script)
     assert_equal script, teacher.most_recently_assigned_script
@@ -46,7 +46,7 @@ class HomeControllerTest < ActionController::TestCase
 
   test "student with progress but not an assigned script will go to index" do
     student = create :student
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     sign_in student
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.script_with_most_recent_progress
@@ -137,7 +137,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     section = create :section, script: script
     student = create(:follower, section: section).student_user
     section.hidden = 1
@@ -152,7 +152,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in then recent progress in that script will go to index" do
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     section = create :section, script: script
     student = create(:follower, section: section).student_user
     section.hidden = 1
@@ -289,7 +289,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'do show levelbuilder links when levelbuilder' do
     skip 'TODO: look into bringing levelbuilder links to /home'
 
-    user = create(:user)
+    user = create :user
     UserPermission.create(user_id: user.id, permission: 'levelbuilder')
     sign_in user
 
@@ -298,7 +298,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student without age gets student information prompt with age select' do
-    student = create(:student)
+    student = create :student
     student.update_attribute(:birthday, nil) # bypasses validations
     student.update_attribute(:us_state, 'DC')
     student = student.reload
@@ -329,7 +329,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student with age does not get student information prompt' do
-    student = create(:student)
+    student = create :student
     assert student.age
 
     sign_in student
@@ -354,7 +354,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with no us_state gets student information prompt' do
-    student = create(:student, age: 12)
+    student = create :student, age: 12
     student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
     student.update_attribute(:us_state, nil) # bypasses validations
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
@@ -369,7 +369,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with no provided us_state gets student information prompt' do
-    student = create(:student, age: 12)
+    student = create :student, age: 12
     student.update_attribute(:us_state, 'DC')
     student.update_attribute(:user_provided_us_state, false)
     student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
@@ -387,7 +387,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
-    student = create(:student, age: 12)
+    student = create :student, age: 12
     student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     student = student.reload
@@ -403,7 +403,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with provided us_state does not get student information prompt' do
-    student = create(:student, age: 12)
+    student = create :student, age: 12
     student.update_attribute(:us_state, 'DC')
     student.update_attribute(:user_provided_us_state, true)
     student = student.reload
@@ -417,7 +417,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student over 13 and in US with us_state does not get student information prompt' do
-    student = create(:student, age: 19)
+    student = create :student, age: 19
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     sign_in student
     get :home

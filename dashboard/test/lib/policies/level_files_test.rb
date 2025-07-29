@@ -3,7 +3,7 @@ require 'test_helper'
 module Policies
   class LevelFilesTest < ActiveSupport::TestCase
     test 'will provide a default if no file exists' do
-      regular_level = create(:level)
+      regular_level = create :level
       expected_file_path = Rails.root.join(
         'config/levels/custom',
         regular_level.game.app,
@@ -14,14 +14,14 @@ module Policies
 
       # can also provide a default for gameless levels, even though the regular
       # path includes the game name
-      gameless_level = create(:level, game: nil)
+      gameless_level = create :level, game: nil
       expected_file_path = Rails.root.join("config/levels/custom/#{gameless_level.name}.level")
       refute(File.exist?(expected_file_path))
       assert_equal(Policies::LevelFiles.level_file_path(gameless_level), expected_file_path)
     end
 
     test 'can find an existing level file from a variety of directories' do
-      level = create(:level)
+      level = create :level
       level_files = [
         # Check in the default location
         'config/levels/custom',
@@ -42,7 +42,7 @@ module Policies
     end
 
     test 'will raise if multiple .level files found with the same name' do
-      level = create(:level)
+      level = create :level
       level_files = [
         'config/levels/custom/foo',
         'config/levels/custom/bar',
@@ -60,7 +60,7 @@ module Policies
     end
 
     test 'will only write to file in levelbuilder mode' do
-      writable_level = create(:level)
+      writable_level = create :level
       Rails.application.config.stubs(:levelbuilder_mode).returns(true)
       assert(Policies::LevelFiles.write_to_file?(writable_level))
       Rails.application.config.stubs(:levelbuilder_mode).returns(false)
@@ -70,14 +70,14 @@ module Policies
     test 'will only write certain levels to file' do
       Rails.application.config.stubs(:levelbuilder_mode).returns(true)
 
-      regular_level = create(:level)
+      regular_level = create :level
       assert(Policies::LevelFiles.write_to_file?(regular_level))
 
       dsl_defined_level = External.create
       assert(dsl_defined_level.is_a?(DSLDefined))
       refute(Policies::LevelFiles.write_to_file?(dsl_defined_level))
 
-      non_custom_level = create(:level, level_num: 'test_file_writing')
+      non_custom_level = create :level, level_num: 'test_file_writing'
       refute(non_custom_level.custom?)
       refute(Policies::LevelFiles.write_to_file?(non_custom_level))
     end

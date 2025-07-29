@@ -3,44 +3,44 @@ require 'test_helper'
 class AgeTest < ActiveSupport::TestCase
   describe 'validations' do
     context 'when the user is not sponsored' do
-      let(:user) {create(:user, age: 10)}
+      let(:user) {create :user, age: 10}
       it 'validates age presence on create' do
         _(user).must_be :valid?
       end
     end
     context 'when the user has a google_oauth2 provider' do
-      let(:user) {create(:user, :google_sso_provider, age: nil)}
+      let(:user) {create :user, :google_sso_provider, age: nil}
       it 'does not validate age presence on create' do
         _(user).must_be :valid?
       end
     end
     context 'when the user has a clever provider' do
-      let(:user) {create(:user, :clever_sso_provider, age: nil)}
+      let(:user) {create :user, :clever_sso_provider, age: nil}
       it 'does not validate age presence on create' do
         _(user).must_be :valid?
       end
     end
     context 'when the user has a sponsored provider' do
-      let(:user) {create(:student, :sponsored, age: nil)}
+      let(:user) {create :student, :sponsored, age: nil}
       it 'does not validate age presence on create' do
         _(user).must_be :valid?
       end
     end
     context 'when the user has an LTI provider' do
-      let(:user) {create(:user, :with_lti_auth, age: nil)}
+      let(:user) {create :user, :with_lti_auth, age: nil}
       it 'does not validate age presence on create' do
         _(user).must_be :valid?
       end
     end
     context 'when age is not included in the dropdown options' do
-      let(:user) {build(:user, age: 1)}
+      let(:user) {build :user, age: 1}
       it 'is not valid' do
         _(user).wont_be :valid?
         _(user.errors[:age]).must_include 'is required'
       end
     end
     context 'when updating an existing user' do
-      let(:user) {create(:user, age: 10)}
+      let(:user) {create :user, age: 10}
       before do
         user.age = nil
         user.save!
@@ -52,7 +52,7 @@ class AgeTest < ActiveSupport::TestCase
   end
   describe '#under_13?' do
     subject(:under_13?) {user.under_13?}
-    let(:user) {create(:user, age: 10)}
+    let(:user) {create :user, age: 10}
     context 'when the user is under 13' do
       it {_under_13?.must_equal true}
     end
@@ -83,7 +83,7 @@ class AgeTest < ActiveSupport::TestCase
   end
   describe '#over_21?' do
     subject(:over_21?) {user.over_21?}
-    let(:user) {create(:user, age: 22)}
+    let(:user) {create :user, age: 22}
     context 'when the user is over 21' do
       it 'returns true' do
         _(user.over_21?).must_equal true
@@ -116,7 +116,7 @@ class AgeTest < ActiveSupport::TestCase
   end
   describe '#age' do
     subject(:age) {user.age}
-    let(:user) {create(:user, birthday: 10.years.ago)}
+    let(:user) {create :user, birthday: 10.years.ago}
     context 'when the user is under 4' do
       before do
         user.update_attribute(:birthday, 3.years.ago)
@@ -138,7 +138,7 @@ class AgeTest < ActiveSupport::TestCase
   end
   describe '#age=' do
     subject(:age) {user.age}
-    let(:user) {create(:user, birthday: 10.years.ago)}
+    let(:user) {create :user, birthday: 10.years.ago}
     context 'when age is set to current age it remains unchanged' do
       before do
         user.age = 10

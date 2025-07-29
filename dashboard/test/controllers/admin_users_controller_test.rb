@@ -12,17 +12,17 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   setup do
-    @admin = create(:admin)
-    @facilitator = create(:facilitator)
+    @admin = create :admin
+    @facilitator = create :facilitator
 
-    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
-    @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
+    @not_admin = create :teacher, username: 'notadmin', email: 'not_admin@email.xx'
+    @deleted_student = create :student, username: 'deletedstudent', email: 'deleted_student@email.xx'
     @deleted_student.destroy
     @malformed = create :teacher, email: 'malformed@example.com'
     @malformed.update_column(:email, '')  # Bypasses validation!
 
     @user = create :user, email: 'test_user@example.com'
-    @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 3)
+    @script = create :script, :in_single_unit_course, :with_levels, levels_count: 3
     @level = @script.script_levels.first.level  # for tests that only need a single level
     @level1 = @script.script_levels.first.level
     @level2 = @script.script_levels.second.level
@@ -72,8 +72,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test "should assume_identity by email not id if email starts with a number" do
-    user_with_id = create(:teacher)
-    user_with_number_email = create(:teacher, email: "#{user_with_id.id}teacher@email.xx")
+    user_with_id = create :teacher
+    user_with_number_email = create :teacher, email: "#{user_with_id.id}teacher@email.xx"
 
     sign_in @admin
 
@@ -256,8 +256,8 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'user_progress returns progress' do
     user = @not_admin
-    script1 = create(:script, :in_single_unit_course, :with_levels, levels_count: 2)
-    script2 = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
+    script1 = create :script, :in_single_unit_course, :with_levels, levels_count: 2
+    script2 = create :script, :in_single_unit_course, :with_levels, levels_count: 1
 
     UserScript.create!(user: user, script: script1)
     UserScript.create!(user: user, script: script2)
@@ -338,9 +338,9 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "delete_progress deletes teacher feedback" do
     sign_in @admin
 
-    teacher = create(:teacher)
-    student = create(:student)
-    section = create(:section, teacher: teacher)
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
     section.add_student(student)
 
     TeacherFeedback.create!(teacher: teacher, student: student, script: @script, level: @level1)
@@ -354,8 +354,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test "delete_progress for driver leaves pairing record" do
-    driver = create(:student)
-    navigator = create(:student)
+    driver = create :student
+    navigator = create :student
 
     driver_user_level = UserLevel.create!(user: driver, script: @script, level: @level, best_result: 100)
     navigator_user_level = UserLevel.create!(user: navigator, script: @script, level: @level, best_result: 100)
@@ -376,8 +376,8 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   test "delete_progress for navigator leaves pairing record" do
-    driver = create(:student)
-    navigator = create(:student)
+    driver = create :student
+    navigator = create :student
 
     driver_user_level = UserLevel.create!(user: driver, script: @script, level: @level, best_result: 100)
     navigator_user_level = UserLevel.create!(user: navigator, script: @script, level: @level, best_result: 100)

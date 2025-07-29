@@ -34,7 +34,7 @@ Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ 
   regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
   email, password = generate_user(pm_name)
-  program_manager = FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+  program_manager = FactoryBot.create :program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner
   track_record_for_deletion('User', program_manager.id)
 
   steps "And I sign in as \"#{pm_name}\""
@@ -84,7 +84,7 @@ Given(/^I create a workshop under the regional partner named "([^"]+)"$/) do |pa
   require_rails_env
 
   regional_partner = RegionalPartner.find_by(name: partner_name, is_active: true)
-  FactoryBot.create(:summer_workshop, regional_partner_id: regional_partner.id)
+  FactoryBot.create :summer_workshop, regional_partner_id: regional_partner.id
 end
 
 Given(/^I delete the workshop$/) do
@@ -100,8 +100,8 @@ Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, 
 
   email, password = generate_user(name)
 
-  facilitator = FactoryBot.create(:facilitator, name: name, email: email, password: password)
-  course_facilitator = FactoryBot.create(:pd_course_facilitator, course: course, facilitator: facilitator)
+  facilitator = FactoryBot.create :facilitator, name: name, email: email, password: password
+  course_facilitator = FactoryBot.create :pd_course_facilitator, course: course, facilitator: facilitator
   track_record_for_deletion('User', facilitator.id)
   track_record_for_deletion('Pd::CourseFacilitator', course_facilitator.id)
 end
@@ -111,7 +111,7 @@ Given /^there is a course offering named "([^"]+)"$/ do |name|
 
   co_key = name.parameterize(separator: '-')
   course_offering = CourseOffering.find_by(key: co_key)
-  course_offering ||= FactoryBot.create(:course_offering, key: co_key, display_name: name, curriculum_type: 'Professional Learning', header: 'self_paced')
+  course_offering ||= FactoryBot.create :course_offering, key: co_key, display_name: name, curriculum_type: 'Professional Learning', header: 'self_paced'
   track_record_for_deletion('CourseOffering', course_offering.id)
 end
 
@@ -614,7 +614,9 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     end
 
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryBot.create(:workshop, :funded,
+    FactoryBot.create(
+      :workshop,
+      :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,

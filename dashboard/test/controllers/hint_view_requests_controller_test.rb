@@ -91,7 +91,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     sign_in driver
     @controller.send :pairings=, {pairings: [navigator], section_id: section.id}
-    level = create(:level, :with_script)
+    level = create :level, :with_script
     post :create, params: {
       script_id: level.script_levels.first.script.id,
       level_id: level.id,

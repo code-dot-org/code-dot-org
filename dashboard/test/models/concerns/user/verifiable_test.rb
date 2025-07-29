@@ -33,7 +33,7 @@ class VerifiableTest < ActiveSupport::TestCase
     context 'when the user is in a plc course' do
       let(:user) {create :teacher}
       before do
-        create(:plc_user_course_enrollment, user: user, plc_course: create(:plc_course))
+        create :plc_user_course_enrollment, user: user, plc_course: create(:plc_course)
       end
       it {_verified_teacher?.must_equal true}
     end

@@ -79,8 +79,8 @@ class ResourceTest < ActiveSupport::TestCase
   test "'resources dropdown' summary method includes markdown key" do
     # This is necessary for the "add markdown syntax" levelbuilder interface to work
     course_offering = create :course_offering
-    course_version = create(:course_version, course_offering: course_offering)
-    resource = create(:resource, course_version: course_version)
+    course_version = create :course_version, course_offering: course_offering
+    resource = create :resource, course_version: course_version
     summary = resource.summarize_for_resources_dropdown
     assert summary.key?(:markdownKey)
     assert_equal(
@@ -151,7 +151,7 @@ class ResourceTest < ActiveSupport::TestCase
   end
 
   test "summarize retrives translations" do
-    resource = create(:resource, name: "English name")
+    resource = create :resource, name: "English name"
     test_locale = :'te-ST'
     custom_i18n = {
       "data" => {

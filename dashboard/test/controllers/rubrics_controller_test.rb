@@ -7,8 +7,8 @@ class RubricsControllerTest < ActionController::TestCase
   setup do
     @levelbuilder = create :levelbuilder
     @script = create :script, :in_single_unit_course
-    @lesson = create(:lesson, :with_lesson_group, script: @script)
-    @level = create(:level)
+    @lesson = create :lesson, :with_lesson_group, script: @script
+    @level = create :level
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
 
     # set up a section containing 6 students: 1 @student and 5 other_students.

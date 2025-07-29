@@ -7,7 +7,7 @@ class ProfanityControllerTest < ActionController::TestCase
     @profane_text = 'bad words'
     @expected_profanities = ['bad']
     @locale = 'en-US'
-    @user = create(:user)
+    @user = create :user
     sign_in(@user)
   end
 

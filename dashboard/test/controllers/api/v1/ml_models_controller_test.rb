@@ -77,7 +77,7 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
 
   test 'user can retrieve the names, ids, and metadata of their trained ML models' do
     sign_in @owner
-    create_list(:user_ml_model, 2, user: @owner)
+    create_list :user_ml_model, 2, user: @owner
 
     database_model_data = UserMlModel.where(user_id: @owner.id).map do |user_ml_model|
       {

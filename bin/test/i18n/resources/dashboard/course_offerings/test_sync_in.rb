@@ -24,8 +24,8 @@ describe I18n::Resources::Dashboard::CourseOfferings::SyncIn do
     end
 
     it 'prepares the i18n source file' do
-      FactoryBot.create(:course_offering, key: 'i18n-key-2', display_name: 'i18n-val-1')
-      FactoryBot.create(:course_offering, key: 'i18n-key-1', display_name: 'i18n-val-2')
+      FactoryBot.create :course_offering, key: 'i18n-key-2', display_name: 'i18n-val-1'
+      FactoryBot.create :course_offering, key: 'i18n-key-1', display_name: 'i18n-val-2'
 
       perform_sync_in
 

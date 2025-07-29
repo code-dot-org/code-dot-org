@@ -9,7 +9,7 @@ class Services::User::UpgradeToPersonalLoginTest < ActiveSupport::TestCase
   let(:password) {'mypassword'}
   let(:secret_words) {'secret words'}
   let(:student) do
-    create(:student_in_word_section)
+    create :student_in_word_section
   end
   let(:params) do
     {
@@ -30,7 +30,7 @@ class Services::User::UpgradeToPersonalLoginTest < ActiveSupport::TestCase
     end
 
     it 'returns false if user is not a student' do
-      non_student = create(:teacher)
+      non_student = create :teacher
       result = Services::User::UpgradeToPersonalLogin.call(user: non_student, params: params)
 
       _(result).must_equal false

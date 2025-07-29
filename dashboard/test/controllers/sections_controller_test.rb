@@ -6,17 +6,17 @@ class SectionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @teacher = create(:teacher)
+    @teacher = create :teacher
 
-    @word_section = create(:section, user: @teacher, login_type: 'word')
+    @word_section = create :section, user: @teacher, login_type: 'word'
     @word_user_1 = create(:follower, section: @word_section).student_user
 
-    @picture_section = create(:section, user: @teacher, login_type: 'picture')
+    @picture_section = create :section, user: @teacher, login_type: 'picture'
     @picture_user_1 = create(:follower, section: @picture_section).student_user
 
-    @regular_section = create(:section, user: @teacher, login_type: 'email')
+    @regular_section = create :section, user: @teacher, login_type: 'email'
 
-    @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id)
+    @flappy_section = create :section, user: @teacher, login_type: 'word', script_id: Unit.flappy_unit.id
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
@@ -27,9 +27,9 @@ class SectionsControllerTest < ActionController::TestCase
 
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:single_unit_course)
+    @unit_group = create :single_unit_course
     @script_in_course = @unit_group.first_unit
-    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
+    @section_with_course = create :section, user: @teacher, login_type: 'word', course_id: @unit_group.id
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
 
     @request.host = CDO.dashboard_hostname
@@ -259,9 +259,9 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'archive_all does archive cotaught section' do
     sign_in @teacher
-    section_owner = create(:teacher)
+    section_owner = create :teacher
 
-    coteacher_section = create(:section, user: section_owner, login_type: 'picture')
+    coteacher_section = create :section, user: section_owner, login_type: 'picture'
     create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
 
     post :archive_all

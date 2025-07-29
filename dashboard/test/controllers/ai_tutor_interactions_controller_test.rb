@@ -70,7 +70,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
 
   test "create AI Tutor Interaction for level that uses projects with valid params" do
     sign_in @student_with_ai_tutor_access
-    @level = create(:level, :with_script)
+    @level = create :level, :with_script
     assert_creates(AiTutorInteraction) do
       post :create, params: {
         level_id: @level.id,
@@ -85,8 +85,8 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
 
   test "create AI Tutor Interaction for level that uses projects in lesson with lesson group with valid params" do
     sign_in @student_with_ai_tutor_access
-    @lesson = create(:lesson, :with_lesson_group)
-    @level = create(:level)
+    @lesson = create :lesson, :with_lesson_group
+    @level = create :level
     @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
     @fake_ip = '127.0.0.1'
     fake_version_id = "fake-version-id"
@@ -221,8 +221,8 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
   class FindProjectAndVersionIdTest < ActionController::TestCase
     setup do
       @controller = AiTutorInteractionsController.new
-      @user = create(:user)
-      @level = create(:level)
+      @user = create :user
+      @level = create :level
       @script_id = 1
       sign_in @user
 

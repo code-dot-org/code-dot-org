@@ -63,9 +63,9 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
 
   test "clean_up_resolved_purges drops records for purged users" do
     # This one should get cleaned up
-    q1 = create(:queued_account_purge, user: create(:student, deleted_at: Time.now, purged_at: Time.now))
+    q1 = create :queued_account_purge, user: create(:student, deleted_at: Time.now, purged_at: Time.now)
     # This one should not
-    q2 = create(:queued_account_purge)
+    q2 = create :queued_account_purge
 
     ids = [q1, q2].map(&:id)
     assert_equal [q1.id, q2.id], QueuedAccountPurge.where(id: ids).pluck(:id)

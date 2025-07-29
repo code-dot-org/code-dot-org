@@ -717,8 +717,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'concise_summarize: section with duplicate students' do
     section = create :section, script: nil, unit_group: nil
     student = create :student
-    create(:follower, section: section, student_user: student)
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
+    create :follower, section: section, student_user: student
     assert_equal 2, Follower.where(section: section, student_user: student).count
 
     summarized_section = section.concise_summarize
@@ -830,8 +830,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'selected_section_summarize: section with duplicate students' do
     section = create :section, script: nil, unit_group: nil
     student = create :student
-    create(:follower, section: section, student_user: student)
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
+    create :follower, section: section, student_user: student
     assert_equal 2, Follower.where(section: section, student_user: student).count
 
     summarized_section = section.selected_section_summarize
@@ -1194,8 +1194,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with duplicate students' do
     section = create :section, script: nil, unit_group: nil
     student = create :student
-    create(:follower, section: section, student_user: student)
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
+    create :follower, section: section, student_user: student
     assert_equal 2, Follower.where(section: section, student_user: student).count
 
     summarized_section = section.summarize
@@ -1333,11 +1333,11 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'reset_code_review_groups creates new code review groups' do
-    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    code_review_group_section = create :section, user: @teacher, login_type: 'word'
     # Create 5 students
     followers = []
     5.times do |i|
-      student = create(:student, name: "student_#{i}")
+      student = create :student, name: "student_#{i}"
       followers << create(:follower, section: code_review_group_section, student_user: student)
     end
     group_1_name = 'new_group_1'
@@ -1391,14 +1391,14 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'section create adds section instructor' do
     assert_difference 'SectionInstructor.count' do
-      section = create(:section)
+      section = create :section
       instructor = section.instructors.first
       assert_equal instructor, section.user
     end
   end
 
   test 'section update fixes section instructor' do
-    section = create(:section)
+    section = create :section
     si = section.section_instructors.first
     si.status = :declined
     si.save!
@@ -1412,7 +1412,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section update fixes soft-deleted section instructor' do
-    section = create(:section)
+    section = create :section
     si = section.section_instructors.first
     si.destroy!
 
@@ -1425,7 +1425,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_instructor returns true and adds the teacher if not previously a co-teacher' do
-    section = create(:section)
+    section = create :section
     user = create :teacher
 
     assert section.add_instructor(user)
@@ -1433,7 +1433,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_instructor returns true and restores the teacher if previously deleted co-teacher' do
-    section = create(:section)
+    section = create :section
     user = create :teacher
 
     # Add instructor, then delete the instructor
@@ -1448,7 +1448,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_instructor returns true and activates the teacher if the teacher was previously invited' do
-    section = create(:section)
+    section = create :section
     inviter = create :teacher
     user = create :teacher
 
@@ -1462,7 +1462,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'remove_instructor destroys the applicable SectionInstructor' do
-    section = create(:section)
+    section = create :section
     user = create :teacher
 
     section.add_instructor(user)
@@ -1475,7 +1475,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'remove_instructor does not remove the primary teacher' do
     user = create :teacher
-    section = create(:section, user: user)
+    section = create :section, user: user
 
     si = SectionInstructor.find_by(instructor: user, section_id: section.id)
     section.remove_instructor(user)
@@ -1497,11 +1497,11 @@ class SectionTest < ActiveSupport::TestCase
 
   def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
-    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    @code_review_group_section = create :section, user: @teacher, login_type: 'word'
     # Create 5 students
     @followers = []
     5.times do |i|
-      student = create(:student, name: "student_#{i}")
+      student = create :student, name: "student_#{i}"
       @followers << create(:follower, section: @code_review_group_section, student_user: student)
     end
 

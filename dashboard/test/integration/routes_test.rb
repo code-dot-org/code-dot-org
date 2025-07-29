@@ -4,7 +4,7 @@ class RoutesTest < ActionDispatch::IntegrationTest
   # Ensure view-only wildcard routes are generated correctly.
   def test_dance_session_cookie_and_cache_headers
     script = create :script, name: 'dance-ai-2023'
-    unit_group = create(:unit_group, name: 'dance-ai-2023', published_state: 'stable')
+    unit_group = create :unit_group, name: 'dance-ai-2023', published_state: 'stable'
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 

@@ -9,13 +9,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create(:program_manager)
-    @workshop = create(:workshop, organizer: @organizer)
+    @organizer = create :program_manager
+    @workshop = create :workshop, organizer: @organizer
 
-    @workshop_organizer = create(:workshop_organizer)
-    @organizer_workshop = create(:workshop, organizer: @workshop_organizer)
+    @workshop_organizer = create :workshop_organizer
+    @organizer_workshop = create :workshop, organizer: @workshop_organizer
 
-    @regional_partner = create(:regional_partner)
+    @regional_partner = create :regional_partner
   end
   setup do
     @workshop.reload
@@ -25,7 +25,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by workshop organizer' do
     # create a workshop with a different organizer, which should not be returned below
-    create(:workshop)
+    create :workshop
 
     workshops = Pd::Workshop.organized_by @workshop_organizer
     assert_equal 1, workshops.length
@@ -34,7 +34,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'query by organizer' do
     # create a workshop with a different organizer, which should not be returned below
-    create(:workshop)
+    create :workshop
 
     workshops = Pd::Workshop.organized_by @organizer
     assert_equal 1, workshops.length
@@ -42,12 +42,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'query by facilitator' do
-    facilitator = create(:facilitator)
+    facilitator = create :facilitator
     @workshop.facilitators << facilitator
     @workshop.save!
 
     # create a workshop with a different facilitator, which should not be returned below
-    create(:workshop, facilitators: [create(:facilitator)])
+    create :workshop, facilitators: [create(:facilitator)]
 
     workshops = Pd::Workshop.facilitated_by facilitator
     assert_equal 1, workshops.length
@@ -60,7 +60,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
-    other_workshop = create(:workshop)
+    other_workshop = create :workshop
     create :pd_enrollment, workshop: other_workshop
 
     workshops = Pd::Workshop.enrolled_in_by teacher
@@ -137,8 +137,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_attendance, session: session, teacher: teacher
 
     # create a workshop attended by a different teacher, which should not be returned below
-    other_workshop = create(:workshop)
-    other_session = create(:pd_session)
+    other_workshop = create :workshop
+    other_session = create :pd_session
     other_workshop.sessions << other_session
     create :pd_attendance, session: other_session
 
@@ -401,8 +401,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'send_exit_surveys teachers with attendance get emails' do
     workshop = create :workshop, :ended
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    create :pd_workshop_participant, workshop: workshop, enrolled: true
+    create :pd_workshop_participant, workshop: workshop, enrolled: true, attended: true
 
     assert workshop.account_required_for_attendance?
     Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
@@ -416,7 +416,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :fit_workshop, :ended
     # workshop subject is deprecated so validation must be skipped
     workshop.save(validate: false)
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    create :pd_workshop_participant, workshop: workshop, enrolled: true, attended: true
 
     # Ensure no exit surveys are sent
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -427,7 +427,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Make a EIR workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
     workshop = create :admin_counselor_workshop, :ended
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    create :pd_workshop_participant, workshop: workshop, enrolled: true, attended: true
 
     # Ensure no exit surveys are sent
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -438,7 +438,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Make a Facilitator workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
     workshop = create :facilitator_workshop, :ended
-    create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
+    create :pd_workshop_participant, workshop: workshop, enrolled: true, attended: true
 
     # Ensure no exit surveys are sent
     Pd::Enrollment.any_instance.expects(:send_exit_survey).never
@@ -1328,7 +1328,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_automated_emails sends pre-workshop 10 days before' do
     workshop = create :csd_academic_year_workshop, sessions_from: Time.zone.today + 10.days
 
-    facilitator = create(:facilitator)
+    facilitator = create :facilitator
     workshop.facilitators = [facilitator]
     workshop.save!
 

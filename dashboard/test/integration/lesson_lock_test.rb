@@ -13,11 +13,11 @@ class StageLockTest < ActionDispatch::IntegrationTest
 
     @script = create(:single_unit_course).first_unit
     @lesson_group = create :lesson_group, script: @script
-    @lockable_lesson = create(:lesson, script: @script, name: 'Lockable Lesson', lockable: true, lesson_group: @lesson_group)
-    external = create(:external, name: 'markdown level')
-    @lockable_external_sl = create(:script_level, script: @script, lesson: @lockable_lesson, levels: [external])
-    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @script, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_lesson = create :lesson, script: @script, name: 'Lockable Lesson', lockable: true, lesson_group: @lesson_group
+    external = create :external, name: 'markdown level'
+    @lockable_external_sl = create :script_level, script: @script, lesson: @lockable_lesson, levels: [external]
+    @level_group = create :level_group, :with_sublevels, name: 'assessment 1'
+    @lockable_level_group_sl = create :script_level, script: @script, lesson: @lockable_lesson, levels: [@level_group], assessment: true
   end
 
   test 'authorized teacher viewing lockable lesson contents' do

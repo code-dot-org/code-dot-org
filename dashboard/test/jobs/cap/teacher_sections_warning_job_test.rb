@@ -12,9 +12,9 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     let(:section_name) {Faker::Educator.unique.course_name}
     let(:section_hidden) {false}
 
-    let(:teacher) {create(:teacher, email: teacher_email, name: teacher_name)}
-    let(:section) {create(:section, user: teacher, name: section_name, hidden: section_hidden)}
-    let(:student) {create(:cpa_non_compliant_student, :in_grace_period, cap_status_date: student_aga_gate_start_date)}
+    let(:teacher) {create :teacher, email: teacher_email, name: teacher_name}
+    let(:section) {create :section, user: teacher, name: section_name, hidden: section_hidden}
+    let(:student) {create :cpa_non_compliant_student, :in_grace_period, cap_status_date: student_aga_gate_start_date}
 
     let(:expect_teacher_warning_to_be_sent) do
       MailJet.expects(:send_email).with(
@@ -44,7 +44,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     end
 
     before do
-      create(:follower, section: section, student_user: student)
+      create :follower, section: section, student_user: student
     end
 
     it 'enqueues job to "default" queue' do
@@ -97,7 +97,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
     end
 
     context 'when student has parental permission' do
-      let(:student) {create(:student, :with_parent_permission, cap_status_date: student_aga_gate_start_date)}
+      let(:student) {create :student, :with_parent_permission, cap_status_date: student_aga_gate_start_date}
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
@@ -118,7 +118,7 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
     # We have legacy teacher accounts which don't have a plaintext email
     context 'teacher email is blank' do
-      let(:teacher) {create(:teacher, :without_email, name: teacher_name)}
+      let(:teacher) {create :teacher, :without_email, name: teacher_name}
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SurveyResultsControllerTest < ActionController::TestCase
   setup do
-    @teacher = create(:teacher)
+    @teacher = create :teacher
     sign_in @teacher
   end
 

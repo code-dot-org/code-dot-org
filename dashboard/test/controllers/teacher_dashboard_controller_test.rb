@@ -49,9 +49,9 @@ class TeacherDashboardControllerTest < ActionController::TestCase
   end
 
   test 'index: returns success if requested section is an instructed section for a coteacher' do
-    cotaught_section = create(:section, user: @section_owner, login_type: 'word')
+    cotaught_section = create :section, user: @section_owner, login_type: 'word'
     other_teacher = create :teacher
-    create(:section_instructor, instructor: other_teacher, section: cotaught_section, status: :active)
+    create :section_instructor, instructor: other_teacher, section: cotaught_section, status: :active
 
     sign_in other_teacher
     get :show, params: {section_id: cotaught_section.id}
@@ -59,7 +59,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
   end
 
   test 'redirect_to_newest_section: redirects to support URL if no sections instructed' do
-    other_teacher = create(:teacher)
+    other_teacher = create :teacher
     sign_in other_teacher
 
     get :redirect_to_newest_section_progress

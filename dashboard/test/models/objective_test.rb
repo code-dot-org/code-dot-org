@@ -23,7 +23,7 @@ class ObjectiveTest < ActiveSupport::TestCase
   end
 
   test "summarize retrives translations" do
-    objective = create(:objective, description: "English description")
+    objective = create :objective, description: "English description"
     test_locale = :'te-ST'
     custom_i18n = {
       "data" => {

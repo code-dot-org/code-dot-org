@@ -27,7 +27,7 @@ class LessonGroupTest < ActiveSupport::TestCase
     script = create :script, :in_single_unit_course
     lesson_group = create :lesson_group, key: 'my-lesson-group', user_facing: true, position: 1, script: script
     lesson = create :lesson, name: "Lesson1", script: script, lesson_group: lesson_group, absolute_position: 1
-    create(:script_level, script: script, lesson: lesson)
+    create :script_level, script: script, lesson: lesson
 
     summary = lesson_group.summarize_for_unit_edit
 

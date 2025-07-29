@@ -11,7 +11,7 @@ class CalloutsTest < ActionDispatch::IntegrationTest
     @level = Maze.create(@maze_data)
     @level.callout_json = '[{"localization_key": "run", "element_id": "#runButton"}]'
     @level.save!
-    @script_level = create(:script_level, levels: [@level], lesson: @lesson, script: @script)
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, script: @script
     @level_path = "/levels/#{@level.id}"
     @script_level_path = "/courses/#{@script.original_unit_group.name}/units/1/lessons/1/levels/1"
     Unit.script_cache.delete @script.name

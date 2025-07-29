@@ -10,8 +10,8 @@ class LessonsControllerTest < ActionController::TestCase
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
 
-    @script = create(:script, name: 'unit-1')
-    @course = create(:single_unit_course, unit: @script)
+    @script = create :script, name: 'unit-1'
+    @course = create :single_unit_course, unit: @script
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -58,34 +58,34 @@ class LessonsControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', include_student_lesson_plans: true
-    @in_development_course = create(:single_unit_course, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    @in_development_course = create :single_unit_course, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     @in_development_unit.reload
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_script = create :script, :with_lessons, lessons_count: 1, name: 'pilot-script', pilot_experiment: 'my-experiment', include_student_lesson_plans: true
-    @pilot_course = create(:single_unit_course, unit: @pilot_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'my-experiment')
+    @pilot_course = create :single_unit_course, unit: @pilot_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'my-experiment'
     @pilot_script.reload
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
     @pilot_instructor = create :teacher, pilot_experiment: 'pl-my-experiment'
     @pilot_pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', pilot_experiment: 'pl-my-experiment', include_student_lesson_plans: true
-    @pilot_pl_course = create(:single_unit_course, unit: @pilot_pl_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'pl-my-experiment')
+    @pilot_pl_course = create :single_unit_course, unit: @pilot_pl_script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, pilot_experiment: 'pl-my-experiment'
     @pilot_pl_script.reload
     @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_script
     @pilot_participant = create :teacher
-    create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
+    create :follower, section: @pilot_pl_section, student_user: @pilot_participant
 
     @login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-script', include_student_lesson_plans: true, login_required: true
-    @login_req_course = create(:single_unit_course, unit: @login_req_script)
+    @login_req_course = create :single_unit_course, unit: @login_req_script
     @login_req_script.reload
 
     @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', include_student_lesson_plans: true, login_required: true
-    @pl_login_req_course = create(:single_unit_course, :pl_course, unit: @pl_login_req_script)
+    @pl_login_req_course = create :single_unit_course, :pl_course, unit: @pl_login_req_script
     @pl_login_req_script.reload
 
     @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1'
-    @pl_course = create(:single_unit_course, :pl_course, unit: @pl_script)
+    @pl_course = create :single_unit_course, :pl_course, unit: @pl_script
     @pl_script.reload
   end
 
@@ -264,7 +264,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'can not show lesson when lesson is in a non-migrated script' do
     sign_in @levelbuilder
     script2 = create :script, name: 'unmigrated-course', is_migrated: false
-    course2 = create(:single_unit_course, unit: script2)
+    course2 = create :single_unit_course, unit: script2
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -287,7 +287,7 @@ class LessonsControllerTest < ActionController::TestCase
 
   test 'show lesson when lesson is the only lesson in script' do
     script = create :script, name: 'one-lesson-script', is_migrated: true
-    course = create(:single_unit_course, unit: script)
+    course = create :single_unit_course, unit: script
     lesson_group = create :lesson_group, script: script
     solo_lesson_in_script = create(
       :lesson,
@@ -368,7 +368,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'can not show student lesson plan when lesson is in a non-migrated script' do
     sign_in @levelbuilder
     script2 = create :script, name: 'unmigrated-course'
-    course2 = create(:single_unit_course, unit: script2)
+    course2 = create :single_unit_course, unit: script2
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -392,7 +392,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'can not show student lesson plan when lesson is in a script without student lesson plans' do
     sign_in @levelbuilder
     script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: false
-    course2 = create(:single_unit_course, unit: script2)
+    course2 = create :single_unit_course, unit: script2
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -416,7 +416,7 @@ class LessonsControllerTest < ActionController::TestCase
   test 'show student lesson plan' do
     sign_in @levelbuilder
     script2 = create :script, name: 'course', is_migrated: true, include_student_lesson_plans: true
-    course2 = create(:single_unit_course, unit: script2)
+    course2 = create :single_unit_course, unit: script2
     lesson_group2 = create :lesson_group, script: script2
     unmigrated_lesson = create(
       :lesson,
@@ -535,7 +535,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
 
@@ -554,7 +554,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson
@@ -581,7 +581,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson
@@ -611,7 +611,7 @@ class LessonsControllerTest < ActionController::TestCase
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group
     lesson_activity = create :lesson_activity, lesson: lesson
@@ -1442,10 +1442,10 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script, use_legacy_lesson_plans: false
-    course = create(:single_unit_course, unit: script, version_year: '2021')
+    course = create :single_unit_course, unit: script, version_year: '2021'
     create :course_version, content_root: course, key: '2021'
     original_script = create :script, use_legacy_lesson_plans: false
-    original_course = create(:single_unit_course, unit: original_script, version_year: '2021')
+    original_course = create :single_unit_course, unit: original_script, version_year: '2021'
     lesson = create :lesson, script: original_script
     create :course_version, content_root: original_course, key: '2021'
     cloned_lesson = create :lesson, script: script
@@ -1462,10 +1462,10 @@ class LessonsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     script = create :script, use_legacy_lesson_plans: false
-    course = create(:single_unit_course, unit: script, version_year: '2021')
+    course = create :single_unit_course, unit: script, version_year: '2021'
     create :course_version, content_root: course, key: '2021'
     original_script = create :script, use_legacy_lesson_plans: false
-    original_course = create(:single_unit_course, unit: original_script, version_year: '2020')
+    original_course = create :single_unit_course, unit: original_script, version_year: '2020'
     lesson = create :lesson, script: original_script
     create :course_version, content_root: original_course, key: '2020'
     cloned_lesson = create :lesson, script: script

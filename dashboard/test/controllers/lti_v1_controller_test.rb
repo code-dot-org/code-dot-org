@@ -513,7 +513,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - given an existing deployment_id in our system, do not create a new LtiDeployment' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    deployment = create :lti_deployment, deployment_id: @deployment_id, lti_integration: @integration
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment, @integration.lti_deployments.first
@@ -523,7 +523,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - given an existing LTI deployment in our system, update deployment with name if empty' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    deployment = create :lti_deployment, deployment_id: @deployment_id, lti_integration: @integration
     assert deployment
     assert_nil deployment.name
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
@@ -537,7 +537,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
     user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    deployment = create :lti_deployment, deployment_id: @deployment_id, lti_integration: @integration
     assert_equal deployment.lti_user_identities.count, 0
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_equal deployment.lti_user_identities.count, 1
@@ -548,7 +548,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
     user = create_preexisting_user(payload)
-    deployment = create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)
+    deployment = create :lti_deployment, deployment_id: @deployment_id, lti_integration: @integration
     deployment.lti_user_identities << user.lti_user_identities.first
     assert_equal deployment.lti_user_identities.count, 1
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}

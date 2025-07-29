@@ -14,12 +14,12 @@ class LevelsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
-    @level = create(:level)
+    @level = create :level
     @partner_level = create :level, editor_experiment: 'platformization-partners'
-    @admin = create(:admin)
-    @not_admin = create(:user)
+    @admin = create :admin
+    @not_admin = create :user
     @platformization_partner = create :platformization_partner
-    @levelbuilder = create(:levelbuilder)
+    @levelbuilder = create :levelbuilder
     sign_in(@levelbuilder)
     @program = '<hey/>'
 
@@ -68,7 +68,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   def create_level_with_rubric
-    create(:level,
+    create(
+      :level,
       mini_rubric: 'true',
       rubric_key_concept: 'This is the key concept',
       rubric_performance_level_1: 'This is great',
@@ -115,7 +116,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with name matching level key for blockly levels" do
     game = Game.find_by_name("CustomMaze")
-    create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
+    create :level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze"
 
     get :get_filtered_levels, params: {name: 'blockly:CustomMaze:special_blockly_level'}
     assert_equal 'blockly:CustomMaze:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
@@ -123,7 +124,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with level_type" do
     existing_levels_count = Odometer.all.count
-    level = create(:odometer)
+    level = create :odometer
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     assert_equal existing_levels_count + 1, JSON.parse(@response.body)['levels'].length
     assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
@@ -131,7 +132,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with script_id" do
-    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 7)
+    script = create :script, :in_single_unit_course, :with_levels, levels_count: 7
     get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
     assert_equal 1, JSON.parse(@response.body)['numPages']
@@ -178,7 +179,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot get exemplar to edit" do
-    teacher = create(:teacher)
+    teacher = create :teacher
     sign_out(@levelbuilder)
     sign_in(teacher)
 
@@ -190,7 +191,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "levelbuilder can update exemplar" do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     exemplar_sources = {"File.java" => "System.out.println()"}
-    javalab_level = create(:javalab)
+    javalab_level = create :javalab
     assert_nil javalab_level.exemplar_sources
 
     post :update_exemplar_code,
@@ -203,11 +204,11 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "teacher cannot update exemplar" do
-    teacher = create(:teacher)
+    teacher = create :teacher
     sign_out(@levelbuilder)
     sign_in(teacher)
 
-    javalab_level = create(:javalab)
+    javalab_level = create :javalab
     post :update_exemplar_code,
       params: {id: javalab_level.id}
     assert_response :forbidden
@@ -241,11 +242,11 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should alphanumeric order custom levels on new" do
     Level.where(user_id: @levelbuilder.id).map(&:destroy)
-    level_1 = create(:level, user: @levelbuilder, name: "BBBB")
-    level_2 = create(:level, user: @levelbuilder, name: "AAAA")
-    level_3 = create(:level, user: @levelbuilder, name: "Z1")
-    level_4 = create(:level, user: @levelbuilder, name: "Z10")
-    level_5 = create(:level, user: @levelbuilder, name: "Z2")
+    level_1 = create :level, user: @levelbuilder, name: "BBBB"
+    level_2 = create :level, user: @levelbuilder, name: "AAAA"
+    level_3 = create :level, user: @levelbuilder, name: "Z1"
+    level_4 = create :level, user: @levelbuilder, name: "Z10"
+    level_5 = create :level, user: @levelbuilder, name: "Z2"
 
     get :new, params: {game_id: @level.game}
 
@@ -648,7 +649,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = create(:deprecated_blockly_level, user_id: nil)
+    level = create :deprecated_blockly_level, user_id: nil
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -815,7 +816,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "update sends JSON::ParserError to user" do
-    level = create(:applab)
+    level = create :applab
     invalid_json = "{,}"
     patch :update, params: {
       id: level,
@@ -829,7 +830,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "update_start_code encrypts validation" do
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
-    level = create(:javalab)
+    level = create :javalab
     post :update_start_code, params: {
       id: level.id
     }, body:
@@ -878,7 +879,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should use level for route helper" do
-    level = create(:artist)
+    level = create :artist
     get :edit, params: {id: level}
     css = css_select "form[action=\"#{level_path(level)}\"]"
     refute css.empty?
@@ -922,7 +923,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "edit form should include skins" do
-    level = create(:artist)
+    level = create :artist
     skins = level.class.skins
     get :edit, params: {id: level, game_id: level.game}
     skin_select = css_select "#level_skin option"
@@ -931,19 +932,19 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should populate artist start direction with current value" do
-    level = create(:artist, start_direction: 180)
+    level = create :artist, start_direction: 180
     get :edit, params: {id: level, game_id: level.game}
     assert_select "#level_start_direction[value='180']"
   end
 
   test "should populate maze start direction with current value" do
-    level = create(:maze, start_direction: 2)
+    level = create :maze, start_direction: 2
     get :edit, params: {id: level, game_id: level.game}
     assert_select "#level_start_direction option[value='2'][selected='selected']"
   end
 
   test "should populate level skin with current value" do
-    level = create(:maze, skin: 'pvz')
+    level = create :maze, skin: 'pvz'
     get :edit, params: {id: level, game_id: level.game}
     assert_select "#level_skin option[value='pvz'][selected='selected']"
   end
@@ -1033,14 +1034,14 @@ class LevelsControllerTest < ActionController::TestCase
 
   test 'should hide legacy unplugged pdf download button for students' do
     level = create :unplugged, name: 'OldUnplugged', type: 'Unplugged'
-    teacher = create(:teacher)
+    teacher = create :teacher
     sign_out(@levelbuilder)
     sign_in(teacher)
     get :show, params: {id: level, game_id: level.game}
     assert_select '.pdf-button'
 
     @controller = LevelsController.new
-    student = create(:student)
+    student = create :student
     sign_out(teacher)
     sign_in(student)
     get :show, params: {id: level, game_id: level.game}
@@ -1057,14 +1058,14 @@ class LevelsControllerTest < ActionController::TestCase
 
   test 'should hide unplugged pdf download section for students' do
     level = create :unplugged, name: 'NewUnplugged', type: 'Unplugged'
-    teacher = create(:teacher)
+    teacher = create :teacher
     sign_out(@levelbuilder)
     sign_in(teacher)
     get :show, params: {id: level, game_id: level.game}
     assert_select '.pdf-button'
 
     @controller = LevelsController.new
-    student = create(:student)
+    student = create :student
     sign_out(teacher)
     sign_in(student)
     get :show, params: {id: level, game_id: level.game}
@@ -1073,7 +1074,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create :level, game_id: game.id, name: "Fun Level"
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -1086,7 +1087,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone without redirect" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create :level, game_id: game.id, name: "Fun Level"
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
     end
@@ -1098,7 +1099,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "cannot clone hard-coded levels" do
-    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create :deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
@@ -1107,7 +1108,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "cloning a level requires a name parameter" do
-    old = create(:level, game_id: Game.first.id, name: "Fun Level")
+    old = create :level, game_id: Game.first.id, name: "Fun Level"
     assert_raise ActionController::ParameterMissing do
       post :clone, params: {id: old.id, name: ''}
     end
@@ -1118,7 +1119,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
 
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level")
+    old = create :level, game_id: game.id, name: "Fun Level"
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -1134,7 +1135,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_out @levelbuilder
     sign_in @platformization_partner
 
-    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create :deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
@@ -1278,7 +1279,8 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   def create_level_with_serialized_maze
-    create(:javalab,
+    create(
+      :javalab,
       serialized_maze: [[{tileType: 1, value: 0}], [{tileType: 0, assetId: 5, value: 0}]]
     )
   end
@@ -1367,7 +1369,7 @@ class LevelsControllerTest < ActionController::TestCase
     CDO.stubs(:disable_s3_image_uploads).returns(false)
 
     # Make sure there is a LevelSourceImage associated with the program.
-    create(:level_source, :with_image, level: @level, data: @program)
+    create :level_source, :with_image, level: @level, data: @program
 
     # Because we cleared disable_s3_image_uploads, there's a chance we'll
     # accidentally try to upload an image to S3. Make sure this never happens.

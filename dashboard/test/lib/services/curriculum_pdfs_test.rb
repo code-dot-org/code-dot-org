@@ -60,12 +60,12 @@ module Services
     test 'will not generate a overview PDF when unit does not have lesson plans' do
       CDO.stubs(:rack_env).returns(:staging)
       unit_with_lesson_plans = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-      lg_with_lps = create(:lesson_group, script: unit_with_lesson_plans)
-      create(:lesson, script: unit_with_lesson_plans, lesson_group: lg_with_lps, has_lesson_plan: true)
+      lg_with_lps = create :lesson_group, script: unit_with_lesson_plans
+      create :lesson, script: unit_with_lesson_plans, lesson_group: lg_with_lps, has_lesson_plan: true
 
       unit_without_lesson_plans = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-      lg_without_lps = create(:lesson_group, script: unit_with_lesson_plans)
-      create(:lesson, script: unit_without_lesson_plans, lesson_group: lg_without_lps, has_lesson_plan: false)
+      lg_without_lps = create :lesson_group, script: unit_with_lesson_plans
+      create :lesson, script: unit_without_lesson_plans, lesson_group: lg_without_lps, has_lesson_plan: false
 
       assert Services::CurriculumPdfs.should_generate_overview_pdf?(unit_with_lesson_plans)
       refute Services::CurriculumPdfs.should_generate_overview_pdf?(unit_without_lesson_plans)
@@ -75,16 +75,16 @@ module Services
       CDO.stubs(:rack_env).returns(:staging)
 
       unit_without_lesson_plans = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-      lg = create(:lesson_group, script: unit_without_lesson_plans)
-      create(:lesson, script: unit_without_lesson_plans, lesson_group: lg, has_lesson_plan: false)
+      lg = create :lesson_group, script: unit_without_lesson_plans
+      create :lesson, script: unit_without_lesson_plans, lesson_group: lg, has_lesson_plan: false
 
       unit_with_lesson_plans = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-      lg = create(:lesson_group, script: unit_with_lesson_plans)
-      create(:lesson, script: unit_with_lesson_plans, lesson_group: lg, has_lesson_plan: true)
+      lg = create :lesson_group, script: unit_with_lesson_plans
+      create :lesson, script: unit_with_lesson_plans, lesson_group: lg, has_lesson_plan: true
 
       unit_with_lesson_resources = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-      lg = create(:lesson_group, script: unit_with_lesson_resources)
-      lesson = create(:lesson, script: unit_with_lesson_resources, lesson_group: lg, has_lesson_plan: true)
+      lg = create :lesson_group, script: unit_with_lesson_resources
+      lesson = create :lesson, script: unit_with_lesson_resources, lesson_group: lg, has_lesson_plan: true
       lesson.resources = [create(:resource)]
 
       refute Services::CurriculumPdfs.should_generate_resource_pdf?(unit_without_lesson_plans)

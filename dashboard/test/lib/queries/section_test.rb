@@ -4,11 +4,11 @@ class Queries::SectionTest < ActiveSupport::TestCase
   describe '.cap_affected' do
     subject(:cap_affected_sections) {described_class.cap_affected}
 
-    let(:section) {create(:section)}
-    let(:section_student) {create(:cpa_non_compliant_student, :in_grace_period)}
+    let(:section) {create :section}
+    let(:section_student) {create :cpa_non_compliant_student, :in_grace_period}
 
     before do
-      create(:follower, section: section, student_user: section_student)
+      create :follower, section: section, student_user: section_student
     end
 
     it 'returns sections with CAP affected students' do
@@ -16,7 +16,7 @@ class Queries::SectionTest < ActiveSupport::TestCase
     end
 
     context 'when section has no CAP affected followers' do
-      let!(:section_student) {create(:student, :with_parent_permission)}
+      let!(:section_student) {create :student, :with_parent_permission}
 
       it 'does not return section' do
         _cap_affected_sections.wont_include section

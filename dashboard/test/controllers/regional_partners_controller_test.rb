@@ -115,7 +115,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'replace mappings on invalid mapping fails and does not delete old mapping' do
-    regional_partner_with_mapping = create(:regional_partner)
+    regional_partner_with_mapping = create :regional_partner
     regional_partner_with_mapping.mappings << Pd::RegionalPartnerMapping.new(zip_code: 98143, regional_partner: regional_partner_with_mapping)
     regional_partner_with_mapping.save!
 

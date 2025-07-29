@@ -8,11 +8,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
     section = create :section, user: @authorized_teacher1, unit_group: unit_group
     @authorized_student1 = create(:follower, section: section).student_user
-    @unauthorized_student = create(:student)
-    @unauthorized_teacher = create(:teacher)
+    @unauthorized_student = create :student
+    @unauthorized_teacher = create :teacher
 
-    @level = create(:level)
-    @script = create(:script, :in_single_unit_course)
+    @level = create :level
+    @script = create :script, :in_single_unit_course
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {
@@ -189,13 +189,13 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'GET chat_request returns forbidden if user is not the requester' do
     sign_in(@authorized_teacher1)
-    request = create(:aichat_request, user: @authorized_student1)
+    request = create :aichat_request, user: @authorized_student1
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end
 
   test 'GET chat_request returns forbidden if user is not signed in' do
-    request = create(:aichat_request, user: @authorized_teacher1)
+    request = create :aichat_request, user: @authorized_teacher1
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end
@@ -205,7 +205,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     execution_status = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
 
     sign_in(@authorized_teacher1)
-    request = create(:aichat_request, user: @authorized_teacher1, response: response, execution_status: execution_status)
+    request = create :aichat_request, user: @authorized_teacher1, response: response, execution_status: execution_status
     get :chat_request, params: {id: request.id}, as: :json
 
     assert_response :success

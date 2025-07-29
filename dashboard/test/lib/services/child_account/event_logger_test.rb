@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
   setup do
-    @user = create(:locked_out_child)
+    @user = create :locked_out_child
   end
 
   test 'call - creates CAP user event' do

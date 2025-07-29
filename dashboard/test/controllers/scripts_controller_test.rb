@@ -26,7 +26,7 @@ class ScriptsControllerTest < ActionController::TestCase
     @pl_coursez_2019 = create :script, name: 'pl-coursez-2019'
     create :single_unit_course, :pl_course, unit: @pl_coursez_2019, name: 'pl-coursez-2019', family_name: 'pl-coursez', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create(:script, :in_single_unit_course)
+    @migrated_unit = create :script, :in_single_unit_course
     @migrated_pl_unit = create(:single_unit_course, :pl_course).first_unit
     @unmigrated_unit = create :script, :in_single_unit_course, is_migrated: false
 
@@ -71,8 +71,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should not get index if not levelbuilder" do
-    admin = create(:admin)
-    not_admin = create(:user)
+    admin = create :admin
+    not_admin = create :user
     [admin, not_admin].each do |user|
       sign_in user
 
@@ -135,7 +135,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show of ECSPD if signed in" do
-    not_admin = create(:user)
+    not_admin = create :user
     sign_in not_admin
     get :show, params: {id: 'ECSPD'}
     assert_response :success
@@ -179,21 +179,21 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should get show if not admin" do
-    not_admin = create(:user)
+    not_admin = create :user
     sign_in not_admin
     get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
-    admin = create(:admin)
+    admin = create :admin
     sign_in admin
     get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
     assert_response :forbidden
   end
 
   test "should use unit name as param where unit name is words but looks like a number" do
-    unit = create(:script, :in_single_unit_course, name: '15-16')
+    unit = create :script, :in_single_unit_course, name: '15-16'
     get :show, params: {id: "15-16"}
 
     assert_response :redirect
@@ -202,7 +202,7 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "should use unit name as param where unit name is words" do
-    unit = create(:script, :in_single_unit_course, name: 'Heure de Code', skip_name_format_validation: true)
+    unit = create :script, :in_single_unit_course, name: 'Heure de Code', skip_name_format_validation: true
     get :show, params: {id: "Heure de Code"}
 
     assert_response :redirect
@@ -211,8 +211,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test "show get show if family name matches script name" do
-    unit = create(:script, name: 'hoc-script')
-    unit_group = create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
+    unit = create :script, name: 'hoc-script'
+    unit_group = create :hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned'
     CourseOffering.add_course_offering(unit_group)
     get :show, params: {course_course_name: 'hoc-course', position: 1}
 
@@ -495,8 +495,8 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "should not get edit if not levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    admin = create(:admin)
-    not_admin = create(:user)
+    admin = create :admin
+    not_admin = create :user
     [not_admin, admin].each do |user|
       sign_in user
       get :edit, params: {id: 'course1'}
@@ -519,8 +519,8 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
     unit = create(:course_version, :with_single_unit_course).content_root.first_unit
-    secondary_course = create(:single_unit_course, unit: unit)
-    create(:course_version, content_root: secondary_course)
+    secondary_course = create :single_unit_course, unit: unit
+    create :course_version, content_root: secondary_course
 
     # Use /s/ URL
     get :edit, params: {id: unit.name}
@@ -1548,7 +1548,7 @@ class ScriptsControllerTest < ActionController::TestCase
       @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
       create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
       @pilot_pl_participant = create :facilitator
-      create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
+      create :follower, section: @pilot_pl_section, student_user: @pilot_pl_participant
     end
 
     no_access_msg = "You don&#39;t have access to this unit."
@@ -1622,7 +1622,7 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CourseInDevelopmentTests < ActionController::TestCase
     setup do
-      @in_development_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+      @in_development_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
       @in_development_unit = @in_development_course.first_unit
     end
 

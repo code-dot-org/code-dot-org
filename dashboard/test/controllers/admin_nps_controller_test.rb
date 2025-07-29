@@ -5,8 +5,8 @@ class AdminNpsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
-    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx', admin: false)
+    @admin = create :admin
+    @not_admin = create :teacher, username: 'notadmin', email: 'not_admin@email.xx', admin: false
   end
 
   generate_admin_only_tests_for :nps_form

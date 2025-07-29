@@ -34,7 +34,7 @@ class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
   end
 
   test 'a user who is both a facilitator and an organizer has their permission reflected' do
-    user = create(:workshop_organizer)
+    user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
 
     sign_in user
@@ -44,7 +44,7 @@ class Pd::WorkshopDashboardControllerTest < ActionController::TestCase
   end
 
   test 'a user who is both a program manager and an organizer has their permission reflected' do
-    user = create(:workshop_organizer)
+    user = create :workshop_organizer
     create :regional_partner_program_manager, program_manager: user
 
     sign_in user

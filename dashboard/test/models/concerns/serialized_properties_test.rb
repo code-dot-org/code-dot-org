@@ -121,7 +121,7 @@ class SerializedPropertiesTest < ActiveSupport::TestCase
   describe '#property_previously_changed?' do
     subject(:property_previously_changed?) {record.property_previously_changed?(property_name)}
 
-    let(:record) {create(:user, property_name => property_old_value)}
+    let(:record) {create :user, property_name => property_old_value}
     let(:property_name) {'us_state'}
     let(:property_old_value) {'AL'}
     let(:property_new_value) {'WA'}

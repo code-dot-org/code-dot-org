@@ -11,24 +11,24 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student2')
-    create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-2')
-    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student3')
-    create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1992', family_name: 'family-2')
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2')
-    create(:single_unit_course, :pl_course, :with_course_offering, unit: @unit_facilitator_to_teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-3')
+    @unit_teacher_to_students = create :script, name: 'unit-teacher-to-student2'
+    create :single_unit_course, :with_course_offering, unit: @unit_teacher_to_students, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-2'
+    @unit_teacher_to_students2 = create :script, name: 'unit-teacher-to-student3'
+    create :single_unit_course, :with_course_offering, unit: @unit_teacher_to_students2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1992', family_name: 'family-2'
+    @unit_facilitator_to_teacher = create :script, name: 'unit-facilitator-to-teacher2'
+    create :single_unit_course, :pl_course, :with_course_offering, unit: @unit_facilitator_to_teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-3'
 
-    @beta_unit = create(:script, name: 'beta-unit')
-    create(:single_unit_course, :with_course_offering, unit: @beta_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'beta')
+    @beta_unit = create :script, name: 'beta-unit'
+    create :single_unit_course, :with_course_offering, unit: @beta_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'beta'
 
-    @in_development_unit = create(:script, name: 'in-development-unit2')
-    create(:single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development')
+    @in_development_unit = create :script, name: 'in-development-unit2'
+    create :single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development'
   end
 
   setup do
-    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
-    create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
+    @unit_group = create :unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable'
+    @unit_in_course = create :script, name: 'unit-in-teacher-instructed-course2', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil
+    create :unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1
     @unit_in_course.reload
     @unit_group.reload
     CourseOffering.add_course_offering(@unit_group)
@@ -41,7 +41,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
     @partner_unit = create :script, editor_experiment: 'ed-experiment'
-    create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-11', pilot_experiment: 'my-editor-experiment')
+    create :single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-11', pilot_experiment: 'my-editor-experiment'
   end
 
   test "course offering associations" do
@@ -161,12 +161,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with unit group if locale in English" do
     ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    ug_2050_unit = create :script, name: 'ug1-2050', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [])
+    ug_2051_unit = create :script, name: 'ug1-2051', supported_locales: []
     create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
     offering = CourseOffering.add_course_offering(ug_2051)
 
@@ -175,10 +175,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with single-unit course if locale in English" do
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
+    create :single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss'
 
     script2 = create :script, supported_locales: []
-    create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
+    create :single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss'
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
     assert_equal offering.latest_published_version('en-us'), script2.get_course_version
@@ -186,12 +186,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with unit group if no stable versions" do
     ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    ug_2050_unit = create :script, name: 'ug1-2050', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [''])
+    ug_2051_unit = create :script, name: 'ug1-2051', supported_locales: ['']
     create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
     offering = CourseOffering.add_course_offering(ug_2051)
 
@@ -200,10 +200,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with unit if no stable versions" do
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2050', family_name: 'ss')
+    create :single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2050', family_name: 'ss'
 
     script2 = create :script, supported_locales: []
-    create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2051', family_name: 'ss')
+    create :single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2051', family_name: 'ss'
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
     assert_equal offering.latest_published_version('fake-locale'), script2.get_course_version
@@ -211,12 +211,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with unit group if given locale not supported" do
     ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    ug_2050_unit = create :script, name: 'ug1-2050', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
+    ug_2051_unit = create :script, name: 'ug1-2051', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
     offering = CourseOffering.add_course_offering(ug_2051)
 
@@ -225,10 +225,23 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns most recent published course version with single-unit course if given locale not supported" do
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
+    create(
+      :single_unit_course,
+      :with_course_offering,
+      unit: script,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
+      version_year: '2050',
+      family_name: 'ss'
+    )
 
     script2 = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
+    create(
+      :single_unit_course,
+      unit: script2,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable,
+      version_year: '2051',
+      family_name: 'ss'
+    )
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
     assert_equal offering.latest_published_version('invalid-locale'), script2.get_course_version
@@ -236,17 +249,17 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns latest stable course version with stable unit group if given locale supported" do
     ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale', 'second-fake-locale'])
+    ug_2050_unit = create :script, name: 'ug1-2050', supported_locales: ['fake-locale', 'second-fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: ['fake-locale'])
+    ug_2051_unit = create :script, name: 'ug1-2051', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
     CourseOffering.add_course_offering(ug_2051)
 
     ug_2052 = create :unit_group, family_name: 'ug', version_year: '2052', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
-    ug_2052_unit = create(:script, name: 'ug1-2052', supported_locales: ['fake-locale'])
+    ug_2052_unit = create :script, name: 'ug1-2052', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2052, script: ug_2052_unit, position: 1
     offering = CourseOffering.add_course_offering(ug_2052)
 
@@ -257,11 +270,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test "latest_published_version returns latest stable course version with stable unit if given locale supported" do
     script = create :script, supported_locales: ['fake-locale', 'second-fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
+    create :single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss'
     script2 = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
+    create :single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss'
     script3 = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, unit: script3, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2052', family_name: 'ss')
+    create :single_unit_course, unit: script3, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview, version_year: '2052', family_name: 'ss'
     offering = CourseOffering.add_course_offering(script3.original_unit_group)
 
     assert_equal offering.latest_published_version('fake-locale'), script2.get_course_version
@@ -333,88 +346,88 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'any_versions_launched? is true if any course versions have been launched' do
     unit1 = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-6').first_unit
-    create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1992', family_name: 'family-6')
+    create :single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1992', family_name: 'family-6'
 
     assert unit1.get_course_version.course_offering.any_versions_launched?
   end
 
   test 'any_versions_launched? is false if none of the course versions have been launched' do
     unit1 = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'family-7').first_unit
-    create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1992', family_name: 'family-7')
+    create :single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1992', family_name: 'family-7'
 
     refute unit1.get_course_version.course_offering.any_versions_launched?
   end
 
   test 'any_versions_in_development? is true if any course versions are in development' do
     unit1 = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-8').first_unit
-    create(:single_unit_course, :with_course_offering, family_name: 'family-8', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    create :single_unit_course, :with_course_offering, family_name: 'family-8', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
 
     assert unit1.get_course_version.course_offering.any_versions_in_development?
   end
 
   test 'any_versions_in_development? is false if none of the course versions are in development' do
     unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-9', version_year: '1991', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-    create(:single_unit_course, :with_course_offering, family_name: 'family-9', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    create :single_unit_course, :with_course_offering, family_name: 'family-9', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     refute unit1.get_course_version.course_offering.any_versions_in_development?
   end
 
   test 'any_version_is_in_published_state? is false if none of the course versions have a published_state of preview or stable' do
     unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-10', version_year: '1991', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-    create(:single_unit_course, :with_course_offering, family_name: 'family-10', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    create :single_unit_course, :with_course_offering, family_name: 'family-10', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
 
     refute unit1.get_course_version.course_offering.any_version_is_in_published_state?
   end
 
   test 'any_version_is_in_published_state? is true if one of the course versions have a published_state of preview or stable' do
     unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-12', version_year: '1991', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
-    create(:single_unit_course, :with_course_offering, family_name: 'family-12', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    create :single_unit_course, :with_course_offering, family_name: 'family-12', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
 
     assert unit1.get_course_version.course_offering.any_version_is_in_published_state?
   end
 
   test 'any_version_is_in_published_state? is true if all of the course versions have a published_state of preview or stable' do
     unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-13', version_year: '1991', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit
-    create(:single_unit_course, :with_course_offering, family_name: 'family-13', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    create :single_unit_course, :with_course_offering, family_name: 'family-13', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
 
     assert unit1.get_course_version.course_offering.any_version_is_in_published_state?
   end
 
   test 'assignable_published_for_students_course_offerings filters only for assignable, published, and for student course offerings' do
     # Course offering that doesn't satisfy any of the conditions
-    none_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'none', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    none_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'none', instructor_audience: 'universal_instructor', participant_audience: 'teacher'
     none_co = CourseOffering.add_course_offering(none_course)
     none_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'assignable' condition
-    assignable_course = create(:single_unit_course, family_name: 'assignable', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    assignable_course = create :single_unit_course, family_name: 'assignable', version_year: '1992', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, instructor_audience: 'universal_instructor', participant_audience: 'teacher'
     assignable_co = CourseOffering.add_course_offering(assignable_course)
 
     # Course offering that only satisfies the 'published' condition
-    published_course = create(:single_unit_course, family_name: 'published', version_year: '1993', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    published_course = create :single_unit_course, family_name: 'published', version_year: '1993', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher'
     published_co = CourseOffering.add_course_offering(published_course)
     published_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'for student' condition
-    for_student_course = create(:single_unit_course, family_name: 'for-student', version_year: '1994', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    for_student_course = create :single_unit_course, family_name: 'for-student', version_year: '1994', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student'
     for_student_co = CourseOffering.add_course_offering(for_student_course)
     for_student_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'assignable' and 'published' condition
-    assignable_published_course = create(:single_unit_course, family_name: 'assignable-published', version_year: '1995', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    assignable_published_course = create :single_unit_course, family_name: 'assignable-published', version_year: '1995', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher'
     assignable_published_co = CourseOffering.add_course_offering(assignable_published_course)
 
     # Course offering that only satisfies the 'assignable' and 'for student' condition
-    assignable_for_student_course = create(:single_unit_course, family_name: 'assignable-for-student', version_year: '1996', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    assignable_for_student_course = create :single_unit_course, family_name: 'assignable-for-student', version_year: '1996', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student'
     assignable_for_student_co = CourseOffering.add_course_offering(assignable_for_student_course)
 
     # Course offering that only satisfies the 'published' and 'for student' condition
-    published_for_student_course = create(:single_unit_course, family_name: 'published-for-student', version_year: '1997', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    published_for_student_course = create :single_unit_course, family_name: 'published-for-student', version_year: '1997', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student'
     published_for_student_co = CourseOffering.add_course_offering(published_for_student_course)
     published_for_student_co.update!(assignable: false)
 
     # Course offering that satisfies all 3 conditions
-    all_course = create(:single_unit_course, family_name: 'all', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    all_course = create :single_unit_course, family_name: 'all', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student'
     all_co = CourseOffering.add_course_offering(all_course)
 
     filtered_course_offerings = CourseOffering.assignable_published_for_students_course_offerings
@@ -431,30 +444,73 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'self_paced_course_offerings_for_catalog filters only for assignable published self-paced teacher course offerings' do
     # Course offering that doesn't satisfy any of the conditions
-    none_course = create(:single_unit_course, family_name: 'none', version_year: '1991', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    none_course = create(
+      :single_unit_course,
+      family_name: 'none',
+      version_year: '1991',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     none_co = CourseOffering.add_course_offering(none_course)
     none_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'assignable' condition
-    assignable_course = create(:single_unit_course, family_name: 'assignable', version_year: '1992', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    assignable_course = create(
+      :single_unit_course,
+      family_name: 'assignable',
+      version_year: '1992',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     CourseOffering.add_course_offering(assignable_course)
 
     # Course offering that only satisfies the 'published' condition
-    published_course = create(:single_unit_course, family_name: 'published', version_year: '1993', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'student')
+    published_course = create(
+      :single_unit_course,
+      family_name: 'published',
+      version_year: '1993',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'student'
+    )
     published_co = CourseOffering.add_course_offering(published_course)
     published_co.update!(assignable: false)
 
     # Course offering that only satisfies the 'for teacher' condition
-    for_teacher_course = create(:single_unit_course, family_name: 'for-teacher', version_year: '1994', published_state: 'in_development', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    for_teacher_course = create(
+      :single_unit_course,
+      family_name: 'for-teacher',
+      version_year: '1994',
+      published_state: 'in_development',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    )
     for_teacher_co = CourseOffering.add_course_offering(for_teacher_course)
     for_teacher_co.update!(assignable: false)
 
     # Course offering that is a NON-self-paced assignable published teacher course offerings
-    non_self_paced_course = create(:single_unit_course, family_name: 'non-self-paced', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'teacher')
+    non_self_paced_course = create(
+      :single_unit_course,
+      family_name: 'non-self-paced',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    )
     CourseOffering.add_course_offering(non_self_paced_course)
 
     # Course offering that satisfies all conditions
-    self_paced_course = create(:single_unit_course, family_name: 'all', version_year: '1998', published_state: 'stable', instructor_audience: 'universal_instructor', instruction_type: 'self_paced', participant_audience: 'teacher')
+    self_paced_course = create(
+      :single_unit_course,
+      family_name: 'all',
+      version_year: '1998',
+      published_state: 'stable',
+      instructor_audience: 'universal_instructor',
+      instruction_type: 'self_paced',
+      participant_audience: 'teacher'
+    )
     self_paced_co = CourseOffering.add_course_offering(self_paced_course)
 
     assert_equal [self_paced_co.key], CourseOffering.self_paced_course_offerings_for_catalog.pluck(:key)
@@ -491,7 +547,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'can_be_assigned? is true if any versions in development and user is levelbuilder' do
-    unit1 = create(:single_unit_course, :with_course_offering, family_name: 'family-10', version_year: '1992', published_state: 'in_development').first_unit
+    unit1 = create(
+      :single_unit_course,
+      :with_course_offering,
+      family_name: 'family-10',
+      version_year: '1992',
+      published_state: 'in_development'
+    ).first_unit
 
     refute unit1.get_course_version.course_offering.can_be_assigned?(@teacher)
     assert unit1.get_course_version.course_offering.can_be_assigned?(@levelbuilder)
@@ -618,7 +680,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'missing_required_device_compatibility? returns false for pl course offerings' do
     pl_co = create :course_offering
-    pl_course = create(:single_unit_course, :pl_course).first_unit
+    pl_course = create(
+      :single_unit_course,
+      :pl_course
+    ).first_unit
     create :course_version, content_root: pl_course, course_offering: pl_co
     co = create :course_offering, self_paced_pl_course_offering: pl_co
 
@@ -650,7 +715,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_minutes returns nil if latest_published_version does not exist' do
-    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    course = create(
+      :single_unit_course,
+      family_name: 'test-duration',
+      version_year: '1997',
+      published_state: 'in_development'
+    )
     co = CourseOffering.add_course_offering(course)
 
     assert_nil co.latest_published_version
@@ -658,22 +728,33 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_minutes returns sum of units duration in minutes' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
+    lesson_group = create :lesson_group, script: unit
 
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson1, duration: 40)
+    lesson1 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson1, duration: 40
 
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson2, duration: 40)
-    create(:lesson_activity, lesson: lesson2, duration: 40)
+    lesson2 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson2, duration: 40
+    create :lesson_activity, lesson: lesson2, duration: 40
 
     co = CourseOffering.add_course_offering(unit.original_unit_group)
     assert_equal 120, co.duration_in_minutes
   end
 
   test 'duration_in_hours returns nil if latest_published_version does not exist' do
-    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    course = create(
+      :single_unit_course,
+      family_name: 'test-duration',
+      version_year: '1997',
+      published_state: 'in_development'
+    )
     co = CourseOffering.add_course_offering(course)
 
     assert_nil co.latest_published_version
@@ -681,33 +762,45 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'duration_in_hours returns 1 hour as the minimum if latest_published_version exists' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
+    lesson_group = create :lesson_group, script: unit
 
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson1, duration: 20)
+    lesson1 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson1, duration: 20
 
     co = CourseOffering.add_course_offering(unit.original_unit_group)
     assert_equal 1, co.duration_in_hours
   end
 
   test 'duration_in_hours returns sum of units duration in hours (rounded down using integer math)' do
-    unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    unit = create(
+      :single_unit_course,
+      unit: unit,
+      published_state: 'stable',
+      version_year: '1997',
+      family_name: 'test-duration'
+    ).first_unit
+    lesson_group = create :lesson_group, script: unit
 
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson1, duration: 50)
+    lesson1 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson1, duration: 50
 
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson2, duration: 50)
-    create(:lesson_activity, lesson: lesson2, duration: 50)
+    lesson2 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson2, duration: 50
+    create :lesson_activity, lesson: lesson2, duration: 50
 
     co = CourseOffering.add_course_offering(unit.original_unit_group)
     assert_equal 2, co.duration_in_hours
   end
 
   test 'duration returns nil if latest_published_version does not exist' do
-    course = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development')
+    course = create :single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'in_development'
     co = CourseOffering.add_course_offering(course)
 
     assert_nil co.latest_published_version
@@ -717,14 +810,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'duration returns label associated with sum of units duration' do
     # Create a unit with multiple lessons, each with a different number of lesson activities.
     unit = create(:single_unit_course, unit: unit, published_state: 'stable', version_year: '1997', family_name: 'test-duration').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    lesson_group = create :lesson_group, script: unit
 
-    lesson1 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson1, duration: 40)
+    lesson1 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson1, duration: 40
 
-    lesson2 = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson2, duration: 40)
-    create(:lesson_activity, lesson: lesson2, duration: 40)
+    lesson2 = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson2, duration: 40
+    create :lesson_activity, lesson: lesson2, duration: 40
 
     # A course_offering of this unit should have a 'week' duration since a week is labeled as 91-250 minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)
@@ -735,10 +828,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'duration returns lesson if sum of units duration is 0' do
     # Create a unit with single lesson with an unspecified duration (defaults to 0).
     unit = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'stable').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    lesson_group = create :lesson_group, script: unit
 
-    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
-    create(:lesson_activity, lesson: lesson)
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    create :lesson_activity, lesson: lesson
 
     # A course_offering of this unit should have a 'lesson' duration since a lesson is labeled as 0-90 minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)
@@ -749,10 +842,10 @@ class CourseOfferingTest < ActiveSupport::TestCase
   test 'duration returns school_year if sum of units duration is greater than 5000' do
     # Create a unit with multiple lessons with durations that sum up to >5000.
     unit = create(:single_unit_course, family_name: 'test-duration', version_year: '1997', published_state: 'stable').first_unit
-    lesson_group = create(:lesson_group, script: unit)
+    lesson_group = create :lesson_group, script: unit
 
-    lesson = create(:lesson, script: unit, lesson_group: lesson_group)
-    6.times {create(:lesson_activity, lesson: lesson, duration: 1000)}
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    6.times {create :lesson_activity, lesson: lesson, duration: 1000}
 
     # A course_offering of this unit should have a 'school_year' duration since a school year is labeled as 5000+ minutes.
     co = CourseOffering.add_course_offering(unit.original_unit_group)
@@ -762,16 +855,16 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
   test 'translated? returns true if user locale is in English' do
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss')
+    create :single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2050', family_name: 'ss'
     offering = CourseOffering.add_course_offering(script.original_unit_group)
     assert offering.translated?('en-us')
   end
 
   test 'translated? returns true only if course offering has a stable version supported in user locale' do
     script1 = create :script, supported_locales: ['fake-locale', 'second-fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script1, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss')
+    create :single_unit_course, :with_course_offering, unit: script1, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2051', family_name: 'ss'
     script2 = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2052', family_name: 'ss')
+    create :single_unit_course, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '2052', family_name: 'ss'
     offering = CourseOffering.add_course_offering(script2.original_unit_group)
 
     assert offering.translated?('fake-locale')

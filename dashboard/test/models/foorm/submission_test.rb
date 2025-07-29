@@ -50,7 +50,7 @@ class Foorm::SubmissionTest < ActiveSupport::TestCase
   end
 
   test 'formatted_answers formats submission with workshop metadata as expected' do
-    workshop = build(:csf_101_workshop)
+    workshop = build :csf_101_workshop
     workshop.save(validate: false)
     create :foorm_form_csf_intro_post_survey
     workshop_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop

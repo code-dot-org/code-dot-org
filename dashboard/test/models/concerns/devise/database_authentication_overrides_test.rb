@@ -4,7 +4,7 @@ class DatabaseAuthenticationOverridesTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
   describe "#update_without_password" do
     context "when updating a student without providing a password" do
-      let(:student) {create(:student)}
+      let(:student) {create :student}
       it "updates attributes without requiring a password" do
         name = "Coder"
 
@@ -16,7 +16,7 @@ class DatabaseAuthenticationOverridesTest < ActiveSupport::TestCase
 
   describe '#update_with_password' do
     context 'when the user does not have a password' do
-      let(:student) {create(:student, :without_encrypted_password)}
+      let(:student) {create :student, :without_encrypted_password}
       let(:new_name) {'Some Student'}
       let(:update_params) do
         {

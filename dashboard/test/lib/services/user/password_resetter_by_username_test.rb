@@ -8,7 +8,7 @@ class Services::User::PasswordResetterByUsernameTest < ActiveSupport::TestCase
   describe '#call' do
     subject(:reset_password) {described_instance.call}
 
-    let!(:user) {create(:user)}
+    let!(:user) {create :user}
 
     before do
       user&.update!(username: username)

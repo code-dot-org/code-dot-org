@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DatasetsControllerTest < ActionController::TestCase
   setup do
-    @levelbuilder = create(:levelbuilder)
+    @levelbuilder = create :levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in @levelbuilder
     @test_manifest = {

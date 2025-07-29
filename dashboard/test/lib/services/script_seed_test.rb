@@ -43,7 +43,7 @@ module Services
     end
 
     test 'seeded_from property is not serialized' do
-      script = create(:script)
+      script = create :script
       script.seeded_from = Time.now
       result = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json
       assert result.key? :properties
@@ -1129,7 +1129,7 @@ module Services
     end
 
     test 'import_script sets seeded_from from serialized_at' do
-      script = create(:script, is_migrated: true)
+      script = create :script, is_migrated: true
       assert script.seeded_from.nil?
 
       serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys

@@ -3,57 +3,57 @@ require 'test_helper'
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_teacher_to_student_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) do |unit_group|
+    @public_teacher_to_student_unit_group = create :unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student do |unit_group|
       CourseOffering.add_course_offering(unit_group)
-      @reference_guide_student_unit_group = create(:reference_guide, course_version: unit_group.course_version)
+      @reference_guide_student_unit_group = create :reference_guide, course_version: unit_group.course_version
     end
 
     @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student').tap do |script|
-      create(:single_unit_course, unit: script)
-      @public_teacher_to_student_script_level = create(:script_level, script: script)
+      create :single_unit_course, unit: script
+      @public_teacher_to_student_script_level = create :script_level, script: script
     end
 
     @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher').tap do |script|
-      create(:single_unit_course, :pl_course, unit: script)
-      @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
+      create :single_unit_course, :pl_course, unit: script
+      @public_facilitator_to_teacher_script_level = create :script_level, script: script
     end
 
-    @public_facilitator_to_teacher_unit_group = create(:unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher) do |unit_group|
+    @public_facilitator_to_teacher_unit_group = create :unit_group, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher do |unit_group|
       CourseOffering.add_course_offering(unit_group)
-      @reference_guide_teacher_unit_group = create(:reference_guide, course_version: unit_group.course_version)
+      @reference_guide_teacher_unit_group = create :reference_guide, course_version: unit_group.course_version
     end
 
     @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'reviewer-to-facilitator').tap do |script|
-      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
-      @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
+      create :single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
+      @public_plc_reviewer_to_facilitator_script_level = create :script_level, script: script
     end
 
     @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-to-teacher').tap do |script|
-      create(:single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-      @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
+      create :single_unit_course, unit: script, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @public_universal_instructor_to_teacher_script_level = create :script_level, script: script
     end
 
     @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required').tap do |script|
-      create(:single_unit_course, unit: script)
+      create :single_unit_course, unit: script
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true).tap do |lesson|
-        @login_required_script_level = create(:script_level, script: script, lesson: lesson)
+        @login_required_script_level = create :script_level, script: script, lesson: lesson
       end
     end
 
     @pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
-      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
-      @pilot_course_script_level = create(:script_level, script: script)
+      create :single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+      @pilot_course_script_level = create :script_level, script: script
     end
 
     @pl_pilot_course = create(:unit, pilot_experiment: 'my-experiment').tap do |script|
-      create(:single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
-      @pl_pilot_course_script_level = create(:script_level, script: script)
+      create :single_unit_course, unit: script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
+      @pl_pilot_course_script_level = create :script_level, script: script
     end
 
-    @in_development_unit_group = create(:unit_group, published_state: 'in_development')
+    @in_development_unit_group = create :unit_group, published_state: 'in_development'
     @in_development_script = create(:script, published_state: 'in_development').tap do |script|
-      @in_development_lesson = create(:lesson, script: script, has_lesson_plan: true)
-      @in_development_script_level = create(:script_level, script: script)
+      @in_development_lesson = create :lesson, script: script, has_lesson_plan: true
+      @in_development_script_level = create :script_level, script: script
     end
   end
 
@@ -687,7 +687,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student of verified teacher in CSA section can access main javabuilder' do
     teacher = create :authorized_teacher
     csa_script = create :csa_script
-    section = create(:section, user: teacher, login_type: 'word', script: csa_script)
+    section = create :section, user: teacher, login_type: 'word', script: csa_script
     student = create(:follower, section: section).student_user
 
     assert Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
@@ -750,7 +750,7 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on bubble choice level' do
-    javalab_sublevel = create(:javalab)
+    javalab_sublevel = create :javalab
     bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
     bubble_choice_script_level = create :script_level,
       levels: [bubble_choice_level]

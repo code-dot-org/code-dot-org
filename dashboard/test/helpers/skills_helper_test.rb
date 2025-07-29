@@ -2,20 +2,20 @@ require 'test_helper'
 require 'cdo/shared_constants'
 class SkillsHelperTest < ActiveSupport::TestCase
   setup do
-    @section = create(:section)
-    @student1 = create(:student)
-    @student2 = create(:student)
+    @section = create :section
+    @student1 = create :student
+    @student2 = create :student
     @section.add_student(@student1)
     @section.add_student(@student2)
 
-    @unit = create(:script, :with_levels, levels_count: 3)
+    @unit = create :script, :with_levels, levels_count: 3
     @level1 = @unit.script_levels.first.level
     @level2 = @unit.script_levels.second.level
     @level3 = @unit.script_levels.third.level
 
-    @skill1 = create(:skill, key: 'survival', description: 'Survive the apocalypse')
-    @skill2 = create(:skill, key: 'cuddle_cats', description: 'Cuddle cats effectively for maximum cat comfort')
-    @skill3 = create(:skill, key: 'play_accordion', description: 'Play the accordion with skill and virtuosity')
+    @skill1 = create :skill, key: 'survival', description: 'Survive the apocalypse'
+    @skill2 = create :skill, key: 'cuddle_cats', description: 'Cuddle cats effectively for maximum cat comfort'
+    @skill3 = create :skill, key: 'play_accordion', description: 'Play the accordion with skill and virtuosity'
 
     @level1.skills << [@skill1, @skill2]
     @level2.skills << [@skill2, @skill3]
@@ -23,7 +23,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data returns correct structure with evaluations" do
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
@@ -31,7 +32,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill2.id,
@@ -39,7 +41,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student2.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
@@ -79,7 +82,7 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data handles empty section" do
-    empty_section = create(:section)
+    empty_section = create :section
 
     result = SkillsHelper.get_section_skills_data(empty_section, @unit)
 
@@ -87,7 +90,7 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data handles unit with no skills" do
-    unit_no_skills = create(:script, :with_levels, levels_count: 2)
+    unit_no_skills = create :script, :with_levels, levels_count: 2
 
     result = SkillsHelper.get_section_skills_data(@section, unit_no_skills)
 
@@ -110,7 +113,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data handles multiple evaluations for same student-skill" do
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
@@ -118,7 +122,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:INCOMPLETE_INCORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
@@ -126,7 +131,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:PARTIAL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,
@@ -169,11 +175,12 @@ class SkillsHelperTest < ActiveSupport::TestCase
   end
 
   test "get_section_skills_data filters evaluations by unit_id" do
-    other_unit = create(:script, :with_levels, levels_count: 1)
+    other_unit = create :script, :with_levels, levels_count: 1
     other_unit_level = other_unit.script_levels.first.level
     other_unit_level.skills << @skill1
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: other_unit.id,
       skill_id: @skill1.id,
@@ -181,7 +188,8 @@ class SkillsHelperTest < ActiveSupport::TestCase
       evaluation: SharedConstants::STUDENT_WORK_EVALUATION_STATUS[:ALL_COMPLETE_CORRECT]
     )
 
-    create(:user_level_skill_evaluation,
+    create(
+      :user_level_skill_evaluation,
       student_id: @student1.id,
       unit_id: @unit.id,
       skill_id: @skill1.id,

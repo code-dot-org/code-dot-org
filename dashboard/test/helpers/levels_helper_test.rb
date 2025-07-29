@@ -12,7 +12,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   setup do
-    @level = create(:maze)
+    @level = create :maze
     @game = Game.custom_maze
     @is_start_mode = false
 
@@ -30,7 +30,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options refuses to generate options for non-blockly levels" do
-    @level = create(:match)
+    @level = create :match
     assert_raises(ArgumentError) do
       blockly_options
     end
@@ -108,12 +108,12 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "blockly_options 'embed' is true for widget levels not in start mode" do
-    @level = create(:applab, embed: false, widget_mode: true)
+    @level = create :applab, embed: false, widget_mode: true
     assert blockly_options[:embed]
   end
 
   test "blockly_options 'embed' is false for widget levels in start mode" do
-    @level = create(:applab, embed: false, widget_mode: true)
+    @level = create :applab, embed: false, widget_mode: true
     @is_start_mode = true
     refute blockly_options[:embed]
   end
@@ -224,14 +224,14 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "should select only callouts for current script level" do
-    script = create(:script, :in_single_unit_course)
-    @level = create(:deprecated_blockly_level)
-    lesson = create(:lesson, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
+    script = create :script, :in_single_unit_course
+    @level = create :deprecated_blockly_level
+    lesson = create :lesson, script: script
+    @script_level = create :script_level, script: script, levels: [@level], lesson: lesson
 
-    callout1 = create(:callout, script_level: @script_level)
-    callout2 = create(:callout, script_level: @script_level)
-    irrelevant_callout = create(:callout)
+    callout1 = create :callout, script_level: @script_level
+    callout2 = create :callout, script_level: @script_level
+    irrelevant_callout = create :callout
 
     callouts = select_and_remember_callouts
 
@@ -241,12 +241,12 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "should localize callouts" do
-    script = create(:script, :in_single_unit_course)
-    @level = create(:deprecated_blockly_level)
-    lesson = create(:lesson, script: script)
-    @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
+    script = create :script, :in_single_unit_course
+    @level = create :deprecated_blockly_level
+    lesson = create :lesson, script: script
+    @script_level = create :script_level, script: script, levels: [@level], lesson: lesson
 
-    create(:callout, script_level: @script_level, localization_key: 'run')
+    create :callout, script_level: @script_level, localization_key: 'run'
 
     callouts = select_and_remember_callouts
 
@@ -267,7 +267,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'Blockly#blockly_app_options and Blockly#blockly_level_options not modified by levels helper' do
-    level = create(:level, :blockly, :with_autoplay_video)
+    level = create :level, :blockly, :with_autoplay_video
     blockly_app_options = level.blockly_app_options level.game, level.skin
     blockly_level_options = level.blockly_level_options
 
@@ -281,9 +281,9 @@ class LevelsHelperTest < ActionView::TestCase
   test 'app_options sets a channel if the level is not cached for a channel-backed level' do
     @public_caching = false
 
-    @script = create(:script, :in_single_unit_course)
+    @script = create :script, :in_single_unit_course
     @level = create :applab
-    create(:script_level, script: @script, levels: [@level])
+    create :script_level, script: @script, levels: [@level]
 
     refute_nil app_options['channel']
   end
@@ -291,9 +291,9 @@ class LevelsHelperTest < ActionView::TestCase
   test 'app_options does not set a channel if the level is cached' do
     @public_caching = true
 
-    @script = create(:script, :in_single_unit_course)
+    @script = create :script, :in_single_unit_course
     @level = create :applab
-    create(:script_level, script: @script, levels: [@level])
+    create :script_level, script: @script, levels: [@level]
 
     assert_nil app_options['channel']
   end
@@ -339,16 +339,16 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    script = create(:script, :in_single_unit_course)
-    level = create(:level, :blockly)
-    create(:script_level, script: script, levels: [@level, level])
+    script = create :script, :in_single_unit_course
+    level = create :level, :blockly
+    create :script_level, script: script, levels: [@level, level]
 
     channel = get_channel_for(@level, script.id)
     # Request it again, should get the same channel
     assert_equal channel, get_channel_for(@level, script.id)
 
     # Request it for a different level, should get a different channel
-    level = create(:level, :blockly)
+    level = create :level, :blockly
     refute_equal channel, get_channel_for(level, script.id)
   end
 
@@ -383,9 +383,9 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     @level = create :applab
-    create(:script_level, script: script, levels: [@level])
+    create :script_level, script: script, levels: [@level]
 
     # channel does not exist
     assert_nil get_channel_for(@level, script.id, @user)
@@ -397,9 +397,9 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in create(:user)
     stub_storage_id_for_user_id(@user.id)
 
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     @level = create :applab
-    create(:script_level, script: script, levels: [@level])
+    create :script_level, script: script, levels: [@level]
 
     # channel exists
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
@@ -416,9 +416,9 @@ class LevelsHelperTest < ActionView::TestCase
     sign_in @user
     stub_storage_id_for_user_id(@user.id)
 
-    script = create(:script, :in_single_unit_course)
+    script = create :script, :in_single_unit_course
     @level = create :javalab
-    create(:script_level, script: script, levels: [@level])
+    create :script_level, script: script, levels: [@level]
 
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
     @channel_id = get_channel_for(@level, script.id, @user)
@@ -437,8 +437,8 @@ class LevelsHelperTest < ActionView::TestCase
     stub_storage_id_for_user_id(user.id)
 
     applab_level = create :applab # is channel backed
-    script = create(:script, :in_single_unit_course)
-    create(:script_level, levels: [applab_level], script: script)
+    script = create :script, :in_single_unit_course
+    create :script_level, levels: [applab_level], script: script
 
     create :channel_token, level: applab_level, storage_id: fake_storage_id_for_user_id(user.id)
 
@@ -448,8 +448,8 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return false if a channel does not exist for a channel backed level' do
     user = create :user
     applab_level = create :applab # is channel backed
-    script = create(:script, :in_single_unit_course)
-    create(:script_level, levels: [applab_level], script: script)
+    script = create :script, :in_single_unit_course
+    create :script_level, levels: [applab_level], script: script
 
     assert_equal false, level_started?(applab_level, script, user)
   end
@@ -457,8 +457,8 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return true if progress exists for a level that is not channel backed' do
     user = create :user
     maze_level = create :maze
-    script = create(:script, :in_single_unit_course)
-    create(:script_level, levels: [maze_level], script: script)
+    script = create :script, :in_single_unit_course
+    create :script_level, levels: [maze_level], script: script
     create :user_level, level: maze_level, user: user, script: script
 
     assert_equal true, level_started?(maze_level, script, user)
@@ -467,8 +467,8 @@ class LevelsHelperTest < ActionView::TestCase
   test 'level_started? should return false if progress does not exist for a level that is not channel backed' do
     user = create :user
     maze_level = create :maze
-    script = create(:script, :in_single_unit_course)
-    create(:script_level, levels: [maze_level], script: script)
+    script = create :script, :in_single_unit_course
+    create :script_level, levels: [maze_level], script: script
 
     assert_equal false, level_started?(maze_level, script, user)
   end
@@ -476,8 +476,8 @@ class LevelsHelperTest < ActionView::TestCase
   test 'a teacher viewing student work should see isStarted value for student' do
     @user = create :user
     @level = create :applab
-    @script = script = create(:script, :in_single_unit_course)
-    create(:script_level, levels: [@level], script: script)
+    @script = script = create :script, :in_single_unit_course
+    create :script_level, levels: [@level], script: script
 
     stub_storage_id_for_user_id(@user.id)
 
@@ -575,10 +575,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for teacher enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
+    @level = create :free_response, submittable: true, peer_reviewable: 'true'
     Plc::UserCourseEnrollment.stubs(:exists?).returns(true)
 
-    user = create(:teacher)
+    user = create :teacher
     sign_in user
 
     app_options = question_options
@@ -587,10 +587,10 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for a teacher not enrolled in plc' do
-    @level = create(:free_response, submittable: true, peer_reviewable: 'true')
+    @level = create :free_response, submittable: true, peer_reviewable: 'true'
     Plc::UserCourseEnrollment.stubs(:exists?).returns(false)
 
-    user = create(:teacher)
+    user = create :teacher
     sign_in user
 
     app_options = question_options
@@ -599,7 +599,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is submittable for student with teacher' do
-    @level = create(:applab, submittable: true)
+    @level = create :applab, submittable: true
 
     user = create(:follower).student_user
     sign_in user
@@ -608,7 +608,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for student without teacher' do
-    @level = create(:applab, submittable: true)
+    @level = create :applab, submittable: true
 
     user = create :student
     sign_in user
@@ -617,13 +617,13 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable level is not submittable for non-logged in user' do
-    @level = create(:applab, submittable: true)
+    @level = create :applab, submittable: true
 
     assert_equal false, app_options[:level]['submittable']
   end
 
   test 'submittable multi level is submittable for student with teacher' do
-    @level = create(:multi, submittable: true)
+    @level = create :multi, submittable: true
 
     user = create(:follower).student_user
     sign_in user
@@ -632,7 +632,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable multi level is not submittable for student without teacher' do
-    @level = create(:multi, submittable: true)
+    @level = create :multi, submittable: true
 
     user = create :student
     sign_in user
@@ -641,7 +641,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'submittable multi level is not submittable for non-logged in user' do
-    @level = create(:multi, submittable: true)
+    @level = create :multi, submittable: true
 
     assert_equal false, app_options[:level]['submittable']
   end
@@ -650,10 +650,10 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :teacher
     sign_in user
 
-    @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script, :in_single_unit_course)
+    @level = create :level, :blockly, :with_ideal_level_source
+    @script = create :script, :in_single_unit_course
     @script.update(professional_learning_course: 'Professional Learning Course')
-    @script_level = create(:script_level, levels: [@level], script: @script)
+    @script_level = create :script_level, levels: [@level], script: @script
     refute can_view_solution?
 
     sign_out user
@@ -668,15 +668,15 @@ class LevelsHelperTest < ActionView::TestCase
     @script_level = nil
     refute can_view_solution?
 
-    @script_level = create(:script_level, levels: [@level], script: @script)
+    @script_level = create :script_level, levels: [@level], script: @script
     @level.update(ideal_level_source_id: nil)
     refute can_view_solution?
   end
 
   test 'show solution link shows link for appropriate users' do
-    @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script, :in_single_unit_course)
-    @script_level = create(:script_level, levels: [@level], script: @script)
+    @level = create :level, :blockly, :with_ideal_level_source
+    @script = create :script, :in_single_unit_course
+    @script_level = create :script_level, levels: [@level], script: @script
 
     user = create :levelbuilder
     sign_in user
@@ -807,7 +807,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'standalone multi should include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script, :in_single_unit_course)
+    @script = create :script, :in_single_unit_course
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -821,7 +821,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'non-standalone multi should not include answers for student' do
     sign_in create(:student)
 
-    @script = create(:script, :in_single_unit_course)
+    @script = create :script, :in_single_unit_course
     @level = create :multi
     @lesson = create :lesson
     @script_level = create :script_level, levels: [@level], lesson: @lesson
@@ -834,7 +834,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'section first_activity_at should not be nil when finding experiments' do
     Experiment.stubs(:should_cache?).returns true
-    teacher = create(:teacher)
+    teacher = create :teacher
     @script = create :script, :in_single_unit_course
     experiment = create(
       :teacher_based_experiment,
@@ -844,8 +844,8 @@ class LevelsHelperTest < ActionView::TestCase
       script: @script
     )
     Experiment.update_cache
-    section = create(:section, user: teacher)
-    student = create(:student)
+    section = create :section, user: teacher
+    student = create :student
     section.add_student(student)
 
     sign_in student
@@ -1118,14 +1118,14 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test "lab2_options refuses to generate options for non-Lab2 levels" do
-    @level = create(:gamelab)
+    @level = create :gamelab
     assert_raises(ArgumentError) do
       lab2_options
     end
   end
 
   test "lab2_options generates options for Lab2 levels" do
-    @level = create(:music)
+    @level = create :music
 
     channel = 'channel123'
     view_options(channel: channel)

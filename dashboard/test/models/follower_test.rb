@@ -2,8 +2,8 @@ require 'test_helper'
 
 class FollowerTest < ActiveSupport::TestCase
   setup do
-    @laurel = create(:teacher)
-    @laurel_section = create(:section, user: @laurel)
+    @laurel = create :teacher
+    @laurel_section = create :section, user: @laurel
     @follower = create :follower
   end
 
@@ -98,7 +98,7 @@ class FollowerTest < ActiveSupport::TestCase
     student.save!
     student.reload
 
-    create(:follower, student_user: student)
+    create :follower, student_user: student
 
     assert_equal 'test', student.family_name
 

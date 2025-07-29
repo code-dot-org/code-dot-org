@@ -4,7 +4,7 @@ class FeatureModeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
+    @admin = create :admin
     sign_in(@admin)
   end
 

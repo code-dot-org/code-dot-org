@@ -133,7 +133,7 @@ FactoryBot.define do
       school_info_count {1}
     end
 
-    school_infos {build_list(:school_info, school_info_count)}
+    school_infos {build_list :school_info, school_info_count}
 
     trait :with_bad_how_many do
       how_many_20_hours {"a bunch"}

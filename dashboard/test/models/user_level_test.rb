@@ -4,8 +4,8 @@ class UserLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @user = create(:user)
-    @level = create(:level)
+    @user = create :user
+    @level = create :level
 
     # records for testing pairing-related methods
     @unpaired_user_level = create :user_level, user: @user, level: @level
@@ -337,7 +337,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'unsubmitting destroys unclaimed peer reviews' do
-    level = create(:free_response, peer_reviewable: true)
+    level = create :free_response, peer_reviewable: true
     script = create :script, :in_single_unit_course
     level_source = create :level_source
 
@@ -351,8 +351,8 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
     )
 
-    review_1 = create(:peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script)
-    review_2 = create(:peer_review, submitter: @user, reviewer: nil, level: level, script: script)
+    review_1 = create :peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script
+    review_2 = create :peer_review, submitter: @user, reviewer: nil, level: level, script: script
 
     ul.update! submitted: false
     assert_equal Activity::UNSUBMITTED_RESULT, ul.best_result
@@ -362,7 +362,7 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test 'other changes do not destroy unclaimed peer reviews' do
-    level = create(:free_response, peer_reviewable: true)
+    level = create :free_response, peer_reviewable: true
     script = create :script, :in_single_unit_course
     level_source = create :level_source
 
@@ -376,8 +376,8 @@ class UserLevelTest < ActiveSupport::TestCase
       best_result: Activity::UNREVIEWED_SUBMISSION_RESULT
     )
 
-    review_1 = create(:peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script)
-    review_2 = create(:peer_review, submitter: @user, reviewer: nil, level: level, script: script)
+    review_1 = create :peer_review, submitter: @user, reviewer: (create :teacher), level: level, script: script
+    review_2 = create :peer_review, submitter: @user, reviewer: nil, level: level, script: script
 
     ul.update! best_result: Activity::REVIEW_ACCEPTED_RESULT
     assert_equal Activity::REVIEW_ACCEPTED_RESULT, ul.best_result

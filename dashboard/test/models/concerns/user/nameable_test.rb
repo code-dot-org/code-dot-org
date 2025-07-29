@@ -3,13 +3,13 @@ require 'test_helper'
 class NameableTest < ActiveSupport::TestCase
   describe 'presence validations' do
     it 'allows a user with a name' do
-      user = build(:user, name: panda_panda)
+      user = build :user, name: panda_panda
       _(user).must_be :valid?
       _(user.errors[:name]).must_be :empty?
     end
 
     it 'does not allow a user without a name' do
-      user = build(:user, name: nil)
+      user = build :user, name: nil
       _(user).wont_be :valid?
       _(user.errors[:name]).must_include I18n.t('activerecord.errors.messages.blank')
     end
@@ -25,17 +25,17 @@ class NameableTest < ActiveSupport::TestCase
 
   describe 'length validations' do
     context 'when name is exactly 1 character' do
-      subject(:user) {build(:user, name: 'A')}
+      subject(:user) {build :user, name: 'A'}
       it {_user.must_be :valid?}
     end
 
     context 'when name is exactly 70 characters' do
-      subject(:user) {build(:user, name: 'A' * 70)}
+      subject(:user) {build :user, name: 'A' * 70}
       it {_user.must_be :valid?}
     end
 
     context 'when name is 71 characters' do
-      subject(:user) {build(:user, name: 'A' * 71)}
+      subject(:user) {build :user, name: 'A' * 71}
       it 'is invalid' do
         _user.wont_be :valid?
         _(user.errors[:name]).must_include 'is too long (maximum is 70 characters)'
@@ -80,7 +80,7 @@ class NameableTest < ActiveSupport::TestCase
     end
 
     it 'is valid with the same name as a deleted user' do
-      user = build(:user, name: 'Same Name')
+      user = build :user, name: 'Same Name'
       _(user).must_be :valid?
     end
   end

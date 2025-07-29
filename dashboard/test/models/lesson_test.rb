@@ -824,7 +824,7 @@ class LessonTest < ActiveSupport::TestCase
 
   test 'should give URL for script level curriculum PDF in unmigrated unit' do
     script = create :script, :in_single_unit_course, is_migrated: false
-    lesson = create(:lesson, script: script, absolute_position: 5, relative_position: 5)
+    lesson = create :lesson, script: script, absolute_position: 5, relative_position: 5
     assert_includes(lesson.lesson_plan_html_url, "curriculum/#{lesson.script.name}/5/Teacher")
     assert_includes(lesson.lesson_plan_pdf_url, "curriculum/#{lesson.script.name}/5/Teacher.pdf")
   end
@@ -1303,14 +1303,14 @@ class LessonTest < ActiveSupport::TestCase
     end
 
     test "render_property localizes and processes" do
-      lesson = create(:lesson)
+      lesson = create :lesson
       lesson.expects(:get_localized_property)
       Services::MarkdownPreprocessor.expects(:process)
       lesson.render_property(:overview)
     end
 
     test "get_localized_property can retrieve translations" do
-      lesson = create(:lesson, overview: "This is the english overview")
+      lesson = create :lesson, overview: "This is the english overview"
       test_locale = :'te-ST'
       custom_i18n = {
         "data" => {

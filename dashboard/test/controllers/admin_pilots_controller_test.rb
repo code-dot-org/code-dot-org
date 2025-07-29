@@ -4,10 +4,10 @@ class AdminPilotsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
+    @admin = create :admin
     sign_in(@admin)
 
-    @not_admin = create(:user, username: 'notadmin')
+    @not_admin = create :user, username: 'notadmin'
   end
 
   #

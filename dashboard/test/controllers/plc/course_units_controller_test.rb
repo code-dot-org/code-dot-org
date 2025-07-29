@@ -2,10 +2,10 @@ require 'test_helper'
 
 class Plc::CourseUnitsControllerTest < ActionController::TestCase
   setup do
-    @admin = create(:admin)
+    @admin = create :admin
 
-    @plc_course = create(:plc_course)
-    @course_unit = create(:plc_course_unit, plc_course: @plc_course, unit_name: 'PLC Course')
+    @plc_course = create :plc_course
+    @course_unit = create :plc_course_unit, plc_course: @plc_course, unit_name: 'PLC Course'
   end
 
   # only admins can view the plc course launch page

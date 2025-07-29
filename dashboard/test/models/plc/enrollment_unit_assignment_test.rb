@@ -4,17 +4,17 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
   setup do
     @teacher = create :teacher
     @plc_course = create :plc_course
-    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
+    @course_unit = create :plc_course_unit, plc_course: @plc_course
     @script = @course_unit.script
     @script.update(professional_learning_course: @plc_course.name)
 
-    @required_lesson_group = create(:lesson_group, key: Plc::LearningModule::REQUIRED_MODULE, script: @script)
-    @content_lesson_group = create(:lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @script)
-    @practice_lesson_group = create(:lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @script)
+    @required_lesson_group = create :lesson_group, key: Plc::LearningModule::REQUIRED_MODULE, script: @script
+    @content_lesson_group = create :lesson_group, key: Plc::LearningModule::CONTENT_MODULE, script: @script
+    @practice_lesson_group = create :lesson_group, key: Plc::LearningModule::PRACTICE_MODULE, script: @script
 
-    @required_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.key)
-    @content_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.key)
-    @practice_learning_module = create(:plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.key)
+    @required_learning_module = create :plc_learning_module, plc_course_unit: @course_unit, module_type: @required_lesson_group.key
+    @content_learning_module = create :plc_learning_module, plc_course_unit: @course_unit, module_type: @content_lesson_group.key
+    @practice_learning_module = create :plc_learning_module, plc_course_unit: @course_unit, module_type: @practice_lesson_group.key
 
     @required_learning_module.lesson.update(script: @script, lesson_group: @required_lesson_group)
     @content_learning_module.lesson.update(script: @script, lesson_group: @content_lesson_group)

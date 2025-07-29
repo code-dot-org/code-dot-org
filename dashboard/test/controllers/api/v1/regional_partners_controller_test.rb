@@ -17,7 +17,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
       cohort_capacity_csd: 25,
       cohort_capacity_csp: 50
 
-    @serializing_teacher = create(:teacher,
+    @serializing_teacher = create(
+      :teacher,
       school_info: create(
         :school_info,
         school: create(

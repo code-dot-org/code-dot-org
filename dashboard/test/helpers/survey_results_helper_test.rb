@@ -9,7 +9,7 @@ class SurveyResultsHelperTest < ActionView::TestCase
   end
 
   setup do
-    @teacher = create(:teacher, created_at: 3.weeks.ago)
+    @teacher = create :teacher, created_at: 3.weeks.ago
     sign_in @teacher
   end
 

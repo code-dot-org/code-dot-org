@@ -4,13 +4,13 @@ class AdminSearchControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @admin = create(:admin)
+    @admin = create :admin
     sign_in(@admin)
 
-    @not_admin = create(:user, username: 'notadmin')
+    @not_admin = create :user, username: 'notadmin'
 
-    @teacher = create(:teacher)
-    @teacher_section = create(:section, user: @teacher)
+    @teacher = create :teacher
+    @teacher_section = create :section, user: @teacher
   end
 
   # Confirm the permissioning on these pages is admin-only.

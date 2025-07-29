@@ -483,15 +483,15 @@ level 'level1_copy2'"
     updated_at = Time.now
 
     # Create a section with students
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
 
     # Set of students in section.
     students = []
     5.times do |i|
-      student = create(:student, name: "student_#{i}")
+      student = create :student, name: "student_#{i}"
       students << student
-      create(:follower, section: section, student_user: student)
+      create :follower, section: section, student_user: student
     end
 
     # All students did the LevelGroup, and the free response part of the survey.
@@ -592,8 +592,8 @@ level 'level1_copy2'"
     script_level = create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
 
     # Create a section
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
 
     actual_survey_results = LevelGroup.get_summarized_survey_results(script, section)
 

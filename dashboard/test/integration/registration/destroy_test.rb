@@ -14,7 +14,7 @@ module RegistrationsControllerTests
       @word_section_teacher = create :teacher, password: @password
       word_section = create :section, user: @word_section_teacher, login_type: Section::LOGIN_TYPE_WORD
       @word_section_student = create :student, encrypted_password: nil, provider: 'sponsored'
-      create(:follower, student_user: @word_section_student, section: word_section)
+      create :follower, student_user: @word_section_student, section: word_section
     end
 
     test "returns bad request if user cannot delete own account" do
@@ -92,8 +92,8 @@ module RegistrationsControllerTests
     end
 
     test "destroying teacher does not destroy student with personal login" do
-      student = create(:student)
-      create(:follower, section: @section, student_user: student)
+      student = create :student
+      create :follower, section: @section, student_user: student
       sign_in @teacher
 
       assert_destroys(User) do

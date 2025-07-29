@@ -14,13 +14,13 @@ class UsersHelperTest < ActionView::TestCase
     test 'returns country code of student' do
       student_country_code = 'UA'
 
-      student = build(:student, country_code: student_country_code)
+      student = build :student, country_code: student_country_code
 
       assert_equal student_country_code, country_code(student, @request)
     end
 
     test 'returns nil if country code of student is not set' do
-      student = build(:student, country_code: nil)
+      student = build :student, country_code: nil
 
       assert_nil country_code(student, @request)
     end
@@ -28,20 +28,20 @@ class UsersHelperTest < ActionView::TestCase
     test 'returns country code of teacher' do
       teacher_country_code = 'UA'
 
-      teacher = build(:teacher, country_code: teacher_country_code)
+      teacher = build :teacher, country_code: teacher_country_code
 
       assert_equal teacher_country_code, country_code(teacher, @request)
     end
 
     test 'returns request country code when teacher country_code is not set' do
-      teacher = build(:teacher, country_code: '')
+      teacher = build :teacher, country_code: ''
 
       assert_equal @country_code, country_code(teacher, @request)
     end
   end
 
   def test_summarize_user_progress
-    script = create(:script, :in_single_unit_course, :with_levels, levels_count: 3)
+    script = create :script, :in_single_unit_course, :with_levels, levels_count: 3
     user = create :user
 
     # Verify results for no completed levels.
@@ -521,7 +521,7 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   describe '.account_linking_lock_reason' do
-    let(:user) {build_stubbed(:user)}
+    let(:user) {build_stubbed :user}
 
     let(:user_cap_compliant?) {true}
     let(:user_in_grace_period?) {false}

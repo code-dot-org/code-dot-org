@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CongratsControllerTest < ActionController::TestCase
   test "shows congrats page for HoC course" do
-    hoc_course = create(:hoc_course)
+    hoc_course = create :hoc_course
     get :index, params: {s: Base64.urlsafe_encode64(hoc_course.name)}
     assert_response :success
 
@@ -26,7 +26,7 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "cached query test for hoc course" do
-    hoc_course = create(:hoc_course)
+    hoc_course = create :hoc_course
 
     Unit.stubs(:should_cache?).returns(true)
 
@@ -54,7 +54,7 @@ class CongratsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in teacher
 
-    pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
+    pl_course = create :single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator"
     pl_unit = pl_course.default_units.first
     CourseOffering.add_course_offering(pl_course)
     create :user_script, user: teacher, script: pl_unit, completed_at: Time.now
@@ -74,7 +74,7 @@ class CongratsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in teacher
 
-    pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
+    pl_course = create :single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator"
     pl_unit = pl_course.default_units.first
     CourseOffering.add_course_offering(pl_course)
     assert_nil UserScript.find_by(user: teacher, script: pl_unit)

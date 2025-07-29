@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BlocksControllerTest < ActionController::TestCase
   setup do
-    @levelbuilder = create(:levelbuilder)
+    @levelbuilder = create :levelbuilder
   end
 
   test 'can list shared functions' do

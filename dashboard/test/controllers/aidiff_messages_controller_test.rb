@@ -4,11 +4,11 @@ class AidiffMessagesControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @teacher = create(:teacher)
-    @teacher_thread = create(:aidiff_thread, user: @teacher)
-    @message = create(:aidiff_message, aidiff_thread: @teacher_thread)
-    @message_not_teacher = create(:aidiff_message)
-    @teacher_sans_experiment = create(:teacher)
+    @teacher = create :teacher
+    @teacher_thread = create :aidiff_thread, user: @teacher
+    @message = create :aidiff_message, aidiff_thread: @teacher_thread
+    @message_not_teacher = create :aidiff_message
+    @teacher_sans_experiment = create :teacher
     create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
   end
 

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Lti::V1::SectionsControllerTest < ActionController::TestCase
   setup do
-    @user = create(:teacher)
+    @user = create :teacher
     sign_in @user
   end
   test 'updates section owners' do

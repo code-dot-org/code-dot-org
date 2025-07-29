@@ -23,7 +23,7 @@ class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   end
 
   setup do
-    @admin = create(:admin)
+    @admin = create :admin
   end
 
   test 'inaccessible by non-admins' do

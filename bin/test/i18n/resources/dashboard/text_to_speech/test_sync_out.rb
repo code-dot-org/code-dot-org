@@ -33,8 +33,8 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     let(:unit_tts_enabled) {true}
     let(:unit_is_csf_international) {false}
     let(:unit_is_twenty_hour) {false}
-    let(:unit) {FactoryBot.create(:unit, tts: unit_tts_enabled)}
-    let(:level) {FactoryBot.create(:applab)}
+    let(:unit) {FactoryBot.create :unit, tts: unit_tts_enabled}
+    let(:level) {FactoryBot.create :applab}
 
     let(:expect_tts_short_instructions_l10n_uploading) do
       described_instance.expects(:upload_tts_short_instructions_l10n).with(level, locale)
@@ -54,8 +54,8 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
       Level.destroy_all
       Unit.destroy_all
 
-      script_level = FactoryBot.create(:script_level, script: unit, levels: [level])
-      FactoryBot.create(:lesson_group, script: script_level.script, lessons: [script_level.lesson])
+      script_level = FactoryBot.create :script_level, script: unit, levels: [level]
+      FactoryBot.create :lesson_group, script: script_level.script, lessons: [script_level.lesson]
 
       Unit.any_instance.stubs(:csf_international?).returns(unit_is_csf_international)
       Unit.any_instance.stubs(:twenty_hour?).returns(unit_is_twenty_hour)
@@ -88,7 +88,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     context 'when the level is not Blockly' do
-      let(:level) {FactoryBot.create(:weblab)}
+      let(:level) {FactoryBot.create :weblab}
 
       it 'does not upload the unit Blockly levels TTS localizations to S3' do
         expect_tts_short_instructions_l10n_uploading.never
@@ -121,7 +121,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     let(:level_tts_short_instructions) {'expected_level_tts_short_instructions'}
     let(:level_tts_short_instructions_l10n) {'expected_level_tts_short_instructions_l10n'}
 
-    let(:level) {FactoryBot.build_stubbed(:level, short_instructions: level_short_instructions)}
+    let(:level) {FactoryBot.build_stubbed :level, short_instructions: level_short_instructions}
 
     before do
       level.stubs(:tts_short_instructions_text).with(locale: locale).returns(level_tts_short_instructions_l10n)
@@ -161,7 +161,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     let(:level_tts_long_instructions) {'expected_level_tts_long_instructions'}
     let(:level_tts_long_instructions_l10n) {'expected_level_tts_long_instructions_l10n'}
 
-    let(:level) {FactoryBot.build_stubbed(:level, long_instructions: level_long_instructions)}
+    let(:level) {FactoryBot.build_stubbed :level, long_instructions: level_long_instructions}
 
     before do
       level.stubs(:tts_long_instructions_text).with(locale: locale).returns(level_tts_long_instructions_l10n)
@@ -203,7 +203,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     let(:level_authored_hint_markdown_l10n) {"expected authored \n hint markdown #{locale} i10n"}
     let(:level_tts_authored_hint_markdown_l10n) {"#{level_authored_hint_markdown_l10n}\n"}
     let(:level_authored_hints) {['hint_id' => level_authored_hint_id, 'hint_markdown' => level_authored_hint_markdown]}
-    let(:level) {FactoryBot.build_stubbed(:level, name: level_name, authored_hints: JSON.dump(level_authored_hints))}
+    let(:level) {FactoryBot.build_stubbed :level, name: level_name, authored_hints: JSON.dump(level_authored_hints)}
 
     let(:localizations) do
       {

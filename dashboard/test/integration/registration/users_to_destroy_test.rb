@@ -54,7 +54,7 @@ module RegistrationsControllerTests
     test "does not return students with personal logins" do
       section = create :section
       student = create :student
-      create(:follower, section: section, student_user: student)
+      create :follower, section: section, student_user: student
       sign_in section.teacher
 
       get '/users/to_destroy'

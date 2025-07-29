@@ -30,24 +30,24 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     Geocoder.stubs(:find_potential_street_address).returns(nil) # don't actually call geocoder service
 
-    @user = create(:user, total_lines: 15)
+    @user = create :user, total_lines: 15
     sign_in(@user)
 
-    @activity = create(:activity, user: @user)
+    @activity = create :activity, user: @user
 
-    @admin = create(:admin)
+    @admin = create :admin
 
-    @script = create(:unit, :in_single_unit_course)
-    @script_level_prev = create(:script_level, script: @script)
-    @script_level = create(:script_level, script: @script)
-    @script_level_next = create(:script_level, script: @script)
+    @script = create :unit, :in_single_unit_course
+    @script_level_prev = create :script_level, script: @script
+    @script_level = create :script_level, script: @script
+    @script_level_next = create :script_level, script: @script
 
-    @lesson = create(:lesson)
+    @lesson = create :lesson
     @lesson.script_levels << @script_level_prev
     @lesson.script_levels << @script_level
     @lesson.script_levels << @script_level_next
 
-    create(:lesson_group, lessons: [@lesson], script: @script)
+    create :lesson_group, lessons: [@lesson], script: @script
     @level = @script_level.level
 
     @blank_image = File.read('test/fixtures/artist_image_blank.png', binmode: true)
@@ -162,7 +162,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "successful milestone with modular course" do
-    secondary_course = create(:single_unit_course, unit: @script)
+    secondary_course = create :single_unit_course, unit: @script
 
     params = @milestone_params
     params[:course_id] = secondary_course.id
@@ -187,10 +187,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "milestone updates existing user_level with time_spent" do
-    @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @level = create :level, :blockly, :with_ideal_level_source
+    @script = create :script
     @script.update(curriculum_umbrella: 'CSF')
-    @script_level = create(:script_level, levels: [@level], script: @script)
+    @script_level = create :script_level, levels: [@level], script: @script
 
     params = @milestone_params
     params[:script_level_id] = @script_level.id
@@ -207,10 +207,10 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "milestone records a maximum time_spent of one hour" do
-    @level = create(:level, :blockly, :with_ideal_level_source)
-    @script = create(:script)
+    @level = create :level, :blockly, :with_ideal_level_source
+    @script = create :script
     @script.update(curriculum_umbrella: 'CSF')
-    @script_level = create(:script_level, levels: [@level], script: @script)
+    @script_level = create :script_level, levels: [@level], script: @script
 
     params = @milestone_params.dup
     params[:script_level_id] = @script_level.id
@@ -733,7 +733,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   test 'sharing program with swear word returns error' do
     ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
 
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
 
     assert_does_not_create(LevelSource) do
       post :milestone, params: {
@@ -852,7 +852,7 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'sharing when gatekeeper has disabled sharing does not work' do
-    script_level = create(:script_level, :playlab)
+    script_level = create :script_level, :playlab
     Gatekeeper.set('shareEnabled', where: {script_name: script_level.script.name}, value: false)
 
     post :milestone,
@@ -1040,9 +1040,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "milestone fails to update locked/readonly level" do
-    teacher = create(:teacher)
+    teacher = create :teacher
 
-    section = create(:section, user: teacher, login_type: 'word')
+    section = create :section, user: teacher, login_type: 'word'
     student_1 = create(:follower, section: section).student_user
     sign_in student_1
 

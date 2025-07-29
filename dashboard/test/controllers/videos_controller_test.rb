@@ -4,8 +4,8 @@ class VideosControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @video = create(:video)
-    @user = create(:admin)
+    @video = create :video
+    @user = create :admin
     sign_in(@user)
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true

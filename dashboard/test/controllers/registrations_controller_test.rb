@@ -28,7 +28,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: returns bad_request if user param is nil" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     put :update, params: {}
@@ -36,7 +36,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: returns bad_request if user_type param is present" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     put :update, params: {user: {user_type: 'student'}}
@@ -44,7 +44,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: returns bad_request if email param is present" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     put :update, params: {user: {email: 'example@email.com'}}
@@ -52,7 +52,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: returns bad_request if hashed_email param is present" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     put :update, params: {user: {hashed_email: 'abcdef'}}
@@ -60,7 +60,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if user cannot edit password" do
-    teacher = create(:teacher, password: 'mypassword')
+    teacher = create :teacher, password: 'mypassword'
     sign_in teacher
 
     User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -73,7 +73,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: does not update user password if password is incorrect" do
-    teacher = create(:teacher, password: 'mypassword')
+    teacher = create :teacher, password: 'mypassword'
     sign_in teacher
 
     put :update, params: {user: {current_password: 'notmypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -95,7 +95,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user password if password is correct" do
-    teacher = create(:teacher, password: 'mypassword')
+    teacher = create :teacher, password: 'mypassword'
     sign_in teacher
 
     put :update, params: {user: {current_password: 'mypassword', password: 'newpassword', password_confirmation: 'newpassword'}}
@@ -127,7 +127,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "update: updates user info if password is not required" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     put :update, params: {
@@ -149,8 +149,8 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "user cannot update username to existing username" do
-    student = create(:student)
-    new_student = create(:student)
+    student = create :student
+    new_student = create :student
 
     new_student.username = "newusername"
     new_student.save
@@ -166,7 +166,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "parent_email: student can add a parent email without opt in" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     patch :set_parent_email, params: {
@@ -181,7 +181,7 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "parent_email: student can add a parent email with opt in" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     patch :set_parent_email, params: {
@@ -557,7 +557,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access account_type url' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     # Attempt to reach a sign up flow page
@@ -567,7 +567,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access login_type url' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     # Attempt to reach a sign up flow page
@@ -577,7 +577,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access finish_teacher_account url' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     # Attempt to reach a sign up flow page
@@ -587,7 +587,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access finish_student_account url' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     # Attempt to reach a sign up flow page
@@ -597,7 +597,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access new' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     get :new
@@ -606,7 +606,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access cancel' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     get :cancel
@@ -615,7 +615,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test 'redirects signed-in user to home if they attempt to access create' do
     # Create a new user and sign them in
-    picture_student = create(:student_in_picture_section)
+    picture_student = create :student_in_picture_section
     sign_in picture_student
 
     get :create

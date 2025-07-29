@@ -10,7 +10,7 @@ class SchoolStatsByYearTest < ActiveSupport::TestCase
 
   test 'cannot create school_stats_by_year with invalid status' do
     school = create :school
-    school_stats = build(:school_stats_by_year, school: school, status: 'invalid_status')
+    school_stats = build :school_stats_by_year, school: school, status: 'invalid_status'
     refute school_stats.save
     assert_includes school_stats.errors[:status], "is not included in the list"
   end

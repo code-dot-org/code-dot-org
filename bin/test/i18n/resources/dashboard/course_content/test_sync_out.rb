@@ -107,7 +107,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     let(:level_types_i18n_data) {described_instance.send(:level_types_i18n_data, level, level_i18n_data)}
 
     let(:level_name) {'expected_level_name'}
-    let(:level) {FactoryBot.build_stubbed(:level, name: level_name)}
+    let(:level) {FactoryBot.build_stubbed :level, name: level_name}
 
     let(:sublevel_name) {'expected_sublevel_name'}
     let(:sublevel_type) {'expected_sublevel_type'}
@@ -141,7 +141,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     end
 
     context 'when a sublevel exists' do
-      let(:sublevel) {FactoryBot.build_stubbed(:level, name: sublevel_name)}
+      let(:sublevel) {FactoryBot.build_stubbed :level, name: sublevel_name}
 
       before do
         Level.expects(:find_by_name).with(sublevel_name).returns(sublevel)
@@ -162,7 +162,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     end
 
     context 'when a contained level of the level exists' do
-      let(:contained_level) {FactoryBot.build_stubbed(:level, name: contained_level_name)}
+      let(:contained_level) {FactoryBot.build_stubbed :level, name: contained_level_name}
 
       before do
         level.expects(:contained_levels).returns begin

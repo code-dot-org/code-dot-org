@@ -6,7 +6,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     @csd_workshop = create :workshop, :ended, num_sessions: 3, course: Pd::Workshop::COURSE_CSD, ended_at: Time.zone.today - 2.days
     @csp_workshop = create :workshop, num_sessions: 3, course: Pd::Workshop::COURSE_CSP
 
-    @teacher = create(:teacher, email: 'test_email@foo.com', user_type: 'teacher')
+    @teacher = create :teacher, email: 'test_email@foo.com', user_type: 'teacher'
     other_teacher = create :teacher
 
     [@byo_workshop, @csd_workshop, @csp_workshop].each do |workshop|

@@ -7,12 +7,12 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
 
   test "section_level_progress" do
     skip "flaky as of 7/17/2023"
-    section = create(:section)
+    section = create :section
     students = (1..50).map {create :student}
     students.each {|s| section.students << s}
 
-    script = create(:script, :in_single_unit_course)
-    create(:lesson_group, lessons: [create(:script_level, script: script).lesson], script: script)
+    script = create :script, :in_single_unit_course
+    create :lesson_group, lessons: [create(:script_level, script: script).lesson], script: script
 
     refute_empty script.script_levels
     script.script_levels.each do |script_level|

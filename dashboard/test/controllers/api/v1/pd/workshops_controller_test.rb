@@ -6,12 +6,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup do
-    @workshop_admin = create(:workshop_admin)
-    @regional_partner = create(:regional_partner)
-    @program_manager = create(:program_manager, regional_partner: @regional_partner)
+    @workshop_admin = create :workshop_admin
+    @regional_partner = create :regional_partner
+    @program_manager = create :program_manager, regional_partner: @regional_partner
     @organizer = @program_manager
-    @workshop_organizer = create(:workshop_organizer)
-    @facilitator = create(:facilitator)
+    @workshop_organizer = create :workshop_organizer
+    @facilitator = create :facilitator
     @csf_facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
 
     @workshop = create(
@@ -27,7 +27,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       num_sessions: 0
     )
 
-    @standalone_workshop = create(:workshop)
+    @standalone_workshop = create :workshop
 
     # Don't actually call the geocoder.
     Geocoder.stubs(:search)
@@ -61,7 +61,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'with the facilitated param, workshop organizers only view workshops they facilitated' do
-    workshop_2 = create(:workshop, organizer: @workshop_organizer, facilitators: [@workshop_organizer])
+    workshop_2 = create :workshop, organizer: @workshop_organizer, facilitators: [@workshop_organizer]
 
     sign_in @workshop_organizer
     get :index, params: {facilitator_view: 1}
@@ -72,7 +72,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'with the facilitated param, program manager workshop organizers only view workshops they facilitated' do
-    workshop_2 = create(:workshop, organizer: @organizer, facilitators: [@organizer])
+    workshop_2 = create :workshop, organizer: @organizer, facilitators: [@organizer]
 
     sign_in @organizer
     get :index, params: {facilitator_view: 1}
@@ -126,9 +126,9 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
     workshop_2 = create :workshop
 
-    enrollment_1 = create(:pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil)
-    enrollment_2 = create(:pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id)
-    create(:pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id)
+    enrollment_1 = create :pd_enrollment, workshop: @workshop, email: teacher.email, user_id: nil
+    enrollment_2 = create :pd_enrollment, workshop: workshop_2, email: 'other@example.com', user_id: teacher.id
+    create :pd_enrollment, workshop: @workshop, email: other_teacher.email, user_id: other_teacher.id
 
     get :workshops_user_enrolled_in
     assert_response :success
@@ -159,8 +159,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     # workshop subject is deprecated so validation must be skipped
     fit_weekend.save(validate: false)
 
-    create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
-    create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+    create :pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id
+    create :pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id
 
     teachercon.start!
 
@@ -196,8 +196,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     # workshop subject is deprecated so validation must be skipped
     fit_weekend.save(validate: false)
 
-    teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
-    fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
+    teachercon_enrollment = create :pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id
+    fit_weekend_enrollment = create :pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id
 
     get :workshops_user_enrolled_in
     assert_response :success
@@ -700,7 +700,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     sign_in @workshop_organizer
     session_initial_start = tomorrow_at 9
     session_initial_end = tomorrow_at 15
-    session = create(:pd_session, start: session_initial_start, end: session_initial_end)
+    session = create :pd_session, start: session_initial_start, end: session_initial_end
     @organizer_workshop.sessions << session
     @organizer_workshop.save!
     assert_equal 1, @organizer_workshop.sessions.count
@@ -724,7 +724,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     workshop = create :workshop, organizer: program_manager, num_sessions: 0
     session_initial_start = tomorrow_at 9
     session_initial_end = tomorrow_at 15
-    session = create(:pd_session, start: session_initial_start, end: session_initial_end)
+    session = create :pd_session, start: session_initial_start, end: session_initial_end
     workshop.sessions << session
     workshop.save!
     assert_equal 1, workshop.sessions.count
@@ -746,7 +746,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'organizers can destroy workshop sessions' do
     sign_in @workshop_organizer
-    session = create(:pd_session)
+    session = create :pd_session
     @organizer_workshop.sessions << session
     @organizer_workshop.save!
     assert_equal 1, @organizer_workshop.sessions.count

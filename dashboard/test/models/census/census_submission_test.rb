@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Census::CensusSubmissionTest < ActiveSupport::TestCase
   test "basic census submission" do
-    submission = build(:census_submission)
+    submission = build :census_submission
     assert submission.valid?, submission.errors.full_messages
   end
 
@@ -17,14 +17,14 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
   end
 
   test "census submission without school infos" do
-    submission = build(:census_submission, school_info_count: 0)
+    submission = build :census_submission, school_info_count: 0
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission with bad how many" do
     caught = false
     begin
-      build(:census_submission, :with_bad_how_many)
+      build :census_submission, :with_bad_how_many
     rescue ArgumentError
       caught = true
     end
@@ -34,7 +34,7 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
   test "census submission with bad role" do
     caught = false
     begin
-      build(:census_submission, :with_bad_role)
+      build :census_submission, :with_bad_role
     rescue ArgumentError
       caught = true
     end
@@ -44,7 +44,7 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
   test "census submission with bad frequency" do
     caught = false
     begin
-      build(:census_submission, :with_bad_frequency)
+      build :census_submission, :with_bad_frequency
     rescue ArgumentError
       caught = true
     end
@@ -52,27 +52,27 @@ class Census::CensusSubmissionTest < ActiveSupport::TestCase
   end
 
   test "census submission with bad school year" do
-    submission = build(:census_submission, :with_bad_school_year)
+    submission = build :census_submission, :with_bad_school_year
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission with long email" do
-    submission = build(:census_submission, :with_long_email)
+    submission = build :census_submission, :with_long_email
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission with long name" do
-    submission = build(:census_submission, :with_long_name)
+    submission = build :census_submission, :with_long_name
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission with long other description" do
-    submission = build(:census_submission, :with_long_other_description)
+    submission = build :census_submission, :with_long_other_description
     refute submission.valid?, submission.errors.full_messages
   end
 
   test "census submission submitter email address is lowercased" do
-    submission = build(:census_submission, submitter_email_address: 'MiXeD.CaSe@example.net')
+    submission = build :census_submission, submitter_email_address: 'MiXeD.CaSe@example.net'
 
     assert_equal 'mixed.case@example.net', submission.submitter_email_address
   end

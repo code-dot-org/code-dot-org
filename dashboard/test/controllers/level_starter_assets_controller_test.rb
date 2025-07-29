@@ -40,7 +40,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
       'welcome.jpg' => uuid_name_2,
       'document.pdf' => uuid_name_3
     }
-    level = create(:applab, starter_assets: level_starter_assets)
+    level = create :applab, starter_assets: level_starter_assets
 
     get :show, params: {level_name: level.name}
     starter_assets = JSON.parse(response.body)['starter_assets']
@@ -76,9 +76,9 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     level_starter_asset_2 = {
       'welcome.jpg' => uuid_name_2
     }
-    template_level = create(:applab, starter_assets: level_starter_asset_1)
+    template_level = create :applab, starter_assets: level_starter_asset_1
 
-    child_level = create(:applab)
+    child_level = create :applab
     child_level.project_template_level_name = template_level.name
     child_level.starter_assets = level_starter_asset_2
     child_level.save!
@@ -104,7 +104,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     level_starter_assets = {
       'ty.png' => @uuid_name
     }
-    level = create(:applab, starter_assets: level_starter_assets)
+    level = create :applab, starter_assets: level_starter_assets
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 
@@ -115,7 +115,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
 
   test 'file: returns 404 if level has no starter assets' do
     LevelStarterAssetsHelper.expects(:get_object).never
-    level = create(:applab, starter_assets: nil)
+    level = create :applab, starter_assets: nil
 
     get :file, params: {level_name: level.name, filename: 'ty', format: 'png'}
 

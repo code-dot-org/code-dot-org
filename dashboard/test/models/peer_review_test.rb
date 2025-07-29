@@ -47,7 +47,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'submitting a peer reviewed level in instructor review only script should create one escalated PeerReview object' do
-    level = create(:free_response)
+    level = create :free_response
     level.update!(
       submittable: true,
       peer_reviewable: 'true'
@@ -165,7 +165,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   test 'pull review from pool' do
     reviewer = create :teacher
 
-    level_source = create(:level_source, data: 'Some answer')
+    level_source = create :level_source, data: 'Some answer'
 
     Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
@@ -189,7 +189,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     reviewer_1 = create :teacher
     reviewer_2 = create :teacher
 
-    level_source = create(:level_source, data: 'Some answer')
+    level_source = create :level_source, data: 'Some answer'
 
     Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
@@ -211,7 +211,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     reviewer_1 = create :teacher
     reviewer_2 = create :teacher
 
-    level_source = create(:level_source, data: 'Some answer')
+    level_source = create :level_source, data: 'Some answer'
 
     Activity.create!(user: @user, level: @script_level.level, test_result: Activity::UNREVIEWED_SUBMISSION_RESULT, level_source: level_source)
     track_progress(level_source.id)
@@ -251,9 +251,9 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_2 = create :teacher
     submitter_3 = create :teacher
 
-    level_source_1 = create(:level_source, data: 'Some answer')
-    level_source_2 = create(:level_source, data: 'Other answer')
-    level_source_3 = create(:level_source, data: 'Unreviewed answer')
+    level_source_1 = create :level_source, data: 'Some answer'
+    level_source_2 = create :level_source, data: 'Other answer'
+    level_source_3 = create :level_source, data: 'Unreviewed answer'
 
     [[submitter_1, level_source_1], [submitter_2, level_source_2], [submitter_3, level_source_3]].each do |submitter, level_source|
       Activity.create!(user: submitter, level: @script_level.level, test_result: Activity::UNSUBMITTED_RESULT, level_source: level_source)
@@ -346,7 +346,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'reviews are logged to the audit trail' do
-    user = create(:user)
+    user = create :user
     peer_review = create :peer_review, reviewer: user
     peer_review.update! data: 'accepted'
 
@@ -396,7 +396,7 @@ class PeerReviewTest < ActiveSupport::TestCase
   end
 
   test 'Submission summary works at the user_level' do
-    level_1, level_2, level_3 = create_list(:free_response, 4, peer_reviewable: true)
+    level_1, level_2, level_3 = create_list :free_response, 4, peer_reviewable: true
 
     [level_1, level_2, level_3].each do |level|
       script_level = create :script_level, levels: [level], script: @learning_module.plc_course_unit.script, lesson: @learning_module.lesson

@@ -7,38 +7,38 @@ class ApiControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @teacher = create(:teacher)
+    @teacher = create :teacher
 
-    @teacher_other = create(:teacher)
+    @teacher_other = create :teacher
 
-    @section_owner = create(:teacher)
-    @section = create(:section, user: @section_owner, login_type: 'word')
-    create(:section_instructor, instructor: @teacher, section: @section, status: :active)
+    @section_owner = create :teacher
+    @section = create :section, user: @section_owner, login_type: 'word'
+    create :section_instructor, instructor: @teacher, section: @section, status: :active
 
-    @script = create(:script, :in_single_unit_course, :with_levels, levels_count: 1)
+    @script = create :script, :in_single_unit_course, :with_levels, levels_count: 1
     @script_level = @script.script_levels[0]
     @level = @script_level.level
 
     # some of our tests depend on sorting of students by name, thus we name them ourselves
     @students = []
     7.times do |i|
-      student = create(:student, name: "student_#{i}")
+      student = create :student, name: "student_#{i}"
       @students << student
-      create(:follower, section: @section, student_user: student)
+      create :follower, section: @section, student_user: student
     end
     @student_1, @student_2, @student_3, @student_4, @student_5, @student_6, @student_7 = @students
 
     @flappy = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @flappy)
-    @flappy_section = create(:section, user: @teacher, script_id: @flappy.id)
+    create :single_unit_course, unit: @flappy
+    @flappy_section = create :section, user: @teacher, script_id: @flappy.id
     @student_flappy_1 = create(:follower, section: @flappy_section).student_user
     @student_flappy_1.reload
 
     @allthings = create(:text_match, :with_script).script_levels.first.script
-    create(:single_unit_course, unit: @allthings)
-    @allthings_section = create(:section, user: @teacher, script_id: @allthings.id)
-    @student_allthings = create(:student, name: 'student_allthings')
-    create(:follower, section: @allthings_section, student_user: @student_allthings)
+    create :single_unit_course, unit: @allthings
+    @allthings_section = create :section, user: @teacher, script_id: @allthings.id
+    @student_allthings = create :student, name: 'student_allthings'
+    create :follower, section: @allthings_section, student_user: @student_allthings
     @allthings_section.reload
     @student_allthings.reload
   end
@@ -56,7 +56,7 @@ class ApiControllerTest < ActionController::TestCase
 
     section = create :section
     level = create :dance, :with_example_solutions
-    script = create(:unit, :in_single_unit_course)
+    script = create :unit, :in_single_unit_course
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
@@ -72,8 +72,8 @@ class ApiControllerTest < ActionController::TestCase
     teacher = create :authorized_teacher
     sign_in teacher
 
-    level = create(:level, :blockly, :with_ideal_level_source)
-    script = create(:unit, :in_single_unit_course)
+    level = create :level, :blockly, :with_ideal_level_source
+    script = create :unit, :in_single_unit_course
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
@@ -90,8 +90,8 @@ class ApiControllerTest < ActionController::TestCase
     sign_in teacher
 
     section = create :section
-    level = create(:level, :blockly, :with_ideal_level_source)
-    script = create(:unit, :in_single_unit_course)
+    level = create :level, :blockly, :with_ideal_level_source
+    script = create :unit, :in_single_unit_course
     script_level = create :script_level, script: script, levels: [level]
 
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
@@ -126,9 +126,9 @@ class ApiControllerTest < ActionController::TestCase
     create :unit_group_unit, unit_group: unit_group, script: @flappy, position: 2
     unit_group.reload
 
-    section = create(:section, user: @teacher, login_type: 'word', unit_group: unit_group)
-    student = create(:student, name: 'student_in_course')
-    create(:follower, section: section, student_user: student)
+    section = create :section, user: @teacher, login_type: 'word', unit_group: unit_group
+    student = create :student, name: 'student_in_course'
+    create :follower, section: section, student_user: student
     section.reload
     student.reload
 
@@ -1248,21 +1248,21 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "section with duplicated students loads all data when per is equal to the number of unique students" do
-    duplicated_section_owner = create(:teacher)
+    duplicated_section_owner = create :teacher
 
     # section will contain 7 unique students, but 8 followers - one of whom is a "duplicate"
-    duplicated_section = create(:section, user: duplicated_section_owner, login_type: 'word')
+    duplicated_section = create :section, user: duplicated_section_owner, login_type: 'word'
 
     # add students in section
     duplicated_students = []
     7.times do |i|
-      student = create(:student, name: "duplicated_student_#{i}")
+      student = create :student, name: "duplicated_student_#{i}"
       duplicated_students << student
-      create(:follower, section: duplicated_section, student_user: student)
+      create :follower, section: duplicated_section, student_user: student
     end
 
     # Create a duplicate follower for student_2 in duplicated_section
-    create(:follower, section: duplicated_section, student_user: duplicated_students[2])
+    create :follower, section: duplicated_section, student_user: duplicated_students[2]
 
     sign_in duplicated_section_owner
     get :section_level_progress, params: {section_id: duplicated_section.id, page: 1, per: 7}
@@ -1464,8 +1464,8 @@ class ApiControllerTest < ActionController::TestCase
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
     teacher = create :teacher
     sign_in teacher
-    section = create(:section, user: teacher, login_type: 'word')
-    create(:section, user: teacher, login_type: 'word', hidden: true)
+    section = create :section, user: teacher, login_type: 'word'
+    create :section, user: teacher, login_type: 'word', hidden: true
 
     get :teacher_panel_section
 
@@ -1491,7 +1491,7 @@ class ApiControllerTest < ActionController::TestCase
   test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 section" do
     teacher = create :teacher
     sign_in teacher
-    section = create(:section, user: teacher, login_type: 'word')
+    section = create :section, user: teacher, login_type: 'word'
 
     get :teacher_panel_section
 
@@ -1504,7 +1504,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "teacher_panel_section returns no_content when no section_id is passed and teacher has multiple sections" do
-    create(:section, user: @teacher, login_type: 'word')
+    create :section, user: @teacher, login_type: 'word'
 
     get :teacher_panel_section
 
@@ -1529,7 +1529,7 @@ class ApiControllerTest < ActionController::TestCase
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = create(:script)
+    script = create :script
 
     user = create :user
     sign_in user
@@ -1545,7 +1545,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = create(:script, :with_levels, levels_count: 5)
+    script = create :script, :with_levels, levels_count: 5
 
     get :script_structure, params: {script: script.id}
     assert_response :success
@@ -1616,7 +1616,7 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "don't show link to pair programming when not in a section" do
-    student = create(:student)
+    student = create :student
     sign_in student
 
     get :user_menu
@@ -1730,7 +1730,7 @@ class ApiControllerTest < ActionController::TestCase
     # change teacher email to @gmail.com, which will the teacher ineligible for verified
     teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
     @controller.stubs(:current_user).returns(teacher)
-    section = create(:section, user: teacher)
+    section = create :section, user: teacher
     assert_equal false, teacher.verified_teacher?
     sign_in teacher
     get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}

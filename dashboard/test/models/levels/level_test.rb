@@ -159,7 +159,7 @@ class LevelTest < ActiveSupport::TestCase
 
   test "summarize_for_edit returns level_num for name on blockly level" do
     game = Game.find_by_name("CustomMaze")
-    blockly_level = create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
+    blockly_level = create :level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze"
 
     summary = blockly_level.summarize_for_edit
 
@@ -241,22 +241,22 @@ class LevelTest < ActiveSupport::TestCase
 
   test 'can have video key' do
     level = Blockly.create(short_instructions: 'test')
-    video = create(:video)
+    video = create :video
     level.update(properties: {video_key: video.key})
     assert_equal video.key, level.video_key
   end
 
   test 'returns specified video with related videos' do
-    level = create(:level)
-    video = create(:video)
+    level = create :level
+    video = create :video
     level.update(properties: {video_key: video.key})
     assert_includes(level.related_videos, video)
   end
 
   test 'returns locale-specific video with related videos' do
-    level = create(:level)
-    en_video = create(:video)
-    es_video = create(:video)
+    level = create :level
+    en_video = create :video
+    es_video = create :video
     es_video.locale = 'es-MX'
     es_video.key = en_video.key
     es_video.save!
@@ -273,7 +273,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'returns concept videos with related videos' do
-    level = create(:level)
+    level = create :level
     level.concepts = [create(:concept, :with_video), create(:concept, :with_video)]
     assert_includes(level.related_videos, level.concepts.first.related_video)
     assert_includes(level.related_videos, level.concepts.second.related_video)
@@ -371,7 +371,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   def create_maze
-    maze = create(:maze, published: true)
+    maze = create :maze, published: true
     assert maze
   end
 
@@ -575,7 +575,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(@custom_level, cache_custom_level)
 
     # Make sure that we can also locate a newly created level.
-    new_level = create(:level)
+    new_level = create :level
     assert_equal(new_level, Level.cache_find(new_level.id))
   end
 
@@ -615,19 +615,19 @@ class LevelTest < ActiveSupport::TestCase
     level = Maze.create(name: 'maze level with level sources')
     assert_nil level.ideal_level_source_id
 
-    right = create(:level_source, level: level, data: "<xml><right/></xml>")
+    right = create :level_source, level: level, data: "<xml><right/></xml>"
     6.times do
-      create(:activity, level: level, level_source: right, test_result: 100)
+      create :activity, level: level, level_source: right, test_result: 100
     end
 
-    wrong = create(:level_source, level: level, data: "<xml><wrong/></xml>")
+    wrong = create :level_source, level: level, data: "<xml><wrong/></xml>"
     10.times do
-      create(:activity, level: level, level_source: wrong, test_result: 0)
+      create :activity, level: level, level_source: wrong, test_result: 0
     end
 
-    right_but_unpopular = create(:level_source, level: level, data: "<xml><right_but_unpopular/></xml>")
+    right_but_unpopular = create :level_source, level: level, data: "<xml><right_but_unpopular/></xml>"
     2.times do
-      create(:activity, level: level, level_source: right_but_unpopular, test_result: 100)
+      create :activity, level: level, level_source: right_but_unpopular, test_result: 100
     end
 
     level.calculate_ideal_level_source_id
@@ -1375,9 +1375,9 @@ class LevelTest < ActiveSupport::TestCase
   describe '#available_callouts' do
     let(:available_callouts) {level.available_callouts(script_level)}
 
-    let(:level) {build(:level)}
-    let(:script_level_callout) {build(:callout)}
-    let(:script_level) {build(:script_level)}
+    let(:level) {build :level}
+    let(:script_level_callout) {build :callout}
+    let(:script_level) {build :script_level}
 
     let(:level_is_custom) {false}
     let(:level_is_localizable) {false}

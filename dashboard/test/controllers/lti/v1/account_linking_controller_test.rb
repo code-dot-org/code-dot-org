@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
   setup do
-    @user = create(:teacher, email: 'test@lti.com')
+    @user = create :teacher, email: 'test@lti.com'
     @admin = create :admin
     @lti_integration = create :lti_integration
     DCDO.stubs(:get)

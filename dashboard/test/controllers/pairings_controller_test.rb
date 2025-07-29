@@ -85,7 +85,7 @@ class PairingsControllerTest < ActionController::TestCase
   test 'should not set pairings in session if they are not valid classmates' do
     section = create(:follower, student_user: @user).section
     classmate = create(:follower, section: section).student_user
-    invalid_user = create(:student)
+    invalid_user = create :student
 
     put :update, xhr: true, params: {pairings: [{id: classmate.id}, {id: invalid_user.id}], sectionId: section.id}
 

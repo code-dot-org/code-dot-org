@@ -11,7 +11,7 @@ class DeviseLockableTest < ActiveSupport::TestCase
   end
 
   test 'students do not get locked out' do
-    student = create(:student)
+    student = create :student
     assert_nil student.failed_attempts
     refute student.access_locked?
 
@@ -23,7 +23,7 @@ class DeviseLockableTest < ActiveSupport::TestCase
   end
 
   test 'teachers do get locked out' do
-    teacher = create(:teacher)
+    teacher = create :teacher
     assert_nil teacher.failed_attempts
     refute teacher.access_locked?
 
@@ -43,7 +43,7 @@ class DeviseLockableTest < ActiveSupport::TestCase
   end
 
   test 'locked-out accounts are automatically unlocked after an hour' do
-    teacher = create(:teacher)
+    teacher = create :teacher
     teacher.lock_access!
     assert teacher.reload.access_locked?
     Timecop.travel(1.hour)

@@ -67,8 +67,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
+    script = create :script, :with_levels, levels_count: 3
+    course = create :single_unit_course, unit: script
     sl = script.script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
@@ -87,8 +87,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
+    script = create :script, :with_levels, levels_count: 3
+    course = create :single_unit_course, unit: script
     sl = script.script_levels[1]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
@@ -107,8 +107,8 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student = create :student
     sign_in student
 
-    script = create(:script, :with_levels, levels_count: 3)
-    course = create(:single_unit_course, unit: script)
+    script = create :script, :with_levels, levels_count: 3
+    course = create :single_unit_course, unit: script
     sl = script.script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
@@ -128,7 +128,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       :with_levels,
       levels_count: 10
     )
-    course = create(:single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+    course = create :single_unit_course, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family'
     CourseOffering.add_course_offering(course)
 
     teacher = create :teacher
@@ -163,7 +163,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       :with_levels,
       levels_count: 10
     )
-    course = create(:single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family')
+    course = create :single_unit_course, unit: unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: 'unversioned', family_name: 'hoc-family'
     CourseOffering.add_course_offering(course)
 
     # make sure the new unit is in the cache

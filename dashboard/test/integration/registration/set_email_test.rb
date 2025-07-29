@@ -305,7 +305,7 @@ module RegistrationsControllerTests
     #
 
     test "multi-auth: returns bad_request if user param is nil" do
-      student = create(:student)
+      student = create :student
       sign_in student
 
       patch '/users/email', params: {}
@@ -313,7 +313,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with password if user cannot edit password" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -323,7 +323,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with email if user cannot edit email" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -333,7 +333,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user with hashed email if user cannot edit email" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -343,7 +343,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for migrated user if password is incorrect" do
-      teacher = create(:teacher, password: 'mypassword')
+      teacher = create :teacher, password: 'mypassword'
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}
@@ -353,7 +353,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated teacher if password is correct" do
-      teacher = create(:teacher, password: 'mypassword')
+      teacher = create :teacher, password: 'mypassword'
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -363,7 +363,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student if password is correct" do
-      student = create(:student, password: 'mypassword')
+      student = create :student, password: 'mypassword'
       sign_in student
 
       patch '/users/email', params: {user: {email: 'new@email.com', current_password: 'mypassword'}}
@@ -373,7 +373,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated teacher without password if password is not required" do
-      teacher = create(:teacher, encrypted_password: '')
+      teacher = create :teacher, encrypted_password: ''
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'new@email.com'}}
@@ -383,7 +383,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student without password if password is not required" do
-      student = create(:student, encrypted_password: '')
+      student = create :student, encrypted_password: ''
       sign_in student
 
       hashed_new_email = User.hash_email('new@email.com')
@@ -394,7 +394,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: updates email for migrated student with plaintext email param if provided" do
-      student = create(:student, encrypted_password: '')
+      student = create :student, encrypted_password: ''
       sign_in student
 
       hashed_other_email = User.hash_email('second@email.com')
@@ -405,7 +405,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with password if user cannot edit password" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_password?).returns(false)
@@ -415,7 +415,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with email if user cannot edit email" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -425,7 +425,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user with hashed email if user cannot edit email" do
-      teacher = create(:teacher)
+      teacher = create :teacher
       sign_in teacher
 
       User.any_instance.stubs(:can_edit_email?).returns(false)
@@ -435,7 +435,7 @@ module RegistrationsControllerTests
     end
 
     test "multi-auth: returns 422 for non-migrated user if password is incorrect" do
-      teacher = create(:teacher, password: 'mypassword')
+      teacher = create :teacher, password: 'mypassword'
       sign_in teacher
 
       patch '/users/email', params: {user: {email: 'example@email.com', current_password: 'notmypassword'}}

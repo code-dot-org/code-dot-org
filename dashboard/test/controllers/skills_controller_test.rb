@@ -53,13 +53,13 @@ class SkillsControllerTest < ActionController::TestCase
   class SectionSkillsTest < ActionController::TestCase
     setup do
       @controller = SkillsController.new
-      @teacher = create(:teacher)
-      @section = create(:section, user: @teacher)
-      @unit = create(:unit, name: 'csd-unit1')
+      @teacher = create :teacher
+      @section = create :section, user: @teacher
+      @unit = create :unit, name: 'csd-unit1'
     end
 
     test 'student_cannot_access_section_skills' do
-      student = create(:student)
+      student = create :student
       sign_in(student)
       get :section_skills, params: {
         section_id: @section.id,
@@ -85,8 +85,8 @@ class SkillsControllerTest < ActionController::TestCase
     end
 
     test 'teacher_cannot_access_section_skills_for_other_sections' do
-      other_teacher = create(:teacher)
-      other_section = create(:section, user: other_teacher)
+      other_teacher = create :teacher
+      other_section = create :section, user: other_teacher
       sign_in(@teacher)
       get :section_skills, params: {
         section_id: other_section.id,

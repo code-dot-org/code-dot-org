@@ -6,7 +6,7 @@ class Api::V1::TextToSpeechControllerTest < ActionController::TestCase
   setup do
     Cdo::Throttle.stubs(:throttle).returns(false)
 
-    @user = create(:user)
+    @user = create :user
     @text = "hola"
     @gender = "female"
     @locale = "es-MX"

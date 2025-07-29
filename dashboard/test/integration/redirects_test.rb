@@ -108,8 +108,8 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     create :script_level, script: script, lesson: lesson
     create :script_level, script: script, lesson: lesson, bonus: true
 
-    @teacher = create(:teacher)
-    create(:section, user: @teacher, script: script, lesson_extras: true, id: 999999)
+    @teacher = create :teacher
+    create :section, user: @teacher, script: script, lesson_extras: true, id: 999999
 
     sign_in(@teacher)
 
@@ -126,9 +126,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     @unit = create :script, name: 'test-script'
     create :single_unit_course, unit: @unit, name: 'test-course'
     @lesson_group = create :lesson_group, script: @unit
-    @lockable_lesson = create(:lesson, script: @unit, lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 1, relative_position: 1)
-    @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
-    @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
+    @lockable_lesson = create :lesson, script: @unit, lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 1, relative_position: 1
+    @level_group = create :level_group, :with_sublevels, name: 'assessment 1'
+    @lockable_level_group_sl = create :script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true
 
     get '/s/test-script/lockable/1/puzzle/1'
     assert_redirected_to '/s/test-script/lockable/1/levels/1'

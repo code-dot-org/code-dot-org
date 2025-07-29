@@ -2,9 +2,9 @@ require 'test_helper'
 
 class LevelSourcesControllerTest < ActionController::TestCase
   setup do
-    @admin = create(:admin)
-    @level_source = create(:level_source)
-    @hidden_level_source = create(:level_source, hidden: true)
+    @admin = create :admin
+    @level_source = create :level_source
+    @hidden_level_source = create :level_source, hidden: true
     @request.host = CDO.dashboard_hostname
   end
 
@@ -57,7 +57,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should get show if hidden and we have project validator permission" do
-    user = create(:teacher)
+    user = create :teacher
     user.permission = UserPermission::PROJECT_VALIDATOR
     sign_in user
     get :show, params: {id: @hidden_level_source.id}
@@ -65,7 +65,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should update if we have project validator permission" do
-    user = create(:teacher)
+    user = create :teacher
     user.permission = UserPermission::PROJECT_VALIDATOR
     sign_in user
     patch :update, params: {level_source: {hidden: true}, id: @level_source}
@@ -166,7 +166,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'artist levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: create(:artist))
+    level_source = create :level_source, level: create(:artist)
 
     LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test-studio.code.org/assets/sharing_drawing.png')
 
@@ -183,7 +183,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test 'playlab levelsource has sharing meta tags' do
-    level_source = create(:level_source, level: create(:playlab))
+    level_source = create :level_source, level: create(:playlab)
 
     LevelSourcesController.view_context_class.any_instance.stubs(:meta_image_url).returns('http://test-studio.code.org/assets/studio_sharing_drawing.png')
 

@@ -35,8 +35,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
     let(:grant_permission_request!) {Services::ChildAccount.grant_permission_request!(parental_permission_request)}
 
-    let(:user) {create(:non_compliant_child)}
-    let(:parental_permission_request) {create(:parental_permission_request, user: user)}
+    let(:user) {create :non_compliant_child}
+    let(:parental_permission_request) {create :parental_permission_request, user: user}
 
     let(:expect_permission_granting_cap_event_logging) do
       Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(user)
@@ -109,7 +109,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   describe '.start_grace_period' do
     let(:start_grace_period) {Services::ChildAccount.start_grace_period(user)}
 
-    let(:user) {create(:non_compliant_child)}
+    let(:user) {create :non_compliant_child}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -158,7 +158,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   describe '.lock_out' do
     let(:lock_out) {Services::ChildAccount.lock_out(user)}
 
-    let(:user) {create(:non_compliant_child)}
+    let(:user) {create :non_compliant_child}
 
     around do |test|
       Timecop.freeze {test.call}

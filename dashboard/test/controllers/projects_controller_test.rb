@@ -26,7 +26,7 @@ class ProjectsControllerTest < ActionController::TestCase
     ProjectsController::STANDALONE_PROJECTS.each do |type, config|
       next if Level.exists?(name: config[:name])
       factory = FactoryBot.factories.registered?(type) ? type : :level
-      create(factory, name: config[:name])
+      create factory, name: config[:name]
     end
 
     @driver = create :user
@@ -384,14 +384,14 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level without script creates new channel if none exists' do
-    level = create(:level, :blockly)
+    level = create :level, :blockly
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
     refute_nil @response.body['channel']
   end
 
   test 'get_or_create_for_level without script returns existing channel' do
-    level = create(:level, :blockly)
+    level = create :level, :blockly
     get :get_or_create_for_level, params: {level_id: level.id}
     assert_response :success
     channel_id = @response.body['channel']
@@ -403,9 +403,9 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level with script creates new channel if none exists' do
-    script = create(:script, :in_single_unit_course)
-    level = create(:level, :blockly)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :level, :blockly
+    create :script_level, script: script, levels: [level]
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     refute_nil @response.body['channel']
@@ -413,18 +413,18 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'get_or_create_for_level with script restricts usage for young students in app lab' do
     sign_in_with_request create(:young_student)
-    script = create(:script, :in_single_unit_course)
-    level = create(:applab)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :applab
+    create :script_level, script: script, levels: [level]
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :forbidden
   end
 
   test 'get_or_create_for_level with script allows usage for young students with tos teacher in app lab' do
     sign_in_with_request create(:young_student_with_tos_teacher)
-    script = create(:script, :in_single_unit_course)
-    level = create(:applab)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :applab
+    create :script_level, script: script, levels: [level]
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     refute_nil @response.body['channel']
@@ -432,23 +432,23 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test 'get_or_create_for_level with user returns forbiddden if not teacher of student' do
     student = create :user
-    script = create(:script, :in_single_unit_course)
-    level = create(:level, :blockly)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :level, :blockly
+    create :script_level, script: script, levels: [level]
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
     assert_response :forbidden
   end
 
   test 'get_or_create_for_level with user returns not started if student has not started' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
     student = create :user
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
     sign_in teacher
 
-    script = create(:script, :in_single_unit_course)
-    level = create(:level, :blockly)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :level, :blockly
+    create :script_level, script: script, levels: [level]
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
     assert_response :success
     body = JSON.parse(@response.body)
@@ -456,16 +456,16 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level with user returns channel' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
     student = create :user
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
 
     # The student should do some work.
     sign_in_with_request(student)
-    script = create(:script, :in_single_unit_course)
-    level = create(:level, :blockly)
-    create(:script_level, script: script, levels: [level])
+    script = create :script, :in_single_unit_course
+    level = create :level, :blockly
+    create :script_level, script: script, levels: [level]
     create :user_level, level: level, user: student, script: script
     get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
     assert_response :success
@@ -480,17 +480,17 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level with user uses script level ID if provided' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
     student = create :user
     other_student = create :user
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
     sign_in teacher
 
-    script = create(:script, :in_single_unit_course)
-    sublevel = create(:level, :blockly)
-    parent_level = create(:bubble_choice_level, sublevels: [sublevel])
-    script_level = create(:script_level, script: script, levels: [parent_level])
+    script = create :script, :in_single_unit_course
+    sublevel = create :level, :blockly
+    parent_level = create :bubble_choice_level, sublevels: [sublevel]
+    script_level = create :script_level, script: script, levels: [parent_level]
 
     # Teacher should be able to get the channel for the given sublevel for the student.
     get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}
@@ -506,16 +506,16 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test 'get_or_create_for_level with user returns forbidden if script level ID does not match level ID' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
     student = create :user
-    create(:follower, section: section, student_user: student)
+    create :follower, section: section, student_user: student
     sign_in teacher
 
-    script = create(:script, :in_single_unit_course)
-    sublevel = create(:level, :blockly)
-    other_level = create(:level, :blockly)
-    script_level = create(:script_level, script: script, levels: [other_level])
+    script = create :script, :in_single_unit_course
+    sublevel = create :level, :blockly
+    other_level = create :level, :blockly
+    script_level = create :script_level, script: script, levels: [other_level]
 
     # Teacher should not be able to get the channel for the given sublevel since the provided level ID does not match the script level ID.
     get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}

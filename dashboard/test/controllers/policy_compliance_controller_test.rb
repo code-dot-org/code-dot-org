@@ -55,7 +55,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "must provide a parent email to the request api" do
-    user = create(:young_student, :without_parent_permission)
+    user = create :young_student, :without_parent_permission
     sign_in user
 
     post '/policy_compliance/child_account_consent', params: {}
@@ -79,7 +79,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "if a user enters their own email as their parent email, should just redirect back" do
-    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    user = create :young_student, :without_parent_permission, email: 'test@studentemail.com'
     sign_in user
 
     assert_emails 0 do
@@ -92,7 +92,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "if a user enters their own email with a subaddress/plus address, it should redirect back" do
-    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    user = create :young_student, :without_parent_permission, email: 'test@studentemail.com'
     sign_in user
 
     assert_emails 0 do
@@ -105,7 +105,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "if a user enters an invalid email, it should return a 400" do
-    user = create(:young_student, :without_parent_permission)
+    user = create :young_student, :without_parent_permission
     sign_in user
 
     post '/policy_compliance/child_account_consent', params:
@@ -116,7 +116,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should send an email to the parent upon creating the request" do
-    user = create(:young_student, :without_parent_permission)
+    user = create :young_student, :without_parent_permission
     sign_in user
 
     assert_emails 1 do
@@ -159,8 +159,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "given a user already has sent a parental permission, should just redirect and not send email after the third time" do
-    user = create(:young_student, :without_parent_permission
-)
+    user = create :young_student, :without_parent_permission
+
     sign_in user
 
     assert_emails 3 do
@@ -175,8 +175,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "a user should not be able to send more than 3 unique parental request emails per day" do
-    user = create(:young_student, :without_parent_permission
-)
+    user = create :young_student, :without_parent_permission
+
     sign_in user
 
     assert_emails 3 do
@@ -211,7 +211,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "registration email should be given a fully qualified path to the token endpoint" do
-    user = create(:young_student, :without_parent_permission)
+    user = create :young_student, :without_parent_permission
     sign_in user
 
     post '/policy_compliance/child_account_consent', params:
@@ -233,7 +233,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   class PendingPermissionRequestTest < ActionDispatch::IntegrationTest
     test 'json format - returns pending permission request data when exists' do
       consent_status = 'p'
-      user = create(:young_student, cap_status: consent_status)
+      user = create :young_student, cap_status: consent_status
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999
@@ -261,7 +261,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
 
     test 'json format - returns no content when no pending permission request' do
-      user = create(:young_student)
+      user = create :young_student
 
       user.expects(:latest_parental_permission_request).returns(nil)
 
@@ -275,7 +275,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   class ChildAccountConsentRequest < ActionDispatch::IntegrationTest
     test 'json format - returns permission request data on success' do
       consent_status = 'p'
-      child_account = create(:young_student, cap_status: consent_status)
+      child_account = create :young_student, cap_status: consent_status
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999
@@ -306,7 +306,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
 
     test 'json format - returns error message on failure' do
-      child_account = build(:young_student)
+      child_account = build :young_student
       parent_email = 'parent@example.com'
       error_message = 'error_message'
 

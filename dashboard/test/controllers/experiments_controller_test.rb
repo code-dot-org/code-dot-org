@@ -9,7 +9,7 @@ class ExperimentsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
     unit_group = create :unit_group, name: 'my-course'
-    default_script = create(:script, name: 'default-script')
+    default_script = create :script, name: 'default-script'
     create :unit_group_unit, unit_group: unit_group, script: default_script, position: 2
   end
 

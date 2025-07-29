@@ -19,8 +19,8 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'migrated user email and hashed email look at authentication_options' do
     original_teacher_email = 'testteacher@xyz.foo'
     new_teacher_email = 'awesometeacher@xyz.foo'
-    teacher = create(:teacher, email: original_teacher_email)
-    email_auth = create(:authentication_option, user: teacher, email: new_teacher_email)
+    teacher = create :teacher, email: original_teacher_email
+    email_auth = create :authentication_option, user: teacher, email: new_teacher_email
     teacher.update(primary_contact_info: email_auth, provider: 'migrated')
     assert_equal teacher.primary_contact_info_id, email_auth.id
     assert_equal new_teacher_email, teacher.email
@@ -30,7 +30,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   test 'email is properly sanitized and hashed' do
     teacher_email = 'TESTcaseSANITIZATION@test.com'
     sanitized = 'testcasesanitization@test.com'
-    teacher = create(:teacher, email: teacher_email)
+    teacher = create :teacher, email: teacher_email
     email_auth = teacher.primary_contact_info
     assert_equal sanitized, email_auth.email
     assert_equal email_auth.hashed_email, AuthenticationOption.hash_email(sanitized)
@@ -38,7 +38,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
 
   test 'student email is not stored but hashed_email is' do
     student_email = 'teststudent@test.com'
-    student = create(:student, email: student_email)
+    student = create :student, email: student_email
     email_auth = student.primary_contact_info
     assert email_auth.user.student?
     assert_equal '', email_auth.email
@@ -75,19 +75,19 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
 
   test 'user can have multiple authentication options' do
     assert_creates(User) do
-      user = create(:user, :with_google_authentication_option, :with_clever_authentication_option)
+      user = create :user, :with_google_authentication_option, :with_clever_authentication_option
       assert_equal 3, user.authentication_options.count
       assert_equal user.hashed_email, user.authentication_options.first.hashed_email
     end
   end
 
   test 'student in word section can have no authentication options' do
-    user = create(:student_in_word_section)
+    user = create :student_in_word_section
     assert_empty user.authentication_options
   end
 
   test 'destroying user destroys authentication options and we can restore them' do
-    user = create(:user, :with_google_authentication_option)
+    user = create :user, :with_google_authentication_option
     authentication_option_id = user.authentication_options.first.id
     user.destroy
     authentication_option = AuthenticationOption.with_deleted.where(id: authentication_option_id).first
@@ -136,14 +136,14 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
   end
 
   test 'primary?' do
-    user = create(:user)
+    user = create :user
 
     assert_equal 1, user.authentication_options.count
     refute_nil user.primary_contact_info
     old_primary_ao = user.primary_contact_info
     assert old_primary_ao.primary?
 
-    google_ao = create(:google_authentication_option, user: user)
+    google_ao = create :google_authentication_option, user: user
     user.update!(primary_contact_info: google_ao)
     old_primary_ao.reload
 
@@ -251,7 +251,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     # associated with a user account that has that email.
     AuthenticationOption::TRUSTED_EMAIL_CREDENTIAL_TYPES.each do |credential_type|
       option = build :authentication_option, credential_type: credential_type
-      create(:user, email: option.email)
+      create :user, email: option.email
       refute option.valid?
     end
   end
@@ -274,7 +274,7 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
       else
         option = build :authentication_option, credential_type: credential_type
       end
-      create(:user, email: option.email)
+      create :user, email: option.email
       assert option.valid?
     end
   end

@@ -5,8 +5,8 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @plc_course = create :plc_course
     # Create course units out of order to make sure that unit_order is respected
-    @course_unit2 = create(:plc_course_unit, plc_course: @plc_course, unit_order: 2)
-    @course_unit1 = create(:plc_course_unit, plc_course: @plc_course, unit_order: 1)
+    @course_unit2 = create :plc_course_unit, plc_course: @plc_course, unit_order: 2
+    @course_unit1 = create :plc_course_unit, plc_course: @plc_course, unit_order: 1
   end
 
   test 'Enrolling user in a course creates unit enrollments' do
@@ -66,14 +66,14 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
 
   test 'enrolling a non-authorized teacher in a course creates an authorized teacher user permission' do
     refute UserPermission.exists?(user_id: @teacher.id, permission: UserPermission::AUTHORIZED_TEACHER)
-    create(:plc_user_course_enrollment, user: @teacher, plc_course: @plc_course)
+    create :plc_user_course_enrollment, user: @teacher, plc_course: @plc_course
     assert UserPermission.exists?(user_id: @teacher.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 
   test 'enrolling a student in a course does not create an authorized teacher user permission' do
     student = create :student
     refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)
-    create(:plc_user_course_enrollment, user: student, plc_course: @plc_course)
+    create :plc_user_course_enrollment, user: student, plc_course: @plc_course
     refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)
   end
 end

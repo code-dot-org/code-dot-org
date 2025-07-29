@@ -11,7 +11,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     facilitator_1 = create :facilitator, name: 'Facilitator 1'
     facilitator_2 = create :facilitator, name: 'Facilitator 2'
     [facilitator_1, facilitator_2].each do |f|
-      create(:pd_course_facilitator, facilitator: f, course: Pd::Workshop::COURSE_CSD)
+      create :pd_course_facilitator, facilitator: f, course: Pd::Workshop::COURSE_CSD
     end
 
     @workshop.facilitators << facilitator_1

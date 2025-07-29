@@ -13,37 +13,37 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   setup do
-    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student22')
-    create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-22')
-    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student32')
-    create(:single_unit_course, :with_course_offering, unit: @unit_teacher_to_students2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1992', family_name: 'family-22')
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher22')
-    create(:single_unit_course, :pl_course, :with_course_offering, unit: @unit_facilitator_to_teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-32')
+    @unit_teacher_to_students = create :script, name: 'unit-teacher-to-student22'
+    create :single_unit_course, :with_course_offering, unit: @unit_teacher_to_students, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-22'
+    @unit_teacher_to_students2 = create :script, name: 'unit-teacher-to-student32'
+    create :single_unit_course, :with_course_offering, unit: @unit_teacher_to_students2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1992', family_name: 'family-22'
+    @unit_facilitator_to_teacher = create :script, name: 'unit-facilitator-to-teacher22'
+    create :single_unit_course, :pl_course, :with_course_offering, unit: @unit_facilitator_to_teacher, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, version_year: '1991', family_name: 'family-32'
 
-    @beta_unit = create(:script, name: 'beta-unit2')
-    create(:single_unit_course, :with_course_offering, unit: @beta_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'beta2')
+    @beta_unit = create :script, name: 'beta-unit2'
+    create :single_unit_course, :with_course_offering, unit: @beta_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, version_year: '1991', family_name: 'beta2'
 
-    @in_development_unit = create(:script, name: 'in-development-unit22')
-    create(:single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development2')
+    @in_development_unit = create :script, name: 'in-development-unit22'
+    create :single_unit_course, :with_course_offering, unit: @in_development_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, version_year: '1991', family_name: 'development2'
 
-    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')
-    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
-    create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
+    @unit_group = create :unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable'
+    @unit_in_course = create :script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil
+    create :unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1
     @unit_in_course.reload
     @unit_group.reload
     CourseOffering.add_course_offering(@unit_group)
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit = create :script, pilot_experiment: 'my-experiment'
-    create(:single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment')
+    create :single_unit_course, :with_course_offering, unit: @pilot_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-42', pilot_experiment: 'my-experiment'
 
     @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
     @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment'
-    create(:single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment')
+    create :single_unit_course, :with_course_offering, :pl_course, unit: @pilot_pl_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-52', pilot_experiment: 'my-pl-experiment'
 
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
-    create(:single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112', pilot_experiment: 'my-editor-experiment')
+    create :single_unit_course, :with_course_offering, unit: @partner_unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, version_year: '1991', family_name: 'family-112', pilot_experiment: 'my-editor-experiment'
   end
 
   test 'get courses with participant progress for student should return no courses' do
@@ -132,7 +132,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "recommended? is false if course_version is not stable" do
-    single_unit_course = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, family_name: 'ss', version_year: '2050')
+    single_unit_course = create :single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, family_name: 'ss', version_year: '2050'
 
     unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     CourseOffering.add_course_offering(unit_group)
@@ -142,7 +142,7 @@ class CourseVersionTest < ActiveSupport::TestCase
   end
 
   test "recommended? is true if its the only course version in the course offering" do
-    single_unit_course = create(:single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'ss', version_year: '2050')
+    single_unit_course = create :single_unit_course, :with_course_offering, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'ss', version_year: '2050'
 
     unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(unit_group)
@@ -153,12 +153,12 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "recommended? is true if its the latest stable version of unit group in the family in user locale" do
     ug_2050 = create :unit_group, family_name: 'ug', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'ug1-2050', supported_locales: ['fake-locale'])
+    ug_2050_unit = create :script, name: 'ug1-2050', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     ug_2051 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2051_unit = create(:script, name: 'ug1-2051', supported_locales: [])
+    ug_2051_unit = create :script, name: 'ug1-2051', supported_locales: []
     create :unit_group_unit, unit_group: ug_2051, script: ug_2051_unit, position: 1
     CourseOffering.add_course_offering(ug_2051)
 
@@ -172,14 +172,14 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "recommended? is true if its the latest stable unit in the family in user locale across unitgroup" do
     ug_2050 = create :unit_group, family_name: 'family', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'family1-2050', supported_locales: ['fake-locale'])
+    ug_2050_unit = create :script, name: 'family1-2050', supported_locales: ['fake-locale']
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2049')
+    create :single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2049'
     script2 = create :script, supported_locales: []
-    create(:single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2052')
+    create :single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2052'
 
     refute ug_2050.course_version.recommended?('en-us')
     refute script.get_course_version.recommended?('en-us')
@@ -192,14 +192,14 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "recommended? is true if its the latest stable unitgroup in the family in user locale across unit" do
     ug_2050 = create :unit_group, family_name: 'family', version_year: '2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    ug_2050_unit = create(:script, name: 'family1-2050')
+    ug_2050_unit = create :script, name: 'family1-2050'
     create :unit_group_unit, unit_group: ug_2050, script: ug_2050_unit, position: 1
     CourseOffering.add_course_offering(ug_2050)
 
     script = create :script, supported_locales: ['fake-locale']
-    create(:single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2048')
+    create :single_unit_course, :with_course_offering, unit: script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2048'
     script2 = create :script, supported_locales: []
-    create(:single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2049')
+    create :single_unit_course, :with_course_offering, unit: script2, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, family_name: 'family', version_year: '2049'
 
     refute script.get_course_version.recommended?('en-us')
     refute script2.get_course_version.recommended?('en-us')

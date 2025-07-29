@@ -107,7 +107,7 @@ class ApplicationHelperTest < ActionView::TestCase
   # version.
   test 'client state migration' do
     script = create :script, :in_single_unit_course, name: 'progress-test'
-    sl = create(:script_level, script: script)
+    sl = create :script_level, script: script
     data = {'progress-test' => {sl.level_id => 100}}
     session[:progress] = data
     assert_equal 100, client_state.level_progress(sl)
@@ -198,7 +198,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level: create(:playlab))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: create(:bounce))
     level = create :level, game: Game.find_by_app('Flappy')
-    level_source = create(:level_source, level: level)
+    level_source = create :level_source, level: level
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
@@ -207,7 +207,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:playlab)))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:bounce)))
     level = create :level, game: Game.find_by_app('Flappy')
-    level_source = create(:level_source, level: level)
+    level_source = create :level_source, level: level
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
 
@@ -216,8 +216,8 @@ class ApplicationHelperTest < ActionView::TestCase
 
     assert_match(/cloudfront.net.*png/, meta_image_url(level_source: create(:level_source_image).level_source))
 
-    artist_level_source = create(:level_source, level: create(:artist))
-    create(:level_source_image, level_source: artist_level_source)
+    artist_level_source = create :level_source, level: create(:artist)
+    create :level_source_image, level_source: artist_level_source
     assert_match(/cloudfront.net.*framed.*png/, meta_image_url(level_source: artist_level_source.reload))
   end
 
