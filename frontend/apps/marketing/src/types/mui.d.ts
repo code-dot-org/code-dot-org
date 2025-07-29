@@ -32,10 +32,12 @@ declare module '@mui/material/styles' {
   // Custom components definitions
   interface ComponentNameToClassKey {
     MuiImage: 'root' | 'imageElement';
+    MuiFooter: 'root' | 'grid' | 'links' | 'link' | 'copyright';
   }
 
   interface ComponentsPropsList {
     MuiImage: Partial<ImageProps>;
+    MuiFooter: Partial<FooterProps>;
   }
 
   interface Components {
@@ -43,6 +45,11 @@ declare module '@mui/material/styles' {
       defaultProps?: ComponentsPropsList['MuiImage'];
       styleOverrides?: ComponentsOverrides<Theme>['MuiImage'];
       variants?: ComponentsVariants['MuiImage'];
+    };
+    MuiFooter?: {
+      defaultProps?: ComponentsPropsList['MuiFooter'];
+      styleOverrides?: ComponentsOverrides<Theme>['MuiFooter'];
+      variants?: ComponentsVariants['MuiFooter'];
     };
   }
 }
