@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-23 19:06:41 UTC",
+    "serialized_at": "2025-07-28 22:21:01 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -316,6 +316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_standalone"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -658,6 +661,18 @@
       }
     },
     {
+      "name": "Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1OzL_wgBlkieBVQTmYYJW83j33JwssOckThzd8YcS1d8/template/preview",
+      "key": "lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_slides"
+      }
+    },
+    {
       "name": "Programming with Events",
       "url": "https://www.youtube.com/watch?v=--o_UfUnS84",
       "key": "programming_with_events",
@@ -687,6 +702,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",
         "resource.key": "intro_to_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "lesson_slides"
       }
     },
     {

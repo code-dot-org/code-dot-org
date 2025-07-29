@@ -256,7 +256,7 @@ class ChannelsApi < Sinatra::Base
   #
   # GET /v3/channels/<channel-id>/sharing_disabled
   #
-  # Get the ability to share a project based on it's owner's share setting.
+  # Get the ability to share a project based on its owner's share setting.
   #
   get %r{/v3/channels/([^/]+)/sharing_disabled} do |id|
     dont_cache
@@ -267,6 +267,22 @@ class ChannelsApi < Sinatra::Base
       bad_request
     end
     {sharing_disabled: value}.to_json
+  end
+
+  #
+  # GET /v3/channels/<channel-id>/is_teacher_of_project_owner
+  #
+  # Get if the current user is a teacher of the project owner.
+  #
+  get %r{/v3/channels/([^/]+)/is_teacher_of_project_owner} do |id|
+    dont_cache
+    content_type :json
+    begin
+      value = Projects.new(get_storage_id).get_is_teacher_of_project_owner(id, current_user_id)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
+    {is_teacher_of_project_owner: value}.to_json
   end
 
   #

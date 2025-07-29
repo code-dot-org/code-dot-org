@@ -1007,9 +1007,21 @@ class Level < ApplicationRecord
     {
       level_id: id,
       level_name: name,
-      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      unit_names: unit_names,
       skills: skill_identifiers,
     }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  # This method returns the names of all units that this level is part of.
+  # For contained levels, we also include the names of the units that
+  # the parent levels are part of.
+  # This is used to filter levels by unit for display on /skills.
+  def unit_names
+    unit_names = script_levels.map {|sl| sl.script.name}
+    parent_levels.each do |parent_level|
+      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
+    end
+    unit_names.uniq.sort
   end
 
   def skill_identifiers
