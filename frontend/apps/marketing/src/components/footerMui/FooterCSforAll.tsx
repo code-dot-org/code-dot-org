@@ -4,10 +4,12 @@ import XIcon from '@mui/icons-material/X';
 import {usePathname, useRouter} from 'next/navigation';
 
 import FooterMui, {FooterProps} from '@/components/footerMui';
+import {Brand} from '@/config/brand';
 import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
 
 export const defaultProps: Omit<FooterProps, 'languages' | 'onLanguageChange'> =
   {
+    brand: Brand.CS_FOR_ALL,
     // TODO - Update these links to point to the correct CSforAll pages
     siteLinks: [
       {key: 'issues', label: 'Issues', href: '/'},

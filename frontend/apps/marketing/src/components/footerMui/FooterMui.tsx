@@ -13,6 +13,9 @@ import {styled} from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import {AnchorHTMLAttributes, HTMLAttributes, Key, ReactNode} from 'react';
 
+import {Brand} from '@/config/brand';
+import {isExternalLink} from '@/config/utils';
+
 export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
   label: string;
@@ -32,6 +35,8 @@ export interface LanguageOption {
 }
 
 export interface FooterProps extends HTMLAttributes<HTMLElement> {
+  /** Brand */
+  brand: Brand;
   /** Footer links */
   siteLinks?: SiteLink[];
   /** Footer social links */
@@ -80,6 +85,7 @@ const FooterMui: React.FC<FooterProps> = ({
   languages,
   selectedLocaleCode,
   onLanguageChange,
+  brand,
   className,
 }) => {
   return (
@@ -101,9 +107,15 @@ const FooterMui: React.FC<FooterProps> = ({
                 <FooterLink
                   href={href}
                   variant="body4"
-                  target={href.startsWith('https') ? '_blank' : undefined}
+                  target={
+                    isExternalLink(href, brand, 'production')
+                      ? '_blank'
+                      : undefined
+                  }
                   rel={
-                    href.startsWith('https') ? 'noopener noreferrer' : undefined
+                    isExternalLink(href, brand, 'production')
+                      ? 'noopener noreferrer'
+                      : undefined
                   }
                 >
                   {label}
