@@ -261,9 +261,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
               id="instructions-feedback-message"
               className={moduleStyles.bubble}
             >
-              {offerBrowserTts && useMessage && !canShowNextButton && (
-                <TextToSpeech text={useMessage} />
-              )}
               {useMessage && (
                 <div ref={feedbackRef} tabIndex={-1}>
                   <EnhancedSafeMarkdown
@@ -280,6 +277,11 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
                 className={moduleStyles.buttonInstruction}
                 size={'s'}
               />
+              {offerBrowserTts && useMessage && !canShowNextButton && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={useMessage} />
+                </div>
+              )}
             </div>
           </div>
         )}
