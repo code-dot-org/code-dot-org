@@ -14,74 +14,14 @@ class AichatAiClient
   end
 
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
-  # Accept a config hash, request array and optional context array.
-  #
-  # Below are typescript definitions of these hashes and arrays (as TS objects/arrays for reference):
-  #
-  # /////////////////////////////////////////////////////////////
-  # type TextMessagePartType = "text";
-  # type FileMessagePartType = "file";
-  # type MessagePartType = TextMessagePartType | FileMessagePartType;
-  #
-  # type FileMessageImageMimeType = "image/jpeg" | "image/png";
-  # type FileMessagePdfMimeType =  "application/pdf";
-  # type FileMessageMimeType = FileMessageImageMimeType | FileMessagePdfMimeType;
-  #
-  # type MessageRole = "model" | "user";
-  #
-  # type TextMessagePartContent = string;
-  # interface FileMessagePartContent {
-  #   name: string;
-  #   mime_type: FileMessageMimeType;
-  #   data: string; //base64 encoded string
-  # }
-  #
-  # interface TextMessagePart {
-  #   type: TextMessagePartType;
-  #   content: TextMessagePartContent;
-  # }
-  #
-  # interface FileMessagePart {
-  #   type: FileMessagePartType;
-  #   content: FileMessagePartContent;
-  # }
-  #
-  # type MessagePart = TextMessagePart | FileMessagePart;
-  #
-  # interface Message {
-  #   role: MessageRole;
-  #   parts: MessagePart[];
-  # }
-  #
-  # // Config object (required):
-  # // Sets up which model to call, the temperature, and any system instructions
-  # // to configure the model's response.
-  # interface AiConfig {
-  #   // Actual model passed to 3rd party AI API (e.g. 'gpt-4o-mini-2024-07-18').
-  #   model: string;
-  #
-  #   // System instructions (made up of message parts).
-  #   // When coming from OpenAI's format, it should be noted that there is no need
-  #   // for the 'role' concept here since all request messages come from the user.
-  #   systemInstructions?: MessagePart[];
-  #
-  #   // Actual temperature passed to 3rd party AI API (e.g. 1.6)
-  #   temperature: number;
-  # }
-  #
-  # // Request array (required):
-  # // The actual (current) request to send to the model, made up of message parts.
-  # // When coming from OpenAI's format, it should be noted that there is no need
-  # // for the 'role' concept here since all request messages come from the user.
-  # type AiRequest = MessagePart[];
-  #
-  # // Context array (optional):
-  # // The previous (history) messages sent to and from the model.
-  # // Each message has a role (user/model) to indicate the direction
-  # // and each message has an array of message parts.
-  # type AiContext = Message[];
-  #
+  # Accept a config hash, request array and optional context array.  These types are defined and documented
+  # in `aichat_ai_client_types.rb``.
   def get_response_text(config, request, context = [])
+    # Assert the parameter types are correct, using RubyTypes.
+    AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
+    AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
+    AichatRubyTypes.assert_value_is_type(context, AichatAiClientTypes::AiContext)
+
     start_time = Time.now
 
     body = create_body(config, request, context)

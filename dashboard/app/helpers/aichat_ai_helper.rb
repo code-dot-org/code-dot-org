@@ -22,10 +22,10 @@ module AichatAiHelper
 
   def self.format_message_parts(message, encrypted_channel_id, level_name)
     parts = [
-      {
+      AichatAiClientTypes::TextMessagePart.new(
         type: 'text',
         content: get_message_text(message)
-      }
+      )
     ]
 
     message['assets']&.each do |asset|
@@ -34,9 +34,14 @@ module AichatAiHelper
 
       base64_string = AichatAssetHelper.get_asset_base64_string(filename, source, encrypted_channel_id, level_name)
 
-      mime_type = Rack::Mime.mime_type(File.extname(filename))
-
-      parts << {type: 'file', content: {name: filename, mime_type: mime_type, data: base64_string}}
+      parts << AichatAiClientTypes::FileMessagePart.new(
+        type: 'file',
+        content: AichatAiClientTypes::FileMessagePartContent.new(
+          name: filename,
+          mime_type: Rack::Mime.mime_type(File.extname(filename)),
+          data: base64_string
+        )
+      )
     end
 
     parts
@@ -56,10 +61,10 @@ module AichatAiHelper
     level_name = level&.name
 
     system_instructions = []
-    system_instructions << {type: 'text', content: level_system_prompt} if level_system_prompt.present?
-    system_instructions << {type: 'text', content: system_prompt} if system_prompt.present?
+    system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: level_system_prompt) if level_system_prompt.present?
+    system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: system_prompt) if system_prompt.present?
     retrieval_contexts&.each do |retrieval_context|
-      system_instructions << {type: 'text', content: retrieval_context}
+      system_instructions << AichatAiClientTypes::TextMessagePart.new(type: 'text', content: retrieval_context)
     end
 
     temperature *= if model_id == "gpt-4o-mini"
@@ -73,11 +78,11 @@ module AichatAiHelper
                      2
                    end
 
-    config = {
+    config = AichatAiClientTypes::AiConfig.new(
       model: get_api_model(model_id),
       systemInstructions: system_instructions,
       temperature: temperature
-    }
+    )
 
     request = format_message_parts(new_message, encrypted_channel_id, level_name)
 
@@ -86,7 +91,10 @@ module AichatAiHelper
     stored_messages&.each do |stored_message|
       # Convert stored message role from user/assistant (aichat) => user/model (internal representation)
       role = stored_message['role'] == 'assistant' ? 'model' : stored_message['role']
-      context << {role: role, parts: format_message_parts(stored_message, encrypted_channel_id, level_name)}
+      context << AichatAiClientTypes::Message.new(
+        role: role,
+        parts: format_message_parts(stored_message, encrypted_channel_id, level_name)
+      )
     end
 
     return config, request, context
