@@ -120,13 +120,15 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
       const currentIndex = timelineElements.indexOf(event.currentTarget);
 
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-        // Move focus to the next element
+        // Prevent scroll action & move focus to the next element
+        event.preventDefault();
         const nextIndex = currentIndex + 1;
         if (nextIndex < timelineElements.length) {
           timelineElements[nextIndex].focus();
         }
       } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-        // Move focus to the previous element
+        // Prevent scroll action & move focus to the previous element
+        event.preventDefault();
         const previousIndex = currentIndex - 1;
         if (previousIndex >= 0) {
           timelineElements[previousIndex].focus();
