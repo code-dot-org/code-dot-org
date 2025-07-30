@@ -19,26 +19,8 @@ defaults:
     working-directory: ./frontend
 
 jobs:
-  build:
-    runs-on: ubuntu-24.04
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          lfs: true
-          sparse-checkout: |
-            frontend
-            .github
-
-      - name: Setup Frontend
-        uses: ./.github/actions/frontend/setup
-
-      - name: Build
-        run: yarn build --filter @code-dot-org/marketing
-
   dryrun-release:
     runs-on: ubuntu-24.04
-    needs: build
 
     steps:
       - uses: actions/checkout@v4
@@ -54,10 +36,10 @@ jobs:
       - name: Dryrun Release
         run: yarn release:dryrun --filter @code-dot-org/marketing
 
-  ui-tests:
+  build-docker:
+    # Skip CI docker build if this is not a pull request.
     if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-24.04
-    needs: build
 
     steps:
       - uses: actions/checkout@v4
@@ -69,9 +51,8 @@ jobs:
 
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
-
-      - name: Build
-        run: yarn build --filter @code-dot-org/marketing
+        with:
+          INSTALL_DEPENDENCIES: false # We don't need to install dependencies for the Docker build.
 
       - name: Build Docker image
         id: build-docker-image
@@ -87,6 +68,54 @@ jobs:
             TURBO_TEAM=${{ vars.TURBO_REPO_TEAM }}
             TURBO_TOKEN=${{ secrets.TURBO_REPO_TOKEN }}
             TURBO_API=${{ vars.TURBO_REPO_API }}
+
+      - name: Save Docker Image to Artifacts
+        run: docker save marketing:test | zstd -T0 > marketing-test-${{ github.run_id }}.tar.zst
+
+      - name: Upload Docker image artifact
+        uses: actions/upload-artifact@v4
+        with:
+          compression: 0
+          name: marketing-test-${{ github.run_id }}.tar.zst
+          path: frontend/marketing-test-${{ github.run_id }}.tar.zst
+
+  ui-tests:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-24.04
+    needs: build-docker
+
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4]
+        # shardTotal is used to determine how many shards there are in total.
+        shardTotal: [4]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing
+
+      - name: Download Docker image artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: marketing-test-${{ github.run_id }}.tar.zst
+          path: frontend
+
+      - name: Extract Docker image artifact
+        run: zstd -d marketing-test-${{ github.run_id }}.tar.zst
+
+      - name: Load Docker image
+        run: docker load -i marketing-test-${{ github.run_id }}.tar
 
       - name: Prepare Test Environment
         shell: bash
@@ -105,15 +134,12 @@ jobs:
       - name: Run Docker Container
         run: |
           docker run -d --env-file .env --rm --name marketing \
-            -p 3001:3000 \
+            --network=host \
+            -e PORT=3001 \
             marketing:test
           
           # Tail the docker logs
           docker logs -f marketing &
-
-      - name: Clean unused docker build artifacts
-        run: |
-          docker system prune --all --force
 
       - name: UI Tests
         uses: ./.github/actions/frontend/marketing/ui-tests
@@ -125,3 +151,22 @@ jobs:
           DRAFT_MODE_TOKEN: ci-draft-mode
           BRANCHED_TESTING_ENABLED: ${{ inputs.BRANCHED_TESTING_ENABLED }}
           PR_HEAD_REF: ${{ inputs.PR_HEAD_REF }}
+          SHARD_INDEX: ${{ matrix.shardIndex }}
+          SHARD_TOTAL: ${{ matrix.shardTotal }}
+
+  merge-reports:
+    # Merge reports after playwright-tests, even if some shards have failed
+    if: ${{ github.event_name == 'pull_request' && !cancelled() }}
+    needs: [ ui-tests ]
+
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Merge Playwright Reports
+        uses: ./.github/actions/frontend/merge-playwright-reports

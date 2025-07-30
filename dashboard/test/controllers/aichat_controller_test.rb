@@ -63,8 +63,8 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@authorized_student1)
     system_prompt = 'hello system prompt'
     locale = 'en'
-    toxicity_response = {text: system_prompt, blocked_by: 'comprehend', details: {}}
-    AichatSafetyHelper.expects(:find_toxicity).with('user', system_prompt, locale, nil).returns(toxicity_response)
+    toxicity_response = {text: system_prompt, blocked_by: 'openai', details: {}}
+    AichatSafetyHelper.expects(:find_toxicity).with(system_prompt, nil).returns(toxicity_response)
 
     expected_response = {
       flaggedFields: [{field: 'systemPrompt', toxicity: toxicity_response.camelize_keys}]
@@ -79,8 +79,8 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@authorized_student1)
     retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
-    toxicity_response = {text: retrieval_contexts.join(' '), blocked_by: 'comprehend', details: {}}
-    AichatSafetyHelper.expects(:find_toxicity).with('user', retrieval_contexts.join(' '), locale, nil).returns(toxicity_response)
+    toxicity_response = {text: retrieval_contexts.join(' '), blocked_by: 'openai', details: {}}
+    AichatSafetyHelper.expects(:find_toxicity).with(retrieval_contexts.join(' '), nil).returns(toxicity_response)
 
     expected_response = {
       flaggedFields: [{field: 'retrievalContexts', toxicity: toxicity_response.camelize_keys}]
@@ -96,10 +96,10 @@ class AichatControllerTest < ActionController::TestCase
     system_prompt = 'hello system prompt'
     retrieval_contexts = ['retrieval1', 'retrieval2']
     locale = 'en'
-    toxicity_response_system_prompt = {text: system_prompt, blocked_by: 'comprehend', details: {}}
-    toxicity_response_retrieval_contexts = {text: retrieval_contexts.join(' '), blocked_by: 'comprehend', details: {}}
-    AichatSafetyHelper.expects(:find_toxicity).with('user', system_prompt, locale, nil).returns(toxicity_response_system_prompt)
-    AichatSafetyHelper.expects(:find_toxicity).with('user', retrieval_contexts.join(' '), locale, nil).returns(toxicity_response_retrieval_contexts)
+    toxicity_response_system_prompt = {text: system_prompt, blocked_by: 'openai', details: {}}
+    toxicity_response_retrieval_contexts = {text: retrieval_contexts.join(' '), blocked_by: 'openai', details: {}}
+    AichatSafetyHelper.expects(:find_toxicity).with(system_prompt, nil).returns(toxicity_response_system_prompt)
+    AichatSafetyHelper.expects(:find_toxicity).with(retrieval_contexts.join(' '), nil).returns(toxicity_response_retrieval_contexts)
 
     expected_response = {
       flaggedFields: [

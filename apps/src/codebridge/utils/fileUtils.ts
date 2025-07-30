@@ -78,7 +78,7 @@ export function prepareSourceForLevelbuilderSave(source?: MultiFileSource) {
   let openFiles = source.openFiles;
   if (validationFile && source.openFiles?.includes(validationFile.id)) {
     openFiles = source.openFiles.filter(id => id !== validationFile?.id);
-    validationFile = {...validationFile, open: false, active: false};
+    validationFile = {...validationFile, active: false};
   }
   return {
     parsedSource: {...source, files: newFiles, openFiles: openFiles},
@@ -104,7 +104,7 @@ export function combineStartSourcesAndValidation(
       ...source,
       files: {
         ...source.files,
-        [validationFile.id]: {...validationFile, open: true},
+        [validationFile.id]: {...validationFile},
       },
       openFiles: source.openFiles
         ? [...source.openFiles, validationFile.id]

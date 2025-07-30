@@ -63,6 +63,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?,
         ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
         has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
+        has_seen_homepage_welcome: current_user.has_seen_homepage_welcome?,
         date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
         child_account_compliance_state: current_user.cap_status,
         country_code: helpers.country_code(current_user, request),
@@ -226,14 +227,27 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
-    current_user.show_progress_table_v2 = show_v2_arg
+    if params[:show_progress_table_v2] != 'legacy' && params[:show_progress_table_v2] != 'v2'
+      return head :bad_request
+    end
 
-    if show_v2_arg
+    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
+
+    if params[:show_progress_table_v2] == 'v2'
       current_user.progress_table_v2_timestamp = DateTime.now
     else
       current_user.progress_table_v1_timestamp = DateTime.now
     end
+    current_user.save!
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/has_seen_homepage_welcome
+  def post_has_seen_homepage_welcome
+    return head :unauthorized unless current_user
+
+    current_user.has_seen_homepage_welcome = !!params[:has_seen_homepage_welcome].try(:to_bool)
     current_user.save!
 
     head :no_content

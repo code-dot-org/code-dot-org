@@ -24,6 +24,7 @@ export const ButtonMuiContentfulComponentDefinition: ComponentDefinition = {
           {value: 'emphasized', displayName: 'Emphasized'},
           {value: 'primary', displayName: 'Primary'},
           {value: 'secondary', displayName: 'Secondary'},
+          {value: 'white', displayName: 'White'},
         ],
       },
     },

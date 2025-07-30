@@ -91,7 +91,7 @@ $(document).ready(function () {
       {sections.length === 0 ? (
         // If a teacher has no sections, we will send them directly to the homepage to bypass
         // all of the section loading logic in the TeacherNavigationRouter.
-        <TeacherHomepage />
+        <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}

@@ -17,7 +17,7 @@ Feature: Curriculum Catalog Filters
     Then I click selector "#grade-dropdown-button"
     And I wait until element "span:contains(Grade 12)" is visible
     Then I click selector "span:contains(Grade 12)"
-    And I wait until element "h5:contains(No matching curricula)" is visible
+    And I wait until element "h2:contains(No matching curricula)" is visible
     And I see no difference for "Curriculum Catalog: No Offerings"
     And I close my eyes
 
@@ -40,7 +40,7 @@ Feature: Curriculum Catalog Filters
     Then I click selector "#grade-dropdown-button"
     And I wait until element "span:contains(Grado 12)" is visible
     Then I click selector "span:contains(Grado 12)"
-    And I wait until element "img ~ h5" is visible
+    And I wait until element "figure ~ h2" is visible
     And I see no difference for "Curriculum Catalog: No Offerings in Spanish"
     And I close my eyes
 
@@ -48,8 +48,8 @@ Feature: Curriculum Catalog Filters
     Given I am on "http://studio.code.org/catalog"
     Then I wait until element "#grade-dropdown-button" is visible
     Then I click selector "#grade-dropdown-button"
-    And I wait until element "#select-all" is visible within element "#grade-dropdown"
-    Then I click selector "#select-all"
+    And I wait until element "span:contains(Select all)" is visible within element "#grade-dropdown"
+    Then I click selector "span:contains(Select all)"
     And the "Kindergarten" checkbox is selected
     And the "Grade 1" checkbox is selected
     And the "Grade 2" checkbox is selected
@@ -63,8 +63,8 @@ Feature: Curriculum Catalog Filters
     And the "Grade 10" checkbox is selected
     And the "Grade 11" checkbox is selected
     And the "Grade 12" checkbox is selected
-    And I wait until element "#clear-all" is visible within element "#grade-dropdown"
-    Then I click selector "#clear-all"
+    And I wait until element "span:contains(Clear all)" is visible within element "#grade-dropdown"
+    Then I click selector "span:contains(Clear all)"
     And the "Kindergarten" checkbox is not selected
     And the "Grade 1" checkbox is not selected
     And the "Grade 2" checkbox is not selected

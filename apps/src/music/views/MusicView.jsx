@@ -30,7 +30,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {
   addToolboxBlocksToWorkspace,
   getToolbox,
-  localizeCategoryNames,
+  prepareToolboxCategories,
 } from '../blockly/toolbox';
 import {
   BlockMode,
@@ -298,7 +298,7 @@ class UnconnectedMusicView extends React.Component {
     // The toolboxDefinition property is a full toolbox that Blockly can load.
     const localizedToolboxDefinition =
       levelData?.toolboxDefinition &&
-      localizeCategoryNames(levelData.toolboxDefinition);
+      prepareToolboxCategories(levelData.toolboxDefinition);
 
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 

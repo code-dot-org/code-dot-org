@@ -1,0 +1,26 @@
+.catalogFiltersContainer {
+  position: sticky;
+  top: 0;
+  padding-inline: 2rem;
+  background-color: white;
+  z-index: 2;
+}
+
+.catalogDropdownFiltersTopRow {
+  display: flex;
+  align-items: baseline;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1em 0 0 0;
+  justify-content: space-between;
+}
+
+.catalogDropdownFilters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 16px;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 0 1em 0;
+}

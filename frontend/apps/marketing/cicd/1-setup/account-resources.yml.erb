@@ -12,17 +12,30 @@ Parameters:
     Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
 
 <%
-  marketing_sites_environment_type_configuration = {
-    development: {
-       base_domain_name: 'marketing-sites.dev-code.org'
-    },
-    test: {
-      base_domain_name: 'marketing-sites.test-code.org'
-    },
-    production: {
-      base_domain_name: 'code.org'
+  # Build configuration for each environment, collecting all possible base domain names
+  # that could be used in that environment across all site types
+  marketing_sites_environment_configuration = {}
+
+  MarketingSites::Configuration.environment_types.each do |environment_type|
+    # Get all unique base domain names for this environment across all site types
+    base_domains_for_environment = []
+    hyphenated_domains_for_environment = []
+
+    MarketingSites::Configuration.site_types.each do |site_type|
+      config = MarketingSites::Configuration.site_config(site_type, environment_type)
+      base_domain = config.base_domain_name
+
+      unless base_domains_for_environment.include?(base_domain)
+        base_domains_for_environment << base_domain
+        hyphenated_domains_for_environment << base_domain.tr('.', '-')
+      end
+    end
+
+    marketing_sites_environment_configuration[environment_type] = {
+      base_domain_names: base_domains_for_environment,
+      hyphenated_base_domains: hyphenated_domains_for_environment
     }
-  }
+  end
 %>
 
 Resources:
@@ -252,12 +265,13 @@ Resources:
             Resource: "arn:aws:s3:::cdo-logs"
 
   # ------------------------------------------------------------
-  # Environment-specific Resources (Generated via ERB)
+  # Provision one deployer role per environment type
   # ------------------------------------------------------------
 <%
-  marketing_sites_environment_type_configuration.each do |env_type, configuration|
-    environment_type = env_type.to_s
-    hyphenated_base_domain = configuration[:base_domain_name].tr('.', '-')
+  marketing_sites_environment_configuration.each do |environment_type, configuration|
+    environment_type = environment_type.to_s
+    all_base_domains = configuration[:base_domain_names]
+    all_hyphenated_domains = configuration[:hyphenated_base_domains]
 %>
 <%  # We only trust GitHub Actions to trigger Stack creation/updates for GitHub test and production Environments
     if %w[test production].include?(environment_type)%>
@@ -265,7 +279,7 @@ Resources:
     Type: AWS::IAM::Role
     Properties:
       RoleName: github-actions-cloudformation-<%=environment_type%>-role
-      Description: Role for GitHub Actions to create/update CloudFormation stacks.
+      Description: Role for GitHub Actions to create/update CloudFormation stacks in <%=environment_type%> environment.
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -277,7 +291,8 @@ Resources:
               StringEquals:
                 # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>'
+              StringLike:
+                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>-*'
       Policies:
         - PolicyName: github-actions-cloudformation-policy
           PolicyDocument:
@@ -295,7 +310,11 @@ Resources:
                   - cloudformation:DeleteStack
                   - cloudformation:UpdateStack
                   - cloudformation:GetTemplateSummary
-                Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_base_domain%>*"
+                # Allow CloudFormation operations on stacks for all possible domain variations in this environment
+                Resource:
+<%    all_hyphenated_domains.each do |hyphenated_domain| %>
+                  - !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_domain%>*"
+<%    end %>
               - Sid: PassRoleToCloudFormation
                 Effect: Allow
                 Action:
@@ -311,7 +330,7 @@ Resources:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
               # GitHub Actions syncs Next.js assets (CSS, javascript, fonts, images etc.) to the static assets bucket
-              # during each build.
+              # during each build for all site types in this environment.
               - Sid: AllowS3StaticAssetsSync
                 Effect: Allow
                 Action:
@@ -322,9 +341,12 @@ Resources:
                   - s3:GetObjectAcl
                   - s3:ListBucket
                   - s3:ListBucketMultipartUploads
+                # Allow S3 operations for all possible domain variations in this environment
                 Resource:
-                  - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*'
-                  - 'arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets'
+<%    all_base_domains.each do |base_domain| %>
+                  - 'arn:aws:s3:::*<%=base_domain%>*static-assets/*'
+                  - 'arn:aws:s3:::*<%=base_domain%>*static-assets'
+<%    end %>
               - Sid: AllowEC2DescribeAvailabilityZones
                 Effect: Allow
                 Action:
@@ -376,16 +398,22 @@ Resources:
               - logs:CreateLogStream
               - logs:PutLogEvents
             Effect: Allow
+            # Allow logging for all possible domain variations in this environment
             Resource:
-              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*/*"
+<%    all_hyphenated_domains.each do |hyphenated_domain| %>
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_domain%>*:log-stream:*/*"
+<%    end %>
           - Sid: AllowECSTaskExecutionCreateLogGroup
             Action:
               - logs:CreateLogGroup
             Effect: Allow
+            # Allow log group creation for all possible domain variations in this environment
             Resource:
-              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*"
-              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_base_domain%>*:log-stream:*"
-<% if environment_type != 'production' %>
+<%    all_hyphenated_domains.each do |hyphenated_domain| %>
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_domain%>*"
+              - !Sub "arn:aws:logs:*:${AWS::AccountId}:log-group:/aws/ecs/*<%=hyphenated_domain%>*:log-stream:*"
+<%    end %>
+<%    if environment_type != 'production' %>
           - Sid: AllowSSMMessagesForECSExec
             Effect: Allow
             Action:
@@ -394,13 +422,14 @@ Resources:
               - ssmmessages:OpenControlChannel
               - ssmmessages:OpenDataChannel
             Resource: '*'
-<% end %>
+<%    end %>
 
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
     Properties:
       RoleName: CloudFormationMarketingSites<%=environment_type.capitalize%>Role
       Path: /admin/
+      Description: CloudFormation service role for deploying all marketing site types in <%=environment_type%> environment
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -427,15 +456,16 @@ Resources:
               - Sid: CloudFormation<%=environment_type.capitalize%>
                 Effect: Allow
                 Action: cloudformation:*
-                # The Stack Name must match this naming prefix convention. Examples:
-                # marketing-sites-production-code-org
-                # marketing-sites-production-hourofcode-com
-                # marketing-sites-test-teachai-org
-                # marketing-sites-test-code-org
-                # marketing-sites-development-code-org-my-feature-branch
-                # marketing-sites-development-code-org-my-other-branch
-                Resource: !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_base_domain%>*"
-
+                # Allow CloudFormation operations on all possible domain variations in this environment
+                # Stack naming examples:
+                # marketing-sites-production-code-org (corporate production)
+                # marketing-sites-production-csforall-org (CSforALL production)
+                # marketing-sites-test-marketing-sites-test-code-org (any site type in test)
+                # marketing-sites-development-marketing-sites-dev-code-org-feature-branch (any site type in dev)
+                Resource:
+<%    all_hyphenated_domains.each do |hyphenated_domain| %>
+                  - !Sub "arn:aws:cloudformation:*:${AWS::AccountId}:stack/*<%=hyphenated_domain%>*"
+<%    end %>
               - Sid: AllowCreateRoleWithBoundary
                 Effect: Allow
                 Action:
@@ -461,7 +491,6 @@ Resources:
                   - iam:TagRole
                   - iam:GetRolePolicy
                   - iam:ListRolePolicies
-                  - iam:PutRolePermissionsBoundary
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
 
               - Sid: AllowPermissionsBoundaryPolicyAccess
@@ -482,7 +511,7 @@ Resources:
                       - ecs-tasks.amazonaws.com
                       - application-autoscaling.amazonaws.com
 
-              # Environment-specific resource deletions
+              # Environment-specific resource deletions for all site types
               - Sid: AllowTaggedResourceDeletions
                 Effect: Allow
                 Action:
@@ -508,7 +537,7 @@ Resources:
                   StringEquals:
                     'aws:ResourceTag/environment-type': <%=environment_type%>
 
-              # Environment-specific ECS resources
+              # ECS resources for all possible domain variations in this environment
               - Sid: AllowECSCreateActionsOnSpecificResources
                 Effect: Allow
                 Action:
@@ -517,9 +546,12 @@ Resources:
                   - ecs:Tag*
                 Resource:
                   - !Sub "arn:aws:ecs:*:${AWS::AccountId}:cluster/*"
-                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*<%=hyphenated_base_domain%>*:*"
-                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-<%=hyphenated_base_domain%>-*"
+<%    all_hyphenated_domains.each do |hyphenated_domain| %>
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:task-definition/*<%=hyphenated_domain%>*:*"
+                  - !Sub "arn:aws:ecs:*:${AWS::AccountId}:service/*/*-<%=hyphenated_domain%>-*"
+<%    end %>
 
+              # S3 static assets for all possible domain variations in this environment
               - Sid: AllowS3ActionsOnStaticAssets
                 Effect: Allow
                 Action:
@@ -529,8 +561,10 @@ Resources:
                   - s3:Get*
                   - s3:List*
                 Resource:
-                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
-                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
+<%    all_base_domains.each do |base_domain| %>
+                  - "arn:aws:s3:::*<%=base_domain%>*static-assets"
+                  - "arn:aws:s3:::*<%=base_domain%>*static-assets/*"
+<%    end %>
 
               - Sid: AllowSecretsManagerActions
                 Effect: Allow
@@ -542,11 +576,11 @@ Resources:
 
 Outputs:
 <%
-  marketing_sites_environment_type_configuration.each do |env_type, configuration|
-    environment_type = env_type.to_s
+  marketing_sites_environment_configuration.each do |environment_type, _|
+    environment_type = environment_type.to_s
 %>
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>RoleArn:
-    Description: ARN of the CloudFormation service role for <%=environment_type%> environment
+    Description: ARN of the CloudFormation service role for <%=environment_type%> environment (all site types)
     Value: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn:
     Description: ARN of the permissions boundary policy for <%=environment_type%> environment roles
@@ -555,7 +589,7 @@ Outputs:
       Name: !Sub "${AWS::StackName}-MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>PolicyArn"
 <%  if %w[test production].include?(environment_type) %>
   GitHubActions<%=environment_type.capitalize%>RoleArn:
-    Description: ARN of the GitHub Actions role for <%=environment_type%> environment
+    Description: ARN of the GitHub Actions role for <%=environment_type%> environment (all site types)
     Value: !GetAtt GitHubActions<%=environment_type.capitalize%>Role.Arn
 <%  end %>
 <%end %>

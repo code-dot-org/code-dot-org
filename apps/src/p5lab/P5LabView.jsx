@@ -64,12 +64,13 @@ class P5LabView extends React.Component {
 
     // Indicate the context of the animation picker
     let projectType = this.props.isBlockly
-      ? PICKER_TYPE.spritelab
+      ? PICKER_TYPE.spritelab // Includes Sprite Lab subtypes such as Poetry Lab.
       : PICKER_TYPE.gamelab;
 
     this.state = {
       libraryManifest: {},
       projectType,
+      uploadsEnabled: true,
     };
   }
 
@@ -90,6 +91,10 @@ class P5LabView extends React.Component {
     getManifest(app, locale).then(libraryManifest => {
       this.setState({libraryManifest});
     });
+    if (window.dashboard?.project) {
+      const project = window.dashboard?.project;
+      this.setState({uploadsEnabled: !project.exceedsAbuseThreshold()});
+    }
   }
 
   // Users of non-Blockly labs should always be allowed to upload animations
@@ -165,6 +170,8 @@ class P5LabView extends React.Component {
                   ? PICKER_TYPE.backgrounds
                   : this.state.projectType
               }
+              uploadsEnabled={this.state.uploadsEnabled}
+              projectType={this.props.labType.toLowerCase()}
             />
           )}
         </div>
@@ -214,6 +221,7 @@ class P5LabView extends React.Component {
             : this.state.projectType
         }
         interfaceMode={interfaceMode}
+        uploadsEnabled={this.state.uploadsEnabled}
       />
     ) : undefined;
   }

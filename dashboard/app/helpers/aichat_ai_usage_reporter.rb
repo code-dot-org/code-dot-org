@@ -69,6 +69,37 @@ class AichatAiUsageReporter
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
   end
 
+  # Helper to calculate the number of messages that have files.
+  private def get_messages_with_file_count(config, request, context)
+    # Start assuming zero message has at least one file.
+    message_with_files_count = 0
+
+    # If any file exists in the request message then one message has at
+    # least one file.
+    if request.any? {|part| part[:type] == 'file'}
+      message_with_files_count += 1
+    end
+
+    system_instructions = config[:systemInstructions]
+
+    # If we have a system message and if any file exists there, then one
+    # additional message has at least one file.
+    if system_instructions && system_instructions.any? {|part| part[:type] == 'file'}
+      message_with_files_count += 1
+    end
+
+    # Iterate through the context (history) messages
+    context.each do |message|
+      # If any file exists in the current message then one additional message
+      # has at least one file.
+      if message[:parts].any? {|part| part[:type] == 'file'}
+        message_with_files_count += 1
+      end
+    end
+
+    message_with_files_count
+  end
+
   # Helper to get message and asset counts used for AiUsageReporter.
   private def get_messages_and_files_counts(config, request, context)
     combined_parts = [
@@ -82,17 +113,23 @@ class AichatAiUsageReporter
       *context.flat_map {|c| c[:parts]}
     ]
 
-    files_count = combined_parts.count {|p| p[:type] == 'file'}
-    pdfs_count = combined_parts.count {|p| p[:type] == 'file' && p[:content][:mime_type] == 'application/pdf'}
+    # Calculate the number of messages that have files.
+    message_with_files_count = get_messages_with_file_count(config, request, context)
+
+    # Calculate the total number of files.
+    total_files_count = combined_parts.count {|part| part[:type] == 'file'}
+
+    # Calculate the number of PDF files.
+    pdfs_count = combined_parts.count {|part| part[:type] == 'file' && part[:content][:mime_type] == 'application/pdf'}
 
     # TODO - make a helper for this!
     # Currently we don't have a shared (between frontend and backd) list of image mime types
     # so for now, we just assume if not a pdf, then it's an image
-    images_count = files_count - pdfs_count
+    images_count = total_files_count - pdfs_count
 
     return_value = {
       total: combined_parts.count,
-      withAssets: files_count,
+      withAssets: message_with_files_count,
       pdfs: pdfs_count,
       images: images_count
     }

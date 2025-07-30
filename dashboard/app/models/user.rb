@@ -208,6 +208,7 @@ class User < ApplicationRecord
     has_completed_ai_differentiation_welcome
     sort_by_family_name
     show_progress_table_v2
+    has_seen_homepage_welcome
     progress_table_v2_closed_beta
     lti_roster_sync_enabled
     progress_table_v2_timestamp

@@ -151,7 +151,6 @@ function displayDifferentiationChat() {
             lessonId: lessonId,
           }}
           scriptName={lessonName}
-          unitDisplayName={lessonData['unit']['displayName']}
         />
       </Provider>,
       aiDiffFabMountPoint

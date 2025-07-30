@@ -22,7 +22,7 @@ env:
 concurrency:
   # For pushes to staging, requests are grouped into the "deploy-marketing" concurrency group to queue them up
   # For pull requests, there are no limits to concurrency
-  group: ${{ github.event_name == 'push' && 'deploy-marketing' || github.run_id }}
+  group: ${{ github.run_id }}
   # For pushes to staging, multiple pushes are queued
   # For pull requests, multiple pushes to the same PR cancels previous executions
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
@@ -37,7 +37,6 @@ jobs:
   # This job builds a docker image for the frontend repository and pushes the docker image to Github Packages.
   # More information: https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images
   build-and-push-image:
-    needs: ci
     runs-on: ubuntu-24.04
 
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
@@ -105,19 +104,43 @@ jobs:
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
 
-  # Job: deploy
-  # This job pulls the task definition for the current task running in the cluster and updates the docker image tag with the one built in the previous job
-  # Then, the task definition is deployed to the ECS service
-  # See: https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service
-  deploy:
-    needs: build-and-push-image
+  # Deploy test environments in parallel
+  deploy-test:
+    needs:
+      - ci
+      - build-and-push-image
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
+    # Do not allow other deployments to deploy while this deployment is in progress.
+    concurrency:
+      group: deploy-marketing-sites-test-${{ github.ref_name }}-${{ matrix.SITE_TYPE }}
+      cancel-in-progress: false
     with:
-      GITHUB_ENVIRONMENT_NAME: ${{ matrix.GITHUB_ENVIRONMENT_NAME }}
       CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
+      ENVIRONMENT_TYPE: test
+      SITE_TYPE: ${{ matrix.SITE_TYPE }}
     strategy:
       fail-fast: true
-      max-parallel: 1
       matrix:
-        GITHUB_ENVIRONMENT_NAME: [ marketing-sites-test, marketing-sites-production ]
+        SITE_TYPE: [ corporate, csforall ]
+
+  # Deploy production environments in parallel, after test environments completes successfully
+  deploy-production:
+    needs:
+      - ci
+      - build-and-push-image
+      - deploy-test
+    uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
+    secrets: inherit
+    # Do not allow other deployments to deploy while this deployment is in progress.
+    concurrency:
+      group: deploy-marketing-sites-production-${{ github.ref_name }}-${{ matrix.SITE_TYPE }}
+      cancel-in-progress: false
+    with:
+      CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
+      ENVIRONMENT_TYPE: production
+      SITE_TYPE: ${{ matrix.SITE_TYPE }}
+    strategy:
+      fail-fast: true
+      matrix:
+        SITE_TYPE: [ corporate, csforall ]

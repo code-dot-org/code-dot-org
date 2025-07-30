@@ -37,8 +37,6 @@ class DCDOBase < DynamicConfigBase
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether to allow the user to toggle between the v1 and v2 progress tables.
       'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
-      # Whether to show the v1 or v2 progress table by default.
-      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
       # Whether to allow users with `progress_table_v2_closed_beta` user preference to toggle between v1 and v2.
       'progress-table-v2-closed-beta-enabled': DCDO.get('progress-table-v2-closed-beta-enabled', false),
       # Whether the scholarship dropdown is locked on the application dashboard.
@@ -67,6 +65,7 @@ class DCDOBase < DynamicConfigBase
       # Remove this as part of Pegasus cleanup after the move to the CMS
       'aif-launch': DCDO.get('aif-launch', false),
       'skills-dashboard': DCDO.get('skills-dashboard', false),
+      'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
     }
   end
 end
