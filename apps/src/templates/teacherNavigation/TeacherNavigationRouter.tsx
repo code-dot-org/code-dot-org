@@ -99,11 +99,14 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
 
   const sectionHasAITutor = React.useMemo(
     () =>
-      selectedSection
-        ? selectedSection.courseVersionName?.includes('csa') ||
-          selectedSection.courseVersionName?.includes('aitutor')
-        : false,
-    [selectedSection]
+      // TODO-AITUTOR: If selected course contains any unit with any level with aitutor enabled
+      //   selectedSection
+      //     ? selectedSection.courseVersionName?.includes('csa') ||
+      //       selectedSection.courseVersionName?.includes('aitutor')
+      //     : false,
+      // [selectedSection]
+      true,
+    []
   );
 
   const studentCount = useAppSelector(
@@ -322,7 +325,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               }
             />
             <Route
-              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              path={TEACHER_NAVIGATION_PATHS.aiTutor}
               element={
                 showAITutorTab && sectionHasAITutor ? (
                   <ElementOrEmptyPage

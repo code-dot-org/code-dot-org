@@ -12,7 +12,7 @@ import {
 } from 'react-router-dom';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import DCDO from '@cdo/apps/dcdo';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -109,21 +109,23 @@ const TeacherNavigationBar: React.FC<{
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    showAITutorTab &&
-    (selectedSection?.courseVersionName?.includes('csa') ||
-      selectedSection?.courseVersionName?.includes(
-        'programming-fundamentals-aitutor-2024'
-      )) &&
-    DCDO.get('ai-tutor-teacher-nav-v2', false)
-      ? [
-          'progress',
-          'assessments',
-          'projects',
-          'stats',
-          'textResponses',
-          'aiTutorChatMessages',
-        ]
-      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  // if (
+  //   showAITutorTab &&
+  //   (selectedSection?.courseVersionName?.includes('csa') ||
+  //     selectedSection?.courseVersionName?.includes(
+  //       'programming-fundamentals-aitutor-2024'
+  //     )) &&
+  //   DCDO.get('ai-tutor-teacher-nav-v2', false)
+  // ) {
+  //   performanceContentKeys.push('aiTutorChatMessages');
+  // }
+
+  // TODO-AITUTOR: I think we still need to set the showAITutorTab properly upstream based on selected section
+  if (queryParams('show-ai-tutor2') === 'true' || showAITutorTab) {
+    performanceContentKeys.splice(1, 0, 'aiTutor');
+  }
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =

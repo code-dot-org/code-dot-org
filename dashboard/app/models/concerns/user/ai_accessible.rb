@@ -9,29 +9,24 @@ module User::AiAccessible
   extend ActiveSupport::Concern
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+  AI_TUTOR2_EXPERIMENT_NAME = 'ai-tutor2'
 
+  # TODO-AITUTOR: I see. So we need both UserPermission::AI_TUTOR_ACCESS
+  # for the teacher to USE AI Tutor on the level. Otherwise they'd have to impersonate
+  # a student from the teacher panel, I believe.
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
+    permission?(UserPermission::AI_TUTOR_ACCESS) || in_ai_tutor_experiment_with_enabled_section?
   end
 
+  # TODO-AITUTOR: Decide if we need a different experiment
   def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
+    !DCDO.get('ai-tutor-disabled', false) && (permission?(UserPermission::AI_TUTOR_ACCESS) ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
-  def ai_tutor_permission?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
-  end
-
   def can_use_ai_iteration_tools?
-    ai_tutor_permission? && levelbuilder?
-  end
-
-  def can_view_student_ai_chat_messages?
-    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
-    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+    permission?(UserPermission::AI_TUTOR_ACCESS) && levelbuilder?
   end
 
   def teacher_can_access_ai_chat?
@@ -49,10 +44,6 @@ module User::AiAccessible
 
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
   end
 
   private def in_ai_tutor_experiment_with_enabled_section?

@@ -4,14 +4,32 @@ import * as Table from 'reactabular-table';
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import styleConstants from '@cdo/apps/styleConstants';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {styleOverrides} from './InteractionsTable';
 import SectionAccessToggle from './SectionAccessToggle';
 import StudentAccessToggle from './StudentAccessToggle';
 
-import style from './interactions-table.module.scss';
+import style from './access-controls.module.scss';
+
+// TODO: Some of these overrides are necessary to reconcile CSS property values that are numbers
+// in the tableConstants file but must be strings according to the reactabular-table type definitions.
+// We should consider updating the tableConstants file to use strings where necessary.
+export const styleOverrides = {
+  table: {
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
+    width: `${styleConstants['content-width']}`,
+    backgroundColor: color.table_light_row,
+  },
+  headerCell: {
+    paddingLeft: '10px',
+    paddingRight: '10px',
+  },
+};
 
 /**
  * Renders toggles to control student access to AI Tutor.
