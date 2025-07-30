@@ -75,13 +75,14 @@ interface SessionEndPayload extends CommonSessionFields {
   soundsUsed: string[];
 }
 
-const trackedProjectProperties = [
-  'levelType',
-  'mode',
-  'channelId',
-  'levelPath',
-  'scriptName',
-] as const;
+// define Project interface based on tracked properties
+interface ProjectContext {
+  levelType?: string;
+  mode?: string;
+  channelId?: string;
+  levelPath?: string;
+  scriptName?: string;
+}
 
 /**
  * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
@@ -113,6 +114,7 @@ export default class AnalyticsReporter {
   }
 
   private session: Session | undefined;
+  private projectContext: ProjectContext | undefined;
   private startInProgress: boolean = false;
 
   async startSession() {
@@ -184,14 +186,21 @@ export default class AnalyticsReporter {
   }
 
   setProjectProperty(
-    property: (typeof trackedProjectProperties)[number],
-    value: string | number | undefined
+    property: keyof ProjectContext,
+    value: string | undefined
   ) {
     if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
+    // For Statsig
+    if (!this.projectContext) {
+      this.projectContext = {};
+    }
+    this.projectContext[property] = value;
+
+    // For Amplitude
     const identifyEvent = new Identify();
     if (value) {
       identifyEvent.set(property, value);
@@ -199,6 +208,7 @@ export default class AnalyticsReporter {
       identifyEvent.unset(property);
     }
     identify(identifyEvent);
+
     this.log(`Project property: ${property}: ${value}`);
   }
 
@@ -216,7 +226,7 @@ export default class AnalyticsReporter {
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
-    this.trackUIEvent('Button clicked', {
+    this.trackUIEvent('Button clicked (Ben test)', {
       buttonName,
       ...properties,
     });
@@ -263,7 +273,7 @@ export default class AnalyticsReporter {
       this.log(logMessage);
     }
 
-    cdoAnalyticsReporter.sendEvent(eventType, payload, PLATFORMS.STATSIG);
+    this.sendStatsigEvent(eventType, payload);
     track(eventType, payload).promise;
   }
 
@@ -344,7 +354,7 @@ export default class AnalyticsReporter {
 
     this.session = undefined;
 
-    cdoAnalyticsReporter.sendEvent('Session end', payload, PLATFORMS.STATSIG);
+    this.sendStatsigEvent('Session end', payload);
     track('Session end', payload);
     flush();
 
@@ -366,5 +376,18 @@ export default class AnalyticsReporter {
       const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
+  }
+
+  private sendStatsigEvent(eventName: string, payload: object = {}) {
+    // We include project properties as part of the event payload rather than as user properties in Statsig.
+    const combinedPayload = this.projectContext
+      ? {...payload, ...this.projectContext}
+      : payload;
+
+    cdoAnalyticsReporter.sendEvent(
+      eventName,
+      combinedPayload,
+      PLATFORMS.STATSIG
+    );
   }
 }
