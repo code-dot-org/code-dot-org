@@ -197,7 +197,9 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {function} [errorCallback]
    */
   async getBlocklyTheme(errorCallback) {
-    const theme = await this.getThemeSettings(errorCallback);
+    const theme = await this.getThemeSettings(() => ({
+      blockly: errorCallback(),
+    }));
     return theme?.blockly ?? null;
   }
 
