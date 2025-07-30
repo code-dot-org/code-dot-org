@@ -12,8 +12,12 @@ import SettingsDropdowns, {Setting} from './SettingsDropdowns';
 
 interface SettingsButtonProps {
   settings: Setting[];
+  className?: string;
 }
-const SettingsButton: React.FC<SettingsButtonProps> = ({settings}) => {
+const SettingsButton: React.FC<SettingsButtonProps> = ({
+  settings,
+  className,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<WithTooltipHandle>(null);
@@ -32,7 +36,7 @@ const SettingsButton: React.FC<SettingsButtonProps> = ({settings}) => {
   };
 
   return (
-    <div ref={buttonContainerRef}>
+    <div ref={buttonContainerRef} className={className}>
       <WithTooltip tooltipProps={settingsTooltipProps} ref={tooltipRef}>
         <Button
           isIconOnly
