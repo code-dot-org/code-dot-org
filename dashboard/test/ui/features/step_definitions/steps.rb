@@ -942,6 +942,10 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
 end
 
+Then /^I move focus to "([^"]*)"$/ do |selector|
+  @browser.execute_script("$(#{selector.dump}).focus()")
+end
+
 And(/^I select age (\d+) in the age dialog/) do |age|
   dropdown_selection = age
   if age == 21
