@@ -384,7 +384,7 @@ export default class AnalyticsReporter {
       : payload;
 
     cdoAnalyticsReporter.sendEvent(
-      eventName,
+      `Music Lab ${eventName}`,
       combinedPayload,
       PLATFORMS.STATSIG
     );
