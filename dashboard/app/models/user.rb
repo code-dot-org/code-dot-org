@@ -108,6 +108,7 @@ class User < ApplicationRecord
   include PartialRegistration
   include Purgeable
   include Facilitator
+  include TermsOfService
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -160,12 +161,6 @@ class User < ApplicationRecord
   # constants for resetting user secret words/picture
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
-
-  # When adding a new version, append to the end of the array
-  # using the next increasing natural number.
-  TERMS_OF_SERVICE_VERSIONS = [
-    1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
 
   serialized_attrs %w(
     ops_first_name
@@ -1162,24 +1157,6 @@ class User < ApplicationRecord
       return terms_of_service_version
     end
     teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
-  end
-
-  # Returns whether the user has accepted the latest major version of the Terms of Service
-  def accepted_latest_terms?
-    terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
-  end
-
-  # Returns the latest major version of the Terms of Service
-  def latest_terms_version
-    TERMS_OF_SERVICE_VERSIONS.last
-  end
-
-  # Updates user's most recently accepted Terms of Service version to the latest version
-  def update_user_tos_version_accept
-    terms_of_service_version = latest_terms_version
-    self.terms_of_service_version = terms_of_service_version
-
-    save!
   end
 
   # Ideally this would just be called school, but school is already a column
