@@ -25,6 +25,7 @@ export interface Setting {
   options: {value: string; text: string}[];
   selectedValue: string | undefined;
   onChange: (value: string) => void;
+  renderBelow?: () => React.ReactNode;
 }
 
 const SettingsDropdowns: React.FunctionComponent<SettingsDropdownsProps> = ({
@@ -69,21 +70,33 @@ const SettingsDropdowns: React.FunctionComponent<SettingsDropdownsProps> = ({
           />
         </div>
         {settings.map(setting => (
-          <div className={moduleStyles.dropdownRow} key={setting.id}>
-            <label htmlFor={setting.id} className={moduleStyles.dropdownLabel}>
-              {setting.label}
-            </label>
-            <SimpleDropdown
-              labelText={setting.label}
-              isLabelVisible={false}
-              onChange={event => setting.onChange(event.target.value)}
-              items={setting.options}
-              selectedValue={setting.selectedValue}
-              name={setting.id}
-              size="s"
-              color={dropdownColor}
-            />
-          </div>
+          <>
+            <div className={moduleStyles.dropdownRow} key={setting.id}>
+              <label
+                htmlFor={setting.id}
+                className={moduleStyles.dropdownLabel}
+              >
+                {setting.label}
+              </label>
+              <SimpleDropdown
+                labelText={setting.label}
+                isLabelVisible={false}
+                onChange={event => setting.onChange(event.target.value)}
+                items={setting.options}
+                selectedValue={setting.selectedValue}
+                name={setting.id}
+                size="s"
+                color={dropdownColor}
+              />
+              {setting.renderBelow && (
+                <div className={moduleStyles.renderBelow}>
+                  <div className={moduleStyles.renderBelowContent}>
+                    {setting.renderBelow()}
+                  </div>
+                </div>
+              )}
+            </div>
+          </>
         ))}
       </div>
     </FocusTrap>,

@@ -9,7 +9,8 @@ $space-l: 8px;
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 4px;
   background-color: var(--background-neutral-secondary);
-  scrollbar-color: var(--text-neutral-tertiary) var(--background-neutral-secondary);
+  scrollbar-color: var(--text-neutral-tertiary)
+    var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
   width: 400px;
   text-align: left;
@@ -39,12 +40,22 @@ $space-l: 8px;
   justify-content: space-between;
   padding: $space-m;
   align-items: center;
+  flex-wrap: wrap;
 
   .dropdownLabel {
     min-width: 150px;
     font-size: 14px;
     font-weight: 500;
     margin: $space-xs;
+  }
+}
+
+.renderBelow {
+  width: 100%;
+  justify-items: flex-end;
+  padding-top: $space-m;
+  .renderBelowContent {
+    width: fit-content;
   }
 }
 
