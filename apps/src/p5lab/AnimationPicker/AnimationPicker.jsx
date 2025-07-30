@@ -213,7 +213,9 @@ class AnimationPicker extends React.Component {
     this.getImageDimensions(file)
       .then(({width, height}) => {
         if (width < 128 || height < 128) {
-          // Skip moderation, upload directly.
+          // We skip moderation of small images because Azure Content Moderator has a minimum
+          // requirement for their evaluate endpoint.
+          // TODO: resize small images and then moderate. https://codedotorg.atlassian.net/browse/SL-1367
           this.props.onUploadStart(data);
           return;
         }
