@@ -174,13 +174,13 @@ class AnimationPicker extends React.Component {
     );
   }
 
-  validateImageDimensions = file => {
+  getImageDimensions = file => {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = () => {
         const img = new Image();
         img.onload = () => {
-          resolve(img.width > 127 && img.height > 127);
+          resolve({width: img.width, height: img.height});
         };
         img.onerror = reject;
         img.src = reader.result;
@@ -210,10 +210,11 @@ class AnimationPicker extends React.Component {
       this.props.onUploadError(msg.animationPicker_unsupportedType());
       return;
     }
-    this.validateImageDimensions(file)
-      .then(isValid => {
-        if (!isValid) {
-          this.props.onUploadError(msg.animationPicker_unsupportedDimensions());
+    this.getImageDimensions(file)
+      .then(({width, height}) => {
+        if (width < 128 || height < 128) {
+          // Skip moderation, upload directly.
+          this.props.onUploadStart(data);
           return;
         }
 
@@ -250,7 +251,7 @@ class AnimationPicker extends React.Component {
           });
       })
       .catch(err => {
-        MetricsReporter.logError('Error validating image dimensions: ' + err);
+        MetricsReporter.logError('Error getting image dimensions: ' + err);
         this.props.onUploadError(msg.animationPicker_uploadingError());
       });
   };
