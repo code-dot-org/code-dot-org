@@ -225,7 +225,7 @@ export default class AnalyticsReporter {
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
-    this.trackUIEvent('Button clicked (Ben test)', {
+    this.trackUIEvent('Button clicked', {
       buttonName,
       ...properties,
     });
