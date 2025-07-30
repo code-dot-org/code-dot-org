@@ -158,7 +158,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       ]);
     }
     if (!prompt.followUpPrompts && !prompt.response) {
-      //getAIResponse(prompt.prompt, true, prompt.label);
+      getAIResponse(prompt.prompt, true, prompt.label);
     }
     userMessageEditorRef.current?.focus();
   };
