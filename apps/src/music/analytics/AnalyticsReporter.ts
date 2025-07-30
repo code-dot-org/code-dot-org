@@ -377,7 +377,7 @@ export default class AnalyticsReporter {
     }
   }
 
-  private sendStatsigEvent(eventName: string, payload: object = {}) {
+  private sendStatsigEvent(eventName: string, payload: object) {
     // We include project properties as part of the event payload rather than as user properties in Statsig.
     const combinedPayload = this.projectContext
       ? {...payload, ...this.projectContext}
