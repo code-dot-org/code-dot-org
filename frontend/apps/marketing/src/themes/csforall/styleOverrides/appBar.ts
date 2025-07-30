@@ -3,18 +3,6 @@ import {alpha, Components, Theme} from '@mui/material/styles';
 export const APPBAR_OVERRIDES: Components<Theme>['MuiAppBar'] = {
   styleOverrides: {
     root: ({theme}) => ({
-      backgroundColor: theme.palette.background.default,
-      // backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(2, 4),
-      '& a:has(img)': {
-        marginBottom: 0,
-        lineHeight: 0,
-      },
-      '& .MuiToolbar-root': {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-      },
       '& .MuiBox-root': {
         display: 'flex',
         alignItems: 'center',
