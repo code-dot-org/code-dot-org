@@ -75,7 +75,6 @@ interface SessionEndPayload extends CommonSessionFields {
   soundsUsed: string[];
 }
 
-// define Project interface based on tracked properties
 interface ProjectContext {
   levelType?: string;
   mode?: string;
