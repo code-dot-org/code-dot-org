@@ -1,3 +1,4 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -74,9 +75,15 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
     );
   }
 
+  const inMemoryEntities = useInMemoryEntities();
+
   const peopleData = useMemo(() => {
     const data = people.filter(Boolean).map(({fields}) => {
       const {name, image, title, bio, personalLink} = fields;
+
+      const resolvedImage = inMemoryEntities.maybeResolveLink(
+        image,
+      ) as ExperienceAsset;
 
       return {
         id: name,
@@ -86,7 +93,10 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               <Box component="figure" sx={styles.image}>
                 <img
                   src={
-                    getAbsoluteImageUrl(image, 'fit=fill&w=128&h=128&r=max') ||
+                    getAbsoluteImageUrl(
+                      resolvedImage,
+                      'fit=fill&w=128&h=128&r=max',
+                    ) ||
                     (typeof placeholderImage === 'string'
                       ? placeholderImage
                       : placeholderImage.src)

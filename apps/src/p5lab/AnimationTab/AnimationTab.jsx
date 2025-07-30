@@ -102,6 +102,7 @@ class AnimationTab extends React.Component {
             defaultQuery={defaultQuery}
             shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
             uploadsEnabled={this.props.uploadsEnabled}
+            projectType={labType.toLowerCase()}
           />
         )}
       </div>

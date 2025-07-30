@@ -1188,9 +1188,9 @@ __metadata:
     "@applitools/eyes-playwright": "npm:^1.36.3"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^1.42.0"
-    "@contentful/rich-text-html-renderer": "npm:^17.0.0"
-    "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
+    "@contentful/experiences-sdk-react": "npm:^2.0.1"
+    "@contentful/rich-text-html-renderer": "npm:^17.1.0"
+    "@contentful/rich-text-plain-text-renderer": "npm:^17.1.0"
     "@emotion/cache": "npm:^11.14.0"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
@@ -1225,8 +1225,8 @@ __metadata:
     "@types/react-dom": "npm:^18"
     "@vercel/otel": "npm:^1.12.0"
     axios: "npm:^1.11.0"
-    contentful: "npm:^11.7.3"
-    contentful-management: "npm:^11.52.1"
+    contentful: "npm:^11.7.15"
+    contentful-management: "npm:^11.54.4"
     cookies-next: "npm:^5.1.0"
     cross-fetch: "npm:^4.1.0"
     dotenv: "npm:^16.4.7"
@@ -1278,41 +1278,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentful/experiences-components-react@npm:1.42.0":
-  version: 1.42.0
-  resolution: "@contentful/experiences-components-react@npm:1.42.0"
+"@contentful/experiences-components-react@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@contentful/experiences-components-react@npm:2.0.1"
   dependencies:
-    "@contentful/experiences-core": "npm:1.42.0"
+    "@contentful/experiences-core": "npm:2.0.1"
     "@contentful/rich-text-react-renderer": "npm:^16.0.1"
     postcss-import: "npm:^16.0.1"
     style-inject: "npm:^0.3.0"
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/c496226562ba86088160158eba45f04a066a4a8180f6495458be1aac65c42355fdc7735a969494789979c66a59844de5a3446eda0baad4d6222d415ce95bc494
+  checksum: 10c0/b14cbf6c1409a33887a1b0aa4f1308655ef5b35d55a0f55cd0d47c25f592632eaa540f745933462543661cc4abb0268d946ec280ff0a02456ca84f29c8834638
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@npm:1.42.0":
-  version: 1.42.0
-  resolution: "@contentful/experiences-core@npm:1.42.0"
+"@contentful/experiences-core@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@contentful/experiences-core@npm:2.0.1"
   dependencies:
-    "@contentful/experiences-validators": "npm:1.42.0"
+    "@contentful/experiences-validators": "npm:2.0.1"
     "@contentful/rich-text-types": "npm:^17.0.0"
   peerDependencies:
     contentful: ">=10.6.0"
-  checksum: 10c0/76995083e1aa6ce1ee7b8b444ea6b6bd37328905ce0ff0520a6af938c4a0a639d26e758a8bf9dd13501e89fd00e78134fbe5b3d078ae7bea30d100f979e34da7
+  checksum: 10c0/a1457467f00c0206491794bc2d4fa129b02664225e66f8e22e37998fe4792527a4bb618ff12d31771df8085d77880f80bf6d7a8707c61f36f1c0a044b72f29ce
   languageName: node
   linkType: hard
 
-"@contentful/experiences-sdk-react@npm:^1.42.0":
-  version: 1.42.0
-  resolution: "@contentful/experiences-sdk-react@npm:1.42.0"
+"@contentful/experiences-sdk-react@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@contentful/experiences-sdk-react@npm:2.0.1"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.42.0"
-    "@contentful/experiences-core": "npm:1.42.0"
-    "@contentful/experiences-validators": "npm:1.42.0"
-    "@contentful/experiences-visual-editor-react": "npm:1.42.0"
+    "@contentful/experiences-components-react": "npm:2.0.1"
+    "@contentful/experiences-core": "npm:2.0.1"
+    "@contentful/experiences-validators": "npm:2.0.1"
+    "@contentful/experiences-visual-editor-react": "npm:2.0.1"
     "@contentful/rich-text-types": "npm:^17.0.0"
     classnames: "npm:^2.3.2"
     csstype: "npm:^3.1.2"
@@ -1324,25 +1324,25 @@ __metadata:
     contentful: ">=10.6.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 10c0/4d94bea62a94f86db051a631b764eb98bc43d64527d9110a125062bb8f72efa22b2f5aae50c4dbd5345aed094dd3c13e5d7923d1fe955f8a24a40122e06c2a13
+  checksum: 10c0/989b9101f0434ef10357f44286c8203ab9bd02825c12776064ae2abf8cf46d3c65cee98d664234d4c4f14cda7ba7d9744e0d55a96c6021e610b1753fc64c499f
   languageName: node
   linkType: hard
 
-"@contentful/experiences-validators@npm:1.42.0":
-  version: 1.42.0
-  resolution: "@contentful/experiences-validators@npm:1.42.0"
+"@contentful/experiences-validators@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@contentful/experiences-validators@npm:2.0.1"
   dependencies:
     zod: "npm:^3.22.4"
-  checksum: 10c0/73328ff53408b3ed46db461542faebca4496158b90a366ceee595efe55c45efc8e977653adb7d9839aee7d3dbaf3649517f5996b01cbfa297e98631c550b6cd8
+  checksum: 10c0/ff8f6e35f286fbac47a071e126020fc0c48ea43a98ed3f1ad36503b580e291702247a761a715a8780ae20fe53a2932753535d361f4d27dfce965c4a70cb1d95e
   languageName: node
   linkType: hard
 
-"@contentful/experiences-visual-editor-react@npm:1.42.0":
-  version: 1.42.0
-  resolution: "@contentful/experiences-visual-editor-react@npm:1.42.0"
+"@contentful/experiences-visual-editor-react@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@contentful/experiences-visual-editor-react@npm:2.0.1"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.42.0"
-    "@contentful/experiences-core": "npm:1.42.0"
+    "@contentful/experiences-components-react": "npm:2.0.1"
+    "@contentful/experiences-core": "npm:2.0.1"
     "@hello-pangea/dnd": "npm:^16.3.0"
     classnames: "npm:^2.3.2"
     contentful: "npm:^10.6.14"
@@ -1356,26 +1356,26 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/fc6aff07a80fd877a0549f8304a16ecb9618bf2a4648688213dfd0424172e4894c0d0f469f1ae7bc37c389743ad51b19d188a17d327e7679729e7da79cf1d282
+  checksum: 10c0/8ca320627a00abe438d1126b6f352af62c829d0cdb640ae1c07e2bd081cc7104375a0709408c88aa3063a893128a7282f77f11c467af21139898f7aed4231e87
   languageName: node
   linkType: hard
 
-"@contentful/rich-text-html-renderer@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "@contentful/rich-text-html-renderer@npm:17.0.0"
+"@contentful/rich-text-html-renderer@npm:^17.1.0":
+  version: 17.1.0
+  resolution: "@contentful/rich-text-html-renderer@npm:17.1.0"
   dependencies:
-    "@contentful/rich-text-types": "npm:^17.0.0"
+    "@contentful/rich-text-types": "npm:^17.1.0"
     escape-html: "npm:^1.0.3"
-  checksum: 10c0/cbc48d53c52753e61158c099b936924cdea957323d41188320629da9396dc82ad01b40bf583d3faba9c8ce03a25e8ac699d66af6429036511d82eaf235de86d7
+  checksum: 10c0/a935cb9ae0b74f37aafb17914b9be1308decd44a57a24ee1729521a0267b621d6a1485de12d03089ac793a35fc3d97a9b40a30a137e41b8e54021ea00b457de8
   languageName: node
   linkType: hard
 
-"@contentful/rich-text-plain-text-renderer@npm:^17.0.0":
-  version: 17.0.0
-  resolution: "@contentful/rich-text-plain-text-renderer@npm:17.0.0"
+"@contentful/rich-text-plain-text-renderer@npm:^17.1.0":
+  version: 17.1.0
+  resolution: "@contentful/rich-text-plain-text-renderer@npm:17.1.0"
   dependencies:
-    "@contentful/rich-text-types": "npm:^17.0.0"
-  checksum: 10c0/ae9fe420e6cfb82a83e5dda2d26cfa6bb9c18a365e5bee0f1e2ed4f74c69641053cf3dffc97c548c82ff08e93bbe81a470fee3bc6c651ecda3678e581955e9ed
+    "@contentful/rich-text-types": "npm:^17.1.0"
+  checksum: 10c0/cd6725b4890aa925a5b80ae660ae3e1c267da8ee1cf20ab0f17c5716a0dfab77c9ad0a8bccfc24ae623a44d1275c6e3e5e13573a76713d7e988f1f25387c1091
   languageName: node
   linkType: hard
 
@@ -1404,6 +1404,15 @@ __metadata:
   dependencies:
     is-plain-obj: "npm:^3.0.0"
   checksum: 10c0/cdeb1239b459d4c0796a0367bfd784f1f2b6b27956bba00fd7b0c80ecbe93a33d0856a49dc525f5f6ce6b5488835c224868fa17c67eeb6b7170d6cc6a9641fe0
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-types@npm:^17.1.0":
+  version: 17.1.0
+  resolution: "@contentful/rich-text-types@npm:17.1.0"
+  dependencies:
+    is-plain-obj: "npm:^3.0.0"
+  checksum: 10c0/06cbdb2b12ffb0913387b7d4ea3bb89b3ba7166033f41795de35208fc624c995e4315e4eaa803142f5ab8f0d4a0ebb314d09ad4f4b451049e1ad50f418f046ae
   languageName: node
   linkType: hard
 
@@ -9223,17 +9232,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.8.4":
-  version: 1.9.0
-  resolution: "axios@npm:1.9.0"
-  dependencies:
-    follow-redirects: "npm:^1.15.6"
-    form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 10c0/9371a56886c2e43e4ff5647b5c2c3c046ed0a3d13482ef1d0135b994a628c41fbad459796f101c655e62f0c161d03883454474d2e435b2e021b1924d9f24994c
-  languageName: node
-  linkType: hard
-
 "axobject-query@npm:^4.1.0":
   version: 4.1.0
   resolution: "axobject-query@npm:4.1.0"
@@ -10407,16 +10405,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contentful-management@npm:^11.52.1":
-  version: 11.52.1
-  resolution: "contentful-management@npm:11.52.1"
+"contentful-management@npm:^11.54.4":
+  version: 11.54.4
+  resolution: "contentful-management@npm:11.54.4"
   dependencies:
     "@contentful/rich-text-types": "npm:^16.6.1"
-    axios: "npm:^1.8.4"
+    axios: "npm:^1.11.0"
     contentful-sdk-core: "npm:^9.0.1"
     fast-copy: "npm:^3.0.0"
     globals: "npm:^15.15.0"
-  checksum: 10c0/7828897e30abe2605635a78a0c904d2c9161973f3541a761ea843b031e58455ab700027b5a4164c832d8428b70dd8b4645e610e7cdddfbf24df6911583ee0b3a
+  checksum: 10c0/7ce9fb63cccf8e1b2864aee1eb0d860a1b02096682b05fd03c6bdc88de6f540616f62a9c64dee85fe38bf0c5ed437a1b0f7e534f4741af4ca5857b9cf75fbc55
   languageName: node
   linkType: hard
 
@@ -10474,18 +10472,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"contentful@npm:^11.7.3":
-  version: 11.7.3
-  resolution: "contentful@npm:11.7.3"
+"contentful@npm:^11.7.15":
+  version: 11.7.15
+  resolution: "contentful@npm:11.7.15"
   dependencies:
     "@contentful/content-source-maps": "npm:^0.11.8"
     "@contentful/rich-text-types": "npm:^16.6.1"
-    axios: "npm:^1.8.4"
+    axios: "npm:^1.11.0"
     contentful-resolve-response: "npm:^1.9.0"
     contentful-sdk-core: "npm:^9.0.1"
     json-stringify-safe: "npm:^5.0.1"
     type-fest: "npm:^4.0.0"
-  checksum: 10c0/469c8fe593233331d6683ea531dc99c9ddb4634625965ede6591a72e5387d7d1afbc6b2e7157b13d17f76a9ad9eac711357902eb633872802f0a47059484be25
+  checksum: 10c0/a1f1fc840c35b8b0a7f1e6a7e55aad9b643e5bb84b4813dc6ba8b2f28d8580c5dd56a14d6a144acfeb5e2b34aea87217b684213b0ad02c2593839e11c9c4bdb9
   languageName: node
   linkType: hard
 
