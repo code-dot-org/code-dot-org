@@ -99,6 +99,7 @@ const RubricWrapper: React.FC = () => {
   const {rubric, canShowTaScoresAlert} = rubricData;
 
   return (
+    // Force light mode for the rubric FAB and dialog as they are not fully themed currently.
     <div data-theme="Light">
       <RubricFloatingActionButton
         rubric={rubric}
