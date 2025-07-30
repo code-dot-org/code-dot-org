@@ -43,7 +43,7 @@ export const FilePreview = () => {
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
-  console.log({files});
+
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
       (f: ProjectFile) =>
