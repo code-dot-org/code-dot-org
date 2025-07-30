@@ -44,6 +44,9 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
+// Experiment for showing the toggle a teacher can use to turn on AI Tutor 2 for their section
+// TODO-AITUTOR: Decide whether we need a new pilot
+experiments.AI_TUTOR2_ACCESS = 'ai-tutor2';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
 experiments.BLOCKLY_DOCS = 'blockly_docs';
 // Adds the ability to toggle between v1 and v2 of the section progress page of the teacher dashboard

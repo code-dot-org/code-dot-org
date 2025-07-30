@@ -45,6 +45,7 @@ class UserPermission < ApplicationRecord
     # Grants ability to be the instructor of any course no matter instructor_audience
     UNIVERSAL_INSTRUCTOR = 'universal_instructor'.freeze,
     # Grants access to use AI Tutor which uses AI Chat API
+    # Students don't need this permission to use AI Tutor, but teachers do.
     AI_TUTOR_ACCESS = 'ai_tutor_access'.freeze,
     #  Grants access to an internal tool to pull AI-evaluated samples of student work
     STUDENT_WORK_ACCESS = 'student_work_access'.freeze,

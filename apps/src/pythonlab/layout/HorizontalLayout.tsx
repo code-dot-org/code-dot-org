@@ -32,6 +32,12 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   );
   const {aiTutor2Context, levelProperties} = useCodebridgeContext();
 
+  // AI Tutor is visible in the level if:
+  //   section-level AI tutor is on (the student is part of a section that has AI Tutor enabled)
+  //      ACTIVE if aiTutor2Available (via level properties) is true
+  //      SLEEPING if aiTutor2Available is false OR student has been disabled by the teacher
+  //   show-ai-tutor2 query param overrides all of the above and shows AI Tutor in ACTIVE state
+  //   ? teachers always see AI Tutor in ACTIVE state?
   const showAiTutor2 =
     levelProperties.aiTutor2Available ||
     queryParams('show-ai-tutor2') === 'true';

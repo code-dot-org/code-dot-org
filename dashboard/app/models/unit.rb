@@ -2210,6 +2210,8 @@ class Unit < ApplicationRecord
   end
 
   def has_ai_tutor_level?
+    # TODO-AITUTOR: Update to look for ai_tutor2_available for new ai tutor,
+    # and can we use this to gate ui in teacher dashboard?
     levels&.any?(&:ai_tutor_available?)
   end
 
