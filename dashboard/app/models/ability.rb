@@ -159,7 +159,7 @@ class Ability
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
-      can [:count, :increment_visit_count, :index, :get_feedbacks], TeacherFeedback, student_id: user.id
+      can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
       can :create, UserMlModel, user_id: user.id
 
       can :list_projects, Section do |section|
