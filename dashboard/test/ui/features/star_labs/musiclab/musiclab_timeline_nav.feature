@@ -5,8 +5,8 @@ Scenario: Ensure users can navigate into and out of timeline, and between elemen
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/7"
   And I rotate to landscape
   And I wait until element "[data-id='when-run-block']" is visible
-  And I drag block "2" to block "when run"
-  And I drag block "1" to block "when run"
+  And I drag block number 2 to block "when run"
+  And I drag block number 1 to block "when run"
   Then I move focus to ".timeline"
   And I press keys ":enter"
   # Check that the first timeline element has focus
