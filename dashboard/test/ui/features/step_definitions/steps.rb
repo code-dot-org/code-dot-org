@@ -1105,10 +1105,6 @@ Then(/^I slow down execution speed$/) do
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
-Then(/^I refresh the page$/) do
-  @browser.navigate.refresh
-end
-
 Then(/^I reload the page$/) do
   page_load(true) do
     @browser.navigate.refresh

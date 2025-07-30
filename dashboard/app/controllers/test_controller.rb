@@ -455,10 +455,10 @@ class TestController < ApplicationController
   # @see /dashboard/test/ui/features/dcdo_mocking.feature
   def get_dcdo
     render json: {
-      fetched: DCDO.get('test_dcdo_on_pegasus', nil),
+      fetched: DCDO.get('dcdo_mocking_test', nil),
       stored: DCDO.instance_variable_get(:@datastore_cache)&.
         instance_variable_get(:@datastore)&.
-        get('test_dcdo_on_pegasus'),
+        get('dcdo_mocking_test'),
     }
   end
 end
