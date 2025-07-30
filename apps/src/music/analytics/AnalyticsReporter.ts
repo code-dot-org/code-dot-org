@@ -185,9 +185,9 @@ export default class AnalyticsReporter {
     );
   }
 
-  setProjectProperty(
-    property: keyof ProjectContext,
-    value: string | undefined
+  setProjectProperty<K extends keyof ProjectContext>(
+    property: K,
+    value: ProjectContext[K]
   ) {
     if (!this.session) {
       this.log('No session in progress');
