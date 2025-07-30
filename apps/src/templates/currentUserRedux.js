@@ -17,6 +17,8 @@ const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 const SET_SORT_BY_FAMILY_NAME = 'currentUser/SET_SORT_BY_FAMILY_NAME';
 const SET_SHOW_PROGRESS_TABLE_V2 = 'currentUser/SET_SHOW_PROGRESS_TABLE_V2';
+const SET_HAS_SEEN_HOMEPAGE_WELCOME =
+  'currentUser/SET_HAS_SEEN_HOMEPAGE_WELCOME';
 const SET_AI_RUBRICS_DISABLED = 'currentUser/SET_AI_RUBRICS_DISABLED';
 const SET_AI_DIFFERENTIATION_ENABLED =
   'currentUser/SET_AI_DIFFERENTIATION_ENABLED';
@@ -108,6 +110,10 @@ export const setUserCreatedAt = userCreatedAt => ({
   type: SET_USER_CREATED_AT,
   userCreatedAt,
 });
+export const setHasSeenHomepageWelcome = hasSeenHomepageWelcome => ({
+  type: SET_HAS_SEEN_HOMEPAGE_WELCOME,
+  hasSeenHomepageWelcome,
+});
 
 const initialState = {
   userId: null,
@@ -131,6 +137,7 @@ const initialState = {
   inSection: null,
   userCreatedAt: null,
   userSharingDisabled: false,
+  hasSeenHomepageWelcome: false,
   showProgressTableV2: 'v2',
 };
 
@@ -242,6 +249,12 @@ export default function currentUser(state = initialState, action) {
       userCreatedAt: action.userCreatedAt,
     };
   }
+  if (action.type === SET_HAS_SEEN_HOMEPAGE_WELCOME) {
+    return {
+      ...state,
+      hasSeenHomepageWelcome: action.hasSeenHomepageWelcome,
+    };
+  }
 
   if (action.type === SET_INITIAL_DATA) {
     const {
@@ -271,6 +284,7 @@ export default function currentUser(state = initialState, action) {
       has_completed_ai_differentiation_welcome,
       educator_role,
       sharing_disabled,
+      has_seen_homepage_welcome,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -316,6 +330,7 @@ export default function currentUser(state = initialState, action) {
       inSection: in_section,
       userCreatedAt: created_at,
       userSharingDisabled: sharing_disabled,
+      hasSeenHomepageWelcome: has_seen_homepage_welcome,
     };
   }
 
