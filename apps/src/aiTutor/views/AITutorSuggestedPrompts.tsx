@@ -1,3 +1,9 @@
+/** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
+ *  TODO-AITUTOR: Remove
+ *
+ *  references: ./AITutorChatWorkspace.tsx
+ **/
+
 import React, {useCallback} from 'react';
 
 import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';

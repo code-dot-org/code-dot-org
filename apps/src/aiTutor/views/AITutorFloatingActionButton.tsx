@@ -1,3 +1,9 @@
+/** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
+ *  TODO-AITUTOR: Remove
+ *
+ *  references: /apps/src/sites/studio/pages/levels/show.js (anchor point)
+ **/
+
 import React from 'react';
 import {Provider} from 'react-redux';
 

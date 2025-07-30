@@ -1,3 +1,6 @@
+/** TODO-AITUTOR: Clean up and remove deprecated types
+ **/
+
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
