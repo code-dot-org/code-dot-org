@@ -87,7 +87,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     return () => {
       window.removeEventListener('resize', ensureDraggableIsVisible);
     };
-  }, [positionX]);
+  }, [positionX, minX, maxX]);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -103,7 +103,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     return () => {
       window.removeEventListener('resize', ensureDraggableIsVisible);
     };
-  }, [positionY]);
+  }, [positionY, minY, maxY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
