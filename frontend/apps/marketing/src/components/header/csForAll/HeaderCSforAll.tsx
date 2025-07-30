@@ -115,6 +115,9 @@ const styles = {
     '& svg': {
       color: theme.palette.common.black,
     },
+    '&:focus': {
+      outline: `2px solid ${theme.palette.primary.main}`,
+    },
   },
   drawer: {
     '& .MuiDrawer-paper': {
@@ -136,6 +139,9 @@ const styles = {
           marginBottom: theme.spacing(4),
         },
       },
+      '& .call-to-action': {
+        width: '100%',
+      },
     },
   },
   closeButton: {
@@ -145,6 +151,9 @@ const styles = {
     insetInlineEnd: theme.spacing(2),
     '& svg': {
       color: theme.palette.common.black,
+    },
+    '&:focus': {
+      outline: `2px solid ${theme.palette.primary.main}`,
     },
   },
 };
@@ -204,7 +213,7 @@ const HeaderMui: React.FC<HeaderProps> = ({
   );
 
   return (
-    <Box component="header" sx={{display: 'flex'}}>
+    <Box component="header">
       <AppBar
         className={className}
         component="nav"
@@ -227,12 +236,11 @@ const HeaderMui: React.FC<HeaderProps> = ({
           {getCallToAction()}
           {/* Menu Button */}
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
+            aria-label="Open drawer"
             edge="end"
-            disableRipple
             onClick={handleDrawerToggle}
             sx={styles.menuButton}
+            disableRipple
           >
             <MenuIcon fontSize="large" />
           </IconButton>
@@ -243,6 +251,7 @@ const HeaderMui: React.FC<HeaderProps> = ({
         <Drawer
           variant="temporary"
           open={mobileOpen}
+          onClose={handleDrawerToggle}
           anchor={
             typeof document !== 'undefined' &&
             document.documentElement.dir === 'rtl'
