@@ -214,6 +214,24 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal "2", response.body
   end
 
+  test 'count is accurate when feedback is available' do
+    sign_in @student
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+    assert_equal "1", response.body
+
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/count"
+
+    assert_equal "2", response.body
+  end
+
   test 'count does not include already seen feedback' do
     sign_in @student
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
@@ -447,6 +465,17 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in feedback.student
     post "#{API}/#{feedback.id}/increment_visit_count"
     assert_response :no_content
+  end
+
+  test 'increment_visit_count returns forbidden for different user' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(true)
+    student = create :student
+    other_student = create :student
+    feedback = create :teacher_feedback, student: student
+
+    sign_in other_student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :forbidden
   end
 
   test 'increment_visit_count returns unprocessable_entity on failed save' do

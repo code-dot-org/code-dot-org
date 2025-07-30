@@ -78,6 +78,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   # Records metrics for student viewing teacher feedback.
   def increment_visit_count
     feedback = TeacherFeedback.find(params[:id])
+    authorize! :increment_visit_count, feedback
     if feedback&.increment_visit_count
       head :no_content
     else
