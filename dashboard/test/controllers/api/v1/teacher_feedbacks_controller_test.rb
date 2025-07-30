@@ -214,24 +214,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal "2", response.body
   end
 
-  test 'count is accurate when feedback is available' do
-    sign_in @student
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_out @teacher
-
-    sign_in @student
-    get "#{API}/count"
-    assert_equal "1", response.body
-
-    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
-    sign_out @teacher
-
-    sign_in @student
-    get "#{API}/count"
-
-    assert_equal "2", response.body
-  end
-
   test 'count does not include already seen feedback' do
     sign_in @student
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
