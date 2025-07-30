@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
-import {WorkshopTabs} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop/components/WorkshopTabs';
+import {WorkshopTabs} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshops/components/WorkshopTabs';
 
 const tabList = [
   {label: 'Overview', path: ''},
