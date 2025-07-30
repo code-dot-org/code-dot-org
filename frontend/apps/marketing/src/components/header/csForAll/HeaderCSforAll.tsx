@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import {alpha} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import React, {
   AnchorHTMLAttributes,
@@ -77,6 +78,34 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+  },
+  leftSide: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: theme.spacing(4),
+    '& .MuiList-root': {
+      display: 'flex',
+      flexDirection: 'row',
+      gap: theme.spacing(2),
+      [`@media (max-width: ${breakpoint}px)`]: {
+        display: 'none',
+      },
+    },
+    '.MuiListItem-root': {
+      margin: 0,
+      padding: 0,
+      width: 'auto',
+      '& a': {
+        textDecoration: 'none',
+        marginBottom: 0,
+        padding: theme.spacing(1, 2),
+        borderRadius: theme.shape.borderRadius,
+        transition: 'background-color 0.3s ease',
+        '&:hover': {
+          backgroundColor: alpha(theme.palette.primary.main, 0.1),
+        },
+      },
+    },
   },
   menuButton: {
     display: 'none',
@@ -184,7 +213,7 @@ const HeaderMui: React.FC<HeaderProps> = ({
         sx={styles.appBar}
       >
         <Toolbar variant="dense" sx={styles.toolBar} disableGutters>
-          <Box>
+          <Box sx={styles.leftSide}>
             {/* Site Logo */}
             <SiteLogo
               label={defaultProps.logo.label}
@@ -214,7 +243,12 @@ const HeaderMui: React.FC<HeaderProps> = ({
         <Drawer
           variant="temporary"
           open={mobileOpen}
-          anchor="right"
+          anchor={
+            typeof document !== 'undefined' &&
+            document.documentElement.dir === 'rtl'
+              ? 'left'
+              : 'right'
+          }
           ModalProps={{
             keepMounted: true,
           }}
