@@ -80,6 +80,21 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when user has project' do
+      # The project factory is prone to issues, so we create a project directly.
+      let(:project) {Project.create(storage_id: user.user_storage_id, updated_ip: '127.0.0.1')}
+
+      after do
+        project.destroy
+      end
+
+      it 'removes updated_ip' do
+        _(project.updated_ip).must_be :present?
+        scrub_pii
+        _(project.reload.updated_ip).must_be :empty?
+      end
+    end
+
     context 'when user is not soft-deleted' do
       let(:soft_deleted_user) {false}
 

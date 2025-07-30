@@ -88,6 +88,9 @@ module Services
         # PD data
         scrub_pd_surveys
         scrub_pd_enrollments
+
+        # Project IP addresses (but no other project data)
+        scrub_project_ips
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -102,6 +105,12 @@ module Services
 
       private def pd_enrollments
         @pd_enrollments ||= user.pd_enrollments.with_deleted
+      end
+
+      private def scrub_project_ips
+        Project.where(storage_id: user.user_storage_id).each do |project|
+          project.update(updated_ip: '')
+        end
       end
 
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
