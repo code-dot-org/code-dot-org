@@ -1078,13 +1078,4 @@ class FilesApi < Sinatra::Base
   private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
   end
-
-  private def moderate_type?(project_type)
-    MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
-  end
-
-  private def moderate_channel?(encrypted_channel_id)
-    project = Projects.new(get_storage_id)
-    !project.content_moderation_disabled?(encrypted_channel_id)
-  end
 end

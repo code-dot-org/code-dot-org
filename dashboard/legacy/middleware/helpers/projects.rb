@@ -265,35 +265,6 @@ class Projects
     0
   end
 
-  def content_moderation_disabled?(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
-    return false unless row
-
-    row[:skip_content_moderation]
-  end
-
-  #
-  # Disables or enables automated content moderation for this project by
-  # altering the value for content_moderation_disabled.
-  # @param [String] channel_id - an encrypted channel id
-  # @param [Boolean] disable, whether the content moderation should be
-  # skipped or not for this project.
-  # @raise [NotFound] if the channel does not exist or already has the desired
-  # value for content_moderation_disabled.
-  #
-  def set_content_moderation(channel_id, disable)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
-    rows_changed = @table.
-      where(id: project_id).
-      exclude(state: 'deleted').
-      update({skip_content_moderation: disable})
-    raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
-
-    disable
-  end
-
   def to_a
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])

@@ -3,6 +3,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
@@ -62,6 +65,7 @@ class AnimationPicker extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    projectType: PropTypes.string,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -84,6 +88,7 @@ class AnimationPicker extends React.Component {
     exitingDialog: false,
     showFlaggedModal: false,
     pendingUploadData: null,
+    flaggedModalError: null,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -138,6 +143,7 @@ class AnimationPicker extends React.Component {
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
           uploadsEnabled={this.props.uploadsEnabled}
+          projectType={this.props.projectType}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -191,12 +197,26 @@ class AnimationPicker extends React.Component {
           this.setState({
             showFlaggedModal: true,
           });
+          analyticsReporter.sendEvent(
+            EVENTS.FLAGGED_CUSTOM_IMAGE,
+            {
+              UploaderType: 'Animation Picker',
+              ProjectType: this.props.projectType,
+            },
+            PLATFORMS.STATSIG
+          );
         } else {
           // If the image is rated 'everyone' or 'unknown', continue with upload.
           this.props.onUploadStart(this.state.pendingUploadData);
         }
       })
-      .catch(err => console.error('Moderation error:', err));
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Azure image moderation error: ' + err);
+      });
   };
 
   handleAcceptFlaggedImage = () => {
@@ -213,14 +233,40 @@ class AnimationPicker extends React.Component {
       .then(response => response.json())
       .then(() => {
         this.props.onUploadStart(pendingUploadData);
-      })
-      .catch(err => console.error('Update abuse error:', err))
-      .finally(() => {
         this.setState({
           showFlaggedModal: false,
           pendingUploadData: null,
         });
+        analyticsReporter.sendEvent(
+          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
+          {
+            UploaderType: 'Animation Picker',
+            ProjectType: this.props.projectType,
+          },
+          PLATFORMS.STATSIG
+        );
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
       });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
+    analyticsReporter.sendEvent(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
+      PLATFORMS.STATSIG
+    );
+    this.props.onClose(); // Close the entire AnimationPicker
   };
 
   render() {
@@ -256,10 +302,8 @@ class AnimationPicker extends React.Component {
           <FlaggedImageModal
             isOpen
             onAccept={this.handleAcceptFlaggedImage}
-            onCancel={() => {
-              this.setState({showFlaggedModal: false, pendingUploadData: null});
-              this.props.onClose(); // Close the entire AnimationPicker
-            }}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
           />
         )}
         {this.renderVisibleBody()}

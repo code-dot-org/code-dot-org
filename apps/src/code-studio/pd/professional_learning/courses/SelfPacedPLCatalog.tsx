@@ -1,9 +1,7 @@
 import HeroBanner from '@code-dot-org/component-library/heroBanner';
-// import {configureStore} from '@reduxjs/toolkit';
-import React, {useEffect, useState} from 'react';
-// import {Provider} from 'react-redux';
+import React, {useCallback, useEffect, useState} from 'react';
 
-import SelfPacedPLCatalogCard from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogCard';
+import SelfPacedPLCatalogSearchResults from '@cdo/apps/code-studio/pd/professional_learning/courses/SelfPacedPLCatalogSearchResults';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {
   filterByDuration,
@@ -11,11 +9,7 @@ import {
   filterByMarketingInitiative,
   filterByTopic,
 } from '@cdo/apps/templates/courseOfferings/filters/helpers';
-import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
 import {CourseOffering} from '@cdo/apps/templates/courseOfferings/types';
-// import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
-// import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import NoMatchingCoursesImage from '@cdo/static/professional-learning/courses/no-curriculum-assigned-empty-state-illustration.png';
 import PLCatalogHeroBannerImage from '@cdo/static/professional-learning/courses/selfPacedPLCatalog-HeroBanner-illustration.png';
 
 import {
@@ -64,7 +58,6 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
     setFilteredCourses,
   ]);
 
-  // console.log(selfPacedPLCourseOfferings);
   const [expandedCardKey, setExpandedCardKey] = useState('');
 
   useEffect(() => {
@@ -77,11 +70,14 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
     }
   }, [expandedCardKey, filteredCourses]);
 
-  // const updateExpandedCardKey = (key: string) => {
-  //   // If updateExpandedCardKey receives the same key as it currently is, then that indicates it's open and
-  //   // we want to close it so we set it to ''. Otherwise, we expand the card of the provided key.
-  //   setExpandedCardKey(expandedCardKey === key ? '' : key);
-  // };
+  const updateExpandedCardKey = useCallback(
+    (key: string) => {
+      // If updateExpandedCardKey receives the same key as it currently is, then that indicates it's open and
+      // we want to close it so we set it to ''. Otherwise, we expand the card of the provided key.
+      setExpandedCardKey(expandedCardKey === key ? '' : key);
+    },
+    [expandedCardKey, setExpandedCardKey]
+  );
 
   // Clears all filter selections.
   const handleClearAllFilters = () => {
@@ -91,32 +87,8 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
     );
   };
 
-  // Renders search results based on the applied filters (or shows the No matching course offerings
-  // message if no results).
-  const renderSearchResults = () => {
-    if (filteredCourses.length > 0) {
-      return (
-        <div className={style.catalogContentCards}>
-          {filteredCourses.map(courseOffering => (
-            <SelfPacedPLCatalogCard {...courseOffering} />
-          ))}
-        </div>
-      );
-    } else {
-      return (
-        <NoMatchingSearchResultsFound
-          illustrationImageProps={{src: NoMatchingCoursesImage}}
-          noResultsHeadingText="No matching courses"
-          noResultsSubHeadingText="None of our self-paced courses match your exact criteria, try broadening your search."
-          onClearAllFilters={handleClearAllFilters}
-        />
-      );
-    }
-  };
-
   return (
-    <div className={style.selfPacedPLCatalog}>
-      {/*<Provider store={configureStore({reducer: {teacherSections}})}>*/}
+    <div className={moduleStyles.selfPacedPLCatalog}>
       <HeroBanner
         className={moduleStyles.plCatalogHeroBanner}
         data-theme="Dark"
@@ -132,15 +104,13 @@ const SelfPacedPLCatalog: React.FunctionComponent<{
           setAppliedFilters={setAppliedFilters}
           handleClearAllFilters={handleClearAllFilters}
         />
-        <div>{renderSearchResults()}</div>
+        <SelfPacedPLCatalogSearchResults
+          filteredCourses={filteredCourses}
+          handleClearAllFilters={handleClearAllFilters}
+          updateExpandedCardKey={updateExpandedCardKey}
+          expandedCardKey={expandedCardKey}
+        />
       </section>
-
-      {/*<CurriculumCatalog*/}
-      {/*  curriculaData={selfPacedPLCourseOfferings}*/}
-      {/*  isInUS*/}
-      {/*  languageNativeName={'adsa'}*/}
-      {/*/>*/}
-      {/*</Provider>*/}
     </div>
   );
 };
