@@ -77,7 +77,7 @@ module AichatRubyTypes
   end
 
   define_method(
-    :InterfaceType,
+    :Interface,
     lambda do |*fields_and_types|
       fields = []
       types = {}
@@ -200,5 +200,5 @@ module AichatRubyTypes
     NumberType.new
   end
 
-  module_function :string, :number, :Optional, :InterfaceType
+  module_function :string, :number, :Optional, :Interface
 end

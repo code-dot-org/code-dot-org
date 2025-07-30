@@ -32,7 +32,7 @@ module AichatAiClientTypes
   #   mime_type: FileMessageMimeType;
   #   data: string; //base64 encoded string
   # }
-  FileMessagePartContent = InterfaceType(
+  FileMessagePartContent = Interface(
     :name, string,
     :mime_type, FileMessageMimeType,
     :data, string
@@ -42,7 +42,7 @@ module AichatAiClientTypes
   #   type: TextMessagePartType;
   #   content: TextMessagePartContent;
   # }
-  TextMessagePart = InterfaceType(
+  TextMessagePart = Interface(
     :type, TextMessagePartType,
     :content,  TextMessagePartContent
   )
@@ -51,7 +51,7 @@ module AichatAiClientTypes
   #   type: FileMessagePartType;
   #   content: FileMessagePartContent;
   # }
-  FileMessagePart = InterfaceType(
+  FileMessagePart = Interface(
     :type, FileMessagePartType,
     :content, FileMessagePartContent
   )
@@ -63,7 +63,7 @@ module AichatAiClientTypes
   #   role: MessageRole;
   #   parts: MessagePart[];
   # }
-  Message = InterfaceType(
+  Message = Interface(
     :role, MessageRole,
     :parts, MessagePart[]
   )
@@ -84,7 +84,7 @@ module AichatAiClientTypes
   #     // Actual temperature passed to 3rd party AI API (e.g. 1.6)
   #     temperature: number;
   # }
-  AiConfig = InterfaceType(
+  AiConfig = Interface(
     :model, string,
     :systemInstructions, Optional(MessagePart[]),
     :temperature, number
