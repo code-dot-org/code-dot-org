@@ -1105,6 +1105,10 @@ Then(/^I slow down execution speed$/) do
   @browser.execute_script("Maze.scale.stepSpeed = 10;")
 end
 
+Then(/^I refresh the page$/) do
+  @browser.navigate.refresh
+end
+
 Then(/^I reload the page$/) do
   page_load(true) do
     @browser.navigate.refresh
@@ -1569,6 +1573,11 @@ end
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
+end
+
+Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
+  response_json = @browser.find_element(:css, 'body').text
+  expect(response_json).to include(%Q["#{key}":#{value}])
 end
 
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
