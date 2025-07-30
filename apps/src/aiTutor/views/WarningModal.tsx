@@ -1,3 +1,9 @@
+/** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
+ *  TODO-AITUTOR: Remove
+ *
+ *  references: ./AiTutorChatWorkspace.tsx
+ **/
+
 import React, {useEffect, useState} from 'react';
 
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';

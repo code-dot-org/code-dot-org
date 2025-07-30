@@ -1,3 +1,19 @@
+/** TODO-AITUTOR: This file is referenced from a bunch of different places including new tutor,
+ *    so it will need careful review for what's still in use.
+ *
+ *  references:
+ *    AITutorFloatingActionButton (deprecated)
+ *    AITutorFooter (deprecated)
+ *    AITutorSuggestedPrompts (deprecated)
+ *    ControlButtons (needs review)
+ *    InfoPanel (needs review - that's part of new tutor hmm)
+ *    Javalab.js (needs review)
+ *    lab2Redux.ts (needs review)
+ *    AITutorTester.tsx
+ *    show.js
+ *    redux.ts
+ **/
+
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
 import _ from 'lodash';
 
