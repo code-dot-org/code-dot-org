@@ -245,10 +245,7 @@ class AnimationPicker extends React.Component {
             }
           })
           .catch(err => {
-            this.setState({
-              showFlaggedModal: true,
-              flaggedModalError: msg.animationPicker_uploadingError(),
-            });
+            this.props.onUploadError(msg.animationPicker_uploadingError());
             MetricsReporter.logError('Azure image moderation error: ' + err);
           });
       })
