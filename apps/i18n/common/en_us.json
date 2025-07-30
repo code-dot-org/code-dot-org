@@ -273,7 +273,7 @@
   "animationPicker_returnToLibrary": "Return to library",
   "animationPicker_title": "{assetType} Library",
   "animationPicker_undoRestrictedShareInstructions": "You can use Version History to undo this change.",
-  "animationPicker_unsupportedDimensions": "Please make sure the width and height of your image are both greater than 128 pixels.",
+  "animationPicker_unsupportedDimensions": "Please make sure the width and height of your image are both greater than 127 pixels.",
   "animationPicker_unsupportedType": "Sorry, this file type is not supported.",
   "animationPicker_unsupportedSize": "Please make sure the image you are trying to upload is smaller than 100 KB.",
   "animationPicker_uploadImage": "Upload image",
