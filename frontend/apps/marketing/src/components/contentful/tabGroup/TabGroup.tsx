@@ -1,4 +1,5 @@
 'use client';
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {BaseEntry} from 'contentful';
 import {useMemo} from 'react';
 
@@ -26,36 +27,46 @@ type TabGroupContentfulProps = {
 const TabGroupContentful: React.FunctionComponent<TabGroupContentfulProps> = ({
   tabs = [],
 }) => {
+  const inMemoryEntities = useInMemoryEntities();
+
   const parsedTabs: TabGroupTabModel[] = useMemo(
     () =>
-      tabs.map(tab => ({
-        value: tab.fields.tabLabel,
-        text: tab.fields.tabLabel,
-        tabContent: {
-          title: tab.fields.title,
-          description: tab.fields.description,
-          image: (() => {
-            const tabImgSrc =
-              tab.fields.image && getAbsoluteImageUrl(tab.fields.image);
+      tabs.map(tab => {
+        const resolvedImage = inMemoryEntities.maybeResolveLink(
+          tab.fields.image,
+        ) as ExperienceAsset;
+        const resolvedCtaLink = inMemoryEntities.maybeResolveLink(
+          tab.fields.ctaLink,
+        ) as LinkEntry;
+        return {
+          value: tab.fields.tabLabel,
+          text: tab.fields.tabLabel,
+          tabContent: {
+            title: tab.fields.title,
+            description: tab.fields.description,
+            image: (() => {
+              const tabImgSrc =
+                resolvedImage && getAbsoluteImageUrl(resolvedImage);
 
-            return tabImgSrc
+              return tabImgSrc
+                ? {
+                    src: tabImgSrc,
+                    alt: tab.fields.image?.fields?.description,
+                  }
+                : undefined;
+            })(),
+            button: resolvedCtaLink
               ? {
-                  src: tabImgSrc,
-                  alt: tab.fields.image?.fields?.description,
+                  href: resolvedCtaLink.fields?.primaryTarget || '#',
+                  text: resolvedCtaLink.fields?.label || '#',
+                  iconRight: resolvedCtaLink.fields?.isThisAnExternalLink
+                    ? externalLinkIconProps
+                    : undefined,
                 }
-              : undefined;
-          })(),
-          button: tab.fields.ctaLink
-            ? {
-                href: tab.fields.ctaLink.fields?.primaryTarget || '#',
-                text: tab.fields.ctaLink.fields?.label || '#',
-                iconRight: tab.fields.ctaLink.fields?.isThisAnExternalLink
-                  ? externalLinkIconProps
-                  : undefined,
-              }
-            : undefined,
-        },
-      })),
+              : undefined,
+          },
+        };
+      }),
     [tabs],
   );
 

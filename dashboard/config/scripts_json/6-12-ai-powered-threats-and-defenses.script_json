@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-25 19:23:00 UTC",
+    "serialized_at": "2025-07-29 16:50:11 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -422,6 +422,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1",
+        "lesson_activity.key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0"
+      }
+    },
+    {
+      "key": "6f78d9ec-bec1-4ec2-a680-78123eb304f2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Create a Deep Fake Script"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f78d9ec-bec1-4ec2-a680-78123eb304f2",
         "lesson_activity.key": "1478ef9c-0ea9-4aca-9a5f-6766a01e1ff0"
       }
     },
@@ -918,6 +929,28 @@
     },
     {
       "chapter": 18,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a Deep Fake Script"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "6f78d9ec-bec1-4ec2-a680-78123eb304f2"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson4-level4"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -942,7 +975,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -967,7 +1000,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -992,7 +1025,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1017,7 +1050,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1042,7 +1075,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1270,6 +1303,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
         "activity_section.key": "c8a5950d-5b8e-437f-b794-104214b8c5f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson4-level4",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson4-level4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "6f78d9ec-bec1-4ec2-a680-78123eb304f2"
       }
     },
     {
