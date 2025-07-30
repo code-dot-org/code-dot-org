@@ -180,7 +180,7 @@ class AnimationPicker extends React.Component {
       reader.onload = () => {
         const img = new Image();
         img.onload = () => {
-          resolve(img.width > 128 && img.height > 128);
+          resolve(img.width > 127 && img.height > 127);
         };
         img.onerror = reject;
         img.src = reader.result;
