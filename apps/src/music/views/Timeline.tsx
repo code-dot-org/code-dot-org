@@ -22,6 +22,7 @@ import {
 } from '../redux/musicRedux';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import {TimelineElementId} from './TimelineElement';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {useMusicSelector} from './types';
@@ -113,27 +114,23 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   }, []);
 
   const timelineElements = Array.from(
-    document.querySelectorAll<HTMLElement>('#timeline-element')
+    document.querySelectorAll<HTMLElement>(`#${TimelineElementId}`)
   );
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLButtonElement>) => {
       const currentIndex = timelineElements.indexOf(event.currentTarget);
-
+      // For arrow keys, prevent scroll action and move focus accordingly, looping at start and end
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-        // Prevent scroll action & move focus to the next element
         event.preventDefault();
-        const nextIndex = currentIndex + 1;
-        if (nextIndex < timelineElements.length) {
-          timelineElements[nextIndex].focus();
-        }
+        const nextIndex = (currentIndex + 1) % timelineElements.length;
+        timelineElements[nextIndex].focus();
       } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-        // Prevent scroll action & move focus to the previous element
         event.preventDefault();
-        const previousIndex = currentIndex - 1;
-        if (previousIndex >= 0) {
-          timelineElements[previousIndex].focus();
-        }
+        const previousIndex =
+          (currentIndex - 1 + timelineElements.length) %
+          timelineElements.length;
+        timelineElements[previousIndex].focus();
       } else if (event.key === 'Escape') {
         // Move focus back to the timeline container
         const timelineContainer = document.getElementById('timeline');
@@ -156,8 +153,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
       }
     }
     if (event.key === 'Tab') {
-      // If Tab is pressed, we want to exit the timeline.
-      // This allows users to navigate away from the timeline using keyboard.
+      // If tab is pressed, we know they are moving on to the next tabbable object
       (event.currentTarget as HTMLElement).blur();
     }
   };

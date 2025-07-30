@@ -13,6 +13,8 @@ import SoundStyle from '../utils/SoundStyle';
 
 import moduleStyles from './timeline.module.scss';
 
+export const TimelineElementId = 'timeline-element';
+
 interface TimelineElementProps {
   eventData: PlaybackEvent;
   barWidth: number;
@@ -66,13 +68,12 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
 
   return (
     <button
-      id={'timeline-element'}
+      id={TimelineElementId}
       tabIndex={-1}
       type="button"
       onKeyDown={onKeyDown}
       aria-label={friendlyLabel}
       className={classNames(
-        'timeline-element',
         moduleStyles.timelineElement,
         SoundStyle[soundType]?.classNameBackground,
         SoundStyle[soundType]?.classNameBorder,
