@@ -35,13 +35,11 @@ export function useMusicSettings(): Setting[] {
 
   useEffect(() => {
     new UserPreferences()
-      .getBlocklyTheme((error: Error | null) => {
-        return {
-          blockly: getBaseName(
-            (localStorage.getItem(BLOCKLY_THEME) || Themes.MODERN) as Themes
-          ),
-        };
-      })
+      .getBlocklyTheme((error: Error | null) =>
+        getBaseName(
+          (localStorage.getItem(BLOCKLY_THEME) || Themes.MODERN) as Themes
+        )
+      )
       .then((theme: string) => {
         setSelectedTheme(theme);
       });
