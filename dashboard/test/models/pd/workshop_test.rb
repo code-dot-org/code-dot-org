@@ -535,13 +535,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'future scope' do
-    future_workshops = [
-      # Today
-      a = create(:workshop, sessions_from: Time.zone.today),
-
-      # Next week
-      b = create(:workshop, sessions_from: Time.zone.today + 1.week)
-    ]
+    # Today
+    a = create :workshop, sessions_from: Time.zone.today
+    # Next week
+    b = create :workshop, sessions_from: Time.zone.today + 1.week
+    future_workshops = [a, b]
 
     # Excluded (not future) workshops:
     # Last week
@@ -862,10 +860,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'workshop starting date picks the day of the first session' do
-    workshop = create :workshop, sessions: [
-      session1 = create(:pd_session, start: Time.zone.today + 15.days),
-      session2 = create(:pd_session, start: Time.zone.today + 20.days)
-    ]
+    session1 = create :pd_session, start: Time.zone.today + 15.days
+    session2 = create :pd_session, start: Time.zone.today + 20.days
+    workshop = create :workshop, sessions: [session1, session2]
     assert_equal session1.start, workshop.workshop_starting_date
     assert_equal session2.start, workshop.workshop_ending_date
   end

@@ -277,11 +277,13 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryBot.create :summer_workshop,
+  workshop = FactoryBot.create(
+    :summer_workshop,
     :ended,
     num_sessions: 5,
     enrolled_and_attending_users: 10,
     num_facilitators: 2
+  )
 
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop

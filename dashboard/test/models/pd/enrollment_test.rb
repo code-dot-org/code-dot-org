@@ -298,10 +298,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     workshop_1.save(validate: false)
     workshop_2 = build :csf_intro_workshop
     workshop_2.save(validate: false)
-    enrollments = [
-      enrollment_no_survey = create(:pd_enrollment, workshop: workshop_1),
-      enrollment_with_processed_survey = create(:pd_enrollment, :from_user, workshop: workshop_2)
-    ]
+
+    enrollment_no_survey = create :pd_enrollment, workshop: workshop_1
+    enrollment_with_processed_survey = create :pd_enrollment, :from_user, workshop: workshop_2
+    enrollments = [enrollment_no_survey, enrollment_with_processed_survey]
 
     existing_survey = create :csf_intro_post_foorm_submission,
       :answers_high,
