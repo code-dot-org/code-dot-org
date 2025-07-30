@@ -37,7 +37,7 @@ const {
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  canViewStudentAIChatMessages,
+  canEnableAITutor,
   sectionOrder,
   providers,
 } = scriptData;
@@ -70,7 +70,7 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
 
-  const showAITutorTab = canViewStudentAIChatMessages;
+  const showAITutorTab = canEnableAITutor;
 
   if (sections.length > 0) {
     const selectedSectionFromList = window.location.pathname.includes(
