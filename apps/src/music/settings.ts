@@ -4,7 +4,7 @@ import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import {getBaseName, setWorkspaceTheme} from '../blockly/utils';
-import {Setting} from '../lab2/views/components/Settings/SettingsDropdowns';
+import {Setting} from '../lab2/views/components/Settings/SettingsDropdown';
 import UserPreferences from '../lib/util/UserPreferences';
 
 const blockThemeOptions = [

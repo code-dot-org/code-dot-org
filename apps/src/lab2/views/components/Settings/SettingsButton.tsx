@@ -8,7 +8,7 @@ import React, {useCallback, useRef, useState} from 'react';
 
 import commonI18n from '@cdo/locale';
 
-import SettingsDropdowns, {Setting} from './SettingsDropdowns';
+import SettingsDropdown, {Setting} from './SettingsDropdown';
 
 interface SettingsButtonProps {
   settings: Setting[];
@@ -50,7 +50,7 @@ const SettingsButton: React.FC<SettingsButtonProps> = ({
         />
       </WithTooltip>
       {isOpen && (
-        <SettingsDropdowns
+        <SettingsDropdown
           closeDropdown={closeSettings}
           buttonRef={buttonContainerRef}
           settings={settings}
