@@ -95,6 +95,10 @@ And Here is some example Blockly code for our system.  In this case, we are gene
       'Put this into a function and call this function from the main block.\n'
   );
 
+  const [generating, setGenerating] = useState<
+    undefined | 'asking' | 'generating'
+  >(undefined);
+
   const selectPack = useCallback(
     (packId: string) => {
       if (!library) {
@@ -111,6 +115,7 @@ And Here is some example Blockly code for our system.  In this case, we are gene
   const setSongToDefault = useCallback(() => {}, []);
   const generateSong = useCallback(() => {
     console.log('starting ask');
+    setGenerating('asking');
     askAi(
       'here is the contxt:\n' +
         context1 +
@@ -121,6 +126,8 @@ And Here is some example Blockly code for our system.  In this case, we are gene
 
       console.log('starting second ask');
 
+      setGenerating('generating');
+
       askAi(
         'here is the contxt:\n' +
           context2 +
@@ -128,6 +135,8 @@ And Here is some example Blockly code for our system.  In this case, we are gene
           result[1].chatMessageText
       ).then(result2 => {
         console.log(result2[1].chatMessageText);
+
+        setGenerating(undefined);
 
         // const jsonString = result2[1].chatMessageText;
 
@@ -161,7 +170,7 @@ And Here is some example Blockly code for our system.  In this case, we are gene
             visualAppearance="heading-lg"
             className={styles.heading}
           >
-            AI
+            Generate a song with AI
           </Typography>
 
           <div
@@ -171,28 +180,39 @@ And Here is some example Blockly code for our system.  In this case, we are gene
                 styles.bodyStacked
             )}
           >
+            <div> &nbsp; </div>
+            {/*
             <div>Generate a song with AI</div>
+            */}
           </div>
 
           <div className={styles.packsContainer}>
             <textarea
               onChange={evt => setText(evt.target.value)}
               value={text}
-              rows={10}
+              rows={4}
               className={styles.textArea}
             />
           </div>
 
+          <div className={styles.status}>
+            {generating === 'asking'
+              ? 'Generating a song...'
+              : generating === 'generating'
+              ? 'Converting to blocks...'
+              : ''}
+          </div>
+
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
-              <Button
+              {/*<Button
                 ariaLabel={musicI18n.skip()}
                 text={musicI18n.skip()}
                 type="secondary"
                 color="purple"
                 size="s"
                 onClick={setSongToDefault}
-              />
+              />*/}
               <Button
                 ariaLabel={'Generate song'}
                 text={'Generate song'}
