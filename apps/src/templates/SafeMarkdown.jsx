@@ -29,6 +29,10 @@ class SafeMarkdown extends React.Component {
     unwrapped: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string,
+    // If we upgrade to prop-types >= 15.7.0 we should use `PropTypes.elementType`
+    // which looks for a react component function or class rather than any function/class.
+    // https://github.com/facebook/prop-types/blob/main/CHANGELOG.md#1570
+    rehypeMap: PropTypes.objectOf(PropTypes.func),
   };
 
   render() {
@@ -37,8 +41,8 @@ class SafeMarkdown extends React.Component {
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
     const processor = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks
-      : markdownToReact;
+      ? markdownToReactExternalLinks(this.props)
+      : markdownToReact(this.props);
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
@@ -131,38 +135,41 @@ const localizationComponentWrappers = {
   },
 };
 
-const markdownToReact = unified()
-  .use(Processor.getParser())
-  // include custom plugins
-  .use([
-    clickableText,
-    expandableImages,
-    visualCodeBlock,
-    xmlAsTopLevelBlock,
-    details,
-  ])
-  // convert markdown to an HTML Abstract Syntax Tree (HAST)
-  .use(remarkRehype, {
-    // include any raw HTML in the markdown as raw HTML nodes in the HAST
-    allowDangerousHtml: true,
-  })
-  // parse the raw HTML nodes in the HAST to actual HAST nodes
-  .use(rehypeRaw)
-  // sanitize the HAST
-  .use(rehypeSanitize, schema)
-  // convert the HAST to React
-  .use(rehypeReact, {
-    createElement: React.createElement,
-    // Use React component wrappers for Blockly XML elements to prevent
-    // React from warning us about invalid components.
-    components: {
-      ...blocklyComponentWrappers,
-      ...localizationComponentWrappers,
-    },
-  });
+const markdownToReact = props =>
+  unified()
+    .use(Processor.getParser())
+    // include custom plugins
+    .use([
+      clickableText,
+      expandableImages,
+      visualCodeBlock,
+      xmlAsTopLevelBlock,
+      details,
+    ])
+    // convert markdown to an HTML Abstract Syntax Tree (HAST)
+    .use(remarkRehype, {
+      // include any raw HTML in the markdown as raw HTML nodes in the HAST
+      allowDangerousHtml: true,
+    })
+    // parse the raw HTML nodes in the HAST to actual HAST nodes
+    .use(rehypeRaw)
+    // sanitize the HAST
+    .use(rehypeSanitize, schema)
+    // convert the HAST to React
+    .use(rehypeReact, {
+      createElement: React.createElement,
+      // Use React component wrappers for Blockly XML elements to prevent
+      // React from warning us about invalid components.
+      components: {
+        ...blocklyComponentWrappers,
+        ...localizationComponentWrappers,
+        ...props.rehypeMap,
+      },
+    });
 
-const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {
-  links: 'all',
-});
+const markdownToReactExternalLinks = props =>
+  markdownToReact(props).use(externalLinks, {
+    links: 'all',
+  });
 
 export default SafeMarkdown;
