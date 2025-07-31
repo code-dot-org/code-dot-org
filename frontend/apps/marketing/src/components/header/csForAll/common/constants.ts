@@ -1,3 +1,3 @@
 // Hide the main list of links on desktop and
-// show the drawer at this breakpoint.
-export const mobileBreakpoint = 1075; // px
+// show the Drawer at this breakpoint.
+export const DRAWER_BREAKPOINT = 1075; // px

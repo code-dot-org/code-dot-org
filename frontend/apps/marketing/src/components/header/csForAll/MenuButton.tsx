@@ -3,7 +3,7 @@ import IconButton from '@mui/material/IconButton';
 
 import theme from '@/themes/csforall';
 
-import {mobileBreakpoint} from './common/constants';
+import {DRAWER_BREAKPOINT} from './common/constants';
 
 export interface MenuButtonProps {
   /** Click handler for the menu button */
@@ -13,7 +13,7 @@ export interface MenuButtonProps {
 const styles = {
   menuButton: {
     display: 'none',
-    [`@media (max-width: ${mobileBreakpoint}px)`]: {
+    [`@media (max-width: ${DRAWER_BREAKPOINT}px)`]: {
       display: 'flex',
     },
     '& svg': {
