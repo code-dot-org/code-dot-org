@@ -94,9 +94,11 @@ const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
   );
 
   const drawer = (
-    <Box onClick={handleDrawerToggle}>
-      {getSiteLogo()}
-      {getSiteLinks('mobile')}
+    <Box onClick={handleDrawerToggle} sx={styles.drawerContent}>
+      <Box>
+        {getSiteLogo()}
+        {getSiteLinks('mobile')}
+      </Box>
       {getCallToAction()}
     </Box>
   );
@@ -244,6 +246,12 @@ const styles = {
         width: '100%',
       },
     },
+  },
+  drawerContent: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    height: 'inherit',
   },
   closeButton: {
     width: 'auto',
