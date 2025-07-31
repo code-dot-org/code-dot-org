@@ -14,8 +14,21 @@ const createStory = (theme: string) => ({
   globals: {theme},
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
-      <Link href="about:blank">Default Link</Link>
-      <Link href="about:blank" color="secondary">
+      <Link
+        href="about:blank"
+        removeMarginBottom={false}
+        size={'s'}
+        isLinkExternal={false}
+      >
+        Default Link
+      </Link>
+      <Link
+        href="about:blank"
+        color="white"
+        removeMarginBottom={false}
+        size={'m'}
+        isLinkExternal={true}
+      >
         Secondary Link
       </Link>
     </div>
