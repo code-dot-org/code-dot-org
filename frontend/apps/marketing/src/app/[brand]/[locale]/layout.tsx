@@ -5,7 +5,7 @@ import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
 import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
-import Header from '@/components/header';
+import HeaderCorporateSite from '@/components/header/corporateSite/HeaderCorporateSite';
 import HeaderCSforAll from '@/components/header/csForAll/HeaderCSforAll';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
@@ -44,7 +44,7 @@ export default async function Layout({
       case Brand.CS_FOR_ALL:
         return <HeaderCSforAll />;
       case Brand.CODE_DOT_ORG:
-        return <Header />;
+        return <HeaderCorporateSite />;
     }
   };
   // Get Footer component based on brand
