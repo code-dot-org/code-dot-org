@@ -22,7 +22,7 @@ export const commonStyles = {
   leftSide: {
     display: 'flex',
     alignItems: 'center',
-    gap: theme.spacing(4),
+    gap: theme.spacing(3),
   },
   drawer: {
     '& .MuiDrawer-paper': {
