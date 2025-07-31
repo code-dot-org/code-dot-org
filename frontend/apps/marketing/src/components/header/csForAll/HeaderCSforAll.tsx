@@ -163,7 +163,7 @@ const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
   );
 };
 
-const breakpoint = 1089; // px
+const breakpoint = 1075; // px
 const styles = {
   appBar: {
     backgroundColor: theme.palette.background.paper,
@@ -186,7 +186,7 @@ const styles = {
     '& .MuiList-root': {
       display: 'flex',
       flexDirection: 'row',
-      gap: theme.spacing(2),
+      gap: theme.spacing(1),
       [`@media (max-width: ${breakpoint}px)`]: {
         display: 'none',
       },
@@ -210,12 +210,12 @@ const styles = {
   menuButton: {
     display: 'none',
     [`@media (max-width: ${breakpoint}px)`]: {
-      display: 'block',
+      display: 'flex',
     },
     '& svg': {
       color: theme.palette.common.black,
     },
-    '&:focus': {
+    '&:focus-visible': {
       outline: `2px solid ${theme.palette.primary.main}`,
     },
   },
@@ -224,7 +224,8 @@ const styles = {
       boxSizing: 'border-box',
       maxWidth: '430px',
       width: '100%',
-      padding: 4,
+      paddingBlock: theme.spacing(3.5),
+      paddingInline: theme.spacing(4),
       '& .MuiListItem-root': {
         padding: 0,
         paddingBottom: theme.spacing(4),
@@ -247,12 +248,13 @@ const styles = {
   closeButton: {
     width: 'auto',
     position: 'absolute',
-    insetBlockStart: theme.spacing(3),
-    insetInlineEnd: theme.spacing(2),
+    insetBlockStart: theme.spacing(2.25),
+    insetInlineEnd: theme.spacing(1.5),
+    zIndex: 1000,
     '& svg': {
       color: theme.palette.common.black,
     },
-    '&:focus': {
+    '&:focus-visible': {
       outline: `2px solid ${theme.palette.primary.main}`,
     },
   },

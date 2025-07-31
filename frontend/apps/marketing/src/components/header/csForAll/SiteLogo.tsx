@@ -15,6 +15,7 @@ const styles = {
     marginBottom: 0,
     lineHeight: 0,
     display: 'block',
+    width: 'fit-content',
     '& img': {
       width: 160,
     },
