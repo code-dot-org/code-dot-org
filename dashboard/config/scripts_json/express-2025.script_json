@@ -21,7 +21,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 15:32:31 UTC",
+    "serialized_at": "2025-07-30 18:42:31 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20754,16 +20755,16 @@
       }
     },
     {
-      "name": "CSF - Express - Slides 2024-2025",
-      "url": "https://docs.google.com/presentation/d/1tz97eQBsl_iE_YdL8bSqICMEwH_Wd-hiswGmRHoBp5I/template/preview",
-      "key": "csf_-_express_-_slides_2024-2025",
+      "name": "CSF - Express - Slides 2025-26",
+      "url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/template/preview",
+      "key": "csf_-_express_-_slides_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1tz97eQBsl_iE_YdL8bSqICMEwH_Wd-hiswGmRHoBp5I/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1aQMgvLRgD5hUvOj5K_UHcDEfXRb3cVT30J2jO30J3rg/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -20848,19 +20849,6 @@
       },
       "seeding_key": {
         "resource.key": "helpful_hints_in_sprite_lab"
-      }
-    },
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
-      "key": "lesson_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides"
       }
     },
     {
@@ -21032,13 +21020,13 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Counting with Variables",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21050,7 +21038,7 @@
     {
       "seeding_key": {
         "lesson.key": "Creating Art with Code",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21068,7 +21056,7 @@
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21104,7 +21092,7 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging in Maze",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21128,7 +21116,7 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21146,13 +21134,13 @@
     {
       "seeding_key": {
         "lesson.key": "For Loops with Artist",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "For Loops with Bee",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21164,7 +21152,7 @@
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21176,7 +21164,7 @@
     {
       "seeding_key": {
         "lesson.key": "Functions with Artist",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21188,13 +21176,13 @@
     {
       "seeding_key": {
         "lesson.key": "Harvesting with Conditionals",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21206,13 +21194,13 @@
     {
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops with Rey and BB-8",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21230,7 +21218,7 @@
     {
       "seeding_key": {
         "lesson.key": "Making Sprites",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21242,19 +21230,25 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "csf_-_express_-_slides_2025-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
         "resource.key": "helpful_hints_in_sprite_lab"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Sticker Art",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Virtual Pet",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21266,13 +21260,13 @@
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Programming with Angry Birds",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21290,19 +21284,19 @@
     {
       "seeding_key": {
         "lesson.key": "Snowflakes with Anna and Elsa",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites in Action",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Swimming Fish with Sprite Lab",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21320,7 +21314,7 @@
     {
       "seeding_key": {
         "lesson.key": "Text and Prompts",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21332,13 +21326,13 @@
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Using Variables with the Artist",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21350,7 +21344,7 @@
     {
       "seeding_key": {
         "lesson.key": "Variables with the Bee",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21362,7 +21356,7 @@
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "resource.key": "csf_-_express_-_slides_2024-2025"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21374,7 +21368,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
@@ -21386,13 +21380,13 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨Producer Power",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_-_express_-_slides_2025-26"
       }
     }
   ],

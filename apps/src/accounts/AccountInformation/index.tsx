@@ -142,23 +142,36 @@ export const AccountInformation: React.FC<AccountInformationProps> = ({
   const handleSubmitAccountSettingsUpdate = async () => {
     resetMessages();
     setErrors({});
-    const userUpdates = {
+
+    const userUpdates: {[key: string]: unknown} = {
       name,
-      username,
-      given_name: givenName,
-      family_name: familyName,
       password,
       password_confirmation: passwordConfirmation,
       current_password: currentPassword,
       age: isStudent ? age : '21+',
-      gender_student_input: isStudent && gender ? gender : undefined,
-      us_state: isStudent && isUSA ? usState : undefined,
-      country_code: isStudent ? countryCode : undefined,
-      facilitator_info_attributes: isFacilitator
-        ? {bio: facilitatorBio}
-        : undefined,
-      educator_role: !isStudent && educatorRole ? educatorRole : undefined,
     };
+    if (userUsername) {
+      userUpdates['username'] = username;
+    }
+    if (isStudent) {
+      userUpdates['country_code'] = countryCode;
+      if (showGenderInput) {
+        userUpdates['gender_student_input'] = gender;
+      }
+      if (isUSA) {
+        userUpdates['us_state'] = usState;
+      }
+    } else {
+      userUpdates['given_name'] = givenName;
+      userUpdates['family_name'] = familyName;
+      if (educatorRole) {
+        userUpdates['educator_role'] = educatorRole;
+      }
+    }
+    if (isFacilitator) {
+      userUpdates['facilitator_info_attributes'] = {bio: facilitatorBio};
+    }
+
     const response = await fetch('/users', {
       method: 'PUT',
       headers: {

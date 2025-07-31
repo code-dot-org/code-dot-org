@@ -1,0 +1,51 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1c'
+
+markdown <<MARKDOWN
+#Diego M. - User Profile
+
+Go through the audit logs for Diego to find any evidence of fraud.
+
+**[Click here](https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+## LOGIN ACTIVITY LOG
+
+<img src="https://images.code.org/9ff4b331cd57a4c8d556558c56421621-image-1753924768816.png" style="float:right; width:45%">
+
+| Date&nbsp;     |   Time    |     Device      |   IP Location   | Outcome |   OS     | Browser |
+|----------|-----------|------------------|------------------|---------|----------|---------|
+| Sept 12  |  9:15 PM  | iPhone SE        | El Paso, TX      | Success | iOS      | Safari  |
+| Sept 13  | 10:35 AM &nbsp; | Chromebook       | El Paso, TX      | Success | ChromeOS&nbsp; | Chrome  |
+| Sept 13  |  4:50 PM  | iPhone SE        | El Paso, TX      | Success | iOS      | Safari  |
+| Sept 14  |  2:05 AM  | Xbox Console  &nbsp;   | Houston, TX      | Failed  | Xbox OS  | Unknown |
+| Sept 14  |  2:09 AM  | Xbox Console     | Houston, TX      | Success | Xbox OS  | Unknown |
+| Sept 14  |  2:13 AM  | Xbox Console     | Houston, TX      | Success | Xbox OS  | Unknown |
+| Sept 14  |  2:15 AM  | Xbox Console     | Houston, TX      | Success | Xbox OS  | Unknown |
+| Sept 14  |  2:22 AM  | iPhone SE        | El Paso, TX      | Success | iOS      | Safari  |
+| Sept 14  |  7:45 AM  | Chromebook       | El Paso, TX      | Success | ChromeOS | Chrome  |
+
+
+---
+
+## LOCATION HISTORY LOG
+| Date &nbsp;    |   Time    | Ping Type |            Location             |
+|----------|-----------|-----------|---------------------------------|
+| Sept 12  |  9:10 PM  | Wi-Fi     | Home – El Paso, TX              |
+| Sept 13  | 10:30 AM &nbsp; | Wi-Fi     | School – El Paso, TX            |
+| Sept 13  |  4:45 PM  | Cell Tower&nbsp;| Rec Center – El Paso, TX        |
+| Sept 14  |  2:00 AM  | None      | —                               |
+| Sept 14  |  2:10 AM  | Wi-Fi     | Houston, TX                     |
+| Sept 14  |  2:22 AM  | Wi-Fi     | Home – El Paso, TX              |
+| Sept 14  |  7:40 AM  | Wi-Fi     | School – El Paso, TX            |
+
+---
+
+## TRANSACTION HISTORY LOG
+| Date &nbsp;    |   Time &nbsp;   |              Merchant              | Amount   |   Location   |     Method     |
+|----------|-----------|-------------------------------------|----------|--------------|----------------|
+| Sept 12  |  9:20 PM  | Taco Zone                           | &#36;7.80   | El Paso, TX  | Visa Gift Card |
+| Sept 13  |  5:00 PM  | Xbox Game Store                     | &#36;19.99  | Online       | Visa Gift Card |
+| Sept 14  |  2:12 AM  | Crypto Mining App Subscription &nbsp;     | &#36;59.99  | Houston, TX&nbsp;  | Visa Gift Card |
+| Sept 14  |  2:16 AM  | DarkEdge VPN Pro                    | &#36;12.49  | Houston, TX  | Visa Gift Card |
+| Sept 14  |  7:47 AM  | Coffee Cactus                       | &#36;4.50   | El Paso, TX  | Visa Gift Card |
+
+MARKDOWN

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-18 19:16:57 UTC",
+    "serialized_at": "2025-07-30 15:17:57 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -911,7 +911,7 @@
       "key": "d66fa24a-c9c6-4813-ac38-760983c67e7b",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. \n* If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n* If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n* If you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n**Do This:** Create a class section on Code Studio.\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n* You can either...\n\n\t* Go to the [r how_to_videos/csp/2025] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
+        "description": "**Do This:** Ensure you are registered on Code Studio as a \"verified\" teacher account\n\n* Anyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Principles teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. \n* If you attended a Code.org 5-day workshop during the summer, you should already have this access.\n* If not, you need to verify your teacher account. Please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take 5-7 business days to become a verified teacher, so please do this step early!\n\n**Do This:** Create a class section on Code Studio.\n\n![](https://images.code.org/7faaa833d7aea4ddbd943ed1f2bd0ed0-sec-setup 1.png)\n\n\n* You can either...\n\n\t* Go to the [r how_to_videos/csp/2025] for a video walkthrough of these steps and more on navigating your Code.org account.\n\n\t  Or...\n\n\t* Follow these steps to create a section:\n\n\t\t1. Navigate to the [My Dashboard](https://studio.code.org/home)\n\t\t2. Click 'New section' under 'Classroom Sections'\n\t\t3. Choose 'Email Logins' \n\t\t\t* If logged on through Google you can choose to sync to your Google Classroom.\n\t\t4. Give your section a name, and choose the most appropriate grade level of students in your class\n\t\t5. Set the course to be \"CS Principles\"\n\t\t6. Set the unit to be \"Unit 1: Digital Information\"\n\t\t7. *If you're NOT using Google Classroom:* Once the section is created, click the name of the section to show the unique \"join link\" for your section.\n",
         "name": "Before your first class\r"
       },
       "seeding_key": {
@@ -946,7 +946,7 @@
       "key": "5be698c2-e2da-41f7-9628-759322818051",
       "position": 5,
       "properties": {
-        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.\n* Once students are looking at the Unit 1 overview page, they will be ready to take the CSP Pre-Course survey",
+        "description": "* Students should also see a small green bar at the top of their page that says 'You've successfully joined ...'\n* Have students navigate to the course on the home page.\n* From the *student's* homepage at [studio.code.org](https://studio.code.org) they should see a \"tile\" for Computer Science Principles. Click 'View course', then go to Unit 1.",
         "tips": [
           {
             "type": "teachingTip",
@@ -963,7 +963,7 @@
       "key": "629c7286-8015-438c-8c5e-b69c52793147",
       "position": 1,
       "properties": {
-        "description": "- Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general. Let's take the CSP Pre-Course Survey.",
+        "description": "- Welcome to Computer Science Principles! This year we’re going to learn a lot about computer science, but before we begin, we want to learn a little bit about you and your thoughts on computer science in general.",
         "name": "Teacher Message\r",
         "remarks": true
       },
@@ -973,26 +973,8 @@
       }
     },
     {
-      "key": "61969684-b756-4391-b4bb-4babfe461fc1",
-      "position": 2,
-      "properties": {
-        "description": "**Do This:** Students can find a link to the survey in Code Studio as the first item on the Unit 1 overview page. To ensure that students only take the survey at the appropriate time, it is \"locked\" and unviewable by them until you \"unlock\" the survey. The [r how_to_administer_a_locked_assessment/csp/2025] document provides details on how to do that when you are ready. Note that the instructions for administering an assessment and a survey are the same.    \r\n\r\n<img src=\"https://curriculum.code.org/media/uploads/presurvey.png\" style=\"width:400px\">",
-        "name": "Important! Have your students take the CSP Pre-Course Survey!\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**\"Why do the pre-course survey?\"**\n\n* A major goal of CS Principles is to broaden participation in computer science.  \n* It is *crucial* therefore to have insight into students' attitidues and beliefs about computer science *before* the course so that we can measure the amount of change that occured *after* the course is over.\n\n* Please note that this survey is **anonymous for students**\n* Completing it also helps us understand important improvements we can make to the curriculum to improve the teacher and student experience.\n   \nPlease help by having your students contribute to this vital dataset.  Their voices make the difference!\n\n**How much time does it take?**\n\n* The survey is roughly 40 quick response items. We expect it to take 5-10 minutes to complete.   You might consider administering it on an admin day at school, or as an early homework.\n* Because it is a pre-course survey it is important that students take it as early in the course as possible, before they have had much (or any) exposure to the class so that we may accurately gauge changes in attitudes and beliefs caused by the course.\n\nThank you!\n\n-- The Code.org Team\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "61969684-b756-4391-b4bb-4babfe461fc1",
-        "lesson_activity.key": "58794bff-3986-4826-8e53-1aab53a82d19"
-      }
-    },
-    {
       "key": "11e12c28-0d84-42ee-ab4f-dfad6b4be782",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "One thing that makes this class unique is that you have to invent solutions to problems and create things all the time, both alone and with others. Everyone has a unique and creative perspective they bring to the table.\r\n    \r\nLet’s start by seeing how creative we can be right now!",
         "name": "Topic Brainstorm\r",
@@ -1005,7 +987,7 @@
     },
     {
       "key": "eb846378-c787-40a2-974a-63fe2d14f54a",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "**Do This:** Take out a journal or a piece of paper."
       },
@@ -1016,7 +998,7 @@
     },
     {
       "key": "ace85fed-5755-4d69-becb-5ab2f286d05b",
-      "position": 5,
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -1032,7 +1014,7 @@
     },
     {
       "key": "c251fa8a-239a-4ad6-8550-8823d6c69285",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\""
       },
@@ -1043,7 +1025,7 @@
     },
     {
       "key": "b3bf8a5a-1b31-4729-b6de-33f149647433",
-      "position": 7,
+      "position": 6,
       "properties": {
         "tips": [
           {
@@ -1059,7 +1041,7 @@
     },
     {
       "key": "e4b98ea9-71d1-4858-af10-3f9ac8178d58",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": " **Discuss:** With a partner or a small group:\r\n\r"
       },
@@ -1070,7 +1052,7 @@
     },
     {
       "key": "776b324a-bd41-47d6-ac90-5df93db1e15e",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "* introduce yourself\r\n* explain the thing you know a lot about\r\n* tell the group something interesting about that topic"
       },

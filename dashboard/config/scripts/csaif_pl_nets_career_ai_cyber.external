@@ -1,0 +1,61 @@
+name 'csaif_pl_nets_career_AI_cyber'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Connections Overview
+
+#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
+
+#### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how programming skills apply across various fields. 
+
+<h2 style="text-align: center;">Emerging Technologies</h2>
+
+ <div style="display: flex; gap: 10px; justify-content: center; max-width: 100%; margin: auto;">
+        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/c09054178b1d5e8005cbe3affc177408-image-1740673501859.png" alt="AI Icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">AI & Gen AI</div>
+        </div>
+        
+  <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/597a652393217e1d02ff8f5cf2ccde70-image-1740673587707.png" alt="Robot icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Robotics</div>
+        </div>
+        
+  <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/5431817363ad35c4b40f08124720304f-image-1740673640875.png" alt="Internet of Things icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Internet of Things</div>
+        </div>
+        
+        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/1ab50e0c0cac05336f90e173da024fe8-image-1740673745086.png" alt="Quantum computing icon" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Quantum Computing</div>
+        </div>
+        
+        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/cab7579927625e6e640f32414b928b53-image-1740674002939.png" alt="Icon of woman using agumented realtiy glasses" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">VR & AR</div>
+        </div>
+        
+        <div style="background-color: #f5f5f5; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); border-radius: 6px; width: 100px; height: 125px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 5px;">
+            <img src="https://images.code.org/95cbb6971b46cde1d8effd34f7dc13c3-image-1740674091132.png" alt="Icon of robotic automation manufacturing" style="width: 70px; height: 70px; object-fit: cover; border-radius: 4px;">
+            <div style="font-size: 12pt; font-weight: bold; margin-top: 5px;">Automation</div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;"><strong>As you teach</strong>, consider ways to make these career connections meaningful:</p>
+        <ul style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 20px;">
+            <li><strong>Highlight Diverse Roles</strong> – Showcase a range of computing careers, from software development to AI ethics, to help students see multiple pathways.</li><br>
+            <li><strong>Encourage Reflection</strong> – Have students consider how their personal interests—whether in gaming, art, science, or social issues—connect to computing careers.</li><br>
+            <li><strong>Invite Guest Speakers</strong> – Bringing in professionals (virtually or in person) can provide insight into different career journeys and inspire students.</li><br>
+            <li><strong>Make Connections Ongoing</strong> – Reinforce career relevance throughout the unit, not just at the beginning, by tying discussions back to real-world applications.</li>
+        </ul>
+    </div>
+
+
+MARKDOWN

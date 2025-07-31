@@ -4,21 +4,12 @@
 
 import * as GoogleBlockly from 'blockly/core';
 
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
-import {
-  Themes,
-  MenuOptionStates,
-  BLOCKLY_THEME,
-  DARK_THEME_SUFFIX,
-  BLOCK_TYPES,
-} from '../constants';
+import {Themes, MenuOptionStates, BLOCK_TYPES} from '../constants';
 import {ExtendedBlockSvg} from '../types';
-import {getBaseName, isDarkTheme, setThemeAndRenderBlocks} from '../utils';
+import {getBaseName, setWorkspaceTheme} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -451,20 +442,10 @@ const registerTheme = function (name: Themes, label: string, weight: number) {
       }
     },
     callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      // Save the theme to user preferences, falling back to localStorage for signed-out users.
-      new UserPreferences().setBlocklyTheme(name, () =>
-        localStorage.setItem(BLOCKLY_THEME, name)
-      );
-      const currentTheme = scope.workspace?.getTheme();
-      const themeName =
-        name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
-      setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
-      const analyticsData = Blockly.analyticsData;
-      analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-        setting: EVENTS.BLOCKLY_SETTING_THEME,
-        value: name,
-        ...analyticsData,
-      });
+      if (!scope.workspace) {
+        return;
+      }
+      setWorkspaceTheme(scope.workspace, name);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
     id: name + 'ThemeOption',
@@ -579,16 +560,6 @@ function isCurrentTheme(
   );
 }
 
-function setAllWorkspacesTheme(
-  newTheme: GoogleBlockly.Theme,
-  previousTheme: GoogleBlockly.Theme | undefined
-) {
-  Blockly.Workspace.getAll().forEach(baseWorkspace => {
-    // Headless workspaces do not have the ability to set the theme.
-    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
-    setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
-  });
-}
 /**
  * Unregister some default options. We do this either because the options are needlessly
  * advanced for our target users or because the options have undesired impacts.
