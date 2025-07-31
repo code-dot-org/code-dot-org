@@ -489,6 +489,9 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
     audioCommands.stopSound({url: url});
   }
 
+  callback(true);
+
+  /*
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -497,6 +500,7 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+  */
 };
 
 Dance.prototype.playSound = function (soundName, options) {

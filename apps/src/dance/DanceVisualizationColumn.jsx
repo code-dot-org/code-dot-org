@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import DCDO from '@cdo/apps/dcdo';
+import MiniMusicPlayer from '@cdo/apps/music/views/MiniMusicPlayer';
 import experiments from '@cdo/apps/util/experiments';
 
 import AgeDialog from '../templates/AgeDialog';
@@ -134,6 +135,13 @@ class DanceVisualizationColumn extends React.Component {
           {this.props.currentAiModalBlockId && (
             <DanceAiModal playSound={playSound} />
           )}
+          <div style={{position: 'absolute', bottom: 40}}>
+            <MiniMusicPlayer
+              projects={[{name: 'my project', id: '-aPklDqjwvXjH27vdIsYtg'}]}
+              libraryName="launch2024"
+              playing={levelIsRunning}
+            />
+          </div>
         </div>
       </div>
     );
