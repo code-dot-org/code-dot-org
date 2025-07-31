@@ -48,17 +48,7 @@ const SettingsModal = () => {
           gap: '6px',
         }}
       >
-        <label
-          htmlFor="theme"
-          style={{
-            minWidth: '150px',
-            fontSize: '14px',
-            fontWeight: 500,
-            margin: '2px',
-          }}
-        >
-          {commonI18n.blocklyTheme()}
-        </label>
+        <p>{commonI18n.blocklyTheme()}</p>
         <SimpleDropdown
           name="theme"
           items={themeOptions}
