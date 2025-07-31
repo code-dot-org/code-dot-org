@@ -33,7 +33,7 @@ const LinkList = ({linkList, ariaLabel, className}: LinkListProps) => {
       sx={{padding: 0}}
     >
       {linkList?.map(
-        ({key, label, href, typography = 'body2', ...linkProps}) => (
+        ({key, label, href, typography = 'body3', ...linkProps}) => (
           <ListItem key={key}>
             <Typography
               variant={typography}
