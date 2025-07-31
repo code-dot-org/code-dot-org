@@ -83,6 +83,7 @@
     "@applitools/eyes-playwright": "^1.36.3",
     "@next/eslint-plugin-next": "^15.0.3",
     "@playwright/test": "~1.49.1",
+    "@storybook/nextjs-vite": "9.0.18",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",

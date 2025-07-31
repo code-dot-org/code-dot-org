@@ -1500,6 +1500,7 @@ __metadata:
     "@statsig/react-bindings": "npm:^3.14.1"
     "@statsig/statsig-node-core": "npm:^0.0.8"
     "@statsig/web-analytics": "npm:^3.14.1"
+    "@storybook/nextjs-vite": "npm:9.0.18"
     "@testing-library/dom": "npm:^10.4.0"
     "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.2.0"
