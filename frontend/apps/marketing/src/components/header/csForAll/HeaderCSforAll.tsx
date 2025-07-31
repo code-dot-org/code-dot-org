@@ -17,10 +17,10 @@ import React, {
   useState,
 } from 'react';
 
-import Button, {ButtonProps} from '@/components/contentful/button';
 import theme from '@/themes/csforall';
 import logoImage from '@public/images/csforall-logo.svg';
 
+import CallToAction, {CallToActionProps} from './CallToAction';
 import SiteLogo, {SiteLogoProps} from './SiteLogo';
 
 export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -28,17 +28,16 @@ export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   label: string;
   href: string;
 }
-
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Site links */
   siteLinks?: SiteLink[];
-  /** Call to action button */
-  callToAction?: ButtonProps;
   /** Custom class */
   className?: string;
 }
 
-const defaultProps: HeaderProps & {logo: SiteLogoProps} = {
+const defaultProps: HeaderProps & {logo: SiteLogoProps} & {
+  callToAction: CallToActionProps;
+} = {
   logo: {
     label: 'CSforAll',
     href: '/',
@@ -58,9 +57,110 @@ const defaultProps: HeaderProps & {logo: SiteLogoProps} = {
   callToAction: {
     type: 'emphasized',
     size: 'small',
-    text: 'Contact Us',
-    href: '/signup',
+    text: 'Get Involved',
+    href: '/get-involved',
   },
+};
+
+const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(prevState => !prevState);
+  };
+
+  // Get Site Logo Component
+  const getSiteLogo = () => <SiteLogo {...defaultProps.logo} />;
+
+  // Get Call to Action Component
+  const getCallToAction = () => (
+    <CallToAction className="call-to-action" {...defaultProps.callToAction} />
+  );
+
+  const getSiteLinks = (size: string) => (
+    <List
+      className={`site-links-${size}`}
+      component="ul"
+      aria-label="Site links"
+    >
+      {siteLinks?.map(({key, label, href}) => (
+        <ListItem key={key}>
+          <Link href={href} aria-label={label}>
+            {label}
+          </Link>
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle}>
+      {getSiteLogo()}
+      {getSiteLinks('mobile')}
+      {getCallToAction()}
+    </Box>
+  );
+
+  return (
+    <Box component="header">
+      <AppBar
+        className={className}
+        component="nav"
+        elevation={0}
+        position="relative"
+        sx={styles.appBar}
+      >
+        <Toolbar variant="dense" sx={styles.toolBar} disableGutters>
+          <Box sx={styles.leftSide}>
+            {/* Site Logo */}
+            {getSiteLogo()}
+            {/* Site Links */}
+            {getSiteLinks('desktop')}
+          </Box>
+          {/* Call to Action Button */}
+          {getCallToAction()}
+          {/* Menu Button */}
+          <IconButton
+            aria-label="Open drawer"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={styles.menuButton}
+            disableRipple
+          >
+            <MenuIcon fontSize="large" />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      {/* Drawer */}
+      <nav>
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          anchor={
+            typeof document !== 'undefined' &&
+            document.documentElement.dir === 'rtl'
+              ? 'left'
+              : 'right'
+          }
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={styles.drawer}
+        >
+          {/* Close Button */}
+          <IconButton
+            onClick={handleDrawerToggle}
+            disableRipple
+            sx={styles.closeButton}
+          >
+            <CloseIcon fontSize="large" />
+          </IconButton>
+          {drawer}
+        </Drawer>
+      </nav>
+    </Box>
+  );
 };
 
 const breakpoint = 1089; // px
@@ -156,126 +256,6 @@ const styles = {
       outline: `2px solid ${theme.palette.primary.main}`,
     },
   },
-};
-
-const HeaderMui: React.FC<HeaderProps> = ({
-  siteLinks,
-  callToAction,
-  className,
-}) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setMobileOpen(prevState => !prevState);
-  };
-
-  const getSiteLogo = () => (
-    <SiteLogo
-      label={defaultProps.logo.label}
-      href={defaultProps.logo.href}
-      imgSrc={defaultProps.logo.imgSrc}
-    />
-  );
-
-  const getSiteLinks = (size: string) => (
-    <List
-      className={`site-links-${size}`}
-      component="ul"
-      aria-label="Site links"
-    >
-      {siteLinks?.map(({key, label, href}) => (
-        <ListItem key={key}>
-          <Link href={href} aria-label={label}>
-            {label}
-          </Link>
-        </ListItem>
-      ))}
-    </List>
-  );
-
-  const getCallToAction = () =>
-    callToAction ? (
-      <Button
-        className="call-to-action"
-        type={callToAction.type}
-        size={callToAction.size}
-        text={callToAction.text}
-        href={callToAction.href}
-      />
-    ) : null;
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle}>
-      {getSiteLogo()}
-      {getSiteLinks('mobile')}
-      {getCallToAction()}
-    </Box>
-  );
-
-  return (
-    <Box component="header">
-      <AppBar
-        className={className}
-        component="nav"
-        elevation={0}
-        position="relative"
-        sx={styles.appBar}
-      >
-        <Toolbar variant="dense" sx={styles.toolBar} disableGutters>
-          <Box sx={styles.leftSide}>
-            {/* Site Logo */}
-            <SiteLogo
-              label={defaultProps.logo.label}
-              href={defaultProps.logo.href}
-              imgSrc={defaultProps.logo.imgSrc}
-            />
-            {/* Site Links */}
-            {getSiteLinks('desktop')}
-          </Box>
-          {/* Call to Action Button */}
-          {getCallToAction()}
-          {/* Menu Button */}
-          <IconButton
-            aria-label="Open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={styles.menuButton}
-            disableRipple
-          >
-            <MenuIcon fontSize="large" />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      {/* Drawer */}
-      <nav>
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          anchor={
-            typeof document !== 'undefined' &&
-            document.documentElement.dir === 'rtl'
-              ? 'left'
-              : 'right'
-          }
-          ModalProps={{
-            keepMounted: true,
-          }}
-          sx={styles.drawer}
-        >
-          {/* Close Button */}
-          <IconButton
-            onClick={handleDrawerToggle}
-            disableRipple
-            sx={styles.closeButton}
-          >
-            <CloseIcon fontSize="large" />
-          </IconButton>
-          {drawer}
-        </Drawer>
-      </nav>
-    </Box>
-  );
 };
 
 const HeaderCSforAll = () => {
