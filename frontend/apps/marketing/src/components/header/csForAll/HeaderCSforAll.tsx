@@ -8,8 +8,8 @@ import React, {HTMLAttributes, useState} from 'react';
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
 import {CALL_TO_ACTION, DESKTOP_LINKS, DRAWER_LINKS, SITE_LOGO} from './config';
+import HamburgerButton from './HamburgerButton';
 import LinkList, {LinkItem} from './LinkList';
-import MenuButton from './MenuButton';
 import SiteLogo from './SiteLogo';
 import {styles} from './styles';
 
@@ -65,8 +65,8 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           </Box>
           {/* Call to Action */}
           {callToAction}
-          {/* Menu Button */}
-          <MenuButton onClick={handleDrawerToggle} />
+          {/* Hamburger Button */}
+          <HamburgerButton onClick={handleDrawerToggle} />
         </Toolbar>
       </AppBar>
 

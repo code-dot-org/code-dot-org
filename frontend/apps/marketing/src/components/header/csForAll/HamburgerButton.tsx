@@ -5,13 +5,13 @@ import theme from '@/themes/csforall';
 
 import {DRAWER_BREAKPOINT} from './common/constants';
 
-export interface MenuButtonProps {
+export interface HamburgerButtonProps {
   /** Click handler for the menu button */
   onClick: () => void;
 }
 
 const styles = {
-  menuButton: {
+  hamburgerButton: {
     display: 'none',
     [`@media (max-width: ${DRAWER_BREAKPOINT}px)`]: {
       display: 'flex',
@@ -25,13 +25,13 @@ const styles = {
   },
 };
 
-const MenuButton = ({onClick}: MenuButtonProps) => {
+const HamburgerButton = ({onClick}: HamburgerButtonProps) => {
   return (
     <IconButton
       aria-label="Open drawer"
       edge="end"
       onClick={onClick}
-      sx={styles.menuButton}
+      sx={styles.hamburgerButton}
       disableRipple
     >
       <MenuIcon fontSize="large" />
@@ -39,4 +39,4 @@ const MenuButton = ({onClick}: MenuButtonProps) => {
   );
 };
 
-export default MenuButton;
+export default HamburgerButton;
