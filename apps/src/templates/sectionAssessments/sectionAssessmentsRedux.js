@@ -1185,7 +1185,6 @@ const loadAssessmentResponsesFromServer = (
   scriptId,
   courseVersionId
 ) => {
-  console.log(courseVersionId);
   let payload = {section_id: sectionId};
   if (scriptId) {
     payload.script_id = scriptId;
