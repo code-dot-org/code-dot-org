@@ -4,9 +4,6 @@
 
 import * as GoogleBlockly from 'blockly/core';
 
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
