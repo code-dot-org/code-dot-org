@@ -158,8 +158,8 @@
 
 %message {
   position: relative;
-  padding: 15px 20px;
   border-radius: 4px;
+  padding: 15px 0 5px;
   animation: slidein 0.5s;
 }
 
@@ -173,6 +173,14 @@
   @extend %message;
   background-color: $light_gray_50;
   color: $neutral_dark;
+}
+
+.messageContent {
+  padding: 0 20px;
+}
+
+.navigationContainer {
+  padding-bottom: 10px;
 }
 
 .predictSummary {
@@ -197,7 +205,9 @@
     font-size: 1.75em;
     line-height: 1.2em;
 
-    &, em, strong {
+    &,
+    em,
+    strong {
       font-family: $barlowSemiCondensed-semibold;
     }
   }
