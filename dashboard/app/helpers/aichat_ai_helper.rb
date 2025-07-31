@@ -38,7 +38,7 @@ module AichatAiHelper
         type: 'file',
         content: AichatAiClientTypes::FileMessagePartContent.new(
           name: filename,
-          mime_type: Rack::Mime.mime_type(File.extname(filename)),
+          mimeType: Rack::Mime.mime_type(File.extname(filename)),
           data: base64_string
         )
       )

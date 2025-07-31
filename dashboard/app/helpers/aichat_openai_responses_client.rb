@@ -78,9 +78,9 @@ class AichatOpenaiResponsesClient < AichatAiClient
           text: part[:content]
         }
       else # There are currently only two types.
-        data_uri = "data:#{part[:content][:mime_type]};base64,#{part[:content][:data]}"
+        data_uri = "data:#{part[:content][:mimeType]};base64,#{part[:content][:data]}"
         message[:content] << (
-          if part[:content][:mime_type] == 'application/pdf'
+          if part[:content][:mimeType] == 'application/pdf'
             {
               type: "input_file",
                 filename: part[:content][:name],

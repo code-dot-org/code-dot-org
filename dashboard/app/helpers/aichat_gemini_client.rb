@@ -67,7 +67,7 @@ class AichatGeminiClient < AichatAiClient
       # There are currently only two types so if not text then it's a file.
       return {
         inline_data: {
-          mime_type: internal_part[:content][:mime_type],
+          mime_type: internal_part[:content][:mimeType],
           data: internal_part[:content][:data]
         }
       }

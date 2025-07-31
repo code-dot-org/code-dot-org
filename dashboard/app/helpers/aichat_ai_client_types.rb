@@ -29,12 +29,12 @@ module AichatAiClientTypes
 
   # interface FileMessagePartContent {
   #   name: string;
-  #   mime_type: FileMessageMimeType;
+  #   mimeType: FileMessageMimeType;
   #   data: string; //base64 encoded string
   # }
   FileMessagePartContent = Interface(
     :name, string,
-    :mime_type, FileMessageMimeType,
+    :mimeType, FileMessageMimeType,
     :data, string
   )
 
