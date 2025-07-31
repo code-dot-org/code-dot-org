@@ -14,6 +14,7 @@ interface SettingsButtonProps {
   settings: Setting[];
   className?: string;
 }
+
 const SettingsButton: React.FC<SettingsButtonProps> = ({
   settings,
   className,
