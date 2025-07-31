@@ -80,7 +80,7 @@ class Api::V1::AssessmentsController < Api::V1::JSONApiController
     responses_by_student = {}
 
     script_id = @script.id
-    unit_group = CourseVersion.find_by_id(params[:course_version_id]).content_root
+    unit_group = CourseVersion.find_by_id(params[:course_version_id])&.content_root
     unit_group_unit = Queries::Courses.unit_group_unit(@script, unit_group)
     assessment_script_levels = @script.get_assessment_script_levels
 
