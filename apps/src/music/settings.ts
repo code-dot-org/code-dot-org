@@ -57,7 +57,7 @@ export function useMusicSettings(): Setting[] {
   return [
     {
       id: 'blocklyTheme',
-      label: 'Block Color Theme',
+      label: commonI18n.blocklyTheme(),
       options: blockThemeOptions,
       selectedValue: selectedTheme,
       onChange: handleBlocklyThemeChange,
