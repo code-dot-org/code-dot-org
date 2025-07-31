@@ -1,0 +1,50 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .tabList {
+    ul {
+      width: 100%;
+    }
+  }
+
+  .navRow {
+    display: flex;
+    align-items: end;
+
+    button {
+      max-height: 2rem;
+    }
+
+    .categorySelectionContainer {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.125rem;
+
+      > span {
+        @include mixins.label-three;
+        margin-bottom: 0;
+      }
+    }
+
+    .divider {
+      margin: 0 0.75rem;
+      border-left: 1px solid var(--borders-neutral-primary);
+      height: 2rem;
+    }
+
+    .exportButton {
+      margin-left: auto;
+    }
+  }
+
+  .navDropdown {
+    select {
+      border-color: var(--borders-neutral-primary);
+      font-weight: 600;
+    }
+  }
+}

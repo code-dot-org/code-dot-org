@@ -199,5 +199,7 @@ linters:
 exclude:
 - '/**/pegasus/test/fixtures/**/*.haml'
 - 'pegasus/test/fixtures/**/*.haml'
+- 'vendor/**/*' # don't lint third-party code
+- '*/vendor/**/*'
 require:
 - './tools/customLinters/haml_lint_only_allowed_characters.rb'

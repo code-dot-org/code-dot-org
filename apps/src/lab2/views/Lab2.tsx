@@ -13,6 +13,7 @@ import BrowserTextToSpeechWrapper from '@cdo/apps/sharedComponents/BrowserTextTo
 
 import ProjectContainer from '../projects/ProjectContainer';
 
+import RubricWrapper from './components/rubrics/RubricWrapper';
 import DialogManager from './dialogs/DialogManager';
 import Lab2Wrapper from './Lab2Wrapper';
 import LabViewsRenderer from './LabViewsRenderer';
@@ -29,6 +30,7 @@ const Lab2: React.FunctionComponent = () => {
               <ProjectContainer channelId={getStandaloneProjectId()}>
                 <LabViewsRenderer />
               </ProjectContainer>
+              <RubricWrapper />
             </DialogManager>
           </Lab2Wrapper>
         </ThemeProvider>

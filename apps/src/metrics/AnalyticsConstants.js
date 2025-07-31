@@ -443,6 +443,11 @@ const EVENTS = {
   // Add custom image to project
   UPLOAD_CUSTOM_IMAGE: 'User clicks on upload image to project',
   SUBMIT_IMAGE_URL: 'User clicks on submit image URL to project',
+  FLAGGED_CUSTOM_IMAGE:
+    'User attempting to upload an image that is flagged for abuse',
+  ACCEPT_FLAGGED_CUSTOM_IMAGE:
+    'User accepts and uploads a flagged custom image',
+  CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',

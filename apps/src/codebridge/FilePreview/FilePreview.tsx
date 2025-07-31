@@ -7,6 +7,8 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {DEFAULT_FOLDER_ID} from '../constants';
+
 import {HTMLPreview} from './HTMLPreview';
 
 import moduleStyles from './styles/filePreview.module.scss';
@@ -41,9 +43,12 @@ export const FilePreview = () => {
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
-      (f: ProjectFile) => f.name === 'index.html' && !f.folderId
+      (f: ProjectFile) =>
+        f.name === 'index.html' &&
+        (!f.folderId || f.folderId === DEFAULT_FOLDER_ID)
     )
   );
 

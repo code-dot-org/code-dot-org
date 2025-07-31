@@ -2,7 +2,6 @@
 @eyes
 Feature: Workshop Dashboard
 
-@skip
 Scenario: New workshop: BYOW
   Given I am a program manager named "Test BYO PM" for regional partner "Test Partner"
   Given there is a facilitator named "Test BYO Facilitator 1" for course "Build Your Own Workshop"
@@ -29,7 +28,7 @@ Scenario: New workshop: BYOW
   And I press keys "123 Main St" for element "input[name='locationAddress']"
   And I click selector "button:contains('Add Date')"
   And I select the "Virtual" option in the last dropdown named "format"
-  And I press keys "example.com" for element "input[name='meetingLink']"
+  And I press keys "https://example.com" for element "input[name='meetingLink']"
   And I wait until the dropdown named "regionalPartnerId" has option "Test Partner"
   And I select the "Test Partner" option in dropdown named "regionalPartnerId"
   And I press keys "Test BYO Facilitator 1\n" for element "#multiselect"
@@ -38,7 +37,7 @@ Scenario: New workshop: BYOW
   And I press keys "$100" for element "input[name='fee']"
   And I select the "National" option in dropdown named "participantGroupType"
   And I press keys "Get ready to learn!" for element "textarea[name='notes']"
-  And I press keys "register.org" for element "input[name='registrationLink']"
+  And I press keys "https://register.org" for element "input[name='registrationLink']"
   And I click selector "label:contains('Hide this workshop from the public workshop catalog')"
 
   And I see no difference for "new workshop details: BYO"

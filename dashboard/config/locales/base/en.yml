@@ -1455,6 +1455,11 @@ en:
     project_type: "project type"
     button: "View alternative courses"
     projects_button: "Go to Projects"
+    course1_retired: We’re sorry! Course 1 has been retired. We recommend [Course A](%{coursea_url}) or [Pre-reader Express](%{pre_reader_express_url}) as a replacement.
+    course2_retired: We’re sorry! Course 2 has been retired. We recommend [Course C](%{coursec_url}) or [Course D](%{course_d_url}) as a replacement.
+    course3_retired: We’re sorry! Course 3 has been retired. We recommend [Course E](%{course_e_url}) or [Course F](%{course_f_url}) as a replacement.
+    course4_retired: We’re sorry! Course 4 has been retired. We recommend [Course F](%{course_f_url}) as a replacement.
+    accelerated_course_retired: We’re sorry! The Accelerated Course has been retired. We recommend [Express Course](%{express_course_url}) as a replacement.
   hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
   hoc_tutorial_email_content:
     dear_teacher: "Dear %{teacher_name},"

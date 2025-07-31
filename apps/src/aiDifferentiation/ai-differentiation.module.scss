@@ -29,10 +29,16 @@
   align-items: stretch;
 }
 
+// Used to accomodate the sidebar in the AI Differentiation workspace.
+.aiDiffContainerWide {
+  width: 712px;
+}
+
 .chatContainer {
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1 1 0;
 }
 
 .hiddenAiDiffPanel {
@@ -268,4 +274,49 @@
 
 .waitingForResponse {
   width: 50px;
+}
+
+// Sidebar styles
+.aiDiffWorkspace {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.sidebarContainer {
+  width: 242px;
+  flex: 0 0 242px;
+  background-color: var(--background-neutral-secondary);
+  height: auto;
+}
+
+.sidebarContent {
+  position: sticky;
+  top: 0;
+  padding-bottom: 16px;
+}
+
+.sidebarSectionTitle {
+  margin: 0;
+  padding: 8px 16px;
+  color: $neutral_dark80;
+}
+
+.sidebarChatItem {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.sidebarButton {
+  width: 224px; /* drawerWidth - 16 */
+  margin-top: 15px !important;
+  margin-left: 8px !important;
+  border: 1px solid black !important;
+  border-radius: 4px;
+}
+
+.sidebarManageLink {
+  margin-left: 8px;
 }

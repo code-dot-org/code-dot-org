@@ -64,7 +64,7 @@ class P5LabView extends React.Component {
 
     // Indicate the context of the animation picker
     let projectType = this.props.isBlockly
-      ? PICKER_TYPE.spritelab
+      ? PICKER_TYPE.spritelab // Includes Sprite Lab subtypes such as Poetry Lab.
       : PICKER_TYPE.gamelab;
 
     this.state = {
@@ -171,6 +171,7 @@ class P5LabView extends React.Component {
                   : this.state.projectType
               }
               uploadsEnabled={this.state.uploadsEnabled}
+              projectType={this.props.labType.toLowerCase()}
             />
           )}
         </div>
