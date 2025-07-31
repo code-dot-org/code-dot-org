@@ -1,37 +1,26 @@
-import CloseButton from '@code-dot-org/component-library/closeButton';
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
-import SimpleDropdown, {
-  SimpleDropdownProps,
-} from '@code-dot-org/component-library/dropdown/simpleDropdown';
-import {Heading6} from '@code-dot-org/component-library/typography';
-import {codebridgeLabsWithConsole, LayoutKey} from '@codebridge/constants';
+import {LayoutKey, codebridgeLabsWithConsole} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import FocusTrap from 'focus-trap-react';
-import React, {useMemo, useState} from 'react';
-import {createPortal} from 'react-dom';
+import {useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
-import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import {
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdowns';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import commonI18n from '@cdo/locale';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {useCodebridgeContext} from '../codebridgeContext';
 
-import moduleStyles from './settings-dropdown.module.scss';
-
 // fontSizeOptions contains a list of value/localized text from the FontSize enum,
 // e.g., [{value: 'Tiny', text: 'Tiny'}, {value: 'Small', text: 'Small'}, ...]
-const fontSizeOptions: SimpleDropdownProps['items'] = [
+const fontSizeOptions = [
   {
     value: 'Tiny',
     text: codebridgeI18n.fontSizeTiny(),
@@ -53,16 +42,7 @@ const fontSizeOptions: SimpleDropdownProps['items'] = [
     text: codebridgeI18n.fontSizeHuge(),
   },
 ];
-interface SettingsDropdownProps {
-  closeDropdown: () => void;
-  buttonRef: React.RefObject<HTMLDivElement>;
-}
-
-const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
-  closeDropdown,
-  buttonRef,
-}) => {
-  const dropdownRef = useOutsideClick<HTMLDivElement>(closeDropdown);
+export function useCodebridgeSettings(): Setting[] {
   const currentEditorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
@@ -85,8 +65,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const [selectedLayout, setSelectedLayout] = useState(config.activeLayout);
 
   const getSelectedKey = (value: string) => value as keyof typeof FontSize;
-
-  const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
   const onTextEditorDropdownChange = (value: string) => {
     const selectedEditorKey = getSelectedKey(value);
@@ -132,8 +110,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     }
   };
 
-  const handleThemeChange = (value: Theme) => {
-    setTheme(value);
+  const handleThemeChange = (value: string) => {
+    setTheme(value as Theme);
     if (signInState === SignInState.SignedIn) {
       new UserPreferences().setGlobalTheme(value);
     }
@@ -166,7 +144,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     value: theme,
   }));
 
-  const layoutDropdownOptions: SimpleDropdownProps['items'] = [
+  const layoutDropdownOptions = [
     {
       value: 'horizontal',
       text: codebridgeI18n.horizontal(),
@@ -176,114 +154,41 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
       text: codebridgeI18n.vertical(),
     },
   ];
-  const dropdownColor = theme === 'Dark' ? 'white' : 'black';
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
 
-  return createPortal(
-    <FocusTrap
-      focusTrapOptions={{
-        onDeactivate: closeDropdown,
-        clickOutsideDeactivates: true,
-      }}
-    >
-      <div
-        className={moduleStyles.settingsDropdown}
-        ref={dropdownRef}
-        role="dialog"
-        style={dropdownStyles}
-        aria-modal="true"
-        aria-label={commonI18n.settings()}
-        data-theme={theme}
-      >
-        <div className={moduleStyles.header}>
-          <Heading6 className={moduleStyles.heading}>
-            {commonI18n.settings()}
-          </Heading6>
-          <CloseButton
-            onClick={closeDropdown}
-            aria-label={codebridgeI18n.closeSettings()}
-            id="close-settings-dropdown"
-          />
-        </div>
-        <div className={moduleStyles.dropdownRow}>
-          <label
-            htmlFor={codebridgeI18n.textEditorFontSize()}
-            className={moduleStyles.dropdownLabel}
-          >
-            {codebridgeI18n.textEditorFontSize()}
-          </label>
-          <SimpleDropdown
-            labelText={codebridgeI18n.textEditorFontSize()}
-            isLabelVisible={false}
-            onChange={event => onTextEditorDropdownChange(event.target.value)}
-            items={fontSizeOptions}
-            selectedValue={selectedEditorFontSizeValue}
-            name={'font-size'}
-            size="s"
-            color={dropdownColor}
-          />
-        </div>
-        {hasConsole && (
-          <div className={moduleStyles.dropdownRow}>
-            <label
-              htmlFor={codebridgeI18n.consoleFontSize()}
-              className={moduleStyles.dropdownLabel}
-            >
-              {codebridgeI18n.consoleFontSize()}
-            </label>
-            <SimpleDropdown
-              labelText={codebridgeI18n.consoleFontSize()}
-              isLabelVisible={false}
-              onChange={event => onConsoleDropdownChange(event.target.value)}
-              items={fontSizeOptions}
-              selectedValue={selectedConsoleFontSizeValue}
-              name={'font-size'}
-              size="s"
-              color={dropdownColor}
-            />
-          </div>
-        )}
-        <div className={moduleStyles.dropdownRow}>
-          <label
-            htmlFor={codebridgeI18n.theme()}
-            className={moduleStyles.dropdownLabel}
-          >
-            {codebridgeI18n.theme()}
-          </label>
-          <SimpleDropdown
-            labelText={codebridgeI18n.theme()}
-            isLabelVisible={false}
-            onChange={event => handleThemeChange(event.target.value as Theme)}
-            items={themeDropdownOptions}
-            selectedValue={theme}
-            name={'theme'}
-            size="s"
-            color={dropdownColor}
-          />
-        </div>
-        <div className={moduleStyles.dropdownRow}>
-          <label
-            htmlFor={codebridgeI18n.layout()}
-            className={moduleStyles.dropdownLabel}
-          >
-            {codebridgeI18n.layout()}
-          </label>
-          <SimpleDropdown
-            labelText={codebridgeI18n.layout()}
-            isLabelVisible={false}
-            onChange={event => handleLayoutChange(event.target.value)}
-            items={layoutDropdownOptions}
-            selectedValue={selectedLayout}
-            name={'layout'}
-            size="s"
-            color={dropdownColor}
-          />
-        </div>
-      </div>
-    </FocusTrap>,
-    document.body
-  );
-};
-
-export default React.memo(SettingsDropdown);
+  return [
+    {
+      id: 'editorFontSize',
+      label: codebridgeI18n.textEditorFontSize(),
+      options: fontSizeOptions,
+      selectedValue: selectedEditorFontSizeValue,
+      onChange: onTextEditorDropdownChange,
+    },
+    ...(hasConsole
+      ? [
+          {
+            id: 'consoleFontSize',
+            label: codebridgeI18n.consoleFontSize(),
+            options: fontSizeOptions,
+            selectedValue: selectedConsoleFontSizeValue,
+            onChange: onConsoleDropdownChange,
+          },
+        ]
+      : []),
+    {
+      id: 'theme',
+      label: codebridgeI18n.theme(),
+      options: themeDropdownOptions,
+      selectedValue: theme,
+      onChange: handleThemeChange,
+    },
+    {
+      id: 'layout',
+      label: codebridgeI18n.layout(),
+      options: layoutDropdownOptions,
+      selectedValue: selectedLayout,
+      onChange: handleLayoutChange,
+    },
+  ];
+}

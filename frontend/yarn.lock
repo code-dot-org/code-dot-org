@@ -1305,6 +1305,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/experiences-core@patch:@contentful/experiences-core@npm%3A2.0.1#~/apps/marketing/patches/@contentful-experiences-core-npm-2.0.1-c20f8b5e11.patch":
+  version: 2.0.1
+  resolution: "@contentful/experiences-core@patch:@contentful/experiences-core@npm%3A2.0.1#~/apps/marketing/patches/@contentful-experiences-core-npm-2.0.1-c20f8b5e11.patch::version=2.0.1&hash=883b0e"
+  dependencies:
+    "@contentful/experiences-validators": "npm:2.0.1"
+    "@contentful/rich-text-types": "npm:^17.0.0"
+  peerDependencies:
+    contentful: ">=10.6.0"
+  checksum: 10c0/239d409a9ff8d4002d41efba184e4b2db1ad1cedf5d0a99d4b6829b0f15a453be098f5721e432e31027f23088224c5ff7856216ab054c244e316a83a5345258b
+  languageName: node
+  linkType: hard
+
 "@contentful/experiences-sdk-react@npm:^2.0.1":
   version: 2.0.1
   resolution: "@contentful/experiences-sdk-react@npm:2.0.1"
