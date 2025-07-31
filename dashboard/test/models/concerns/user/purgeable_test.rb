@@ -33,4 +33,13 @@ class PurgeableTest < ActiveSupport::TestCase
       _(user.purged_at).must_be :present?
     end
   end
+
+  describe 'SOFT_DELETED_RECORD_TTL guardrail' do
+    # This test ensures that the SOFT_DELETED_RECORD_TTL is 28 days, which is important for our
+    # data retention policy. If you change this value, please confirm with the platform and infrastructure
+    # teams that the change is warranted.
+    it 'should be 28 days' do
+      _(User::SOFT_DELETED_RECORD_TTL).must_equal 28.days
+    end
+  end
 end

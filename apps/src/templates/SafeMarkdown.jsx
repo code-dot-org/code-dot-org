@@ -118,6 +118,19 @@ blocklyTags.forEach(tag => {
     return <BlocklyElement is={tag} {...props} />;
   };
 });
+
+// These wrappers add context for Localize to better understand the markdown
+// output. This also will enable URL localization for all links.
+const localizationComponentWrappers = {
+  a: function (props) {
+    // eslint-disable-next-line jsx-a11y/anchor-has-content
+    return <a {...props} data-lz-url="true" data-localize="markdown-url" />;
+  },
+  p: function (props) {
+    return <p {...props} data-isolate="true" />;
+  },
+};
+
 const markdownToReact = unified()
   .use(Processor.getParser())
   // include custom plugins
@@ -142,7 +155,10 @@ const markdownToReact = unified()
     createElement: React.createElement,
     // Use React component wrappers for Blockly XML elements to prevent
     // React from warning us about invalid components.
-    components: blocklyComponentWrappers,
+    components: {
+      ...blocklyComponentWrappers,
+      ...localizationComponentWrappers,
+    },
   });
 
 const markdownToReactExternalLinks = markdownToReact().use(externalLinks, {

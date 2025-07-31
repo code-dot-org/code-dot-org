@@ -1,7 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
-
-import Section from '@/cms/section';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect, userEvent} from 'storybook/test';
 
 import Video from '../index';
 
@@ -50,11 +48,7 @@ export const VideoWithCaption: Story = {
     isYouTubeCookieAllowed: true,
   },
   decorators: Story => {
-    return (
-      <Section background={'dark'}>
-        <Story />
-      </Section>
-    );
+    return <Story />;
   },
   play: async ({canvasElement, args}) => {
     const canvas = within(canvasElement);

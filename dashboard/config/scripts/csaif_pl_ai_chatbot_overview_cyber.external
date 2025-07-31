@@ -1,0 +1,58 @@
+name 'csaif_pl_AI_chatbot_overview_cyber'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat Lab Overview
+
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Code.org AI bot character" style="border-radius:40px; float: right; padding-right: 12px; height: 225px; clear: both; margin: 0 10px 10px 0;">
+
+## Working with AI
+
+#### Throughout the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>, students will have the opportunity to interact with an AI Chatbot.
+
+#### Code.org has created an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
+
+## Why use Generative AI?
+
+#### By working with AI in a structured and responsible setting, students will learn how to engage ethically with these technologies, use AI as a tool for problem-solving, and develop essential skills for the future of work. 
+
+#### Understanding how to interact with AI effectively will prepare them to navigate an increasingly AI-driven world with confidence and critical thinking.
+<br>
+
+---
+#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab. 
+
+<div style="background-color: #FFFFFF; color: #000000; padding: 15px; border-radius: 5px; width: 90%; margin: 20px auto; border: 4px solid #000000; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); position: relative;">
+    
+    <!-- Close Button -->
+    <span style="position: absolute; top: 10px; right: 10px; font-size: 20pt; font-weight: bold; border: 2px solid black; border-radius: 2px; padding: 0 10px; cursor: pointer; line-height: 1;">X</span>
+    
+<h2>Remember to chat responsibly!</h2>
+    <hr>
+
+<div style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 10px;">
+        <p style="font-size: 14pt;"><b>All messages you send will be visible to your teacher, including blocked messages.</b></p>
+        <p style="font-size: 14pt;">Inappropriate messages will be flagged by our content moderation policy.</p>
+        <p style="font-size: 14pt;">All unsaved changes will be lost.</p>
+        <p style="font-size: 14pt;">In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</p>
+    </div>
+
+<hr>
+
+<!-- Start Chatting Button -->
+<div align="right">
+  <a href="#start" style="background-color: #8c52ba; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 14pt; border-radius: 8px; display: inline-block;">
+    Start Chatting
+  </a>
+</div>
+
+</div>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong><br> Before students use the AI chatbot for the first time, take a few minutes to review the Chat Responsibly box together.<br>Use this moment to set expectations for appropriate, respectful communication and reinforce that the goal is to stay safe, stay on task, and use the tool to support their learning.   
+</p>
+</div>
+MARKDOWN

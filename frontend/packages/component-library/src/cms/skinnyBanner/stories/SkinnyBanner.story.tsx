@@ -1,7 +1,7 @@
 import partnerLogo from '@public/images/code-org-logo.png';
 import imageFile from '@public/images/image-component.png';
-import {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
 import SkinnyBanner from './../SkinnyBanner';
 

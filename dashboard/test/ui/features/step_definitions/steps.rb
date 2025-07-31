@@ -894,6 +894,10 @@ def element_exists?(selector)
   @browser.execute_script(jquery_element_exists(selector))
 end
 
+def element_focused?(selector)
+  @browser.execute_script("return document.querySelector(#{selector.dump}) === document.activeElement;")
+end
+
 def element_visible?(selector)
   @browser.execute_script(jquery_is_element_visible(selector))
 end
@@ -916,6 +920,14 @@ end
 
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
+end
+
+Then /^element "([^"]*)" has focus/ do |selector|
+  expect(element_focused?(selector)).to eq(true)
+end
+
+Then /^element "([^"]*)" does not have focus/ do |selector|
+  expect(element_focused?(selector)).to eq(false)
 end
 
 Then /^element "([^"]*)" is hidden$/ do |selector|
@@ -1557,6 +1569,11 @@ end
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
+end
+
+Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
+  response_json = @browser.find_element(:css, 'body').text
+  expect(response_json).to include(%Q["#{key}":#{value}])
 end
 
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|

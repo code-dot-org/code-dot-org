@@ -622,7 +622,7 @@ class LevelsController < ApplicationController
   end
 
   def add_skill
-    level_id = params[:levelId].to_i
+    level_id = params[:id].to_i
     skill_id  = params[:skillId].to_i
 
     begin
@@ -639,6 +639,7 @@ class LevelsController < ApplicationController
 
     unless @level.skills.include?(@skill)
       @level.skills << @skill
+      @level.add_skill_key(@skill.key)
     end
 
     if @level.save
@@ -649,7 +650,7 @@ class LevelsController < ApplicationController
   end
 
   def remove_skill
-    level_id = params[:levelId].to_i
+    level_id = params[:id].to_i
     skill_id  = params[:skillId].to_i
 
     begin
@@ -665,6 +666,7 @@ class LevelsController < ApplicationController
     end
 
     @level.skills.delete(@skill)
+    @level.remove_skill_key(@skill.key)
 
     if @level.save
       render json: {status: 'success', message: "Skill #{@skill.id} successfully removed from #{@level.id}"}, status: :ok

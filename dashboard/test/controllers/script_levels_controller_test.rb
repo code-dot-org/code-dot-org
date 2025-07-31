@@ -101,8 +101,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     AzureTextToSpeech.unstub(:get_voices)
   end
 
-  test "should return level_properties " do
-    script = create(:script, :in_single_unit_course)
+  test "should return level_properties" do
+    script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
@@ -130,6 +130,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal body["usesProjects"], false
     assert_equal body["exampleSolutions"], []
     assert_equal body["helpVideos"], []
+    assert_equal body["offerBrowserTts"], true
     assert_match Regexp.new("^/courses/bogus-single-unit-course-[0-9]+/units/1"), body["finishUrl"]
   end
 

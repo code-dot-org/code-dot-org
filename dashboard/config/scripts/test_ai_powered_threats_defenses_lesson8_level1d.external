@@ -1,0 +1,55 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1d'
+
+markdown <<MARKDOWN
+#Amara T. - User Profile
+
+Go through the audit logs for Amara to find any evidence of fraud.
+
+**[Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+## LOGIN ACTIVITY LOG
+
+<img src="https://images.code.org/9ff4b331cd57a4c8d556558c56421621-image-1753924768816.png" style="float:right; width:45%">
+
+| Date     |   Time    |       Device       |     IP Location     | Outcome |    OS     |    Browser     |
+|----------|-----------|--------------------|----------------------|---------|-----------|----------------|
+| Sept 15  |  4:40 PM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
+| Sept 16  |  8:10 AM  | Chromebook         | Minneapolis, MN      | Success | ChromeOS  | Chrome         |
+| Sept 17  |  8:05 PM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
+| Sept 18  |  2:28 AM  | Windows PC         | Toronto, ON          | Failed  | Windows   | Edge           |
+| Sept 18  |  2:34 AM  | Windows PC         | Toronto, ON          | Success | Windows   | Edge           |
+| Sept 18  |  2:37 AM  | Windows PC         | Toronto, ON          | Success | Windows   | Edge           |
+| Sept 18  |  2:41 AM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
+| Sept 18  |  8:05 AM  | Chromebook         | Minneapolis, MN      | Success | ChromeOS  | Chrome         |
+
+
+
+---
+
+## LOCATION HISTORY LOG
+
+| Date     |   Time    | Ping Type |             Location              |
+|----------|-----------|-----------|-----------------------------------|
+| Sept 15  |  4:30 PM  | Wi-Fi     | Home – Minneapolis, MN            |
+| Sept 16  |  8:00 AM  | Wi-Fi     | School – Minneapolis, MN          |
+| Sept 17  |  8:00 PM  | Wi-Fi     | Home – Minneapolis, MN            |
+| Sept 18  |  2:25 AM  | None      | —                                 |
+| Sept 18  |  2:35 AM  | Wi-Fi     | Toronto, ON                       |
+| Sept 18  |  2:41 AM  | Wi-Fi     | Home – Minneapolis, MN            |
+| Sept 18  |  8:00 AM  | Wi-Fi     | School – Minneapolis, MN          |
+
+
+---
+
+## TRANSACTION HISTORY LOG
+
+| Date     |   Time    |             Merchant              |  Amount   |     Location     |       Method       |
+|----------|-----------|------------------------------------|-----------|------------------|---------------------|
+| Sept 15  |  4:50 PM  | Halal Market                       | &#36;12.60 | Minneapolis, MN  | Reloadable Debit    |
+| Sept 16  | 12:15 PM  | School Cafeteria                   | &#36;3.75  | Minneapolis, MN  | Reloadable Debit    |
+| Sept 17  |  8:10 PM  | Photo Editor Pro (Upgrade)         | &#36;4.99  | Online           | Reloadable Debit    |
+| Sept 18  |  2:36 AM  | Proxy IP Rotation Service          | &#36;29.00 | Toronto, ON      | Reloadable Debit    |
+| Sept 18  |  2:40 AM  | SecureNotes (Subscription)         | &#36;6.99  | Toronto, ON      | Reloadable Debit    |
+| Sept 18  |  8:07 AM  | Corner Bakery                      | &#36;5.40  | Minneapolis, MN  | Reloadable Debit    |
+
+MARKDOWN

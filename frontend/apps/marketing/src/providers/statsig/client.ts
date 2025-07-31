@@ -37,7 +37,7 @@ export function getClient(clientKey: string, stage: Stage, values: string) {
     values,
     {
       environment: {tier: stage},
-      plugins: plugins,
+      plugins: stage === 'production' ? plugins : undefined,
     },
   );
 }

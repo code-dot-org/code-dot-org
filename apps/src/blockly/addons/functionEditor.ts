@@ -17,6 +17,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
 
 import {BLOCK_TYPES} from '../constants';
+import CdoTheme from '../themes/cdoTheme';
 import {
   EditorWorkspaceSvg,
   ExtendedBlocklyOptions,
@@ -24,6 +25,7 @@ import {
   ProcedureBlockConfiguration,
   ProcedureType,
 } from '../types';
+import {setThemeAndRenderBlocks} from '../utils';
 
 import CdoConnectionChecker from './cdoConnectionChecker';
 import {frameSizes} from './cdoConstants';
@@ -51,6 +53,7 @@ export default class FunctionEditor {
   }
 
   init(options: ExtendedBlocklyOptions) {
+    const defaultTheme = (options.theme || CdoTheme) as GoogleBlockly.Theme;
     // The workspace we'll show to users for editing
     const modalEditor = document.getElementById(MODAL_EDITOR_ID);
     if (!modalEditor) {
@@ -88,11 +91,16 @@ export default class FunctionEditor {
       readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
-      theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      theme: defaultTheme,
       toolbox,
       trashcan: false, // Don't use default trashcan.
       modalInputs: false,
     }) as EditorWorkspaceSvg;
+    Blockly.cdoUtils
+      .getUserTheme(this.editorWorkspace.getTheme())
+      .then((theme: GoogleBlockly.Theme) => {
+        setThemeAndRenderBlocks(this.editorWorkspace!, theme, defaultTheme);
+      });
     this.editorWorkspace.registerToolboxCategoryCallback(
       'VARIABLE',
       variablesFlyoutCategory

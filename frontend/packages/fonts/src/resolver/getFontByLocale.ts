@@ -1,4 +1,7 @@
-import {InternationalFontLocale} from '@/constants';
+import {
+  FALLBACK_FONT_FAMILIES_BY_LOCALE,
+  InternationalFontLocale,
+} from '@/constants';
 
 export function getFontByLocale(locale: InternationalFontLocale) {
   switch (locale) {
@@ -54,4 +57,11 @@ export function getFontByLocale(locale: InternationalFontLocale) {
       // Return false if there are no fallback locales
       return Promise.resolve(false);
   }
+}
+
+export function getFallbackFontFamilyByLocale(
+  locale: InternationalFontLocale,
+): string[] {
+  console.log('locale: ', locale);
+  return FALLBACK_FONT_FAMILIES_BY_LOCALE[locale] ?? [];
 }
