@@ -7,9 +7,11 @@ import React, {HTMLAttributes, useState} from 'react';
 
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
-import {CALL_TO_ACTION, DESKTOP_LINKS, DRAWER_LINKS, SITE_LOGO} from './config';
+import {CALL_TO_ACTION, DRAWER_LINKS, SITE_LOGO} from './config';
 import HamburgerButton from './HamburgerButton';
-import LinkList, {LinkItem} from './LinkList';
+import {LinkItemProps} from './LinkItem';
+import LinkList from './LinkList';
+import MainMenuDesktop from './MainMenuDesktop';
 import SiteLogo from './SiteLogo';
 import {styles} from './styles';
 
@@ -39,7 +41,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
   const getLinks = (
     className: string,
     ariaLabel: string,
-    linkList: LinkItem[],
+    linkList: LinkItemProps[],
   ) => (
     <LinkList
       className={`link-list-${className}`}
@@ -60,8 +62,8 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           <Box sx={styles.leftSide}>
             {/* Site Logo */}
             {siteLogo}
-            {/* Desktop Links */}
-            {getLinks('desktop', 'Main Links', DESKTOP_LINKS.linkList)}
+            {/* Main Menu Desktop with Dropdowns */}
+            <MainMenuDesktop />
           </Box>
           {/* Call to Action */}
           {callToAction}

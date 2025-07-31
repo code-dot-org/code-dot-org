@@ -1,23 +1,11 @@
-import Link from '@mui/material/Link';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import Typography from '@mui/material/Typography';
-import {AnchorHTMLAttributes, Key} from 'react';
 
-export interface LinkItem extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  /** Unique link key */
-  key: Key;
-  /** Link label */
-  label: string;
-  /** Link href */
-  href: string;
-  /** Typography variant */
-  typography?: React.ComponentProps<typeof Typography>['variant'];
-}
+import LinkItem, {LinkItemProps} from './LinkItem';
 
 export interface LinkListProps {
   /** Site links */
-  linkList?: LinkItem[];
+  linkList?: LinkItemProps[];
   /** Aria label for the list */
   ariaLabel?: string;
   /** Custom class */
@@ -33,17 +21,14 @@ const LinkList = ({linkList, ariaLabel, className}: LinkListProps) => {
       sx={{padding: 0}}
     >
       {linkList?.map(
-        ({key, label, href, typography = 'body3', ...linkProps}) => (
-          <ListItem key={key}>
-            <Typography
-              variant={typography}
-              component={Link}
+        ({id, label, href, typography = 'body3', ...linkProps}) => (
+          <ListItem key={id}>
+            <LinkItem
+              label={label}
               href={href}
-              sx={{textDecoration: 'none'}}
+              typography={typography}
               {...linkProps}
-            >
-              {label}
-            </Typography>
+            />
           </ListItem>
         ),
       )}
