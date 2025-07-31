@@ -1,36 +1,22 @@
 'use client';
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import {alpha} from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
-import React, {
-  AnchorHTMLAttributes,
-  HTMLAttributes,
-  Key,
-  useState,
-} from 'react';
+import React, {HTMLAttributes, useState} from 'react';
 
 import theme from '@/themes/csforall';
 import logoImage from '@public/images/csforall-logo.svg';
 
 import CallToAction, {CallToActionProps} from './CallToAction';
+import CloseButton from './CloseButton';
+import {mobileBreakpoint} from './common/constants';
+import LinkList, {LinkItem} from './LinkList';
+import MenuButton from './MenuButton';
 import SiteLogo, {SiteLogoProps} from './SiteLogo';
 
-export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
-}
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
-  /** Site links */
-  siteLinks?: SiteLink[];
   /** Custom class */
   className?: string;
 }
@@ -43,17 +29,6 @@ const defaultProps: HeaderProps & {logo: SiteLogoProps} & {
     href: '/',
     imgSrc: logoImage.src,
   },
-  siteLinks: [
-    {key: 'issues', label: 'Issues', href: '/issues'},
-    {key: 'take-action', label: 'Take Action', href: '/take-action'},
-    {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
-    {key: 'donate', label: 'Donate', href: '/donate'},
-    {
-      key: 'news-and-resources',
-      label: 'News & Resources',
-      href: '/news-and-resources',
-    },
-  ],
   callToAction: {
     type: 'emphasized',
     size: 'small',
@@ -62,45 +37,97 @@ const defaultProps: HeaderProps & {logo: SiteLogoProps} & {
   },
 };
 
-const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
+const desktopLinks: {linkList: LinkItem[]} = {
+  linkList: [
+    {key: 'issues', label: 'Issues', href: '/issues', typography: 'body3'},
+    {
+      key: 'take-action',
+      label: 'Take Action',
+      href: '/take-action',
+      typography: 'body3',
+    },
+    {
+      key: 'hour-of-ai',
+      label: 'Hour of AI',
+      href: '/hour-of-ai',
+      typography: 'body3',
+    },
+    {
+      key: 'donate',
+      label: 'Donate',
+      href: '/donate',
+      typography: 'body3',
+    },
+    {
+      key: 'news-and-resources',
+      label: 'News & Resources',
+      href: '/news-and-resources',
+      typography: 'body3',
+    },
+  ],
+};
+
+const drawerLinks: {linkList: LinkItem[]} = {
+  linkList: [
+    {key: 'issues', label: 'Issues', href: '/issues', typography: 'h4'},
+    {
+      key: 'take-action',
+      label: 'Take Action',
+      href: '/take-action',
+      typography: 'h4',
+    },
+    {
+      key: 'hour-of-ai',
+      label: 'Hour of AI',
+      href: '/hour-of-ai',
+      typography: 'h4',
+    },
+    {
+      key: 'donate',
+      label: 'Donate',
+      href: '/donate',
+      typography: 'h4',
+    },
+    {
+      key: 'news-and-resources',
+      label: 'News & Resources',
+      href: '/news-and-resources',
+      typography: 'h4',
+    },
+  ],
+};
+
+const HeaderMui: React.FC<HeaderProps> = ({className}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  // Toggle Drawer
   const handleDrawerToggle = () => {
     setMobileOpen(prevState => !prevState);
   };
 
   // Get Site Logo Component
-  const getSiteLogo = () => <SiteLogo {...defaultProps.logo} />;
+  const siteLogo = <SiteLogo {...defaultProps.logo} />;
 
   // Get Call to Action Component
-  const getCallToAction = () => (
+  const callToAction = (
     <CallToAction className="call-to-action" {...defaultProps.callToAction} />
   );
 
-  const getSiteLinks = (size: string) => (
-    <List
-      className={`site-links-${size}`}
-      component="ul"
-      aria-label="Site links"
-    >
-      {siteLinks?.map(({key, label, href}) => (
-        <ListItem key={key}>
-          <Link href={href} aria-label={label}>
-            {label}
-          </Link>
-        </ListItem>
-      ))}
-    </List>
+  const getDesktopLinks = (size: string) => (
+    <LinkList
+      className={`link-list-${size}`}
+      ariaLabel="Main Links"
+      linkList={desktopLinks.linkList}
+    />
   );
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={styles.drawerContent}>
-      <Box>
-        {getSiteLogo()}
-        {getSiteLinks('mobile')}
-      </Box>
-      {getCallToAction()}
-    </Box>
+  // Get Links for Drawer
+  const getDrawerLinks = (size: string) => (
+    <LinkList
+      className={`link-list-${size}`}
+      ariaLabel="Main Links"
+      linkList={drawerLinks.linkList}
+    />
   );
 
   return (
@@ -115,26 +142,18 @@ const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
         <Toolbar variant="dense" sx={styles.toolBar} disableGutters>
           <Box sx={styles.leftSide}>
             {/* Site Logo */}
-            {getSiteLogo()}
+            {siteLogo}
             {/* Site Links */}
-            {getSiteLinks('desktop')}
+            {getDesktopLinks('desktop')}
           </Box>
           {/* Call to Action Button */}
-          {getCallToAction()}
+          {callToAction}
           {/* Menu Button */}
-          <IconButton
-            aria-label="Open drawer"
-            edge="end"
-            onClick={handleDrawerToggle}
-            sx={styles.menuButton}
-            disableRipple
-          >
-            <MenuIcon fontSize="large" />
-          </IconButton>
+          <MenuButton onClick={handleDrawerToggle} />
         </Toolbar>
       </AppBar>
       {/* Drawer */}
-      <nav>
+      <Box component="nav">
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -151,28 +170,27 @@ const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
           sx={styles.drawer}
         >
           {/* Close Button */}
-          <IconButton
-            aria-label="Close drawer"
-            onClick={handleDrawerToggle}
-            disableRipple
-            sx={styles.closeButton}
-          >
-            <CloseIcon fontSize="large" />
-          </IconButton>
-          {drawer}
+          <CloseButton onClick={handleDrawerToggle} />
+          {/* Drawer Content */}
+          <Box onClick={handleDrawerToggle} sx={styles.drawerContent}>
+            <Box>
+              {siteLogo}
+              {getDrawerLinks('mobile')}
+            </Box>
+            {callToAction}
+          </Box>
         </Drawer>
-      </nav>
+      </Box>
     </Box>
   );
 };
 
-const breakpoint = 1075; // px
 const styles = {
   appBar: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(2, 4),
-    [`@media (max-width: ${breakpoint}px)`]: {
-      '.site-links-desktop, .call-to-action': {
+    [`@media (max-width: ${mobileBreakpoint}px)`]: {
+      '.link-list-desktop, .call-to-action': {
         display: 'none',
       },
     },
@@ -190,7 +208,7 @@ const styles = {
       display: 'flex',
       flexDirection: 'row',
       gap: theme.spacing(1),
-      [`@media (max-width: ${breakpoint}px)`]: {
+      [`@media (max-width: ${mobileBreakpoint}px)`]: {
         display: 'none',
       },
     },
@@ -208,18 +226,6 @@ const styles = {
           backgroundColor: alpha(theme.palette.primary.main, 0.1),
         },
       },
-    },
-  },
-  menuButton: {
-    display: 'none',
-    [`@media (max-width: ${breakpoint}px)`]: {
-      display: 'flex',
-    },
-    '& svg': {
-      color: theme.palette.common.black,
-    },
-    '&:focus-visible': {
-      outline: `2px solid ${theme.palette.primary.main}`,
     },
   },
   drawer: {
@@ -253,19 +259,6 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: 'inherit',
-  },
-  closeButton: {
-    width: 'auto',
-    position: 'absolute',
-    insetBlockStart: theme.spacing(2.25),
-    insetInlineEnd: theme.spacing(1.5),
-    zIndex: 1000,
-    '& svg': {
-      color: theme.palette.common.black,
-    },
-    '&:focus-visible': {
-      outline: `2px solid ${theme.palette.primary.main}`,
-    },
   },
 };
 
