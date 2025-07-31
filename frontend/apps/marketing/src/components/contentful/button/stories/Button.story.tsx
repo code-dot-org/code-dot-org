@@ -27,6 +27,7 @@ type Story = StoryObj<typeof Button>;
 
 const createStory = (theme: string) => {
   const Story: Story = {
+    globals: {theme},
     render: () => (
       <div
         style={{
@@ -74,14 +75,9 @@ const createStory = (theme: string) => {
       </div>
     ),
   };
-  Story.globals = {
-    theme,
-  };
+
   return Story;
 };
-
-export const CDOVariants = createStory('code.org');
-export const CSForAllVariants = createStory('csforall');
 
 export const Playground: Story = {
   args: {
@@ -94,3 +90,5 @@ export const Playground: Story = {
     className: '',
   },
 };
+
+export const Variants = createStory('csforall');

@@ -4,7 +4,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["../../apps/marketing/src/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["../../apps/marketing/public/*"]
     }
   }
 }
