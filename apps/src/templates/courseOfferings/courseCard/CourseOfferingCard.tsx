@@ -16,27 +16,44 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import i18n from '@cdo/locale';
 
+import CourseOfferingExpandedCard from './courseExpandedCard/CourseOfferingExpandedCard';
+
 import moduleStyles from './courseOfferingCard.module.scss';
 
-interface CourseOfferingCardProps extends CourseOffering {
+interface CourseOfferingCardProps {
+  courseOffering: CourseOffering;
   isThisCourseForTeachers?: boolean;
   courseDurationLabel: string;
   actionRowContent?: React.ReactNode;
   defaultImageSrc: string;
+  isExpanded?: boolean;
+  expandedCardActionRowContent?: React.ReactNode;
+  onCloseExpandedCard: () => void;
+  relatedProposalsHeader?: string;
+  relatedProposalsContent?: React.ReactNode;
 }
 
 const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
-  display_name,
-  grade_levels,
-  image,
-  is_translated,
-  cs_topic,
-  school_subject,
-  isThisCourseForTeachers,
+  courseOffering,
+  isThisCourseForTeachers = false,
   courseDurationLabel,
   actionRowContent,
   defaultImageSrc,
+  isExpanded = false,
+  expandedCardActionRowContent,
+  onCloseExpandedCard,
+  relatedProposalsHeader,
+  relatedProposalsContent,
 }) => {
+  const {
+    display_name,
+    grade_levels,
+    school_subject,
+    cs_topic,
+    image,
+    is_translated,
+  } = courseOffering;
+
   const translatedSubjectsAndTopicsTitlesArray = useMemo(() => {
     const keys = intersection(
       subjectsAndTopicsOrder,
@@ -82,7 +99,7 @@ const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
     return tagsList;
   }, [display_name, translatedSubjectsAndTopicsTitlesArray]);
 
-  const translatedGradeRange = useMemo(() => {
+  const translatedGradeRange: [string, string] = useMemo(() => {
     const gradesArray = grade_levels?.split(',') || [];
 
     const translatedGradesString = i18n.gradeRange({
@@ -97,49 +114,66 @@ const CourseOfferingCard: React.FC<CourseOfferingCardProps> = ({
   }, [grade_levels]);
 
   return (
-    <div className={moduleStyles.courseOfferingCardContainer}>
-      <Image
-        className={moduleStyles.courseOfferingCardImage}
-        src={image || defaultImageSrc}
-      />
-      <div className={moduleStyles.mainContent}>
-        <div className={moduleStyles.textContent}>
-          <div className={moduleStyles.header}>
-            <div className={moduleStyles.topicWrapper}>
-              {translatedSubjectsAndTopicsTitlesArray.length > 0 && (
-                <Tags size="s" tagsList={courseSubjectsAndTopicsTagsList} />
-              )}
+    <div>
+      <div className={moduleStyles.courseOfferingCardContainer}>
+        <Image
+          className={moduleStyles.courseOfferingCardImage}
+          src={image || defaultImageSrc}
+        />
+        <div className={moduleStyles.mainContent}>
+          <div className={moduleStyles.textContent}>
+            <div className={moduleStyles.header}>
+              <div className={moduleStyles.topicWrapper}>
+                {translatedSubjectsAndTopicsTitlesArray.length > 0 && (
+                  <Tags size="s" tagsList={courseSubjectsAndTopicsTagsList} />
+                )}
 
-              {is_translated && (
-                <FontAwesomeV6Icon iconName="language" iconStyle="solid" />
-              )}
+                {is_translated && (
+                  <FontAwesomeV6Icon iconName="language" iconStyle="solid" />
+                )}
+              </div>
+              <Heading4 noMargin className={moduleStyles.courseTitle}>
+                {display_name}
+              </Heading4>
             </div>
-            <Heading4 noMargin className={moduleStyles.courseTitle}>
-              {display_name}
-            </Heading4>
+            <div className={moduleStyles.details}>
+              <div>
+                <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
+                <BodyThreeText noMargin>
+                  <StrongText noMargin>{translatedGradeRange[0]}</StrongText>{' '}
+                  {translatedGradeRange[1]}
+                  {isThisCourseForTeachers && '  Teachers'}
+                </BodyThreeText>
+              </div>
+              <div>
+                <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
+                <BodyThreeText noMargin>
+                  <StrongText noMargin>{i18n.duration()}:</StrongText>{' '}
+                  {courseDurationLabel}
+                </BodyThreeText>
+              </div>
+            </div>
           </div>
-          <div className={moduleStyles.details}>
-            <div>
-              <FontAwesomeV6Icon iconName="user" iconStyle="solid" />
-              <BodyThreeText noMargin>
-                <StrongText noMargin>{translatedGradeRange[0]}</StrongText>{' '}
-                {translatedGradeRange[1]}
-                {isThisCourseForTeachers && '  Teachers'}
-              </BodyThreeText>
-            </div>
-            <div>
-              <FontAwesomeV6Icon iconName="clock" iconStyle="solid" />
-              <BodyThreeText noMargin>
-                <StrongText noMargin>{i18n.duration()}:</StrongText>{' '}
-                {courseDurationLabel}
-              </BodyThreeText>
-            </div>
-          </div>
+          {actionRowContent && (
+            <div className={moduleStyles.actionRow}>{actionRowContent}</div>
+          )}
         </div>
-        {actionRowContent && (
-          <div className={moduleStyles.actionRow}>{actionRowContent}</div>
-        )}
       </div>
+      {isExpanded && (
+        <CourseOfferingExpandedCard
+          courseOffering={courseOffering}
+          courseDurationLabel={courseDurationLabel}
+          translatedGradeRange={translatedGradeRange}
+          isThisCourseForTeachers={isThisCourseForTeachers}
+          translatedSubjectsAndTopicsTitlesArray={
+            translatedSubjectsAndTopicsTitlesArray
+          }
+          onClose={onCloseExpandedCard}
+          actionRowContent={expandedCardActionRowContent}
+          relatedProposalsHeader={relatedProposalsHeader}
+          relatedProposalsContent={relatedProposalsContent}
+        />
+      )}
     </div>
   );
 };

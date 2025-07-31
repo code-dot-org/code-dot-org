@@ -1,3 +1,4 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
@@ -68,14 +69,21 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
     );
   }
 
+  const inMemoryEntities = useInMemoryEntities();
+
   const logosData = useMemo(() => {
     const data = logos.filter(Boolean).map(({fields}) => {
       const {title, logoImage, primaryLinkRef} = fields;
+
+      const resolvedLogoImage = inMemoryEntities.maybeResolveLink(
+        logoImage,
+      ) as ExperienceAsset;
+
       const url = primaryLinkRef?.fields?.primaryTarget || '';
       const getImage = () => (
         <img
-          src={getAbsoluteImageUrl(logoImage)}
-          alt={logoImage?.fields?.title || title || 'Logo'}
+          src={getAbsoluteImageUrl(resolvedLogoImage)}
+          alt={resolvedLogoImage?.fields?.title || title || 'Logo'}
           loading="lazy"
         />
       );

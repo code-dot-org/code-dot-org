@@ -8,6 +8,7 @@ import {LevelSkill} from './types';
 
 const LevelsSkillsCreator: React.FC = () => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
+  const [addingSkillsToLevels, setAddingSkillsToLevels] = useState(false);
   const csvSelected = !!csvFile;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -56,7 +57,7 @@ const LevelsSkillsCreator: React.FC = () => {
       alert('No LevelsSkills to create. Please upload a CSV first.');
       return;
     }
-
+    setAddingSkillsToLevels(true);
     for (const levelsSkill of levelsSkillsData) {
       try {
         await addSkillToLevel(levelsSkill);
@@ -69,8 +70,9 @@ const LevelsSkillsCreator: React.FC = () => {
           }`
         );
       }
-      window.location.reload();
     }
+    setAddingSkillsToLevels(false);
+    window.location.reload();
   };
 
   return (
@@ -107,6 +109,7 @@ const LevelsSkillsCreator: React.FC = () => {
           text="Add Skills to Levels"
           onClick={importCSV}
           disabled={!csvSelected}
+          isPending={addingSkillsToLevels}
         />
       </div>
     </div>
