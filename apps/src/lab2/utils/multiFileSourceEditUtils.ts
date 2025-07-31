@@ -234,7 +234,7 @@ const getNewActiveFileId = (
   if (fileBeingClosed.active) {
     // List of open files before fileBeingClosed was closed.
     const oldOpenFiles = source.openFiles;
-    if (!oldOpenFiles) {
+    if (!oldOpenFiles || oldOpenFiles.length === 0) {
       return undefined;
     }
     // Find the index of fileBeingClosed.
