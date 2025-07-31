@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-11 20:43:26 UTC",
+    "serialized_at": "2025-07-23 20:24:14 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -567,25 +567,11 @@
       "key": "0a2b6572-3ae1-4eae-af6b-3dda1b909705",
       "position": 3,
       "properties": {
-        "duration": 35,
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0a2b6572-3ae1-4eae-af6b-3dda1b909705",
-        "lesson.key": "Sequencing - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "programming-with-music-lab-2025"
-      }
-    },
-    {
-      "key": "5bec9543-2af7-4904-a8d0-c0bc43628ebc",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5bec9543-2af7-4904-a8d0-c0bc43628ebc",
         "lesson.key": "Sequencing - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
@@ -787,25 +773,11 @@
       "key": "f731f0e2-1b98-442d-8fb8-b5fbc8df52ec",
       "position": 3,
       "properties": {
-        "duration": 35,
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "f731f0e2-1b98-442d-8fb8-b5fbc8df52ec",
-        "lesson.key": "Loops - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "programming-with-music-lab-2025"
-      }
-    },
-    {
-      "key": "24e1a6fb-80a8-4144-852d-7362e575dd82",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "24e1a6fb-80a8-4144-852d-7362e575dd82",
         "lesson.key": "Loops - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
@@ -1007,25 +979,11 @@
       "key": "88135275-ed13-4b53-8e83-be9091de2536",
       "position": 3,
       "properties": {
-        "duration": 35,
+        "duration": 40,
         "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "88135275-ed13-4b53-8e83-be9091de2536",
-        "lesson.key": "Functions - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "programming-with-music-lab-2025"
-      }
-    },
-    {
-      "key": "179506c7-4961-4dec-9dcd-2228e764119c",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "179506c7-4961-4dec-9dcd-2228e764119c",
         "lesson.key": "Functions - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "programming-with-music-lab-2025"
@@ -1974,16 +1932,6 @@
       }
     },
     {
-      "key": "5818fd3d-8256-494c-9197-e35a6af64aa1",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5818fd3d-8256-494c-9197-e35a6af64aa1",
-        "lesson_activity.key": "5bec9543-2af7-4904-a8d0-c0bc43628ebc"
-      }
-    },
-    {
       "key": "e715eef7-5cde-43c9-81a4-2398713683ef",
       "position": 1,
       "properties": {
@@ -2576,16 +2524,6 @@
       }
     },
     {
-      "key": "250a5203-b305-4304-896d-1777b2eae0d3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "250a5203-b305-4304-896d-1777b2eae0d3",
-        "lesson_activity.key": "24e1a6fb-80a8-4144-852d-7362e575dd82"
-      }
-    },
-    {
       "key": "b2f900fa-3d38-455f-9ed5-302b072fd9d1",
       "position": 1,
       "properties": {
@@ -3144,16 +3082,6 @@
       "seeding_key": {
         "activity_section.key": "691409b7-bf02-40b5-8a3f-c003d7f0db37",
         "lesson_activity.key": "88135275-ed13-4b53-8e83-be9091de2536"
-      }
-    },
-    {
-      "key": "7d6b9411-752c-4563-ad50-84acfcf140a7",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7d6b9411-752c-4563-ad50-84acfcf140a7",
-        "lesson_activity.key": "179506c7-4961-4dec-9dcd-2228e764119c"
       }
     },
     {
@@ -8909,6 +8837,16 @@
   ],
   "objectives": [
     {
+      "key": "2fe2eb41-5883-4d7b-b1a3-0d6f1dfb668a",
+      "properties": {
+        "description": "Apply effects to tracks by sequencing effect blocks strategically"
+      },
+      "seeding_key": {
+        "lesson.key": "Sequencing - Synthesize",
+        "objective.key": "2fe2eb41-5883-4d7b-b1a3-0d6f1dfb668a"
+      }
+    },
+    {
       "key": "4144a46d-7f3a-4c88-9d35-2739700a944f",
       "properties": {
         "description": "Apply the problem-solving process to explore and refine design ideas in Music Lab"
@@ -8916,6 +8854,76 @@
       "seeding_key": {
         "lesson.key": "Introduction to Music Lab",
         "objective.key": "4144a46d-7f3a-4c88-9d35-2739700a944f"
+      }
+    },
+    {
+      "key": "425c145b-ac72-4853-9f02-e7060949cc3c",
+      "properties": {
+        "description": "Create songs using loop and randomness to represent a repeating animation"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "objective.key": "425c145b-ac72-4853-9f02-e7060949cc3c"
+      }
+    },
+    {
+      "key": "480a3f51-3148-434a-8128-43bd1c3369a0",
+      "properties": {
+        "description": "Create walk-up songs utilizing trigger blocks and sequencing skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "objective.key": "480a3f51-3148-434a-8128-43bd1c3369a0"
+      }
+    },
+    {
+      "key": "64ee1952-5a27-46b6-91ce-24b3fdb66902",
+      "properties": {
+        "description": "Create remixes of songs by using functions and abstraction to focus on elements of a song"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions - Synthesis",
+        "objective.key": "64ee1952-5a27-46b6-91ce-24b3fdb66902"
+      }
+    },
+    {
+      "key": "67a2e7e0-6178-464e-ab84-f1bab85e20f5",
+      "properties": {
+        "description": "Play tracks in a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "objective.key": "67a2e7e0-6178-464e-ab84-f1bab85e20f5"
+      }
+    },
+    {
+      "key": "6dab4ee8-5216-44d4-8cbb-944962c2e533",
+      "properties": {
+        "description": "Create live coding songs by applying looping skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops - Synthesize",
+        "objective.key": "6dab4ee8-5216-44d4-8cbb-944962c2e533"
+      }
+    },
+    {
+      "key": "7905d305-a892-43ae-9341-c1ec3f5748d8",
+      "properties": {
+        "description": "Create songs that combine loops with sequencing blocks"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops - Practice",
+        "objective.key": "7905d305-a892-43ae-9341-c1ec3f5748d8"
+      }
+    },
+    {
+      "key": "8c4f1336-62fc-4609-a2c1-816156acdd23",
+      "properties": {
+        "description": "Create a genre mash-up remix by applying sequencing, loops, and functions"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "objective.key": "8c4f1336-62fc-4609-a2c1-816156acdd23"
       }
     },
     {
@@ -8939,6 +8947,16 @@
       }
     },
     {
+      "key": "b8e2f758-f1b8-418f-9d6a-200440eaafef",
+      "properties": {
+        "description": "Decompose songs into specific parts by using functions strategically"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "objective.key": "b8e2f758-f1b8-418f-9d6a-200440eaafef"
+      }
+    },
+    {
       "key": "bd34f98d-618c-4d0d-b5f9-6e11fa2e3441",
       "properties": {
         "description": "Play tracks sequentially and simultaneously"
@@ -8959,6 +8977,26 @@
       }
     },
     {
+      "key": "dc0ad936-5ef0-4455-ab01-ee5b675df1c7",
+      "properties": {
+        "description": "Use patterns to simplify repeated code into loops"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "objective.key": "dc0ad936-5ef0-4455-ab01-ee5b675df1c7"
+      }
+    },
+    {
+      "key": "e64b532f-47d6-4dc9-9a73-266f4f2c0a80",
+      "properties": {
+        "description": "Create songs that use nested loops"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops - Practice",
+        "objective.key": "e64b532f-47d6-4dc9-9a73-266f4f2c0a80"
+      }
+    },
+    {
       "key": "feab178a-d80d-4996-9fe9-9db31447a160",
       "properties": {
         "description": "Combine tracks with different measure lengths"
@@ -8966,6 +9004,16 @@
       "seeding_key": {
         "lesson.key": "Sequencing - Practice",
         "objective.key": "feab178a-d80d-4996-9fe9-9db31447a160"
+      }
+    },
+    {
+      "key": "fef901e5-145e-49c8-af4f-1240e2a57cdf",
+      "properties": {
+        "description": "Define and call functions to represent a part of a song"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "objective.key": "fef901e5-145e-49c8-af4f-1240e2a57cdf"
       }
     }
   ],

@@ -49,6 +49,24 @@
   padding-bottom: 5px;
 }
 
+/* Styles for SystemPromptModificationField component */
+.system-prompt-modification-field__toggle {
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.system-prompt-modification-field__textarea {
+  width: 100%;
+  margin-top: 8px;
+
+  .edit-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 /* Styles for AccuracyCheck component */
 .evaluation-complete-notification {
   margin-top: 12px;
@@ -94,6 +112,7 @@
 .view-system-prompt__toggle {
   cursor: pointer;
   user-select: none;
+  font-weight: bold;
 }
 
 .view-system-prompt__text {

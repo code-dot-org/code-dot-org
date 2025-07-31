@@ -1,4 +1,4 @@
-import MUIDivider from '@mui/material/Divider';
+import MuiDivider from '@mui/material/Divider';
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
 
@@ -6,7 +6,7 @@ import type {SpacingProps} from '@/components/common/types';
 
 export type DividerProps = HTMLAttributes<HTMLElement> & {
   /** Divider color */
-  color?: 'primary' | 'strong';
+  color?: 'primary' | 'strong' | 'white';
   /** Divider margin */
   margin?: keyof SpacingProps;
   /** Divider custom className */
@@ -19,7 +19,7 @@ const Divider: React.FC<DividerProps> = ({
   className,
 }) => {
   return (
-    <MUIDivider
+    <MuiDivider
       className={classNames(
         `divider--color-${color}`,
         `divider--margin-${margin}`,

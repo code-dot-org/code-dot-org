@@ -33,6 +33,18 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    color: {
+      displayName: 'Color',
+      type: 'Text',
+      defaultValue: 'primary',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'white', displayName: 'White'},
+        ],
+      },
+    },
     removeMarginBottom: {...removeMarginBottomDefinition},
     children: {
       displayName: 'Content',

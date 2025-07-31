@@ -1,0 +1,41 @@
+name 'pl-java-class-design-using-fliles-3_pl'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Working with Java Files
+
+#### A Java program is made up of one or more **Java source code files**. Each source code file gives instructions to Java to tell it what we want it to do and the order we want the tasks to execute. 
+
+#### When we write Java source code files, we have to be sure to follow certain rules so our program runs as expected.
+
+#### In larger programs, it's common to build different classes in separate files to keep the code organized and easier to manage.
+
+---
+##File names
+
+<img src="https://images.code.org/6db56848de494c93a965b3845b2c9aee-image-1747667743965.png" alt="Sample Java code with a class header and file name" width="400px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
+
+<br><br>
+
+#### **File names** usually start with a **capital letter** and end with the **file extension** to indicate what type of file it is.
+
+#### In Java, **source code files** end with **.java**.
+
+<div style="clear:both;"></div>
+
+---
+## Class headers
+
+<img src="https://images.code.org/55234feeac009a7bd6345fecdf102441-image-1747668058775.png" alt="Sample Java code with a class header and file name" width="400px" style="border-radius:10px; float:left; margin: 0 30px 10px 10px;">
+
+#### The **class header** consists of the class keyword and the name of the class.
+
+#### The **name of the class** and the **file name** ***must*** **be the same**!
+
+<div style="clear:both;"></div>
+
+---
+
+### **Next up:** Practice working with Java files. 
+MARKDOWN

@@ -26,6 +26,7 @@ export const OverlineContentfulComponentDefinition: ComponentDefinition = {
         in: [
           {value: 'primary', displayName: 'Primary'},
           {value: 'secondary', displayName: 'Secondary'},
+          {value: 'white', displayName: 'White'},
         ],
       },
     },

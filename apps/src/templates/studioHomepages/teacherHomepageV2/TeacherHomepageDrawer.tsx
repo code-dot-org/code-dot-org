@@ -80,11 +80,8 @@ export const TeacherHomepageDrawer: React.FC = () => {
     schoolType: existingSchoolInfo?.school_type,
   });
 
-  const schoolName =
-    schoolInfo.schoolsList.find(school => school.value === schoolInfo.schoolId)
-      ?.text ||
-    schoolInfo.schoolName ||
-    i18n.schoolInfoDialogDescriptionNoName();
+  const existingSchoolName =
+    existingSchoolInfo?.school_name || i18n.schoolInfoDialogDescriptionNoName();
 
   const tryUpdateSchoolInfo = async () => {
     const hasNcesId =
@@ -208,7 +205,7 @@ export const TeacherHomepageDrawer: React.FC = () => {
         <BodyTwoText>
           {schoolInfoConfirmationOpen
             ? `${i18n.schoolInfoDialogDescription()}${i18n.schoolInfoDialogDescriptionSchoolName(
-                {schoolName}
+                {schoolName: existingSchoolName}
               )}`
             : success
             ? i18n.schoolInfoDrawerSuccess()

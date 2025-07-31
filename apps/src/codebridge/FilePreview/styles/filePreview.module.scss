@@ -1,7 +1,9 @@
-@import 'color.scss';
-
 .filePreview {
   height: 100%;
-  background-color: $darkest_gray;
-  color: $white;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.iframePreview {
+  border: 2px solid var(--borders-neutral-primary);
 }

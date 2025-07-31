@@ -47,6 +47,20 @@ describe('Heading Component', () => {
     );
   });
 
+  it('applies the color prop correctly', () => {
+    render(
+      <Heading
+        visualAppearance="heading-lg"
+        color="white"
+        removeMarginBottom={false}
+      >
+        White Heading
+      </Heading>,
+    );
+    const heading = screen.getByText('White Heading');
+    expect(heading).toHaveStyle('color: white');
+  });
+
   it('removes margin when removeMarginBottom is true', () => {
     render(
       <Heading visualAppearance={'heading-md'} removeMarginBottom={true}>
