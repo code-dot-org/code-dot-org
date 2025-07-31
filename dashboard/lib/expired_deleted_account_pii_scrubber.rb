@@ -23,6 +23,7 @@ class ExpiredDeletedAccountPiiScrubber
   SLACK_CHANNEL_FOR_SUMMARY = 'cron-daily'
   SLACK_CHANNEL_FOR_ERRORS = 'user-accounts'
   ACCOUNT_SCRUB_LIMIT = 8_000
+  BATCH_SIZE = 1_000
 
   # @param dry_run [Boolean] If true, no accounts will actually be scrubbed.
   # @param deleted_since [Time] The time before which accounts should be scrubbed of PII.
@@ -49,13 +50,20 @@ class ExpiredDeletedAccountPiiScrubber
   def call
     reset_metrics
 
-    accounts_to_scrub.find_each do |user|
-      scrub_user(user)
-      self.num_accounts_scrubbed += 1
-    rescue StandardError => exception
-      self.num_errors += 1
-      Honeybadger.notify(exception, context: {user_id: user.id})
-      log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
+    # Process individual batches in a loop to avoid issues with find_each, which imposes
+    # an order by id, causing an inefficient scan on the id index. Order does not matter
+    # for this operation, so we can use a simple limit approach.
+    loop do
+      account_batch = accounts_to_scrub.limit(BATCH_SIZE)
+      account_batch.each do |user|
+        scrub_user(user)
+        self.num_accounts_scrubbed += 1
+      rescue StandardError => exception
+        self.num_errors += 1
+        Honeybadger.notify(exception, context: {user_id: user.id})
+        log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
+      end
+      break if account_batch.size < BATCH_SIZE
     end
 
     if dry_run?
