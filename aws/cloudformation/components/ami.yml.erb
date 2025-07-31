@@ -175,7 +175,7 @@ frontend_device_name ||= '/dev/sda1'
           - !ImportValue VPC-FrontendSecurityGroup
         KeyName: <%=ssh_key_name%>
         Monitoring:
-          Enabled: true
+          Enabled: <%=rack_env?(:production)%>
         BlockDeviceMappings:
           - DeviceName: <%=frontend_device_name%>
             Ebs:
