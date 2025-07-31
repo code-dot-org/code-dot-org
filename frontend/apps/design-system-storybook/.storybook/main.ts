@@ -12,6 +12,7 @@ function getAbsolutePath(value: string) {
 
 const config: StorybookConfig = {
   stories: [
+    '../../marketing/src/**/stories/*.story.@(ts|tsx)',
     '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
   ],
   addons: [
@@ -66,6 +67,7 @@ const config: StorybookConfig = {
       },
     },
     getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-themes'),
   ],
   framework: {
     name: getAbsolutePath('@storybook/react-webpack5'),
@@ -87,6 +89,7 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
+        '@/themes': resolve(__dirname, '../../marketing/src/themes'),
         '@': resolve(__dirname, '../../../packages/component-library/src'),
         '@public': resolve(__dirname, '../public'),
       };
