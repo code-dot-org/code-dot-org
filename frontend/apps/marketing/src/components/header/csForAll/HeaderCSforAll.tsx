@@ -152,6 +152,7 @@ const HeaderMui: React.FC<HeaderProps> = ({siteLinks, className}) => {
         >
           {/* Close Button */}
           <IconButton
+            aria-label="Close drawer"
             onClick={handleDrawerToggle}
             disableRipple
             sx={styles.closeButton}
