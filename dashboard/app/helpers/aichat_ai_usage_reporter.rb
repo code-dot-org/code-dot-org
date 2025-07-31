@@ -1,3 +1,6 @@
+# Class to optionally pass to AichatAiClient for logging/throttling.
+# Note: this file uses TypeScript type declaration syntax to describe types in comments.
+# This is in line with the TypeScript-like "RubyTypes" used to actually declare the types.
 class AichatAiUsageReporter
   DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
   ONE_DAY_S = 60 * 60 * 24
@@ -69,29 +72,33 @@ class AichatAiUsageReporter
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
   end
 
-  # Helper to calculate the number of messages that have files.
+  # Helper to calculate the number of "messages" that have at least one file. The concept of "message" here
+  # is not the same as the concept of `Message` within the `config`(`AiConfig`),`request`(`AiRequest`), and
+  # `context`(`AiContext`) data structures (where `context` is a `Message[]`, `request` is a `MessagePart[]`,
+  # and `config.systemInstructions` is a `MessagePart[]`). When  counting the number of "messages" that have
+  # at least one file, we are treating all `config.systemInstructions` as a single message and the `request`
+  # as another single message. Thus, if there are 5 files in the system instructions and 3 files in the
+  # request, this would be counted as 2 messages with at least on file.
   private def get_messages_with_file_count(config, request, context)
-    # Start assuming zero message has at least one file.
     message_with_files_count = 0
 
-    # If any file exists in the request message then one message has at
-    # least one file.
+    # Request (with all its message parts) treated as a single "message" so increment count if any of those
+    # parts is a file.
     if request.any? {|part| part[:type] == 'file'}
       message_with_files_count += 1
     end
 
     system_instructions = config[:systemInstructions]
 
-    # If we have a system message and if any file exists there, then one
-    # additional message has at least one file.
+    # System instructions (with all its message parts) treated as a single "message" so increment count if it
+    # exists (system instructions are optional) and if any of those parts is a file.
     if system_instructions && system_instructions.any? {|part| part[:type] == 'file'}
       message_with_files_count += 1
     end
 
-    # Iterate through the context (history) messages
     context.each do |message|
-      # If any file exists in the current message then one additional message
-      # has at least one file.
+      # Each context (history) message has multiple message parts so increment count if any of those
+      # parts is a file.
       if message[:parts].any? {|part| part[:type] == 'file'}
         message_with_files_count += 1
       end
@@ -100,35 +107,36 @@ class AichatAiUsageReporter
     message_with_files_count
   end
 
-  # Helper to get message and asset counts used for AiUsageReporter.
-  private def get_messages_and_files_counts(config, request, context)
-    combined_parts = [
-      # Add systemInstructions parts if not nil.
+  # `MessagePart`s exist at different levels in the config, request, context data structures.
+  # This helper combines them all into a single array.
+  private def get_all_message_parts(config, request, context)
+    [
+      # System instructions (`MessagePart[]`) are optional so combine its parts if it exists.
       *(config[:systemInstructions] ? config[:systemInstructions] : []),
 
-      # Add request parts.
+      # The request is a `MessagePart[]` so just combine that directly.
       *request,
 
-      # Add each context item's parts array.
+      # The context has a parts field which is a `MessagePart[]`, so combine that too.
       *context.flat_map {|c| c[:parts]}
     ]
+  end
 
-    # Calculate the number of messages that have files.
+  private def get_messages_and_files_counts(config, request, context)
+    message_parts = get_all_message_parts(config, request, context)
+
     message_with_files_count = get_messages_with_file_count(config, request, context)
 
-    # Calculate the total number of files.
-    total_files_count = combined_parts.count {|part| part[:type] == 'file'}
+    total_files_count = message_parts.count {|part| part[:type] == 'file'}
 
-    # Calculate the number of PDF files.
-    pdfs_count = combined_parts.count {|part| part[:type] == 'file' && part[:content][:mime_type] == 'application/pdf'}
+    pdfs_count = message_parts.count {|part| part[:type] == 'file' && part[:content][:mime_type] == 'application/pdf'}
 
-    # TODO - make a helper for this!
     # Currently we don't have a shared (between frontend and backd) list of image mime types
     # so for now, we just assume if not a pdf, then it's an image
     images_count = total_files_count - pdfs_count
 
     return_value = {
-      total: combined_parts.count,
+      total: message_parts.count,
       withAssets: message_with_files_count,
       pdfs: pdfs_count,
       images: images_count
