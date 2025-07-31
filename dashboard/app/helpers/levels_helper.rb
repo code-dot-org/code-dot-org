@@ -244,8 +244,11 @@ module LevelsHelper
     # In general, we need to allocate a channel if a level is channel-backed.
     # As an optimization, we can skip allocating the channel in the following
     # two special cases where we know the channel will not be written to:
-    # - For levels with contained levels, the outer level is read-only and does not write to the channel. (We currently do not support inner levels that are channel-backed.)
-    # - In edit_blocks mode, the source code is saved as a level property and is not written to the channel.
+    # - For levels with contained levels, the outer level is read-only and does
+    #   not write to the channel. (We currently do not support inner levels that
+    #   are channel-backed.)
+    # - In edit_blocks mode, the source code is saved as a level property and
+    #   is not written to the channel.
     level_requires_channel = (@level.channel_backed? &&
           @level.try(:contained_levels).blank? &&
           params[:action] != 'edit_blocks')
@@ -768,7 +771,7 @@ module LevelsHelper
     app_options[:public_caching] = @public_caching
     if @script_level&.lesson
       app_options[:theme] = @script_level.lesson.get_background_for_user(current_user)
-    elsif @level.uses_theme_preference? && current_user
+    elsif @level.is_a?(Pythonlab) && current_user
       theme_preference = UserPreference.find_by(user_id: current_user.id)&.theme
       app_options[:theme] = (theme_preference && theme_preference['global']) || 'dark'
     end
@@ -1052,7 +1055,6 @@ module LevelsHelper
     end
   end
 
-  # This is what we need to modify so that it returns either one text string OR a blob
   # Returns student code for a given level
   def get_student_code(user_id, level, unit_id, code_version = nil)
     s3 = AWS::S3.create_client
@@ -1089,8 +1091,6 @@ module LevelsHelper
           student_code = source
         end
       end
-      puts "Getting student_code"
-      puts student_code
     end
     {
       project_id: channel_id,
