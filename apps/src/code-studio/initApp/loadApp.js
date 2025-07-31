@@ -77,8 +77,8 @@ export function setupApp(appOptions) {
         );
       }
 
-      if (!appSupportsSettings(appOptions.app)) {
-        $('#settings-header').hide();
+      if (appSupportsSettings(appOptions.app)) {
+        $('#settings-header').show();
       }
 
       if (

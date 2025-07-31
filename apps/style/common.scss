@@ -1042,6 +1042,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 }
 
+#settings-header {
+  display: none;
+}
+
 #versions-header {
   display: none;
 }
