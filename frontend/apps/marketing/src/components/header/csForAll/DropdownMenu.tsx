@@ -83,15 +83,15 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, label, linkList}) => {
           },
         }}
         elevation={2}
-        sx={styles.menu}
         disableAutoFocusItem
+        sx={styles.menu}
       >
         {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
           <MenuItem
             key={href ?? label}
-            sx={styles.menuItem}
             onClick={handleClose}
             disableRipple
+            sx={styles.menuItem}
           >
             <LinkItem
               label={label}
