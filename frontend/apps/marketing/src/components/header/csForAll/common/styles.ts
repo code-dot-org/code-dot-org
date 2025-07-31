@@ -1,8 +1,10 @@
+import {alpha} from '@mui/material/styles';
+
 import theme from '@/themes/csforall';
 
-import {DRAWER_BREAKPOINT} from './common/constants';
+import {DRAWER_BREAKPOINT} from './constants';
 
-export const styles = {
+export const commonStyles = {
   appBar: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(2, 4),
@@ -56,5 +58,17 @@ export const styles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: 'inherit',
+  },
+  button: {
+    color: theme.palette.text.primary,
+    fontSize: theme.typography.body3.fontSize,
+    textDecoration: 'none',
+    marginBottom: 0,
+    padding: theme.spacing(1, 2),
+    borderRadius: theme.shape.borderRadius,
+    transition: 'background-color 0.3s ease',
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.primary.main, 0.1),
+    },
   },
 };

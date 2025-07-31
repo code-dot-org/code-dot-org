@@ -7,13 +7,13 @@ import React, {HTMLAttributes, useState} from 'react';
 
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
+import {commonStyles} from './common/styles';
 import {CALL_TO_ACTION, DRAWER_LINKS, SITE_LOGO} from './config';
 import HamburgerButton from './HamburgerButton';
 import {LinkItemProps} from './LinkItem';
 import LinkList from './LinkList';
 import MainMenuDesktop from './MainMenuDesktop';
 import SiteLogo from './SiteLogo';
-import {styles} from './styles';
 
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Custom class */
@@ -56,10 +56,10 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
         component="nav"
         elevation={0}
         position="relative"
-        sx={styles.appBar}
+        sx={commonStyles.appBar}
       >
-        <Toolbar variant="dense" sx={styles.toolBar} disableGutters>
-          <Box sx={styles.leftSide}>
+        <Toolbar variant="dense" sx={commonStyles.toolBar} disableGutters>
+          <Box sx={commonStyles.leftSide}>
             {/* Site Logo */}
             {siteLogo}
             {/* Main Menu Desktop with Dropdowns */}
@@ -87,12 +87,12 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           ModalProps={{
             keepMounted: true,
           }}
-          sx={styles.drawer}
+          sx={commonStyles.drawer}
         >
           {/* Close Button */}
           <CloseButton onClick={handleDrawerToggle} />
           {/* Drawer Content */}
-          <Box onClick={handleDrawerToggle} sx={styles.drawerContent}>
+          <Box onClick={handleDrawerToggle} sx={commonStyles.drawerContent}>
             <Box>
               {siteLogo}
               {getLinks('drawer', 'Main Links', DRAWER_LINKS.linkList)}
