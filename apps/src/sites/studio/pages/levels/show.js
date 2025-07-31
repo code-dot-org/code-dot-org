@@ -50,19 +50,24 @@ function initPage() {
     );
   }
 
-  const differentiationContext = {type: AiDiffContext.LEVEL};
-
   // AI Differentiation FAB to be shown only if rubric FAB is not.
   const renderAiDiffButton = () => {
-    const aiDiffFabMountPoint = document.getElementById(
-      'ai-differentiation-fab-mount-point'
-    );
     const reportingData = {
       unitName: config.script_name,
       courseName: config.course_name,
       levelName: config.level_name,
     };
+    const differentiationContext = {type: AiDiffContext.LEVEL};
+    if (hasScriptData('script[data-aiDiffData]')) {
+      const aiDiffData = getScriptData('aiDiffData');
+      const {levelId, scriptId} = aiDiffData;
+      differentiationContext.levelId = levelId;
+      differentiationContext.unitId = scriptId;
+    }
 
+    const aiDiffFabMountPoint = document.getElementById(
+      'ai-differentiation-fab-mount-point'
+    );
     if (aiDiffFabMountPoint && experiments.isEnabled('ai-diff-levels')) {
       ReactDOM.render(
         <Provider store={getStore()}>
