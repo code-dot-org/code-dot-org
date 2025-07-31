@@ -6,6 +6,8 @@ import {getNoteName, isBlackKey} from '../utils/Notes';
 
 import moduleStyles from './keybed.module.scss';
 
+const keyId = 'keyId';
+
 interface KeybedProps {
   numOctaves: number;
   startOctave: number;
@@ -95,21 +97,19 @@ const Key: React.FunctionComponent<KeyProps> = ({
   isVertical,
 }: KeyProps) => {
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    const currentElement = event.currentTarget;
-
+    const keyElements = Array.from(
+      document.querySelectorAll<HTMLElement>(`#${keyId}`)
+    );
+    const currentIndex = keyElements.indexOf(event.currentTarget);
     if (event.key === 'ArrowRight') {
       // Move focus to the next sibling
-      const nextElement = currentElement.nextElementSibling as HTMLElement;
-      if (nextElement) {
-        nextElement.focus();
-      }
+      const nextIndex = (currentIndex + 1) % keyElements.length;
+      keyElements[nextIndex].focus();
     } else if (event.key === 'ArrowLeft') {
       // Move focus to the previous sibling
-      const previousElement =
-        currentElement.previousElementSibling as HTMLElement;
-      if (previousElement) {
-        previousElement.focus();
-      }
+      const previousIndex =
+        (currentIndex - 1 + keyElements.length) % keyElements.length;
+      keyElements[previousIndex].focus();
     } else if (event.key === 'Enter' || event.key === ' ') {
       // Trigger the onClick handler for selection
       onClick();
@@ -124,11 +124,15 @@ const Key: React.FunctionComponent<KeyProps> = ({
       if (keypadContainer) {
         keypadContainer.focus();
       }
+    } else if (event.key === 'Tab') {
+      // Swallow the event so the focus doesn't leave the keybed
+      event.stopPropagation();
     }
   };
 
   return (
     <div
+      id={keyId}
       className={classNames(
         moduleStyles.key,
         isDisabled && moduleStyles.disabled,
