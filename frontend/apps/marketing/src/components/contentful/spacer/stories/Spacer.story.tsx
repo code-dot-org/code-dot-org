@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
 
-import Spacer from '../Spacer';
+import Spacer, {SpacerProps} from '../Spacer';
 
 const meta: Meta<typeof Spacer> = {
   title: 'Marketing/Spacer',
@@ -38,7 +38,7 @@ export const CDOVariants = createStory('code.org');
 export const CSForAllVariants = createStory('csforall');
 
 export const Playground: Story = {
-  render: args => {
+  render: (args: SpacerProps) => {
     return (
       <div
         style={{
