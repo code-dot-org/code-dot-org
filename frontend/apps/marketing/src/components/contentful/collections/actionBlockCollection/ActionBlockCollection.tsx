@@ -1,3 +1,4 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -57,6 +58,8 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   sortOrder = 'alphabetical',
   className,
 }) => {
+  const inMemoryEntities = useInMemoryEntities();
+
   const CONTENT_TYPES_WITH_OVERLINE = [
     'curriculum',
     'selfPacedPl',
@@ -65,7 +68,10 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
   ];
   const CONTENT_TYPES_WITH_SECONDARY_BUTTON = ['selfPacedPl', 'lab'];
 
-  const createButtonConfig = (linkRef: LinkEntry) => {
+  const createButtonConfig = (maybeLinkRef: LinkEntry) => {
+    const linkRef = inMemoryEntities.maybeResolveLink(
+      maybeLinkRef,
+    ) as LinkEntry;
     if (!linkRef?.fields?.label) return undefined;
 
     const {fields} = linkRef;
@@ -107,6 +113,10 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
         publishedDate,
       } = fields;
 
+      const resolvedImage = inMemoryEntities.maybeResolveLink(
+        image,
+      ) as ExperienceAsset;
+
       return {
         id: title,
         item: (
@@ -122,7 +132,7 @@ const ActionBlockCollection: React.FC<ActionBlockCollectionProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={{src: getAbsoluteImageUrl(image) || ''}}
+              image={{src: getAbsoluteImageUrl(resolvedImage) || ''}}
               primaryButton={createButtonConfig(primaryLinkRef)}
               secondaryButton={
                 CONTENT_TYPES_WITH_SECONDARY_BUTTON.includes(contentType)

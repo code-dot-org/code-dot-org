@@ -18675,8 +18675,8 @@ en:
           title: Game Design
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* #### Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
-          student_description: "#### **You will:**\n\n* #### Learn the basic elements of game design.\n* #### Use variables to keep score.\n* #### Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* ####  Learn how to access Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          description: "##### **You will:**\n\n* ##### Learn the basic elements of game design.\n* ##### Use variables to keep score.\n* ##### Code environment and player sprites. \n* ##### Learn how to host a game jam in your classroom. \n* #####  Learn how to access Code.org curricula.\n\n##### **Suggested time:** 80 minutes\n"
+          student_description: "##### **You will:**\n\n* ##### Learn the basic elements of game design.\n* ##### Use variables to keep score.\n* ##### Code environment and player sprites. \n* ##### Learn how to host a game jam in your classroom. \n* #####  Learn how to access Code.org curricula.\n\n##### **Suggested time:** 80 minutes\n"
         k5gettingstarted:
           lessons: {}
           lesson_groups:
@@ -18898,8 +18898,8 @@ en:
           title: Getting Started [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
-          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          description: "##### **You will:**\n\n* #####  Get an introduction to Code.org’s mission. \n* #####  Learn how to navigate the Code.org website and teacher tools.\n* #####  Set up a classroom section.\n* #####  Locate and use course lesson plans and teacher resources.\n* #####  Learn how to access support while teaching Code.org curricula.\n\n##### **Suggested time:** 80 minutes\n"
+          student_description: "##### **You will:**\n\n* #####  Get an introduction to Code.org’s mission. \n* #####  Learn how to navigate the Code.org website and teacher tools.\n* #####  Set up a classroom section.\n* #####  Locate and use course lesson plans and teacher resources.\n* #####  Learn how to access support while teaching Code.org curricula.\n\n##### **Suggested time:** 80 minutes\n"
         k5-unplugged:
           lessons: {}
           lesson_groups:

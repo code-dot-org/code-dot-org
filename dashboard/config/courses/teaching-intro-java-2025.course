@@ -8,7 +8,7 @@
     "teaching-java-basics",
     "teaching-oop-java"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

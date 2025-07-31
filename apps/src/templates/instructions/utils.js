@@ -154,39 +154,17 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-    const blockSpace = Blockly.createEmbeddedWorkspace(
-      blockSpaceContainer,
-      xml,
-      {
-        noScrolling: true,
-        inline: inline,
-        rtl: isRtl,
-      }
-    );
 
-    // give block embeds more padding than inline
-    const withPadding = !inline;
-
-    // finally, shrink the container to exactly contain the blockspace. Note
-    // that some blocks (like K1 harvester blocks, which use FieldImages) can
-    // resize after initial render, so we also want to resize the container
-    // whenever a blockSpaceChange results in the content size changing.
-    let metrics = blockSpace.getMetrics();
-    Blockly.addChangeListener(blockSpace, function () {
-      const oldHeight = metrics.contentHeight;
-      const oldWidth = metrics.contentWidth;
-      const newHeight = blockSpace.getMetrics().contentHeight;
-      const newWidth = blockSpace.getMetrics().contentWidth;
-
-      // if the blockspace's content size has changed, kick off another sync and
-      // save the new metrics as the old ones
-      if (newHeight !== oldHeight || newWidth !== oldWidth) {
-        shrinkBlockSpaceContainer(blockSpace, withPadding);
-        metrics = blockSpace.getMetrics();
-      }
-    });
-
-    shrinkBlockSpaceContainer(blockSpace, withPadding);
+    // Only Google Blockly supports themes.
+    if (typeof Blockly.cdoUtils.getUserTheme === 'function') {
+      // We need to do an asychronous lookup of the user's preferred block theme,
+      // because it may not have been set yet on the student's primary workspace.
+      Blockly.cdoUtils.getUserTheme().then(theme => {
+        createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl, theme);
+      });
+    } else {
+      createEmbeddedWorkspace(blockSpaceContainer, xml, inline, isRtl);
+    }
   });
 }
 
@@ -208,4 +186,43 @@ export function shouldDisplayChatTips(skinId) {
       return true;
   }
   /*eslint-enable no-fallthrough*/
+}
+
+function createEmbeddedWorkspace(
+  blockSpaceContainer,
+  xml,
+  inline,
+  isRtl,
+  theme
+) {
+  const workspace = Blockly.createEmbeddedWorkspace(blockSpaceContainer, xml, {
+    noScrolling: true,
+    inline: inline,
+    rtl: isRtl,
+    theme,
+  });
+
+  // Give block embeds more padding than inline.
+  const withPadding = !inline;
+
+  // Finally, shrink the container to exactly contain the blockspace. Note
+  // that some blocks (like K1 harvester blocks, which use FieldImages) can
+  // resize after initial render, so we also want to resize the container
+  // whenever a blockSpaceChange results in the content size changing.
+  let metrics = workspace.getMetrics();
+  Blockly.addChangeListener(workspace, function () {
+    const oldHeight = metrics.contentHeight;
+    const oldWidth = metrics.contentWidth;
+    const newHeight = workspace.getMetrics().contentHeight;
+    const newWidth = workspace.getMetrics().contentWidth;
+
+    // if the blockspace's content size has changed, kick off another sync and
+    // save the new metrics as the old ones
+    if (newHeight !== oldHeight || newWidth !== oldWidth) {
+      shrinkBlockSpaceContainer(workspace, withPadding);
+      metrics = workspace.getMetrics();
+    }
+  });
+
+  shrinkBlockSpaceContainer(workspace, withPadding);
 }

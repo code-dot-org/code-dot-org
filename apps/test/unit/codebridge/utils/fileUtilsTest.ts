@@ -119,7 +119,6 @@ describe('fileUtils', () => {
           ...defaultFile,
           id: '3',
           type: ProjectFileType.VALIDATION,
-          open: true,
           active: true,
         },
       },
@@ -136,7 +135,6 @@ describe('fileUtils', () => {
       validationFile: {
         ...defaultFile,
         id: '3',
-        open: false,
         active: false,
         type: ProjectFileType.VALIDATION,
       },
@@ -165,7 +163,6 @@ describe('fileUtils', () => {
           ...defaultFile,
           id: '2',
           type: ProjectFileType.VALIDATION,
-          open: true,
         },
       },
       openFiles: ['1', '2'],

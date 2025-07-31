@@ -3,9 +3,13 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {
@@ -19,6 +23,7 @@ import {
 } from '../redux/animationPicker';
 
 import AnimationPickerBody from './AnimationPickerBody.jsx';
+import FlaggedImageModal from './FlaggedImageModal';
 import styles from './styles';
 
 var msg = require('@cdo/locale');
@@ -60,6 +65,7 @@ class AnimationPicker extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
     shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
+    projectType: PropTypes.string,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -75,10 +81,14 @@ class AnimationPicker extends React.Component {
     playAnimations: PropTypes.bool.isRequired,
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     uploadWarningShowing: PropTypes.bool.isRequired,
+    uploadsEnabled: PropTypes.bool.isRequired,
   };
 
   state = {
     exitingDialog: false,
+    showFlaggedModal: false,
+    pendingUploadData: null,
+    flaggedModalError: null,
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -132,6 +142,8 @@ class AnimationPicker extends React.Component {
           selectedAnimations={this.props.selectedAnimations}
           pickerType={this.props.pickerType}
           shouldWarnOnAnimationUpload={this.props.shouldWarnOnAnimationUpload}
+          uploadsEnabled={this.props.uploadsEnabled}
+          projectType={this.props.projectType}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
@@ -162,6 +174,140 @@ class AnimationPicker extends React.Component {
     );
   }
 
+  getImageDimensions = file => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const img = new Image();
+        img.onload = () => {
+          resolve({width: img.width, height: img.height});
+        };
+        img.onerror = reject;
+        img.src = reader.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  };
+
+  /**
+   * Send the uploaded image file to be moderated. Then continue with uploadStart.
+   */
+  handleModeratedUploadStart = data => {
+    const file = data?.files?.[0];
+    if (!file) {
+      console.error('No file found in upload data.');
+      return;
+    }
+    if (data.files[0].size >= MAX_UPLOAD_SIZE) {
+      this.props.onUploadError(msg.animationPicker_unsupportedSize());
+      return;
+    }
+    if (
+      data.files[0].type !== 'image/png' &&
+      data.files[0].type !== 'image/jpeg'
+    ) {
+      this.props.onUploadError(msg.animationPicker_unsupportedType());
+      return;
+    }
+    this.getImageDimensions(file)
+      .then(({width, height}) => {
+        if (width < 128 || height < 128) {
+          // We skip moderation of small images because Azure Content Moderator has a minimum
+          // requirement for their evaluate endpoint.
+          // TODO: resize small images and then moderate. https://codedotorg.atlassian.net/browse/SL-1367
+          this.props.onUploadStart(data);
+          return;
+        }
+
+        this.setState({
+          pendingUploadData: data,
+        });
+
+        HttpClient.post(`/v3/images/moderate`, file, true, {
+          'Content-Type': file.type,
+        })
+          .then(response => response.json())
+          .then(json => {
+            // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
+            if (json.rating !== 'everyone' && json.rating !== 'unknown') {
+              this.setState({
+                showFlaggedModal: true,
+              });
+              analyticsReporter.sendEvent(
+                EVENTS.FLAGGED_CUSTOM_IMAGE,
+                {
+                  UploaderType: 'Animation Picker',
+                  ProjectType: this.props.projectType,
+                },
+                PLATFORMS.STATSIG
+              );
+            } else {
+              // If the image is rated 'everyone' or 'unknown', continue with upload.
+              this.props.onUploadStart(this.state.pendingUploadData);
+            }
+          })
+          .catch(err => {
+            this.props.onUploadError(msg.animationPicker_uploadingError());
+            MetricsReporter.logError('Azure image moderation error: ' + err);
+          });
+      })
+      .catch(err => {
+        MetricsReporter.logError('Error getting image dimensions: ' + err);
+        this.props.onUploadError(msg.animationPicker_uploadingError());
+      });
+  };
+
+  handleAcceptFlaggedImage = () => {
+    const {pendingUploadData} = this.state;
+    if (!pendingUploadData) return;
+
+    const body = JSON.stringify({type: 'flag'});
+    HttpClient.post(
+      `/v3/channels/${this.props.channelId}/abuse/image`,
+      body,
+      true,
+      {'Content-Type': 'application/json; charset=UTF-8'}
+    )
+      .then(response => response.json())
+      .then(() => {
+        this.props.onUploadStart(pendingUploadData);
+        this.setState({
+          showFlaggedModal: false,
+          pendingUploadData: null,
+        });
+        analyticsReporter.sendEvent(
+          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
+          {
+            UploaderType: 'Animation Picker',
+            ProjectType: this.props.projectType,
+          },
+          PLATFORMS.STATSIG
+        );
+      })
+      .catch(err => {
+        this.setState({
+          showFlaggedModal: true,
+          flaggedModalError: msg.animationPicker_uploadingError(),
+        });
+        MetricsReporter.logError('Update project abuse error: ' + err);
+      });
+  };
+
+  handleCancelFlaggedImage = () => {
+    this.setState({
+      showFlaggedModal: false,
+      pendingUploadData: null,
+      flaggedModalError: null,
+    });
+    analyticsReporter.sendEvent(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
+      PLATFORMS.STATSIG
+    );
+    this.props.onClose(); // Close the entire AnimationPicker
+  };
+
   render() {
     if (!this.props.visible) {
       return null;
@@ -187,10 +333,18 @@ class AnimationPicker extends React.Component {
             '.png'
           }
           allowedExtensions={this.props.allowedExtensions}
-          onUploadStart={this.props.onUploadStart}
+          onUploadStart={this.handleModeratedUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
+        {this.state.showFlaggedModal && (
+          <FlaggedImageModal
+            isOpen
+            onAccept={this.handleAcceptFlaggedImage}
+            onCancel={this.handleCancelFlaggedImage}
+            errorMessage={this.state.flaggedModalError}
+          />
+        )}
         {this.renderVisibleBody()}
       </BaseDialog>
     );
@@ -221,17 +375,8 @@ export default connect(
       dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
-      if (data.files[0].size >= MAX_UPLOAD_SIZE) {
-        dispatch(handleUploadError(msg.animationPicker_unsupportedSize()));
-      } else if (
-        data.files[0].type === 'image/png' ||
-        data.files[0].type === 'image/jpeg'
-      ) {
-        dispatch(beginUpload(data.files[0].name));
-        data.submit();
-      } else {
-        dispatch(handleUploadError(msg.animationPicker_unsupportedType()));
-      }
+      dispatch(beginUpload(data.files[0].name));
+      data.submit();
     },
     onUploadDone(result) {
       dispatch(handleUploadComplete(result));

@@ -1,0 +1,115 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1a-2'
+title 'Jordan P. - User Profile'
+
+
+markdown <<MARKDOWN
+#Jordan P. - User Profile
+
+Go through the audit logs for Jordan to find any evidence of fraud.
+
+**[Click here](https://docs.google.com/document/d/1GRBeFTM2ZnkZnTbZs6TPJsKO7Yu0ZBIbYnFX1nMiwwQ/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+---
+
+## LOGIN ACTIVITY LOG
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
+
+  <!-- Left: Login Activity Table -->
+  <div style="flex: 1;">
+    <table border="1" cellpadding="5" style="width: 100%;">
+      <thead style="background-color: #e0e0e0;">
+        <tr>
+          <th><b>Date</b></th>
+          <th><b>Time</b></th>
+          <th><b>Device</b></th>
+          <th><b>IP Location</b></th>
+          <th><b>Outcome</b></th>
+          <th><b>Operating System</b></th>
+          <th><b>Browser</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sept 10</td><td>7:43 PM</td><td>iPhone 14</td><td>Sacramento, CA</td><td>Success</td><td>iOS</td><td>Safari</td></tr>
+        <tr><td>Sept 11</td><td>7:21 AM</td><td>Chromebook</td><td>Sacramento, CA</td><td>Success</td><td>ChromeOS</td><td>Chrome</td></tr>
+        <tr><td>Sept 11</td><td>11:46 PM</td><td>iPhone 14</td><td>Sacramento, CA</td><td>Success</td><td>iOS</td><td>Safari</td></tr>
+        <tr><td>Sept 12</td><td>1:00 AM</td><td>iPhone 14</td><td>Sacramento, CA</td><td>Success</td><td>iOS</td><td>Safari</td></tr>
+        <tr><td>Sept 12</td><td>3:48 AM</td><td>iPhone</td><td>Reno, NV</td><td>Failed</td><td>Linux Kernel</td><td>Unknown</td></tr>
+        <tr><td>Sept 12</td><td>3:51 AM</td><td>iPhone</td><td>Reno, NV</td><td>Success</td><td>Linux Kernel</td><td>Unknown</td></tr>
+        <tr><td>Sept 12</td><td>3:52 AM</td><td>iPhone</td><td>Reno, NV</td><td>Success</td><td>Linux Kernel</td><td>Unknown</td></tr>
+        <tr><td>Sept 12</td><td>3:58 AM</td><td>iPhone</td><td>Reno, NV</td><td>Success</td><td>Linux Kernel</td><td>Unknown</td></tr>
+        <tr><td>Sept 12</td><td>4:03 AM</td><td>iPhone</td><td>Reno, NV</td><td>Success</td><td>Linux Kernel</td><td>Unknown</td></tr>
+        <tr><td>Sept 12</td><td>4:05 AM</td><td>iPhone 14</td><td>Sacramento, CA</td><td>Success</td><td>iOS</td><td>Safari</td></tr>
+        <tr><td>Sept 13</td><td>9:16 AM</td><td>iPhone 14</td><td>Sacramento, CA</td><td>Success</td><td>iOS</td><td>Safari</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Right: Larger Map Image -->
+  <div style="flex: 0 0 40%;">
+    <img src="https://images.code.org/5ee32a3d1cdde682c7158eb64edd57c0-image-1753906204044.png" 
+         alt="Map showing Sacramento and Reno locations" 
+         style="width: 100%; max-width: 400px; border: 1px solid #ccc;" />
+  </div>
+
+</div>
+
+---
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
+
+  <!-- Left: Location History Log -->
+  <div style="flex: 1;">
+    <h3><i class="fas fa-map-marker-alt"></i> Location History Log</h3>
+    <table border="1" cellpadding="5" style="width: 100%;">
+      <thead style="background-color: #e0e0e0;">
+        <tr>
+          <th><b>Date</b></th>
+          <th><b>Time</b></th>
+          <th><b>Ping Type</b></th>
+          <th><b>Location</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sept 10</td><td>7:00 PM</td><td>Wi-Fi</td><td>Home – Sacramento, CA</td></tr>
+        <tr><td>Sept 11</td><td>7:15 AM</td><td>Wi-Fi</td><td>School – Sacramento, CA</td></tr>
+        <tr><td>Sept 11</td><td>6:00 PM</td><td>Cell Tower</td><td>Smoothie Shop – Sacramento, CA</td></tr>
+        <tr><td>Sept 12</td><td>3:40 AM</td><td>None</td><td>—</td></tr>
+        <tr><td>Sept 12</td><td>3:55 AM</td><td>Wi-Fi</td><td>Sacramento, CA</td></tr>
+        <tr><td>Sept 12</td><td>4:10 AM</td><td>Wi-Fi</td><td>Reno, NV</td></tr>
+        <tr><td>Sept 13</td><td>9:10 AM</td><td>Wi-Fi</td><td>Home – Sacramento, CA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Right: Transaction History Log -->
+  <div style="flex: 1;">
+    <h3><i class="fas fa-credit-card"></i> Transaction History Log</h3>
+    <table border="1" cellpadding="5" style="width: 100%;">
+      <thead style="background-color: #e0e0e0;">
+        <tr>
+          <th><b>Date</b></th>
+          <th><b>Time</b></th>
+          <th><b>Merchant</b></th>
+          <th><b>Amount</b></th>
+          <th><b>Location</b></th>
+          <th><b>Method</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sept 10</td><td>6:45 PM</td><td>Jamba Juice</td><td>&#36;6.85</td><td>Sacramento, CA</td><td>Apple Pay</td></tr>
+        <tr><td>Sept 11</td><td>12:30 PM</td><td>School Cafeteria</td><td&#36;$4.00</td><td>Sacramento, CA</td><td>Debit</td></tr>
+        <tr><td>Sept 12</td><td>3:15 AM</td><td>Trendy Apparel</td><td>&#36;13.80</td><td>Online</td><td>Debit</td></tr>
+        <tr><td>Sept 12</td><td>4:00 AM</td><td>Khan Academy Premium</td><td>&#36;15.00</td><td>Online</td><td>Debit</td></tr>
+        <tr><td>Sept 12</td><td>4:10 AM</td><td>Gift Cards Unlimited</td><td>&#36;250.00</td><td>Online</td><td>Debit</td></tr>
+        <tr><td>Sept 12</td><td>4:18 AM</td><td>Discord Nitro Subscription</td><td>&#36;9.99</td><td>Online</td><td>Debit</td></tr>
+        <tr><td>Sept 12</td><td>4:35 AM</td><td>AutoZone</td><td>&#36;84.76</td><td>Reno, NV</td><td>Debit</td></tr>
+        <tr><td>Sept 13</td><td>12:15 PM</td><td>Local Art Supply Store</td><td>&#36;23.50</td><td>Sacramento, CA</td><td>Apple Pay</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+MARKDOWN

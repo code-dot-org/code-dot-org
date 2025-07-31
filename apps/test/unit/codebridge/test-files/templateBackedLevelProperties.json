@@ -9,7 +9,6 @@
         "contents": "print('Hello from the start!')",
         "folderId": "0",
         "active": false,
-        "open": true,
         "type": "locked_starter"
       },
       "2": {
@@ -19,7 +18,6 @@
         "contents": "",
         "folderId": "0",
         "active": false,
-        "open": true,
         "type": "support"
       }
     },

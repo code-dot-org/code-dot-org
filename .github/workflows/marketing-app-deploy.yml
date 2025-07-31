@@ -37,7 +37,6 @@ jobs:
   # This job builds a docker image for the frontend repository and pushes the docker image to Github Packages.
   # More information: https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images
   build-and-push-image:
-    needs: ci
     runs-on: ubuntu-24.04
 
     # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
@@ -107,9 +106,15 @@ jobs:
 
   # Deploy test environments in parallel
   deploy-test:
-    needs: build-and-push-image
+    needs:
+      - ci
+      - build-and-push-image
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
+    # Do not allow other deployments to deploy while this deployment is in progress.
+    concurrency:
+      group: deploy-marketing-sites-test-${{ github.ref_name }}-${{ matrix.SITE_TYPE }}
+      cancel-in-progress: false
     with:
       CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
       ENVIRONMENT_TYPE: test
@@ -121,9 +126,16 @@ jobs:
 
   # Deploy production environments in parallel, after test environments completes successfully
   deploy-production:
-    needs: deploy-test
+    needs:
+      - ci
+      - build-and-push-image
+      - deploy-test
     uses: ./.github/workflows/marketing-app-deploy-to-environment.yml
     secrets: inherit
+    # Do not allow other deployments to deploy while this deployment is in progress.
+    concurrency:
+      group: deploy-marketing-sites-production-${{ github.ref_name }}-${{ matrix.SITE_TYPE }}
+      cancel-in-progress: false
     with:
       CONTAINER_IMAGE_DIGEST: ${{ needs.build-and-push-image.outputs.digest }}
       ENVIRONMENT_TYPE: production
