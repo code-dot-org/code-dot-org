@@ -19,7 +19,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
-import {useCodeBridgeSettings} from '../Settings/settings';
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import moduleStyles from './workspace.module.scss';
 
@@ -28,7 +28,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
   const isWidgetView = levelProperties.widgetView;
-  const settings = useCodeBridgeSettings();
+  const settings = useCodebridgeSettings();
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source

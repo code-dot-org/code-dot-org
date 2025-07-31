@@ -42,7 +42,7 @@ const fontSizeOptions = [
     text: codebridgeI18n.fontSizeHuge(),
   },
 ];
-export function useCodeBridgeSettings(): Setting[] {
+export function useCodebridgeSettings(): Setting[] {
   const currentEditorFontSizeKey = useAppSelector(
     state => state.lab2View.editorFontSizeKey
   );
