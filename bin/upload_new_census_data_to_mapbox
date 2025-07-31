@@ -1,35 +1,28 @@
 #!/usr/bin/env ruby
 
 # The map on code.org/yourschool is run off of Mapbox. This script updates the data on the
-# Mapbox tileset under the TEST_CENSUS_TILESET name. It reads from the given AWS file and
+# Mapbox tileset under the CENSUS_TILESET name. It reads from the given AWS file and
 # creates maptiles with Mapbox's command line tool, Tippecanoe, and uploading them to Mapbox's
 # server.
 #
-# This can be used to test the new data on production before having it go live to everyone by:
+# This script is used to upload the new census data to a new tileset that can be tested before making it the
+# default tileset for all users to see:
 # 1) Run this script on production-daemon and pass in the access report year and data file:
-#     - ./bin/test_update_census_mapbox [ACCESS_REPORT_YEAR] [ACCESS_REPORT_DATA_FILE]
+#     - ./bin/update_census_mapbox [ACCESS_REPORT_YEAR] [ACCESS_REPORT_DATA_FILE]
 #     - Example: ./bin/test_update_census_mapbox 2024 access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv
-# 2) Navigate to https://code.org/en-US/your-school?tileset=censustiles-dev to view results
+# 2) Navigate to https://code.org/en-US/your-school?tileset=censustiles-[ACCESS_REPORT_YEAR] to view results
 #
-# If this looks good on production, then you can publish that data (i.e. you won't need a URL
-# param, and it will be the default map data):
+# If this looks good on production, then the data is okay to import into our CensusSummaries table and you
+# can make the new tileset the default (i.e. you won't need a URL param, and it will be the default map data):
 # 1) Update the seeding file name to the new file in census_summary.rb
-# 2) Update the CURRENT_CENSUS_SCHOOL_YEAR constant to the new school year in census_summary.rb
-# 3) Wait for those changes to hit production and for CensusSummaries to be seeded by the
-#    new file
-# 4) Run ./bin/update_census_mapbox on production-daemon
-#
-# Note: This script does not read from the CensusSummaries table while
-# the real update_census_mapbox script does. Both read from the
-# Schools database.
+# 2) Update the MAP_TILESET_ID constant to censustiles-[ACCESS_REPORT_YEAR] in AdoptionMap.tsx
+# 3) Update the census_tileset to censustiles-[ACCESS_REPORT_YEAR] in embeddable_census_map.haml
 
 require_relative '../dashboard/config/environment'
 require_relative '../pegasus/helpers/properties'
 require_relative './cron/upload_to_mapbox'
 
 raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token
-
-TEST_CENSUS_TILESET = 'censustiles-dev'
 
 CSV_IMPORT_OPTIONS = {col_sep: ",", headers: true, encoding: 'bom|utf-8'}.freeze
 
@@ -43,6 +36,8 @@ def main
   raise ArgumentError.new("Wrong number of arguments: Expected access report year and access report data file.") unless ARGV.length == 2
   access_report_year = ARGV[0]
   aws_access_report_data_file = ARGV[1]
+
+  census_tileset = "censustiles-#{access_report_year}"
 
   CDO.log.info "Loading census summary data."
   AWS::S3.seed_from_file('cdo-census', aws_access_report_data_file) do |filename|
@@ -84,7 +79,7 @@ def main
     CDO.log.info "Census summaries loading: done processing #{filename}.\n"
 
     file = Tempfile.new(['census', 'geojson'])
-    tiles = Tempfile.new([TEST_CENSUS_TILESET, 'mbtiles'])
+    tiles = Tempfile.new([census_tileset, 'mbtiles'])
     file.write(JSON.pretty_generate(geojson))
     _stdout, stderr, tippecanoe_status = Open3.capture3(
       # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
@@ -95,13 +90,22 @@ def main
     )
     upload_successful = false
     if tippecanoe_status.success?
-      upload_successful = upload_maptiles(tiles.path, TEST_CENSUS_TILESET)
+      upload_successful = upload_maptiles(tiles.path, census_tileset)
     end
     unless tippecanoe_status.success? && upload_successful
       CDO.log.info "Error in uploading"
       CDO.log.info "Success state: #{tippecanoe_status.success?}"
       CDO.log.info "Tippecanoe status: #{stderr}"
       CDO.log.info "Upload successful: #{upload_successful}"
+
+      Honeybadger.notify(
+        error_message: "Updating Census map on Mapbox failed",
+        error_class: "Census Map Update Failure",
+        context: {
+          tippecanoe_status: stderr,
+          upload_status: upload_successful
+        }
+      )
     end
   end
 end
