@@ -47,7 +47,7 @@ import Iframe, {
   IframeContentfulComponentDefinition,
 } from '@/components/contentful/iframe';
 import Image, {
-  ImageContentfulComponentDefinition,
+  ImageCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/image';
 import Link, {
   LinkContentfulComponentDefinition,
@@ -62,7 +62,7 @@ import RichText, {
   RichTextContentfulComponentDefinition,
 } from '@/components/contentful/richText';
 import Section, {
-  SectionContentfulComponentDefinition,
+  SectionCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/section';
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
@@ -155,7 +155,7 @@ const contentfulRegistration = {
     },
     {
       component: Image,
-      definition: ImageContentfulComponentDefinition,
+      definition: ImageCSforAllContentfulComponentDefinition,
     },
     {
       component: ImageCarousel,
@@ -176,7 +176,7 @@ const contentfulRegistration = {
     },
     {
       component: Section,
-      definition: SectionContentfulComponentDefinition,
+      definition: SectionCSforAllContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },

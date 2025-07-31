@@ -15,6 +15,7 @@ CERTIFICATE_TEMPLATE_FILE = 'cloudfront-certificate.yml.erb'
 # Default options
 options = {
   environment_type: 'development',
+  site_type: 'corporate',
   region: 'us-east-1',
   base_domain_name: 'marketing-sites.dev-code.org',
   subdomain_name: 'code',
@@ -28,12 +29,20 @@ opt_parser = OptionParser.new do |opts|
   opts.banner = "Usage: ./deploy.rb [options]"
 
   opts.on(
-    '--environment_type TYPE',
+    '--environment_type ENVIRONMENT_TYPE',
     %w[development test production],
     "Environment type (development, test, or production)",
     "Default: development"
-  ) do |env_type|
-    options[:environment_type] = env_type
+  ) do |environment_type|
+    options[:environment_type] = environment_type
+  end
+
+  opts.on(
+    '--site_type SITE_TYPE',
+    %w[corporate csforall],
+    "Code identifying the site type (corporate csforall)",
+    ) do |site_type|
+    options[:site_type] = site_type
   end
 
   opts.on(
@@ -173,31 +182,50 @@ def process_template(template_file, output_file, binding_object)
   end
 end
 
-def deploy_stack(stack_name, template_file, parameters, region, role_arn, environment_type)
+def deploy_stack(stack_name:, template_file:, parameters: {}, region:, role_arn: nil, tags: {}, capabilities: [])
   temp_dir = File.join(Dir.pwd, 'tmp')
   FileUtils.mkdir_p(temp_dir)
+  parameter_path = nil
 
-  param_file = "parameters_#{stack_name}_#{Time.now.to_i}.json"
-  parameter_path = File.join(temp_dir, param_file)
-  parameter_content = parameters.map {|k, v| {"ParameterKey" => k, "ParameterValue" => v.to_s}}
-  File.write(parameter_path, JSON.pretty_generate(parameter_content))
+  # Build the AWS CLI command
+  command_parts = [
+    "aws cloudformation deploy",
+    "--stack-name #{stack_name}",
+    "--template-file #{template_file}",
+    "--region #{region}"
+  ]
+
+  # Add capabilities if any are specified
+  unless capabilities.empty?
+    command_parts << "--capabilities #{capabilities.join(' ')}"
+  end
+
+  command_parts << "--role-arn #{role_arn}" if role_arn
+
+  # Add parameters if any
+  unless parameters.empty?
+    param_file = "parameters_#{stack_name}_#{Time.now.to_i}.json"
+    parameter_path = File.join(temp_dir, param_file)
+    parameter_content = parameters.map {|k, v| {"ParameterKey" => k, "ParameterValue" => v.to_s}}
+    File.write(parameter_path, JSON.pretty_generate(parameter_content))
+    command_parts << "--parameter-overrides file://#{parameter_path}"
+  end
+
+  # Add tags only if there are any
+  unless tags.empty?
+    tag_string = tags.map {|k, v| "#{k}=#{v}"}.join(" ")
+    command_parts << "--tags #{tag_string}"
+  end
+
+  command = command_parts.join(" \\\n    ")
 
   begin
-    command = <<~CMD
-      aws cloudformation deploy \\
-          --stack-name #{stack_name} \\
-          --template-file #{template_file} \\
-          --parameter-overrides file://#{parameter_path} \\
-          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \\
-          --region #{region} \\
-          --role-arn #{role_arn} \\
-          --tags environment-type=#{environment_type}
-    CMD
-
     execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
   ensure
-    # Clean up the parameter file regardless of success or failure.
-    FileUtils.rm_f(parameter_path)
+    # Clean up the parameter file if the parameter_path was set and the file exists
+    if parameter_path && File.exist?(parameter_path)
+      FileUtils.rm_f(parameter_path)
+    end
   end
 end
 
@@ -274,12 +302,15 @@ begin
     }
 
     deploy_stack(
-      cert_stack_name,
-      cert_template_path,
-      cert_parameters,
-      "us-east-1",
-      options[:role_arn],
-      options[:environment_type]
+      stack_name: cert_stack_name,
+      template_file: cert_template_path,
+      parameters: cert_parameters,
+      region: 'us-east-1',
+      role_arn: options[:role_arn],
+      tags: {
+        'environment-type' => options[:environment_type],
+        'site-type' => options[:site_type]
+      }
     )
 
     # Step 3: Get certificate ARN from stack output.
@@ -301,6 +332,7 @@ begin
       "BaseDomainName" => options[:base_domain_name],
       "SubdomainName" => options[:subdomain_name],
       "EnvironmentType" => options[:environment_type],
+      "SiteType" => options[:site_type],
       "ContainerImageHashDigest" => options[:container_image_hash],
       "CloudFrontTLSCertificateArn" => certificate_arn,
       "WebApplicationServerSecretsARN" => options[:web_application_server_secrets_arn],
@@ -308,12 +340,16 @@ begin
     }
 
     deploy_stack(
-      options[:stack_name],
-      marketing_site_template_path,
-      marketing_site_stack_parameters,
-      options[:region],
-      options[:role_arn],
-      options[:environment_type]
+      stack_name: options[:stack_name],
+      template_file: marketing_site_template_path,
+      parameters: marketing_site_stack_parameters,
+      region: options[:region],
+      role_arn: options[:role_arn],
+      tags: {
+        'environment-type' => options[:environment_type],
+        'site-type' => options[:site_type]
+      },
+      capabilities: %w(CAPABILITY_IAM CAPABILITY_NAMED_IAM) # Marketing Sites templates creates ECS Task / Task Exec Roles.
     )
 
     puts "\nDeployment process completed successfully!"
