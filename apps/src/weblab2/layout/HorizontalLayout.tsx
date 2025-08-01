@@ -71,10 +71,6 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             />
           </>
         )}
-        {/* TODO: Make the panels resizable vertically. The iframe in FilePreview makes it so you
-         can only drag left, not right (something about the mouse events getting 
-         captured by the preview?).
-         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
         <div
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}

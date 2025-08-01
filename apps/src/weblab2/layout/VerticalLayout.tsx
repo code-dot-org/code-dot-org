@@ -70,10 +70,6 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           style={{width: middlePanelWidth}}
           className={moduleStyles.shrinkAndGrow}
         />
-        {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
-         can only drag left, not right (something about the mouse events getting 
-         captured by the preview?) 
-         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
         <ResizeBar
           isVertical={true}
           separatorProps={rightPanelSeparatorProps}
