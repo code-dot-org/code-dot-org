@@ -77,7 +77,7 @@ export function setupApp(appOptions) {
         );
       }
 
-      if (appSupportsSettings(appOptions.app)) {
+      if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
         $('#settings-header').show();
       }
 
@@ -243,10 +243,11 @@ export function setupApp(appOptions) {
 /**
  * Checks if the given app name supports settings.
  * Currently this is just Blockly labs that support changing the Blockly theme.
- * @param {*} appName
+ * @param {string} appName
+ * @param {boolean} droplet
  * @returns {boolean}
  */
-function appSupportsSettings(appName) {
+function appSupportsSettings(appName, droplet) {
   const supportedApps = [
     'bounce',
     'craft',
@@ -257,7 +258,8 @@ function appSupportsSettings(appName) {
     'studio',
     'turtle',
   ];
-  return supportedApps.includes(appName);
+  // Star Wars Edit Code is considered 'studio' but does not use Blockly.
+  return supportedApps.includes(appName) && !droplet;
 }
 
 /**

@@ -2,10 +2,12 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import React, {useState, useEffect} from 'react';
 
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
-import {commonI18n} from '@cdo/apps/types/locale';
+import commonI18n from '@cdo/locale';
 
 import {setAllWorkspacesTheme} from '../blockly/utils';
 import UserPreferences from '../lib/util/UserPreferences';
+
+import styles from './settings.module.scss';
 
 const themeOptions = [
   {value: Themes.MODERN, text: commonI18n.blocklyModernTheme()},
@@ -40,14 +42,7 @@ const SettingsModal = () => {
   return (
     <div className="modal-content" style={{margin: 0}}>
       <h5 className="dialog-title">{commonI18n.settings()}</h5>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '6px',
-        }}
-      >
+      <div className={styles.settingsRow}>
         <p>{commonI18n.blocklyTheme()}</p>
         <SimpleDropdown
           name="theme"
