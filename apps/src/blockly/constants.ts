@@ -185,6 +185,7 @@ export const READ_ONLY_PROPERTIES = [
   'ConnectionType',
   'ContextMenu',
   'ContextMenuRegistry',
+  'contractEditor',
   'createBlockDefinitionsFromJsonArray',
   'Css',
   'Cursor',
