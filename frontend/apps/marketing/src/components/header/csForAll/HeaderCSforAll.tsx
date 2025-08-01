@@ -7,7 +7,7 @@ import React, {HTMLAttributes, useState} from 'react';
 
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
-import {commonStyles} from './common/styles';
+import {headerStyles} from './common/styles';
 import {CALL_TO_ACTION, DRAWER_LINKS, SITE_LOGO} from './config';
 import HamburgerButton from './HamburgerButton';
 import {LinkItemProps} from './LinkItem';
@@ -56,10 +56,10 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
         component="nav"
         elevation={0}
         position="relative"
-        sx={commonStyles.appBar}
+        sx={headerStyles.appBar}
       >
-        <Toolbar variant="dense" sx={commonStyles.toolBar} disableGutters>
-          <Box sx={commonStyles.leftSide}>
+        <Toolbar variant="dense" sx={headerStyles.toolBar} disableGutters>
+          <Box sx={headerStyles.leftSide}>
             {/* Site Logo */}
             {siteLogo}
             {/* Main Menu Desktop with Dropdowns */}
@@ -87,12 +87,12 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           ModalProps={{
             keepMounted: true,
           }}
-          sx={commonStyles.drawer}
+          sx={headerStyles.drawer}
         >
           {/* Close Button */}
           <CloseButton onClick={handleDrawerToggle} />
           {/* Drawer Content */}
-          <Box onClick={handleDrawerToggle} sx={commonStyles.drawerContent}>
+          <Box onClick={handleDrawerToggle} sx={headerStyles.drawerContent}>
             <Box>
               {siteLogo}
               {getLinks('drawer', 'Main Links', DRAWER_LINKS.linkList)}

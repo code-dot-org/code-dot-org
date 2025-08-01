@@ -1,7 +1,9 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import {alpha} from '@mui/material/styles';
 
-import {commonStyles} from './common/styles';
+import theme from '@/themes/csforall';
+
 import {
   ISSUES_LINKS,
   NEWS_AND_RESOURCES_LINKS,
@@ -14,6 +16,18 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     gap: 1,
+  },
+  button: {
+    color: theme.palette.text.primary,
+    fontSize: theme.typography.body3.fontSize,
+    textDecoration: 'none',
+    marginBottom: 0,
+    padding: theme.spacing(1, 2),
+    borderRadius: theme.shape.borderRadius,
+    transition: 'background-color 0.3s ease',
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.primary.main, 0.1),
+    },
   },
 };
 
@@ -35,7 +49,7 @@ const MainMenuDesktop = () => {
         href="/hour-of-ai"
         disableElevation
         disableRipple
-        sx={commonStyles.button}
+        sx={styles.button}
       >
         Hour of AI
       </Button>
@@ -44,7 +58,7 @@ const MainMenuDesktop = () => {
         href="https://donate.code.org"
         disableElevation
         disableRipple
-        sx={commonStyles.button}
+        sx={styles.button}
       >
         Donate
       </Button>
