@@ -1,3 +1,5 @@
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {alpha, Button, MenuItem} from '@mui/material';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
@@ -17,7 +19,31 @@ export interface MenuListProps {
 }
 
 const styles = {
+  menu: {
+    '& .MuiPaper-root': {
+      border: `1px solid ${theme.palette.divider}`,
+      borderTop: 0,
+      borderRadius: `0 0 ${theme.shape.borderRadius}px ${theme.shape.borderRadius}px`,
+    },
+    '& .MuiList-root': {
+      paddingInline: theme.spacing(1.5),
+      paddingTop: 0,
+      paddingBottom: theme.spacing(1),
+      minWidth: '200px',
+    },
+  },
+  menuItem: {
+    marginBlock: theme.spacing(0.5),
+    '&:hover, &:focus': {
+      backgroundColor: alpha(theme.palette.primary.main, 0.1),
+      borderRadius: theme.shape.borderRadius,
+    },
+    '&:first-child': {
+      marginTop: 0,
+    },
+  },
   button: {
+    cursor: 'pointer',
     color: theme.palette.text.primary,
     fontSize: theme.typography.body3.fontSize,
     textDecoration: 'none',
@@ -25,23 +51,10 @@ const styles = {
     padding: theme.spacing(1, 2),
     borderRadius: theme.shape.borderRadius,
     transition: 'background-color 0.3s ease',
+    gap: theme.spacing(0.5),
+    alignItems: 'center',
     '&:hover': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
-    },
-  },
-  menu: {
-    '& .MuiList-root': {
-      paddingBlock: theme.spacing(1.5),
-      paddingInline: theme.spacing(1),
-      minWidth: '200px',
-    },
-  },
-  menuItem: {
-    '&:hover, &:focus': {
-      backgroundColor: 'transparent',
-      '& a': {
-        color: theme.palette.secondary.main,
-      },
     },
   },
 };
@@ -71,6 +84,11 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, label, linkList}) => {
         sx={styles.button}
       >
         {label}
+        {open ? (
+          <ExpandLessIcon fontSize="medium" />
+        ) : (
+          <ExpandMoreIcon fontSize="medium" />
+        )}
       </Button>
       <Menu
         id={id}
@@ -82,7 +100,11 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, label, linkList}) => {
             'aria-labelledby': id,
           },
         }}
-        elevation={2}
+        anchorOrigin={{
+          vertical: 64,
+          horizontal: -12,
+        }}
+        elevation={0}
         disableAutoFocusItem
         sx={styles.menu}
       >

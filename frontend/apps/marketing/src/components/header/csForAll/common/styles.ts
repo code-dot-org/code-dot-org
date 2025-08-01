@@ -7,6 +7,7 @@ export const DRAWER_BREAKPOINT = 1078; // px
 export const headerStyles = {
   appBar: {
     backgroundColor: theme.palette.background.paper,
+    borderBottom: `1px solid ${theme.palette.divider}`,
     padding: theme.spacing(2, 4),
     [`@media (max-width: ${DRAWER_BREAKPOINT}px)`]: {
       '.link-list-desktop, .call-to-action': {
@@ -29,13 +30,16 @@ export const headerStyles = {
       boxSizing: 'border-box',
       maxWidth: '430px',
       width: '100%',
+
       paddingBlock: theme.spacing(3.5),
       paddingInline: theme.spacing(4),
       '& .MuiListItem-root': {
         padding: 0,
         paddingBottom: theme.spacing(4),
+
         '& a': {
           margin: 0,
+          fontSize: theme.typography.h5.fontSize,
         },
       },
       '& .logo-link': {
