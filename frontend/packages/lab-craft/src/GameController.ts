@@ -127,6 +127,10 @@ export class LevelRunnerScene extends Phaser.Scene {
   specialLevelType?: string;
   /** Whether or not the level should display and track a score */
   useScore?: boolean;
+  isRepeat: boolean = false;
+  DEBUG: boolean = false;
+  commandRecord: Map<string, Map<string, number>> = new Map();
+  repeatCommandRecord: Map<string, Map<string, number>> = new Map();
 
   constructor({
     assetRoot,
@@ -149,9 +153,10 @@ export class LevelRunnerScene extends Phaser.Scene {
     this.playerDelayFactor = 1.0;
     this.assetRoot = assetRoot;
     this.levelData = Object.freeze({...levelConfig});
+    this.initializeCommandRecord();
   }
 
-  getCommandCount(commandName: string, targetType?: string, repeated?: boolean): number {
+  getCommandCount(_commandName: string, _targetType?: string, _repeated?: boolean): number {
     return 0;
   }
 
@@ -360,7 +365,7 @@ export class LevelRunnerScene extends Phaser.Scene {
 
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
-        this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
+        this.levelView.player?.play('idle');
         if (this.getIsDirectPlayerControl()) {
           this.delayPlayerMoveBy(0, 0, () => {
             commandQueueItem.succeeded();
@@ -388,16 +393,60 @@ export class LevelRunnerScene extends Phaser.Scene {
         });
       });
     } else if (frontBlock && frontBlock.isRail) {
-      this.levelView.playTrack(frontPosition, player.facing, true, player, null);
+      this.levelView.playTrack(frontPosition, player.facing, true, player);
       commandQueueItem.succeeded();
     } else {
-      this.levelView.playPunchDestroyAirAnimation(player.position, player.facing, this.levelModel.getMoveForwardPosition(), () => {
+      this.levelView.playPunchDestroyAirAnimation(this.levelModel.getMoveForwardPosition(), () => {
         this.levelView.setSelectionIndicatorPosition(player.position);
         player.play('idle');
         this.delayPlayerMoveBy(0, 0, () => {
           commandQueueItem.succeeded();
         });
-      });
+      }, player);
+    }
+  }
+
+  initializeCommandRecord() {
+    const commandList = ["moveAway", "moveToward", "moveForward", "turn", "turnRandom", "explode", "wait", "flash", "drop", "spawn", "destroy", "playSound", "attack", "addScore"];
+
+    this.commandRecord = new Map<string, Map<string, number>>();
+    this.repeatCommandRecord = new Map<string, Map<string, number>>();
+    this.isRepeat = false;
+
+    for (const command of commandList) {
+      this.commandRecord.set(command, new Map<string, number>());
+      this.commandRecord.get(command)?.set("count", 0);
+      this.repeatCommandRecord.set(command, new Map<string, number>());
+      this.repeatCommandRecord.get(command)?.set("count", 0);
+    }
+  }
+
+  startPushRepeatCommand() {
+    this.isRepeat = true;
+  }
+
+  endPushRepeatCommand() {
+    this.isRepeat = false;
+  }
+
+  addCommandRecord(commandName: string, targetType: string, repeat: boolean) {
+    const commandRecord = repeat ? this.repeatCommandRecord : this.commandRecord;
+    // correct command name
+    if (commandRecord.has(commandName)) {
+      // update count for command map
+      const commandMap = commandRecord.get(commandName);
+      commandMap?.set("count", (commandMap?.get("count") || 0) + 1);
+      // command map has target
+      if (commandMap?.has(targetType)) {
+        // increment count
+        commandMap?.set(targetType, (commandMap?.get(targetType) || 0) + 1);
+      } else {
+        commandMap?.set(targetType, 1);
+      }
+      if (this.DEBUG) {
+        const msgHeader = repeat ? "Repeat " : "" + "Command :";
+        console.log(msgHeader + commandName + " executed in mob type : " + targetType + " updated count : " + commandMap?.get(targetType));
+      }
     }
   }
 
@@ -490,7 +539,7 @@ export class LevelRunnerScene extends Phaser.Scene {
             blockType = "rails";
           }
         }
-        this.levelView.playPlaceBlockAnimation(player.position, player.facing, blockType, blockTypeAtPosition, player, () => {
+        this.levelView.playPlaceBlockAnimation(player, player.position, blockType, blockTypeAtPosition, () => {
           const entity = convertNameToEntity(blockType, position.x, position.y);
           if (entity) {
             this.levelEntity.spawnEntityAt(...entity);
@@ -566,6 +615,45 @@ export class LevelRunnerScene extends Phaser.Scene {
 
   placeBlockForward(commandQueueItem: BaseCommand, blockType: string) {
     this.placeBlockDirection(commandQueueItem, blockType, Direction.North);
+  }
+
+  isType(target: string | number): boolean {
+    return (typeof target === 'string') && (target !== 'Player' && target !== "PlayerAgent");
+  }
+
+  destroyEntity(commandQueueItem: BaseCommand, target?: string | number) {
+    if (!target || !this.isType(target)) {
+      // apply to all entities
+      if (target === undefined) {
+        const entities = this.levelEntity.entityMap;
+        for (const value of entities) {
+          const entity = value[1];
+          const callbackCommand = new CallbackCommand(this, () => {}, entity.identifier, () => {}, () => {
+            this.destroyEntity(callbackCommand, entity.identifier);
+          });
+          entity.addCommand(callbackCommand, commandQueueItem.repeat);
+        }
+        commandQueueItem.succeeded();
+      } else if (typeof target === 'string') {
+        this.addCommandRecord("destroy", target, commandQueueItem.repeat);
+        const entity = this.getEntity(target);
+        if (entity !== undefined) {
+          entity.healthPoint = 1;
+          entity.takeDamage(commandQueueItem);
+        } else {
+          commandQueueItem.succeeded();
+        }
+      }
+    } else if (typeof target === 'string') {
+      const entities = this.levelEntity.getEntitiesOfType(target);
+      for (const entity of entities) {
+        const callbackCommand = new CallbackCommand(this, () => {}, entity.identifier, () => {}, () => {
+          this.destroyEntity(callbackCommand, entity.identifier);
+        });
+        entity.addCommand(callbackCommand, commandQueueItem.repeat);
+      }
+      commandQueueItem.succeeded();
+    }
   }
 
   destroyBlock(_commandQueueItem: BaseCommand) {

@@ -2471,6 +2471,20 @@ class LevelView {
     }
   }
 
+  playDoorAnimation(position: Position, open: boolean, completionHandler?: () => void) {
+    const blockIndex = (this.yToIndex(position.y)) + position.x;
+    const sprite = this.actionPlaneBlocks.get(blockIndex);
+    const animationName = open ? "open" : "close";
+    sprite?.on(
+      `${Phaser.Animations.Events.ANIMATION_COMPLETE_KEY}${animationName}`,
+      () => {
+        completionHandler?.();
+      },
+    );
+
+    sprite?.anims.play(animationName);
+  }
+
   playOpenConduitAnimation(position: Position) {
     const index = this.coordinatesToIndex(position);
     if (this.actionPlaneBlocks.has(index)) {
@@ -2539,6 +2553,46 @@ class LevelView {
     this.resettableTweens.push(tween);
   }
 
+  playPunchDestroyAirAnimation(destroyPosition: Position, completionHandler?: () => void, entity?: BaseEntity) {
+    this.playPunchAnimation(destroyPosition, 'punchDestroy', completionHandler, entity);
+  }
+
+  playPunchAirAnimation(destroyPosition: Position, completionHandler?: () => void, entity?: BaseEntity) {
+    this.playPunchAnimation(destroyPosition, 'punch', completionHandler, entity);
+  }
+
+  playPunchAnimation(destroyPosition: Position, animationType: string, completionHandler?: () => void, entity?: BaseEntity) {
+    entity ||= this.player;
+    if (!entity) {
+      return;
+    }
+
+    if (entity.shouldUpdateSelectionIndicator()) {
+      this.setSelectionIndicatorPosition(destroyPosition);
+    }
+    entity.play(animationType, completionHandler);
+  }
+
+  playItemDropAnimation(destroyPosition: Position, blockType: string, completionHandler?: () => void) {
+    let autoAcquire: (() => void) | undefined;
+
+    if (this.scene.getIsDirectPlayerControl()) {
+      completionHandler?.();
+    } else {
+      autoAcquire = () => {
+        const player = this.scene.levelModel.player;
+        if (player) {
+          this.playItemAcquireAnimation(completionHandler || (() => {}), blockType, sprite, player);
+        }
+      };
+    }
+    const sprite = this.createMiniBlock(destroyPosition.x, destroyPosition.y, blockType, {onComplete: autoAcquire});
+
+    if (sprite) {
+      sprite.setDepth(this.yToIndex(destroyPosition.y) + 2);
+    }
+  }
+
   playItemAcquireAnimation(completionHandler: () => void, blockType: string, sprite: Phaser.GameObjects.Sprite, entity?: BaseEntity) {
     entity ||= this.player;
     if (!entity) {
@@ -2589,12 +2643,77 @@ class LevelView {
     });
   }
 
+  playTrack(position: Position, facing: Direction, isOnBlock: boolean, entity?: BaseEntity, completionHandler?: () => void) {
+    entity ||= this.player;
+    if (!entity) {
+      return;
+    }
+
+    entity.onTracks = true;
+
+    // Need to get track on current position to avoid mishandling immediate turns
+    let track = this.scene.levelModel.actionPlane.getMinecartTrack(position, facing);
+
+    const nextPos = Position.forward(entity.position, facing);
+
+    if (entity.getOffTrack || (!track && !this.isFirstTimeOnRails(position, nextPos))) {
+      entity.getOffTrack = false;
+      entity.onTracks = false;
+      completionHandler?.();
+      return;
+    }
+
+    // If track is undefined, it means the player was not on a rail
+    // but if we reached this, that means we're trying to get on a rail for the first time
+    // and we need to grab that track -in front of us-
+    if (track === undefined) {
+      track = this.scene.levelModel.actionPlane.getMinecartTrack(nextPos, facing);
+
+      // Having a weird bug on publish where rail destruction while riding causes a destructure of
+      // non-iterable instance error. If getTrack fails with currPos and nextPos, just call the whole thing off.
+      // so that we don't reach the const assignment below.
+      if (track === undefined) {
+        entity.getOffTrack = false;
+        entity.onTracks = false;
+        completionHandler?.();
+        return;
+      }
+    }
+
+    let direction;
+    const [arraydirection, nextPosition, nextFacing, speed] = track;
+    entity.position = nextPosition;
+
+    //turn
+    if (arraydirection.substring(0, 4) === "turn") {
+      direction = arraydirection.substring(5);
+      const isUp = facing === FacingDirection.North || nextFacing === FacingDirection.North;
+      this.onAnimationEnd(this.playMinecartTurnAnimation(position, isUp, isOnBlock, completionHandler, direction), () => {
+        this.playTrack(nextPosition, nextFacing, isOnBlock, entity, completionHandler);
+      });
+    } else {
+      this.onAnimationEnd(this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed), () => {
+        this.playTrack(nextPosition, nextFacing, isOnBlock, entity, completionHandler);
+      });
+    }
+  }
+
   getTreasureTypeFromChest(block?: LevelBlock): string | undefined {
     if (!block) {
       return;
     }
 
     return block.blockType.substring(0, block.blockType.length - 5);
+  }
+
+  /**
+  * Handling the first case of walking onto a track while not currently on one
+  */
+  isFirstTimeOnRails(currPos: Position, nextPos: Position) {
+    const nextBlock = this.scene.levelModel.actionPlane.getBlockAt(nextPos);
+    const currBlock = this.scene.levelModel.actionPlane.getBlockAt(currPos);
+
+    return (nextBlock && currBlock) && (!currBlock.isRail && nextBlock.isRail);
   }
 
   playBlockSound(groundType: string) {

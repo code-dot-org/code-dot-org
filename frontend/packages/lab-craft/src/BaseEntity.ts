@@ -336,14 +336,17 @@ class BaseEntity {
     });
   }
 
-  callBumpEvents(forwardPositionInformation) {
-    for (let i = 1; i < forwardPositionInformation.length; i++) {
-      if (forwardPositionInformation[i] === 'frontEntity') {
-        this.scene.events.emit(EventType.WhenTouched, {
-          targetType: forwardPositionInformation[i + 1].type,
-          eventSenderIdentifier: this.identifier,
-          targetIdentifier: forwardPositionInformation[i + 1].identifier,
-        });
+  callBumpEvents(forwardPositionInformation: [boolean, (string | BaseEntity)[]]) {
+    for (let i = 0; i < forwardPositionInformation[1].length; i++) {
+      if (forwardPositionInformation[1][i] === 'frontEntity') {
+        const frontEntity: string | BaseEntity = forwardPositionInformation[1][i + 1];
+        if (frontEntity instanceof BaseEntity) {
+          this.scene.events.emit(EventType.WhenTouched, {
+            targetType: frontEntity.type,
+            eventSenderIdentifier: this.identifier,
+            targetIdentifier: frontEntity.identifier,
+          });
+        }
         i++;
       }
     }
@@ -384,6 +387,9 @@ class BaseEntity {
     }
   }
 
+  doMoveBackward(_commandQueueItem: BaseCommand) {
+  }
+
   moveBackward(commandQueueItem: BaseCommand, record: boolean = true) {
     if (record) {
       this.scene.addCommandRecord(
@@ -392,10 +398,6 @@ class BaseEntity {
         commandQueueItem.repeat,
       );
     }
-    const backwardPosition = this.scene.levelModel.getMoveDirectionPosition(
-      this,
-      2,
-    );
     const backwardPositionInformation =
       this.scene.levelModel.canMoveBackward(this);
     if (backwardPositionInformation[0]) {
@@ -404,7 +406,7 @@ class BaseEntity {
       );
       const reverseOffset = Position.directionToOffsetPosition(this.facing);
       const weMovedOnTo = this.handleMoveOnPressurePlate(offset);
-      this.doMoveBackward(commandQueueItem, backwardPosition);
+      this.doMoveBackward(commandQueueItem);
       if (!weMovedOnTo) {
         this.handleMoveOffPressurePlate(reverseOffset);
       }
@@ -778,7 +780,7 @@ class BaseEntity {
     }
   }
 
-  takeDamage(callbackCommand: CallbackCommand) {
+  takeDamage(callbackCommand: BaseCommand) {
     if (this.healthPoint > 1) {
       this.play('hurt');
       setTimeout(() => {
@@ -940,7 +942,7 @@ class BaseEntity {
   handleGetOnRails(direction: Direction) {
     this.getOffTrack = false;
     this.handleMoveOffPressurePlate(new Position(0, 0));
-    this.scene.levelView.playTrack(this.position, direction, true, this, null);
+    this.scene.levelView.playTrack(this.position, direction, true, this);
   }
 
   /**
