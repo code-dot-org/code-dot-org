@@ -1,11 +1,32 @@
 name 'test-ai-powered-threats-defenses-lesson8-level1c'
 
-markdown <<MARKDOWN
-#Diego M. - User Profile
+display_name 'Amara T.'
+bubble_choice_description 'A gamer from El Paso who uses public Wi-Fi and plays online with friends. Her logs show logins from Houston in the middle of the night—does that match her habits?'
+thumbnail_url 'https://images.code.org/fd9ad3d069939f2b2982b4722f97a105-image-1753989295582.png'
 
-Go through the audit logs for Diego to find any evidence of fraud.
+markdown <<MARKDOWN
+#Amara T.
+
+#### Read about Amara and investigate the audit logs. Can you find any evidence of fraud?
 
 **[Click here](https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+---
+## USER PROFILE
+
+* **Age**: 17
+* **Location**: El Paso, Texas
+* **Background**: Mexican-American, bilingual (Spanish and English), lives with her dad and younger brother
+* **School**: Public high school student; takes dual-enrollment classes at a local community college
+* **Devices**: iPhone SE, school-issued Chromebook, Xbox Series S
+* **Tech Habits**: Heavy gamer (FIFA, Fortnite); active on Discord, Twitch, and Instagram; often uses public Wi-Fi at the rec center
+* **Spending Habits**: Uses prepaid Visa gift cards; buys game credits and skins
+* **Hobbies**: Soccer, music production (GarageBand), hangs out at the community rec center
+* **Travel History**: Frequently visits family in Juárez, Mexico
+* **Security Habits**: Uses fingerprint ID; reuses passwords; sometimes forgets to log out of shared or public devices
+
+
+---
 
 ## LOGIN ACTIVITY LOG
 
@@ -47,5 +68,6 @@ Go through the audit logs for Diego to find any evidence of fraud.
 | Sept 14  |  2:12 AM  | Crypto Mining App Subscription &nbsp;     | &#36;59.99  | Houston, TX&nbsp;  | Visa Gift Card |
 | Sept 14  |  2:16 AM  | DarkEdge VPN Pro                    | &#36;12.49  | Houston, TX  | Visa Gift Card |
 | Sept 14  |  7:47 AM  | Coffee Cactus                       | &#36;4.50   | El Paso, TX  | Visa Gift Card |
+
 
 MARKDOWN
