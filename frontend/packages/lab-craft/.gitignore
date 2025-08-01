@@ -1,0 +1,9 @@
+dist
+node_modules
+.storybook/*.d.ts
+public/skins
+public/craft
+public/blockly
+
+# This is a token that our tsup config uses to detect cjs type generation failures
+.tsup.building.cjs
