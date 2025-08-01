@@ -10,6 +10,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {DEFAULT_FOLDER_ID} from '../constants';
 
 import {HTMLPreview} from './HTMLPreview';
+import RightButtons from './RightButtons';
 
 import moduleStyles from './styles/filePreview.module.scss';
 
@@ -81,6 +82,7 @@ export const FilePreview = () => {
       id="editor-workspace"
       headerContent={headerContent}
       className={moduleStyles.filePreview}
+      rightHeaderContent={<RightButtons />}
     >
       <select
         onChange={e => {
