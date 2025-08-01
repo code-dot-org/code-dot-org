@@ -8,6 +8,7 @@ import {
   ISSUES_LINKS,
   NEWS_AND_RESOURCES_LINKS,
   TAKE_ACTION_LINKS,
+  TOP_LEVEL_LINKS,
 } from './config';
 import DropdownMenu from './DropdownMenu';
 
@@ -35,36 +36,36 @@ const MainMenuDesktop = () => {
   return (
     <Box className="link-list-desktop" sx={styles.linkListDesktop}>
       <DropdownMenu
-        id="issues-menu"
-        label="Issues"
+        id={TOP_LEVEL_LINKS?.linkList[0].id ?? ''}
+        label={TOP_LEVEL_LINKS?.linkList[0].label ?? ''}
         linkList={ISSUES_LINKS.linkList}
       />
       <DropdownMenu
-        id="take-action-menu"
-        label="Take Action"
+        id={TOP_LEVEL_LINKS?.linkList[1].id ?? ''}
+        label={TOP_LEVEL_LINKS?.linkList[1].label ?? ''}
         linkList={TAKE_ACTION_LINKS.linkList}
       />
       <Button
         variant="text"
-        href="/hour-of-ai"
+        href={TOP_LEVEL_LINKS.linkList[2].href}
         disableElevation
         disableRipple
         sx={styles.button}
       >
-        Hour of AI
+        {TOP_LEVEL_LINKS.linkList[2].label}
       </Button>
       <Button
         variant="text"
-        href="https://donate.code.org"
+        href={TOP_LEVEL_LINKS.linkList[3].href}
         disableElevation
         disableRipple
         sx={styles.button}
       >
-        Donate
+        {TOP_LEVEL_LINKS.linkList[3].label}
       </Button>
       <DropdownMenu
-        id="news-and-resources-menu"
-        label="News & Resources"
+        id={TOP_LEVEL_LINKS.linkList[4].id ?? ''}
+        label={TOP_LEVEL_LINKS.linkList[4].label}
         linkList={NEWS_AND_RESOURCES_LINKS.linkList}
       />
     </Box>

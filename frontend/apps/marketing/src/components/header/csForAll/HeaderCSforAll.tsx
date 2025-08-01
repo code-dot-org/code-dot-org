@@ -8,7 +8,7 @@ import React, {HTMLAttributes, useState} from 'react';
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
 import {headerStyles} from './common/styles';
-import {CALL_TO_ACTION, DRAWER_LINKS, SITE_LOGO} from './config';
+import {CALL_TO_ACTION, TOP_LEVEL_LINKS, SITE_LOGO} from './config';
 import HamburgerButton from './HamburgerButton';
 import {LinkItemProps} from './LinkItem';
 import LinkList from './LinkList';
@@ -95,7 +95,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           <Box onClick={handleDrawerToggle} sx={headerStyles.drawerContent}>
             <Box>
               {siteLogo}
-              {getLinks('drawer', 'Main Links', DRAWER_LINKS.linkList)}
+              {getLinks('drawer', 'Main Links', TOP_LEVEL_LINKS.linkList)}
             </Box>
             {callToAction}
           </Box>
