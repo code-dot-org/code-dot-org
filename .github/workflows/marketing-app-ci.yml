@@ -60,7 +60,9 @@ jobs:
         uses: ./.github/actions/frontend/setup
 
       - name: Run tests
-        run: yarn test:ui:ci --filter @code-dot-org/marketing-storybook
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+        run: yarn workspace @code-dot-org/marketing-storybook test:ui:ci
 
   build-docker:
     # Skip CI docker build if this is not a pull request.
