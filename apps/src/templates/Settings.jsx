@@ -1,4 +1,3 @@
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import React, {useState, useEffect} from 'react';
 
 import {BLOCKLY_THEME, Themes} from '@cdo/apps/blockly/constants';
@@ -44,13 +43,16 @@ const SettingsModal = () => {
       <h5 className="dialog-title">{commonI18n.settings()}</h5>
       <div className={styles.settingsRow}>
         <p>{commonI18n.blocklyTheme()}</p>
-        <SimpleDropdown
-          name="theme"
-          items={themeOptions}
-          selectedValue={selectedTheme}
+        <select
+          value={selectedTheme}
           onChange={e => handleChange(e.target.value)}
-          isLabelVisible={false}
-        />
+        >
+          {themeOptions.map(opt => (
+            <option key={opt.value} value={opt.value}>
+              {opt.text}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );
