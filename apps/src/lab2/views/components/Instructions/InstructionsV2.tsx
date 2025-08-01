@@ -10,7 +10,7 @@ import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/Vali
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import Feedback from './Feedback';
+import NavigationArea from './NavigationArea';
 import PredictQuestion from './PredictQuestion';
 import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
@@ -168,7 +168,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <PredictQuestionRunPrompt />
           </>
         )}
-        <Feedback
+        <NavigationArea
           {...feedbackProps}
           levelProperties={levelProperties}
           handleInstructionsTextClick={handleInstructionsTextClick}

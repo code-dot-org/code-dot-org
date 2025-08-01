@@ -17,7 +17,7 @@ import {SubmitButton} from './NavigationButton';
 
 import moduleStyles from './instructions.module.scss';
 
-interface FeedbackProps {
+interface NavigationAreaProps {
   levelProperties: LevelProperties;
   handleInstructionsTextClick?: (id: string) => void;
   isRunning: boolean;
@@ -29,7 +29,7 @@ interface FeedbackProps {
 /**
  * Displays the feedback message and the navigation button.
  */
-const Feedback: React.FC<FeedbackProps> = ({
+const NavigationArea: React.FC<NavigationAreaProps> = ({
   levelProperties,
   isRunning,
   hasRun,
@@ -174,4 +174,4 @@ const Feedback: React.FC<FeedbackProps> = ({
   );
 };
 
-export default Feedback;
+export default NavigationArea;
