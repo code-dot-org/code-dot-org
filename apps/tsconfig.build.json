@@ -11,6 +11,7 @@
     "./test/**/*.tsx"
   ],
   "compilerOptions": {
+    "traceResolution": true,
     "jsx": "react",
     "target": "es5",
     "lib": ["ES2022", "DOM"],
@@ -33,8 +34,12 @@
       "@cdo/static/*": ["./static/*"],
       "@cdo/i18n/*": ["./i18n/*"],
       "@codebridge/*": ["./src/codebridge/*"],
-      "@cdo/generated-scripts/*": ["./generated-scripts/*"]
+      "@cdo/generated-scripts/*": ["./generated-scripts/*"],
+      "@code-dot-org/redactable-markdown": ["src/types/redactable-markdown.d.ts"],
+      "@code-dot-org/remark-plugins": ["src/types/remark-plugins.d.ts"],
+      "rehype-react": ["src/types/rehype-react.d.ts"]
     },
+    
     "resolveJsonModule": true,
     "incremental": true,
     "sourceMap": true,
