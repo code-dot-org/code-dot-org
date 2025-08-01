@@ -1,5 +1,6 @@
 import type {StorybookConfig} from '@storybook/nextjs-vite';
 import {join, dirname} from 'node:path';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -20,6 +21,13 @@ const config: StorybookConfig = {
   framework: {
     name: getAbsolutePath('@storybook/nextjs-vite'),
     options: {},
+  },
+  viteFinal: async config => {
+    const existingPlugins = config.plugins || [];
+    config.plugins = [...existingPlugins, tsconfigPaths()];
+    return {
+      ...config,
+    };
   },
 };
 export default config;
