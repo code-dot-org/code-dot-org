@@ -1,3 +1,2 @@
-import BlocklyProvider from './BlocklyProvider';
-import BlocklyContext from './BlocklyContext';
-export {BlocklyProvider, BlocklyContext};
+export * from './BlocklyContext';
+export {default as BlocklyContext} from './BlocklyContext';
