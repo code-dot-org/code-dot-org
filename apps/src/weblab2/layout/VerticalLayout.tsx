@@ -6,18 +6,37 @@ import React from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 150;
 const INITIAL_INFO_PANEL_WIDTH = 300;
+const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
 const MIN_EDITOR_WIDTH = 300;
 const MIN_PREVIEW_WIDTH = 200;
 const INITIAL_PREVIEW_WIDTH = 600;
+const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
+  isWidgetView,
 }) => {
+  const widgetViewShowCode = useAppSelector(
+    state => state.codebridgeWorkspace.widgetViewShowCode
+  );
+  const shouldHideEditor = isWidgetView && !widgetViewShowCode;
+  const infoPanelInitialWidth = isProjectLevel
+    ? 0
+    : shouldHideEditor
+    ? INITIAL_INFO_PANEL_WIDTH_WIDGET
+    : INITIAL_INFO_PANEL_WIDTH;
+
+  const editorMinWidth = shouldHideEditor ? 0 : MIN_EDITOR_WIDTH;
+  const previewInitialWidth = shouldHideEditor
+    ? INITIAL_PREVIEW_WIDTH_WIDGET
+    : INITIAL_PREVIEW_WIDTH;
+
   const {
     leftPanelWidth,
     middlePanelWidth,
@@ -27,16 +46,16 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   } = useVerticalLayout({
     leftPanel: {
       minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
-      initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
+      initialWidth: infoPanelInitialWidth,
       name: 'instructions',
     },
     middlePanel: {
-      minWidth: MIN_EDITOR_WIDTH,
+      minWidth: editorMinWidth,
       name: 'editor',
     },
     rightPanel: {
       minWidth: MIN_PREVIEW_WIDTH,
-      initialWidth: INITIAL_PREVIEW_WIDTH,
+      initialWidth: previewInitialWidth,
       name: 'preview',
     },
     appName: 'weblab2',
@@ -57,17 +76,21 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               style={{width: leftPanelWidth}}
               className={moduleStyles.flexShrink0}
             />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
+            {!shouldHideEditor && (
+              <ResizeBar
+                isVertical={true}
+                separatorProps={leftPanelSeparatorProps}
+                isDragging={leftPanelDragging}
+              />
+            )}
           </>
         )}
-        <Workspace
-          style={{width: middlePanelWidth}}
-          className={moduleStyles.shrinkAndGrow}
-        />
+        {!shouldHideEditor && (
+          <Workspace
+            style={{width: middlePanelWidth}}
+            className={moduleStyles.shrinkAndGrow}
+          />
+        )}
         {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
          can only drag left, not right (something about the mouse events getting 
          captured by the preview?) 
