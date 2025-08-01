@@ -49,6 +49,7 @@ const styles = {
     textDecoration: 'none',
     marginBottom: 0,
     padding: theme.spacing(1, 2),
+    paddingInlineEnd: theme.spacing(1.5),
     borderRadius: theme.shape.borderRadius,
     transition: 'background-color 0.3s ease',
     gap: theme.spacing(0.5),

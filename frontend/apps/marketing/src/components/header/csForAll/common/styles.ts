@@ -1,8 +1,6 @@
 import theme from '@/themes/csforall';
 
-// Hide the main list of links on desktop and
-// show the Drawer at this breakpoint.
-export const DRAWER_BREAKPOINT = 1078; // px
+import {DRAWER_BREAKPOINT} from './constants';
 
 export const headerStyles = {
   appBar: {
