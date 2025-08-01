@@ -100,7 +100,7 @@ export const CALL_TO_ACTION: {callToAction: CallToActionProps} = {
   },
 };
 
-// Top Level Links
+// Top Level Links used in Main Menu Desktop and Drawer
 export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
     createLinkItem(SHARED_LINKS.ISSUES, {typography: 'h4'}),
@@ -137,3 +137,33 @@ export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
     createLinkItem(SHARED_LINKS.NEWS),
   ],
 };
+
+// Main Menu Desktop Configuration
+const [issuesLink, takeActionLink, hourOfAiLink, donateLink, newsLink] =
+  TOP_LEVEL_LINKS.linkList;
+
+export const mainMenuDesktopItems = [
+  {
+    type: 'dropdown' as const,
+    topLevelLink: issuesLink,
+    dropdownConfig: ISSUES_LINKS,
+  },
+  {
+    type: 'dropdown' as const,
+    topLevelLink: takeActionLink,
+    dropdownConfig: TAKE_ACTION_LINKS,
+  },
+  {
+    type: 'button' as const,
+    topLevelLink: hourOfAiLink,
+  },
+  {
+    type: 'button' as const,
+    topLevelLink: donateLink,
+  },
+  {
+    type: 'dropdown' as const,
+    topLevelLink: newsLink,
+    dropdownConfig: NEWS_AND_RESOURCES_LINKS,
+  },
+];

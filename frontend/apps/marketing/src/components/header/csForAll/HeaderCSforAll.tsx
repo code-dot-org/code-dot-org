@@ -8,7 +8,12 @@ import React, {HTMLAttributes, useState} from 'react';
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
 import {headerStyles} from './common/styles';
-import {CALL_TO_ACTION, TOP_LEVEL_LINKS, SITE_LOGO} from './config';
+import {
+  CALL_TO_ACTION,
+  TOP_LEVEL_LINKS,
+  SITE_LOGO,
+  mainMenuDesktopItems,
+} from './config';
 import HamburgerButton from './HamburgerButton';
 import {LinkItemProps} from './LinkItem';
 import LinkList from './LinkList';
@@ -38,7 +43,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
   );
 
   // Get Link List
-  const getLinks = (
+  const getDrawerLinks = (
     className: string,
     ariaLabel: string,
     linkList: LinkItemProps[],
@@ -63,7 +68,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
             {/* Site Logo */}
             {siteLogo}
             {/* Main Menu Desktop with Dropdowns */}
-            <MainMenuDesktop />
+            <MainMenuDesktop mainMenuDesktopItems={mainMenuDesktopItems} />
           </Box>
           {/* Call to Action */}
           {callToAction}
@@ -95,7 +100,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
           <Box onClick={handleDrawerToggle} sx={headerStyles.drawerContent}>
             <Box>
               {siteLogo}
-              {getLinks('drawer', 'Main Links', TOP_LEVEL_LINKS.linkList)}
+              {getDrawerLinks('drawer', 'Main Links', TOP_LEVEL_LINKS.linkList)}
             </Box>
             {callToAction}
           </Box>

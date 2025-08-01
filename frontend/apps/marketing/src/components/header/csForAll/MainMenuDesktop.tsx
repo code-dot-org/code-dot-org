@@ -1,14 +1,28 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import {useMemo} from 'react';
 
 import {buttonStyles} from './common/styles';
-import {
-  ISSUES_LINKS,
-  NEWS_AND_RESOURCES_LINKS,
-  TAKE_ACTION_LINKS,
-  TOP_LEVEL_LINKS,
-} from './config';
 import DropdownMenu from './DropdownMenu';
+import {LinkItemProps} from './LinkItem';
+
+export interface MenuConfig {
+  linkList: LinkItemProps[];
+  parentId?: string;
+}
+
+export interface MenuItemConfig {
+  type: 'dropdown' | 'button';
+  topLevelLink: LinkItemProps;
+  dropdownConfig?: MenuConfig;
+}
+
+interface MainMenuDesktopProps {
+  /** Main menu items */
+  mainMenuDesktopItems: MenuItemConfig[];
+  /** Custom class */
+  className?: string;
+}
 
 const styles = {
   linkListDesktop: {
@@ -18,49 +32,67 @@ const styles = {
   },
 };
 
-const MainMenuDesktop = () => {
-  const [
-    issuesLink,
-    takeActionLink,
-    aboutLink,
-    joinLink,
-    newsAndResourcesLink,
-  ] = TOP_LEVEL_LINKS.linkList;
+export const useMenuConfiguration = (
+  topLevelLinks: {linkList: LinkItemProps[]} | null,
+  dropdownConfigs: Record<string, MenuConfig> = {},
+): MenuItemConfig[] => {
+  return useMemo(() => {
+    if (!topLevelLinks?.linkList) return [];
+
+    return topLevelLinks.linkList.map((link): MenuItemConfig => {
+      const dropdownConfig = Object.values(dropdownConfigs).find(
+        config => config.parentId === link.id,
+      );
+
+      return {
+        type: dropdownConfig ? 'dropdown' : 'button',
+        topLevelLink: link,
+        dropdownConfig,
+      };
+    });
+  }, [topLevelLinks, dropdownConfigs]);
+};
+
+const MainMenuDesktop = ({
+  mainMenuDesktopItems,
+  className = 'link-list-desktop',
+}: MainMenuDesktopProps) => {
+  const renderMenuItem = (item: MenuItemConfig, index: number) => {
+    const {type, topLevelLink, dropdownConfig} = item;
+    const key = topLevelLink.id || `${type}-${index}`;
+
+    if (type === 'dropdown' && dropdownConfig) {
+      return (
+        <DropdownMenu
+          key={key}
+          id={topLevelLink.id ?? ''}
+          label={topLevelLink.label}
+          linkList={dropdownConfig.linkList}
+        />
+      );
+    }
+
+    if (type === 'button' && topLevelLink.href) {
+      return (
+        <Button
+          key={key}
+          variant="text"
+          href={topLevelLink.href}
+          disableElevation
+          disableRipple
+          sx={buttonStyles.button}
+        >
+          {topLevelLink.label}
+        </Button>
+      );
+    }
+
+    return null;
+  };
+
   return (
-    <Box className="link-list-desktop" sx={styles.linkListDesktop}>
-      <DropdownMenu
-        id={issuesLink?.id ?? ''}
-        label={issuesLink?.label ?? ''}
-        linkList={ISSUES_LINKS.linkList}
-      />
-      <DropdownMenu
-        id={takeActionLink?.id ?? ''}
-        label={takeActionLink?.label ?? ''}
-        linkList={TAKE_ACTION_LINKS.linkList}
-      />
-      <Button
-        variant="text"
-        href={aboutLink.href}
-        disableElevation
-        disableRipple
-        sx={buttonStyles.button}
-      >
-        {aboutLink.label}
-      </Button>
-      <Button
-        variant="text"
-        href={joinLink.href}
-        disableElevation
-        disableRipple
-        sx={buttonStyles.button}
-      >
-        {joinLink.label}
-      </Button>
-      <DropdownMenu
-        id={newsAndResourcesLink?.id ?? ''}
-        label={newsAndResourcesLink.label}
-        linkList={NEWS_AND_RESOURCES_LINKS.linkList}
-      />
+    <Box className={className} sx={styles.linkListDesktop}>
+      {mainMenuDesktopItems.map(renderMenuItem)}
     </Box>
   );
 };
