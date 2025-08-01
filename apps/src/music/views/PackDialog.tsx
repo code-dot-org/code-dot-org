@@ -90,6 +90,71 @@ And Here is some example Blockly code for our system.  In this case, we are gene
   {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
 `;
 
+  const context3 = `
+You'll be given psuedocode that plays a song.
+
+The psuedocode looks something like this:
+
+when_run
+  play "hiphop/drum_beat_808"
+  play "electro/drum_beat_hyper"
+  play_together
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+  repeat 3
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+
+Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
+
+Your job will be to generate some psuedocode for a system that makes some characters that dance.  Here is an example of that psuedocode:
+
+when_run
+  create "sloth" at "center"
+  "sloths" do "dab"
+
+at "2" measures
+  "sloths" do "floss"
+
+at "3" measures
+  "sloths" do "dab"
+
+This psuedocode has three moments of interest.  When first run, it creates a "sloth" character in the "center" of the screen, and then it makes all "sloths" do a dance called the "dab".  Then, when the background song reaches measure "2", the sloths start doing the "floss" dance move.  Then, when the song reaches measure "3", the sloths start doing the "dab" again.
+
+Valid dancer characters are "sloth", "cat", "dog", and "duck".  Valid dances are "dab", "floss", "fresh", and "disco".
+
+Valid screen locations are "top", "bottom", "left", "right" and "center".
+
+Try to generate a dance sequence that has major moments, like the dancing changing, that coincide with the input music's major moments.
+
+Note that the dance psudocode does not support the same set of features as the music psuedocode.
+
+`;
+
+  const context4 = `
+Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
+
+Here is some example input psuedocode:
+
+when_run
+  create "sloth" at "center"
+  "sloths" do "dab"
+
+at "2" measures
+  "sloths" do "floss"
+
+at "3" measures
+  "sloths" do "dab"
+
+This psuedocode has three moments of interest.  When first run, it creates a "sloth" character in the "center" of the screen, and then it makes all "sloths" do a dance called the "dab".  Then, when the background song reaches measure "2", the sloths start doing the "floss" dance move.  Then, when the song reaches measure "3", the sloths start doing the "dab" again.
+
+Indenting is important.
+
+And here is example blockly JSON that represents the psuedocode above:
+
+{"blocks":{"languageVersion":0,"blocks":[{"type":"Dancelab_whenSetup","id":";fui020!Iaz!kp-n0K[8","x":47,"y":41,"movable":false,"inputs":{"DO":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"{U-DOxMPz$)-j8dIS#O|","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"CAT\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 100, y: 200}</field>"},"next":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"~y[?utp)~L.$C@ZiL51V","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"DOG\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 300, y: 200}</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"!zxTn$JN@Iwv}-Dk^Q(8","fields":{"GROUP":"<field name=\\"GROUP\\">\\"CAT\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Dab</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"=D*J5IY5upi+bOqMX8nR","fields":{"GROUP":"<field name=\\"GROUP\\">\\"DOG\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Dab</field>","DIR":"<field name=\\"DIR\\">-1</field>"}}}}}}}}}}},{"type":"Dancelab_atTimestampNotAfter","id":"S4!uAzkx{%vw@UFZX8hY","x":50,"y":237,"deletable":false,"editable":false,"fields":{"TIMESTAMP":2,"UNIT":"<field name=\\"UNIT\\">\\"measures\\"</field>"},"next":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"d9O0m4kmUCbnvV+!g","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"SLOTH\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 200, y: 200}</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"vb82H}!NOVGmpir7;~5Q","fields":{"GROUP":"<field name=\\"GROUP\\">\\"CAT\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"j..*n3lnL=w~GAWxr7dl","fields":{"GROUP":"<field name=\\"GROUP\\">\\"DOG\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_doMoveEachLR","id":"*hCDocpHXqlku@f[[rK=","fields":{"GROUP":"<field name=\\"GROUP\\">\\"SLOTH\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"}}}}}}}}}}]}}
+`;
+
   const [text, setText] = useState(
     'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.\n' +
       'Put this into a function and call this function from the main block.\n'
