@@ -1,3 +1,5 @@
+import {alpha} from '@mui/material/styles';
+
 import theme from '@/themes/csforall';
 
 import {DRAWER_BREAKPOINT} from './constants';
@@ -60,5 +62,22 @@ export const headerStyles = {
     flexDirection: 'column',
     justifyContent: 'space-between',
     height: 'inherit',
+  },
+};
+
+// Shared button styles
+export const buttonStyles = {
+  button: {
+    color: theme.palette.text.primary,
+    fontSize: theme.typography.body3.fontSize,
+    fontWeight: theme.typography.fontWeightBold,
+    textDecoration: 'none',
+    marginBottom: 0,
+    padding: theme.spacing(1, 2),
+    borderRadius: theme.shape.borderRadius,
+    transition: 'background-color 0.3s ease',
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.primary.main, 0.1),
+    },
   },
 };

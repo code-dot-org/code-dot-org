@@ -7,6 +7,7 @@ import {useState} from 'react';
 
 import theme from '@/themes/csforall';
 
+import {buttonStyles} from './common/styles';
 import LinkItem, {LinkItemProps} from './LinkItem';
 
 export interface MenuListProps {
@@ -43,17 +44,10 @@ const styles = {
     },
   },
   button: {
-    cursor: 'pointer',
-    color: theme.palette.text.primary,
-    fontSize: theme.typography.body3.fontSize,
-    textDecoration: 'none',
-    marginBottom: 0,
-    padding: theme.spacing(1, 2),
-    paddingInlineEnd: theme.spacing(1.5),
-    borderRadius: theme.shape.borderRadius,
-    transition: 'background-color 0.3s ease',
-    gap: theme.spacing(0.5),
+    ...buttonStyles.button,
     alignItems: 'center',
+    gap: theme.spacing(0.5),
+    paddingInlineEnd: theme.spacing(1.5),
     '&:hover': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
     },

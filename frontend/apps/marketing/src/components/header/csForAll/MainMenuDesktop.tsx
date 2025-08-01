@@ -1,9 +1,7 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import {alpha} from '@mui/material/styles';
 
-import theme from '@/themes/csforall';
-
+import {buttonStyles} from './common/styles';
 import {
   ISSUES_LINKS,
   NEWS_AND_RESOURCES_LINKS,
@@ -17,18 +15,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     gap: 1,
-  },
-  button: {
-    color: theme.palette.text.primary,
-    fontSize: theme.typography.body3.fontSize,
-    textDecoration: 'none',
-    marginBottom: 0,
-    padding: theme.spacing(1, 2),
-    borderRadius: theme.shape.borderRadius,
-    transition: 'background-color 0.3s ease',
-    '&:hover': {
-      backgroundColor: alpha(theme.palette.primary.main, 0.1),
-    },
   },
 };
 
@@ -50,7 +36,7 @@ const MainMenuDesktop = () => {
         href={TOP_LEVEL_LINKS.linkList[2].href}
         disableElevation
         disableRipple
-        sx={styles.button}
+        sx={buttonStyles.button}
       >
         {TOP_LEVEL_LINKS.linkList[2].label}
       </Button>
@@ -59,7 +45,7 @@ const MainMenuDesktop = () => {
         href={TOP_LEVEL_LINKS.linkList[3].href}
         disableElevation
         disableRipple
-        sx={styles.button}
+        sx={buttonStyles.button}
       >
         {TOP_LEVEL_LINKS.linkList[3].label}
       </Button>
