@@ -16,7 +16,7 @@ import slide5Image from './images/welcome-slide-4.png';
 import styles from './welcome-popup.module.scss';
 
 export interface WelcomePopupProps {
-  teacherName?: string;
+  onCloseCallback?: () => void;
 }
 
 const SLIDE_0 = {
@@ -50,7 +50,7 @@ const SLIDE_4 = {
 
 const SLIDES = [SLIDE_0, SLIDE_1, SLIDE_2, SLIDE_3, SLIDE_4];
 
-const WelcomePopup: React.FC<WelcomePopupProps> = () => {
+const WelcomePopup: React.FC<WelcomePopupProps> = ({onCloseCallback}) => {
   const [isOpen, setIsOpen] = React.useState(true);
 
   const [stepNum, setStepNum] = React.useState(0);
@@ -61,6 +61,9 @@ const WelcomePopup: React.FC<WelcomePopupProps> = () => {
     setIsOpen(false);
     new UserPreferences().setHasSeenProgressTableInvite(true);
     dispatch(setHasSeenHomepageWelcome(true));
+    if (onCloseCallback) {
+      onCloseCallback();
+    }
   };
 
   const handleNext = () => {

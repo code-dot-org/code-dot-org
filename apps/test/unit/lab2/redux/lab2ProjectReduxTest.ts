@@ -56,7 +56,11 @@ const createMockMultiFileSource = (
   overrides: Partial<MultiFileSource> = {}
 ): MultiFileSource => ({
   files: {
-    '1': createMockFile('1', {name: 'index.html', language: 'html'}),
+    '1': createMockFile('1', {
+      name: 'index.html',
+      language: 'html',
+      active: true,
+    }),
     '2': createMockFile('2', {name: 'script.js', language: 'javascript'}),
   },
   folders: {
@@ -300,17 +304,19 @@ describe('lab2ProjectRedux', () => {
 
   describe('closeFile', () => {
     it('should close a file', () => {
-      const initialProjectSources = createMockProjectSources();
+      const initialProjectSources = createMockProjectSources({
+        openFiles: ['1', '2'],
+      });
       const initialStateWithSources = {
         ...initialState,
         projectSources: initialProjectSources,
       };
 
       const state = reducer(initialStateWithSources, closeFile('1'));
-
-      expect(
-        (state.projectSources!.source as MultiFileSource).files['1'].active
-      ).toBe(false);
+      const newSource = state.projectSources!.source as MultiFileSource;
+      expect(newSource.files['1'].active).toBe(false);
+      expect(newSource.openFiles).toEqual(['2']);
+      expect(newSource.files['2'].active).toBe(true);
       expect(state.hasEdited).toBe(false); // Closing doesn't count as edit
     });
 
@@ -322,7 +328,9 @@ describe('lab2ProjectRedux', () => {
 
   describe('deleteFile', () => {
     it('should delete an existing file', () => {
-      const initialProjectSources = createMockProjectSources();
+      const initialProjectSources = createMockProjectSources({
+        openFiles: ['1', '2'],
+      });
       const initialStateWithSources = {
         ...initialState,
         projectSources: initialProjectSources,
@@ -330,9 +338,10 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, deleteFile('1'));
 
-      expect(
-        (state.projectSources!.source as MultiFileSource).files['1']
-      ).toBeUndefined();
+      const newSource = state.projectSources!.source as MultiFileSource;
+      expect(newSource.files['1']).toBeUndefined();
+      expect(newSource.openFiles).toEqual(['2']);
+      expect(newSource.files['2'].active).toBe(true);
       expect(state.hasEdited).toBe(true);
     });
 
@@ -566,7 +575,31 @@ describe('lab2ProjectRedux', () => {
 
   describe('deleteFolder', () => {
     it('should delete an existing folder', () => {
-      const initialProjectSources = createMockProjectSources();
+      const initialProjectSources = {
+        source: {
+          files: {
+            '1': createMockFile('1', {
+              name: 'index.html',
+              language: 'html',
+            }),
+            '2': createMockFile('2', {
+              name: 'script.js',
+              language: 'javascript',
+            }),
+            '3': createMockFile('3', {
+              name: 'style.css',
+              language: 'css',
+              folderId: '1',
+              active: true,
+            }),
+          },
+          folders: {
+            '1': createMockFolder('1'),
+          },
+          openFiles: ['1', '2', '3'],
+        },
+        labConfig: undefined,
+      };
       const initialStateWithSources = {
         ...initialState,
         projectSources: initialProjectSources,
@@ -574,9 +607,9 @@ describe('lab2ProjectRedux', () => {
 
       const state = reducer(initialStateWithSources, deleteFolder('1'));
 
-      expect(
-        (state.projectSources!.source as MultiFileSource).folders['1']
-      ).toBeUndefined();
+      const newSource = state.projectSources!.source as MultiFileSource;
+      expect(newSource.folders['1']).toBeUndefined();
+      expect(newSource.files['1'].active).toBe(true);
       expect(state.hasEdited).toBe(true);
     });
 
