@@ -238,7 +238,7 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
-        unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
