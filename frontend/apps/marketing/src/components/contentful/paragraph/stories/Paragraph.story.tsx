@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
+import {expect} from 'storybook/test';
 
 import Paragraph from '../Paragraph';
 
@@ -9,53 +10,6 @@ const meta: Meta<typeof Paragraph> = {
 };
 export default meta;
 type Story = StoryObj<typeof Paragraph>;
-
-export const Variants: Story = {
-  render: () => (
-    <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
-      <Paragraph
-        visualAppearance="body-one"
-        isStrong={false}
-        color="primary"
-        removeMarginBottom={false}
-      >
-        Body One Paragraph
-      </Paragraph>
-      <Paragraph
-        visualAppearance="body-two"
-        isStrong={false}
-        color="secondary"
-        removeMarginBottom={false}
-      >
-        Body Two Paragraph
-      </Paragraph>
-      <Paragraph
-        visualAppearance="body-three"
-        isStrong={false}
-        color="primary"
-        removeMarginBottom={false}
-      >
-        Body Three Paragraph
-      </Paragraph>
-      <Paragraph
-        visualAppearance="body-four"
-        isStrong={false}
-        color="secondary"
-        removeMarginBottom={false}
-      >
-        Body Four Paragraph
-      </Paragraph>
-      <Paragraph
-        visualAppearance="body-one"
-        isStrong={true}
-        color="primary"
-        removeMarginBottom={false}
-      >
-        Strong Body One Paragraph
-      </Paragraph>
-    </div>
-  ),
-};
 
 export const Playground: Story = {
   args: {
@@ -80,5 +34,90 @@ export const Playground: Story = {
     },
     removeMarginBottom: {control: 'boolean'},
     className: {control: 'text'},
+  },
+};
+
+export const BodyOne: Story = {
+  render: () => (
+    <Paragraph
+      visualAppearance="body-one"
+      isStrong={false}
+      color="primary"
+      removeMarginBottom={false}
+    >
+      Body One Paragraph
+    </Paragraph>
+  ),
+  play: async ({canvas}) => {
+    const bodyOne = canvas.getByText('Body One Paragraph');
+    expect(bodyOne).toBeInTheDocument();
+  },
+};
+
+export const BodyTwo: Story = {
+  render: () => (
+    <Paragraph
+      visualAppearance="body-two"
+      isStrong={false}
+      color="secondary"
+      removeMarginBottom={false}
+    >
+      Body Two Paragraph
+    </Paragraph>
+  ),
+  play: async ({canvas}) => {
+    const bodyTwo = canvas.getByText('Body Two Paragraph');
+    expect(bodyTwo).toBeInTheDocument();
+  },
+};
+
+export const BodyThree: Story = {
+  render: () => (
+    <Paragraph
+      visualAppearance="body-three"
+      isStrong={false}
+      color="primary"
+      removeMarginBottom={false}
+    >
+      Body Three Paragraph
+    </Paragraph>
+  ),
+  play: async ({canvas}) => {
+    const bodyThree = canvas.getByText('Body Three Paragraph');
+    expect(bodyThree).toBeInTheDocument();
+  },
+};
+
+export const BodyFour: Story = {
+  render: () => (
+    <Paragraph
+      visualAppearance="body-four"
+      isStrong={false}
+      color="secondary"
+      removeMarginBottom={false}
+    >
+      Body Four Paragraph
+    </Paragraph>
+  ),
+  play: async ({canvas}) => {
+    const bodyFour = canvas.getByText('Body Four Paragraph');
+    expect(bodyFour).toBeInTheDocument();
+  },
+};
+
+export const StrongBodyOne: Story = {
+  render: () => (
+    <Paragraph
+      visualAppearance="body-one"
+      isStrong={true}
+      color="primary"
+      removeMarginBottom={false}
+    >
+      Strong Body One Paragraph
+    </Paragraph>
+  ),
+  play: async ({canvas}) => {
+    const strongBodyOne = canvas.getByText('Strong Body One Paragraph');
+    expect(strongBodyOne).toBeInTheDocument();
   },
 };

@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
+import {expect} from 'storybook/test';
 
 import Section from '../Section';
 
@@ -28,7 +29,7 @@ const paddings = ['m', 'l'] as const;
 const themes = ['Light', 'Dark'] as const;
 const dividers = ['none', 'primary', 'strong'] as const;
 
-const createStory = (background: (typeof backgrounds)[number]): Story => ({
+const createStory = (background: string): Story => ({
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
       {paddings.flatMap(padding =>
@@ -50,6 +51,17 @@ const createStory = (background: (typeof backgrounds)[number]): Story => ({
       )}
     </div>
   ),
+  play: async ({canvas}) => {
+    for (const padding of paddings) {
+      for (const themeOpt of themes) {
+        for (const divider of dividers) {
+          const sectionText = `Section | background: ${background} | padding: ${padding} | theme: ${themeOpt} | divider: ${divider}`;
+          const section = canvas.getByText(sectionText);
+          expect(section).toBeInTheDocument();
+        }
+      }
+    }
+  },
 });
 
 // Example usage for each background:

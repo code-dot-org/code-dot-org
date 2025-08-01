@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
+import {expect} from 'storybook/test';
 
 import Divider from '../Divider';
 
@@ -9,16 +10,6 @@ const meta: Meta<typeof Divider> = {
 };
 export default meta;
 type Story = StoryObj<typeof Divider>;
-
-export const Variants = {
-  render: () => (
-    <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
-      <Divider color="primary" margin="m" />
-      <Divider color="strong" margin="l" />
-      <Divider color="white" margin="s" />
-    </div>
-  ),
-};
 
 export const Playground: Story = {
   args: {
@@ -33,5 +24,41 @@ export const Playground: Story = {
     },
     margin: {control: 'text'},
     className: {control: 'text'},
+  },
+};
+
+export const Primary: Story = {
+  args: {
+    color: 'primary',
+    margin: 'm',
+  },
+  play: async ({canvas}) => {
+    const separator = canvas.getByRole('separator');
+    expect(separator).toBeInTheDocument();
+  },
+};
+
+export const Strong: Story = {
+  args: {
+    color: 'strong',
+    margin: 'l',
+  },
+  play: async ({canvas}) => {
+    const separator = canvas.getByRole('separator');
+    expect(separator).toBeInTheDocument();
+  },
+};
+
+export const White: Story = {
+  globals: {
+    backgrounds: {value: 'dark'},
+  },
+  args: {
+    color: 'white',
+    margin: 's',
+  },
+  play: async ({canvas}) => {
+    const separator = canvas.getByRole('separator');
+    expect(separator).toBeInTheDocument();
   },
 };

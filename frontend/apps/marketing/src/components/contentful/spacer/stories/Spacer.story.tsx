@@ -12,27 +12,6 @@ type Story = StoryObj<typeof Spacer>;
 
 const sizes = ['xs', 's', 'm', 'l'] as const;
 
-export const Variants: Story = {
-  render: () => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 16,
-        background: '#f0f0f0',
-        padding: 16,
-      }}
-    >
-      {sizes.map(size => (
-        <div key={size} style={{border: '1px dashed #aaa', marginBottom: 8}}>
-          <div>Spacer size: {size}</div>
-          <Spacer size={size} />
-        </div>
-      ))}
-    </div>
-  ),
-};
-
 export const Playground: Story = {
   render: (args: SpacerProps) => {
     return (
@@ -60,4 +39,40 @@ export const Playground: Story = {
     size: {control: 'select', options: sizes},
     className: {control: 'text'},
   },
+};
+
+export const SpacerXS: Story = {
+  render: () => (
+    <div style={{border: '1px dashed #aaa', marginBottom: 8}}>
+      <div>Spacer size: xs</div>
+      <Spacer size="xs" />
+    </div>
+  ),
+};
+
+export const SpacerS: Story = {
+  render: () => (
+    <div style={{border: '1px dashed #aaa', marginBottom: 8}}>
+      <div>Spacer size: s</div>
+      <Spacer size="s" />
+    </div>
+  ),
+};
+
+export const SpacerM: Story = {
+  render: () => (
+    <div style={{border: '1px dashed #aaa', marginBottom: 8}}>
+      <div>Spacer size: m</div>
+      <Spacer size="m" />
+    </div>
+  ),
+};
+
+export const SpacerL: Story = {
+  render: () => (
+    <div style={{border: '1px dashed #aaa', marginBottom: 8}}>
+      <div>Spacer size: l</div>
+      <Spacer size="l" />
+    </div>
+  ),
 };

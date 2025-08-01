@@ -1,4 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
+import {expect} from 'storybook/test';
 
 import Testimonial, {TESTIMONIAL_CONTENTFUL_BACKGROUNDS} from '../Testimonial';
 
@@ -15,22 +16,6 @@ const backgrounds = [
   TESTIMONIAL_CONTENTFUL_BACKGROUNDS.PATTERN_PRIMARY,
 ];
 
-export const Variants: Story = {
-  render: () => (
-    <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
-      {backgrounds.map(background => (
-        <Testimonial
-          key={background}
-          quote={`Testimonial for ${background}`}
-          source="Jane Doe"
-          context="Student"
-          background={background}
-        />
-      ))}
-    </div>
-  ),
-};
-
 export const Playground: Story = {
   args: {
     quote: 'Playground testimonial text.',
@@ -43,5 +28,43 @@ export const Playground: Story = {
     source: {control: 'text'},
     context: {control: 'text'},
     background: {control: 'select', options: backgrounds},
+  },
+};
+
+export const PatternDark: Story = {
+  render: () => (
+    <Testimonial
+      quote="Testimonial for patternDark"
+      source="Jane Doe"
+      context="Student"
+      background={TESTIMONIAL_CONTENTFUL_BACKGROUNDS.PATTERN_DARK}
+    />
+  ),
+  play: async ({canvas}) => {
+    const quoteElem = canvas.getByText('Testimonial for patternDark');
+    expect(quoteElem).toBeInTheDocument();
+    const sourceElem = canvas.getByText('Jane Doe');
+    expect(sourceElem).toBeInTheDocument();
+    const contextElem = canvas.getByText('Student');
+    expect(contextElem).toBeInTheDocument();
+  },
+};
+
+export const PatternPrimary: Story = {
+  render: () => (
+    <Testimonial
+      quote="Testimonial for patternPrimary"
+      source="Jane Doe"
+      context="Student"
+      background={TESTIMONIAL_CONTENTFUL_BACKGROUNDS.PATTERN_PRIMARY}
+    />
+  ),
+  play: async ({canvas}) => {
+    const quoteElem = canvas.getByText('Testimonial for patternPrimary');
+    expect(quoteElem).toBeInTheDocument();
+    const sourceElem = canvas.getByText('Jane Doe');
+    expect(sourceElem).toBeInTheDocument();
+    const contextElem = canvas.getByText('Student');
+    expect(contextElem).toBeInTheDocument();
   },
 };
