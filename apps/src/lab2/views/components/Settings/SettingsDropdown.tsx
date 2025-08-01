@@ -11,9 +11,9 @@ import useDropdownPosition from '@cdo/apps/lab2/hooks/useDropdownPosition';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import commonI18n from '@cdo/locale';
 
-import moduleStyles from './settings-dropdowns.module.scss';
+import moduleStyles from './settings-dropdown.module.scss';
 
-interface SettingsDropdownsProps {
+interface SettingsDropdownProps {
   closeDropdown: () => void;
   buttonRef: React.RefObject<HTMLDivElement>;
   settings: Setting[];
@@ -27,7 +27,7 @@ export interface Setting {
   onChange: (value: string) => void;
 }
 
-const SettingsDropdowns: React.FunctionComponent<SettingsDropdownsProps> = ({
+const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   closeDropdown,
   buttonRef,
   settings,
@@ -91,4 +91,4 @@ const SettingsDropdowns: React.FunctionComponent<SettingsDropdownsProps> = ({
   );
 };
 
-export default React.memo(SettingsDropdowns);
+export default React.memo(SettingsDropdown);

@@ -1,15 +1,36 @@
 name 'test-ai-powered-threats-defenses-lesson8-level1d'
 
-markdown <<MARKDOWN
-#Amara T. - User Profile
+display_name 'Diego M.'
+bubble_choice_description 'A security-conscious student from Minneapolis who keeps his online life private. Some tools were bought from Toronto during a sketchy login—would Diego really do that?'
+thumbnail_url 'https://images.code.org/33dcf3d41e5ddeb76754f0d6b827b429-image-1753989745927.png'
 
-Go through the audit logs for Amara to find any evidence of fraud.
+markdown <<MARKDOWN
+#Diego M.
+
+#### Read about Diego and investigate the audit logs. Can you find any evidence of fraud?
 
 **[Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
 
+---
+## USER PROFILE
+
+* **Age**: 18
+* **Location**: Minneapolis, MN
+* **Background**: Somali-American; lives with parents and grandmother in a multigenerational household
+* **School**: Public high school senior; works part-time as a receptionist at a local dentist’s office
+* **Devices**: Android phone (Motorola), school Chromebook, shared family desktop
+* **Tech Habits**: Uses Signal and WhatsApp; avoids video calls; clears history often; never saves passwords
+* **Spending Habits**: Uses reloadable debit cards; rarely shops online; prefers in-person stores for cultural groceries and clothing
+* **Hobbies**: Henna art, baking, photo editing on his phone, journaling
+* **Travel History**: Traveled to Toronto once for a family wedding last summer; otherwise stays within his Minneapolis neighborhood
+* **Security Habits**: Private and cautious; no biometrics; uses long passcodes; guards phone closely
+
+
+---
+
 ## LOGIN ACTIVITY LOG
 
-<img src="https://images.code.org/9ff4b331cd57a4c8d556558c56421621-image-1753924768816.png" style="float:right; width:45%">
+<img src="https://images.code.org/cd1bfdb5f547249031d4985de1715ad5-image-1753975969699.png" style="float:right; width:45%">
 
 | Date     |   Time    |       Device       |     IP Location     | Outcome |    OS     |    Browser     |
 |----------|-----------|--------------------|----------------------|---------|-----------|----------------|
@@ -52,4 +73,5 @@ Go through the audit logs for Amara to find any evidence of fraud.
 | Sept 18  |  2:40 AM  | SecureNotes (Subscription)         | &#36;6.99  | Toronto, ON      | Reloadable Debit    |
 | Sept 18  |  8:07 AM  | Corner Bakery                      | &#36;5.40  | Minneapolis, MN  | Reloadable Debit    |
 
+![]()
 MARKDOWN

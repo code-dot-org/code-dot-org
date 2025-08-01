@@ -49,6 +49,7 @@ function RubricContainer({
   sectionId,
   loadAllTeacherEvaluationData,
   loadAiEvalStatusForAll,
+  reloadOnStudentChange = true,
 }) {
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const rubricTabSessionKey = 'rubricFABTabSessionKey';
@@ -375,6 +376,7 @@ function RubricContainer({
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}
             sectionId={sectionId}
+            reloadOnStudentChange={reloadOnStudentChange}
           />
           {showSettings && (
             <RubricSettings
@@ -412,6 +414,7 @@ RubricContainer.propTypes = {
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
   sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
 
   // Redux provided
   loadAllTeacherEvaluationData: PropTypes.func,
