@@ -15,7 +15,7 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import HttpClient from '../util/HttpClient';
 
 import AiDiffContainer from './AiDiffContainer';
-import {Context} from './types';
+import {ChatThread, chatThreadValidator, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -84,6 +84,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
+  const [threads, setThreads] = useState<ChatThread[]>();
+
+  async function asyncFetchThreads(): Promise<ChatThread[]> {
+    const response = await HttpClient.fetchJson<ChatThread[]>(
+      `/aidiff_threads`,
+      {},
+      chatThreadValidator
+    );
+    return response.value;
+  }
 
   useEffect(() => {
     const body = JSON.stringify({
@@ -100,6 +110,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         console.log(error);
         setCurriculumCourses([]);
       });
+    asyncFetchThreads().then(response => {
+      console.log(response);
+      setThreads(response);
+    });
   }, [context]);
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
@@ -148,6 +162,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         closeTutor={handleClick}
         scriptName={scriptName}
         curriculumCourses={curriculumCourses}
+        threads={threads}
       />
     </div>
   );
