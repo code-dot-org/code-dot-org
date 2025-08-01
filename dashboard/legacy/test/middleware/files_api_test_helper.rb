@@ -45,10 +45,8 @@ class FilesApiTestHelper
     last_response.body
   end
 
-  def put_object(filename, body = '', headers = {}, query: nil)
-    path = "/v3/#{@endpoint}/#{@channel_id}/#{filename}"
-    path += "?#{query}" if query
-    put path, body, headers
+  def put_object(filename, body = '', headers = {})
+    put "/v3/#{@endpoint}/#{@channel_id}/#{filename}", body, headers
     last_response.body
   end
 

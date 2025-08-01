@@ -122,7 +122,7 @@ class LibrariesTest < FilesApiTestBase
     delete_all_library_versions(filename)
 
     # Upload a file
-    @api.put_object(filename, file_data, file_headers, query: 'project_type=applab')
+    @api.put_object(filename, file_data, file_headers)
     assert_equal 400, last_response.status
   end
 

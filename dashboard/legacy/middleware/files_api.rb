@@ -425,7 +425,7 @@ class FilesApi < Sinatra::Base
     # between their own projects -- skip this check for backpack files since the files are
     # only being used by a single user.
     # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
-    if endpoint == 'libraries' && project_type == 'applab'
+    if endpoint == 'libraries' && project_type != 'backpack'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception
