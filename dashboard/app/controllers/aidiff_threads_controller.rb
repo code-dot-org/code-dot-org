@@ -28,7 +28,8 @@ class AidiffThreadsController < ApplicationController
           level_id: @level&.id,
           course_id: @unit_group&.id,
           lesson_id: @lesson&.id,
-          context_type: params[:context][:type]
+          context_type: params[:context][:type],
+          session_created: DateTime.now
         )
         # Add user message to thread
         log_messages(response_body)
@@ -104,7 +105,9 @@ class AidiffThreadsController < ApplicationController
         log_messages(response_body)
         response_body[:message_id] = @assistant_message.id
         response_body[:thread_id] = @aidiff_thread.id
-        @aidiff_thread.update!(external_id: response_body[:session_id], session_created: DateTime.now)
+        if session_id.nil?
+          @aidiff_thread.update!(external_id: response_body[:session_id], session_created: DateTime.now)
+        end
       rescue StandardError => exception
         return render status: :bad_request, json: {error: exception.message}
       end
