@@ -1576,7 +1576,10 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
 end
 
 Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
-  response_json = @browser.find_element(:css, 'body').text
+  # Click the raw data tab to see the JSON response in Firefox
+  @browser.find_elements(:css, '#rawdata-tab').first&.click
+
+  response_json = @browser.find_element(:css, 'pre').text
   expect(response_json).to include(%Q["#{key}":#{value}])
 end
 
