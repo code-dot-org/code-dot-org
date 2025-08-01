@@ -1,5 +1,4 @@
 import {Codebridge} from '@codebridge/Codebridge';
-import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
@@ -7,12 +6,10 @@ import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 
 import {useSource} from '../codebridge/hooks/useSource';
-import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
+import {useAppSelector} from '../util/reduxHooks';
 
 import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
@@ -72,13 +69,6 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
-
-  const dispatch = useAppDispatch();
-
-  // Set view code to false if level is switched for any levels in widget view.
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(setWidgetViewShowCode(false));
-  });
 
   return (
     <div className={moduleStyles.weblab2Container}>
