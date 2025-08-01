@@ -2,7 +2,7 @@ import React from 'react';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
-import {Context} from './types';
+import {ChatThread, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -11,6 +11,7 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   showSidebar?: boolean;
+  threads?: ChatThread[];
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -18,10 +19,11 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   scriptName,
   curriculumCourses,
   showSidebar,
+  threads,
 }) => {
   return (
     <div className={style.aiDiffWorkspace}>
-      {showSidebar && <AiDiffSidebar />}
+      {showSidebar && <AiDiffSidebar threads={threads} />}
       <AiDiffChat
         context={context}
         scriptName={scriptName}
