@@ -11,6 +11,11 @@ import * as GoogleBlockly from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+// We are transitioning off of a standalone Amplitude project for Music Lab
+// and onto Code.org's main Statsig project.
+// In the short term, we log to both projects to establish parity between the two logging systems.
+import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import cdoAnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {
   getEnvironment,
@@ -70,13 +75,13 @@ interface SessionEndPayload extends CommonSessionFields {
   soundsUsed: string[];
 }
 
-const trackedProjectProperties = [
-  'levelType',
-  'mode',
-  'channelId',
-  'levelPath',
-  'scriptName',
-] as const;
+interface ProjectContext {
+  levelType?: string;
+  mode?: string;
+  channelId?: string;
+  levelPath?: string;
+  scriptName?: string;
+}
 
 /**
  * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
@@ -108,6 +113,7 @@ export default class AnalyticsReporter {
   }
 
   private session: Session | undefined;
+  private projectContext: ProjectContext | undefined;
   private startInProgress: boolean = false;
 
   async startSession() {
@@ -178,15 +184,22 @@ export default class AnalyticsReporter {
     );
   }
 
-  setProjectProperty(
-    property: (typeof trackedProjectProperties)[number],
-    value: string | number | undefined
+  setProjectProperty<K extends keyof ProjectContext>(
+    property: K,
+    value: ProjectContext[K]
   ) {
     if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
+    // For Statsig
+    if (!this.projectContext) {
+      this.projectContext = {};
+    }
+    this.projectContext[property] = value;
+
+    // For Amplitude
     const identifyEvent = new Identify();
     if (value) {
       identifyEvent.set(property, value);
@@ -194,6 +207,7 @@ export default class AnalyticsReporter {
       identifyEvent.unset(property);
     }
     identify(identifyEvent);
+
     this.log(`Project property: ${property}: ${value}`);
   }
 
@@ -258,6 +272,7 @@ export default class AnalyticsReporter {
       this.log(logMessage);
     }
 
+    this.sendStatsigEvent(eventType, payload);
     track(eventType, payload).promise;
   }
 
@@ -338,6 +353,7 @@ export default class AnalyticsReporter {
 
     this.session = undefined;
 
+    this.sendStatsigEvent('Session end', payload);
     track('Session end', payload);
     flush();
 
@@ -359,5 +375,18 @@ export default class AnalyticsReporter {
       const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
+  }
+
+  private sendStatsigEvent(eventName: string, payload: object) {
+    // We include project properties as part of the event payload rather than as user properties in Statsig.
+    const combinedPayload = this.projectContext
+      ? {...payload, ...this.projectContext}
+      : payload;
+
+    cdoAnalyticsReporter.sendEvent(
+      `Music Lab ${eventName}`,
+      combinedPayload,
+      PLATFORMS.STATSIG
+    );
   }
 }

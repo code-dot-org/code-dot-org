@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-30 18:51:18 UTC",
+    "serialized_at": "2025-07-31 23:31:32 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -10448,16 +10448,15 @@
       }
     },
     {
-      "name": "CSF Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
-      "key": "csf_syllabus_2024-25",
+      "name": "CSF Syllabus 2025-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_syllabus_2025-26",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25"
+        "resource.key": "csf_syllabus_2025-26"
       }
     },
     {
@@ -11176,7 +11175,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25",
+        "resource.key": "csf_syllabus_2025-26",
         "script.name": "coursee-2025"
       }
     },
