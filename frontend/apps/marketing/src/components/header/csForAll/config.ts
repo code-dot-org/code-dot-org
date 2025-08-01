@@ -142,7 +142,7 @@ export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
 const [issuesLink, takeActionLink, hourOfAiLink, donateLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
 
-export const mainMenuDesktopItems = [
+export const MAIN_MENU_DESKTOP_ITEMS = [
   {
     type: 'dropdown' as const,
     topLevelLink: issuesLink,

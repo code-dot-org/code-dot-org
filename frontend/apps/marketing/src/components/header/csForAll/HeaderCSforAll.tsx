@@ -12,7 +12,7 @@ import {
   CALL_TO_ACTION,
   TOP_LEVEL_LINKS,
   SITE_LOGO,
-  mainMenuDesktopItems,
+  MAIN_MENU_DESKTOP_ITEMS,
 } from './config';
 import HamburgerButton from './HamburgerButton';
 import {LinkItemProps} from './LinkItem';
@@ -68,7 +68,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
             {/* Site Logo */}
             {siteLogo}
             {/* Main Menu Desktop with Dropdowns */}
-            <MainMenuDesktop mainMenuDesktopItems={mainMenuDesktopItems} />
+            <MainMenuDesktop mainMenuDesktopItems={MAIN_MENU_DESKTOP_ITEMS} />
           </Box>
           {/* Call to Action */}
           {callToAction}
