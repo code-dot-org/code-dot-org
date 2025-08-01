@@ -43,6 +43,12 @@ jobs:
       # https://playwright.dev/docs/docker#pull-the-image
       image: mcr.microsoft.com/playwright:v1.49.1-noble
     steps:
+      - name: Install git-lfs
+        working-directory: ./
+        run: |
+          apt-get update && \
+          apt-get install -y git-lfs 
+
       - uses: actions/checkout@v4
         with:
           lfs: true
@@ -62,11 +68,6 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Install git-lfs
-        run: |
-          apt-get update && \
-          apt-get install -y git-lfs 
-
       - uses: actions/checkout@v4
         with:
           lfs: true
