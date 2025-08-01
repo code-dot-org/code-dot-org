@@ -1,9 +1,22 @@
 'use client';
 
-import React, {PropsWithChildren, useState} from 'react';
+import React, {PropsWithChildren, useState, createContext} from 'react';
 
-import {LevelContext} from '@lab-blockly/contexts';
 import type {LevelData} from '@lab-blockly/types';
+import {LevelData} from '@lab-blockly/types';
+
+export interface LevelContent {
+  level?: LevelData;
+  lessonIndex?: number;
+  levelIndex?: number;
+  hintsShown: number;
+  setHintsShown: (value: number) => void;
+}
+
+const LevelContext = createContext<LevelContent>({
+  hintsShown: 0,
+  setHintsShown: (_: number) => {},
+});
 
 export interface LevelProviderProps extends PropsWithChildren {
   level?: LevelData;
@@ -14,7 +27,7 @@ export interface LevelProviderProps extends PropsWithChildren {
 /**
  * This keeps track of the current level data.
  */
-const LevelProvider: React.FunctionComponent<LevelProviderProps> = ({
+export const LevelProvider: React.FunctionComponent<LevelProviderProps> = ({
   level,
   levelIndex,
   lessonIndex,
@@ -38,4 +51,4 @@ const LevelProvider: React.FunctionComponent<LevelProviderProps> = ({
   );
 };
 
-export default LevelProvider;
+export default LevelContext;

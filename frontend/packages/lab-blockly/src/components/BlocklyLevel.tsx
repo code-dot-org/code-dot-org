@@ -137,8 +137,6 @@ function BlocklyLevel<
     }
   }, []);
 
-  console.log('base renderer', renderer, customBlocks);
-
   return (
     <BlocklyProvider
       environment={environment as unknown as Environment}
