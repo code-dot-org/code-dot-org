@@ -15,8 +15,7 @@ const backgrounds = [
   TESTIMONIAL_CONTENTFUL_BACKGROUNDS.PATTERN_PRIMARY,
 ];
 
-const createStory = (theme: string): Story => ({
-  globals: {theme},
+export const Variants: Story = {
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
       {backgrounds.map(background => (
@@ -30,9 +29,7 @@ const createStory = (theme: string): Story => ({
       ))}
     </div>
   ),
-});
-
-export const Variants = createStory('csforall');
+};
 
 export const Playground: Story = {
   args: {

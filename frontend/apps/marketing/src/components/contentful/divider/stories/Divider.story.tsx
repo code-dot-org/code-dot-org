@@ -10,8 +10,7 @@ const meta: Meta<typeof Divider> = {
 export default meta;
 type Story = StoryObj<typeof Divider>;
 
-const createStory = (theme: string): Story => ({
-  globals: {theme},
+export const Variants = {
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
       <Divider color="primary" margin="m" />
@@ -19,9 +18,7 @@ const createStory = (theme: string): Story => ({
       <Divider color="white" margin="s" />
     </div>
   ),
-});
-
-export const Variants = createStory('csforall');
+};
 
 export const Playground: Story = {
   args: {

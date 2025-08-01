@@ -25,58 +25,53 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-const createStory = (theme: string) => {
-  const Story: Story = {
-    globals: {theme},
-    render: () => (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 16,
-          alignItems: 'start',
-        }}
-      >
-        <Button
-          text="Emphasized"
-          type="emphasized"
-          size="medium"
-          href="about:blank"
-          isLinkExternal={false}
-        />
-        <Button
-          text="Primary"
-          type="primary"
-          size="medium"
-          href="about:blank"
-          isLinkExternal={false}
-        />
-        <Button
-          text="Secondary"
-          type="secondary"
-          size="medium"
-          href="about:blank"
-          isLinkExternal={false}
-        />
-        <Button
-          text="White"
-          type="white"
-          size="medium"
-          href="about:blank"
-          isLinkExternal={false}
-        />
-        <Button
-          text="External Link"
-          type="primary"
-          size="medium"
-          href="about:blank"
-          isLinkExternal={true}
-        />
-      </div>
-    ),
-  };
-
-  return Story;
+export const Variants: Story = {
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 16,
+        alignItems: 'start',
+      }}
+    >
+      <Button
+        text="Emphasized"
+        type="emphasized"
+        size="medium"
+        href="about:blank"
+        isLinkExternal={false}
+      />
+      <Button
+        text="Primary"
+        type="primary"
+        size="medium"
+        href="about:blank"
+        isLinkExternal={false}
+      />
+      <Button
+        text="Secondary"
+        type="secondary"
+        size="medium"
+        href="about:blank"
+        isLinkExternal={false}
+      />
+      <Button
+        text="White"
+        type="white"
+        size="medium"
+        href="about:blank"
+        isLinkExternal={false}
+      />
+      <Button
+        text="External Link"
+        type="primary"
+        size="medium"
+        href="about:blank"
+        isLinkExternal={true}
+      />
+    </div>
+  ),
 };
 
 export const Playground: Story = {
@@ -90,5 +85,3 @@ export const Playground: Story = {
     className: '',
   },
 };
-
-export const Variants = createStory('csforall');

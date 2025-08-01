@@ -21,8 +21,7 @@ const visualAppearances = [
 const colors = ['primary', 'white'] as const;
 const removeMarginBottoms = [false, true] as const;
 
-const createStory = (theme: string): Story => ({
-  globals: {theme},
+export const Variants: Story = {
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
       {visualAppearances
@@ -50,10 +49,7 @@ const createStory = (theme: string): Story => ({
         .flat()}
     </div>
   ),
-});
-
-export const CDOVariants = createStory('code.org');
-export const CSForAllVariants = createStory('csforall');
+};
 
 export const Playground: Story = {
   args: {

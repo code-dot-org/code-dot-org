@@ -1464,8 +1464,10 @@ __metadata:
     "@storybook/nextjs-vite": "npm:9.0.18"
     "@vitest/browser": "npm:^3.2.4"
     "@vitest/coverage-v8": "npm:^3.2.4"
+    eslint: "npm:^9.16.0"
     eslint-plugin-storybook: "npm:9.0.18"
     playwright: "npm:~1.49.1"
+    prettier: "npm:3.4.2"
     storybook: "npm:9.0.18"
     vitest: "npm:^3.2.4"
   languageName: unknown

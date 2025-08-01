@@ -12,8 +12,7 @@ type Story = StoryObj<typeof Spacer>;
 
 const sizes = ['xs', 's', 'm', 'l'] as const;
 
-const createStory = (theme: string) => ({
-  globals: {theme},
+export const Variants: Story = {
   render: () => (
     <div
       style={{
@@ -32,10 +31,7 @@ const createStory = (theme: string) => ({
       ))}
     </div>
   ),
-});
-
-export const CDOVariants = createStory('code.org');
-export const CSForAllVariants = createStory('csforall');
+};
 
 export const Playground: Story = {
   render: (args: SpacerProps) => {

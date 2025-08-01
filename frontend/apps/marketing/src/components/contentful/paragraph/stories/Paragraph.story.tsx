@@ -10,60 +10,52 @@ const meta: Meta<typeof Paragraph> = {
 export default meta;
 type Story = StoryObj<typeof Paragraph>;
 
-const createStory = (theme: string) => {
-  return {
-    globals: {
-      theme,
-    },
-    render: () => (
-      <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
-        <Paragraph
-          visualAppearance="body-one"
-          isStrong={false}
-          color="primary"
-          removeMarginBottom={false}
-        >
-          Body One Paragraph
-        </Paragraph>
-        <Paragraph
-          visualAppearance="body-two"
-          isStrong={false}
-          color="secondary"
-          removeMarginBottom={false}
-        >
-          Body Two Paragraph
-        </Paragraph>
-        <Paragraph
-          visualAppearance="body-three"
-          isStrong={false}
-          color="primary"
-          removeMarginBottom={false}
-        >
-          Body Three Paragraph
-        </Paragraph>
-        <Paragraph
-          visualAppearance="body-four"
-          isStrong={false}
-          color="secondary"
-          removeMarginBottom={false}
-        >
-          Body Four Paragraph
-        </Paragraph>
-        <Paragraph
-          visualAppearance="body-one"
-          isStrong={true}
-          color="primary"
-          removeMarginBottom={false}
-        >
-          Strong Body One Paragraph
-        </Paragraph>
-      </div>
-    ),
-  };
+export const Variants: Story = {
+  render: () => (
+    <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
+      <Paragraph
+        visualAppearance="body-one"
+        isStrong={false}
+        color="primary"
+        removeMarginBottom={false}
+      >
+        Body One Paragraph
+      </Paragraph>
+      <Paragraph
+        visualAppearance="body-two"
+        isStrong={false}
+        color="secondary"
+        removeMarginBottom={false}
+      >
+        Body Two Paragraph
+      </Paragraph>
+      <Paragraph
+        visualAppearance="body-three"
+        isStrong={false}
+        color="primary"
+        removeMarginBottom={false}
+      >
+        Body Three Paragraph
+      </Paragraph>
+      <Paragraph
+        visualAppearance="body-four"
+        isStrong={false}
+        color="secondary"
+        removeMarginBottom={false}
+      >
+        Body Four Paragraph
+      </Paragraph>
+      <Paragraph
+        visualAppearance="body-one"
+        isStrong={true}
+        color="primary"
+        removeMarginBottom={false}
+      >
+        Strong Body One Paragraph
+      </Paragraph>
+    </div>
+  ),
 };
-
-export const CDOVariants = createStory('code.org');
-export const CSForAllVariants = createStory('csforall');
 
 export const Playground: Story = {
   args: {
