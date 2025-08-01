@@ -937,6 +937,18 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
+    # project template level as this level.
+    rubric_level_id = script_level&.lesson&.rubric&.level_id
+    if rubric_level_id
+      if rubric_level_id == id
+        properties_camelized[:showRubric] = true
+      else
+        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
+        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+      end
+    end
     properties_camelized
   end
 

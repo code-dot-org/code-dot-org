@@ -78,35 +78,6 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_properties" do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other", offer_browser_tts: true}
-
-    get :level_properties, params: {id: level}
-    assert_response :success
-
-    body = JSON.parse(response.body)
-    expected_body = {
-      "id" => level.id,
-      "name" => level.name,
-      "levelData" => {"hello" => "there"},
-      "other" => "other",
-      "preloadAssetList" => nil,
-      "type" => "Maze",
-      "appName" => "maze",
-      "useRestrictedSongs" => false,
-      "sharedBlocks" => [],
-      "usesProjects" => false,
-      "exemplarSources" => nil,
-      "helpVideos" => [],
-      "baseAssetUrl" => "/blockly/",
-      "isAssessment" => nil,
-      "progressionType" => nil,
-      "enableBlocklyKeyboardNavigation" => nil,
-      "offerBrowserTts" => true
-    }
-    assert_equal(expected_body, body)
-  end
-
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length

@@ -3,14 +3,22 @@ import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
+import UserPreferences from '../lib/util/UserPreferences';
 import {shrinkBlockSpaceContainer} from '../templates/instructions/utils';
 
-import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
+import {
+  DARK_THEME_SUFFIX,
+  Themes,
+  BLOCK_TYPES,
+  BLOCKLY_THEME,
+} from './constants';
 import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
@@ -406,4 +414,35 @@ export function setThemeAndRenderBlocks(
       }
     }
   }
+}
+
+export function setWorkspaceTheme(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  name: string
+) {
+  // Save the theme to user preferences, falling back to localStorage for signed-out users.
+  new UserPreferences().setBlocklyTheme(name, () =>
+    localStorage.setItem(BLOCKLY_THEME, name)
+  );
+
+  const currentTheme = workspace.getTheme();
+  const themeName = name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
+  setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
+  const analyticsData = Blockly.analyticsData;
+  analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+    setting: EVENTS.BLOCKLY_SETTING_THEME,
+    value: name,
+    ...analyticsData,
+  });
+}
+
+export function setAllWorkspacesTheme(
+  newTheme: GoogleBlockly.Theme,
+  previousTheme: GoogleBlockly.Theme | undefined
+) {
+  Blockly.Workspace.getAll().forEach(baseWorkspace => {
+    // Headless workspaces do not have the ability to set the theme.
+    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
+    setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
+  });
 }

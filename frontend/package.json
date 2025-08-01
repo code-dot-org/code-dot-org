@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "@storybook/test-runner": "^0.19.1",
+    "@storybook/test-runner": "^0.23.0",
     "lint-staged": "^15.4.3",
     "prettier": "3.4.2",
     "rimraf": "^6.0.1",
