@@ -1,3 +1,2 @@
-import LevelProvider from './LevelProvider';
-import LevelContext from './LevelContext';
-export {LevelProvider, LevelContext}
+export * from './LevelContext';
+export {default as LevelContext} from './LevelContext';

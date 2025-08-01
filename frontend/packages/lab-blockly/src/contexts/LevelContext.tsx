@@ -3,7 +3,6 @@
 import React, {PropsWithChildren, useState, createContext} from 'react';
 
 import type {LevelData} from '@lab-blockly/types';
-import {LevelData} from '@lab-blockly/types';
 
 export interface LevelContent {
   level?: LevelData;
