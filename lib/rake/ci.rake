@@ -132,7 +132,7 @@ namespace :ci do
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local'}" \
+          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -145,7 +145,7 @@ namespace :ci do
             "--ci " \
             "--parallel 10 " \
             "--retry_count 1 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local'}" \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end
