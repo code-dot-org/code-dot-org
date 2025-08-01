@@ -1456,6 +1456,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/marketing-storybook@workspace:apps/marketing-storybook"
   dependencies:
+    "@applitools/eyes-storybook": "npm:^3.56.0"
     "@chromatic-com/storybook": "npm:^4.0.1"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"

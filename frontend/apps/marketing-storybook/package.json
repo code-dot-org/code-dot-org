@@ -21,7 +21,6 @@
     "build-storybook": "storybook build",
     "clean": "rimraf dist",
     "dev": "yarn run storybook",
-    "eyes-storybook": "tsx ./scripts/eyes-storybook.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prettier": "prettier --check .",
@@ -37,6 +36,7 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
+    "@applitools/eyes-storybook": "^3.56.0",
     "@chromatic-com/storybook": "^4.0.1",
     "@code-dot-org/component-library": "workspace:*",
     "@code-dot-org/fonts": "workspace:*",

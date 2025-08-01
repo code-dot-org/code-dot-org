@@ -67,6 +67,27 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
         run: yarn workspace @code-dot-org/marketing-storybook test:ui:ci
 
+  storybook-eyes:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Build
+        run: yarn build --filter @code-dot-org/marketing-storybook
+
+      - name: Run visual tests
+        env:
+          APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
+        run: yarn workspace @code-dot-org/marketing-storybook eyes-storybook
+
   build-docker:
     # Skip CI docker build if this is not a pull request.
     if: ${{ github.event_name == 'pull_request' }}
