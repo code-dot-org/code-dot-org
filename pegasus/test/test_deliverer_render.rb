@@ -8,6 +8,12 @@ class DelivererRenderTest < Minitest::Test
   def setup
     Deliverer.any_instance.stubs(:reset_connection).returns({})
     @deliverer = Deliverer.new({})
+
+    # Many of our emails include generated links, but the fixtures we test
+    # against are of course static. To ensure these tests run consistently on
+    # all environments, we use consistent hostnames.
+    CDO.stubs(override_dashboard: 'test-studio.code.org')
+    CDO.stubs(override_pegasus: 'test.code.org')
   end
 
   # This test produces a lot of database changes (including lots of new entries
