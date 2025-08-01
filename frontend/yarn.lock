@@ -1457,6 +1457,7 @@ __metadata:
   resolution: "@code-dot-org/marketing-storybook@workspace:apps/marketing-storybook"
   dependencies:
     "@chromatic-com/storybook": "npm:^4.0.1"
+    "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@mdx-js/react": "npm:^3.1.0"
