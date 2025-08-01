@@ -167,7 +167,6 @@ export default class CourseVersionPublishingEditor extends Component {
             </select>
           </label>
         </div>
-        )
         <label>
           Published State
           <select
