@@ -49,9 +49,10 @@ export function useCodebridgeSettings(): Setting[] {
   const currentConsoleFontSizeKey = useAppSelector(
     state => state.lab2View.consoleFontSizeKey
   );
+
   const {signInState} = useAppSelector(state => state.currentUser);
   const {config, setConfig, levelProperties} = useCodebridgeContext();
-  const appName = levelProperties.appName;
+  const {appName, widgetView} = levelProperties;
 
   // We need to set the theme here because the dropdown is rendered in a portal, outside of the
   // main lab container.
@@ -183,12 +184,16 @@ export function useCodebridgeSettings(): Setting[] {
       selectedValue: theme,
       onChange: handleThemeChange,
     },
-    {
-      id: 'layout',
-      label: codebridgeI18n.layout(),
-      options: layoutDropdownOptions,
-      selectedValue: selectedLayout,
-      onChange: handleLayoutChange,
-    },
+    ...(!widgetView
+      ? [
+          {
+            id: 'layout',
+            label: codebridgeI18n.layout(),
+            options: layoutDropdownOptions,
+            selectedValue: selectedLayout,
+            onChange: handleLayoutChange,
+          },
+        ]
+      : []),
   ];
 }
