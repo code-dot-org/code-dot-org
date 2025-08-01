@@ -1353,6 +1353,7 @@ __metadata:
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lab-blockly": "workspace:*"
+    "@code-dot-org/lab-maze": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@eslint/js": "npm:^9.15.0"
     "@release-it/conventional-changelog": "npm:^10.0.0"
@@ -1565,7 +1566,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/lab-maze@workspace:packages/lab-maze":
+"@code-dot-org/lab-maze@workspace:*, @code-dot-org/lab-maze@workspace:packages/lab-maze":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab-maze@workspace:packages/lab-maze"
   dependencies:
