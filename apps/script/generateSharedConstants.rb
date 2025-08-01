@@ -165,6 +165,7 @@ def main
         COURSES
         ACTIVE_COURSES
         ARCHIVED_COURSES
+        ACTIVE_PERMISSION_COURSES
         COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
