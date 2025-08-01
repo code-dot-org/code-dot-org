@@ -1,7 +1,7 @@
 import type {Meta, StoryObj} from '@storybook/nextjs-vite';
 import {expect} from 'storybook/test';
 
-import Section from '../Section';
+import Section, {SectionBackground} from '../Section';
 
 const meta: Meta<typeof Section> = {
   title: 'Marketing/Section',
@@ -29,7 +29,7 @@ const paddings = ['m', 'l'] as const;
 const themes = ['Light', 'Dark'] as const;
 const dividers = ['none', 'primary', 'strong'] as const;
 
-const createStory = (background: string): Story => ({
+const createStory = (background: SectionBackground): Story => ({
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
       {paddings.flatMap(padding =>
