@@ -11,6 +11,17 @@
     "csd6b-2025",
     "csd7-2025"
   ],
+  "unit_prefixes": [
+    "1",
+    "2",
+    "3a",
+    "3b",
+    "4",
+    "5",
+    "6a",
+    "6b",
+    "7"
+  ],
   "original_script_names": [
     "csd1-2025",
     "csd2-2025",
@@ -28,6 +39,7 @@
   "properties": {
     "family_name": "csd",
     "has_verified_resources": true,
+    "numbered_units": "custom",
     "version_year": "2025"
   },
   "resources": [

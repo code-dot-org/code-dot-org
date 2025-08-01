@@ -450,15 +450,4 @@ class TestController < ApplicationController
     Services::ChildAccount.grant_permission_request!(permission_request)
     head :ok
   end
-
-  # Endpoint for testing DCDO mocking.
-  # @see /dashboard/test/ui/features/dcdo_mocking.feature
-  def get_dcdo
-    render json: {
-      fetched: DCDO.get('dcdo_mocking_test', nil),
-      stored: DCDO.instance_variable_get(:@datastore_cache)&.
-        instance_variable_get(:@datastore)&.
-        get('dcdo_mocking_test'),
-    }
-  end
 end
