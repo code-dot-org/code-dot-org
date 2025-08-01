@@ -109,6 +109,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           <Workspace
             style={{width: middlePanelWidth}}
             className={moduleStyles.shrinkAndGrow}
+            isWidgetView={isWidgetView}
           />
         )}
         {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you

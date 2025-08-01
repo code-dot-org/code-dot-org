@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
@@ -10,7 +11,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {DEFAULT_FOLDER_ID} from '../constants';
 
 import {HTMLPreview} from './HTMLPreview';
-import RightButtons from './RightButtons';
 
 import moduleStyles from './styles/filePreview.module.scss';
 
