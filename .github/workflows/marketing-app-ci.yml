@@ -36,6 +36,26 @@ jobs:
       - name: Dryrun Release
         run: yarn release:dryrun --filter @code-dot-org/marketing
 
+  storybook-test:
+    runs-on: ubuntu-24.04
+    container:
+      # Make sure to grab the latest version of the Playwright image
+      # https://playwright.dev/docs/docker#pull-the-image
+      image: mcr.microsoft.com/playwright:v1.49.1-noble
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+          sparse-checkout: |
+            frontend
+            .github
+
+      - name: Setup Frontend
+        uses: ./.github/actions/frontend/setup
+
+      - name: Run tests
+        run: yarn test:ui:ci --filter @code-dot-org/marketing-storybook
+
   build-docker:
     # Skip CI docker build if this is not a pull request.
     if: ${{ github.event_name == 'pull_request' }}

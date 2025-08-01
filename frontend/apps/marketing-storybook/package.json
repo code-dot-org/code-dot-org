@@ -28,7 +28,7 @@
     "prettier:fix": "prettier --write .",
     "storybook": "storybook dev -p 6007",
     "test-storybook": "vitest --project=storybook",
-    "test:ui:ci": "bash ./scripts/test-storybook.sh",
+    "test:ui:ci": "yarn test-storybook",
     "test:ui:local": "test-storybook --url http://localhost:6006",
     "typecheck": "tsc --noEmit"
   },
