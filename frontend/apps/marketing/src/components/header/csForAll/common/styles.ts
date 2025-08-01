@@ -4,6 +4,7 @@ import theme from '@/themes/csforall';
 
 import {DRAWER_BREAKPOINT} from './constants';
 
+// Main Header styles
 export const headerStyles = {
   appBar: {
     backgroundColor: theme.palette.background.paper,

@@ -19,39 +19,46 @@ const styles = {
 };
 
 const MainMenuDesktop = () => {
+  const [
+    issuesLink,
+    takeActionLink,
+    aboutLink,
+    joinLink,
+    newsAndResourcesLink,
+  ] = TOP_LEVEL_LINKS.linkList;
   return (
     <Box className="link-list-desktop" sx={styles.linkListDesktop}>
       <DropdownMenu
-        id={TOP_LEVEL_LINKS?.linkList[0].id ?? ''}
-        label={TOP_LEVEL_LINKS?.linkList[0].label ?? ''}
+        id={issuesLink?.id ?? ''}
+        label={issuesLink?.label ?? ''}
         linkList={ISSUES_LINKS.linkList}
       />
       <DropdownMenu
-        id={TOP_LEVEL_LINKS?.linkList[1].id ?? ''}
-        label={TOP_LEVEL_LINKS?.linkList[1].label ?? ''}
+        id={takeActionLink?.id ?? ''}
+        label={takeActionLink?.label ?? ''}
         linkList={TAKE_ACTION_LINKS.linkList}
       />
       <Button
         variant="text"
-        href={TOP_LEVEL_LINKS.linkList[2].href}
+        href={aboutLink.href}
         disableElevation
         disableRipple
         sx={buttonStyles.button}
       >
-        {TOP_LEVEL_LINKS.linkList[2].label}
+        {aboutLink.label}
       </Button>
       <Button
         variant="text"
-        href={TOP_LEVEL_LINKS.linkList[3].href}
+        href={joinLink.href}
         disableElevation
         disableRipple
         sx={buttonStyles.button}
       >
-        {TOP_LEVEL_LINKS.linkList[3].label}
+        {joinLink.label}
       </Button>
       <DropdownMenu
-        id={TOP_LEVEL_LINKS.linkList[4].id ?? ''}
-        label={TOP_LEVEL_LINKS.linkList[4].label}
+        id={newsAndResourcesLink?.id ?? ''}
+        label={newsAndResourcesLink.label}
         linkList={NEWS_AND_RESOURCES_LINKS.linkList}
       />
     </Box>
