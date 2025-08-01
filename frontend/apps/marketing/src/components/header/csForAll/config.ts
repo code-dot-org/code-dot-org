@@ -5,6 +5,38 @@ import {LinkItemProps} from './LinkItem';
 import {SiteLogoProps} from './SiteLogo';
 
 const SHARED_LINKS = {
+  ABOUT: {
+    href: '/about',
+    label: 'About',
+  },
+  ADVOCACY: {
+    href: '/advocacy',
+    label: 'Advocacy',
+  },
+  AI_LITERACY: {
+    href: '/ai-literacy',
+    label: 'AI Literacy',
+  },
+  CS_ED_CON: {
+    href: '/cs-ed-con',
+    label: 'CSEdCon',
+  },
+  DONATE: {
+    href: '/donate',
+    label: 'Donate',
+  },
+  GENDER_GAP: {
+    href: '/gender-gap',
+    label: 'Gender Gap',
+  },
+  GET_INVOLVED: {
+    href: '/get-involved',
+    label: 'Get Involved',
+  },
+  GRAD_REQUIREMENTS: {
+    href: '/grad-requirements',
+    label: 'Grad Requirements',
+  },
   HOME: {
     href: '/',
     label: 'Home',
@@ -13,65 +45,29 @@ const SHARED_LINKS = {
     href: '/hour-of-ai',
     label: 'Hour of AI',
   },
-  DONATE: {
-    href: '/donate',
-    label: 'Donate',
-  },
-  UNLOCK_8: {
-    href: '/unlock-8',
-    label: 'Unlock 8',
-  },
-  ADVOCACY: {
-    href: '/advocacy',
-    label: 'Advocacy',
-  },
-  STATE_OF_CS_REPORT: {
-    href: '/state-of-cs-report',
-    label: 'State of CS Report',
-  },
-  ADVOCACY_COALITION: {
-    href: '/advocacy-coalition',
-    label: 'Advocacy Coalition',
-  },
-  POLICY_AGENDA: {
-    href: '/policy-agenda',
-    label: 'Policy Agenda',
-  },
-  UNLOCK8_PETITION: {
-    href: '/unlock8-petition',
-    label: 'Unlock8 petition',
-  },
-  CS_ED_CON: {
-    href: '/cs-ed-con',
-    label: 'CSEdCon',
-  },
-  ABOUT: {
-    href: '/about',
-    label: 'About',
+  ISSUES: {
+    href: '/issues',
+    label: 'Issues',
   },
   NEWS: {
     href: '/news',
     label: 'News',
   },
-  STATS: {
-    href: '/stats',
-    label: 'Stats',
+  NEWS_AND_RESOURCES: {
+    href: '/news-and-resources',
+    label: 'News & Resources',
   },
-  GET_INVOLVED: {
-    href: '/get-involved',
-    label: 'Get Involved',
-  },
-  ISSUES: {
-    href: '/issues',
-    label: 'Issues',
+  STATE_OF_CS_REPORT: {
+    href: '/state-of-cs-report',
+    label: 'State of CS Report',
   },
   TAKE_ACTION: {
     href: '/take-action',
     label: 'Take Action',
   },
-  NEWS_AND_RESOURCES: {
-    href: '/news-and-resources',
-    label: 'News & Resources',
+  UNLOCK8_PETITION: {
+    href: '/unlock8-petition',
+    label: 'Unlock8 Petition',
   },
 } as const;
 
@@ -117,18 +113,20 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
 
 // Main Menu Issues Dropdown Links
 export const ISSUES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [createLinkItem(SHARED_LINKS.UNLOCK_8)],
+  linkList: [
+    createLinkItem(SHARED_LINKS.GENDER_GAP),
+    createLinkItem(SHARED_LINKS.GRAD_REQUIREMENTS),
+    createLinkItem(SHARED_LINKS.AI_LITERACY),
+  ],
 };
 
 // Main Menu Take Action Dropdown Links
 export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
-    createLinkItem(SHARED_LINKS.ADVOCACY),
-    createLinkItem(SHARED_LINKS.STATE_OF_CS_REPORT),
-    createLinkItem(SHARED_LINKS.ADVOCACY_COALITION),
-    createLinkItem(SHARED_LINKS.POLICY_AGENDA),
     createLinkItem(SHARED_LINKS.UNLOCK8_PETITION),
     createLinkItem(SHARED_LINKS.CS_ED_CON),
+    createLinkItem(SHARED_LINKS.ADVOCACY),
+    createLinkItem(SHARED_LINKS.STATE_OF_CS_REPORT),
   ],
 };
 
@@ -136,8 +134,6 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
 export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
     createLinkItem(SHARED_LINKS.ABOUT),
-    createLinkItem(SHARED_LINKS.DONATE),
     createLinkItem(SHARED_LINKS.NEWS),
-    createLinkItem(SHARED_LINKS.STATS),
   ],
 };
