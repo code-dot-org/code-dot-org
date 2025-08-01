@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+
+import HttpClient from '../util/HttpClient';
 
 import AiDiffChat from './AiDiffChat';
 import AiDiffSidebar from './AiDiffSidebar';
-import {ChatThread, Context} from './types';
+import {ChatThread, chatThreadValidator, Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -11,7 +13,6 @@ interface AiDiffWorkSpaceProps {
   scriptName?: string;
   curriculumCourses?: string[];
   showSidebar?: boolean;
-  threads?: ChatThread[];
 }
 
 const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
@@ -19,8 +20,40 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   scriptName,
   curriculumCourses,
   showSidebar,
-  threads,
 }) => {
+  const [threads, setThreads] = useState<ChatThread[]>();
+
+  async function asyncFetchThreads(): Promise<ChatThread[]> {
+    const response = await HttpClient.fetchJson<ChatThread[]>(
+      `/aidiff_threads`,
+      {},
+      chatThreadValidator
+    );
+    return response.value;
+  }
+
+  const fetchThreads = () => {
+    asyncFetchThreads().then(response => {
+      setThreads(
+        response.sort((a, b) => {
+          return a.updatedAt > b.updatedAt ? -1 : 1;
+        })
+      );
+    });
+  };
+
+  useEffect(() => {
+    if (showSidebar) {
+      asyncFetchThreads().then(response => {
+        setThreads(
+          response.sort((a, b) => {
+            return a.updatedAt > b.updatedAt ? -1 : 1;
+          })
+        );
+      });
+    }
+  }, [showSidebar]);
+
   return (
     <div className={style.aiDiffWorkspace}>
       {showSidebar && <AiDiffSidebar threads={threads} />}
@@ -28,6 +61,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         context={context}
         scriptName={scriptName}
         curriculumCourses={curriculumCourses}
+        threadFetchCallback={showSidebar ? fetchThreads : () => {}}
       />
     </div>
   );

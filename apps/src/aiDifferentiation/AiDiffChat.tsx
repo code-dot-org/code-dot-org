@@ -80,6 +80,7 @@ interface AiDiffChatProps {
   suggestedPrompts?: ChatPrompt[];
   disableEndButtons?: boolean;
   curriculumCourses?: string[];
+  threadFetchCallback?: () => void;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
@@ -92,6 +93,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     : SUGGESTED_PROMPTS[0],
   disableEndButtons = false,
   curriculumCourses = [],
+  threadFetchCallback = () => {},
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -228,6 +230,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           // logging here because on the first user message the threadID is null
           // we only get a threadID initialized in the response
           if (threadId === null) {
+            threadFetchCallback();
             sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
           }
 
@@ -248,7 +251,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           chatResponseCallback();
         });
     },
-    [context, threadId, viewAsUserId, chatResponseCallback, sendChatEvent]
+    [
+      context,
+      threadId,
+      viewAsUserId,
+      chatResponseCallback,
+      sendChatEvent,
+      threadFetchCallback,
+    ]
   );
 
   // Scroll to bottom of content when a new message comes in

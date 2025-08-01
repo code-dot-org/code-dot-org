@@ -9,7 +9,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffHeader from './AiDiffHeader';
 import AiDiffWorkSpace from './AiDiffWorkspace';
-import {ChatThread, Context} from './types';
+import {Context} from './types';
 import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
@@ -22,7 +22,6 @@ interface AiDiffContainerProps {
   open: boolean;
   scriptName?: string;
   curriculumCourses?: string[];
-  threads?: ChatThread[];
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
@@ -31,7 +30,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   open,
   scriptName,
   curriculumCourses,
-  threads,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -113,7 +111,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                     context={context}
                     scriptName={scriptName}
                     curriculumCourses={curriculumCourses}
-                    threads={threads}
                     showSidebar={showSidebar}
                   />
                 )}
