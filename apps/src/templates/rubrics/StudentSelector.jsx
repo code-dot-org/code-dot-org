@@ -5,7 +5,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
+import {
+  queryUserProgress,
+  setViewAsUserId,
+} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -159,6 +162,7 @@ export default connect(
   dispatch => ({
     selectUser(userId) {
       dispatch(queryUserProgress(userId));
+      dispatch(setViewAsUserId(userId));
     },
   })
 )(StudentSelector);

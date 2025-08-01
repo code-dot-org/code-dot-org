@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-14T23:15:32.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Use AI as a Data Visualization Coach\r\n\r\nUse AI Chat to interpret different data visualizations.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **data visualization** from the library by selecting **Upload > From Library**.\r\n2. Ask AI Chat one of these questions:\r\n    - *Here’s my chart. What trends or patterns might I be missing?*\r\n    - *What kind of question could I answer with this chart?*\r\n    - *How would you describe this bar graph to someone who can’t see it?*\r\n    - *How could this data visualization be misleading to someone?*",
+    "long_instructions": "## Use AI as a Data Visualization Coach\r\n\r\nUse AI Chat to interpret different data visualizations.\r\n\r\n---\r\n\r\nDo This:\r\n1. Upload the **data visualization** from the library by selecting **+ Add file > From Library**.\r\n2. Ask AI Chat one of these questions:\r\n    - *Here's my chart. What trends or patterns might I be missing?*\r\n    - *What kind of question could I answer with this chart?*\r\n    - *How would you describe this bar graph to someone who can't see it?*\r\n    - *How could this data visualization be misleading to someone?*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -46,9 +47,11 @@
     "starter_assets": {
       "Spotify.pdf": "989de1c7-5920-41e3-b2c9-deaf08afec15.pdf"
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:32.752+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson7_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson7_ai_chat\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:32.752+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson7_ai_chat\\\"\"],\"cloned_from\":\"data_science_lesson7_ai_chat\"},{\"changed_at\":\"2025-07-30 15:40:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

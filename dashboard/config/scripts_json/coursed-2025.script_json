@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-13 18:40:32 UTC",
+    "serialized_at": "2025-07-31 23:30:10 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -203,7 +203,7 @@
       "relative_position": 5,
       "properties": {
         "background": "dark",
-        "overview": "In this lesson, students will be exploring the foundational concepts of sequencing and loops in programming as they step into the role of a songwriter using Music Lab. They will learn that computers only follow the instructions given to them in the order specified, emphasizing the importance of clear and logical step-by-step directions. Students will discover how to identify repeating patterns in their code and use loops to make it more efficient. By layering musical sounds and breaking down complex tasks, students will develop problem-solving skills while also gaining insight into how technology is used in music careers to bring creative ideas to life."
+        "overview": "In this context-setting/skill-building lesson, students will explore sequencing and loops as they take on the role of a songwriter in Music Lab, layering sounds and identifying patterns to write efficient code and bring musical ideas to life."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
@@ -220,7 +220,7 @@
       "relative_position": 6,
       "properties": {
         "background": "dark",
-        "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
+        "overview": "In this context-setting, students will become sound designers using Music Lab to create interactive soundtracks with events and effects that enhance storytelling and engagement."
       },
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
@@ -11523,19 +11523,6 @@
       }
     },
     {
-      "name": "CSF - Course D - Slides",
-      "url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/template/preview",
-      "key": "csf_-_course_d_-_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/export/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csf_-_course_d_-_slides"
-      }
-    },
-    {
       "name": "CSF Change Log 2025-26",
       "url": "https://docs.google.com/document/d/1WGwamsReVGP7vUPISG9ivX3RHNBjlHa5GmU28abHNHo/edit?usp=sharing",
       "key": "csf_change_log_2025-26",
@@ -11561,6 +11548,19 @@
       }
     },
     {
+      "name": "CSF Course D Slides 2025-26",
+      "url": "https://docs.google.com/presentation/d/1C6Fr9_v4A8mXEZEnFpMVuedxUcXHRbD3vVCmPNES18k/template/preview",
+      "key": "csf_course_d_slides_2025-26",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1C6Fr9_v4A8mXEZEnFpMVuedxUcXHRbD3vVCmPNES18k/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_d_slides_2025-26"
+      }
+    },
+    {
       "name": "CSF State Standards for CS - Master Crosswalk List",
       "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
       "key": "csf_state_standards_for_cs_-_master_crosswalk_list",
@@ -11571,16 +11571,15 @@
       }
     },
     {
-      "name": "CSF Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
-      "key": "csf_syllabus_2024-25",
+      "name": "CSF Syllabus 2025-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_syllabus_2025-26_1",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25"
+        "resource.key": "csf_syllabus_2025-26_1"
       }
     },
     {
@@ -11758,19 +11757,6 @@
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
-      }
-    },
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
-      "key": "lesson_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides"
       }
     },
     {
@@ -12033,7 +12019,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12093,13 +12079,13 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals with Cards",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Dance Party",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12129,7 +12115,7 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12147,13 +12133,7 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing Shapes with Loops",
-        "resource.key": "csf_-_course_d_-_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "End of Course Project",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12164,8 +12144,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_course_d_slides_2025-26"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12183,7 +12169,7 @@
     {
       "seeding_key": {
         "lesson.key": "Graph Paper Programming",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12225,7 +12211,7 @@
     {
       "seeding_key": {
         "lesson.key": "Hardware and Software Skits",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12243,7 +12229,7 @@
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12255,7 +12241,7 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12267,13 +12253,13 @@
     {
       "seeding_key": {
         "lesson.key": "Looking Ahead with Minecraft",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12297,7 +12283,7 @@
     {
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12345,7 +12331,7 @@
     {
       "seeding_key": {
         "lesson.key": "Until Loops in Maze",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12357,7 +12343,7 @@
     {
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
-        "resource.key": "csf_-_course_d_-_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12369,7 +12355,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     },
     {
@@ -12381,7 +12367,7 @@
     {
       "seeding_key": {
         "lesson.key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
-        "resource.key": "lesson_slides"
+        "resource.key": "csf_course_d_slides_2025-26"
       }
     }
   ],
@@ -12430,7 +12416,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25",
+        "resource.key": "csf_syllabus_2025-26_1",
         "script.name": "coursed-2025"
       }
     },

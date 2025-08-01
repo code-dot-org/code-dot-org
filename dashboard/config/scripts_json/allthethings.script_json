@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-23 17:30:22 UTC",
+    "serialized_at": "2025-07-30 18:45:13 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6418,6 +6418,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Submittable Music Level 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7035,6 +7038,48 @@
     },
     {
       "chapter": 201,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Weblab2 3"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      },
+      "level_keys": [
+        "Allthethings Weblab2 3"
+      ]
+    },
+    {
+      "chapter": 202,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Weblab2 4"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      },
+      "level_keys": [
+        "Allthethings Weblab2 4"
+      ]
+    },
+    {
+      "chapter": 203,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7058,7 +7103,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 204,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7082,7 +7127,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 205,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7106,7 +7151,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 206,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7130,7 +7175,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 207,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7154,7 +7199,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 208,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7178,7 +7223,7 @@
       ]
     },
     {
-      "chapter": 207,
+      "chapter": 209,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7202,7 +7247,7 @@
       ]
     },
     {
-      "chapter": 208,
+      "chapter": 210,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7226,7 +7271,7 @@
       ]
     },
     {
-      "chapter": 209,
+      "chapter": 211,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7250,7 +7295,7 @@
       ]
     },
     {
-      "chapter": 210,
+      "chapter": 212,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -9803,6 +9848,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "Allthethings Weblab2 3",
+        "script_level.level_keys": [
+          "Allthethings Weblab2 3"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Weblab2 4",
+        "script_level.level_keys": [
+          "Allthethings Weblab2 4"
+        ],
+        "lesson.key": "lesson-54",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "b26e8309-b1a7-486a-9490-96d4ddd8b9aa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Music Lab2 Showcase",
         "script_level.level_keys": [
           "Music Lab2 Showcase"
@@ -9954,7 +10023,7 @@
   ],
   "rubrics": [
     {
-      "level_name": "Submittable Music Level 1",
+      "level_name": "Music Project Level 2",
       "seeding_key": {
         "lesson.key": "lesson-49",
         "lesson_group.key": "",
@@ -9974,7 +10043,7 @@
     {
       "key": "4152d63a-af5c-40ea-a15f-b0a3ebd7414c",
       "position": 1,
-      "learning_goal": "Test Rubric",
+      "learning_goal": "Loops",
       "ai_enabled": false,
       "tips": null,
       "seeding_key": {
@@ -9993,6 +10062,19 @@
       "seeding_key": {
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+      "position": 2,
+      "learning_goal": "Test Concept 2",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -10027,7 +10109,7 @@
   "learning_goal_evidence_levels": [
     {
       "understanding": 0,
-      "teacher_description": "4",
+      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -10039,7 +10121,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "3",
+      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -10051,7 +10133,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "2",
+      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -10063,7 +10145,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "1",
+      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -10117,6 +10199,54 @@
         "understanding": 3,
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No evidence for concept 2",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Limited evidence for concept 2",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Convincing evidence for concept 2",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Extensive evidence for concept 2",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
+        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }

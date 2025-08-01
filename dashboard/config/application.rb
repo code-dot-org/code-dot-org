@@ -33,6 +33,11 @@ module Dashboard
     # Explicitly load appropriate defaults for this version of Rails.
     config.load_defaults 6.1
 
+    # Manually configure some values to match defaults for the next version of
+    # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
+    # TODO infra: remove these values once we're loading defaults for 7.0 above
+    config.active_support.disable_to_s_conversion = true
+
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
     #
