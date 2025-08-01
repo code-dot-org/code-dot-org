@@ -2581,13 +2581,13 @@ class LevelView {
     } else {
       autoAcquire = () => {
         const player = this.scene.levelModel.player;
-        if (player) {
+        if (player && sprite) {
           this.playItemAcquireAnimation(completionHandler || (() => {}), blockType, sprite, player);
         }
       };
     }
-    const sprite = this.createMiniBlock(destroyPosition.x, destroyPosition.y, blockType, {onComplete: autoAcquire});
 
+    const sprite = this.createMiniBlock(destroyPosition.x, destroyPosition.y, blockType, {onComplete: autoAcquire});
     if (sprite) {
       sprite.setDepth(this.yToIndex(destroyPosition.y) + 2);
     }
@@ -2680,21 +2680,19 @@ class LevelView {
       }
     }
 
-    let direction;
     const [arraydirection, nextPosition, nextFacing, speed] = track;
     entity.position = nextPosition;
 
-    //turn
+    // Turn
     if (arraydirection.substring(0, 4) === "turn") {
-      direction = arraydirection.substring(5);
-      const isUp = facing === FacingDirection.North || nextFacing === FacingDirection.North;
-      this.onAnimationEnd(this.playMinecartTurnAnimation(position, isUp, isOnBlock, completionHandler, direction), () => {
+      const direction = arraydirection.substring(5);
+      this.playMinecartTurnAnimation(() => {
         this.playTrack(nextPosition, nextFacing, isOnBlock, entity, completionHandler);
-      });
+      }, direction);
     } else {
-      this.onAnimationEnd(this.playMinecartMoveForwardAnimation(position, facing, isOnBlock, completionHandler, nextPosition, speed), () => {
+      this.playMinecartMoveForwardAnimation(() => {
         this.playTrack(nextPosition, nextFacing, isOnBlock, entity, completionHandler);
-      });
+      }, nextPosition, speed);
     }
   }
 
@@ -2735,6 +2733,28 @@ class LevelView {
     } else {
       this.audioPlayer.play('stepWood');
     }
+  }
+
+  playMinecartTurnAnimation(completionHandler: () => void, turnDirection: string) {
+    this.player?.play(`mineCart_turn${turnDirection}`, completionHandler);
+  }
+
+  playMinecartMoveForwardAnimation(completionHandler: () => void, nextPosition: Position, speed: number) {
+    // If we loop the sfx that might be better?
+    this.audioPlayer.play('minecart');
+    this.player?.play('mineCart');
+    const screenPosition = this.positionToScreen(nextPosition);
+    const tween = this.scene.tweens.add({
+      targets: this.player?.sprite,
+      x: screenPosition.x,
+      y: screenPosition.y,
+      duration: speed,
+      easing: 'Linear',
+      onComplete: completionHandler,
+    });
+    this.addResettableTween(tween);
+    tween.play();
+    this.player?.sprite?.setDepth(this.yToIndex(nextPosition.y) + 10);
   }
 
   playOpenChestAnimation(position: Position) {
