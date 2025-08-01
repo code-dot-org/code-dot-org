@@ -2,7 +2,7 @@ import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
@@ -43,6 +43,8 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     rightPanelWidth,
     leftPanelSeparatorProps,
     leftPanelDragging,
+    setRightPanelSize,
+    setLeftPanelSize,
   } = useVerticalLayout({
     leftPanel: {
       minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
@@ -60,6 +62,24 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     },
     appName: 'weblab2',
   });
+
+  useEffect(() => {
+    setRightPanelSize(
+      shouldHideEditor ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
+    );
+  }, [setRightPanelSize, shouldHideEditor]);
+
+  useEffect(() => {
+    if (!isProjectLevel) {
+      setLeftPanelSize(
+        shouldHideEditor
+          ? INITIAL_INFO_PANEL_WIDTH_WIDGET
+          : INITIAL_INFO_PANEL_WIDTH
+      );
+    } else {
+      setLeftPanelSize(0);
+    }
+  }, [isProjectLevel, setLeftPanelSize, shouldHideEditor]);
 
   return (
     <div
