@@ -15,7 +15,7 @@ describe('previewFileType', () => {
   });
 
   it('should use default preview file types if not provided', () => {
-    // Assuming defaultPreviewFileTypesArray includes 'html', 'css', and 'javascript'
+    // Assuming defaultPreviewFileTypesArray includes 'html'.
     expect(previewFileType('html')).toBe(true);
     expect(previewFileType('css')).toBe(false);
     expect(previewFileType('javascript')).toBe(false);

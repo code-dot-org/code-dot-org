@@ -33,72 +33,24 @@ const defaultConfig: ConfigType = {
 };
 
 const defaultSource: MultiFileSource = {
-  folders: {
-    '1': {id: '1', name: 'foo', parentId: '0'},
-    '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz', parentId: '0'},
-    '4': {id: '4', name: 'f1', parentId: '1'},
-    '5': {id: '5', name: 'f2', parentId: '1'},
-    '6': {id: '6', name: 'b1', parentId: '2'},
-  },
-
+  folders: {},
   files: {
     '1': {
       id: '1',
       name: 'index.html',
       language: 'html',
-      contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"/>
+      contents: `<!DOCTYPE html>
+<html>
   <body>
     Content goes here!
-    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
-`,
+  `,
       active: true,
       folderId: '0',
     },
-    '2': {
-      id: '2',
-      name: 'styles.css',
-      language: 'css',
-      contents: '.foo { color : red}',
-      folderId: '0',
-    },
-    '3': {
-      id: '3',
-      name: 'page.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      folderId: '0',
-    },
-    '4': {
-      id: '4',
-      name: 'test4.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      folderId: '2',
-    },
-    '5': {
-      id: '5',
-      name: 'test5.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      folderId: '4',
-    },
-    '6': {
-      id: '6',
-      name: 'test6-1.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      folderId: '1',
-    },
   },
-  openFiles: ['1', '2'],
+  openFiles: ['1'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};

@@ -25,28 +25,21 @@ class AichatOpenaiResponsesClient < AichatAiClient
   end
 
   # Create request body.
-  private def create_body(
-    stored_messages,
-    new_message,
-    system_instructions,
-    temperature,
-    level_name,
-    encrypted_channel_id
-    )
-
-    # We expose a temperature scale of 0.1-1 to users, but OpenAI's API allows a scale of 0-2.
-    # As of 7/11/25, testing revealed temperatures exceeding 1.5 generate garbage and trigger timeouts/false moderation calls
-    temperature *= DCDO.get('openai_temperature_scaling_factor', 1.5)
-
+  private def create_body(config, request, context = [])
     input = [
-      {role: "system", content: [{type: "input_text", text: system_instructions}]},
-      *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
-      format_message(new_message, encrypted_channel_id, level_name)
+      # Add systemInstructions if not nil.
+      *(config[:systemInstructions] ? [format_message(config[:systemInstructions], 'system')] : []),
+
+      # Add context (i.e. chat history) messages (if context was nil, it's now empty array based on default value).
+      *context.map {|context_item| format_message(context_item[:parts], context_item[:role])},
+
+      # Add required request
+      format_message(request)
     ]
 
     body = {
-      model: model,
-      temperature: temperature,
+      model: config[:model],
+      temperature: config[:temperature],
       input: input
     }
 
@@ -62,30 +55,46 @@ class AichatOpenaiResponsesClient < AichatAiClient
     )
   end
 
-  # Helper to format openid "message" object for body.
-  private def format_message(message, encrypted_channel_id, level_name)
-    type = message['role'] == "assistant" ? "output_text" : "input_text"
-    formatted = {
-      role: message['role'],
-      content: [
-        {
-          type: type,
-          text: get_message_text(message)
-        }
-      ]
-    }
-    message['assets']&.each do |asset|
-      filename = asset["filename"]
-      source = asset["source"]
-
-      data_uri = AichatAssetHelper.get_asset_data_uri(filename, source, encrypted_channel_id, level_name)
-
-      formatted[:content] << if file_is_pdf?(filename)
-                               {type: 'input_file', filename: asset["filename"], file_data: data_uri}
-                             elsif file_is_image?(filename)
-                               {type: "input_image", image_url: data_uri}
-                             end
+  # Convert role from internal representation to OpenAI's role
+  # (user/model => user/assistant).
+  private def convert_role(role)
+    if role == 'model'
+      return 'assistant'
     end
-    formatted
+    # Else 'user', which is still 'user' for OpenAI.
+    role
+  end
+
+  # Helper to format openid "message" object for body.
+  # Role defaults to 'user' as only context message sets role explicitly.
+  private def format_message(parts, role = "user")
+    message = {role: convert_role(role), content: []}
+
+    parts&.each do |part|
+      if part[:type] == 'text'
+
+        message[:content] << {
+          type: role == "model" ? "output_text" : "input_text",
+          text: part[:content]
+        }
+      else # There are currently only two types.
+        data_uri = "data:#{part[:content][:mimeType]};base64,#{part[:content][:data]}"
+        message[:content] << (
+          if part[:content][:mimeType] == 'application/pdf'
+            {
+              type: "input_file",
+                filename: part[:content][:name],
+                file_data: data_uri
+            }
+          else # There are currently only pdfs and images
+            {
+              type: "input_image",
+              image_url: data_uri
+            }
+          end
+        )
+      end
+    end
+    message
   end
 end

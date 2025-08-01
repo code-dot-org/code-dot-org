@@ -370,6 +370,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ul = create :user_level, user: student, level: sublevel1, best_result: 100, script_id: script_level.script.id
     expected_summary[:userLevelId] = ul.id
     expected_summary[:updatedAt] = ul.updated_at
+    expected_summary[:attempts] = ul.attempts
+    expected_summary[:timeSpent] = ul.time_spent
     expected_summary[:paired] = false
     expected_summary[:partnerNames] = []
     expected_summary[:partnerCount] = 0
@@ -384,6 +386,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     expected_summary[:userLevelId] = ul2.id
     expected_summary[:updatedAt] = ul2.updated_at
+    expected_summary[:attempts] = ul2.attempts
+    expected_summary[:timeSpent] = ul2.time_spent
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.passed
     expected_summary[:teacherFeedbackReviewState] = TeacherFeedback::REVIEW_STATES.keepWorking

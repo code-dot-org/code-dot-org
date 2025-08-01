@@ -1372,6 +1372,70 @@ class LevelTest < ActiveSupport::TestCase
     assert_nil level.get_validations
   end
 
+  test "summarize_for_lab2_properties should return level properties" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [level]
+    )
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal level.id, properties["id"]
+    assert_equal level.name, properties["name"]
+    assert_equal({"hello" => "there"}, properties["levelData"])
+    assert_equal "other", properties["other"]
+    assert_equal "Music", properties["type"]
+    assert_equal "music", properties["appName"]
+    assert_equal true, properties["usesProjects"]
+    assert_equal true, properties["offerBrowserTts"]
+    assert_match Regexp.new("^/s/bogus-script-[0-9]+"), properties["finishUrl"]
+    assert_nil properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties shows rubric if level matches lesson rubric level" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    create(:rubric, level: level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [level]
+    )
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
+  test "summarize_for_lab2_properties shows rubric if level shares template with rubric level" do
+    script = create(:script, :in_single_unit_course, tts: true)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    template_level = create :music, name: 'music template'
+    rubric_level = create :music, name: 'music assessment project', properties: {project_template_level_name: template_level.name}
+    level = create :music, name: 'music 1', properties: {project_template_level_name: template_level.name}
+    create(:rubric, level: rubric_level, lesson: lesson)
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [level]
+    )
+
+    properties = level.summarize_for_lab2_properties(script, script_level).stringify_keys
+
+    assert_equal true, properties["showRubric"]
+  end
+
   describe '#available_callouts' do
     let(:available_callouts) {level.available_callouts(script_level)}
 

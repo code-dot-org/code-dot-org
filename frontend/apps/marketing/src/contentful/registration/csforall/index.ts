@@ -25,6 +25,9 @@ import LogoCollection, {
 import PeopleCollection, {
   PeopleCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/peopleCollection';
+import AdoptionMap, {
+  AdoptionMapContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/adoptionMap';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -92,6 +95,13 @@ const contentfulRegistration = {
     {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
+    },
+    {
+      component: AdoptionMap,
+      definition: AdoptionMapContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Button,
