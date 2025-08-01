@@ -45,6 +45,7 @@ LocalhostPreviewCodeprojectsRecord:
       - 127.0.0.1
 <%- end -%>
 
+# A shared codeprojects certificate for this environment, avoiding wildcard certificates.
 CodeprojectsCertificate:
   Type: AWS::CertificateManager::Certificate
   Properties:
@@ -73,36 +74,35 @@ CodeprojectsRecords:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
     RecordSets:
       # NOTE: today this points directly to a manually created codeprojects load balancer, this changes it to point to the main code.org load balancer.
-      # Comment this out to avoid changing the existing codeprojects base domain stack.
-      - Name: !Ref CodeprojectsBaseDomainName
-        Type: A
-        AliasTarget:
-          DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
-          HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
-      # NOTE: this record is new
+      # Commented for now to avoid changing the existing codeprojects base domain stack.
+      # - Name: !Ref CodeprojectsBaseDomainName
+      #   Type: A
+      #   AliasTarget:
+      #     DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
+      #     HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
+      # NOTE: today this points directly to the manually created codeprojects load balancer, this changes it to point to the www redirect distribution below.
+      # Comment this out to avoid changing the existing codeprojects base domain stack (though this is safer than changing the base domain)
+      # - Name: !Sub www.${CodeprojectsBaseDomainName}
+      #   Type: A
+      #   AliasTarget:
+      #     DNSName: !GetAtt CodeprojectsWwwRedirectDistribution.DomainName
+      #     HostedZoneId: !GetAtt CodeprojectsWwwRedirectDistribution.HostedZoneId
       - Name: !Sub preview.${CodeprojectsBaseDomainName}
         Type: A
         AliasTarget:
           DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
           HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
-      # NOTE: today this points directly to the manually created codeprojects load balancer, this changes it to point to the www redirect distribution below.
-      # Comment this out to avoid changing the existing codeprojects base domain stack (though this is safer than changing the base domain)
-      - Name: !Sub www.${CodeprojectsBaseDomainName}
-        Type: A
-        AliasTarget:
-          DNSName: !GetAtt CodeprojectsWwwRedirectDistribution.DomainName
-          HostedZoneId: !GetAtt CodeprojectsWwwRedirectDistribution.HostedZoneId
 
 # Codeprojects CloudFront Distribution
 # TODO:
-#   - handle bramble-download and static subdomains
+#   - handle bramble-download and static subdomains, which may need custom origins
 CodeprojectsCloudFrontDistribution:
   Type: AWS::CloudFront::Distribution
   Properties:
     DistributionConfig:
       Enabled: true
       Comment: !Sub ${CodeprojectsBaseDomainName} main distribution
-      PriceClass: PriceClass_100
+      PriceClass: PriceClass_All
       Aliases:
         - !Ref CodeprojectsBaseDomainName
         - !Sub preview.${CodeprojectsBaseDomainName}
@@ -205,6 +205,13 @@ CodeprojectsWwwRedirectFunction:
       function handler(event) {
           var request = event.request;
           var host = request.headers.host.value;
+          
+          // Check if host starts with 'www.'
+          if (!host.startsWith('www.')) {
+              console.log('Host does not start with www:', host);
+              return request;
+          }
+          
           var newHost = host.substring(4); // Remove 'www.' prefix
           var newUrl = 'https://' + newHost + request.uri;
           
@@ -220,6 +227,8 @@ CodeprojectsWwwRedirectFunction:
               }
               newUrl += '?' + queryParams.join('&');
           }
+          
+          console.log('Redirecting from', host, 'to', newHost);
           
           return {
               statusCode: 301,
