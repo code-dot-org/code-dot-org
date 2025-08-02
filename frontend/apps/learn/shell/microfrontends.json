@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "@code-dot-org/learn-shell": {
+      "development": {
+        "fallback": "microfrontends-learn-root.vercel.app"
+      }
+    }
+  }
+}

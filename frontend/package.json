@@ -13,6 +13,7 @@
   "license": "SEE LICENSE IN LICENSE",
   "workspaces": [
     "apps/*",
+    "apps/learn/*",
     "packages/*"
   ],
   "scripts": {
