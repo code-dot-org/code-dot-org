@@ -10,6 +10,14 @@ module Api::V1::Pd
       render json: report
     end
 
+    # GET /api/v1/pd/workshops/:id/foorm/workshop_survey_summary
+    def workshop_survey_summary
+      is_authorized, facilitator_id_filter = get_authorization_and_filter(current_user, params[:workshop_id])
+      return render json: {}, status: :unauthorized unless is_authorized
+      report = Pd::Foorm::SurveyReporter.get_workshop_survey_summary(params[:workshop_id], facilitator_id_filter)
+      render json: report
+    end
+
     # GET /api/v1/pd/workshops/:id/foorm/csv_survey_report
     def csv_survey_report
       return render json: {}, status: :unauthorized unless current_user&.workshop_admin?
