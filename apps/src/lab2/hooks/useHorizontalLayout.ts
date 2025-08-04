@@ -13,6 +13,8 @@ import {
 } from '@cdo/apps/lab2/views/components/layout/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
+
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
 
@@ -172,6 +174,14 @@ export const useHorizontalLayout = ({
     throttledAdjustWorkspaceHeight();
   }, [throttledAdjustWorkspaceHeight]);
 
+  const panelClassName = useMemo(() => {
+    if (leftPanelDragging || rightBottomPanelDragging) {
+      return moduleStyles.resizingPanel;
+    } else {
+      return undefined;
+    }
+  }, [leftPanelDragging, rightBottomPanelDragging]);
+
   useEffect(() => {
     // Flexbox can handle adjusting the widths of the panel to fit the screen, but some
     // panels needs an accurate width in order to resize appropriately (for example, output panels
@@ -192,5 +202,6 @@ export const useHorizontalLayout = ({
     setLeftPanelSize,
     setRightBottomPanelSize,
     rightmostPanelWidth,
+    panelClassName,
   };
 };
