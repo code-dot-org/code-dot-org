@@ -45,7 +45,6 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
   useEffect(() => {
     if (showSidebar) {
       fetchThreads();
-      console.log('in use effect');
     }
   }, [showSidebar, fetchThreads]);
 
