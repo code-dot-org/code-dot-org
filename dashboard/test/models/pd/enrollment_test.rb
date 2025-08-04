@@ -248,7 +248,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert duplicate_enrollment.valid?
   end
 
-  test 'full_name' do
+  test 'setting full_name' do
     enrollment = create :pd_enrollment
     enrollment.full_name = 'SplitFirst SplitLast'
     assert_equal 'SplitFirst', enrollment.first_name
@@ -265,6 +265,24 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.first_name = 'SeparateFirst'
     enrollment.last_name = 'SeparateLast'
     assert_equal 'SeparateFirst SeparateLast', enrollment.full_name
+  end
+
+  test 'getting full_name uses user given_name and family_name if available' do
+    user = create :user, given_name: "", family_name: ""
+    enrollment = create :pd_enrollment, user: user, first_name: "EnrollFirstName", last_name: "EnrollLastName"
+
+    # Uses enrollment name if both user.given_name and user.family_name are not available
+    assert_equal enrollment.full_name, 'EnrollFirstName EnrollLastName'
+
+    # Uses enrollment name if one of user.given_name or user.family_name is not available
+    user.update!(given_name: "UserFirstName")
+    assert_equal enrollment.full_name, 'EnrollFirstName EnrollLastName'
+    user.update!(given_name: "", family_name: "UserLastName")
+    assert_equal enrollment.full_name, 'EnrollFirstName EnrollLastName'
+
+    # Uses user given_name and family_name if both are available
+    user.update!(given_name: "UserFirstName", family_name: "UserLastName")
+    assert_equal enrollment.full_name, 'UserFirstName UserLastName'
   end
 
   test 'email format validation' do
@@ -442,16 +460,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.validate
     assert_equal 'First', enrollment.first_name
     assert_equal 'Last', enrollment.last_name
-  end
-
-  test 'get safe names' do
-    enrollments = create_list :pd_enrollment, 5
-    safe_names = Pd::Enrollment.where(id: enrollments.pluck(:id)).order(:id).get_safe_names
-    assert_equal 5, safe_names.length
-
-    # each safe name is a tuple of the full name and the enrollment itself
-    expected = enrollments.map {|e| [e.full_name, e]}
-    assert_equal expected, safe_names
   end
 
   test 'school is deprecated' do
