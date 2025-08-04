@@ -29,6 +29,7 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
           // Keeping the value as `strong` so it can be used in existing components
           // without breaking, but the dropdown will say "Secondary" on all sites.
           {value: 'strong', displayName: 'Secondary'},
+          {value: 'white', displayName: 'White'},
         ],
       },
     },

@@ -589,6 +589,8 @@ class ScriptLevel < ApplicationRecord
     if user_level
       teacher_panel_summary[:userLevelId] = user_level.id
       teacher_panel_summary[:updatedAt] = user_level.updated_at
+      teacher_panel_summary[:attempts] = user_level.attempts
+      teacher_panel_summary[:timeSpent] = user_level.time_spent
     end
 
     teacher_panel_summary

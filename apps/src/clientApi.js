@@ -47,6 +47,10 @@ class CollectionsApi {
     return this.projectId || project().getCurrentId();
   }
 
+  getProjectType() {
+    return project().getStandaloneApp();
+  }
+
   // NOTE: path parameter as supplied should not be URI encoded, as it will be
   // URI encoded in this function...
   basePath(path) {

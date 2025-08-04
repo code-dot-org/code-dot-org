@@ -117,34 +117,6 @@ class ProjectsTest < Minitest::Test
     assert_equal 'weblab', project.project_type_from_channel_id(type_in_level)
   end
 
-  def test_content_moderation_disabled?
-    signedin_storage_id = create_storage_id_for_user(20)
-    project = Projects.new(signedin_storage_id)
-
-    # Create a new typeless project
-    # content_moderation_disabled should be false by default on project creation for projects of any type.
-    new_project_channel_id = project.create({}, ip: 123)
-    assert_equal false, project.content_moderation_disabled?(new_project_channel_id)
-  end
-
-  def test_set_content_moderation
-    signedin_storage_id = create_storage_id_for_user(20)
-    project = Projects.new(signedin_storage_id)
-
-    # Create a new typeless project
-    # skip_content_moderation should be false by default on project creation for projects of any type.
-    new_project_channel_id = project.create({}, ip: 123)
-    assert_equal false, project.content_moderation_disabled?(new_project_channel_id)
-
-    # Set content_moderation_disabled to true.
-    project.set_content_moderation(new_project_channel_id, true)
-    assert_equal true, project.content_moderation_disabled?(new_project_channel_id)
-
-    # Set skip_content_moderation back to false.
-    project.set_content_moderation(new_project_channel_id, false)
-    assert_equal false, project.content_moderation_disabled?(new_project_channel_id)
-  end
-
   def test_restore
     signedin_storage_id = create_storage_id_for_user(20)
     project = Projects.new(signedin_storage_id)
@@ -233,5 +205,36 @@ class ProjectsTest < Minitest::Test
     channel_id = project.create({'thumbnailUrl' => expected_thumbnail_url}, ip: 123)
 
     assert_equal expected_thumbnail_url, project.get(channel_id)['thumbnailUrl']
+  end
+
+  def test_get_is_teacher_of_project_owner_returns_true_when_user_is_teacher
+    student_user_id = 100
+    teacher_user_id = 200
+    student_storage_id = create_storage_id_for_user(student_user_id)
+
+    project = Projects.new(student_storage_id)
+    channel_id = project.create({projectType: 'spritelab'}, ip: 123)
+
+    # Stub storage_decrypt_channel_id to return the correct owner storage ID.
+    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
+    project.expects(:teaches_student?).with(student_user_id, teacher_user_id).returns(true)
+
+    assert_equal true, project.get_is_teacher_of_project_owner(channel_id, teacher_user_id)
+  end
+
+  def test_get_is_teacher_of_project_owner_returns_false_when_user_is_not_teacher
+    student_user_id = 100
+    non_teacher_user_id = 300
+    student_storage_id = create_storage_id_for_user(student_user_id)
+
+    project = Projects.new(student_storage_id)
+    channel_id = project.create({projectType: 'spritelab'}, ip: 123)
+
+    project.expects(:storage_decrypt_channel_id).with(channel_id).returns([student_storage_id, 123])
+    project.expects(:user_id_for_storage_id).with(student_storage_id).returns(student_user_id)
+    project.expects(:teaches_student?).with(student_user_id, non_teacher_user_id).returns(false)
+
+    assert_equal false, project.get_is_teacher_of_project_owner(channel_id, non_teacher_user_id)
   end
 end

@@ -121,6 +121,7 @@ export default class SelectStartAnimations extends React.Component {
         selectedAnimations={[]}
         hideCostumes={false}
         shouldWarnOnAnimationUpload={false}
+        uploadsEnabled={true}
       />
     );
   };

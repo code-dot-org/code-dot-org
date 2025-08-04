@@ -830,7 +830,14 @@ module SharedConstants
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
     GEMINI_2_5_FLASH: "gemini-2.5-flash",
+    GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
+  }
+
+  AI_CHAT_CLIENT_TYPES = {
+    AI_CHAT_LAB: 0,
+    AI_TUTOR: 1,
+    FLOW_LAB: 2,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

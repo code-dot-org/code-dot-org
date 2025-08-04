@@ -24,9 +24,9 @@ export const withBrand: MiddlewareFactory = () => {
     const hostname = request.headers.get('host');
     const brand = getBrandFromHostname(hostname);
     const isPreviewHostname = PREVIEW_HOSTNAMES.has(hostname);
+    const draft = await draftMode();
 
-    if (isPreviewHostname) {
-      const draft = await draftMode();
+    if (!draft.isEnabled && isPreviewHostname) {
       draft.enable();
     }
 

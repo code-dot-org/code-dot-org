@@ -21,6 +21,7 @@ export default class AssetUploader extends React.Component {
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
     api: PropTypes.object.isRequired,
+    projectType: PropTypes.string.isRequired,
   };
 
   /**
@@ -31,7 +32,7 @@ export default class AssetUploader extends React.Component {
     this.refs.uploader.openFileChooser();
     analyticsReporter.sendEvent(
       EVENTS.UPLOAD_CUSTOM_IMAGE,
-      {LabType: 'applab'},
+      {UploaderType: 'Asset Uploader', ProjectType: this.props.projectType},
       PLATFORMS.STATSIG
     );
   };

@@ -27,42 +27,61 @@ import style from './ai-differentiation.module.scss';
 interface AiDiffFloatingActionButtonProps {
   context: Context;
   scriptName?: string;
-  unitDisplayName?: string;
+  canShowPulse?: boolean;
+  canStartOpen?: boolean;
+  canDefaultOpen?: boolean;
 }
+
+const SESSION_STORAGE_KEY = 'AiDiffFabOpenStateKey';
+const LOCAL_STORAGE_OPENED_KEY = 'AiDiffHasOpenedKey';
+const LOCAL_STORAGE_CLOSED_KEY = 'AiDiffHasClosedKey';
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
   context,
   scriptName,
-  unitDisplayName,
+  canShowPulse = true,
+  /**
+   * Prevents the FAB opening without direct user click.
+   */
+  canStartOpen = true,
+  /**
+   * Whether the FAB can start open if a user has never interacted with it.
+   * Does not prevent auto-opening if the user has interacted with the FAB before.
+   */
+  canDefaultOpen = true,
 }) => {
-  const sessionStorageKey = 'AiDiffFabOpenStateKey';
-  const localStorageOpenedKey = 'AiDiffHasOpenedKey';
-  const localStorageClosedKey = 'AiDiffHasClosedKey';
-
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
-    JSON.parse(tryGetLocalStorage(localStorageOpenedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_OPENED_KEY, false.toString())
+    ) || false;
 
   const hasClosed =
-    JSON.parse(tryGetLocalStorage(localStorageClosedKey, false.toString())) ||
-    false;
+    JSON.parse(
+      tryGetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, false.toString())
+    ) || false;
 
-  // Open the chat window if this is the first time the user has seen the FAB in this
-  // session and they haven't interacted with the FAB yet.
-  // Depends on other logic which sets the open state in session storage.
-  const isFirstSession =
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null &&
-    !hasOpened &&
-    !hasClosed;
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  // Keeps FAB open/closed on new pages in the same tab or window
-  // New tab or window is default closed if they have previously opened/closed the FAB
-  // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, isFirstSession)) ||
-      isFirstSession
-  );
+  React.useEffect(() => {
+    // If the user has manually opened or closed the FAB, we should not open it automatically.
+    if (!hasOpened && !hasClosed) {
+      // Open the chat window if this is the first time the user has seen the FAB in this
+      // session and they haven't interacted with the FAB yet.
+      // Depends on other logic which sets the open state in session storage.
+      const isFirstSession =
+        JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, null)) === null;
+
+      // Keeps FAB open/closed on new pages in the same tab or window
+      // New tab or window is default closed if they have previously opened/closed the FAB
+      // Default open if they have never opened/closed the fab before (i.e. first time on the site)
+      setIsOpen(
+        canStartOpen &&
+          ((isFirstSession && canDefaultOpen) ||
+            JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
+      );
+    }
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
 
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
 
@@ -70,7 +89,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const body = JSON.stringify({
       context: context,
     });
-    HttpClient.post(`/ai_diff/curriculum_courses`, body, true, {
+    HttpClient.post(`/aidiff_threads/curriculum_courses`, body, true, {
       'Content-Type': 'application/json',
     })
       .then(response => response.json())
@@ -85,7 +104,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
-  const showPulse = !hasOpened && isFabImageLoaded;
+  const showPulse = canShowPulse && !hasOpened && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -94,23 +113,19 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     const eventData = {
       aiDiffChatContext: context,
       scriptName,
-      unitName: unitDisplayName,
     };
     const eventName = isOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
       : EVENTS.AI_DIFF_CHAT_OPENED;
     analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
-      trySetLocalStorage(localStorageOpenedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
-      trySetLocalStorage(localStorageClosedKey, true.toString());
+      trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
     setIsOpen(!isOpen);
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
   };
-
-  useEffect(() => {
-    trySetSessionStorage(sessionStorageKey, isOpen);
-  }, [isOpen]);
 
   return (
     <div id="fab-contained">
@@ -128,11 +143,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         />
       </button>
       <AiDiffContainer
-        open={isOpen || isFirstSession}
+        open={isOpen}
         context={context}
         closeTutor={handleClick}
         scriptName={scriptName}
-        unitDisplayName={unitDisplayName}
         curriculumCourses={curriculumCourses}
       />
     </div>

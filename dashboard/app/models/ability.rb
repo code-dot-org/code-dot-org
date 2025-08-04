@@ -59,7 +59,9 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalTeacherEvaluation
+      LearningGoalTeacherEvaluation,
+      AidiffThread,
+      AidiffMessage
     ]
     cannot :index, Level
 
@@ -187,7 +189,9 @@ class Ability
         can :manage, User do |u|
           user.students.include?(u)
         end
-        can [:create, :get_feedback_from_teacher], TeacherFeedback, student_sections: {user_id: user.id}
+        can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
           !user.students.where(id: user_level.user_id).empty?
@@ -208,6 +212,9 @@ class Ability
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
         can :get_most_recent_user_level_evaluation, StudentWorkEvaluation do |evaluation|
           user.students.exists?(id: evaluation.student_id)
+        end
+        can :get_feedbacks, TeacherFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
         end
 
       end
@@ -277,10 +284,12 @@ class Ability
       end
 
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
-        can :chat_completion, :ai_diff
-        can :curriculum_courses, :ai_diff
         can :submit_feedback, AidiffMessage
+        can :create, AidiffThread
+        can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
       end
+
+      can :show, Rubric
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.

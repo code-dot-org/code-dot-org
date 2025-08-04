@@ -31,6 +31,37 @@ describe('getStudioBaseUrl', () => {
     (getStage as jest.Mock).mockReturnValue('unknown');
     expect(getStudioBaseUrl()).toBe('https://studio.code.org');
   });
+
+  describe('levelbuilder special case', () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let originalWindow: any;
+    beforeEach(() => {
+      originalWindow = global.window;
+    });
+    afterEach(() => {
+      if (originalWindow === undefined) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        delete (global as any).window;
+      } else {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (global as any).window = originalWindow;
+      }
+    });
+
+    it('should return the levelbuilder studio URL when in browser and hostname is levelbuilder.code.org', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (global as any).window = {location: {hostname: 'levelbuilder.code.org'}};
+      expect(getStudioBaseUrl()).toBe('https://levelbuilder-studio.code.org');
+    });
+
+    it('should not throw and should return correct URL when window is undefined (SSR)', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      delete (global as any).window;
+      (getStage as jest.Mock).mockReturnValue('production');
+      expect(() => getStudioBaseUrl()).not.toThrow();
+      expect(getStudioBaseUrl()).toBe('https://studio.code.org');
+    });
+  });
 });
 
 describe('getStudioUrl', () => {

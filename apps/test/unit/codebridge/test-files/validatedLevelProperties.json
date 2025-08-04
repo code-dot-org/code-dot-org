@@ -11,7 +11,6 @@
         "contents": "print(\"Hello from level 2!\")",
         "folderId": "0",
         "active": true,
-        "open": true,
         "type": "starter"
       },
       "2": {
@@ -21,7 +20,6 @@
         "contents": "def factorial(n):\n    \"\"\"\n    Calculate the factorial of a non-negative integer n.\n    Raises a ValueError for negative integers.\n    \"\"\"\n    if n < 0:\n        raise ValueError(\"Negative integers are not allowed\")\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n",
         "folderId": "0",
         "active": false,
-        "open": true,
         "type": "starter"
       }
     },

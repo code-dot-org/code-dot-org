@@ -1,3 +1,4 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
@@ -43,6 +44,7 @@ const logoStyles = {
     justifyContent: 'center',
     width: 'fit-content',
     height: '100%',
+    marginBottom: 0,
     textDecoration: 'none',
     transition: 'opacity 0.3s ease-in-out',
     '&:hover': {
@@ -58,7 +60,7 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
 }) => {
   if (!logos) {
     return (
-      <Typography variant="body2" sx={{color: 'var(--text-neutral-primary)'}}>
+      <Typography variant="body3" sx={{color: 'var(--text-neutral-primary)'}}>
         <em>
           <strong>📋 Logo Collection placeholder.</strong> Please add a "List"
           content type entry in the Content sidebar.
@@ -67,14 +69,21 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
     );
   }
 
+  const inMemoryEntities = useInMemoryEntities();
+
   const logosData = useMemo(() => {
     const data = logos.filter(Boolean).map(({fields}) => {
       const {title, logoImage, primaryLinkRef} = fields;
+
+      const resolvedLogoImage = inMemoryEntities.maybeResolveLink(
+        logoImage,
+      ) as ExperienceAsset;
+
       const url = primaryLinkRef?.fields?.primaryTarget || '';
       const getImage = () => (
         <img
-          src={getAbsoluteImageUrl(logoImage)}
-          alt={logoImage?.fields?.title || title || 'Logo'}
+          src={getAbsoluteImageUrl(resolvedLogoImage)}
+          alt={resolvedLogoImage?.fields?.title || title || 'Logo'}
           loading="lazy"
         />
       );

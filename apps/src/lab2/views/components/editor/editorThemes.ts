@@ -174,6 +174,12 @@ export const lightTheme = EditorView.theme(
     '.cm-gutters': {
       backgroundColor: color.white,
     },
+    // Use the same wavy underline style for errors as the dark theme
+    '.cm-lintRange-error': {
+      backgroundImage: 'none !important',
+      textDecoration: 'underline wavy',
+      textDecorationColor: color.red,
+    },
   },
   {dark: false}
 );
