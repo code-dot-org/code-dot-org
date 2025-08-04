@@ -139,13 +139,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
   end
 
-  # POST /api/v1/pd/enrollments/edit
-  def edit
-    return head :forbidden unless current_user.workshop_admin?
-    enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
-  end
-
   private def render_unsuccessful(error_message, options = {})
     render json: options.merge({workshop_enrollment_status: error_message}),
       status: :bad_request

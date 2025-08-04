@@ -178,6 +178,9 @@ export const PaneButton = Radium(function (props) {
 
   function onKeyDownWrapper(event) {
     const {onClick} = props;
+    if (!onClick) {
+      return;
+    }
     if (
       event.key === ' ' ||
       event.key === 'Enter' ||

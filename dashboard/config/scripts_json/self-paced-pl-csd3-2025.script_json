@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-15 20:35:07 UTC",
+    "serialized_at": "2025-07-18 20:04:05 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -615,6 +615,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-21-mod3-GameLab-practice-lc_25"
         ],

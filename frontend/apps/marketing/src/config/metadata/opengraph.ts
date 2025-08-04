@@ -6,5 +6,6 @@ export const BRAND_OPENGRAPH_DEFAULT_IMAGE_URL: {
   [Brand.CODE_DOT_ORG]:
     'https://contentful-images.code.org/90t6bu6vlf76/6QAykNTAjFdgHya4lBchyF/539e119f045b74395ec9aca97bacf6ed/opengraph-default.png',
   [Brand.HOUR_OF_CODE]: undefined,
-  [Brand.CS_FOR_ALL]: undefined, // https://codedotorg.atlassian.net/browse/CMS-847
+  [Brand.CS_FOR_ALL]:
+    'https://contentful-images.code.org/27jkibac934d/7q8KX08NZDetFqLFrvlA46/e79393e0815aee7be0ac056b21c6a197/CSForAll_logo_opengraph.jpg?fm=webp',
 };

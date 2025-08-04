@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-07-31T16:21:39.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Reflect on the strengths and limitations of training an AI system to recognize suspicious behavior. Whose behavior might it misunderstand, and why?",
+    "stay_on_level_after_submit": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "### Teacher Goal for Evaluating Student Responses\r\n\r\nTeachers should look for evidence that students are thinking critically about:\r\n\r\n- The benefits of using AI for pattern recognition (speed, consistency, automation)\r\n- The risks of bias or overgeneralization in AI if training data lacks diversity\r\n- How cultural background, tech access, or lifestyle can shape what’s “normal” or “suspicious”\r\n- Examples from their user profile (e.g., someone who uses VPNs regularly, travels often, or shares devices)\r\n- An awareness of nuance—that what looks suspicious in one context may be normal in another\r\n\r\nHigh-quality answers might say things like:\r\n\r\n> “If AI only sees people logging in from the same device at home, it might flag someone like Diego who uses public Wi-Fi at the rec center.”\r\n\r\n> “AI is helpful because it can catch strange behavior fast, but it could misjudge Amara’s privacy habits as suspicious even if she’s just being cautious.”\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-31T16:21:39.890+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson5-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson5-level2\"},{\"changed_at\":\"2025-07-31 16:23:11 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

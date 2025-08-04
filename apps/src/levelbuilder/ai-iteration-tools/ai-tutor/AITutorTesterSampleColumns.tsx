@@ -1,30 +1,18 @@
 import React from 'react';
 
-import {ValueOf} from '@cdo/apps/types/utils';
-import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
-
-import {genAIEndpointIds} from './constants';
-import {Endpoint} from './types';
-
 import style from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a table that explains the columns that can be in uploaded csvs for the AITutorTester.
  */
 
-interface SampleColumnsProps {
-  endpoint: Endpoint;
-}
-
-const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
-  endpoint,
-}) => {
-  const studentInputRow = {
-    columnHeader: 'studentInput',
-    description:
-      'REQUIRED. The student\'s question e.g. "Why doesn\'t my code compile?"',
-  };
-  const basicRows = [
+const AITutorTesterSampleColumns: React.FC = () => {
+  const rows = [
+    {
+      columnHeader: 'studentInput',
+      description:
+        'REQUIRED. The student\'s question e.g. "Why doesn\'t my code compile?"',
+    },
     {
       columnHeader: 'systemPrompt',
       description:
@@ -35,8 +23,6 @@ const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
       description:
         "OPTIONAL. If provided, will be used to fetch the level's instructions and test files if applicable. Reminder: it needs to be the levelId for the level in the environment in which you're running the tester.",
     },
-  ];
-  const aiTutorRows = [
     {
       columnHeader: 'studentCode',
       description: "OPTIONAL. The student's code.",
@@ -47,23 +33,6 @@ const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
         'OPTIONAL. If provided will be used to determine the programming language.',
     },
   ];
-  const genAIRows = [
-    {
-      columnHeader: 'temperature',
-      description:
-        'OPTIONAL. Temperature parameter for model customization. Default is 0.8.',
-    },
-  ];
-
-  let rows = [studentInputRow];
-
-  if (endpoint === 'ai-tutor') {
-    rows = rows.concat(basicRows, aiTutorRows);
-  } else if (
-    genAIEndpointIds.includes(endpoint as ValueOf<typeof AiChatModelIds>)
-  ) {
-    rows = rows.concat(basicRows, genAIRows);
-  }
 
   return (
     <div>

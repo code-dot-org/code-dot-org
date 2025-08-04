@@ -28,13 +28,13 @@ Scenario: Minecraft:Agent tutorial in Spanish
 Scenario: Toolbox Categories in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element "#blockly-0" has "es-MX" text from key "data.block_categories.Events"
-  Then element "#blockly-1" has "es-MX" text from key "data.block_categories.Text"
-  Then element "#blockly-2" has "es-MX" text from key "data.block_categories.Variables"
-  Then element "#blockly-3" has "es-MX" text from key "data.block_categories.Effects"
-  Then element "#blockly-4" has "es-MX" text from key "data.block_categories.Sprites"
-  Then element "#blockly-5" has "es-MX" text from key "data.block_categories.Functions"
-  Then element "#blockly-6" has "es-MX" text from key "data.block_categories.Variables"
+  Then element "#blockly-1" has "es-MX" text from key "data.block_categories.Events"
+  Then element "#blockly-2" has "es-MX" text from key "data.block_categories.Text"
+  Then element "#blockly-3" has "es-MX" text from key "data.block_categories.Variables"
+  Then element "#blockly-4" has "es-MX" text from key "data.block_categories.Effects"
+  Then element "#blockly-5" has "es-MX" text from key "data.block_categories.Sprites"
+  Then element "#blockly-6" has "es-MX" text from key "data.block_categories.Functions"
+  Then element "#blockly-7" has "es-MX" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/es-MX"
@@ -74,13 +74,13 @@ Scenario: Minecraft:Agent tutorial in Portuguese
 Scenario: Toolbox Categories in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element "#blockly-0" has "pt-BR" text from key "data.block_categories.Events"
-  Then element "#blockly-1" has "pt-BR" text from key "data.block_categories.Text"
-  Then element "#blockly-2" has "pt-BR" text from key "data.block_categories.Variables"
-  Then element "#blockly-3" has "pt-BR" text from key "data.block_categories.Effects"
-  Then element "#blockly-4" has "pt-BR" text from key "data.block_categories.Sprites"
-  Then element "#blockly-5" has "pt-BR" text from key "data.block_categories.Functions"
-  Then element "#blockly-6" has "pt-BR" text from key "data.block_categories.Variables"
+  Then element "#blockly-1" has "pt-BR" text from key "data.block_categories.Events"
+  Then element "#blockly-2" has "pt-BR" text from key "data.block_categories.Text"
+  Then element "#blockly-3" has "pt-BR" text from key "data.block_categories.Variables"
+  Then element "#blockly-4" has "pt-BR" text from key "data.block_categories.Effects"
+  Then element "#blockly-5" has "pt-BR" text from key "data.block_categories.Sprites"
+  Then element "#blockly-6" has "pt-BR" text from key "data.block_categories.Functions"
+  Then element "#blockly-7" has "pt-BR" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Portuguese
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/4/levels/6/lang/pt-BR"
@@ -129,13 +129,13 @@ Scenario: Translated function names in Arabic
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/45/levels/4/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element "#blockly-0" has "ar-SA" text from key "data.block_categories.Events"
-  Then element "#blockly-1" has "ar-SA" text from key "data.block_categories.Text"
-  Then element "#blockly-2" has "ar-SA" text from key "data.block_categories.Variables"
-  Then element "#blockly-3" has "ar-SA" text from key "data.block_categories.Effects"
-  Then element "#blockly-4" has "ar-SA" text from key "data.block_categories.Sprites"
-  Then element "#blockly-5" has "ar-SA" text from key "data.block_categories.Functions"
-  Then element "#blockly-6" has "ar-SA" text from key "data.block_categories.Variables"
+  Then element "#blockly-1" has "ar-SA" text from key "data.block_categories.Events"
+  Then element "#blockly-2" has "ar-SA" text from key "data.block_categories.Text"
+  Then element "#blockly-3" has "ar-SA" text from key "data.block_categories.Variables"
+  Then element "#blockly-4" has "ar-SA" text from key "data.block_categories.Effects"
+  Then element "#blockly-5" has "ar-SA" text from key "data.block_categories.Sprites"
+  Then element "#blockly-6" has "ar-SA" text from key "data.block_categories.Functions"
+  Then element "#blockly-7" has "ar-SA" text from key "data.block_categories.Variables"
 
 Scenario: Pixelation Widget long and short instructions in Spanish
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/17/levels/2/lang/es-MX"

@@ -894,6 +894,10 @@ def element_exists?(selector)
   @browser.execute_script(jquery_element_exists(selector))
 end
 
+def element_focused?(selector)
+  @browser.execute_script("return document.querySelector(#{selector.dump}) === document.activeElement;")
+end
+
 def element_visible?(selector)
   @browser.execute_script(jquery_is_element_visible(selector))
 end
@@ -918,6 +922,14 @@ Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
 
+Then /^element "([^"]*)" has focus/ do |selector|
+  expect(element_focused?(selector)).to eq(true)
+end
+
+Then /^element "([^"]*)" does not have focus/ do |selector|
+  expect(element_focused?(selector)).to eq(false)
+end
+
 Then /^element "([^"]*)" is hidden$/ do |selector|
   expect(element_visible?(selector)).to eq(false)
 end
@@ -928,6 +940,10 @@ end
 
 Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
   expect(element_displayed?(selector)).to eq(negation.nil?)
+end
+
+Then /^I move focus to "([^"]*)"$/ do |selector|
+  @browser.execute_script("$(#{selector.dump}).focus()")
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
@@ -1557,6 +1573,14 @@ end
 Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   body_text = @browser.execute_script('return document.body && document.body.textContent;').to_s
   expect(body_text.include?(text)).to eq(negation.nil?)
+end
+
+Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
+  # Click the raw data tab to see the JSON response in Firefox
+  @browser.find_elements(:css, '#rawdata-tab').first&.click
+
+  response_json = @browser.find_element(:css, 'pre').text
+  expect(response_json).to include(%Q["#{key}":#{value}])
 end
 
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|

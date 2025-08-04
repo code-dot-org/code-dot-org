@@ -26,7 +26,7 @@ export interface CurrentUserState {
   under13: boolean;
   over21: boolean;
   isTeacher: boolean | undefined;
-  showProgressTableV2: boolean;
+  showProgressTableV2: string;
   progressTableV2ClosedBeta: boolean;
   childAccountComplianceState: string | null;
   inSection: boolean | null;
@@ -36,5 +36,6 @@ export interface CurrentUserState {
   aiDifferentiationEnabled: boolean;
   hasCompletedAiDifferentiationWelcome: boolean;
   userSharingDisabled: boolean;
+  hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
 }

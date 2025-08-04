@@ -604,6 +604,19 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
+  test 'coteachers can manage feedback for students in a section they own' do
+    teacher = create :teacher
+    coteacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    create :section_instructor, section: section, instructor: coteacher, status: :active
+    section.add_student student
+    feedback = create :teacher_feedback, student: student, teacher: teacher
+
+    assert Ability.new(coteacher).can? :create, feedback
+    assert Ability.new(coteacher).can? :get_feedback_from_teacher, feedback
+  end
+
   test 'teachers cannot manage feedback for students not in a section they own' do
     teacher = create :teacher
     student = create :student
@@ -639,14 +652,28 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(other_student).can? :get_feedbacks, feedback
   end
 
-  test 'teacher cannot get all the feedback for student work on a level' do
+  test 'teacher can get all the feedback for a student they teach on a level' do
     teacher = create :teacher
     student = create :student
     section = create :section, user: teacher
     section.add_student student
     feedback = create :teacher_feedback, student: student
+    other_feedback = create :teacher_feedback, student: student, teacher: teacher
 
-    refute Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, other_feedback
+  end
+  test 'teacher cannot get all the feedback for a student they do not teach on a level' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+    other_feedback = create :teacher_feedback, student: student, teacher: teacher
+    other_teacher = create :teacher
+
+    refute Ability.new(other_teacher).can? :get_feedbacks, feedback
+    refute Ability.new(other_teacher).can? :get_feedbacks, other_feedback
   end
 
   test 'teacher can view as user for student in their section' do
@@ -969,37 +996,7 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
-  test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(teacher).can? :log_chat_event, :aichat_event
-    assert Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    teacher = create :teacher
-    teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(teacher).can? :log_chat_event, :aichat_event
-    refute Ability.new(teacher).can? :chat_history, :aichat_event
-  end
-
-  test 'student meeting AI Chat access requirements can perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(true)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    assert Ability.new(student).can? :log_chat_event, :aichat_event
-    assert Ability.new(student).can? :chat_history, :aichat_event
-  end
-
-  test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
-    student = create :student
-    student.stubs(:student_can_access_ai_chat?).returns(false)
-    # :aichat_request actions are tested via the aichat_requests_controller tests.
-    refute Ability.new(student).can? :log_chat_event, :aichat_event
-    refute Ability.new(student).can? :chat_history, :aichat_event
-  end
+  # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
   private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create :code_review_group, section: section

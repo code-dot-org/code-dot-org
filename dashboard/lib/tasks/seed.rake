@@ -377,6 +377,8 @@ namespace :seed do
     %w(
       ui-test-course-2017
       ui-test-course-2019
+      ui-test-original-course-2017
+      ui-test-original-course-2019
       ui-test-single-unit-course-2025
       ui-test-single-unit-course-2026
       ui-test-csa-family-script
@@ -512,6 +514,7 @@ namespace :seed do
     %w(
       ui-test-course
       ui-test-csa-family-script
+      ui-test-original-course
       ui-test-teacher-pl-course
       ui-test-self-paced-pl
       ui-test-facilitator-pl-course

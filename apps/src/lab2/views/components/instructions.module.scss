@@ -131,11 +131,18 @@
 }
 
 .textContent {
-  height: 100%;
+  overflow: hidden;
+  gap: 8px;
   padding: 15px 0 5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+.ttsContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
 }
 
 %scrolling-content {
@@ -145,20 +152,14 @@
   padding: 0 10px;
 }
 
-.scrollingContentWithTTS {
+.scrollingContent {
   @extend %scrolling-content;
-  margin-bottom: 25px;
-}
-
-.scrollingContentWithoutTTS {
-  @extend %scrolling-content;
-  margin-bottom: 10px;
 }
 
 %message {
   position: relative;
-  padding: 15px 20px;
   border-radius: 4px;
+  padding: 15px 0 5px;
   animation: slidein 0.5s;
 }
 
@@ -172,6 +173,14 @@
   @extend %message;
   background-color: $light_gray_50;
   color: $neutral_dark;
+}
+
+.messageContent {
+  padding: 0 20px;
+}
+
+.navigationContainer {
+  padding-bottom: 10px;
 }
 
 .predictSummary {
@@ -196,7 +205,9 @@
     font-size: 1.75em;
     line-height: 1.2em;
 
-    &, em, strong {
+    &,
+    em,
+    strong {
       font-family: $barlowSemiCondensed-semibold;
     }
   }

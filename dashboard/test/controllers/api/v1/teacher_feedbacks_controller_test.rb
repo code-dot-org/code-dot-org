@@ -59,6 +59,38 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal REVIEW_STATE, parsed_response['review_state']
   end
 
+  test 'cannot be retrieved by student' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
+    sign_out @teacher
+
+    sign_in @student
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'cannot be retrieved by teacher not teaching student' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
+    sign_out @teacher
+
+    other_teacher = create :teacher
+    sign_in other_teacher
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+  test 'can be retrieved by coteacher' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1, REVIEW_STATE)
+    sign_out @teacher
+
+    sign_in @coteacher
+    get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
+
+    assert_equal COMMENT1, parsed_response['comment']
+    assert_equal PERFORMANCE1, parsed_response['performance']
+    assert_equal REVIEW_STATE, parsed_response['review_state']
+  end
+
   test 'retrieves feedback for correct student' do
     student2 = create :student
     @section.add_student(student2)
@@ -318,6 +350,54 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal PERFORMANCE1, parsed_response[0]['performance']
   end
 
+  test 'student cannot retrieve feedback for another student - different section' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
+    sign_out @teacher
+
+    other_student = create :student
+    sign_in other_student
+
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'teacher can retrieve feedback for a level - two comments, one teacher' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
+
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+
+    assert_equal 1, parsed_response.count
+    assert_equal COMMENT2, parsed_response[0]['comment']
+    assert_equal PERFORMANCE2, parsed_response[0]['performance']
+  end
+
+  test 'teacher not teaching student cannot retrieve feedback for a level - two comments, one teacher' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
+
+    other_teacher = create :teacher
+    sign_in other_teacher
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+
+    assert_response :forbidden
+  end
+
+  test 'coteacher can retrieve feedback for a level - two comments, one teacher' do
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
+    teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
+    sign_out @teacher
+
+    sign_in @coteacher
+    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
+
+    assert_equal 1, parsed_response.count
+    assert_equal COMMENT2, parsed_response[0]['comment']
+    assert_equal PERFORMANCE2, parsed_response[0]['performance']
+  end
+
   # tests for the bug when feedback leaks between scripts with the same levels
   test 'when a level is part of more than one script, student receives feedback for the level feedback was given' do
     level = create :level
@@ -367,6 +447,17 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     sign_in feedback.student
     post "#{API}/#{feedback.id}/increment_visit_count"
     assert_response :no_content
+  end
+
+  test 'increment_visit_count returns forbidden for different user' do
+    TeacherFeedback.any_instance.stubs(:increment_visit_count).returns(true)
+    student = create :student
+    other_student = create :student
+    feedback = create :teacher_feedback, student: student
+
+    sign_in other_student
+    post "#{API}/#{feedback.id}/increment_visit_count"
+    assert_response :forbidden
   end
 
   test 'increment_visit_count returns unprocessable_entity on failed save' do

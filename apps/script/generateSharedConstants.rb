@@ -109,6 +109,7 @@ def main
       AI_REQUEST_EXECUTION_STATUS
       STUDENT_WORK_EVALUATION_STATUS
       AI_CHAT_MODEL_IDS
+      AI_CHAT_CLIENT_TYPES
       AI_CHAT_TEACHER_FEEDBACK
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
@@ -151,6 +152,7 @@ def main
       DEVICE_TYPES
       DEVICE_COMPATIBILITY_LEVELS
       PARTICIPANT_AUDIENCES_BY_TYPE
+      NUMBERED_UNITS_TYPE
     ),
       source_module: Curriculum::SharedCourseConstants, transform_keys: false
     ),

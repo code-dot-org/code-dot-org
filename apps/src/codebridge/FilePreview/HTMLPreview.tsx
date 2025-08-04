@@ -5,6 +5,8 @@ import React, {useRef, useMemo} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import moduleStyles from './styles/filePreview.module.scss';
+
 type HTMLPreviewProps = {
   file: ProjectFile;
 };
@@ -59,6 +61,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
           id="preview"
           style={{width: '100%', height: '100%', backgroundColor: 'white'}}
           srcDoc={srcdoc}
+          className={moduleStyles.iframePreview}
         />
       )}
     </>

@@ -6,14 +6,14 @@ import DSCOHeader, {
 
 import {getStudioBaseUrl} from '@/config/studio';
 import logoImage from '@public/images/cdo-logo-inverse.svg';
-import allProjectsImage from '@public/images/header-all-projects-icon.png';
-import appLabImage from '@public/images/header-app-lab-icon.png';
-import artistImage from '@public/images/header-artist-icon.png';
-import dancePartyImage from '@public/images/header-dance-party-icon.png';
-import gameLabImage from '@public/images/header-game-lab-icon.png';
-import musicLabImage from '@public/images/header-music-lab-icon.png';
-import pythonLabImage from '@public/images/header-python-lab-icon.png';
-import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
+import allProjectsImage from '@public/images/header-all-projects-icon.webp';
+import appLabImage from '@public/images/header-app-lab-icon.webp';
+import artistImage from '@public/images/header-artist-icon.webp';
+import dancePartyImage from '@public/images/header-dance-party-icon.webp';
+import gameLabImage from '@public/images/header-game-lab-icon.webp';
+import musicLabImage from '@public/images/header-music-lab-icon.webp';
+import pythonLabImage from '@public/images/header-python-lab-icon.webp';
+import spriteLabImage from '@public/images/header-sprite-lab-icon.webp';
 
 const defaultProps = getDefaultHeaderProps({
   logoImage: logoImage.src,

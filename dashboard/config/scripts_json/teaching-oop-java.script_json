@@ -1,0 +1,2585 @@
+{
+  "script": {
+    "name": "teaching-oop-java",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - CSA",
+      "is_migrated": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-07-18 15:46:44 UTC",
+    "hide_within_course": false,
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "teaching-oop-java"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Getting to Know the Painter Class",
+      "name": "Getting to Know the Painter Class",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Use Object Oriented Programming concepts in Code.org’s Neighborhood\n- Instantiate an object\n- Call methods from the `Painter` class\n\n**Estimated Time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Use Object Oriented Programming concepts in Code.org’s Neighborhood\n- Instantiate an object\n- Call methods from the `Painter` class\n\n**Estimated Time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    },
+    {
+      "key": "Exploring the Painter Class",
+      "name": "Exploring the Painter Class",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Call methods from the Painter class\n- Learn how to use UML diagrams\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Call methods from the Painter class\n- Learn how to use UML diagrams\n\n**Estimated time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    },
+    {
+      "key": "Class Structure and Design",
+      "name": "Class Structure and Design",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**In this unit, you will:** \n-  Represent attributes of an object using instance variables\n- Write no-argument and parameterized constructors to set the state of an object\n- Write expressions using arithmetic operators and compound assignment operators with variables and object data\n- Write accessor and mutator methods to obtain and modify object data\n- Write `toString()` methods and use escape sequences to display and format information about an object to the console\n\n**Estimated Time:** 60 minutes",
+        "student_overview": "**In this unit, you will:** \n-  Represent attributes of an object using instance variables\n- Write no-argument and parameterized constructors to set the state of an object\n- Write expressions using arithmetic operators and compound assignment operators with variables and object data\n- Write accessor and mutator methods to obtain and modify object data\n- Write `toString()` methods and use escape sequences to display and format information about an object to the console\n\n**Estimated Time:** 60 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "890b18b4-f9b0-4b34-939a-b82ed55d7433",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433",
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    },
+    {
+      "key": "b404a251-496f-438d-8845-c5a8361a5197",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b404a251-496f-438d-8845-c5a8361a5197",
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    },
+    {
+      "key": "03003a3b-9d1d-48db-9273-29f6746e8430",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430",
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2ead0615-8458-4ca9-a838-5f47c835fec7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ead0615-8458-4ca9-a838-5f47c835fec7",
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433"
+      }
+    },
+    {
+      "key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61",
+      "position": 2,
+      "properties": {
+        "progression_name": "Object-oriented programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61",
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433"
+      }
+    },
+    {
+      "key": "99bad392-86cd-4314-a593-dae9a3aab178",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introducing the Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178",
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433"
+      }
+    },
+    {
+      "key": "10d19144-affd-40a6-bb57-2760090a8500",
+      "position": 4,
+      "properties": {
+        "progression_name": "Instantiating objects and calling methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500",
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433"
+      }
+    },
+    {
+      "key": "b09eace5-0833-44f5-b373-3a720b1a3ccf",
+      "position": 5,
+      "properties": {
+        "progression_name": "Vocabulary wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "b09eace5-0833-44f5-b373-3a720b1a3ccf",
+        "lesson_activity.key": "890b18b4-f9b0-4b34-939a-b82ed55d7433"
+      }
+    },
+    {
+      "key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to UML diagrams"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2",
+        "lesson_activity.key": "b404a251-496f-438d-8845-c5a8361a5197"
+      }
+    },
+    {
+      "key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using methods that return informaiton"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5",
+        "lesson_activity.key": "b404a251-496f-438d-8845-c5a8361a5197"
+      }
+    },
+    {
+      "key": "6aa666e2-aab2-40d6-a848-881b1e10c70a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "6aa666e2-aab2-40d6-a848-881b1e10c70a",
+        "lesson_activity.key": "b404a251-496f-438d-8845-c5a8361a5197"
+      }
+    },
+    {
+      "key": "e374398e-3da5-449e-a274-9aa676f72b87",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview of Class Structure"
+      },
+      "seeding_key": {
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "3caa4716-a261-40fb-9889-55baedd81598",
+      "position": 2,
+      "properties": {
+        "progression_name": "Instance Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "ca766f55-b9b8-4044-85ff-66d242af1807",
+      "position": 3,
+      "properties": {
+        "progression_name": "Constructors "
+      },
+      "seeding_key": {
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "18620139-b3b0-4227-9022-4943a2caded5",
+      "position": 4,
+      "properties": {
+        "progression_name": "User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "18620139-b3b0-4227-9022-4943a2caded5",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "213c73c7-5b44-40da-bd53-88ac505ea722",
+      "position": 5,
+      "properties": {
+        "progression_name": "The This Keyword"
+      },
+      "seeding_key": {
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "b2f55987-b597-47d8-ac55-317a723a5f75",
+      "position": 6,
+      "properties": {
+        "progression_name": "Accessor and Mutator Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    },
+    {
+      "key": "d057442b-896f-4a3e-82c1-2f83f5de445b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Printing Objects"
+      },
+      "seeding_key": {
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b",
+        "lesson_activity.key": "03003a3b-9d1d-48db-9273-29f6746e8430"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-overview-1_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "2ead0615-8458-4ca9-a838-5f47c835fec7"
+      },
+      "level_keys": [
+        "pl-java-oop-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Object-oriented programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-intro-video-2_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61"
+      },
+      "level_keys": [
+        "pl-java-oop-intro-video-2_pl"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Object-oriented programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-predict-3_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61"
+      },
+      "level_keys": [
+        "pl-java-oop-predict-3_pl"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing the Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-practice-modify-4_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      },
+      "level_keys": [
+        "pl-java-oop-practice-modify-4_pl"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing the Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-neighborhood-5_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      },
+      "level_keys": [
+        "pl-java-oop-neighborhood-5_pl"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introducing the Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-practice-paint-6_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      },
+      "level_keys": [
+        "pl-java-oop-practice-paint-6_pl"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-classes-objects-7_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      },
+      "level_keys": [
+        "pl-java-oop-classes-objects-7_pl"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-calling-methods-8_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      },
+      "level_keys": [
+        "pl-java-oop-calling-methods-8_pl"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-creating-objects-video-9_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      },
+      "level_keys": [
+        "pl-java-oop-creating-objects-video-9_pl"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-debug-practice-10_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      },
+      "level_keys": [
+        "pl-java-oop-debug-practice-10_pl"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Instantiating objects and calling methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-painter-practice-11_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      },
+      "level_keys": [
+        "pl-java-oop-painter-practice-11_pl"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-chk-und-vocab-12_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b09eace5-0833-44f5-b373-3a720b1a3ccf"
+      },
+      "level_keys": [
+        "pl-java-oop-chk-und-vocab-12_pl"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocabulary wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-oop-summary-13_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b09eace5-0833-44f5-b373-3a720b1a3ccf"
+      },
+      "level_keys": [
+        "pl-java-oop-summary-13_pl"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to UML diagrams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-overview-1_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      },
+      "level_keys": [
+        "pl-java-painter-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to UML diagrams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-uml-2_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      },
+      "level_keys": [
+        "pl-java-painter-uml-2_pl"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to UML diagrams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-documentation-video-3_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      },
+      "level_keys": [
+        "pl-java-painter-documentation-video-3_pl"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to UML diagrams"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-practice-4_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      },
+      "level_keys": [
+        "pl-java-painter-practice-4_pl"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using methods that return informaiton"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-return-methods-5_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      },
+      "level_keys": [
+        "pl-java-painter-return-methods-5_pl"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using methods that return informaiton"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-predict-6_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      },
+      "level_keys": [
+        "pl-java-painter-predict-6_pl"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using methods that return informaiton"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-practice-methods-7_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      },
+      "level_keys": [
+        "pl-java-painter-practice-methods-7_pl"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Using methods that return informaiton"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-code-solution-video-8_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      },
+      "level_keys": [
+        "pl-java-painter-code-solution-video-8_pl"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Using methods that return informaiton"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-choice-practice-9_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      },
+      "level_keys": [
+        "pl-java-painter-choice-practice-9_pl"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-painter-conclude-10_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "6aa666e2-aab2-40d6-a848-881b1e10c70a"
+      },
+      "level_keys": [
+        "pl-java-painter-conclude-10_pl"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-overview-1_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-structure-overview-1_pl"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-parts-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-structure-parts-2_pl"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-using-fliles-3_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-design-using-fliles-3_pl"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-file-practice-4_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-design-file-practice-4_pl"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-predict-class-4_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-design-predict-class-4_pl"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-modify-5_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-design-modify-5_pl"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Class Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-modify-6_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      },
+      "level_keys": [
+        "pl-java-class-design-modify-6_pl"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Instance Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-instance-variable-video-7_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      },
+      "level_keys": [
+        "pl-java-class-design-instance-variable-video-7_pl"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Instance Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-instance-variable-info-9_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      },
+      "level_keys": [
+        "pl-java-class-design-instance-variable-info-9_pl"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Instance Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-choice-10_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      },
+      "level_keys": [
+        "pl-java-class-design-choice-10_pl"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Instance Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-chk-und-11_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      },
+      "level_keys": [
+        "pl-java-class-design-chk-und-11_pl"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-12_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-structure-constructors-12_pl"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-predict-13_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-design-no-arg-predict-13_pl"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-invest-14_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-design-no-arg-invest-14_pl"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-15_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-structure-constructors-15_pl"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-no-argument-15_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-structure-no-argument-15_pl"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ava-class-design-param-constructor-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "ava-class-design-param-constructor-18_pl"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 18,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-design-param-constructor-18_pl"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 19,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-param-const-chk-und-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      },
+      "level_keys": [
+        "pl-java-class-design-param-const-chk-und-18_pl"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 20,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "User Input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-scanner-video-19-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "18620139-b3b0-4227-9022-4943a2caded5"
+      },
+      "level_keys": [
+        "pl-java-class-design-scanner-video-19-2_pl"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "User Input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-scanner-practice-21_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "18620139-b3b0-4227-9022-4943a2caded5"
+      },
+      "level_keys": [
+        "pl-java-class-design-scanner-practice-21_pl"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The This Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-this-keyword-22_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      },
+      "level_keys": [
+        "pl-java-class-structure-this-keyword-22_pl"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 23,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The This Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-this-modify-23_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      },
+      "level_keys": [
+        "pl-java-class-design-this-modify-23_pl"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The This Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-this-modify-24_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      },
+      "level_keys": [
+        "pl-java-class-design-this-modify-24_pl"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 25,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "The This Keyword"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-this-choice-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      },
+      "level_keys": [
+        "pl-java-class-design-this-choice-26_pl"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 26,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-methods-info-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-structure-methods-info-26_pl"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 27,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-video_pl"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 28,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-26_pl"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 29,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-27_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-27_pl"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 30,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-28_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-28_pl"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 31,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-structure-mutator-methods-info-29-2_pl"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 32,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-mutator-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-mutator-video_pl"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 33,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-29_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-29_pl"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 34,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-30_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-30_pl"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 35,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-31_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-method-modify-31_pl"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 36,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Accessor and Mutator Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-mutator-check-31_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      },
+      "level_keys": [
+        "pl-java-class-design-accessor-mutator-check-31_pl"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 37,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toString-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-class-design-toString-video_pl"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 38,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-toString-panel-35_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-toString-panel-35_pl"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 39,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-toPrint-info-35_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-class-structure-toPrint-info-35_pl"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 40,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-36_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-modify-36_pl"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 41,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-37_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-modify-37_pl"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 42,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-practice-37_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-class-design-toPrint-practice-37_pl"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 43,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Printing Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-next-steps_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      },
+      "level_keys": [
+        "pl-java-next-steps_pl"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-overview-1_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "2ead0615-8458-4ca9-a838-5f47c835fec7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-intro-video-2_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-intro-video-2_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-predict-3_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-predict-3_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "143e06f1-77e0-40a2-ad82-4b0914e8bb61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-practice-modify-4_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-practice-modify-4_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-neighborhood-5_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-neighborhood-5_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-practice-paint-6_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-practice-paint-6_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "99bad392-86cd-4314-a593-dae9a3aab178"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-classes-objects-7_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-classes-objects-7_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-calling-methods-8_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-calling-methods-8_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-creating-objects-video-9_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-creating-objects-video-9_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-debug-practice-10_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-debug-practice-10_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-painter-practice-11_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-painter-practice-11_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "10d19144-affd-40a6-bb57-2760090a8500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-chk-und-vocab-12_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-chk-und-vocab-12_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b09eace5-0833-44f5-b373-3a720b1a3ccf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-oop-summary-13_pl",
+        "script_level.level_keys": [
+          "pl-java-oop-summary-13_pl"
+        ],
+        "lesson.key": "Getting to Know the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b09eace5-0833-44f5-b373-3a720b1a3ccf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-overview-1_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-uml-2_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-uml-2_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-documentation-video-3_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-documentation-video-3_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-practice-4_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-practice-4_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d0be0e7f-167f-45ff-a319-f0c350d76aa2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-return-methods-5_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-return-methods-5_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-predict-6_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-predict-6_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-practice-methods-7_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-practice-methods-7_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-code-solution-video-8_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-code-solution-video-8_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-choice-practice-9_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-choice-practice-9_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "f8e1526e-3a6b-4295-9bcf-18c14fa595f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-painter-conclude-10_pl",
+        "script_level.level_keys": [
+          "pl-java-painter-conclude-10_pl"
+        ],
+        "lesson.key": "Exploring the Painter Class",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "6aa666e2-aab2-40d6-a848-881b1e10c70a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-overview-1_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-overview-1_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-parts-2_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-parts-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-using-fliles-3_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-using-fliles-3_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-file-practice-4_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-file-practice-4_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-predict-class-4_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-predict-class-4_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-modify-5_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-modify-5_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-modify-6_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-modify-6_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "e374398e-3da5-449e-a274-9aa676f72b87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-instance-variable-video-7_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-instance-variable-video-7_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-instance-variable-info-9_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-instance-variable-info-9_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-choice-10_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-choice-10_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-chk-und-11_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-chk-und-11_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "3caa4716-a261-40fb-9889-55baedd81598"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-constructors-12_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-12_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-no-arg-predict-13_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-predict-13_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-no-arg-invest-14_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-invest-14_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-constructors-15_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-15_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-no-argument-15_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-no-argument-15_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ava-class-design-param-constructor-18_pl",
+        "script_level.level_keys": [
+          "ava-class-design-param-constructor-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-param-constructor-18_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-param-const-chk-und-18_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-param-const-chk-und-18_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "ca766f55-b9b8-4044-85ff-66d242af1807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-scanner-video-19-2_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-scanner-video-19-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "18620139-b3b0-4227-9022-4943a2caded5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-scanner-practice-21_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-scanner-practice-21_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "18620139-b3b0-4227-9022-4943a2caded5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-this-keyword-22_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-this-keyword-22_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-this-modify-23_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-this-modify-23_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-this-modify-24_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-this-modify-24_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-this-choice-26_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-this-choice-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "213c73c7-5b44-40da-bd53-88ac505ea722"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-methods-info-26_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-methods-info-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-video_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-26_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-26_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-27_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-27_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-28_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-28_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-mutator-methods-info-29-2_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-mutator-video_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-mutator-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-29_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-29_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-30_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-30_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-method-modify-31_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-method-modify-31_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-accessor-mutator-check-31_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-accessor-mutator-check-31_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "b2f55987-b597-47d8-ac55-317a723a5f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toString-video_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-toString-video_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-toString-panel-35_pl",
+        "script_level.level_keys": [
+          "pl-java-toString-panel-35_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-toPrint-info-35_pl",
+        "script_level.level_keys": [
+          "pl-java-class-structure-toPrint-info-35_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-modify-36_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-36_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-modify-37_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-modify-37_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-toPrint-practice-37_pl",
+        "script_level.level_keys": [
+          "pl-java-class-design-toPrint-practice-37_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-next-steps_pl",
+        "script_level.level_keys": [
+          "pl-java-next-steps_pl"
+        ],
+        "lesson.key": "Class Structure and Design",
+        "lesson_group.key": "",
+        "script.name": "teaching-oop-java",
+        "activity_section.key": "d057442b-896f-4a3e-82c1-2f83f5de445b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

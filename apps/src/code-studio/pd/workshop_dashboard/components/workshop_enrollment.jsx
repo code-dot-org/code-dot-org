@@ -49,7 +49,9 @@ export default class WorkshopEnrollment extends React.Component {
   render() {
     if (this.props.enrollments.length === 0) {
       const signupUrl =
-        location.origin + '/pd/workshops/' + this.props.workshopId + '/enroll';
+        location.origin +
+        '/professional-learning/workshops/' +
+        this.props.workshopId;
       const signupLink = (
         <a href={signupUrl} target="_blank" rel="noopener noreferrer">
           {signupUrl}

@@ -29,7 +29,7 @@ export default class StudentHomepage extends Component {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
     hasFeedback: PropTypes.bool,
-    sections: shapes.sections,
+    sections: shapes.participantSections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,

@@ -1,0 +1,33 @@
+@import '@code-dot-org/component-library-styles/variables.scss';
+
+$card-width: 309px;
+
+.selfPacedPLCatalog {
+  .plCatalogHeroBanner {
+    background-color: var(--background-neutral-primary);
+  }
+
+  .plCatalogExpandedCardStartLearningButton {
+    flex: 1 0 0;
+  }
+
+  background-color: var(--background-neutral-secondary);
+
+  .bodyContainer {
+    background: var(--background-neutral-secondary);
+
+    > div {
+      background-color: var(--background-neutral-secondary);
+    }
+
+    .catalogContentCards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, $card-width);
+      justify-content: center;
+      grid-gap: 1em;
+      max-width: 60rem;
+      margin: 0 auto 1em auto;
+      }
+
+  }
+}

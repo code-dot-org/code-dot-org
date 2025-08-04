@@ -23,7 +23,8 @@ interface WithRouterPropsType {
 
 interface RouteConfig {
   path: string;
-  breadcrumbs: string;
+  breadcrumbs?: string;
+  childRoutes?: RouteConfig[];
 }
 
 export const WithRouterProps: React.FC<
@@ -39,9 +40,30 @@ export const WithRouterProps: React.FC<
 
   // TODO: remove once ApplicationDashboard is refactored to react-router-dom
   // https://codedotorg.atlassian.net/browse/ACQ-3128
-  const breadcrumbs = routeConfigs?.find(config =>
-    matchPath(config.path, location.pathname)
-  )?.breadcrumbs;
+  // Recursively join parent and child paths for nested route matching
+  const getBreadcrumbs = (
+    configs: RouteConfig[] = [],
+    parentPath = ''
+  ): string | undefined => {
+    for (const config of configs) {
+      const joinedPath = [`/${parentPath}`, config.path]
+        .filter(Boolean)
+        .join('/')
+        .replace(/\/\/+/g, '/');
+
+      if (matchPath(joinedPath, location.pathname)) {
+        return config.breadcrumbs;
+      }
+      if (config.childRoutes) {
+        const childBreadcrumbs = getBreadcrumbs(config.childRoutes, joinedPath);
+        if (childBreadcrumbs) {
+          return childBreadcrumbs;
+        }
+      }
+    }
+  };
+
+  const breadcrumbs = getBreadcrumbs(routeConfigs);
   // Create routes structure that Header expects
   const routes = [
     {}, // First route is not used

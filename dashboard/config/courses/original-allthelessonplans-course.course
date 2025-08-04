@@ -12,7 +12,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "original-allthelessonplans-course",
-    "has_numbered_units": true,
+    "numbered_units": "auto",
     "version_year": "unversioned"
   },
   "resources": [
