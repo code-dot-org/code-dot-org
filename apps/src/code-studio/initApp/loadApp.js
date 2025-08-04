@@ -77,6 +77,10 @@ export function setupApp(appOptions) {
         );
       }
 
+      if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
+        $('#settings-header').show();
+      }
+
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -234,6 +238,28 @@ export function setupApp(appOptions) {
   // stopped being able to use the user agent on the server, and thus try
   // to have the same logic on the client.
   appOptions.noPadding = userAgentParser.isMobile();
+}
+
+/**
+ * Checks if the given app name supports settings.
+ * Currently this is just Blockly labs that support changing the Blockly theme.
+ * @param {string} appName
+ * @param {boolean} droplet
+ * @returns {boolean}
+ */
+function appSupportsSettings(appName, droplet) {
+  const supportedApps = [
+    'bounce',
+    'craft',
+    'dance',
+    'flappy',
+    'poetry',
+    'spritelab',
+    'studio',
+    'turtle',
+  ];
+  // Star Wars Edit Code is considered 'studio' but does not use Blockly.
+  return supportedApps.includes(appName) && !droplet;
 }
 
 /**

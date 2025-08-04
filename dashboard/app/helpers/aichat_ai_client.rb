@@ -3,41 +3,28 @@
 # methods. Currently the two implemented APIs (OpenAI and Gemini) are POST based REST APIs.
 class AichatAiClient
   # Create an instance of the appropriate derived class based on model id.
-  def self.create_instance(model_id)
+  def self.create_instance(model_id, usage_reporter = nil)
+    #TODO make model api mode and this check based on SharedConstants::AICHAT_MODEL_VERSION
     # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.
     if model_id == "gpt-4o-mini"
-      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION)
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
     else
-      return AichatGeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id)
+      return AichatGeminiClient.new(CDO.google_gemini_student_learning_api_key, model_id, usage_reporter)
     end
   end
 
   # Call the API (through methods overridden in derived class) and get response text to send back to user.
-  def get_response_text(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+  # Accept a config hash, request array and optional context array.  These types are defined and documented
+  # in `aichat_ai_client_types.rb``.
+  def get_response_text(config, request, context = [])
+    # Assert the parameter types are correct, using RubyTypes.
+    AichatRubyTypes.assert_value_is_type(config, AichatAiClientTypes::AiConfig)
+    AichatRubyTypes.assert_value_is_type(request, AichatAiClientTypes::AiRequest)
+    AichatRubyTypes.assert_value_is_type(context, AichatAiClientTypes::AiContext)
+
     start_time = Time.now
 
-    level = Level.find_by(id: level_id)
-
-    # Level system prompt - string or nil.
-    level_system_prompt = level&.properties&.dig('aichat_settings', 'levelSystemPrompt')
-
-    # Level name - string.
-    level_name = level&.name
-
-    system_instructions = combine_system_instructions(
-      system_prompt,
-      level_system_prompt,
-      retrieval_contexts
-    )
-
-    body = create_body(
-      stored_messages,
-      new_message,
-      system_instructions,
-      temperature,
-      level_name,
-      encrypted_channel_id
-    )
+    body = create_body(config, request, context)
 
     http_response = HTTParty.post(
       url,
@@ -54,27 +41,30 @@ class AichatAiClient
     response_text = extract_text_response_from_body(response_body)
 
     usage = get_usage_from_body(response_body)
-    messages_with_assets_count = get_messages_with_assets_count(stored_messages, new_message)
 
     response_time = Time.now - start_time
-    report_usage_and_throttling_metrics(usage, messages_with_assets_count, level_id, project_id, user_id, model_id, response_time)
+
+    # Disable metrics temporarily for gemini until reporter is customized for gemini.
+    if is_a?(AichatOpenaiResponsesClient)
+      usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
+    end
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 
     response_text
   end
 
-  attr_accessor :api_key, :model
+  # TODO - implement structured output
+  # def get_structured_response_json(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id)
+  # end
 
-  TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
-  DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
-  ONE_DAY_S = 60 * 60 * 24
-  DEFAULT_TEMPERATURE = 0
+  attr_accessor :api_key, :model, :usage_reporter
 
   # Private initializer - all instances should be created with `create_instance` factory.
-  private def initialize(api_key, model)
+  private def initialize(api_key, model, usage_reporter = nil)
     @api_key = api_key
     @model = model
+    @usage_reporter = usage_reporter
   end
 
   # The following methods MUST be Implemented By Derived class.
@@ -102,8 +92,7 @@ class AichatAiClient
     raise_not_implemented_error
   end
 
-  # Create request body from stored_messages, new_message, system_instructions, temperature,
-  # level_name, and encrypted_channel_id.
+  # Create request body from config, request and context
   private def create_body
     raise_not_implemented_error
   end
@@ -116,15 +105,6 @@ class AichatAiClient
     {
       "Content-Type" => "application/json",
     }
-  end
-
-  # Create a single system instruction from system_prompt + level_system_prompt + retrieval_contexts.
-  private def combine_system_instructions(system_prompt, level_system_prompt, retrieval_contexts)
-    instructions = ""
-    instructions << (level_system_prompt + " ") if level_system_prompt.present?
-    instructions << (system_prompt + " ") if system_prompt.present?
-    instructions << retrieval_contexts.join(" ") if retrieval_contexts.present?
-    instructions
   end
 
   # Helper to determine if a filename is an image (by extension).
@@ -144,105 +124,6 @@ class AichatAiClient
     text = message['chatMessageText']
     text = text + "\n" + message['hiddenContext'] if message['hiddenContext']
     text
-  end
-
-  # Helper to get message and asset counts used for logging.
-  private def get_messages_with_assets_count(stored_messages, new_message)
-    messages = stored_messages + [new_message]
-
-    pdfs_count = images_count = messages_with_assets_count = 0
-
-    messages.each do |message|
-      if message['assets'].is_a?(Array)
-        messages_with_assets_count +=1 unless message['assets'].empty?
-
-        message['assets'].each do |asset|
-          filename = asset['filename']
-          pdfs_count += 1 if file_is_pdf?(filename)
-          images_count += 1 if file_is_image?(filename)
-        end
-      end
-    end
-
-    {
-      total: messages.count,
-       withAssets: messages_with_assets_count,
-       pdfs: pdfs_count,
-       images: images_count
-    }
-  end
-
-  # Note - this is temporarily disabled for gemini by overriding this method there with a "no-op".
-  # Reports and logs usage metrics to Cloudwatch and our throttling system.
-  private def report_usage_and_throttling_metrics(usage, message_and_file_counts, level_id, project_id, user_id, model_id, response_time)
-    unless usage
-      Honeybadger.notify("OpenAI response detected without usage statistics, which are required for throttling.")
-      return
-    end
-
-    # Pull out token counts.
-    prompt_tokens = usage['prompt_tokens']
-    completion_tokens = usage['completion_tokens']
-    cached_prompt_tokens = usage['cached_prompt_tokens']
-
-    # Typical usage of our throttling module calls throttle at the point where it's deciding whether to throttle or not.
-    # In this case, we are just reporting token usage, and subsequent calls to our aichat_request endpoint check whether
-    # the user has been throttled.
-    #
-    # Prompt tokens are by far and away our largest cost driver (and the piece that users actually control),
-    # so we throttle on that.
-    limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
-    Cdo::Throttle.throttle(AichatAiHelper.token_throttling_key(model_id, user_id),
-      limit,
-      ONE_DAY_S,
-      throttle_for: ONE_DAY_S,
-      count: prompt_tokens
-    )
-
-    # Calculate costs.
-    input_rate = 0.15 / 1_000_000 # $0.15 per million tokens.
-    cached_input_rate = 0.075 / 1_000_000 # $0.075 per million tokens.
-    output_rate = 0.60 / 1_000_000 # $0.60 per million tokens.
-
-    input_cost = (prompt_tokens * input_rate) + (cached_prompt_tokens * cached_input_rate)
-    output_cost = completion_tokens * output_rate
-    total_cost = input_cost + output_cost
-
-    is_multimodal = message_and_file_counts[:withAssets] > 0
-
-    log_payload = {
-      event: 'aichat_openai_usage',
-      multimodal: is_multimodal,
-      usage: usage,
-      messages: message_and_file_counts,
-      cost: {
-        input: "$#{format("%.6f", input_cost)}",
-        output: "$#{format("%.6f", output_cost)}",
-        total: "$#{format("%.6f", total_cost)}"
-      },
-      responseTime: response_time,
-      levelId: level_id,
-      projectId: project_id,
-      userId: user_id
-    }
-
-    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', false)
-
-    metrics = [
-      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens], ['CachedTokens', cached_prompt_tokens]
-    ].map do |key, value|
-      {
-        metric_name: "AichatOpenaiRequest.#{key}",
-        value: value,
-        unit: 'Count',
-        timestamp: Time.now,
-        dimensions: [
-          {name: 'Environment', value: CDO.rack_env},
-          {name: 'Multimodal', value: is_multimodal.to_s},
-        ]
-      }
-    end
-    Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
   end
 
   private def raise_not_implemented_error

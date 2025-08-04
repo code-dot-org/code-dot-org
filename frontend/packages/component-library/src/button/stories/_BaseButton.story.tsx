@@ -1,4 +1,4 @@
-import {Meta, StoryFn} from '@storybook/react';
+import {Meta, StoryFn} from '@storybook/react-webpack5';
 
 import _BaseButton, {_BaseButtonProps} from '../_BaseButton';
 import {buttonColors} from '../index';

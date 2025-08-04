@@ -238,7 +238,7 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
-        unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
+        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
@@ -325,7 +325,7 @@ class UnitGroup < ApplicationRecord
         course_offering_id: course_version&.course_offering&.id,
         course_version_id: course_version&.id,
         course_path: link,
-        course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
+        course_offering_edit_path: for_edit && course_version&.course_offering ? edit_course_offering_path(course_version.course_offering.key) : nil
       }
     end
   end
