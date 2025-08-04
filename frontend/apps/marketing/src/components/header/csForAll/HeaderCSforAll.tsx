@@ -61,6 +61,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
         component="nav"
         elevation={0}
         position="relative"
+        aria-label="Main navigation"
         sx={headerStyles.appBar}
       >
         <Toolbar variant="dense" sx={headerStyles.toolBar} disableGutters>
@@ -78,7 +79,7 @@ const HeaderCSforAll: React.FC<HeaderProps> = ({className}) => {
       </AppBar>
 
       {/* Drawer */}
-      <Box component="nav">
+      <Box component="nav" aria-label="Main mobile navigation">
         <Drawer
           variant="temporary"
           open={drawerOpen}
