@@ -6,7 +6,12 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
@@ -69,11 +74,17 @@ describe('UnitEditor', () => {
       locales: [],
       name: 'test-unit',
       unitFamilies: [],
+      versionYearOptions: [],
+      initialFamilyName: '',
+      initialVersionYear: '',
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.in_development,
       initialHideWithinCourse: false,
+      initialInstructionType: InstructionType.teacher_led,
+      initialInstructorAudience: InstructorAudience.teacher,
+      initialParticipantAudience: ParticipantAudience.student,
       initialSupportedLocales: [],
       initialTopicTags: [],
       hasCourse: false,
