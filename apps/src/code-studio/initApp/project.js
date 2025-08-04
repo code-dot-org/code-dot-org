@@ -348,30 +348,6 @@ var projects = (module.exports = {
     return currentSourceVersionId;
   },
 
-  disableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/disable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
-  enableAutoContentModeration() {
-    return new Promise((resolve, reject) => {
-      channels.update(
-        `${this.getCurrentId()}/enable-content-moderation`,
-        null,
-        err => {
-          err ? reject(err) : resolve();
-        }
-      );
-    });
-  },
-
   /**
    * Allows admin user to reset abuse score to 0 and then saves the project.
    */

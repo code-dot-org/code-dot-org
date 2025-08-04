@@ -6049,6 +6049,7 @@ en:
           description_short: This is a short description.
           description_student: This is a student description.
           description_teacher: This is a teacher description.
+          version_title: ''
         focus-on-hardware-2025:
           title: Focus on Hardware '25-'26 (CS Discoveries)
           description_short: A collection of Computer Science Discovery units that explore how computers and smaller physical devices work
@@ -6192,6 +6193,18 @@ en:
           version_title: '2020'
         original-allthettsthings-course:
           title: original-allthettsthings-course
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-original-course-2017:
+          title: ui-test-original-course-2017
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-original-course-2019:
+          title: ui-test-original-course-2019
           description_short: ''
           description_student: ''
           description_teacher: ''

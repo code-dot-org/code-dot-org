@@ -3,6 +3,7 @@ import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -12,6 +13,7 @@ import {getBaseAssetUrl} from '../appConfig';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import {useMusicSettings} from '../settings';
 
 import moduleStyles from './HeaderButtons.module.scss';
 
@@ -174,6 +176,14 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
               className={'icon'}
             />
           </button>
+        </>
+      )}
+      <SettingsButton
+        settings={useMusicSettings()}
+        className={classNames(moduleStyles.button)}
+      />
+      {!readOnlyWorkspace && (
+        <>
           <button
             onClick={() => onClickUndoRedo('undo')}
             type="button"

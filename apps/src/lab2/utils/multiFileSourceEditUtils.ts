@@ -1,7 +1,12 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {getOpenFileIds, sortFilesByName} from '@cdo/apps/codebridge/utils';
+import {getOpenFileIds} from '@cdo/apps/codebridge/utils';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
-import {FileId, FolderId, MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  FileId,
+  FolderId,
+  MultiFileSource,
+  ProjectFile,
+} from '@cdo/apps/lab2/types';
 
 import {
   getNextFileId,
@@ -92,34 +97,12 @@ export const closeFileHelper = (
     openFiles: source.openFiles?.filter(openFileId => openFileId !== fileId),
   };
 
-  // If the file was active, then we want to activate whatever file was next to it.
-  // Choose the recent file before hand if possible, and otherwise after, alphabetically sorted.
-  if (file.active) {
-    // List of open files before we closed.
-    const oldSortedFiles = sortFilesByName(source, {
-      mustBeOpen: true,
-    });
-    // Find our index.
-    const fileIdx = oldSortedFiles.findIndex(f => f.id === file.id)!;
-    // If there's a file before us, use that one.
-
-    let newActiveFileId;
-    if (fileIdx > 0) {
-      newActiveFileId = oldSortedFiles[fileIdx - 1].id;
-    }
-    // Otherwise, check to see if there's a file after us. And if so, use that one.
-    // We're removing this file from our list, so we have one fewer item in the list,
-    // so we need to decrement by 1
-    else if (fileIdx < oldSortedFiles.length - 1) {
-      newActiveFileId = oldSortedFiles[fileIdx + 1].id;
-    }
-
-    if (newActiveFileId) {
-      newSource.files[newActiveFileId] = {
-        ...newSource.files[newActiveFileId],
-        active: true,
-      };
-    }
+  const newActiveFileId = getNewActiveFileId(source, file);
+  if (newActiveFileId) {
+    newSource.files[newActiveFileId] = {
+      ...newSource.files[newActiveFileId],
+      active: true,
+    };
   }
 
   return newSource;
@@ -144,8 +127,16 @@ export const deleteFileHelper = (
     },
     openFiles: newOpenFileIds,
   };
-
+  const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
+
+  const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
+  if (newActiveFileId) {
+    newSource.files[newActiveFileId] = {
+      ...newSource.files[newActiveFileId],
+      active: true,
+    };
+  }
 
   return newSource;
 };
@@ -217,5 +208,51 @@ export const deleteFolderHelper = (
     }
   }
 
+  // Update the active file if necessary.
+  const activeFile = Object.values(newSource.files).find(f => f.active);
+  if (!activeFile) {
+    if (newSource.openFiles && newSource.openFiles.length > 0) {
+      // If there are any open files, set the first one as active.
+      const firstOpenFileId = newSource.openFiles[0];
+      newSource.files[firstOpenFileId] = {
+        ...newSource.files[firstOpenFileId],
+        active: true,
+      };
+    }
+  }
+
   return newSource;
+};
+
+// If we either close or delete a file, we may need to update the active file.
+// This will happen if the file being closed or deleted is the active file.
+// Return the new active file ID, or undefined if there is no new active file.
+const getNewActiveFileId = (
+  source: MultiFileSource,
+  fileBeingClosed: ProjectFile
+) => {
+  if (fileBeingClosed.active) {
+    // List of open files before fileBeingClosed was closed.
+    const oldOpenFiles = source.openFiles;
+    if (!oldOpenFiles || oldOpenFiles.length === 0) {
+      return undefined;
+    }
+    // Find the index of fileBeingClosed.
+    const fileIdx = oldOpenFiles.findIndex(f => f === fileBeingClosed.id)!;
+    // If there's a file before fileBeingClosed, use that one.
+
+    let newActiveFileId;
+    if (fileIdx > 0) {
+      newActiveFileId = oldOpenFiles[fileIdx - 1];
+    }
+    // Otherwise, check to see if there's a file after fileBeingClosed. If so, use that one.
+    // We're removing fileBeingClosed from the list of open files, so we have one fewer item in the list,
+    // so we need to decrement by 1
+    else if (fileIdx < oldOpenFiles.length - 1) {
+      newActiveFileId = oldOpenFiles[fileIdx + 1];
+    }
+
+    return newActiveFileId;
+  }
+  return undefined;
 };

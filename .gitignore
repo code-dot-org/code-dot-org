@@ -9,16 +9,12 @@
 *.pid.oldbin
 *_temp.json
 *~
-**/.bundle
 **/.vscode
-dashboard/brakeman_security_report.htm
 .DS_Store
 .dropbox
 .tmputils
-.rakeTasks
 .tscache/
 .idea/
-.irb_history
 jsconfig.json
 npm-debug.log
 /.dropbox.cache
@@ -34,6 +30,17 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
+
+#
+# Ruby Ignores
+#
+**/.bundle
+.irb_history
+dashboard/brakeman_security_report.htm
+.rakeTasks
+/vendor/bundle
+/dashboard/vendor/bundle
+/cookbooks/vendor/bundle
 
 #
 # JS Ignores

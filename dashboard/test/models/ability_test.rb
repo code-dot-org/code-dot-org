@@ -604,6 +604,19 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
+  test 'coteachers can manage feedback for students in a section they own' do
+    teacher = create :teacher
+    coteacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    create :section_instructor, section: section, instructor: coteacher, status: :active
+    section.add_student student
+    feedback = create :teacher_feedback, student: student, teacher: teacher
+
+    assert Ability.new(coteacher).can? :create, feedback
+    assert Ability.new(coteacher).can? :get_feedback_from_teacher, feedback
+  end
+
   test 'teachers cannot manage feedback for students not in a section they own' do
     teacher = create :teacher
     student = create :student
@@ -639,14 +652,28 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(other_student).can? :get_feedbacks, feedback
   end
 
-  test 'teacher cannot get all the feedback for student work on a level' do
+  test 'teacher can get all the feedback for a student they teach on a level' do
     teacher = create :teacher
     student = create :student
     section = create :section, user: teacher
     section.add_student student
     feedback = create :teacher_feedback, student: student
+    other_feedback = create :teacher_feedback, student: student, teacher: teacher
 
-    refute Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, other_feedback
+  end
+  test 'teacher cannot get all the feedback for a student they do not teach on a level' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, user: teacher
+    section.add_student student
+    feedback = create :teacher_feedback, student: student
+    other_feedback = create :teacher_feedback, student: student, teacher: teacher
+    other_teacher = create :teacher
+
+    refute Ability.new(other_teacher).can? :get_feedbacks, feedback
+    refute Ability.new(other_teacher).can? :get_feedbacks, other_feedback
   end
 
   test 'teacher can view as user for student in their section' do

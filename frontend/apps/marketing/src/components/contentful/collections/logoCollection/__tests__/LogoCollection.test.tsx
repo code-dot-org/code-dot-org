@@ -5,6 +5,12 @@ import LogoCollection, {LogoCollectionProps} from '../LogoCollection';
 jest.mock('@/selectors/contentful/getImage', () => ({
   getAbsoluteImageUrl: jest.fn(() => 'https://example.com/logo.png'),
 }));
+jest.mock('@contentful/experiences-sdk-react', () => ({
+  ...jest.requireActual('@contentful/experiences-sdk-react'),
+  useInMemoryEntities: jest.fn(() => ({
+    maybeResolveLink: jest.fn().mockImplementation(link => link),
+  })),
+}));
 
 const mockLogos: LogoCollectionProps['logos'] = [
   {

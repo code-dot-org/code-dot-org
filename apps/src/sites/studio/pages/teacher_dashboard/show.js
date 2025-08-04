@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {displayDifferentiationChat} from '@cdo/apps/aiDifferentiation/aiDiffUtils';
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -91,7 +90,7 @@ $(document).ready(function () {
       {sections.length === 0 ? (
         // If a teacher has no sections, we will send them directly to the homepage to bypass
         // all of the section loading logic in the TeacherNavigationRouter.
-        <TeacherHomepage />
+        <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
@@ -101,5 +100,4 @@ $(document).ready(function () {
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
-  displayDifferentiationChat();
 });

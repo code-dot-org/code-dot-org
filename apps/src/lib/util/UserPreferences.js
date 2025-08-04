@@ -62,6 +62,16 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save whether the user has already seen the Welcome Popup for teacher homepage v2.
+   * @param {boolean} hasSeenHomepageWelcome: True if the user has seen the welcome, false otherwise.
+   */
+  setHasSeenProgressTableInvite(hasSeenHomepageWelcome) {
+    return $.post(`/api/v1/users/has_seen_homepage_welcome`, {
+      has_seen_homepage_welcome: hasSeenHomepageWelcome,
+    });
+  }
+
+  /**
    * Save the preference to opt-out of AI Rubrics (AI TA).
    * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
    */
@@ -197,7 +207,9 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {function} [errorCallback]
    */
   async getBlocklyTheme(errorCallback) {
-    const theme = await this.getThemeSettings(errorCallback);
+    const theme = await this.getThemeSettings(() => ({
+      blockly: errorCallback(),
+    }));
     return theme?.blockly ?? null;
   }
 
