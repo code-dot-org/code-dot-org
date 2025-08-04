@@ -5,8 +5,7 @@ import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
 import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
-import HeaderCorporateSite from '@/components/header/corporateSite/HeaderCorporateSite';
-import HeaderCSforAll from '@/components/header/csForAll/HeaderCSforAll';
+import {getHeader} from '@/components/header/Header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
@@ -38,15 +37,6 @@ export default async function Layout({
   const localeConfig = SUPPORTED_LOCALES_MAP.get(locale);
   const theme = getMuiTheme(brand);
   const isDraftModeEnabled = (await draftMode()).isEnabled;
-  // Get Header component based on brand
-  const getHeader = () => {
-    switch (brand) {
-      case Brand.CS_FOR_ALL:
-        return <HeaderCSforAll />;
-      case Brand.CODE_DOT_ORG:
-        return <HeaderCorporateSite />;
-    }
-  };
   // Get Footer component based on brand
   const getFooter = () => {
     switch (brand) {
@@ -80,7 +70,7 @@ export default async function Layout({
                 clientKey={statsigClientKey}
                 values={statsigBootstrapValues}
               >
-                {getHeader()}
+                {getHeader(brand)}
                 {children}
                 {getFooter()}
               </StatsigProvider>
