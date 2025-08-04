@@ -809,7 +809,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'end of lesson' do
-    script = Unit.find_by_name('course1')
+    script = create :unit, :with_levels, lessons_count: 4, levels_count: 3
 
     assert script.lessons[0].script_levels.last.end_of_lesson?
     assert script.lessons[1].script_levels.last.end_of_lesson?
