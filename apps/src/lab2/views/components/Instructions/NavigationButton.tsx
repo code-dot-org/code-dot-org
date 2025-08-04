@@ -27,6 +27,7 @@ interface NavigationButtonProps {
   hasEdited: boolean;
   className?: string;
   size?: ComponentSizeXSToL;
+  requireRun?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
@@ -35,23 +36,30 @@ const NavigationButton: React.FC<NavigationButtonProps> = ({
   hasEdited,
   className,
   size,
+  requireRun,
 }) => {
-  return levelProperties.submittable ? (
-    <SubmitButton
-      levelId={levelProperties.id}
-      appName={levelProperties.appName}
-      disableEditRunForSubmission={levelProperties.disableEditRunForSubmission}
-      disableRunForSubmission={levelProperties.appName === 'weblab2'}
-      hasRun={hasRun}
-      hasEdited={hasEdited}
-      className={className}
-    />
-  ) : (
+  if (levelProperties.submittable) {
+    return (
+      <SubmitButton
+        levelId={levelProperties.id}
+        appName={levelProperties.appName}
+        disableEditRunForSubmission={
+          levelProperties.disableEditRunForSubmission
+        }
+        hasRun={hasRun}
+        hasEdited={hasEdited}
+        className={className}
+      />
+    );
+  }
+
+  return (
     <ContinueButton
       className={className}
       size={size}
       hasRun={hasRun}
       isPredictLevel={levelProperties.predictSettings?.isPredictLevel}
+      requireRun={requireRun}
     />
   );
 };
@@ -61,6 +69,7 @@ interface ContinueButtonProps {
   size?: ComponentSizeXSToL;
   isPredictLevel?: boolean;
   hasRun?: boolean;
+  requireRun?: boolean;
 }
 
 /**
@@ -71,6 +80,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   size,
   isPredictLevel,
   hasRun,
+  requireRun,
 }) => {
   const dispatch = useAppDispatch();
   const hasNextLevel = useAppSelector(
@@ -96,7 +106,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     } else if (hasConditions) {
       return validationSatisfied;
     } else {
-      return hasRun;
+      return !requireRun || hasRun;
     }
   }, [
     hasRun,
@@ -104,6 +114,7 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
     isPredictLevel,
     hasSubmittedPredictResponse,
     validationSatisfied,
+    requireRun,
   ]);
 
   const text = hasNextLevel ? commonI18n.continue() : commonI18n.finish();
@@ -137,7 +148,6 @@ interface SubmitButtonProps {
   hasRun: boolean;
   hasEdited: boolean;
   disableEditRunForSubmission?: boolean;
-  disableRunForSubmission?: boolean;
   className?: string;
 }
 
@@ -150,7 +160,6 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   hasRun,
   hasEdited,
   disableEditRunForSubmission = false,
-  disableRunForSubmission = false,
   className,
 }) => {
   const hasSubmitted = useAppSelector(
@@ -161,10 +170,7 @@ const SubmitButton: React.FC<SubmitButtonProps> = ({
   );
 
   const enabled =
-    disableEditRunForSubmission ||
-    (disableRunForSubmission && hasEdited) ||
-    hasSubmitted ||
-    (hasRun && hasEdited);
+    disableEditRunForSubmission || hasSubmitted || (hasRun && hasEdited);
   const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
 
   const dialogControl = useDialogControl();
