@@ -106,7 +106,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
       >
         {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
           <MenuItem
-            key={`${href ?? 'nohref'}-${label}`}
+            key={href ? `${href}-${label}` : `nohref-${label}`}
             onClick={handleClose}
             disableRipple
             sx={styles.menuItem}

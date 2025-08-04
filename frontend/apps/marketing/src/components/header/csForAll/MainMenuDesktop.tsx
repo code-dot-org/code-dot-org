@@ -1,6 +1,5 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import {useMemo} from 'react';
 
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
@@ -36,27 +35,6 @@ const styles = {
     flexDirection: 'row',
     gap: 1,
   },
-};
-
-export const useMenuConfiguration = (
-  topLevelLinks: {linkList: LinkItemProps[]} | null,
-  dropdownConfigs: Record<string, MenuConfig> = {},
-): MenuItemConfig[] => {
-  return useMemo(() => {
-    if (!topLevelLinks?.linkList) return [];
-
-    return topLevelLinks.linkList.map((link): MenuItemConfig => {
-      const dropdownConfig = Object.values(dropdownConfigs).find(
-        config => config.parentId === link.id,
-      );
-
-      return {
-        type: dropdownConfig ? 'dropdown' : 'button',
-        topLevelLink: link,
-        dropdownConfig,
-      };
-    });
-  }, [topLevelLinks, dropdownConfigs]);
 };
 
 const MainMenuDesktop = ({
