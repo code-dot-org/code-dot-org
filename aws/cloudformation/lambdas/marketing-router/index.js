@@ -776,6 +776,7 @@ const marketingPaths = {
   "/promote/wv": true,
   "/promote/wi": true,
   "/promote/wy": true,
+  "/back-to-school-kit": true,
 }
 
 const pathPatterns = [
