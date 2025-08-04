@@ -156,6 +156,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_response :success
       json_response = JSON.parse(response.body)
       assert_equal "course", json_response["context_type"]
+      assert_equal "hello", json_response["title"]
       assert_equal 2, json_response["messages"].count
       assert_equal "hello", json_response["messages"][0]["content"]
       assert_equal "beep boop", json_response["messages"][1]["content"]

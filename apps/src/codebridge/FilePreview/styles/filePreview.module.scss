@@ -7,3 +7,15 @@
 .iframePreview {
   border: 2px solid var(--borders-neutral-primary);
 }
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+// While the preview is being resized, disable pointer events
+// so the resize handle can be used without interference.
+.resizing {
+  pointer-events: none;
+}

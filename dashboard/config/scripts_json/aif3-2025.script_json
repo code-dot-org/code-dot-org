@@ -35,7 +35,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-18 19:03:59 UTC",
+    "serialized_at": "2025-08-01 18:03:59 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6187,7 +6187,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csaif3-2025/resources",
+      "url": "/s/aif3-2025/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -6198,7 +6198,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csaif3-2025/standards",
+      "url": "/s/aif3-2025/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -6209,7 +6209,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csaif3-2025/vocab",
+      "url": "/s/aif3-2025/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
