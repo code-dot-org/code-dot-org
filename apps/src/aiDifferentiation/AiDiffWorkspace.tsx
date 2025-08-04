@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import HttpClient from '../util/HttpClient';
 
@@ -32,7 +32,7 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
     return response.value;
   }
 
-  const fetchThreads = () => {
+  const fetchThreads = useCallback(() => {
     asyncFetchThreads().then(response => {
       setThreads(
         response.sort((a, b) => {
@@ -40,19 +40,14 @@ const AiDiffWorkSpace: React.FC<AiDiffWorkSpaceProps> = ({
         })
       );
     });
-  };
+  }, [setThreads]);
 
   useEffect(() => {
     if (showSidebar) {
-      asyncFetchThreads().then(response => {
-        setThreads(
-          response.sort((a, b) => {
-            return a.updatedAt > b.updatedAt ? -1 : 1;
-          })
-        );
-      });
+      fetchThreads();
+      console.log('in use effect');
     }
-  }, [showSidebar]);
+  }, [showSidebar, fetchThreads]);
 
   return (
     <div className={style.aiDiffWorkspace}>
