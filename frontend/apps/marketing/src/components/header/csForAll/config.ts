@@ -14,29 +14,17 @@ const SHARED_LINKS = {
     href: '/advocacy',
     label: 'Advocacy',
   },
-  AI_LITERACY: {
-    href: '/ai-literacy',
-    label: 'AI Literacy',
-  },
-  CS_ED_CON: {
-    href: '/cs-ed-con',
-    label: 'CSEdCon',
+  CS_IS_EVERYTHING: {
+    href: '/cs-is-everything',
+    label: 'CS is Everything',
   },
   DONATE: {
-    href: '/donate',
+    href: 'https://donate.code.org/campaign/708610/donate',
     label: 'Donate',
   },
-  GENDER_GAP: {
-    href: '/gender-gap',
-    label: 'Gender Gap',
-  },
   GET_INVOLVED: {
-    href: '/get-involved',
+    href: '/open-letter-unlock-8',
     label: 'Get Involved',
-  },
-  GRAD_REQUIREMENTS: {
-    href: '/grad-requirements',
-    label: 'Grad Requirements',
   },
   HOME: {
     href: '/',
@@ -58,16 +46,28 @@ const SHARED_LINKS = {
     href: '/news-and-resources',
     label: 'News & Resources',
   },
+  PRIVACY_POLICY: {
+    href: '/privacy-policy',
+    label: 'Privacy Policy',
+  },
   STATE_OF_CS_REPORT: {
-    href: '/state-of-cs-report',
+    href: 'https://advocacy.code.org/stateofcs/',
     label: 'State of CS Report',
   },
   TAKE_ACTION: {
     href: '/take-action',
     label: 'Take Action',
   },
+  TEACH_AI: {
+    href: 'https://www.teachai.org/',
+    label: 'Teach AI',
+  },
+  UNLOCK8: {
+    href: '/unlock8',
+    label: 'Unlock8',
+  },
   UNLOCK8_PETITION: {
-    href: '/unlock8-petition',
+    href: '/open-letter-unlock-8',
     label: 'Unlock8 Petition',
   },
 } as const;
@@ -105,9 +105,9 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
 // Main Menu Issues Dropdown Links
 export const ISSUES_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
-    createLinkItem(SHARED_LINKS.GENDER_GAP),
-    createLinkItem(SHARED_LINKS.GRAD_REQUIREMENTS),
-    createLinkItem(SHARED_LINKS.AI_LITERACY),
+    createLinkItem(SHARED_LINKS.CS_IS_EVERYTHING),
+    createLinkItem(SHARED_LINKS.UNLOCK8),
+    createLinkItem(SHARED_LINKS.TEACH_AI),
   ],
 };
 
@@ -115,8 +115,6 @@ export const ISSUES_LINKS: {linkList: LinkItemProps[]} = {
 export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
     createLinkItem(SHARED_LINKS.UNLOCK8_PETITION),
-    createLinkItem(SHARED_LINKS.CS_ED_CON),
-    createLinkItem(SHARED_LINKS.ADVOCACY),
     createLinkItem(SHARED_LINKS.STATE_OF_CS_REPORT),
   ],
 };

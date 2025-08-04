@@ -1,6 +1,9 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
+import {isExternalLink} from '@/components/common/utils';
+import {Brand} from '@/config/brand';
+
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
 import DropdownMenu from './DropdownMenu';
@@ -25,6 +28,8 @@ export interface MenuItemConfig {
 interface MainMenuDesktopProps {
   /** Main menu items */
   mainMenuDesktopItems: MenuItemConfig[];
+  /** Brand for the links, used with external links */
+  brand?: Brand;
   /** Custom class */
   className?: string;
 }
@@ -39,6 +44,7 @@ const styles = {
 
 const MainMenuDesktop = ({
   mainMenuDesktopItems,
+  brand = Brand.CS_FOR_ALL,
   className = 'link-list-desktop',
 }: MainMenuDesktopProps) => {
   const renderMenuItem = (item: MenuItemConfig, index: number) => {
@@ -65,6 +71,16 @@ const MainMenuDesktop = ({
           disableElevation
           disableRipple
           sx={buttonStyles.button}
+          target={
+            isExternalLink(topLevelLink.href, brand, 'production')
+              ? '_blank'
+              : undefined
+          }
+          rel={
+            isExternalLink(topLevelLink.href, brand, 'production')
+              ? 'noopener noreferrer'
+              : undefined
+          }
         >
           {topLevelLink.label}
         </Button>
