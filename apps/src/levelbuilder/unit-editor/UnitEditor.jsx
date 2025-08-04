@@ -37,7 +37,7 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {lessonGroupShape} from './shapes';
 
 /**
- * Component for editing units in unit_groups or stand alone courses
+ * Component for editing units
  */
 class UnitEditor extends React.Component {
   static propTypes = {
@@ -95,7 +95,6 @@ class UnitEditor extends React.Component {
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
-    initialIsCourse: PropTypes.bool,
     initialShowCalendar: PropTypes.bool,
     initialWeeklyInstructionalMinutes: PropTypes.number,
     isMigrated: PropTypes.bool,
@@ -126,7 +125,6 @@ class UnitEditor extends React.Component {
       ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
       savedFamilyName: this.props.initialFamilyName,
-      isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
         this.props.initialWeeklyInstructionalMinutes || '',
@@ -223,16 +221,6 @@ class UnitEditor extends React.Component {
           'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.',
       });
       return;
-    } else if (
-      this.state.isCourse &&
-      ((this.state.versionYear !== '' && this.state.familyName === '') ||
-        (this.state.versionYear === '' && this.state.familyName !== ''))
-    ) {
-      this.setState({
-        isSaving: false,
-        error: 'Please set both version year and family name.',
-      });
-      return;
     }
 
     if (
@@ -255,7 +243,6 @@ class UnitEditor extends React.Component {
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
-      is_course: this.state.isCourse,
       show_calendar: this.state.showCalendar,
       weekly_instructional_minutes: parseInt(
         this.state.weeklyInstructionalMinutes
