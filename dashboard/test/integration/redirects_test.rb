@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class RedirectsTest < ActionDispatch::IntegrationTest
+  setup_all do
+    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
+    @multi_lesson_unit_group = create :single_unit_course, :stable, unit: @multi_lesson_unit
+  end
+
   test 'redirect beta' do
     get '/beta'
     assert_redirected_to '/'
@@ -67,10 +72,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/frozen?lang=es'
     assert_equal 'es-ES', cookies[:language_]
 
-    get '/s/course1/lessons/1/levels/1/lang/es'
-    assert_redirected_to '/s/course1/lessons/1/levels/1?set_locale=es&lang=es'
+    get "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1/lang/es"
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?set_locale=es&lang=es"
     follow_redirect!
-    assert_redirected_to '/s/course1/lessons/1/levels/1?lang=es'
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
     assert_equal 'es-ES', cookies[:language_]
   end
 

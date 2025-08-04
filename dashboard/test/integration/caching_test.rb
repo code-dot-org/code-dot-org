@@ -106,17 +106,17 @@ class CachingTest < ActionDispatch::IntegrationTest
   test 'should cache script after initialization' do
     Unit.unit_cache_to_cache
     assert_queries(0, ignore_filters: [], capture_filters: [/script\.rb.*get_from_cache/]) do
-      get '/courses/course1/units/1/lessons/3/levels/1'
+      get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
     end
   end
 
   test 'redirects old stage url without hitting database' do
     assert_queries(0, ignore_filters: [], capture_filters: []) do
-      get '/s/course1/stage/3/puzzle/1'
+      get "/s/#{@multi_lesson_unit.name}/stage/3/puzzle/1"
     end
     assert_response :redirect
-    assert_redirected_to '/s/course1/lessons/3/levels/1'
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/3/levels/1"
     follow_redirect!
-    assert_redirected_to '/courses/course1/units/1/lessons/3/levels/1'
+    assert_redirected_to "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
   end
 end
