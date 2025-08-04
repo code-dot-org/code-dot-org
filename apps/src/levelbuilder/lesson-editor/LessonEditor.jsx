@@ -419,7 +419,9 @@ class LessonEditor extends Component {
                   courseVersionId={unitInfo.courseVersionId}
                 />
               ) : (
-                <h4>A unit belong to a course in order to add vocabulary.</h4>
+                <h4>
+                  A unit must belong to a course in order to add vocabulary.
+                </h4>
               )}
             </CollapsibleEditorSection>
 
