@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from 'react';
+import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import {
@@ -8,6 +8,8 @@ import {
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
@@ -131,6 +133,14 @@ export const useVerticalLayout = ({
     return () => window.removeEventListener('resize', adjustWidths);
   }, [adjustWidths]);
 
+  const panelClassName = useMemo(() => {
+    if (leftPanelDragging || rightPanelDragging) {
+      return moduleStyles.resizingPanel;
+    } else {
+      return undefined;
+    }
+  }, [leftPanelDragging, rightPanelDragging]);
+
   return {
     leftPanelWidth,
     middlePanelWidth,
@@ -141,5 +151,6 @@ export const useVerticalLayout = ({
     rightPanelDragging,
     setLeftPanelSize,
     setRightPanelSize,
+    panelClassName,
   };
 };

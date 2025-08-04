@@ -73,8 +73,6 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     showingRightmostPanel: showAiTutor2,
   });
 
-  console.log({panelClassName});
-
   return (
     <div
       className={

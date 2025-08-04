@@ -55,8 +55,8 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   return (
     <div
       className={classNames(
-        moduleStyles.previewContainer,
-        isResizing && moduleStyles.resizing
+        moduleStyles.previewContainer //,
+        //isResizing && moduleStyles.resizing
       )}
     >
       {file && (
