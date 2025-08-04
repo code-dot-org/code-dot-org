@@ -44,8 +44,14 @@
       "multimodalEnabled": false
     },
     "offer_browser_tts": "false",
-    "disable_edit_run_for_submission": "false"
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Jordan P. Audit Logs.pdf": "fbbc7a56-5975-4b74-9407-41ee6d4768ce.pdf",
+      "Sana R. Audit Logs.pdf": "b5f95c63-7550-4cd4-a22e-b145ccaa53c4.pdf",
+      "Diego M. Audit Logs.pdf": "eeda6405-e2d3-46fd-bc65-9c8e05736a9a.pdf",
+      "Amara T. Audit Logs.pdf": "45057ff9-c1df-42b9-9ba5-25e18d515dd1.pdf"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2025-07-30T17:31:05.800+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level2\"},{\"changed_at\":\"2025-07-30 17:38:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-30 17:40:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-07-30T17:31:05.800+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level2\"},{\"changed_at\":\"2025-07-30 17:38:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-30 17:40:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:43:14 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:47:22 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

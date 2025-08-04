@@ -9,7 +9,7 @@ import {
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
-import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdowns';
+import {Setting} from '@cdo/apps/lab2/views/components/Settings/SettingsDropdown';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';

@@ -1,11 +1,33 @@
 name 'test-ai-powered-threats-defenses-lesson8-level1b-2'
 
-markdown <<MARKDOWN
-#Sana R. - User Profile
+display_name 'Sana R.'
+bubble_choice_description 'A bilingual teen from Dearborn who splits time between school and family trips to Windsor. Someone used her account at 3 AM from another city—was it her, or someone else?'
+thumbnail_url 'https://images.code.org/f3d77fe12133795a062ec89d1458e9e8-image-1753988431724.png'
 
-Go through the audit logs for Sana to find any evidence of fraud.
+markdown <<MARKDOWN
+#Sana R.
+
+#### Read about Sana and investigate the audit logs. Can you find any evidence of fraud?
 
 **[Click here](https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+---
+
+## USER PROFILE
+
+* **Age**: 16
+* **Location**: Dearborn, Michigan
+* **Background**: First-generation Lebanese-American; lives with her parents and three younger siblings
+* **School**: Private Islamic high school (7:45 AM–2:30 PM)
+* **Devices**: Samsung Galaxy S22 (personal), Windows laptop (school)
+* **Tech Habits**: Uses WhatsApp, YouTube, and Chrome on Android; logs in from home or school
+* **Spending Habits**: Uses family-shared debit card (monitored by her mom); shops at Halal-certified stores
+* **Hobbies**: Drawing, helping her younger siblings with school, journaling, and cooking with her mom
+* **Religious Practices**: Avoids gambling content and streaming ads; does not eat pork
+* **Travel History**: Frequently visits cousins in Windsor, Ontario (Canada)
+* **Security Habits**: Uses fingerprint ID; avoids cloud syncing or password saving in browsers
+
+---
 
 ## LOGIN ACTIVITY LOG
 <img src="https://images.code.org/d368161e48f6d9e9d917bd8e94f20e01-image-1753920998715.png" style="float:right; width:35%">
@@ -49,4 +71,6 @@ Go through the audit logs for Sana to find any evidence of fraud.
 | Sept 9   |  3:40 AM   | Grocery Express                 | &#36;83.45   | Toledo, OH          | Debit  |
 | Sept 9   |  8:16 AM   | Zaytuna Cafe                    | &#36;6.70    | Dearborn, MI        | Debit  |
 | Sept 10&nbsp;  | 10:15 AM &nbsp;  | Online Quran Reader             | &#36;11.99   | Online              | Debit  |
+
+![]()
 MARKDOWN

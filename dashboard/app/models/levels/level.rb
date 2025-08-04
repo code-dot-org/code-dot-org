@@ -493,7 +493,7 @@ class Level < ApplicationRecord
   # Programming levels are levels where students write code.
   # These are the lab types that support programming used in 6-12th grade curriculum.
   def upper_grades_programming_level?
-    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+    %w(Applab Gamelab Javalab Pythonlab Weblab Music).include?(type)
   end
 
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
@@ -936,6 +936,18 @@ class Level < ApplicationRecord
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
+    end
+
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
+    # project template level as this level.
+    rubric_level_id = script_level&.lesson&.rubric&.level_id
+    if rubric_level_id
+      if rubric_level_id == id
+        properties_camelized[:showRubric] = true
+      else
+        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
+        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+      end
     end
     properties_camelized
   end

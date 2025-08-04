@@ -2,12 +2,16 @@ import {throttle} from 'lodash';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {
+  handleResizeEnd,
+  handleResizeStart,
+} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {
   ColumnPanelConfig,
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 // The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
@@ -52,6 +56,7 @@ export const useHorizontalLayout = ({
     number | undefined
   >(rightBottomPanel.initialHeight);
   const rightmostPanelWidth = 300;
+  const dispatch = useAppDispatch();
 
   const {
     position: rawLeftPanelWidth,
@@ -63,10 +68,11 @@ export const useHorizontalLayout = ({
     initial: leftPanel.initialWidth,
     min: leftPanel.minWidth,
     onResizeStart: () =>
-      logOnResize(appName, {
+      handleResizeStart(dispatch, appName, {
         layout: 'horizontal',
         resizeBar: leftPanel.name,
       }),
+    onResizeEnd: () => handleResizeEnd(dispatch),
   });
   const {
     position: rawRightBottomPanelHeight,
@@ -79,10 +85,11 @@ export const useHorizontalLayout = ({
     min: rightBottomPanel.minHeight,
     reverse: true,
     onResizeStart: () =>
-      logOnResize(appName, {
+      handleResizeStart(dispatch, appName, {
         layout: 'horizontal',
         resizeBar: rightBottomPanel.name,
       }),
+    onResizeEnd: () => handleResizeEnd(dispatch),
   });
 
   const adjustRightPanelWidth = useCallback(() => {
