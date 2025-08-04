@@ -70,8 +70,6 @@ $(document).ready(function () {
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
 
-  const showAITutorTab = canEnableAITutor;
-
   if (sections.length > 0) {
     const selectedSectionFromList = window.location.pathname.includes(
       '/teacher_dashboard/home'
@@ -94,7 +92,7 @@ $(document).ready(function () {
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
+          canEnableAITutor={canEnableAITutor}
         />
       )}
     </Provider>,

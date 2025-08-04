@@ -116,7 +116,7 @@ describe('TeacherNavigationBar', () => {
   const renderDefault = (
     selectedSectionId = 11,
     selectedRoute = null,
-    showAITutorTab = false
+    canEnableAITutor = false
   ) => {
     store = getStore();
     registerReducers({
@@ -151,7 +151,7 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                    <TeacherNavigationBar canEnableAITutor={canEnableAITutor} />
                     <Outlet />
                   </div>
                 }

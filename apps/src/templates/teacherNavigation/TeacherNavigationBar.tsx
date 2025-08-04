@@ -111,18 +111,7 @@ const TeacherNavigationBar: React.FC<{
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
 
-  // if (
-  //   showAITutorTab &&
-  //   (selectedSection?.courseVersionName?.includes('csa') ||
-  //     selectedSection?.courseVersionName?.includes(
-  //       'programming-fundamentals-aitutor-2024'
-  //     )) &&
-  //   DCDO.get('ai-tutor-teacher-nav-v2', false)
-  // ) {
-  //   performanceContentKeys.push('aiTutorChatMessages');
-  // }
-
-  // TODO-AITUTOR: I think we still need to set the showAITutorTab properly upstream based on selected section
+  // TODO-AITUTOR: Remove the queryParam
   if (queryParams('show-ai-tutor2') === 'true' || showAITutorTab) {
     performanceContentKeys.splice(1, 0, 'aiTutor');
   }
