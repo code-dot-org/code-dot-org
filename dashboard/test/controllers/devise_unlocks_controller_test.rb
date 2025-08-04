@@ -5,7 +5,7 @@ class DeviseUnlocksControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   test 'locked-out account can be successfully unlocked by token' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     refute teacher.access_locked?
 
     token = teacher.lock_access!

@@ -4,9 +4,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @teacher = create :teacher
-    @other_teacher = create :teacher
-    @section = create :section, user: @teacher, login_type: 'word'
+    @teacher = create(:teacher)
+    @other_teacher = create(:teacher)
+    @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
   end
 
@@ -39,7 +39,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "depends_on_this_section_for_login if this is sponsored student's only section" do
-    student = create :student_in_picture_section
+    student = create(:student_in_picture_section)
     assert student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
 
@@ -52,9 +52,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if sponsored student has multiple sections" do
-    student = create :student_in_picture_section
-    second_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
-    create :follower, student_user: student, section: second_section
+    student = create(:student_in_picture_section)
+    second_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    create(:follower, student_user: student, section: second_section)
     student.reload
 
     assert student.teacher_managed_account?
@@ -69,7 +69,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is parent-managed" do
-    student = create :parent_managed_student, :in_picture_section
+    student = create(:parent_managed_student, :in_picture_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -83,7 +83,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test "not depends_on_this_section_for_login if student is in an email section" do
-    student = create :student, :in_email_section
+    student = create(:student, :in_email_section)
 
     refute student.teacher_managed_account?
     assert_equal 1, student.sections_as_student.size
@@ -110,7 +110,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   test 'accurately calculates completed levels count for each student' do
     sign_in @teacher
 
-    @level = create :level
+    @level = create(:level)
     UserLevel.create(
       user: @student,
       level: @level,
@@ -128,7 +128,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
   end
 
   test 'teacher cannot update another teacher' do
-    other_teacher = create :teacher
+    other_teacher = create(:teacher)
     @section.students << other_teacher
 
     sign_in @teacher
@@ -271,7 +271,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'email section cannot add students' do
     sign_in @teacher
-    @section = create :section, user: @teacher, login_type: 'email'
+    @section = create(:section, user: @teacher, login_type: 'email')
     post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :bad_request
   end
@@ -307,9 +307,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can not add students to a section at capacity' do
     sign_in @teacher
-    @section = create :section, user: @teacher, login_type: 'word'
+    @section = create(:section, user: @teacher, login_type: 'word')
     500.times do
-      create :follower, section: @section
+      create(:follower, section: @section)
     end
     post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
     assert_response :forbidden

@@ -2,8 +2,8 @@ require 'test_helper'
 
 class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSupport::TestCase
   setup_all do
-    @lesson = create :lesson, overview: "This is the english overview"
-    @activity_section = create :activity_section, name: "English name", description: "English description"
+    @lesson = create(:lesson, overview: "This is the english overview")
+    @activity_section = create(:activity_section, name: "English name", description: "English description")
     @test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
@@ -33,7 +33,7 @@ class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSuppor
 
   test "get_localized_property defaults to English" do
     # when we don't have a value
-    activity_section = create :activity_section, name: "default name"
+    activity_section = create(:activity_section, name: "default name")
     assert_equal("default name", Services::I18n::CurriculumSyncUtils.get_localized_property(activity_section, :name))
 
     # or when the locale is english

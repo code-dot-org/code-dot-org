@@ -11,7 +11,7 @@ class CAP::LockoutJobTest < ActiveJob::TestCase
   describe '.schedule_for' do
     let(:schedule_lockout_for_user) {described_class.schedule_for(user)}
 
-    let(:user) {build_stubbed :user}
+    let(:user) {build_stubbed(:user)}
 
     let(:user_estimated_lockout_date) {DateTime.now}
 
@@ -63,7 +63,7 @@ class CAP::LockoutJobTest < ActiveJob::TestCase
   describe '#perform' do
     let(:perform_user_lockout_job) {described_instance.perform(user_id: user.id)}
 
-    let(:user) {create :user}
+    let(:user) {create(:user)}
 
     let(:user_has_been_locked_out) {true}
 

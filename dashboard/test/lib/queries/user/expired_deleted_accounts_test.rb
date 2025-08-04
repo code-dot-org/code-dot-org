@@ -4,11 +4,11 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
   describe '#call' do
     let(:described_instance) {described_class.new(deleted_before: deleted_before)}
     let(:deleted_before) {28.days.ago}
-    let(:expected_user) {create :user, :deleted}
+    let(:expected_user) {create(:user, :deleted)}
     subject(:expired_deleted_accounts) {described_instance.call}
 
     it 'does not return users who are not soft-deleted' do
-      active_user = create :user, current_sign_in_at: Time.now
+      active_user = create(:user, current_sign_in_at: Time.now)
       _(expired_deleted_accounts).wont_include active_user
     end
 
@@ -28,11 +28,11 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
     context 'when user already scrubbed of PII' do
       before do
         expected_user.update(deleted_at: deleted_before - 1.day)
-        create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
+        create(:user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now)
       end
 
       it 'does not return the user' do
-        create :user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now
+        create(:user_data_retention_status, user: expected_user, pii_scrubbed_at: Time.now)
         _(expired_deleted_accounts).wont_include expected_user
       end
     end
@@ -50,7 +50,7 @@ class Queries::User::ExpiredDeletedAccountsTest < ActiveSupport::TestCase
     context 'when user already anonymized' do
       before do
         expected_user.update(deleted_at: deleted_before - 1.day)
-        create :user_data_retention_status, user: expected_user, anonymized_at: Time.now
+        create(:user_data_retention_status, user: expected_user, anonymized_at: Time.now)
       end
 
       it 'does not return the user' do

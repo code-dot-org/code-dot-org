@@ -230,7 +230,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:restore_lesson_i18n_keys) {described_instance.send(:restore_lesson_i18n_keys, init_types_i18n_data)}
 
     let(:unit_name) {'expected-unit-name'}
-    let(:unit) {FactoryBot.create :unit, name: unit_name}
+    let(:unit) {FactoryBot.create(:unit, name: unit_name)}
 
     let(:lesson_is_numbered) {true}
     let(:relative_position) {9}
@@ -321,13 +321,13 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:restore_reference_guide_i18n_keys) {described_instance.send(:restore_reference_guide_i18n_keys, init_types_i18n_data)}
 
     let(:course_offering_key) {'expected-course-offering-key'}
-    let(:course_offering) {FactoryBot.create :course_offering, key: course_offering_key}
+    let(:course_offering) {FactoryBot.create(:course_offering, key: course_offering_key)}
 
     let(:course_version_key) {'version'}
-    let(:course_version) {FactoryBot.create :course_version, key: course_version_key, course_offering: course_offering}
+    let(:course_version) {FactoryBot.create(:course_version, key: course_version_key, course_offering: course_offering)}
 
     let(:reference_guide_key) {'expected-reference-guide-key'}
-    let(:reference_guide) {FactoryBot.create :reference_guide, key: reference_guide_key, course_version: course_version}
+    let(:reference_guide) {FactoryBot.create(:reference_guide, key: reference_guide_key, course_version: course_version)}
 
     let(:init_types_i18n_data) do
       {

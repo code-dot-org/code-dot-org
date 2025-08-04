@@ -156,7 +156,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
   end
 
   context 'when signed in as teacher' do
-    let(:teacher) {create :teacher}
+    let(:teacher) {create(:teacher)}
 
     before do
       sign_in teacher
@@ -232,7 +232,7 @@ class HeaderTest < ActionDispatch::IntegrationTest
   end
 
   context 'when signed in as student' do
-    let(:student) {create :student}
+    let(:student) {create(:student)}
 
     before do
       sign_in student

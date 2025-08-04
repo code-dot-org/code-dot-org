@@ -2,13 +2,13 @@ require 'test_helper'
 
 class Queries::SchoolInfoTest < ActiveSupport::TestCase
   setup do
-    @user = create :teacher
+    @user = create(:teacher)
   end
 
   test 'when school_info exists with an associated school' do
-    school = create :school, name: 'TEST SCHOOL', school_type: 'public', id: '1', zip: '12345'
-    school_info = create :school_info, school: school
-    user_school_info = create :user_school_info, user: @user, school_info: school_info
+    school = create(:school, name: 'TEST SCHOOL', school_type: 'public', id: '1', zip: '12345')
+    school_info = create(:school_info, school: school)
+    user_school_info = create(:user_school_info, user: @user, school_info: school_info)
 
     Queries::UserSchoolInfo.expects(:last_complete).with(@user).returns(user_school_info)
 
@@ -28,8 +28,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test 'when US school_info exists without an associated school' do
-    school_info = create :school_info_us, school_name: 'Unknown School', zip: 1234 # zip column in school_infos is an int, but probably shouldn't be
-    user_school_info = create :user_school_info, user: @user, school_info: school_info
+    school_info = create(:school_info_us, school_name: 'Unknown School', zip: 1234) # zip column in school_infos is an int, but probably shouldn't be
+    user_school_info = create(:user_school_info, user: @user, school_info: school_info)
 
     Queries::UserSchoolInfo.stubs(:last_complete).with(@user).returns(user_school_info)
 
@@ -48,8 +48,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test 'when US school_info exists for a non-school setting' do
-    school_info = create :school_info_us, school_name: 'Not a school', zip: 12, school_type: SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING
-    user_school_info = create :user_school_info, user: @user, school_info: school_info
+    school_info = create(:school_info_us, school_name: 'Not a school', zip: 12, school_type: SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING)
+    user_school_info = create(:user_school_info, user: @user, school_info: school_info)
 
     Queries::UserSchoolInfo.stubs(:last_complete).with(@user).returns(user_school_info)
 
@@ -68,8 +68,8 @@ class Queries::SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test 'when non-US school_info exists without an associated school' do
-    school_info = create :school_info_non_us, school_name: 'Non-US School', school_type: nil, full_address: nil
-    user_school_info = create :user_school_info, user: @user, school_info: school_info
+    school_info = create(:school_info_non_us, school_name: 'Non-US School', school_type: nil, full_address: nil)
+    user_school_info = create(:user_school_info, user: @user, school_info: school_info)
 
     Queries::UserSchoolInfo.stubs(:last_complete).with(@user).returns(user_school_info)
 

@@ -15,13 +15,13 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
     @drive_path = "/tmp/example.pdf"
     @drive_file_id = "your_drive_file_id"
     @drive_url = "https://drive.google.com/file/d/" + @drive_file_id + "/view"
-    @google_drive_resource = create :resource, url: @drive_url
+    @google_drive_resource = create(:resource, url: @drive_url)
 
     # This is the more common type of document uploaded as a resource
     @docs_path = '/tmp/resource.fake_name.pdf'
     @docs_file_id = 'example'
     @docs_url = "https://docs.google.com/document/d/" + @docs_file_id
-    @google_docs_resource = create :resource, url: @docs_url
+    @google_docs_resource = create(:resource, url: @docs_url)
 
     @fake_service = mock('DriveService')
     Google::Apis::DriveV3::DriveService.stubs(:new).returns(@fake_service)
@@ -41,22 +41,22 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   end
 
   test 'script resources PDF includes resources from all lessons' do
-    script = create :script, :in_single_unit_course, seeded_from: Time.now
-    lesson_group = create :lesson_group, script: script
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
+    lesson_group = create(:lesson_group, script: script)
     FileUtils.stubs(:cp)
 
     Dir.mktmpdir('script resources pdf test') do |tmpdir|
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.empty?}
       Services::CurriculumPdfs.generate_script_resources_pdf(script, tmpdir)
 
-      first_lesson = create :lesson, script: script
+      first_lesson = create(:lesson, script: script)
       first_lesson.resources << create(:resource, url: "test.pdf", include_in_pdf: true)
       lesson_group.lessons << first_lesson
       script.reload
       PDF.expects(:merge_local_pdfs).with {|_output, *input| input.length == 2}
       Services::CurriculumPdfs.generate_script_resources_pdf(script, tmpdir)
 
-      first_lesson = create :lesson, script: script
+      first_lesson = create(:lesson, script: script)
       first_lesson.resources << create(:resource, url: "test.pdf", include_in_pdf: true)
       lesson_group.lessons << first_lesson
       script.reload
@@ -66,11 +66,11 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   end
 
   test 'script resources PDF skips resources where should_include_in_pdf is falsy' do
-    script = create :script, :in_single_unit_course, seeded_from: Time.now
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script
-    resource = create :resource, url: "test.pdf", include_in_pdf: false
-    verified_teacher_resource = create :resource, url: "verified-teacher-test.pdf", include_in_pdf: true, audience: 'Verified Teacher'
+    script = create(:script, :in_single_unit_course, seeded_from: Time.now)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script)
+    resource = create(:resource, url: "test.pdf", include_in_pdf: false)
+    verified_teacher_resource = create(:resource, url: "verified-teacher-test.pdf", include_in_pdf: true, audience: 'Verified Teacher')
 
     lesson.resources << resource
     lesson.resources << verified_teacher_resource
@@ -107,13 +107,13 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
   end
 
   test 'resources that are google forms will be ignored' do
-    resource = create :resource, url: "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe3_rxy0l_KEOg/view", name: "fake_form"
+    resource = create(:resource, url: "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe3_rxy0l_KEOg/view", name: "fake_form")
     @fake_service.expects(:export_file).never
     assert_nil Services::CurriculumPdfs.fetch_resource_pdf(resource)
   end
 
   test 'resources that are externally-hosted PDFs can be downloaded' do
-    resource = create :resource, url: "https://example.com/test.pdf", include_in_pdf: true
+    resource = create(:resource, url: "https://example.com/test.pdf", include_in_pdf: true)
     Dir.mktmpdir('curriculum_pdfs_script_overview_test') do |tmpdir|
       URI.expects(:parse).with("https://example.com/test.pdf")
       assert Services::CurriculumPdfs.fetch_resource_pdf(resource, tmpdir)

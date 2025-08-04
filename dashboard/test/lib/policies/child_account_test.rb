@@ -4,7 +4,7 @@ require 'ostruct'
 class Policies::ChildAccountTest < ActiveSupport::TestCase
   class ComplianceStateTest < ActiveSupport::TestCase
     setup do
-      @student = build :student
+      @student = build(:student)
     end
 
     test 'grace_period?' do
@@ -170,7 +170,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_lockout_date) {DateTime.now + 1.year}
     let(:user_state_policy) {{lockout_date: user_lockout_date, max_age: 13}}
     let(:user_birthday) {DateTime.now.ago(age)}
-    let(:user) {build_stubbed :student, birthday: user_birthday}
+    let(:user) {build_stubbed(:student, birthday: user_birthday)}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -181,7 +181,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'the user is a teacher' do
-      let(:user) {build_stubbed :teacher}
+      let(:user) {build_stubbed(:teacher)}
 
       it 'returns false' do
         _(underage?).must_equal false
@@ -232,7 +232,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   describe '.lockout_date' do
     let(:lockout_date) {Policies::ChildAccount.lockout_date(user, approximate: approximate)}
 
-    let(:user) {build_stubbed :student}
+    let(:user) {build_stubbed(:student)}
     let(:approximate) {true}
     # Use default value
     let(:future) {nil}
@@ -284,7 +284,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when user is already locked out' do
-      let(:user) {build_stubbed :locked_out_child}
+      let(:user) {build_stubbed(:locked_out_child)}
 
       it 'returns nil' do
         _(lockout_date).must_be_nil
@@ -295,7 +295,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   describe '.partially_locked_out?' do
     let(:partially_locked_out?) {Policies::ChildAccount.partially_locked_out?(user)}
 
-    let(:user) {build_stubbed :student}
+    let(:user) {build_stubbed(:student)}
     let(:user_predates_policy?) {true}
     let(:permission_granted?) {false}
 
@@ -341,7 +341,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:can_link_new_personal_account?) {Policies::ChildAccount.can_link_new_personal_account?(user)}
 
     let(:user_birthday) {DateTime.now}
-    let(:user) {build_stubbed :student, birthday: user_birthday, us_state: 'CO', country_code: 'US'}
+    let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: 'CO', country_code: 'US')}
     let(:underage?) {true}
     let(:permission_granted?) {true}
 
@@ -351,7 +351,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user is a teacher' do
-      let(:user) {build_stubbed :teacher}
+      let(:user) {build_stubbed(:teacher)}
 
       it 'returns true' do
         _(can_link_new_personal_account?).must_equal true
@@ -359,7 +359,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user does not have a state' do
-      let(:user) {build_stubbed :student, birthday: user_birthday, us_state: nil, country_code: 'US'}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'US')}
 
       it 'returns false' do
         _(can_link_new_personal_account?).must_equal false
@@ -367,7 +367,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user is outside the US' do
-      let(:user) {build_stubbed :student, birthday: user_birthday, us_state: nil, country_code: 'CA'}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: 'CA')}
 
       it 'returns true' do
         _(can_link_new_personal_account?).must_equal true
@@ -375,7 +375,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user does not have a country' do
-      let(:user) {build_stubbed :student, birthday: user_birthday, country_code: nil}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, country_code: nil)}
 
       it 'returns true' do
         _(can_link_new_personal_account?).must_equal true
@@ -383,7 +383,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when the user does not have a state nor country' do
-      let(:user) {build_stubbed :student, birthday: user_birthday, us_state: nil, country_code: nil}
+      let(:user) {build_stubbed(:student, birthday: user_birthday, us_state: nil, country_code: nil)}
 
       it 'returns true' do
         _(can_link_new_personal_account?).must_equal true
@@ -484,7 +484,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_age) {user_state_policy_max_age - 1.year}
     # With a personal account
     let(:user_account_is_personal?) {true}
-    let(:user) {build_stubbed :user, user_type: user_type, birthday: user_age&.year&.ago}
+    let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
     # This is the policy: max age of 12 with a lockout date 1 year after the start date
     let(:user_state_policy_start_date) {1.second.ago}
@@ -573,7 +573,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
   end
 
   describe '.compliant?' do
-    let(:user) {create :student}
+    let(:user) {create(:student)}
     let(:future) {nil}
 
     let(:parent_permission_required) {false}

@@ -4,13 +4,13 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   include OpenaiEvaluateHelper
 
   setup do
-    @section = create :section
-    @student1 = create :student
-    @student2 = create :student
+    @section = create(:section)
+    @student1 = create(:student)
+    @student2 = create(:student)
     @section.add_student(@student1)
     @section.add_student(@student2)
 
-    @unit = create :script, :with_levels, levels_count: 4
+    @unit = create(:script, :with_levels, levels_count: 4)
     @free_response_level = @unit.script_levels.first.level
     @code_level1 = @unit.script_levels.second.level
     Level.find_by(id: @code_level1.id).update!(name: 'U4 L03 Variables operator practice 5_2024')
@@ -21,8 +21,8 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section evaluates free response levels" do
-    level_source = create :level_source, data: "This is my free response answer"
-    create :user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source
+    level_source = create(:level_source, data: "This is my free response answer")
+    create(:user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source)
 
     mock_response = {
       status: :ok,
@@ -48,7 +48,7 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section evaluates specific code levels with skill evaluation" do
-    create :user_level, user: @student1, level: @code_level1, script: @unit
+    create(:user_level, user: @student1, level: @code_level1, script: @unit)
 
     helper = mock('helper')
     ApplicationController.expects(:helpers).returns(helper)
@@ -100,8 +100,8 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section skips levels with no level_source data" do
-    level_source = create :level_source, data: ""
-    create :user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source
+    level_source = create(:level_source, data: "")
+    create(:user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source)
 
     OpenaiEvaluateHelper.expects(:evaluate).never
 
@@ -109,7 +109,7 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section skips non-targeted levels" do
-    create :user_level, user: @student1, level: @other_level, script: @unit
+    create(:user_level, user: @student1, level: @other_level, script: @unit)
 
     ApplicationController.helpers.expects(:get_student_code).never
     OpenaiEvaluateHelper.expects(:evaluate).never
@@ -118,7 +118,7 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section handles nil student code" do
-    create :user_level, user: @student1, level: @code_level2, script: @unit
+    create(:user_level, user: @student1, level: @code_level2, script: @unit)
 
     helper = mock('helper')
     ApplicationController.expects(:helpers).returns(helper)
@@ -134,13 +134,13 @@ class OpenaiEvaluateHelperTest < ActionView::TestCase
   end
 
   test "evaluate_section processes multiple students and levels" do
-    level_source1 = create :level_source, data: "Student 1 response"
-    create :user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source1
+    level_source1 = create(:level_source, data: "Student 1 response")
+    create(:user_level, user: @student1, level: @free_response_level, script: @unit, level_source: level_source1)
 
-    level_source2 = create :level_source, data: "Student 2 response"
-    create :user_level, user: @student2, level: @free_response_level, script: @unit, level_source: level_source2
+    level_source2 = create(:level_source, data: "Student 2 response")
+    create(:user_level, user: @student2, level: @free_response_level, script: @unit, level_source: level_source2)
 
-    create :user_level, user: @student1, level: @code_level1, script: @unit
+    create(:user_level, user: @student1, level: @code_level1, script: @unit)
 
     helper = mock('helper')
     ApplicationController.expects(:helpers).at_least_once.returns(helper)

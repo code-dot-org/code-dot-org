@@ -14,9 +14,9 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     AWS::S3.stubs(:delete_from_bucket).returns(true)
     AWS::S3.stubs(:upload_to_bucket).returns(true)
     ShareFiltering.stubs(:find_failure).returns(nil)
-    @owner = create :student
-    @model = create :user_ml_model, user: @owner
-    @not_owner = create :student
+    @owner = create(:student)
+    @model = create(:user_ml_model, user: @owner)
+    @not_owner = create(:student)
   end
 
   test 'user can successfully save an ML model' do
@@ -77,7 +77,7 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
 
   test 'user can retrieve the names, ids, and metadata of their trained ML models' do
     sign_in @owner
-    create_list :user_ml_model, 2, user: @owner
+    create_list(:user_ml_model, 2, user: @owner)
 
     database_model_data = UserMlModel.where(user_id: @owner.id).map do |user_ml_model|
       {

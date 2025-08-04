@@ -3,8 +3,8 @@ require 'test_helper'
 class UserAiAccessibleTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:user) {create :user}
-  let(:section) {create :section, ai_tutor_enabled: true}
+  let(:user) {create(:user)}
+  let(:section) {create(:section, ai_tutor_enabled: true)}
 
   before do
     user.extend(User::AiAccessible)
@@ -82,8 +82,8 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
   describe '#can_view_student_ai_chat_messages?' do
     subject(:can_view_student_ai_chat_messages?) {user.can_view_student_ai_chat_messages?}
 
-    let(:ai_unit_group) {create :unit_group, name: 'programming-fundamentals-aitutor-2024'}
-    let(:ai_section) {create :section, unit_group: ai_unit_group}
+    let(:ai_unit_group) {create(:unit_group, name: 'programming-fundamentals-aitutor-2024')}
+    let(:ai_section) {create(:section, unit_group: ai_unit_group)}
 
     it 'returns true if student is in correct course and experiment is enabled' do
       allow(user).to receive(:sections).and_return([ai_section])
@@ -92,7 +92,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
     end
 
     it 'returns false for unrelated courses' do
-      unrelated_group = create :unit_group, name: 'other-course'
+      unrelated_group = create(:unit_group, name: 'other-course')
       section.update!(unit_group: unrelated_group)
       allow(user).to receive(:sections).and_return([section])
       _can_view_student_ai_chat_messages?.must_equal false
@@ -128,7 +128,7 @@ class UserAiAccessibleTest < ActiveSupport::TestCase
   describe '#student_can_access_ai_chat?' do
     subject(:student_can_access_ai_chat?) {user.student_can_access_ai_chat?}
     it 'returns true if teacher can access and section has AI chat enabled' do
-      teacher = create :teacher
+      teacher = create(:teacher)
       allow(section).to receive(:assigned_ai_chat?).and_return(true)
 
       allow(teacher).to receive(:teacher_can_access_ai_chat?).and_return(true)

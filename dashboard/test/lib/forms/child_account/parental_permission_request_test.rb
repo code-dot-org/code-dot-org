@@ -3,7 +3,7 @@ require 'test_helper'
 class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCase
   class SuccessTest < ActiveSupport::TestCase
     setup do
-      @child_account = create :student
+      @child_account = create(:student)
       @parent_email = 'parent@email.com'
 
       @permission_request_form = Forms::ChildAccount::ParentalPermissionRequest.new(
@@ -26,7 +26,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
     end
 
     test 'updates and returns existing parental permission request resends count' do
-      permission_request = create :parental_permission_request, user: @child_account, parent_email: @parent_email
+      permission_request = create(:parental_permission_request, user: @child_account, parent_email: @parent_email)
 
       assert_difference -> {permission_request.reload.resends_sent}, 1 do
         assert @permission_request_form.request
@@ -50,7 +50,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
 
   class ValidationTest < ActiveSupport::TestCase
     setup do
-      @child_account = build :student
+      @child_account = build(:student)
       @parent_email = 'parent@email.com'
     end
 
@@ -147,7 +147,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
 
     test 'validates whether daily request limit has not been reached' do
       Policies::ChildAccount::MAX_STUDENT_DAILY_PARENT_PERMISSION_REQUESTS.times do |i|
-        create :parental_permission_request, user: @child_account, parent_email: "parent#{i}@example.com"
+        create(:parental_permission_request, user: @child_account, parent_email: "parent#{i}@example.com")
       end
 
       create_list(
@@ -168,7 +168,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
 
   class FailureTest < ActiveSupport::TestCase
     setup do
-      @child_account = create :student
+      @child_account = create(:student)
       @parent_email = 'parent@email.com'
 
       @permission_request_form = Forms::ChildAccount::ParentalPermissionRequest.new(
@@ -187,7 +187,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
     end
 
     test 'does not update existing permission request resends count when sending request ends with an error' do
-      permission_request = create :parental_permission_request, user: @child_account, parent_email: @parent_email
+      permission_request = create(:parental_permission_request, user: @child_account, parent_email: @parent_email)
 
       expected_mail_error = 'expected_mail_error'
       ParentMailer.expects(:parent_permission_request).raises(expected_mail_error)

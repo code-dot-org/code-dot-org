@@ -11,9 +11,6 @@ Gemspec/RequiredRubyVersion:
   Exclude: 
     - dashboard/engines/**/*
 
-FactoryBot/ConsistentParenthesesStyle:
-  EnforcedStyle: omit_parentheses
-
 Layout/DotPosition:
   EnforcedStyle: trailing
 

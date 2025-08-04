@@ -9,7 +9,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     subject(:reset_password) {described_instance.call}
 
     let(:mail) {ActionMailer::Base.deliveries.first}
-    let!(:user) {create :user, email: email}
+    let!(:user) {create(:user, email: email)}
 
     let(:cdo_rack_env) {'expected_cdo_rack_env'}
 
@@ -41,7 +41,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     end
 
     context 'when account is unmigrated' do
-      let!(:user) {create :user, :demigrated, email: email}
+      let!(:user) {create(:user, :demigrated, email: email)}
 
       it 'returns user with generated reset password tokens' do
         _reset_password.must_equal user
@@ -68,7 +68,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     end
 
     context 'when account is an lti account' do
-      let!(:user) {create :teacher, :with_lti_auth}
+      let!(:user) {create(:teacher, :with_lti_auth)}
       # Email is changed by lti auth option, so we need to reference that email
       let!(:email) {user.email}
 
@@ -96,7 +96,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
       end
 
       context 'when account has email authentication' do
-        let(:email_auth_option) {create :authentication_option, email: email}
+        let(:email_auth_option) {create(:authentication_option, email: email)}
 
         before do
           user.authentication_options.append(email_auth_option)
@@ -128,7 +128,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
     end
 
     context 'when account is a google account' do
-      let!(:user) {create :teacher, :with_google_authentication_option, email: email}
+      let!(:user) {create(:teacher, :with_google_authentication_option, email: email)}
 
       context 'when account does not have email authentication' do
         before do

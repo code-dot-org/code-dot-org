@@ -36,7 +36,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     DCDO.stubs(:get).with('restrict_reporting_to_verified_teachers', false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
-    user = create :student
+    user = create(:student)
     sign_in user
 
     # Check initial state.
@@ -50,7 +50,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   test "signed in student can't update abuse score reporting restricted to verified teachers" do
     @controller.stubs(:restrict_reporting_to_verified_teachers).returns(true)
 
-    user = create :student
+    user = create(:student)
     sign_in user
 
     # Check initial state.
@@ -63,7 +63,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "verified teacher can update abuse score when reporting restricted to verified teacher users" do
-    user = create :authorized_teacher
+    user = create(:authorized_teacher)
     sign_in user
 
     @controller.stubs(:restrict_reporting_to_verified_teachers).returns(true)
@@ -83,7 +83,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     # check initial state
     assert_equal 0, Projects.get_abuse(@channel_id)
 
-    user = create :student
+    user = create(:student)
     sign_in user
 
     assert_equal 0, @controller.update_channel_abuse_score(@channel_id)
@@ -110,7 +110,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
-    user = create :student
+    user = create(:student)
     sign_in user
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
@@ -122,7 +122,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
     assert response.ok?
     assert_equal 0, JSON.parse(response.body)['abuse_score']
 
-    user = create :project_validator
+    user = create(:project_validator)
     sign_in user
 
     response = delete :reset_abuse, params: {channel_id: @channel_id}
@@ -131,7 +131,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "update_abuse_image_moderation with updates abuse score according to type for signed in user" do
-    user = create :student
+    user = create(:student)
     sign_in user
 
     # Ensure initial score is 0
@@ -157,7 +157,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "update_abuse_image_moderation raises bad request on bad channel_id" do
-    user = create :student
+    user = create(:student)
     sign_in user
 
     assert_raises(ActionController::BadRequest) do
@@ -166,7 +166,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "update_abuse_image_moderation with invalid type returns bad request" do
-    user = create :student
+    user = create(:student)
     sign_in user
 
     # Ensure initial score is 0
@@ -198,7 +198,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   # files
 
   test "patch with permission can update" do
-    user = create :project_validator
+    user = create(:project_validator)
     sign_in user
 
     FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
@@ -266,7 +266,7 @@ class ReportAbuseControllerTest < ActionController::TestCase
   end
 
   test "with permission can decrement" do
-    user = create :project_validator
+    user = create(:project_validator)
     sign_in user
     FileBucket.any_instance.stubs(:get_abuse_score).returns(10)
     FileBucket.any_instance.expects(:replace_abuse_score).once

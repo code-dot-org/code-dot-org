@@ -3,8 +3,8 @@ require 'test_helper'
 class Services::User::UserTypeSetterTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:student) {create :student}
-  let(:teacher) {create :teacher}
+  let(:student) {create(:student)}
+  let(:teacher) {create(:teacher)}
   let(:email) {'teacher@email.com'}
   let(:email_preference) {{opt_in: true}}
 

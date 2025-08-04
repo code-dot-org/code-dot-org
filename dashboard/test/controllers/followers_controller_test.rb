@@ -3,25 +3,25 @@ require 'rake'
 
 class FollowersControllerTest < ActionController::TestCase
   setup do
-    @laurel = create :teacher
-    @laurel_section_1 = create :section, user: @laurel
-    @laurel_section_2 = create :section, user: @laurel
-    @laurel_section_script = create :section, user: @laurel, script: Unit.find_by_name('course1')
+    @laurel = create(:teacher)
+    @laurel_section_1 = create(:section, user: @laurel)
+    @laurel_section_2 = create(:section, user: @laurel)
+    @laurel_section_script = create(:section, user: @laurel, script: Unit.find_by_name('course1'))
 
     # add a few students to a section
-    @laurel_student_1 = create :follower, section: @laurel_section_1
-    @laurel_student_2 = create :follower, section: @laurel_section_1
+    @laurel_student_1 = create(:follower, section: @laurel_section_1)
+    @laurel_student_2 = create(:follower, section: @laurel_section_1)
 
-    @chris = create :teacher
-    @chris_section = create :section, user: @chris
+    @chris = create(:teacher)
+    @chris_section = create(:section, user: @chris)
 
     # student without section or teacher
-    @student = create :user
+    @student = create(:user)
 
-    @picture_section = create :section, login_type: Section::LOGIN_TYPE_PICTURE
-    @word_section = create :section, login_type: Section::LOGIN_TYPE_WORD
+    @picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+    @word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
 
-    @admin = create :admin
+    @admin = create(:admin)
 
     @request.host = CDO.dashboard_hostname
   end
@@ -134,10 +134,10 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_user_new errors when joing a section already at capacity' do
     sign_in @student
-    section = create :section, login_type: 'email'
+    section = create(:section, login_type: 'email')
 
     500.times do
-      create :follower, section: section
+      create(:follower, section: section)
     end
 
     assert_does_not_create(Follower) do
@@ -151,7 +151,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_user_new errors when joining a restricted section' do
     sign_in @student
-    section = create :section, login_type: 'email', restrict_section: true
+    section = create(:section, login_type: 'email', restrict_section: true)
 
     assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: section.code}
@@ -330,7 +330,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_register errors when joining a provider_managed section' do
     sign_in @student
-    section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
+    section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
 
     assert_does_not_create(User, Follower) do
       get :student_register, params: {section_code: section.code}
@@ -343,7 +343,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_register errors when joining a section where user does not meet participant type' do
     sign_in @student
-    section = create :section, :facilitator_participants
+    section = create(:section, :facilitator_participants)
 
     assert_does_not_create(User, Follower) do
       get :student_register, params: {section_code: section.code}
@@ -356,7 +356,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_register sends user to Teacher Account Required page when a student tries to join a teacher section' do
     sign_in @student
-    section = create :section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"]
+    section = create(:section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"])
 
     get :student_register, params: {section_code: section.code}
 
@@ -387,7 +387,7 @@ class FollowersControllerTest < ActionController::TestCase
   end
 
   test 'student_user_new displays captcha when joining 3 or more sections in 24 hours' do
-    @new_student = create :user
+    @new_student = create(:user)
     sign_in @new_student
     3.times do
       post :student_register, params: {section_code: 'INVALID'}
@@ -400,7 +400,7 @@ class FollowersControllerTest < ActionController::TestCase
   # Restores original configuration after testing the assertion
   test 'student_user_new displays error when joining 3 or more sections in 24 hours without completing captcha' do
     Recaptcha.configuration.skip_verify_env.delete("test")
-    @new_student = create :user
+    @new_student = create(:user)
     sign_in @new_student
     4.times do
       post :student_register, params: {section_code: @chris_section.code}

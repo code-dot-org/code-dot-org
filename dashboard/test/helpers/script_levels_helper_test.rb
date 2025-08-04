@@ -10,12 +10,12 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   end
 
   setup do
-    @teacher = create :teacher
-    @student = create :student
-    script = create :script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true
-    create :section, user: @teacher, script: script
-    @section = create :section, user: @teacher, script: script
-    create :follower, section: @section, student_user: @student
+    @teacher = create(:teacher)
+    @student = create(:student)
+    script = create(:script, :in_single_unit_course, :with_levels, lessons_count: 3, levels_count: 3, lesson_extras_available: true)
+    create(:section, user: @teacher, script: script)
+    @section = create(:section, user: @teacher, script: script)
+    create(:follower, section: @section, student_user: @student)
   end
 
   test 'tracking_pixel_url' do
@@ -116,7 +116,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     assert response[:redirect].end_with?('extras')
     response = {}
 
-    teacherless_student = create :student
+    teacherless_student = create(:student)
     stubs(:current_user).returns(teacherless_student)
     script_level_solved_response(response, script_level)
     refute response[:redirect].end_with?('extras')

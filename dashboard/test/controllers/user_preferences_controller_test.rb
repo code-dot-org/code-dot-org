@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserPreferencesControllerTest < ActionController::TestCase
   setup do
-    @user = create :user
+    @user = create(:user)
     sign_in @user
   end
 

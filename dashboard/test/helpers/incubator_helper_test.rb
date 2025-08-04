@@ -9,8 +9,8 @@ class IncubatorHelperTest < ActionView::TestCase
   end
 
   setup do
-    @teacher_yes = create :teacher
-    @student = create :student
+    @teacher_yes = create(:teacher)
+    @student = create(:student)
   end
 
   test 'teacher who can see incubator' do

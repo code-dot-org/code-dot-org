@@ -55,7 +55,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     end
 
     context 'when non-user object is passed in' do
-      let(:user) {create :section}
+      let(:user) {create(:section)}
       it 'raises an error' do
         _ {scrub_pii}.must_raise ArgumentError
       end
@@ -140,7 +140,7 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     context 'when user is facilitator' do
       let(:user) {user_facilitator_info.user}
 
-      let!(:user_facilitator_info) {create :user_facilitator_info}
+      let!(:user_facilitator_info) {create(:user_facilitator_info)}
 
       it 'destroys associated facilitator info record' do
         _ {scrub_pii}.must_change -> {user_facilitator_info.destroyed?}, from: false, to: true

@@ -3,7 +3,7 @@ require 'test_helper'
 class HintViewRequestsControllerTest < ActionController::TestCase
   setup do
     HintViewRequest.stubs(:enabled?).returns true
-    @student = create :student
+    @student = create(:student)
   end
 
   test 'creation requires current_user' do
@@ -80,9 +80,9 @@ class HintViewRequestsControllerTest < ActionController::TestCase
   end
 
   test 'creates hints for both users when pairing' do
-    driver = create :user
-    navigator = create :user
-    section = create :section
+    driver = create(:user)
+    navigator = create(:user)
+    section = create(:section)
     section.add_student driver
     section.add_student navigator
 
@@ -91,7 +91,7 @@ class HintViewRequestsControllerTest < ActionController::TestCase
 
     sign_in driver
     @controller.send :pairings=, {pairings: [navigator], section_id: section.id}
-    level = create :level, :with_script
+    level = create(:level, :with_script)
     post :create, params: {
       script_id: level.script_levels.first.script.id,
       level_id: level.id,

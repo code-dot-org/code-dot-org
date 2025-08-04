@@ -3,19 +3,19 @@ require 'test_helper'
 class NameableTest < ActiveSupport::TestCase
   describe 'presence validations' do
     it 'allows a user with a name' do
-      user = build :user, name: panda_panda
+      user = build(:user, name: panda_panda)
       _(user).must_be :valid?
       _(user.errors[:name]).must_be :empty?
     end
 
     it 'does not allow a user without a name' do
-      user = build :user, name: nil
+      user = build(:user, name: nil)
       _(user).wont_be :valid?
       _(user.errors[:name]).must_include I18n.t('activerecord.errors.messages.blank')
     end
 
     context 'when purged_at is set' do
-      let(:user) {build :user, name: nil, purged_at: Time.now}
+      let(:user) {build(:user, name: nil, purged_at: Time.now)}
       it 'allows a user without a name' do
         _(user).must_be :valid?
         _(user.errors[:name]).must_be :empty?
@@ -25,17 +25,17 @@ class NameableTest < ActiveSupport::TestCase
 
   describe 'length validations' do
     context 'when name is exactly 1 character' do
-      subject(:user) {build :user, name: 'A'}
+      subject(:user) {build(:user, name: 'A')}
       it {_user.must_be :valid?}
     end
 
     context 'when name is exactly 70 characters' do
-      subject(:user) {build :user, name: 'A' * 70}
+      subject(:user) {build(:user, name: 'A' * 70)}
       it {_user.must_be :valid?}
     end
 
     context 'when name is 71 characters' do
-      subject(:user) {build :user, name: 'A' * 71}
+      subject(:user) {build(:user, name: 'A' * 71)}
       it 'is invalid' do
         _user.wont_be :valid?
         _(user.errors[:name]).must_include 'is too long (maximum is 70 characters)'
@@ -44,7 +44,7 @@ class NameableTest < ActiveSupport::TestCase
   end
 
   describe 'strip_display_given_family_names callback' do
-    subject(:user) {create :teacher, name: '  First  ', given_name: '   Given   ', family_name: ' Last '}
+    subject(:user) {create(:teacher, name: '  First  ', given_name: '   Given   ', family_name: ' Last ')}
     it 'strips whitespace from name, given_name, and family_name if changed' do
       _(user.name).must_equal 'First'
       _(user.given_name).must_equal 'Given'
@@ -52,7 +52,7 @@ class NameableTest < ActiveSupport::TestCase
     end
 
     context 'on update' do
-      let(:user) {create :student}
+      let(:user) {create(:student)}
 
       it 'strips whitespace when name is updated' do
         user.update(name: '  UpdatedFirst  ')
@@ -76,23 +76,23 @@ class NameableTest < ActiveSupport::TestCase
 
   describe 'creating a user with the same name as a deleted user' do
     before do
-      create :user, :deleted, name: 'Same Name'
+      create(:user, :deleted, name: 'Same Name')
     end
 
     it 'is valid with the same name as a deleted user' do
-      user = build :user, name: 'Same Name'
+      user = build(:user, name: 'Same Name')
       _(user).must_be :valid?
     end
   end
 
   describe '#sort_by_family_name?' do
     it 'returns true when sort_by_family_name is set' do
-      user = build :user, sort_by_family_name: true
+      user = build(:user, sort_by_family_name: true)
       _(user.sort_by_family_name?).must_equal true
     end
 
     it 'returns false when sort_by_family_name is nil' do
-      user = build :user, sort_by_family_name: nil
+      user = build(:user, sort_by_family_name: nil)
       _(user.sort_by_family_name?).must_equal false
     end
   end

@@ -6,7 +6,7 @@ class Queries::User::EnabledExperimentsTest < ActiveSupport::TestCase
   let(:experiment_name_1) {'ai-tutor'}
   let(:experiment_name_2) {'progress-v2'}
 
-  let(:user) {create :user}
+  let(:user) {create(:user)}
 
   before do
     exp_1 = {name: experiment_name_1}

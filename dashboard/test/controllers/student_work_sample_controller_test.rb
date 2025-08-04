@@ -66,22 +66,22 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   # Can fetch student code samples with student_work_access permission
   # found if valid params
   test 'student_work_dataset_maker_can_access_valid_params' do
-    user = create :student_work_dataset_maker
+    user = create(:student_work_dataset_maker)
     sign_in(user)
-    level = create :level
-    unit = create :script, :in_single_unit_course
+    level = create(:level)
+    unit = create(:script, :in_single_unit_course)
     get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, student_ids: []}
     assert_response :ok
   end
 
   # Fetch a code sample
   test 'can fetch code sample' do
-    dataset_maker = create :student_work_dataset_maker
+    dataset_maker = create(:student_work_dataset_maker)
     sign_in(dataset_maker)
-    unit = create :script, :in_single_unit_course
-    level = create :level
-    student = create :student
-    create :user_level, user: student, level: level, script: unit
+    unit = create(:script, :in_single_unit_course)
+    level = create(:level)
+    student = create(:student)
+    create(:user_level, user: student, level: level, script: unit)
     get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, student_ids: [student.id]}
     assert_response :ok
     response_json = JSON.parse(response.body)

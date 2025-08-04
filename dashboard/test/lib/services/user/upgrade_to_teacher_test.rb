@@ -3,7 +3,7 @@ require 'test_helper'
 class Services::User::UpgradeToTeacherTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:user) {create :user}
+  let(:user) {create(:user)}
   let(:email) {'test@example.com'}
   let(:hashed_email) {::User.hash_email(email)}
   let(:email_preference_params) do

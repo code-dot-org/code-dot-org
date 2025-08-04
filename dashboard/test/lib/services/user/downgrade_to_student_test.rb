@@ -3,7 +3,7 @@ require 'test_helper'
 class Services::User::DowngradeToStudentTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  let(:user) {create :user}
+  let(:user) {create(:user)}
 
   subject(:downgrade_to_student_call) {Services::User::DowngradeToStudent.call(user: user)}
 

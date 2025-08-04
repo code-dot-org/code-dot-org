@@ -233,7 +233,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
       [{
@@ -299,7 +299,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
       [{
@@ -345,7 +345,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block = []
 
@@ -375,7 +375,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
       [{
@@ -436,7 +436,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     custom_block =
       [{
@@ -502,7 +502,7 @@ class BlocklyTest < ActiveSupport::TestCase
 
     I18n.backend.store_translations test_locale, custom_i18n
 
-    level = create :level, :blockly, level_num: 'level1_2_3'
+    level = create(:level, :blockly, level_num: 'level1_2_3')
 
     test_custom_block = create_custom_block(
       "ThunderCats_atSelectStrengthLevel", "SelectStrengthLevel",
@@ -620,7 +620,7 @@ class BlocklyTest < ActiveSupport::TestCase
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
-    level = create :level, :blockly
+    level = create(:level, :blockly)
 
     # Add translation mapping to the I18n backend
     custom_i18n = {

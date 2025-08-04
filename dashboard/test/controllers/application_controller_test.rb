@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ApplicationControllerTest < ActionDispatch::IntegrationTest
   describe 'CAP lockout' do
-    let(:user) {create :student}
+    let(:user) {create(:student)}
 
     let(:user_is_locked_out?) {true}
 
@@ -139,7 +139,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
 
   describe 'LMS lockout' do
     let(:user) do
-      create :student
+      create(:student)
     end
 
     before do

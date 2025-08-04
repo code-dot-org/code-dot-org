@@ -4,7 +4,7 @@ module Services
   class LevelFilesTest < ActiveSupport::TestCase
     test 'can write custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-      level = build :maze, name: "Testing Level File Writing", published: true
+      level = build(:maze, name: "Testing Level File Writing", published: true)
       File.expects(:write).with do |path, _data|
         assert_equal path, Rails.root.join("config/levels/custom/maze/Testing Level File Writing.level")
       end
@@ -13,7 +13,7 @@ module Services
 
     test 'can delete custom level file' do
       Policies::LevelFiles.stubs(:write_to_file?).returns(true)
-      level = create :level, name: "Testing Level File Writing"
+      level = create(:level, name: "Testing Level File Writing")
 
       # There are a couple of different places level files can end up, and we want
       # to check all of them.
@@ -47,7 +47,7 @@ module Services
     end
 
     test 'deletes removed level properties on import' do
-      level = create :level, long_instructions: 'foo', short_instructions: 'bar'
+      level = create(:level, long_instructions: 'foo', short_instructions: 'bar')
       assert_equal level.long_instructions, 'foo'
       assert_equal level.short_instructions, 'bar'
 

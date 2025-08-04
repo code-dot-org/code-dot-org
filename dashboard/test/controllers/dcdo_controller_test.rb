@@ -2,7 +2,7 @@ require 'test_helper'
 
 class DcdoControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @admin = create :admin
+    @admin = create(:admin)
   end
 
   test 'inaccessible by non-admins' do

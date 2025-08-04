@@ -4,15 +4,15 @@ class AichatRequestsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    @authorized_teacher1 = create :authorized_teacher
-    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
-    section = create :section, user: @authorized_teacher1, unit_group: unit_group
+    @authorized_teacher1 = create(:authorized_teacher)
+    unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
+    section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
     @authorized_student1 = create(:follower, section: section).student_user
-    @unauthorized_student = create :student
-    @unauthorized_teacher = create :teacher
+    @unauthorized_student = create(:student)
+    @unauthorized_teacher = create(:teacher)
 
-    @level = create :level
-    @script = create :script, :in_single_unit_course
+    @level = create(:level)
+    @script = create(:script, :in_single_unit_course)
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {
@@ -63,7 +63,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'unauthorized users can access start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
@@ -72,7 +72,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'ai_tutor2 DCDO flag blocks access to start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
     DCDO.stubs(:get).with('block_ai_tutor2_chat_completion', anything).returns(true)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :forbidden
@@ -88,7 +88,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
   test 'aichat DCDO flag does not block access to start_chat_completion from python lab levels' do
     sign_in(@unauthorized_student)
     DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
-    python_lab_level = create :pythonlab
+    python_lab_level = create(:pythonlab)
     params_with_python_level = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(currentLevelId: python_lab_level.id))
     post :start_chat_completion, params: params_with_python_level, as: :json
     assert_response :success
@@ -189,13 +189,13 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'GET chat_request returns forbidden if user is not the requester' do
     sign_in(@authorized_teacher1)
-    request = create :aichat_request, user: @authorized_student1
+    request = create(:aichat_request, user: @authorized_student1)
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end
 
   test 'GET chat_request returns forbidden if user is not signed in' do
-    request = create :aichat_request, user: @authorized_teacher1
+    request = create(:aichat_request, user: @authorized_teacher1)
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
   end
@@ -205,7 +205,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     execution_status = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
 
     sign_in(@authorized_teacher1)
-    request = create :aichat_request, user: @authorized_teacher1, response: response, execution_status: execution_status
+    request = create(:aichat_request, user: @authorized_teacher1, response: response, execution_status: execution_status)
     get :chat_request, params: {id: request.id}, as: :json
 
     assert_response :success

@@ -4,9 +4,9 @@ module Pd::Foorm
   class FoormParserTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @daily_survey_day_0 = create :foorm_form_summer_pre_survey
-      @daily_survey_day_5 = create :foorm_form_summer_post_survey
-      @csf_survey = create :foorm_form_csf_intro_post_survey
+      @daily_survey_day_0 = create(:foorm_form_summer_pre_survey)
+      @daily_survey_day_5 = create(:foorm_form_summer_post_survey)
+      @csf_survey = create(:foorm_form_csf_intro_post_survey)
     end
 
     teardown_all do

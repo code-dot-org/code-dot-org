@@ -5,7 +5,7 @@ require 'test_helper'
 # changes.
 class UserHelpersTest < ActiveSupport::TestCase
   def create_user_with_username(username)
-    user = create :user
+    user = create(:user)
     user.update_attribute(:username, username)
   end
 

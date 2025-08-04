@@ -18,8 +18,8 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
   describe '#translatable_units' do
     let(:translatable_units) {described_instance.send(:translatable_units)}
 
-    let(:untranslatable_unit) {FactoryBot.create :unit, name: 'untranslatable'}
-    let(:translatable_unit) {FactoryBot.create :unit, name: 'translatable'}
+    let(:untranslatable_unit) {FactoryBot.create(:unit, name: 'untranslatable')}
+    let(:translatable_unit) {FactoryBot.create(:unit, name: 'translatable')}
 
     before do
       untranslatable_unit
@@ -50,7 +50,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     end
 
     let(:unit_name) {'expected-unit-name'}
-    let(:unit) {FactoryBot.create :unit, name: unit_name, course_version: unit_course_version}
+    let(:unit) {FactoryBot.create(:unit, name: unit_name, course_version: unit_course_version)}
 
     before do
       unit.stubs(:in_initiative?).with('HOC').returns(false)
@@ -131,7 +131,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
 
     let(:unit_name) {'expected_unit_name'}
     let(:unit_is_migrated) {true}
-    let(:unit) {FactoryBot.build_stubbed :unit, name: unit_name, is_migrated: unit_is_migrated}
+    let(:unit) {FactoryBot.build_stubbed(:unit, name: unit_name, is_migrated: unit_is_migrated)}
 
     let(:i18n_source_dir) {CDO.dir('i18n/locales/source/curriculum_content')}
     let(:unit_subdirectory) {'expected_unit_subdirectory'}

@@ -8,7 +8,7 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
   let(:dry_run) {false}
   let(:deleted_since) {User::SOFT_DELETED_RECORD_TTL.ago}
   let(:limit) {described_class::ACCOUNT_SCRUB_LIMIT}
-  let(:user) {create :user, :deleted}
+  let(:user) {create(:user, :deleted)}
   let(:older_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL + 1.day).ago}
   let(:newer_than_ttl_date) {(User::SOFT_DELETED_RECORD_TTL - 1.day).ago}
 

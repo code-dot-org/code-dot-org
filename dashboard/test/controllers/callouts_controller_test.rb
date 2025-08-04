@@ -6,7 +6,7 @@ class CalloutsControllerTest < ActionController::TestCase
   setup do
     @callout = Callout.first
 
-    @user = create :admin
+    @user = create(:admin)
     sign_in(@user)
 
     @request.host = CDO.dashboard_hostname

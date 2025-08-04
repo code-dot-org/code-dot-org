@@ -10,21 +10,21 @@ class Plc::EnrollmentEvaluationsControllerTest < ActionController::TestCase
 
     # I used the dialogue from Monty Python because it's actually a decent example of an evaluation quiz that isn't
     # the same for everyone. Not all users taking an examination will answer the exact same questions.
-    @plc_course = create :plc_course
-    @course_unit = create :plc_course_unit, plc_course: @plc_course
+    @plc_course = create(:plc_course)
+    @course_unit = create(:plc_course_unit, plc_course: @plc_course)
 
-    @module_required = create :plc_learning_module, name: 'Required', plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE
+    @module_required = create(:plc_learning_module, name: 'Required', plc_course_unit: @course_unit, module_type: Plc::LearningModule::REQUIRED_MODULE)
 
-    @module_content_1 = create :plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE
-    @module_content_2 = create :plc_learning_module, name: 'Advanced Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE
+    @module_content_1 = create(:plc_learning_module, name: 'Getting thrown off cliffs', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
+    @module_content_2 = create(:plc_learning_module, name: 'Advanced Ornithology', plc_course_unit: @course_unit, module_type: Plc::LearningModule::CONTENT_MODULE)
 
-    @module_practice_1 = create :plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE
-    @module_practice_2 = create :plc_learning_module, name: 'Not revealing your embarassing nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE
+    @module_practice_1 = create(:plc_learning_module, name: 'Answering questions honestly', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
+    @module_practice_2 = create(:plc_learning_module, name: 'Not revealing your embarassing nickname', plc_course_unit: @course_unit, module_type: Plc::LearningModule::PRACTICE_MODULE)
 
-    @user = create :teacher
+    @user = create(:teacher)
     sign_in(@user)
 
-    @enrollment = create :plc_user_course_enrollment, user: @user, plc_course: @plc_course
+    @enrollment = create(:plc_user_course_enrollment, user: @user, plc_course: @plc_course)
     @unit_assignment = @enrollment.plc_unit_assignments.first
   end
 

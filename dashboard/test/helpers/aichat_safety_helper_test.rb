@@ -69,8 +69,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
     mock_response = create_stubbed_response(@openai_response_profanity_json)
     AichatOpenaiResponsesHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
 
-    @english_script = create :script, :with_levels, :in_single_unit_course, name: 'customizing-llms-2024'
-    @spanish_script = create :script, :with_levels, :in_single_unit_course, name: 'customizing-llms-latm-pilot'
+    @english_script = create(:script, :with_levels, :in_single_unit_course, name: 'customizing-llms-2024')
+    @spanish_script = create(:script, :with_levels, :in_single_unit_course, name: 'customizing-llms-latm-pilot')
   end
 
   test "returns toxicity for input if detected" do

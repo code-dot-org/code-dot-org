@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserMenuTest < ActionDispatch::IntegrationTest
   def open_pairing_test(show_pairing)
-    student = create :student_in_word_section
+    student = create(:student_in_word_section)
     section = student.sections_as_student.first
     post "/sections/#{section.code}/log_in", params: {
       id: section.code,
@@ -27,7 +27,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'student does not see links to teacher dashboard' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'
@@ -44,7 +44,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test 'should show sign out link for signed in user' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'
@@ -54,7 +54,7 @@ class UserMenuTest < ActionDispatch::IntegrationTest
   end
 
   test "don't show link to pair programming when not in a section" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get '/home'

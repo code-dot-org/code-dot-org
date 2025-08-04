@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LtiIntegrationTest < ActiveSupport::TestCase
   test "platform_id should exist" do
-    integration = create :lti_integration
+    integration = create(:lti_integration)
     refute_nil integration.platform_id
     assert_equal integration.platform_id.length, 36
   end

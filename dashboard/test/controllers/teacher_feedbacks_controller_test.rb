@@ -9,7 +9,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   end
 
   test 'index: returns success if signed in user - no feedback' do
-    student = create :student
+    student = create(:student)
     sign_in student
     get :index
     assert_response :success
@@ -19,7 +19,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   end
 
   test 'index: returns success if signed in user - feedback' do
-    feedback = create :teacher_feedback, :with_script_level
+    feedback = create(:teacher_feedback, :with_script_level)
     assert_equal TeacherFeedback.all.count, 1
     sign_in feedback.student
     get :index
@@ -32,16 +32,16 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   end
 
   test 'index returns many feedbacks for 3 levels' do
-    student = create :student
-    teacher = create :teacher
-    script_level = create :script_level
-    script_level_2 = create :script_level
-    script_level_3 = create :script_level
+    student = create(:student)
+    teacher = create(:teacher)
+    script_level = create(:script_level)
+    script_level_2 = create(:script_level)
+    script_level_3 = create(:script_level)
     2.times do
-      create :teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script
+      create(:teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script)
     end
-    create :teacher_feedback, student: student, teacher: teacher, level: script_level_2.level, script: script_level_2.script
-    create :teacher_feedback, student: student, teacher: teacher, level: script_level_3.level, script: script_level_3.script
+    create(:teacher_feedback, student: student, teacher: teacher, level: script_level_2.level, script: script_level_2.script)
+    create(:teacher_feedback, student: student, teacher: teacher, level: script_level_3.level, script: script_level_3.script)
 
     assert_equal TeacherFeedback.all.count, 4
     sign_in student
@@ -55,14 +55,14 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   end
 
   test 'index returns most recent feedback first for a level' do
-    student = create :student
-    teacher = create :teacher
-    script_level = create :script_level
+    student = create(:student)
+    teacher = create(:teacher)
+    script_level = create(:script_level)
 
     # script_level feedback
-    create :teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 4.weeks.ago, comment: "oldest"
-    create :teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 3.weeks.ago, comment: "middle"
-    create :teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 2.weeks.ago, comment: "newest"
+    create(:teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 4.weeks.ago, comment: "oldest")
+    create(:teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 3.weeks.ago, comment: "middle")
+    create(:teacher_feedback, student: student, teacher: teacher, level: script_level.level, script: script_level.script, created_at: 2.weeks.ago, comment: "newest")
 
     sign_in student
     get :index
@@ -77,13 +77,13 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
   end
 
   test 'index returns only latest feedback marked awaiting review if student has done work since feedback was given' do
-    student = create :student
-    script_level = create :script_level
+    student = create(:student)
+    script_level = create(:script_level)
     3.times do
-      create :teacher_feedback, student: student, script: script_level.script, level: script_level.levels.first, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+      create(:teacher_feedback, student: student, script: script_level.script, level: script_level.levels.first, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
     end
 
-    create :user_level, user: student, level: script_level.levels.first, script: script_level.script, updated_at: 1.week.from_now
+    create(:user_level, user: student, level: script_level.levels.first, script: script_level.script, updated_at: 1.week.from_now)
 
     sign_in student
     get :index

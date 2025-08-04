@@ -4,23 +4,23 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
 
   self.use_transactional_test_case = true
   setup_all do
-    @organizer = create :program_manager
-    @workshop_organizer = create :workshop_organizer
-    @facilitator = create :facilitator
-    @teacher = create :teacher
+    @organizer = create(:program_manager)
+    @workshop_organizer = create(:workshop_organizer)
+    @facilitator = create(:facilitator)
+    @teacher = create(:teacher)
 
-    @school_district = create :school_district
-    @school = create :school
+    @school_district = create(:school_district)
+    @school = create(:school)
   end
 
   setup do
-    @workshop = create :byo_workshop, organizer: @organizer, num_sessions: 1
+    @workshop = create(:byo_workshop, organizer: @organizer, num_sessions: 1)
     @workshop.facilitators << @facilitator
-    @existing_enrollment = create :pd_enrollment, workshop: @workshop
+    @existing_enrollment = create(:pd_enrollment, workshop: @workshop)
 
-    @organizer_workshop = create :workshop, organizer: @workshop_organizer, num_sessions: 1
+    @organizer_workshop = create(:workshop, organizer: @workshop_organizer, num_sessions: 1)
     @organizer_workshop.facilitators << @facilitator
-    @organizer_workshop_existing_enrollment = create :pd_enrollment, workshop: @organizer_workshop
+    @organizer_workshop_existing_enrollment = create(:pd_enrollment, workshop: @organizer_workshop)
   end
 
   test 'join sends signed out users to sign in gate' do
@@ -29,7 +29,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   test 'join sends student users to account upgrade gate' do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     get :join, params: {workshop_id: @workshop.id}
@@ -46,7 +46,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   test 'join has Closed status with closed workshop' do
-    closed_workshop = create :workshop, :ended
+    closed_workshop = create(:workshop, :ended)
     sign_in @teacher
 
     get :join, params: {workshop_id: closed_workshop.id}
@@ -56,7 +56,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   test 'join has Full status with full workshop' do
-    full_workshop = create :workshop, capacity: 1, num_enrollments: 1
+    full_workshop = create(:workshop, capacity: 1, num_enrollments: 1)
     sign_in @teacher
 
     get :join, params: {workshop_id: full_workshop.id}
@@ -75,9 +75,9 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   test 'join has Duplicate status if user is already enrolled in the workshop' do
-    already_enrolled_teacher = create :teacher
-    workshop_with_enrollment = create :workshop
-    create :pd_enrollment, workshop: workshop_with_enrollment, user: already_enrolled_teacher
+    already_enrolled_teacher = create(:teacher)
+    workshop_with_enrollment = create(:workshop)
+    create(:pd_enrollment, workshop: workshop_with_enrollment, user: already_enrolled_teacher)
     sign_in already_enrolled_teacher
 
     get :join, params: {workshop_id: workshop_with_enrollment.id}
@@ -132,7 +132,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   end
 
   test 'cancel with attendance renders attended view and preserves the enrollment' do
-    create :pd_attendance, enrollment: @existing_enrollment
+    create(:pd_attendance, enrollment: @existing_enrollment)
     assert_does_not_destroy Pd::Enrollment do
       get :cancel, params: {code: @existing_enrollment.code}
     end
@@ -166,7 +166,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'confirm_join_session upgrades migrated student account if emails match' do
     @workshop.start!
     email = 'accidental_student@example.net'
-    student = create :student, email: email
+    student = create(:student, email: email)
     student.migrate_to_multi_auth
     student.reload
 
@@ -191,7 +191,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'confirm_join_session upgrades unmigrated student account if emails match' do
     @workshop.start!
     email = 'accidental_student@example.net'
-    student = create :student, email: email
+    student = create(:student, email: email)
     sign_in student
 
     assert_creates Pd::Enrollment do
@@ -213,7 +213,7 @@ class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   test 'confirm_join_session redirects student to upgrade account if emails dont match' do
     @workshop.start!
     email = 'mismatch@example.net'
-    student = create :student, email: 'accidental_student@example.net'
+    student = create(:student, email: 'accidental_student@example.net')
     sign_in student
 
     assert_creates Pd::Enrollment do

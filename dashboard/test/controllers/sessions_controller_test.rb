@@ -16,14 +16,14 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "teachers go to homepage after signing in" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to '/home'
   end
 
   test "students go to learn homepage after signing in" do
-    student = create :student
+    student = create(:student)
     create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
@@ -52,7 +52,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "teachers go to specified return to url after signing in" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
     create_session_for_user(teacher)
     assert_signed_in_as teacher
@@ -60,7 +60,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'signing in as user via username' do
-    user = create :user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx'
+    user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
 
     post :create, params: {
       user: {login: user.username, hashed_email: '', password: user.password}
@@ -71,21 +71,21 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'signing in as student via hashed_email' do
-    student = create :student, birthday: Date.new(2010, 1, 3), email: 'my@email.xx'
+    student = create(:student, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
     create_session_for_user(student)
     assert_signed_in_as student
     assert_redirected_to '/'
   end
 
   test 'signing in new user creates blank UserGeo' do
-    user = create :user
+    user = create(:user)
     assert UserGeo.find_by_user_id(user.id).nil?
     create_session_for_user(user)
     assert UserGeo.find_by_user_id(user.id)
   end
 
   test 'signing in user with existing UserGeo does not change UserGeo' do
-    user = create :user, current_sign_in_ip: '1.2.3.4'
+    user = create(:user, current_sign_in_ip: '1.2.3.4')
     UserGeo.create(user_id: user.id, ip_address: '127.0.0.1')
 
     assert_no_change('UserGeo.find_by_user_id(user.id)') do
@@ -96,7 +96,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'failed signin does not create UserGeo' do
-    user = create :user
+    user = create(:user)
 
     assert_no_change('UserGeo.count') do
       post :create, params: {
@@ -112,7 +112,7 @@ class SessionsControllerTest < ActionController::TestCase
   test 'signing in user creates SignIn' do
     frozen_time = Date.parse('1985-10-26 01:20:00')
     DateTime.stubs(:now).returns(frozen_time)
-    user = create :user, sign_in_count: 2
+    user = create(:user, sign_in_count: 2)
     assert_creates(SignIn) do
       create_session_for_user(user)
     end
@@ -123,7 +123,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test 'failed signin does not create SignIn' do
-    user = create :user
+    user = create(:user)
     assert_does_not_create(SignIn) do
       post :create, params: {
         user: {
@@ -136,7 +136,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "users go to code.org after logging out" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
     delete :destroy
@@ -151,7 +151,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "facebook users go to generic oauth sign out page after logging out" do
-    student = create :student, provider: :facebook
+    student = create(:student, provider: :facebook)
     sign_in student
 
     delete :destroy
@@ -160,7 +160,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "google account users go to generic oauth sign out page after logging out" do
-    student = create :student, provider: :google_oauth2
+    student = create(:student, provider: :google_oauth2)
     sign_in student
 
     delete :destroy
@@ -181,19 +181,19 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "deleted user cannot sign in" do
-    teacher = create :teacher, :deleted
+    teacher = create(:teacher, :deleted)
     create_session_for_user(teacher)
     assert_signed_in_as nil
   end
 
   test "session cookie set if remember me not checked" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     create_session_for_user(teacher)
     assert_nil @response.cookies["remember_user_token"]
   end
 
   test "persistent cookie set if remember me is checked" do
-    teacher = create :teacher
+    teacher = create(:teacher)
 
     post :create, params: {
       user: {
@@ -208,7 +208,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "session can be expired" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     create_session_for_user(teacher)
     original_id = session.id.dup
 
@@ -217,7 +217,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   test "misc session data will be preserved through expiration" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     create_session_for_user(teacher)
     # User-identifying data will NOT be preserved.
     session[:_csrf_token] = "baz"
@@ -247,7 +247,7 @@ class SessionsControllerTest < ActionController::TestCase
   end
 
   describe 'GET lockout' do
-    let(:user) {create :parent_managed_student}
+    let(:user) {create(:parent_managed_student)}
 
     let(:user_is_locked_out) {true}
 
@@ -304,7 +304,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     context 'when permission request is already sent' do
       before do
-        create :parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date
+        create(:parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date)
       end
 
       let(:parent_email) {'latest_permission_request@parent.email'}
@@ -322,7 +322,7 @@ class SessionsControllerTest < ActionController::TestCase
     end
 
     context 'when user is not parent managed' do
-      let(:user) {create :student, email: user_email}
+      let(:user) {create(:student, email: user_email)}
 
       let(:user_email) {'cap@test.org'}
 

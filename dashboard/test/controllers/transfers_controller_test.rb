@@ -8,14 +8,14 @@ class TransfersControllerTest < ActionController::TestCase
   NONEXISTENT_SECTION_CODE = 'AEIOUY'.freeze
 
   setup do
-    @teacher = create :teacher
-    @facilitator = create :facilitator
+    @teacher = create(:teacher)
+    @facilitator = create(:facilitator)
     sign_in(@teacher)
 
-    @word_section = create :section, user: @teacher, login_type: 'word'
+    @word_section = create(:section, user: @teacher, login_type: 'word')
     @word_student = create(:follower, section: @word_section).student_user
 
-    @picture_section = create :section, user: @teacher, login_type: 'picture'
+    @picture_section = create(:section, user: @teacher, login_type: 'picture')
     @picture_student = create(:follower, section: @picture_section).student_user
 
     @params = {
@@ -25,10 +25,10 @@ class TransfersControllerTest < ActionController::TestCase
       stay_enrolled_in_current_section: true
     }
 
-    @other_teacher = create :teacher
-    @other_teacher_section = create :section, user: @other_teacher, login_type: 'word'
+    @other_teacher = create(:teacher)
+    @other_teacher_section = create(:section, user: @other_teacher, login_type: 'word')
 
-    @pl_email_section = create :section, :teacher_participants, user: @facilitator
+    @pl_email_section = create(:section, :teacher_participants, user: @facilitator)
   end
 
   test "returns an error when student ids are not provided" do
@@ -68,7 +68,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when the new_section_code belongs to a google classroom section" do
-    google_classroom_section = create :section, user: @teacher, login_type: 'google_classroom'
+    google_classroom_section = create(:section, user: @teacher, login_type: 'google_classroom')
 
     @params[:new_section_code] = google_classroom_section.code
     post :create, params: @params
@@ -80,7 +80,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when the new_section_code belongs to a clever section" do
-    clever_section = create :section, user: @teacher, login_type: 'clever'
+    clever_section = create(:section, user: @teacher, login_type: 'clever')
 
     @params[:new_section_code] = clever_section.code
     post :create, params: @params
@@ -162,7 +162,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "multiple students can be transferred" do
-    new_student = create :student
+    new_student = create(:student)
     Follower.create!(
       user: @teacher,
       student_user: new_student,
@@ -178,7 +178,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "students can be transferred to other teachers if they already belong to a section belonging to the other teacher" do
-    already_enrolled_section = create :section, user: @other_teacher, login_type: 'word'
+    already_enrolled_section = create(:section, user: @other_teacher, login_type: 'word')
     Follower.create!(
       user: @other_teacher,
       student_user: @word_student,
@@ -248,7 +248,7 @@ class TransfersControllerTest < ActionController::TestCase
 
   test "returns an error when the new_section will be over it's section capacity" do
     500.times do
-      create :follower, section: @picture_section
+      create(:follower, section: @picture_section)
     end
 
     post :create, params: @params

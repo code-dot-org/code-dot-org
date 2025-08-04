@@ -4,7 +4,7 @@ class Services::ChildAccount::LockoutHandlerTest < ActiveSupport::TestCase
   let(:described_class) {Services::ChildAccount::LockoutHandler}
   let(:described_instance) {described_class.new(user: user)}
 
-  let(:user) {build_stubbed :student}
+  let(:user) {build_stubbed(:student)}
 
   it 'inherits from Services::Base' do
     _(described_class.superclass).must_equal Services::Base

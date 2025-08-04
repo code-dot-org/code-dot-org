@@ -8,12 +8,12 @@ class RaceInterstitialHelperTest < ActionView::TestCase
 
   describe '.show?' do
     subject(:show?) {RaceInterstitialHelper.show?(user)}
-    let(:user) {create :student, current_sign_in_ip: '127.0.0.1'}
-    let!(:sign_in) {create :sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 8.days}
+    let(:user) {create(:student, current_sign_in_ip: '127.0.0.1')}
+    let!(:sign_in) {create(:sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 8.days)}
     let!(:geocoder_result) {mock_geocoder_result('US')}
 
     context 'when teacher' do
-      let(:user) {create :teacher}
+      let(:user) {create(:teacher)}
 
       it 'returns false' do
         _(show?).must_equal false
@@ -21,7 +21,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     end
 
     context 'when under 13' do
-      let(:user) {create :student, age: 8}
+      let(:user) {create(:student, age: 8)}
 
       it 'returns false' do
         _(show?).must_equal false
@@ -37,7 +37,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     end
 
     context 'when signed in for the first time less than a week ago' do
-      let(:sign_in) {create :sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 3.days}
+      let(:sign_in) {create(:sign_in, user: user, sign_in_count: 1, sign_in_at: DateTime.now - 3.days)}
 
       it 'returns false' do
         _(show?).must_equal false
@@ -45,7 +45,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     end
 
     context 'when race already present' do
-      let(:user) {create :student, current_sign_in_ip: '127.0.0.1', races: 'white,black'}
+      let(:user) {create(:student, current_sign_in_ip: '127.0.0.1', races: 'white,black')}
 
       it 'returns false' do
         _(show?).must_equal false
@@ -53,7 +53,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     end
 
     context 'when closed dialog already' do
-      let(:user) {create :student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog'}
+      let(:user) {create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog')}
 
       # These tests reference a bug that affected users between May 2023 and February 2024.
       # PR with the fix: https://github.com/code-dot-org/code-dot-org/pull/56729
@@ -65,7 +65,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
 
       context 'when created before bug was introduced' do
         let(:user) do
-          create :student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog' do |u|
+          create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
             u.created_at = Time.new(2023, 4, 1)
           end
         end
@@ -77,7 +77,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
 
       context 'when created during bug-affected time period' do
         let(:user) do
-          create :student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog' do |u|
+          create(:student, current_sign_in_ip: '127.0.0.1', races: 'closed_dialog') do |u|
             u.created_at = Time.new(2023, 6, 1)
           end
         end
@@ -89,7 +89,7 @@ class RaceInterstitialHelperTest < ActionView::TestCase
     end
 
     context 'when IP address is nil' do
-      let(:user) {create :student, current_sign_in_ip: nil}
+      let(:user) {create(:student, current_sign_in_ip: nil)}
 
       it 'returns false' do
         _(show?).must_equal false

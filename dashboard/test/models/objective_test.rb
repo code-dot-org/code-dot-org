@@ -23,7 +23,7 @@ class ObjectiveTest < ActiveSupport::TestCase
   end
 
   test "summarize retrives translations" do
-    objective = create :objective, description: "English description"
+    objective = create(:objective, description: "English description")
     test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
@@ -43,7 +43,7 @@ class ObjectiveTest < ActiveSupport::TestCase
 
   test 'description is required' do
     assert_raises ActiveRecord::RecordInvalid do
-      create :objective, description: nil
+      create(:objective, description: nil)
     end
   end
 end

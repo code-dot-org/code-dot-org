@@ -2,9 +2,9 @@ require 'test_helper'
 
 class User::FacilitatorInfoTest < ActiveSupport::TestCase
   describe 'validations' do
-    subject(:user_facilitator_info) {build :user_facilitator_info, user: user, bio: bio}
+    subject(:user_facilitator_info) {build(:user_facilitator_info, user: user, bio: bio)}
 
-    let(:user) {create :facilitator}
+    let(:user) {create(:facilitator)}
     let(:bio) do
       Faker::Lorem.
         paragraph(sentence_count: User::FacilitatorInfo::BIO_MIN_LENGTH).

@@ -61,7 +61,7 @@ class OpenaiChatControllerTest < ActionController::TestCase
   response: :bad_request
 
   test 'identifies when chat message contains profanity' do
-    student = create :student_with_ai_tutor_access
+    student = create(:student_with_ai_tutor_access)
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: {messages: [{role: "user", content: "damn you, robot!"}], locale: "en"}
@@ -70,7 +70,7 @@ class OpenaiChatControllerTest < ActionController::TestCase
   end
 
   test 'identifies when chat message contains PII' do
-    student = create :student_with_ai_tutor_access
+    student = create(:student_with_ai_tutor_access)
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovegood@hogwarts.edu'))
     post :chat_completion, params: {messages: [{role: "user", content: "my email is l.lovegood@hogwarts.edu"}], locale: "en"}

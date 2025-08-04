@@ -5,7 +5,7 @@ class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
     sign_in teacher
     get :home
@@ -14,7 +14,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "teacher without progress or assigned course/script redirected to index" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     assert_nil teacher.user_script_with_most_recent_progress
     assert_nil teacher.most_recently_assigned_user_script
@@ -24,8 +24,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "teacher with assigned course/script redirected to index" do
-    teacher = create :teacher
-    script = create :script, :in_single_unit_course
+    teacher = create(:teacher)
+    script = create(:script, :in_single_unit_course)
     sign_in teacher
     teacher.assign_script(script)
     assert_equal script, teacher.most_recently_assigned_script
@@ -35,7 +35,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student without progress or assigned course/script redirected to index" do
-    student = create :student
+    student = create(:student)
     sign_in student
     assert_nil student.user_script_with_most_recent_progress
     assert_nil student.most_recently_assigned_user_script
@@ -45,8 +45,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with progress but not an assigned script will go to index" do
-    student = create :student
-    script = create :script, :in_single_unit_course
+    student = create(:student)
+    script = create(:script, :in_single_unit_course)
     sign_in student
     User.any_instance.stubs(:script_with_most_recent_progress).returns(script)
     assert_equal script, student.script_with_most_recent_progress
@@ -57,10 +57,10 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned unit and no progress is redirected to course overview" do
-    unit_group = create :unit_group
-    unit = create :unit, original_unit_group: unit_group
-    unit_group_unit = create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-    section = create :section, script: unit
+    unit_group = create(:unit_group)
+    unit = create(:unit, original_unit_group: unit_group)
+    unit_group_unit = create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    section = create(:section, script: unit)
     student = create(:follower, section: section).student_user
     sign_in student
     assert_equal unit, student.most_recently_assigned_script
@@ -73,10 +73,10 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned script then recent progress in a different script will go to index" do
-    student = create :student
+    student = create(:student)
     sign_in student
-    assigned_user_script = create :user_script, user: student, assigned_at: 2.days.ago
-    user_script_with_progress = create :user_script, user: student, last_progress_at: 1.day.ago
+    assigned_user_script = create(:user_script, user: student, assigned_at: 2.days.ago)
+    user_script_with_progress = create(:user_script, user: student, last_progress_at: 1.day.ago)
     User.any_instance.stubs(:user_script_with_most_recent_progress).returns(user_script_with_progress)
     User.any_instance.stubs(:most_recently_assigned_user_script).returns(assigned_user_script)
     assert_equal assigned_user_script, student.most_recently_assigned_user_script
@@ -88,12 +88,12 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with recent progress then an assigned script should go to the assigned script overview" do
-    unit_group = create :unit_group
-    unit = create :unit, original_unit_group: unit_group
-    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-    assigned_section = create :section, script: unit
+    unit_group = create(:unit_group)
+    unit = create(:unit, original_unit_group: unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    assigned_section = create(:section, script: unit)
     student = create(:follower, section: assigned_section).student_user
-    user_script_with_progress = create :user_script, user: student, script: unit, last_progress_at: 2.days.ago
+    user_script_with_progress = create(:user_script, user: student, script: unit, last_progress_at: 2.days.ago)
     sign_in student
 
     student.most_recently_assigned_user_script
@@ -105,10 +105,10 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned script then recent progress in that script will go to script overview" do
-    unit_group = create :unit_group
-    unit = create :unit, original_unit_group: unit_group
-    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-    section = create :section, script: unit
+    unit_group = create(:unit_group)
+    unit = create(:unit, original_unit_group: unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    section = create(:section, script: unit)
     student = create(:follower, section: section).student_user
     sign_in student
 
@@ -122,10 +122,10 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with assigned course or script and no age is still redirected to course overview" do
-    unit_group = create :unit_group
-    unit = create :unit, original_unit_group: unit_group
-    create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
-    section = create :section, script: unit
+    unit_group = create(:unit_group)
+    unit = create(:unit, original_unit_group: unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
+    section = create(:section, script: unit)
     student = create(:follower, section: section).student_user
     student.birthday = nil
     student.age = nil
@@ -137,8 +137,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in will go to index" do
-    script = create :script, :in_single_unit_course
-    section = create :section, script: script
+    script = create(:script, :in_single_unit_course)
+    section = create(:section, script: script)
     student = create(:follower, section: section).student_user
     section.hidden = 1
     section.save(validate: false)
@@ -152,8 +152,8 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with most recent assigned script only associated with archived sections they are enrolled in then recent progress in that script will go to index" do
-    script = create :script, :in_single_unit_course
-    section = create :section, script: script
+    script = create(:script, :in_single_unit_course)
+    section = create(:section, script: script)
     student = create(:follower, section: section).student_user
     section.hidden = 1
     section.save(validate: false)
@@ -169,9 +169,9 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student without pilot access will go to index" do
-    pilot_script = create :script, pilot_experiment: 'pilot-experiment'
-    create :single_unit_course, unit: pilot_script, pilot_experiment: 'pilot-experiment'
-    section = create :section, script: pilot_script
+    pilot_script = create(:script, pilot_experiment: 'pilot-experiment')
+    create(:single_unit_course, unit: pilot_script, pilot_experiment: 'pilot-experiment')
+    section = create(:section, script: pilot_script)
     student = create(:follower, section: section).student_user
     sign_in student
     get :index
@@ -180,11 +180,11 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "student with pilot access will go to pilot script" do
-    unit_group = create :unit_group
-    pilot_unit = create :unit, pilot_experiment: 'pilot-experiment', original_unit_group: unit_group
-    create :unit_group_unit, unit_group: unit_group, script: pilot_unit, position: 1
-    pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
-    section = create :section, script: pilot_unit, user: pilot_teacher
+    unit_group = create(:unit_group)
+    pilot_unit = create(:unit, pilot_experiment: 'pilot-experiment', original_unit_group: unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: pilot_unit, position: 1)
+    pilot_teacher = create(:teacher, pilot_experiment: 'pilot-experiment')
+    section = create(:section, script: pilot_unit, user: pilot_teacher)
     student = create(:follower, section: section).student_user
     sign_in student
     get :index
@@ -289,7 +289,7 @@ class HomeControllerTest < ActionController::TestCase
   test 'do show levelbuilder links when levelbuilder' do
     skip 'TODO: look into bringing levelbuilder links to /home'
 
-    user = create :user
+    user = create(:user)
     UserPermission.create(user_id: user.id, permission: 'levelbuilder')
     sign_in user
 
@@ -298,7 +298,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student without age gets student information prompt with age select' do
-    student = create :student
+    student = create(:student)
     student.update_attribute(:birthday, nil) # bypasses validations
     student.update_attribute(:us_state, 'DC')
     student = student.reload
@@ -315,7 +315,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'LTI student without us_state gets student information prompt' do
-    student = create :student, :with_lti_auth
+    student = create(:student, :with_lti_auth)
 
     student.update_attribute(:us_state, nil) # bypasses validations
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
@@ -329,7 +329,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student with age does not get student information prompt' do
-    student = create :student
+    student = create(:student)
     assert student.age
 
     sign_in student
@@ -340,7 +340,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'LTI student with age and us_state does not get student information prompt' do
-    student = create :student, :with_lti_auth
+    student = create(:student, :with_lti_auth)
     assert student.age
     student.update_attribute(:us_state, 'AL')
     student = student.reload
@@ -354,7 +354,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with no us_state gets student information prompt' do
-    student = create :student, age: 12
+    student = create(:student, age: 12)
     student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
     student.update_attribute(:us_state, nil) # bypasses validations
     refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
@@ -369,7 +369,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with no provided us_state gets student information prompt' do
-    student = create :student, age: 12
+    student = create(:student, age: 12)
     student.update_attribute(:us_state, 'DC')
     student.update_attribute(:user_provided_us_state, false)
     student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
@@ -387,7 +387,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
-    student = create :student, age: 12
+    student = create(:student, age: 12)
     student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     student = student.reload
@@ -403,7 +403,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student under 13 and in US with provided us_state does not get student information prompt' do
-    student = create :student, age: 12
+    student = create(:student, age: 12)
     student.update_attribute(:us_state, 'DC')
     student.update_attribute(:user_provided_us_state, true)
     student = student.reload
@@ -417,7 +417,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'student over 13 and in US with us_state does not get student information prompt' do
-    student = create :student, age: 19
+    student = create(:student, age: 19)
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     sign_in student
     get :home
@@ -426,7 +426,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'clever student under 13 and in US with no us_state does not get student information prompt' do
-    student = create :student, :clever_sso_provider
+    student = create(:student, :clever_sso_provider)
     student.update_attribute(:age, 11)
     request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
     sign_in student
@@ -441,7 +441,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "teacher visiting homepage gets expected cookies set" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     get :home
 

@@ -77,7 +77,7 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
     let(:teacher_email) {'teacher@example.com'}
     let(:terms_of_service_version) {1}
 
-    let!(:user) {create :user, email: student_email, terms_of_service_version: 1}
+    let!(:user) {create(:user, email: student_email, terms_of_service_version: 1)}
 
     it 'changes user_type to TYPE_TEACHER' do
       _ {change_user_type}.must_change -> {User.find(user.id).user_type}, from: ::User::TYPE_STUDENT, to: new_user_type
@@ -119,7 +119,7 @@ class Services::UserTypeChangeTest < ActionDispatch::IntegrationTest
     end
 
     context 'when user already has oauth option with new teacher email' do
-      let!(:auth_option) {create :authentication_option, user: user, email: teacher_email}
+      let!(:auth_option) {create(:authentication_option, user: user, email: teacher_email)}
 
       it 'removes only user student email Auth Option' do
         _(user.authentication_options.count).must_equal 2 # Check that the user starts with 2 Auth Options

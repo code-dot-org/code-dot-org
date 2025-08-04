@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
   let(:described_instance) {described_class.new(user: user)}
-  let!(:user) {build :user, provider: provider, encrypted_password: nil}
+  let!(:user) {build(:user, provider: provider, encrypted_password: nil)}
   let(:provider) {'manual'}
 
   describe '#call' do
@@ -39,7 +39,7 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
     end
 
     context 'when Google' do
-      let(:user) {build :user, :google_sso_provider}
+      let(:user) {build(:user, :google_sso_provider)}
 
       it 'migrates the user' do
         migrate
@@ -62,7 +62,7 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
     end
 
     context 'when Clever' do
-      let(:user) {build :user, :clever_sso_provider}
+      let(:user) {build(:user, :clever_sso_provider)}
 
       it 'migrates the user' do
         migrate
@@ -77,7 +77,7 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
     end
 
     context 'when Microsoft' do
-      let(:user) {build :user, :microsoft_v2_sso_provider}
+      let(:user) {build(:user, :microsoft_v2_sso_provider)}
 
       it 'migrates the user' do
         migrate
@@ -92,7 +92,7 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
     end
 
     context 'when Facebook' do
-      let(:user) {build :user, :facebook_sso_provider}
+      let(:user) {build(:user, :facebook_sso_provider)}
 
       it 'migrates the user' do
         migrate
