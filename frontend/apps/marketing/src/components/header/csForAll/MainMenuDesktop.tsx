@@ -7,13 +7,19 @@ import {LinkItemProps} from './common/types';
 import DropdownMenu from './DropdownMenu';
 
 export interface MenuConfig {
+  /** Dropdown menu items */
   linkList: LinkItemProps[];
+  /** Dropdown parent button id */
   parentId?: string;
 }
 
 export interface MenuItemConfig {
+  /** Menu item type */
+  /** 'dropdown' for a dropdown menu, 'button' for a direct link */
   type: 'dropdown' | 'button';
+  /** Top-level link item */
   topLevelLink: LinkItemProps;
+  /** Dropdown configuration if type is 'dropdown' */
   dropdownConfig?: MenuConfig;
 }
 
