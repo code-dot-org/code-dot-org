@@ -14,7 +14,6 @@ scripts_map = {
   'algebra' => 'algebra',
   'flappy' => 'flappy',
   '20-hour' => '20-hour',
-  'course1' => 'course1',
   'course2' => 'course2',
   'course3' => 'course3',
   'course4' => 'course4',
