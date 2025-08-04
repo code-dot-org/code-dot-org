@@ -78,22 +78,23 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
 
   return (
     <aside className={styles.sidebarContainer}>
-      <div className={styles.sidebarContent}>
-        <Box
-          component="nav"
-          sx={{width: {sm: drawerWidth}, flexShrink: {sm: 0}}}
-          aria-label="AI differentiation chat threads"
-        >
-          <Button
-            color={buttonColors.white}
-            size="m"
-            type="primary"
-            iconLeft={{iconName: 'plus'}}
-            onClick={() => console.log('Add new chat thread')}
-            text={commonI18n.aiDifferentiation_new_chat()}
-            className={styles.sidebarButton}
-          />
-          <List>
+      <Box
+        component="nav"
+        sx={{width: {sm: drawerWidth}, flexShrink: {sm: 0}}}
+        aria-label="AI differentiation chat threads"
+        className={styles.sidebarBox}
+      >
+        <Button
+          color={buttonColors.white}
+          size="m"
+          type="primary"
+          iconLeft={{iconName: 'plus'}}
+          onClick={() => console.log('Add new chat thread')}
+          text={commonI18n.aiDifferentiation_new_chat()}
+          className={styles.sidebarButton}
+        />
+        <div className={styles.sidebarContent}>
+          <List disablePadding={true}>
             {todayChats.length > 0 && (
               <>
                 <p className={styles.sidebarSectionTitle}>TODAY</p>
@@ -147,8 +148,8 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
               </>
             )}
           </List>
-        </Box>
-      </div>
+        </div>
+      </Box>
     </aside>
   );
 };
