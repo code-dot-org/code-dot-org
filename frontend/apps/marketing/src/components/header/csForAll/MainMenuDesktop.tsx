@@ -3,8 +3,8 @@ import Button from '@mui/material/Button';
 import {useMemo} from 'react';
 
 import {buttonStyles} from './common/styles';
+import {LinkItemProps} from './common/types';
 import DropdownMenu from './DropdownMenu';
-import {LinkItemProps} from './LinkItem';
 
 export interface MenuConfig {
   linkList: LinkItemProps[];
@@ -66,7 +66,7 @@ const MainMenuDesktop = ({
         <DropdownMenu
           key={key}
           id={topLevelLink.id ?? ''}
-          label={topLevelLink.label}
+          buttonLabel={topLevelLink.label}
           linkList={dropdownConfig.linkList}
         />
       );

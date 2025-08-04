@@ -1,7 +1,8 @@
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
-import LinkItem, {LinkItemProps} from './LinkItem';
+import {LinkItemProps} from './common/types';
+import LinkItem from './LinkItem';
 
 export interface LinkListProps {
   /** Site links */

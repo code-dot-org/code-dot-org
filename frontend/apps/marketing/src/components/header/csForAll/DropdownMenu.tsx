@@ -8,13 +8,14 @@ import {useState} from 'react';
 import theme from '@/themes/csforall';
 
 import {buttonStyles} from './common/styles';
-import LinkItem, {LinkItemProps} from './LinkItem';
+import {LinkItemProps} from './common/types';
+import LinkItem from './LinkItem';
 
 export interface MenuListProps {
-  /** The id of the button that opens the menu */
+  /** Button id that opens menu */
   id: string;
-  /** The label of the button that opens the menu */
-  label: string;
+  /** Button label that opens menu */
+  buttonLabel: string;
   /** The list of links to display in the menu */
   linkList?: LinkItemProps[];
 }
@@ -54,7 +55,7 @@ const styles = {
   },
 };
 
-const DropdownMenu: React.FC<MenuListProps> = ({id, label, linkList}) => {
+const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
@@ -78,7 +79,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, label, linkList}) => {
         disableRipple
         sx={styles.button}
       >
-        {label}
+        {buttonLabel}
         {open ? (
           <ExpandLessIcon fontSize="medium" />
         ) : (

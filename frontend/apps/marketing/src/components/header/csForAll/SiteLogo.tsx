@@ -1,11 +1,13 @@
 import Link from '@mui/material/Link';
 import {AnchorHTMLAttributes} from 'react';
 
+import {LinkItemProps} from './common/types';
+
 export interface SiteLogoProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Logo aria label */
-  label: string;
+  label: LinkItemProps['label'];
   /** Logo URL */
-  href: string;
+  href: LinkItemProps['href'];
   /** Logo image */
   imgSrc: string;
 }

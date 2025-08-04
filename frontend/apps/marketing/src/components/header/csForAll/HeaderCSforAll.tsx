@@ -8,6 +8,7 @@ import React, {HTMLAttributes, useState} from 'react';
 import CallToAction from './CallToAction';
 import CloseButton from './CloseButton';
 import {headerStyles} from './common/styles';
+import {LinkItemProps} from './common/types';
 import {
   CALL_TO_ACTION,
   TOP_LEVEL_LINKS,
@@ -15,7 +16,6 @@ import {
   MAIN_MENU_DESKTOP_ITEMS,
 } from './config';
 import HamburgerButton from './HamburgerButton';
-import {LinkItemProps} from './LinkItem';
 import LinkList from './LinkList';
 import MainMenuDesktop from './MainMenuDesktop';
 import SiteLogo from './SiteLogo';

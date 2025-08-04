@@ -27,7 +27,7 @@ const styles = {
 const CloseButton = ({onClick}: MenuButtonProps) => {
   return (
     <IconButton
-      aria-label="Close drawer"
+      aria-label="Close menu"
       onClick={onClick}
       disableRipple
       sx={styles.closeButton}

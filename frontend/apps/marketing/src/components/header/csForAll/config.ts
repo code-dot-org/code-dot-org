@@ -1,7 +1,8 @@
 import logoImage from '@public/images/csforall-logo.svg';
 
 import {CallToActionProps} from './CallToAction';
-import {LinkItemProps} from './LinkItem';
+import {LinkItemProps} from './common/types';
+import {createLinkItem} from './common/utils';
 import {SiteLogoProps} from './SiteLogo';
 
 const SHARED_LINKS = {
@@ -71,20 +72,10 @@ const SHARED_LINKS = {
   },
 } as const;
 
-const createLinkItem = (
-  link: (typeof SHARED_LINKS)[keyof typeof SHARED_LINKS],
-  overrides: Partial<LinkItemProps> = {},
-): LinkItemProps => ({
-  id: link.href.replace('/', '').replace('/', '-') || 'home',
-  label: link.label,
-  href: link.href,
-  ...overrides,
-});
-
 // Site Logo
 export const SITE_LOGO: {logo: SiteLogoProps} = {
   logo: {
-    label: 'CSforAll',
+    label: 'Go to homepage',
     href: SHARED_LINKS.HOME.href,
     imgSrc: logoImage.src,
   },

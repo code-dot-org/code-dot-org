@@ -28,7 +28,7 @@ const styles = {
 const HamburgerButton = ({onClick}: HamburgerButtonProps) => {
   return (
     <IconButton
-      aria-label="Open drawer"
+      aria-label="Open menu"
       edge="end"
       onClick={onClick}
       sx={styles.hamburgerButton}
