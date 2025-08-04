@@ -10,6 +10,26 @@ describe('HeaderCSforAll', () => {
     expect(logo).toBeInTheDocument();
   });
 
+  it('renders the main navigation on desktop', () => {
+    render(<HeaderCSforAll />);
+    const nav = screen.getByLabelText('Main navigation');
+    expect(nav).toBeInTheDocument();
+  });
+
+  it('renders a dropdown menu', () => {
+    render(<HeaderCSforAll />);
+    const dropdownToggle = screen.getAllByRole('button')[0];
+    fireEvent.click(dropdownToggle);
+    const dropdownMenu = screen.getByRole('menu');
+    expect(dropdownMenu).toBeInTheDocument();
+  });
+
+  it('renders the main navigation on mobile', () => {
+    render(<HeaderCSforAll />);
+    const nav = screen.getByLabelText('Main mobile navigation');
+    expect(nav).toBeInTheDocument();
+  });
+
   it('renders call to action button on desktop and drawer', () => {
     render(<HeaderCSforAll />);
     const callToAction = screen.getAllByText('Get Involved');
