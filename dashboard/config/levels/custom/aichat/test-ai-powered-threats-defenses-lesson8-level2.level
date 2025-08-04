@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-07-30T17:31:05.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## AI Fraud Detection\r\n\r\nCompare how well an AI system detects fraud compared to your own analysis.\r\n\r\n### Do This:\r\n\r\nLoad the same user artifacts that you looked at to AI and compare:\r\n1. Did the AI flag the same thing?\r\n2. Did it miss anything?\r\n3. Did it catch something you or another person wouldn't?\r\n\r\n\r\n**Try it out!** \r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>Please review this user's background, login log, and transaction history. What behavior seems suspicious or possibly fraudulent, and why?\r\n:::\r\n&nbsp\r\n\r\n:::details [<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Need help narrowing down which details to focus on?**]\r\nYou can ask AI Chat what vulnerabilities to attack based on your partner’s interests.\r\n:::\r\n",
+    "submittable": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a simulated AI fraud detection assistant trained on user login activity and transaction history.\n\nWhen given a user persona with background information, recent login attempts, and transaction data, you will analyze the activity to identify anything unusual or potentially fraudulent.\n\nHighlight any suspicious behavior (e.g., strange login patterns, large transactions, unusual locations, etc.) and explain your reasoning in plain language. Use behavioral patterns from the user profile to inform your judgment.\n\nYou may also share anything that seems uncertain or could be a false positive. Your goal is to simulate how an AI system might flag anomalies while acknowledging limitations.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": false
+    },
+    "offer_browser_tts": "false",
+    "disable_edit_run_for_submission": "false",
+    "starter_assets": {
+      "Jordan P. Audit Logs.pdf": "fbbc7a56-5975-4b74-9407-41ee6d4768ce.pdf",
+      "Sana R. Audit Logs.pdf": "b5f95c63-7550-4cd4-a22e-b145ccaa53c4.pdf",
+      "Diego M. Audit Logs.pdf": "eeda6405-e2d3-46fd-bc65-9c8e05736a9a.pdf",
+      "Amara T. Audit Logs.pdf": "45057ff9-c1df-42b9-9ba5-25e18d515dd1.pdf"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-07-30T17:31:05.800+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson3-level2\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson3-level2\"},{\"changed_at\":\"2025-07-30 17:38:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-30 17:40:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:43:14 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-07-31 15:47:22 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

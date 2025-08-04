@@ -7,7 +7,7 @@ class LibraryBucket < BucketHelper
   end
 
   def allowed_file_types
-    %w(.json .java .py .csv .txt)
+    %w(.json .java .py .csv .txt .js)
   end
 
   def cache_duration_seconds

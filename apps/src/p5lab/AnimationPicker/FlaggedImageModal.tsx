@@ -8,12 +8,14 @@ interface FlaggedImageModalProps {
   isOpen: boolean;
   onAccept: () => void;
   onCancel: () => void;
+  errorMessage?: string;
 }
 
 const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   isOpen,
   onAccept,
   onCancel,
+  errorMessage,
 }) => {
   if (!isOpen) return null;
 
@@ -23,32 +25,34 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
       onClose={onCancel}
       title={i18n.animationPicker_flaggedImageModalTitle()}
       customContent={
-        <div>
-          <BodyTwoText>
-            {i18n.animationPicker_flaggedImage()}
-            <ul>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageNoShare()}
-                </BodyTwoText>
-              </li>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageNoUpload()}
-                </BodyTwoText>
-              </li>
-              <li>
-                <BodyTwoText>
-                  {i18n.animationPicker_flaggedImageTOS()}
-                </BodyTwoText>
-              </li>
-            </ul>
-          </BodyTwoText>
+        <div id="dsco-dialog-description">
+          <BodyTwoText>{i18n.animationPicker_flaggedImage()}</BodyTwoText>
+          <ul>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageNoShare()}
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageNoUpload()}
+              </BodyTwoText>
+            </li>
+            <li>
+              <BodyTwoText>
+                {i18n.animationPicker_flaggedImageTOS()}
+              </BodyTwoText>
+            </li>
+          </ul>
+          {errorMessage && (
+            <BodyTwoText style={{color: 'red'}}>{errorMessage}</BodyTwoText>
+          )}
         </div>
       }
       primaryButtonProps={{
         text: i18n.accept(),
         onClick: onAccept,
+        disabled: !!errorMessage, // Disable if there's an error message.
       }}
       secondaryButtonProps={{
         text: i18n.cancel(),

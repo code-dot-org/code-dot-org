@@ -4,14 +4,15 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import ConsoleManager from './ConsoleManager';
 
@@ -43,6 +44,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   const widgetViewShowCode = useAppSelector(
     state => state.codebridgeWorkspace.widgetViewShowCode
   );
+  const settings = useCodebridgeSettings();
 
   useEffect(() => {
     if (!consoleManager) {
@@ -92,7 +94,9 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           color={'black'}
         />
       </WithTooltip>
-      {isWidgetView && !widgetViewShowCode && <SettingsButton />}
+      {isWidgetView && !widgetViewShowCode && (
+        <SettingsButton settings={settings} />
+      )}
     </div>
   );
 };

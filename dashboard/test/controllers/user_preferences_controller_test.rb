@@ -97,11 +97,11 @@ class UserPreferencesControllerTest < ActionController::TestCase
     preference = UserPreference.create!(user_id: @user.id, theme: initial_theme)
 
     new_theme = {
-      'Blockly' => 'cdohighcontrast'
+      'blockly' => 'cdohighcontrast'
     }
     merged_theme = {
       'global'=> 'Dark',
-      'Blockly' => 'cdohighcontrast'
+      'blockly' => 'cdohighcontrast'
     }
 
     assert_no_difference 'UserPreference.count' do

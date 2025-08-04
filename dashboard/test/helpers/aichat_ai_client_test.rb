@@ -47,20 +47,27 @@ class AichatAiClientTest < ActionView::TestCase
   end
 
   private def call_get_response_text(model_id, level, new_message)
-    AichatAiClient.create_instance(model_id).get_response_text(
+    usage_reporter = AichatAiUsageReporter.new(model_id, @user_id, @project_id, level.id)
+
+    config, request, context = AichatAiHelper.get_config_request_context(
       @stored_messages,
-         new_message,
-         @temperature,
-         @system_prompt,
-         @retrieval_contexts,
-         model_id,
-         level.id,
-         @encrypted_channel_id,
-         @user_id,
-         @project_id
-      )
+      new_message,
+      @temperature,
+      @system_prompt,
+      @retrieval_contexts,
+      model_id,
+      level.id,
+      @encrypted_channel_id,
+      @user_id,
+      @project_id
+    )
+
+    AichatAiClient.create_instance(model_id, usage_reporter).get_response_text(
+      config, request, context
+    )
   end
-  private def stub_request_and_get_response_test(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level)
+
+  private def stub_request_and_get_response_text(new_message, url_to_post, expected_request_body, expected_headers, stubbed_response_body, model_id, level)
     stub_request(:post, url_to_post).
           with(
             body: expected_request_body,

@@ -1,0 +1,198 @@
+$left-card-arrow-center-left-value: 17.5%;
+$center-card-arrow-center-left-value: 51.5%;
+$right-card-arrow-center-left-value: 85.5%;
+
+
+div > div:nth-child(3n + 1) {
+  .courseOfferingExpandedCardContainer {
+    justify-self: flex-start;
+
+    .arrowContainer:before {
+      inset-inline-start: $left-card-arrow-center-left-value;
+    }
+  }
+}
+
+
+div > div:nth-child(3n + 2) {
+  .courseOfferingExpandedCardContainer {
+    justify-self: center;
+
+    .arrowContainer:before {
+      inset-inline-start: $center-card-arrow-center-left-value;
+    }
+  }
+}
+
+div > div:nth-child(3n + 3) {
+  .courseOfferingExpandedCardContainer {
+    justify-self: flex-end;
+
+    .arrowContainer:before {
+      inset-inline-start: $right-card-arrow-center-left-value;
+      background-color: var(--background-neutral-secondary);
+    }
+  }
+}
+.courseOfferingExpandedCardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowContainer {
+  display: flex;
+  position: relative;
+  padding-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+.arrowContainer::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid var(--borders-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  top: 100%;
+  margin-left: -25px;
+  content: "";
+  transform: rotate(45deg);
+  margin-top: -10px;
+  z-index: 1;
+}
+
+.expandedCard {
+  display: flex;
+  width: 60rem;
+  align-items: flex-start;
+  border-radius: 0.25rem;
+  border: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+  box-sizing: border-box;
+
+  .curriculumDetails {
+    display: flex;
+    max-width: 42.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+
+    .top {
+      display: flex;
+      padding: 1rem 1rem 1.25rem 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      align-self: stretch;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        align-self: stretch;
+
+        .main {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+          align-self: stretch;
+
+          .aspects {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: 0.375rem 1rem;
+            align-self: stretch;
+            flex-wrap: wrap;
+
+            > div {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .details {
+      display: flex;
+      padding: 1.25rem 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      align-self: stretch;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      background: var(--background-neutral-primary);
+
+      figure {
+        height: 100%;
+      }
+    }
+
+    .additionalDetails {
+      display: flex;
+      padding: 0.875rem 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.625rem;
+      align-self: stretch;
+
+      border-bottom: 1px solid var(--borders-neutral-primary);
+    }
+
+    .actionRowContent {
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      gap: 0.75rem;
+      align-self: stretch;
+    }
+  }
+
+  .right {
+    display: flex;
+    max-width: 17.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    align-self: stretch;
+    position: relative;
+
+    border-radius: 0 0.25rem 0.25rem 0;
+    border-left: 1px solid var(--borders-neutral-primary);
+    background: var(--background-neutral-secondary);
+
+    .top {
+      display: flex;
+      height: 6.625rem;
+      padding: 1.25rem 1rem;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 0.5rem;
+      align-self: stretch;
+      border-bottom: 1px solid var(--borders-neutral-primary);
+      background: var(--background-neutral-secondary);
+    }
+
+    .related {
+      display: flex;
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+      flex: 1 0 0;
+      align-self: stretch;
+    }
+
+    .closeExpandedCardButton {
+      position: absolute;
+      right: 0.75rem;
+      top: 0.6875rem;
+    }
+  }
+}

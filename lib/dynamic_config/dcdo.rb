@@ -65,6 +65,7 @@ class DCDOBase < DynamicConfigBase
       # Remove this as part of Pegasus cleanup after the move to the CMS
       'aif-launch': DCDO.get('aif-launch', false),
       'skills-dashboard': DCDO.get('skills-dashboard', false),
+      'teacher-homepage-welcome': DCDO.get('teacher-homepage-welcome', false),
     }
   end
 end

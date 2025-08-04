@@ -2250,9 +2250,9 @@ FactoryBot.define do
 
   factory :aichat_request do
     association :user
-    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}.to_json}
-    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
-    stored_messages {[].to_json}
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}}
+    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}}
+    stored_messages {[]}
     level_id {1}
     script_id {1}
     project_id {1}
