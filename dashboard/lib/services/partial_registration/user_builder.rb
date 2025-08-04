@@ -62,7 +62,6 @@ module Services
           :family_name,
           :name,
           :educator_role,
-          :signup_sources_tracking,
           :email_preference_opt_in_required,
           :email_preference_opt_in,
           :email_preference_request_ip,

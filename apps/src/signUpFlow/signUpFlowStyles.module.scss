@@ -1,5 +1,4 @@
 @import 'color', 'breakpoints', 'style-constants';
-@import '@code-dot-org/component-library-styles/variables.scss';
 @import '@code-dot-org/component-library-styles/typography.module';
 
 @mixin link-style {
@@ -81,7 +80,7 @@ span {
     background-color: $white;
     padding: 30px;
     gap: 16px;
-    border-radius: $regular-border-radius;
+    border-radius: 4px;
     border: 1px solid $light_gray_200;
     margin-bottom: 1rem;
     box-sizing: border-box;
@@ -261,7 +260,7 @@ span {
       margin-top: 1rem;
       background-color: $light_gray_50;
       padding: 1rem;
-      border-radius: $regular-border-radius;
+      border-radius: 4px;
       box-sizing: border-box;
 
       .buttonContainer {
@@ -287,7 +286,7 @@ span {
           padding: 0.5rem;
           background: $light_white;
           border: 1px solid $light_gray_200;
-          border-radius: $regular-border-radius;
+          border-radius: 4px;
         }
       }
 
@@ -453,7 +452,7 @@ span {
   padding: 30px;
   text-align: center;
   background-color: $light_white;
-  border-radius: $regular-border-radius;
+  border-radius: 0.25rem;
   border: 1px solid $light_gray_200 !important;
 
   .headerTextContainer {
@@ -495,62 +494,6 @@ span {
     .displayNameInput {
       margin: 0.375rem 0 !important;
     }
-
-    .signupSourcesContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 0.125rem;
-
-      > p {
-        font-weight: 600;
-      }
-
-      .sourcesDropdown {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 0.125rem;
-
-        :focus {
-          outline-style: solid;
-          outline-color: var(--brand-teal-50);
-          outline-width: 2px;
-          outline-offset: 2px;
-          border-radius: $regular-border-radius;
-        }
-
-        > button {
-          height: 2.75rem;
-
-          span {
-            display: block;
-            text-align: start;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-          }
-
-          i:last-of-type {
-            font-weight: 400;
-          }
-        }
-
-        ul {
-          label {
-            padding-top: 0.5rem !important;
-            align-items: center !important;
-          }
-        }
-
-        div:first-of-type {
-          top: 100%;
-          padding: 0;
-          box-sizing: border-box;
-        }
-      }
-    }
-    
   }
 
   .requiredLabel {
@@ -611,7 +554,7 @@ span {
   gap: 1.125rem;
   background-color: $light_gray_50;
   padding: 1.125rem;
-  border-radius: $regular-border-radius;
+  border-radius: 0.25rem;
   border: 1px solid $light_gray_200;
 
   i {
@@ -646,7 +589,7 @@ span {
   align-items: center;
   justify-content: space-between;
   background-color: $light_negative_100;
-  border-radius: $regular-border-radius;
+  border-radius: 0.25rem;
   padding: 0.625rem 0.75rem;
   margin-bottom: 1.125rem;
 
