@@ -13,16 +13,106 @@ import {FocusOn} from 'react-focus-on';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import askAi from '../ai/askAi';
 import appConfig from '../appConfig';
 import {DEFAULT_PACK} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import {setPackId, setCodeToLoad} from '../redux/musicRedux';
+import {setPackId} from '../redux/musicRedux';
 
 import styles from './PackDialog.module.scss';
+
+interface PackEntryProps {
+  playingPreview: string | null;
+  folder: SoundFolder;
+  folderIndex: number;
+  isSelected: boolean;
+  onSelect: (path: SoundFolder) => void;
+  onPreview: (path: string) => void;
+  mode: Mode;
+  currentFolderRefCallback: (ref: HTMLDivElement) => void;
+}
+
+const PackEntry: React.FunctionComponent<PackEntryProps> = ({
+  playingPreview,
+  folder,
+  folderIndex,
+  isSelected,
+  onSelect,
+  onPreview,
+  mode,
+  currentFolderRefCallback,
+}) => {
+  const library = MusicLibrary.getInstance();
+
+  const previewSound = folder.sounds.find(sound => sound.type === 'preview');
+  const soundPath = previewSound && folder.id + '/' + previewSound.src;
+  const isPlayingPreview = previewSound && playingPreview === soundPath;
+  const imageSrc = library?.getPackImageUrl(folder.id);
+
+  const onEntryClick = useCallback(() => {
+    onSelect(folder);
+
+    if (soundPath && !isPlayingPreview) {
+      onPreview(soundPath);
+    }
+  }, [folder, isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  return (
+    <div
+      className={classNames(
+        styles.pack,
+        !isSelected && folderIndex % 2 === 1 && styles.packAlternate,
+        isSelected && styles.packSelected
+      )}
+      onClick={onEntryClick}
+      onKeyDown={event => {
+        if (event.key === 'Enter') {
+          onEntryClick();
+        }
+      }}
+      aria-label={folder.name}
+      tabIndex={0}
+      role="button"
+      ref={isSelected ? currentFolderRefCallback : null}
+    >
+      {imageSrc && (
+        <div
+          className={classNames(
+            styles.packImageContainer,
+            isSelected && styles.packImageContainerSelected
+          )}
+        >
+          <img
+            className={styles.packImage}
+            src={imageSrc}
+            alt=""
+            draggable={false}
+          />
+        </div>
+      )}
+      <div
+        className={classNames(
+          styles.packName,
+          mode !== 'artist' && styles.packBold
+        )}
+      >
+        {folder.name}
+      </div>
+      {folder.artist && (
+        <div
+          className={classNames(
+            styles.packArtist,
+            mode === 'artist' && styles.packBold
+          )}
+        >
+          {folder.artist}
+        </div>
+      )}
+    </div>
+  );
+};
 
 interface PackDialogProps {
   player: MusicPlayer;
@@ -41,128 +131,38 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   const library = MusicLibrary.getInstance();
 
-  const context =
-    'Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play togehter:' +
-    '{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!8`2$m2/`}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}' +
-    '\n\n' +
-    'Your job will be to geneate Blocky code for songs based on a description.\n' +
-    'The code will be in the form of a valid JSON string.  Return only the JSON and nothing else. Please make sure it is valid JSON before returning it.\n' +
-    'Available sounds for a guitar are: "indie/guitar_chord_change", "indie/guitar_clean_arp", and "pop/guitar_clean_line".\n' +
-    'Availalbe sounds for a drum beat are: "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat".\n';
+  // Use a ref for instant access to this value inside onPreview.
+  const playingPreview = useRef<string | null>(null);
 
-  const context1 = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
+  const [mode, setMode] = useState<Mode>('popular');
 
-when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
-  play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
-Let's try it out.  Can you generate a song that, when run, plays "indie/guitar_chord_change" followed by "indie/guitar_clean_arp"?
-
-And then it plays these three sounds together - "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat" - three times.
-`;
-
-  const context2 = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
-
-The psuedocode looks something like this:
-
-when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
-  play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
-And Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play togehter:
-
-  {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
-`;
-
-  const context3 = `
-You'll be given psuedocode that plays a song.
-
-The psuedocode looks something like this:
-
-when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
-  play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
-Your job will be to generate some psuedocode for a system that makes some characters that dance.  Here is an example of that psuedocode:
-
-when_run
-  create "sloth" at "center"
-  "sloths" do "dab"
-
-at "2" measures
-  "sloths" do "floss"
-
-at "3" measures
-  "sloths" do "dab"
-
-This psuedocode has three moments of interest.  When first run, it creates a "sloth" character in the "center" of the screen, and then it makes all "sloths" do a dance called the "dab".  Then, when the background song reaches measure "2", the sloths start doing the "floss" dance move.  Then, when the song reaches measure "3", the sloths start doing the "dab" again.
-
-Valid dancer characters are "sloth", "cat", "dog", and "duck".  Valid dances are "dab", "floss", "fresh", and "disco".
-
-Valid screen locations are "top", "bottom", "left", "right" and "center".
-
-Try to generate a dance sequence that has major moments, like the dancing changing, that coincide with the input music's major moments.
-
-Note that the dance psudocode does not support the same set of features as the music psuedocode.
-
-`;
-
-  const context4 = `
-Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
-
-Here is some example input psuedocode:
-
-when_run
-  create "sloth" at "center"
-  "sloths" do "dab"
-
-at "2" measures
-  "sloths" do "floss"
-
-at "3" measures
-  "sloths" do "dab"
-
-This psuedocode has three moments of interest.  When first run, it creates a "sloth" character in the "center" of the screen, and then it makes all "sloths" do a dance called the "dab".  Then, when the background song reaches measure "2", the sloths start doing the "floss" dance move.  Then, when the song reaches measure "3", the sloths start doing the "dab" again.
-
-Indenting is important.
-
-And here is example blockly JSON that represents the psuedocode above:
-
-{"blocks":{"languageVersion":0,"blocks":[{"type":"Dancelab_whenSetup","id":";fui020!Iaz!kp-n0K[8","x":47,"y":41,"movable":false,"inputs":{"DO":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"{U-DOxMPz$)-j8dIS#O|","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"CAT\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 100, y: 200}</field>"},"next":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"~y[?utp)~L.$C@ZiL51V","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"DOG\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 300, y: 200}</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"!zxTn$JN@Iwv}-Dk^Q(8","fields":{"GROUP":"<field name=\\"GROUP\\">\\"CAT\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Dab</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"=D*J5IY5upi+bOqMX8nR","fields":{"GROUP":"<field name=\\"GROUP\\">\\"DOG\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Dab</field>","DIR":"<field name=\\"DIR\\">-1</field>"}}}}}}}}}}},{"type":"Dancelab_atTimestampNotAfter","id":"S4!uAzkx{%vw@UFZX8hY","x":50,"y":237,"deletable":false,"editable":false,"fields":{"TIMESTAMP":2,"UNIT":"<field name=\\"UNIT\\">\\"measures\\"</field>"},"next":{"block":{"type":"Dancelab_makeAnonymousDanceSprite","id":"d9O0m4kmUCbnvV+!g","fields":{"COSTUME":"<field name=\\"COSTUME\\">\\"SLOTH\\"</field>","LOCATION":"<field name=\\"LOCATION\\">{x: 200, y: 200}</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"vb82H}!NOVGmpir7;~5Q","fields":{"GROUP":"<field name=\\"GROUP\\">\\"CAT\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_changeMoveEachLR","id":"j..*n3lnL=w~GAWxr7dl","fields":{"GROUP":"<field name=\\"GROUP\\">\\"DOG\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"},"next":{"block":{"type":"Dancelab_doMoveEachLR","id":"*hCDocpHXqlku@f[[rK=","fields":{"GROUP":"<field name=\\"GROUP\\">\\"SLOTH\\"</field>","MOVE":"<field name=\\"MOVE\\">MOVES.Floss</field>","DIR":"<field name=\\"DIR\\">-1</field>"}}}}}}}}}}]}}
-`;
-
-  const [text, setText] = useState(
-    'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.\n' +
-      'Put this into a function and call this function from the main block.\n'
+  // Use state so that we can re-render when the preview state changes.
+  const [playingPreviewState, setPlayingPreviewState] = useState<string | null>(
+    null
   );
 
-  const [generating, setGenerating] = useState<
-    undefined | 'asking' | 'generating'
-  >(undefined);
+  const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
+
+  const currentFolderRef: React.MutableRefObject<HTMLDivElement | null> =
+    useRef(null);
+
+  const analyticsReporter = useContext(AnalyticsContext);
+
+  const handleSelectFolder = useCallback(
+    (folder: SoundFolder) => {
+      if (!library) {
+        return;
+      }
+
+      if (selectedFolderId === folder.id) {
+        setSelectedFolderId(null);
+        player.cancelPreviews();
+      } else {
+        setSelectedFolderId(folder.id);
+      }
+    },
+    [selectedFolderId, library, player]
+  );
 
   const selectPack = useCallback(
     (packId: string) => {
@@ -173,61 +173,84 @@ And here is example blockly JSON that represents the psuedocode above:
       player.cancelPreviews();
       dispatch(setPackId(packId));
       library.setCurrentPackId(packId);
+      setSelectedFolderId(null);
+      analyticsReporter?.onPackSelected(packId);
     },
-    [library, dispatch, player]
+    [library, dispatch, player, analyticsReporter]
   );
 
-  const setSongToDefault = useCallback(() => {}, []);
-  const generateSong = useCallback(() => {
-    console.log('starting ask');
-    setGenerating('asking');
-    askAi(
-      'here is the contxt:\n' +
-        context1 +
-        '\n and here is the request:\n' +
-        text
-    ).then(result => {
-      console.log(result[1].chatMessageText);
+  const setPackToDefault = useCallback(() => {
+    selectPack(DEFAULT_PACK);
+  }, [selectPack]);
 
-      console.log('starting second ask');
+  const setPackToSelectedFolder = useCallback(() => {
+    if (selectedFolderId) {
+      selectPack(selectedFolderId);
+    }
+  }, [selectPack, selectedFolderId]);
 
-      setGenerating('generating');
+  const onPreview = useCallback(
+    (id: string) => {
+      playingPreview.current = id;
+      setPlayingPreviewState(id);
 
-      askAi(
-        'here is the contxt:\n' +
-          context2 +
-          '\n and here is the request:\n' +
-          result[1].chatMessageText
-      ).then(result2 => {
-        console.log(result2[1].chatMessageText);
-
-        setGenerating(undefined);
-
-        // const jsonString = result2[1].chatMessageText;
-
-        // Trim the result so that anything before the first '{' and after the last '}' is removed.
-        const trimmedResult = result2[1].chatMessageText.trim();
-        const firstBraceIndex = trimmedResult.indexOf('{');
-        const lastBraceIndex = trimmedResult.lastIndexOf('}');
-        const jsonString = trimmedResult.substring(
-          firstBraceIndex,
-          lastBraceIndex + 1
-        ); // Include the last brace
-
-        console.log('JSON String:', jsonString);
-        selectPack(DEFAULT_PACK);
-        dispatch(setCodeToLoad(jsonString));
+      player.previewSound(id, () => {
+        // If the user starts another preview while one is
+        // already playing, it will have started playing before
+        // we get this stop event.  We want to wait until the
+        // new preview stops before we reactivate the button, and
+        // so we don't clear out playingPreview unless the
+        // stop event coming in is for the actively playing preview.
+        if (playingPreview.current === id) {
+          playingPreview.current = null;
+          setPlayingPreviewState(null);
+        }
       });
+    },
+    [player]
+  );
+
+  const currentFolderRefCallback = (ref: HTMLDivElement) => {
+    currentFolderRef.current = ref;
+  };
+
+  // Scroll the current pack into view each time the mode changes.
+  useEffect(() => {
+    currentFolderRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
     });
-  }, [context1, context2, dispatch, selectPack, text]);
+  }, [mode]);
+
+  if (!library) return null;
+
+  const folders = library.getRestrictedPacks();
 
   if (currentPackId) {
     return null;
   }
 
+  const sortedFolders =
+    mode === 'popular'
+      ? folders
+      : mode === 'song'
+      ? folders.sort((a, b) => a.name.localeCompare(b.name))
+      : folders.sort((a, b) =>
+          a.artist && b.artist
+            ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
+            : 0
+        );
+
   return (
     <FocusOn className={styles.focusLock}>
-      <div className={styles.dialogContainer}>
+      <div
+        className={styles.dialogContainer}
+        onKeyDown={event => {
+          if (event.key === 'Escape') {
+            setPackToDefault();
+          }
+        }}
+      >
         <div id="pack-dialog" className={styles.packDialog}>
           <div id="hidden-item" tabIndex={0} role="button" />
           <Typography
@@ -235,7 +258,7 @@ And here is example blockly JSON that represents the psuedocode above:
             visualAppearance="heading-lg"
             className={styles.heading}
           >
-            Generate a song with AI
+            {musicI18n.packDialogTitle()}
           </Typography>
 
           <div
@@ -245,47 +268,59 @@ And here is example blockly JSON that represents the psuedocode above:
                 styles.bodyStacked
             )}
           >
-            <div> &nbsp; </div>
-            {/*
-            <div>Generate a song with AI</div>
-            */}
-          </div>
+            <div>{musicI18n.packDialogBody()}</div>
 
-          <div className={styles.packsContainer}>
-            <textarea
-              id="generate-description"
-              onChange={evt => setText(evt.target.value)}
-              value={text}
-              rows={4}
-              className={styles.textArea}
+            <SegmentedButtons
+              selectedButtonValue={mode}
+              buttons={[
+                {label: musicI18n.packModePopular(), value: 'popular'},
+                {label: musicI18n.packModeSong(), value: 'song'},
+                {label: musicI18n.packModeArtist(), value: 'artist'},
+              ]}
+              onChange={value => setMode(value as Mode)}
+              className={styles.segmentedButtons}
+              size="xs"
             />
           </div>
 
-          <div className={styles.status}>
-            {generating === 'asking'
-              ? 'Generating a song...'
-              : generating === 'generating'
-              ? 'Converting to blocks...'
-              : ''}
+          <div className={styles.packsContainer}>
+            <div className={styles.packs}>
+              {sortedFolders.map((folder, folderIndex) => {
+                return (
+                  <PackEntry
+                    key={folderIndex}
+                    playingPreview={playingPreviewState}
+                    folder={folder}
+                    folderIndex={folderIndex}
+                    isSelected={folder.id === selectedFolderId}
+                    onSelect={handleSelectFolder}
+                    onPreview={onPreview}
+                    mode={mode}
+                    currentFolderRefCallback={currentFolderRefCallback}
+                  />
+                );
+              })}
+            </div>
           </div>
 
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
-              {/*<Button
+              <Button
                 ariaLabel={musicI18n.skip()}
                 text={musicI18n.skip()}
                 type="secondary"
                 color="purple"
                 size="s"
-                onClick={setSongToDefault}
-              />*/}
+                onClick={setPackToDefault}
+              />
               <Button
-                ariaLabel={'Generate song'}
-                text={'Generate song'}
+                ariaLabel={musicI18n.select()}
+                text={musicI18n.select()}
                 type="primary"
                 color="purple"
                 size="s"
-                onClick={generateSong}
+                disabled={!selectedFolderId}
+                onClick={setPackToSelectedFolder}
               />
             </div>
           </div>
