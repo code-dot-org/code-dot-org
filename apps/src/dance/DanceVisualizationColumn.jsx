@@ -40,6 +40,7 @@ class DanceVisualizationColumn extends React.Component {
     currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
     playSound: PropTypes.func.isRequired,
+    musicChannelId: PropTypes.string,
   };
 
   state = {
@@ -61,7 +62,7 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
-    const {levelIsRunning, playSound} = this.props;
+    const {levelIsRunning, playSound, musicChannelId} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -135,13 +136,15 @@ class DanceVisualizationColumn extends React.Component {
           {this.props.currentAiModalBlockId && (
             <DanceAiModal playSound={playSound} />
           )}
-          <div style={{position: 'absolute', bottom: 40}}>
-            <MiniMusicPlayer
-              projects={[{name: 'my project', id: '-aPklDqjwvXjH27vdIsYtg'}]}
-              libraryName="launch2024"
-              playing={levelIsRunning}
-            />
-          </div>
+          {musicChannelId && (
+            <div style={{position: 'absolute', bottom: 40}}>
+              <MiniMusicPlayer
+                projects={[{name: 'My Music', id: musicChannelId}]}
+                libraryName="launch2024"
+                isPlaying={levelIsRunning}
+              />
+            </div>
+          )}
         </div>
       </div>
     );

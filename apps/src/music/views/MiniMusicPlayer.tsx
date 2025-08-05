@@ -21,13 +21,13 @@ import moduleStyles from './MiniMusicPlayer.module.scss';
 interface MiniPlayerViewProps {
   projects: Channel[];
   libraryName: string;
-  playing: boolean;
+  isPlaying?: boolean;
 }
 
 const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   projects,
   libraryName,
-  playing,
+  isPlaying = false,
 }) => {
   const playerRef = useRef<MusicPlayer | null>(null);
   if (playerRef.current === null) {
@@ -140,11 +140,14 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   }, []);
 
   useEffect(() => {
-    if (playing) {
+    if (isPlaying) {
       // Start the player.
       onPlaySong(projects[0]);
+    } else {
+      // Stop the player.
+      onStopSong();
     }
-  }, [onPlaySong, playing, projects]);
+  }, [onPlaySong, onStopSong, isPlaying, projects]);
 
   // Some loading UI while we're fetching the library
   if (isLoading) {

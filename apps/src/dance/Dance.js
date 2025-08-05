@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import firehoseClient from '@cdo/apps/metrics/firehose';
@@ -209,6 +210,7 @@ Dance.prototype.init = function (config) {
               setSong={this.setSongCallback.bind(this)}
               resetProgram={this.reset.bind(this)}
               playSound={this.playSound.bind(this)}
+              musicChannelId={queryParams('dance-music-channel-id')}
             />
           }
           onMount={onMount}
@@ -489,18 +491,19 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
     audioCommands.stopSound({url: url});
   }
 
-  callback(true);
-
-  /*
-  audioCommands.playSound({
-    url: url,
-    callback: callback,
-    onEnded: () => {
-      onEnded();
-      this.studioApp_.toggleRunReset('run');
-    },
-  });
-  */
+  if (queryParams('dance-music-channel-id')) {
+    // Simulate successful sound play.
+    callback(true);
+  } else {
+    audioCommands.playSound({
+      url: url,
+      callback: callback,
+      onEnded: () => {
+        onEnded();
+        this.studioApp_.toggleRunReset('run');
+      },
+    });
+  }
 };
 
 Dance.prototype.playSound = function (soundName, options) {
