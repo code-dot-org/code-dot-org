@@ -127,7 +127,6 @@ CodeprojectsCachePolicy:
         HeadersConfig: 
           HeaderBehavior: whitelist
           Headers:
-            - Authorization
             - CloudFront-Forwarded-Proto
             - Host
             - Origin
@@ -147,7 +146,6 @@ CodeprojectsOriginRequestPolicy:
       HeadersConfig:
         HeaderBehavior: whitelist
         Headers:
-          - Authorization
           - CloudFront-Forwarded-Proto
           - Host
           - Origin
