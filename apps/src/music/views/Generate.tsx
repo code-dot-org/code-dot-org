@@ -1,14 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
-import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {
-  useCallback,
-  useEffect,
-  useState,
-  useRef,
-  useContext,
-} from 'react';
+import React, {useCallback, useState} from 'react';
 import {FocusOn} from 'react-focus-on';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -16,41 +9,24 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import askAi from '../ai/askAi';
 import appConfig from '../appConfig';
 import {DEFAULT_PACK} from '../constants';
-import {AnalyticsContext} from '../context';
-import musicI18n from '../locale';
-import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setPackId, setCodeToLoad} from '../redux/musicRedux';
 
-import styles from './PackDialog.module.scss';
+import styles from './Generate.module.scss';
 
-interface PackDialogProps {
+interface GenerateProps {
   player: MusicPlayer;
 }
 
-type Mode = 'popular' | 'song' | 'artist';
-
-/**
- * The PackDialog allows the user to preview and choose from the set of restricted
- * sound packs.
- */
-const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
+const Generate: React.FunctionComponent<GenerateProps> = ({player}) => {
   const dispatch = useAppDispatch();
 
   const currentPackId = useAppSelector(state => state.music.packId);
 
   const library = MusicLibrary.getInstance();
 
-  const context =
-    'Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play togehter:' +
-    '{"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!8`2$m2/`}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}' +
-    '\n\n' +
-    'Your job will be to geneate Blocky code for songs based on a description.\n' +
-    'The code will be in the form of a valid JSON string.  Return only the JSON and nothing else. Please make sure it is valid JSON before returning it.\n' +
-    'Available sounds for a guitar are: "indie/guitar_chord_change", "indie/guitar_clean_arp", and "pop/guitar_clean_line".\n' +
-    'Availalbe sounds for a drum beat are: "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat".\n';
-
-  const context1 = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
+  const contextGenerateMusicPsuedocodeFromDescription = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
 
 when_run
   play "hiphop/drum_beat_808"
@@ -69,7 +45,7 @@ Let's try it out.  Can you generate a song that, when run, plays "indie/guitar_c
 And then it plays these three sounds together - "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat" - three times.
 `;
 
-  const context2 = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
+  const contextGenerateMusicBlocklyFromMusicPsuedocode = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
 
 The psuedocode looks something like this:
 
@@ -90,7 +66,7 @@ And Here is some example Blockly code for our system.  In this case, we are gene
   {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
 `;
 
-  const context3 = `
+  const contextGenerateDancePsuedocodeFromMusicPsuedocode = `
 You'll be given psuedocode that plays a song.
 
 The psuedocode looks something like this:
@@ -131,7 +107,7 @@ Note that the dance psudocode does not support the same set of features as the m
 
 `;
 
-  const context4 = `
+  const contextGenerateDanceBlocklyFromDancePsuedocode = `
 Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
 
 Here is some example input psuedocode:
@@ -177,13 +153,12 @@ And here is example blockly JSON that represents the psuedocode above:
     [library, dispatch, player]
   );
 
-  const setSongToDefault = useCallback(() => {}, []);
   const generateSong = useCallback(() => {
     console.log('starting ask');
     setGenerating('asking');
     askAi(
       'here is the contxt:\n' +
-        context1 +
+        contextGenerateMusicPsuedocodeFromDescription +
         '\n and here is the request:\n' +
         text
     ).then(result => {
@@ -195,7 +170,7 @@ And here is example blockly JSON that represents the psuedocode above:
 
       askAi(
         'here is the contxt:\n' +
-          context2 +
+          contextGenerateMusicBlocklyFromMusicPsuedocode +
           '\n and here is the request:\n' +
           result[1].chatMessageText
       ).then(result2 => {
@@ -219,7 +194,13 @@ And here is example blockly JSON that represents the psuedocode above:
         dispatch(setCodeToLoad(jsonString));
       });
     });
-  }, [context1, context2, dispatch, selectPack, text]);
+  }, [
+    contextGenerateMusicPsuedocode,
+    contextGenerateMusicBlocklyFromMusicPsuedocode,
+    dispatch,
+    selectPack,
+    text,
+  ]);
 
   if (currentPackId) {
     return null;
@@ -246,9 +227,6 @@ And here is example blockly JSON that represents the psuedocode above:
             )}
           >
             <div> &nbsp; </div>
-            {/*
-            <div>Generate a song with AI</div>
-            */}
           </div>
 
           <div className={styles.packsContainer}>
@@ -271,14 +249,6 @@ And here is example blockly JSON that represents the psuedocode above:
 
           <div className={styles.footer}>
             <div className={styles.buttonContainer}>
-              {/*<Button
-                ariaLabel={musicI18n.skip()}
-                text={musicI18n.skip()}
-                type="secondary"
-                color="purple"
-                size="s"
-                onClick={setSongToDefault}
-              />*/}
               <Button
                 ariaLabel={'Generate song'}
                 text={'Generate song'}
@@ -295,4 +265,4 @@ And here is example blockly JSON that represents the psuedocode above:
   );
 };
 
-export default PackDialog;
+export default Generate;
