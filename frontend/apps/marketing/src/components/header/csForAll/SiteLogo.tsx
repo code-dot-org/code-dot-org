@@ -26,14 +26,18 @@ const styles = {
 
 const SiteLogo = (logo: SiteLogoProps) => {
   return (
-    <Link
-      className="logo-link"
-      href={logo?.href}
-      aria-label={logo?.label}
-      sx={styles.logoLink}
-    >
-      <img src={logo?.imgSrc} alt="" loading="eager" />
-    </Link>
+    <>
+      {logo && (
+        <Link
+          className="logo-link"
+          href={logo.href}
+          aria-label={logo.label}
+          sx={styles.logoLink}
+        >
+          <img src={logo.imgSrc} alt="" loading="eager" />
+        </Link>
+      )}
+    </>
   );
 };
 
