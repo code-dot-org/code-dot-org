@@ -984,7 +984,7 @@ class Pd::Workshop < ApplicationRecord
     }
   end
 
-  private def send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
+  private def self.send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
     workshop = enrollment.workshop
     organizer = workshop.organizer
     regional_partner = workshop.regional_partner
