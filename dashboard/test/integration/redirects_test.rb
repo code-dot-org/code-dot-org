@@ -83,17 +83,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     get '/s/allthethings/stage/1/puzzle/1'
     assert_redirected_to '/s/allthethings/lessons/1/levels/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/1/levels/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/1/levels/1'
 
     get '/s/allthethings/stage/40/puzzle/1/sublevel/1'
     assert_redirected_to '/s/allthethings/lessons/40/levels/1/sublevel/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/40/levels/1/sublevel/1'
 
     get '/s/allthethings/stage/33/puzzle/1/page/1'
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/33/levels/1/page/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/33/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.
