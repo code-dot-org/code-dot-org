@@ -714,7 +714,7 @@ class Unit < ApplicationRecord
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
   def can_view_version?(user, locale: nil, unit_group: nil)
-    unit_group ||= self.unit_group
+    unit_group ||= original_unit_group
     return false unless Ability.new(user).can?(:read, self, unit_group)
 
     # Users can view any course not in a family.
