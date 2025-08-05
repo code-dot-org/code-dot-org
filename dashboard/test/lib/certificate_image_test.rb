@@ -1,6 +1,12 @@
 require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
+  setup_all do
+    unit = create :unit, name: 'course1'
+    unit_group = create :single_unit_course, :stable, unit: unit, name: 'course1'
+    CourseOffering.add_course_offering(unit_group)
+  end
+
   def test_special_template_courses
     assert CertificateImage.prefilled_title_course?('hourofcode') # 2014
     assert CertificateImage.prefilled_title_course?('flappy')
@@ -142,7 +148,6 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.hoc_course?('kodable')
     assert CertificateImage.hoc_course?('hello')
 
-    # course1 is created by dashboard test fixtures
     refute CertificateImage.hoc_course?('course1')
     refute CertificateImage.hoc_course?('coursea-2021')
     refute CertificateImage.hoc_course?('csp-2021')
