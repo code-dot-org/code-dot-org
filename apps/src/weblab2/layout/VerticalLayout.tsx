@@ -2,6 +2,7 @@ import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -26,6 +27,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     leftPanelDragging,
     rightPanelSeparatorProps,
     rightPanelDragging,
+    panelClassName,
   } = useVerticalLayout({
     leftPanel: {
       minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
@@ -57,7 +59,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={moduleStyles.flexShrink0}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
             <ResizeBar
               isVertical={true}
@@ -68,7 +70,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         )}
         <Workspace
           style={{width: middlePanelWidth}}
-          className={moduleStyles.shrinkAndGrow}
+          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
         />
         <ResizeBar
           isVertical={true}
@@ -77,7 +79,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
         />
         <div
           style={{width: rightPanelWidth}}
-          className={moduleStyles.shrinkAndGrow}
+          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
         >
           <FilePreview />
         </div>

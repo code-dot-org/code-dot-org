@@ -102,6 +102,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
         }}
         elevation={0}
         disableAutoFocusItem
+        disableScrollLock
         sx={styles.menu}
       >
         {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
