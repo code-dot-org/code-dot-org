@@ -10,6 +10,8 @@ module MailJet
   SECRET_KEY = CDO.try(:mailjet_secret_key).freeze
   MAILGUN_API_KEY = CDO.try(:mailgun_api_key).freeze
 
+  MAILJET_RETRY_LIMIT = 5
+
   # We use MailJet when the following are true:
   # - The use_mailjet DCDO is true
   # - We are not in the test environment

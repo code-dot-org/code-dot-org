@@ -32,6 +32,21 @@ module MailJetConstants
       },
       from_address: 'noreply@code.org',
       from_name: 'Code.org',
+    },
+    teacher_workshop_reminder: {
+      template_id: {
+        production: {
+          default: 13_173_754,
+        },
+        staging: {
+          default: 13_173_754,
+        },
+        development: {
+          default: 13_173_754,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
     }
   }.freeze
 

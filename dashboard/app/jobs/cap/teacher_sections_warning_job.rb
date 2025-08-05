@@ -3,7 +3,6 @@
 module CAP
   class TeacherSectionsWarningJob < ApplicationJob
     EVENT_NAME = 'cap_teacher_sections_warning'
-    MAILJET_RETRY_LIMIT = 5
 
     rescue_from StandardError, with: :report_exception
 
@@ -48,7 +47,7 @@ module CAP
     private def send_warning_email(email, name, cap_sections)
       Retryable.retryable(
         on: RestClient::TooManyRequests,
-        tries: MAILJET_RETRY_LIMIT,
+        tries: MailJet.MAILJET_RETRY_LIMIT,
         sleep: ->(n) {2 ** n}
       ) do
         MailJet.send_email(
