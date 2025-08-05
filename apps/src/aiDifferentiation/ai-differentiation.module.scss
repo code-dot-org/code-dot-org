@@ -31,6 +31,14 @@
 
 // Used to accomodate the sidebar in the AI Differentiation workspace.
 .aiDiffContainerWide {
+  position: fixed;
+  left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 712px;
 }
 
@@ -288,12 +296,23 @@
   flex: 0 0 242px;
   background-color: var(--background-neutral-secondary);
   height: auto;
+  display: flex;
+}
+
+.sidebarBox {
+  width: inherit;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebarContent {
-  position: sticky;
-  top: 0;
-  padding-bottom: 16px;
+  display: flex;
+  overflow-y: scroll;
+  width: inherit;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-direction: column;
 }
 
 .sidebarSectionTitle {
@@ -307,6 +326,24 @@
   font-family: Figtree, sans-serif;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+}
+
+.sidebarChatItemPrimary {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarChatItemSecondary {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  font-size: smaller;
+  font-weight: 200;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .sidebarButton {
