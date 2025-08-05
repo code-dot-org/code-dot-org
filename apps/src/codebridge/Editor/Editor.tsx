@@ -4,7 +4,12 @@ import {esLint} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
 import {linter, lintGutter} from '@codemirror/lint';
 import {Extension} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
 import js from '@eslint/js';
+import {
+  colorPicker,
+  wrapperClassName,
+} from '@replit/codemirror-css-color-picker';
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React, {useCallback, useMemo} from 'react';
@@ -58,6 +63,16 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
         extensions.push(linter(esLint(new eslint.Linter(), config)));
         extensions.push(lintGutter());
+      } else if (file.language === 'css') {
+        // Add css color picker and remove white outline from color indicator.
+        extensions.push(colorPicker);
+        extensions.push(
+          EditorView.theme({
+            [`.${wrapperClassName}`]: {
+              outlineColor: 'transparent',
+            },
+          })
+        );
       }
 
       return extensions;

@@ -154,7 +154,7 @@ interface SubmitButtonProps {
 /**
  * Displays the "Submit" or "Unsubmit" button that submits or unsubmits the project on a submittable level.
  */
-const SubmitButton: React.FC<SubmitButtonProps> = ({
+export const SubmitButton: React.FC<SubmitButtonProps> = ({
   levelId,
   appName,
   hasRun,
