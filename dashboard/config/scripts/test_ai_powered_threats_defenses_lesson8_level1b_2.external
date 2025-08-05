@@ -1,0 +1,76 @@
+name 'test-ai-powered-threats-defenses-lesson8-level1b-2'
+
+display_name 'Sana R.'
+bubble_choice_description 'A bilingual teen from Dearborn who splits time between school and family trips to Windsor. Someone used her account at 3 AM from another city—was it her, or someone else?'
+thumbnail_url 'https://images.code.org/f3d77fe12133795a062ec89d1458e9e8-image-1753988431724.png'
+
+markdown <<MARKDOWN
+#Sana R.
+
+#### Read about Sana and investigate the audit logs. Can you find any evidence of fraud?
+
+**[Click here](https://docs.google.com/document/d/1PWv-Ml0uWkXhHpiXJpRBscK_lFK4iOvAYeDboSVcG-M/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
+
+---
+
+## USER PROFILE
+
+* **Age**: 16
+* **Location**: Dearborn, Michigan
+* **Background**: First-generation Lebanese-American; lives with her parents and three younger siblings
+* **School**: Private Islamic high school (7:45 AM–2:30 PM)
+* **Devices**: Samsung Galaxy S22 (personal), Windows laptop (school)
+* **Tech Habits**: Uses WhatsApp, YouTube, and Chrome on Android; logs in from home or school
+* **Spending Habits**: Uses family-shared debit card (monitored by her mom); shops at Halal-certified stores
+* **Hobbies**: Drawing, helping her younger siblings with school, journaling, and cooking with her mom
+* **Religious Practices**: Avoids gambling content and streaming ads; does not eat pork
+* **Travel History**: Frequently visits cousins in Windsor, Ontario (Canada)
+* **Security Habits**: Uses fingerprint ID; avoids cloud syncing or password saving in browsers
+
+---
+
+## LOGIN ACTIVITY LOG
+<img src="https://images.code.org/d368161e48f6d9e9d917bd8e94f20e01-image-1753920998715.png" style="float:right; width:35%">
+
+| Date &nbsp;      |    Time    |         Device          |     IP Location     | Outcome   |   OS     |  Browser  |
+|------------|------------|--------------------------|----------------------|-----------|----------|-----------|
+| Sept 6     |  6:50 PM   |  Samsung Galaxy S22 &nbsp;&nbsp;     |  Dearborn, MI        | Success   | Android  | Chrome    |
+| Sept 7     |  7:30 AM   |  Windows Laptop          |  Dearborn, MI        | Success   | Windows&nbsp;  | Edge      |
+| Sept 8     |  9:12 PM   |  Samsung Galaxy S22      |  Windsor, ON         | Success   | Android  | Chrome    |
+| Sept 9     |  3:22 AM   |  iPhone                  |  Toledo, OH          | Failed    | iOS      | Unknown   |
+| Sept 9     |  3:26 AM   |  iPhone                  |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:28 AM   |  iPhone                  |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:33 AM   |  iPhone                  |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  3:34 AM   |  iPhone                  |  Toledo, OH          | Success   | iOS      | Unknown   |
+| Sept 9     |  8:15 AM   |  Samsung Galaxy S22      |  Dearborn, MI        | Success   | Android  | Chrome    |
+| Sept 10    | 10:12 AM &nbsp;  |  Windows Laptop          |  Dearborn, MI        | Success   | Windows   | Edge      |
+
+---
+
+## LOCATION HISTORY LOG
+| Date &nbsp;    |    Time    |   Ping Type   |             Location              |
+|----------|------------|---------------|-----------------------------------|
+| Sept 6   |  6:45 PM   | Wi-Fi         | Home – Dearborn, MI               |
+| Sept 7   |  7:25 AM   | Wi-Fi         | School – Dearborn, MI             |
+| Sept 8   |  8:45 PM   | Cell Tower    | Windsor, ON (Canada)              |
+| Sept 9   |  3:20 AM   | None          | —                                 |
+| Sept 9   |  3:30 AM   | Wi-Fi         | Toledo, OH                        |
+| Sept 9   |  8:10 AM   | Wi-Fi         | Home – Dearborn, MI               |
+| Sept 10  | 10:00 AM &nbsp;  | Wi-Fi         | School – Dearborn, MI             |
+
+---
+
+## TRANSACTION HISTORY LOG
+| Date     |    Time    |            Merchant             | Amount   |      Location      | Method |
+|----------|------------|---------------------------------|----------|---------------------|--------|
+| Sept 6   |  6:55 PM   | Al Medina Market                | &#36;17.32   | Dearborn, MI   &nbsp;     | Debit  |
+| Sept 7   | 12:20 PM   | School Cafeteria                | &#36;3.50    | Dearborn, MI        | Debit  |
+| Sept 8   |  9:15 PM   | HalalCart Canada                | &#36;22.10   | Windsor, ON         | Debit  |
+| Sept 9   |  3:33 AM   | Crypto Wallet Setup Fee  &nbsp;       | &#36;49.99   | Toledo, OH          | Debit  |
+| Sept 9   |  3:38 AM   | BetZone Sports App              | &#36;24.99   | Toledo, OH          | Debit  |
+| Sept 9   |  3:40 AM   | Grocery Express                 | &#36;83.45   | Toledo, OH          | Debit  |
+| Sept 9   |  8:16 AM   | Zaytuna Cafe                    | &#36;6.70    | Dearborn, MI        | Debit  |
+| Sept 10&nbsp;  | 10:15 AM &nbsp;  | Online Quran Reader             | &#36;11.99   | Online              | Debit  |
+
+![]()
+MARKDOWN

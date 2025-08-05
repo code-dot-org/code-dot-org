@@ -1252,7 +1252,7 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :rubrics, only: [:create, :edit, :new, :update] do
+    resources :rubrics, only: [:create, :edit, :new, :update, :show] do
       member do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'

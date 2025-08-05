@@ -82,10 +82,6 @@ export default function initPage(unitEditorData) {
         versionYearOptions={unitEditorData.version_year_options}
         isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}
-        /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
-         * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
-         * complements, but currently (August 2020) they are not, so they are separate fields for now. */
-        initialIsCourse={scriptData.is_course}
         hasCourse={unitEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
         initialWeeklyInstructionalMinutes={

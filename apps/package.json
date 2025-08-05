@@ -237,6 +237,7 @@
     "@react-bootstrap/pagination": "^1.0.0",
     "@react-pdf/renderer": "3.4.4",
     "@reduxjs/toolkit": "^1.9.3",
+    "@replit/codemirror-css-color-picker": "^6.3.0",
     "@selectize/selectize": "^0.15.2",
     "@statsig/js-client": "^3.12.2",
     "@statsig/session-replay": "^3.12.2",

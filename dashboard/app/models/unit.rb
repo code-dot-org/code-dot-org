@@ -1058,7 +1058,7 @@ class Unit < ApplicationRecord
 
     # hard code some exceptions. ideally we'd get rid of these and just make our
     # UI tests deal with the 13+ requirement
-    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+    return false if %w(allthethings allthettsthings).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
@@ -2218,6 +2218,7 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
     levels&.any?(&:ai_tutor_available?)
   end

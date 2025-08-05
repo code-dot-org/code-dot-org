@@ -37,14 +37,18 @@ import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
 import Workshop from './workshop';
-import {WorkshopEnrollments} from './workshop/components/WorkshopEnrollments';
-import {WorkshopOverview} from './workshop/components/WorkshopOverview';
-import {WorkshopSurveys} from './workshop/components/WorkshopSurveys';
-import {WorkshopTabs} from './workshop/components/WorkshopTabs';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 import {WorkshopFormTemplate} from './WorkshopFormTemplate';
 import {workshopLabel} from './WorkshopFormTemplate/utils';
+import {WorkshopEnrollments} from './workshops/enrollments/WorkshopEnrollments';
+import {WorkshopOverview} from './workshops/overview/WorkshopOverview';
+import {Engagement} from './workshops/surveys/post/components/Engagement';
+import {FacilitatorFeedback} from './workshops/surveys/post/components/FacilitatorFeedback';
+import {Implementation} from './workshops/surveys/post/components/Implementation';
+import {Logistics} from './workshops/surveys/post/components/Logistics';
+import {Other} from './workshops/surveys/post/components/Other';
+import {WorkshopLayout} from './workshops/WorkshopLayout';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
 
@@ -56,6 +60,75 @@ const store = createStore(
   })
 );
 
+const postSurveyCategoryChildRoutes = [
+  {
+    label: 'Implementation',
+    path: 'implementation',
+    icon: 'rocket',
+    component: Implementation,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Implementation',
+  },
+  {
+    label: 'Engagement',
+    path: 'engagement',
+    icon: 'heart',
+    component: Engagement,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Engagement',
+  },
+  {
+    label: 'Logistics',
+    path: 'logistics',
+    icon: 'calendar-check',
+    component: Logistics,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Logistics',
+  },
+  {
+    label: 'Facilitator Feedback',
+    path: 'facilitators',
+    icon: 'star',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Facilitators',
+    childRoutes: [
+      {
+        path: ':facilitatorId',
+        component: FacilitatorFeedback,
+        breadcrumbs:
+          'Workshops,Workshop,Temp,Surveys,Post,Facilitators,Facilitator',
+      },
+    ],
+  },
+  {
+    label: 'Other',
+    path: 'other',
+    icon: 'ellipsis',
+    component: Other,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post,Other',
+  },
+];
+
+const surveyTypeChildRoutes = [
+  {
+    label: 'Post-workshop survey',
+    path: 'post',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Post',
+    childRoutes: [
+      // this makes "implementation" the default
+      {
+        index: true,
+        component: () => <Navigate to="implementation" replace />,
+      },
+      ...postSurveyCategoryChildRoutes,
+    ],
+  },
+  {
+    label: 'Pre-workshop survey',
+    path: 'pre',
+    component: () => <div>Pre workshop</div>,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys,Pre',
+  },
+];
+
 const workshopChildRouteConfigs = [
   {
     label: 'Overview',
@@ -66,13 +139,21 @@ const workshopChildRouteConfigs = [
     label: 'Enrollment',
     path: 'enrollments',
     component: WorkshopEnrollments,
-    breadcrumbs: 'Workshops,Workshop,Enrollments',
+    breadcrumbs: 'Workshops,Workshop,Temp,Enrollments',
   },
   {
     label: 'Surveys',
     path: 'surveys',
-    component: WorkshopSurveys,
-    breadcrumbs: 'Workshops,Workshop,Surveys',
+    component: Outlet,
+    breadcrumbs: 'Workshops,Workshop,Temp,Surveys',
+    childRoutes: [
+      // this makes "post" the default
+      {
+        index: true,
+        component: () => <Navigate to="post" replace />,
+      },
+      ...surveyTypeChildRoutes,
+    ],
   },
 ];
 
@@ -111,13 +192,24 @@ const routeConfigs = [
   {
     // remove /temp for switch over
     path: 'workshops/:workshopId/temp',
-    breadcrumbs: 'Workshops,Workshop',
-    component: WorkshopTabs,
+    breadcrumbs: 'Workshops,Workshop,Temp',
+    component: WorkshopLayout,
     props: {
       tabList: workshopChildRouteConfigs.map(({label, path}) => ({
         label,
         path,
       })),
+      surveyTypeOptions: surveyTypeChildRoutes.map(({label, path}) => ({
+        text: label,
+        value: `surveys/${path}`,
+      })),
+      questionCategoryButtons: postSurveyCategoryChildRoutes.map(
+        ({label, path, icon}) => ({
+          label,
+          value: `surveys/post/${path}`,
+          iconLeft: {iconName: icon},
+        })
+      ),
     },
     childRoutes: workshopChildRouteConfigs,
   },
