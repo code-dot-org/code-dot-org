@@ -41,6 +41,8 @@
 #  processed_location
 #
 
+require 'mailjet'
+
 class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
@@ -540,14 +542,14 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
-        email.deliver_now
+        user = enrollment.user
+        send_teacher_workshop_reminder_email(enrollment, user.friendly_name, user.email, days)
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
         if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          alt_summer_email = enrollment.user&.alternate_email
+          alt_summer_email = user&.alternate_email
           if alt_summer_email.present?
-            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
+            send_teacher_workshop_reminder_email(enrollment, user.friendly_name, alt_summer_email, days)
           end
         end
       rescue => exception
@@ -980,5 +982,43 @@ class Pd::Workshop < ApplicationRecord
       organizer: organizer&.slice(:name, :email),
       facilitators: facilitators_info
     }
+  end
+
+  private def send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
+    workshop = enrollment.workshop
+    organizer = workshop.organizer
+    regional_partner = workshop.regional_partner
+
+    Retryable.retryable(
+      on: RestClient::TooManyRequests,
+      tries: MailJet.MAILJET_RETRY_LIMIT,
+      sleep: ->(n) {2 ** n}
+    ) do
+      MailJet.send_email(
+        :teacher_workshop_reminder,
+        user_email,
+        user_name,
+        vars: {
+          email_to: cap_sections,
+          facilitator_name: workshop.facilitator&.name,
+          rp_email: regional_partner&.email,
+          rp_name: regional_partner&.name,
+          organizer_email: organizer.email,
+          organizer_name: organizer.name,
+          workshop_notes: workshop.notes,
+          sessions: workshop.sessions.map do |session|
+            {
+              datetime: session.start_date_with_start_and_end_times_us_format,
+              format: session.session_format,
+              meeting_link: session.meeting_link,
+              location: session.formatted_location_details
+            }
+          end,
+          workshop_subjects: workshop.course_offerings.present? ? workshop.course_offerings.map(&:display_name)&.join(', ') : workshop.subject,
+          workshop_name: workshop.name.presence || "#{workshop.course} #{workshop.subject}",
+          num_days: days
+        }
+      )
+    end
   end
 end
