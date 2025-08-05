@@ -21,7 +21,7 @@ import {DataEdge} from './DataEdge';
 import {DnDProvider, useDnD} from './DnDContext';
 import AiNode from './nodes/AiNode';
 import ConditionNode from './nodes/ConditionNode';
-import OutputNode from './nodes/OutputNode';
+import ResultNode from './nodes/ResultNode';
 import TextNode from './nodes/TextNode';
 import WebNode from './nodes/WebNode';
 import Sidebar from './Sidebar';
@@ -32,7 +32,7 @@ const nodeTypes = {
   ai: AiNode,
   condition: ConditionNode,
   text: TextNode,
-  output: OutputNode,
+  result: ResultNode,
   web: WebNode,
 };
 
@@ -105,10 +105,10 @@ const FlowLab: React.FunctionComponent = () => {
             data: {text: ''},
           };
           break;
-        case 'output':
+        case 'result':
           newNode = {
             id: getId(),
-            type: 'output',
+            type: 'result',
             position,
             data: {},
           };

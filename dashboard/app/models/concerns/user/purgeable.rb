@@ -8,6 +8,7 @@ module User::Purgeable
 
   included do
     SYSTEM_DELETED_USERNAME = 'sys_deleted'
+    SOFT_DELETED_RECORD_TTL = 28.days
 
     has_one :user_data_retention_status, class_name: 'User::DataRetentionStatus'
     delegate :pii_scrubbed_at, to: :user_data_retention_status, allow_nil: true

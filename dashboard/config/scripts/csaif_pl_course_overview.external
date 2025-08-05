@@ -3,18 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Cybersecurity and Global Impacts Unit Overview
+# AI-Powered Threats and Defenses Unit Overview
  
-#### Teachers can use the Cybersecurity and Global Impacts Unit as part of the AI Foundations course, or as a standalone resource for grades 9-12. It can also be integrated into existing computer science, math, or science curricula, offering scheduling flexibility.
+#### Teachers can use the AI-Powered Threats and Defenses Unit as part of the AI Foundations course, or as a standalone resource for grades 9-12. It can also be integrated into existing computer science, math, or science curricula, offering scheduling flexibility.
 
 <div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Figtree, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
 
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Learn how <strong>computing innovations</strong> have impacted our world in beneficial and harmful ways.</li>
-      <li>Learn how <strong>data</strong> can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it.</li>
-      <li>Participate in a <strong>"school of the future"</strong> conference in which you and a team make a proposal for how best to improve school life with computing innovations.</li>
+      <li>TBD</li>
+      <li>TBD</li>
+      <li>TBD</li>
     </ul>
   </div>
   <div>
@@ -40,7 +40,7 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 <p align="center">
-<img src="https://images.code.org/f6b28b41ad1b4680f92938c23c1360a6-Screenshot 2025-03-17 at 1.04.19 PM.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+<img src="" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">

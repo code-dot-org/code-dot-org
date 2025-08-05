@@ -13,6 +13,7 @@
 #  updated_at       :datetime
 #  properties       :text(65535)
 #  deleted_at       :datetime
+#  unit_group_id    :integer
 #
 # Indexes
 #

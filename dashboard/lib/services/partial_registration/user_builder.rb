@@ -58,6 +58,8 @@ module Services
           :user_type,
           :email,
           :hashed_email,
+          :given_name,
+          :family_name,
           :name,
           :educator_role,
           :email_preference_opt_in_required,

@@ -13,10 +13,10 @@ export const DEFAULT_PROJECT: ProjectSources = {
         contents: 'print("Hello world!")',
         folderId: '0',
         active: true,
-        open: true,
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
 };
 
@@ -30,10 +30,10 @@ export const STANDALONE_CONSOLE_PROJECT: ProjectSources = {
         contents: 'print("Hello world!")',
         folderId: '0',
         active: true,
-        open: true,
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
   labConfig: {
     standaloneSettings: {projectType: 'console'},
@@ -50,7 +50,6 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
         contents: 'from neighborhood import Painter',
         folderId: '0',
         active: true,
-        open: true,
       },
       '1': {
         id: '1',
@@ -64,6 +63,7 @@ export const STANDALONE_NEIGHBORHOOD_PROJECT: ProjectSources = {
       },
     },
     folders: {},
+    openFiles: ['0'],
   },
   labConfig: {
     miniApp: {name: 'neighborhood'},

@@ -88,18 +88,37 @@ DiamondContainer.propTypes = {
   children: PropTypes.node,
 };
 
+const handleKeyDown = (event, clickEvent) => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    clickEvent();
+  }
+};
+
 export function BubbleLink({url, onClick, children, a11y_description}) {
-  return (
+  const commonProps = {
+    onClick,
+    className: 'progress-bubble-link',
+    title: a11y_description,
+  };
+
+  return url ? (
+    <a href={url} {...commonProps}>
+      {children}
+    </a>
+  ) : (
+    // Anchor tags without href attributes are not recognizable by assistive tech.
+    // Adding additional props to make it tab navigable and screen reader accessible.
     <a
-      href={url}
-      onClick={onClick}
-      className="progress-bubble-link"
-      title={a11y_description}
+      role="button"
+      tabIndex={0}
+      onKeyDown={e => handleKeyDown(e, onClick)}
+      {...commonProps}
     >
       {children}
     </a>
   );
 }
+
 BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,

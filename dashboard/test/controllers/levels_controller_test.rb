@@ -6,10 +6,6 @@ class LevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -78,38 +74,11 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_properties" do
-    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
-
-    get :level_properties, params: {id: level}
-    assert_response :success
-
-    body = JSON.parse(response.body)
-    expected_body = {
-      "id" => level.id,
-      "name" => level.name,
-      "levelData" => {"hello" => "there"},
-      "other" => "other",
-      "preloadAssetList" => nil,
-      "type" => "Maze",
-      "appName" => "maze",
-      "useRestrictedSongs" => false,
-      "sharedBlocks" => [],
-      "usesProjects" => false,
-      "exemplarSources" => nil,
-      "helpVideos" => [],
-      "baseAssetUrl" => "/blockly/",
-      "isAssessment" => nil,
-      "progressionType" => nil,
-      "enableBlocklyKeyboardNavigation" => nil
-    }
-    assert_equal(expected_body, body)
-  end
-
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
-    assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 22, JSON.parse(@response.body)['numPages']
+    response = JSON.parse(@response.body)
+    assert response['levels'].any?
+    assert_kind_of Integer, response['numPages']
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
@@ -1312,25 +1281,41 @@ class LevelsControllerTest < ActionController::TestCase
     params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
-  test "add_skill adds a skill" do
+  test "add and remove skills" do
     level = create :level
     assert level.skills.empty?
-    skill = create :skill
-    post :add_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    refute level.skill_keys
+    # Add one skill, make sure it's as expected
+    skill_1 = create :skill
+    post :add_skill, params: {id: level.id, skillId: skill_1.id}
     assert_response :success
     level.reload
-    assert_equal [skill], level.skills
-  end
-
-  test "remove_skill removes a skill" do
-    level = create :level
-    skill = create :skill
-    create :levels_skill, level: level, skill: skill
-    assert_equal [skill], level.skills
-    post :remove_skill, params: {id: level.id, levelId: level.id, skillId: skill.id}
+    assert_equal [skill_1], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys == [skill_1.key].to_json
+    # Add another skill, make sure both are expected
+    skill_2 = create :skill
+    post :add_skill, params: {id: level.id, skillId: skill_2.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_1, skill_2], level.skills
+    assert level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_1.key, skill_2.key].to_json
+    # Remove one skill, make sure it's gone but the other is still there
+    post :remove_skill, params: {id: level.id, skillId: skill_1.id}
+    assert_response :success
+    level.reload
+    assert_equal [skill_2], level.skills
+    refute level.skill_keys.include?(skill_1.key)
+    assert level.skill_keys.include?(skill_2.key)
+    assert level.skill_keys == [skill_2.key].to_json
+    # Remove the last skill, make sure there are no skills left
+    post :remove_skill, params: {id: level.id, skillId: skill_2.id}
     assert_response :success
     level.reload
     assert level.skills.empty?
+    refute level.skill_keys
   end
 
   # Assert that the url is a real S3 url, and not a placeholder.

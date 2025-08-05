@@ -99,6 +99,7 @@ progress.generateLessonProgress = function (
     disablePostMilestone,
     age_13_required,
     hasUnnumberedLessons,
+    course_name,
   } = scriptData;
 
   initializeStoreWithProgress(
@@ -112,6 +113,7 @@ progress.generateLessonProgress = function (
       age_13_required,
       id: lessonData.script_id,
       hasUnnumberedLessons,
+      courseName: course_name,
     },
     currentLevelId,
     false,
@@ -371,6 +373,7 @@ function initializeStoreWithProgress(
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
       currentPageNumber: currentPageNumber,
+      courseName: scriptData.courseName,
     })
   );
 

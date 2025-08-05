@@ -289,16 +289,6 @@ And(/^I am viewing a workshop with fake survey results$/) do
   steps "And I am on \"http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}\""
 end
 
-Given(/^I visit the old enroll form page of a workshop$/) do
-  require_rails_env
-
-  workshop = FactoryBot.create :workshop
-  @workshop_id = workshop.id
-  steps <<~GHERKIN
-    And I am on "http://studio.code.org/pd/workshops/#{@workshop_id}/enroll"
-  GHERKIN
-end
-
 Given(/^I am a "([^"]*)" user enrolling in workshop with "([^"]*)" status$/) do |user_type, status|
   require_rails_env
 

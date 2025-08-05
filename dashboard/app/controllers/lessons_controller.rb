@@ -29,6 +29,7 @@ class LessonsController < ApplicationController
     return render :forbidden unless script.is_migrated
 
     if script.is_deprecated
+      @deprecated_course_name = script.name
       return render 'errors/deprecated_course'
     end
 

@@ -80,7 +80,7 @@ describe('getClient', () => {
     (getCookie as jest.Mock).mockReturnValue(null);
     (uuidv4 as jest.Mock).mockReturnValue('new-stable-id');
     const clientKey = 'test-client-key';
-    const stage = 'development';
+    const stage = 'production';
     const values = 'test-values';
 
     render(
@@ -116,7 +116,7 @@ describe('getClient', () => {
   it('should use the correct environment tier based on the stage', () => {
     (getCookie as jest.Mock).mockReturnValue('existing-stable-id');
     const clientKey = 'test-client-key';
-    const stage = 'development';
+    const stage = 'production';
     const values = 'test-values';
 
     render(
@@ -147,7 +147,7 @@ describe('getClient', () => {
     (getCookie as jest.Mock).mockReturnValue(null);
     (uuidv4 as jest.Mock).mockReturnValue('new-stable-id');
     const clientKey = 'test-client-key';
-    const stage = 'development';
+    const stage = 'production';
     const values = 'test-values';
 
     render(
@@ -175,5 +175,55 @@ describe('getClient', () => {
       },
     );
     expect(setCookie).not.toHaveBeenCalled();
+  });
+
+  it('should only set plugins in production', () => {
+    (getCookie as jest.Mock).mockReturnValue('existing-stable-id');
+    const clientKey = 'test-client-key';
+    const values = 'test-values';
+
+    // Production: plugins should be set
+    render(
+      <OneTrustContext.Provider
+        value={{allowedCookies: new Set([OneTrustCookieGroup.Performance])}}
+      >
+        <MockStatsigComponent
+          clientKey={clientKey}
+          stage={'production'}
+          values={values}
+        />
+      </OneTrustContext.Provider>,
+    );
+    expect(useClientBootstrapInit).toHaveBeenLastCalledWith(
+      clientKey,
+      {userID: 'marketing-user', customIDs: {stableID: 'existing-stable-id'}},
+      values,
+      {
+        environment: {tier: 'production'},
+        plugins: plugins,
+      },
+    );
+
+    // Development: plugins should be undefined
+    render(
+      <OneTrustContext.Provider
+        value={{allowedCookies: new Set([OneTrustCookieGroup.Performance])}}
+      >
+        <MockStatsigComponent
+          clientKey={clientKey}
+          stage={'development'}
+          values={values}
+        />
+      </OneTrustContext.Provider>,
+    );
+    expect(useClientBootstrapInit).toHaveBeenLastCalledWith(
+      clientKey,
+      {userID: 'marketing-user', customIDs: {stableID: 'existing-stable-id'}},
+      values,
+      {
+        environment: {tier: 'development'},
+        plugins: undefined,
+      },
+    );
   });
 });

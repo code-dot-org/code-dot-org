@@ -1,4 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
@@ -7,6 +8,7 @@ import {LevelSkill} from './types';
 
 const LevelsSkillsCreator: React.FC = () => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
+  const [addingSkillsToLevels, setAddingSkillsToLevels] = useState(false);
   const csvSelected = !!csvFile;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +57,7 @@ const LevelsSkillsCreator: React.FC = () => {
       alert('No LevelsSkills to create. Please upload a CSV first.');
       return;
     }
-
+    setAddingSkillsToLevels(true);
     for (const levelsSkill of levelsSkillsData) {
       try {
         await addSkillToLevel(levelsSkill);
@@ -69,6 +71,8 @@ const LevelsSkillsCreator: React.FC = () => {
         );
       }
     }
+    setAddingSkillsToLevels(false);
+    window.location.reload();
   };
 
   return (
@@ -79,9 +83,16 @@ const LevelsSkillsCreator: React.FC = () => {
         are environment specific. You can check the Skills table on this page
         for skillId and the gray admin box on a level page for the levelId. The
         levelId is also in the url of the level edit page: /levels/levelId/edit.
-        After upload of your CSV, reload the page and double-check the Levels
-        Skills association table to ensure skills are associated with levels
-        correctly.
+        After upload of your CSV, double-check the Levels Skills association
+        table to ensure skills are associated with levels correctly. You can
+        copy this{' '}
+        <Link
+          openInNewTab
+          href="https://docs.google.com/spreadsheets/d/1avXwCQ2qK5V3hhmFm_yk1IHzF-tUA30Tm2ZA5rq31ww/edit?usp=sharing"
+        >
+          template
+        </Link>{' '}
+        to get started.
       </p>
       <br />
       <div>
@@ -98,6 +109,7 @@ const LevelsSkillsCreator: React.FC = () => {
           text="Add Skills to Levels"
           onClick={importCSV}
           disabled={!csvSelected}
+          isPending={addingSkillsToLevels}
         />
       </div>
     </div>
