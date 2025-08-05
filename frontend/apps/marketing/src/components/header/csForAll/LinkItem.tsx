@@ -9,7 +9,7 @@ import {LinkItemProps} from './common/types';
 const LinkItem = ({
   brand = Brand.CS_FOR_ALL,
   label,
-  href,
+  href = '',
   typography = 'body3',
   ...linkProps
 }: LinkItemProps) => {

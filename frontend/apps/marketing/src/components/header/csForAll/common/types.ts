@@ -8,7 +8,7 @@ export interface LinkItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Link label */
   label: string;
   /** Link href */
-  href: string;
+  href?: string;
   /** Typography variant */
   typography?: React.ComponentProps<typeof Typography>['variant'];
   // Brand for the link, used with external links
