@@ -36,13 +36,10 @@ module MailJetConstants
     teacher_workshop_reminder: {
       template_id: {
         production: {
-          default: 13_173_754,
-        },
-        staging: {
-          default: 13_173_754,
+          default: 7_182_428,
         },
         development: {
-          default: 13_173_754,
+          default: 7_208_545,
         }
       },
       from_address: 'noreply@code.org',
