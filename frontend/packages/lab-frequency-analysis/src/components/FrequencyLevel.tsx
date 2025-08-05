@@ -5,6 +5,7 @@ import {SplitPane} from '@rexxars/react-split-pane';
 import React, {useRef, useEffect, useState, useCallback} from 'react';
 
 import {Heading1} from '@code-dot-org/component-library/typography';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import DATA from '../data';
 import FrequencyLevelProvider from '../providers/FrequencyLevelProvider';
@@ -18,7 +19,7 @@ import MessagePanel from './MessagePanel';
 import moduleStyles from './frequencyLevel.module.scss';
 
 export interface FrequencyLevelProps {
-  levelData?: FrequencyLevelData;
+  levelData?: LevelData<FrequencyLevelData>;
 }
 
 /**
@@ -45,9 +46,9 @@ const FrequencyLevel: React.FunctionComponent<FrequencyLevelProps> = ({
     cipher: new Map<string, string>(),
     positions: [],
   });
-  const mode = levelData?.mode || 'caesar';
+  const mode = levelData?.subData?.mode || 'caesar';
 
-  const messages = levelData?.messages || [];
+  const messages = levelData?.subData?.messages || [];
 
   const updaters = useRef<(() => void)[]>([]);
 

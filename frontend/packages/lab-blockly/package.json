@@ -33,6 +33,14 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
+    "./parser": {
+      "types": {
+        "import": "./dist/esm/parser/index.d.ts",
+        "require": "./dist/cjs/parser/index.d.js"
+      },
+      "import": "./dist/esm/parser/index.mjs",
+      "require": "./dist/cjs/parser/index.js"
+    },
     "./contexts": {
       "types": {
         "import": "./dist/esm/contexts/index.d.ts",
@@ -77,6 +85,7 @@
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/models": "workspace:*",
     "@eslint/js": "^9.15.0",
     "@release-it/conventional-changelog": "^10.0.0",
     "@storybook/addon-a11y": "^8.6.9",

@@ -5,7 +5,7 @@ import {JSDOM} from 'jsdom';
 import path from 'path';
 import URL from 'url';
 
-import * as FrequencyAnalysisLab from '@code-dot-org/lab-frequency-analysis';
+import {levelRegistry2} from '@/levels/registry';
 
 /** Describes a single level hint. */
 export interface HintData {
@@ -70,7 +70,7 @@ export interface LevelData<T = object> {
   /** The shared level template defining a potential 'workspace' */
   template?: LevelData;
   /** Other level specific data */
-  data?: T;
+  subData?: T;
 }
 
 export interface SpriteLabAnimationConfiguration {
@@ -395,8 +395,9 @@ export const parseLevelData: (
   };
 
   // Parse level data via type
-  if (ret.type === FrequencyAnalysisLab.key) {
-    ret.data = FrequencyAnalysisLab.load(config);
+  console.log('level registry', levelRegistry2);
+  if (ret.type in levelRegistry2) {
+    ret.subData = levelRegistry2[ret.type].load(config, xml, parser);
   }
 
   // Is this a concept level?

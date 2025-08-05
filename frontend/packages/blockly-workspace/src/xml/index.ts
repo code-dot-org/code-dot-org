@@ -4,7 +4,7 @@
  * JSON offline for the purposes of compiling a cached version of a level file.
  */
 
-import type {BlocklySerialization} from './types';
+import type {BlocklySerialization} from '../types';
 
 export function convertBlocklyXmlToJson(
   parser: DOMParser,

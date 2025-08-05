@@ -5,9 +5,9 @@ import {BlocklyContext} from '@code-dot-org/blockly-workspace/contexts';
 import Button from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
 import Typography from '@code-dot-org/component-library/typography';
+import type {HintData} from '@code-dot-org/models/levels';
 
 import {LevelContext} from '@lab-blockly/contexts';
-import type {HintData} from '@lab-blockly/types';
 
 import moduleStyles from './instructions.module.scss';
 

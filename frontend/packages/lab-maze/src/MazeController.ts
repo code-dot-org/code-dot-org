@@ -24,6 +24,8 @@
  * fraser@google.com (Neil Fraser)
  */
 
+import {BlocklyData} from '@code-dot-org/lab-blockly';
+
 import AnimationsController from './AnimationsController';
 import Bee from './Bee';
 import Cell from './Cell';
@@ -74,7 +76,7 @@ export interface GetTestResultsOptions {
 }
 
 /** Describes maze level initial data. */
-export interface MazeData {
+export interface MazeData extends BlocklyData {
   serializedMaze?: SerializedMazeTileData[][];
   map?: (number | string)[][];
   skinId: string;

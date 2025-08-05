@@ -2,14 +2,11 @@
 
 import {useContext} from 'react';
 
-import * as FrequencyAnalysisLab from '@code-dot-org/lab-frequency-analysis';
-
 import Header from '@/components/header';
 import {ProgressNavigator} from '@/components/header/progress';
 import UnitLevel from '@/components/unit/UnitLevel';
 import LevelContext from '@/contexts/LevelContext';
 import UnitContext from '@/contexts/UnitContext';
-import {register} from '@/levels/registry';
 
 export default function UnitLevelPage() {
   const {unit} = useContext(UnitContext);
@@ -24,9 +21,6 @@ export default function UnitLevelPage() {
     levelInfo?.activitySectionIndex !== undefined
       ? lesson?.activitySections[levelInfo.activitySectionIndex]
       : undefined;
-
-  // Register level types
-  register(FrequencyAnalysisLab);
 
   return (
     <div

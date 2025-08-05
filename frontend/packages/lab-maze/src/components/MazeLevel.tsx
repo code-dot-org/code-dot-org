@@ -1,3 +1,5 @@
+'use client';
+
 import React, {
   useRef,
   useMemo,
@@ -17,8 +19,8 @@ import BlocklyLevel, {
   BlocklyLevelEnvironment,
   BlocklyLevelProps,
 } from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/lab-blockly';
 import {LevelContext} from '@code-dot-org/lab-blockly/contexts';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import blocks from '@lab-maze/blocks';
 import Visualization from '@lab-maze/components/Visualization';
@@ -40,16 +42,16 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface MazeLevelProps extends BlocklyLevelProps<MazeData> {
-  level: LevelData<MazeData>;
+  levelData: LevelData<MazeData>;
   skins?: SkinsData;
   api?: API;
   customBlocks?: BlockDefinition[];
-  visualization: ReactNode;
+  visualization?: ReactNode;
   visualizationClassName?: string;
 }
 
 const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
-  level,
+  levelData,
   customBlocks,
   skins,
   theme,
@@ -70,7 +72,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   // Respond to a hint showing a path
   useEffect(() => {
     if (hintsShown > 0) {
-      const hint = (level.hints || [])[hintsShown - 1];
+      const hint = (levelData.hints || [])[hintsShown - 1];
       if (hint.path && maze.current) {
         maze.current.drawHintPath(hint.path);
       }
@@ -99,8 +101,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
   // Pull out the skin asset paths
   const skin = useMemo(
-    () => skinFor(skins || defaultSkins, level?.subData?.skinId || 'birds'),
-    [level],
+    () => skinFor(skins || defaultSkins, levelData?.subData?.skinId || 'birds'),
+    [levelData],
   );
 
   // Determine all blocks
@@ -118,7 +120,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       // Create our Maze driver
       maze.current = new Maze(
         environment.current.mainWorkspace,
-        level?.subData || {
+        levelData?.subData || {
           skinId: skin.id,
         },
         environment.current,
@@ -149,7 +151,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       console.log('UNINIT THE MAZE LEVEL');
       maze.current?.uninitialize();
     };
-  }, [svg, level]);
+  }, [svg, levelData]);
 
   // When blockly is loaded and initialized
   const onInject = useCallback(() => {
@@ -160,7 +162,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   // Ensure a 'when_run' block exists... as some levels omit it for some reason
   const startBlocks = useMemo(() => {
     // Deep duplicate the block data
-    const initial = level.blocklyData?.startBlocks || DefaultStartBlocks;
+    const initial = levelData.subData?.startBlocks || DefaultStartBlocks;
     const data = {...initial};
     data.blocks ||= {};
     data.blocks = {...data.blocks};
@@ -170,11 +172,11 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       data.blocks.blocks.unshift({type: 'when_run'});
     }
     return data;
-  }, [level]);
+  }, [levelData]);
 
   return (
     <BlocklyLevel<MazeData>
-      level={level}
+      levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}

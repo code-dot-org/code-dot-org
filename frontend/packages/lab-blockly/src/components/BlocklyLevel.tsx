@@ -15,11 +15,12 @@ import {getToolboxWidth} from '@code-dot-org/blockly-workspace/utils';
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Heading6} from '@code-dot-org/component-library/typography';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import Workspace from '@lab-blockly/components/workspace';
 import Instructions from '@lab-blockly/components/workspace/information/instructions';
 import MultipleChoice from '@lab-blockly/components/workspace/information/multipleChoice';
-import type {LevelData} from '@lab-blockly/types';
+import type {BlocklyData} from '@lab-blockly/types';
 
 import moduleStyles from './blocklyLevel.module.scss';
 
@@ -38,10 +39,10 @@ export interface BlocklyLevelEnvironment extends Environment {
 }
 
 export type BlocklyLevelProps<
-  T = object,
+  T extends BlocklyData = BlocklyData,
   U extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 > = {
-  level: LevelData<T>;
+  levelData: LevelData<T>;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
   /** A set of blocks to load into a hidden workspace */
@@ -51,7 +52,7 @@ export type BlocklyLevelProps<
   /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
   /** A component that is loaded as the level visualization */
-  visualization: ReactNode;
+  visualization?: ReactNode;
   /** The blockly theme to use. */
   theme?: Theme;
   /** The blockly renderer to use. */
@@ -93,10 +94,10 @@ const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
   }).length;
 
 function BlocklyLevel<
-  T = object,
+  T extends BlocklyData = BlocklyData,
   U extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 >({
-  level,
+  levelData,
   startBlocks,
   hiddenBlocks,
   options,
@@ -122,12 +123,12 @@ function BlocklyLevel<
   ];
   const toolboxBlocks = useMemo(
     () =>
-      level.multipleChoice
+      levelData.multipleChoice
         ? undefined
-        : level.blocklyData?.toolboxBlocks?.contents?.length === 0
+        : levelData.subData?.toolboxBlocks?.contents?.length === 0
           ? undefined
-          : level.blocklyData?.toolboxBlocks,
-    [level],
+          : levelData.subData?.toolboxBlocks,
+    [levelData],
   );
   const setToolboxHeaderWidth = useCallback(() => {
     // Get the width of the flyout / toolbox
@@ -146,18 +147,18 @@ function BlocklyLevel<
       renderer={renderer}
     >
       <Workspace
-        outputPane={visualization}
+        outputPane={visualization || <div/>}
         tabs={[
           {
             value: 'instructions',
             text: 'Instructions',
-            tabContent: level.multipleChoice ? (
-              <MultipleChoice multipleChoice={level.multipleChoice} />
+            tabContent: levelData.multipleChoice ? (
+              <MultipleChoice multipleChoice={levelData.multipleChoice} />
             ) : (
               <Instructions
                 avatar={avatar}
-                instructions={level.longInstructions || ''}
-                hints={level.hints}
+                instructions={levelData.longInstructions || ''}
+                hints={levelData.hints}
               />
             ),
           },
@@ -184,14 +185,14 @@ function BlocklyLevel<
             </div>
             <div className={moduleStyles.workspaceHeader}>
               <Heading6 className={moduleStyles.headerText}>Workspace</Heading6>
-              {!!level.blocklyData?.idealBlockCount && (
+              {!!levelData.subData?.idealBlockCount && (
                 <>
                   <Heading6
                     className={classNames(
                       moduleStyles.headerText,
                       moduleStyles.blockCount,
                       blockCount.current >
-                        (level.blocklyData?.idealBlockCount || 0)
+                        (levelData.subData?.idealBlockCount || 0)
                         ? moduleStyles.over
                         : undefined,
                     )}
@@ -204,7 +205,7 @@ function BlocklyLevel<
                       moduleStyles.idealCount,
                     )}
                   >
-                    {level.blocklyData?.idealBlockCount || 0} blocks
+                    {levelData.subData?.idealBlockCount || 0} blocks
                   </Heading6>
                 </>
               )}
@@ -258,7 +259,7 @@ function BlocklyLevel<
           )}
           <BlocklyWorkspace<U>
             options={{
-              readOnly: level.multipleChoice ? true : undefined,
+              readOnly: levelData.multipleChoice ? true : undefined,
               ...options,
             }}
             renderer={renderer}
@@ -266,8 +267,8 @@ function BlocklyLevel<
             customBlocks={customBlocks}
             startBlocks={
               startBlocks ||
-              level.template?.blocklyData?.startBlocks ||
-              level.blocklyData?.startBlocks
+              levelData.template?.subData?.startBlocks ||
+              levelData.subData?.startBlocks
             }
             toolboxBlocks={toolboxBlocks}
             onChange={(event: Blockly.Events.Abstract) => {
@@ -282,7 +283,7 @@ function BlocklyLevel<
               }
               if (environment) {
                 environment.idealBlockCount =
-                  level.blocklyData?.idealBlockCount;
+                  levelData.subData?.idealBlockCount;
               }
 
               // Dynamically update the counter
@@ -294,7 +295,7 @@ function BlocklyLevel<
                 const headerNode = blockCountRef.current
                   .parentNode as HTMLElement | null;
                 if (
-                  blockCount.current > (level.blocklyData?.idealBlockCount || 0)
+                  blockCount.current > (levelData.subData?.idealBlockCount || 0)
                 ) {
                   headerNode?.classList.add(moduleStyles.over);
                 } else {

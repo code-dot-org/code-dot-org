@@ -32,6 +32,14 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
+    "./xml": {
+      "types": {
+        "import": "./dist/esm/xml/index.d.ts",
+        "require": "./dist/cjs/xml/index.d.js"
+      },
+      "import": "./dist/esm/xml/index.mjs",
+      "require": "./dist/cjs/xml/index.js"
+    },
     "./utils": {
       "types": {
         "import": "./dist/esm/utils/index.d.ts",

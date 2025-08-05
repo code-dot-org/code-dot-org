@@ -119,14 +119,14 @@ const defaultBlocks: BlockDefinition[] = [
 
 export const MazeBase = Template.bind({});
 MazeBase.args = {
-  level: defaultLevelData,
+  levelData: defaultLevelData,
   renderer: Thrasos,
   customBlocks: defaultBlocks,
 };
 
 export const MazeMarkdownInstructions = Template.bind({});
 MazeMarkdownInstructions.args = {
-  level: {
+  levelData: {
     ...defaultLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },

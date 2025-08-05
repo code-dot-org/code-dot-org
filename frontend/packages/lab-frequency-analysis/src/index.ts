@@ -1,3 +1,6 @@
+// Auto-import SASS generated CSS
+import './index.css';
+
 import load from './parser';
 export {load};
 

@@ -1,4 +1,4 @@
-import * as Blockly from 'blockly/core';
+import type * as Blockly from 'blockly/core';
 
 import {ProcedureBlock} from '@code-dot-org/blockly-workspace';
 import {BlockLimitMap} from '@code-dot-org/blockly-workspace/plugins/blockLimits';
@@ -442,7 +442,7 @@ class TestResults {
         // Incomplete block if any input connection target is null
         return block.inputList.some(input => {
           return (
-            input.type === Blockly.inputs.inputTypes.VALUE &&
+            input.type === /*Blockly.inputs.inputTypes.VALUE*/ 1 &&
             !input.connection?.targetConnection
           );
         });

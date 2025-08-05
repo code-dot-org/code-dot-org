@@ -104,7 +104,7 @@ const defaultBlocks: BlockDefinition[] = [
 
 export const BlocklyBase = Template.bind({});
 BlocklyBase.args = {
-  level: defaultLevelData,
+  levelData: defaultLevelData,
   renderer: Thrasos,
   visualization: <div><canvas width="400" height="400" style={{ width: '100%', height: '100%', background: 'black' }} /></div>,
   customBlocks: defaultBlocks,
@@ -112,7 +112,7 @@ BlocklyBase.args = {
 
 export const BlocklyMarkdownInstructions = Template.bind({});
 BlocklyMarkdownInstructions.args = {
-  level: {
+  levelData: {
     ...defaultLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },

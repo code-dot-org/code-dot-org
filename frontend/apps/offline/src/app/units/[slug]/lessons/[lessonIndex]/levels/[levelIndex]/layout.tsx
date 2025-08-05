@@ -39,6 +39,8 @@ export default async function LevelLayout({
     return notFound();
   }
 
+  console.log('LAYOUT', level);
+
   return (
     <LevelProvider
       level={level}

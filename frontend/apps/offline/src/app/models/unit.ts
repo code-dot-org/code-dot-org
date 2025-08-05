@@ -501,6 +501,8 @@ export const loadUnitDefinition: (
     `${slug}.script_json`,
   );
 
+  console.log(fallbackPath);
+
   const fallbackContents = await fs.readFile(fallbackPath, 'utf8');
   const ret = JSON.parse(fallbackContents);
 
