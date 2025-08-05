@@ -11,8 +11,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    seed_deprecated_unit_fixtures
-
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
@@ -270,17 +268,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal netsim_script_level, assigns(:script_level)
-  end
-
-  test "should show script level of ECSPD if signed in" do
-    sign_in @student
-    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
-    assert_response :success
-  end
-
-  test "should not get show of ECSPD if not signed in" do
-    get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
-    assert_redirected_to_sign_in
   end
 
   test "should not fetch partial peer review matches" do
@@ -999,10 +986,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   end
 
   test "should show special script level by chapter" do
+    create_hourofcode_unit_and_levels
     # this works for 'special' scripts like flappy, hoc
-    expected_script_level = ScriptLevel.where(script_id: Unit.get_from_cache(Unit::FLAPPY_NAME).id, chapter: 5).first
+    expected_script_level = ScriptLevel.where(script_id: Unit.get_from_cache(Unit::HOC_NAME).id, chapter: 5).first
 
-    get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: '5'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '5'}
     assert_response :success
 
     assert_equal expected_script_level, assigns(:script_level)
@@ -1227,78 +1215,66 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "show redirects admins to root" do
     sign_in create(:admin)
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_redirected_to root_path
   end
 
   test 'end of HoC for logged in user works' do
+    create_hourofcode_unit_and_levels
     sign_in(create(:user))
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
 
   test 'end of HoC for anonymous visitor works' do
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: '20'}
+    create_hourofcode_unit_and_levels
+    get :show, params: {script_id: Unit::HOC_NAME, chapter: '10'}
     assert_response :success
   end
 
-  # test 'end of HoC has wrapup video in response' do
-  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   assert_includes(@response.body, 'hoc_wrapup')
-  # end
-
-  # test 'end of HoC for signed-in users has no wrapup video, does have lesson change info' do
-  #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   refute_includes(@response.body, 'hoc_wrapup')
-  #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
-  # end
-
   test "next redirects admins to root" do
     sign_in create(:admin)
-    get :next, params: {script_id: Unit::HOC_NAME}
+    get :next, params: {script_id: @custom_script.name}
     assert_redirected_to root_path
   end
 
   test 'next for non signed in user' do
-    get :next, params: {script_id: Unit::HOC_NAME}
+    get :next, params: {script_id: @custom_script.name}
 
     assert_response :redirect
-    assert_redirected_to '/hoc/1'
+    assert_redirected_to "/courses/#{@custom_script.original_unit_group.name}/units/1/lessons/1/levels/1"
   end
 
-  test 'should show tracking pixel for hoc chapter 1 in prod' do
+  test 'should show tracking pixel for first level of hoc course in prod' do
     set_env :production
-    get :show, params: {script_id: Unit::HOC_NAME, chapter: 1}
 
-    assert_select 'img[src="//code.org/api/hour/begin_hourofcode.png"]'
-  end
+    unit = create(:script, :with_levels, name: 'hoc-script')
+    create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
 
-  test 'should show tracking pixel for frozen chapter 1 in prod' do
-    set_env :production
     get :show, params: {
-      course_course_name: Unit::FROZEN_NAME,
+      course_course_name: 'hoc-course',
       unit_position: 1,
       lesson_position: 1,
-      id: 1
+      id: 1,
     }
-    assert_select 'img[src="//code.org/api/hour/begin_frozen.png"]'
+
+    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]'
   end
 
-  test 'should show tracking pixel for flappy chapter 1 in prod' do
+  test 'should not show tracking pixel for second level of hoc course in prod' do
     set_env :production
-    get :show, params: {script_id: Unit::FLAPPY_NAME, chapter: 1}
-    assert_select 'img[src="//code.org/api/hour/begin_flappy.png"]'
-  end
 
-  test 'should show tracking pixel for playlab chapter 1 in prod' do
-    set_env :production
+    unit = create(:script, :with_levels, name: 'hoc-script')
+    create(:hoc_course, unit: unit, name: 'hoc-course', family_name: 'hoc-course', version_year: 'unversioned')
+
     get :show, params: {
-      course_course_name: Unit::PLAYLAB_NAME,
+      course_course_name: 'hoc-course',
       unit_position: 1,
       lesson_position: 1,
-      id: 1
+      id: 2,
     }
-    assert_select 'img[src="//code.org/api/hour/begin_playlab.png"]'
+
+    assert_select 'img[src="//code.org/api/hour/begin_hoc-script.png"]', false, 'must not contain tracking pixel'
   end
 
   test "should 404 for invalid chapter for flappy" do

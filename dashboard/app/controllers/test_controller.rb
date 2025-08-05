@@ -154,6 +154,25 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def assign_section_to_course_and_unit
+    return unless (teacher = current_user)
+
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position)
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
+
+    section = teacher.sections[params.require(:section_position).to_i - 1]
+    section.update!(unit_group: unit_group, script: unit)
+    section.students.each do |student|
+      student.assign_script(unit)
+    end
+
+    head :ok
+  end
+
   def get_i18n_t
     locale = params[:locale] || request.env['cdo.locale']
     render plain: I18n.t(params.require(:key), locale: locale)

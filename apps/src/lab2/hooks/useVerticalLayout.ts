@@ -1,9 +1,13 @@
 import {useCallback, useEffect, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
+import {
+  handleResizeEnd,
+  handleResizeStart,
+} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {ColumnPanelConfig} from '@cdo/apps/lab2/views/components/layout/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 
@@ -36,6 +40,7 @@ export const useVerticalLayout = ({
   const [rightPanelWidth, setRightPanelWidth] = useState<number | undefined>(
     rightPanel.initialWidth
   );
+  const dispatch = useAppDispatch();
 
   const {
     position: rawLeftPanelWidth,
@@ -47,7 +52,11 @@ export const useVerticalLayout = ({
     initial: leftPanel.initialWidth,
     min: leftPanel.minWidth,
     onResizeStart: () =>
-      logOnResize(appName, {layout: 'vertical', resizeBar: leftPanel.name}),
+      handleResizeStart(dispatch, appName, {
+        layout: 'vertical',
+        resizeBar: leftPanel.name,
+      }),
+    onResizeEnd: () => handleResizeEnd(dispatch),
   });
   const {
     position: rawRightPanelWidth,
@@ -60,7 +69,11 @@ export const useVerticalLayout = ({
     min: rightPanel.minWidth,
     reverse: true,
     onResizeStart: () =>
-      logOnResize(appName, {layout: 'vertical', resizeBar: rightPanel.name}),
+      handleResizeStart(dispatch, appName, {
+        layout: 'vertical',
+        resizeBar: rightPanel.name,
+      }),
+    onResizeEnd: () => handleResizeEnd(dispatch),
   });
 
   const adjustWidths = useCallback(() => {
