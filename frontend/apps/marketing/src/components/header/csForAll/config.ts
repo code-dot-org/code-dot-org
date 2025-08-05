@@ -1,4 +1,4 @@
-import logoImage from '@public/images/csforall-logo.svg';
+import logoImage from '@public/images/csforall-logo.webp';
 
 import {CallToActionProps} from './CallToAction';
 import {LinkItemProps} from './common/types';
