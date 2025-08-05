@@ -111,7 +111,7 @@ module Pd::Foorm
 
         choice_value = choice_key.to_i
         choice_label = choices[choice_key] || choice_key
-        weighted_value = LIKERT_WEIGHTS[choice_value] || 0
+        weighted_value = LIKERT_WEIGHTS[choice_value]
 
         breakdown[choice_key] = {
           count: count,
@@ -121,7 +121,7 @@ module Pd::Foorm
         }
 
         # Add to weighted sum
-        weighted_sum += weighted_value * count
+        weighted_sum += weighted_value * count if weighted_value
 
         # Count agreement responses (5, 6, 7)
         if choice_value >= AGREEMENT_THRESHOLD
