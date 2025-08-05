@@ -20,6 +20,10 @@
 # - localhost.staging.codeprojects.org
 # 
 # Therefore we're using <env>.codeprojects.org, except in prod, where we use the base domain.
+#
+# TODO:
+#   - Cloudfront distribution and function for www redirect
+#   - Adopt/Replace the existing codeprojects.org base domain resources, which don't use Cloudfront. Add them to this single distribution if reasonable.
 # -----------------------------------------------
 
 <%- if rack_env?(:staging) -%>
@@ -73,20 +77,6 @@ CodeprojectsRecords:
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
     RecordSets:
-      # NOTE: today this points directly to a manually created codeprojects load balancer, this changes it to point to the main code.org load balancer.
-      # Commented for now to avoid changing the existing codeprojects base domain stack.
-      # - Name: !Ref CodeprojectsBaseDomainName
-      #   Type: A
-      #   AliasTarget:
-      #     DNSName: !GetAtt CodeprojectsCloudFrontDistribution.DomainName
-      #     HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
-      # NOTE: today this points directly to the manually created codeprojects load balancer, this changes it to point to the www redirect distribution below.
-      # Comment this out to avoid changing the existing codeprojects base domain stack (though this is safer than changing the base domain)
-      # - Name: !Sub www.${CodeprojectsBaseDomainName}
-      #   Type: A
-      #   AliasTarget:
-      #     DNSName: !GetAtt CodeprojectsWwwRedirectDistribution.DomainName
-      #     HostedZoneId: !GetAtt CodeprojectsWwwRedirectDistribution.HostedZoneId
       - Name: !Sub preview.${CodeprojectsBaseDomainName}
         Type: A
         AliasTarget:
@@ -94,8 +84,6 @@ CodeprojectsRecords:
           HostedZoneId: !GetAtt CodeprojectsCloudFrontDistribution.HostedZoneId
 
 # Codeprojects CloudFront Distribution
-# TODO:
-#   - handle bramble-download and static subdomains, which may need custom origins
 CodeprojectsCloudFrontDistribution:
   Type: AWS::CloudFront::Distribution
   Properties:
@@ -104,7 +92,7 @@ CodeprojectsCloudFrontDistribution:
       Comment: !Sub ${CodeprojectsBaseDomainName} main distribution
       PriceClass: PriceClass_All
       Aliases:
-        - !Ref CodeprojectsBaseDomainName
+        # - !Ref CodeprojectsBaseDomainName
         - !Sub preview.${CodeprojectsBaseDomainName}
       Origins:
         - Id: DashboardOrigin
@@ -168,79 +156,6 @@ CodeprojectsOriginRequestPolicy:
           - User-Agent
       QueryStringsConfig:
         QueryStringBehavior: all
-
-# Dedicated CloudFront distribution for www redirects
-CodeprojectsWwwRedirectDistribution:
-  Type: AWS::CloudFront::Distribution
-  Properties:
-    DistributionConfig:
-      Enabled: true
-      Comment: !Sub www.${CodeprojectsBaseDomainName} redirect
-      PriceClass: PriceClass_100
-      Aliases:
-        - !Sub www.${CodeprojectsBaseDomainName}
-      Origins:
-        # An origin is required, but will never receive traffic
-        - Id: PrimaryOrigin
-          DomainName: example.com
-          CustomOriginConfig:
-            OriginProtocolPolicy: match-viewer
-      DefaultCacheBehavior:
-        TargetOriginId: PrimaryOrigin
-        FunctionAssociations:
-          - EventType: viewer-request
-            FunctionARN: !GetAtt CodeprojectsWwwRedirectFunction.FunctionARN
-        ViewerProtocolPolicy: allow-all
-      ViewerCertificate:
-        AcmCertificateArn: !Ref CodeprojectsCertificate
-        MinimumProtocolVersion: TLSv1.2_2021
-        SslSupportMethod: sni-only
-
-# CloudFront function to redirect www to non-www with 301 status
-CodeprojectsWwwRedirectFunction:
-  Type: AWS::CloudFront::Function
-  Properties:
-    Name: !Sub ${AWS::StackName}-codeprojects-www-redirect
-    FunctionCode: |
-      function handler(event) {
-          var request = event.request;
-          var host = request.headers.host.value;
-          
-          // Check if host starts with 'www.'
-          if (!host.startsWith('www.')) {
-              console.log('Host does not start with www:', host);
-              return request;
-          }
-          
-          var newHost = host.substring(4); // Remove 'www.' prefix
-          var newUrl = 'https://' + newHost + request.uri;
-          
-          // Add query string if present
-          if (request.querystring && Object.keys(request.querystring).length > 0) {
-              var queryParams = [];
-              for (var key in request.querystring) {
-                  if (request.querystring[key].value) {
-                      queryParams.push(key + '=' + encodeURIComponent(request.querystring[key].value));
-                  } else {
-                      queryParams.push(key);
-                  }
-              }
-              newUrl += '?' + queryParams.join('&');
-          }
-          
-          console.log('Redirecting from', host, 'to', newHost);
-          
-          return {
-              statusCode: 301,
-              statusDescription: 'Moved Permanently',
-              headers: {
-                  'location': { value: newUrl }
-              }
-          };
-      }
-    FunctionConfig:
-      Comment: Redirects www subdomain to non-www with 301 status
-      Runtime: cloudfront-js-1.0
 
 # -----------------------------------------------
 # End codeprojects.org resources
