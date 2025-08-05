@@ -4,17 +4,18 @@ import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
+import {ChatThread} from './types';
+
 import styles from './ai-differentiation.module.scss';
 
 interface AiDiffSidebarProps {
-  // Props will go here :)
+  threads?: ChatThread[];
+  selectedThreadId?: number;
+  threadSelectCallback?: () => void;
 }
 
 const now = new Date();
-const tenMinutesAgo = new Date(Date.now() - 10 * 60 * 1000);
-const fifteenMinutesAgo = new Date(Date.now() - 15 * 60 * 1000);
 const yesterday = new Date(Date.now() - 24 * 60 * 60 * 1000);
-const otherYesterday = new Date(Date.now() - 25 * 60 * 60 * 1000);
 const sevenDaysAgo = new Date(now);
 sevenDaysAgo.setDate(now.getDate() - 7);
 const thirtyDaysAgo = new Date(now);
@@ -22,118 +23,83 @@ thirtyDaysAgo.setDate(now.getDate() - 30);
 const lastYear = new Date(now);
 lastYear.setFullYear(now.getFullYear() - 1);
 
-const chats = [
-  {
-    id: 0,
-    displayName: 'The most recent chat',
-    timestamp: now,
-    link: '#',
-  },
-  {
-    id: 1,
-    displayName: 'A chat from 10 minutes ago',
-    timestamp: tenMinutesAgo,
-    link: '#',
-  },
-  {
-    id: 2,
-    displayName: 'A chat from 15 minutes ago',
-    timestamp: fifteenMinutesAgo,
-    link: '#',
-  },
-  {
-    id: 3,
-    displayName: 'A chat from yesterday',
-    timestamp: yesterday,
-    link: '#',
-  },
-  {
-    id: 4,
-    displayName: 'Another chat from yesterday',
-    timestamp: otherYesterday,
-    link: '#',
-  },
-  {
-    id: 5,
-    displayName: 'A chat from last month',
-    timestamp: thirtyDaysAgo,
-    link: '#',
-  },
-  {
-    id: 6,
-    displayName: 'A chat from last year',
-    timestamp: lastYear,
-    link: '#',
-  },
-];
-
-const todayChats = chats.filter(chat => {
-  const chatDate = new Date(chat.timestamp);
-  return chatDate > yesterday;
-});
-
-const past7DaysChats = chats.filter(chat => {
-  const chatDate = new Date(chat.timestamp);
-
-  return chatDate >= sevenDaysAgo && chatDate <= yesterday;
-});
-
-const past30DaysChats = chats.filter(chat => {
-  const chatDate = new Date(chat.timestamp);
-  return chatDate >= thirtyDaysAgo && chatDate <= sevenDaysAgo;
-});
-
-const oldChats = chats.filter(chat => {
-  const chatDate = new Date(chat.timestamp);
-  return chatDate < thirtyDaysAgo;
-});
-
 const drawerWidth = 240;
 
-const ChatItem: React.FC<{
-  chat: (typeof chats)[0];
+const ThreadItem: React.FC<{
+  chat: ChatThread;
   selected: boolean;
   onClick: () => void;
 }> = ({chat, selected, onClick}) => (
   <ListItem key={chat.id} disablePadding>
     <ListItemButton onClick={() => onClick()} selected={selected}>
       <ListItemText
-        primary={chat.displayName}
+        primary={chat.title}
+        secondary={chat.updatedAt.toLocaleString([], {
+          dateStyle: 'medium',
+          timeStyle: 'short',
+        })}
         className={styles.sidebarChatItem}
+        classes={{
+          primary: styles.sidebarChatItemPrimary,
+          secondary: styles.sidebarChatItemSecondary,
+        }}
       />
     </ListItemButton>
   </ListItem>
 );
 
-const AiDiffSidebar: React.FC<AiDiffSidebarProps> = () => {
+const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
+  threads = [],
+  selectedThreadId,
+  threadSelectCallback,
+}) => {
   const [selectedChat, setSelectedChat] = React.useState<number>(0);
   const handleListItemClick = (chatId: number) => {
     setSelectedChat(chatId);
   };
 
+  const todayChats = threads.filter(thread => {
+    return thread.updatedAt > yesterday;
+  });
+
+  const past7DaysChats = threads.filter(thread => {
+    return thread.updatedAt >= sevenDaysAgo && thread.updatedAt <= yesterday;
+  });
+
+  const past30DaysChats = threads.filter(thread => {
+    return (
+      thread.updatedAt >= thirtyDaysAgo && thread.updatedAt <= sevenDaysAgo
+    );
+  });
+
+  const oldChats = threads.filter(thread => {
+    return thread.updatedAt < thirtyDaysAgo;
+  });
+
   return (
     <aside className={styles.sidebarContainer}>
-      <div className={styles.sidebarContent}>
-        <Box
-          component="nav"
-          sx={{width: {sm: drawerWidth}, flexShrink: {sm: 0}}}
-          aria-label="AI differentiation chat threads"
-        >
-          <Button
-            color={buttonColors.white}
-            size="m"
-            type="primary"
-            iconLeft={{iconName: 'plus'}}
-            onClick={() => console.log('Add new chat thread')}
-            text={commonI18n.aiDifferentiation_new_chat()}
-            className={styles.sidebarButton}
-          />
-          <List>
+      <Box
+        component="nav"
+        sx={{width: {sm: drawerWidth}, flexShrink: {sm: 0}}}
+        aria-label="AI differentiation chat threads"
+        className={styles.sidebarBox}
+      >
+        <Button
+          color={buttonColors.white}
+          size="m"
+          type="primary"
+          iconLeft={{iconName: 'plus'}}
+          onClick={() => console.log('Add new chat thread')}
+          text={commonI18n.aiDifferentiation_new_chat()}
+          className={styles.sidebarButton}
+        />
+        <div className={styles.sidebarContent}>
+          <List disablePadding={true}>
             {todayChats.length > 0 && (
               <>
                 <p className={styles.sidebarSectionTitle}>TODAY</p>
                 {todayChats.map(chat => (
-                  <ChatItem
+                  <ThreadItem
                     key={chat.id}
                     chat={chat}
                     selected={chat.id === selectedChat}
@@ -146,7 +112,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = () => {
               <>
                 <p className={styles.sidebarSectionTitle}>PREVIOUS 7 DAYS</p>
                 {past7DaysChats.map(chat => (
-                  <ChatItem
+                  <ThreadItem
                     key={chat.id}
                     chat={chat}
                     selected={chat.id === selectedChat}
@@ -159,7 +125,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = () => {
               <>
                 <p className={styles.sidebarSectionTitle}>PREVIOUS 30 DAYS</p>
                 {past30DaysChats.map(chat => (
-                  <ChatItem
+                  <ThreadItem
                     key={chat.id}
                     chat={chat}
                     selected={chat.id === selectedChat}
@@ -172,7 +138,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = () => {
               <>
                 <p className={styles.sidebarSectionTitle}>OLDER CHATS</p>
                 {oldChats.map(chat => (
-                  <ChatItem
+                  <ThreadItem
                     key={chat.id}
                     chat={chat}
                     selected={chat.id === selectedChat}
@@ -182,8 +148,8 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = () => {
               </>
             )}
           </List>
-        </Box>
-      </div>
+        </div>
+      </Box>
     </aside>
   );
 };

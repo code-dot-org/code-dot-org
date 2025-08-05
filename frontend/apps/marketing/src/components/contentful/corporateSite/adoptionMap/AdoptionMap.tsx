@@ -29,7 +29,10 @@ import './adoptionMap.scss';
 
 import styles from './adoptionMap.module.scss';
 
+// This constant is updated each year to the new census year tileset after its data is
+// confirmed using the update_census_mapbox script.
 const MAP_TILESET_ID = 'censustiles';
+
 const MAP_POINT_LAYER_ID = 'census';
 const MAPBOX_STYLE_URL = 'mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz';
 const NO_CS_SCHOOLS_LAYER_ID = 'census-schools';
