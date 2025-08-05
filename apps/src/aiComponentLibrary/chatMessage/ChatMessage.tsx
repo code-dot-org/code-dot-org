@@ -1,14 +1,16 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
+
 import {Role} from './types';
 
 import moduleStyles from './chat-message.module.scss';
-
 interface ChatMessageProps {
   text: string;
   role: Role;
@@ -18,6 +20,9 @@ interface ChatMessageProps {
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
 }
+
+const shouldCopyCodeBlocks =
+  String(queryParams('ai-show-copy-code')).toLowerCase() === 'true';
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
@@ -72,7 +77,13 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            <SafeMarkdown markdown={text} openExternalLinksInNewTab />
+            <SafeMarkdown
+              markdown={text}
+              rehypeMap={
+                shouldCopyCodeBlocks ? {pre: CopyableCodeBlock} : undefined
+              }
+              openExternalLinksInNewTab
+            />
           </div>
         </div>
         <div
