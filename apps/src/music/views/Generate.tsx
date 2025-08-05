@@ -8,7 +8,8 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askAi from '../ai/askAi';
 import appConfig from '../appConfig';
-import {setCodeToLoad} from '../redux/musicRedux';
+import MusicLibrary from '../player/MusicLibrary';
+import {setPackId, setCodeToLoad} from '../redux/musicRedux';
 
 import styles from './Generate.module.scss';
 
@@ -16,6 +17,24 @@ interface GenerateProps {}
 
 const Generate: React.FunctionComponent<GenerateProps> = () => {
   const dispatch = useAppDispatch();
+
+  const packId = 'kenya_grace_strangers';
+
+  const library = MusicLibrary.getInstance();
+
+  dispatch(setPackId(packId));
+  library?.setCurrentPackId(packId);
+
+  const sounds = library
+    ?.getFolderForFolderId(packId)
+    ?.sounds.map(sound => {
+      if (sound.type !== 'preview') {
+        return sound.src;
+      }
+    })
+    .filter(sound => sound !== undefined)
+    .join('", "');
+  console.log(sounds);
 
   const contextGenerateMusicPsuedocodeFromDescription = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
 
@@ -31,9 +50,7 @@ when_run
 
 Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
 
-Let's try it out.  Can you generate a song that, when run, plays "indie/guitar_chord_change" followed by "indie/guitar_clean_arp"?
-
-And then it plays these three sounds together - "hiphop/drum_beat_808", "electro/drum_beat_hyper", and "groove/reggaeton_beat" - three times.
+The valid sounds to use are: "${sounds}".  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
 `;
 
   const contextGenerateMusicBlocklyFromMusicPsuedocode = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.

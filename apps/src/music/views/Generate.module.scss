@@ -4,7 +4,8 @@
   height: 100%;
   z-index: 1000;
   background: #4802AA;
-  background: linear-gradient(49deg, rgba(72, 2, 170, 1) 0%, rgba(176, 14, 229, 1) 52%, rgba(77, 202, 239, 1) 100%);  flex-direction: column;
+  background: linear-gradient(49deg, rgba(72, 2, 170, 1) 0%, rgba(176, 14, 229, 1) 52%, rgba(77, 202, 239, 1) 100%);
+  flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,7 @@
   padding: 20px;
   box-sizing: border-box;
   color: white;
-  background-color: #1a0b36;
+  background-color: rgba(26 11 76 / 0.6);
   border: none;
   resize: vertical;
   border-radius: 10px;
