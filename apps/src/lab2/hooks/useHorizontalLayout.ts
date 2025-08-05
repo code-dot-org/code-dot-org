@@ -2,16 +2,12 @@ import {throttle} from 'lodash';
 import {useCallback, useEffect, useMemo, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import {
-  handleResizeEnd,
-  handleResizeStart,
-} from '@cdo/apps/lab2/utils/resizeUtils';
+import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import {RESIZE_BAR_SIZE_PX} from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import {
   ColumnPanelConfig,
   RowPanelConfig,
 } from '@cdo/apps/lab2/views/components/layout/types';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -58,7 +54,6 @@ export const useHorizontalLayout = ({
     number | undefined
   >(rightBottomPanel.initialHeight);
   const rightmostPanelWidth = 300;
-  const dispatch = useAppDispatch();
 
   const {
     position: rawLeftPanelWidth,
@@ -70,11 +65,10 @@ export const useHorizontalLayout = ({
     initial: leftPanel.initialWidth,
     min: leftPanel.minWidth,
     onResizeStart: () =>
-      handleResizeStart(dispatch, appName, {
+      logOnResize(appName, {
         layout: 'horizontal',
         resizeBar: leftPanel.name,
       }),
-    onResizeEnd: () => handleResizeEnd(dispatch),
   });
   const {
     position: rawRightBottomPanelHeight,
@@ -87,11 +81,10 @@ export const useHorizontalLayout = ({
     min: rightBottomPanel.minHeight,
     reverse: true,
     onResizeStart: () =>
-      handleResizeStart(dispatch, appName, {
+      logOnResize(appName, {
         layout: 'horizontal',
         resizeBar: rightBottomPanel.name,
       }),
-    onResizeEnd: () => handleResizeEnd(dispatch),
   });
 
   const adjustRightPanelWidth = useCallback(() => {
