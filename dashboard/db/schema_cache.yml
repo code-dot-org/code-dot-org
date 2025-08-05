@@ -7863,6 +7863,7 @@ columns:
   - *32
   - *49
   - *29
+  - *144
   users:
   - *5
   - *156
@@ -14515,7 +14516,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250716223213
+version: 20250729212602
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
