@@ -62,5 +62,8 @@ module Pd::Foorm
 
     PROMOTER_MIN_RATING = 0
     PROMOTER_MAX_RATING = 10
+
+    DEFAULT_MIN_RATING = 1
+    DEFAULT_MAX_RATING = 5
   end
 end
