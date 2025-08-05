@@ -230,12 +230,12 @@ module Pd::Foorm
 
     # Determine if a rating question uses NPS scale (0-10) vs Likert scale (1-7)
     def self.promoter_percentage_scale?(question_data)
-      rate_min = question_data[:rate_min] || 1
-      rate_max = question_data[:rate_max] || 7
+      rate_min = question_data[:rate_min] || LIKERT_MIN_RATING
+      rate_max = question_data[:rate_max] || LIKERT_MAX_RATING
 
       # NPS-style: 0-10 scale (11 points)
       # Likert-style: 1-7 scale (7 points)
-      rate_min == 0 && rate_max == 10
+      rate_min == PROMOTER_MIN_RATING && rate_max == PROMOTER_MAX_RATING
     end
 
     def self.replace_facilitator_name(text, name)

@@ -1,19 +1,7 @@
 # Processes different types of survey question responses into standardized formats
 module Pd::Foorm
   class ResponseProcessor
-    # Likert scale conversion: 1→0, 2→17, 3→33, 4→50, 5→67, 6→83, 7→100
-    LIKERT_WEIGHTS = {
-      1 => 0,
-      2 => 17,
-      3 => 33,
-      4 => 50,
-      5 => 67,
-      6 => 83,
-      7 => 100
-    }.freeze
-
-    PROMOTER_THRESHOLD = 7
-    AGREEMENT_THRESHOLD = 5
+    include Constants
 
     # Process single select responses with detailed breakdown
     def self.process_single_select_responses(question_summary, choices, has_other = false)
