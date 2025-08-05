@@ -50,6 +50,7 @@ import {MusicExemplarSettings, MusicLevelData} from '../types';
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import ExemplarPlayerView from './ExemplarPlayerView';
+import Generate from './Generate';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -397,6 +398,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         )}
 
         <div id="blockly-area" className={moduleStyles.blocklyArea}>
+          {AppConfig.getValue('ai-generate') === 'true' && <Generate />}
+
           <PanelContainer
             id="workspace-panel"
             headerContent={headerContent}
@@ -455,7 +458,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 appName="music"
               />
             )}
+
             <div role="application" id={blocklyDivId} />
+
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>
                 <AdvancedControls />
