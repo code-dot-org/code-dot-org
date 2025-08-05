@@ -15,9 +15,8 @@ export interface SiteLogoProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 const styles = {
   logoLink: {
     marginBottom: 0,
-    lineHeight: 0,
+    lineHeight: 1,
     display: 'block',
-    width: 'fit-content',
     '& img': {
       width: 160,
     },
