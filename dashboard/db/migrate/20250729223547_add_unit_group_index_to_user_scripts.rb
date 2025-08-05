@@ -3,8 +3,7 @@ class AddUnitGroupIndexToUserScripts < ActiveRecord::Migration[6.1]
   OLD_INDEX_NAME = 'index_user_scripts_on_user_id_and_script_id_and_deleted_at'
 
   def up
-    # Skip production because the database migration will happen in
-    # bin/oneoff/gh-ost_migrations/2025-07-29_add_unit_group_composite_index_to_user_scripts.sh
+    # Skip production because the database migration will be done manually.
     return if Rails.env.production?
 
     add_index :user_scripts, [:user_id, :script_id, :unit_group_id, :deleted_at], unique: true, name: NEW_INDEX_NAME
