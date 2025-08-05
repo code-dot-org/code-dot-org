@@ -2218,6 +2218,7 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
     levels&.any?(&:ai_tutor_available?)
   end
