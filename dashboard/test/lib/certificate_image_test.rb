@@ -4,9 +4,10 @@ class CertificateImageTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    unit = create :unit, name: 'course1'
-    unit_group = create :single_unit_course, :stable, unit: unit, name: 'course1'
-    CourseOffering.add_course_offering(unit_group)
+    create_csf_unit 'course1'
+    create_csf_unit 'course2'
+    create_csf_unit 'course3'
+    create_csf_unit 'course4'
   end
 
   def test_special_template_courses
@@ -162,5 +163,12 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert info_line.match(/#{width}x/)
     assert info_line.match(/x#{height}/)
     image&.destroy!
+  end
+
+  private def create_csf_unit(name)
+    unit = create :unit, name: name
+    unit_group = create :single_unit_course, :stable, unit: unit, name: name
+    CourseOffering.add_course_offering(unit_group)
+    unit
   end
 end

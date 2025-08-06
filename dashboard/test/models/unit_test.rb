@@ -716,8 +716,9 @@ class UnitTest < ActiveSupport::TestCase
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
     course1_unit = create :script, name: 'course1', family_name: 'course1'
+    course2_unit = create :script, name: 'course2', family_name: 'course2'
     assert_equal 'banner_course1.jpg', course1_unit.banner_image
-    assert_equal 'banner_course2.jpg', Unit.find_by_name('course2').banner_image
+    assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
   end
 
@@ -1960,7 +1961,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", "course2", "course3", "course4", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
+      ["20-hour", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
