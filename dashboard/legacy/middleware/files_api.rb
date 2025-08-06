@@ -742,7 +742,9 @@ class FilesApi < Sinatra::Base
 
     bucket = FileBucket.new
     unescaped_filename = CGI.unescape(filename)
-    # Reject unsafe filenames (CR, LF, null, control chars, slashes, etc.)
+    # Layer 2: Validation safety net (secondary defense)
+    # Reject filenames that slip through sanitization (empty names, path traversal, etc.)
+    # Note: Most unsafe chars are already sanitized in Layer 1, this catches edge cases
     bad_request unless bucket.allowed_file_name?(unescaped_filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
@@ -818,8 +820,8 @@ class FilesApi < Sinatra::Base
 
   # POST /v3/files/<channel-id>/?version=<version-id>&files-version=<project-version-id>
   #
-  # Create or replace a file. We use this method so that IE9 can still
-  # upload by posting to an iframe.
+  # Create or replace a file via traditional multipart form upload (drag & drop, file picker).
+  # This endpoint handles file uploads from web forms and provides IE9 compatibility.
   #
   post %r{/v3/files/([^/]+)/$} do |encrypted_channel_id|
     dont_cache
@@ -834,6 +836,8 @@ class FilesApi < Sinatra::Base
 
     bad_request unless file[:filename] && file[:tempfile]
 
+    # Layer 1: Sanitize unsafe characters (main defense)
+    # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
     filename = BucketHelper.replace_unsafe_chars(file[:filename])
     files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
@@ -841,13 +845,15 @@ class FilesApi < Sinatra::Base
   #
   # PUT /v3/files/<channel-id>/<filename>?version=<version-id>&files-version=<project-version-id>
   #
-  # Create or replace a file. Optionally overwrite a specific version.
+  # Create or replace a file via direct API calls (JavaScript-initiated uploads).
+  # This endpoint handles programmatic file uploads and provides direct file content.
   #
   put %r{/v3/files/([^/]+)/([^/]+)$} do |encrypted_channel_id, filename|
     dont_cache
     content_type :json
 
-    # Sanitize the filename to replace unsafe characters with dashes
+    # Layer 1: Sanitize unsafe characters (main defense)
+    # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
     sanitized_filename = BucketHelper.replace_unsafe_chars(filename)
 
     if params['src'].nil?

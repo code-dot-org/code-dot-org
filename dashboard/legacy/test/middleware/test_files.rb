@@ -267,26 +267,7 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
-  # Quick pass/fail tests for the Content-Disposition header sanitization
-  def test_content_disposition_header_injection
-    # Upload a file with CR/LF in the filename to test header injection sanitization
-    malicious = "evil\r\nname.txt"
-    post_file_data(@api, malicious, 'data', 'text/plain')
-    # List files to get the actual stored filename (sanitized by storage logic)
-    files = @api.list_objects["files"]
-    expected_name = malicious.gsub(/[^\w.\-]/, '-')
-    stored_name = files.find {|f| f["filename"] == expected_name}["filename"]
-    # Fetch the file using the sanitized filename
-    @api.get_object(stored_name)
-    assert successful?
-    header = last_response['Content-Disposition']
-    # Header should not contain CR or LF
-    refute_match(/[\r\n]/, header, "Header contains CR or LF: #{header.inspect}")
-    # Header should match the sanitized filename
-    assert_equal "attachment; filename=\"#{stored_name}\"", header, "Header was: #{header.inspect}"
-    delete_all_manifest_versions
-  end
-
+  # Test Content-Disposition header safety for files with spaces
   def test_content_disposition_header_escaping_spaces
     # Upload a file with spaces in the filename to test space escaping
     name = @api.randomize_filename('file name.txt')
@@ -866,19 +847,22 @@ class FilesTest < FilesApiTestBase
     assert successful?
   end
 
-  def test_rejects_unsafe_filenames
-    # Only test CR and LF for header injection
+  def test_sanitizes_unsafe_filenames_in_post
+    # Test that POST endpoint (traditional file uploads) sanitizes unsafe filenames
+    # This endpoint handles multipart form data and should sanitize CR/LF characters
     unsafe_filenames = [
       "bad\rname.txt",
       "bad\nname.txt"
     ]
     unsafe_filenames.each do |filename|
       post_file_data(@api, filename, "data", "text/plain")
-      # Should be sanitized or rejected
+      # Should be sanitized (not rejected) - expect 200 success
       files = @api.list_objects["files"]
       sanitized = filename.gsub(/[^\w.\-]/, '-')
       stored = files.find {|f| f["filename"] == sanitized}
       assert stored, "Expected sanitized filename #{sanitized} to be present"
+
+      # Verify the file can be retrieved and has safe headers
       @api.get_object(stored["filename"])
       assert successful?
       header = last_response['Content-Disposition']
@@ -886,6 +870,39 @@ class FilesTest < FilesApiTestBase
       assert_equal "attachment; filename=\"#{stored["filename"]}\"", header, "Header was: #{header.inspect}"
       delete_all_manifest_versions
     end
+  end
+
+  def test_sanitizes_unsafe_filenames_in_put
+    # Test that PUT endpoint (API direct uploads) sanitizes unsafe filenames
+    # This endpoint handles direct file content and should sanitize CR/LF characters
+    unsafe_filenames = [
+      "bad\rname.txt",
+      "bad\nname.txt"
+    ]
+    unsafe_filenames.each do |filename|
+      @api.put_object(filename, "data")
+      # Should be sanitized (not rejected) - expect 200 success
+      files = @api.list_objects["files"]
+      sanitized = filename.gsub(/[^\w.\-]/, '-')
+      stored = files.find {|f| f["filename"] == sanitized}
+      assert stored, "Expected sanitized filename #{sanitized} to be present"
+
+      # Verify the file can be retrieved and has safe headers
+      @api.get_object(stored["filename"])
+      assert successful?
+      header = last_response['Content-Disposition']
+      refute_match(/[\r\n]/, header, "Header contains CR or LF: #{header.inspect}")
+      assert_equal "attachment; filename=\"#{stored["filename"]}\"", header, "Header was: #{header.inspect}"
+      delete_all_manifest_versions
+    end
+  end
+
+  def test_rejects_empty_filename_in_put
+    # Test that PUT endpoint rejects empty filenames (validation safety net)
+    # This is the one validation case that actually works through the API
+    @api.put_object("", "data")
+    assert bad_request?, "Expected empty filename to be rejected with 400"
+    delete_all_manifest_versions
   end
 
   def test_moderate_image_supported_types
