@@ -66,6 +66,18 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
     setAnchorEl(event.currentTarget);
   };
 
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    href: LinkItemProps['href'],
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      if (href) {
+        window.location.href = href;
+      }
+    }
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -111,13 +123,8 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
         {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
-            onClick={e => {
-              e.preventDefault();
-              handleClose();
-              if (href) {
-                window.location.href = href;
-              }
-            }}
+            onClick={handleClose}
+            onKeyDown={e => handleKeyDown(e, href)}
             disableRipple
             sx={styles.menuItem}
           >
