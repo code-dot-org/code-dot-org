@@ -58,7 +58,7 @@ import Iframe, {
   IframeContentfulComponentDefinition,
 } from '@/components/contentful/iframe';
 import Image, {
-  ImageContentfulComponentDefinition,
+  ImageCorporateSiteContentfulComponentDefinition,
 } from '@/components/contentful/image';
 import Link, {
   LinkContentfulComponentDefinition,
@@ -73,7 +73,7 @@ import RichText, {
   RichTextContentfulComponentDefinition,
 } from '@/components/contentful/richText';
 import Section, {
-  SectionContentfulComponentDefinition,
+  SectionCorporateSiteContentfulComponentDefinition,
 } from '@/components/contentful/section';
 import SimpleList, {
   SimpleListContentfulComponentDefinition,
@@ -191,7 +191,7 @@ const contentfulRegistration = {
     },
     {
       component: Image,
-      definition: ImageContentfulComponentDefinition,
+      definition: ImageCorporateSiteContentfulComponentDefinition,
     },
     {
       component: ImageCarousel,
@@ -216,7 +216,7 @@ const contentfulRegistration = {
     },
     {
       component: Section,
-      definition: SectionContentfulComponentDefinition,
+      definition: SectionCorporateSiteContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
       },

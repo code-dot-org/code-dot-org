@@ -6,7 +6,7 @@ import DSCOFooter, {
 } from '@code-dot-org/component-library/cms/footer';
 
 import {LOCALIZE_JS_CONFIG_MAP} from '@/config/locale';
-import awsLogo from '@public/images/powered-by-aws.png';
+import awsLogo from '@public/images/powered-by-aws.webp';
 
 import './onetrust.scss';
 

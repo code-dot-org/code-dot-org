@@ -5,6 +5,7 @@ import React, {ReactNode} from 'react';
 import {
   ComponentSize,
   RemoveMarginBottomProps,
+  TypographyColor,
 } from '@/components/common/types';
 
 type OverlineProps = RemoveMarginBottomProps & {
@@ -13,7 +14,7 @@ type OverlineProps = RemoveMarginBottomProps & {
   /** Overline size */
   size: Exclude<ComponentSize, 'xs'>;
   /** Overline color */
-  color: 'primary' | 'secondary';
+  color: TypographyColor;
   /** ClassName passed by Contentful to apply styles that are set through Contentful native editor*/
   className?: string;
 };

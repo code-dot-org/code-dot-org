@@ -8,8 +8,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    seed_deprecated_unit_fixtures
-
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)
@@ -243,6 +241,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with custom route' do
+    create_hourofcode_unit_and_levels
     summary = Unit.hoc_2014_unit.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
@@ -370,6 +369,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     ul = create :user_level, user: student, level: sublevel1, best_result: 100, script_id: script_level.script.id
     expected_summary[:userLevelId] = ul.id
     expected_summary[:updatedAt] = ul.updated_at
+    expected_summary[:attempts] = ul.attempts
+    expected_summary[:timeSpent] = ul.time_spent
     expected_summary[:paired] = false
     expected_summary[:partnerNames] = []
     expected_summary[:partnerCount] = 0
@@ -384,6 +385,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     expected_summary[:userLevelId] = ul2.id
     expected_summary[:updatedAt] = ul2.updated_at
+    expected_summary[:attempts] = ul2.attempts
+    expected_summary[:timeSpent] = ul2.time_spent
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.passed
     expected_summary[:teacherFeedbackReviewState] = TeacherFeedback::REVIEW_STATES.keepWorking

@@ -9,8 +9,8 @@ import Typography from '@code-dot-org/component-library/typography';
 
 import Overline from '@/components/contentful/overline';
 import {handleError} from '@/otel/errorHandler';
-import sadBee404 from '@public/images/error/404.png';
-import sadBee500 from '@public/images/error/500.png';
+import sadBee404 from '@public/images/error/404.webp';
+import sadBee500 from '@public/images/error/500.webp';
 
 import errorStyles from './error.module.scss';
 

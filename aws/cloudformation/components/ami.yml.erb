@@ -258,3 +258,29 @@ frontend_device_name ||= '/dev/sda1'
                 Action: 'sns:Publish'
                 Resource: !Ref WebServerHookTopicNew
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+
+  FrontendHighMemoryAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub ${AWS::StackName}_web_server_high_memory
+      AlarmDescription: |
+        Memory on a Frontend web server instance is too high. Investigate to
+        see which instance is reporting high memory. Replace the instance. This
+        alarm may be caused by a memory leak or issue on one specific instance,
+        or as a result of particularly high memory consuming traffic across all
+        instances. Further investigation is required to identify the cause.
+      ActionsEnabled: true
+      AlarmActions:
+          - !Ref <%=rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
+      MetricName: mem_used_percent
+      Namespace: CWAgent
+      Statistic: Maximum
+      Dimensions:
+          - Name: AutoScalingGroupName
+            Value: !Ref Frontends
+      Period: 10
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      Threshold: 87
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: ignore

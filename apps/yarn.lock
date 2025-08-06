@@ -3804,12 +3804,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:~1.0.0":
-  version: 1.0.0
-  resolution: "@blockly/keyboard-navigation@npm:1.0.0"
+"@blockly/keyboard-navigation@npm:~2.0.0":
+  version: 2.0.0
+  resolution: "@blockly/keyboard-navigation@npm:2.0.0"
   peerDependencies:
-    blockly: ^12.1.0
-  checksum: 10/617cb49efec035a1806253e74e34aad7c222e27ef49766737d25c0a447d08344d46242289d6a425a6b6e86a12ef012816410cead2286d89a09cbfc7afb803224
+    blockly: ^12.2.0
+  checksum: 10/a3f9282dc4db15eb64a3faf4a9159163911420e8b757bb9e147a972e431b7e421edfc40f9dcab85e1211aa6bf7c1fb9698b10f964f30c4ca7966b5ebed5791c5
   languageName: node
   linkType: hard
 
@@ -6475,6 +6475,17 @@ __metadata:
   version: 1.19.0
   resolution: "@remix-run/router@npm:1.19.0"
   checksum: 10/13a881fc47ca3571dcad298f6f19218c84f09f0dda38695d874a9fb1b496e42b6b37b777169d283cd1f5098a1470fa76c5143c53eb5a4078202bd12ea1541d29
+  languageName: node
+  linkType: hard
+
+"@replit/codemirror-css-color-picker@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@replit/codemirror-css-color-picker@npm:6.3.0"
+  peerDependencies:
+    "@codemirror/language": ^6.0.0
+    "@codemirror/state": ^6.0.0
+    "@codemirror/view": ^6.0.0
+  checksum: 10/ae3895ba7dedd8c4f3d19d4cf8772161d7857a7941a5f795cb086255e593d1b538fbca2402998cb8e8998bb2a694b3f82381f68eced7913351f38b356a80532b
   languageName: node
   linkType: hard
 
@@ -10847,7 +10858,7 @@ __metadata:
     "@blockly/field-bitmap": "npm:^6.0.0"
     "@blockly/field-colour": "npm:^6.0.0"
     "@blockly/field-grid-dropdown": "npm:^6.0.0"
-    "@blockly/keyboard-navigation": "npm:~1.0.0"
+    "@blockly/keyboard-navigation": "npm:~2.0.0"
     "@blockly/plugin-cross-tab-copy-paste": "npm:^7.0.0"
     "@blockly/plugin-scroll-options": "npm:^7.0.0"
     "@blockly/theme-dark": "npm:^8.0.0"
@@ -10901,6 +10912,7 @@ __metadata:
     "@react-bootstrap/pagination": "npm:^1.0.0"
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
+    "@replit/codemirror-css-color-picker": "npm:^6.3.0"
     "@selectize/selectize": "npm:^0.15.2"
     "@statsig/js-client": "npm:^3.12.2"
     "@statsig/session-replay": "npm:^3.12.2"
@@ -10948,7 +10960,7 @@ __metadata:
     babel-plugin-add-module-exports: "npm:^1.0.4"
     babel-plugin-dynamic-import-node: "npm:^2.3.3"
     babel-plugin-syntax-async-functions: "npm:^6.13.0"
-    blockly: "npm:12.1.0"
+    blockly: "npm:12.2.0"
     bootstrap-sass: "npm:^3.4.1"
     browser-process-hrtime: "npm:0.1.2"
     buffer: "npm:^6.0.3"
@@ -11171,12 +11183,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:12.1.0":
-  version: 12.1.0
-  resolution: "blockly@npm:12.1.0"
+"blockly@npm:12.2.0":
+  version: 12.2.0
+  resolution: "blockly@npm:12.2.0"
   dependencies:
     jsdom: "npm:26.1.0"
-  checksum: 10/daea493005028bc43258af1e9038ce65ebd9239373397c9c2e231f00f55b6cf46fbce9daa06526e29e13990909e799f4ddd7a1e884bc7a697641c06329c43108
+  checksum: 10/207b3d0f0a89ff7f74ea3cffba65f41cf6afd29d4b13eede794ed88b209a2f221dd5394efa19344a50389c2ceedeee0113f173b50c2a07b2dfa7c974c4067387
   languageName: node
   linkType: hard
 

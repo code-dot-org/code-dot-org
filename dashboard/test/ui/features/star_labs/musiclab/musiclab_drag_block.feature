@@ -20,7 +20,7 @@ Scenario Outline: Dragging play sound block
   And I wait until element "[data-id='when-run-block']" is visible
 
   # There should be no music timeline entry yet.
-  And element ".timeline-element" is not visible
+  And element "#timeline-element" is not visible
 
   # Open the first category.
   And I press the first ".blocklyTreeRow" element
@@ -29,7 +29,7 @@ Scenario Outline: Dragging play sound block
   Then I drag block "play_sound_at_current_location_simple2" to block "when-run-block"
 
   # There should now be a music timeline entry.
-  And element ".timeline-element" is visible
+  And element "#timeline-element" is visible
 
   # Click the field inside the attached "play sound" block.
   And I click block field "[data-id='when-run-block'] > [data-id='play_sound_at_current_location_simple2'] > .blocklyEditableField"
@@ -47,7 +47,7 @@ Scenario Outline: Dragging play sound block
   And I wait until element "#sounds-panel" is not visible
 
   # There should still be a music timeline entry.
-  And element ".timeline-element" is visible
+  And element "#timeline-element" is visible
 
 Examples:
   | url                                                       | test_name               |

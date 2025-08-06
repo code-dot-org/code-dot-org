@@ -78,6 +78,7 @@
   "panelHeaderWorkspace": "Workspace",
   "panelHeaderControls": "Controls",
   "panelHeaderTimeline": "Timeline",
+  "timelineContainer": "Timeline: press enter to interact with song elements, escape to exit",
   "skip": "Skip",
   "continue": "Continue",
   "select": "Select",

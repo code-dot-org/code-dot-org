@@ -28,6 +28,8 @@ export function getProjectId(brand: Brand): string {
   switch (brand) {
     case Brand.CODE_DOT_ORG:
       return 'ttv8iUlCkVIPo';
+    case Brand.CS_FOR_ALL:
+      return 'oYxcqdBRv0Lqd';
     case Brand.HOUR_OF_CODE:
       // When hourofcode is to be translated, add the project ID here
       return '';

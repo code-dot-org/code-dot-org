@@ -26,4 +26,15 @@ class AidiffMessage < ApplicationRecord
     user: 1,
     assistant: 2,
   }
+
+  def summarize
+    {
+      id: id,
+      role: role,
+      content: content,
+      updated_at: updated_at,
+      is_preset: is_preset,
+      preset_chip_text: preset_chip_text,
+    }
+  end
 end

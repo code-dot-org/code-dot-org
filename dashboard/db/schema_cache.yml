@@ -7283,6 +7283,7 @@ columns:
     comment: 
   - *29
   - *49
+  - *144
   user_ml_models:
   - *9
   - *19
@@ -7863,6 +7864,7 @@ columns:
   - *32
   - *49
   - *29
+  - *144
   users:
   - *5
   - *156
@@ -14216,11 +14218,12 @@ indexes:
   user_scripts:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: user_scripts
-    name: index_user_scripts_on_user_id_and_script_id_and_deleted_at
+    name: index_user_scripts_on_user_script_unit_group_deleted_unique
     unique: true
     columns:
     - user_id
     - script_id
+    - unit_group_id
     - deleted_at
     lengths: {}
     orders: {}
@@ -14515,7 +14518,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250716223213
+version: 20250805233618
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -64,6 +64,7 @@ const PROGRESS: InitProgressPayload = {
   },
   isFullProgress: false,
   currentPageNumber: 1,
+  courseName: 'csd',
 };
 
 const UNIT_SUMMARY = {

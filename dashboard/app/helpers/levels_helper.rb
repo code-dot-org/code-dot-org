@@ -1077,7 +1077,20 @@ module LevelsHelper
         Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
         return
       end
-      student_code = body ? JSON.parse(body)['source'] : nil
+      student_code = nil
+      if body
+        parsed = JSON.parse(body)
+        source = parsed['source']
+        if source.is_a?(Hash) && source['files']
+          # Transform files hash into {filename => contents}
+          student_code = {}
+          source['files'].each do |_, file_obj|
+            student_code[file_obj['name']] = file_obj['contents']
+          end
+        else
+          student_code = source
+        end
+      end
     end
     {
       project_id: channel_id,

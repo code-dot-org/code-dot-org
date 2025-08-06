@@ -43,9 +43,6 @@ export default function initPage(unitEditorData) {
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.coursePublishedState}
         initialHideWithinCourse={scriptData.hide_within_course}
-        initialInstructionType={scriptData.instructionType}
-        initialInstructorAudience={scriptData.instructorAudience}
-        initialParticipantAudience={scriptData.participantAudience}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
@@ -67,7 +64,6 @@ export default function initPage(unitEditorData) {
         initialHasUnnumberedLessons={scriptData.hasUnnumberedLessons}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
-        initialPilotExperiment={scriptData.pilot_experiment || ''}
         initialEditorExperiment={scriptData.editor_experiment || ''}
         initialAnnouncements={scriptData.announcements || []}
         initialSupportedLocales={scriptData.supported_locales || []}
@@ -76,16 +72,9 @@ export default function initPage(unitEditorData) {
         initialCurriculumUmbrella={scriptData.curriculum_umbrella || ''}
         initialTopicTags={scriptData.topic_tags || []}
         initialContentArea={scriptData.content_area || ''}
-        initialFamilyName={scriptData.family_name || ''}
-        initialVersionYear={scriptData.version_year || ''}
         unitFamilies={unitEditorData.script_families}
-        versionYearOptions={unitEditorData.version_year_options}
         isLevelbuilder={unitEditorData.is_levelbuilder}
         initialTts={scriptData.tts}
-        /* isCourse controls whether this Script/Unit is intended to be the root of a CourseOffering version.
-         * hasCourse indicates whether this Script/Unit is part of a UnitGroup. These two in theory should be
-         * complements, but currently (August 2020) they are not, so they are separate fields for now. */
-        initialIsCourse={scriptData.is_course}
         hasCourse={unitEditorData.has_course}
         initialShowCalendar={scriptData.showCalendar}
         initialWeeklyInstructionalMinutes={
