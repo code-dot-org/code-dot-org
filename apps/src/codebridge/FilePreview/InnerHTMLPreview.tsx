@@ -1,6 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFolderPath} from '@codebridge/utils';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
@@ -22,46 +22,50 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const parentOrigin = useMemo(() => location.origin, []);
 
-  const handleMessage = (event: MessageEvent) => {
-    // TODO: validate origin per-environment
-    // if (event.origin !== 'localhost-studio.code.org') {
-    //   return;
-    // }
-    const {data} = event;
-    if (data.type === IframeMessageType.SET_SOURCE) {
-      if (!data.source) {
-        // Clear the preview if no source is provided. We are likely changing levels.
-        setFilesToBlobs({});
-        setBlobUrl(undefined);
-      } else {
-        setSource(data.source);
+  const handleMessage = useCallback(
+    (event: MessageEvent) => {
+      if (event.origin !== parentOrigin) {
+        return;
       }
-      console.log('Received source:', data.source);
-    } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-      console.log('got change file message:', data.fileName);
-      setCurrentFile(data.fileName);
-      // Tell the parent that we are changing the file, as this came from a link click.
-      window.parent.postMessage(
-        {type: IframeMessageType.FILE_UPDATED, fileName: data.fileName},
-        '*'
-      );
-    } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
-      setCurrentFile(data.fileName);
-      // We don't need to update the parent, because they initiated this change.
-    }
-  };
+      const {data} = event;
+      if (data.type === IframeMessageType.SET_SOURCE) {
+        if (!data.source) {
+          // Clear the preview if no source is provided. We are likely changing levels.
+          setFilesToBlobs({});
+          setBlobUrl(undefined);
+        } else {
+          setSource(data.source);
+        }
+      } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
+        setCurrentFile(data.fileName);
+        // Tell the parent that we are changing the file, as this came from a link click.
+        window.parent.postMessage(
+          {type: IframeMessageType.FILE_UPDATED, fileName: data.fileName},
+          parentOrigin
+        );
+      } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
+        setCurrentFile(data.fileName);
+        // We don't need to update the parent, because they initiated this change.
+      }
+    },
+    [parentOrigin]
+  );
 
   useEffect(() => {
     window.addEventListener('message', handleMessage);
     // Notify parent that we're ready to receive messages
     // TODO: use a more specific origin check
-    window.parent.postMessage({type: IframeMessageType.IFRAME_READY}, '*');
+    window.parent.postMessage(
+      {type: IframeMessageType.IFRAME_READY},
+      parentOrigin
+    );
 
     return () => {
       window.removeEventListener('message', handleMessage);
     };
-  }, []);
+  }, [handleMessage, parentOrigin]);
 
   function getFullyQualifiedFileName(
     fileName: string,
@@ -168,7 +172,7 @@ const InnerHTMLPreview = () => {
             link.setAttribute(
               'onclick',
               `event.preventDefault();
-              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '*');
+              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '${parentOrigin}');
               return false;
             `
             );
@@ -185,7 +189,7 @@ const InnerHTMLPreview = () => {
       });
       setFilesToBlobs(files);
     }
-  }, [source]);
+  }, [parentOrigin, source]);
 
   const getPreview = useCallback(() => {
     if (blobUrl === NOT_FOUND_FILE) {

@@ -33,6 +33,8 @@ export const HTMLPreview2 = () => {
   const sourceLevelId = useRef<number | undefined>(undefined);
   const [levelLoading, setLevelLoading] = useState(false);
   const [currentFile, setCurrentFile] = useState<string>('index.html');
+  // For now, the inner preview is on a studio-code.org url, so we can check the origin.
+  const expectedIframeOrigin = location.origin;
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // Clear the source so the preview does not show outdated content.
@@ -46,10 +48,10 @@ export const HTMLPreview2 = () => {
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
-      if (
-        event.data.type === IframeMessageType.IFRAME_READY &&
-        event.origin === previewUrl
-      ) {
+      if (event.origin !== expectedIframeOrigin) {
+        return;
+      }
+      if (event.data.type === IframeMessageType.IFRAME_READY) {
         console.log('got iframe ready message');
         setIsIframeLoaded(true);
         // We will change the file to index.html before the source has been set.
@@ -74,7 +76,7 @@ export const HTMLPreview2 = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile]);
+  }, [previewUrl, currentFile, expectedIframeOrigin]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
