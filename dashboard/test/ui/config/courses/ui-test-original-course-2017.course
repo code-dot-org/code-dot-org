@@ -3,11 +3,15 @@
   "script_names": [
     "ui-test-script-in-course-2017",
     "ui-test-script-2-in-course-2017",
-    "ui-test-shared-unit"
+    "ui-test-shared-unit",
+    "ui-test-versioned-script-2017",
+    "ui-test-unnumbered-lessons"
   ],
   "original_script_names": [
     "ui-test-script-in-course-2017",
     "ui-test-script-2-in-course-2017",
+    "ui-test-versioned-script-2017",
+    "ui-test-unnumbered-lessons",
     "ui-test-shared-unit"
   ],
   "published_state": "in_development",

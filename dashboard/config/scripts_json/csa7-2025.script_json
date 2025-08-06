@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:17:32 UTC",
+    "serialized_at": "2025-08-05 22:06:08 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5236,11 +5236,9 @@
     },
     {
       "name": "[EXEMPLAR] Unit 7 Guide",
-      "url": "https://docs.google.com/document/d/1SuKkXhuLkM0qjGUKxYFXIIG5wjVIRYRxN-VgWJuxF4c/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1gtk9K701IWEjmYu03A8qw56vYd4Z_Dr08SUPffSo3J4/edit?usp=drive_link",
       "key": "_exemplar_unit_7_guide",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_7_guide"
@@ -6126,12 +6124,9 @@
     },
     {
       "name": "Unit 7 Guide",
-      "url": "https://docs.google.com/document/d/1-DU8lBsSPy3Kld-IWLeDoZmhIstoM_BeRQEvIOGSYxw/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1XZyUJnzhjdyMN8vhPX-PoApl9JVhprYOvw0B__rF1OY/edit?usp=drive_link",
       "key": "unit_7_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_7_guide"
@@ -6139,11 +6134,9 @@
     },
     {
       "name": "Unit 7 Overview",
-      "url": "https://docs.google.com/document/d/1aiGwLcIpCkHjWsjzDOHDCnxB_ITAOCiv6YLsslyM09g/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1aC6x2I3mokYbGuKM3wS4VeU9SVoIcyfOvyhOri71o0E/edit?usp=drive_link",
       "key": "unit_7_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_7_overview"
@@ -6151,12 +6144,9 @@
     },
     {
       "name": "Unit 7 Study Guide",
-      "url": "https://docs.google.com/document/d/1m3jf7bmZaR2fk85b0mR-Ut_5yRatwXk8Bl0g30Gc71k/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1V0GPRklj1CEY-yCYll4XumJdNyDt6oi71_elTXV8pzg/edit?usp=drive_link",
       "key": "unit_7_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_7_study_guide"

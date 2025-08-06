@@ -40,9 +40,6 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/contentful/heading';
-import HeroBanner, {
-  HeroBannerContentfulComponentDefinition,
-} from '@/components/contentful/heroBanner';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/contentful/iconHighlight';
@@ -138,13 +135,6 @@ const contentfulRegistration = {
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
-    },
-    {
-      component: HeroBanner,
-      definition: HeroBannerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
     },
     {
       component: IconHighlight,

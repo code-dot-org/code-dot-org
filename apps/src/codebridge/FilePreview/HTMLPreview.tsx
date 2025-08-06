@@ -1,6 +1,5 @@
 import {ProjectFile} from '@codebridge/types';
 import {findFolder} from '@codebridge/utils';
-import classNames from 'classnames';
 import React, {useRef, useMemo} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -17,7 +16,6 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   const {files, folders} = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
-  const isResizing = useAppSelector(state => state.lab2View.isResizing);
 
   const srcdoc = useMemo(() => {
     if (!file) {
@@ -53,12 +51,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   }, [files, folders, file]);
 
   return (
-    <div
-      className={classNames(
-        moduleStyles.previewContainer,
-        isResizing && moduleStyles.resizing
-      )}
-    >
+    <div className={moduleStyles.previewContainer}>
       {file && (
         <iframe
           sandbox=""

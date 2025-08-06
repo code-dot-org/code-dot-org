@@ -8,14 +8,12 @@ export interface Lab2ViewState {
   consoleFontSizeKey: keyof typeof FontSize;
   editorFontSizeKey: keyof typeof FontSize;
   editorFontSizeLoaded: boolean;
-  isResizing: boolean;
 }
 
 const initialState: Lab2ViewState = {
   consoleFontSizeKey: 'Small',
   editorFontSizeKey: 'Small',
   editorFontSizeLoaded: false,
-  isResizing: false,
 };
 
 // THUNKS
@@ -65,17 +63,10 @@ const lab2ViewSlice = createSlice({
     setEditorFontSizeLoaded(state, action: PayloadAction<boolean>) {
       state.editorFontSizeLoaded = action.payload;
     },
-    setIsResizing(state, action: PayloadAction<boolean>) {
-      state.isResizing = action.payload;
-    },
   },
 });
 
-export const {
-  setConsoleFontSize,
-  setEditorFontSize,
-  setEditorFontSizeLoaded,
-  setIsResizing,
-} = lab2ViewSlice.actions;
+export const {setConsoleFontSize, setEditorFontSize, setEditorFontSizeLoaded} =
+  lab2ViewSlice.actions;
 
 export default lab2ViewSlice.reducer;
