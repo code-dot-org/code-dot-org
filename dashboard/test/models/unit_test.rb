@@ -74,7 +74,6 @@ class UnitTest < ActiveSupport::TestCase
     UnitGroup.course_cache
 
     CourseVersion.stubs(:should_cache?).returns true
-    CourseVersion.course_offering_keys('Unit')
 
     CourseOffering.all.pluck(:key).each do |key|
       CourseOffering.get_from_cache(key)

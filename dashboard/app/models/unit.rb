@@ -359,12 +359,6 @@ class Unit < ApplicationRecord
       @@all_scripts ||= script_cache.values.uniq.compact.freeze
     end
 
-    def family_names
-      Rails.cache.fetch('script/family_names', force: !Unit.should_cache?) do
-        (CourseVersion.course_offering_keys('Unit') + ScriptConstants::DEPRECATED_FAMILY_NAMES).uniq.sort
-      end
-    end
-
     private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end

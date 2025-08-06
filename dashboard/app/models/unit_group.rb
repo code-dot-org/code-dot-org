@@ -282,7 +282,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.family_names
-    CourseVersion.course_offering_keys('UnitGroup')
+    CourseVersion.course_offering_keys
   end
 
   # A course that the general public can assign. Has been soft or
