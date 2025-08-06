@@ -110,11 +110,13 @@ module Cdo
     end
 
     def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
+      return 'codeprojects.org' if rack_env?(:production)
+      return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeprojects.org"
     end
 
     def preview_codeprojects_hostname
-      canonical_hostname('preview.codeprojects.org')
+      "preview.#{codeprojects_hostname}"
     end
 
     def hostedzone_id(domain)

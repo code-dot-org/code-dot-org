@@ -41,7 +41,7 @@ LocalhostPreviewCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
     HostedZoneId: !Ref CodeprojectsHostedZoneId
-    Name: !Sub localhost.preview.${CodeprojectsBaseDomainName}
+    Name: !Sub preview.localhost.${CodeprojectsBaseDomainName}
     Type: A
     TTL: 3600
     ResourceRecords:
