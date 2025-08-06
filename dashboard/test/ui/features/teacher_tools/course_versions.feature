@@ -74,6 +74,8 @@ Scenario: Versions warning announcement on script overview page
 
   When I am on "http://studio.code.org/courses/ui-test-versioned-script-2019/units/1"
   And I wait until element "#script-title" is visible
+  # Make sure we did not get redirected to the 2017 version
+  And check that the URL contains "ui-test-versioned-script-2019"
   And element "#uitest-version-selector" is visible
   Then element ".announcement-notification:contains(newer version)" is visible
   # Then element ".announcement-notification:contains(using the dropdown below)" is visible # not showing this message on script overview pages for single-unit courses

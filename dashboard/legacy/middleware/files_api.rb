@@ -21,12 +21,6 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
-  # These file types are not used in Applab, so they are safe to skip during the
-  # profanity check for libraries in put_file.
-  BACKPACK_PROGRAM_FILE_TYPES = ['.csv', '.java', '.py', '.txt']
-
-  DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
-
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -266,7 +260,7 @@ class FilesApi < Sinatra::Base
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
     project = Projects.new(get_storage_id).get(encrypted_channel_id)
-    project_type = project[:projectType]&.downcase
+    project_type = project[:projectType]&.downcase if project
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
@@ -421,13 +415,17 @@ class FilesApi < Sinatra::Base
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
 
-    # Block libraries with PII/profanity from being published.
-    # Block main.json file from aichat lab flagged with profanity from being saved.
-    #
-    # The "backpack" feature uses libraries to allow students to share code
-    # between their own projects -- skip this check for .java and .py files, since in this use case
-    # the files are only being used by a single user.
-    if endpoint == 'libraries' && BACKPACK_PROGRAM_FILE_TYPES.exclude?(file_type)
+    unless project_type
+      project = Projects.new(get_storage_id).get(encrypted_channel_id)
+      project_type = project[:projectType]&.downcase if project
+    end
+
+    # Block App Lab libraries with PII/profanity from being published and shared with other users.
+    # The "backpack" feature uses the libraries endpoint to allow users to share code
+    # between their own projects -- skip this check for backpack files since the files are
+    # only being used by a single user.
+    # Backpack is used in Java Lab, Python Lab, and Web Lab 2, but not in App Lab.
+    if endpoint == 'libraries' && project_type != 'backpack'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue StandardError => exception

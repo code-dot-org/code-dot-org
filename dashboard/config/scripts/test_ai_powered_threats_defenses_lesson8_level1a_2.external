@@ -1,16 +1,32 @@
 name 'test-ai-powered-threats-defenses-lesson8-level1a-2'
 title 'Jordan P. - User Profile'
 
+display_name 'Jordan P.'
+bubble_choice_description 'A high school student from Sacramento juggling school and a smoothie shop job. Jordan\’s account shows weird late-night activity—can you figure out if something went wrong?'
+thumbnail_url 'https://images.code.org/35daf4616746412a061782ab3771c1c6-image-1753987189397.png'
 
 markdown <<MARKDOWN
-#Jordan P. - User Profile
+#Jordan P.
 
-Go through the audit logs for Jordan to find any evidence of fraud.
+#### Read about Jordan and investigate the audit logs. Can you find any evidence of fraud?
 
 **[Click here](https://docs.google.com/document/d/1GRBeFTM2ZnkZnTbZs6TPJsKO7Yu0ZBIbYnFX1nMiwwQ/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
 
 ---
+## User Profile
+* **Age**: 17
+* **Location**: Lives in Sacramento, CA with their aunt and younger sibling
+* **School**: Attends school from 8:30 AM–3:30 PM
+* **Work**: Part-time job at a smoothie shop (evenings)
+* **Devices**: iPhone 14 (mobile), Chromebook (school-issued)
+* **Tech Habits**: Logs in from home Wi-Fi or school; never uses public computers
+* **Spending Habits**: Pays with Apple Pay or debit card, usually at local shops and food places; rarely shops online
+* **Hobbies**: Fitness, drawing, local volunteering (animal shelter)
+* **Travel History**: Never left California; doesn’t drive yet
+* **Security Habits**: Uses Face ID and MFA; same password for 5+ years across all accounts
 
+
+---
 ## LOGIN ACTIVITY LOG
 
 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px;">
@@ -111,5 +127,5 @@ Go through the audit logs for Jordan to find any evidence of fraud.
 
 </div>
 
-
+![]()
 MARKDOWN

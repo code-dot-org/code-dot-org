@@ -638,7 +638,7 @@ class ScriptLevelsController < ApplicationController
 
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
-      success: milestone_response(script_level: @script_level, level: @level, solved?: true),
+      success: milestone_response(script_level: @script_level, level: @level, solved?: true, unit_group: @unit_group),
       failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
     }
 

@@ -1,6 +1,7 @@
 Feature: Musiclab timeline is keyboard navigable
 
 @no_mobile
+@no_safari
 Scenario: Ensure users can navigate into and out of timeline, and between elements with arrows
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/46/levels/4"
   And I rotate to landscape
