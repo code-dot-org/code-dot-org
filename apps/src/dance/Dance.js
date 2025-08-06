@@ -211,6 +211,7 @@ Dance.prototype.init = function (config) {
               resetProgram={this.reset.bind(this)}
               playSound={this.playSound.bind(this)}
               musicChannelId={queryParams('dance-music-channel-id')}
+              musicPackId={queryParams('dance-music-pack-id')}
             />
           }
           onMount={onMount}
