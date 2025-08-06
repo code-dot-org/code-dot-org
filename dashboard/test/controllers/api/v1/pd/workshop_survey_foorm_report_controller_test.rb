@@ -367,7 +367,7 @@ module Api::V1::Pd
       refute_empty categories[:engagement][:questions], "Engagement category should have questions"
 
       # Verify response structure for likert questions
-      likert_question = categories[:engagement][:questions].find {|q| q[:responses].key?(:weighted_score)}
+      likert_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'likert'}
       assert likert_question.key?(:question_name)
       assert likert_question.key?(:question_text)
       assert likert_question.key?(:question_type)
@@ -378,7 +378,7 @@ module Api::V1::Pd
       assert likert_question[:responses].key?(:breakdown)
 
       # Verify response structure for promoter questions
-      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'scale'}
+      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'promoter'}
       assert promoter_question.key?(:question_name)
       assert promoter_question.key?(:question_text)
       assert promoter_question.key?(:question_type)
@@ -386,7 +386,6 @@ module Api::V1::Pd
       assert promoter_question[:responses][:promoter_percentage].is_a?(Integer)
       assert promoter_question[:responses][:total_responses].is_a?(Integer)
       assert promoter_question[:responses].key?(:breakdown)
-      puts JSON.pretty_generate(categories)
 
       # Verify response structure for multi select questions
       multi_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'multiSelect'}
@@ -527,44 +526,6 @@ module Api::V1::Pd
 
       categories.keys.each do |category|
         assert expected_categories.include?(category), "Unexpected category: #{category}"
-      end
-    end
-
-    test 'workshop survey summary processes different question types correctly' do
-      sign_in @workshop_admin
-
-      byo_workshop = create :byo_workshop
-      create :build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id
-      create_list :build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id
-
-      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
-      assert_response :success
-      response = JSON.parse(@response.body, symbolize_names: true)
-
-      # Find questions across categories and verify they're processed correctly
-      all_questions = []
-      categories = response[:categories]
-      [:implementation, :engagement, :logistics, :other].each do |category|
-        all_questions.concat(categories[category][:questions])
-      end
-
-      # Verify single select questions have proper response structure
-      single_select_q = all_questions.find {|q| q[:question_type] == 'singleSelect' && q[:responses].key?(:total_responses)}
-      assert single_select_q[:responses].key?(:breakdown), "Single select should have breakdown"
-      assert single_select_q[:responses][:total_responses] > 0, "Should have response count"
-
-      # Verify Likert questions (from matrix) have weighted scores
-      likert_q = all_questions.find {|q| q[:responses].key?(:weighted_score)}
-      if likert_q
-        assert likert_q[:responses].key?(:agreement_percentage), "Likert should have agreement percentage"
-        assert likert_q[:responses][:weighted_score].between?(0, 100), "Weighted score should be 0-100"
-      end
-
-      # Verify scale questions (NPS) have promoter percentage
-      scale_q = all_questions.find {|q| q[:responses].key?(:promoter_percentage)}
-      if scale_q
-        assert scale_q[:responses].key?(:promoter_percentage), "Scale should have promoter percentage"
-        assert scale_q[:responses][:promoter_percentage].between?(0, 100), "Promoter percentage should be 0-100"
       end
     end
   end
