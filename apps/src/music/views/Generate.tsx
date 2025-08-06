@@ -1,13 +1,12 @@
 import {Button} from '@code-dot-org/component-library/button';
 import Typography from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 import {FocusOn} from 'react-focus-on';
 
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import askAi from '../ai/askAi';
-import appConfig from '../appConfig';
+import {generateBlocklyJson} from '../ai/generateBlockly3';
 import MusicLibrary from '../player/MusicLibrary';
 import {setPackId, setCodeToLoad} from '../redux/musicRedux';
 
@@ -18,7 +17,7 @@ interface GenerateProps {}
 const Generate: React.FunctionComponent<GenerateProps> = () => {
   const dispatch = useAppDispatch();
 
-  const packId = 'kenya_grace_strangers';
+  const packId = 'tinashe_tightrope';
 
   const library = MusicLibrary.getInstance();
 
@@ -34,7 +33,6 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
     })
     .filter(sound => sound !== undefined)
     .join('", "');
-  console.log(sounds);
 
   const contextGenerateMusicPsuedocodeFromDescription = `Your job will be to generate psuedocode for a system that plays a song.  You'll be given a description of what to play, and then you should output code that generates the song to be played.  The psuedocode looks something like this:
 
@@ -53,29 +51,8 @@ Indenting is important.  In this example, when the code is run, it plays "hiphop
 The valid sounds to use are: "${sounds}".  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
 `;
 
-  const contextGenerateMusicBlocklyFromMusicPsuedocode = `Your job will be to generate Blockly JSON from psuedocode which describes how to play a song.
-
-The psuedocode looks something like this:
-
-when_run
-  play "hiphop/drum_beat_808"
-  play "electro/drum_beat_hyper"
-  play_together
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-  repeat 3
-    play "hiphop/drum_beat_808"
-    play "electro/drum_beat_hyper"
-
-Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
-
-And Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play togehter:
-
-  {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
-`;
-
   const [text, setText] = useState(
-    'Please generate a fun song.  Between 10-15 measures is enoguh duration.  Use layering of sounds to make it exciting.'
+    'Please generate a fun song.  Between 10-15 measures is enoguh duration.  Use layering of sounds to make it exciting.  No comments please.'
   );
 
   const [generating, setGenerating] = useState<
@@ -92,42 +69,17 @@ And Here is some example Blockly code for our system.  In this case, we are gene
         text
     ).then(result => {
       console.log(result[1].chatMessageText);
+      const psuedocode = result[1].chatMessageText.replaceAll('```', '');
 
-      console.log('starting second ask');
+      //const resultBlockly = '';
+      const resultBlockly = generateBlocklyJson(psuedocode);
+      dispatch(setCodeToLoad(resultBlockly));
 
-      setGenerating('generating');
+      console.log(resultBlockly);
 
-      askAi(
-        'here is the contxt:\n' +
-          contextGenerateMusicBlocklyFromMusicPsuedocode +
-          '\n and here is the request:\n' +
-          result[1].chatMessageText
-      ).then(result2 => {
-        console.log(result2[1].chatMessageText);
-
-        // const jsonString = result2[1].chatMessageText;
-
-        // Trim the result so that anything before the first '{' and after the last '}' is removed.
-        const trimmedResult = result2[1].chatMessageText.trim();
-        const firstBraceIndex = trimmedResult.indexOf('{');
-        const lastBraceIndex = trimmedResult.lastIndexOf('}');
-        const jsonString = trimmedResult.substring(
-          firstBraceIndex,
-          lastBraceIndex + 1
-        ); // Include the last brace
-
-        console.log('JSON String:', jsonString);
-        dispatch(setCodeToLoad(jsonString));
-
-        setGenerating('done');
-      });
+      setGenerating('done');
     });
-  }, [
-    contextGenerateMusicPsuedocodeFromDescription,
-    contextGenerateMusicBlocklyFromMusicPsuedocode,
-    dispatch,
-    text,
-  ]);
+  }, [contextGenerateMusicPsuedocodeFromDescription, text, dispatch]);
 
   if (generating === 'done') {
     return null;
@@ -145,13 +97,7 @@ And Here is some example Blockly code for our system.  In this case, we are gene
           Generate a song with AI
         </Typography>
 
-        <div
-          className={classNames(
-            styles.body,
-            appConfig.getValue('pack-dialog-2-stacked') === 'true' &&
-              styles.bodyStacked
-          )}
-        >
+        <div className={styles.body}>
           <div> &nbsp; </div>
         </div>
 
