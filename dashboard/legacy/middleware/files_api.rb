@@ -394,7 +394,10 @@ class FilesApi < Sinatra::Base
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
-    # Reject unsafe filenames (CR, LF, null, control chars, slashes, etc.)
+    # Layer 2: Validation safety net (secondary defense)
+    # The Layer 1 defenses are naming conventions for most file upload routes, but for
+    # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
+    # replacing them with dashes.
     bad_request unless buckets.allowed_file_name?(filename)
     if body.length >= max_file_size
       body = buckets.try_resize_file(body, file_type)
@@ -741,11 +744,13 @@ class FilesApi < Sinatra::Base
     filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
 
     bucket = FileBucket.new
-    unescaped_filename = CGI.unescape(filename)
     # Layer 2: Validation safety net (secondary defense)
-    # Reject filenames that slip through sanitization (empty names, path traversal, etc.)
-    # Note: Most unsafe chars are already sanitized in Layer 1, this catches edge cases
-    bad_request unless bucket.allowed_file_name?(unescaped_filename)
+    # The Layer 1 defenses are naming conventions for most file upload routes, but for
+    # Web Lab file uploads, the Layer 1 sanitization also strips out unsafe characters,
+    # replacing them with dashes.
+    bad_request unless bucket.allowed_file_name?(filename)
+
+    unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME
     bad_request if unescaped_filename_downcased.length > FileBucket::MAXIMUM_FILENAME_LENGTH
@@ -838,6 +843,7 @@ class FilesApi < Sinatra::Base
 
     # Layer 1: Sanitize unsafe characters (main defense)
     # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
+    # (Layer 2 is the allowed_file_name? check in put_file and files_put_file)
     filename = BucketHelper.replace_unsafe_chars(file[:filename])
     files_put_file(encrypted_channel_id, filename, file[:tempfile].read)
   end
@@ -854,6 +860,7 @@ class FilesApi < Sinatra::Base
 
     # Layer 1: Sanitize unsafe characters (main defense)
     # Replace CR, LF, and other unsafe chars with dashes to prevent header injection
+    # (Layer 2 is the allowed_file_name? check in put_file and files_put_file)
     sanitized_filename = BucketHelper.replace_unsafe_chars(filename)
 
     if params['src'].nil?
