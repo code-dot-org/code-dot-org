@@ -41,7 +41,7 @@
 #  processed_location
 #
 
-require 'mailjet'
+require_relative '../../../../lib/cdo/mailjet'
 
 class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
@@ -984,14 +984,14 @@ class Pd::Workshop < ApplicationRecord
     }
   end
 
-  private def self.send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
+  def self.send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
     workshop = enrollment.workshop
     organizer = workshop.organizer
     regional_partner = workshop.regional_partner
 
     Retryable.retryable(
       on: RestClient::TooManyRequests,
-      tries: MailJet.MAILJET_RETRY_LIMIT,
+      tries: 5,
       sleep: ->(n) {2 ** n}
     ) do
       MailJet.send_email(
@@ -999,14 +999,14 @@ class Pd::Workshop < ApplicationRecord
         user_email,
         user_name,
         vars: {
-          email_to: cap_sections,
+          email_to: user_email,
           cancel_registration_link: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code),
           pre_survey_link: enrollment.pre_workshop_survey_url,
-          facilitator_name: workshop.facilitator&.name,
-          rp_email: regional_partner&.email,
+          facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
+          rp_email: regional_partner&.contact_email_with_backup,
           rp_name: regional_partner&.name,
-          organizer_email: organizer.email,
-          organizer_name: organizer.name,
+          organizer_email: organizer&.email,
+          organizer_name: organizer&.name,
           workshop_notes: workshop.notes,
           sessions: workshop.sessions.map do |session|
             {
