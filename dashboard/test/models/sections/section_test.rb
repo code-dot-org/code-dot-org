@@ -1306,7 +1306,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
     script = Unit.find_by_name('jigsaw')
-    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    unit_group = create :unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 
@@ -1320,7 +1320,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
     script = Unit.find_by_name('jigsaw')
-    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    unit_group = create :unit_group, :stable, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 

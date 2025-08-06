@@ -4,10 +4,6 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   setup do
     @coursez_2017 = create :script, name: 'coursez-2017'
     create :single_unit_course, unit: @coursez_2017, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
@@ -83,13 +79,15 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'show includes correct SEO data' do
+    unit = create :unit, name: 'allthelessonplans'
+    unit_group = create :single_unit_course, unit: unit, published_state: PUBLISHED_STATE.stable
     get :show, params: {
-      course_course_name: Unit::TWENTY_HOUR_NAME,
+      course_course_name: unit_group.name,
       position: 1,
     }
     assert_response :ok
-    assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
-    assert_includes(@response.body, "<meta property=\"description\" content=\"This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!\" />")
+    assert_includes(@response.body, "<title>Unit: All The Lesson Plans - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"Teacher overview of the unit.\" />")
   end
 
   test 'canonical url is added if it is a single unit course' do
@@ -119,76 +117,42 @@ class ScriptsControllerTest < ActionController::TestCase
     refute_includes(@response.body, "<link rel=\"canonical\"")
   end
 
-  test "should get show of hoc" do
-    get :show, params: {course_course_name: Unit::HOC_NAME, position: 1}
-    assert_response :success
-  end
-
-  test "should get show of k-8" do
-    get :show, params: {course_course_name: Unit::TWENTY_HOUR_NAME, position: 1}
-    assert_response :success
-  end
-
-  test "should get show of custom unit" do
-    get :show, params: {course_course_name: 'course1', position: 1}
-    assert_response :success
-  end
-
-  test "should get show of ECSPD if signed in" do
+  test "should get show if login required and signed in" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {id: 'ECSPD'}
+    @migrated_unit.update!(login_required: true)
+    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
     assert_response :success
   end
 
-  test "should get show of ECSPD if not signed in" do
-    get :show, params: {id: 'ECSPD'}
+  test "should get show if login required and not signed in" do
+    @migrated_unit.update!(login_required: true)
+    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
     assert_response :success
-  end
-
-  test "should not show link to Overview of Courses 1, 2, and 3 if logged in as a student" do
-    sign_in create(:student)
-
-    get :show, params: {course_course_name: 'course1', position: 1}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
-  end
-
-  test "should not show link to Overview of Courses 1, 2, and 3 if not logged in" do
-    get :show, params: {course_course_name: 'course1', position: 1}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3', count: 0
-  end
-
-  test "should show link to Overview of Courses 1, 2, and 3 if logged in as a teacher" do
-    sign_in create(:teacher)
-
-    get :show, params: {course_course_name: 'course1', position: 1}
-    assert_response :success
-    assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
   test "show of hourofcode redirects to hoc" do
+    create_hourofcode_unit_and_levels
     get :show, params: {course_course_name: 'hourofcode', position: 1}
     assert_response :success
   end
 
   test "should get show if not signed in" do
-    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
     assert_response :success
   end
 
   test "should get show if not admin" do
     not_admin = create(:user)
     sign_in not_admin
-    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
     assert_response :success
   end
 
   test 'should not get show if admin' do
     admin = create(:admin)
     sign_in admin
-    get :show, params: {course_course_name: Unit::FLAPPY_NAME, position: 1}
+    get :show, params: {course_course_name: @migrated_unit.unit_group.name, position: 1}
     assert_response :forbidden
   end
 

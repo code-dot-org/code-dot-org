@@ -16,6 +16,7 @@ type TabGroupContentfulProps = {
   tabs?: (BaseEntry & {
     fields: {
       ctaLink?: LinkEntry;
+      internalName?: string;
       description: string;
       image?: ExperienceAsset;
       tabLabel: string;
