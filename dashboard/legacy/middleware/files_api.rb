@@ -418,7 +418,7 @@ class FilesApi < Sinatra::Base
     unless project_type
       project = Projects.new(get_storage_id).get(encrypted_channel_id)
       project_type = project[:projectType]&.downcase if project
-        end
+    end
 
     # Block App Lab libraries with PII/profanity from being published and shared with other users.
     # The "backpack" feature uses the libraries endpoint to allow users to share code
@@ -847,6 +847,9 @@ class FilesApi < Sinatra::Base
     dont_cache
     content_type :json
 
+    # Sanitize the filename to replace unsafe characters with dashes
+    sanitized_filename = BucketHelper.replace_unsafe_chars(filename)
+
     if params['src'].nil?
       # read the entire request before considering rejecting it, otherwise varnish
       # may return a 503 instead of whatever status code we specify. Unfortunately
@@ -855,7 +858,7 @@ class FilesApi < Sinatra::Base
       body = request.body.read
     end
 
-    files_put_file(encrypted_channel_id, filename, body)
+    files_put_file(encrypted_channel_id, sanitized_filename, body)
   end
 
   #
@@ -1019,7 +1022,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/files-public/([^/]+)/.metadata/([^/]+)$} do |encrypted_channel_id, filename|
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
-          cache_for 1.hour
+    cache_for 1.hour
     file
   end
 
