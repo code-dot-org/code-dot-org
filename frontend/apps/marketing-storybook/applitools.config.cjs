@@ -6,17 +6,18 @@
 // Used in DevContainers, see `.devcontainer/frontend/Dockerfile`
 const isDocker = !!process.env.IS_DOCKER || !!process.env.CI;
 
-const variatrionMatrix = {
-  theme: ['code.org', 'csforall'],
-  sectionBackground: ['primary', 'dark'],
+const variationMatrix = {
+  'code.org': {theme: 'code.org', sectionBackground: ['primary', 'dark']},
+  csforall: {theme: 'csforall', sectionBackground: ['primary']},
 };
 
-const variations = variatrionMatrix.theme.flatMap(theme =>
-  variatrionMatrix.sectionBackground.map(sectionBackground => ({
-    queryParams: {
-      globals: `theme:${theme};sectionBackground:${sectionBackground}`,
-    },
-  })),
+const variations = Object.entries(variationMatrix).flatMap(
+  ([, {theme, sectionBackground}]) =>
+    sectionBackground.map(bg => ({
+      queryParams: {
+        globals: `theme:${theme};sectionBackground:${bg}`,
+      },
+    })),
 );
 
 module.exports = {
