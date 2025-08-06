@@ -29,6 +29,9 @@ export const useFileUploader = (
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+  const channelId = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
+  );
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
@@ -68,12 +71,8 @@ export const useFileUploader = (
     [folderId, files, isStartMode, validationFile, validFileTypes]
   );
 
-  const uploadToExternalSource = async (file: File) => {
-    // return something with URL?
-    // If the file is not a text file, upload to S3
-    // await HttpClient.put(buildAssetUrl(asset), file);
-    // we don't have channelId here
-    const url = `/v3/assets/3H-AyPf3huzbPZ9mTPK4qw/${file.name}`;
+  const uploadToAssetsBucket = async (file: File) => {
+    const url = `/v3/assets/${channelId}/${file.name}`;
     await HttpClient.put(url, file);
     return url;
   };
@@ -83,7 +82,7 @@ export const useFileUploader = (
     sendAnalyticsEvent,
     validateFileName,
     externalSourceFileTypes: ['png'],
-    uploadToExternalSource,
+    uploadToExternalSource: uploadToAssetsBucket,
     ...lab2FileUploaderArgs,
   });
 };
