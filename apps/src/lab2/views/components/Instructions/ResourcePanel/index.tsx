@@ -5,11 +5,11 @@ import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 
-import AiTutor2Chat from '../../AiTutor2Chat';
-import PanelContainer from '../../PanelContainer';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
