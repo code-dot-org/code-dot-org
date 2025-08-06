@@ -7,8 +7,8 @@ export async function getAllTheThingsPagePath() {
 
     const branchName = maybeBranchName.replaceAll('/', '-');
 
-    return `/engineering/all-the-things-${branchName}`;
+    return `/engineering/ui-integration-test-${branchName}`;
   }
 
-  return `/engineering/all-the-things`;
+  return `/engineering/ui-integration-test`;
 }
