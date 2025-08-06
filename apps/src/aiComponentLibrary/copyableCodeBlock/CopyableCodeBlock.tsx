@@ -60,7 +60,7 @@ const CopyableCodeBlock: React.FunctionComponent = (
       <header className={moduleStyles['header']}>
         <Button
           onClick={handleCopy}
-          text="Copy code"
+          text={i18n.copyCode()}
           size="xs"
           color="black"
           iconLeft={{
@@ -95,7 +95,7 @@ const CopyableCodeBlock: React.FunctionComponent = (
               className={moduleStyles.checkMarkIcon}
             />
             <span aria-hidden={true} key={Date.now()}>
-              Copied!
+              {i18n.copied()}
             </span>
           </span>
         </div>
