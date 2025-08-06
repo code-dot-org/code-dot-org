@@ -1,4 +1,4 @@
-// Creates a definition for the ActionBlock component to be used in Contentful Studio
+// Creates a definition for the Card component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const CardContentfulComponentDefinition: ComponentDefinition = {
