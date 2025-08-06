@@ -1,3 +1,6 @@
+import {sectionBackground} from '@/components/contentful/section/Section';
+import cdoTheme from '@/themes/code.org';
+import csforallTheme from '@/themes/csforall';
 import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {CssBaseline, ThemeProvider} from '@mui/material';
 import {withThemeFromJSXProvider} from '@storybook/addon-themes';
@@ -6,9 +9,9 @@ import {loadFonts, injectFontAwesome} from '@code-dot-org/fonts';
 
 import '@code-dot-org/fonts/brands/code.org/index.css';
 import '@code-dot-org/fonts/brands/CSForAll/index.css';
-import cdoTheme from '../../marketing/src/themes/code.org';
-import csforallTheme from '../../marketing/src/themes/csforall';
+
 import './preview.module.scss';
+import SectionDecorator from '../decorators/SectionDecorator';
 
 injectFontAwesome();
 
@@ -617,6 +620,7 @@ export const decorators = [
     Provider: ThemeProvider,
     GlobalStyles: CssBaseline,
   }),
+  SectionDecorator,
 ];
 
 const preview = {
@@ -640,6 +644,21 @@ const preview = {
         },
       },
     },
+  },
+  globalTypes: {
+    sectionBackground: {
+      description: 'Contentful section background',
+      toolbar: {
+        title: 'Section Background',
+        icon: 'moon',
+        items: Object.values(sectionBackground),
+        dynamicTitle: true,
+      },
+    },
+  },
+
+  initialGlobals: {
+    sectionType: 'primary',
   },
 };
 export const loaders = document.fonts ? [fontLoader] : [];

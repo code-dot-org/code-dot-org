@@ -6,6 +6,19 @@
 // Used in DevContainers, see `.devcontainer/frontend/Dockerfile`
 const isDocker = !!process.env.IS_DOCKER || !!process.env.CI;
 
+const variatrionMatrix = {
+  theme: ['code.org', 'csforall'],
+  sectionBackground: ['primary', 'dark'],
+};
+
+const variations = variatrionMatrix.theme.flatMap(theme =>
+  variatrionMatrix.sectionBackground.map(sectionBackground => ({
+    queryParams: {
+      globals: `theme:${theme};sectionBackground:${sectionBackground}`,
+    },
+  })),
+);
+
 module.exports = {
   concurrency: 5,
   showLogs: !!process.env.APPLITOOLS_SHOW_LOGS,
@@ -24,12 +37,5 @@ module.exports = {
       ? ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
       : [],
   },
-  variations: [
-    {
-      queryParams: {globals: 'theme:code.org'},
-    },
-    {
-      queryParams: {globals: 'theme:csforall'},
-    },
-  ],
+  variations,
 };
