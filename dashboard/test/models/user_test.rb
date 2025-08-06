@@ -2668,32 +2668,32 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_script creates UserScript if necessary' do
     assert_creates(UserScript) do
-      user_script = @student.assign_script(Unit.first)
-      assert_equal Unit.first.id, user_script.script_id
+      user_script = @student.assign_script(@csf_script)
+      assert_equal @csf_script.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script reuses UserScript if available' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Unit.first)
+      UserScript.create!(user: @student, script: @csf_script)
     end
     assert_does_not_create(UserScript) do
-      user_script = @student.assign_script(Unit.first)
-      assert_equal Unit.first.id, user_script.script_id
+      user_script = @student.assign_script(@csf_script)
+      assert_equal @csf_script.id, user_script.script_id
       refute_nil user_script.assigned_at
     end
   end
 
   test 'assign_script does overwrite assigned_at if pre-existing' do
     Timecop.travel(2017, 1, 2, 12, 0, 0) do
-      UserScript.create!(user: @student, script: Unit.first, assigned_at: DateTime.now)
+      UserScript.create!(user: @student, script: @csf_script, assigned_at: DateTime.now)
     end
 
     Timecop.travel(2018, 3, 4, 12, 0, 0) do
       assert_does_not_create(UserScript) do
-        user_script = @student.assign_script(Unit.first)
-        assert_equal Unit.first.id, user_script.script_id
+        user_script = @student.assign_script(@csf_script)
+        assert_equal @csf_script.id, user_script.script_id
         assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
       end
     end

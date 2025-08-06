@@ -190,7 +190,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_script_level uses cache' do
-    script_level = Unit.first.script_levels.first
+    unit = create :unit, :with_levels
+    script_level = unit.script_levels.first
 
     populate_cache_and_disconnect_db
 
@@ -227,7 +228,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'level uses cache' do
-    script_level = Unit.first.script_levels.first
+    unit = create :unit, :with_levels
+    script_level = unit.script_levels.first
     expected_level = script_level.level
 
     populate_cache_and_disconnect_db
@@ -237,7 +239,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'lesson hierarchy uses cache' do
-    unit = Unit.first
+    unit = create :unit, :with_levels
     lesson = unit.lessons.first
     expected_script_level = lesson.script_levels.first
     expected_level = lesson.script_levels.first.levels.first
