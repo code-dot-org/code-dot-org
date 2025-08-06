@@ -74,7 +74,6 @@ const projectSlice = createSlice({
         fileName: string;
         folderId?: FolderId;
         contents?: string;
-        url?: string;
       }>
     ) {
       if (state.projectSources?.source) {

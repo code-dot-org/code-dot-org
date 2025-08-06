@@ -70,10 +70,8 @@ export const useFileUploader = (
     [folderId, files, isStartMode, validationFile, validFileTypes]
   );
 
-  const getExternalFileName = useCallback(
-    (fileName: string) => `/folder-${folderId}-file-${fileName}`,
-    [folderId]
-  );
+  const getExternalFileName = (fileName: string) =>
+    `/folder-${folderId}-file-${fileName}`;
 
   return useLab2FileUploader({
     sendAnalyticsEvent,

@@ -36,12 +36,12 @@ export const createNewFileHelper = (
     id: fileId,
     name: fileName,
     language: extension || 'html',
-    contents: contents || defaultContents,
+    contents: url ? '' : contents || defaultContents,
     folderId,
   };
 
   if (url) {
-    file.url = url; // If a URL is provided, add it to the file object.
+    file.url = url;
   }
 
   newSource.files[fileId] = file;

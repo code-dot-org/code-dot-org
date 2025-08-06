@@ -176,10 +176,10 @@ export const useFileUploader = ({
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
           if (error instanceof Error) {
+            // what to do in error case?
             handleError(error);
           }
         }
-        // what to do in error case?
       }
     });
   }, [
