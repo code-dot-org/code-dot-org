@@ -36,6 +36,9 @@ const styles = {
   },
   menuItem: {
     marginBlock: theme.spacing(0.5),
+    '& a': {
+      width: '100%',
+    },
     '&:hover, &:focus': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
       borderRadius: theme.shape.borderRadius,
@@ -108,7 +111,13 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
         {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
-            onClick={handleClose}
+            onClick={e => {
+              e.preventDefault();
+              handleClose();
+              if (href) {
+                window.location.href = href;
+              }
+            }}
             disableRipple
             sx={styles.menuItem}
           >
