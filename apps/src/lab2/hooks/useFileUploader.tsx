@@ -1,6 +1,7 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -24,8 +25,8 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  externalSourceFileTypes?: string[];
-  uploadToExternalSource?: (file: File) => Promise<string>;
+  folderId?: string;
+  channelId?: string;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -93,8 +94,8 @@ export const useFileUploader = ({
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
-  externalSourceFileTypes = [],
-  uploadToExternalSource = undefined,
+  channelId = '',
+  folderId = '',
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
@@ -120,17 +121,14 @@ export const useFileUploader = ({
         return;
       }
 
-      // NOTE: this is multifile, API supports one at a time?
-      // I feel like we have to mess with the internals (this is lab2 code)
-      // because we're talking about changing the core way that files are saved to a project.
-      // This currently just returns file contents as a string, which is not what we want.
-      // We want to write the file to S3 AND store the url somewhere.
-      if (
-        externalSourceFileTypes.includes(file.name.split('.')[1]) &&
-        uploadToExternalSource
-      ) {
+      const reader = new FileReader();
+      if (file.type.match(/^text/)) {
+        reader.readAsText(file);
+      } else {
         try {
-          const url = await uploadToExternalSource(file);
+          // handle if channel ID missing?
+          const url = `/v3/assets/${channelId}/${folderId}-${file.name}`;
+          await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,
@@ -146,13 +144,6 @@ export const useFileUploader = ({
         }
         // what to do in error case?
         return;
-      }
-
-      const reader = new FileReader();
-      if (file.type.match(/^text/)) {
-        reader.readAsText(file);
-      } else {
-        reader.readAsArrayBuffer(file);
       }
 
       reader.onload = () => {
@@ -190,8 +181,8 @@ export const useFileUploader = ({
     sendAnalyticsEvent,
     errorCallback,
     callback,
-    externalSourceFileTypes,
-    uploadToExternalSource,
+    channelId,
+    folderId,
   ]);
 
   return useMemo(
