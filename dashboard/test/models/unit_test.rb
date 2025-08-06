@@ -1961,7 +1961,7 @@ class UnitTest < ActiveSupport::TestCase
 
   test "unit_names_by_curriculum_umbrella returns the correct unit names" do
     assert_equal(
-      ["20-hour", "coursea-2017", "courseb-2017", "coursec-2017", "coursed-2017", "coursee-2017", "coursef-2017", "express-2017", "pre-express-2017", @csf_unit.name, @csf_unit_2019.name],
+      ["20-hour", @csf_unit.name, @csf_unit_2019.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
     )
     assert_equal(
