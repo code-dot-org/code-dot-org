@@ -89,7 +89,11 @@ const CopyableCodeBlock: React.FunctionComponent = (
           </span>
 
           <span className={moduleStyles.codeContentOverlayMessage}>
-            <FontAwesomeV6Icon iconStyle="solid" iconName="circle-check" />
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName="circle-check"
+              className={moduleStyles.checkMarkIcon}
+            />
             <span aria-hidden={true} key={Date.now()}>
               Copied!
             </span>
