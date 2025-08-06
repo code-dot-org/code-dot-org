@@ -47,6 +47,13 @@ const mockPeople: PeopleCollectionProps['people'] = [
   } as any,
 ];
 
+jest.mock('@contentful/experiences-sdk-react', () => ({
+  ...jest.requireActual('@contentful/experiences-sdk-react'),
+  useInMemoryEntities: jest.fn(() => ({
+    maybeResolveLink: jest.fn().mockImplementation(link => link),
+  })),
+}));
+
 describe('PeopleCollection', () => {
   it('renders people with all fields', () => {
     render(

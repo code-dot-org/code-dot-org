@@ -2,6 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -47,6 +48,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     rightBottomPanelDragging,
     setRightBottomPanelSize,
     rightmostPanelWidth,
+    panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
       initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
@@ -84,7 +86,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={moduleStyles.flexShrink0}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
             <ResizeBar
               isVertical={true}
@@ -102,6 +104,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               <Workspace
                 style={{height: rightTopPanelHeight}}
                 isWidgetView={isWidgetView}
+                className={panelClassName}
               />
               <ResizeBar
                 isVertical={false}
@@ -114,6 +117,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
             width={rightPanelWidth}
             setOutputHeight={setRightBottomPanelSize}
+            className={panelClassName}
           />
         </div>
         {showAiTutor2 && aiTutor2Context && (

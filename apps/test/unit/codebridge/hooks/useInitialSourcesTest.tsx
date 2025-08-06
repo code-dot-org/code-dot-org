@@ -30,6 +30,7 @@ import {
   predictLevelProperties,
   smallProject,
   smallProjectSources,
+  smallProjectWithOutdatedFormat,
   templateBackedLevelProperties,
   withExemplarLevelProperties,
 } from '../test-files';
@@ -356,5 +357,42 @@ describe('useInitialSources', () => {
     );
 
     expect(initialSources).toEqual(sampleInitialSources);
+  });
+
+  it('correctly repairs open files in server sources', () => {
+    const outdatedServerSources: ProjectSources = {
+      source: smallProjectWithOutdatedFormat,
+      labConfig: undefined,
+    };
+    const {initialSources} = renderDefault(
+      nonValidatedLevelProperties,
+      outdatedServerSources
+    );
+
+    const expectedInitialSources = {
+      source: {
+        ...smallProjectWithOutdatedFormat,
+        openFiles: ['1', '2'],
+      },
+      labConfig: undefined,
+    };
+
+    expect(initialSources).toEqual(expectedInitialSources);
+  });
+
+  it('correctly repairs open files in start sources', () => {
+    const outdatedLevelProperties = {
+      ...nonValidatedLevelProperties,
+      startSources: smallProjectWithOutdatedFormat,
+    };
+    const {initialSources} = renderDefault(outdatedLevelProperties);
+    const expectedInitialSources = {
+      source: {
+        ...smallProjectWithOutdatedFormat,
+        openFiles: ['1', '2'],
+      },
+      labConfig: undefined,
+    };
+    expect(initialSources).toEqual(expectedInitialSources);
   });
 });

@@ -5,7 +5,7 @@ import {ReactNode} from 'react';
 
 import type {SpacingProps} from '@/components/common/types';
 import {DividerProps} from '@/components/contentful/divider';
-import bgPatternImage from '@public/images/bg-pattern-lines.png';
+import bgPatternImage from '@public/images/bg-pattern-lines.webp';
 
 export type SectionBackground =
   | 'primary'

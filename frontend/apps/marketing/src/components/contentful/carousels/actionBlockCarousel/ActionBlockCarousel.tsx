@@ -1,5 +1,6 @@
 'use client';
 
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
@@ -50,6 +51,8 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
     );
   }
 
+  const inMemoryEntities = useInMemoryEntities();
+
   const slidesData = useMemo(
     () =>
       slides.filter(Boolean).map(({sys, fields}) => {
@@ -63,6 +66,16 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
           secondaryLinkRef,
           publishedDate,
         } = fields;
+
+        const resolvedImage = inMemoryEntities.maybeResolveLink(
+          image,
+        ) as ExperienceAsset;
+        const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
+          primaryLinkRef,
+        ) as LinkEntry;
+        const resolvedSecondaryLinkRef = inMemoryEntities.maybeResolveLink(
+          secondaryLinkRef,
+        ) as LinkEntry;
 
         return {
           id: title,
@@ -80,17 +93,21 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
               }
               title={title}
               description={shortDescription}
-              image={{src: getAbsoluteImageUrl(image) || ''}}
+              image={{
+                src: getAbsoluteImageUrl(resolvedImage) || '',
+              }}
               primaryButton={
-                primaryLinkRef?.fields?.label
+                resolvedPrimaryLinkRef?.fields?.label
                   ? {
-                      text: primaryLinkRef.fields.label,
-                      href: primaryLinkRef.fields.primaryTarget || '#',
-                      ariaLabel: primaryLinkRef.fields.ariaLabel || '',
-                      iconRight: primaryLinkRef.fields.isThisAnExternalLink
+                      text: resolvedPrimaryLinkRef.fields.label,
+                      href: resolvedPrimaryLinkRef.fields.primaryTarget || '#',
+                      ariaLabel: resolvedPrimaryLinkRef.fields.ariaLabel || '',
+                      iconRight: resolvedPrimaryLinkRef.fields
+                        .isThisAnExternalLink
                         ? externalLinkIconProps
                         : undefined,
-                      ...(primaryLinkRef.fields.isThisAnExternalLink && {
+                      ...(resolvedPrimaryLinkRef.fields
+                        .isThisAnExternalLink && {
                         target: '_blank',
                         rel: 'noopener noreferrer',
                       }),
@@ -98,16 +115,20 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                   : undefined
               }
               secondaryButton={
-                secondaryLinkRef?.fields?.label &&
+                resolvedSecondaryLinkRef?.fields?.label &&
                 ['selfPacedPl', 'lab'].includes(contentType)
                   ? {
-                      text: secondaryLinkRef.fields.label,
-                      href: secondaryLinkRef.fields.primaryTarget || '#',
-                      ariaLabel: secondaryLinkRef.fields.ariaLabel || '',
-                      iconRight: secondaryLinkRef.fields.isThisAnExternalLink
+                      text: resolvedSecondaryLinkRef.fields.label,
+                      href:
+                        resolvedSecondaryLinkRef.fields.primaryTarget || '#',
+                      ariaLabel:
+                        resolvedSecondaryLinkRef.fields.ariaLabel || '',
+                      iconRight: resolvedSecondaryLinkRef.fields
+                        .isThisAnExternalLink
                         ? externalLinkIconProps
                         : undefined,
-                      ...(secondaryLinkRef.fields.isThisAnExternalLink && {
+                      ...(resolvedSecondaryLinkRef.fields
+                        .isThisAnExternalLink && {
                         target: '_blank',
                         rel: 'noopener noreferrer',
                       }),

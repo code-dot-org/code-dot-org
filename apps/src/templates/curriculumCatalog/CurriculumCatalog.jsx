@@ -4,8 +4,7 @@
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
-import HeroBanner from '@code-dot-org/component-library/heroBanner';
-
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
@@ -290,14 +289,11 @@ const CurriculumCatalog = ({
 
   return (
     <>
-      <HeroBanner
-        data-theme="Dark"
-        withWideText
-        hideImageOnSmallScreen
-        heading={i18n.curriculumCatalogHeaderTitle()}
-        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundImageUrl={CourseCatalogBannerBackground}
-        imageProps={{src: CourseCatalogIllustration01}}
+      <HeaderBanner
+        headingText={i18n.curriculumCatalogHeaderTitle()}
+        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
+        backgroundUrl={CourseCatalogBannerBackground}
+        imageUrl={CourseCatalogIllustration01}
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
