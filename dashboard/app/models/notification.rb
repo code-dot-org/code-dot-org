@@ -26,9 +26,12 @@
 class Notification < ApplicationRecord
   belongs_to :user
 
-  validates :user_id, presence: true
   validates :title, presence: true
   validates :priority, presence: true, numericality: {greater_than_or_equal_to: 0}
+
+  scope :not_dismissed, -> {where(is_dismissed: false)}
+  scope :not_expired, -> {where('expires_at IS NULL OR expires_at > ?', Time.current)}
+  scope :active, -> {not_dismissed.not_expired}
 
   def read?
     read_at.present?

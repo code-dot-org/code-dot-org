@@ -48,6 +48,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :notifications, only: [:index] do
+      collection do
+        post ':id/mark_as_read', controller: :notifications, action: :mark_as_read
+        post ':id/dismiss', controller: :notifications, action: :dismiss
+      end
+    end
+
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
