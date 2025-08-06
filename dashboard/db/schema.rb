@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_08_05_233618) do
+ActiveRecord::Schema.define(version: 2025_08_06_211348) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1084,6 +1084,25 @@ ActiveRecord::Schema.define(version: 2025_08_05_233618) do
     t.index ["satisfied"], name: "index_new_feature_feedbacks_on_satisfied"
     t.index ["user_id", "form_key"], name: "index_new_feature_feedbacks_on_user_id_and_form_key", unique: true
     t.index ["user_id"], name: "index_new_feature_feedbacks_on_user_id"
+  end
+
+  create_table "notifications", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "external_id"
+    t.string "title", null: false
+    t.text "description"
+    t.string "notification_type"
+    t.datetime "read_at"
+    t.boolean "is_dismissed", default: false, null: false
+    t.string "link_url"
+    t.json "ai_prompts"
+    t.string "icon_name"
+    t.datetime "expires_at"
+    t.integer "priority", default: 0, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "created_at"], name: "index_notifications_on_user_id_and_created_at"
+    t.index ["user_id", "read_at", "expires_at"], name: "index_notifications_on_user_id_and_read_at_and_expires_at"
   end
 
   create_table "objectives", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2639,6 +2658,7 @@ ActiveRecord::Schema.define(version: 2025_08_05_233618) do
   add_foreign_key "lti_user_identities", "lti_integrations"
   add_foreign_key "lti_user_identities", "users"
   add_foreign_key "new_feature_feedbacks", "users"
+  add_foreign_key "notifications", "users"
   add_foreign_key "parental_permission_requests", "users"
   add_foreign_key "pd_application_emails", "pd_applications"
   add_foreign_key "pd_application_tags_applications", "pd_application_tags"
