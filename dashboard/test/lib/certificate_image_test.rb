@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CertificateImageTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     unit = create :unit, name: 'course1'
     unit_group = create :single_unit_course, :stable, unit: unit, name: 'course1'
