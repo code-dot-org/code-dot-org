@@ -1,12 +1,9 @@
-import ActionBlock, {
-  ActionBlockContentfulComponentDefinition,
-} from '@/components/contentful/actionBlocks/defaultActionBlock';
-import FullWidthActionBlock, {
-  FullWidthActionBlockContentfulComponentDefinition,
-} from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
+import Card, {
+  CardContentfulComponentDefinition,
+} from '@/components/contentful/card';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -77,13 +74,6 @@ import Video, {
 const contentfulRegistration = {
   componentRegistrations: [
     {
-      component: ActionBlock,
-      definition: ActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
@@ -111,6 +101,13 @@ const contentfulRegistration = {
       definition: PeopleCollectionContentfulComponentDefinition,
     },
     {
+      component: Card,
+      definition: CardContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: Divider,
       definition: DividerContentfulComponentDefinition,
       options: {
@@ -124,13 +121,6 @@ const contentfulRegistration = {
     {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
-    },
-    {
-      component: FullWidthActionBlock,
-      definition: FullWidthActionBlockContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
     },
     {
       component: Heading,

@@ -2,3 +2,4 @@
 export {ImageCorporateSiteContentfulComponentDefinition} from './imageCorporateSiteContentfulDefinition';
 export {ImageCSforAllContentfulComponentDefinition} from './imageCSforAllContentfulDefinition';
 export {default} from './Image';
+export type {ImageProps} from './Image';
