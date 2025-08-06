@@ -25,8 +25,8 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  folderId?: string;
   channelId?: string;
+  getExternalFileName?: (fileName: string) => string;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -95,12 +95,19 @@ export const useFileUploader = ({
   sendAnalyticsEvent = () => {},
   multiple = true,
   channelId = '',
-  folderId = '',
+  getExternalFileName,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
 
   const changeHandler = useCallback(() => {
+    const handleError = (error: Error) => {
+      sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
+        error: error.message,
+      });
+      errorCallback(error.message, callbackArgs.current);
+    };
+
     Array.from(inputRef.current?.files || []).forEach(async file => {
       const fileNameErrorMessage = validateFileName(file.name);
       if (fileNameErrorMessage) {
@@ -121,13 +128,46 @@ export const useFileUploader = ({
         return;
       }
 
-      const reader = new FileReader();
       if (file.type.match(/^text/)) {
+        const reader = new FileReader();
         reader.readAsText(file);
+
+        reader.onload = () => {
+          if (!reader.result) {
+            callback(file.name, '', undefined, callbackArgs.current);
+          } else {
+            const result =
+              typeof reader.result === 'string'
+                ? reader.result
+                : bufferToString(reader.result);
+            sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+              name: file.name,
+              type: file.type,
+            });
+            callback(
+              file.name,
+              result as string,
+              undefined,
+              callbackArgs.current
+            );
+          }
+        };
+
+        reader.onerror = () => {
+          if (reader.error) {
+            handleError(reader.error);
+          }
+        };
       } else {
         try {
-          // handle if channel ID missing?
-          const url = `/v3/assets/${channelId}/${folderId}-${file.name}`;
+          // Better error handling?
+          if (!getExternalFileName || !channelId) {
+            return;
+          }
+
+          const url = `/v3/assets/${channelId}/${getExternalFileName(
+            file.name
+          )}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
@@ -136,44 +176,11 @@ export const useFileUploader = ({
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
           if (error instanceof Error) {
-            sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
-              error: error.message,
-            });
-            errorCallback(error.message, callbackArgs.current);
+            handleError(error);
           }
         }
         // what to do in error case?
-        return;
       }
-
-      reader.onload = () => {
-        if (!reader.result) {
-          callback(file.name, '', undefined, callbackArgs.current);
-        } else {
-          const result =
-            typeof reader.result === 'string'
-              ? reader.result
-              : bufferToString(reader.result);
-          sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-            name: file.name,
-            type: file.type,
-          });
-          callback(
-            file.name,
-            result as string,
-            undefined,
-            callbackArgs.current
-          );
-        }
-      };
-      reader.onerror = () => {
-        if (reader.error) {
-          sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
-            error: reader.error.message,
-          });
-          errorCallback(reader.error.message, callbackArgs.current);
-        }
-      };
     });
   }, [
     validMimeTypes,
@@ -182,7 +189,7 @@ export const useFileUploader = ({
     errorCallback,
     callback,
     channelId,
-    folderId,
+    getExternalFileName,
   ]);
 
   return useMemo(
