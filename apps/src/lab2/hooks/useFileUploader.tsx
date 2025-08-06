@@ -13,6 +13,7 @@ export type FileUploaderProps = {
   callback: (
     filename: string,
     contents: string,
+    uploadUrl?: string,
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
@@ -134,7 +135,7 @@ export const useFileUploader = ({
             name: file.name,
             type: file.type,
           });
-          callback(file.name, url, callbackArgs.current);
+          callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
           if (error instanceof Error) {
             sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
@@ -156,7 +157,7 @@ export const useFileUploader = ({
 
       reader.onload = () => {
         if (!reader.result) {
-          callback(file.name, '', callbackArgs.current);
+          callback(file.name, '', undefined, callbackArgs.current);
         } else {
           const result =
             typeof reader.result === 'string'
@@ -166,7 +167,12 @@ export const useFileUploader = ({
             name: file.name,
             type: file.type,
           });
-          callback(file.name, result as string, callbackArgs.current);
+          callback(
+            file.name,
+            result as string,
+            undefined,
+            callbackArgs.current
+          );
         }
       };
       reader.onerror = () => {

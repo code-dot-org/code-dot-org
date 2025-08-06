@@ -81,12 +81,12 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     }
   }, [file?.language, langMapping]);
 
-  if (file && viewableImageFileType(file.language)) {
+  if (file?.url && viewableImageFileType(file.language)) {
     // const base64 = window.btoa(file.contents);
     return (
       <div>
         {/*<img src={`data:image/png;base64,${base64}`} alt={file.name} />*/}
-        <img src={file.contents} alt={file.name} />
+        <img src={file?.url} alt={file.name} />
       </div>
     );
   }

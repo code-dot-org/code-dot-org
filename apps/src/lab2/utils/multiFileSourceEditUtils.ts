@@ -24,20 +24,27 @@ export const createNewFileHelper = (
   source: MultiFileSource,
   fileName: string,
   folderId: FolderId = DEFAULT_FOLDER_ID,
-  contents: string = ''
+  contents: string = '',
+  url?: string
 ): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
   const [, extension] = fileName.split('.');
   const defaultContents = `Add your changes to ${fileName}`;
 
-  newSource.files[fileId] = {
+  const file: ProjectFile = {
     id: fileId,
     name: fileName,
     language: extension || 'html',
     contents: contents || defaultContents,
     folderId,
   };
+
+  if (url) {
+    file.url = url; // If a URL is provided, add it to the file object.
+  }
+
+  newSource.files[fileId] = file;
 
   return activateFileHelper(newSource, fileId);
 };
