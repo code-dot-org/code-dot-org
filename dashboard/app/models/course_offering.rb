@@ -33,7 +33,7 @@
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
-  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
@@ -136,17 +136,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def course_id
-    return unless latest_published_version&.content_root_type == 'UnitGroup'
-    latest_published_version.content_root.id
-  end
-
-  def script_id
-    return unless latest_published_version&.content_root_type == 'Unit'
-    latest_published_version.content_root.id
-  end
-
-  def standalone_unit?
-    latest_published_version&.content_root_type == 'Unit'
+    latest_published_version&.content_root&.id
   end
 
   def self.should_cache?
@@ -453,10 +443,6 @@ class CourseOffering < ApplicationRecord
 
   def units_included_in_any_version?(unit_ids)
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Unit'}
   end
 
   def csd?

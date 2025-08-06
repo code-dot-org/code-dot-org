@@ -69,7 +69,6 @@ class Unit < ApplicationRecord
   has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
   belongs_to :original_unit_group, class_name: 'UnitGroup', optional: true
-  has_one :course_version, as: :content_root, dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
@@ -1695,11 +1694,9 @@ class Unit < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons, unit_group_unit: original_unit_group_unit)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
-    summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
-    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
-    summary[:unitPublishedState] = unit_group ? published_state : nil
-    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
+    summary[:coursePublishedState] = original_unit_group ? original_unit_group.published_state : published_state
+    summary[:unitPublishedState] = original_unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = original_unit_group&.course_version&.course_offering&.csd?
     summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
   end
@@ -1801,18 +1798,10 @@ class Unit < ApplicationRecord
   # will always return false for participants so they will fall into the second check for
   # launched and can_view_version?. For instructors if course_assignable? is false then
   # launched will also be false.
-  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: nil)
-    unit_group ||= original_unit_group
-
-    return {} if unit_group && !unit_group.single_unit_course?
-
+  def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: original_unit_group)
     if unit_group&.single_unit_course?
       return unit_group.summarize_course_versions(user, locale_code)
     end
-
-    all_course_versions = course_version&.course_offering&.course_versions
-    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
-    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.clear_cache
@@ -1960,12 +1949,11 @@ class Unit < ApplicationRecord
     unit_group_units.find {|ugu| ugu.unit_group == original_unit_group}
   end
 
-  # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
-  # if this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion,
+  # If this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion
   # if there is one.
   # @return [CourseVersion]
-  def get_course_version
-    course_version || unit_group&.course_version
+  def get_course_version(unit_group: original_unit_group)
+    unit_group&.course_version
   end
 
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
