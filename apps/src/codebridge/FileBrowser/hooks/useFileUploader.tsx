@@ -12,6 +12,7 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
@@ -52,7 +53,7 @@ export const useFileUploader = (
     [appName]
   );
 
-  const {validFileTypes, ...lab2FileUploaderArgs} = args;
+  const {validFileTypes, callback, ...lab2FileUploaderArgs} = args;
   const validateFileName = useCallback(
     (fileName: string) => {
       return validateCodebridgeFileName({
@@ -67,9 +68,22 @@ export const useFileUploader = (
     [folderId, files, isStartMode, validationFile, validFileTypes]
   );
 
+  const uploadToExternalSource = async (file: File) => {
+    // return something with URL?
+    // If the file is not a text file, upload to S3
+    // await HttpClient.put(buildAssetUrl(asset), file);
+    // we don't have channelId here
+    const url = `/v3/assets/3H-AyPf3huzbPZ9mTPK4qw/${file.name}`;
+    await HttpClient.put(url, file);
+    return url;
+  };
+
   return useLab2FileUploader({
+    callback,
     sendAnalyticsEvent,
     validateFileName,
+    externalSourceFileTypes: ['png'],
+    uploadToExternalSource,
     ...lab2FileUploaderArgs,
   });
 };

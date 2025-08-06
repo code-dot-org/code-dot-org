@@ -1,7 +1,6 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -24,6 +23,8 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
+  externalSourceFileTypes?: string[];
+  uploadToExternalSource?: (file: File) => Promise<string>;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -91,6 +92,8 @@ export const useFileUploader = ({
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
+  externalSourceFileTypes = [],
+  uploadToExternalSource = undefined,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
@@ -115,18 +118,32 @@ export const useFileUploader = ({
         );
         return;
       }
+
       // NOTE: this is multifile, API supports one at a time?
       // I feel like we have to mess with the internals (this is lab2 code)
       // because we're talking about changing the core way that files are saved to a project.
       // This currently just returns file contents as a string, which is not what we want.
       // We want to write the file to S3 AND store the url somewhere.
-      if (!file.type.match(/^text/)) {
-        // If the file is not a text file, upload to S3
-        // await HttpClient.put(buildAssetUrl(asset), file);
-        // we don't have channelId here
-        const url = `/v3/assets/3H-AyPf3huzbPZ9mTPK4qw/${file.name}`;
-        await HttpClient.put(url, file);
-        callback(file.name, url, callbackArgs.current);
+      if (
+        externalSourceFileTypes.includes(file.name.split('.')[1]) &&
+        uploadToExternalSource
+      ) {
+        try {
+          const url = await uploadToExternalSource(file);
+          sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+            name: file.name,
+            type: file.type,
+          });
+          callback(file.name, url, callbackArgs.current);
+        } catch (error) {
+          if (error instanceof Error) {
+            sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
+              error: error.message,
+            });
+            errorCallback(error.message, callbackArgs.current);
+          }
+        }
+        // what to do in error case?
         return;
       }
 
@@ -167,6 +184,8 @@ export const useFileUploader = ({
     sendAnalyticsEvent,
     errorCallback,
     callback,
+    externalSourceFileTypes,
+    uploadToExternalSource,
   ]);
 
   return useMemo(

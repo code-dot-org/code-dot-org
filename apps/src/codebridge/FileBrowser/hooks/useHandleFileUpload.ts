@@ -21,7 +21,7 @@ export const useHandleFileUpload = (
 
   const dialogControl = useDialogControl();
   return useCallback(
-    (fileName: string, contents: string, folderIdArg: unknown) => {
+    async (fileName: string, contents: string, folderIdArg: unknown) => {
       const folderId = folderIdArg as FolderId;
 
       const validationError = validateFileName({
@@ -44,7 +44,15 @@ export const useHandleFileUpload = (
         return;
       }
 
+      // need to check against a list of files types we want to upload to s3
+      // need to actually get project id somehow
+      // if (file) {
+      //   const url = `/v3/assets/3H-AyPf3huzbPZ9mTPK4qw/${fileName}`;
+      //   await HttpClient.put(url, file);
+      // }
+
       // this is what actually updates the project files (in Redux and triggering save to S3)
+      // add createNewExternalFileThunk to the project files?
       dispatch(createNewFileThunk({fileName, folderId, contents}));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
