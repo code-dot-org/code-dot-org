@@ -75,8 +75,7 @@ And Here is some example Blockly code for our system.  In this case, we are gene
 `;
 
   const [text, setText] = useState(
-    'Can you generate a song which plays a drum beat and a guitar alternating, 4 times.  Then plays the drum beat and guide code together, 2 times?  Use a variety of sounds that fit the ask.\n' +
-      'Put this into a function and call this function from the main block.\n'
+    'Please generate a fun song.  Between 10-15 measures is enoguh duration.  Use layering of sounds to make it exciting.'
   );
 
   const [generating, setGenerating] = useState<
