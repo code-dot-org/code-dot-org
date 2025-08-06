@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:18:52 UTC",
+    "serialized_at": "2025-08-05 22:03:53 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6829,11 +6829,9 @@
     },
     {
       "name": "[EXEMPLAR] Unit 5 Guide",
-      "url": "https://docs.google.com/document/d/1pFYOmi8Lv7vUeHHVO_jUNpXvyYZeDr_2b1AhOOKY8hA/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1vlaElrbyBzgN2DZ8MDFOiFW7pxjAK-TvHX0veb2NTOc/edit?usp=drive_link",
       "key": "_exemplar_unit_5_guide",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_5_guide"
@@ -7667,12 +7665,9 @@
     },
     {
       "name": "Unit 5 Guide",
-      "url": "https://docs.google.com/document/d/1ebODfr4siIJIFnppGrtJigfliZNprKcz2Hc0P5OSBlk/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1vug-NdjvX47SdsiSXBx0__w8q2YXGlu657gp4PD9qi8/edit?usp=drive_link",
       "key": "unit_5_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
@@ -7680,11 +7675,9 @@
     },
     {
       "name": "Unit 5 Overview",
-      "url": "https://docs.google.com/document/d/1A22tMFqIWkq0445i0lKpueZYCu-6RKN9XeBkt5f7TM0/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1wcfaBlZb1DN8vOwm2FdtSQks92btL8GCXdE_bQ5RNo4/edit?usp=drive_link",
       "key": "unit_5_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_5_overview"
@@ -7692,12 +7685,9 @@
     },
     {
       "name": "Unit 5 Study Guide",
-      "url": "https://docs.google.com/document/d/1XsASO5aI0HzNApY9_21rgkgdi48SVzjbFUZiv9LI_Fw/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1oO7LVS9Sxe3TBZ5ZkQOXzK6xpZ0pnTvvrxkAaG8xnTQ/edit?usp=drive_link",
       "key": "unit_5_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_5_study_guide"

@@ -42,7 +42,7 @@ class CoursesController < ApplicationController
       redirect_path = Policies::Courses.modularity_enabled? ?
                         course_unit_path(@unit_group, 1) :
                         script_path(@unit_group.first_unit)
-      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path, status: :moved_permanently
       return
     end
 

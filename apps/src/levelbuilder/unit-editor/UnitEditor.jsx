@@ -7,10 +7,7 @@ import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {
-  InstructionType,
   PublishedState,
-  InstructorAudience,
-  ParticipantAudience,
   CurriculumUmbrella,
   CurriculumTopicTags,
   CurriculumContentArea,
@@ -47,14 +44,6 @@ class UnitEditor extends React.Component {
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
     initialHideWithinCourse: PropTypes.bool,
-    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
-      .isRequired,
-    initialInstructorAudience: PropTypes.oneOf(
-      Object.values(InstructorAudience)
-    ).isRequired,
-    initialParticipantAudience: PropTypes.oneOf(
-      Object.values(ParticipantAudience)
-    ).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -70,7 +59,6 @@ class UnitEditor extends React.Component {
     initialHasUnnumberedLessons: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
-    initialPilotExperiment: PropTypes.string,
     initialEditorExperiment: PropTypes.string,
     initialAnnouncements: PropTypes.arrayOf(announcementShape).isRequired,
     initialSupportedLocales: PropTypes.arrayOf(PropTypes.string),
@@ -88,10 +76,7 @@ class UnitEditor extends React.Component {
       ...Object.keys(CurriculumContentArea),
       '',
     ]),
-    initialFamilyName: PropTypes.string,
-    initialVersionYear: PropTypes.string,
     unitFamilies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
     isLevelbuilder: PropTypes.bool,
     initialTts: PropTypes.bool,
     hasCourse: PropTypes.bool,
@@ -123,8 +108,6 @@ class UnitEditor extends React.Component {
       error: null,
       lastSaved: null,
       ttsDialogOpen: false,
-      familyName: this.props.initialFamilyName,
-      savedFamilyName: this.props.initialFamilyName,
       showCalendar: this.props.initialShowCalendar,
       weeklyInstructionalMinutes:
         this.props.initialWeeklyInstructionalMinutes || '',
@@ -146,7 +129,6 @@ class UnitEditor extends React.Component {
       hasUnnumberedLessons: this.props.initialHasUnnumberedLessons,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
-      pilotExperiment: this.props.initialPilotExperiment,
       editorExperiment: this.props.initialEditorExperiment,
       supportedLocales: this.props.initialSupportedLocales,
       locales: this.props.initialLocales,
@@ -154,8 +136,6 @@ class UnitEditor extends React.Component {
       curriculumUmbrella: this.props.initialCurriculumUmbrella,
       topicTags: this.props.initialTopicTags,
       contentArea: this.props.initialContentArea,
-      versionYear: this.props.initialVersionYear,
-      savedVersionYear: this.props.initialVersionYear,
       tts: this.props.initialTts,
       title: this.props.i18nData.title || '',
       descriptionAudience: this.props.i18nData.descriptionAudience || '',
@@ -163,9 +143,6 @@ class UnitEditor extends React.Component {
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       hideWithinCourse: !!this.props.initialHideWithinCourse,
-      instructionType: this.props.initialInstructionType,
-      instructorAudience: this.props.initialInstructorAudience,
-      participantAudience: this.props.initialParticipantAudience,
       enableBlocklyKeyboardNavigation:
         this.props.initialEnableBlocklyKeyboardNavigation || false,
     };
@@ -181,10 +158,6 @@ class UnitEditor extends React.Component {
 
   handleChangeSupportedLocales = selectedOptions => {
     this.setState({supportedLocales: selectedOptions});
-  };
-
-  handleFamilyNameChange = event => {
-    this.setState({familyName: event.target.value});
   };
 
   handleShowCalendarChange = () => {
@@ -242,7 +215,6 @@ class UnitEditor extends React.Component {
 
     let dataToSave = {
       name: this.props.name,
-      family_name: this.state.familyName,
       show_calendar: this.state.showCalendar,
       weekly_instructional_minutes: parseInt(
         this.state.weeklyInstructionalMinutes
@@ -251,9 +223,6 @@ class UnitEditor extends React.Component {
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       hide_within_course: this.state.hideWithinCourse,
-      instruction_type: this.state.instructionType,
-      instructor_audience: this.state.instructorAudience,
-      participant_audience: this.state.participantAudience,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -270,7 +239,6 @@ class UnitEditor extends React.Component {
       has_unnumbered_lessons: this.state.hasUnnumberedLessons,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
-      pilot_experiment: this.state.pilotExperiment,
       editor_experiment: this.state.editorExperiment,
       supported_locales: this.state.supportedLocales,
       locales: this.state.locales,
@@ -278,7 +246,6 @@ class UnitEditor extends React.Component {
       curriculum_umbrella: this.state.curriculumUmbrella,
       topic_tags: this.state.topicTags,
       content_area: this.state.contentArea,
-      version_year: this.state.versionYear,
       tts: this.state.tts,
       title: this.state.title,
       description_audience: this.state.descriptionAudience,
@@ -312,8 +279,6 @@ class UnitEditor extends React.Component {
             lastSaved: Date.now(),
             isSaving: false,
             lastUpdatedAt: data.updated_at,
-            savedFamilyName: data.family_name,
-            savedVersionYear: data.version_year,
           });
         }
       })

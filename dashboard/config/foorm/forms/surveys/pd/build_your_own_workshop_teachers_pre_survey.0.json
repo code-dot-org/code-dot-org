@@ -45,6 +45,7 @@
           "type": "matrix",
           "name": "baseline_readiness_teaching_cs",
           "title": "How much do you agree or disagree with the following statements?",
+          "description": "Skip any row that is not relevant to the workshop you are participating in",
           "columns": [
             {
               "value": "1",
