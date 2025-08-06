@@ -1,5 +1,6 @@
 import frequencyAnalysisLoader from '@code-dot-org/lab-frequency-analysis/parser';
 import mazeLoader from '@code-dot-org/lab-maze/parser';
+import artistLoader from '@code-dot-org/lab-artist/parser';
 
 export interface LevelProps<T extends object = object> {
   levelData?: T;
@@ -51,3 +52,4 @@ export {levelRegistry2};
 
 register2('Maze', mazeLoader);
 register2('FrequencyAnalysis', frequencyAnalysisLoader);
+register2('Artist', artistLoader);

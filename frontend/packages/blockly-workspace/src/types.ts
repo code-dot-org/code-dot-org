@@ -122,14 +122,16 @@ export interface BlockDefinition {
   /** The style group to apply, e.g. 'math_blocks' */
   style?: string;
   /** The function that generates code for this block. */
-  generator: (
-    block: Blockly.Block,
-    generator: JavascriptGenerator,
-    options?: {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      [key: string]: any;
-    },
-  ) => string | [string, number] | null;
+  generator: {
+    javascript: (
+      block: Blockly.Block,
+      generator: JavascriptGenerator,
+      options?: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        [key: string]: any;
+      },
+    ) => string | [string, number] | null;
+  };
   /** Whether or not this can be attached to a statement */
   previousStatement?: boolean;
   /** Whether or not the block can have subsequent blocks attached to it */

@@ -50,7 +50,7 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   return code;
 }
 
-export function updateBlockEnabled(block: Blockly.Block) {
+export function updateBlockEnabled(block: Blockly.Block, reason: string = Blockly.constants.MANUALLY_DISABLED) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
@@ -59,12 +59,12 @@ export function updateBlockEnabled(block: Blockly.Block) {
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
       for (let i = 0, child; (child = children[i]); i++) {
-        child.setEnabled(true);
+        child.setDisabledReason(true, reason);
       }
     } else if (block.outputConnection || block.previousConnection) {
       let currentBlock: Blockly.Block | null = block;
       do {
-        currentBlock.setEnabled(false);
+        currentBlock.setDisabledReason(false, reason)
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }
@@ -81,9 +81,9 @@ export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
     if (block.type === BLOCK_TYPES.procedureCall) {
-      block.setEnabled(false);
+      block.setDisabledReason(false, 'orphaned');
     }
-    updateBlockEnabled(block);
+    updateBlockEnabled(block, 'orphaned');
   });
 }
 
@@ -216,6 +216,7 @@ export function getCodeFromBlockJsonSource(json: {
 }): string {
   const workspace = new Blockly.Workspace();
   javascriptGenerator.init(workspace);
+  console.log('init generator', javascriptGenerator.isInitialized, workspace);
 
   for (const jsonBlock of json.blocks?.blocks || []) {
     console.log('BLOCK', jsonBlock);

@@ -16,6 +16,8 @@ const levelMap = {
   Maze: dynamic(() => import('@code-dot-org/lab-maze'), {ssr: false, loading: () => <Spinner />}),
   /** Cipher analysis exhibiting the weaknesses of symmetric encryption */
   FrequencyAnalysis: dynamic(() => import('@code-dot-org/lab-frequency-analysis'), {ssr: false, loading: () => <Spinner />}),
+  /** A turtle karel that can draw shapes and lines based on code */
+  Artist: dynamic(() => import('@code-dot-org/lab-artist'), {ssr: false, loading: () => <Spinner />}),
 };
 
 import moduleStyles from './level.module.scss';

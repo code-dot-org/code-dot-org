@@ -109,6 +109,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
       renderer,
       theme,
       environment,
+      toolboxBlocks,
     );
     Blockly.setLocale(En as unknown as {[key: string]: string});
 
@@ -130,7 +131,7 @@ function BlocklyWorkspace<T extends Environment & object = Environment>({
         _generator: JavascriptGenerator,
       ) {
         return (
-          blockDefinition.generator?.(block, javascriptGenerator, {}) || ''
+          blockDefinition.generator?.javascript?.(block, javascriptGenerator, {}) || ''
         );
       };
     });

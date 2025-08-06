@@ -203,12 +203,12 @@
   },
   "dependencies": {
     "@blockly/block-shareable-procedures": "^6.0.1",
-    "@blockly/field-colour": "^6.0.1",
-    "@blockly/field-grid-dropdown": "^6.0.1",
+    "@blockly/field-colour": "^6.0.4",
+    "@blockly/field-grid-dropdown": "^6.0.3",
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/markdown": "workspace:*",
     "@react-hook/resize-observer": "^2.0.2",
-    "blockly": "11.1.1"
+    "blockly": "12.2.0"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",

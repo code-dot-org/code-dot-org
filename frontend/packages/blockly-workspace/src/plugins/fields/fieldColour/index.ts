@@ -11,6 +11,7 @@ export const plugin: FieldPlugin = {
   type: PluginType.Field,
   name: 'field_colour',
   initialize: () => {
+    console.log('registering field colour');
     registerFieldColour();
     installColourBlocks({
       javascript: javascriptGenerator,

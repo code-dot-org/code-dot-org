@@ -5,7 +5,7 @@ import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import ArtistLevel, {ArtistLevelProps} from '@code-dot-org/lab-artist';
 import type {ArtistData} from '@code-dot-org/lab-artist';
-import type {LevelData} from '@code-dot-org/lab-blockly';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 export default {
   title: 'Labs/Artist',
@@ -31,7 +31,7 @@ const defaultLevelData: LevelData<ArtistData> = {
   type: 'Artist',
   longInstructions: 'These are the instructions for this level in **Markdown**',
   shortInstructions: 'These are shorter instructions',
-  blocklyData: {
+  subData: {
     startBlocks: {
       blocks: {
         blocks: [
@@ -50,8 +50,6 @@ const defaultLevelData: LevelData<ArtistData> = {
         ],
       },
     },
-  },
-  subData: {
     skinId: 'artist',
     startDirection: 90,
     images: [],
@@ -112,14 +110,14 @@ const defaultBlocks: BlockDefinition[] = [
 
 export const ArtistBase = Template.bind({});
 ArtistBase.args = {
-  level: defaultLevelData,
+  levelData: defaultLevelData,
   renderer: Thrasos,
   customBlocks: defaultBlocks,
 };
 
 export const ArtistMarkdownInstructions = Template.bind({});
 ArtistMarkdownInstructions.args = {
-  level: {
+  levelData: {
     ...defaultLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },

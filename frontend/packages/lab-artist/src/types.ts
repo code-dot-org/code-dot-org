@@ -1,19 +1,22 @@
 import type {BlocklySerialization} from '@code-dot-org/blockly-workspace';
+import type {BlocklyData} from '@code-dot-org/lab-blockly';
+
+export interface ArtistImageData {
+  filename: string;
+  /** Internal reference to the locally stored version of the image */
+  local?: string;
+  position: [number, number];
+  scale?: number;
+}
 
 /** Data for artist levels. */
-export interface ArtistData {
+export interface ArtistData extends BlocklyData {
   skinId?: string;
   initialX?: number;
   initialY?: number;
   startDirection?: number;
   predrawBlocks?: BlocklySerialization;
-  images: {
-    filename: string;
-    /** Internal reference to the locally stored version of the image */
-    local?: string;
-    position: [number, number];
-    scale?: number;
-  }[];
+  images: ArtistImageData[];
 }
 
 /**

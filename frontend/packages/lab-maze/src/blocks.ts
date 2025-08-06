@@ -1,5 +1,5 @@
 import * as Blockly from 'blockly/core';
-import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
+import {JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
@@ -18,7 +18,9 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     tooltip: '',
     helpUrl: '',
     message0: 'when run',
-    generator: () => '\n',
+    generator: {
+      javascript: () => '\n',
+    },
     nextStatement: true,
   },
   {
@@ -30,8 +32,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     previousStatement: true,
     nextStatement: true,
     message0: 'move forward',
-    generator: (block: Blockly.Block) => {
-      return `Maze.moveForward('block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        return `Maze.moveForward('block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -53,10 +57,12 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         ],
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      return 'Maze.' + dir + "('block_id_" + block.id + "');\n";
+    generator: {
+      javascript(block: Blockly.Block) {
+        // Generate JavaScript for moving forward/backward
+        const dir = block.getFieldValue('DIR');
+        return 'Maze.' + dir + "('block_id_" + block.id + "');\n";
+      },
     },
   },
   {
@@ -77,9 +83,11 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         ],
       },
     ],
-    generator: (block: Blockly.Block) => {
-      const dir = block.getFieldValue('DIR');
-      return `Maze.${dir}('block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        const dir = block.getFieldValue('DIR');
+        return `Maze.${dir}('block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -103,7 +111,11 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     ],
     nextStatement: true,
     previousStatement: true,
-    generator: javascriptGenerator.forBlock.controls_repeat,
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        return javascriptGenerator.forBlock.controls_repeat(block, javascriptGenerator);
+      },
+    },
   },
   {
     // Do forever loop.
@@ -130,16 +142,18 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         name: 'DO',
       },
     ],
-    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
-      // Generate JavaScript for do forever loop.
-      const branch = generator.statementToCode(block, 'DO');
-      /*
-      branch =
-        Blockly.getInfiniteLoopTrap() +
-        Blockly.loopHighlight('Maze', block.id) +
-        branch;
-       */
-      return 'while (Maze.notFinished()) {\n' + branch + '}\n';
+    generator: {
+      javascript(block: Blockly.Block, generator: JavascriptGenerator) {
+        // Generate JavaScript for do forever loop.
+        const branch = generator.statementToCode(block, 'DO');
+        /*
+        branch =
+          Blockly.getInfiniteLoopTrap() +
+          Blockly.loopHighlight('Maze', block.id) +
+          branch;
+         */
+        return 'while (Maze.notFinished()) {\n' + branch + '}\n';
+      },
     },
   },
   {
@@ -158,13 +172,15 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         name: 'DO',
       },
     ],
-    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
-      const branch = generator.statementToCode(block, 'DO');
-      /*branch =
-        Blockly.getInfiniteLoopTrap() +
-        Blockly.loopHighlight('Maze', this.id) +
-        branch;*/
-      return `while (Maze.notFinished()) {\n${branch}}\n`;
+    generator: {
+      javascript(block: Blockly.Block, generator: JavascriptGenerator) {
+        const branch = generator.statementToCode(block, 'DO');
+        /*branch =
+          Blockly.getInfiniteLoopTrap() +
+          Blockly.loopHighlight('Maze', this.id) +
+          branch;*/
+        return `while (Maze.notFinished()) {\n${branch}}\n`;
+      },
     },
   },
   {
@@ -194,12 +210,14 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         name: 'DO',
       },
     ],
-    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
-      const dir = block.getFieldValue('DIR');
-      const argument = `Maze.${dir}('block_id_${block.id}')`;
-      const branch = generator.statementToCode(block, 'DO');
-      //branch = Blockly.getInfiniteLoopTrap() + branch;
-      return `while (${argument}) {\n${branch}}\n`;
+    generator: {
+      javascript(block: Blockly.Block, generator: JavascriptGenerator) {
+        const dir = block.getFieldValue('DIR');
+        const argument = `Maze.${dir}('block_id_${block.id}')`;
+        const branch = generator.statementToCode(block, 'DO');
+        //branch = Blockly.getInfiniteLoopTrap() + branch;
+        return `while (${argument}) {\n${branch}}\n`;
+      },
     },
   },
   {
@@ -230,13 +248,15 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         name: 'DO',
       },
     ],
-    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
-      // Generate JavaScript for 'if' conditional if there is a path.
-      const argument =
-        'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
-      const branch = generator.statementToCode(block, 'DO');
-      const code = 'if (' + argument + ') {\n' + branch + '}\n';
-      return code;
+    generator: {
+      javascript(block: Blockly.Block, generator: JavascriptGenerator) {
+        // Generate JavaScript for 'if' conditional if there is a path.
+        const argument =
+          'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
+        const branch = generator.statementToCode(block, 'DO');
+        const code = 'if (' + argument + ') {\n' + branch + '}\n';
+        return code;
+      },
     },
   },
   {
@@ -274,15 +294,17 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         name: 'ELSE',
       },
     ],
-    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
-      // Generate JavaScript for 'if/else' conditional if there is a path.
-      const argument =
-        'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
-      const branch0 = generator.statementToCode(block, 'DO');
-      const branch1 = generator.statementToCode(block, 'ELSE');
-      const code =
-        'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
-      return code;
+    generator: {
+      javascript(block: Blockly.Block, generator: JavascriptGenerator) {
+        // Generate JavaScript for 'if/else' conditional if there is a path.
+        const argument =
+          'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
+        const branch0 = generator.statementToCode(block, 'DO');
+        const branch1 = generator.statementToCode(block, 'ELSE');
+        const code =
+          'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
+        return code;
+      },
     },
   },
   // This block add a harmless comment to the code
@@ -302,8 +324,10 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         text: '',
       },
     ],
-    generator: (block: Blockly.Block) =>
-      `// ${block.getFieldValue('COMMENT')}\n`,
+    generator: {
+      javascript: (block: Blockly.Block) =>
+        `// ${block.getFieldValue('COMMENT')}\n`,
+    },
   },
 ];
 

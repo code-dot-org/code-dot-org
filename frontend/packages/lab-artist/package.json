@@ -22,8 +22,27 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": {
+        "import": "./dist/esm/index.d.ts",
+        "require": "./dist/cjs/index.d.js"
+      },
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./parser": {
+      "types": {
+        "import": "./dist/esm/parser/index.d.ts",
+        "require": "./dist/cjs/parser/index.d.js"
+      },
+      "import": "./dist/esm/parser/index.mjs",
+      "require": "./dist/cjs/parser/index.js"
+    }
+  },
   "scripts": {
-    "build": "node copy.mjs && tsup --clean",
+    "build": "node copy.mjs && tsup --clean && node fix.mjs",
     "storybook:build": "storybook build -o dist/storybook",
     "storybook:dev": "yarn run storybook",
     "storybook": "storybook dev -p 6006",

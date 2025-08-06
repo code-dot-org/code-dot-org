@@ -14,7 +14,7 @@ import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
 import {getCodeFromBlockJsonSource, getAllGeneratedCode} from '@code-dot-org/blockly-workspace/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/lab-blockly';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import * as defaultAPI from '../api';
 import Artist from '../Artist';
@@ -23,7 +23,6 @@ import {skinFor} from '../skins';
 import type {ArtistData} from '../types';
 
 import Visualization from './Visualization';
-
 
 /** By default, a blank level should at least show a 'When Run' block */
 const DefaultStartBlocks: BlocklySerialization = {
@@ -37,7 +36,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface ArtistLevelProps extends BlocklyLevelProps {
-  level: LevelData<ArtistData>;
+  levelData: LevelData<ArtistData>;
   api?: object;
   customBlocks?: BlockDefinition[];
   /** A class to apply to the existing visualization container */
@@ -48,7 +47,7 @@ export interface ArtistLevelProps extends BlocklyLevelProps {
  * Wraps a Blockly-based Artist level.
  */
 const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
-  level,
+  levelData,
   customBlocks,
   theme,
   renderer,
@@ -107,28 +106,28 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     execute(false);
   }, [controller, stepping]);
 
-  const skin = skinFor(level.subData?.skinId || 'artist');
+  const skin = skinFor(levelData.subData?.skinId || 'artist');
 
   const onInject = useCallback(() => {
     if (container.current) {
-      const predrawCode = level.subData?.predrawBlocks
-        ? getCodeFromBlockJsonSource(level.subData.predrawBlocks)
+      const predrawCode = levelData.subData?.predrawBlocks
+        ? getCodeFromBlockJsonSource(levelData.subData.predrawBlocks)
         : undefined;
 
-      const solutionCode = level.blocklyData?.solutionBlocks
-        ? getCodeFromBlockJsonSource(level.blocklyData.solutionBlocks)
+      const solutionCode = levelData.subData?.solutionBlocks
+        ? getCodeFromBlockJsonSource(levelData.subData.solutionBlocks)
         : undefined;
 
       console.log(
         'LEVEL',
-        level,
-        level.subData?.predrawBlocks,
+        levelData,
+        levelData.subData?.predrawBlocks,
         predrawCode,
         solutionCode,
       );
       controller.current = new Artist({
         api: {...defaultAPI, ...(api || {})},
-        level: level.subData || {
+        level: levelData.subData || {
           images: [],
         },
         instant: false,
@@ -145,12 +144,12 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     return () => {
       console.log('UNINIT THE ARTIST LEVEL');
     };
-  }, [controller, level]);
+  }, [controller, levelData]);
 
   // Ensure a 'when_run' block exists... as some levels omit it for some reason
   const startBlocks = useMemo(() => {
     // Deep duplicate the block data
-    const initial = level.blocklyData?.startBlocks || DefaultStartBlocks;
+    const initial = levelData.subData?.startBlocks || DefaultStartBlocks;
     const data = {...initial};
     data.blocks ||= {};
     data.blocks = {...data.blocks};
@@ -160,11 +159,11 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
       data.blocks.blocks.unshift({type: 'when_run'});
     }
     return data;
-  }, [level]);
+  }, [levelData]);
 
   return (
     <BlocklyLevel<ArtistData>
-      level={level}
+      levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}

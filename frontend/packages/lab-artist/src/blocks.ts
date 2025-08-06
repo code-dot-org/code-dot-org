@@ -1,5 +1,5 @@
 import * as Blockly from 'blockly/core';
-import {javascriptGenerator, Order} from 'blockly/javascript';
+import {JavascriptGenerator, Order} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
@@ -132,13 +132,15 @@ const generateSimpleBlocksForDirection = (
           },
         ]
       : [],
-    generator: (block: Blockly.Block) => {
-      const dir = `${type}${cardinals[direction].apiFunction}`;
-      const distance =
-        hasLengthInput && block.getFieldValue('LENGTH') === 'LONG_MOVE_LENGTH'
-          ? 100
-          : 50;
-      return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        const dir = `${type}${cardinals[direction].apiFunction}`;
+        const distance =
+          hasLengthInput && block.getFieldValue('LENGTH') === 'LONG_MOVE_LENGTH'
+            ? 100
+            : 50;
+        return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+      },
     },
   }) as BlockDefinition;
 
@@ -161,7 +163,9 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     tooltip: '',
     helpUrl: '',
     message0: 'when run',
-    generator: () => '\n',
+    generator: {
+      javascript() {return '\n';},
+    },
     nextStatement: true,
   },
   {
@@ -187,12 +191,14 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         check: 'Number',
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      const distance =
-        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
-      return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        // Generate JavaScript for moving forward/backward
+        const dir = block.getFieldValue('DIR');
+        const distance =
+          javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
+        return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -213,10 +219,12 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         ],
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const pen = block.getFieldValue('PEN');
-      return `Artist.${pen}('block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        // Generate JavaScript for moving forward/backward
+        const pen = block.getFieldValue('PEN');
+        return `Artist.${pen}('block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -234,11 +242,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         check: 'Number',
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const value =
-        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
-      return `Artist.globalAlpha(${value}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        // Generate JavaScript for moving forward/backward
+        const value =
+          javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
+        return `Artist.globalAlpha(${value}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -264,12 +274,14 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         check: 'Number',
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for jumping forward/backward
-      const dir = block.getFieldValue('DIR');
-      const distance =
-        javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
-      return `Artist.${dir}(${distance || '0'}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        // Generate JavaScript for jumping forward/backward
+        const dir = block.getFieldValue('DIR');
+        const distance =
+          javascriptGenerator.valueToCode(block, 'VALUE', Order.NONE) || '0';
+        return `Artist.${dir}(${distance || '0'}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -294,10 +306,12 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         value: 0,
       },
     ],
-    generator: (block: Blockly.Block) => {
-      const xParam = block.getFieldValue('XPOS');
-      const yParam = block.getFieldValue('YPOS');
-      return `Artist.jumpToXY(${xParam}, ${yParam}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        const xParam = block.getFieldValue('XPOS');
+        const yParam = block.getFieldValue('YPOS');
+        return `Artist.jumpToXY(${xParam}, ${yParam}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   ...['draw_move_by_constant', 'draw_move_by_constant_dropdown'].map(
@@ -327,11 +341,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
             value: 100,
           },
         ],
-        generator: (block: Blockly.Block) => {
-          // Generate JavaScript for moving forward/backward
-          const dir = block.getFieldValue('DIR');
-          const distance = block.getFieldValue('VALUE');
-          return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+        generator: {
+          javascript(block: Blockly.Block) {
+            // Generate JavaScript for moving forward/backward
+            const dir = block.getFieldValue('DIR');
+            const distance = block.getFieldValue('VALUE');
+            return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+          },
         },
       }) as BlockDefinition,
   ),
@@ -360,11 +376,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         value: 90,
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      const angle = block.getFieldValue('VALUE');
-      return `Artist.${dir}(${angle}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        // Generate JavaScript for moving forward/backward
+        const dir = block.getFieldValue('DIR');
+        const angle = block.getFieldValue('VALUE');
+        return `Artist.${dir}(${angle}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -392,11 +410,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         value: 90,
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      const angle = block.getFieldValue('VALUE');
-      return `Artist.${dir}(${angle}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        // Generate JavaScript for moving forward/backward
+        const dir = block.getFieldValue('DIR');
+        const angle = block.getFieldValue('VALUE');
+        return `Artist.${dir}(${angle}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   ...['jump_by_constant', 'jump_by_constant_dropdown'].map(
@@ -425,11 +445,13 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
             value: 100,
           },
         ],
-        generator: (block: Blockly.Block) => {
-          // Generate JavaScript for moving forward/backward
-          const dir = block.getFieldValue('DIR');
-          const distance = block.getFieldValue('VALUE');
-          return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+        generator: {
+          javascript(block: Blockly.Block) {
+            // Generate JavaScript for moving forward/backward
+            const dir = block.getFieldValue('DIR');
+            const distance = block.getFieldValue('VALUE');
+            return `Artist.${dir}(${distance}, 'block_id_${block.id}');\n`;
+          },
         },
       }) as BlockDefinition,
   ),
@@ -448,12 +470,14 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         check: 'Colour',
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for setting color
-      const colour =
-        javascriptGenerator.valueToCode(block, 'COLOUR', Order.NONE) ||
-        "'#000'";
-      return `Artist.penColour(${colour}, 'block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        // Generate JavaScript for setting color
+        const colour =
+          javascriptGenerator.valueToCode(block, 'COLOUR', Order.NONE) ||
+          "'#000'";
+        return `Artist.penColour(${colour}, 'block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -482,7 +506,11 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
         ],
       },
     ],
-    generator: javascriptGenerator.forBlock.math_number,
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        return javascriptGenerator.forBlock.math_number(block, javascriptGenerator);
+      },
+    },
   },
   {
     type: 'controls_repeat_dropdown',
@@ -515,7 +543,11 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     ],
     nextStatement: true,
     previousStatement: true,
-    generator: javascriptGenerator.forBlock.controls_repeat,
+    generator: {
+      javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+        return javascriptGenerator.forBlock.controls_repeat(block, javascriptGenerator);
+      },
+    },
   },
   ...['draw_width', 'draw_width_inline'].map(
     type =>
@@ -541,14 +573,16 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
                 check: 'Number',
               },
         ],
-        generator: (block: Blockly.Block) => {
-          // Generate JavaScript for setting pen width
-          const width =
-            type === 'draw_width_inline'
-              ? block.getFieldValue('WIDTH')
-              : javascriptGenerator.valueToCode(block, 'WIDTH', Order.NONE) ||
-                '1';
-          return `Artist.penWidth(${width}, 'block_id_${block.id}');\n`;
+        generator: {
+          javascript(block: Blockly.Block, javascriptGenerator: JavascriptGenerator) {
+            // Generate JavaScript for setting pen width
+            const width =
+              type === 'draw_width_inline'
+                ? block.getFieldValue('WIDTH')
+                : javascriptGenerator.valueToCode(block, 'WIDTH', Order.NONE) ||
+                  '1';
+            return `Artist.penWidth(${width}, 'block_id_${block.id}');\n`;
+          },
         },
       }) as BlockDefinition,
   ),
