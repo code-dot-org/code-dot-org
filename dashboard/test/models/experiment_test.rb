@@ -27,9 +27,11 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "user based experiment at 50 percent is enabled for only some users" do
+    next_round_user_id = get_next_round_user_id
+
     experiment = create :user_based_experiment, percentage: 50
-    user_on = build :user, id: 1025 + experiment.min_user_id
-    user_off = build :user, id: 1075 + experiment.min_user_id
+    user_on = build :user, id: next_round_user_id + 25 + experiment.min_user_id
+    user_off = build :user, id: next_round_user_id + 75 + experiment.min_user_id
 
     assert_equal [experiment], Experiment.get_all_enabled(user: user_on)
     assert Experiment.enabled?(user: user_on, experiment_name: experiment.name)
@@ -63,14 +65,16 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "teacher based experiment at 50 percent is enabled for only some users" do
+    next_round_user_id = get_next_round_user_id
+
     experiment = create :teacher_based_experiment, percentage: 50, script: @script
     student_on = create :student
-    teacher_on = create :teacher, id: 1025 + experiment.min_user_id
+    teacher_on = create :teacher, id: next_round_user_id + 25 + experiment.min_user_id
     section_on = create :section, teacher: teacher_on
     create :follower, section: section_on, student_user: student_on
 
     student_off = create :student
-    teacher_off = create :teacher, id: 1075 + experiment.min_user_id
+    teacher_off = create :teacher, id: next_round_user_id + 75 + experiment.min_user_id
     section_off = create :section, teacher: teacher_off
     create :follower, section: section_off, student_user: student_off
 
@@ -251,5 +255,11 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_nil Experiment.get_editor_experiment(teacher)
     assert_equal 'platformization-partners', Experiment.get_editor_experiment(platformization_partner)
     assert_nil Experiment.get_editor_experiment(levelbuilder)
+  end
+
+  # returns the next unused user id that is a multiple of 100
+  private def get_next_round_user_id
+    last_user_id = User.maximum(:id) || 0
+    (last_user_id % 100) + 100
   end
 end
