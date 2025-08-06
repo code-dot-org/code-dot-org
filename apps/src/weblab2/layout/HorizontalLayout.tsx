@@ -1,10 +1,10 @@
-import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React from 'react';
 
+import {HTMLPreview2} from '@cdo/apps/codebridge/FilePreview/HTMLPreview2';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -90,7 +90,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             style={{height: rightBottomPanelHeight}}
             className={panelClassName}
           >
-            <FilePreview />
+            <HTMLPreview2 />
           </div>
         </div>
       </div>

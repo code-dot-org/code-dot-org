@@ -1,10 +1,10 @@
-import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React from 'react';
 
+import {HTMLPreview2} from '@cdo/apps/codebridge/FilePreview/HTMLPreview2';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 
@@ -81,7 +81,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           style={{width: rightPanelWidth}}
           className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
         >
-          <FilePreview />
+          <HTMLPreview2 />
         </div>
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}

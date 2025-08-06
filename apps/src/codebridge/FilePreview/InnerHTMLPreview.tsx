@@ -1,0 +1,213 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {getFolderPath} from '@codebridge/utils';
+import React, {useCallback, useEffect, useRef} from 'react';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+
+import {IframeMessageType} from './constants';
+
+import moduleStyles from './styles/inner-html-preview.module.scss';
+const NOT_FOUND_FILE = 'NOT_FOUND';
+
+// TODO: better error handling.
+const InnerHTMLPreview = () => {
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [source, setSource] = React.useState<MultiFileSource | undefined>(
+    undefined
+  );
+  const [blobUrl, setBlobUrl] = React.useState<string | undefined>(undefined);
+  const [filesToBlobs, setFilesToBlobs] = React.useState<
+    Record<string, string>
+  >({});
+  const [currentFile, setCurrentFile] = React.useState<string | undefined>(
+    undefined
+  );
+
+  const handleMessage = (event: MessageEvent) => {
+    // TODO: validate origin per-environment
+    // if (event.origin !== 'localhost-studio.code.org') {
+    //   return;
+    // }
+    const {data} = event;
+    if (data.type === IframeMessageType.SET_SOURCE) {
+      if (!data.source) {
+        // Clear the preview if no source is provided. We are likely changing levels.
+        setFilesToBlobs({});
+        setBlobUrl(undefined);
+      } else {
+        setSource(data.source);
+      }
+      console.log('Received source:', data.source);
+    } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
+      console.log('got change file message:', data.fileName);
+      setCurrentFile(data.fileName);
+      // Tell the parent that we are changing the file, as this came from a link click.
+      window.parent.postMessage(
+        {type: IframeMessageType.FILE_UPDATED, fileName: data.fileName},
+        '*'
+      );
+    } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
+      setCurrentFile(data.fileName);
+      // We don't need to update the parent, because they initiated this change.
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('message', handleMessage);
+    // Notify parent that we're ready to receive messages
+    // TODO: use a more specific origin check
+    window.parent.postMessage({type: IframeMessageType.IFRAME_READY}, '*');
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
+
+  function getFullyQualifiedFileName(
+    fileName: string,
+    folderId: string,
+    folders: MultiFileSource['folders']
+  ) {
+    if (folderId === DEFAULT_FOLDER_ID) {
+      return fileName; // root folder, no path needed
+    }
+    const fullPath = getFolderPath(folderId, folders) + '/' + fileName;
+    return fullPath.substring(1); // remove leading slash
+  }
+
+  useEffect(() => {
+    if (currentFile && filesToBlobs) {
+      const newBlobUrl = filesToBlobs[currentFile];
+      if (newBlobUrl) {
+        setBlobUrl(newBlobUrl);
+      } else {
+        // TODO: have some sort of error case to user? In case they are trying to href to a file that doesn't exist.
+        console.error(`current file ${currentFile} not found in source files`);
+        setBlobUrl(NOT_FOUND_FILE);
+      }
+    }
+  }, [currentFile, filesToBlobs]);
+
+  // TODOs:
+  // support other file types (images, etc.)
+  // more robust file paths--do we need to handle paths with leading '/' or '../'?
+  // Can we be smarter about not regenerating blob URLs if the file hasn't changed?
+  // Do we need to redirect console logs from the iframe to the parent window?
+  // We may need to add some helper script that we always run in the iframe to handle this.
+  // We can potentially override window.console.log in the iframe to post messages to the parent window.
+  useEffect(() => {
+    if (source) {
+      const files: Record<string, string> = {};
+      // Handle non-HTML files. These are just converted to Blobs.
+      Object.values(source.files).forEach(file => {
+        if (file.language !== 'html') {
+          let fileType = '';
+          if (file.language === 'css' || file.language === 'csv') {
+            fileType = `text/${file.language}`;
+          } else if (file.language === 'js') {
+            fileType = 'text/javascript';
+          } else {
+            // TODO: handle other file types, like images
+            fileType = file.language;
+          }
+          const blob = new Blob([file.contents], {type: fileType});
+          const fullFileName = getFullyQualifiedFileName(
+            file.name,
+            file.folderId,
+            source.folders
+          );
+          files[fullFileName] = URL.createObjectURL(blob);
+        }
+      });
+      // Handle HTML files. We replace src links to non-html files with blob URLs.
+      // We update links to other files with a click handler that will post a message to us
+      // to change the file.
+      const htmlFiles = Object.values(source.files).filter(
+        file => file.language === 'html'
+      );
+      htmlFiles.forEach(file => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(file.contents, 'text/html');
+        // Remove any existing CSP meta tags, as we need to set our own.
+        const existingCspTags = doc.querySelectorAll(
+          'meta[http-equiv="Content-Security-Policy"]'
+        );
+        existingCspTags.forEach(tag => tag.remove());
+
+        const metaTag = doc.createElement('meta');
+        metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
+        // TODO: use the same list for allowed requests as xhr_proxy_controller.rb.
+        metaTag.setAttribute(
+          'content',
+          "connect-src 'self' http://numbersapi.com"
+        );
+
+        const head = doc.querySelector('head');
+        if (head) {
+          head.appendChild(metaTag);
+        }
+        const links = doc.querySelectorAll(
+          'link[rel="stylesheet"], script[src]'
+        );
+        links.forEach(link => {
+          const src = link.getAttribute('src') || link.getAttribute('href');
+          if (src && files[src]) {
+            const blobUrl = files[src];
+            if (link.tagName.toLowerCase() === 'link') {
+              link.setAttribute('href', blobUrl);
+            } else {
+              link.setAttribute('src', blobUrl);
+            }
+          }
+        });
+        const fileLinks: NodeListOf<HTMLAnchorElement> =
+          doc.querySelectorAll('a[href]');
+        fileLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href?.endsWith('.html')) {
+            link.setAttribute(
+              'onclick',
+              `event.preventDefault();
+              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '*');
+              return false;
+            `
+            );
+          }
+        });
+        const updatedContents = doc.documentElement.outerHTML;
+        const blob = new Blob([updatedContents], {type: 'text/html'});
+        const fullFileName = getFullyQualifiedFileName(
+          file.name,
+          file.folderId,
+          source.folders
+        );
+        files[fullFileName] = URL.createObjectURL(blob);
+      });
+      setFilesToBlobs(files);
+    }
+  }, [source]);
+
+  const getPreview = useCallback(() => {
+    if (blobUrl === NOT_FOUND_FILE) {
+      return <div>Page not found</div>;
+    } else if (blobUrl) {
+      return (
+        <iframe
+          ref={iframeRef}
+          sandbox="allow-scripts allow-same-origin"
+          allow="self"
+          title="Inner HTML Preview"
+          id="inner-preview"
+          src={blobUrl}
+          className={moduleStyles.fileIframe}
+        />
+      );
+    } else {
+      return <div>Loading...</div>;
+    }
+  }, [blobUrl]);
+
+  return getPreview();
+};
+
+export default InnerHTMLPreview;
