@@ -17,6 +17,7 @@ class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
   attr_reader :dry_run, :deleted_since, :limit
+  attr_accessor :excluded_user_ids
   alias :dry_run? :dry_run
 
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
@@ -44,11 +45,20 @@ class ExpiredDeletedAccountPiiScrubber
     @limit = limit || ACCOUNT_SCRUB_LIMIT
     raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
 
+    # Users that we don't want to include in paged batches, such as those that encountered an error
+    # and need to be manually reviewed.
+    @excluded_user_ids = []
+
     reset_metrics
   end
 
   def call
     reset_metrics
+
+    total_size = accounts_to_scrub.size
+    if total_size > limit
+      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_size} exceeds limit of #{limit}"
+    end
 
     # Process individual batches in a loop to avoid issues with find_each, which imposes
     # an order by id, causing an inefficient scan on the id index. Order does not matter
@@ -60,6 +70,7 @@ class ExpiredDeletedAccountPiiScrubber
         self.num_accounts_scrubbed += 1
       rescue StandardError => exception
         self.num_errors += 1
+        excluded_user_ids << user.id
         Honeybadger.notify(exception, context: {user_id: user.id})
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
       end
@@ -78,12 +89,7 @@ class ExpiredDeletedAccountPiiScrubber
   end
 
   def accounts_to_scrub
-    accounts = Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since)
-    total_accounts = accounts.count
-    if total_accounts > limit
-      raise SafetyConstraintViolation, "Too many accounts to scrub: #{total_accounts} exceeds limit of #{limit}"
-    end
-    accounts
+    Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: excluded_user_ids)
   end
 
   def summary
