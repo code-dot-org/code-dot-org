@@ -99,11 +99,6 @@ class Unit < ApplicationRecord
           },
           {
             unit_group_units: :unit_group
-          },
-          {
-            course_version: {
-              course_offering: :course_versions
-            }
           }
         ]
       )
