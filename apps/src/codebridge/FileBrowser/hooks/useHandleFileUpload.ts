@@ -44,6 +44,7 @@ export const useHandleFileUpload = (
         return;
       }
 
+      // this is what actually updates the project files (in Redux and triggering save to S3)
       dispatch(createNewFileThunk({fileName, folderId, contents}));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,

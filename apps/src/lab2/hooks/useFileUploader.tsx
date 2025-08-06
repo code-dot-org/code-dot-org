@@ -1,6 +1,7 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -74,6 +75,7 @@ const isValidMimeType = (
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
                                         If the function is not provided, then no analytics will be tracked
+ * @property props.multiple - Optionally disable multiple file uploads. Defaults to true.
  *
  * @returns An object containing the following properties:
  *
@@ -94,7 +96,7 @@ export const useFileUploader = ({
   const callbackArgs = useRef<unknown>();
 
   const changeHandler = useCallback(() => {
-    Array.from(inputRef.current?.files || []).forEach(file => {
+    Array.from(inputRef.current?.files || []).forEach(async file => {
       const fileNameErrorMessage = validateFileName(file.name);
       if (fileNameErrorMessage) {
         errorCallback(fileNameErrorMessage, callbackArgs.current);
@@ -111,6 +113,20 @@ export const useFileUploader = ({
           codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
         );
+        return;
+      }
+      // NOTE: this is multifile, API supports one at a time?
+      // I feel like we have to mess with the internals (this is lab2 code)
+      // because we're talking about changing the core way that files are saved to a project.
+      // This currently just returns file contents as a string, which is not what we want.
+      // We want to write the file to S3 AND store the url somewhere.
+      if (!file.type.match(/^text/)) {
+        // If the file is not a text file, upload to S3
+        // await HttpClient.put(buildAssetUrl(asset), file);
+        // we don't have channelId here
+        const url = `/v3/assets/3H-AyPf3huzbPZ9mTPK4qw/${file.name}`;
+        await HttpClient.put(url, file);
+        callback(file.name, url, callbackArgs.current);
         return;
       }
 
