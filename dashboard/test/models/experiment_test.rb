@@ -282,7 +282,7 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   private def get_next_round_id(max_id)
-    last_id = max_id.to_i || 0
+    last_id = max_id.to_i
     ((last_id / 100) * 100) + 100
   end
 end
