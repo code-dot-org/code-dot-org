@@ -16,14 +16,6 @@ scripts_map = {
   '20-hour' => '20-hour',
   'ECSPD' => 'ECSPD',
   'allthethings' => 'allthethings',
-  'coursea-2017' => 'coursea-2017',
-  'courseb-2017' => 'courseb-2017',
-  'coursec-2017' => 'coursec-2017',
-  'coursed-2017' => 'coursed-2017',
-  'coursee-2017' => 'coursee-2017',
-  'coursef-2017' => 'coursef-2017',
-  'express-2017' => 'express-2017',
-  'pre-express-2017' => 'pre-express-2017'
 }
 
 @course_offerings = {}
