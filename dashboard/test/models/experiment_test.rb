@@ -257,9 +257,32 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_nil Experiment.get_editor_experiment(levelbuilder)
   end
 
+  test 'get_next_round_id' do
+    assert_equal 100, get_next_round_id(nil)
+    assert_equal 100, get_next_round_id(0)
+    assert_equal 100, get_next_round_id(1)
+
+    assert_equal 100, get_next_round_id(50)
+    assert_equal 100, get_next_round_id(50.0)
+    assert_equal 100, get_next_round_id('50')
+
+    assert_equal 100, get_next_round_id(99)
+    assert_equal 200, get_next_round_id(100)
+    assert_equal 200, get_next_round_id(101)
+    assert_equal 200, get_next_round_id(199)
+    assert_equal 300, get_next_round_id(200)
+    assert_equal 300, get_next_round_id(201)
+    assert_equal 1000, get_next_round_id(901)
+  end
+
   # returns the next unused user id that is a multiple of 100
   private def get_next_round_user_id
-    last_user_id = User.maximum(:id) || 0
-    (last_user_id % 100) + 100
+    max_id = User.maximum(:id)
+    get_next_round_id(max_id)
+  end
+
+  private def get_next_round_id(max_id)
+    last_id = max_id.to_i || 0
+    ((last_id / 100) * 100) + 100
   end
 end
