@@ -22,8 +22,8 @@ const CopyableCodeBlock: React.FunctionComponent = (
    * Change the aria-live message every other time the overlay becomes visible.
    * This ensures that screenreaders (tested across browser w/ VoiceOver on Mac)
    * will read the message each time (if the same message is displayed it may
-   * not be read).  We add an extra exclamation point (i18n.copied already has one)
-   * as adding an extra space is not enough to trigger a re-read.
+   * not be read).  We add an extra zero width space (i18n.copied already has one)
+   * as adding an extra normal space is not enough to trigger a re-read.
    **/
   useEffect(() => {
     if (visible) {
@@ -31,7 +31,8 @@ const CopyableCodeBlock: React.FunctionComponent = (
         if (previousCount % 2 === 1) {
           setAriaCopyMessage(i18n.copied());
         } else {
-          setAriaCopyMessage(i18n.copied() + '!');
+          //Add a zero width space.
+          setAriaCopyMessage(i18n.copied() + '\u200B');
         }
         return previousCount + 1;
       });
