@@ -6,12 +6,12 @@ export const CardContentfulComponentDefinition: ComponentDefinition = {
   name: 'Card',
   category: '04: Layout Building Blocks',
   thumbnailUrl:
-    'https://contentful-images.code.org/90t6bu6vlf76/AHRiLWYa6NruVlsM61hbn/8dc5d6ba056e81df347445738fb8cd5c/component_actionblock_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/5GISjBzkhPQIXj9i7Gc7yg/6af2043e1ed4e57a1d1f3dd5a33e0d30/component_card_thumbnail.png',
   tooltip: {
     description:
-      'A flexible card for highlighting key content. Supports text, images, and a primary and secondary CTA.',
+      'A simple flexible card for highlighting key content. Supports text, images, and a primary and secondary CTA.',
     imageUrl:
-      'https://contentful-images.code.org/90t6bu6vlf76/5cjcKrwgMCHaJxEK48xN2B/75599dc0fab6fb3a0cae8c2fb963827b/component_actionblock_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/5H922jIBGENGq8KNoQZsZ4/6885497ab9854c6cf53e0922a075607c/component_card_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
