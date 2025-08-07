@@ -84,6 +84,9 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
       const resolvedImage = inMemoryEntities.maybeResolveLink(
         image,
       ) as ExperienceAsset;
+      const resolvedPersonalLink = inMemoryEntities.maybeResolveLink(
+        personalLink,
+      ) as LinkEntry;
 
       return {
         id: name,
@@ -125,11 +128,11 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                 {bio}
               </Typography>
             )}
-            {personalLink && (
+            {resolvedPersonalLink && (
               <Box sx={styles.personalLink}>
                 <Link
                   size="s"
-                  href={personalLink?.fields?.primaryTarget}
+                  href={resolvedPersonalLink?.fields?.primaryTarget}
                   isLinkExternal
                   removeMarginBottom
                 >
