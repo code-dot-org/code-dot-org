@@ -48,6 +48,7 @@
       &.showOverlay {
         opacity: 1;
         transition: none;
+        pointer-events: unset;
       }
 
       >.codeContentOverlayBackground {
