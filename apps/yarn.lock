@@ -1347,6 +1347,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/parser@npm:^7.25.6":
+  version: 7.28.0
+  resolution: "@babel/parser@npm:7.28.0"
+  dependencies:
+    "@babel/types": "npm:^7.28.0"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 10/2c14a0d2600bae9ab81924df0a85bbd34e427caa099c260743f7c6c12b2042e743e776043a0d1a2573229ae648f7e66a80cfb26fc27e2a9eb59b55932d44c817
+  languageName: node
+  linkType: hard
+
 "@babel/parser@npm:^7.25.9, @babel/parser@npm:^7.26.0, @babel/parser@npm:^7.26.2":
   version: 7.26.2
   resolution: "@babel/parser@npm:7.26.2"
@@ -3489,6 +3500,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/standalone@npm:^7.28.2":
+  version: 7.28.2
+  resolution: "@babel/standalone@npm:7.28.2"
+  checksum: 10/2924e8842827ae2cf01125dfecada47d282f478e4e84d3391c3bd943a1c6c71eab5d79bb1b6a7246953c7b58e74996306c60fb18fecc0e21f15edb82f4050775
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15":
   version: 7.23.9
   resolution: "@babel/template@npm:7.23.9"
@@ -3720,6 +3738,16 @@ __metadata:
     "@babel/helper-validator-identifier": "npm:^7.24.6"
     to-fast-properties: "npm:^2.0.0"
   checksum: 10/34552539cdc740513650cb3c7754f77a55cc5253dff9d45afd52292d366eb1c099939d5db066e458abcf4c9a7dedfe43467445f9c2208b3cb64866762dee5e9d
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^7.25.6, @babel/types@npm:^7.28.0, @babel/types@npm:^7.28.2":
+  version: 7.28.2
+  resolution: "@babel/types@npm:7.28.2"
+  dependencies:
+    "@babel/helper-string-parser": "npm:^7.27.1"
+    "@babel/helper-validator-identifier": "npm:^7.27.1"
+  checksum: 10/a8de404a2e3109651f346d892dc020ce2c82046068f4ce24de7f487738dfbfa7bd716b35f1dcd6d6c32dde96208dc74a56b7f56a2c0bcb5af0ddc56cbee13533
   languageName: node
   linkType: hard
 
@@ -7808,7 +7836,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.18.0":
+"@types/babel__core@npm:^7.1.14, @types/babel__core@npm:^7.18.0, @types/babel__core@npm:^7.20.5":
   version: 7.20.5
   resolution: "@types/babel__core@npm:7.20.5"
   dependencies:
@@ -7830,7 +7858,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel__template@npm:*":
+"@types/babel__generator@npm:^7.6.8":
+  version: 7.27.0
+  resolution: "@types/babel__generator@npm:7.27.0"
+  dependencies:
+    "@babel/types": "npm:^7.0.0"
+  checksum: 10/f572e67a9a39397664350a4437d8a7fbd34acc83ff4887a8cf08349e39f8aeb5ad2f70fb78a0a0a23a280affe3a5f4c25f50966abdce292bcf31237af1c27b1a
+  languageName: node
+  linkType: hard
+
+"@types/babel__standalone@npm:^7":
+  version: 7.1.9
+  resolution: "@types/babel__standalone@npm:7.1.9"
+  dependencies:
+    "@babel/parser": "npm:^7.25.6"
+    "@babel/types": "npm:^7.25.6"
+    "@types/babel__core": "npm:^7.20.5"
+    "@types/babel__generator": "npm:^7.6.8"
+    "@types/babel__template": "npm:^7.4.4"
+    "@types/babel__traverse": "npm:^7.20.6"
+  checksum: 10/ed22e64e4c14351eec992c04da2b64b915cdeecbe5c8c1ecbcf5af3c833e8a899718be8f5c10d6705de71c2c808f4ddcd64d01bbd08a83c65a7e289b08a0fb80
+  languageName: node
+  linkType: hard
+
+"@types/babel__template@npm:*, @types/babel__template@npm:^7.4.4":
   version: 7.4.4
   resolution: "@types/babel__template@npm:7.4.4"
   dependencies:
@@ -7855,6 +7906,15 @@ __metadata:
   dependencies:
     "@babel/types": "npm:^7.20.7"
   checksum: 10/63d13a3789aa1e783b87a8b03d9fb2c2c90078de7782422feff1631b8c2a25db626e63a63ac5a1465d47359201c73069dacb4b52149d17c568187625da3064ae
+  languageName: node
+  linkType: hard
+
+"@types/babel__traverse@npm:^7.20.6":
+  version: 7.28.0
+  resolution: "@types/babel__traverse@npm:7.28.0"
+  dependencies:
+    "@babel/types": "npm:^7.28.2"
+  checksum: 10/371c5e1b40399ef17570e630b2943617b84fafde2860a56f0ebc113d8edb1d0534ade0175af89eda1ae35160903c33057ed42457e165d4aa287fedab2c82abcf
   languageName: node
   linkType: hard
 
@@ -10854,6 +10914,7 @@ __metadata:
     "@babel/polyfill": "npm:^7.12.1"
     "@babel/preset-env": "npm:^7.26.0"
     "@babel/preset-react": "npm:^7.25.9"
+    "@babel/standalone": "npm:^7.28.2"
     "@blockly/block-shareable-procedures": "npm:^6.0.0"
     "@blockly/field-bitmap": "npm:^6.0.0"
     "@blockly/field-colour": "npm:^6.0.0"
@@ -10929,6 +10990,7 @@ __metadata:
     "@testing-library/react": "npm:^12.1.5"
     "@testing-library/react-hooks": "npm:^8.0.1"
     "@testing-library/user-event": "npm:^14.4.3"
+    "@types/babel__standalone": "npm:^7"
     "@types/chai": "npm:^4.3.5"
     "@types/htmlhint": "npm:^1.1.5"
     "@types/jest": "npm:^29.5.12"

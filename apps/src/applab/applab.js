@@ -4,6 +4,7 @@
  * Copyright 2014-2015 Code.org
  *
  */
+import * as Babel from '@babel/standalone';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -1214,6 +1215,8 @@ Applab.execute = function () {
       '\n';
   }
   codeWhenRun += studioApp().getCode();
+  codeWhenRun = Babel.transform(codeWhenRun, {presets: ['env']}).code;
+  console.log({codeWhenRun});
   Applab.currentExecutionLog = [];
 
   if (typeof codeWhenRun === 'string') {
