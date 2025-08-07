@@ -630,7 +630,7 @@ class UnitGroup < ApplicationRecord
   # rubocop:enable Naming/PredicateName
 
   def single_unit_course?
-    default_unit_group_units.one?
+    cached.default_unit_group_units.one?
   end
 
   def first_unit
