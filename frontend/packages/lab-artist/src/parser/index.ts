@@ -28,6 +28,7 @@ export const sanitizeJSON: (data: string) => string = data =>
  * Parses a level config to produce the level data we need to supply to
  * the level component.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function load(config: {[key: string]: any}, xml?: Document, parser?: DOMParser): ArtistData {
   const parseXml = (root: HTMLElement | undefined) =>
     root?.querySelector('xml > *') ? root?.innerHTML?.trim() : undefined;

@@ -15,7 +15,7 @@ import BlocklyLevel, {
   BlocklyLevelEnvironment,
   BlocklyLevelProps,
 } from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/lab-blockly';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import blocks from '../blocks';
 import Craft from '../Craft';
@@ -45,7 +45,7 @@ const defaultSkins: Skins = {
 };
 
 export interface CraftLevelProps extends BlocklyLevelProps {
-  level: LevelData<CraftData>;
+  levelData: LevelData<CraftData>;
   skins?: {
     [key: string]: Skin;
   };
@@ -55,7 +55,7 @@ export interface CraftLevelProps extends BlocklyLevelProps {
 }
 
 const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
-  level,
+  levelData,
   customBlocks,
   skins,
   theme,
@@ -93,7 +93,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
   // Pull out the skin asset paths
   const skin = useMemo(
     () => (skins || defaultSkins)['simple'],
-    [level],
+    [levelData],
   );
 
   // Determine all blocks
@@ -101,7 +101,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
     () => [...blocks, ...(customBlocks || [])],
     [blocks, customBlocks],
   );
-  console.log(level);
+  console.log(levelData);
 
   // Set up the driver
   useEffect(() => {
@@ -112,7 +112,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
       // Create our Craft driver
       console.log('new craft', container.current);
       craft.current = new Craft({
-        levelData: level?.subData || levels.adventurer01,
+        levelData: levelData?.subData || levels.adventurer01,
         environment: environment.current,
         container: container.current,
       });
@@ -136,7 +136,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
       console.log('UNINIT THE MAZE LEVEL');
       craft.current?.uninitialize();
     };
-  }, [container, level]);
+  }, [container, levelData]);
 
   // When blockly is loaded and initialized
   const onInject = useCallback(() => {
@@ -147,7 +147,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
   // Ensure a 'when_run' block exists... as some levels omit it for some reason
   const startBlocks = useMemo(() => {
     // Deep duplicate the block data
-    const initial = level.blocklyData?.startBlocks || DefaultStartBlocks;
+    const initial = levelData.subData?.startBlocks || DefaultStartBlocks;
     const data = {...initial};
     data.blocks ||= {};
     data.blocks = {...data.blocks};
@@ -157,11 +157,11 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
       data.blocks.blocks.unshift({type: 'when_run'});
     }
     return data;
-  }, [level]);
+  }, [levelData]);
 
   return (
     <BlocklyLevel
-      level={level}
+      levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
       renderer={renderer || ThrasosRenderer}

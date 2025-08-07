@@ -29,6 +29,8 @@ const levelMap: {
   Karel: dynamic(() => import('@code-dot-org/lab-karel'), {ssr: false, loading: () => <Spinner />}),
   /** Video player */
   StandaloneVideo: dynamic(() => import('@code-dot-org/lab-standalone-video'), {ssr: false, loading: () => <Spinner />}),
+  /** Minecraft levels */
+  Craft: dynamic(() => import('@code-dot-org/lab-craft'), {ssr: false, loading: () => <Spinner />}),
 };
 
 import moduleStyles from './level.module.scss';

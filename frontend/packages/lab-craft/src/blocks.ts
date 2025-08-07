@@ -10,7 +10,9 @@ const blocks: BlockDefinition[] = [
     tooltip: '',
     helpUrl: '',
     message0: 'when run',
-    generator: () => '\n',
+    generator: {
+      javascript: () => '\n',
+    },
     nextStatement: true,
   },
   {
@@ -32,7 +34,9 @@ const blocks: BlockDefinition[] = [
         ],
       },
     ],
-    generator: () => '\n',
+    generator: {
+      javascript: () => '\n',
+    },
   },
 ];
 

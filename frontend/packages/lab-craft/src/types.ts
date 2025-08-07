@@ -1,3 +1,5 @@
+import {BlocklyData} from '@code-dot-org/lab-blockly';
+
 import type LevelModel from './level/LevelModel';
 import type Position from './Position';
 
@@ -20,7 +22,7 @@ export interface VerificationAPI {
 /**
  * Craft level data.
  */
-export interface CraftData {
+export interface CraftData extends BlocklyData {
   /** Instructions for this level */
   instructions?: string;
   /** The size of the map */
