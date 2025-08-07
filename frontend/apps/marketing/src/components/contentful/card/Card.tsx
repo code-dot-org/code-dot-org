@@ -1,4 +1,3 @@
-'use client';
 import CardMui from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,7 +8,6 @@ import {HTMLAttributes, useMemo} from 'react';
 import Button, {ButtonProps} from '@/components/contentful/button';
 import Overline from '@/components/contentful/overline';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
-import theme from '@/themes/csforall';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 
 type SharedButtonProps = ButtonProps & LinkEntry;
@@ -32,35 +30,6 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /** Card custom className */
   className?: string;
 }
-
-const styles = {
-  card: {
-    border: '1px solid',
-    boxShadow: 0,
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    containerName: 'cardContainer',
-    containerType: 'inline-size',
-  },
-  content: {
-    paddingTop: theme.spacing(4),
-    paddingInline: theme.spacing(5),
-  },
-  actions: {
-    padding: theme.spacing(5),
-    paddingTop: theme.spacing(2),
-    gap: theme.spacing(2),
-    marginTop: 'auto',
-    '@container cardContainer (width < 700px)': {
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      '& a': {
-        width: '100%',
-      },
-    },
-  },
-};
 
 const Card: React.FC<CardProps> = ({
   title,
@@ -89,7 +58,7 @@ const Card: React.FC<CardProps> = ({
   console.log(primaryButton, secondaryButton);
 
   return (
-    <CardMui className={className} raised={false} sx={styles.card}>
+    <CardMui className={className} raised={false}>
       {imageSrc && (
         <CardMedia
           src={imageSource}
@@ -99,7 +68,7 @@ const Card: React.FC<CardProps> = ({
           sx={{height: setImageHeight}}
         />
       )}
-      <CardContent sx={styles.content}>
+      <CardContent>
         {overline && (
           <Overline color="primary" size="s" removeMarginBottom={false}>
             {overline}
@@ -110,7 +79,7 @@ const Card: React.FC<CardProps> = ({
         </Typography>
         <Typography variant="body3">{description}</Typography>
       </CardContent>
-      <CardActions sx={styles.actions} disableSpacing>
+      <CardActions disableSpacing>
         {primaryButton && (
           <Button
             {...primaryButton}
