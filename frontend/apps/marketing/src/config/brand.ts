@@ -55,6 +55,7 @@ function getBrandFromExactHostname(hostname: string | null): Brand | undefined {
     case 'hourofcode.com':
       return Brand.HOUR_OF_CODE;
     case 'csforall.org':
+    case 'cyberchallenge.tech':
       return Brand.CS_FOR_ALL;
     default:
       return undefined;
