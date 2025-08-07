@@ -29,6 +29,13 @@ module User::AiAccessible
     permission?(UserPermission::AI_TUTOR_ACCESS) && levelbuilder?
   end
 
+  # TODO-AITUTOR: Remove this method when cleaning up tutor code.
+  def can_view_student_ai_chat_messages?
+    ai_tutor_courses = ['programming-fundamentals-aitutor-2024']
+    (sections.any?(&:assigned_csa?) || sections.any? {|s| ai_tutor_courses.include?(s.unit_group&.name)}) &&
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
   def teacher_can_access_ai_chat?
     teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
   end
