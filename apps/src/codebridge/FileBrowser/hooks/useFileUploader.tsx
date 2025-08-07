@@ -14,7 +14,10 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
+type UseFileUploaderArgs = Omit<
+  FileUploaderProps,
+  'sendAnalyticsEvent' | 'channelId'
+> & {
   validFileTypes?: string[];
 };
 
@@ -28,9 +31,8 @@ export const useFileUploader = (
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
-  const channelId = useAppSelector(
-    state => state.lab.channel && state.lab.channel.id
-  );
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {

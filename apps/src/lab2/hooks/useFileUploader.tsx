@@ -19,6 +19,7 @@ export type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  channelId: string;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
@@ -26,7 +27,6 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  channelId?: string;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -91,10 +91,10 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  channelId,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
-  channelId = '',
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
@@ -159,9 +159,8 @@ export const useFileUploader = ({
         };
       } else {
         try {
-          // Better error handling?
           if (!channelId) {
-            return;
+            throw new Error('channelId required for file upload');
           }
 
           const url = `/v3/assets/${channelId}/${createUuid()}`;
@@ -173,7 +172,6 @@ export const useFileUploader = ({
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
           if (error instanceof Error) {
-            // what to do in error case?
             handleError(error);
           }
         }
