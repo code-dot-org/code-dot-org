@@ -62,3 +62,25 @@ export const CustomImageHeight: Story = {
     await expect(imageElement).toBeInTheDocument();
   },
 };
+
+export const GridLayout: Story = {
+  render: () => (
+    <section
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '24px',
+        maxWidth: '1200px',
+      }}
+    >
+      <Card {...defaultArgs} title="Card 1" />
+      <Card {...defaultArgs} title="Card 2" />
+      <Card {...defaultArgs} title="Card 3" />
+      <Card {...defaultArgs} title="Card 4" />
+    </section>
+  ),
+  play: async ({canvas}) => {
+    const cardTitles = canvas.getAllByText(/Card [1-4]/);
+    await expect(cardTitles).toHaveLength(4);
+  },
+};
