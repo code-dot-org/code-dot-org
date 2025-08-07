@@ -2,7 +2,9 @@ $header-text-color: var(--neutral-gray-10);
 $header-warning-text-color: var(--text-warning-primary);
 
 .blocklyLevel {
+  display: flex;
   flex: 100%;
+  flex-direction: column;
   height: 100%;
   overflow: hidden;
 }
