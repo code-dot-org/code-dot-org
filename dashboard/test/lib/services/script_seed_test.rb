@@ -64,7 +64,6 @@ module Services
 
     test 'seed script in unit group' do
       script = create_script_tree
-      refute script.course_version
       assert script.original_unit_group.course_version
       assert script.original_unit_group.id, script.original_unit_group_id
       script.freeze
@@ -93,7 +92,6 @@ module Services
     # a particular machine.
     test 'seed script not yet in unit group' do
       script = create_script_tree
-      refute script.course_version
       assert script.unit_group.course_version
 
       # Capture the json while resources are still present. This test checks

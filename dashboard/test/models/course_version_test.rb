@@ -231,7 +231,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     course_version = CourseVersion.add_course_version(offering, script)
 
     assert_nil course_version
-    assert_nil script.course_version
+    assert_nil script.get_course_version
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050')
   end
 

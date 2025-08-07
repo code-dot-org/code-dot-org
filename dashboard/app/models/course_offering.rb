@@ -322,7 +322,7 @@ class CourseOffering < ApplicationRecord
     locale_str = locale_code&.to_s
     return true if locale_str&.start_with?('en')
 
-    latest_stable_version = any_version_is_unit? ? Unit.latest_stable_version(key, locale: locale_str) : UnitGroup.latest_stable_version(key, locale: locale_str)
+    latest_stable_version = UnitGroup.latest_stable_version(key, locale: locale_str)
     !latest_stable_version.nil?
   end
 

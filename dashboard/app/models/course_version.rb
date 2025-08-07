@@ -88,7 +88,7 @@ class CourseVersion < ApplicationRecord
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
   def self.add_course_version(course_offering, content_root)
-    if content_root.is_course?
+    if content_root.is_a?(UnitGroup)
       raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
       course_version = CourseVersion.find_or_initialize_by(
@@ -99,7 +99,8 @@ class CourseVersion < ApplicationRecord
       )
       course_version.published_state = content_root.published_state
     else
-      course_version = nil
+      # If content_root is not a UnitGroup, then we cannot create a CourseVersion.
+      return nil
     end
 
     # Check if we should prevent saving the new course version:
