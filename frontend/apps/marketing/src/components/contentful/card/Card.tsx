@@ -5,12 +5,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {HTMLAttributes, useMemo} from 'react';
 
-import Button, {ButtonProps} from '@/components/contentful/button';
+import Button from '@/components/contentful/button';
 import Overline from '@/components/contentful/overline';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
-
-type SharedButtonProps = ButtonProps & LinkEntry;
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /** Card title */
@@ -24,9 +22,9 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /** Card overline */
   overline?: string;
   /** Primary button props */
-  primaryButton?: SharedButtonProps;
+  primaryButton?: LinkEntry;
   /** Secondary button props */
-  secondaryButton?: SharedButtonProps;
+  secondaryButton?: LinkEntry;
   /** Card custom className */
   className?: string;
 }
@@ -88,6 +86,7 @@ const Card: React.FC<CardProps> = ({
               primaryButton.fields.isThisAnExternalLink || undefined
             }
             type="primary"
+            size="medium"
           />
         )}
         {secondaryButton && (
@@ -100,6 +99,7 @@ const Card: React.FC<CardProps> = ({
               secondaryButton.fields.isThisAnExternalLink || undefined
             }
             type="secondary"
+            size="medium"
           />
         )}
       </CardActions>
