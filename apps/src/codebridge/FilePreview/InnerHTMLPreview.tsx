@@ -22,7 +22,8 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  const parentOrigin = useMemo(() => location.origin, []);
+  // TODO: use a more specific origin check.
+  const parentOrigin = useMemo(() => '*', []);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {

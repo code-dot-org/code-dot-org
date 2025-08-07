@@ -9,7 +9,7 @@ import {useCodebridgeContext} from '../codebridgeContext';
 
 import {IframeMessageType} from './constants';
 
-import moduleStyles from './styles/htmlPreview2.module.scss';
+import moduleStyles from './styles/html-preview2.module.scss';
 
 // TODO: do we want a way for users to change the file manually?
 // We could set that up fairly easily since we control the file changes here.
@@ -23,7 +23,7 @@ export const HTMLPreview2 = () => {
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-    return `${location.protocol}//${subdomain}preview.codeprojects.org${port}`;
+    return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
   }, []);
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
