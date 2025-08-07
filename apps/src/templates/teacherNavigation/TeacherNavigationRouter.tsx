@@ -14,7 +14,7 @@ import {
   ScrollRestoration,
 } from 'react-router-dom';
 
-import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import AITutorAccessControls from '@cdo/apps/aiTutor/views/teacherDashboard/AITutorAccessControls';
 import TeacherUnitOverview from '@cdo/apps/code-studio/components/progress/TeacherUnitOverview';
 import DCDO from '@cdo/apps/dcdo';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
@@ -98,7 +98,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   );
 
   // TODO-AITUTOR: Ideally we want to check if the section has any units with Unit.has_ai_tutor_level?
-  // but I'm not sure how to plumb that information through to here?
+  // but I'm not sure how to plumb that information through to here.
   // for ai tutor2 pilot, I think we are OK with showing the tutor tab for any section for teachers in the pilot.
   const sectionHasAITutor = !!selectedSection;
 
@@ -329,7 +329,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                   <ElementOrEmptyPage
                     showNoStudents={studentCount === 0}
                     showNoCurriculumAssigned={false}
-                    element={<TutorTab sectionId={sectionId || 0} />}
+                    element={
+                      <AITutorAccessControls sectionId={sectionId || 0} />
+                    }
                   />
                 ) : (
                   <Navigate
