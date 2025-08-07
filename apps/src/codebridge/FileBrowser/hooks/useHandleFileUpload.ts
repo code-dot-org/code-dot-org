@@ -54,11 +54,9 @@ export const useHandleFileUpload = (
 
       if (url) {
         dispatch(createNewExternalFileThunk({fileName, folderId, url}));
-        return;
+      } else {
+        dispatch(createNewFileThunk({fileName, folderId, contents}));
       }
-      // this is what actually updates the project files (in Redux and triggering save to S3)
-      // add createNewExternalFileThunk to the project files?
-      dispatch(createNewFileThunk({fileName, folderId, contents}));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
       });

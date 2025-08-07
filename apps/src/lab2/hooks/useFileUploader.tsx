@@ -65,7 +65,7 @@ const isValidMimeType = (
 
 /**
  * A custom hook that provides functionality for file uploads,
- * including validation, reading, and handling callbacks.
+ * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
  *
  * @param props An object containing configuration options for the hook.
  *
@@ -74,6 +74,7 @@ const isValidMimeType = (
  * @property props.errorCallback - A function to be called with an error message if the upload fails.
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
+ * @property props.channelId - Required so that we can upload non-text files to S3.
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
