@@ -1,6 +1,19 @@
+<%
+# Determine if production domain should be enabled
+is_production = options[:environment_type] == 'production'
+has_production_domain = options[:production_domain_name] && !options[:production_domain_name].empty?
+has_production_hosted_zone = options[:production_hosted_zone_id] && !options[:production_hosted_zone_id].empty?
+enable_production_domain = is_production && has_production_domain && has_production_hosted_zone
+
+# Build the domain display string for the description
+base_domain_url = "https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"
+domain_display = enable_production_domain ?
+  "https://#{options[:production_domain_name]} and #{base_domain_url}" :
+  base_domain_url
+%>
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Provision CloudFront certificate for a marketing site (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) in us-east-1 (Cloudfront is a global service; its TLS certificates must be in us-east-1).
+Description: Provision CloudFront certificate for a marketing site (<%=domain_display%>) in us-east-1 (Cloudfront is a global service; its TLS certificates must be in us-east-1).
 
 # Market site domain names use this naming convention:
 # https://docs.google.com/spreadsheets/d/1abCYr1tFEs-Ag5lyq5m0r5zQi_ioGgr-Th3NAdocQPQ/edit?pli=1&gid=0#gid=0
@@ -14,23 +27,26 @@ Parameters:
   SubdomainName:
     Type: String
     Description: Subdomain name of this marketing site (e.g. 'hourofcode' in 'hourofcode.marketing-sites.test-code.org').
+<% if enable_production_domain %>
+  # Avoid complex CloudFormation template string concatenation logic (subdomain + basedomain) to handle a fully
+  # qualified domain name for production sites typically not having a subdomain, by explicitly specifying the
+  # production domain name when it's just a top level domain.
+  ProductionDomainName:
+    Type: String
+    Default: "<%= options[:production_domain_name] %>"
+    Description: >
+      Fully qualified domain name of this site for production. For example, 'hourofai.org' when
+      EnvironmentType is 'production', BaseDomainName is 'marketing-sites.code.org', SubdomainName is 'hourofai'.
+  ProductionHostedZoneId:
+    Type: String
+    Default: "<%= options[:production_hosted_zone_id] %>"
+    Description: AWS Route 53 Hosted Zone ID for the production domain name.
+<% end %>
 
 Conditions:
   IsUSEast1: !Equals [!Ref "AWS::Region", "us-east-1"]
 
 Resources:
-  # TLS Cert for CloudFront Distribution (must be in us-east-1)
-  # Deprecated: Remove after CloudfrontTLSCertificate is deployed to production.
-  TLSCertificate:
-    Condition: IsUSEast1
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-      DomainValidationOptions:
-        - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
-          HostedZoneId: !Ref HostedZoneId
-      ValidationMethod: DNS
-
   # Wildcard TLS Cert for CloudFront Distribution (must be in us-east-1)
   CloudFrontTLSCertificate:
     Condition: IsUSEast1
@@ -39,18 +55,20 @@ Resources:
       DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
       SubjectAlternativeNames:
         - !Sub "preview-${SubdomainName}.${BaseDomainName}"
+<% if enable_production_domain %>
+        - !Ref ProductionDomainName
+<% end %>
       DomainValidationOptions:
         - DomainName: !Sub "${SubdomainName}.${BaseDomainName}"
           HostedZoneId: !Ref HostedZoneId
         - DomainName: !Sub "preview-${SubdomainName}.${BaseDomainName}"
           HostedZoneId: !Ref HostedZoneId
+<% if enable_production_domain %>
+        - DomainName: !Ref ProductionDomainName
+          HostedZoneId: !Ref ProductionHostedZoneId
+<% end %>
       ValidationMethod: DNS
-
 Outputs:
-  TLSCertificateArn:
-    Value: !Ref TLSCertificate
-    Export:
-      Name: !Sub "${AWS::StackName}-TLSCertificateArn"
   CloudFrontTLSCertificateArn:
     Value: !Ref CloudFrontTLSCertificate
     Export:
