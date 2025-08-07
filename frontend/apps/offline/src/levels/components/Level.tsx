@@ -20,6 +20,8 @@ const levelMap = {
   Artist: dynamic(() => import('@code-dot-org/lab-artist'), {ssr: false, loading: () => <Spinner />}),
   /** Collector levels which are maze levels where there is an added element of collecting as you go */
   Karel: dynamic(() => import('@code-dot-org/lab-karel'), {ssr: false, loading: () => <Spinner />}),
+  /** Video player */
+  StandaloneVideo: dynamic(() => import('@code-dot-org/lab-standalone-video'), {ssr: false, loading: () => <Spinner />}),
 };
 
 import moduleStyles from './level.module.scss';

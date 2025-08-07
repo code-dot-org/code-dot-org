@@ -18,6 +18,20 @@ export interface MultipleChoiceData {
   }[];
 }
 
+/** Internal video metadata */
+export interface VideoDefinition {
+  youtube: string;
+  download: string;
+  locale: string;
+}
+
+/** Describes a video. */
+export interface VideoData {
+  download: string;
+  youTubeId: string;
+  locale: string;
+}
+
 /** Describes a level's properties */
 export interface LevelData<T extends object = object> {
   /** Unique key for this level */
@@ -36,6 +50,10 @@ export interface LevelData<T extends object = object> {
   template?: LevelData<T>;
   /** Multiple choice question data. */
   multipleChoice?: MultipleChoiceData;
+  /** An optional video that is associated with the level. */
+  videoKey?: string;
+  /** The metadata about the associated video. */
+  videoData?: VideoData;
   /** Specific level data. */
   subData?: T;
 }
