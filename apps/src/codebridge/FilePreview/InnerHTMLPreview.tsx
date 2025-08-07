@@ -22,12 +22,19 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  // TODO: use a more specific origin check.
-  const parentOrigin = useMemo(() => '*', []);
+
+  const parentOrigin = useMemo(() => {
+    const regex = /preview\.([^.]+)\.codeprojects\.org/;
+    const match = location.hostname.match(regex);
+    const environment = match && match[1] ? `${match[1]}-` : '';
+    const port = 'localhost-' === environment ? `:${location.port}` : '';
+    return `${location.protocol}//${environment}studio.code.org${port}`;
+  }, []);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
-      if (event.origin !== parentOrigin) {
+      // We either receive messages from ourself (for file changes via href) or from the parent.
+      if (event.origin !== parentOrigin && event.origin !== location.origin) {
         return;
       }
       const {data} = event;
@@ -57,7 +64,6 @@ const InnerHTMLPreview = () => {
   useEffect(() => {
     window.addEventListener('message', handleMessage);
     // Notify parent that we're ready to receive messages
-    // TODO: use a more specific origin check
     window.parent.postMessage(
       {type: IframeMessageType.IFRAME_READY},
       parentOrigin
@@ -173,7 +179,7 @@ const InnerHTMLPreview = () => {
             link.setAttribute(
               'onclick',
               `event.preventDefault();
-              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '${parentOrigin}');
+              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '${location.origin}');
               return false;
             `
             );
