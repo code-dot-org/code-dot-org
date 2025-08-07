@@ -12,7 +12,6 @@ import {
 } from 'react-router-dom';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -111,8 +110,7 @@ const TeacherNavigationBar: React.FC<{
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
 
-  // TODO-AITUTOR: Remove the queryParam
-  if (queryParams('show-ai-tutor2') === 'true' || showAITutorTab) {
+  if (showAITutorTab) {
     performanceContentKeys.splice(1, 0, 'aiTutor');
   }
 
