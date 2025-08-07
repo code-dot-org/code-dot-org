@@ -55,8 +55,6 @@ const Card: React.FC<CardProps> = ({
     return '300px';
   }, [imageHeight]);
 
-  console.log(primaryButton, secondaryButton);
-
   return (
     <CardMui className={className} raised={false}>
       {imageSrc && (
