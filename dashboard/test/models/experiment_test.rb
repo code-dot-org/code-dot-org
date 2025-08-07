@@ -27,9 +27,11 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "user based experiment at 50 percent is enabled for only some users" do
+    next_round_user_id = get_next_round_user_id
+
     experiment = create :user_based_experiment, percentage: 50
-    user_on = build :user, id: 1025 + experiment.min_user_id
-    user_off = build :user, id: 1075 + experiment.min_user_id
+    user_on = build :user, id: next_round_user_id + 25 + experiment.min_user_id
+    user_off = build :user, id: next_round_user_id + 75 + experiment.min_user_id
 
     assert_equal [experiment], Experiment.get_all_enabled(user: user_on)
     assert Experiment.enabled?(user: user_on, experiment_name: experiment.name)
@@ -63,14 +65,16 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "teacher based experiment at 50 percent is enabled for only some users" do
+    next_round_user_id = get_next_round_user_id
+
     experiment = create :teacher_based_experiment, percentage: 50, script: @script
     student_on = create :student
-    teacher_on = create :teacher, id: 1025 + experiment.min_user_id
+    teacher_on = create :teacher, id: next_round_user_id + 25 + experiment.min_user_id
     section_on = create :section, teacher: teacher_on
     create :follower, section: section_on, student_user: student_on
 
     student_off = create :student
-    teacher_off = create :teacher, id: 1075 + experiment.min_user_id
+    teacher_off = create :teacher, id: next_round_user_id + 75 + experiment.min_user_id
     section_off = create :section, teacher: teacher_off
     create :follower, section: section_off, student_user: student_off
 
@@ -251,5 +255,34 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_nil Experiment.get_editor_experiment(teacher)
     assert_equal 'platformization-partners', Experiment.get_editor_experiment(platformization_partner)
     assert_nil Experiment.get_editor_experiment(levelbuilder)
+  end
+
+  test 'get_next_round_id' do
+    assert_equal 100, get_next_round_id(nil)
+    assert_equal 100, get_next_round_id(0)
+    assert_equal 100, get_next_round_id(1)
+
+    assert_equal 100, get_next_round_id(50)
+    assert_equal 100, get_next_round_id(50.0)
+    assert_equal 100, get_next_round_id('50')
+
+    assert_equal 100, get_next_round_id(99)
+    assert_equal 200, get_next_round_id(100)
+    assert_equal 200, get_next_round_id(101)
+    assert_equal 200, get_next_round_id(199)
+    assert_equal 300, get_next_round_id(200)
+    assert_equal 300, get_next_round_id(201)
+    assert_equal 1000, get_next_round_id(901)
+  end
+
+  # returns the next unused user id that is a multiple of 100
+  private def get_next_round_user_id
+    max_id = User.maximum(:id)
+    get_next_round_id(max_id)
+  end
+
+  private def get_next_round_id(max_id)
+    last_id = max_id.to_i
+    ((last_id / 100) * 100) + 100
   end
 end

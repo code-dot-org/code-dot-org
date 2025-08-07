@@ -39,7 +39,7 @@ $default-spacing: 4px;
   background: $light_white;
 
   .tabsContainer {
-    background-color: #eaebeb;
+    background-color: var(--background-neutral-tertiary);
     padding: $default-spacing $default-spacing 0 $default-spacing;
   }
 

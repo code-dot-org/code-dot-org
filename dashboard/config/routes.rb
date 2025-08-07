@@ -29,8 +29,11 @@ Dashboard::Application.routes.draw do
     get '/weblab/footer', to: 'projects#weblab_footer'
   end
 
+  constraints host: CDO.preview_codeprojects_hostname do
+    get '/', to: 'codeprojects_preview#show'
+  end
   # This matches any host that is not the codeprojects hostname
-  constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
+  constraints host: /^(?!#{CDO.codeprojects_hostname}|#{CDO.preview_codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
       get :home, controller: :teacher_dashboard, action: :show

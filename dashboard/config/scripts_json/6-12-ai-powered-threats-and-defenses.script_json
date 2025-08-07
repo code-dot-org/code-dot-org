@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-05 20:05:50 UTC",
+    "serialized_at": "2025-08-06 23:30:53 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -200,7 +200,7 @@
     },
     {
       "key": "lesson-12",
-      "name": "Lesson 12",
+      "name": "Layered Defenses",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -739,7 +739,7 @@
       "key": "576e1684-75f5-4a5f-9125-a8287b5c9797",
       "position": 3,
       "properties": {
-        "progression_name": "AI-Generated Strong Keys"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "576e1684-75f5-4a5f-9125-a8287b5c9797",
@@ -782,7 +782,7 @@
       "key": "31fff750-6578-4f08-ac27-d9de538d0b28",
       "position": 1,
       "properties": {
-        "progression_name": "Explore & Map System Events and Vulnerabilities"
+        "progression_name": "Layered Defense Exploration"
       },
       "seeding_key": {
         "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28",
@@ -1557,6 +1557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson10-level1-2"
+        ],
         "progression": "AI-Enhanced Password Cracking"
       },
       "bonus": false,
@@ -1579,6 +1582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson10-level2-2"
+        ],
         "progression": "Messaging Metadata"
       },
       "bonus": false,
@@ -1597,10 +1603,35 @@
     },
     {
       "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check For Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-powered-threats-and-defenses-l10-cfu"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "576e1684-75f5-4a5f-9125-a8287b5c9797"
+      },
+      "level_keys": [
+        "ai-powered-threats-and-defenses-l10-cfu"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson11-level1choice"
+        ],
         "progression": "Persona Choices"
       },
       "bonus": false,
@@ -1618,12 +1649,37 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore & Map System Events and Vulnerabilities"
+        "progression": "Layered Defense Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson12-level2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
+      },
+      "level_keys": [
+        "test-ai-powered-threats-defenses-lesson12-level2"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson12-level1"
+        ],
+        "progression": "Layered Defense Exploration"
       },
       "bonus": false,
       "seeding_key": {
@@ -2027,6 +2083,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-powered-threats-and-defenses-l10-cfu",
+        "script_level.level_keys": [
+          "ai-powered-threats-and-defenses-l10-cfu"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "576e1684-75f5-4a5f-9125-a8287b5c9797"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-ai-powered-threats-defenses-lesson11-level1choice",
         "script_level.level_keys": [
           "test-ai-powered-threats-defenses-lesson11-level1choice"
@@ -2035,6 +2103,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
         "activity_section.key": "5dbfa394-560e-4caf-8a88-db1d01976889"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-ai-powered-threats-defenses-lesson12-level2",
+        "script_level.level_keys": [
+          "test-ai-powered-threats-defenses-lesson12-level2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "6-12-ai-powered-threats-and-defenses",
+        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
       }
     },
     {

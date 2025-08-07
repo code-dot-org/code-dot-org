@@ -36,6 +36,9 @@ const styles = {
   },
   menuItem: {
     marginBlock: theme.spacing(0.5),
+    '& a': {
+      width: '100%',
+    },
     '&:hover, &:focus': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
       borderRadius: theme.shape.borderRadius,
@@ -61,6 +64,18 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
+  };
+
+  const handleKeyDown = (
+    event: React.KeyboardEvent,
+    href: LinkItemProps['href'],
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      if (href) {
+        window.location.href = href;
+      }
+    }
   };
 
   const handleClose = () => {
@@ -109,6 +124,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
             onClick={handleClose}
+            onKeyDown={e => handleKeyDown(e, href)}
             disableRipple
             sx={styles.menuItem}
           >
