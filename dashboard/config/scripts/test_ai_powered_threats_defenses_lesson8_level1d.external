@@ -1,13 +1,13 @@
 name 'test-ai-powered-threats-defenses-lesson8-level1d'
 
-display_name 'Diego M.'
-bubble_choice_description 'A security-conscious student from Minneapolis who keeps his online life private. Some tools were bought from Toronto during a sketchy login—would Diego really do that?'
+display_name 'Omar M.'
+bubble_choice_description 'A security-conscious student from Minneapolis who keeps his online life private. Some tools were bought from Toronto during a sketchy login—would Omar really do that?'
 thumbnail_url 'https://images.code.org/33dcf3d41e5ddeb76754f0d6b827b429-image-1753989745927.png'
 
 markdown <<MARKDOWN
-#Diego M.
+#Omar M.
 
-#### Read about Diego and investigate the audit logs. Can you find any evidence of fraud?
+#### Read about Omar and investigate the audit logs. Can you find any evidence of fraud?
 
 **[Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
 

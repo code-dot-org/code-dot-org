@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-30 18:45:13 UTC",
+    "serialized_at": "2025-08-05 10:06:41 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -7042,6 +7042,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7063,6 +7066,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8612,19 +8618,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_artistIntro",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "2-3 Artist 1 new",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -8638,7 +8631,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "ramp_video_artistIntro",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -8651,7 +8657,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -10023,7 +10029,7 @@
   ],
   "rubrics": [
     {
-      "level_name": "Music Project Level 2",
+      "level_name": "Submittable Music Level 1",
       "seeding_key": {
         "lesson.key": "lesson-49",
         "lesson_group.key": "",
@@ -10043,7 +10049,7 @@
     {
       "key": "4152d63a-af5c-40ea-a15f-b0a3ebd7414c",
       "position": 1,
-      "learning_goal": "Loops",
+      "learning_goal": "Test Rubric",
       "ai_enabled": false,
       "tips": null,
       "seeding_key": {
@@ -10062,19 +10068,6 @@
       "seeding_key": {
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-      "position": 2,
-      "learning_goal": "Test Concept 2",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
@@ -10109,7 +10102,7 @@
   "learning_goal_evidence_levels": [
     {
       "understanding": 0,
-      "teacher_description": "The song does not have enough tracks or all of them start at the same time.",
+      "teacher_description": "4",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -10121,7 +10114,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "The song contains at least 4 tracks but several of them start at the same time",
+      "teacher_description": "3",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -10133,7 +10126,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "The song contains at least 4 different tracks that start and stop at different times, but the song does not create a \"build\" effect based on how the tracks are sequenced.",
+      "teacher_description": "2",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -10145,7 +10138,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "The song contains at least 4 different tracks that are layered together to create a complex song that \"builds\". New tracks are introduced at different start times and all tracks end at the same time.",
+      "teacher_description": "1",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -10199,54 +10192,6 @@
         "understanding": 3,
         "learning_goal.key": "78189d6e-11b2-44a8-83c8-027de9bed803",
         "lesson.key": "lesson-51",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "No evidence for concept 2",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-        "lesson.key": "lesson-49",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Limited evidence for concept 2",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-        "lesson.key": "lesson-49",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Convincing evidence for concept 2",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-        "lesson.key": "lesson-49",
-        "lesson_group.key": "",
-        "script.name": "allthethings"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Extensive evidence for concept 2",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "8f31c700-d2c5-4f3d-8cad-129f0cde217f",
-        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }

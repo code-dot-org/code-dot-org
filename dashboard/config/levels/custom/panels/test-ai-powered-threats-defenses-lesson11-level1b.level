@@ -1,0 +1,46 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-08-05T20:04:32.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "##Amira\n\nAmira is a visually impaired student who uses a screen reader and other accessibility tools to navigate her school’s digital systems. \n\nShe’s highly independent and tech-savvy, with a growing interest in coding and a love for science fiction audiobooks. Still, she often finds that security tools are designed with only sighted users in mind.",
+        "imageUrl": "https://images.code.org/3037f14a2397df9156aa44d57635d907-Screenshot 2025-08-05 134017.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-6ea9678a-ce7e-41b9-abb2-d878eb87ac30",
+        "typing": false,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##CAPTCHA Image Verification\n\nAmira tries to log in to a new class tool, but the CAPTCHA verification is image-based. The system offers an audio option, but it’s distorted and hard to understand. She can't continue without solving it.",
+        "imageUrl": "https://images.code.org/3a5cc4be77005c3961f20bea0f095517-Screenshot 2025-08-05 132715.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-91f6e938-059e-4b97-b572-350b4fa8bbb8",
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##QR Code-Based Login on Classroom Projector\n\nThe class uses a QR code login system. Amira tries to scan it, but it takes multiple attempts to get the camera aligned just right. It's not impossible—but it definitely slows her down.",
+        "imageUrl": "https://images.code.org/07c843836abe4b645a8aade8a52331de-Screenshot 2025-08-05 132756.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-79557c5a-46fd-42a9-8bcd-652ea77a7ed0",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "##Color-Based Password Strength Meter\n\nWhen creating a password, Amira sees a color bar that shows how “strong” it is—but there’s no text or sound to describe what the color means. The tool works fine for some, but it’s not designed with all users in mind.",
+        "imageUrl": "https://images.code.org/e8fffa2e90aacd889c31a01845d7758e-Screenshot 2025-08-05 132837.png",
+        "key": "test-ai-powered-threats-defenses-lesson3-level3-10f16dff-0ead-45fb-8aaf-e7607fe82cca",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "display_name": "Amira",
+    "thumbnail_url": "https://images.code.org/ab2c952e53b4983b029c0572174409c6-Screenshot 2025-08-05 145327.png",
+    "bubble_choice_description": "A tech-savvy student who uses a screen reader and high-contrast tools to navigate school systems. Amira runs into problems when security tools aren’t designed with low vision in mind."
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-08-05T20:04:32.547+00:00\",\"changed\":[\"cloned from \\\"test-ai-powered-threats-defenses-lesson11-level1a\\\"\"],\"cloned_from\":\"test-ai-powered-threats-defenses-lesson11-level1a\"},{\"changed_at\":\"2025-08-05 20:04:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 20:41:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:34:14 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:53:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-05 21:56:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -2,6 +2,7 @@ import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React from 'react';
 
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
@@ -29,6 +30,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     rightBottomPanelDragging,
     leftPanelSeparatorProps,
     leftPanelDragging,
+    panelClassName,
   } = useHorizontalLayout({
     leftPanel: {
       minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
@@ -62,7 +64,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={moduleStyles.flexShrink0}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
             <ResizeBar
               isVertical={true}
@@ -75,13 +77,19 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}
         >
-          <Workspace style={{height: rightTopPanelHeight}} />
+          <Workspace
+            style={{height: rightTopPanelHeight}}
+            className={panelClassName}
+          />
           <ResizeBar
             isVertical={false}
             separatorProps={rightBottomPanelSeparatorProps}
             isDragging={rightBottomPanelDragging}
           />
-          <div style={{height: rightBottomPanelHeight}}>
+          <div
+            style={{height: rightBottomPanelHeight}}
+            className={panelClassName}
+          >
             <FilePreview />
           </div>
         </div>

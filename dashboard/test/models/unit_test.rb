@@ -8,8 +8,6 @@ class UnitTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    seed_deprecated_unit_fixtures
-
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
     # Level names match those in 'test.script'
@@ -199,7 +197,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = Unit.find_by_name(Unit::FLAPPY_NAME).script_levels.first.level
+    unit = create :unit, :with_levels
+    level = unit.script_levels.first.level
 
     populate_cache_and_disconnect_db
 
@@ -207,7 +206,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = Unit.find_by_name(Unit::FLAPPY_NAME).script_levels.first.level
+    unit = create :unit, :with_levels
+    level = unit.script_levels.first.level
 
     populate_cache_and_disconnect_db
 
@@ -2516,7 +2516,7 @@ class UnitTest < ActiveSupport::TestCase
 
     # delete unit group
     course_unit_group.destroy
-    assert UnitGroupUnit.find_by(id: unit_gp_unit.course_id).nil?
+    assert UnitGroup.find_by(id: unit_gp_unit.course_id).nil?
 
     # delete unit in unit group
     unit_id = unit_in_course.id

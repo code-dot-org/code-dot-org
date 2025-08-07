@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-08-06T21:02:59.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Analyzing Layered Defenses**\r\n\r\n#### **Instructions:**  \r\n\r\n1. **Click the link** below in order to create a copy of the activity guide\r\n\r\n2. **Explore** the user interactivity of one of the four apps presented on Level 2.\r\n\r\n3. **Drag and Drop the colored dots and the comment boxes** onto app diagrams within your activity guide to annotate potential vulnerabilities.\r\n\r\n4. Use the **Layered Defense Menu resource** to plan security upgrades for the vulnerabilities that you highlighted.\r\n\r\n\r\n",
+    "link_title": "Layered Defenses Digital Activity Guide",
+    "url": "https://docs.google.com/presentation/d/1XV0xFys3SShBC2ofgtYJMcscEb330A1kW19NrYi-ieA/copy"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-06 21:03:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-06 21:04:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</ExternalLink>

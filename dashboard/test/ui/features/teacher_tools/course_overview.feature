@@ -27,7 +27,7 @@ Feature: CourseOverview
     And I click selector ".assignment-version-title:contains('25-'26)" once I see it
     And I select the "Digital Information" option in dropdown "uitest-secondary-assignment"
     And I press the first "#uitest-save-section-changes" element to load a new page
-    
+
     Then I sign in as "Ron"
     And I am on "http://studio.code.org/courses/csp-2025"
     And I wait to see ".uitest-CourseScript"
@@ -35,5 +35,10 @@ Feature: CourseOverview
     # Viewing course overview as a teacher with sections is covered in teacher_homepage.feature
 
   Scenario: Viewing course overview for a single-unit course
+    # original course
     Given I am on "http://studio.code.org/courses/ui-test-single-unit-course-2026"
     And I get redirected to "/courses/ui-test-single-unit-course-2026/units/1" via "dashboard"
+
+    # modular course
+    Given I am on "http://studio.code.org/courses/ui-test-versioned-script-2019"
+    And I get redirected to "/courses/ui-test-versioned-script-2019/units/1" via "dashboard"

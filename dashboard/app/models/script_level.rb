@@ -793,6 +793,7 @@ class ScriptLevel < ApplicationRecord
     level&.deprecated?
   end
 
+  # TODO-AITUTOR: Remove this & clean up progressionType lab2 property.
   # WARNING: Do NOT reuse this trashy little method. It is fragile English-only string comparison
   # written for a very specific use case - logging analytics for the CSA '24-'25 AI Tutor pilot,
   # in which the level progression naming conventions follow a very specific pattern aligned

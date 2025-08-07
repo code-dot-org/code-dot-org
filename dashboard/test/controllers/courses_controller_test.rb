@@ -407,6 +407,7 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in create(:teacher)
     get :show, params: {course_name: single_unit_course.name}
     assert_redirected_to course_unit_path(single_unit_course, 1)
+    assert_response :moved_permanently
   end
 
   test "show: query params are preserved in redirect to unit for single-unit course" do
@@ -415,6 +416,7 @@ class CoursesControllerTest < ActionController::TestCase
     sign_in create(:teacher)
     get :show, params: {course_name: single_unit_course.name, viewAs: 'Instructor'}
     assert_redirected_to course_unit_path(single_unit_course, 1, viewAs: 'Instructor')
+    assert_response :moved_permanently
   end
 
   no_access_msg = "You don&#39;t have access to this course."
@@ -909,6 +911,7 @@ class CoursesControllerTest < ActionController::TestCase
 
         it 'redirects to the nested Course Unit page' do
           assert_redirected_to "/courses/#{course.name}/units/1"
+          assert_response :moved_permanently
         end
       end
     end
