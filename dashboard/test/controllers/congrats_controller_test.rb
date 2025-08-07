@@ -30,7 +30,7 @@ class CongratsControllerTest < ActionController::TestCase
 
     Unit.stubs(:should_cache?).returns(true)
 
-    assert_cached_queries(1) do
+    assert_cached_queries(0) do
       # Reset @view_options before each request to avoid FrozenError on retries
       @controller.instance_variable_set(:@view_options, nil)
       get :index, params: {s: Base64.urlsafe_encode64(hoc_course.name)}
