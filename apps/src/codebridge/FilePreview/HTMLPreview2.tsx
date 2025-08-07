@@ -19,7 +19,7 @@ export const HTMLPreview2 = () => {
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewUrl = useMemo(() => {
-    const re = /([-.]?studio)?\.?code.org/i;
+    const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
     const environmentKey = location.hostname.replace(re, '');
     const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
     const port = 'localhost' === environmentKey ? `:${location.port}` : '';

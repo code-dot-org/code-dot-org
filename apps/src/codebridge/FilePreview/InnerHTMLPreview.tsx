@@ -28,7 +28,8 @@ const InnerHTMLPreview = () => {
     const match = location.hostname.match(regex);
     const environment = match && match[1] ? `${match[1]}-` : '';
     const port = 'localhost-' === environment ? `:${location.port}` : '';
-    return `${location.protocol}//${environment}studio.code.org${port}`;
+    const cdn = environment.includes('adhoc') ? 'cdn-' : '';
+    return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
 
   const handleMessage = useCallback(
