@@ -11,10 +11,6 @@ import {IframeMessageType} from './constants';
 
 import moduleStyles from './styles/html-preview2.module.scss';
 
-// TODO: do we want a way for users to change the file manually?
-// We could set that up fairly easily since we control the file changes here.
-// We could also track the list of viewed files and implement history (back/forwards) at some point.
-// We could also implement a fake url bar that shows the current file name and allows users to change it.
 export const HTMLPreview2 = () => {
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -36,7 +32,7 @@ export const HTMLPreview2 = () => {
   const [currentFile, setCurrentFile] = useState<string>('index.html');
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    // Clear the source so the preview does not show outdated content.
+    // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
     setLevelLoading(true);
   });
@@ -52,10 +48,6 @@ export const HTMLPreview2 = () => {
       }
       if (event.data.type === IframeMessageType.IFRAME_READY) {
         setIsIframeLoaded(true);
-        // We will change the file to index.html before the source has been set.
-        // Right now it's not a problem but it does put an error in the console.
-        // Should the inner preview default to index.html?
-        // Or should we wait for the source to be set before changing the file?
         iframeRef.current?.contentWindow?.postMessage(
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
@@ -93,12 +85,12 @@ export const HTMLPreview2 = () => {
       setDebouncedSource(source);
       sourceLevelId.current = levelProperties.id;
     } else {
-      // Set a timeout to update debounced value after 500ms
+      // Set a timeout to send the debounced value after 500ms
       const debouncedSourceSetter = setTimeout(() => {
         setDebouncedSource(source);
       }, 500);
 
-      // Cleanup the timeout if source or level changes before 500ms.
+      // Cleanup the timeout if source or level changes before 500ms has elapsed.
       return () => {
         clearTimeout(debouncedSourceSetter);
       };

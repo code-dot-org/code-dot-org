@@ -9,7 +9,6 @@ import {IframeMessageType} from './constants';
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
 
-// TODO: better error handling.
 const InnerHTMLPreview = () => {
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
@@ -34,7 +33,7 @@ const InnerHTMLPreview = () => {
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
-      // We either receive messages from ourself (for file changes via href) or from the parent.
+      // We either receive messages from ourselves (for file changes via href) or from the parent.
       if (event.origin !== parentOrigin && event.origin !== location.origin) {
         return;
       }
@@ -93,7 +92,6 @@ const InnerHTMLPreview = () => {
       if (newBlobUrl) {
         setBlobUrl(newBlobUrl);
       } else {
-        // TODO: have some sort of error case to user? In case they are trying to href to a file that doesn't exist.
         console.error(`current file ${currentFile} not found in source files`);
         setBlobUrl(NOT_FOUND_FILE);
       }
@@ -101,8 +99,8 @@ const InnerHTMLPreview = () => {
   }, [currentFile, filesToBlobs]);
 
   // TODOs:
-  // support other file types (images, etc.)
-  // more robust file paths--do we need to handle paths with leading '/' or '../'?
+  // Support other file types (images, etc.)
+  // More robust file paths--do we need to handle paths with leading '/' or '../'?
   // Can we be smarter about not regenerating blob URLs if the file hasn't changed?
   // Do we need to redirect console logs from the iframe to the parent window?
   // We may need to add some helper script that we always run in the iframe to handle this.
@@ -200,6 +198,7 @@ const InnerHTMLPreview = () => {
   }, [parentOrigin, source]);
 
   const getPreview = useCallback(() => {
+    // TODO: better loading/page not found UI.
     if (blobUrl === NOT_FOUND_FILE) {
       return <div>Page not found</div>;
     } else if (blobUrl) {
