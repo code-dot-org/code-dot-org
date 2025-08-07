@@ -1,4 +1,4 @@
-class RemoveContentRootTypeFromCourseVersion < ActiveRecord::Migration[6.1]
+class RemoveContentRootTypeFromCourseVersions < ActiveRecord::Migration[6.1]
   def up
     remove_index :course_versions, name: "index_course_versions_on_content_root_type_and_content_root_id"
     remove_index :course_versions, name: "index_course_versions_on_offering_id_and_key_and_type"
