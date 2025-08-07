@@ -43,6 +43,7 @@
       display: inline-block;
       white-space: nowrap;
       opacity: 0;
+      pointer-events: none;
 
       &.showOverlay {
         opacity: 1;
