@@ -1,69 +1,133 @@
-import {ProjectFile} from '@codebridge/types';
-import {findFolder} from '@codebridge/utils';
-import React, {useRef, useMemo} from 'react';
+import TextField from '@code-dot-org/component-library/textField';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 
-import {MultiFileSource} from '@cdo/apps/lab2/types';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './styles/filePreview.module.scss';
+import {useCodebridgeContext} from '../codebridgeContext';
 
-type HTMLPreviewProps = {
-  file: ProjectFile;
-};
+import {IframeMessageType} from './constants';
 
-export const HTMLPreview = ({file}: HTMLPreviewProps) => {
-  const iframeRef = useRef(null);
-  const {files, folders} = useAppSelector(
-    state => state.lab2Project.projectSources?.source as MultiFileSource
+import moduleStyles from './styles/html-preview.module.scss';
+
+export const HTMLPreview = () => {
+  const {levelProperties} = useCodebridgeContext();
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const previewUrl = useMemo(() => {
+    const re = /([-.]?studio)?\.?(cdn-)?code.org/i;
+    const environmentKey = location.hostname.replace(re, '');
+    const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
+    const port = 'localhost' === environmentKey ? `:${location.port}` : '';
+    return `${location.protocol}//preview.${subdomain}codeprojects.org${port}`;
+  }, []);
+
+  const source = useAppSelector(
+    state => state.lab2Project.projectSources?.source
   );
+  const [isIframeLoaded, setIsIframeLoaded] = useState(false);
+  const [debouncedSource, setDebouncedSource] = useState(source);
+  const sourceLevelId = useRef<number | undefined>(undefined);
+  const [levelLoading, setLevelLoading] = useState(false);
+  const [currentFile, setCurrentFile] = useState<string>('index.html');
 
-  const srcdoc = useMemo(() => {
-    if (!file) {
-      return '';
-    }
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    // When we switch levels, clear the source so the preview does not show outdated content.
+    setDebouncedSource(undefined);
+    setLevelLoading(true);
+  });
 
-    const contents = file.contents.replace(
-      new RegExp('<link rel="stylesheet" href="([^"]+)"\\s*/>', 'g'),
-      (_: unknown, styleURI: string) => {
-        // this is tedious. Break apart the style URI and look up all folders to get the final folder ID.
-        // THEN look for a file with the same name and folder and that's what we need.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    setLevelLoading(false);
+  });
 
-        const styleFolders = styleURI.split('/');
-        const styleName = styleFolders.pop();
-
-        const folderId = findFolder(styleFolders, {
-          folders: Object.values(folders),
-        });
-
-        const styleFile = Object.values(files).find(
-          f => f.name === styleName && f.folderId === folderId
-        );
-
-        return `
-          <style>
-            ${styleFile?.contents}
-          </style>
-      `;
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin !== previewUrl) {
+        return;
       }
-    );
+      if (event.data.type === IframeMessageType.IFRAME_READY) {
+        setIsIframeLoaded(true);
+        iframeRef.current?.contentWindow?.postMessage(
+          {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
+          previewUrl
+        );
+      } else if (
+        event.data.type === IframeMessageType.FILE_UPDATED &&
+        event.origin === previewUrl
+      ) {
+        setCurrentFile(event.data.fileName);
+      }
+    };
 
-    return contents;
-  }, [files, folders, file]);
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, [previewUrl, currentFile]);
+
+  useEffect(() => {
+    const debouncedUpdate = setTimeout(() => {
+      iframeRef.current?.contentWindow?.postMessage(
+        {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
+        previewUrl
+      );
+    }, 300);
+
+    return () => clearTimeout(debouncedUpdate);
+  }, [currentFile, previewUrl]);
+
+  useEffect(() => {
+    if (levelLoading) {
+      // If the level is currently loading, we skip sending a potentially outdated source.
+      return;
+    }
+    if (sourceLevelId.current !== levelProperties.id) {
+      // If we have a new level id, update the source immediately.
+      setDebouncedSource(source);
+      sourceLevelId.current = levelProperties.id;
+    } else {
+      // Set a timeout to send the debounced value after 500ms
+      const debouncedSourceSetter = setTimeout(() => {
+        setDebouncedSource(source);
+      }, 500);
+
+      // Cleanup the timeout if source or level changes before 500ms has elapsed.
+      return () => {
+        clearTimeout(debouncedSourceSetter);
+      };
+    }
+  }, [source, levelProperties.id, levelLoading]);
+
+  useEffect(() => {
+    if (isIframeLoaded && iframeRef.current && debouncedSource && previewUrl) {
+      iframeRef.current.contentWindow?.postMessage(
+        {
+          type: IframeMessageType.SET_SOURCE,
+          source: debouncedSource,
+        },
+        previewUrl
+      );
+    }
+  }, [previewUrl, debouncedSource, isIframeLoaded]);
 
   return (
     <div className={moduleStyles.previewContainer}>
-      {file && (
-        <iframe
-          sandbox=""
-          allow="self"
-          title="Web Preview"
-          ref={iframeRef}
-          id="preview"
-          style={{width: '100%', height: '100%', backgroundColor: 'white'}}
-          srcDoc={srcdoc}
-          className={moduleStyles.iframePreview}
+      <div>
+        <TextField
+          onChange={e => setCurrentFile(e.target.value)}
+          value={currentFile}
+          name={'url-input'}
+          size={'s'}
         />
-      )}
+      </div>
+      <iframe
+        sandbox="allow-scripts allow-same-origin"
+        allow="self"
+        title="Web Preview"
+        ref={iframeRef}
+        id="preview"
+        className={moduleStyles.previewIframe}
+        src={previewUrl}
+      />
     </div>
   );
 };
