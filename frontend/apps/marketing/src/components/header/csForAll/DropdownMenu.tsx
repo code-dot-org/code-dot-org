@@ -119,7 +119,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
         disableScrollLock
         sx={styles.menu}
       >
-        {linkList?.map(({label, href = 'body3'}) => (
+        {linkList?.map(({label, href}) => (
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
             component="a"
