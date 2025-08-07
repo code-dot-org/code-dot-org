@@ -35,6 +35,7 @@ type ResourcePanelProps = InstructionsProps & {
   className?: string;
   headerClassName?: string;
   aiTutor2Context?: string;
+  rightHeaderContent?: React.ReactNode;
 };
 
 /**
@@ -44,6 +45,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   className,
   headerClassName,
   aiTutor2Context,
+  rightHeaderContent,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -117,6 +119,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           id={currentTab}
           headerContent={tabInfo[currentTab].title}
           headerClassName={headerClassName}
+          rightHeaderContent={rightHeaderContent}
         >
           {availableTabs[currentTab]}
           <NavigationArea {...instructionsProps} />
