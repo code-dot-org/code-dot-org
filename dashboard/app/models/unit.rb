@@ -115,7 +115,6 @@ class Unit < ApplicationRecord
               unit_group: :course_version
             }
           },
-          :course_version,
           :lesson_groups,
           {
             lessons: [
