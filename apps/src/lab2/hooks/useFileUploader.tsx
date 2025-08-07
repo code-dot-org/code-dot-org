@@ -2,6 +2,7 @@ import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -26,7 +27,6 @@ export type FileUploaderProps = {
     payload: Record<string, string>
   ) => void;
   channelId?: string;
-  getExternalFileName?: (fileName: string) => string;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -95,7 +95,6 @@ export const useFileUploader = ({
   sendAnalyticsEvent = () => {},
   multiple = true,
   channelId = '',
-  getExternalFileName,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
@@ -161,13 +160,11 @@ export const useFileUploader = ({
       } else {
         try {
           // Better error handling?
-          if (!getExternalFileName || !channelId) {
+          if (!channelId) {
             return;
           }
 
-          const url = `/v3/assets/${channelId}/${getExternalFileName(
-            file.name
-          )}`;
+          const url = `/v3/assets/${channelId}/${createUuid()}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
@@ -189,7 +186,6 @@ export const useFileUploader = ({
     errorCallback,
     callback,
     channelId,
-    getExternalFileName,
   ]);
 
   return useMemo(
