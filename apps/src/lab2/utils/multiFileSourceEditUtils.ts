@@ -7,6 +7,7 @@ import {
   MultiFileSource,
   ProjectFile,
 } from '@cdo/apps/lab2/types';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {
   getNextFileId,
@@ -137,6 +138,10 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
+  if (fileToBeDeleted.url) {
+    HttpClient.delete(fileToBeDeleted.url);
+  }
+
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
   if (newActiveFileId) {
     newSource.files[newActiveFileId] = {
@@ -206,7 +211,12 @@ export const deleteFolderHelper = (
     newSource.files = {...newSource.files};
     Object.values(newSource.files)
       .filter(f => files.has(f.id))
-      .forEach(f => delete newSource.files[f.id]);
+      .forEach(f => {
+        delete newSource.files[f.id];
+        if (f.url) {
+          HttpClient.delete(f.url);
+        }
+      });
     if (newSource.openFiles) {
       // Delete files from the list of open files.
       newSource.openFiles = newSource.openFiles.filter(
