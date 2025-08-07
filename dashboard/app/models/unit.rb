@@ -1204,7 +1204,7 @@ class Unit < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil)
     raise 'Unit name has already been taken' if Unit.find_by_name(new_name) || File.exist?(Unit.script_json_filepath(new_name))
 
     if destination_professional_learning_course.nil? && old_professional_learning_course?
@@ -1230,7 +1230,6 @@ class Unit < ApplicationRecord
         copied_unit.announcements = nil
         copied_unit.name = new_name
 
-        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.published_state = destination_unit_group.nil? ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development : nil
         copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
         copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
@@ -1246,12 +1245,6 @@ class Unit < ApplicationRecord
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
           copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
-        else
-          raise "Must supply version year if new unit will be a standalone unit" unless version_year
-          copied_unit.version_year = version_year
-          raise "Must supply family name if new unit will be a standalone unit" unless family_name
-          copied_unit.family_name = family_name
-          CourseOffering.add_course_offering(copied_unit)
         end
 
         copied_unit.save! if copied_unit.changed?
@@ -1789,14 +1782,15 @@ class Unit < ApplicationRecord
   end
 
   # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view. 'course_assignable'
-  # will always return false for participants so they will fall into the second check for
-  # launched and can_view_version?. For instructors if course_assignable? is false then
-  # launched will also be false.
+  # assign or all the launched versions a participant can view. A unit can no
+  # longer have course versions, so this method will only return course versions
+  # for single-unit courses.
   def summarize_course_versions(user = nil, locale_code = 'en-us', unit_group: original_unit_group)
     if unit_group&.single_unit_course?
       return unit_group.summarize_course_versions(user, locale_code)
     end
+
+    {}
   end
 
   def self.clear_cache
@@ -1947,7 +1941,7 @@ class Unit < ApplicationRecord
   # If this unit belongs to a UnitGroup, returns the UnitGroup's CourseVersion
   # if there is one.
   # @return [CourseVersion]
-  def get_course_version(unit_group: original_unit_group)
+  def get_course_version
     unit_group&.course_version
   end
 
