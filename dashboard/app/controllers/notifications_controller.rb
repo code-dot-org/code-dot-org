@@ -11,22 +11,31 @@ class NotificationsController < ApplicationController
   end
 
   def mark_as_read
-    notification = current_user.notifications.find_by(id: params[:id])
-    if notification
-      notification.mark_as_read
-      render json: {status: 'success', message: 'Notification marked as read'}, status: :ok
-    else
-      render json: {status: 'error', message: 'Notification not found'}, status: :not_found
-    end
-  end
+    notification_ids = params[:notification_ids] || []
 
-  def dismiss
-    notification = current_user.notifications.find_by(id: params[:id])
-    if notification
-      notification.dismiss
-      render json: {status: 'success', message: 'Notification dismissed'}, status: :ok
-    else
-      render json: {status: 'error', message: 'Notification not found'}, status: :not_found
+    if notification_ids.empty?
+      render json: {status: 'error', message: 'No notification IDs provided'}, status: :bad_request
+      return
     end
+
+    notifications = current_user.notifications.where(id: notification_ids)
+    found_ids = notifications.pluck(:id)
+    missing_ids = notification_ids.map(&:to_i) - found_ids
+
+    # Mark found notifications as read
+    notifications.each(&:mark_as_read)
+
+    response_data = {
+      status: 'success',
+      message: "#{notifications.count} notification() marked as read",
+      marked_count: notifications.count,
+    }
+
+    if missing_ids.any?
+      response_data[:missing_ids] = missing_ids
+      response_data[:message] += ", (#{missing_ids.length} not found)"
+    end
+
+    render json: response_data, status: :ok
   end
 end

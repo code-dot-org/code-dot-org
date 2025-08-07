@@ -50,8 +50,7 @@ Dashboard::Application.routes.draw do
 
     resources :notifications, only: [:index] do
       collection do
-        post ':id/mark_as_read', controller: :notifications, action: :mark_as_read
-        post ':id/dismiss', controller: :notifications, action: :dismiss
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
       end
     end
 
