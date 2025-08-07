@@ -1,5 +1,6 @@
 export type * from './types';
 export * from './components/MazeLevel';
+export * as api from './api';
 import Visualization from './components/Visualization';
 export {Visualization};
 import type {VisualizationProps} from './components/Visualization';
@@ -17,6 +18,8 @@ export {skins};
 export {default as TestResults} from './TestResults';
 import Validator from './Validator';
 export {Validator};
+export {default as Cell} from './Cell';
+export {default as Collector} from './Collector';
 
 const key = 'Maze';
 export {key}

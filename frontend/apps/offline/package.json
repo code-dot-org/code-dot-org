@@ -41,6 +41,7 @@
     "@code-dot-org/lab-artist": "workspace:*",
     "@code-dot-org/lab-blockly": "workspace:*",
     "@code-dot-org/lab-frequency-analysis": "workspace:*",
+    "@code-dot-org/lab-karel": "workspace:*",
     "@code-dot-org/lab-maze": "workspace:*",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@next/third-parties": "^15.2.1",
