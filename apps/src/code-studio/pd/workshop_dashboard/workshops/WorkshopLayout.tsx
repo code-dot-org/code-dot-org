@@ -6,6 +6,7 @@ import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
+import {WorkshopProvider} from './context/WorkshopContext';
 import {WorkshopLayoutProps} from './types';
 
 import styles from './workshop.module.scss';
@@ -27,7 +28,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const handleDownload = () => {};
 
   return (
-    <>
+    <WorkshopProvider>
       <nav aria-label="Workshop sections" className={styles.navContainer}>
         <WorkshopTabs tabList={tabList} />
         <div className={styles.navRow}>
@@ -57,6 +58,6 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
       <main>
         <Outlet />
       </main>
-    </>
+    </WorkshopProvider>
   );
 };
