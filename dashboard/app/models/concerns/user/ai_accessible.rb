@@ -10,12 +10,10 @@ module User::AiAccessible
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
-  # TODO-AITUTOR: So we need both UserPermission::AI_TUTOR_ACCESS
-  # for the teacher to USE AI Tutor on the level. Otherwise they'd have to impersonate
-  # a student from the teacher panel, I believe.
-  # PROPOSAL: Can we get rid of UserPermission::AI_TUTOR_ACCESS?
-  # We have an experiment(pilot) gating access already. Can we just allow
-  # teachers in the pilot to use AI Tutor without a separate user permission?
+  # TODO-AITUTOR: It looks like the only utility UserPermission::AI_TUTOR_ACCESS
+  # gives us at the moment is the ability for teachers to use AI Tutor on a level
+  # without impersonating a student. We could let teachers
+  # in the pilot use AI Tutor without a separate user permission.
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
     permission?(UserPermission::AI_TUTOR_ACCESS) || in_ai_tutor_experiment_with_enabled_section?
