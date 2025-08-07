@@ -3,13 +3,13 @@ import * as Blockly from 'blockly/core';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
-import ArtistLevel, {ArtistLevelProps} from '@code-dot-org/lab-artist';
-import type {ArtistData} from '@code-dot-org/lab-artist';
+import KarelLevel, {KarelLevelProps} from '@code-dot-org/lab-karel';
+import type {MazeData} from '@code-dot-org/lab-maze';
 import type {LevelData} from '@code-dot-org/models/levels';
 
 export default {
-  title: 'Labs/Artist',
-  component: ArtistLevel,
+  title: 'Labs/Karel',
+  component: KarelLevel,
   parameters: {
     layout: 'fullscreen',
   },
@@ -18,17 +18,17 @@ export default {
 //
 // TEMPLATE
 //
-const Template: StoryFn<ArtistLevelProps> = args => (
+const Template: StoryFn<KarelLevelProps> = args => (
   <div style={{width: '100vw', height: '100vh'}}>
-    <ArtistLevel
+    <KarelLevel
       {...args}
     />
   </div>
 );
 
-const defaultLevelData: LevelData<ArtistData> = {
+const defaultLevelData: LevelData<MazeData> = {
   key: 'default-level',
-  type: 'Artist',
+  type: 'Karel',
   longInstructions: 'These are the instructions for this level in **Markdown**',
   shortInstructions: 'These are shorter instructions',
   subData: {
@@ -50,11 +50,18 @@ const defaultLevelData: LevelData<ArtistData> = {
         ],
       },
     },
-    skinId: 'artist',
-    startDirection: 90,
-    images: [],
-    initialX: 200,
-    initialY: 200,
+    skinId: 'collector',
+    startDirection: 1,
+    serializedMaze: [
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":2},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":1,"value":1,"range":1},{"tileType":1},{"tileType":1,"value":1,"range":1},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
+    ],
   },
 };
 
@@ -81,7 +88,7 @@ const defaultBlocks: BlockDefinition[] = [
     message0: 'move forward',
     generator: {
       javascript(block: Blockly.Block) {
-        return `Artist.moveForward('block_id_${block.id}');\n`;
+        return `Karel.moveForward('block_id_${block.id}');\n`;
       },
     },
   },
@@ -108,21 +115,21 @@ const defaultBlocks: BlockDefinition[] = [
       javascript(block: Blockly.Block) {
         // Generate JavaScript for moving forward/backward
         const dir = block.getFieldValue('DIR');
-        return 'Artist.' + dir + "('block_id_" + block.id + "');\n";
+        return 'Karel.' + dir + "('block_id_" + block.id + "');\n";
       },
     },
   },
 ];
 
-export const ArtistBase = Template.bind({});
-ArtistBase.args = {
+export const KarelBase = Template.bind({});
+KarelBase.args = {
   levelData: defaultLevelData,
   renderer: Thrasos,
   customBlocks: defaultBlocks,
 };
 
-export const ArtistMarkdownInstructions = Template.bind({});
-ArtistMarkdownInstructions.args = {
+export const KarelMarkdownInstructions = Template.bind({});
+KarelMarkdownInstructions.args = {
   levelData: {
     ...defaultLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
