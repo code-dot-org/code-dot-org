@@ -13,6 +13,7 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {createUuid} from '@cdo/apps/utils';
 
 type UseFileUploaderArgs = Omit<FileUploaderProps, 'sendAnalyticsEvent'> & {
   validFileTypes?: string[];
@@ -71,7 +72,7 @@ export const useFileUploader = (
   );
 
   const getExternalFileName = (fileName: string) =>
-    `/folder-${folderId}-file-${fileName}`;
+    `${createUuid()}-${fileName}`;
 
   return useLab2FileUploader({
     sendAnalyticsEvent,
