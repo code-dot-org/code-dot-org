@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {shouldShowCopyCode} from '@cdo/apps/lab2/ai/ai-should-show-copy-code';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
@@ -20,9 +20,6 @@ interface ChatMessageProps {
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
 }
-
-const shouldCopyCodeBlocks =
-  String(queryParams('ai-show-copy-code')).toLowerCase() === 'true';
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   text,
@@ -80,7 +77,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             <SafeMarkdown
               markdown={text}
               rehypeMap={
-                shouldCopyCodeBlocks ? {pre: CopyableCodeBlock} : undefined
+                shouldShowCopyCode ? {pre: CopyableCodeBlock} : undefined
               }
               openExternalLinksInNewTab
             />
