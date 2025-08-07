@@ -3,15 +3,22 @@
 import dynamic from 'next/dynamic';
 import React, {useMemo} from 'react';
 
-import type {LevelData} from '@/app/models/level';
-import type {ActivitySectionData} from '@/app/models/unit';
+import type {ActivitySectionData} from '@code-dot-org/models/activitySections';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 import Spinner from './Spinner';
 
 /**
  * A map of level types and their implementing packages.
  */
-const levelMap = {
+const levelMap: {
+  [key: string]: React.ComponentType<{
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    levelData: LevelData<any>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  }>;
+} = {
   /** Navigation karels that use a small colorful grid */
   Maze: dynamic(() => import('@code-dot-org/lab-maze'), {ssr: false, loading: () => <Spinner />}),
   /** Cipher analysis exhibiting the weaknesses of symmetric encryption */

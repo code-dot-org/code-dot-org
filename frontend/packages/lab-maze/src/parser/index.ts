@@ -20,7 +20,7 @@ export const sanitizeJSON: (data: string) => string = data =>
  * Parses a level config to produce the level data we need to supply to
  * the level component.
  */
-function load(config: {[key: string]: any}, xml?: Element, parser?: DOMParser): MazeData {
+function load(config: {[key: string]: any}, xml?: Document, parser?: DOMParser): MazeData {
   return {
     ...loadBlocklyData(config, xml, parser),
     skinId: config.properties?.skin || 'birds',

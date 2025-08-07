@@ -23,7 +23,7 @@ export interface LevelRegistry {
 export interface LevelRegistry2 {
   [key: string]: {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    load: (config: {[key: string]: any}, xml?: Element, parser?: DOMParser) => {[key: string]: any};
+    load: (config: {[key: string]: any}, xml?: Document, parser?: DOMParser) => {[key: string]: any};
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     levelModule?: () => any;
   };
@@ -42,7 +42,7 @@ export function register(levelModule: LevelModule) {
 export default levelRegistry;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function register2(key: string, load: (config: {[key: string]: any}, xml?: Element, parser?: DOMParser) => {[key: string]: any}, levelModule?: () => any) {
+export function register2(key: string, load: (config: {[key: string]: any}, xml?: Document, parser?: DOMParser) => {[key: string]: any}, levelModule?: () => any) {
   levelRegistry2[key] = {
     load,
     levelModule,

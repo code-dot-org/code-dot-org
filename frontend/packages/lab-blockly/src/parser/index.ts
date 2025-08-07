@@ -12,7 +12,8 @@ import type {BlocklyData} from '../types';
  * Parses a level config to produce the level data we need to supply to
  * the level component.
  */
-function load(config: {[key: string]: any}, xml?: Element, parser?: DOMParser): BlocklyData {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function load(config: {[key: string]: any}, xml?: Document, parser?: DOMParser): BlocklyData {
   const parseXml = (root: HTMLElement | undefined) =>
     root?.querySelector('xml > *') ? root?.innerHTML?.trim() : undefined;
 

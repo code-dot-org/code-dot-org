@@ -19,7 +19,7 @@ import MessagePanel from './MessagePanel';
 import moduleStyles from './frequencyLevel.module.scss';
 
 export interface FrequencyLevelProps {
-  levelData?: LevelData<FrequencyLevelData>;
+  levelData: LevelData<FrequencyLevelData>;
 }
 
 /**
