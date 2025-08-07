@@ -1,3 +1,9 @@
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
@@ -74,6 +80,13 @@ import Video, {
 const contentfulRegistration = {
   componentRegistrations: [
     {
+      component: ActionBlock,
+      definition: ActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: ActionBlockCarousel,
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
@@ -121,6 +134,13 @@ const contentfulRegistration = {
     {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
+    },
+    {
+      component: FullWidthActionBlock,
+      definition: FullWidthActionBlockContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Heading,
