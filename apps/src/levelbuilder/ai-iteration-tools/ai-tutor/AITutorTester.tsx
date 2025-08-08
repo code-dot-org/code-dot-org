@@ -3,7 +3,7 @@ import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
-import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {ChatContext} from '@cdo/apps/aiTutor/types';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
@@ -54,6 +54,19 @@ const AITutorTester: React.FC = () => {
     });
 
     await Promise.allSettled(responsePromises);
+  };
+
+  const formatQuestionForAITutor = (chatContext: ChatContext) => {
+    let formattedQuestion = chatContext.studentInput;
+
+    if (chatContext.studentCode) {
+      const separator = '\n\n---\n\n';
+      const codePrefix = "Here is the student's code:\n\n```\n";
+      const codePostfix = '\n```';
+      formattedQuestion = `${chatContext.studentInput}${separator}${codePrefix}${chatContext.studentCode}${codePostfix}`;
+    }
+
+    return formattedQuestion;
   };
 
   const askAITutor = async (row: AIInteraction) => {
