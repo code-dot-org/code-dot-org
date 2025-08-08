@@ -93,8 +93,8 @@ const projectSlice = createSlice({
       state,
       action: PayloadAction<{
         fileName: string;
-        folderId?: FolderId;
         url: string;
+        folderId?: FolderId;
       }>
     ) {
       if (state.projectSources?.source) {
