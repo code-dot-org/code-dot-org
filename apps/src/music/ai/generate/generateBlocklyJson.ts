@@ -1,6 +1,30 @@
 // NOTE: This is AI-generated code.  Search for HAND_CHANGE for any changes made by hand after that.
 
 /*
+  Generate prompt:
+
+  Your job will be to generate a TypeScript function that generates Blockly JSON, as a string, from psuedocode which describes how to play a song.  Never use the "any" type, and double-check your work to make sure that there are no errors.
+
+The psuedocode looks something like this:
+
+when_run
+  play "hiphop/drum_beat_808"
+  play "electro/drum_beat_hyper"
+  play_together
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+  repeat 3
+    play "hiphop/drum_beat_808"
+    play "electro/drum_beat_hyper"
+
+Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
+
+And Here is some example Blockly code for our system.  In this case, we are generating a song.  It repeats the output 3 times, the output being a drum beat cowbell and a guitar code which play together:
+
+  {"blocks":{"languageVersion":0,"blocks":[{"type":"when_run_simple2","id":"when-run-block","x":30,"y":30,"deletable":false,"movable":false,"next":{"block":{"type":"repeat_simple2","id":"repeat_simple2","extraState":{"disableNextConnection":false},"fields":{"times":3},"inputs":{"code":{"block":{"type":"play_sounds_together","id":"play_sounds_together","extraState":{"disableNextConnection":false},"inputs":{"code":{"block":{"type":"play_sound_at_current_location_simple2","id":"play_sound_at_current_location_simple2","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"},"next":{"block":{"type":"play_sound_at_current_location_simple2","id":"!;-!82$m2/}%!h8$ua","extraState":{"disableNextConnection":false},"fields":{"sound":"electro/drum_beat_cowbell"}}}}}}}}}}}}]}}
+ */
+
+/*
   AI response:
 
   To achieve this, we'll create a TypeScript function that parses the pseudocode line by line, keeping
