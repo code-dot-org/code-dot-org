@@ -1,6 +1,12 @@
-// This is AI-generated code.
+// NOTE: This is AI-generated code.  Search for HAND_CHANGE for any changes made by hand after that.
 
-/* To achieve this, we'll create a TypeScript function that parses the pseudocode line by line, keeping track of indentation levels to correctly determine the nesting of Blockly blocks. We'll define the necessary TypeScript interfaces to ensure type safety throughout the generation of the Blockly JSON structure.
+/*
+  AI response:
+
+  To achieve this, we'll create a TypeScript function that parses the pseudocode line by line, keeping
+   track of indentation levels to correctly determine the nesting of Blockly blocks. We'll define the
+   necessary TypeScript interfaces to ensure type safety throughout the generation of the Blockly JSON
+   structure.
  */
 
 // Define interfaces for Blockly JSON structure to ensure type safety
@@ -84,7 +90,8 @@ export function generateBlocklyJson(pseudocode: string): string {
   // Each entry includes the parent block and its indentation level.
   const scopeStack: {block: BlocklyBlock; indentation: number}[] = [];
 
-  let previousIndentation: number = 0; // Tracks the indentation of the previous processed line
+  // HAND_CHANGE: Commented out manually.
+  // let previousIndentation: number = 0; // Tracks the indentation of the previous processed line
 
   for (let i = 0; i < meaningfulLines.length; i++) {
     const line = meaningfulLines[i];
@@ -222,7 +229,8 @@ export function generateBlocklyJson(pseudocode: string): string {
       scopeStack.push({block: newBlock, indentation: currentIndentation});
     }
 
-    previousIndentation = currentIndentation;
+    // HAND_CHANGE: Commented out manually.
+    // previousIndentation = currentIndentation;
   }
 
   // Construct the final Blockly workspace object

@@ -1,14 +1,20 @@
 .generatePanel {
   position: absolute;
   width: 100%;
-  height: 100%;
-  z-index: 1000;
+  top: 32px;
+  bottom: 0;
+  z-index: 71;
   background: #4802AA;
-  background: linear-gradient(49deg, rgba(72, 2, 170, 1) 0%, rgba(176, 14, 229, 1) 52%, rgba(77, 202, 239, 1) 100%);
+  background: linear-gradient(49deg, rgba(72 2 170 / 1) 0%, rgba(176 14 229 / 1) 52%, rgba(77 202 239 / 1) 100%);
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+
+.heading {
+  margin-bottom: 0;
 }
 
 .textArea {
@@ -27,7 +33,7 @@
   //border: solid 1px #48BCFC;
 }
 
-.status {
+.footer {
   height: 60px;
   font-size: 16px;
 }

@@ -27,6 +27,8 @@ export enum InstructionsPosition {
   RIGHT = 'RIGHT',
 }
 
+type AiGenerateState = 'none' | 'generating' | 'done';
+
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
   packId: string | null;
@@ -79,6 +81,8 @@ export interface MusicState {
 
   // Some code to load.  Reset to undefined when the code is loaded.
   codeToLoad?: string;
+  // Status of AI generation.
+  aiGenerateState: AiGenerateState;
 }
 
 const initialState: MusicState = {
@@ -111,6 +115,7 @@ const initialState: MusicState = {
   key: DEFAULT_KEY,
   bpm: DEFAULT_BPM,
   codeToLoad: undefined,
+  aiGenerateState: 'none',
 };
 
 const musicSlice = createSlice({
@@ -268,6 +273,9 @@ const musicSlice = createSlice({
         state.codeToLoad = action.payload;
       }
     },
+    setAiGenerateState: (state, action: PayloadAction<AiGenerateState>) => {
+      state.aiGenerateState = action.payload;
+    },
   },
 });
 
@@ -348,4 +356,5 @@ export const {
   setKey,
   setBpm,
   setCodeToLoad,
+  setAiGenerateState,
 } = musicSlice.actions;
