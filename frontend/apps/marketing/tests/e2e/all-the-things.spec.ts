@@ -466,20 +466,19 @@ test.describe('All the things UI e2e test', () => {
       });
 
       test('renders', async () => {
-        const accordionButtons = component.getByRole('button', {name: /.+/});
+        const dialogLocator = component.getByRole('group');
 
-        await expect(accordionButtons).toHaveCount(3);
+        await expect(dialogLocator).toHaveCount(3);
 
-        for (const button of await accordionButtons.all()) {
-          await expect(button).toBeVisible();
+        for (const dialog of await dialogLocator.all()) {
+          await expect(dialog).toBeVisible();
         }
       });
 
       test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
-        const accordionButtons = component.getByRole('button', {name: /.+/});
-
-        for (const button of await accordionButtons.all()) {
-          await button.click();
+        for (const dialog of await component.getByRole('group').all()) {
+          await dialog.click();
+          await expect(dialog).toHaveAttribute('open');
         }
 
         await eyes.check(testInfo.title, {region: component});

@@ -36,12 +36,6 @@ const config: StorybookConfig = {
     };
 
     return {
-      optimizeDeps: {
-        include: [
-          ...(config.optimizeDeps?.include || []),
-          '@mui/icons-material/ExpandMore',
-        ],
-      },
       ...config,
     };
   },

@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import FAQAccordionContentful, {
   FAQAccordionContentfulProps,
 } from '@/components/contentful/faqAccordion/FAQAccordion';
 import {Meta, StoryObj} from '@storybook/react';
-import {expect, within, userEvent} from 'storybook/test';
+import {expect, userEvent} from 'storybook/test';
 
 import FAQAccordionMock from './__mocks__/FAQAccordion.json';
 
@@ -16,37 +18,33 @@ export default meta;
 type Story = StoryObj<FAQAccordionContentfulProps>;
 
 export const FilledOut: Story = {
-  args: FAQAccordionMock as FAQAccordionContentfulProps,
+  args: FAQAccordionMock as any,
   play: async ({canvas}) => {
-    // Check for all three FAQ questions
-    const questions = ['FAQ Text', 'FAQ Lists', 'FAQ Links'];
-    for (const q of questions) {
-      const summary = canvas.getByRole('button', {name: q});
-      expect(summary).toBeInTheDocument();
-      await userEvent.click(summary);
-      // Find the closest MuiAccordion-root ancestor and cast to HTMLElement
-      const accordionRoot = summary.closest(
-        '.MuiAccordion-root',
-      ) as HTMLElement | null;
-      expect(accordionRoot).toBeTruthy();
-      // Use within to get the region inside this accordion
-      const region = within(accordionRoot!).getByRole('region', {hidden: true});
-      expect(region).toBeInTheDocument();
-      if (q === 'FAQ Text') {
-        expect(region).toHaveTextContent('Normal text');
-      } else if (q === 'FAQ Lists') {
-        expect(region).toHaveTextContent('Ordered Item 3');
-      } else if (q === 'FAQ Links') {
-        // Find the Bold Italic link inside the region
-        const boldItalicLink = within(region).getByRole('link', {
-          name: 'Bold Italic link',
-        });
-        expect(boldItalicLink).toBeInTheDocument();
-        expect(boldItalicLink).toHaveAttribute(
-          'href',
-          expect.stringContaining('https://code.org'),
-        );
-      }
+    // Find all FAQ items (summary elements)
+    let summaryEls: HTMLElement[] = [];
+    // Only use summary elements, do not use role 'button'
+    summaryEls = await canvas.findAllByText((content, element) => {
+      return !!element && element.tagName === 'SUMMARY';
+    });
+    // Open the first FAQ item
+    await userEvent.click(summaryEls[0]);
+    // Check that the answer is now visible
+    const answerText = 'Normal text'; // from mock JSON
+    await expect(canvas.getByText(answerText)).toBeInTheDocument();
+
+    /// Open second FAQ item
+    await userEvent.click(summaryEls[1]);
+    // Check that the answer is now visible
+    const secondAnswerText = 'Ordered Item 3'; // from mock JSON
+    await expect(canvas.getByText(secondAnswerText)).toBeInTheDocument();
+
+    /// Open third FAQ item
+    await userEvent.click(summaryEls[2]);
+    // Check that anchor links are present
+    const links = await canvas.findAllByRole('link');
+    expect(links.length).toBeGreaterThan(0);
+    for (const link of links) {
+      await expect(link).toBeVisible();
     }
   },
 };

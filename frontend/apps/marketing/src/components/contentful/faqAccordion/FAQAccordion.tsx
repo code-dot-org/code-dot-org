@@ -1,17 +1,16 @@
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
 import {documentToPlainTextString} from '@contentful/rich-text-plain-text-renderer';
 import {BLOCKS} from '@contentful/rich-text-types';
-import {ExpandMore} from '@mui/icons-material';
-import MuiAccordion from '@mui/material/Accordion';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import MuiAccordionSummary from '@mui/material/AccordionSummary';
-import MuiBox from '@mui/material/Box';
 import {EntryFields, BaseEntry} from 'contentful';
 import {useMemo} from 'react';
-import {JsonLd} from 'react-schemaorg';
-import type {FAQPage} from 'schema-dts';
+
+import FAQAccordion, {
+  FAQAccordionItem,
+} from '@code-dot-org/component-library/accordrion/faqAccordion';
 
 import RichText from '@/components/contentful/richText';
+
+import moduleStyles from './faqAccordion.module.scss';
 
 export type FAQAccordionContentfulProps = {
   faqs?: (BaseEntry & {
@@ -26,9 +25,6 @@ const isRichText = (
   field: EntryFields.Text | EntryFields.RichText,
 ): field is EntryFields.RichText =>
   typeof field === 'object' && field?.nodeType === BLOCKS.DOCUMENT;
-
-const slugify = (str: string) =>
-  encodeURIComponent(str.trim().toLowerCase().replace(/\s+/g, '-'));
 
 const FAQAccordionContentful: React.FunctionComponent<
   FAQAccordionContentfulProps
@@ -48,7 +44,11 @@ const FAQAccordionContentful: React.FunctionComponent<
         }
 
         if (isRichText(faq.fields.answer)) {
-          answer = <RichText content={faq.fields.answer} />;
+          answer = (
+            <div className={moduleStyles.faqAccordionAnswer}>
+              <RichText content={faq.fields.answer} />
+            </div>
+          );
           // See: https://developers.google.com/search/docs/appearance/structured-data/faqpage#answer
           answerString = documentToHtmlString(faq.fields.answer, {
             preserveWhitespace: true,
@@ -58,15 +58,13 @@ const FAQAccordionContentful: React.FunctionComponent<
           answerString = answer;
         }
 
-        const safeId = slugify(questionString);
-
         return {
-          id: safeId,
+          id: questionString,
           label: question,
           questionString,
           content: answer,
           answerString,
-        };
+        } as FAQAccordionItem;
       }) || [],
     [faqs],
   );
@@ -85,45 +83,7 @@ const FAQAccordionContentful: React.FunctionComponent<
   }
 
   return (
-    <MuiBox>
-      {faqItems.map(item => {
-        const summaryId = `accordion-summary-${item.id}`;
-        const detailsId = `accordion-details-${item.id}`;
-
-        return (
-          <MuiAccordion key={item.id} slotProps={{heading: {component: 'div'}}}>
-            <MuiAccordionSummary
-              id={summaryId}
-              aria-controls={detailsId}
-              component="summary"
-              expandIcon={<ExpandMore />}
-            >
-              {item.label}
-            </MuiAccordionSummary>
-            <MuiAccordionDetails id={detailsId} aria-labelledby={summaryId}>
-              {item.content}
-            </MuiAccordionDetails>
-          </MuiAccordion>
-        );
-      })}
-
-      {/* JSON-LD for structured data. Needed for Google SEO.
-      (see https://developers.google.com/search/docs/appearance/structured-data/faqpage#json-ld) */}
-      <JsonLd<FAQPage>
-        item={{
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqItems.map(item => ({
-            '@type': 'Question',
-            name: item.questionString,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answerString,
-            },
-          })),
-        }}
-      />
-    </MuiBox>
+    <FAQAccordion className={moduleStyles.faqAccordion} items={faqItems} />
   );
 };
 
