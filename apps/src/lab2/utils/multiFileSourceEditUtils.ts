@@ -1,5 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import {getOpenFileIds} from '@cdo/apps/codebridge/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {
   FileId,
@@ -139,7 +140,15 @@ export const deleteFileHelper = (
   delete newSource.files[fileId];
 
   if (fileToBeDeleted.url) {
-    HttpClient.delete(fileToBeDeleted.url);
+    try {
+      // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
+      // In the case of a failure, we just end up with an orphaned file in S3.
+      HttpClient.delete(fileToBeDeleted.url);
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error deleting project asset from S3', error as Error);
+    }
   }
 
   const newActiveFileId = getNewActiveFileId(source, fileToBeDeleted);
@@ -214,7 +223,18 @@ export const deleteFolderHelper = (
       .forEach(f => {
         delete newSource.files[f.id];
         if (f.url) {
-          HttpClient.delete(f.url);
+          try {
+            // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
+            // In the case of a failure, we just end up with an orphaned file in S3.
+            HttpClient.delete(f.url);
+          } catch (error) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Error deleting project asset (as part of folder deletion) from S3',
+                error as Error
+              );
+          }
         }
       });
     if (newSource.openFiles) {
