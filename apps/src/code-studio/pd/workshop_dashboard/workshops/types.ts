@@ -8,6 +8,8 @@ export interface WorkshopSession {
   end: string;
   sessionFormat: SessionFormat | null;
   locationName: string | null;
+  locationAddress: string | null;
+  meetingLink: string | null;
   code: string | null;
   showLink: boolean;
   attendanceCount: number | null;

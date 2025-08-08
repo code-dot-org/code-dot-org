@@ -38,6 +38,8 @@ describe('WorkshopInformationSection', () => {
         code: 'TEST',
         showLink: false,
         attendanceCount: 0,
+        locationAddress: null,
+        meetingLink: null,
       },
     ],
     facilitators: [
@@ -193,6 +195,8 @@ describe('WorkshopInformationSection', () => {
           code: 'TEST1',
           showLink: false,
           attendanceCount: 0,
+          locationAddress: null,
+          meetingLink: null,
         },
         {
           id: 2,
@@ -203,6 +207,8 @@ describe('WorkshopInformationSection', () => {
           code: 'TEST2',
           showLink: false,
           attendanceCount: 0,
+          locationAddress: null,
+          meetingLink: null,
         },
       ],
     });
