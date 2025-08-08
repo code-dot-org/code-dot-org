@@ -74,13 +74,20 @@ export interface Session {
   start: string;
   end: string;
   code: string;
-  location_address?: string | null;
-  location_name?: string | null;
-  meeting_link?: string | null;
+  location_address: string | null;
+  location_name: string | null;
+  meeting_link: string | null;
   session_format: SessionFormat;
+  'show_link?': boolean | null;
+  attendance_count: number | null;
+  is_local: boolean | null;
 }
 
-export interface SessionRequest extends Omit<Session, 'id' | 'code'> {
+export interface SessionRequest
+  extends Omit<
+    Session,
+    'id' | 'code' | 'show_link?' | 'attendance_count' | 'is_local'
+  > {
   id?: number;
 }
 
@@ -100,31 +107,53 @@ export interface SessionFormState {
   format: SessionFormat;
 }
 
+export type WorkshopState = 'Not Started' | 'In Progress' | 'Ended';
+
 export interface Workshop {
   id: number;
-  course?: string | null;
-  name?: string | null;
-  capacity?: number | null;
-  grades?: string[];
-  description?: string | null;
-  notes?: string | null;
-  suppress_email?: boolean;
-  regional_partner_id?: number | null;
-  organizer?: Organizer;
-  facilitators?: Facilitator[];
-  subject?: string | null;
-  fee?: string | null;
-  prereq?: string | null;
-  hidden?: boolean;
-  registration_link?: string | null;
+  course: string | null;
+  name: string | null;
+  capacity: number | null;
+  grades: string[] | null;
+  description: string | null;
+  notes: string | null;
+  suppress_email: boolean | null;
+  regional_partner_id: number | null;
+  organizer: Organizer | null;
+  facilitators: Facilitator[];
+  subject: string | null;
+  fee: string | null;
+  prereq: string | null;
+  hidden: boolean | null;
+  registration_link: string | null;
   sessions: Session[];
-  course_offerings?: number[];
-  participant_group_type?: string | null;
-  time_zone?: string | null;
+  course_offerings: number[];
+  participant_group_type: string | null;
+  time_zone: string | null;
+  state: WorkshopState;
+  enrolled_teacher_count: number | null;
+  'ready_to_close?': boolean | null;
+  'account_required_for_attendance?': boolean | null;
+  regional_partner_name: string | null;
+  course_offering_names: string | null;
+  created_at: string;
 }
 
 export interface WorkshopRequest
-  extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
+  extends Omit<
+    Workshop,
+    | 'id'
+    | 'facilitators'
+    | 'organizer'
+    | 'sessions'
+    | 'state'
+    | 'enrolled_teacher_count'
+    | 'ready_to_close?'
+    | 'account_required_for_attendance?'
+    | 'regional_partner_name'
+    | 'course_offering_names'
+    | 'created_at'
+  > {
   id?: number;
   facilitators: number[];
   organizer_id: number | null;
