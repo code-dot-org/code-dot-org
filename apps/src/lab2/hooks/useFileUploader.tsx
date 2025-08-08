@@ -161,10 +161,11 @@ export const useFileUploader = ({
       } else {
         try {
           if (!channelId) {
-            throw new Error('channelId required for file upload');
+            throw new Error('channelId required for file upload.');
           }
 
-          const url = `/v3/assets/${channelId}/${createUuid()}`;
+          const fileType = file.name.split('.')[1];
+          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
           await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
