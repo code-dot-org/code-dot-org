@@ -1,49 +1,52 @@
 import {SegmentedButtonsProps} from '@code-dot-org/component-library/segmentedButtons';
+
+import {SessionFormat, WorkshopState} from '../WorkshopFormTemplate/types';
+
 export interface WorkshopSession {
-  id: string;
+  id: number;
   start: string;
   end: string;
-  sessionFormat: 'in_person' | 'virtual';
-  locationName?: string;
-  code?: string;
+  sessionFormat: SessionFormat | null;
+  locationName: string | null;
+  code: string | null;
   showLink: boolean;
-  attendanceCount: number;
+  attendanceCount: number | null;
 }
 
 export interface WorkshopFacilitator {
-  id: string;
+  id: number;
   name: string;
   email: string;
 }
 
 export interface WorkshopData {
-  id: string;
-  state: 'Not Started' | 'In Progress' | 'Ended';
-  timeZone: string;
-  name: string;
-  course: string;
-  subject: string;
-  courseOfferingNames: string;
+  id: number;
+  state: WorkshopState;
+  timeZone: string | null;
+  name: string | null;
+  course: string | null;
+  subject: string | null;
+  courseOfferingNames: string | null;
   sessions: WorkshopSession[];
   facilitators: WorkshopFacilitator[];
-  regionalPartnerName: string;
+  regionalPartnerName: string | null;
   accountRequiredForAttendance: boolean;
   readyToClose: boolean;
-  registrationLink?: string;
-  createdAt: string;
-  enrolledTeacherCount?: number;
-  hidden?: boolean;
+  registrationLink: string | null;
+  createdAt: string | null;
+  enrolledTeacherCount: number | null;
+  hidden: boolean | null;
 }
 
-export interface EnrollmentData {
-  id: string;
+export interface WorkshopEnrollment {
+  id: number;
   name: string;
   email: string;
 }
 
 export interface WorkshopContextValue {
   workshop: WorkshopData | null;
-  enrollments: EnrollmentData[] | null;
+  enrollments: WorkshopEnrollment[] | null;
   loading: boolean;
   loadingEnrollments: boolean;
   error: string | null;

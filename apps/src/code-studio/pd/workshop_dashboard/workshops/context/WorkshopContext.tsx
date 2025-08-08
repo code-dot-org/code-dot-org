@@ -8,7 +8,8 @@ import React, {
 } from 'react';
 import {useParams} from 'react-router-dom';
 
-import {WorkshopContextValue, WorkshopData, EnrollmentData} from '../types';
+import {Workshop} from '../../WorkshopFormTemplate/types';
+import {WorkshopContextValue, WorkshopData, WorkshopEnrollment} from '../types';
 
 const WorkshopContext = createContext<WorkshopContextValue | null>(null);
 
@@ -26,43 +27,8 @@ interface WorkshopProviderProps {
   children: ReactNode;
 }
 
-// API response types (matching the actual API structure)
-interface ApiWorkshopSession {
-  id: string;
-  start: string;
-  end: string;
-  session_format: string;
-  location_name?: string;
-  code?: string;
-  'show_link?': boolean;
-  attendance_count: number;
-}
-
-interface ApiWorkshopData {
-  id: string;
-  state: 'Not Started' | 'In Progress' | 'Ended';
-  time_zone: string;
-  name: string;
-  course: string;
-  subject: string;
-  course_offering_names: string;
-  sessions: ApiWorkshopSession[];
-  facilitators: Array<{
-    id: string;
-    name: string;
-    email: string;
-  }>;
-  regional_partner_name: string;
-  'account_required_for_attendance?': boolean;
-  'ready_to_close?': boolean;
-  registration_link?: string;
-  created_at: string;
-  enrolled_teacher_count?: number;
-  hidden?: boolean;
-}
-
-// Helper function to transform API response to our clean types
-const transformWorkshopData = (apiData: ApiWorkshopData): WorkshopData => ({
+// Transform Workshop API response to WorkshopData for display components
+export const transformWorkshopData = (apiData: Workshop): WorkshopData => ({
   id: apiData.id,
   state: apiData.state,
   timeZone: apiData.time_zone,
@@ -70,27 +36,27 @@ const transformWorkshopData = (apiData: ApiWorkshopData): WorkshopData => ({
   course: apiData.course,
   subject: apiData.subject,
   courseOfferingNames: apiData.course_offering_names,
-  sessions:
-    apiData.sessions?.map((session: ApiWorkshopSession) => ({
-      id: session.id,
-      start: session.start,
-      end: session.end,
-      sessionFormat: session.session_format as 'in_person' | 'virtual',
-      locationName: session.location_name,
-      code: session.code,
-      showLink: session['show_link?'] || false,
-      attendanceCount: session.attendance_count || 0,
-    })) || [],
-  facilitators:
-    apiData.facilitators?.map(facilitator => ({
-      id: facilitator.id,
-      name: facilitator.name,
-      email: facilitator.email,
-    })) || [],
+  sessions: apiData.sessions.map(session => ({
+    id: session.id,
+    start: session.start,
+    end: session.end,
+    sessionFormat: session.session_format,
+    locationName: session.location_name,
+    locationAddress: session.location_address,
+    meetingLink: session.meeting_link,
+    code: session.code,
+    showLink: session['show_link?'] ?? false,
+    attendanceCount: session.attendance_count,
+  })),
+  facilitators: apiData.facilitators.map(facilitator => ({
+    id: facilitator.id,
+    name: facilitator.name,
+    email: facilitator.email,
+  })),
   regionalPartnerName: apiData.regional_partner_name,
   accountRequiredForAttendance:
-    apiData['account_required_for_attendance?'] || false,
-  readyToClose: apiData['ready_to_close?'] || false,
+    apiData['account_required_for_attendance?'] ?? false,
+  readyToClose: apiData['ready_to_close?'] ?? false,
   registrationLink: apiData.registration_link,
   createdAt: apiData.created_at,
   enrolledTeacherCount: apiData.enrolled_teacher_count,
@@ -102,7 +68,9 @@ export const WorkshopProvider: React.FC<WorkshopProviderProps> = ({
 }) => {
   const {workshopId} = useParams<{workshopId: string}>();
   const [workshop, setWorkshop] = useState<WorkshopData | null>(null);
-  const [enrollments, setEnrollments] = useState<EnrollmentData[] | null>(null);
+  const [enrollments, setEnrollments] = useState<WorkshopEnrollment[] | null>(
+    null
+  );
   const [loading, setLoading] = useState(true);
   const [loadingEnrollments, setLoadingEnrollments] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -149,16 +117,6 @@ export const WorkshopProvider: React.FC<WorkshopProviderProps> = ({
 
       const data = await response.json();
       setEnrollments(data);
-
-      // Update workshop with enrollment count
-      setWorkshop(prev =>
-        prev
-          ? {
-              ...prev,
-              enrolledTeacherCount: data.length,
-            }
-          : null
-      );
     } catch (err) {
       console.error('Failed to load enrollments:', err);
     } finally {
@@ -172,10 +130,8 @@ export const WorkshopProvider: React.FC<WorkshopProviderProps> = ({
   }, [loadWorkshop]);
 
   useEffect(() => {
-    if (workshop?.id) {
-      loadEnrollments();
-    }
-  }, [workshop?.id, loadEnrollments]);
+    loadEnrollments();
+  }, [loadEnrollments]);
 
   const contextValue: WorkshopContextValue = {
     workshop,
