@@ -43,6 +43,29 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
     AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
   end
 
+  test 'Test previous message concatenation' do
+    thread = create(:aidiff_thread, external_id: @session_id, user: create(:teacher), llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: 10, unit_id: nil, lesson_id: nil, context_type: "course")
+    create(:aidiff_message, aidiff_thread: thread, role: :user, content: "hello", raw_content: "hello")
+    create(:aidiff_message, aidiff_thread: thread, content: "beep boop", raw_content: "beep boop")
+    create(:aidiff_message, aidiff_thread: thread, role: :user, content: "open the pod bay doors", raw_content: "open the pod bay doors")
+    create(:aidiff_message, aidiff_thread: thread, content: "I'm afraid I can't do that Dave", raw_content: "I'm afraid I can't do that Dave")
+    input = AiDiffBedrockHelper.populate_new_session_messages(thread.aidiff_messages, "oh no")
+    expected_input = "This is a continuation of a previous conversation. The previous messages are:
+
+User: hello
+
+Assistant: beep boop
+
+User: open the pod bay doors
+
+Assistant: I'm afraid I can't do that Dave
+
+
+**The current message that you should respond to is:**
+User: oh no"
+    assert_equal input, expected_input
+  end
+
   test 'Testing prompt formatting for level, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:LEVEL]
     course_display_name = "Computer Science Discoveries"

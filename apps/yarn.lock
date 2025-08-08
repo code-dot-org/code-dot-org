@@ -6478,6 +6478,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@replit/codemirror-css-color-picker@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "@replit/codemirror-css-color-picker@npm:6.3.0"
+  peerDependencies:
+    "@codemirror/language": ^6.0.0
+    "@codemirror/state": ^6.0.0
+    "@codemirror/view": ^6.0.0
+  checksum: 10/ae3895ba7dedd8c4f3d19d4cf8772161d7857a7941a5f795cb086255e593d1b538fbca2402998cb8e8998bb2a694b3f82381f68eced7913351f38b356a80532b
+  languageName: node
+  linkType: hard
+
 "@restart/hooks@npm:^0.4.9":
   version: 0.4.9
   resolution: "@restart/hooks@npm:0.4.9"
@@ -10901,6 +10912,7 @@ __metadata:
     "@react-bootstrap/pagination": "npm:^1.0.0"
     "@react-pdf/renderer": "npm:3.4.4"
     "@reduxjs/toolkit": "npm:^1.9.3"
+    "@replit/codemirror-css-color-picker": "npm:^6.3.0"
     "@selectize/selectize": "npm:^0.15.2"
     "@statsig/js-client": "npm:^3.12.2"
     "@statsig/session-replay": "npm:^3.12.2"

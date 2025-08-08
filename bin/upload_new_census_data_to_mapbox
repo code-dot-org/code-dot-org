@@ -1,0 +1,112 @@
+#!/usr/bin/env ruby
+
+# The map on code.org/yourschool is run off of Mapbox. This script updates the data on the Mapbox tileset
+# under the name censustiles-[ACCESS_REPORT_YEAR]. It reads from the given AWS file and creates maptiles
+# with Mapbox's command line tool, Tippecanoe, and uploading them to Mapbox's server.
+#
+# This script is used to upload the new census data to a new tileset that can be tested before making it the
+# default tileset for all users to see:
+# 1) Run this script on production-daemon and pass in the access report year and data file:
+#     - ./bin/upload_new_census_data_to_mapbox [ACCESS_REPORT_YEAR] [ACCESS_REPORT_DATA_FILE]
+#     - Example: ./bin/upload_new_census_data_to_mapbox 2024 access-report-data-files-2024/final-csv/final_csv_2024_09_30.csv
+# 2) Navigate to https://code.org/en-US/your-school?tileset=censustiles-[ACCESS_REPORT_YEAR] to view results
+#
+# If this looks good on production, then the data is okay to import into our CensusSummaries table and you
+# can make the new tileset the default (i.e. you won't need a URL param, and it will be the default map data):
+# 1) Update the seeding file name to the new file in census_summary.rb
+# 2) Update the MAP_TILESET_ID constant to censustiles-[ACCESS_REPORT_YEAR] in AdoptionMap.tsx
+# 3) Update the census_tileset to censustiles-[ACCESS_REPORT_YEAR] in embeddable_census_map.haml
+
+require_relative '../dashboard/config/environment'
+require_relative '../pegasus/helpers/properties'
+require_relative './cron/upload_to_mapbox'
+
+raise "CDO.mapbox_upload_token is not defined" unless CDO.mapbox_upload_token
+
+CSV_IMPORT_OPTIONS = {col_sep: ",", headers: true, encoding: 'bom|utf-8'}.freeze
+
+def make_location(lat, long)
+  return nil if lat.nil? || long.nil?
+
+  "#{format('%.6f', lat)}, #{format('%.6f', long)}"
+end
+
+def main
+  raise ArgumentError.new("Wrong number of arguments: Expected access report year and access report data file.") unless ARGV.length == 2
+  access_report_year = ARGV[0]
+  aws_access_report_data_file = ARGV[1]
+
+  census_tileset = "censustiles-#{access_report_year}"
+
+  CDO.log.info "Loading census summary data."
+  AWS::S3.seed_from_file('cdo-census', aws_access_report_data_file) do |filename|
+    geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
+    entries_skipped = 0
+
+    CSV.read(filename, **CSV_IMPORT_OPTIONS).each do |row|
+      # Parse or skip row data
+      parsed = row.to_hash.symbolize_keys
+      school = School.find_by_id(parsed[:school_id])
+
+      if school.nil?
+        entries_skipped += 1
+        next
+      end
+
+      teaches_cs = parsed[:teaches_cs] == 'unknown' ? 'U' : parsed[:teaches_cs]
+
+      # Add parsed row to map
+      geojson["features"] <<
+        {
+          geometry: {
+            coordinates: [school.longitude.to_f, school.latitude.to_f],
+            type: "Point"
+          },
+          properties: {
+            school_id: school.id,
+            year: access_report_year,
+            school_name: school.name.titleize,
+            school_city: school.city.titleize,
+            school_state: school.state,
+            teaches_cs: teaches_cs
+          },
+          type: "Feature"
+        }
+    end
+
+    CDO.log.info "#{entries_skipped} census summaries skipped due to no school_id match in database."
+    CDO.log.info "Census summaries loading: done processing #{filename}.\n"
+
+    file = Tempfile.new(['census', 'geojson'])
+    tiles = Tempfile.new([census_tileset, 'mbtiles'])
+    file.write(JSON.pretty_generate(geojson))
+    _stdout, stderr, tippecanoe_status = Open3.capture3(
+      # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
+      # clusters points that are approximately 2 pixels apart, and drops points to make them fit if they can't.
+      # The layer is called "census". DO NOT change the layer name without changing the map
+      # in the Mapbox UI.
+      "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"census\" --force #{file.path}"
+    )
+    upload_successful = false
+    if tippecanoe_status.success?
+      upload_successful = upload_maptiles(tiles.path, census_tileset)
+    end
+    unless tippecanoe_status.success? && upload_successful
+      CDO.log.info "Error in uploading"
+      CDO.log.info "Success state: #{tippecanoe_status.success?}"
+      CDO.log.info "Tippecanoe status: #{stderr}"
+      CDO.log.info "Upload successful: #{upload_successful}"
+
+      Honeybadger.notify(
+        error_message: "Updating Census map on Mapbox failed",
+        error_class: "Census Map Update Failure",
+        context: {
+          tippecanoe_status: stderr,
+          upload_status: upload_successful
+        }
+      )
+    end
+  end
+end
+
+main

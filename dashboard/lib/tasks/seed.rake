@@ -122,6 +122,7 @@ namespace :seed do
     focus-on-creativity3-2024
     focus-on-coding3-2024
     customizing-llms-2024
+    csd3-2025
     csp-ap
     csp1-2024
     csp2-2024
@@ -364,6 +365,7 @@ namespace :seed do
        mc
        minecraft
        original-allthelessonplans-course
+       original-allthethings-course
        original-alltheselfpacedplthings-course
        playlab
        starwars
@@ -377,6 +379,8 @@ namespace :seed do
     %w(
       ui-test-course-2017
       ui-test-course-2019
+      ui-test-original-course-2017
+      ui-test-original-course-2019
       ui-test-single-unit-course-2025
       ui-test-single-unit-course-2026
       ui-test-csa-family-script
@@ -393,7 +397,13 @@ namespace :seed do
 
   timed_task_with_logging courses_adhoc: :environment do
     # seed those courses that are best to test on adhoc for the most current year
-    %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
+    %w(
+      allthethingscourse
+      csp-2024
+      csd-2024
+      csa-2024
+      original-allthethings-course
+    ).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -512,6 +522,7 @@ namespace :seed do
     %w(
       ui-test-course
       ui-test-csa-family-script
+      ui-test-original-course
       ui-test-teacher-pl-course
       ui-test-self-paced-pl
       ui-test-facilitator-pl-course

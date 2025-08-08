@@ -7,6 +7,8 @@
 root_dir = File.join(node[:home], node.chef_environment)
 ['', 'dashboard', 'cookbooks'].each do |subdir|
   project_dir = File.join(root_dir, subdir)
+  next unless Dir.exist?(project_dir)
+
   bundle_dir = File.join(project_dir, '.bundle')
   vendor_dir = File.join(project_dir, 'vendor/bundle')
 
@@ -31,14 +33,5 @@ root_dir = File.join(node[:home], node.chef_environment)
     user node[:user]
     cwd project_dir
     not_if {Dir.exist?(vendor_dir)}
-  end
-
-  # Finally, undo the change to the config file. We'll reenable this setting on
-  # a future build.
-  execute "reset deployment config" do
-    command 'bundle config unset deployment'
-    user node[:user]
-    cwd project_dir
-    only_if "grep DEPLOYMENT #{File.join(bundle_dir, 'config')}"
   end
 end

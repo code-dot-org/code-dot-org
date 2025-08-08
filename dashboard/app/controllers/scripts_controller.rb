@@ -461,7 +461,7 @@ class ScriptsController < ApplicationController
 
   private def get_redirect_info(unit, locale, course)
     # Return nil if unit is nil or we know the user can view the version requested.
-    return nil if !unit || unit.can_view_version?(current_user, locale: locale)
+    return nil if !unit || unit.can_view_version?(current_user, locale: locale, unit_group: course)
 
     # Redirect the user to the latest assigned unit in this family, or to the latest stable unit in this family if
     # none are assigned.

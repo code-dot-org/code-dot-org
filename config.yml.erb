@@ -168,9 +168,7 @@ gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
-mapbox_upload_tileset:
 mapbox_access_token:      !Secret
-mapbox_access_tileset:    'censustiles'
 
 # Crowdin
 crowdin_codeorg_api_key:
@@ -491,10 +489,6 @@ stub_school_data: false
 disable_s3_image_uploads: false
 
 channels_api_secret: !Secret
-
-# Whether to prefix bundler commands with 'sudo'.
-# It may be useful to set this false when doing local development on Linux.
-bundler_use_sudo: <%=chef_managed%>
 
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>

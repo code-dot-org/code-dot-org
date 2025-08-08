@@ -92,10 +92,12 @@ class TestController < ApplicationController
 
   def assign_course_and_unit_as_student
     return unless (user = current_user)
-    course = UnitGroup.find_by_name(params.require(:course_name))
-    unit_group_unit = course.default_unit_group_units.find_by!(position: params.require(:unit_position))
-    raise "Unit #{params[:unit_position].inspect} not found in course #{params[:course_name].inspect}" unless unit_group_unit
-    unit = unit_group_unit.script
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position).to_i
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
 
     teacher_email = params[:teacher_email]
     if teacher_email
@@ -114,7 +116,7 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script_id: unit.id, course_id: unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -142,9 +144,32 @@ class TestController < ApplicationController
     end
 
     section_name = params[:section_name] || "New Section"
-    section = Section.create(name: section_name, user: teacher_user, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    unit = course.single_unit_course? ? course.default_unit_group_units.first.script : nil
+    section = Section.create!(name: section_name, user: teacher_user, course_id: course.id, script: unit, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
+
+    user.assign_script(unit) if unit
+
+    head :ok
+  end
+
+  def assign_section_to_course_and_unit
+    return unless (teacher = current_user)
+
+    course_name = params.require(:course_name)
+    unit_position = params.require(:unit_position)
+    unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+    raise "Unit #{unit_position.inspect} not found in course #{course_name.inspect}" unless unit_context
+    unit_group = unit_context[:unit_group]
+    unit = unit_context[:unit]
+
+    section = teacher.sections[params.require(:section_position).to_i - 1]
+    section.update!(unit_group: unit_group, script: unit)
+    section.students.each do |student|
+      student.assign_script(unit)
+    end
+
     head :ok
   end
 
