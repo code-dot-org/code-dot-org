@@ -3,6 +3,7 @@ import Typography from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {trySetSessionStorage} from '@cdo/apps/utils';
 
 import askAi from '../ai/generate/askAi';
 import {generateBlocklyJson} from '../ai/generate/generateBlocklyJson';
@@ -71,6 +72,9 @@ The valid sounds to use are: "${sounds}".  You can use any of these sounds in yo
       dispatch(setCodeToLoad(resultBlockly));
 
       dispatch(setAiGenerateState('done'));
+
+      // And save the psuedocode to session storage.
+      trySetSessionStorage('music-ai-generate', psuedocode);
     });
   }, [contextGenerateMusicPsuedocodeFromDescription, text, dispatch]);
 
