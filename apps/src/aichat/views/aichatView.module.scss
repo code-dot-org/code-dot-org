@@ -58,10 +58,9 @@ $column-min-width: 200px;
 }
 
 .panelContainer {
-  border: 1px $light_gray_200 solid;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: $border-radius;
   box-sizing: border-box;
-  background: $white;
 }
 
 .panelHeader {
