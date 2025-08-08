@@ -12,14 +12,14 @@ Lint/MixedCaseRange: # new in 1.53
   Enabled: true
 Lint/RedundantRegexpQuantifiers: # new in 1.53
   Enabled: true
-FactoryBot/ConsistentParenthesesStyle:
-  Enabled: true
-FactoryBot/ExcessiveCreateList: # new in 2.25
-  Enabled: true
-FactoryBot/FactoryNameStyle: # new in 2.16
-  Enabled: true
-FactoryBot/IdSequence: # new in 2.24
-  Enabled: true
+# FactoryBot/ConsistentParenthesesStyle:
+#   Enabled: true
+# FactoryBot/ExcessiveCreateList: # new in 2.25
+#   Enabled: true
+# FactoryBot/FactoryNameStyle: # new in 2.16
+#   Enabled: true
+# FactoryBot/IdSequence: # new in 2.24
+#   Enabled: true
 Style/MapIntoArray: # new in 1.63
   Enabled: true
 Style/RedundantCurrentDirectoryInPath: # new in 1.53
