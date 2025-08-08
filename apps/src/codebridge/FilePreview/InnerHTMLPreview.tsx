@@ -1,5 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFolderPath} from '@codebridge/utils';
+import $ from 'jquery';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -21,6 +22,62 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const [hoveredElement, setHoveredElement] =
+    React.useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      setHoveredElement(target);
+    };
+
+    const handleMouseLeave = () => {
+      setHoveredElement(null);
+    };
+
+    const setupEventListeners = () => {
+      const iframeRefCurrent = iframeRef.current;
+      const contentDocument = iframeRefCurrent?.contentDocument;
+
+      if (contentDocument) {
+        console.log('Setting up event listeners on iframe content');
+        contentDocument.addEventListener('mousemove', handleMouseMove);
+        contentDocument.addEventListener('mouseleave', handleMouseLeave);
+
+        return () => {
+          contentDocument.removeEventListener('mousemove', handleMouseMove);
+          contentDocument.removeEventListener('mouseleave', handleMouseLeave);
+        };
+      }
+      return undefined;
+    };
+
+    const iframeRefCurrent = iframeRef.current;
+
+    if (iframeRefCurrent && blobUrl) {
+      // If the iframe is already loaded, set up listeners immediately
+      if (iframeRefCurrent.contentDocument?.readyState === 'complete') {
+        return setupEventListeners();
+      } else {
+        // Otherwise, wait for the iframe to load
+        const handleLoad = () => {
+          console.log('Iframe loaded, setting up event listeners');
+          setupEventListeners();
+        };
+
+        iframeRefCurrent.addEventListener('load', handleLoad);
+
+        return () => {
+          iframeRefCurrent.removeEventListener('load', handleLoad);
+          const contentDocument = iframeRefCurrent.contentDocument;
+          if (contentDocument) {
+            contentDocument.removeEventListener('mousemove', handleMouseMove);
+            contentDocument.removeEventListener('mouseleave', handleMouseLeave);
+          }
+        };
+      }
+    }
+  }, [blobUrl]);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -195,13 +252,15 @@ const InnerHTMLPreview = () => {
     }
   }, [parentOrigin, source]);
 
-  const getPreview = useCallback(() => {
-    // TODO: better loading/page not found UI.
-    // https://codedotorg.atlassian.net/browse/CT-1258
-    if (blobUrl === NOT_FOUND_FILE) {
-      return <div>Page not found</div>;
-    } else if (blobUrl) {
-      return (
+  console.log(`You are hovering over a ${hoveredElement?.localName}`);
+
+  // TODO: better loading/page not found UI.
+  // https://codedotorg.atlassian.net/browse/CT-1258
+  if (blobUrl === NOT_FOUND_FILE) {
+    return <div>Page not found</div>;
+  } else if (blobUrl) {
+    return (
+      <>
         <iframe
           ref={iframeRef}
           sandbox="allow-scripts allow-same-origin"
@@ -211,13 +270,11 @@ const InnerHTMLPreview = () => {
           src={blobUrl}
           className={moduleStyles.fileIframe}
         />
-      );
-    } else {
-      return <div>Loading...</div>;
-    }
-  }, [blobUrl]);
-
-  return getPreview();
+      </>
+    );
+  } else {
+    return <div>Loading...</div>;
+  }
 };
 
 export default InnerHTMLPreview;
