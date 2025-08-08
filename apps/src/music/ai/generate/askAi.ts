@@ -18,9 +18,9 @@ export default async function askAi(message: string) {
 
   const aichatContext: AichatContext = {
     clientType: 2,
-    currentLevelId: null, // this.currentLevelId ? parseInt(this.currentLevelId) : null,
-    scriptId: null, // this.scriptId || null,
-    channelId: undefined, // this.channelId,
+    currentLevelId: null,
+    scriptId: null,
+    channelId: undefined,
   };
 
   const aiCustomizations = {
