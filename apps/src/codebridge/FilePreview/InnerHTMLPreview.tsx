@@ -23,6 +23,8 @@ const InnerHTMLPreview = () => {
   );
   const [hoveredElement, setHoveredElement] =
     React.useState<HTMLElement | null>(null);
+  const [overlayElement, setOverlayElement] =
+    React.useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -43,9 +45,61 @@ const InnerHTMLPreview = () => {
         contentDocument.addEventListener('mousemove', handleMouseMove);
         contentDocument.addEventListener('mouseleave', handleMouseLeave);
 
+        // Create overlay element for highlighting
+        let overlay = contentDocument.getElementById(
+          'element-highlight-overlay'
+        ) as HTMLDivElement;
+        if (!overlay) {
+          overlay = contentDocument.createElement('div');
+          overlay.id = 'element-highlight-overlay';
+          overlay.style.cssText = `
+        position: absolute;
+        pointer-events: none;
+        border: 2px solid #007acc;
+        background-color: rgba(0, 122, 204, 0.1);
+        z-index: 9999;
+        display: none;
+      `;
+          contentDocument.body.appendChild(overlay);
+        }
+        setOverlayElement(overlay);
+
+        // Create info tooltip
+        let tooltip = contentDocument.getElementById(
+          'element-info-tooltip'
+        ) as HTMLDivElement;
+        if (!tooltip) {
+          tooltip = contentDocument.createElement('div');
+          tooltip.id = 'element-info-tooltip';
+          tooltip.style.cssText = `
+        position: absolute;
+        background: #333;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-family: monospace;
+        pointer-events: none;
+        z-index: 10000;
+        display: none;
+        white-space: nowrap;
+      `;
+          contentDocument.body.appendChild(tooltip);
+        }
+
         return () => {
           contentDocument.removeEventListener('mousemove', handleMouseMove);
           contentDocument.removeEventListener('mouseleave', handleMouseLeave);
+
+          // Clean up overlay and tooltip
+          const overlayToRemove = contentDocument.getElementById(
+            'element-highlight-overlay'
+          );
+          const tooltipToRemove = contentDocument.getElementById(
+            'element-info-tooltip'
+          );
+          if (overlayToRemove) overlayToRemove.remove();
+          if (tooltipToRemove) tooltipToRemove.remove();
         };
       }
       return undefined;
@@ -77,6 +131,67 @@ const InnerHTMLPreview = () => {
       }
     }
   }, [blobUrl]);
+
+  // Effect to update overlay position and info when hoveredElement changes
+  useEffect(() => {
+    const iframeRefCurrent = iframeRef.current;
+    if (
+      iframeRefCurrent &&
+      iframeRefCurrent.contentDocument &&
+      overlayElement
+    ) {
+      const doc = iframeRefCurrent.contentDocument;
+      const overlay = doc.getElementById(
+        'element-highlight-overlay'
+      ) as HTMLDivElement;
+      const tooltip = doc.getElementById(
+        'element-info-tooltip'
+      ) as HTMLDivElement;
+
+      if (hoveredElement && overlay && tooltip) {
+        const rect = hoveredElement.getBoundingClientRect();
+        const scrollTop = doc.documentElement.scrollTop || doc.body.scrollTop;
+        const scrollLeft =
+          doc.documentElement.scrollLeft || doc.body.scrollLeft;
+
+        // Position overlay
+        overlay.style.display = 'block';
+        overlay.style.top = `${rect.top + scrollTop}px`;
+        overlay.style.left = `${rect.left + scrollLeft}px`;
+        overlay.style.width = `${rect.width}px`;
+        overlay.style.height = `${rect.height}px`;
+
+        // Update tooltip content
+        const tagName = hoveredElement.tagName.toLowerCase();
+        const id = hoveredElement.id;
+        const className = hoveredElement.className;
+
+        let tooltipText = `<${tagName}`;
+        if (id) tooltipText += ` id="${id}"`;
+        if (className) tooltipText += ` class="${className}"`;
+        tooltipText += `>`;
+
+        tooltip.textContent = tooltipText;
+        tooltip.style.display = 'block';
+        tooltip.style.top = `${rect.top + scrollTop - 25}px`;
+        tooltip.style.left = `${rect.left + scrollLeft}px`;
+
+        // Adjust tooltip position if it goes off-screen
+        const tooltipRect = tooltip.getBoundingClientRect();
+        if (tooltipRect.right > doc.documentElement.clientWidth) {
+          tooltip.style.left = `${
+            rect.right + scrollLeft - tooltipRect.width
+          }px`;
+        }
+        if (tooltipRect.top < 0) {
+          tooltip.style.top = `${rect.bottom + scrollTop + 5}px`;
+        }
+      } else if (overlay && tooltip) {
+        overlay.style.display = 'none';
+        tooltip.style.display = 'none';
+      }
+    }
+  }, [hoveredElement, overlayElement]);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -251,7 +366,9 @@ const InnerHTMLPreview = () => {
     }
   }, [parentOrigin, source]);
 
-  console.log(`You are hovering over a ${hoveredElement?.localName}`);
+  console.log(
+    `You are hovering over a ${hoveredElement?.localName} with id ${hoveredElement?.id}`
+  );
 
   // TODO: better loading/page not found UI.
   // https://codedotorg.atlassian.net/browse/CT-1258
