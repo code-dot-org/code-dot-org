@@ -1,18 +1,18 @@
 {
-  "name": "@code-dot-org/audio",
+  "name": "@code-dot-org/lab-panels",
   "version": "0.1.0",
   "keywords": [
-    "audio",
+    "lab",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/audio/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/lab-panels/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/audio"
+    "directory": "frontend/packages/lab-panels"
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
@@ -32,13 +32,13 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./textToSpeech": {
+    "./parser": {
       "types": {
-        "import": "./dist/esm/textToSpeech/index.d.ts",
-        "require": "./dist/cjs/textToSpeech/index.d.js"
+        "import": "./dist/esm/parser/index.d.ts",
+        "require": "./dist/cjs/parser/index.d.js"
       },
-      "import": "./dist/esm/textToSpeech/index.mjs",
-      "require": "./dist/cjs/textToSpeech/index.js"
+      "import": "./dist/esm/parser/index.mjs",
+      "require": "./dist/cjs/parser/index.js"
     }
   },
   "scripts": {
@@ -66,14 +66,19 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "@code-dot-org/localization": "workspace:*"
+    "@code-dot-org/component-library": "workspace:*",
+    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/localization": "workspace:*",
+    "markdown-to-txt": "^2.0.1",
+    "react-typist": "^2.0.5"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
-    "@code-dot-org/component-library": "workspace:*",
-    "@code-dot-org/fonts": "workspace:*",
+    "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/models": "workspace:*",
     "@eslint/js": "^9.15.0",
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@release-it/conventional-changelog": "^10.0.0",
     "@storybook/addon-a11y": "^8.6.9",
     "@storybook/addon-essentials": "^8.6.9",
@@ -97,6 +102,7 @@
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@types/react-typist": "^2.0.6",
     "axe-playwright": "^2.0.3",
     "classnames": "^2.5.1",
     "clean-package": "^2.2.0",

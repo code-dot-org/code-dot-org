@@ -1,0 +1,26 @@
+.playButton {
+  bottom: 0.5rem;
+  color: var(--text-primary-gray);
+  cursor: pointer;
+  display: flex;
+  inset-inline-end: 0.5rem;
+  opacity: 35%;
+  position: absolute;
+  transition: opacity 0.2s ease;
+
+  &HigherPosition {
+    bottom: 58px;
+  }
+
+  &Playing {
+    opacity: 100%;
+  }
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.icon {
+  font-size: 0.9375rem;
+}

@@ -1,0 +1,239 @@
+$text-offset-x: 2cqw;
+$text-offset-y: 2cqw;
+$text-vertical-padding: 1.8cqw;
+$text-horizontal-padding: 2.6cqw;
+$neutral-light: var(--neutral-gray-5);
+$neutral-dark: var(--neutral-gray-95);
+$neutral-dark30: var(--background-neutral-dark);
+$neutral-dark70: var(--background-neutral-dark);
+$light-white: var(--text-primary-light);
+$light-primary-700: var(--text-primary-light);
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    margin-bottom: -$text-offset-y;
+    margin-top: $text-offset-y;
+  }
+
+  to {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+@keyframes delay-pointer-events {
+  from {
+    pointer-events: none;
+  }
+
+  to {
+    pointer-events: initial;
+  }
+}
+
+.panelsContainer {
+  align-items: center;
+  background-color: var(--neutral-base-black);
+  background-image: url('../../public/images/bg-pattern.png');
+  background-repeat: repeat;
+  background-size: 18rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+
+  .panel {
+    container-name: panel;
+    container-type: inline-size;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    .image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 5px;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      &Current {
+        animation: 0.5s ease 0s fade-in;
+        animation-fill-mode: both;
+      }
+
+      &Invisible {
+        opacity: 0;
+      }
+    }
+
+    .text {
+      animation:
+        0.5s ease 0.5s fade-in,
+        0.5s ease 0.5s slide-in;
+      animation-fill-mode: both;
+      background-color: $neutral-light;
+      border-radius: 5px;
+      color: $neutral-dark;
+      font-size: 1.6cqw;
+      line-height: 1.4em;
+      padding: $text-vertical-padding $text-horizontal-padding;
+      position: absolute;
+      width: 40%;
+
+      &Dark {
+        background-color: $neutral-dark;
+        color: $light-white;
+      }
+
+      .invisiblePlaceholder {
+        opacity: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      p {
+        margin: 0;
+      }
+
+      p {
+        ol,
+        ul {
+          display: inline-block;
+          margin: 0;
+        }
+      }
+
+      .typist {
+        position: absolute;
+        top: 1.8cqw;
+        width: calc(100% - 2 * $text-horizontal-padding);
+      }
+
+      &TopLeft {
+        top: $text-offset-y;
+        left: $text-offset-x;
+      }
+
+      &TopCenter {
+        top: $text-offset-y;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &TopRight {
+        top: $text-offset-y;
+        right: $text-offset-x;
+      }
+
+      &BottomLeft {
+        bottom: $text-offset-y;
+        left: $text-offset-x;
+      }
+
+      &BottomCenter {
+        bottom: $text-offset-y;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &BottomRight {
+        bottom: $text-offset-y;
+        right: $text-offset-x;
+      }
+    }
+  }
+
+  .childrenArea {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .button {
+      height: 38px;
+      inset-inline-end: 0;
+      position: absolute;
+
+      // After typing, the button will be ready.
+      &Ready {
+        animation:
+          0.5s ease 0s fade-in,
+          0.5s ease 0s delay-pointer-events;
+        animation-fill-mode: both;
+      }
+
+      // If no typing, the button appears with a delay.
+      &Delay {
+        animation:
+          0.5s ease 1.2s fade-in,
+          0.5s ease 1.2s delay-pointer-events;
+        animation-fill-mode: both;
+      }
+    }
+
+    .bubble {
+      border-radius: 50%;
+      margin: 0 7px;
+
+      &CurrentDark {
+        color: $neutral-light;
+      }
+
+      &CurrentLight {
+        color: $neutral-dark70;
+      }
+
+      &NotCurrentDark {
+        color: $neutral-dark70;
+        cursor: pointer;
+      }
+
+      &NotCurrentLight {
+        color: $neutral-dark30;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .skipContainer {
+    position: absolute;
+    right: 4px;
+    top: 1px;
+
+    .buttonSkip {
+      align-items: center;
+      background-color: $neutral-dark;
+      border-radius: 3px;
+      color: $neutral-light;
+      display: flex;
+      font-size: 13px;
+      height: 24px;
+      justify-content: center;
+      margin: 2px;
+      padding: 0 11px;
+      transition: opacity 0.2s ease;
+      width: initial;
+
+      &Content {
+        margin-right: 9px;
+      }
+    }
+  }
+}

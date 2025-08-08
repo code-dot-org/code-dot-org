@@ -1,46 +1,25 @@
 {
-  "name": "@code-dot-org/audio",
+  "name": "@code-dot-org/localization",
   "version": "0.1.0",
   "keywords": [
-    "audio",
+    "localization",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/audio/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/localization/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/audio"
+    "directory": "frontend/packages/localization"
   },
   "license": "SEE LICENSE IN LICENSE",
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": false,
   "main": "src/index.ts",
   "files": [
     "dist"
   ],
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": {
-        "import": "./dist/esm/index.d.ts",
-        "require": "./dist/cjs/index.d.js"
-      },
-      "import": "./dist/esm/index.mjs",
-      "require": "./dist/cjs/index.js"
-    },
-    "./textToSpeech": {
-      "types": {
-        "import": "./dist/esm/textToSpeech/index.d.ts",
-        "require": "./dist/cjs/textToSpeech/index.d.js"
-      },
-      "import": "./dist/esm/textToSpeech/index.mjs",
-      "require": "./dist/cjs/textToSpeech/index.js"
-    }
-  },
   "scripts": {
     "build": "tsup --clean",
     "storybook:build": "storybook build -o dist/storybook",
@@ -64,9 +43,6 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
-  },
-  "dependencies": {
-    "@code-dot-org/localization": "workspace:*"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
