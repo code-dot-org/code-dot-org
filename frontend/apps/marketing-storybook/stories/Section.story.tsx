@@ -6,6 +6,9 @@ const meta: Meta<typeof Section> = {
   title: 'Marketing/Section',
   component: Section,
   tags: ['autodocs', 'marketing'],
+  parameters: {
+    disableSectionDecorator: true,
+  },
 };
 export default meta;
 type Story = StoryObj<typeof Section>;

@@ -9,7 +9,6 @@ import theme from '@/themes/csforall';
 
 import {buttonStyles} from './common/styles';
 import {LinkItemProps} from './common/types';
-import LinkItem from './LinkItem';
 
 export interface MenuListProps {
   /** Button id that opens menu */
@@ -36,9 +35,8 @@ const styles = {
   },
   menuItem: {
     marginBlock: theme.spacing(0.5),
-    '& a': {
-      width: '100%',
-    },
+    fontSize: theme.typography.body3.fontSize,
+    transition: 'all 0.2s ease',
     '&:hover, &:focus': {
       backgroundColor: alpha(theme.palette.primary.main, 0.1),
       borderRadius: theme.shape.borderRadius,
@@ -64,18 +62,6 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
-  };
-
-  const handleKeyDown = (
-    event: React.KeyboardEvent,
-    href: LinkItemProps['href'],
-  ) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      if (href) {
-        window.location.href = href;
-      }
-    }
   };
 
   const handleClose = () => {
@@ -112,7 +98,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
           },
         }}
         anchorOrigin={{
-          vertical: 64,
+          vertical: 63,
           horizontal: -12,
         }}
         elevation={0}
@@ -120,20 +106,15 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
         disableScrollLock
         sx={styles.menu}
       >
-        {linkList?.map(({label, href, typography = 'body3', ...linkProps}) => (
+        {linkList?.map(({label, href}) => (
           <MenuItem
             key={href ? `${href}-${label}` : `nohref-${label}`}
-            onClick={handleClose}
-            onKeyDown={e => handleKeyDown(e, href)}
+            component="a"
+            href={href}
             disableRipple
             sx={styles.menuItem}
           >
-            <LinkItem
-              label={label}
-              href={href}
-              typography={typography}
-              {...linkProps}
-            />
+            {label}
           </MenuItem>
         ))}
       </Menu>

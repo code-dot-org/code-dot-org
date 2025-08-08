@@ -9,69 +9,15 @@ markdown <<MARKDOWN
 
 #### Read about Omar and investigate the audit logs. Can you find any evidence of fraud?
 
-**[Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing) if you would prefer to view the audit logs in a document.**
-
----
-## USER PROFILE
-
-* **Age**: 18
-* **Location**: Minneapolis, MN
-* **Background**: Somali-American; lives with parents and grandmother in a multigenerational household
-* **School**: Public high school senior; works part-time as a receptionist at a local dentist’s office
-* **Devices**: Android phone (Motorola), school Chromebook, shared family desktop
-* **Tech Habits**: Uses Signal and WhatsApp; avoids video calls; clears history often; never saves passwords
-* **Spending Habits**: Uses reloadable debit cards; rarely shops online; prefers in-person stores for cultural groceries and clothing
-* **Hobbies**: Henna art, baking, photo editing on his phone, journaling
-* **Travel History**: Traveled to Toronto once for a family wedding last summer; otherwise stays within his Minneapolis neighborhood
-* **Security Habits**: Private and cautious; no biometrics; uses long passcodes; guards phone closely
+**Your teacher** should provide you with an **activity guide** and **Omar's audit logs**. However, if you would like a digital version of the **activity guide, [click here](https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing)**. If you would like a digital version of **Omar's audit logs, [Click here](https://docs.google.com/document/d/1yGNSBj9MVcrx32Ifl1BJFc8YlnxsGOkw2E20aPWRAMY/edit?usp=sharing)**.
 
 
----
-
-## LOGIN ACTIVITY LOG
-
-<img src="https://images.code.org/cd1bfdb5f547249031d4985de1715ad5-image-1753975969699.png" style="float:right; width:45%">
-
-| Date     |   Time    |       Device       |     IP Location     | Outcome |    OS     |    Browser     |
-|----------|-----------|--------------------|----------------------|---------|-----------|----------------|
-| Sept 15  |  4:40 PM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
-| Sept 16  |  8:10 AM  | Chromebook         | Minneapolis, MN      | Success | ChromeOS  | Chrome         |
-| Sept 17  |  8:05 PM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
-| Sept 18  |  2:28 AM  | Windows PC         | Toronto, ON          | Failed  | Windows   | Edge           |
-| Sept 18  |  2:34 AM  | Windows PC         | Toronto, ON          | Success | Windows   | Edge           |
-| Sept 18  |  2:37 AM  | Windows PC         | Toronto, ON          | Success | Windows   | Edge           |
-| Sept 18  |  2:41 AM  | Motorola Android   | Minneapolis, MN      | Success | Android   | Firefox Focus  |
-| Sept 18  |  8:05 AM  | Chromebook         | Minneapolis, MN      | Success | ChromeOS  | Chrome         |
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+  <img src="https://images.code.org/3d932b1aaf49381360bbb4d72c812f10-image-1754594902600.png" 
+       style="width: 300px; border: 2px solid black;">
+  <img src="https://images.code.org/ad9d23492685f457bc5d0b6df227dfc0-image-1754595349744.png" 
+       style="width: 300px; border: 2px solid black;">
+</div>
 
 
-
----
-
-## LOCATION HISTORY LOG
-
-| Date     |   Time    | Ping Type |             Location              |
-|----------|-----------|-----------|-----------------------------------|
-| Sept 15  |  4:30 PM  | Wi-Fi     | Home – Minneapolis, MN            |
-| Sept 16  |  8:00 AM  | Wi-Fi     | School – Minneapolis, MN          |
-| Sept 17  |  8:00 PM  | Wi-Fi     | Home – Minneapolis, MN            |
-| Sept 18  |  2:25 AM  | None      | —                                 |
-| Sept 18  |  2:35 AM  | Wi-Fi     | Toronto, ON                       |
-| Sept 18  |  2:41 AM  | Wi-Fi     | Home – Minneapolis, MN            |
-| Sept 18  |  8:00 AM  | Wi-Fi     | School – Minneapolis, MN          |
-
-
----
-
-## TRANSACTION HISTORY LOG
-
-| Date     |   Time    |             Merchant              |  Amount   |     Location     |       Method       |
-|----------|-----------|------------------------------------|-----------|------------------|---------------------|
-| Sept 15  |  4:50 PM  | Halal Market                       | &#36;12.60 | Minneapolis, MN  | Reloadable Debit    |
-| Sept 16  | 12:15 PM  | School Cafeteria                   | &#36;3.75  | Minneapolis, MN  | Reloadable Debit    |
-| Sept 17  |  8:10 PM  | Photo Editor Pro (Upgrade)         | &#36;4.99  | Online           | Reloadable Debit    |
-| Sept 18  |  2:36 AM  | Proxy IP Rotation Service          | &#36;29.00 | Toronto, ON      | Reloadable Debit    |
-| Sept 18  |  2:40 AM  | SecureNotes (Subscription)         | &#36;6.99  | Toronto, ON      | Reloadable Debit    |
-| Sept 18  |  8:07 AM  | Corner Bakery                      | &#36;5.40  | Minneapolis, MN  | Reloadable Debit    |
-
-![]()
 MARKDOWN

@@ -2520,7 +2520,7 @@ class UnitTest < ActiveSupport::TestCase
 
     # delete unit group
     course_unit_group.destroy
-    assert UnitGroupUnit.find_by(id: unit_gp_unit.course_id).nil?
+    assert UnitGroup.find_by(id: unit_gp_unit.course_id).nil?
 
     # delete unit in unit group
     unit_id = unit_in_course.id
