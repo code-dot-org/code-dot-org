@@ -1,4 +1,5 @@
-import {Box, Stack, Alert} from '@mui/material';
+import Alert from '@code-dot-org/component-library/alert';
+import {Box, Stack} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
@@ -17,11 +18,7 @@ export const WorkshopOverview: React.FC = () => {
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
   if (!workshop) {
-    return (
-      <Box>
-        <Alert severity="warning">No workshop data available</Alert>
-      </Box>
-    );
+    return <Alert size="m" text="Workshop not found" type="warning" />;
   }
 
   return (
