@@ -26,6 +26,8 @@ const InnerHTMLPreview = () => {
   const [overlayElement, setOverlayElement] =
     React.useState<HTMLDivElement | null>(null);
 
+  // This only works the first time the iframe loads. If the blob url changes,
+  // it breaks.
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
