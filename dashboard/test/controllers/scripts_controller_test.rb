@@ -79,8 +79,8 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   test 'show includes correct SEO data' do
-    unit = create :unit, name: 'allthelessonplans'
-    unit_group = create :single_unit_course, unit: unit, published_state: PUBLISHED_STATE.stable
+    unit = create(:unit, name: 'allthelessonplans')
+    unit_group = create(:single_unit_course, unit: unit, published_state: PUBLISHED_STATE.stable)
     get :show, params: {
       course_course_name: unit_group.name,
       position: 1,

@@ -198,7 +198,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     level = unit.script_levels.first.level
 
     populate_cache_and_disconnect_db
@@ -207,7 +207,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     level = unit.script_levels.first.level
 
     populate_cache_and_disconnect_db

@@ -269,8 +269,8 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'getting full_name uses user given_name and family_name if available' do
-    user = create :user, given_name: "", family_name: ""
-    enrollment = create :pd_enrollment, user: user, first_name: "EnrollFirstName", last_name: "EnrollLastName"
+    user = create(:user, given_name: "", family_name: "")
+    enrollment = create(:pd_enrollment, user: user, first_name: "EnrollFirstName", last_name: "EnrollLastName")
 
     # Uses enrollment name if both user.given_name and user.family_name are not available
     assert_equal enrollment.full_name, 'EnrollFirstName EnrollLastName'

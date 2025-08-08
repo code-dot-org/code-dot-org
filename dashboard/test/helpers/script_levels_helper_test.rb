@@ -35,14 +35,14 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'unit name instead of lesson name in header for single-lesson unit' do
     stubs(:current_user).returns(nil)
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     script_level = unit.get_script_level_by_chapter 1
     assert_equal unit.name, script_level.lesson.summarize[:title]
   end
 
   test 'show lesson name in header for multi-lesson unit' do
     stubs(:current_user).returns(nil)
-    unit = create :unit, :with_levels, lessons_count: 3
+    unit = create(:unit, :with_levels, lessons_count: 3)
     script_level = unit.get_script_level_by_relative_position_and_puzzle_position 3, 1, false
     assert_equal "Lesson 3: #{script_level.lesson.name}", script_level.lesson.summarize[:title]
   end

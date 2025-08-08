@@ -318,29 +318,43 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     # Sign in and create a new script.
     sign_in @teacher
     script = create(:unit, :in_single_unit_course)
-    modular_course = create :single_unit_course, unit: script
-    create :course_version, content_root: modular_course
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
+    modular_course = create(:single_unit_course, unit: script)
+    create(:course_version, content_root: modular_course)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
 
     # Set up an assessment for that script.
-    sub_level1 = create :text_match, name: 'level_free_response', type: 'TextMatch'
-    sub_level2 = create :multi, name: 'level_multi_unsubmitted', type: 'Multi'
-    sub_level3 = create :multi, name: 'level_multi_correct', type: 'Multi'
-    sub_level4 = create :multi, name: 'level_multi_incorrect', type: 'Multi'
-    create :multi, name: 'level_multi_unattempted', type: 'Multi'
-    sub_level5 = create :match, name: 'level_match_unsubmitted', type: 'Match', properties: {
-      answers: [{text: "one"}, {text: "two"}],
-      questions: [{text: "one"}, {text: "two"}]
-    }
-    sub_level6 = create :match, name: 'level_match_correct', type: 'Match', properties: {
-      answers: [{text: "one"}, {text: "two"}],
-      questions: [{text: "one"}, {text: "two"}]
-    }
-    sub_level7 = create :match, name: 'level_match_incorrect', type: 'Match', properties: {
-      answers: [{text: "one"}, {text: "two"}],
-      questions: [{text: "one"}, {text: "two"}]
-    }
+    sub_level1 = create(:text_match, name: 'level_free_response', type: 'TextMatch')
+    sub_level2 = create(:multi, name: 'level_multi_unsubmitted', type: 'Multi')
+    sub_level3 = create(:multi, name: 'level_multi_correct', type: 'Multi')
+    sub_level4 = create(:multi, name: 'level_multi_incorrect', type: 'Multi')
+    create(:multi, name: 'level_multi_unattempted', type: 'Multi')
+    sub_level5 = create(
+      :match,
+      name: 'level_match_unsubmitted',
+      type: 'Match',
+      properties: {
+        answers: [{text: "one"}, {text: "two"}],
+        questions: [{text: "one"}, {text: "two"}]
+      }
+    )
+    sub_level6 = create(
+      :match,
+      name: 'level_match_correct',
+      type: 'Match',
+      properties: {
+        answers: [{text: "one"}, {text: "two"}],
+        questions: [{text: "one"}, {text: "two"}]
+      }
+    )
+    sub_level7 = create(
+      :match,
+      name: 'level_match_incorrect',
+      type: 'Match', properties: {
+        answers: [{text: "one"}, {text: "two"}],
+        questions: [{text: "one"}, {text: "two"}]
+      }
+    )
 
     level_group_dsl = <<~DSL
       name 'LevelGroupLevel1'
@@ -364,7 +378,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     DSL
     level1 = LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
 
-    create :script_level, script: script, levels: [level1], assessment: true, lesson: lesson
+    create(:script_level, script: script, levels: [level1], assessment: true, lesson: lesson)
 
     student_answers = [
       [sub_level1, "This is a free response"],
@@ -377,13 +391,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     ]
 
     # create user_level for level_group
-    create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
+    create(:user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true)
 
     # create user_levels for sublevels
     student_answers.each do |level_and_answer|
       level, answer = level_and_answer
-      level_source = create :level_source, level: level, data: answer
-      create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+      level_source = create(:level_source, level: level, data: answer)
+      create(:user_level, user: @student_1, script: script, level: level, level_source: level_source)
     end
 
     # Call the controller method.
