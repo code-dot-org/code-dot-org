@@ -51,7 +51,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     gap: 2,
-    marginBottom: 2,
+    marginBottom: 3,
   },
 };
 
@@ -132,11 +132,13 @@ export default function Error(props: ErrorProps) {
             </Button>
             <Button
               variant="outlined"
-              color="secondary"
+              color="inherit"
               size="medium"
               disableElevation
               disableRipple
               href="https://status.code.org/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Check status page
             </Button>

@@ -1,5 +1,7 @@
 import {Components, Theme, createTheme} from '@mui/material/styles';
 
+// Setting these colors here to only apply to buttons
+// since we aren't using MUI colors elsewhere.
 const customTheme = (theme: Theme) =>
   createTheme({
     palette: {
@@ -22,7 +24,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         alignItems: 'center',
         gap: localTheme.spacing(0.75),
         textTransform: 'none',
-        border: '1px solid transparent',
         borderRadius: 4,
         'html[dir="rtl"] & svg': {
           transform: 'scaleX(-1)',
@@ -34,6 +35,9 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&:focus-visible': {
           outline: '2px solid ' + localTheme.palette.secondary.main,
           outlineOffset: '2px',
+        },
+        '&.MuiButton-contained': {
+          border: '1px solid transparent',
         },
         '&.MuiButton-containedPrimary': {
           backgroundColor: localTheme.palette.primary.main,
@@ -52,7 +56,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall':
           {
             fontSize: '0.875rem',
-            padding: localTheme.spacing(1, 2),
+            padding: localTheme.spacing(0.75, 1.5),
           },
         '&.MuiButton-contained.MuiButton-sizeMedium, &.MuiButton-outlined.MuiButton-sizeMedium':
           {
