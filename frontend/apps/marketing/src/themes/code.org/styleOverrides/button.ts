@@ -9,9 +9,6 @@ const customTheme = (theme: Theme) =>
       primary: {
         main: '#8c52ba',
       },
-      secondary: {
-        main: '#0093a4',
-      },
     },
   });
 
@@ -42,13 +39,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.MuiButton-containedPrimary': {
           backgroundColor: localTheme.palette.primary.main,
           color: localTheme.palette.primary.contrastText,
-          '&:hover': {
-            backgroundColor: localTheme.palette.primary.dark,
-          },
-        },
-        '&.MuiButton-outlinedSecondary': {
-          color: theme.palette.common.black,
-          border: `1px solid ${localTheme.palette.secondary.main}`,
           '&:hover': {
             backgroundColor: localTheme.palette.primary.dark,
           },
