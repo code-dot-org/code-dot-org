@@ -1,11 +1,11 @@
 import {Components, Theme} from '@mui/material/styles';
 
-import {BUTTON_OVERRIDES} from './button';
 import {
   ACCORDION_DETAILS_OVERRIDES,
   ACCORDION_OVERRIDES,
   ACCORDION_SUMMARY_OVERRIDES,
 } from './accordion';
+import {BUTTON_OVERRIDES} from './button';
 import {CONTAINER_OVERRIDES} from './container';
 import {DIVIDER_OVERRIDES} from './divider';
 import {IMAGE_OVERRIDES} from './image';
