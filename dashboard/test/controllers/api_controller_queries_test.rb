@@ -8,7 +8,7 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
   test "section_level_progress" do
     skip "flaky as of 7/17/2023"
     section = create(:section)
-    students = (1..50).map {create :student}
+    students = (1..50).map {create(:student)}
     students.each {|s| section.students << s}
 
     script = create(:script, :in_single_unit_course)
@@ -17,9 +17,9 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
     refute_empty script.script_levels
     script.script_levels.each do |script_level|
       students.each do |student|
-        create :user_level, user: student, level: script_level.level, script: script
+        create(:user_level, user: student, level: script_level.level, script: script)
       end
-      create :teacher_feedback, student: students.first, teacher: section.teacher, level: script_level.level, script: script
+      create(:teacher_feedback, student: students.first, teacher: section.teacher, level: script_level.level, script: script)
     end
     # This test has been flaky due to one fewer query on the teacher_feedbacks table.
     # Without a better theory for why, assert that there are teacher_feedback entries.

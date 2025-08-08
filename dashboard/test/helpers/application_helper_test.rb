@@ -89,9 +89,9 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state level progress' do
-    script = create :script, :in_single_unit_course, name: 'zzz'
-    sl1 = create :script_level, script: script
-    sl2 = create :script_level, script: script
+    script = create(:script, :in_single_unit_course, name: 'zzz')
+    sl1 = create(:script_level, script: script)
+    sl2 = create(:script_level, script: script)
 
     assert client_state.level_progress_is_empty_for_test
     assert_equal 0, client_state.level_progress(sl1)
@@ -106,7 +106,7 @@ class ApplicationHelperTest < ActionView::TestCase
   # versions of the client state, as would happen if we roll back from a future
   # version.
   test 'client state migration' do
-    script = create :script, :in_single_unit_course, name: 'progress-test'
+    script = create(:script, :in_single_unit_course, name: 'progress-test')
     sl = create(:script_level, script: script)
     data = {'progress-test' => {sl.level_id => 100}}
     session[:progress] = data
@@ -184,7 +184,7 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'client state with invalid cookie' do
-    sl = create :script_level
+    sl = create(:script_level)
     cookies[:progress] = '&*%$% mangled #$#$$'
     assert_equal 0, client_state.level_progress(sl),
       'Invalid cookie should show no progress'
@@ -197,7 +197,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/sharing_drawing.png', meta_image_url(level: create(:artist))
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level: create(:playlab))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level: create(:bounce))
-    level = create :level, game: Game.find_by_app('Flappy')
+    level = create(:level, game: Game.find_by_app('Flappy'))
     level_source = create(:level_source, level: level)
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
@@ -206,7 +206,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal '/sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:artist)))
     assert_equal '/studio_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:playlab)))
     assert_equal '/bounce_sharing_drawing.png', meta_image_url(level_source: create(:level_source, level: create(:bounce)))
-    level = create :level, game: Game.find_by_app('Flappy')
+    level = create(:level, game: Game.find_by_app('Flappy'))
     level_source = create(:level_source, level: level)
     assert_equal '/flappy_sharing_drawing.png', meta_image_url(level_source: level_source)
   end
@@ -227,37 +227,37 @@ class ApplicationHelperTest < ActionView::TestCase
   end
 
   test 'best_activity_css_class returns "not started" for no activity' do
-    user_level = create :user_level, best_result: 0
+    user_level = create(:user_level, best_result: 0)
     assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level])
   end
 
   test 'best_activity_css_class returns "not started" for multiple user_levels with no activity' do
-    user_level1 = create :user_level, best_result: 0
-    user_level2 = create :user_level, best_result: 0
+    user_level1 = create(:user_level, best_result: 0)
+    user_level2 = create(:user_level, best_result: 0)
     assert_equal LEVEL_STATUS.not_tried,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one attempted' do
-    user_level1 = create :user_level, best_result: 1
-    user_level2 = create :user_level, best_result: 0
+    user_level1 = create(:user_level, best_result: 1)
+    user_level2 = create(:user_level, best_result: 0)
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "passed" for one passed' do
-    user_level1 = create :user_level
-    user_level2 = create :user_level, best_result: 20
+    user_level1 = create(:user_level)
+    user_level2 = create(:user_level, best_result: 20)
     assert_equal LEVEL_STATUS.passed,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "perfect" for one passed and one perfect' do
-    user_level1 = create :user_level, best_result: 100
-    user_level2 = create :user_level, best_result: 20
+    user_level1 = create(:user_level, best_result: 100)
+    user_level2 = create(:user_level, best_result: 20)
     assert_equal LEVEL_STATUS.perfect,  best_activity_css_class([user_level1, user_level2])
   end
 
   test 'best_activity_css_class returns "attempted" for one unsubmitted' do
-    user_level1 = create :user_level, best_result: 0
-    user_level2 = create :user_level, best_result: -50
+    user_level1 = create(:user_level, best_result: 0)
+    user_level2 = create(:user_level, best_result: -50)
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 

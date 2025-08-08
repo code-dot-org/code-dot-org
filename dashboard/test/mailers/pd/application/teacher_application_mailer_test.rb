@@ -2,10 +2,10 @@ require 'test_helper'
 
 class TeacherApplicationMailerTest < ActionMailer::TestCase
   setup do
-    @regional_partner = create :regional_partner
-    @application_with_partner = create :pd_teacher_application
+    @regional_partner = create(:regional_partner)
+    @application_with_partner = create(:pd_teacher_application)
     @application_with_partner.update!(regional_partner: @regional_partner)
-    @application_without_partner = create :pd_teacher_application, regional_partner: nil
+    @application_without_partner = create(:pd_teacher_application, regional_partner: nil)
   end
 
   test 'confirmation email sends with regional partner' do

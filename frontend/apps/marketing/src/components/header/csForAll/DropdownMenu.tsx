@@ -98,7 +98,7 @@ const DropdownMenu: React.FC<MenuListProps> = ({id, buttonLabel, linkList}) => {
           },
         }}
         anchorOrigin={{
-          vertical: 64,
+          vertical: 63,
           horizontal: -12,
         }}
         elevation={0}

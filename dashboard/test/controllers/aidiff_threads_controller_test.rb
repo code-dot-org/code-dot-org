@@ -16,7 +16,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
 
-    create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
+    create(:single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation')
 
     @session_id = "1234"
     @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
@@ -83,7 +83,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     test "index returns only user-owned threads" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       #this user's threads
@@ -103,7 +103,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     test "show redirects to signin when teacher not signed in" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       get :show, params: {id: thread.id}
@@ -122,7 +122,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     test "show returns forbidden when teacher doesn't own thread" do
       #some other user's thread
       @teacher2 = create(:teacher)
-      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       sign_in @teacher
@@ -233,8 +233,8 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     end
 
     test "does not create thread if not a teacher" do
-      student = create :student
-      create :follower, student_user: student, user: @teacher
+      student = create(:student)
+      create(:follower, student_user: student, user: @teacher)
 
       sign_in student
 
@@ -281,7 +281,7 @@ class AidiffThreadsControllerTest < ActionController::TestCase
 
     test "chat_completion returns forbidden when teacher doesn't own the thread" do
       @teacher2 = create(:teacher)
-      create :single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation'
+      create(:single_user_experiment, min_user_id: @teacher2.id, name: 'ai-differentiation')
       @thread = create(:aidiff_thread, external_id: @session_id, user: @teacher2, llm_version: AiDiffBedrockHelper::MODEL_ID, course_id: @unit_group.id, unit_id: @unit_in_course.id, lesson_id: @lesson.id, context_type: "lesson")
 
       #sign in different teacher
@@ -475,8 +475,8 @@ class AidiffThreadsControllerTest < ActionController::TestCase
     end
 
     test "does not get curriculum_courses if not a teacher" do
-      student = create :student
-      create :follower, student_user: student, user: @teacher
+      student = create(:student)
+      create(:follower, student_user: student, user: @teacher)
 
       sign_in student
 

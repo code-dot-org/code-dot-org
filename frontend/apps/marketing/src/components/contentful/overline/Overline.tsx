@@ -17,6 +17,7 @@ type OverlineProps = RemoveMarginBottomProps & {
   color: TypographyColor;
   /** ClassName passed by Contentful to apply styles that are set through Contentful native editor*/
   className?: string;
+  sx?: React.CSSProperties;
 };
 
 const Overline: React.FunctionComponent<OverlineProps> = ({
@@ -25,6 +26,7 @@ const Overline: React.FunctionComponent<OverlineProps> = ({
   color = 'primary',
   removeMarginBottom,
   className,
+  sx,
 }) => {
   return (
     <Typography
@@ -36,6 +38,7 @@ const Overline: React.FunctionComponent<OverlineProps> = ({
       component="p"
       variant="overline"
       gutterBottom={!removeMarginBottom}
+      sx={sx}
     >
       {children}
     </Typography>

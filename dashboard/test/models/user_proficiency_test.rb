@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserProficiencyTest < ActiveSupport::TestCase
   setup do
-    @proficiency = build :user_proficiency
+    @proficiency = build(:user_proficiency)
   end
 
   test 'get_levels_count' do

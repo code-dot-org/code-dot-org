@@ -2,8 +2,8 @@ require 'test_helper'
 
 class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   setup do
-    @teacher = create :teacher
-    @plc_course = create :plc_course
+    @teacher = create(:teacher)
+    @plc_course = create(:plc_course)
     # Create course units out of order to make sure that unit_order is respected
     @course_unit2 = create(:plc_course_unit, plc_course: @plc_course, unit_order: 2)
     @course_unit1 = create(:plc_course_unit, plc_course: @plc_course, unit_order: 1)
@@ -17,9 +17,9 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'test bulk enrollments' do
-    user_from_id = create :teacher
+    user_from_id = create(:teacher)
     student_email = 'some_student@code.org'
-    @student = create :student, email: student_email
+    @student = create(:student, email: student_email)
     nonexistent_email = 'wrong-email@wrong.com'
 
     created_enrollments, nonexistent_users, nonteacher_users, other_failure_users =
@@ -71,7 +71,7 @@ class Plc::UserCourseEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'enrolling a student in a course does not create an authorized teacher user permission' do
-    student = create :student
+    student = create(:student)
     refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)
     create(:plc_user_course_enrollment, user: student, plc_course: @plc_course)
     refute UserPermission.exists?(user_id: student.id, permission: UserPermission::AUTHORIZED_TEACHER)

@@ -68,7 +68,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :success
 
   test 'can decode jwt token' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -83,7 +83,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'sends options as stringified json' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {
       channelId: @fake_channel_id,
@@ -161,35 +161,35 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'param for channel id is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override sources is required when using override sources route' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     post :access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for override validation is required when using override validation route' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     post :access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for execution type is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for mini-app type is required' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN'}
     assert_response :bad_request
@@ -197,7 +197,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
 
   test 'returns error if upload fails' do
     JavalabFilesHelper.stubs(:upload_project_files).returns(nil)
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
@@ -235,7 +235,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'levelbuilder has correct verified_teachers parameter' do
-    levelbuilder = create :levelbuilder
+    levelbuilder = create(:levelbuilder)
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -247,7 +247,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'regular teacher account has correct verified_teachers parameter (supports javalab eval mode)' do
-    teacher = create :with_recent_captcha_teacher
+    teacher = create(:with_recent_captcha_teacher)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -259,7 +259,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'regular teacher who has never verified via captcha gets prompted for captcha' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
@@ -269,7 +269,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'regular teacher who has verified via captcha more than 24 hours ago gets prompted for captcha' do
-    teacher = create :teacher, last_verified_captcha_at: Time.now.utc - 25.hours
+    teacher = create(:teacher, last_verified_captcha_at: Time.now.utc - 25.hours)
     sign_in(teacher)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 

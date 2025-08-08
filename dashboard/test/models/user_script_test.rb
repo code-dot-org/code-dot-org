@@ -3,17 +3,17 @@ require 'test_helper'
 class UserScriptTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @script = create :script, :in_single_unit_course
-    @lesson_group = create :lesson_group, script: @script
-    @lesson = create :lesson, script: @script, lesson_group: @lesson_group
+    @script = create(:script, :in_single_unit_course)
+    @lesson_group = create(:lesson_group, script: @script)
+    @lesson = create(:lesson, script: @script, lesson_group: @lesson_group)
     @script_levels = 1.upto(10).map do
-      create :script_level, script: @script, lesson: @lesson
+      create(:script_level, script: @script, lesson: @lesson)
     end
   end
 
   setup do
-    @user = create :user
-    @user_script = create :user_script, user: @user, script: @script
+    @user = create(:user)
+    @user_script = create(:user_script, user: @user, script: @script)
   end
 
   def complete_level(script_level, result = 100)
@@ -32,8 +32,8 @@ class UserScriptTest < ActiveSupport::TestCase
 
   test "check completed for script with some levels completed" do
     # complete some levels
-    create :user_level, user: @user, level: @script_levels.first.level, best_result: 100
-    create :user_level, user: @user, level: @script_levels.second.level, best_result: 100
+    create(:user_level, user: @user, level: @script_levels.first.level, best_result: 100)
+    create(:user_level, user: @user, level: @script_levels.second.level, best_result: 100)
 
     refute @user_script.check_completed?
   end
