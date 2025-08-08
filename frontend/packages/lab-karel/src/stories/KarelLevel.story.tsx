@@ -26,7 +26,7 @@ const Template: StoryFn<KarelLevelProps> = args => (
   </div>
 );
 
-const defaultLevelData: LevelData<MazeData> = {
+const collectorLevelData: LevelData<MazeData> = {
   key: 'default-level',
   type: 'Karel',
   longInstructions: 'These are the instructions for this level in **Markdown**',
@@ -62,6 +62,39 @@ const defaultLevelData: LevelData<MazeData> = {
       [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
       [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
     ],
+  },
+};
+
+const beeLevelData: LevelData<MazeData> = {
+  key: 'bee-level',
+  type: 'Karel',
+  longInstructions: 'These are the instructions for this level in **Markdown**',
+  shortInstructions: 'These are shorter instructions',
+  subData: {
+    startBlocks: {
+      blocks: {
+        blocks: [
+          {
+            type: 'when_run',
+            next: {
+              block: {
+                type: 'maze_moveForward',
+              },
+            },
+          },
+          {
+            type: 'maze_move',
+            y: 100,
+          },
+        ],
+      },
+    },
+    skinId: 'bee',
+    startDirection: 3,
+    flowerType: 'redWithNectar',
+    serializedMaze: [
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":1,"value":3,"range":3,"featureType":0},{"tileType":1,"value":3,"range":3,"featureType":1},{"tileType":1},{"tileType":1},{"tileType":2},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":1,"value":3,"range":3,"featureType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":1,"value":3,"range":3,"featureType":0},{"tileType":1},{"tileType":1},{"tileType":1,"value":3,"range":3,"featureType":1},{"tileType":1,"value":3,"range":3,"featureType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],[{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}]
+    ]
   },
 };
 
@@ -121,17 +154,34 @@ const defaultBlocks: BlockDefinition[] = [
   },
 ];
 
-export const KarelBase = Template.bind({});
-KarelBase.args = {
-  levelData: defaultLevelData,
+export const CollectorBase = Template.bind({});
+CollectorBase.args = {
+  levelData: collectorLevelData,
   renderer: Thrasos,
   customBlocks: defaultBlocks,
 };
 
-export const KarelMarkdownInstructions = Template.bind({});
-KarelMarkdownInstructions.args = {
+export const CollectorMarkdownInstructions = Template.bind({});
+CollectorMarkdownInstructions.args = {
   levelData: {
-    ...defaultLevelData,
+    ...collectorLevelData,
+    longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
+  },
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const BeeBase = Template.bind({});
+BeeBase.args = {
+  levelData: beeLevelData,
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const BeeMarkdownInstructions = Template.bind({});
+BeeMarkdownInstructions.args = {
+  levelData: {
+    ...beeLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },
   renderer: Thrasos,

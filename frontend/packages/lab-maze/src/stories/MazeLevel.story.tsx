@@ -3,8 +3,8 @@ import * as Blockly from 'blockly/core';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
-import MazeLevel, {MazeLevelProps} from '@code-dot-org/lab-maze';
 import type {LevelData} from '@code-dot-org/lab-blockly';
+import MazeLevel, {MazeLevelProps} from '@code-dot-org/lab-maze';
 import type {MazeData} from '@code-dot-org/lab-maze';
 
 export default {
@@ -26,8 +26,8 @@ const Template: StoryFn<MazeLevelProps> = args => (
   </div>
 );
 
-const defaultLevelData: LevelData<MazeData> = {
-  key: 'default-level',
+const birdsLevelData: LevelData<MazeData> = {
+  key: 'birds-level',
   type: 'Maze',
   longInstructions: 'These are the instructions for this level in **Markdown**',
   shortInstructions: 'These are shorter instructions',
@@ -64,6 +64,47 @@ const defaultLevelData: LevelData<MazeData> = {
       [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: 1,
+  },
+};
+
+const scratLevelData: LevelData<MazeData> = {
+  key: 'scrat-level',
+  type: 'Maze',
+  longInstructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!",
+  shortInstructions: "Ok, let's do that again for practice - this isn't very different, but watch out for the wall!",
+  blocklyData: {
+    startBlocks: {
+      blocks: {
+        blocks: [
+          {
+            type: 'when_run',
+            next: {
+              block: {
+                type: 'maze_moveForward',
+              },
+            },
+          },
+          {
+            type: 'maze_move',
+            y: 100,
+          },
+        ],
+      },
+    },
+  },
+  subData: {
+    skinId: 'scrat',
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 2, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 1, 1, 3, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    startDirection: 2,
   },
 };
 
@@ -117,17 +158,34 @@ const defaultBlocks: BlockDefinition[] = [
   },
 ];
 
-export const MazeBase = Template.bind({});
-MazeBase.args = {
-  levelData: defaultLevelData,
+export const BirdsBase = Template.bind({});
+BirdsBase.args = {
+  levelData: birdsLevelData,
   renderer: Thrasos,
   customBlocks: defaultBlocks,
 };
 
-export const MazeMarkdownInstructions = Template.bind({});
-MazeMarkdownInstructions.args = {
+export const BirdsMarkdownInstructions = Template.bind({});
+BirdsMarkdownInstructions.args = {
   levelData: {
-    ...defaultLevelData,
+    ...birdsLevelData,
+    longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
+  },
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const ScratBase = Template.bind({});
+ScratBase.args = {
+  levelData: scratLevelData,
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const ScratMarkdownInstructions = Template.bind({});
+ScratMarkdownInstructions.args = {
+  levelData: {
+    ...scratLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },
   renderer: Thrasos,
