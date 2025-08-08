@@ -19,6 +19,7 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const packId = useAppSelector(state => state.music.packId);
   const aiGenerateState = useAppSelector(state => state.music.aiGenerateState);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
 
   const library = MusicLibrary.getInstance();
 
@@ -74,9 +75,17 @@ The valid sounds to use are: "${sounds}".  You can use any of these sounds in yo
       dispatch(setAiGenerateState('done'));
 
       // And save the psuedocode to session storage.
-      trySetSessionStorage('music-ai-generate', psuedocode);
+      trySetSessionStorage(
+        'music-ai-generate',
+        JSON.stringify({channelId, psuedocode})
+      );
     });
-  }, [contextGenerateMusicPsuedocodeFromDescription, text, dispatch]);
+  }, [
+    dispatch,
+    contextGenerateMusicPsuedocodeFromDescription,
+    text,
+    channelId,
+  ]);
 
   if (!packId || aiGenerateState === 'done') {
     return null;
