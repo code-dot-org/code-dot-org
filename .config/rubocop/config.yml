@@ -6,7 +6,6 @@ inherit_from:
   - blocklist.yml
 
 require:
-  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility

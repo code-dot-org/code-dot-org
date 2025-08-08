@@ -814,8 +814,6 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.32.0)
       parser (>= 3.3.1.0)
-    rubocop-factory_bot (2.26.1)
-      rubocop (~> 1.61)
     rubocop-performance (1.13.3)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -1124,7 +1122,6 @@ DEPENDENCIES
   rmagick (~> 4.2.5)
   rspec
   rubocop (~> 1.28)
-  rubocop-factory_bot
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
