@@ -77,7 +77,7 @@ The valid sounds to use are: "${sounds}".  You can use any of these sounds in yo
       // And save the psuedocode to session storage.
       trySetSessionStorage(
         'music-ai-generate',
-        JSON.stringify({channelId, psuedocode})
+        JSON.stringify({channelId, packId, psuedocode})
       );
     });
   }, [
@@ -85,6 +85,7 @@ The valid sounds to use are: "${sounds}".  You can use any of these sounds in yo
     contextGenerateMusicPsuedocodeFromDescription,
     text,
     channelId,
+    packId,
   ]);
 
   if (!packId || aiGenerateState === 'done') {
