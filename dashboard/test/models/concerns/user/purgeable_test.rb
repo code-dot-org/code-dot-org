@@ -2,10 +2,10 @@ require 'test_helper'
 
 class PurgeableTest < ActiveSupport::TestCase
   describe 'Attribute delegation' do
-    let!(:user) {create :user}
+    let!(:user) {create(:user)}
     let(:pii_scrubbed_at) {nil}
     let(:anonymized_at) {nil}
-    let!(:user_data_retention_status) {create :user_data_retention_status, user: user, pii_scrubbed_at: pii_scrubbed_at, anonymized_at: anonymized_at}
+    let!(:user_data_retention_status) {create(:user_data_retention_status, user: user, pii_scrubbed_at: pii_scrubbed_at, anonymized_at: anonymized_at)}
 
     context 'when PII has been scrubbed' do
       let(:pii_scrubbed_at) {Time.zone.now}
@@ -27,7 +27,7 @@ class PurgeableTest < ActiveSupport::TestCase
   # This functionality is tested more thoroughly in DeleteAccountsHelperTest
   # Later, more purge-related testing functionality may be added/moved here.
   describe '#clear_user_and_mark_purged' do
-    let(:user) {create :user}
+    let(:user) {create(:user)}
     it('marks user as purged') do
       user.clear_user_and_mark_purged
       _(user.purged_at).must_be :present?

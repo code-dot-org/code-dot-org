@@ -101,12 +101,12 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects urls with stage for lesson extras' do
-    script = create :script, name: 'script-with-bonus', lesson_extras_available: true
-    create :single_unit_course, name: 'course-with-bonus', unit: script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    create :script_level, script: script, lesson: lesson
-    create :script_level, script: script, lesson: lesson, bonus: true
+    script = create(:script, name: 'script-with-bonus', lesson_extras_available: true)
+    create(:single_unit_course, name: 'course-with-bonus', unit: script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    create(:script_level, script: script, lesson: lesson)
+    create(:script_level, script: script, lesson: lesson, bonus: true)
 
     @teacher = create(:teacher)
     create(:section, user: @teacher, script: script, lesson_extras: true, id: 999999)
@@ -123,9 +123,9 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects urls with lockable and puzzle to lockable and levels' do
-    @unit = create :script, name: 'test-script'
-    create :single_unit_course, unit: @unit, name: 'test-course'
-    @lesson_group = create :lesson_group, script: @unit
+    @unit = create(:script, name: 'test-script')
+    create(:single_unit_course, unit: @unit, name: 'test-course')
+    @lesson_group = create(:lesson_group, script: @unit)
     @lockable_lesson = create(:lesson, script: @unit, lockable: true, lesson_group: @lesson_group, has_lesson_plan: false, absolute_position: 1, relative_position: 1)
     @level_group = create(:level_group, :with_sublevels, name: 'assessment 1')
     @lockable_level_group_sl = create(:script_level, script: @unit, lesson: @lockable_lesson, levels: [@level_group], assessment: true)
@@ -156,12 +156,12 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   end
 
   test 'redirects to /courses/ from /s/' do
-    single_unit_course = create :single_unit_course, name: 'single-unit-course'
+    single_unit_course = create(:single_unit_course, name: 'single-unit-course')
 
     get "/s/#{single_unit_course.first_unit.name}"
     assert_redirected_to "/courses/#{single_unit_course.name}/units/1"
 
-    multi_unit_course = create :unit_group, :with_units, name: 'multi-unit-course'
+    multi_unit_course = create(:unit_group, :with_units, name: 'multi-unit-course')
     get "/s/#{multi_unit_course.default_units.last.name}"
     assert_redirected_to "/courses/#{multi_unit_course.name}/units/#{multi_unit_course.default_unit_group_units.last.position}"
   end

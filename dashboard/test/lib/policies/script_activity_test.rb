@@ -2,10 +2,10 @@ require 'test_helper'
 
 class Policies::ScriptActivityTest < ActiveSupport::TestCase
   setup_all do
-    @user = create :user
-    @script = create :script, :in_single_unit_course
-    @lesson_group = create :lesson_group, script: @script
-    @lesson = create :lesson, script: @script, lesson_group: @lesson_group
+    @user = create(:user)
+    @script = create(:script, :in_single_unit_course)
+    @lesson_group = create(:lesson_group, script: @script)
+    @lesson = create(:lesson, script: @script, lesson_group: @lesson_group)
     @script_level = create(
       :script_level,
       script: @script,
@@ -16,7 +16,7 @@ class Policies::ScriptActivityTest < ActiveSupport::TestCase
       ],
       properties: {'ScriptActivity test level 2': {active: false}}
     )
-    create :user_script, user: @user, script: @script
+    create(:user_script, user: @user, script: @script)
   end
 
   test 'script with inactive level completed is completed' do
@@ -44,10 +44,11 @@ class Policies::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'user has completed script' do
-    user_script = create :user_script,
+    user_script = create(:user_script,
       user: @user,
       started_at: (Time.now - 10.days),
       completed_at: (Time.now - 4.days)
+)
 
     assert Policies::ScriptActivity.completed?(@user, user_script.script)
   end
@@ -58,10 +59,11 @@ class Policies::ScriptActivityTest < ActiveSupport::TestCase
     # completed_at, but because the script has no levels there is no next level
     # for the user to go to, and so completed? succeeds using a fallback code
     # path.
-    user_script = create :user_script,
+    user_script = create(:user_script,
       user: @user,
       started_at: (Time.now - 10.days),
       last_progress_at: (Time.now - 4.days)
+)
 
     assert user_script.completed_at.nil?
     assert Policies::ScriptActivity.completed?(@user, user_script.script)

@@ -2,11 +2,11 @@ require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
   def setup
-    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
-    @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
+    @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    @multi_lesson_unit_group = create(:single_unit_course, unit: @multi_lesson_unit)
 
-    @other_hoc_unit = create :unit, :with_levels, levels_count: 10
-    @other_hoc_course = create :hoc_course, unit: @other_hoc_unit
+    @other_hoc_unit = create(:unit, :with_levels, levels_count: 10)
+    @other_hoc_course = create(:hoc_course, unit: @other_hoc_unit)
 
     setup_script_cache
   end
@@ -93,7 +93,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone to multi-lesson course passing" do
-    unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
+    unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
     sl = unit.script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
