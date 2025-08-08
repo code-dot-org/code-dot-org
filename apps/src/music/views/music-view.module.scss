@@ -95,7 +95,7 @@ $default-spacing: 2px;
 }
 
 .panelContainerHeader {
-  margin-bottom: 2px;
+  border-bottom: 1px solid var(--borders-neutral-primary)
 }
 
 .advancedControlsContainer {
