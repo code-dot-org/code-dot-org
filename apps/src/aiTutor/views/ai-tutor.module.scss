@@ -42,25 +42,6 @@ button.buttonStyle {
   color: $neutral_white;
 }
 
-.floatingActionButton {
-  position: fixed;
-  left: 10px;
-  bottom: 48px;
-
-  height: 55px;
-  width: 55px;
-  background-size: 55px;
-  padding: 0;
-
-  border-width: 0;
-  border-radius: 30px;
-
-  img {
-    opacity: 1;
-    border-radius: 30px;
-  }
-}
-
 .aiBotImg {
   width: 42px;
   height: 68px;
@@ -78,7 +59,7 @@ button.buttonStyle {
 
 .aiTutorHeader {
   border-radius: 4px 4px 0 0;
-  background:  var(--neutral-gray-90);
+  background: var(--neutral-gray-90);
   color: $neutral_white;
 
   border-top: $border-width solid $border-color;
@@ -183,4 +164,3 @@ button.buttonStyle {
   box-sizing: border-box;
   padding: $default-spacing;
 }
-

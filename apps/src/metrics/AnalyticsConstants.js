@@ -319,8 +319,6 @@ const EVENTS = {
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
   // AI Tutor
-  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
-  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_CHAT_EVENT: 'AI Tutor was asked a question',
   AI_TUTOR_SUGGESTED_PROMPT_NONE: 'None - general chat',
   AI_TUTOR_SUGGESTED_PROMPT_COMPILATION: 'Compilation',

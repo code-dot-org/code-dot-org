@@ -185,9 +185,6 @@ const aiTutorSlice = createSlice({
         state.chatMessages[index] = _.merge({}, lastMessage, action.payload);
       }
     },
-    setIsChatOpen: (state, action: PayloadAction<boolean>) => {
-      state.isChatOpen = action.payload;
-    },
     setShowSuggestedPrompts: (state, action: PayloadAction<boolean>) => {
       state.showSuggestedPrompts = action.payload;
     },
@@ -203,6 +200,5 @@ export const {
   clearChatMessages,
   setIsWaitingForChatResponse,
   updateLastChatMessage,
-  setIsChatOpen,
   setShowSuggestedPrompts,
 } = aiTutorSlice.actions;
