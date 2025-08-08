@@ -1,6 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFolderPath} from '@codebridge/utils';
-import $ from 'jquery';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
