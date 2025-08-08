@@ -117,6 +117,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       // Update the avatar image
       setCurrentAvatar(skin.smallStaticAvatar);
 
+      console.log('creating maze', skin);
+
       // Create our Maze driver
       maze.current = new Maze(
         environment.current.mainWorkspace,

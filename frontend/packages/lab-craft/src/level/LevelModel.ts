@@ -5,6 +5,7 @@ import FacingDirection, {Direction} from '../FacingDirection';
 import type {LevelRunnerScene} from '../GameController';
 import Position from '../Position';
 import type {CraftData, VerificationAPI} from '../types';
+import {safeEval} from '../utils';
 
 import LevelBlock from './LevelBlock';
 import LevelPlane from './LevelPlane';
@@ -53,6 +54,10 @@ class LevelModel implements VerificationAPI {
     this.scene = scene;
 
     this.initialLevelData = {...levelData};
+
+    if (typeof this.initialLevelData.verificationFunction === 'string') {
+      this.initialLevelData.verificationFunction = safeEval(this.initialLevelData.verificationFunction, () => false);
+    }
 
     this.reset();
   }
@@ -219,10 +224,18 @@ class LevelModel implements VerificationAPI {
   }
 
   isSolved(): boolean {
+    if (typeof this.initialLevelData.verificationFunction === 'string') {
+      return false;
+    }
+
     return !!this.initialLevelData.verificationFunction?.(this);
   }
 
   isFailed(): boolean {
+    if (typeof this.initialLevelData.failureCheckFunction === 'string') {
+      return false;
+    }
+
     if (this.initialLevelData.failureCheckFunction !== undefined) {
       return this.initialLevelData.failureCheckFunction(this);
     } else {

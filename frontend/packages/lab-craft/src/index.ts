@@ -1,3 +1,6 @@
+// Auto-import SASS generated CSS
+import './index.css';
+
 export * from './events';
 import FacingDirection from './FacingDirection';
 import GameController from './GameController';

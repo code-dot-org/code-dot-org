@@ -12,7 +12,7 @@ import LevelModel from './level/LevelModel';
 import LevelView from './level/LevelView';
 import levels from './levels';
 import type {CraftData} from './types';
-import {convertNameToEntity} from './utils';
+import {safeEval, convertNameToEntity} from './utils';
 
 const GAME_WIDTH = 400;
 const GAME_HEIGHT = 400;
@@ -38,10 +38,10 @@ export interface GameControllerConfig {
   earlyLoadNiceToHaveAssetPacks?: string[];
   onScoreUpdate?: () => void;
   customSlowMotion?: number;
+  levelConfig: CraftData;
 }
 
 export interface SceneConfig extends GameControllerConfig {
-  levelConfig: CraftData;
   assetLoader: AssetLoader;
 }
 
@@ -207,7 +207,7 @@ export class LevelRunnerScene extends Phaser.Scene {
     this.specialLevelType = levelConfig.specialLevelType;
     this.timeout = levelConfig.levelVerificationTimeout;
     this.useScore = levelConfig.useScore;
-    this.timeoutResult = levelConfig.timeoutResult;
+    this.timeoutResult = typeof levelConfig.timeoutResult === 'string' ? safeEval(levelConfig.timeoutResult, () => false) : levelConfig.timeoutResult;
     this.onDayCallback = levelConfig.onDayCallback;
     this.onNightCallback = levelConfig.onNightCallback;
   }
@@ -750,7 +750,7 @@ class GameController {
       assetLoader: this.assetLoader,
       audioPlayer: this.audioPlayer,
       levelConfig: {
-        ...levels.aquatic10,
+        ...(config.levelConfig || levels.aquatic10),
       },
     };
 

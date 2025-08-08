@@ -1,5 +1,7 @@
 import {Direction} from './FacingDirection';
 
+export const safeEval = <T>(value: string | undefined, def: T) => value !== undefined ? ((0, eval)('() => ' + value))() as unknown as T : def;
+
 /**
  * Creates a new event.
  */

@@ -79,9 +79,11 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
   const skinUrl: (path: string) => string = (path: string) =>
     `/skins/${id}/${path}`;
 
+  console.log('crafting skin', skins, id);
+
   // (1) Properties common across Blockly apps
   const skin: Skin = {
-    id: id,
+    id,
     assetUrl: skinUrl,
 
     // Images
@@ -153,6 +155,8 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
   // Load individual skin
   const config: SkinData = skins[id] || defaultSkins['birds'];
 
+  console.log('base config', {...config});
+
   // (2) Default values for properties common across maze skins.
   skin.obstacleScale = 1.0;
   skin.obstacleAnimation = skin.assetUrl('obstacle.gif');
@@ -204,6 +208,14 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
 
   if (config.walkSound) {
     skin.walkSound = soundAssetUrls(skin, config.walkSound);
+  }
+
+  if (config.harvestSound) {
+    skin.harvestSound = soundAssetUrls(skin, config.harvestSound);
+  }
+
+  if (config.nectarSound) {
+    skin.nectarSound = soundAssetUrls(skin, config.nectarSound);
   }
 
   for (const key of Object.keys(config)) {

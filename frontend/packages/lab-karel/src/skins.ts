@@ -23,6 +23,33 @@ const skins = {
     background: 'background.png',
     danceOnLoad: true,
   },
+  bee: {
+    obstacleIdle: 'obstacle.png',
+    redFlower: 'redFlower.png',
+    purpleFlower: 'purpleFlower.png',
+    honey: 'honey.png',
+    cloud: 'cloud.png',
+    cloudAnimation: 'cloud_hide.gif',
+    beeSound: true,
+    nectarSound: 'getNectar.mp3',
+    honeySound: 'makeHoney.mp3',
+
+    look: '#000',
+    nonDisappearingPegmanHittingObstacle: true,
+    idlePegmanAnimation: 'idle_avatar.gif',
+    wallPegmanAnimation: 'wall_avatar.png',
+    movePegmanAnimation: 'move_avatar.png',
+    hittingWallAnimation: 'wall.gif',
+    movePegmanAnimationSpeedScale: 1.5,
+    // This is required when move pegman animation is set
+    movePegmanAnimationFrameNumber: 9,
+    actionSpeedScale: {
+      nectar: 1,
+    },
+    pegmanYOffset: 0,
+    pegmanHeight: 50,
+    pegmanWidth: 50,
+  },
 };
 
 export default skins;

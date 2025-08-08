@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
-import MazeLevel, {MazeLevelProps} from '@code-dot-org/lab-maze';
+import MazeLevel, {MazeLevelProps, skinFor} from '@code-dot-org/lab-maze';
 
 import * as api from '../api';
 import blocks from '../blocks';
@@ -16,13 +16,19 @@ const KarelLevel: React.FunctionComponent<KarelLevelProps> = ({
   levelData,
   customBlocks,
 }) => {
+  // Pull out the skin asset paths
+  const skin = useMemo(
+    () => skinFor(skins, levelData?.subData?.skinId || 'collector'),
+    [levelData],
+  );
+
   return (
     <MazeLevel
       levelData={levelData}
       theme={DefaultTheme}
       renderer={ThrasosRenderer}
       skins={skins}
-      customBlocks={[...blocks, ...(customBlocks || [])]}
+      customBlocks={[...blocks(skin), ...(customBlocks || [])]}
       visualizationClassName={moduleStyles.karelMaze}
       api={api}
     />

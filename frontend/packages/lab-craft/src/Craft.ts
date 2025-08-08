@@ -84,6 +84,7 @@ class Craft extends EventTarget {
       earlyLoadAssetPacks: ['heroAllAssetsMinusPlayer'],
       earlyLoadNiceToHaveAssetPacks: ['playerSteveEvents', 'playerAgent'],
       assetRoot: '/skins/craft/',
+      levelConfig: config.levelData,
     });
   }
 

@@ -13,8 +13,8 @@ import Maze from './Maze';
 export {Maze}
 import MazeController from './MazeController';
 export {MazeController}
-import skins from './skins';
-export {skins};
+export {default as skins, skinFor} from './skins';
+export {Skin} from './skin';
 export {default as TestResults} from './TestResults';
 import Validator from './Validator';
 export {Validator};

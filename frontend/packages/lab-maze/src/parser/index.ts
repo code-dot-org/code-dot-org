@@ -34,6 +34,7 @@ function load(config: {[key: string]: any}, xml?: Document, parser?: DOMParser):
     startDirection: config.properties?.start_direction
       ? parseInt(config.properties?.start_direction)
       : undefined,
+    flowerType: config.properties?.flower_type,
   };
 }
 

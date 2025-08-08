@@ -97,12 +97,38 @@ export interface SkinData {
   actionSpeedScale?: {
     [key: string]: number;
   };
+
+  // Dirt
+  dirt?: string;
+  // Harvester
+  sprout?: string;
+  // Bee
+  cloud?: string;
+  cloudAnimation?: string;
+  redFlower?: string;
+  purpleFlower?: string;
+  honey?: string;
+  // Neighborhood
+  paintCan?: string;
+
+  // Sprite maps
+  spriteMap?: SpriteMap;
+  sheetRows?: {
+    [key: string]: number;
+  };
+
+  // Harvester Sounds
+  harvestSound?: string;
+  // Bee Sounds
+  beeSound?: boolean;
+  nectarSound?: string;
+  honeySound?: string;
 }
 
 /**
  * Represents a complete skin for a maze level (or derivative).
  */
-export interface Skin extends Omit<SkinData, 'walkSound' | 'collectSounds'> {
+export interface Skin extends Omit<SkinData, 'walkSound' | 'collectSounds' | 'harvestSound' | 'nectarSound' | 'honeySound'> {
   id: string;
   assetUrl: (path: string) => string;
   avatar: string;
@@ -160,25 +186,6 @@ export interface Skin extends Omit<SkinData, 'walkSound' | 'collectSounds'> {
   scoreCard: string;
   randomPurpleIcon: string;
 
-  // Dirt
-  dirt?: string;
-  // Harvester
-  sprout?: string;
-  // Bee
-  cloud?: string;
-  cloudAnimation?: string;
-  redFlower?: string;
-  purpleFlower?: string;
-  honey?: string;
-  // Neighborhood
-  paintCan?: string;
-
-  // Sprite maps
-  spriteMap?: SpriteMap;
-  sheetRows?: {
-    [key: string]: number;
-  };
-
   // Sounds [mp3, ogg]
   collectSounds?: [string, string][];
   startSound: [string, string];
@@ -193,6 +200,7 @@ export interface Skin extends Omit<SkinData, 'walkSound' | 'collectSounds'> {
   wall2Sound?: [string, string];
   wall3Sound?: [string, string];
   wall4Sound?: [string, string];
+
   // Harvester Sounds
   harvestSound?: [string, string];
   // Bee Sounds

@@ -23,6 +23,8 @@ export interface VerificationAPI {
  * Craft level data.
  */
 export interface CraftData extends BlocklyData {
+  /** If we should show any selection popups before starting */
+  showPopupOnLoad?: string;
   /** Instructions for this level */
   instructions?: string;
   /** The size of the map */
@@ -82,17 +84,19 @@ export interface CraftData extends BlocklyData {
   /** The special level type designation */
   specialLevelType?: string;
   /** The verification routine */
-  verificationFunction?: ((api: VerificationAPI) => boolean) | (() => boolean);
+  verificationFunction?: string | ((api: VerificationAPI) => boolean) | (() => boolean);
   /** Time to wait for the level to run before failing verification */
   levelVerificationTimeout?: number;
   /** A validation that ends the level */
-  timeoutResult?: ((api: LevelModel) => boolean) | (() => boolean);
+  timeoutResult?: string | ((api: LevelModel) => boolean) | (() => boolean);
   /** A validation that checks for failure */
-  failureCheckFunction?: ((api: LevelModel) => boolean) | (() => boolean);
+  failureCheckFunction?: string | ((api: LevelModel) => boolean) | (() => boolean);
   /** The bottom right position of the house, if there is one. */
   houseBottomRight?: [number, number];
   /** A callback when the world transitions to daytime */
   onDayCallback?: () => void;
   /** A callback when the world transitions to nighttime */
   onNightCallback?: () => void;
+  /** The blocks available */
+  availableBlocks?: string[];
 }
