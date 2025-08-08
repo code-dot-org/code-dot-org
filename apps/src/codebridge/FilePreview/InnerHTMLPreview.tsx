@@ -99,12 +99,9 @@ const InnerHTMLPreview = () => {
   }, [currentFile, filesToBlobs]);
 
   // TODOs:
-  // Support other file types (images, etc.)
-  // More robust file paths--do we need to handle paths with leading '/' or '../'?
-  // Can we be smarter about not regenerating blob URLs if the file hasn't changed?
-  // Do we need to redirect console logs from the iframe to the parent window?
-  // We may need to add some helper script that we always run in the iframe to handle this.
-  // We can potentially override window.console.log in the iframe to post messages to the parent window.
+  // Support other file types (images, etc.): https://codedotorg.atlassian.net/browse/CT-1255
+  // More robust file paths: https://codedotorg.atlassian.net/browse/CT-1256
+  // Better regeneration logic: https://codedotorg.atlassian.net/browse/CT-1259
   useEffect(() => {
     if (source) {
       const files: Record<string, string> = {};
@@ -146,7 +143,8 @@ const InnerHTMLPreview = () => {
 
         const metaTag = doc.createElement('meta');
         metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-        // TODO: use the same list for allowed requests as xhr_proxy_controller.rb.
+        // TODO: Improve the list of allowed origins.
+        // https://codedotorg.atlassian.net/browse/CT-579
         metaTag.setAttribute(
           'content',
           "connect-src 'self' http://numbersapi.com"
@@ -199,6 +197,7 @@ const InnerHTMLPreview = () => {
 
   const getPreview = useCallback(() => {
     // TODO: better loading/page not found UI.
+    // https://codedotorg.atlassian.net/browse/CT-1258
     if (blobUrl === NOT_FOUND_FILE) {
       return <div>Page not found</div>;
     } else if (blobUrl) {
