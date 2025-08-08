@@ -18,6 +18,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
 }) => {
   const {pathname} = useLocation();
 
+  const showTabs = !pathname.includes('/edit');
   const showSurveyElements = pathname.includes('/surveys');
   const showPostSurveyCategorySelection = pathname.includes('/surveys/post');
   const showFacilitatorSelection = pathname.includes(
@@ -30,7 +31,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   return (
     <WorkshopProvider>
       <nav aria-label="Workshop sections" className={styles.navContainer}>
-        <WorkshopTabs tabList={tabList} />
+        {showTabs && <WorkshopTabs tabList={tabList} />}
         <div className={styles.navRow}>
           {showSurveyElements && (
             <SurveyTypeSelection surveyTypeOptions={surveyTypeOptions} />
