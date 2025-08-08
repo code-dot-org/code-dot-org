@@ -1,15 +1,10 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  ReactNode,
-  useEffect,
-} from 'react';
+import React, {createContext, useContext, ReactNode} from 'react';
 import {useParams} from 'react-router-dom';
 
+import {useFetch} from '@cdo/apps/util/useFetch';
+
 import {Workshop} from '../../WorkshopFormTemplate/types';
-import {WorkshopContextValue, WorkshopData, WorkshopEnrollment} from '../types';
+import {WorkshopContextValue, WorkshopData} from '../types';
 
 const WorkshopContext = createContext<WorkshopContextValue | null>(null);
 
@@ -67,80 +62,19 @@ export const WorkshopProvider: React.FC<WorkshopProviderProps> = ({
   children,
 }) => {
   const {workshopId} = useParams<{workshopId: string}>();
-  const [workshop, setWorkshop] = useState<WorkshopData | null>(null);
-  const [enrollments, setEnrollments] = useState<WorkshopEnrollment[] | null>(
-    null
+
+  const {data, loading, error, refetch} = useFetch<Workshop | null>(
+    workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
   );
-  const [loading, setLoading] = useState(true);
-  const [loadingEnrollments, setLoadingEnrollments] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  const loadWorkshop = useCallback(async () => {
-    if (!workshopId) return;
-
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await fetch(`/api/v1/pd/workshops/${workshopId}`);
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch workshop: ${response.status}`);
-      }
-
-      const data = await response.json();
-      const transformedData = transformWorkshopData(data);
-      setWorkshop(transformedData);
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : 'Failed to load workshop data'
-      );
-      setWorkshop(null);
-    } finally {
-      setLoading(false);
-    }
-  }, [workshopId]);
-
-  const loadEnrollments = useCallback(async () => {
-    if (!workshopId) return;
-
-    setLoadingEnrollments(true);
-
-    try {
-      const response = await fetch(
-        `/api/v1/pd/workshops/${workshopId}/enrollments`
-      );
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch enrollments: ${response.status}`);
-      }
-
-      const data = await response.json();
-      setEnrollments(data);
-    } catch (err) {
-      console.error('Failed to load enrollments:', err);
-    } finally {
-      setLoadingEnrollments(false);
-    }
-  }, [workshopId]);
-
-  // Load data when component mounts or workshopId changes
-  useEffect(() => {
-    loadWorkshop();
-  }, [loadWorkshop]);
-
-  useEffect(() => {
-    loadEnrollments();
-  }, [loadEnrollments]);
+  // Transform API data to WorkshopData, or null if not loaded/errored
+  const workshop = data ? transformWorkshopData(data) : null;
 
   const contextValue: WorkshopContextValue = {
     workshop,
-    enrollments,
     loading,
-    loadingEnrollments,
     error,
-    loadWorkshop,
-    loadEnrollments,
+    loadWorkshop: refetch,
   };
 
   return (

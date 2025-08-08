@@ -38,20 +38,11 @@ export interface WorkshopData {
   hidden: boolean | null;
 }
 
-export interface WorkshopEnrollment {
-  id: number;
-  name: string;
-  email: string;
-}
-
 export interface WorkshopContextValue {
   workshop: WorkshopData | null;
-  enrollments: WorkshopEnrollment[] | null;
   loading: boolean;
-  loadingEnrollments: boolean;
-  error: string | null;
+  error: Error | string | null;
   loadWorkshop: () => void;
-  loadEnrollments: () => void;
 }
 
 export interface TabConfig {
