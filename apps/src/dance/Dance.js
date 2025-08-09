@@ -12,6 +12,7 @@ import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
@@ -42,6 +43,7 @@ import {
   setAiOutput,
 } from './danceRedux';
 import DanceVisualizationColumn from './DanceVisualizationColumn';
+import Generate from './generate/Generate';
 import danceMsg from './locale';
 import {loadSongMetadata} from './songs';
 import utils from './utils';
@@ -192,6 +194,18 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
+  if (queryParams('ai-generate') === 'true') {
+    this.musicAiGenerate = JSON.parse(
+      tryGetLocalStorage('music-ai-generate', {})
+    );
+  }
+
+  const musicChannelId =
+    queryParams('dance-music-channel-id') || this.musicAiGenerate?.channelId;
+  const musicPackId =
+    queryParams('dance-music-pack-id') || this.musicAiGenerate?.packId;
+  const psuedoCode = this.musicAiGenerate?.psuedocode;
+
   ReactDOM.render(
     <Provider store={getStore()}>
       <ErrorBoundary
@@ -210,12 +224,15 @@ Dance.prototype.init = function (config) {
               setSong={this.setSongCallback.bind(this)}
               resetProgram={this.reset.bind(this)}
               playSound={this.playSound.bind(this)}
-              musicChannelId={queryParams('dance-music-channel-id')}
-              musicPackId={queryParams('dance-music-pack-id')}
+              musicChannelId={musicChannelId}
+              musicPackId={musicPackId}
             />
           }
           onMount={onMount}
         />
+        {queryParams('ai-generate') === 'true' && (
+          <Generate psuedoCode={psuedoCode} />
+        )}
       </ErrorBoundary>
     </Provider>,
     document.getElementById(config.containerId)
@@ -492,7 +509,10 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
     audioCommands.stopSound({url: url});
   }
 
-  if (queryParams('dance-music-channel-id')) {
+  if (
+    queryParams('dance-music-channel-id') ||
+    queryParams('ai-generate') === 'true'
+  ) {
     // Simulate successful sound play.
     callback(true);
   } else {
