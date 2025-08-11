@@ -51,7 +51,7 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   }, [files, folders, file]);
 
   return (
-    <>
+    <div className={moduleStyles.previewContainer}>
       {file && (
         <iframe
           sandbox=""
@@ -64,6 +64,6 @@ export const HTMLPreview = ({file}: HTMLPreviewProps) => {
           className={moduleStyles.iframePreview}
         />
       )}
-    </>
+    </div>
   );
 };

@@ -78,8 +78,11 @@ const LogoCollection: React.FC<LogoCollectionProps> = ({
       const resolvedLogoImage = inMemoryEntities.maybeResolveLink(
         logoImage,
       ) as ExperienceAsset;
+      const resolvedPrimaryLinkRef = inMemoryEntities.maybeResolveLink(
+        primaryLinkRef,
+      ) as LinkEntry;
 
-      const url = primaryLinkRef?.fields?.primaryTarget || '';
+      const url = resolvedPrimaryLinkRef?.fields?.primaryTarget || '';
       const getImage = () => (
         <img
           src={getAbsoluteImageUrl(resolvedLogoImage)}

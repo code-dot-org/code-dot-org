@@ -7,3 +7,9 @@
 .iframePreview {
   border: 2px solid var(--borders-neutral-primary);
 }
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

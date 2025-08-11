@@ -51,6 +51,7 @@ export default function RubricContent({
   feedbackAdded,
   setFeedbackAdded,
   sectionId,
+  reloadOnStudentChange = true,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
@@ -81,7 +82,7 @@ export default function RubricContent({
           <StudentSelector
             styleName={style.studentSelector}
             selectedUserId={studentLevelInfo ? studentLevelInfo.user_id : null}
-            reloadOnChange={true}
+            reloadOnChange={reloadOnStudentChange}
             sectionId={sectionId}
             reportingData={reportingData}
           />
@@ -159,6 +160,7 @@ RubricContent.propTypes = {
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
   sectionId: PropTypes.number,
+  reloadOnStudentChange: PropTypes.bool,
 };
 
 export const InfoAlert = ({text, dismissable}) => {

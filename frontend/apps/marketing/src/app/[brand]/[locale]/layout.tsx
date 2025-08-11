@@ -5,7 +5,7 @@ import {draftMode} from 'next/headers';
 
 import Footer from '@/components/footer';
 import FooterCSforAll from '@/components/footerMui/FooterCSforAll';
-import Header from '@/components/header';
+import {getHeader} from '@/components/header/Header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
@@ -70,7 +70,7 @@ export default async function Layout({
                 clientKey={statsigClientKey}
                 values={statsigBootstrapValues}
               >
-                <Header />
+                {getHeader(brand)}
                 {children}
                 {getFooter()}
               </StatsigProvider>

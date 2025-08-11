@@ -2,13 +2,13 @@ require 'test_helper'
 
 class Policies::InlineAnswerTest < ActiveSupport::TestCase
   setup_all do
-    @authorized_teacher = create :authorized_teacher
-    @teacher = create :teacher
-    @student = create :student
-    @facilitator = create :facilitator
-    @universal_instructor = create :universal_instructor
-    @plc_reviewer = create :plc_reviewer
-    @levelbuilder = create :levelbuilder
+    @authorized_teacher = create(:authorized_teacher)
+    @teacher = create(:teacher)
+    @student = create(:student)
+    @facilitator = create(:facilitator)
+    @universal_instructor = create(:universal_instructor)
+    @plc_reviewer = create(:plc_reviewer)
+    @levelbuilder = create(:levelbuilder)
 
     unit_group = create(:unit_group, name: 'teacher-instructed-course', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
     @unit_in_course = create(:script, name: 'unit-in-course')

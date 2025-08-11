@@ -2,18 +2,18 @@ require 'test_helper'
 
 class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCase
   setup do
-    @organizer = create :workshop_organizer
-    @program_manager = create :program_manager
-    @facilitator = create :facilitator
+    @organizer = create(:workshop_organizer)
+    @program_manager = create(:program_manager)
+    @facilitator = create(:facilitator)
 
-    @organizer_workshop = create :workshop, organizer: @organizer, facilitators: [@facilitator]
-    @organizer_workshop_enrollment = create :pd_enrollment, workshop: @organizer_workshop
+    @organizer_workshop = create(:workshop, organizer: @organizer, facilitators: [@facilitator])
+    @organizer_workshop_enrollment = create(:pd_enrollment, workshop: @organizer_workshop)
 
-    @workshop = create :workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1
-    @enrollment = create :pd_enrollment, workshop: @workshop
+    @workshop = create(:workshop, :with_codes_assigned, organizer: @program_manager, facilitators: [@facilitator], num_sessions: 1)
+    @enrollment = create(:pd_enrollment, workshop: @workshop)
 
-    @unrelated_workshop = create :workshop
-    @unrelated_enrollment = create :pd_enrollment, workshop: @unrelated_workshop
+    @unrelated_workshop = create(:workshop)
+    @unrelated_enrollment = create(:pd_enrollment, workshop: @unrelated_workshop)
   end
 
   CONTROLLER_PATH = 'api/v1/pd/workshop_enrollments'
@@ -233,10 +233,10 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'sends cancel enrollment email to both the users email and alternate summer email if available and for a summer workshop' do
-    @teacher = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
-    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
-    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted'
-    enrollment = create :pd_enrollment, application_id: application.id, user: @teacher, workshop: workshop
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
+    workshop = create(:summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
+    application = create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted')
+    enrollment = create(:pd_enrollment, application_id: application.id, user: @teacher, workshop: workshop)
 
     Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment).returns(stub(:deliver_now))
     Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment, @teacher.alternate_email).returns(stub(:deliver_now))
@@ -249,7 +249,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'enrollments can be created' do
-    @teacher = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
     assert_creates(Pd::Enrollment) do
       post :create, params: {
         workshop_id: @workshop.id,
@@ -265,10 +265,10 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   test 'sends enrollment receipt email to both the users email and alternate summer email if available and for a summer workshop' do
     Pd::WorkshopMailer.expects(:teacher_enrollment_receipt).returns(stub(:deliver_now)).times(2)
 
-    @teacher = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
     sign_in @teacher
-    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
-    create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted'
+    workshop = create(:summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
+    create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted')
 
     post :create, params: {
       workshop_id: workshop.id,
@@ -297,7 +297,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating an enrollment with a student sends \'error\' workshop enrollment status' do
-    student = create :student
+    student = create(:student)
     post :create, params: {
       workshop_id: @workshop.id,
       user_id: student.id
@@ -307,7 +307,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
-    @teacher = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
     post :create, params: {
       workshop_id: @workshop.id,
       user_id: @teacher.id
@@ -349,7 +349,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating an enrollment with errors sends \'error\' workshop enrollment status' do
-    @teacher = create :teacher, given_name: ''
+    @teacher = create(:teacher, given_name: '')
     post :create, params: {
       workshop_id: @workshop.id,
       user_id: @teacher.id
@@ -359,7 +359,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'creating an enrollment on an unknown workshop id returns 404' do
-    @teacher = create :teacher, given_name: 'Firstname', family_name: 'Lastname'
+    @teacher = create(:teacher, given_name: 'Firstname', family_name: 'Lastname')
     post :create, params: {
       workshop_id: 'nonsense',
       user_id: @teacher.id
@@ -368,8 +368,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'admin can update scholarship info' do
-    workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    workshop = create(:summer_workshop)
+    enrollment = create(:pd_enrollment, :from_user, workshop: workshop)
     sign_in create(:admin)
 
     assert_nil enrollment.scholarship_status
@@ -380,8 +380,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'program managers can update scholarship info' do
-    workshop = create :summer_workshop, organizer: @program_manager
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    workshop = create(:summer_workshop, organizer: @program_manager)
+    enrollment = create(:pd_enrollment, :from_user, workshop: workshop)
     sign_in @program_manager
 
     assert_nil enrollment.scholarship_status
@@ -392,8 +392,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'facilitators cannot update scholarship info' do
-    workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, :from_user, workshop: workshop
+    workshop = create(:summer_workshop)
+    enrollment = create(:pd_enrollment, :from_user, workshop: workshop)
     sign_in workshop.facilitators.first
 
     assert_nil enrollment.scholarship_status
@@ -403,13 +403,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'move' do
-    origin_workshop = create :pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
+    origin_workshop = create(:pd_workshop, num_sessions: 1, enrolled_and_attending_users: 1,
       enrolled_absent_users: 1
+)
     attendance = Pd::Attendance.for_workshop(origin_workshop).first
     attendance.update(pd_enrollment_id: origin_workshop.enrollments.first.id)
-    destination_workshop = create :pd_workshop
+    destination_workshop = create(:pd_workshop)
 
-    admin = create :workshop_admin
+    admin = create(:workshop_admin)
     sign_in admin
 
     assert_equal 2, origin_workshop.enrollments.length

@@ -6,12 +6,24 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
   styleOverrides: {
     root: ({theme}) => ({
       fontFamily: ROBOTO_MONO_FONT,
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: theme.spacing(0.75),
+      'html[dir="rtl"] & svg': {
+        transform: 'scaleX(-1)',
+      },
+      '& .MuiButton-icon': {
+        marginRight: 0,
+        marginLeft: 0,
+      },
       '&:focus-visible': {
         outline: '2px solid ' + theme.palette.primary.main,
         outlineOffset: '2px',
       },
       textTransform: 'none',
-      border: '1px solid transparent',
+      '&.MuiButton-contained': {
+        border: '1px solid transparent',
+      },
       '&.MuiButton-contained.button--color-emphasized': {
         backgroundColor: theme.palette.secondary.main,
         '&:hover': {

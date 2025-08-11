@@ -522,10 +522,10 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'teachers read their Section' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     ability = Ability.new teacher
-    my_section = create :section, user_id: teacher.id
-    not_my_section = create :section, user_id: create(:teacher).id
+    my_section = create(:section, user_id: teacher.id)
+    not_my_section = create(:section, user_id: create(:teacher).id)
 
     # When checking a class, conditions are ignored.
     # See https://github.com/ryanb/cancan/wiki/checking-abilities#checking-with-class
@@ -539,7 +539,7 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'non-admins can read only own UserPermission' do
-    user = create :user
+    user = create(:user)
     user_permission = UserPermission.create(
       user_id: user.id,
       permission: UserPermission::PROJECT_VALIDATOR
@@ -565,7 +565,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'levelbuilders cannot manage objects when not in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    user = create :levelbuilder
+    user = create(:levelbuilder)
     ability = Ability.new user
 
     refute ability.can?(:manage, Game)
@@ -580,7 +580,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'levelbuilders can manage appropriate objects in levelbuilder mode' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    user = create :levelbuilder
+    user = create(:levelbuilder)
     ability = Ability.new user
 
     assert ability.can?(:manage, Game)
@@ -594,99 +594,126 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'teachers can manage feedback for students in a section they own' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user: teacher
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
     section.add_student student
-    feedback = create :teacher_feedback, student: student, teacher: teacher
+    feedback = create(:teacher_feedback, student: student, teacher: teacher)
 
     assert Ability.new(teacher).can? :create, feedback
     assert Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
+  test 'coteachers can manage feedback for students in a section they own' do
+    teacher = create(:teacher)
+    coteacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    create(:section_instructor, section: section, instructor: coteacher, status: :active)
+    section.add_student student
+    feedback = create(:teacher_feedback, student: student, teacher: teacher)
+
+    assert Ability.new(coteacher).can? :create, feedback
+    assert Ability.new(coteacher).can? :get_feedback_from_teacher, feedback
+  end
+
   test 'teachers cannot manage feedback for students not in a section they own' do
-    teacher = create :teacher
-    student = create :student
-    section_with_student = create :section
+    teacher = create(:teacher)
+    student = create(:student)
+    section_with_student = create(:section)
     section_with_student.add_student student
 
     # teacher section, not the same one that contains the student
-    create :section, user: teacher
-    feedback = create :teacher_feedback, student: student
+    create(:section, user: teacher)
+    feedback = create(:teacher_feedback, student: student)
 
     refute Ability.new(teacher).can? :create, feedback
     refute Ability.new(teacher).can? :get_feedback_from_teacher, feedback
   end
 
   test 'student can get feedback for their work on a level' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user: teacher
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
     section.add_student student
-    feedback = create :teacher_feedback, student: student
+    feedback = create(:teacher_feedback, student: student)
 
     assert Ability.new(student).can? :get_feedbacks, feedback
   end
 
   test 'student cannot get feedback for the work of a different student on a level' do
-    teacher = create :teacher
-    student = create :student
-    other_student = create :student
-    section = create :section, user: teacher
+    teacher = create(:teacher)
+    student = create(:student)
+    other_student = create(:student)
+    section = create(:section, user: teacher)
     section.add_student student
-    feedback = create :teacher_feedback, student: student
+    feedback = create(:teacher_feedback, student: student)
 
     refute Ability.new(other_student).can? :get_feedbacks, feedback
   end
 
-  test 'teacher cannot get all the feedback for student work on a level' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user: teacher
+  test 'teacher can get all the feedback for a student they teach on a level' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
     section.add_student student
-    feedback = create :teacher_feedback, student: student
+    feedback = create(:teacher_feedback, student: student)
+    other_feedback = create(:teacher_feedback, student: student, teacher: teacher)
 
-    refute Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, feedback
+    assert Ability.new(teacher).can? :get_feedbacks, other_feedback
+  end
+  test 'teacher cannot get all the feedback for a student they do not teach on a level' do
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
+    section.add_student student
+    feedback = create(:teacher_feedback, student: student)
+    other_feedback = create(:teacher_feedback, student: student, teacher: teacher)
+    other_teacher = create(:teacher)
+
+    refute Ability.new(other_teacher).can? :get_feedbacks, feedback
+    refute Ability.new(other_teacher).can? :get_feedbacks, other_feedback
   end
 
   test 'teacher can view as user for student in their section' do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, user: teacher
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, user: teacher)
     section.add_student student
 
     assert Ability.new(teacher).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'teacher cannot view as user for student not in their section' do
-    teacher = create :teacher
-    student = create :student
+    teacher = create(:teacher)
+    student = create(:student)
 
     refute Ability.new(teacher).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'project validator can view as user for another user' do
-    project_validator = create :project_validator
-    student = create :student
+    project_validator = create(:project_validator)
+    student = create(:student)
 
     assert Ability.new(project_validator).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'levelbuilder cannot view as user for student' do
-    levelbuilder = create :levelbuilder
-    student = create :student
+    levelbuilder = create(:levelbuilder)
+    student = create(:student)
 
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
   test 'verified teacher can access main javabuilder' do
-    verified_teacher = create :authorized_teacher
+    verified_teacher = create(:authorized_teacher)
     assert Ability.new(verified_teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
   end
 
   test 'student of verified teacher in CSA section can access main javabuilder' do
-    teacher = create :authorized_teacher
-    csa_script = create :csa_script
+    teacher = create(:authorized_teacher)
+    csa_script = create(:csa_script)
     section = create(:section, user: teacher, login_type: 'word', script: csa_script)
     student = create(:follower, section: section).student_user
 
@@ -694,31 +721,33 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'unverified teacher cannot access main javabuilder' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     refute Ability.new(teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
   end
 
   test 'student in section of unverified teacher cannot access main javabuilder' do
-    student = create :student
-    section = create :section
-    create :follower, section: section, student_user: student
+    student = create(:student)
+    section = create(:section)
+    create(:follower, section: section, student_user: student)
     refute Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
   end
 
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id,
       project_level_id: javalab_script_level.levels[0].id
+)
 
     assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -728,22 +757,24 @@ class AbilityTest < ActiveSupport::TestCase
     # Create two javalab levels that share the same project template level.
     # The first one will be used to create the code review and the second one
     # will be used to check the ability.
-    script = create :script, :in_single_unit_course
-    template_level = create :javalab
-    javalab_level_1 = create :javalab, project_template_level_name: template_level.name
-    javalab_level_2 = create :javalab, project_template_level_name: template_level.name
-    javalab_script_level_2 = create :script_level, script: script,
+    script = create(:script, :in_single_unit_course)
+    template_level = create(:javalab)
+    javalab_level_1 = create(:javalab, project_template_level_name: template_level.name)
+    javalab_level_2 = create(:javalab, project_template_level_name: template_level.name)
+    javalab_script_level_2 = create(:script_level, script: script,
       levels: [javalab_level_2]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: script.id,
       level_id: javalab_level_1.id,
       project_level_id: template_level.id
+)
 
     assert Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level_2, project_owner
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level_2, project_owner
@@ -751,19 +782,21 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student in same CSA code review enabled section and code review group as student seeking code review (v2) can view as peer on bubble choice level' do
     javalab_sublevel = create(:javalab)
-    bubble_choice_level = create :bubble_choice_level, sublevels: [javalab_sublevel]
-    bubble_choice_script_level = create :script_level,
+    bubble_choice_level = create(:bubble_choice_level, sublevels: [javalab_sublevel])
+    bubble_choice_script_level = create(:script_level,
       levels: [bubble_choice_level]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: bubble_choice_script_level.script_id,
       level_id: javalab_sublevel.id,
       project_level_id: javalab_sublevel.id
+)
 
     assert Ability.new(peer_reviewer).can? :view_as_user, bubble_choice_script_level, project_owner, javalab_sublevel
     assert Ability.new(peer_reviewer).can? :view_as_user_for_code_review, bubble_choice_script_level, project_owner, javalab_sublevel
@@ -771,18 +804,20 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student in same CSA non code review enabled section and code review group as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc - 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc - 1.day)
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id,
       project_level_id: javalab_script_level.levels[0].id
+)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -790,19 +825,21 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student in same CSA code review enabled section but different code review groups as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner], section)
     put_students_in_section_and_code_review_group([peer_reviewer], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id,
       project_level_id: javalab_script_level.levels[0].id
+)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -810,16 +847,18 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student not in same section as student seeking code review cannot view as peer' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    create :code_review,
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    create(:code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id,
       project_level_id: javalab_script_level.levels[0].id
+)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(peer_reviewer).can? :view_as_user_for_code_review, javalab_script_level, project_owner
@@ -827,12 +866,13 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student in same section and code review group cannot view as peer if peer is not seeking code review' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    peer_reviewer = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    peer_reviewer = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner, peer_reviewer], section)
 
     refute Ability.new(peer_reviewer).can? :view_as_user, javalab_script_level, project_owner
@@ -841,25 +881,27 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'student cannot view their own work as peer' do
     # We enable read only access to other student work only on Javalab levels
-    javalab_script_level = create :script_level,
+    javalab_script_level = create(:script_level,
       levels: [create(:javalab)]
+)
 
-    project_owner = create :student
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+    project_owner = create(:student)
+    section = create(:section, code_review_expires_at: Time.now.utc + 1.day)
     put_students_in_section_and_code_review_group([project_owner], section)
-    create :code_review,
+    create(:code_review,
       user_id: project_owner.id,
       script_id: javalab_script_level.script_id,
       level_id: javalab_script_level.levels[0].id,
       project_level_id: javalab_script_level.levels[0].id
+)
 
     refute Ability.new(project_owner).can? :view_as_user, javalab_script_level, project_owner
     refute Ability.new(project_owner).can? :view_as_user_for_code_review, javalab_script_level, project_owner
   end
 
   test 'students cannot view as peer on non-Javalab levels' do
-    student_1 = create :student
-    student_2 = create :student
+    student_1 = create(:student)
+    student_2 = create(:student)
 
     refute Ability.new(student_1).can? :view_as_user, @login_required_script_level, student_2
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
@@ -868,8 +910,8 @@ class AbilityTest < ActiveSupport::TestCase
   test 'levelbuilders cannot view as peer on non-Javalab levels' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    levelbuilder = create :levelbuilder
-    student = create :student
+    levelbuilder = create(:levelbuilder)
+    student = create(:student)
 
     assert Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
     refute Ability.new(levelbuilder).can? :view_as_user_for_code_review, @login_required_script_level, student
@@ -877,11 +919,11 @@ class AbilityTest < ActiveSupport::TestCase
 
   test 'only the project owner can create a code review on that project' do
     skip 'tests that create a project'
-    project_owner = create :student
-    other_student = create :student
-    project = create :project, owner: project_owner
-    other_project = create :project, owner: other_student
-    code_review = create :code_review, user_id: project_owner.id, project_id: project.id
+    project_owner = create(:student)
+    other_student = create(:student)
+    project = create(:project, owner: project_owner)
+    other_project = create(:project, owner: other_student)
+    code_review = create(:code_review, user_id: project_owner.id, project_id: project.id)
 
     assert Ability.new(project_owner).can? :create, code_review, project
     refute Ability.new(project_owner).can? :create, code_review, other_project
@@ -890,9 +932,9 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'only the code review owner can edit the code review' do
-    code_review_owner = create :student
-    other_student = create :student
-    code_review = create :code_review, user_id: code_review_owner.id
+    code_review_owner = create(:student)
+    other_student = create(:student)
+    code_review = create(:code_review, user_id: code_review_owner.id)
 
     assert Ability.new(code_review_owner).can? :edit, code_review
     refute Ability.new(other_student).can? :edit, code_review
@@ -902,25 +944,25 @@ class AbilityTest < ActiveSupport::TestCase
     skip 'tests that create a project'
 
     # Create the teacher and 3 students involved in this test.
-    teacher = create :teacher
-    project_owner = create :student
-    student_in_group = create :student
-    student_not_in_group = create :student
+    teacher = create(:teacher)
+    project_owner = create(:student)
+    student_in_group = create(:student)
+    student_not_in_group = create(:student)
 
     # Create a section that's led by the teacher and has all 3 students.
-    section = create :section, teacher: teacher
+    section = create(:section, teacher: teacher)
     followers = []
     followers[0] = create :follower, section: section, student_user: project_owner
     followers[1] = create :follower, section: section, student_user: student_in_group
     followers[2] = create :follower, section: section, student_user: student_not_in_group
 
     # Create a code review group includes 2 students (project_owner and student_in_group)
-    code_review_group = create :code_review_group, section: section
-    create :code_review_group_member, code_review_group: code_review_group, follower: followers[0]
-    create :code_review_group_member, code_review_group: code_review_group, follower: followers[1]
+    code_review_group = create(:code_review_group, section: section)
+    create(:code_review_group_member, code_review_group: code_review_group, follower: followers[0])
+    create(:code_review_group_member, code_review_group: code_review_group, follower: followers[1])
 
     # Create the project owned by code_review_owner
-    project = create :project, owner: project_owner
+    project = create(:project, owner: project_owner)
 
     # Now we're finally ready to verify who can index code reviews associated the project
     assert Ability.new(teacher).can? :index_code_reviews, project
@@ -930,15 +972,15 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'workshop admins can update scholarship info' do
-    workshop_admin = create :workshop_admin
-    pd_enrollment = create :pd_enrollment
+    workshop_admin = create(:workshop_admin)
+    pd_enrollment = create(:pd_enrollment)
 
     assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
   end
 
   test 'workshop admins can see, update, and delete incomplete applications' do
-    workshop_admin = create :workshop_admin
-    incomplete_application = create :pd_teacher_application, status: 'incomplete'
+    workshop_admin = create(:workshop_admin)
+    incomplete_application = create(:pd_teacher_application, status: 'incomplete')
 
     assert Ability.new(workshop_admin).can? :show, incomplete_application
     assert Ability.new(workshop_admin).can? :update, incomplete_application
@@ -946,8 +988,8 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'regional partners cannot see, update, or delete incomplete applications' do
-    program_manager = create :program_manager
-    incomplete_application = create :pd_teacher_application, status: 'incomplete'
+    program_manager = create(:program_manager)
+    incomplete_application = create(:pd_teacher_application, status: 'incomplete')
 
     refute Ability.new(program_manager).can? :show, incomplete_application
     refute Ability.new(program_manager).can? :update, incomplete_application
@@ -955,27 +997,27 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'users with AI_TUTOR_ACCESS permission can access Open AI chat completion endpoint' do
-    ai_tutor_access_user = create :ai_tutor_access
+    ai_tutor_access_user = create(:ai_tutor_access)
     assert Ability.new(ai_tutor_access_user).can? :chat_completion, :openai_chat
   end
 
   test 'users with ai tutor access through section enablement can access Open AI chat completion endpoint' do
-    student = create :student_with_ai_tutor_access
+    student = create(:student_with_ai_tutor_access)
     assert Ability.new(student).can? :chat_completion, :openai_chat
   end
 
   test 'user without ai tutor access cannot access Open AI chat completion endpoint' do
-    student = create :student_without_ai_tutor_access
+    student = create(:student_without_ai_tutor_access)
     refute Ability.new(student).can? :chat_completion, :openai_chat
   end
 
   # other :aichat_request and aichat_event actions are tested via respective controller tests.
 
   private def put_students_in_section_and_code_review_group(students, section)
-    code_review_group = create :code_review_group, section: section
+    code_review_group = create(:code_review_group, section: section)
     students.each do |student|
-      follower = create :follower, student_user: student, section: section
-      create :code_review_group_member, follower: follower, code_review_group: code_review_group
+      follower = create(:follower, student_user: student, section: section)
+      create(:code_review_group_member, follower: follower, code_review_group: code_review_group)
     end
   end
 end

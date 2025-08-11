@@ -15,6 +15,29 @@
         },
         {
           "type": "radiogroup",
+          "name": "cdo_teaching_experience",
+          "title": "Which of the following options best captures your previous experience using Code.org in the classroom?",
+          "choices": [
+            {
+              "value": "cs_teaching",
+              "text": " I use Code.org to teach a computer science course"
+            },
+            {
+              "value": "co_curricular_teaching",
+              "text": " I use Code.org to introduce computer science when teaching other content"
+            },
+            {
+              "value": "hoc",
+              "text": "My students have done Hour of Code activities"
+            },
+            {
+              "value": "not_used",
+              "text": "I have not used Code.org in my classroom yet"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
           "name": "gender_identity",
           "title": "What is your gender identity?",
           "choices": [
@@ -39,6 +62,112 @@
               "text": "Prefer not to answer"
             }
           ]
+        },
+        {
+          "type": "checkbox",
+          "name": "grade",
+          "title": "What grade levels do you currently support or work with?",
+          "description": " (Select all that apply)",
+          "choices": [
+            {
+              "value": "k",
+              "text": "Kindergarten"
+            },
+            {
+              "value": "1",
+              "text": "1st grade"
+            },
+            {
+              "value": "2",
+              "text": "2nd grade"
+            },
+            {
+              "value": "3",
+              "text": "3rd grade"
+            },
+            {
+              "value": "4",
+              "text": "4th grade"
+            },
+            {
+              "value": "5",
+              "text": "5th grade"
+            },
+            {
+              "value": "6",
+              "text": "6th grade"
+            },
+            {
+              "value": "7",
+              "text": "7th grade"
+            },
+            {
+              "value": "8",
+              "text": "8th grade"
+            },
+            {
+              "value": "9",
+              "text": "9th grade"
+            },
+            {
+              "value": "10",
+              "text": "10th grade"
+            },
+            {
+              "value": "11",
+              "text": "11th grade"
+            },
+            {
+              "value": "12",
+              "text": "12th grade"
+            },
+            {
+              "value": "12up",
+              "text": "Above 12th grade"
+            },
+            {
+              "value": "na",
+              "text": "N/A"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "highest_level_cs_education",
+          "title": "Which most accurately describes the highest level of formal computer science education you have completed? ",
+          "otherPlaceHolder": "Other CS Education",
+          "choices": [
+            {
+              "value": "little_no",
+              "text": "At this time, I have little to no formal education in computer science."
+            },
+            {
+              "value": "online_courses",
+              "text": "I have taken one or more courses online for credit."
+            },
+            {
+              "value": "college_courses",
+              "text": "I took one or more courses in college."
+            },
+            {
+              "value": "earning_degree",
+              "text": "I am currently in the process of earning a computer science degree."
+            },
+            {
+              "value": "bachelors_degree",
+              "text": "I have a Bachelor's degree in computer science."
+            },
+            {
+              "value": "masters_degree",
+              "text": "I have a Master's degree in computer science."
+            },
+            {
+              "value": "phd",
+              "text": "I have a PhD in computer science."
+            }
+          ],
+          "hasOther": true,
+          "otherText": "Other CS Education (describe)"
         },
         {
           "type": "checkbox",

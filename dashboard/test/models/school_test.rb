@@ -63,12 +63,12 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs false when no stats data' do
-    school = create :school
+    school = create(:school)
     refute school.afe_high_needs?
   end
 
   test 'AFE high needs false when null students total' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -80,7 +80,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs true when frl eligible above 40 percent of students' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -94,7 +94,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs true when urm percent above 30 percent of students' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -108,7 +108,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs false when urm percent below 30 percent of students' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -122,7 +122,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs true when title_i_status is yes' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -135,7 +135,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs true when school is rural' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -148,7 +148,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'AFE high needs false when no criteria are met' do
-    school = create :school
+    school = create(:school)
     school.school_stats_by_year << SchoolStatsByYear.new(
       {
         school_id: school.id,
@@ -167,7 +167,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'urm school stats missing counts' do
-    school = create :school
+    school = create(:school)
     stats_by_year =
       school.school_stats_by_year << SchoolStatsByYear.new(
         school_id: school.id,

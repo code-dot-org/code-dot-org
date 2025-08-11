@@ -42,7 +42,7 @@ function RubricSubmitFooter({
 
   // When the rubric opens, we should get the current feedback, if any
   useEffect(() => {
-    if (open && studentLevelInfo) {
+    if (open && studentLevelInfo?.user_id) {
       // Get the teacher feedback
       const studentId = studentLevelInfo.user_id;
       const levelId = rubric.level.id;
@@ -71,7 +71,7 @@ function RubricSubmitFooter({
     rubric.id,
     rubric.level.id,
     rubric.script.id,
-    studentLevelInfo,
+    studentLevelInfo?.user_id,
   ]);
 
   // The first stage of submission is the progress state submission

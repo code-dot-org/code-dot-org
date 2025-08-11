@@ -7,9 +7,9 @@ import gameLabImage from '@public/images/header-game-lab-icon.png';
 import musicLabImage from '@public/images/header-music-lab-icon.png';
 import pythonLabImage from '@public/images/header-python-lab-icon.png';
 import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
-import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
-import type {Meta, StoryObj} from '@storybook/react';
-import {within, expect, userEvent} from '@storybook/test';
+import type {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect, userEvent} from 'storybook/test';
+import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from 'storybook/viewport';
 
 import {getDefaultHeaderProps} from '../config';
 import Header, {HeaderProps} from '../Header';

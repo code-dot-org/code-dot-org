@@ -10,12 +10,12 @@ module Services
     end
 
     test 'get_pdfless_lessons will only include lessons not present in S3' do
-      unit_with_lesson_pdfs = create :script, :in_single_unit_course, :with_lessons, seeded_from: Time.now
+      unit_with_lesson_pdfs = create(:script, :in_single_unit_course, :with_lessons, seeded_from: Time.now)
       AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_with_lesson_pdfs.name)
       end.returns(true)
 
-      unit_without_lesson_pdfs = create :script, :in_single_unit_course, :with_lessons, seeded_from: Time.now
+      unit_without_lesson_pdfs = create(:script, :in_single_unit_course, :with_lessons, seeded_from: Time.now)
       AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_without_lesson_pdfs.name)
       end.returns(false)
@@ -26,8 +26,8 @@ module Services
 
     test 'get_pdfless_lessons excludes lessons without lesson plans' do
       AWS::S3.stubs(:exists_in_bucket).returns(false)
-      unit_with_lesson_plans = create :script, :in_single_unit_course, :with_lessons
-      unit_without_lesson_plans = create :script, :in_single_unit_course,  :with_lessons
+      unit_with_lesson_plans = create(:script, :in_single_unit_course, :with_lessons)
+      unit_without_lesson_plans = create(:script, :in_single_unit_course,  :with_lessons)
       unit_without_lesson_plans.lessons.each do |lesson|
         lesson.update!(has_lesson_plan: false)
       end
@@ -37,16 +37,16 @@ module Services
     end
 
     test 'get_pdf_enabled_scripts excludes unit in development published state' do
-      in_development = create :script, seeded_from: true
-      create :single_unit_course, unit: in_development, published_state: PUBLISHED_STATE.in_development
-      pilot = create :script, seeded_from: true
-      create :single_unit_course, unit: pilot, published_state: PUBLISHED_STATE.pilot
-      beta = create :script, seeded_from: true
-      create :single_unit_course, unit: beta, published_state: PUBLISHED_STATE.beta
-      preview = create :script, seeded_from: true
-      create :single_unit_course, unit: preview, published_state: PUBLISHED_STATE.preview
-      stable = create :script, seeded_from: true
-      create :single_unit_course, unit: stable, published_state: PUBLISHED_STATE.stable
+      in_development = create(:script, seeded_from: true)
+      create(:single_unit_course, unit: in_development, published_state: PUBLISHED_STATE.in_development)
+      pilot = create(:script, seeded_from: true)
+      create(:single_unit_course, unit: pilot, published_state: PUBLISHED_STATE.pilot)
+      beta = create(:script, seeded_from: true)
+      create(:single_unit_course, unit: beta, published_state: PUBLISHED_STATE.beta)
+      preview = create(:script, seeded_from: true)
+      create(:single_unit_course, unit: preview, published_state: PUBLISHED_STATE.preview)
+      stable = create(:script, seeded_from: true)
+      create(:single_unit_course, unit: stable, published_state: PUBLISHED_STATE.stable)
 
       script_names = Services::CurriculumPdfs.get_pdf_enabled_scripts.map(&:name)
 

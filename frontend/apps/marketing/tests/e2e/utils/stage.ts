@@ -30,3 +30,7 @@ export function getAppStageFromTestStage() {
       throw new Error(`Invalid stage: ${stage}`);
   }
 }
+
+export function isDeployedStage() {
+  return getAppStageFromTestStage() !== 'development';
+}
