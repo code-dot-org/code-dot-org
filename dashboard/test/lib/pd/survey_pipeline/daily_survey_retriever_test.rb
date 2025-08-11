@@ -11,30 +11,31 @@ module Pd::SurveyPipeline
       @workshop_form_ids = [11_000_000_000_000, 11_000_000_000_001]
       @facilitator_form_ids = [22_000_000_000_000, 22_000_000_000_001]
 
-      @workshops = create_list :workshop, 2, subject: Pd::SharedWorkshopConstants::SUBJECT_CSP_WORKSHOP_1_2, num_sessions: 3
-      @facilitators = create_list :facilitator, 2
-      teachers = create_list :teacher, 2
+      @workshops = create_list(:workshop, 2, subject: Pd::SharedWorkshopConstants::SUBJECT_CSP_WORKSHOP_1_2, num_sessions: 3)
+      @facilitators = create_list(:facilitator, 2)
+      teachers = create_list(:teacher, 2)
       days = [1, 2]
 
       # Create workshop daily survey submissions
       # 2 workshops * 2 teachers * 2 days * 2 forms = 16 submissions
       ws_combinations = @workshops.product(teachers, days, @workshop_form_ids)
       @workshop_submissions = ws_combinations.each do |ws, teacher, day, form|
-        create :pd_workshop_daily_survey, pd_workshop: ws, user: teacher, day: day, form_id: form
+        create(:pd_workshop_daily_survey, pd_workshop: ws, user: teacher, day: day, form_id: form)
       end
 
       # Create facilitator daily survey submissions
       # 2 workshops * 2 teachers * 2 days * 2 forms * 2 facilitators = 32 submissions
       f_combinations = @workshops.product(teachers, days, @facilitator_form_ids, @facilitators)
       @facilitator_submissions = f_combinations.each do |ws, teacher, day, form, facilitator|
-        create :pd_workshop_facilitator_daily_survey, pd_workshop: ws, user: teacher,
+        create(:pd_workshop_facilitator_daily_survey, pd_workshop: ws, user: teacher,
           day: day, form_id: form, pd_session: ws.sessions[day], facilitator: facilitator
+)
       end
 
       # Create survey questions
       # 2 general workshop + 2 facilitator-specific surveys
       @survey_questions = (@workshop_form_ids + @facilitator_form_ids).each do |form|
-        create :pd_survey_question, form_id: form
+        create(:pd_survey_question, form_id: form)
       end
     end
 

@@ -6,8 +6,22 @@
 // Used in DevContainers, see `.devcontainer/frontend/Dockerfile`
 const isDocker = !!process.env.IS_DOCKER || !!process.env.CI;
 
+const variationMatrix = {
+  'code.org': {theme: 'code.org', sectionBackground: ['primary', 'dark']},
+  csforall: {theme: 'csforall', sectionBackground: ['primary']},
+};
+
+const variations = Object.entries(variationMatrix).flatMap(
+  ([, {theme, sectionBackground}]) =>
+    sectionBackground.map(bg => ({
+      queryParams: {
+        globals: `theme:${theme};sectionBackground:${bg}`,
+      },
+    })),
+);
+
 module.exports = {
-  concurrency: 5,
+  concurrency: 10,
   showLogs: !!process.env.APPLITOOLS_SHOW_LOGS,
   appName: 'Marketing Storybook',
   batchName: 'Frontend Eyes Tests',
@@ -24,12 +38,5 @@ module.exports = {
       ? ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
       : [],
   },
-  variations: [
-    {
-      queryParams: {globals: 'theme:code.org'},
-    },
-    {
-      queryParams: {globals: 'theme:csforall'},
-    },
-  ],
+  variations,
 };

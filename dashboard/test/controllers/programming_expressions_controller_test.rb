@@ -8,8 +8,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   setup do
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    @levelbuilder = create :levelbuilder
-    @programming_environment = create :programming_environment
+    @levelbuilder = create(:levelbuilder)
+    @programming_environment = create(:programming_environment)
   end
 
   test 'can create programming expression from params' do
@@ -33,8 +33,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'can update programming expression from params' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
-    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create(:programming_expression, programming_environment: @programming_environment)
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
 
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_expression.key}.json"}.once
     post :update, params: {
@@ -75,7 +75,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    programming_expression = create(:programming_expression, programming_environment: @programming_environment)
 
     get :edit, params: {id: programming_expression.id}
     assert_response :ok
@@ -88,8 +88,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to show page when using id path' do
     sign_in @levelbuilder
 
-    category = create :programming_environment_category, programming_environment: @programming_environment
-    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
+    programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: category)
 
     get :show, params: {id: programming_expression.id}
     assert_response :ok
@@ -104,8 +104,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to show page when using environment and expression path' do
     sign_in @levelbuilder
 
-    category = create :programming_environment_category, programming_environment: @programming_environment
-    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
+    category = create(:programming_environment_category, programming_environment: @programming_environment)
+    programming_expression = create(:programming_expression, programming_environment: @programming_environment, programming_environment_category: category)
 
     get :show_by_keys, params: {
       programming_environment_name: @programming_environment.name,
@@ -123,9 +123,9 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'redirected to new docs url if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    programming_environment = create :programming_environment, name: 'weblab'
-    category = create :programming_environment_category, programming_environment: programming_environment
-    programming_expression = create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+    programming_environment = create(:programming_environment, name: 'weblab')
+    category = create(:programming_environment_category, programming_environment: programming_environment)
+    programming_expression = create(:programming_expression, programming_environment: programming_environment, programming_environment_category: category)
 
     get :docs_show, params: {programming_environment_name: programming_environment.name, programming_expression_key: programming_expression.key}
     assert_response :redirect
@@ -133,7 +133,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'can destroy programming expression' do
     sign_in @levelbuilder
-    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    programming_expression = create(:programming_expression, key: 'test-expression', programming_environment: @programming_environment)
 
     FileUtils.expects(:rm_f).once
 
@@ -147,7 +147,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'destroying a programming expressions fails if File cannot be deleted' do
     sign_in @levelbuilder
-    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
+    programming_expression = create(:programming_expression, key: 'test-expression', programming_environment: @programming_environment)
 
     FileUtils.expects(:rm_f).throws(StandardError).once
 
@@ -161,8 +161,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'can clone programming expression' do
     sign_in @levelbuilder
-    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
-    destination_programming_environment = create :programming_environment
+    programming_expression = create(:programming_expression, key: 'test-expression', programming_environment: @programming_environment)
+    destination_programming_environment = create(:programming_environment)
 
     assert_creates(ProgrammingExpression) do
       post :clone, params: {
@@ -178,9 +178,9 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'can clone programming expression into a category' do
     sign_in @levelbuilder
-    programming_expression = create :programming_expression, key: 'test-expression', programming_environment: @programming_environment
-    destination_programming_environment = create :programming_environment
-    destination_category = create :programming_environment_category, programming_environment: destination_programming_environment
+    programming_expression = create(:programming_expression, key: 'test-expression', programming_environment: @programming_environment)
+    destination_programming_environment = create(:programming_environment)
+    destination_category = create(:programming_environment_category, programming_environment: destination_programming_environment)
 
     assert_creates(ProgrammingExpression) do
       post :clone, params: {
@@ -199,18 +199,18 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   class FilterTests < ActionController::TestCase
     setup do
       ProgrammingEnvironment.all.destroy_all
-      @programming_environment1 = create :programming_environment
-      @programming_environment2 = create :programming_environment
+      @programming_environment1 = create(:programming_environment)
+      @programming_environment2 = create(:programming_environment)
       [@programming_environment1, @programming_environment2].each do |programming_environment|
         3.times do
-          category = create :programming_environment_category, programming_environment: programming_environment
+          category = create(:programming_environment_category, programming_environment: programming_environment)
           4.times do
-            create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+            create(:programming_expression, programming_environment: programming_environment, programming_environment_category: category)
           end
         end
       end
 
-      @levelbuilder = create :levelbuilder
+      @levelbuilder = create(:levelbuilder)
     end
 
     test 'get_filtered_results returns not_acceptable if no page providewd' do
@@ -260,11 +260,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
-      programming_environment = create :programming_environment
-      @programming_expression = create :programming_expression, programming_environment: programming_environment
+      programming_environment = create(:programming_environment)
+      @programming_expression = create(:programming_expression, programming_environment: programming_environment)
 
       @update_params = {id: @programming_expression.id, name: 'new name'}
-      destination_programming_environment = create :programming_environment
+      destination_programming_environment = create(:programming_environment)
       @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
 

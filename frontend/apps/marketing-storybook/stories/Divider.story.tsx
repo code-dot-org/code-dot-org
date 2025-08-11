@@ -50,7 +50,7 @@ export const Strong: Story = {
 
 export const White: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   args: {
     color: 'white',

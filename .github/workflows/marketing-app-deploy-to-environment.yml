@@ -108,7 +108,9 @@ jobs:
             --container_image_hash ${{ inputs.CONTAINER_IMAGE_DIGEST }} \
             --role_arn ${{ secrets.CLOUDFORMATION_DEPLOYER_ROLE_ARN }} \
             --web_application_server_secrets_arn ${{ secrets.APPLICATION_SERVER_SECRETS_ARN }} \
-            --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }}
+            --cloudformation_role_boundary ${{ secrets.CLOUDFORMATION_ROLE_BOUNDARY_ARN }} \
+            --production_domain_name "${{ vars.PRODUCTION_DOMAIN_NAME }}" \
+            --production_hosted_zone_id "${{ secrets.PRODUCTION_HOSTED_ZONE_ID }}"
 
       - name: "[${{ env.GITHUB_ENVIRONMENT_NAME }}] Invalidate CloudFront Cache"
         env:

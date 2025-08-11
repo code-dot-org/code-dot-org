@@ -3,8 +3,8 @@ require 'test_helper'
 class AiTutorInteractionsControllerTest < ActionController::TestCase
   include LevelsHelper
   setup do
-    @student_with_ai_tutor_access = create :student_with_ai_tutor_access
-    @student = create :student
+    @student_with_ai_tutor_access = create(:student_with_ai_tutor_access)
+    @student = create(:student)
   end
 
   test "create AI Tutor Interaction with valid params" do
@@ -87,7 +87,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     sign_in @student_with_ai_tutor_access
     @lesson = create(:lesson, :with_lesson_group)
     @level = create(:level)
-    @script_level = create :script_level, script: @lesson.script, lesson: @lesson, levels: [@level]
+    @script_level = create(:script_level, script: @lesson.script, lesson: @lesson, levels: [@level])
     @fake_ip = '127.0.0.1'
     fake_version_id = "fake-version-id"
     @storage_id = create_storage_id_for_user(@student_with_ai_tutor_access.id)
@@ -122,7 +122,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     section = @student_with_ai_tutor_access.sections_as_student.first
     num_ai_tutor_interactions = 3
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index, params: {
       sectionId: section.id,
@@ -138,7 +138,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
-    random_section = create :section
+    random_section = create(:section)
     refute teacher.sections.include?(random_section)
 
     get :index, params: {sectionId: random_section.id}
@@ -170,7 +170,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     sign_in @student_with_ai_tutor_access
     num_ai_tutor_interactions = 2
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index
     assert_response :success
@@ -181,10 +181,10 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
   end
 
   test 'index returns forbidden when student is not in teacher section' do
-    random_teacher = create :teacher
+    random_teacher = create(:teacher)
     sign_in random_teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
-    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
 
     get :index, params: {userId: @student_with_ai_tutor_access.id}
     assert_response :forbidden
@@ -194,7 +194,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     teacher = @student_with_ai_tutor_access.teachers.first
     sign_in teacher
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(false)
-    create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+    create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     get :index, params: {
       userId: @student_with_ai_tutor_access.id,
     }
@@ -207,7 +207,7 @@ class AiTutorInteractionsControllerTest < ActionController::TestCase
     User.any_instance.stubs(:can_view_student_ai_chat_messages?).returns(true)
     num_ai_tutor_interactions = 3
     num_ai_tutor_interactions.times do
-      create :ai_tutor_interaction, user: @student_with_ai_tutor_access
+      create(:ai_tutor_interaction, user: @student_with_ai_tutor_access)
     end
     get :index, params: {
       userId: @student_with_ai_tutor_access.id,

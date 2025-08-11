@@ -39,9 +39,9 @@ class CertificateImagesControllerTest < ActionController::TestCase
   end
 
   test 'can show coursea course name' do
-    coursea = create :script, name: "coursea-2021"
-    coursea_course = create :single_unit_course, name: "coursea-2021", family_name: 'coursea', version_year: '2021', unit: coursea
-    create :course_version, content_root: coursea_course
+    coursea = create(:script, name: "coursea-2021")
+    coursea_course = create(:single_unit_course, name: "coursea-2021", family_name: 'coursea', version_year: '2021', unit: coursea)
+    create(:course_version, content_root: coursea_course)
 
     # stub the image, so that we can verify the params passed to create_course_certificate_image
     stub_path = dashboard_dir('app/assets/images/hour-of-code-logo.png')
@@ -55,8 +55,8 @@ class CertificateImagesControllerTest < ActionController::TestCase
   end
 
   test 'can show csp course name' do
-    csp = create :unit_group, name: "csp-2021"
-    create :course_version, content_root: csp
+    csp = create(:unit_group, name: "csp-2021")
+    create(:course_version, content_root: csp)
 
     # stub the image, so that we can verify the params passed to create_course_certificate_image
     stub_path = dashboard_dir('app/assets/images/hour-of-code-logo.png')

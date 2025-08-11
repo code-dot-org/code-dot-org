@@ -9,13 +9,14 @@ module Api::V1::Pd
     freeze_time
 
     setup_all do
-      @workshop_admin = create :workshop_admin
-      @workshop_organizer = create :workshop_organizer
-      @program_manager = create :teacher
-      @regional_partner = create :regional_partner,
+      @workshop_admin = create(:workshop_admin)
+      @workshop_organizer = create(:workshop_organizer)
+      @program_manager = create(:teacher)
+      @regional_partner = create(:regional_partner,
         program_managers: [@workshop_organizer, @program_manager],
         cohort_capacity_csd: 25,
         cohort_capacity_csp: 50
+)
 
       @hash_csd_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csd, regional_partner_id: @regional_partner.id
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
@@ -39,7 +40,8 @@ module Api::V1::Pd
         role: 'csd_teachers'
       }
 
-      @serializing_teacher = create(:teacher,
+      @serializing_teacher = create(
+        :teacher,
         email: 'minerva@hogwarts.edu',
         school_info: create(
           :school_info,
@@ -119,7 +121,7 @@ module Api::V1::Pd
     test "quick view returns appropriate application type" do
       create TEACHER_APPLICATION_FACTORY, course: 'csp'
       create TEACHER_APPLICATION_FACTORY, course: 'csd'
-      user = create :workshop_admin
+      user = create(:workshop_admin)
       sign_in user
 
       get :quick_view, params: @test_quick_view_params
@@ -191,9 +193,9 @@ module Api::V1::Pd
 
     test 'enrollment count included in index' do
       sign_in @workshop_admin
-      workshop = create :pd_workshop, num_sessions: 1
+      workshop = create(:pd_workshop, num_sessions: 1)
       application = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application.id, user: application.user, workshop: workshop
+      create(:pd_enrollment, application_id: application.id, user: application.user, workshop: workshop)
       get :index
       assert_response :success
       data = JSON.parse(response.body)
@@ -202,10 +204,10 @@ module Api::V1::Pd
     end
 
     test 'enrollment only counts enrollments for that regional partner' do
-      regional_partner_2 = create :regional_partner
-      workshop = create :pd_workshop, num_sessions: 1
+      regional_partner_2 = create(:regional_partner)
+      workshop = create(:pd_workshop, num_sessions: 1)
       application_2 = create TEACHER_APPLICATION_FACTORY, course: 'csd', status: 'accepted', regional_partner: regional_partner_2, pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id
+      create(:pd_enrollment, application_id: application_2.id, user: application_2.user, pd_workshop_id: workshop.id)
 
       sign_in @workshop_admin
 
@@ -345,9 +347,10 @@ module Api::V1::Pd
     end
 
     test 'update appends to the timestamp log if summer workshop is changed' do
-      summer_workshop = create :summer_workshop,
+      summer_workshop = create(:summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
         session_location_address: 'Orchard Park NY'
+)
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -369,9 +372,10 @@ module Api::V1::Pd
     end
 
     test 'update does not append to the timestamp log if summer workshop is not changed' do
-      summer_workshop = create :summer_workshop,
+      summer_workshop = create(:summer_workshop,
         sessions_from: Date.new(2019, 6, 1),
         session_location_address: 'Orchard Park NY'
+)
 
       sign_in @program_manager
       @csd_teacher_application_with_partner.update(status_timestamp_change_log: '[]')
@@ -543,9 +547,9 @@ module Api::V1::Pd
     end
 
     test 'cohort view shows enrolled as a status' do
-      workshop = create :pd_workshop, num_sessions: 1
+      workshop = create(:pd_workshop, num_sessions: 1)
       application = create TEACHER_APPLICATION_FACTORY, course: 'csp', status: 'accepted', pd_workshop_id: workshop.id
-      create :pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id
+      create(:pd_enrollment, application_id: application.id, user: application.user, pd_workshop_id: workshop.id)
 
       sign_in @workshop_admin
       get :cohort_view, params: {role: 'csp_teachers', regional_partner_value: 'none'}
@@ -561,10 +565,11 @@ module Api::V1::Pd
       time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :summer_workshop,
+        workshop = create(:summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
           session_location_address: 'Orchard Park NY'
-        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+)
+        create(:pd_enrollment, workshop: workshop, user: @serializing_teacher)
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
@@ -652,10 +657,11 @@ module Api::V1::Pd
       time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
-        workshop = create :summer_workshop,
+        workshop = create(:summer_workshop,
           sessions_from: Date.new(2020, 1, 1),
           session_location_address: 'Orchard Park NY'
-        create :pd_enrollment, workshop: workshop, user: @serializing_teacher
+)
+        create(:pd_enrollment, workshop: workshop, user: @serializing_teacher)
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
