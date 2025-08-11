@@ -141,7 +141,7 @@ class HttpCache
       'sign_up_user_type',
     ].concat(default_cookies)
 
-    {
+    http_config = {
       pegasus: {
         behaviors: [
           # NextJS assets path for the marketing app
@@ -333,6 +333,28 @@ class HttpCache
         }
       }
     }
+
+    if defined?(HocLegacy::Engine)
+      http_config.deep_merge!(
+        dashboard: {
+          behaviors: [
+            {
+              path: '/api/hour/*',
+              headers: ALLOWLISTED_HEADERS,
+              # Allow the company cookie to be read and set to track company users for tutorials.
+              cookies: allowlisted_cookies + ['company']
+            },
+            {
+              path: '/v2/certificate',
+              headers: ALLOWLISTED_HEADERS,
+              cookies: allowlisted_cookies,
+            },
+          ],
+        },
+      )
+    end
+
+    http_config
   end
 
   def self.uncached_script_level_path?(script_level_path)

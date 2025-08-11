@@ -23,6 +23,9 @@ module Rack
         # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
         # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
         ::OmniAuth.config.path_prefix, # e.g. `/users/auth`
+        # Exclude HoC legacy API routes from Global Edition scope.
+        '/hour/',
+        '/api/hour/',
       ].compact.freeze
 
       attr_reader :app, :env

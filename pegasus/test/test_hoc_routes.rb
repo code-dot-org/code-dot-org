@@ -1,4 +1,5 @@
 require_relative './test_helper'
+require 'minitest/around'
 require 'minitest/autorun'
 require 'rack/test'
 require 'mocha/mini_test'
@@ -334,6 +335,65 @@ class HocRoutesTest < Minitest::Test
         after_end_row = get_session_hoc_activity_entry
         assert_nil after_end_row
         assert_equal 'HOC_UNSAMPLED', @mock_session.cookie_jar['hour_of_code']
+      end
+    end
+
+    context 'when DCDO hoc_apis_in_dashboard is true' do
+      around do |test|
+        DB.transaction(rollback: :always) {test.call}
+      end
+
+      before do
+        DCDO.set('hoc_apis_in_dashboard', true)
+      end
+
+      after do
+        DCDO.clear
+      end
+
+      it 'redirects to studio when starting tutorial' do
+        @pegasus.expects(:launch_tutorial).never
+
+        @pegasus.get '/api/hour/begin/mc?company=co'
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/begin/mc?company=co'
+      end
+
+      it 'redirects to studio when ending tutorial' do
+        @pegasus.expects(:complete_tutorial).never
+
+        @pegasus.get '/api/hour/finish/mc'
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish/mc'
+      end
+
+      it 'redirects to studio when ending current tutorial session' do
+        @pegasus.expects(:complete_tutorial).never
+
+        @pegasus.get '/api/hour/finish'
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish'
+      end
+
+      it 'redirects to studio when starting tutorial with png image' do
+        @pegasus.expects(:launch_tutorial_pixel).never
+
+        @pegasus.get '/api/hour/begin_mc.png?company=co'
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/begin_mc.png?company=co'
+      end
+
+      it 'redirects to studio when ending tutorial with png image' do
+        @pegasus.expects(:complete_tutorial_pixel).never
+
+        @pegasus.get '/api/hour/finish_mc.png?company=co'
+
+        _(@pegasus.last_response.status).must_equal 301
+        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish_mc.png?company=co'
       end
     end
 

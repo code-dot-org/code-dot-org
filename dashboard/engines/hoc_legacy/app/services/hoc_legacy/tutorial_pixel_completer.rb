@@ -1,0 +1,43 @@
+# frozen_string_literal: true
+
+module HocLegacy
+  class TutorialPixelCompleter < Services::Base
+    include SessionManageable
+
+    attr_reader :controller, :tutorial
+
+    def initialize(controller:, tutorial:)
+      @controller = controller
+      @tutorial = tutorial
+    end
+
+    def call
+      return if CDO.read_only || unsampled_session?
+
+      if session_pending?
+        session_row_query.update(
+          pixel_finished_at: DateTime.now,
+          pixel_finished_ip: request.ip,
+        )
+      else
+        create_session_row_unless_unsampled(
+          referer: request.host_with_port,
+          tutorial: tutorial.try(:[], :code),
+          pixel_finished_at: DateTime.now,
+          pixel_finished_ip: request.ip,
+        )
+      end
+    end
+
+    private delegate :request, :response, to: :controller
+
+    private def session_row
+      return @session_row if defined?(@session_row)
+      @session_row = session_row_query.first
+    end
+
+    private def session_pending?
+      session_row && !session_row[:pixel_finished_at] && !session_row[:finished_at]
+    end
+  end
+end

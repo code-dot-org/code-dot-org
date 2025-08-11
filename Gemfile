@@ -389,7 +389,6 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-# Automatically include all rails engines
-Dir[Bundler.root.join('**/engines/*/*.gemspec')].each do |gemspec_path|
-  gem File.basename(gemspec_path, '.gemspec'), path: Bundler.root, glob: gemspec_path.sub(%r{^.*/engines/}, '**/engines/')
-end
+# Plugins (engines)
+gem 'hoc_legacy', path: '.', glob: '**/engines/*/*.gemspec'
+gem 'marketing', path: '.', glob: '**/engines/*/*.gemspec'

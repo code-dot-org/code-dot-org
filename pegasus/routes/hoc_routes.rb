@@ -1,3 +1,5 @@
+require 'cdo/tutorials'
+
 partner_sites = CDO.partners.map {|x| x + '.code.org'}
 
 get '/:short_code' do |short_code|
@@ -20,6 +22,8 @@ end
 
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  return redirect_to_studio("api/hour/begin/#{code}", params.except('code')) if DCDO.get('hoc_apis_in_dashboard', false)
+
   tutorial = Tutorials.new(:tutorials).find_with_code(code)
   tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
 
@@ -50,6 +54,8 @@ end
 
 get '/api/hour/begin_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  return redirect_to_studio("api/hour/begin_#{code}.png", params.except('code')) if DCDO.get('hoc_apis_in_dashboard', false)
+
   tutorial = Tutorials.new(:tutorials).find_with_code(code)
   tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
 
@@ -59,11 +65,14 @@ end
 
 get '/api/hour/finish' do
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  return redirect_to_studio('api/hour/finish', params) if DCDO.get('hoc_apis_in_dashboard', false)
   complete_tutorial
 end
 
 get '/api/hour/finish/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  return redirect_to_studio("api/hour/finish/#{code}", params.except('code')) if DCDO.get('hoc_apis_in_dashboard', false)
+
   tutorial = Tutorials.new(:tutorials).find_with_code(code)
   tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
 
@@ -73,6 +82,8 @@ end
 
 get '/api/hour/finish_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
+  return redirect_to_studio("api/hour/finish_#{code}.png", params.except('code')) if DCDO.get('hoc_apis_in_dashboard', false)
+
   tutorial = Tutorials.new(:tutorials).find_with_code(code)
   tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
 

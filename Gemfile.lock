@@ -90,8 +90,9 @@ GIT
 
 PATH
   remote: .
-  glob: **/engines/marketing/marketing.gemspec
+  glob: **/engines/*/*.gemspec
   specs:
+    hoc_legacy (0.0.0)
     marketing (0.0.0)
       contentful
 
@@ -312,9 +313,9 @@ GEM
       fiber-annotation
       fiber-local
       json
-    contentful (2.17.1)
+    contentful (2.18.0)
       http (> 0.8, < 6.0)
-      multi_json (~> 1)
+      multi_json (~> 1.15)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -1043,6 +1044,7 @@ DEPENDENCIES
   haml-rails
   haml_lint
   highline (~> 3.1.0)
+  hoc_legacy!
   honeybadger (>= 4.5.6)
   http (~> 5.0)
   httparty
