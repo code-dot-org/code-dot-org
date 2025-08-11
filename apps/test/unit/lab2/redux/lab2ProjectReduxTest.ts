@@ -18,6 +18,7 @@ import reducer, {
   rearrangeFiles,
   resetProjectMetadata,
   Lab2ProjectState,
+  createNewExternalFile,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   MultiFileSource,
@@ -141,6 +142,75 @@ describe('lab2ProjectRedux', () => {
       const state = reducer(
         initialState,
         createNewFile({fileName: 'newFile.txt'})
+      );
+
+      expect(state).toEqual(initialState);
+    });
+  });
+
+  describe('createNewExternalFile', () => {
+    it('should create a new external file in root folder', () => {
+      const fileUrl = '/v3/assets/channelId/abc-def.png';
+      const initialProjectSources = createMockProjectSources();
+      const initialStateWithSources = {
+        ...initialState,
+        projectSources: initialProjectSources,
+      };
+
+      const state = reducer(
+        initialStateWithSources,
+        createNewExternalFile({
+          fileName: 'image.png',
+          url: fileUrl,
+        })
+      );
+
+      const source = state.projectSources!.source as MultiFileSource;
+      const newFiles = Object.values(source.files);
+      const newFile = newFiles.find(f => f.name === 'image.png');
+
+      expect(newFile).toBeDefined();
+      expect(newFile?.folderId).toBe(DEFAULT_FOLDER_ID);
+      expect(newFile?.contents).toBe('');
+      expect(newFile?.url).toBe(fileUrl);
+      expect(newFile?.language).toBe('png');
+      expect(state.hasEdited).toBe(true);
+    });
+
+    it('should create a new external file in specific folder', () => {
+      const fileUrl = '/v3/assets/channelId/abc-def.png';
+      const initialProjectSources = createMockProjectSources();
+      const initialStateWithSources = {
+        ...initialState,
+        projectSources: initialProjectSources,
+      };
+
+      const state = reducer(
+        initialStateWithSources,
+        createNewExternalFile({
+          fileName: 'image.png',
+          url: fileUrl,
+          folderId: '1',
+        })
+      );
+
+      const source = state.projectSources!.source as MultiFileSource;
+      const newFiles = Object.values(source.files);
+      const newFile = newFiles.find(f => f.name === 'image.png');
+
+      expect(newFile).toBeDefined();
+      expect(newFile?.folderId).toBe('1');
+      expect(newFile?.contents).toBe('');
+      expect(newFile?.url).toBe(fileUrl);
+      expect(newFile?.language).toBe('png');
+      expect(state.hasEdited).toBe(true);
+    });
+
+    it('should not create file when project sources is undefined', () => {
+      const fileUrl = '/v3/assets/channelId/abc-def.png';
+      const state = reducer(
+        initialState,
+        createNewExternalFile({fileName: 'image.png', url: fileUrl})
       );
 
       expect(state).toEqual(initialState);

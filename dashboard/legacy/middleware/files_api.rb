@@ -420,7 +420,8 @@ class FilesApi < Sinatra::Base
       project_type = project[:projectType]&.downcase if project
     end
 
-    # Block App Lab libraries with PII/profanity from being published and shared with other users.
+    # Block non-backpack files (e.g., App Lab libraries) with PII/profanity from being published
+    # or shared with other users.
     # The "backpack" feature uses the libraries endpoint to allow users to share code
     # between their own projects -- skip this check for backpack files since the files are
     # only being used by a single user.

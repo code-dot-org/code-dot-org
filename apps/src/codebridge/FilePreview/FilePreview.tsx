@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
@@ -81,6 +82,7 @@ export const FilePreview = () => {
       id="editor-workspace"
       headerContent={headerContent}
       className={moduleStyles.filePreview}
+      rightHeaderContent={<RightButtons />}
     >
       <select
         onChange={e => {
