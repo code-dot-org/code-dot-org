@@ -95,7 +95,11 @@ $default-spacing: 2px;
 }
 
 .panelContainerHeader {
-  border-bottom: 1px solid var(--borders-neutral-primary)
+  margin-bottom: 2px;
+}
+
+.headerWithBorder {
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .advancedControlsContainer {

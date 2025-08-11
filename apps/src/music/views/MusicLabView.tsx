@@ -363,7 +363,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 overrideTheme={'Light'}
                 includeFooterSpacing={false}
                 levelProperties={levelProperties}
-                headerClassName={moduleStyles.panelContainerHeader}
+                headerClassName={moduleStyles.headerWithBorder}
               />
             ) : (
               <PanelContainer
@@ -440,7 +440,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 hideChaff={hideChaff}
               />
             }
-            headerClassName={moduleStyles.panelContainerHeader}
+            headerClassName={
+              experiments.isEnabledAllowingQueryString(
+                experiments.LAB2_RESOURCE_PANEL
+              )
+                ? moduleStyles.headerWithBorder
+                : moduleStyles.panelContainerHeader
+            }
           >
             {isStartMode && (
               <div
