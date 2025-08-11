@@ -100,13 +100,11 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
               style={{width: leftPanelWidth}}
               className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
-            {!shouldHideEditor && (
-              <ResizeBar
-                isVertical={true}
-                separatorProps={leftPanelSeparatorProps}
-                isDragging={leftPanelDragging}
-              />
-            )}
+            <ResizeBar
+              isVertical={true}
+              separatorProps={leftPanelSeparatorProps}
+              isDragging={leftPanelDragging}
+            />
           </>
         )}
         {!shouldHideEditor && (
