@@ -86,6 +86,10 @@ module Services
         @delete_accounts_helper ||= DeleteAccountsHelper.new(bypass_safety_constraints: true)
       end
 
+      private def pd_application_ids
+        @pd_application_ids ||= Pd::Application::ApplicationBase.with_deleted.where(user_id: user.id).pluck(:id)
+      end
+
       # Deletes PII from deprecated tables that no longer have a corresponding ActiveRecord model.
       # Also deletes PII from Pegasus DB, which is planned to for deprecation and should not generally
       # be accessed from Dashboard code. Pegasus DB is a separate database in the RDS cluster, and includes
@@ -96,7 +100,8 @@ module Services
       # - Email addresses in contact rollup tables
       private def scrub_legacy_data
         if email.present?
-          delete_accounts_helper.clean_and_destroy_pd_content(user.id, email)
+          delete_accounts_helper.anonymize_regional_partner_contacts(user.id)
+          delete_accounts_helper.anonymize_legacy_pd_tables(user.id,)
           delete_accounts_helper.remove_poste_data(email)
           delete_accounts_helper.remove_census_submissions(email)
           delete_accounts_helper.purge_contact_rollups(email)
