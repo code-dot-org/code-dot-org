@@ -11,6 +11,14 @@ export const sendAnalytics =
   (dispatch: AppDispatch, getState: () => RootState) => {
     const userHasAichatAccess = getState().aichat.userHasAichatAccess;
     if (userHasAichatAccess || skipAccessCheck) {
-      analyticsReporter.sendEvent(event, properties, PLATFORMS.BOTH);
+      const propertiesWithClientType = {
+        ...properties,
+        clientType: getState().aichat.clientType,
+      };
+      analyticsReporter.sendEvent(
+        event,
+        propertiesWithClientType,
+        PLATFORMS.BOTH
+      );
     }
   };

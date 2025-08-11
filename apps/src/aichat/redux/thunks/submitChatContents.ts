@@ -99,6 +99,7 @@ export const submitChatContents = createAsyncThunk(
           fileCount,
           fileCountImage,
           fileCountPdf,
+          clientType,
         })
       );
     } catch (error) {
