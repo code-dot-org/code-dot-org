@@ -89,8 +89,8 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       _(accounts_to_scrub).wont_include user
     end
 
-    it 'does not include accounts from excluded_user_ids' do
-      described_instance.excluded_user_ids << user.id
+    it 'does not include accounts from processed_user_ids' do
+      described_instance.processed_user_ids << user.id
       _(accounts_to_scrub).wont_include user
     end
   end

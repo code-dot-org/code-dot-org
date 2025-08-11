@@ -17,7 +17,7 @@ class ExpiredDeletedAccountPiiScrubber
   class SafetyConstraintViolation < RuntimeError; end
 
   attr_reader :dry_run, :deleted_since, :limit
-  attr_accessor :excluded_user_ids
+  attr_accessor :processed_user_ids
   alias :dry_run? :dry_run
 
   LOGGING_NAMESPACE = 'Platform/PiiScrubber'
@@ -46,7 +46,7 @@ class ExpiredDeletedAccountPiiScrubber
     raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
 
     # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
-    @excluded_user_ids = []
+    @processed_user_ids = []
 
     reset_metrics
   end
@@ -65,13 +65,14 @@ class ExpiredDeletedAccountPiiScrubber
     loop do
       account_batch = accounts_to_scrub.limit(BATCH_SIZE)
       account_batch.each do |user|
-        excluded_user_ids << user.id
         scrub_user(user)
         self.num_accounts_scrubbed += 1
       rescue StandardError => exception
         self.num_errors += 1
         Honeybadger.notify(exception, context: {user_id: user.id})
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
+      ensure
+        processed_user_ids << user.id
       end
       break if account_batch.size < BATCH_SIZE
     end
@@ -88,7 +89,7 @@ class ExpiredDeletedAccountPiiScrubber
   end
 
   def accounts_to_scrub
-    Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: excluded_user_ids)
+    Queries::User::ExpiredDeletedAccounts.call(deleted_before: deleted_since).where.not(id: processed_user_ids)
   end
 
   def summary
