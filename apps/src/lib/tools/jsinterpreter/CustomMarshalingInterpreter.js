@@ -23,6 +23,34 @@ function safeReadProperty(object, property) {
   } catch (e) {}
 }
 
+/*
+ * Helper to get all property names starting with an instance and then walking up its
+ * prototype chain.  If `depth` is provided, the number of levels when walking up the
+ * prototype chain will be limited to this number.  If depth is 1, only the instance's
+ * property names will be returned,  If depth is 2 then the instance and it's prototype's
+ * properties will be returned, and so on...
+ **/
+function getAllPropertyNames(object, depth = Number.MAX_SAFE_INTEGER) {
+  let currentDepth = 0;
+  let currentObject = object;
+
+  const propertyNames = new Set();
+
+  while (
+    currentDepth < depth &&
+    currentObject &&
+    currentObject !== Object.prototype
+  ) {
+    Object.getOwnPropertyNames(currentObject).forEach(name =>
+      propertyNames.add(name)
+    );
+    currentObject = Object.getPrototypeOf(currentObject);
+    currentDepth++;
+  }
+
+  return [...propertyNames];
+}
+
 function isCanvasImageData(nativeVar) {
   // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
   if (typeof Uint8ClampedArray !== 'undefined') {
@@ -471,6 +499,25 @@ export default class CustomMarshalingInterpreter extends Interpreter {
     return {hooks, interpreter};
   }
 
+  /*
+   * Workaround for marshalNativeToInterpreterObject which previously iterated over enumerable properties
+   * to make them available to the interpreter.  This does not work with class instances as their properties
+   * and methods defined on the prototype will not be enumerable.  This patches this issue for `Simple2Sequencer`
+   * (used by music lab) which previously worked as it was compiled with TypeScript down to ES5 which makes
+   * methods enumerable.  A narrow approach was taken as walking up the prototype chain for all objects without
+   * a max depth could be costly.
+   **/
+  getNativeObjectProperties(nativeObject) {
+    if (
+      typeof nativeObject === 'object' &&
+      nativeObject.constructor?.name === 'Simple2Sequencer'
+    ) {
+      return getAllPropertyNames(nativeObject, 2);
+    } else {
+      return Object.keys(nativeObject);
+    }
+  }
+
   /**
    * Marshal a single native object from native to interpreter. This is in an
    * indepedendent function so the JIT compiler can optimize the calling function.
@@ -485,7 +532,7 @@ export default class CustomMarshalingInterpreter extends Interpreter {
   marshalNativeToInterpreterObject(nativeObject, maxDepth, interpreterObject) {
     var retVal = interpreterObject || this.createObject(this.OBJECT);
     var isFunc = this.isa(retVal, this.FUNCTION);
-    for (var prop in nativeObject) {
+    for (const prop of this.getNativeObjectProperties(nativeObject)) {
       var value = safeReadProperty(nativeObject, prop);
       if (
         isFunc &&
