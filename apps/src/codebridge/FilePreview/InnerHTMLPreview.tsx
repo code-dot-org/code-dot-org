@@ -31,6 +31,19 @@ const InnerHTMLPreview = () => {
     return `${location.protocol}//${environment}studio.${cdn}code.org${port}`;
   }, []);
 
+  // Wrapper around setFilesToBlobs that will revoke the previous blob URLs
+  // to prevent memory leaks.
+  const revokeAndSetFilesToBlobs = (
+    newFilesToBlobs: Record<string, string>
+  ) => {
+    setFilesToBlobs(prevFilesToBlobs => {
+      Object.values(prevFilesToBlobs).forEach(blobUrl =>
+        URL.revokeObjectURL(blobUrl)
+      );
+      return newFilesToBlobs;
+    });
+  };
+
   const handleMessage = useCallback(
     (event: MessageEvent) => {
       // We either receive messages from ourselves (for file changes via href) or from the parent.
@@ -41,7 +54,7 @@ const InnerHTMLPreview = () => {
       if (data.type === IframeMessageType.SET_SOURCE) {
         if (!data.source) {
           // Clear the preview if no source is provided. We are likely changing levels.
-          setFilesToBlobs({});
+          revokeAndSetFilesToBlobs({});
           setBlobUrl(undefined);
         } else {
           setSource(data.source);
@@ -191,7 +204,7 @@ const InnerHTMLPreview = () => {
         );
         files[fullFileName] = URL.createObjectURL(blob);
       });
-      setFilesToBlobs(files);
+      revokeAndSetFilesToBlobs(files);
     }
   }, [parentOrigin, source]);
 

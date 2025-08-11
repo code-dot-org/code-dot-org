@@ -11,6 +11,9 @@ import {IframeMessageType} from './constants';
 
 import moduleStyles from './styles/html-preview.module.scss';
 
+const URL_CHANGE_DELAY_MS = 300;
+const SOURCE_CHANGE_DELAY_MS = 500;
+
 export const HTMLPreview = () => {
   const {levelProperties} = useCodebridgeContext();
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -28,17 +31,17 @@ export const HTMLPreview = () => {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
   const [debouncedSource, setDebouncedSource] = useState(source);
   const sourceLevelId = useRef<number | undefined>(undefined);
-  const [levelLoading, setLevelLoading] = useState(false);
+  const [isLevelLoading, setIsLevelLoading] = useState(false);
   const [currentFile, setCurrentFile] = useState<string>('index.html');
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
     setDebouncedSource(undefined);
-    setLevelLoading(true);
+    setIsLevelLoading(true);
   });
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
-    setLevelLoading(false);
+    setIsLevelLoading(false);
   });
 
   useEffect(() => {
@@ -70,13 +73,13 @@ export const HTMLPreview = () => {
         {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
         previewUrl
       );
-    }, 300);
+    }, URL_CHANGE_DELAY_MS);
 
     return () => clearTimeout(debouncedUpdate);
   }, [currentFile, previewUrl]);
 
   useEffect(() => {
-    if (levelLoading) {
+    if (isLevelLoading) {
       // If the level is currently loading, we skip sending a potentially outdated source.
       return;
     }
@@ -88,14 +91,14 @@ export const HTMLPreview = () => {
       // Set a timeout to send the debounced value after 500ms
       const debouncedSourceSetter = setTimeout(() => {
         setDebouncedSource(source);
-      }, 500);
+      }, SOURCE_CHANGE_DELAY_MS);
 
       // Cleanup the timeout if source or level changes before 500ms has elapsed.
       return () => {
         clearTimeout(debouncedSourceSetter);
       };
     }
-  }, [source, levelProperties.id, levelLoading]);
+  }, [source, levelProperties.id, isLevelLoading]);
 
   useEffect(() => {
     if (isIframeLoaded && iframeRef.current && debouncedSource && previewUrl) {
