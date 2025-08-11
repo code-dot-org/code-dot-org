@@ -42,8 +42,8 @@
       }
     ],
     "family_name": "csa",
-    "has_numbered_units": true,
     "has_verified_resources": true,
+    "numbered_units": "auto",
     "version_year": "2024"
   },
   "resources": [

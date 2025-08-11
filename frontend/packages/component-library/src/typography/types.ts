@@ -11,7 +11,8 @@ type SemanticTag =
   | 'strong'
   | 'em'
   | 'figcaption'
-  | 'span';
+  | 'span'
+  | 'div';
 
 type VisualAppearance =
   | 'heading-xxl'

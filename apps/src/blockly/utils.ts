@@ -3,12 +3,22 @@ import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
-import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
+import UserPreferences from '../lib/util/UserPreferences';
+import {shrinkBlockSpaceContainer} from '../templates/instructions/utils';
+
+import {
+  DARK_THEME_SUFFIX,
+  Themes,
+  BLOCK_TYPES,
+  BLOCKLY_THEME,
+} from './constants';
 import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
@@ -363,4 +373,76 @@ export function updateBlockEnabled(block: GoogleBlockly.Block) {
   } finally {
     Blockly.Events.setRecordUndo(initialUndoFlag);
   }
+}
+
+/**
+ * Sets the theme for the workspace and re-renders blocks if the font size changed.
+ *
+ * @param {GoogleBlockly.Workspace} workspace - The Blockly workspace to set the theme for.
+ * @param {GoogleBlockly.Theme} theme - The theme to apply to the workspace.
+ */
+export function setThemeAndRenderBlocks(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  theme: GoogleBlockly.Theme,
+  previousTheme?: GoogleBlockly.Theme
+) {
+  if (theme && workspace?.rendered) {
+    // Update the main workspace's flyout if it exists.
+    if (workspace.getFlyout()) {
+      setThemeAndRenderBlocks(
+        workspace.getFlyout()!.getWorkspace(),
+        theme,
+        previousTheme
+      );
+    }
+    workspace.setTheme(theme);
+    // Re-render blocks if the font size changed.
+    // Once https://github.com/google/blockly/issues/7782 is resolved,
+    // we should be able to remove this.
+    if (theme.fontStyle?.size !== previousTheme?.fontStyle?.size) {
+      workspace.getAllBlocks().map(block => {
+        block.markDirty();
+        block.render();
+      });
+      // If this is an embedded workspace, we resize its container to avoid cropping or excess padding.
+      if (Blockly.embeddedWorkspaces.includes(workspace.id)) {
+        shrinkBlockSpaceContainer(workspace, true);
+      }
+      // Adjust the width of the vertical flyout if it exists.
+      if (workspace.getFlyout()) {
+        workspace.getFlyout()!.reflow();
+      }
+    }
+  }
+}
+
+export function setWorkspaceTheme(
+  workspace: GoogleBlockly.WorkspaceSvg,
+  name: string
+) {
+  // Save the theme to user preferences, falling back to localStorage for signed-out users.
+  new UserPreferences().setBlocklyTheme(name, () =>
+    localStorage.setItem(BLOCKLY_THEME, name)
+  );
+
+  const currentTheme = workspace.getTheme();
+  const themeName = name + (isDarkTheme(currentTheme) ? DARK_THEME_SUFFIX : '');
+  setAllWorkspacesTheme(Blockly.themes[themeName as Themes], currentTheme);
+  const analyticsData = Blockly.analyticsData;
+  analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
+    setting: EVENTS.BLOCKLY_SETTING_THEME,
+    value: name,
+    ...analyticsData,
+  });
+}
+
+export function setAllWorkspacesTheme(
+  newTheme: GoogleBlockly.Theme,
+  previousTheme: GoogleBlockly.Theme | undefined
+) {
+  Blockly.Workspace.getAll().forEach(baseWorkspace => {
+    // Headless workspaces do not have the ability to set the theme.
+    const workspace = baseWorkspace as GoogleBlockly.WorkspaceSvg;
+    setThemeAndRenderBlocks(workspace, newTheme, previousTheme);
+  });
 }

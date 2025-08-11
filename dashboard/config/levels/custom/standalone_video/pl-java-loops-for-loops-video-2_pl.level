@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:11:47.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "CSA-PL-for-loops",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "## For loops in in other languages\r\n\r\n#### Most languages have a similar structure to for loops in Java.  Below you can see a comparison between other languages and Java.\r\n\r\n<img src=\"https://images.code.org/27b96d79b123884eb905584497874ec2-image-1647831710590.58.08 PM.png\" alt=\"Image of different programming languages and how to use for loops in those languages\" style=\"border-radius:10px; clear: both; width:70%; margin: 0 20px 20px 0; \">\r\n\r\n#### The video at the bottom of this page describes for loops in more depth.\r\n\r\n>### Vocabulary: \r\n>- #### **Loop Control Variable:** A variable declared and used within a loop to count iterations through the loop\r\n>- #### **`for` Loop** - A loop that repeats a code segment a given number of times\r\n\r\n## Additional resources\r\n#### Looking for more practice and resource understanding for loops in Java? Consider using the following resources:\r\n\r\n*  <a href=\"https://runestone.academy/ns/books/published/csawesome/Unit4-Iteration/topic-4-2-for-loops.html\" target=\"_blank\" style = \"font-size:14pt\">CS Awesome’s chapter on for loops</a>\r\n\r\n* <a href=\"https://codehs.com/textbook/apcsa_textbook/4.2\" target=\"_blank\" style = \"font-size:14pt\">CodeHS's chapter on for loops</a>\r\n\r\n#### **Up next:** In the next level, we will practice reading and writing code using `for` loops. \r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:11:47.796+00:00\",\"changed\":[\"cloned from \\\"pl-java-loops-for-loops-video-2\\\"\"],\"cloned_from\":\"pl-java-loops-for-loops-video-2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

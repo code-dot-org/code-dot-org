@@ -129,7 +129,6 @@ export interface ProjectFile {
   name: string;
   language: string;
   contents: string;
-  open?: boolean;
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
@@ -202,6 +201,7 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   submittable?: boolean;
+  disableEditRunForSubmission?: boolean;
   finishUrl?: string;
   finishDialog?: string;
   offerBrowserTts?: boolean;
@@ -221,6 +221,7 @@ export interface LevelProperties {
   progressionType?: string;
   type?: string;
   starterAssets?: {[key: string]: string};
+  showRubric?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require

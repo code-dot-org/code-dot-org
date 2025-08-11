@@ -1,6 +1,6 @@
 name 'test-ai-powered-threats-defenses-lesson2-level6'
-display_name 'Interview Your Computing Roles'
-description 'Explore the key technical roles who contribute to developing your chosen innovation. Select a role to conduct an AI interview and learn how their work helps bring this technology to life, the challenges they face, and how computing drives innovation.'
+display_name 'Investigate a Cybersecurity Threat'
+description 'Viruses, DDoS attacks, misconfigured settings, and ransomware all show how technology can break down when systems aren\’t protected. Explore one of the four scenarios to understand how digital threats spread, disrupt, or expose information.'
 
 sublevels
 level 'test-ai-powered-threats-defenses-lesson2-level6a'

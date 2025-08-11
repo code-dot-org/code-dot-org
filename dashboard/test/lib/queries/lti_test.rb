@@ -5,7 +5,7 @@ require 'authentication_option'
 
 class Services::LtiTest < ActiveSupport::TestCase
   test 'get_user returns an existing user' do
-    user = create :user
+    user = create(:user)
     id_token = {
       sub: 'some-sub',
       aud: 'some-aud',
@@ -20,7 +20,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'finds a code.org user given LTI integration creds and an NRPS member response' do
-    user = create :user
+    user = create(:user)
     lms_user_id = SecureRandom.uuid
     lms_issuer = "http://#{SecureRandom.alphanumeric 10}.com"
     lms_client_id = SecureRandom.uuid
@@ -41,70 +41,70 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'finds an LTI Deployment given an LTI integration id and a deployment id' do
-    lti_integration = create :lti_integration
-    lti_deployment = create :lti_deployment, lti_integration: lti_integration
+    lti_integration = create(:lti_integration)
+    lti_deployment = create(:lti_deployment, lti_integration: lti_integration)
 
     assert_equal lti_deployment, Queries::Lti.get_deployment(lti_integration.id, lti_deployment.deployment_id)
   end
 
   test 'finds an LTI Course given an LTI integration id and an LTI context id' do
-    lti_integration = create :lti_integration
+    lti_integration = create(:lti_integration)
     context_id = SecureRandom.uuid
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: context_id
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: context_id)
 
     assert_equal lti_course, Queries::Lti.get_course_from_context(lti_integration.id, context_id)
   end
 
   test 'finds an LTI Course given a section code' do
     section_code = SecureRandom.alphanumeric(6)
-    lti_course = create :lti_course
-    create :lti_section, lti_course: lti_course, section: create(:section, code: section_code)
+    lti_course = create(:lti_course)
+    create(:lti_section, lti_course: lti_course, section: create(:section, code: section_code))
 
     assert_equal lti_course, Queries::Lti.get_lti_course_from_section_code(section_code)
   end
 
   test 'creates an LTI course given metadata from an LTI launch ID token' do
-    lti_integration = create :lti_integration
+    lti_integration = create(:lti_integration)
     lti_course = Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: 'context-id', deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
     assert lti_course
   end
 
   test 'finds an existing LTI course given metadata from an LTI launch ID token' do
-    lti_integration = create :lti_integration
-    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid
+    lti_integration = create(:lti_integration)
+    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid)
     assert_equal lti_course, Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: lti_course.context_id, deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
   end
 
   test 'lti_user_ids should return the subjects (user id) for a given user' do
-    lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+    lti_integration = create(:lti_integration)
+    lti_user_identity = create(:lti_user_identity, lti_integration: lti_integration)
 
     assert_equal ["subject"], Queries::Lti.lti_user_ids(lti_user_identity.user, lti_integration)
 
     # Returns all subjects if a user has more than one with a matching lti_integration
-    create :lti_user_identity, lti_integration: lti_integration, user: lti_user_identity.user, subject: 'subject2'
+    create(:lti_user_identity, lti_integration: lti_integration, user: lti_user_identity.user, subject: 'subject2')
     assert_equal ["subject", "subject2"], Queries::Lti.lti_user_ids(lti_user_identity.user, lti_integration)
   end
 
   test 'lti_user_ids should return nil if there are no matching identities' do
-    lti_integration = create :lti_integration
-    other_lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+    lti_integration = create(:lti_integration)
+    other_lti_integration = create(:lti_integration)
+    lti_user_identity = create(:lti_user_identity, lti_integration: lti_integration)
 
     assert_nil Queries::Lti.lti_user_ids(lti_user_identity.user, other_lti_integration)
   end
 
   test 'lti_user_identity should return the lti_user_identity for a given user' do
-    lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+    lti_integration = create(:lti_integration)
+    lti_user_identity = create(:lti_user_identity, lti_integration: lti_integration)
 
     assert_equal lti_user_identity, Queries::Lti.lti_user_identity(lti_user_identity.user, lti_integration)
   end
 
   test 'lti_user_identity should return nil if there are no matching identities' do
-    lti_integration = create :lti_integration
-    other_lti_integration = create :lti_integration
-    lti_user_identity = create :lti_user_identity, lti_integration: lti_integration
+    lti_integration = create(:lti_integration)
+    other_lti_integration = create(:lti_integration)
+    lti_user_identity = create(:lti_user_identity, lti_integration: lti_integration)
 
     assert_nil Queries::Lti.lti_user_identity(lti_user_identity.user, other_lti_integration)
   end

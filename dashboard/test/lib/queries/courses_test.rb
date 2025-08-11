@@ -24,7 +24,7 @@ class Queries::CoursesTest < ActiveSupport::TestCase
     end
 
     context 'unit is defined' do
-      let!(:unit) {create :unit, name: script_name}
+      let!(:unit) {create(:unit, name: script_name)}
 
       context 'unit_group_unit is nil' do
         it 'returns course context' do
@@ -33,9 +33,9 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
 
       context 'unit_group_unit is defined' do
-        let(:unit_group) {create :unit_group}
+        let(:unit_group) {create(:unit_group)}
         let(:unit_position) {123}
-        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, position: unit_position, script_id: unit.id}
+        let!(:unit_group_unit) {create(:unit_group_unit, course_id: unit_group.id, position: unit_position, script_id: unit.id)}
 
         it 'returns course context' do
           _(subject).must_equal course_context
@@ -76,9 +76,9 @@ class Queries::CoursesTest < ActiveSupport::TestCase
     end
 
     context 'unit defined' do
-      let(:original_unit_group) {create :unit_group}
-      let(:unit) {create :unit, original_unit_group: original_unit_group}
-      let!(:unit_group_unit) {create :unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1}
+      let(:original_unit_group) {create(:unit_group)}
+      let(:unit) {create(:unit, original_unit_group: original_unit_group)}
+      let!(:unit_group_unit) {create(:unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1)}
 
       before do
         unit.reload
@@ -89,9 +89,9 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
 
       context 'unit_group is defined' do
-        let!(:original_unit_group_unit) {create :unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1}
-        let(:unit_group) {create :unit_group}
-        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
+        let!(:original_unit_group_unit) {create(:unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1)}
+        let(:unit_group) {create(:unit_group)}
+        let!(:unit_group_unit) {create(:unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1)}
 
         it 'returns unit_group_unit' do
           _(subject).must_equal unit_group_unit
@@ -118,7 +118,7 @@ class Queries::CoursesTest < ActiveSupport::TestCase
     end
 
     context 'course_name is defined' do
-      let(:unit_group) {create :unit_group}
+      let(:unit_group) {create(:unit_group)}
       let(:course_name) {unit_group.name}
 
       context 'unit_position is nil' do
@@ -128,9 +128,9 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
 
       context 'unit_position is defined' do
-        let(:unit) {create :unit, original_unit_group: unit_group}
+        let(:unit) {create(:unit, original_unit_group: unit_group)}
         let(:unit_position) {1}
-        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: unit_position}
+        let!(:unit_group_unit) {create(:unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: unit_position)}
         let(:unit_context) do
           {
             unit_group: unit_group,

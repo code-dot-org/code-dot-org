@@ -38,21 +38,22 @@ export const finishedLoadingCoursesWithProgress = () => ({
 
 // Selectors
 export const getSelectedUnitId = state => state.unitSelection.scriptId;
-export const getSelectedCourseId = state => state.unitSelection.courseVersionId;
+export const getSelectedCourseVersionId = state =>
+  state.unitSelection.courseVersionId;
 
-export const getSelectedCourse = state => {
-  const courseVersionId = getSelectedCourseId(state);
+export const getSelectedCourseVersion = state => {
+  const courseVersionId = getSelectedCourseVersionId(state);
   return state.unitSelection.coursesWithProgress.find(
     c => c.id === courseVersionId
   );
 };
 
 export const getSelectedCourseName = state => {
-  return getSelectedCourse(state)?.course_name || null;
+  return getSelectedCourseVersion(state)?.course_name || null;
 };
 
 const getSelectedUnit = state => {
-  const courseVersionId = getSelectedCourseId(state);
+  const courseVersionId = getSelectedCourseVersionId(state);
   const unitId = getSelectedUnitId(state);
   if (!courseVersionId || !unitId) {
     return null;
@@ -84,6 +85,10 @@ export const doesCurrentCourseUseFeedback = state => {
 
 export const getSelectedUnitPosition = state => {
   return getSelectedUnit(state) ? getSelectedUnit(state).position : null;
+};
+
+export const getSelectedCourseId = state => {
+  return getSelectedUnit(state) ? getSelectedUnit(state).course_id : null;
 };
 
 export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
@@ -138,7 +143,7 @@ export default function unitSelection(state = initialState, action) {
     const firstUnit = firstCourse ? firstCourse.units[0] : null;
 
     // If the currently selected Unit is the new set of coursesWithProgress,
-    // the default to selecting the first Unit.
+    // then default to selecting the first Unit.
     let scriptId = firstUnit?.id;
     let courseVersionId = firstCourse?.id;
     if (state.scriptId && state.courseVersionId) {
@@ -159,8 +164,6 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
-      // This automatically selects the first unit of the first course
-      // unless a Unit is already set
       scriptId: scriptId,
       courseVersionId: courseVersionId,
     };

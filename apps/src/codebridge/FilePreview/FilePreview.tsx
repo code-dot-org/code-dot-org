@@ -1,4 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
@@ -6,6 +7,8 @@ import React, {useState, useEffect} from 'react';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {DEFAULT_FOLDER_ID} from '../constants';
 
 import {HTMLPreview} from './HTMLPreview';
 
@@ -41,9 +44,12 @@ export const FilePreview = () => {
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(
     Object.values(files).find(
-      (f: ProjectFile) => f.name === 'index.html' && !f.folderId
+      (f: ProjectFile) =>
+        f.name === 'index.html' &&
+        (!f.folderId || f.folderId === DEFAULT_FOLDER_ID)
     )
   );
 
@@ -76,6 +82,7 @@ export const FilePreview = () => {
       id="editor-workspace"
       headerContent={headerContent}
       className={moduleStyles.filePreview}
+      rightHeaderContent={<RightButtons />}
     >
       <select
         onChange={e => {

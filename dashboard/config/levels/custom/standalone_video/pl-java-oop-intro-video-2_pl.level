@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-07-18T15:17:24.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csa-pl-intro-to-oop",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28813,
+    "name_suffix": "_pl",
+    "encrypted": "false",
+    "long_instructions": "#### Let’s start by learning a bit more about what Object-Oriented Languages can do.   \r\n\r\n### **As you watch this video, consider:**\r\n\r\n- #### How is object-oriented programming different from or similar to other programming languages you may have experience with?\r\n\r\n#### First, we will focus on using a class in Code.org called the `Painter` class, and will write classes later in lesson 3.\r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Object-Orientened Programming</strong> an approach to creating and using models of physical or imagined objects</p>\r\n\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Class</strong> a programmer-definied blueprint from which objects are created</p>\r\n\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Camel Case</strong> a naming convention where the first letter of the fist word is upper or lowercase and the fist letter of each addition word is uppercase</p>\r\n</div>\r\n\r\n<hr>\r\n\r\n#### **Up next:** We will look at our first program that uses the `Painter` class."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-07-18T15:17:24.409+00:00\",\"changed\":[\"cloned from \\\"pl-java-oop-intro-video-2\\\"\"],\"cloned_from\":\"pl-java-oop-intro-video-2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

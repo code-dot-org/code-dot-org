@@ -29,6 +29,8 @@ const SECTION_ID = 11;
 const UNIT_DATA = getScriptData(5);
 const DEFAULT_PROPS = {
   isSkeleton: false,
+  courseId: 2,
+  unitPositon: 3,
 };
 
 const LESSON_ID_1 = UNIT_DATA.lessons[0].id;

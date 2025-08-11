@@ -1,3 +1,18 @@
+:ruby
+  if @deprecated_course_name == Unit::COURSE1_NAME
+    description = I18n.t('course_deprecated.course1_retired', coursea_url: course_path('coursea', viewAs: 'Instructor'), pre_reader_express_url: course_path('pre-express', viewAs: 'Instructor'), markdown: :inline)
+    elsif @deprecated_course_name == Unit::COURSE2_NAME
+      description = I18n.t('course_deprecated.course2_retired', coursec_url: course_path('coursec', viewAs: 'Instructor'), course_d_url: course_path('coursed', viewAs: 'Instructor'), markdown: :inline)
+    elsif @deprecated_course_name == Unit::COURSE3_NAME
+      description = I18n.t('course_deprecated.course3_retired', course_e_url: course_path('coursee', viewAs: 'Instructor'), course_f_url: course_path('coursef', viewAs: 'Instructor'), markdown: :inline)
+    elsif @deprecated_course_name == Unit::COURSE4_NAME
+      description = I18n.t('course_deprecated.course4_retired', course_f_url: course_path('coursef', viewAs: 'Instructor'), markdown: :inline)
+    elsif @deprecated_course_name == Unit::TWENTY_HOUR_NAME
+      description = I18n.t('course_deprecated.accelerated_course_retired', express_course_url: course_path('express', viewAs: 'Instructor'), markdown: :inline)
+  else
+    description = I18n.t('course_deprecated.title', path_type: I18n.t('course_deprecated.curriculum'))
+  end
+
 .not-found-page.deprecated-course-page
   .error-parent
     .deprecated-course-child
@@ -7,6 +22,6 @@
         %a.design-system-btn{href: '/projects'}
           = I18n.t('course_deprecated.projects_button')
       - else
-        %p= I18n.t('course_deprecated.title', path_type: I18n.t('course_deprecated.curriculum'))
+        %p!= description
       %a.design-system-btn{href: 'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses'}
         = I18n.t('course_deprecated.button')

@@ -21,6 +21,7 @@ const SkillsEditDialog: React.FC<SkillsEditDialogProps> = ({
   const handleSave = () => {
     updateSkill(editedSkill.id, editedSkill);
     onClose();
+    window.location.reload();
   };
 
   const getInputForm = () => {

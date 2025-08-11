@@ -713,8 +713,9 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
-  def can_view_version?(user, locale: nil)
-    return false unless Ability.new(user).can?(:read, self)
+  def can_view_version?(user, locale: nil, unit_group: nil)
+    unit_group ||= self.unit_group
+    return false unless Ability.new(user).can?(:read, self, unit_group)
 
     # Users can view any course not in a family.
     return true if family_name.nil? && !unit_group&.single_unit_course?
@@ -1058,7 +1059,7 @@ class Unit < ApplicationRecord
 
     # hard code some exceptions. ideally we'd get rid of these and just make our
     # UI tests deal with the 13+ requirement
-    return false if %w(allthethings allthehiddenthings allthettsthings).include?(name)
+    return false if %w(allthethings allthettsthings).include?(name)
 
     script_levels.any? {|script_level| script_level.levels.any?(&:age_13_required?)}
   end
@@ -1564,6 +1565,7 @@ class Unit < ApplicationRecord
         id: id,
         name: name,
         title: title_for_display(unit_group_unit: unit_group_unit),
+        unit_prefix: unit_group_unit&.unit_prefix,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
         course_id: unit_group_unit&.cached_unit_group&.id,
@@ -1644,13 +1646,14 @@ class Unit < ApplicationRecord
   end
 
   def summarize_for_lesson_materials_view(user, unit_group_unit: nil)
-    unit_position = unit_number
-    has_numbered_units = unit_group&.has_numbered_units?
-    course_version_year = unit_group&.version_year || version_year
     if unit_group_unit
       unit_position = unit_group_unit.position
-      has_numbered_units = unit_group_unit.unit_group.has_numbered_units?
+      numbered_units = unit_group_unit.unit_group.numbered_units
       course_version_year = unit_group_unit.unit_group.version_year || version_year
+    else
+      unit_position = unit_number
+      numbered_units = original_unit_group&.numbered_units
+      course_version_year = original_unit_group&.version_year || version_year
     end
     summary = {
       unitId: id,
@@ -1662,7 +1665,7 @@ class Unit < ApplicationRecord
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      hasNumberedUnits: has_numbered_units,
+      numberedUnits: numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: course_version_year,
     }
@@ -1841,10 +1844,16 @@ class Unit < ApplicationRecord
     unit_group_unit ||= Queries::Courses.unit_group_unit(self)
     unit_group = unit_group_unit&.cached_unit_group
     title = localized_title
-    has_prefix = unit_group&.has_numbered_units
-    return title unless has_prefix
+    numbered_units = unit_group&.numbered_units
+    return title unless numbered_units
 
-    position = unit_group_unit&.position
+    if numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.auto
+      position = unit_group_unit&.position
+    elsif numbered_units == Curriculum::SharedCourseConstants::NUMBERED_UNITS_TYPE.custom
+      position = unit_group_unit&.unit_prefix
+      return title if position&.strip&.empty?
+    end
+
     prefix = I18n.t "unit_prefix", n: position
     "#{prefix} - #{title}"
   end
@@ -2001,6 +2010,7 @@ class Unit < ApplicationRecord
     unit_group_unit ||= unit_group_units&.first
     {
       id: id,
+      course_id: unit_group_unit&.course_id,
       key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
@@ -2209,6 +2219,7 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
     levels&.any?(&:ai_tutor_available?)
   end

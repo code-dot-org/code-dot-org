@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
@@ -33,8 +32,6 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   className,
   headerClassName,
 }) => {
-  const {theme} = useTheme();
-
   return (
     <div
       className={classNames(
@@ -49,7 +46,6 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
           className={classNames(
             'panelContainerHeader',
             moduleStyles.panelContainerHeader,
-            moduleStyles[`panelContainerHeader${theme}`],
             headerClassName
           )}
         >
@@ -72,10 +68,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
             visualAppearance={'body-three'}
           >
             <span
-              className={classNames(
-                moduleStyles.panelContainerHeaderItemText,
-                moduleStyles[`panelContainerHeaderItemText${theme}`]
-              )}
+              className={classNames(moduleStyles.panelContainerHeaderItemText)}
             >
               {headerContent}
             </span>

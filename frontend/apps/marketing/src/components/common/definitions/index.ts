@@ -111,3 +111,77 @@ export const hideImagesDefinition: Record<string, ComponentDefinitionVariable> =
       group: 'style',
     },
   };
+
+// Used in the Image component
+export const imageSrcDefinition: Record<string, ComponentDefinitionVariable> = {
+  src: {
+    displayName: 'Image source',
+    type: 'Media',
+    defaultValue: undefined,
+    group: 'content',
+    validations: {
+      bindingSourceType: ['asset', 'manual'],
+    },
+  },
+};
+
+export const imageAltTextDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  altText: {
+    displayName: 'Alt text',
+    type: 'Text',
+    defaultValue: '',
+    group: 'content',
+    validations: {
+      bindingSourceType: ['asset', 'manual', 'entry'],
+    },
+  },
+};
+
+export const imageHasRoundedCornersDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  hasRoundedCorners: {
+    displayName: 'Rounded corners',
+    type: 'Boolean',
+    defaultValue: true,
+    group: 'style',
+  },
+};
+
+// Used in the Section component
+export const sectionPaddingDefinition: Record<
+  string,
+  ComponentDefinitionVariable
+> = {
+  padding: {
+    displayName: 'Padding',
+    type: 'Text',
+    group: 'style',
+    description: 'Adds medium or large padding to the section.',
+    defaultValue: 'l',
+    validations: {
+      in: [
+        {value: 'm', displayName: 'Medium'},
+        {value: 'l', displayName: 'Large'},
+      ],
+    },
+  },
+};
+
+// Used in the Section component
+export const sectionIdDefinition: Record<string, ComponentDefinitionVariable> =
+  {
+    id: {
+      displayName: 'Section ID',
+      type: 'Text',
+      group: 'content',
+      description: 'Adds a custom ID to a section; can be used for skip links.',
+      validations: {
+        bindingSourceType: ['manual'],
+      },
+    },
+  };

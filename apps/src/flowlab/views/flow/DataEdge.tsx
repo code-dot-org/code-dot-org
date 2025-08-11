@@ -85,7 +85,7 @@ export function DataEdge({
             //className="absolute rounded border bg-background px-1 text-foreground"
             style={{transform}}
           >
-            <div className="text-xs">{label}</div>
+            {label}
           </div>
         </EdgeLabelRenderer>
       )}

@@ -56,6 +56,10 @@ a.button {
   &[aria-disabled='true'] {
     cursor: not-allowed;
     border-color: var(--borders-neutral-disabled);
+
+    &.button-tertiary {
+      border-color: transparent;
+    }
   }
 }
 

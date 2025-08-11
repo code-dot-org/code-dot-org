@@ -1,8 +1,8 @@
 import adminsPageTopImage from '@public/images/admins-page-top.png';
 import helpPageTopImage from '@public/images/help-page-top.png';
 import teachPageTopImage from '@public/images/teach-page-top.png';
-import {Meta, StoryObj} from '@storybook/react';
-import {within, expect} from '@storybook/test';
+import {Meta, StoryObj} from '@storybook/react-webpack5';
+import {within, expect} from 'storybook/test';
 
 import {LinkButtonProps} from '@/button';
 import {ImageProps} from '@/image';

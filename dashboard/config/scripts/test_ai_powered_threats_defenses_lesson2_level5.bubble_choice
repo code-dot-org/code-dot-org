@@ -1,6 +1,6 @@
 name 'test-ai-powered-threats-defenses-lesson2-level5'
 display_name 'Computing Careers'
-description 'Computing professionals play essential roles in creating and improving technology. Learn about different careers to see how their skills and tools make innovation possible.'
+description 'Viruses, DDoS attacks, misconfigured settings, and ransomware all show how technology can break down when systems aren\’t protected. Explore one of the four scenarios to understand how digital threats spread, disrupt, or expose information.'
 
 sublevels
 level 'test-ai-powered-threats-defenses-lesson2-level5a'
