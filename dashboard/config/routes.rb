@@ -1,7 +1,6 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
-  mount HocLegacy::Engine => '/'
   mount Marketing::Engine => '/marketing'
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -1390,5 +1389,10 @@ Dashboard::Application.routes.draw do
         delete :clear_all_data
       end
     end
+
+    # Mounting an engine at "/" makes it act as a catch-all for all unmatched paths.
+    # If placed before other routes (e.g., Devise), it will intercept their requests.
+    # Always mount such engines last to avoid swallowing host application routes.
+    mount HocLegacy::Engine => '/'
   end
 end
