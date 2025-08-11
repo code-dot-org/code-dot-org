@@ -129,6 +129,8 @@ export const HTMLPreview = () => {
             size={'s'}
           />
         </div>
+        {/* This iframe points to the environment-specific version of preview.codeprojects.org. That url will eventually
+            route to InnerHTMLPreview. */}
         <iframe
           sandbox="allow-scripts allow-same-origin"
           allow="self"
