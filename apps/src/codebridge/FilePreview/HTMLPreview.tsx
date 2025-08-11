@@ -1,11 +1,13 @@
 import TextField from '@code-dot-org/component-library/textField';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import RightButtons from '@codebridge/RightButtons/RightButtons';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCodebridgeContext} from '../codebridgeContext';
 
 import {IframeMessageType} from './constants';
 
@@ -113,24 +115,30 @@ export const HTMLPreview = () => {
   }, [previewUrl, debouncedSource, isIframeLoaded]);
 
   return (
-    <div className={moduleStyles.previewContainer}>
-      <div>
-        <TextField
-          onChange={e => setCurrentFile(e.target.value)}
-          value={currentFile}
-          name={'url-input'}
-          size={'s'}
+    <PanelContainer
+      id={'html-preview'}
+      headerContent={codebridgeI18n.preview()}
+      rightHeaderContent={<RightButtons />}
+    >
+      <div className={moduleStyles.previewContainer}>
+        <div>
+          <TextField
+            onChange={e => setCurrentFile(e.target.value)}
+            value={currentFile}
+            name={'url-input'}
+            size={'s'}
+          />
+        </div>
+        <iframe
+          sandbox="allow-scripts allow-same-origin"
+          allow="self"
+          title="Web Preview"
+          ref={iframeRef}
+          id="preview"
+          className={moduleStyles.previewIframe}
+          src={previewUrl}
         />
       </div>
-      <iframe
-        sandbox="allow-scripts allow-same-origin"
-        allow="self"
-        title="Web Preview"
-        ref={iframeRef}
-        id="preview"
-        className={moduleStyles.previewIframe}
-        src={previewUrl}
-      />
-    </div>
+    </PanelContainer>
   );
 };
