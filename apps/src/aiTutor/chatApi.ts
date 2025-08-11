@@ -43,7 +43,7 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
-export async function postOpenaiChatCompletion(
+async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
   scriptId?: number,

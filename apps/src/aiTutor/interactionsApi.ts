@@ -1,5 +1,5 @@
 /** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
- *  TODO-AITUTOR: Remove
+ *  TODO-AITUTOR: Remove along with server side code
  **/
 
 import {MetricEvent} from '@cdo/apps/metrics/events';
