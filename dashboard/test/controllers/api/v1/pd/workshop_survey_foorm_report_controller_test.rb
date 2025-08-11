@@ -5,10 +5,10 @@ module Api::V1::Pd
     self.use_transactional_test_case = true
 
     setup_all do
-      @summer_post_survey = create :foorm_form_summer_post_survey
-      @summer_pre_survey = create :foorm_form_summer_pre_survey
-      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
-      @build_your_own_workshop_post_survey = create :foorm_form_build_your_own_workshop_post_survey
+      @summer_post_survey = create(:foorm_form_summer_post_survey)
+      @summer_pre_survey = create(:foorm_form_summer_pre_survey)
+      @csf_intro_post_survey = create(:foorm_form_csf_intro_post_survey)
+      @build_your_own_workshop_post_survey = create(:foorm_form_build_your_own_workshop_post_survey)
     end
 
     setup do
@@ -342,9 +342,9 @@ module Api::V1::Pd
     # Tests for the new workshop_survey_summary endpoint
     test 'get workshop survey summary correctly' do
       sign_in @workshop_admin
-      byo_workshop = create :byo_workshop
-      create :build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id
-      create_list :build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
 
       get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
       assert_response :success
@@ -417,14 +417,15 @@ module Api::V1::Pd
     end
 
     test 'workshop survey summary returns unauthorized for unauthorized users' do
-      generic_teacher = create :teacher
-      other_facilitator = create :facilitator
-      program_manager = create :program_manager
-      workshop_organizer = create :workshop_organizer
-      byo_workshop = create :byo_workshop,
+      generic_teacher = create(:teacher)
+      other_facilitator = create(:facilitator)
+      program_manager = create(:program_manager)
+      workshop_organizer = create(:workshop_organizer)
+      byo_workshop = create(:byo_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+      )
       this_facilitator = byo_workshop.facilitators[0]
 
       expected_authorization = [
@@ -445,10 +446,11 @@ module Api::V1::Pd
     end
 
     test 'workshop survey summary filters facilitator data if facilitator is signed in' do
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator), create(:facilitator)]
+      )
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]
       facilitator_2 = csf_workshop.facilitators[1]
@@ -477,9 +479,9 @@ module Api::V1::Pd
     test 'workshop survey summary handles matrix questions by category' do
       sign_in @workshop_admin
       # Create a workshop with matrix questions that should be split by category
-      byo_workshop = create :byo_workshop
-      create :build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id
-      create_list :build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
 
       get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
       assert_response :success
@@ -505,7 +507,7 @@ module Api::V1::Pd
 
     test 'workshop survey summary handles workshop without survey responses' do
       sign_in @workshop_admin
-      empty_workshop = create :byo_workshop
+      empty_workshop = create(:byo_workshop)
 
       get :workshop_survey_summary, params: {workshop_id: empty_workshop.id}
       assert_response :success
