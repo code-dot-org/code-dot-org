@@ -14,6 +14,7 @@ import {WorkshopData} from '../types';
 import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
 import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
+import {WorkshopStatusSection} from './sections/WorkshopStatusSection';
 
 export const WorkshopOverview: React.FC = () => {
   const permission = useSelector(
@@ -23,7 +24,7 @@ export const WorkshopOverview: React.FC = () => {
   );
   const isWorkshopAdmin = permission.has(WorkshopAdmin);
 
-  const {workshop, loading, error} = useOutletContext<
+  const {workshop, loading, error, refetch} = useOutletContext<
     Omit<UseFetchResult<Workshop>, 'data'> & {
       workshop: WorkshopData;
     }
@@ -49,6 +50,11 @@ export const WorkshopOverview: React.FC = () => {
           isWorkshopAdmin={isWorkshopAdmin}
         />
         <WorkshopLinksSection workshop={workshop} />
+        <WorkshopStatusSection
+          workshop={workshop}
+          isWorkshopAdmin={isWorkshopAdmin}
+          onWorkshopUpdate={refetch}
+        />
         <TakeAttendanceSection workshop={workshop} />
       </Stack>
     </Box>

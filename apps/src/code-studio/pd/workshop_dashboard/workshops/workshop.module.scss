@@ -62,6 +62,11 @@ div.card {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      .cardHeaderRow {
+        display: flex;
+        gap: 0.5rem;
+      }
     }
   }
 
