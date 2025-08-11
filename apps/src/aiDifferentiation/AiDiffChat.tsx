@@ -235,7 +235,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             id: json.message_id,
           };
 
-          // logging here because on the first user message the threadID is null
+          // logging here because on the first user message the threadID is 0
           // we only get a threadID initialized in the response
           if (localThreadId === 0) {
             threadFetchCallback();
