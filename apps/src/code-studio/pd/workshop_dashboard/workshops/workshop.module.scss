@@ -127,9 +127,34 @@
     }
   }
 
-}
+  .workshopTag {
+    > div {
+      max-height: 1.125rem;
+      background-color: var(--background-neutral-tertiary);
 
+      span {
+        margin: 0;
+      }
+    }
 
-:global(.MuiPaper-root).card {
-  box-shadow: 0 2px 3px 0 rgba(0 0 0 / 5%);
+    &.visibility {
+      > div {
+        background-color: var(--background-neutral-tertiary);
+      }
+    }
+    &.status {
+      > div {
+        background-color: var(--background-brand-teal-primary);
+
+        span {
+          color: var(--text-neutral-white-fixed);
+        }
+      }
+    }
+  }
+
+  .workshopLink {
+    margin-top: 0.375rem;
+  }
+
 }
