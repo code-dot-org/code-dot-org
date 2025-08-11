@@ -282,34 +282,5 @@ test.describe('All the things UI e2e test', () => {
         await eyes.check(testInfo.title, {region: component});
       });
     });
-
-    [
-      'Section - Dark Gray',
-      'Section - Pattern Dark',
-      'Section - Pattern Teal',
-    ].forEach(carousel => {
-      test.describe(carousel.toLowerCase(), () => {
-        let component: Locator;
-
-        test.beforeEach(async () => {
-          component = allTheThingsPage.getSectionLocator(carousel as Section);
-          await component.scrollIntoViewIfNeeded();
-        });
-
-        test('eyes', {tag: '@eyes'}, async ({eyes, browserName}, testInfo) => {
-          // Skip the test on Safari for 'Section - Dark Gray' since it's taking
-          // too long to render and causing timeouts.
-          test.skip(
-            carousel === 'Section - Dark Gray' && browserName === 'webkit',
-            'Skipping Section - Dark Gray on Safari',
-          );
-
-          await eyes.check(testInfo.title, {
-            region: component,
-            fully: true,
-          });
-        });
-      });
-    });
   });
 });

@@ -14,15 +14,15 @@ module Api::V1::Pd::Application
         form_data: build(TEACHER_APPLICATION_HASH_FACTORY)
       }
 
-      @applicant = create :teacher
+      @applicant = create(:teacher)
 
-      @program_manager = create :program_manager
+      @program_manager = create(:program_manager)
       partner = @program_manager.regional_partners.first
       partner.update!(applications_principal_approval: RegionalPartner::ALL_REQUIRE_APPROVAL)
       @hash_with_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
       @application = create TEACHER_APPLICATION_FACTORY, form_data_hash: @hash_with_admin_approval
 
-      @program_manager_without_admin_approval = create :program_manager
+      @program_manager_without_admin_approval = create(:program_manager)
       partner_without_admin_approval = @program_manager_without_admin_approval.regional_partners.first
       partner_without_admin_approval.update!(applications_principal_approval: RegionalPartner::SELECTIVE_APPROVAL)
       @hash_without_admin_approval = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_without_admin_approval.id
@@ -133,7 +133,7 @@ module Api::V1::Pd::Application
       assert_equal 'reopened', TEACHER_APPLICATION_CLASS.last.status
 
       # while the application is reopened, the principal approval gets submitted
-      create :pd_principal_approval_application, teacher_application: application
+      create(:pd_principal_approval_application, teacher_application: application)
       put :update, params: {id: application.id}
       assert_response :success
       assert_equal 'unreviewed', TEACHER_APPLICATION_CLASS.last.status

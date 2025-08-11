@@ -14,7 +14,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
 
     test 'given user should update the compliance state' do
       # Update the state a few times and make sure the last_update time changes.
-      user = create :non_compliant_child
+      user = create(:non_compliant_child)
 
       new_state = Policies::ChildAccount::ComplianceState::LOCKED_OUT
       Services::ChildAccount.update_compliance(user, new_state)
