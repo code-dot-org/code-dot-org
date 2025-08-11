@@ -9,6 +9,10 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     allow(DCDO).to receive(:get).and_call_original
   end
 
+  it 'fails test' do
+    _(false).must_equal true
+  end
+
   describe 'GET /hour/:short_code' do
     subject(:show_tutorial_request) {get "/hour/#{tutorial_short_code}?company=#{param_company}"}
 
