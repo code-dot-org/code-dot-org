@@ -156,46 +156,28 @@ class ActiveSupport::TestCase
   include ActiveSupport::Testing::TransactionalTestCase
   include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
+  include Curriculum::SharedCourseConstants
 
-  def seed_deprecated_unit_fixtures
-    # Some of the functionality we're testing here relies on Scripts with
-    # certain hardcoded names. In the old fixture-based model, this data was
-    # all provided; in the new factory-based model, we need to do a little
-    # prep.
-    #
-    # NOTE for any future developers: please DO NOT add new scripts to this
-    # list. This exists to provide backwards compatibility to old tests which
-    # are dependent on factory-provided content. If you are writing new tests,
-    # please make sure that they are instead relying on factory-provided
-    # content.
-    tested_script_names = [
-      'ECSPD',
-      'allthethings',
-      Unit::COURSE1_NAME,
-      Unit::COURSE4_NAME,
-      Unit::FLAPPY_NAME,
-      Unit::FROZEN_NAME,
-      Unit::HOC_NAME,
-      Unit::PLAYLAB_NAME,
-      Unit::TWENTY_HOUR_NAME
-    ]
+  # Create the hourofcode unit and levels from factories, taking care to first
+  # delete any conflicting objects that may have already been created in test
+  # fixtures. This paves the way to remove this unit from the test fixtures
+  # without breaking tests which use this helper.
+  #
+  # The hourofcode unit has some special properties, such as special routes for
+  # script lavels (e.g. /hoc/1), which make it helpful to test against a unit
+  # with this exact name.
+  def create_hourofcode_unit_and_levels
+    unit_name = Unit::HOC_NAME
 
-    tested_script_names.each do |script_name|
-      # create a placeholder factory-provided Unit if we don't already have a
-      # fixture-provided one.
-      # Specify skip_name_format_validation because 'ECSPD' will fail to be
-      # created otherwise, because upper case letters are not allowed.
-      script = Unit.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
+    # remove any existing fixture-provided unit with this name.
+    # TODO: remove these lines once the hourofcode unit is no longer in fixtures.
+    Unit.find_by_name(unit_name)&.destroy
+    UnitGroup.find_by_name(unit_name)&.destroy
+    CourseOffering.find_by_key(unit_name)&.destroy
 
-      # make sure that all the Unit's ScriptLevels have associated Levels.
-      # This is expected during the interim period where we are no longer
-      # generating Levels from fixtures, but are still generating Scripts
-      script.script_levels.each do |script_level|
-        next unless script_level.levels.empty?
-        script_level.levels = [create(:level)]
-      end
-    end
+    # create placeholder hourofcode CourseOffering, UnitGroup, Unit and Levels.
+    unit = create(:script, :with_levels, levels_count: 10, name: unit_name)
+    create(:hoc_course, unit: unit, name: unit_name, family_name: unit_name, published_state: PUBLISHED_STATE.stable)
   end
 
   def assert_creates(*args, &block)

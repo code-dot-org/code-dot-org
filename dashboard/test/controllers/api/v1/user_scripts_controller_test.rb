@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   test "student can dismiss version warning" do
-    user_script = create :user_script
+    user_script = create(:user_script)
     sign_in user_script.user
     patch "/api/v1//user_scripts/#{user_script.script.id}", params: {
       version_warning_dismissed: true
@@ -13,7 +13,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "student without user_script can dismiss version warning" do
-    user = create :user
+    user = create(:user)
     script = create(:unit, :in_single_unit_course)
     sign_in user
     patch "/api/v1//user_scripts/#{script.id}", params: {
@@ -26,7 +26,7 @@ class Api::V1::UserScriptsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "raises for nonexistent script" do
-    user = create :user
+    user = create(:user)
     sign_in user
     bogus_script_id = 10_000_000
     patch "/api/v1//user_scripts/#{bogus_script_id}", params: {

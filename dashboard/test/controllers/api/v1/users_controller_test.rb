@@ -4,7 +4,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'a get request to using_text_mode returns using_text_mode attribute of user object' do
@@ -104,7 +104,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
-    teacher = create :teacher, lti_roster_sync_enabled: true
+    teacher = create(:teacher, lti_roster_sync_enabled: true)
     sign_in(teacher)
 
     assert teacher.lti_roster_sync_enabled
@@ -208,7 +208,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to postpone_census_banner updates next_census_display' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :postpone_census_banner, params: {user_id: 'me'}
     assert_response :success
@@ -218,7 +218,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_census_banner updates next_census_display' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :dismiss_census_banner, params: {user_id: 'me'}
     assert_response :success
@@ -228,7 +228,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_donor_teacher_banner' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     post :dismiss_donor_teacher_banner, params: {user_id: 'me', participate: true, source: 'marketing'}
     assert_response :success
@@ -238,7 +238,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to dismiss_parent_email_banner' do
-    test_user = create :student
+    test_user = create(:student)
     sign_in(test_user)
     post :dismiss_parent_email_banner, params: {user_id: 'me'}
     assert_response :success
@@ -247,7 +247,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'a post request to set_standards_report_info_to_seen' do
-    test_user = create :user
+    test_user = create(:user)
     sign_in(test_user)
     assert_nil test_user.has_seen_standards_report_info_dialog
     post :set_standards_report_info_to_seen, params: {user_id: 'me'}
@@ -265,7 +265,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test "a get request to get current returns signed in user info" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
     get :current
     assert_response :success
@@ -307,9 +307,9 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test "teacher can update ai tutor access for student in section" do
-    teacher = create :teacher
-    student_in_section = create :student
-    section = create :section, teacher: teacher
+    teacher = create(:teacher)
+    student_in_section = create(:student)
+    section = create(:section, teacher: teacher)
     section.students << student_in_section
 
     sign_in(teacher)
@@ -321,9 +321,9 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'teacher cannot update ai tutor access for student not in section' do
-    teacher = create :teacher
-    student_not_in_section = create :student
-    create :section, teacher: teacher
+    teacher = create(:teacher)
+    student_not_in_section = create(:student)
+    create(:section, teacher: teacher)
 
     sign_in(teacher)
 
@@ -332,7 +332,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'student cannot modify ai tutor access' do
-    student = create :student
+    student = create(:student)
 
     sign_in(student)
 
@@ -341,7 +341,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'updating ai tutor access for uncreated user returns unauthorized' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
 
     post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
@@ -350,11 +350,11 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'set_seen_ta_scores updates seen_ta_scores_map' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     assert_nil teacher.seen_ta_scores_map
     sign_in(teacher)
 
-    unit = create :unit, :with_lessons, :in_single_unit_course
+    unit = create(:unit, :with_lessons, :in_single_unit_course)
     lesson = unit.lessons.first
     params = {lesson_id: lesson.id}
 
@@ -364,7 +364,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'set_seen_ta_scores returns 400 if lesson id is missing' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
 
     post :set_seen_ta_scores
@@ -372,7 +372,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
   end
 
   test 'set_seen_ta_scores returns 400 if lesson id is not a number' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in(teacher)
 
     post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}

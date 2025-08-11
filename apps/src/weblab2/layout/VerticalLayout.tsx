@@ -2,6 +2,7 @@ import {FilePreview} from '@codebridge/FilePreview/FilePreview';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
+import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
@@ -45,6 +46,9 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     leftPanelDragging,
     setRightPanelSize,
     setLeftPanelSize,
+    rightPanelSeparatorProps,
+    rightPanelDragging,
+    panelClassName,
   } = useVerticalLayout({
     leftPanel: {
       minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
@@ -94,7 +98,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           <>
             <InfoPanel
               style={{width: leftPanelWidth}}
-              className={moduleStyles.flexShrink0}
+              className={classNames(moduleStyles.flexShrink0, panelClassName)}
             />
             {!shouldHideEditor && (
               <ResizeBar
@@ -106,19 +110,21 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
           </>
         )}
         {!shouldHideEditor && (
-          <Workspace
-            style={{width: middlePanelWidth}}
-            className={moduleStyles.shrinkAndGrow}
-            isWidgetView={isWidgetView}
-          />
+          <>
+            <Workspace
+              style={{width: middlePanelWidth}}
+              className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
+            />
+            <ResizeBar
+              isVertical={true}
+              separatorProps={rightPanelSeparatorProps}
+              isDragging={rightPanelDragging}
+            />
+          </>
         )}
-        {/* TODO: Make right panel resizable. The iframe in FilePreview makes it so you
-         can only drag left, not right (something about the mouse events getting 
-         captured by the preview?) 
-         Ticket: https://codedotorg.atlassian.net/browse/CT-1125 */}
         <div
           style={{width: rightPanelWidth}}
-          className={moduleStyles.shrinkAndGrow}
+          className={classNames(moduleStyles.shrinkAndGrow, panelClassName)}
         >
           <FilePreview />
         </div>

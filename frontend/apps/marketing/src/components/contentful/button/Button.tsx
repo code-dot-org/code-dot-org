@@ -3,7 +3,7 @@ import MuiButton from '@mui/material/Button';
 import classNames from 'classnames';
 import {EntryFields} from 'contentful';
 
-type ButtonProps = {
+export type ButtonProps = {
   /** Button text */
   text?: string;
   /** Button type (semantic) */

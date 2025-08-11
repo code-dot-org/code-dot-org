@@ -34,6 +34,7 @@ class Weblab2 < Level
     validation_enabled
     widget_view
     widget_view_allow_show_code
+    disable_edit_run_for_submission
   )
 
   def self.create_from_level_builder(params, level_params)

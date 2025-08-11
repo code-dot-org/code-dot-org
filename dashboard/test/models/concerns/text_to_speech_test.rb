@@ -92,31 +92,42 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts_long_instructions_text for contained levels' do
-    contained_level_freeresponse = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {
-      long_instructions: "This is contained"
-    }
-    outer_level = create :level, name: 'level 1', type: 'Blockly'
+    contained_level_freeresponse = create(
+      :level,
+      name: 'contained level 1',
+      type: 'FreeResponse',
+      properties: {long_instructions: "This is contained"}
+    )
+    outer_level = create(:level, name: 'level 1', type: 'Blockly')
     outer_level.update(contained_level_names: [contained_level_freeresponse.name])
 
-    outer_level_with_instructions = create :level, name: 'level 2', type: 'Blockly', long_instructions: "These aren't displayed"
+    outer_level_with_instructions = create(:level, name: 'level 2', type: 'Blockly', long_instructions: "These aren't displayed")
     outer_level_with_instructions.update(contained_level_names: [contained_level_freeresponse.name])
 
-    contained_level_freeresponse_2 = create :level, name: 'contained level 2', type: 'FreeResponse', properties: {
-      long_instructions: "This is also contained"
-    }
-    outer_level_with_multiple_contained_levels = create :level, name: 'level 3', type: 'Blockly'
+    contained_level_freeresponse_2 = create(
+      :level,
+      name: 'contained level 2',
+      type: 'FreeResponse',
+      properties: {long_instructions: "This is also contained"}
+    )
+    outer_level_with_multiple_contained_levels = create(:level, name: 'level 3', type: 'Blockly')
     outer_level_with_multiple_contained_levels.update(contained_level_names: [contained_level_freeresponse.name, contained_level_freeresponse_2.name])
 
-    contained_level_multi = create :level, name: 'contained level multi', type: 'Multi', properties: {
-      markdown: 'Contained',
-      questions: [{text: 'Question text'}],
-      answers: [
-        {"text" => "answer 1", "correct" => false},
-        {"text" => "answer 2", "correct" => true},
-        {"text" => "answer 3", "correct" => true},
-      ]
-    }
-    outer_level_with_contained_multi_level = create :level, name: 'level 4', type: 'Blockly'
+    contained_level_multi = create(
+      :level,
+      name: 'contained level multi',
+      type: 'Multi',
+      properties: {
+        markdown: 'Contained',
+        questions: [{text: 'Question text'}],
+        answers: [
+          {"text" => "answer 1", "correct" => false},
+          {"text" => "answer 2", "correct" => true},
+          {"text" => "answer 3", "correct" => true},
+        ]
+      }
+    )
+    outer_level_with_contained_multi_level = create(:level, name: 'level 4', type: 'Blockly')
     outer_level_with_contained_multi_level.update(contained_level_names: [contained_level_multi.name])
     assert_equal "This is contained\n", outer_level.tts_long_instructions_text
     assert_equal "This is contained\n", outer_level_with_instructions.tts_long_instructions_text
@@ -125,8 +136,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts works for non-english short instructions' do
-    translatable_level = create :level, name: 'TTS test Short Instructions',
+    translatable_level = create(:level, name: 'TTS test Short Instructions',
       type: 'Blockly', short_instructions: "regular instructions in English"
+)
 
     test_locale = :'te-ST'
     I18n.locale = test_locale
@@ -143,8 +155,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts works for non-english long instructions' do
-    translatable_level = create :level, name: 'TTS test Long Instructions',
+    translatable_level = create(:level, name: 'TTS test Long Instructions',
       type: 'Blockly', long_instructions: "long instructions in English"
+)
 
     test_locale = :'te-ST'
     I18n.locale = test_locale
@@ -161,16 +174,21 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts works for non-english contained levels' do
-    contained_level = create :level, name: 'contained level multi', type: 'Multi', properties: {
-      markdown: 'Contained',
-      questions: [{text: 'Question text'}],
-      answers: [
-        {"text" => "answer 1", "correct" => false},
-        {"text" => "answer 2", "correct" => true},
-        {"text" => "answer 3", "correct" => true},
-      ]
-    }
-    outer_level = create :level, name: 'level 4', type: 'Blockly'
+    contained_level = create(
+      :level,
+      name: 'contained level multi',
+      type: 'Multi',
+      properties: {
+        markdown: 'Contained',
+        questions: [{text: 'Question text'}],
+        answers: [
+          {"text" => "answer 1", "correct" => false},
+          {"text" => "answer 2", "correct" => true},
+          {"text" => "answer 3", "correct" => true},
+        ]
+      }
+    )
+    outer_level = create(:level, name: 'level 4', type: 'Blockly')
     outer_level.update(contained_level_names: [contained_level.name])
 
     test_locale = :'te-ST'
@@ -195,9 +213,10 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'tts ignores overrides for non-english' do
-    translatable_level = create :level, name: 'TTS test Short Instructions',
+    translatable_level = create(:level, name: 'TTS test Short Instructions',
       type: 'Blockly', short_instructions: "regular instructions in English",
       tts_short_instructions_override: "instructions override"
+)
 
     test_locale = :'te-ST'
     I18n.locale = test_locale
@@ -214,11 +233,13 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'updating the long instructions for a level should cause it to create new long instructions audio' do
-    level = create :level,
+    level = create(
+      :level,
       name: 'level 1',
       type: 'Blockly',
       long_instructions: "test long instructions",
       published: true
+    )
     level.save
 
     Policies::LevelFiles.stubs(:write_to_file?).returns(true)
@@ -229,13 +250,19 @@ class TextToSpeechTest < ActiveSupport::TestCase
   end
 
   test 'updating the contained level for a level should cause it to create new long instructions audio' do
-    contained_level_one = create :level, name: 'contained level 1', type: 'FreeResponse', properties: {
-      long_instructions: "This is the first contained"
-    }
-    contained_level_two = create :level, name: 'contained level 2', type: 'FreeResponse', properties: {
-      long_instructions: "This is the second contained"
-    }
-    outer_level = create :level, name: 'level 1', type: 'Blockly', published: true
+    contained_level_one = create(
+      :level,
+      name: 'contained level 1',
+      type: 'FreeResponse',
+      properties: {long_instructions: "This is the first contained"}
+    )
+    contained_level_two = create(
+      :level,
+      name: 'contained level 2',
+      type: 'FreeResponse',
+      properties: {long_instructions: "This is the second contained"}
+    )
+    outer_level = create(:level, name: 'level 1', type: 'Blockly', published: true)
     outer_level.update(contained_level_names: [contained_level_one.name])
 
     Policies::LevelFiles.stubs(:write_to_file?).returns(true)

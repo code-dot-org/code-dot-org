@@ -171,8 +171,8 @@ class Services::PartialRegistration::UserBuilderTest < ActiveSupport::TestCase
   end
 
   test 'builds teacher with nces school in our database' do
-    fake_school = create :school
-    fake_school_info = create :school_info, school_id: fake_school.id
+    fake_school = create(:school)
+    fake_school_info = create(:school_info, school_id: fake_school.id)
     setup_partial_user({user_type: 'teacher', school_info_attributes:
       {
         school_id: fake_school.id,

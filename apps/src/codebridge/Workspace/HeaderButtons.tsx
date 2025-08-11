@@ -35,14 +35,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
 
-  const feedbackTooltipProps: TooltipProps = {
-    text: commonI18n.feedback(),
-    direction: 'onBottom',
-    tooltipId: 'feedback-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
-
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
     direction: 'onBottom',
@@ -110,20 +102,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       )}
       {!isWidgetView && (
         <VersionHistoryButton startSources={startSources} appName={appName} />
-      )}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
-            ariaLabel={commonI18n.feedback()}
-            size={'xs'}
-            type={'tertiary'}
-            color={'black'}
-            target="_blank"
-          />
-        </WithTooltip>
       )}
       {/* For now, only python lab supports documentation */}
       {appName === 'pythonlab' && (
