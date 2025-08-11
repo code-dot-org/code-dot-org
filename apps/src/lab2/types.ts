@@ -132,6 +132,7 @@ export interface ProjectFile {
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
+  url?: string;
 }
 
 /**

@@ -3,11 +3,11 @@ require 'test_helper'
 class RegionalPartnersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @workshop_admin = create :workshop_admin
+    @workshop_admin = create(:workshop_admin)
   end
 
   setup do
-    @regional_partner = create :regional_partner
+    @regional_partner = create(:regional_partner)
   end
 
   def self.test_workshop_admin_only(method, action, params = {})
@@ -78,7 +78,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'assign workshop organizer as program manager creates regional partner program manager' do
-    workshop_organizer = create :workshop_organizer
+    workshop_organizer = create(:workshop_organizer)
     sign_in @workshop_admin
     assert_creates RegionalPartnerProgramManager do
       post :assign_program_manager, params: {id: @regional_partner.id, email: workshop_organizer.email}
@@ -87,7 +87,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'assign program manager creates regional partner program manager' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in @workshop_admin
     assert_creates RegionalPartnerProgramManager do
       post :assign_program_manager, params: {id: @regional_partner.id, email: teacher.email}

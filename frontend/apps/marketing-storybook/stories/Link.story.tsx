@@ -87,7 +87,7 @@ export const LinkXSPrimary: Story = {
 
 export const LinkXSWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -142,7 +142,7 @@ export const LinkSPrimary: Story = {
 
 export const LinkSWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -197,7 +197,7 @@ export const LinkMPrimary: Story = {
 
 export const LinkMWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -252,7 +252,7 @@ export const LinkLPrimary: Story = {
 
 export const LinkLWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>

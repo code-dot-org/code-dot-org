@@ -90,14 +90,14 @@ FactoryBot.define do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
       end
       evaluator.enrolled_and_attending_users.times do
-        teacher = create :teacher
+        teacher = create(:teacher)
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
         workshop.sessions.each do |session|
           session.attendances << build(:pd_attendance, session: session, teacher: teacher)
         end
       end
       evaluator.enrolled_absent_users.times do
-        teacher = create :teacher
+        teacher = create(:teacher)
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
@@ -106,7 +106,7 @@ FactoryBot.define do
       workshop.sessions.map(&:save)
 
       evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator, course: workshop.course)
+        workshop.facilitators << (create(:facilitator, course: workshop.course))
       end
     end
 

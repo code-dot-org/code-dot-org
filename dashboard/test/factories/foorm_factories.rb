@@ -1249,4 +1249,194 @@ FactoryBot.define do
     association :foorm_submission, factory: :basic_foorm_submission
     association :simple_survey_form, factory: :foorm_simple_survey_form
   end
+
+  # Build Your Own Workshop survey submission factory
+  factory :build_your_own_workshop_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :pd_workshop, factory: :csd_summer_workshop
+    association :user, factory: :teacher
+
+    trait :answers_low do
+      association :foorm_submission, factory: [:build_your_own_workshop_post_foorm_submission, :answers_low]
+    end
+
+    trait :answers_high do
+      association :foorm_submission, factory: [:build_your_own_workshop_post_foorm_submission, :answers_high]
+    end
+  end
+
+  factory :build_your_own_workshop_post_foorm_submission, class: 'Foorm::Submission' do
+    form_name {"surveys/pd/build_your_own_workshop_teachers_post_survey_test"}
+    foorm_submission_metadata
+
+    trait :answers_low do
+      answers do
+        '{
+          "cdo_teaching_experience": "not_used",
+          "overall_success": {
+            "more_prepared": "1",
+            "plan_to_teach": "1",
+            "motivated_learn_cs_in_education": "1"
+          },
+          "nps_self_paced_pd_byow": 1,
+          "workshop_logistics": {
+            "clear_communication_when_where": "1",
+            "modality_met_needs": "1"
+          },
+          "barriers_implementation_curriculum":["needs_more_preparation","lack_admin_support"],
+          "uncategorized_feedback": "Overall experience was okay"
+        }'
+      end
+    end
+
+    trait :answers_high do
+      answers do
+        '{
+          "cdo_teaching_experience": "cs_teaching",
+          "overall_success": {
+            "more_prepared": "7",
+            "plan_to_teach": "7",
+            "motivated_learn_cs_in_education": "7"
+          },
+          "nps_self_paced_pd_byow": 10,
+          "workshop_logistics": {
+            "clear_communication_when_where": "7",
+            "modality_met_needs": "7"
+          },
+          "barriers_implementation_curriculum":["none"],
+          "uncategorized_feedback": "Amazing workshop experience!"
+        }'
+      end
+    end
+  end
+
+  # Build Your Own Workshop form factory - simplified version with key categorized questions
+  factory :foorm_form_build_your_own_workshop_post_survey, class: 'Foorm::Form' do
+    name {'surveys/pd/build_your_own_workshop_teachers_post_survey_test'}
+    version {0}
+    created_at {'2024-01-01 00:00:00'}
+    updated_at {'2024-01-01 00:00:00'}
+    questions do
+      '{
+        "title": "Build Your Own Workshop Post Survey",
+        "pages": [
+          {
+            "name": "page1",
+            "elements": [
+              {
+                "category": "implementation",
+                "type": "radiogroup",
+                "name": "cdo_teaching_experience",
+                "title": "Which option best captures your previous experience using Code.org?",
+                "choices": [
+                  {"value": "cs_teaching", "text": "I use Code.org to teach a computer science course"},
+                  {"value": "not_used", "text": "I have not used Code.org in my classroom yet"}
+                ]
+              },
+              {
+                "type": "matrix",
+                "name": "overall_success",
+                "title": "How much do you agree with the following statements?",
+                "columns": [
+                  {"value": "1", "text": "Strongly Disagree"},
+                  {"value": "7", "text": "Strongly Agree"}
+                ],
+                "rows": [
+                  {
+                    "category": "implementation",
+                    "value": "more_prepared",
+                    "text": "I feel more prepared to teach this material.",
+                    "shortText": "Feel prepared to teach (%)"
+                  },
+                  {
+                    "category": "implementation",
+                    "value": "plan_to_teach",
+                    "text": "I plan to teach this curriculum in my classroom.",
+                    "shortText": "Plan to apply practices (%)"
+                  },
+                  {
+                    "category": "engagement",
+                    "value": "motivated_learn_cs_in_education",
+                    "text": "This workshop motivated me to continue learning about CS.",
+                    "shortText": "Motivated to teach CS (%)"
+                  }
+                ]
+              },
+              {
+                "category": "implementation",
+                "type": "checkbox",
+                "name": "barriers_implementation_curriculum",
+                "title": "Please share the main reasons you might not teach this workshop\'s content in your classroom this year.",
+                "shortText": "Barriers to implementation",
+                "description": "(Select all that apply)",
+                "choices": [
+                  {
+                    "value": "needs_more_preparation",
+                    "text": "I would like more preparation before teaching this content in my classroom"
+                  },
+                  {
+                    "value": "time_constraints",
+                    "text": "I have limited time to adopt new curriculum"
+                  },
+                  {
+                    "value": "lack_admin_support",
+                    "text": "I don’t have enough support from my school’s administration"
+                  },
+                  {
+                    "value": "limited_student_interest",
+                    "text": "My students don’t seem interested in this content"
+                  },
+                  {
+                    "value": "none",
+                    "text": "None of these"
+                  },
+                  {
+                    "value": "other",
+                    "text": "Other"
+                  }
+                ]
+              },
+              {
+                "category": "engagement",
+                "type": "rating",
+                "name": "nps_self_paced_pd_byow",
+                "title": "How likely are you to recommend this workshop?",
+                "shortText": "Likely to recommend",
+                "rateCount": 11,
+                "rateMin": 0,
+                "rateMax": 10
+              },
+              {
+                "type": "matrix",
+                "name": "workshop_logistics",
+                "title": "How much do you agree with these logistics statements?",
+                "columns": [
+                  {"value": "1", "text": "Strongly Disagree"},
+                  {"value": "7", "text": "Strongly Agree"}
+                ],
+                "rows": [
+                  {
+                    "category": "logistics",
+                    "value": "clear_communication_when_where",
+                    "text": "I received clear communication about the workshop.",
+                    "shortText": "Received clear communication (%)"
+                  },
+                  {
+                    "category": "logistics",
+                    "value": "modality_met_needs",
+                    "text": "The workshop format met my needs.",
+                    "shortText": "Format met needs (%)"
+                  }
+                ]
+              },
+              {
+                "type": "comment",
+                "name": "uncategorized_feedback",
+                "title": "Any other feedback about the workshop?"
+              }
+            ]
+          }
+        ]
+      }'
+    end
+  end
 end

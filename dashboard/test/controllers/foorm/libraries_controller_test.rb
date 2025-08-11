@@ -3,7 +3,7 @@ require 'test_helper'
 module Foorm
   class LibrariesControllerTest < ActionController::TestCase
     setup_all do
-      @levelbuilder = create :levelbuilder
+      @levelbuilder = create(:levelbuilder)
     end
 
     test_redirect_to_sign_in_for :editor

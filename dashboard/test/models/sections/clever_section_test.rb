@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CleverSectionTest < ActiveSupport::TestCase
   test 'from clever service without family name import' do
-    owner = create :teacher
+    owner = create(:teacher)
     student_list = [
       {'data' => {'dob' => '2002-09-04T00:00:00.000Z', 'name' => {'first' => 'Ethan', 'last' => 'Doe'}, 'id' => '5966ed736b21538e3c000004'}},
       {'data' => {'dob' => '2000-02-11T00:00:00.000Z', 'name' => {'first' => 'Lily', 'last' => 'Fake'}, 'id' => '5966ed736b21538e3c000005'}},
@@ -32,7 +32,7 @@ class CleverSectionTest < ActiveSupport::TestCase
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
 
-    owner = create :teacher
+    owner = create(:teacher)
     student_list = [
       {'data' => {'dob' => '2002-09-04T00:00:00.000Z', 'name' => {'first' => 'Ethan', 'last' => 'Doe'}, 'id' => '5966ed736b21538e3c000004'}},
       {'data' => {'dob' => '2000-02-11T00:00:00.000Z', 'name' => {'first' => 'Lily', 'last' => 'Fake'}, 'id' => '5966ed736b21538e3c000005'}},

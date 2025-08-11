@@ -2,12 +2,12 @@ require 'test_helper'
 
 class CourseTypesTests < ActiveSupport::TestCase
   setup_all do
-    @student = create :student
-    @teacher = create :teacher
-    @facilitator = create :facilitator
-    @universal_instructor = create :universal_instructor
-    @plc_reviewer = create :plc_reviewer
-    @levelbuilder = create :levelbuilder
+    @student = create(:student)
+    @teacher = create(:teacher)
+    @facilitator = create(:facilitator)
+    @universal_instructor = create(:universal_instructor)
+    @plc_reviewer = create(:plc_reviewer)
+    @levelbuilder = create(:levelbuilder)
 
     # Unit Groups with Units
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher', family_name: 'teacher-unit-groups')
@@ -231,7 +231,7 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
 
   test 'get_family_courses should return nil if there is no family name' do
-    unit_without_family_name = create :script, :in_single_unit_course, name: 'no-family-name'
+    unit_without_family_name = create(:script, :in_single_unit_course, name: 'no-family-name')
     assert_nil unit_without_family_name.get_family_courses
   end
 
@@ -264,7 +264,7 @@ class CourseTypesTests < ActiveSupport::TestCase
   # end
 
   test 'should not raise error when changing course type values for a course that is the only one in its family' do
-    solo_unit_in_family_name = create :script, :in_single_unit_course, name: 'solo-family-name', family_name: 'solo-family-name'
+    solo_unit_in_family_name = create(:script, :in_single_unit_course, name: 'solo-family-name', family_name: 'solo-family-name')
     assert_nothing_raised do
       solo_unit_in_family_name.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       solo_unit_in_family_name.save!
@@ -273,7 +273,7 @@ class CourseTypesTests < ActiveSupport::TestCase
 
   # A unit without a family is in a unit group
   test 'should not raise error when changing unit without family' do
-    unit_without_family_name = create :script, name: 'solo-family-name', family_name: nil
+    unit_without_family_name = create(:script, name: 'solo-family-name', family_name: nil)
     assert_nothing_raised do
       unit_without_family_name.participant_audience = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       unit_without_family_name.save!

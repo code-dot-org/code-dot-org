@@ -125,11 +125,11 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "should not allow pairing when the parent is a levelgroup" do
-    parent = create :level_group, name: 'LevelGroupLevel', type: 'LevelGroup'
-    child = create :level
+    parent = create(:level_group, name: 'LevelGroupLevel', type: 'LevelGroup')
+    child = create(:level)
     parent.child_levels << child
-    script = create :script, :in_single_unit_course
-    create :script_level, script: script, levels: [parent]
+    script = create(:script, :in_single_unit_course)
+    create(:script_level, script: script, levels: [parent])
     assert_equal [parent], child.parent_levels
 
     assert_equal child.should_allow_pairing?(script.id), false
@@ -167,8 +167,9 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get_question_text returns question text for free response level" do
-    free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
+    free_response_level = create(:level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
+)
     assert_equal free_response_level.get_question_text, 'Answer this question.'
   end
 
@@ -442,40 +443,40 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'find_by_key' do
-    level = create :level, level_num: 'test_unplugged', game: Game.unplugged
+    level = create(:level, level_num: 'test_unplugged', game: Game.unplugged)
     assert_equal level, Level.find_by_key('blockly:Unplugged:test_unplugged')
 
-    level = create :level, level_num: 'test_maze', game: Game.find_by_name('maze')
+    level = create(:level, level_num: 'test_maze', game: Game.find_by_name('maze'))
     assert_equal level, Level.find_by_key('blockly:Maze:test_maze')
 
-    level = create :level, name: 'TestFindByName'
+    level = create(:level, name: 'TestFindByName')
     assert_equal level, Level.find_by_key('TestFindByName')
   end
 
   test 'cannot create two blockly levels with same key' do
-    game = create :game, name: 'Artist'
-    level1 = create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+    game = create(:game, name: 'Artist')
+    level1 = create(:artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game)
     assert_equal 'blockly:Artist:5_5_5', level1.key
     e = assert_raises ActiveRecord::RecordInvalid do
-      create :artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game
+      create(:artist, name: 'blockly', level_num: '5_5_5', user_id: nil, game: game)
     end
     assert_includes e.message, 'Validation failed: Level num has already been taken'
   end
 
   test 'cannot create multi and match levels with same key' do
-    multi = create :multi, name: 'multi match', level_num: nil, user_id: nil
+    multi = create(:multi, name: 'multi match', level_num: nil, user_id: nil)
     assert_equal 'multi match', multi.key
     e = assert_raises ActiveRecord::RecordInvalid do
-      create :match, name: 'multi match', level_num: nil, user_id: nil
+      create(:match, name: 'multi match', level_num: nil, user_id: nil)
     end
     assert_includes e.message, 'Validation failed: Name has already been taken'
   end
 
   test 'cannot create custom and dsl levels with same key' do
-    level1 = create :artist, name: 'artist multi'
+    level1 = create(:artist, name: 'artist multi')
     assert_equal 'artist multi', level1.key
     e = assert_raises ActiveRecord::RecordInvalid do
-      create :multi, name: 'artist multi', level_num: nil, user_id: nil
+      create(:multi, name: 'artist multi', level_num: nil, user_id: nil)
     end
     assert_includes e.message, 'Validation failed: Name has already been taken'
   end
@@ -801,7 +802,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone' do
-    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
+    old_level = create(:level, name: 'old level', start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -817,7 +818,7 @@ class LevelTest < ActiveSupport::TestCase
       right 'Blue'
     DSL
 
-    old_level = create :multi, name: 'old multi level'
+    old_level = create(:multi, name: 'old multi level')
     old_level.stubs(:dsl_text).returns(dsl_text)
 
     new_level = old_level.clone_with_name('new multi level')
@@ -842,7 +843,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone with suffix' do
-    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    old_level = create(:level, name: 'level', start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_suffix('_copy')
     assert_equal 'level_copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -850,7 +851,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'underscore is prepended to suffix on clone_with_suffix' do
-    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
+    old_level = create(:level, name: 'level', start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_suffix('copy')
     assert_equal 'level_copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -858,13 +859,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'doesnt clone with suffix deprecated blockly levels' do
-    old_level = create :level, name: 'blockly', level_num: 'blockly_level', start_blocks: '<xml>foo</xml>'
+    old_level = create(:level, name: 'blockly', level_num: 'blockly_level', start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_suffix('_copy')
     assert_equal old_level, new_level
   end
 
   test 'clone with suffix does not replaces old suffix that are not in version year format' do
-    level_1 = create :level, name: 'my_level_1'
+    level_1 = create(:level, name: 'my_level_1')
 
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('pilot')
@@ -878,7 +879,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix only replaces trailing version year in suffix' do
-    level_1 = create :level, name: 'my_level_1'
+    level_1 = create(:level, name: 'my_level_1')
 
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('new_2024')
@@ -892,7 +893,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix properly escapes suffixes' do
-    level_1 = create :level, name: 'your_level_1'
+    level_1 = create(:level, name: 'your_level_1')
 
     tricky_suffix = '!(."'
 
@@ -911,17 +912,17 @@ class LevelTest < ActiveSupport::TestCase
     new_name = ('x' * 58) + suffix
     assert_equal(70, new_name.length)
 
-    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
+    old_level = create(:level, name: old_name, start_blocks: '<xml>foo</xml>')
     new_level = old_level.clone_with_suffix(suffix)
     assert_equal new_name, new_level.name
     assert_equal suffix, new_level.name_suffix
   end
 
   test 'clone with same suffix copies and shares project template level' do
-    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
-    level_1 = create :level, name: 'level 1'
+    template_level = create(:level, name: 'template level', start_blocks: '<xml>template</xml>')
+    level_1 = create(:level, name: 'level 1')
     level_1.project_template_level_name = template_level.name
-    level_2 = create :level, name: 'level 2'
+    level_2 = create(:level, name: 'level 2')
     level_2.project_template_level_name = template_level.name
 
     level_1_copy = level_1.clone_with_suffix('_copy')
@@ -941,7 +942,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies contained levels' do
-    contained_level_1 = create :free_response, name: 'contained level 1'
+    contained_level_1 = create(:free_response, name: 'contained level 1')
     multi_dsl_text = <<~DSL
       name 'contained level 2'
       title 'Multiple Choice'
@@ -949,13 +950,13 @@ class LevelTest < ActiveSupport::TestCase
       wrong 'Red'
       right 'Blue'
     DSL
-    contained_level_2 = create :multi, name: 'contained level 2'
+    contained_level_2 = create(:multi, name: 'contained level 2')
     Multi.any_instance.stubs(:dsl_text).returns(multi_dsl_text)
     File.stubs(:write)
 
     # level 1 has 1 contained level
 
-    level_1 = create :level, name: 'level 1'
+    level_1 = create(:level, name: 'level 1')
     level_1.contained_level_names = [contained_level_1.name]
     level_1.save!
     level_1_copy = level_1.clone_with_suffix('_copy')
@@ -968,7 +969,7 @@ class LevelTest < ActiveSupport::TestCase
 
     # level 2 has 2 contained levels, one of which has already been copied
 
-    level_2 = create :level, name: 'level 2'
+    level_2 = create(:level, name: 'level 2')
     level_2.contained_level_names = [
       contained_level_1.name,
       contained_level_2.name
@@ -983,13 +984,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies child levels of bubble choice sublevels' do
-    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
-    level_1 = create :level, name: 'level 1'
+    template_level = create(:level, name: 'template level', start_blocks: '<xml>template</xml>')
+    level_1 = create(:level, name: 'level 1')
     level_1.project_template_level_name = template_level.name
     level_1.save!
 
-    contained_level = create :level, name: 'contained level', type: 'FreeResponse'
-    level_2 = create :level, name: 'level 2'
+    contained_level = create(:level, name: 'contained level', type: 'FreeResponse')
+    level_2 = create(:level, name: 'level 2')
     level_2.contained_level_names = [contained_level.name]
     level_2.save!
 
@@ -1020,7 +1021,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies level concept difficulty' do
-    level_1 = create :level, name: 'level 1'
+    level_1 = create(:level, name: 'level 1')
     level_1.assign_attributes(
       'level_concept_difficulty' => {'sequencing' => 3, 'debugging' => 5}
     )
@@ -1037,7 +1038,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix sets editor experiment' do
-    old_level = create :level, name: 'old level'
+    old_level = create(:level, name: 'old level')
     new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'level-editors')
     assert_equal 'old level_copy', new_level.name
     assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
@@ -1068,7 +1069,7 @@ class LevelTest < ActiveSupport::TestCase
       new_dsl_text == expected_new_dsl_text
     end
 
-    old_level = create :multi, name: 'old multi level'
+    old_level = create(:multi, name: 'old multi level')
     old_level.stubs(:dsl_text).returns(old_dsl_text)
 
     new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'level-editors')
@@ -1102,7 +1103,7 @@ class LevelTest < ActiveSupport::TestCase
       new_dsl_text == expected_new_dsl_text
     end
 
-    old_level = create :multi, name: 'old multi level'
+    old_level = create(:multi, name: 'old multi level')
     old_level.stubs(:dsl_text).returns(old_dsl_text)
 
     new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'new-level-editors')
@@ -1111,23 +1112,23 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix uses existing levels when level names match' do
-    existing_level = create :level, name: 'old level_2020'
-    old_level = create :level, name: 'old level'
+    existing_level = create(:level, name: 'old level_2020')
+    old_level = create(:level, name: 'old level')
     new_level = old_level.clone_with_suffix('_2020')
     assert_equal existing_level, new_level
   end
 
   test 'clone with suffix does not use exactly levels when allow_existing is false' do
-    existing_level = create :level, name: 'old level_2020'
-    old_level = create :level, name: 'old level'
+    existing_level = create(:level, name: 'old level_2020')
+    old_level = create(:level, name: 'old level')
     new_level = old_level.clone_with_suffix('_2020', allow_existing: false)
     refute_equal existing_level, new_level
     assert_equal 'old level_copy1_2020', new_level.name
   end
 
   test 'contained_level_names filters blank names before validation' do
-    level = build :level
-    create :level, name: 'real_name'
+    level = build(:level)
+    create(:level, name: 'real_name')
     level.contained_level_names = ['', 'real_name']
     assert_equal level.contained_level_names, ['', 'real_name']
     level.valid?
@@ -1135,39 +1136,39 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'hint_prompt_enabled is true for levels in a script where hint_prompt_enabled is true' do
-    script = create :csf_script
+    script = create(:csf_script)
     assert script.hint_prompt_enabled?
-    level = create :level
-    create :script_level, levels: [level], script: script
+    level = create(:level)
+    create(:script_level, levels: [level], script: script)
     assert level.hint_prompt_enabled?
   end
 
   test 'hint_prompt_enabled is true for levels in many scripts if at least one script is hint_prompt_enabled' do
-    hint_script = create :csf_script
+    hint_script = create(:csf_script)
     assert hint_script.hint_prompt_enabled?
-    no_hint_script = create :csp_script
+    no_hint_script = create(:csp_script)
     refute no_hint_script.hint_prompt_enabled?
-    level = create :level
-    create :script_level, levels: [level], script: hint_script
-    create :script_level, levels: [level], script: no_hint_script
+    level = create(:level)
+    create(:script_level, levels: [level], script: hint_script)
+    create(:script_level, levels: [level], script: no_hint_script)
     assert level.hint_prompt_enabled?
   end
 
   test 'hint_prompt_enabled is false for levels in scripts where hint_prompt_enabled is false' do
-    no_hint_script = create :csp_script
+    no_hint_script = create(:csp_script)
     refute no_hint_script.hint_prompt_enabled?
-    level = create :level
-    create :script_level, levels: [level], script: no_hint_script
+    level = create(:level)
+    create(:script_level, levels: [level], script: no_hint_script)
     refute level.hint_prompt_enabled?
   end
 
   test 'validates game for deprecated blockly level' do
     error = assert_raises ActiveRecord::RecordInvalid do
-      create :deprecated_blockly_level, game: nil
+      create(:deprecated_blockly_level, game: nil)
     end
     assert_includes error.message, 'Game required for non-custom levels'
 
-    level = create :deprecated_blockly_level
+    level = create(:deprecated_blockly_level)
     level.game = nil
     error = assert_raises ActiveRecord::RecordInvalid do
       level.save!
@@ -1201,59 +1202,59 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "get_level_for_progress returns the level if there are no sublevels or contained levels" do
-    level = create :level
-    script_level = create :script_level, levels: [level]
-    student = create :student
+    level = create(:level)
+    script_level = create(:script_level, levels: [level])
+    student = create(:student)
     level_for_progress = level.get_level_for_progress(student, script_level.script)
     assert_equal level, level_for_progress
   end
 
   test "get_level_for_progress returns the sublevel with the best result if no sublevels have keepWorking feedback" do
-    student = create :student
+    student = create(:student)
 
-    sublevel1 = create :level
-    sublevel2 = create :level
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice]
+    sublevel1 = create(:level)
+    sublevel2 = create(:level)
+    bubble_choice = create(:bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2])
+    script_level = create(:script_level, levels: [bubble_choice])
     script = script_level.script
 
-    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
-    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+    create(:user_level, user: student, level: sublevel1, script: script, best_result: 20)
+    create(:user_level, user: student, level: sublevel2, script: script, best_result: 100)
 
     level_for_progress = bubble_choice.get_level_for_progress(student, script)
     assert_equal sublevel2, level_for_progress
   end
 
   test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback" do
-    teacher = create :teacher
-    student = create :student
-    section = create :section, teacher: teacher
+    teacher = create(:teacher)
+    student = create(:student)
+    section = create(:section, teacher: teacher)
     section.students << student # we query for feedback where student is currently in section
 
-    sublevel1 = create :level
-    sublevel2 = create :level
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
-    script_level = create :script_level, levels: [bubble_choice]
+    sublevel1 = create(:level)
+    sublevel2 = create(:level)
+    bubble_choice = create(:bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2])
+    script_level = create(:script_level, levels: [bubble_choice])
     script = script_level.script
 
-    create :user_level, user: student, level: sublevel1, script: script, best_result: 20
-    create :user_level, user: student, level: sublevel2, script: script, best_result: 100
-    create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    create(:user_level, user: student, level: sublevel1, script: script, best_result: 20)
+    create(:user_level, user: student, level: sublevel2, script: script, best_result: 100)
+    create(:teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
 
     level_for_progress = bubble_choice.get_level_for_progress(student, script)
     assert_equal sublevel1, level_for_progress
   end
 
   test "get_level_for_progress returns the first contained level if the level has contained levels" do
-    student = create :student
+    student = create(:student)
 
-    contained_level_1 = create :free_response, name: 'contained level 1'
-    contained_level_2 = create :multi, name: 'contained level 2'
+    contained_level_1 = create(:free_response, name: 'contained level 1')
+    contained_level_2 = create(:multi, name: 'contained level 2')
 
-    level = create :level, name: 'level 1'
+    level = create(:level, name: 'level 1')
     level.contained_level_names = [contained_level_1.name, contained_level_2.name]
     level.save!
-    script_level = create :script_level, levels: [level]
+    script_level = create(:script_level, levels: [level])
 
     level_for_progress = level.get_level_for_progress(student, script_level.script)
     assert_equal contained_level_1, level_for_progress
@@ -1265,26 +1266,26 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "can_have_feedback_review_state? returns false if the level has contained levels" do
-    contained_level = create :multi
-    level_with_contained = create :level, contained_level_names: [contained_level.name]
+    contained_level = create(:multi)
+    level_with_contained = create(:level, contained_level_names: [contained_level.name])
 
     refute level_with_contained.can_have_feedback_review_state?
   end
 
   test 'next_unused_name_for_copy finds next available level name' do
-    level = create :level, name: 'my-level'
+    level = create(:level, name: 'my-level')
     assert_equal 'my-level_copy1_2020', level.next_unused_name_for_copy('_2020')
 
-    create :level, name: 'my-level_copy1_2020'
-    create :level, name: 'my-level_copy2_2020'
-    create :level, name: 'my-level_copy4_2020'
+    create(:level, name: 'my-level_copy1_2020')
+    create(:level, name: 'my-level_copy2_2020')
+    create(:level, name: 'my-level_copy4_2020')
     assert_equal 'my-level_copy3_2020', level.next_unused_name_for_copy('_2020')
   end
 
   test 'next_unused_name_for_copy returns name under the maximum length' do
     long_name = 'abcdefghij123456789012345678901234567890123456789012345678901234567890'
     assert_equal 70, long_name.length
-    level = create :level, name: long_name
+    level = create(:level, name: long_name)
     next_name = level.next_unused_name_for_copy('_2020')
 
     # the maximum is 70. allow a little extra room for longer numbers.
@@ -1361,13 +1362,13 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'get_validations returns validations for level' do
-    level = create :level, name: 'test_level', properties: {validations: 'test validations'}
+    level = create(:level, name: 'test_level', properties: {validations: 'test validations'})
 
     assert_equal 'test validations', level.get_validations
   end
 
   test 'get_validations returns nil if there are no validations' do
-    level = create :level, name: 'test_level'
+    level = create(:level, name: 'test_level')
 
     assert_nil level.get_validations
   end
@@ -1376,7 +1377,7 @@ class LevelTest < ActiveSupport::TestCase
     script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create(:music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"})
     script_level = create(
       :script_level,
       lesson: lesson,
@@ -1402,7 +1403,7 @@ class LevelTest < ActiveSupport::TestCase
     script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    level = create :music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    level = create(:music, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"})
     create(:rubric, level: level, lesson: lesson)
     script_level = create(
       :script_level,
@@ -1420,9 +1421,9 @@ class LevelTest < ActiveSupport::TestCase
     script = create(:script, :in_single_unit_course, tts: true)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    template_level = create :music, name: 'music template'
-    rubric_level = create :music, name: 'music assessment project', properties: {project_template_level_name: template_level.name}
-    level = create :music, name: 'music 1', properties: {project_template_level_name: template_level.name}
+    template_level = create(:music, name: 'music template')
+    rubric_level = create(:music, name: 'music assessment project', properties: {project_template_level_name: template_level.name})
+    level = create(:music, name: 'music 1', properties: {project_template_level_name: template_level.name})
     create(:rubric, level: rubric_level, lesson: lesson)
     script_level = create(
       :script_level,
