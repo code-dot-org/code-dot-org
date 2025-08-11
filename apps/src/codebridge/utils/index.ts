@@ -6,6 +6,7 @@ export * from './isValidFileName';
 export * from './isValidFolderName';
 export * from './fileUtils';
 export * from './findFile';
+export * from './findFilePathByRelativePath';
 export * from './findFolder';
 export * from './getEmptyProject';
 export * from './getErrorMessage';

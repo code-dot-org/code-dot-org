@@ -1,5 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFolderPath} from '@codebridge/utils';
+import {findFilePathByRelativePath, getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -60,10 +60,10 @@ const InnerHTMLPreview = () => {
           setSource(data.source);
         }
       } else if (data.type === IframeMessageType.CHANGE_FILE_HREF) {
-        setCurrentFile(data.fileName);
+        setCurrentFile(data.filePath);
         // Tell the parent that we are changing the file, as this came from a link click.
         window.parent.postMessage(
-          {type: IframeMessageType.FILE_UPDATED, fileName: data.fileName},
+          {type: IframeMessageType.FILE_UPDATED, fileName: data.filePath},
           parentOrigin
         );
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
@@ -183,13 +183,19 @@ const InnerHTMLPreview = () => {
         });
         const fileLinks: NodeListOf<HTMLAnchorElement> =
           doc.querySelectorAll('a[href]');
+        const fullFileName = getFullyQualifiedFileName(
+          file.name,
+          file.folderId,
+          source.folders
+        );
         fileLinks.forEach(link => {
           const href = link.getAttribute('href');
           if (href?.endsWith('.html')) {
+            const filePath = findFilePathByRelativePath(href, fullFileName);
             link.setAttribute(
               'onclick',
               `event.preventDefault();
-              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', fileName: '${href}'}, '${location.origin}');
+              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', filePath: '${filePath}'}, '${location.origin}');
               return false;
             `
             );
@@ -197,11 +203,6 @@ const InnerHTMLPreview = () => {
         });
         const updatedContents = doc.documentElement.outerHTML;
         const blob = new Blob([updatedContents], {type: 'text/html'});
-        const fullFileName = getFullyQualifiedFileName(
-          file.name,
-          file.folderId,
-          source.folders
-        );
         files[fullFileName] = URL.createObjectURL(blob);
       });
       revokeAndSetFilesToBlobs(files);
