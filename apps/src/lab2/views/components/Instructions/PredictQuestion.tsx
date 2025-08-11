@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import classNames from 'classnames';
@@ -26,6 +27,8 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const predictSettings = useAppSelector(
     state => state.lab.levelProperties?.predictSettings
   );
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isWeblab2 = appName === 'weblab2';
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const dispatch = useAppDispatch();
@@ -134,6 +137,14 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           })
         )}
       </div>
+      {isWeblab2 && (
+        <Button
+          onClick={() => console.log('clicked submit')}
+          text="Submit answer"
+          size="s"
+          className={moduleStyles.submitButton}
+        />
+      )}
       <PredictResetButton />
     </div>
   );
