@@ -3,6 +3,10 @@
 #
 # Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
 #
+# Make an arbitrary change to this file to ensure that `test:changed` runs
+# everything, so we have a baseline we use as comparison for any functional
+# changes we make to this file in other branches.
+#
 # NOTE: after making changes to this file, you'll need to sign them using
 # `drone sign code-dot-org/code-dot-org --save`
 
