@@ -6,6 +6,7 @@ import {useSelector} from 'react-redux';
 import {WorkshopAdmin} from '../../permission';
 import {useWorkshopContext} from '../context/WorkshopContext';
 
+import {TakeAttendanceSection} from './sections/TakeAttendanceSection';
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
 import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
 
@@ -30,6 +31,7 @@ export const WorkshopOverview: React.FC = () => {
           isWorkshopAdmin={isWorkshopAdmin}
         />
         <WorkshopLinksSection workshop={workshop} />
+        <TakeAttendanceSection workshop={workshop} />
       </Stack>
     </Box>
   );
