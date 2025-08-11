@@ -105,4 +105,7 @@ Dashboard::Application.configure do
   # on the test machine. this is necessary because as of April 2025 the test DB
   # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
   config.active_record.dump_schema_after_migration = !CDO.test_system?
+
+  # Include engine tests in the main test run
+  config.paths.add 'test', with: Rails.root.join('engines/hoc_legacy/test')
 end
