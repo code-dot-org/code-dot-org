@@ -1,10 +1,15 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {findFilePathByRelativePath, getFolderPath} from '@codebridge/utils';
+import {createBlobUrlForFile, getFolderPath} from '@codebridge/utils';
 import React, {useCallback, useEffect, useMemo, useRef} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {IframeMessageType} from './constants';
+import {
+  setContentSecurityPolicy,
+  updateLinksToHtmlFiles,
+  updateLinksToNonHtmlFiles,
+} from './htmlParsingHelpers';
 
 import moduleStyles from './styles/inner-html-preview.module.scss';
 const NOT_FOUND_FILE = 'NOT_FOUND';
@@ -121,86 +126,35 @@ const InnerHTMLPreview = () => {
       // Handle non-HTML files. These are just converted to Blobs.
       Object.values(source.files).forEach(file => {
         if (file.language !== 'html') {
-          let fileType = '';
-          if (file.language === 'css' || file.language === 'csv') {
-            fileType = `text/${file.language}`;
-          } else if (file.language === 'js') {
-            fileType = 'text/javascript';
-          } else {
-            // TODO: handle other file types, like images
-            fileType = file.language;
-          }
-          const blob = new Blob([file.contents], {type: fileType});
           const fullFileName = getFullyQualifiedFileName(
             file.name,
             file.folderId,
             source.folders
           );
-          files[fullFileName] = URL.createObjectURL(blob);
+          files[fullFileName] = createBlobUrlForFile(file);
         }
       });
-      // Handle HTML files. We replace src links to non-html files with blob URLs.
-      // We update links to other files with a click handler that will post a message to us
-      // to change the file.
+      // Handle HTML files. We do the following;
+      // 1. Set the Content Security Policy to allow requests to certain origins.
+      // 2. Replace src links to non-html files with blob URLs.
+      // 3. Update links to other files with a click handler that will post a message to us
+      //    to change the file.
       const htmlFiles = Object.values(source.files).filter(
         file => file.language === 'html'
       );
       htmlFiles.forEach(file => {
         const parser = new DOMParser();
         const doc = parser.parseFromString(file.contents, 'text/html');
-        // Remove any existing CSP meta tags, as we need to set our own.
-        const existingCspTags = doc.querySelectorAll(
-          'meta[http-equiv="Content-Security-Policy"]'
-        );
-        existingCspTags.forEach(tag => tag.remove());
 
-        const metaTag = doc.createElement('meta');
-        metaTag.setAttribute('http-equiv', 'Content-Security-Policy');
-        // TODO: Improve the list of allowed origins.
-        // https://codedotorg.atlassian.net/browse/CT-579
-        metaTag.setAttribute(
-          'content',
-          "connect-src 'self' http://numbersapi.com"
-        );
-
-        const head = doc.querySelector('head');
-        if (head) {
-          head.appendChild(metaTag);
-        }
-        const links = doc.querySelectorAll(
-          'link[rel="stylesheet"], script[src]'
-        );
-        links.forEach(link => {
-          const src = link.getAttribute('src') || link.getAttribute('href');
-          if (src && files[src]) {
-            const blobUrl = files[src];
-            if (link.tagName.toLowerCase() === 'link') {
-              link.setAttribute('href', blobUrl);
-            } else {
-              link.setAttribute('src', blobUrl);
-            }
-          }
-        });
-        const fileLinks: NodeListOf<HTMLAnchorElement> =
-          doc.querySelectorAll('a[href]');
         const fullFileName = getFullyQualifiedFileName(
           file.name,
           file.folderId,
           source.folders
         );
-        fileLinks.forEach(link => {
-          const href = link.getAttribute('href');
-          if (href?.endsWith('.html')) {
-            const filePath = findFilePathByRelativePath(href, fullFileName);
-            link.setAttribute(
-              'onclick',
-              `event.preventDefault();
-              window.parent.postMessage({type: '${IframeMessageType.CHANGE_FILE_HREF}', filePath: '${filePath}'}, '${location.origin}');
-              return false;
-            `
-            );
-          }
-        });
+
+        setContentSecurityPolicy(doc);
+        updateLinksToNonHtmlFiles(doc, files, fullFileName);
+        updateLinksToHtmlFiles(doc, fullFileName);
         const updatedContents = doc.documentElement.outerHTML;
         const blob = new Blob([updatedContents], {type: 'text/html'});
         files[fullFileName] = URL.createObjectURL(blob);
