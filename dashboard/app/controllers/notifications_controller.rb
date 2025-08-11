@@ -2,6 +2,8 @@ class NotificationsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource only: [:index, :create, :update, :destroy]
 
+  # Index does not use pagination, returns all active notifications for the current user
+  # Consider adding pagination if the number of notifications grows large
   def index
     rails_notifications = current_user.notifications.active.order(created_at: :desc).all
 
@@ -22,7 +24,7 @@ class NotificationsController < ApplicationController
     found_ids = notifications.pluck(:id)
     missing_ids = notification_ids.map(&:to_i) - found_ids
 
-    notifications.each(&:mark_as_read)
+    notifications.where(read_at: nil).update_all(read_at: Time.current)
 
     response_data = {
       status: 'success',

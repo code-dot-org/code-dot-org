@@ -37,10 +37,6 @@ class Notification < ApplicationRecord
     read_at.present?
   end
 
-  def mark_as_read
-    update!(read_at: Time.current) unless read?
-  end
-
   def expired?
     expires_at.present? && expires_at < Time.current
   end
