@@ -92,7 +92,7 @@ opt_parser = OptionParser.new do |opts|
     "(e.g. 'hourofcode.org' for production deployments)",
     "Only used when environment_type is 'production'"
   ) do |domain|
-    options[:production_domain_name] = domain
+    options[:production_domain_name] = domain&.empty? ? nil : domain
   end
 
   opts.on(
@@ -101,7 +101,7 @@ opt_parser = OptionParser.new do |opts|
     "AWS Route 53 Hosted Zone ID for the production domain",
     "Required when production_domain_name is specified"
   ) do |id|
-    options[:production_hosted_zone_id] = id
+    options[:production_hosted_zone_id] = id&.empty? ? nil : id
   end
 
   opts.on(
