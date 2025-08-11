@@ -27,7 +27,7 @@ class NotificationsController < ApplicationController
 
     response_data = {
       status: 'success',
-      message: "#{notifications.count} notification() marked as read",
+      message: "#{notifications.count} notification(s) marked as read",
       marked_count: notifications.count,
     }
 
