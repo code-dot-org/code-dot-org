@@ -22,7 +22,6 @@ class NotificationsController < ApplicationController
     found_ids = notifications.pluck(:id)
     missing_ids = notification_ids.map(&:to_i) - found_ids
 
-    # Mark found notifications as read
     notifications.each(&:mark_as_read)
 
     response_data = {
