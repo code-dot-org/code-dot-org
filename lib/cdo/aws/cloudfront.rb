@@ -305,11 +305,13 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: ([]).tap do |arr|
-          arr << function_associations[:accept_language] if normalize_accept_language
-          # Include edge auth function on levelbuilder and adhoc (host-gated in the function code).
-          arr << function_associations[:edge_auth] if rack_env?(:levelbuilder) || rack_env?(:adhoc)
-        end,
+        # CloudFront allows only ONE function per event type per behavior.
+        # Prefer edge-auth on all adhoc and levelbuilder. Otherwise use Accept-Language normalizer when applicable.
+        FunctionAssociations: if rack_env?(:adhoc) || rack_env?(:levelbuilder)
+                                [function_associations[:edge_auth]]
+                              else
+                                (normalize_accept_language ? [function_associations[:accept_language]] : [])
+                              end,
         LambdaFunctionAssociations: behavior_config[:include_marketing_router_lambda] ? [function_associations[:marketing_router]] : [],
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,

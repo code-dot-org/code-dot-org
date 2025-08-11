@@ -511,15 +511,6 @@ Resources:
             };
           }
 
-          // Enforce only for levelbuilder host
-          var host = headers.host && headers.host.value ? headers.host.value.toLowerCase() : '';
-          // Enforce on levelbuilder and Dave2-edge-auth adhoc hostnames
-          var isLevelbuilder = host === 'levelbuilder.code.org';
-          var isDaveAdhoc = host.indexOf('adhoc-dave2-edge-auth') === 0 && host.endsWith('.cdn-code.org');
-          if (!isLevelbuilder && !isDaveAdhoc) {
-            return request;
-          }
-
           // Allow health checks to pass
           if (request.uri === '/healthcheck' || request.uri === '/health_check') {
             return request;
@@ -534,12 +525,56 @@ Resources:
           if (provided === expected1 || (expected2 && provided === expected2)) {
             // Strip Authorization before forwarding
             delete headers.authorization;
+
+            // Normalize Accept-Language for cache key stability
+            try {
+              var normalized = normalizeAcceptLanguage(request);
+              if (normalized) {
+                headers['accept-language'] = { value: normalized };
+              }
+            } catch (e) {}
             return request;
           }
 
           return unauthorized();
         }
-<% end -%>
+
+        // Best-effort Accept-Language normalization
+        function normalizeAcceptLanguage(request) {
+          var cookie = request.cookies && request.cookies.language_ ? request.cookies.language_.value : '';
+          if (cookie) {
+            return cookie.toLowerCase();
+          }
+          var hdr = request.headers && request.headers['accept-language'] ? request.headers['accept-language'].value : '';
+          if (!hdr) return 'en';
+
+          // Parse list of ranges with optional q-values, pick highest q
+          var parts = hdr.split(',');
+          var best = null;
+          var bestQ = -1;
+          for (var i = 0; i < parts.length; i++) {
+            var p = parts[i].trim();
+            if (!p) continue;
+            var semis = p.split(';');
+            var lang = semis[0].toLowerCase();
+            var q = 1.0;
+            for (var j = 1; j < semis.length; j++) {
+              var s = semis[j].trim();
+              if (s.startsWith('q=')) {
+                var val = parseFloat(s.substring(2));
+                if (!isNaN(val)) q = val;
+              }
+            }
+            if (q > bestQ) {
+              bestQ = q;
+              best = lang;
+            }
+          }
+          if (!best) return 'en';
+          // Reduce to primary tag (e.g., en-US -> en)
+          var primary = best.split('-')[0];
+          return primary || 'en';
+        }
 <% end -%>
 
 <% if cdn_enabled -%>
