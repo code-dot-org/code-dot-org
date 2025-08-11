@@ -57,6 +57,7 @@ export const asyncLoadSelectedSection = async (
     });
 };
 
+// maybe here is the place to set whether the section has AI Tutor available?
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const setSelectedSectionData = (sectionData: any) => {
   getStore().dispatch(
