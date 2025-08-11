@@ -7,6 +7,7 @@ import {WorkshopAdmin} from '../../permission';
 import {useWorkshopContext} from '../context/WorkshopContext';
 
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
+import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
 
 export const WorkshopOverview: React.FC = () => {
   const {workshop} = useWorkshopContext();
@@ -28,6 +29,7 @@ export const WorkshopOverview: React.FC = () => {
           workshop={workshop}
           isWorkshopAdmin={isWorkshopAdmin}
         />
+        <WorkshopLinksSection workshop={workshop} />
       </Stack>
     </Box>
   );
