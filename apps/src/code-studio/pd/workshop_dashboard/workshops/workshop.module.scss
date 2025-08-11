@@ -49,8 +49,9 @@
   }
 }
 
-.card {
+div.card {
   border: 1px solid var(--borders-neutral-primary);
+  box-shadow: 0 2px 3px 0 rgba(0 0 0 / 5%);
 
   .cardHeader {
     border-bottom: 1px solid var(--borders-neutral-primary);
@@ -69,12 +70,8 @@
     }
   }
 
-  .cardContent {
-    padding: 0.75rem 1rem;
-
-    &:global(.MuiCardContent-root:last-child) {
-      padding-bottom: 1rem;
-    }
+  div.cardContent {
+    padding: 0.75rem 1rem 1rem;
   }
 
   .divider {
