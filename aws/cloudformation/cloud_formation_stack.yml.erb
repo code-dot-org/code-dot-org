@@ -476,6 +476,72 @@ Resources:
 
 <% end -%>
 
+<%# ------------------------------------------------------------ %>
+<%# Edge auth resources (CloudFront Function + KeyValueStore)   %>
+<%# Only provision in levelbuilder environment for now.         %>
+<%# ------------------------------------------------------------ %>
+<% if cdn_enabled && (rack_env?(:levelbuilder) || rack_env?(:adhoc)) -%>
+  EdgeAuthFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: !Sub "${AWS::StackName}-edge-auth"
+      AutoPublish: true
+      FunctionConfig:
+        Comment: Enforce Basic Auth for Levelbuilder via KVS
+        Runtime: cloudfront-js-2.0
+        KeyValueStoreAssociations:
+          - KeyValueStoreARN: { 'Fn::ImportValue': EdgeAuth-KVSArn }
+      FunctionCode: |
+        function handler(event) {
+          var cf = require('cloudfront');
+          var request = event.request;
+          var headers = request.headers || {};
+
+          // Native Basic Auth prompt when unauthorized
+          function unauthorized() {
+            return {
+              statusCode: 401,
+              statusDescription: 'Unauthorized',
+              headers: {
+                'www-authenticate': { value: 'Basic realm="Levelbuilder"' },
+                'cache-control': { value: 'no-store' },
+                'content-type': { value: 'text/plain; charset=utf-8' }
+              },
+              body: 'Authentication required'
+            };
+          }
+
+          // Enforce only for levelbuilder host
+          var host = headers.host && headers.host.value ? headers.host.value.toLowerCase() : '';
+          // Enforce on levelbuilder and Dave2-edge-auth adhoc hostnames
+          var isLevelbuilder = host === 'levelbuilder.code.org';
+          var isDaveAdhoc = host.indexOf('adhoc-dave2-edge-auth') === 0 && host.endsWith('.cdn-code.org');
+          if (!isLevelbuilder && !isDaveAdhoc) {
+            return request;
+          }
+
+          // Allow health checks to pass
+          if (request.uri === '/healthcheck' || request.uri === '/health_check') {
+            return request;
+          }
+
+          // Read expected tokens from KeyValueStore
+          var kvs = cf.kvs();
+          var expected1 = kvs.get('currentAuthB64') || '';
+          var expected2 = kvs.get('previousAuthB64') || '';
+
+          var provided = (headers.authorization && headers.authorization.value) || '';
+          if (provided === expected1 || (expected2 && provided === expected2)) {
+            // Strip Authorization before forwarding
+            delete headers.authorization;
+            return request;
+          }
+
+          return unauthorized();
+        }
+<% end -%>
+<% end -%>
+
 <% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup
