@@ -291,19 +291,19 @@ steps:
     commands:
       - rm -r ./.venv/ # 214M
       - rm -r ./apps/.yarn/ # 358M
-      # - rm -r ./apps/build/locales/ # 78M
-      # - rm -r ./bin/i18n/node_modules/ # 5.3M
+      - rm -r ./apps/build/locales/ # 78M
+      - rm -r ./bin/i18n/node_modules/ # 5.3M
       - rm -r ./dashboard/tmp/ # 494M
-      # - rm -r ./frontend/.turbo/ # 42M
-      # - rm -r ./frontend/.yarn/ # 2.4M
-      # - rm -r ./frontend/apps/design-system-storybook/node_modules/ # 12M
-      # - rm -r ./frontend/apps/marketing-storybook/node_modules/ # 12M
-      # - rm -r ./frontend/apps/marketing/node_modules/ # 46 M
+      - rm -r ./frontend/.turbo/ # 42M
+      - rm -r ./frontend/.yarn/ # 2.4M
+      - rm -r ./frontend/apps/design-system-storybook/node_modules/ # 12M
+      - rm -r ./frontend/apps/marketing-storybook/node_modules/ # 12M
+      - rm -r ./frontend/apps/marketing/node_modules/ # 46 M
       - rm -r ./frontend/node_modules/ # 1.9G (!!!!!)
-      # - rm -r ./frontend/packages/component-library/dist/ # 24M
-      # - rm -r ./frontend/packages/component-library/node_modules/ # 39M
-      # - rm -r ./frontend/packages/fonts/dist/ # 23M
-      # - rm -r ./frontend/packages/fonts/node_modules/ # 5.9M
+      - rm -r ./frontend/packages/component-library/dist/ # 24M
+      - rm -r ./frontend/packages/component-library/node_modules/ # 39M
+      - rm -r ./frontend/packages/fonts/dist/ # 23M
+      - rm -r ./frontend/packages/fonts/node_modules/ # 5.9M
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
