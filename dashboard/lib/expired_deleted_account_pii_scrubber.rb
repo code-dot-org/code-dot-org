@@ -45,8 +45,7 @@ class ExpiredDeletedAccountPiiScrubber
     @limit = limit || ACCOUNT_SCRUB_LIMIT
     raise ArgumentError.new('limit must be Integer') unless @limit.is_a? Integer
 
-    # Users that we don't want to include in paged batches, such as those that encountered an error
-    # and need to be manually reviewed.
+    # Users that we don't want to include in paged batches. Includes users who have already been processed or encountered an error.
     @excluded_user_ids = []
 
     reset_metrics
@@ -66,11 +65,11 @@ class ExpiredDeletedAccountPiiScrubber
     loop do
       account_batch = accounts_to_scrub.limit(BATCH_SIZE)
       account_batch.each do |user|
+        excluded_user_ids << user.id
         scrub_user(user)
         self.num_accounts_scrubbed += 1
       rescue StandardError => exception
         self.num_errors += 1
-        excluded_user_ids << user.id
         Honeybadger.notify(exception, context: {user_id: user.id})
         log_message("Error scrubbing user_id #{user.id}: #{exception.message}")
       end
