@@ -8,6 +8,7 @@ import {useWorkshopContext} from '../context/WorkshopContext';
 
 import {WorkshopInformationSection} from './sections/WorkshopInformationSection';
 import {WorkshopLinksSection} from './sections/WorkshopLinksSection';
+import {WorkshopStatusSection} from './sections/WorkshopStatusSection';
 
 export const WorkshopOverview: React.FC = () => {
   const {workshop} = useWorkshopContext();
@@ -30,6 +31,11 @@ export const WorkshopOverview: React.FC = () => {
           isWorkshopAdmin={isWorkshopAdmin}
         />
         <WorkshopLinksSection workshop={workshop} />
+        <WorkshopStatusSection
+          workshop={workshop}
+          isWorkshopAdmin={isWorkshopAdmin}
+          onWorkshopUpdate={loadWorkshop}
+        />
       </Stack>
     </Box>
   );
