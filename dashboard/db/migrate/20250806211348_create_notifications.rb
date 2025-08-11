@@ -5,7 +5,7 @@ class CreateNotifications < ActiveRecord::Migration[6.1]
     create_table :notifications do |t|
       t.integer :user_id, null: false
       t.string :external_id
-      t.string :title, null: false
+      t.string :title
       t.text :description
       t.string :notification_type
       t.datetime :read_at

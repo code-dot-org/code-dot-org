@@ -5,7 +5,7 @@
 #  id                :bigint           not null, primary key
 #  user_id           :integer          not null
 #  external_id       :string(255)
-#  title             :string(255)      not null
+#  title             :string(255)
 #  description       :text(65535)
 #  notification_type :string(255)
 #  read_at           :datetime
@@ -26,7 +26,6 @@
 class Notification < ApplicationRecord
   belongs_to :user
 
-  validates :title, presence: true
   validates :priority, presence: true, numericality: {greater_than_or_equal_to: 0}
 
   scope :not_dismissed, -> {where(is_dismissed: false)}
