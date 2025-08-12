@@ -37,7 +37,8 @@ type ExampleAnswer = {
 
 const AccuracyCheck: React.FC<{
   levelId: number;
-}> = ({levelId}) => {
+  levelHasSkills?: boolean;
+}> = ({levelId, levelHasSkills}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [studentAnswers, setStudentAnswers] = useState<ExampleAnswer[]>([]);
   const [evaluationPending, setEvaluationPending] = useState<boolean>(false);
@@ -95,13 +96,14 @@ const AccuracyCheck: React.FC<{
     setEvaluationPending(false);
   };
 
-  // TODO: This function will need to updated to determine
-  // whether we're asking for a skill-based evaluation or not.
+  // TODO: This function will need to be updated to handle the
+  // AI-returned formatted response for skill-based evaluations
   const evaluateStudentWork = async (example: ExampleAnswer) => {
     const aiResponse = await evaluationFromOpenAI(
       example.studentWork,
       levelId,
-      AiEvaluationTypes.SINGLE_STUDENT
+      AiEvaluationTypes.SINGLE_STUDENT,
+      levelHasSkills
     );
     const parsedResponse = JSON.parse(aiResponse?.content || '{}');
     const evaluation: EvaluatedExample = {
