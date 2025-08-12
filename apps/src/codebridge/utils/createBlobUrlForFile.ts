@@ -1,5 +1,8 @@
 import {ProjectFile} from '../types';
 
+// Given a ProjectFile, create a Blob URL for it.
+// Currently explicitly supports css, csv, and js files,
+// otherwise the file type will be empty.
 export const createBlobUrlForFile = (file: ProjectFile): string => {
   // TODO: handle other file types, like images
   let fileType = '';
