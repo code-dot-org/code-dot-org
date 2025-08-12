@@ -7,17 +7,24 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {styleOverrides} from './InteractionsTable';
 import SectionAccessToggle from './SectionAccessToggle';
 import StudentAccessToggle from './StudentAccessToggle';
 
-import style from './interactions-table.module.scss';
+import style from './ai-tutor-access-controls.module.scss';
+
+export const styleOverrides = {
+  headerCell: {
+    paddingLeft: '10px',
+    paddingRight: '10px',
+    backgroundColor: 'var(--neutral-gray-5)',
+  },
+};
 
 /**
  * Renders toggles to control student access to AI Tutor.
  */
 
-interface AccessControlsProps {
+interface AITutorAccessControlsProps {
   sectionId: number;
 }
 
@@ -27,7 +34,9 @@ interface StudentRowData {
   aiTutorAccessDenied: boolean;
 }
 
-const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
+const AITutorAccessControls: React.FC<AITutorAccessControlsProps> = ({
+  sectionId,
+}) => {
   const [students, setStudents] = useState<StudentAccessData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [globalErrorMessage, setGlobalErrorMessage] = useState<string | null>(
@@ -91,7 +100,8 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
           style: {
             ...tableStyles.headerCell,
             ...styleOverrides.headerCell,
-            minWidth: '150px',
+            width: '150px',
+            minWidth: '60px',
           },
         },
       },
@@ -126,10 +136,7 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
           isLoading ? (
             <Spinner />
           ) : (
-            <Table.Provider
-              columns={columns}
-              style={{...tableStyles.table, ...styleOverrides.table}}
-            >
+            <Table.Provider columns={columns} style={tableStyles.table}>
               <Table.Header />
               <Table.Body
                 rows={students.map(student => ({
@@ -147,4 +154,4 @@ const AccessControls: React.FC<AccessControlsProps> = ({sectionId}) => {
   );
 };
 
-export default AccessControls;
+export default AITutorAccessControls;

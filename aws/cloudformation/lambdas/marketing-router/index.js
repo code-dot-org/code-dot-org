@@ -780,6 +780,7 @@ const marketingPaths = {
   "/global/partners": true,
   "/global/india": true,
   "/back-to-school-for-district": true,
+  "/india": true,
 }
 
 const pathPatterns = [

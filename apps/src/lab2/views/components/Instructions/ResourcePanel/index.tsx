@@ -36,6 +36,7 @@ type ResourcePanelProps = InstructionsProps & {
   headerClassName?: string;
   aiTutor2Context?: string;
   rightHeaderContent?: React.ReactNode;
+  includeFooterSpacing?: boolean;
 };
 
 /**
@@ -46,6 +47,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   headerClassName,
   aiTutor2Context,
   rightHeaderContent,
+  includeFooterSpacing = true,
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
@@ -114,7 +116,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           ))}
         </div>
       </div>
-      <div className={classNames(styles.panels)}>
+      <div
+        className={classNames(
+          styles.panels,
+          includeFooterSpacing && styles.footerSpacing
+        )}
+      >
         <PanelContainer
           id={currentTab}
           headerContent={tabInfo[currentTab].title}

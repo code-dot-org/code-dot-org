@@ -34,7 +34,6 @@ export type SideBarItem = {
 export type ConfigType = {
   defaultTheme?: EditorTheme;
   editableFileTypes: string[];
-  previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;

@@ -131,7 +131,7 @@ module Pd::Foorm
           question_text: row_text,
           question_short_text: row_short_text,
           question_sub_text: row_data[:sub_text],
-          question_type: 'singleSelect',
+          question_type: 'likert',
           category: row_data[:category],
           responses: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
@@ -167,7 +167,7 @@ module Pd::Foorm
           question_text: row_text,
           question_short_text: row_short_text,
           question_sub_text: row_data[:sub_text],
-          question_type: 'singleSelect',
+          question_type: 'likert',
           category: row_data[:category],
           responses: Pd::Foorm::ResponseProcessor.process_likert_responses(row_summary, question_data[:columns])
         }
@@ -188,12 +188,19 @@ module Pd::Foorm
         question_short_text = replace_facilitator_name(question_short_text, facilitator_name)
       end
 
+      question_type =
+        if question_data[:type] == ANSWER_RATING
+          promoter_percentage_scale?(question_data) ? 'promoter' : 'likert'
+        else
+          question_data[:type]
+        end
+
       base_question = {
         question_name: question_name,
         question_text: question_text,
         question_short_text: question_short_text,
         question_sub_text: question_data[:sub_text],
-        question_type: question_data[:type],
+        question_type: question_type,
         category: question_data[:category]
       }
 

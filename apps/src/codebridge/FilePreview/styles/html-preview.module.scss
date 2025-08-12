@@ -1,0 +1,17 @@
+
+.previewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+}
+
+.previewIframe{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: 5px;
+  box-sizing: border-box;
+}
