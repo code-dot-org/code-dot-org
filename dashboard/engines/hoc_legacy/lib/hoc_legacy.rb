@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Dir[File.join(__dir__, 'hoc_legacy/**/*.rb')].sort.each {|file| require file}
+require_relative 'hoc_legacy/engine'
 
 module HocLegacy
   API_ROOT_PATH = '/api/hour/'

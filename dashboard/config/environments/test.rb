@@ -106,6 +106,10 @@ Dashboard::Application.configure do
   # schema differs from other environments due to utf8mb3 vs utf8mb4 issues.
   config.active_record.dump_schema_after_migration = !CDO.test_system?
 
-  # Include engine tests in the main test run
-  config.paths.add 'test', with: Rails.root.join('engines/hoc_legacy/test')
+  config.before_initialize do
+    # Set the default test pattern for Rails test tasks to run the main app and engine tests by default.
+    # This is used by `rake test` and `rails test` commands.
+    # @see https://github.com/rails/rails/blob/v6.1.7.7/railties/lib/rails/test_unit/runner.rb#L81
+    ENV['DEFAULT_TEST'] = "{test,engines/*/test}/**/*_test.rb"
+  end
 end

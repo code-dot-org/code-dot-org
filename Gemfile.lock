@@ -313,9 +313,9 @@ GEM
       fiber-annotation
       fiber-local
       json
-    contentful (2.17.1)
+    contentful (2.18.0)
       http (> 0.8, < 6.0)
-      multi_json (~> 1)
+      multi_json (~> 1.15)
     crack (0.4.5)
       rexml
     crass (1.0.6)

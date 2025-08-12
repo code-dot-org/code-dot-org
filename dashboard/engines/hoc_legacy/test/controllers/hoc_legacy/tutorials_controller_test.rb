@@ -3,8 +3,6 @@
 require 'test_helper'
 
 class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
-  include Minitest::RSpecMocks
-
   before do
     allow(DCDO).to receive(:get).and_call_original
   end
