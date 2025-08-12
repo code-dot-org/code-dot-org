@@ -42,18 +42,17 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
 
     before do
       allow(CDO).to receive(:read_only).and_return(false)
-      allow(described_instance).to receive(:unsampled_session?).and_return(false)
 
       allow(request).to receive(:host_with_port).and_return(request_host_with_port)
       allow(request).to receive(:ip).and_return(request_ip)
       allow(described_instance).to receive(:session_id).and_return(session_id)
 
-      allow(described_instance).to receive(:create_session_row_unless_unsampled)
+      allow(described_instance).to receive(:create_session_row)
     end
 
     it 'creates new session row' do
       complete_tutorial_pixel
-      expect(described_instance).to have_received(:create_session_row_unless_unsampled).with(
+      expect(described_instance).to have_received(:create_session_row).with(
         referer: request_host_with_port,
         tutorial: tutorial_code,
         pixel_finished_at: current_time,
@@ -68,18 +67,7 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
 
       it 'does not create new session row' do
         complete_tutorial_pixel
-        expect(described_instance).not_to have_received(:create_session_row_unless_unsampled)
-      end
-    end
-
-    context 'when session is unsampled' do
-      before do
-        allow(described_instance).to receive(:unsampled_session?).and_return(true)
-      end
-
-      it 'does not create new session row' do
-        complete_tutorial_pixel
-        expect(described_instance).not_to have_received(:create_session_row_unless_unsampled)
+        expect(described_instance).not_to have_received(:create_session_row)
       end
     end
 
@@ -108,7 +96,7 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
 
       it 'does not create new session row' do
         complete_tutorial_pixel
-        expect(described_instance).not_to have_received(:create_session_row_unless_unsampled)
+        expect(described_instance).not_to have_received(:create_session_row)
       end
 
       context 'and pixel is finished' do
@@ -125,7 +113,7 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
 
         it 'creates new session row' do
           complete_tutorial_pixel
-          expect(described_instance).to have_received(:create_session_row_unless_unsampled).once
+          expect(described_instance).to have_received(:create_session_row).once
         end
       end
 
@@ -144,7 +132,7 @@ class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
 
         it 'creates new session row' do
           complete_tutorial_pixel
-          expect(described_instance).to have_received(:create_session_row_unless_unsampled).once
+          expect(described_instance).to have_received(:create_session_row).once
         end
       end
     end

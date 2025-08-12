@@ -16,30 +16,28 @@ module HocLegacy
     end
 
     def call
-      unless CDO.read_only || unsampled_session?
-        session_row = create_session_row_unless_unsampled(
+      return if CDO.read_only
+
+      session_row = create_session_row(
+        {
           referer: request.referer_site_with_port,
           tutorial: tutorial[:code],
           company: company,
           started_at: DateTime.now,
-          started_ip: request.ip
-        )
-      end
+          started_ip: request.ip,
+        }
+      )
 
       # TODO(elijah): this pathway (formerly used by /api/hour/begin_learn)
       #               is currently unused. Either reenable the pathway in a more-scalable way or remove this block.
-      if track_learn && !CDO.read_only
-        learn_weight = DCDO.get('hoc_learn_activity_sample_weight', 1).to_i
-
-        if learn_weight > 0 && Kernel.rand < (1.0 / learn_weight)
-          PEGASUS_DB[:hoc_learn_activity].insert(
-            referer: request.referer_site_with_port,
-            weight: learn_weight,
-            hoc_activity_id: session_row.try(:[], :id),
-            tutorial: tutorial[:code],
-            created_at: DateTime.now,
-          )
-        end
+      if track_learn
+        PEGASUS_DB[:hoc_learn_activity].insert(
+          referer: request.referer_site_with_port,
+          weight: DCDO.get('hoc_learn_activity_sample_weight', 1).to_i,
+          hoc_activity_id: session_row[:id],
+          tutorial: tutorial[:code],
+          created_at: DateTime.now,
+        )
       end
     end
 

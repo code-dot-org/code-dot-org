@@ -13,7 +13,7 @@ module HocLegacy
     end
 
     def call
-      return if CDO.read_only || unsampled_session?
+      return if CDO.read_only
 
       if session_pending?
         session_row_query.update(
@@ -21,12 +21,14 @@ module HocLegacy
           pixel_started_ip: request.ip,
         )
       else
-        create_session_row_unless_unsampled(
-          referer: request.host_with_port,
-          tutorial: tutorial.try(:[], :code),
-          company: company,
-          pixel_started_at: DateTime.now,
-          pixel_started_ip: request.ip,
+        create_session_row(
+          {
+            referer: request.host_with_port,
+            tutorial: tutorial.try(:[], :code),
+            company: company,
+            pixel_started_at: DateTime.now,
+            pixel_started_ip: request.ip,
+          }
         )
       end
     end

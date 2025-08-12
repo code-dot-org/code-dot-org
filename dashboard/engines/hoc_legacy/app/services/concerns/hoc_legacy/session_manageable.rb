@@ -8,6 +8,7 @@ module HocLegacy
 
     SESSION_ROW_CREATION_RETRIES = 3
     DEFAULT_HOC_ACTIVITY_WEIGHT = 1
+    DEFAULT_SESSION_WEIGHT = 1.0
 
     included do
       private def request
@@ -28,7 +29,7 @@ module HocLegacy
         HOC_COOKIE_KEY,
         {
           value: row[:session],
-          domain: HOC_COOKIES_DOMAIN,
+          domain: HOC_COOKIE_DOMAIN,
           path: File.join(request.script_name, API_ROOT_PATH),
         }
       )
@@ -36,7 +37,7 @@ module HocLegacy
 
     # Returns the session id for the current session if sampled, or nil if unset or unsampled.
     private def session_id
-      unsampled_session? ? nil : request.cookies[HOC_COOKIE_KEY]
+      request.cookies[HOC_COOKIE_KEY]
     end
 
     # Creates a session row with the given weight and sets the hour of code cookie to contain the session id.
@@ -57,44 +58,6 @@ module HocLegacy
       raise "Couldn't create a unique session row." if row[:id] == 0
 
       set_hour_of_code_cookie_for_row(row)
-
-      row
-    end
-
-    # Creates a session row and sets the hour of code cookie to the session_id,
-    # if the user is assigned to the sample set (as decided by a random choice
-    # based on the reciprocal of the hoc_activity_sample_weight DCDO variable).
-    #
-    # If, however, the user is not in the sample, returns nil and sets the cookie
-    # to UNSAMPLED_SESSION_ID.
-    #
-    # The "weight" encoded in the session row is set to hoc_activity_sample_weight
-    # and the probability that a given sample will be in the session is
-    # 1 / weight, so that reports can compute the approximate number of actual sessions
-    # by summing over the weights. A weight of 0 is defined to mean nothing should be
-    # sampled, as is a negative weight.
-    private def create_session_row_unless_unsampled(**row_params)
-      # We don't need to do anything if we've already decided this session is unsampled.
-      return if unsampled_session?
-
-      # Decide whether the session should be sampled. Don't sample for cartoon network
-      # (or any company). We always need to create a session row in order to show the
-      # correct call to action on the congrats page.
-      weight = row_params[:company].nil? ? DCDO.get('hoc_activity_sample_weight', 1).to_i : DEFAULT_HOC_ACTIVITY_WEIGHT
-
-      # DANGER - as of 12/2017 we believe this doesn't behave as expected. Setting
-      # weight to 10 should yield 10% saved rows. In practice, it appears to yield
-      # between 5 - 6% saved rows. We don't presently understand what the bug is.
-      # (Possibly the cookie is leading to overfiltering?) We should understand/fix
-      # this before setting weight to anything besides 1 in the future.
-      if weight > 0 && Kernel.rand < (1.0 / weight)
-        # If we decided to make the session sampled, create the session row and set the hoc cookie.
-        row = create_session_row(row_params, weight: weight)
-      else
-        # Otherwise set the hoc cookie to make the session as unsampled.
-        set_hour_of_code_cookie_for_row(session: UNSAMPLED_SESSION_ID)
-        row = nil
-      end
 
       row
     end

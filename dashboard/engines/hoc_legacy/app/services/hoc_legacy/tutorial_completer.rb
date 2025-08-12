@@ -33,11 +33,7 @@ module HocLegacy
             tutorial: tutorial.try(:[], :code),
             finished_at: DateTime.now,
             finished_ip: request.ip
-          },
-          # Use weight of 0 for unsampled sessions so that we don't double count.
-          # Otherwise, use a weight of 1 so that we count the user. This happens only
-          # in the corner case when a user skips to the end without going to the beginning.
-          weight: unsampled_session? ? 0 : 1
+          }
         )
       end
 

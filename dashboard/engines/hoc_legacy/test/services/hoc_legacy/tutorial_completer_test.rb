@@ -43,7 +43,6 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
 
     before do
       allow(CDO).to receive(:read_only).and_return(false)
-      allow(described_instance).to receive(:unsampled_session?).and_return(false)
 
       allow(request).to receive(:host_with_port).and_return(request_host_with_port)
       allow(request).to receive(:ip).and_return(request_ip)
@@ -52,7 +51,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
       allow(described_instance).to receive(:create_session_row)
     end
 
-    it 'returns created session row with weight 1' do
+    it 'returns created session row' do
       new_session_id = Faker::Internet.unique.uuid
       new_session_row_params = {
         referer: request_host_with_port,
@@ -63,33 +62,10 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
       new_session_row = new_session_row_params.merge(session: new_session_id)
 
       expect(described_instance).to receive(:create_session_row).
-        with(new_session_row_params, weight: 1).
+        with(new_session_row_params).
         and_return(new_session_row)
 
       _complete_tutorial.must_equal new_session_row
-    end
-
-    context 'when session is unsampled' do
-      before do
-        allow(described_instance).to receive(:unsampled_session?).and_return(true)
-      end
-
-      it 'returns created session row with weight 0' do
-        new_session_id = Faker::Internet.unique.uuid
-        new_session_row_params = {
-          referer: request_host_with_port,
-          tutorial: tutorial[:code],
-          finished_at: current_time,
-          finished_ip: request_ip,
-        }
-        new_session_row = new_session_row_params.merge(session: new_session_id)
-
-        expect(described_instance).to receive(:create_session_row).
-          with(new_session_row_params, weight: 0).
-          and_return(new_session_row)
-
-        _complete_tutorial.must_equal new_session_row
-      end
     end
 
     context 'when read-only mode is enabled' do
@@ -135,7 +111,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
     describe 'without :tutorial argument' do
       let(:instance_arguments) {{controller:}}
 
-      it 'returns created session row with weight 1' do
+      it 'returns created session row' do
         new_session_id = Faker::Internet.unique.uuid
         new_session_row_params = {
           referer: request_host_with_port,
@@ -146,7 +122,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
         new_session_row = new_session_row_params.merge(session: new_session_id)
 
         expect(described_instance).to receive(:create_session_row).
-          with(new_session_row_params, weight: 1).
+          with(new_session_row_params).
           and_return(new_session_row)
 
         _complete_tutorial.must_equal new_session_row

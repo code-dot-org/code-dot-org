@@ -22,28 +22,6 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
   let(:response) {ActionDispatch::TestResponse.new}
   let(:described_instance) {described_class.new(request:, response:)}
 
-  describe '#unsampled_session?' do
-    subject(:unsampled_session?) {described_instance.send(:unsampled_session?)}
-
-    let(:hour_of_code) {nil}
-
-    before do
-      request.cookies[HocLegacy::HOC_COOKIE_KEY] = hour_of_code
-    end
-
-    it 'returns false by default' do
-      _unsampled_session?.must_equal false
-    end
-
-    context 'when hour_of_code cookies is HOC_UNSAMPLED' do
-      let(:hour_of_code) {HocLegacy::UNSAMPLED_SESSION_ID}
-
-      it 'returns true' do
-        _unsampled_session?.must_equal true
-      end
-    end
-  end
-
   describe '#set_hour_of_code_cookie_for_row' do
     subject(:set_hour_of_code_cookie_for_row) {described_instance.send(:set_hour_of_code_cookie_for_row, session_row)}
 
@@ -74,22 +52,8 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
 
     let!(:hoc_cookie_value) {request.cookies[HocLegacy::HOC_COOKIE_KEY] = Faker::Internet.password}
 
-    before do
-      allow(described_instance).to receive(:unsampled_session?).and_return(false)
-    end
-
     it 'returns session id from hour_of_code cookie' do
       _session_id.must_equal hoc_cookie_value
-    end
-
-    context 'when session is unsampled' do
-      before do
-        allow(described_instance).to receive(:unsampled_session?).and_return(true)
-      end
-
-      it 'returns nil' do
-        _session_id.must_be_nil
-      end
     end
   end
 
@@ -166,94 +130,6 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
         last_retry_value = Faker::Number.unique.number(digits: 5)
         expect(hoc_activity_table_mock).to receive(:insert).and_return(0, 0, last_retry_value)
         _(create_session_row[:id]).must_equal last_retry_value
-      end
-    end
-  end
-
-  describe '#create_session_row_unless_unsampled' do
-    subject(:create_session_row_unless_unsampled) {described_instance.send(:create_session_row_unless_unsampled, **session_row_params)}
-
-    let(:random_num) {0.49}
-    let(:dcdo_hoc_activity_sample_weight) {2}
-
-    let(:session_row_params) {{}}
-
-    before do
-      allow(Kernel).to receive(:rand).and_return(random_num)
-      allow(DCDO).to receive(:get).with('hoc_activity_sample_weight', anything).and_return(dcdo_hoc_activity_sample_weight)
-      allow(described_instance).to receive(:unsampled_session?).and_return(false)
-      allow(described_instance).to receive(:create_session_row).and_return('created_session_row')
-    end
-
-    it 'does not set hour_of_code cookie' do
-      expect(described_instance).not_to receive(:set_hour_of_code_cookie_for_row)
-      create_session_row_unless_unsampled
-    end
-
-    it 'returns created session row' do
-      created_session_row_mock = double(:created_session_row)
-
-      expect(described_instance).to receive(:create_session_row).
-        with(session_row_params, weight: dcdo_hoc_activity_sample_weight).
-        and_return(created_session_row_mock)
-
-      _create_session_row_unless_unsampled.must_equal created_session_row_mock
-    end
-
-    context 'when session is unsampled' do
-      before do
-        allow(described_instance).to receive(:unsampled_session?).and_return(true)
-      end
-
-      it 'skips session row creation' do
-        expect(described_instance).not_to receive(:create_session_row)
-        expect(described_instance).not_to receive(:set_hour_of_code_cookie_for_row)
-        _create_session_row_unless_unsampled.must_be_nil
-      end
-    end
-
-    context 'when :company row params is provided' do
-      let(:company) {'expected_company'}
-      let(:session_row_params) {{company:}}
-
-      it 'returns created session row with default wight' do
-        created_session_row_mock = double(:created_session_row)
-
-        expect(described_instance).to receive(:create_session_row).
-          with(session_row_params, weight: 1).
-          and_return(created_session_row_mock)
-
-        _create_session_row_unless_unsampled.must_equal created_session_row_mock
-      end
-    end
-
-    context 'when DCDO hoc_activity_sample_weight is less than or equal to 0' do
-      let(:dcdo_hoc_activity_sample_weight) {0}
-
-      it 'sets hour_of_code cookie' do
-        expect(described_instance).to receive(:set_hour_of_code_cookie_for_row).
-          with(session: HocLegacy::UNSAMPLED_SESSION_ID).once
-        create_session_row_unless_unsampled
-      end
-
-      it 'returns nil' do
-        expect(described_instance).not_to receive(:create_session_row)
-        _create_session_row_unless_unsampled.must_be_nil
-      end
-    end
-
-    context 'when DCDO hoc_activity_sample_weight is less then random number' do
-      let(:dcdo_hoc_activity_sample_weight) {random_num - 0.01}
-
-      it 'sets hour_of_code cookie' do
-        expect(described_instance).to receive(:set_hour_of_code_cookie_for_row).
-          with(session: HocLegacy::UNSAMPLED_SESSION_ID).once
-        create_session_row_unless_unsampled
-      end
-
-      it 'returns nil' do
-        expect(described_instance).not_to receive(:create_session_row)
-        _create_session_row_unless_unsampled.must_be_nil
       end
     end
   end
