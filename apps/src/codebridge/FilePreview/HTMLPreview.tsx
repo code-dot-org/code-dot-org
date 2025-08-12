@@ -40,7 +40,7 @@ export const HTMLPreview = () => {
   const hasSubmittedPredictResponse = useAppSelector(
     isPredictResponseSubmitted
   );
-  const allowStudentScripts = !isPredictLevel || hasSubmittedPredictResponse;
+  const allowUserScripts = !isPredictLevel || hasSubmittedPredictResponse;
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     // When we switch levels, clear the source so the preview does not show outdated content.
@@ -66,7 +66,7 @@ export const HTMLPreview = () => {
         iframeRef.current?.contentWindow?.postMessage(
           {
             type: IframeMessageType.SET_ALLOW_SCRIPTS,
-            allow: allowStudentScripts,
+            allow: allowUserScripts,
           },
           previewUrl
         );
@@ -80,7 +80,7 @@ export const HTMLPreview = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, allowStudentScripts]);
+  }, [previewUrl, currentFile, allowUserScripts]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
@@ -131,11 +131,11 @@ export const HTMLPreview = () => {
   useEffect(() => {
     if (isIframeLoaded && iframeRef.current && previewUrl) {
       iframeRef.current.contentWindow?.postMessage(
-        {type: IframeMessageType.SET_ALLOW_SCRIPTS, allow: allowStudentScripts},
+        {type: IframeMessageType.SET_ALLOW_SCRIPTS, allow: allowUserScripts},
         previewUrl
       );
     }
-  }, [isIframeLoaded, previewUrl, allowStudentScripts]);
+  }, [isIframeLoaded, previewUrl, allowUserScripts]);
 
   return (
     <PanelContainer
