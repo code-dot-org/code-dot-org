@@ -1,4 +1,3 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {
@@ -15,34 +14,12 @@ import {
   useMediaQuery,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React from 'react';
 
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-
+import {CopyLinkButton} from '../../components/CopyLinkButton';
 import {WorkshopData} from '../../types';
 
 import styles from '../../workshop.module.scss';
-
-interface CopyLinkButtonProps {
-  link: string;
-  ariaLabel?: string;
-}
-
-const CopyLinkButton: React.FC<CopyLinkButtonProps> = ({link, ariaLabel}) => {
-  const [icon, setIcon] = useState('copy');
-
-  return (
-    <Button
-      text="Copy link"
-      type="secondary"
-      size="xs"
-      color={buttonColors.gray}
-      iconLeft={{iconName: icon, iconStyle: 'solid'}}
-      onClick={() => copyToClipboard(link, () => setIcon('check'))}
-      ariaLabel={ariaLabel}
-    />
-  );
-};
 
 interface WorkshopLinksSectionProps {
   workshop: WorkshopData;
@@ -53,8 +30,10 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
 }) => {
   const isLargeScreen = useMediaQuery('(min-width: 768px)');
 
-  const marketingPageUrl = `${window.location.origin}/professional-learning/workshops/${workshop.id}`;
-  const joinWorkshopUrl = `${window.location.origin}/pd/workshops/${workshop.id}/join`;
+  const marketingPageUrl = `/professional-learning/workshops/${workshop.id}`;
+  const fullMarketingPageUrl = `${window.origin}/professional-learning/workshops/${workshop.id}`;
+  const joinWorkshopUrl = `/pd/workshops/${workshop.id}/join`;
+  const fullJoinWorkshopUrl = `${window.origin}/pd/workshops/${workshop.id}/join`;
 
   return (
     <Card className={styles.card}>
@@ -108,12 +87,12 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
                 aria-label="Open marketing page in new tab"
                 href={marketingPageUrl}
               >
-                {marketingPageUrl}
+                {fullMarketingPageUrl}
               </Link>
             </Box>
             <Box>
               <CopyLinkButton
-                link={marketingPageUrl}
+                link={fullMarketingPageUrl}
                 ariaLabel="Copy marketing page link to clipboard"
               />
             </Box>
@@ -146,12 +125,12 @@ export const WorkshopLinksSection: React.FC<WorkshopLinksSectionProps> = ({
                     aria-label="Open join workshop page in new tab"
                     href={joinWorkshopUrl}
                   >
-                    {joinWorkshopUrl}
+                    {fullJoinWorkshopUrl}
                   </Link>
                 </Box>
                 <Box>
                   <CopyLinkButton
-                    link={joinWorkshopUrl}
+                    link={fullJoinWorkshopUrl}
                     ariaLabel="Copy join workshop link to clipboard"
                   />
                 </Box>
