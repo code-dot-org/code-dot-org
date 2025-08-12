@@ -352,48 +352,58 @@ class HocRoutesTest < Minitest::Test
       end
 
       it 'redirects to studio when starting tutorial' do
+        api_request_path = '/api/hour/begin/mc?company=test_company'
+
         @pegasus.expects(:launch_tutorial).never
 
-        @pegasus.get '/api/hour/begin/mc?company=co'
+        @pegasus.get api_request_path
 
         _(@pegasus.last_response.status).must_equal 301
-        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/begin/mc?company=co'
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
 
       it 'redirects to studio when ending tutorial' do
+        api_request_path = '/api/hour/finish/mc'
+
         @pegasus.expects(:complete_tutorial).never
 
-        @pegasus.get '/api/hour/finish/mc'
+        @pegasus.get api_request_path
 
         _(@pegasus.last_response.status).must_equal 301
-        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish/mc'
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
 
       it 'redirects to studio when ending current tutorial session' do
+        api_request_path = '/api/hour/finish'
+
         @pegasus.expects(:complete_tutorial).never
 
-        @pegasus.get '/api/hour/finish'
+        @pegasus.get api_request_path
 
         _(@pegasus.last_response.status).must_equal 301
-        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish'
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
 
       it 'redirects to studio when starting tutorial with png image' do
+        api_request_path = '/api/hour/begin_mc.png?company=test_company'
+
         @pegasus.expects(:launch_tutorial_pixel).never
 
-        @pegasus.get '/api/hour/begin_mc.png?company=co'
+        @pegasus.get api_request_path
 
         _(@pegasus.last_response.status).must_equal 301
-        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/begin_mc.png?company=co'
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
 
       it 'redirects to studio when ending tutorial with png image' do
+        api_request_path = '/api/hour/finish_mc.png?company=test_company'
+
         @pegasus.expects(:complete_tutorial_pixel).never
 
-        @pegasus.get '/api/hour/finish_mc.png?company=co'
+        @pegasus.get api_request_path
 
         _(@pegasus.last_response.status).must_equal 301
-        _(@pegasus.last_response['Location']).must_equal 'https://test-studio.code.org/api/hour/finish_mc.png?company=co'
+        _(@pegasus.last_response['Location']).must_equal CDO.studio_url(api_request_path, CDO.default_scheme)
       end
     end
 
