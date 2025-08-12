@@ -16,7 +16,7 @@ const fontLoader = async () => {
   };
 };
 
-/** @type { import('@storybook/react').Preview } */
+/** @type { import('@storybook/react-webpack5').Preview } */
 const preview = {
   parameters: {
     controls: {
@@ -24,6 +24,10 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+
+    docs: {
+      codePanel: true,
     },
   },
 };

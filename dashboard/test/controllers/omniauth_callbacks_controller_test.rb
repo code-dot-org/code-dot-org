@@ -433,7 +433,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: signs in user if user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :student, :clever_sso_provider
+    user = create(:student, :clever_sso_provider)
 
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
@@ -452,7 +452,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :clever_sso_provider, :demigrated
+    user = create(:teacher, :clever_sso_provider, :demigrated)
 
     # When I hit the clever oauth callback
     auth = generate_auth_user_hash \
@@ -477,7 +477,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'clever: updates tokens when migrated user is found by credentials' do
     # Given I have a Clever-Code.org account
-    user = create :teacher, :clever_sso_provider
+    user = create(:teacher, :clever_sso_provider)
     assert user.migrated?
 
     # When I hit the clever oauth callback
@@ -577,7 +577,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'google_oauth2: signs in user if user is found by credentials' do
     # Given I have a Google-Code.org account
-    user = create :student, :google_sso_provider
+    user = create(:student, :google_sso_provider)
 
     # When I hit the google oauth callback
     auth = generate_auth_user_hash \
@@ -596,7 +596,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'google_oauth2: updates tokens when unmigrated user is found by credentials' do
     # Given I have a Google-Code.org account
-    user = create :teacher, :google_sso_provider, :demigrated
+    user = create(:teacher, :google_sso_provider, :demigrated)
 
     # When I hit the google oauth callback
     auth = generate_auth_user_hash \
@@ -635,7 +635,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'google_oauth2: updates tokens when migrated user is found by credentials' do
     # Given I have a Google-Code.org account
-    user = create(:teacher,
+    user = create(
+      :teacher,
       :google_sso_provider,
       uid: 'fake-uid'
     )
@@ -1069,7 +1070,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'sign_up_clever: email conflict redirect if any users are already using your email address' do
     email = 'alreadytaken@example.com'
-    create :student, email: email
+    create(:student, email: email)
 
     auth = generate_auth_user_hash(
       provider: AuthenticationOption::CLEVER,
@@ -1086,7 +1087,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: can connect multiple auth options with the same email to the same user' do
     email = 'test@xyz.foo'
-    user = create :user, uid: 'some-uid'
+    user = create(:user, uid: 'some-uid')
     AuthenticationOption.create!(
       {
         user: user,
@@ -1115,7 +1116,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'connect_provider: cannot connect multiple auth options with the same email to a different user' do
     email = 'test@xyz.foo'
-    user_a = create :user
+    user_a = create(:user)
     AuthenticationOption.create!(
       {
         user: user_a,
@@ -1131,7 +1132,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       }
     )
 
-    user_b = create :user
+    user_b = create(:user)
     auth = generate_auth_user_hash(provider: 'facebook', uid: 'some-other-uid', refresh_token: '65432', email: email)
     setup_should_connect_provider(user_b, auth)
     assert_does_not_create(AuthenticationOption) do
@@ -1148,7 +1149,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: does not connect if user not migrated' do
-    user = create :user, :demigrated
+    user = create(:user, :demigrated)
     auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid, refresh_token: '65432', email: user.email)
     setup_should_connect_provider(user, auth)
     assert_does_not_create(AuthenticationOption) do
@@ -1159,7 +1160,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new google auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
+    user = create(:user, uid: 'some-uid')
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     setup_should_connect_provider(user, auth)
@@ -1173,7 +1174,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new facebook auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
+    user = create(:user, uid: 'some-uid')
     auth = generate_auth_user_hash(provider: 'facebook', uid: user.uid)
 
     setup_should_connect_provider(user, auth)
@@ -1187,7 +1188,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: creates new clever auth option for signed in user' do
-    user = create :user, uid: 'some-uid'
+    user = create(:user, uid: 'some-uid')
     auth = generate_auth_user_hash(provider: 'clever', uid: user.uid)
 
     setup_should_connect_provider(user, auth)
@@ -1201,7 +1202,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'connect_provider: redirects to account edit page with an error if AuthenticationOption cannot save' do
-    user = create :user, uid: 'some-uid'
+    user = create(:user, uid: 'some-uid')
     auth = generate_auth_user_hash(provider: 'google_oauth2', uid: user.uid, refresh_token: '54321')
 
     AuthenticationOption.any_instance.expects(:save).returns(false)
@@ -1216,13 +1217,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Performs takeover of an account with matching credential that has no activity" do
-    user = create :user
+    user = create(:user)
 
     # Given there exists another user
     #   having credential X
     #   and having no activity
-    other_user = create :user
-    credential = create :google_authentication_option, user: other_user
+    other_user = create(:user)
+    credential = create(:google_authentication_option, user: other_user)
     refute other_user.has_activity?
 
     # When I attempt to add credential X
@@ -1241,16 +1242,16 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Successful takeover also enrolls in replaced user's sections" do
-    user = create :user
+    user = create(:user)
 
     # Given there exists another user
     #   having credential X
     #   and having no activity
     #   and enrolled in section Y
-    other_user = create :user
-    credential = create :google_authentication_option, user: other_user
+    other_user = create(:user)
+    credential = create(:google_authentication_option, user: other_user)
     refute other_user.has_activity?
-    section = create :section
+    section = create(:section)
     section.students << other_user
 
     # When I add credential X
@@ -1266,15 +1267,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Teacher takeover of student transfers section enrollment" do
     # Given I am a teacher
-    user = create :teacher
+    user = create(:teacher)
 
     # And there exists a student
     #   having credential X
     #   and has no activity
-    other_user = create :student
-    credential = create :google_authentication_option, user: other_user
+    other_user = create(:student)
+    credential = create(:google_authentication_option, user: other_user)
     refute other_user.has_activity?
-    section = create :section
+    section = create(:section)
     section.students << other_user
 
     # When I add credential X
@@ -1290,15 +1291,15 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Successful takeover transfers ownership of sections" do
     # Given I am a teacher
-    user = create :teacher
+    user = create(:teacher)
 
     # And there exists another teacher
     #   having credential X
     #   and who owns section Y
     #   and has no activity
-    other_user = create :teacher
-    credential = create :google_authentication_option, user: other_user
-    section = create :section, teacher: other_user
+    other_user = create(:teacher)
+    credential = create(:google_authentication_option, user: other_user)
+    section = create(:section, teacher: other_user)
     refute other_user.has_activity?
 
     # When I add credential X
@@ -1315,13 +1316,13 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Refuses to link credential if student is taking over teacher account" do
     # Given I am a student
-    user = create :student
+    user = create(:student)
 
     # And there exists a teacher
     #   having credential X
     #   and has no activity
-    other_user = create :teacher
-    credential = create :google_authentication_option, user: other_user
+    other_user = create(:teacher)
+    credential = create(:google_authentication_option, user: other_user)
     refute other_user.has_activity?
 
     # When I attempt to add credential X
@@ -1344,14 +1345,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test "connect_provider: Refuses to link credential if there is an account with matching credential that has activity" do
-    user = create :user
+    user = create(:user)
 
     # Given there exists another user
     #   having credential X
     #   and having activity
-    other_user = create :user
-    credential = create :google_authentication_option, user: other_user
-    create :user_level, user: other_user, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+    other_user = create(:user)
+    credential = create(:google_authentication_option, user: other_user)
+    create(:user_level, user: other_user, best_result: ActivityConstants::MINIMUM_PASS_RESULT)
     assert other_user.has_activity?
 
     # When I attempt to add credential X
@@ -1375,8 +1376,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test "connect_provider: Presents no-op message if the provided credentials are already linked to user's account" do
     # Given the current user already has credential X
-    user = create :user
-    credential = create :google_authentication_option, user: user
+    user = create(:user)
+    credential = create(:google_authentication_option, user: user)
     assert_equal 2, user.authentication_options.count
 
     # When I attempt to add credential X
@@ -1398,7 +1399,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     provider = AuthenticationOption::SILENT_TAKEOVER_CREDENTIAL_TYPES.sample
 
     [User::TYPE_STUDENT, User::TYPE_TEACHER].each do |user_type|
-      user = create user_type
+      user = create(user_type)
       auth = generate_auth_user_hash(
         provider: provider,
         email: user.email
@@ -1421,7 +1422,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Adds email to teacher account missing email' do
     # Set up existing account
-    malformed_account = create :teacher, :demigrated, provider: 'microsoft_v2_auth'
+    malformed_account = create(:teacher, :demigrated, provider: 'microsoft_v2_auth')
     email = malformed_account.email
     uid = 'google-takeover-id'
 
@@ -1462,7 +1463,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'silent_takeover: Does not add email to student account' do
     # Set up existing account
     email = 'student+example@code.org'
-    student = create :student, :demigrated, :microsoft_v2_sso_provider, email: email
+    student = create(:student, :demigrated, :microsoft_v2_sso_provider, email: email)
     uid = 'google-takeover-id'
 
     Honeybadger.expects(:notify).never
@@ -1496,7 +1497,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   test 'silent_takeover: does add authentication option to account with verified email' do
     # Set up existing account
     email = 'example@code.org'
-    user = create :teacher, :microsoft_v2_sso_provider, email: email
+    user = create(:teacher, :microsoft_v2_sso_provider, email: email)
     uid = 'google-takeover-id'
 
     Honeybadger.expects(:notify).never
@@ -1525,7 +1526,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Fails and notifies on malformed unmigrated user' do
     # Set up existing account
-    malformed_account = create :teacher, :demigrated
+    malformed_account = create(:teacher, :demigrated)
     email = malformed_account.email
 
     # Make account invalid
@@ -1557,7 +1558,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   test 'silent_takeover: Fails and notifies on malformed migrated user' do
     # Set up existing account
-    account = create :teacher
+    account = create(:teacher)
     email = account.email
     assert_equal 1, account.authentication_options.count
 

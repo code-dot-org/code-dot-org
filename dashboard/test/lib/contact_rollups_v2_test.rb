@@ -4,8 +4,8 @@ require 'cdo/contact_rollups/v2/pardot'
 class ContactRollupsV2Test < ActiveSupport::TestCase
   test 'sync new contact' do
     # Create seed data in a source table
-    email_preference = create :email_preference, email: 'test@domain.com', opt_in: true
-    student_with_parent_email = create :student, parent_email: 'caring@parent.com'
+    email_preference = create(:email_preference, email: 'test@domain.com', opt_in: true)
+    student_with_parent_email = create(:student, parent_email: 'caring@parent.com')
 
     # We use retrieve_prospects twice in the pipeline
     # to get the most current email-Pardot ID mappings.
@@ -53,14 +53,15 @@ class ContactRollupsV2Test < ActiveSupport::TestCase
     # Create seed data
     email = 'test@domain.com'
     base_time = Time.now.utc
-    create :email_preference, email: email, opt_in: false, updated_at: base_time
+    create(:email_preference, email: email, opt_in: false, updated_at: base_time)
 
     pardot_id = 1
-    create :contact_rollups_pardot_memory,
+    create(:contact_rollups_pardot_memory,
       email: email,
       pardot_id: pardot_id,
       data_synced: {db_Opt_In: 'Yes'},
       data_synced_at: base_time - 1.day
+)
 
     # We use retrieve_prospects twice in the pipeline
     # to get the most current email-Pardot ID mappings.

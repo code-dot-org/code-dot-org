@@ -411,14 +411,13 @@ export async function getUserTheme(
   }
 
   const userPrefs = new UserPreferences();
-  const userThemePreference = await userPrefs.getBlocklyTheme(() => {});
-  // Today we only store the theme's base name in localStorage, which never includes 'dark'.
-  // Until March, 2024 we stored the full theme name, so we need to convert it now.
-  // getBaseName strips the 'dark' suffix from a theme name, if present.
-  const browserThemePreference = getBaseName(localStorage.blocklyTheme);
-
-  // Prioritize persistent user preference over local browser preference.
-  const themePreference = userThemePreference || browserThemePreference;
+  const themePreference = await userPrefs.getBlocklyTheme(() =>
+    // Fallback to localStorage if user preferences are not available (e.g. signed-out users).
+    // Today we only store the theme's base name in localStorage, which never includes 'dark'.
+    // Until March, 2024 we stored the full theme name, so we need to convert it now.
+    // getBaseName strips the 'dark' suffix from a theme name, if present.
+    getBaseName(localStorage.blocklyTheme)
+  );
 
   if (!themePreference) {
     // The user has not indicated a preference, so we use the lab theme or a safe default.

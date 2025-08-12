@@ -8,9 +8,9 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     assert 0, ContactRollupsProcessed.count
 
     # Create 6 records for 3 unique emails
-    create :contact_rollups_raw, email: 'email1@example.domain'
-    create_list :contact_rollups_raw, 2, email: 'email2@example.domain'
-    create_list :contact_rollups_raw, 3, email: 'email3@example.domain'
+    create(:contact_rollups_raw, email: 'email1@example.domain')
+    create_list(:contact_rollups_raw, 2, email: 'email2@example.domain')
+    create_list(:contact_rollups_raw, 3, email: 'email3@example.domain')
 
     ContactRollupsProcessed.import_from_raw_table
 
@@ -23,7 +23,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
     batch_sizes = [1, 5, 7, 11, 20]
 
     ContactRollupsRaw.delete_all
-    create_list :contact_rollups_raw, unique_email_count
+    create_list(:contact_rollups_raw, unique_email_count)
 
     batch_sizes.each do |batch_size|
       ContactRollupsProcessed.delete_all
@@ -35,12 +35,15 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
   test 'import_from_raw_table combines data from multiple records' do
     base_time = Time.now.utc
     email = 'email@example.domain'
-    create :contact_rollups_raw, email: email,
+    create(:contact_rollups_raw, email: email,
       sources: 'dashboard.users', data: nil, data_updated_at: base_time - 2.days
-    create :contact_rollups_raw, email: email,
+)
+    create(:contact_rollups_raw, email: email,
       sources: 'dashboard.email_preferences', data: {opt_in: 1}, data_updated_at: base_time - 1.day
-    create :contact_rollups_raw, email: email,
+)
+    create(:contact_rollups_raw, email: email,
       sources: 'dashboard.pd_enrollments', data: {course: COURSE_CSF}, data_updated_at: base_time
+)
 
     refute ContactRollupsProcessed.find_by_email(email)
     ContactRollupsProcessed.import_from_raw_table
@@ -53,7 +56,7 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
 
   test 'import_from_raw_table calls all extraction functions' do
     assert 0, ContactRollupsRaw.count
-    create :contact_rollups_raw
+    create(:contact_rollups_raw)
 
     # Each extraction function will be called once per unique email address
     ContactRollupsProcessed.expects(:extract_opt_in).

@@ -42,6 +42,8 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
+// Experiment for enabling the AI-TA differentiation chat sidebar to manage threads
+experiments.AI_DIFF_SIDEBAR = 'ai-diff-sidebar';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 // Adds a "Get help with this block" option to block context menus if docs exist (e.g. Sprite Lab)
@@ -64,6 +66,8 @@ experiments.MODULARITY = 'modularity';
 experiments.LOCALIZEJS = 'localizejs';
 // Use the new lab2 instructions panel
 experiments.LAB2_INSTRUCTIONS_V2 = 'lab2-instructions-v2';
+// Use the new lab2 tabbed resource panel
+experiments.LAB2_RESOURCE_PANEL = 'lab2-resource-panel';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

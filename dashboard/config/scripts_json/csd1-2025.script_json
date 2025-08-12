@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 21:49:57 UTC",
+    "serialized_at": "2025-08-04 20:57:33 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -5682,7 +5682,7 @@
     },
     {
       "name": "Peer Review Exemplar",
-      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
+      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit?usp=sharing",
       "key": "peer_review_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -5742,7 +5742,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",

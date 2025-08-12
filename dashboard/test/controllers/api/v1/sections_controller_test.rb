@@ -26,7 +26,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @beta_unit_group.reload
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @beta_unit_group.id)
 
-    @preview_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    @preview_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     @script = @preview_course.default_units.first
     CourseOffering.add_course_offering(@preview_course)
 
@@ -51,7 +51,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
     @csp_unit_group.reload
 
-    @single_unit_course = create :single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    @single_unit_course = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     CourseOffering.add_course_offering(@single_unit_course)
     @single_unit_course.reload
 
@@ -118,7 +118,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   # should therefore only get their own sections when indexing sections,
   # even though they'll have permission to pull up details for any section.
   test 'admin can only index own sections' do
-    admin = create :admin
+    admin = create(:admin)
     create(:section, user: admin, login_type: 'email')
 
     sign_in admin
@@ -186,7 +186,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with a full section code" do
-    student = create :student
+    student = create(:student)
     sign_in student
     section = create(:section, login_type: 'email')
 
@@ -200,7 +200,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with participant type not student" do
-    student = create :student
+    student = create(:student)
     sign_in student
     section = create(:section, :teacher_participants)
 
@@ -210,7 +210,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with a restricted section code" do
-    student = create :student
+    student = create(:student)
     sign_in student
     section = create(:section, login_type: 'email', restrict_section: true)
     post :join, params: {id: section.code}
@@ -224,14 +224,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with valid section code" do
-    student = create :student
+    student = create(:student)
     sign_in student
     post :join, params: {id: @section.code}
     assert_response :success
   end
 
   test "join with valid section code twice" do
-    student = create :student
+    student = create(:student)
     sign_in student
     post :join, params: {id: @section.code}
     assert_response :success
@@ -265,7 +265,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with valid unjoined section code" do
-    student = create :student
+    student = create(:student)
     sign_in student
     post :leave, params: {id: @section.code}
     assert_response 403
@@ -663,8 +663,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'pilot teacher can assign the pilot course' do
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
+    pilot_unit_group = create(:unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
     CourseOffering.add_course_offering(pilot_unit_group)
 
     sign_in pilot_teacher
@@ -680,7 +680,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign the pilot course' do
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create(:unit_group, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
     CourseOffering.add_course_offering(pilot_unit_group)
 
     sign_in @teacher
@@ -693,8 +693,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'pilot teacher can assign pilot course' do
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_course = create :single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_teacher = create(:teacher, pilot_experiment: 'my-experiment')
+    pilot_course = create(:single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
     pilot_script = pilot_course.first_unit
     CourseOffering.add_course_offering(pilot_course)
 
@@ -711,7 +711,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign a pilot course' do
-    pilot_course = create :single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    pilot_course = create(:single_unit_course, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
     CourseOffering.add_course_offering(pilot_course)
 
     sign_in @teacher
@@ -750,7 +750,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'creating a section with a script assigns the script to the creating user' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     teacher.assign_script @csp_script
     assert_includes teacher.scripts, @csp_script
@@ -768,7 +768,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'creating a section with a script does not assign script if it was already assigned' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
     teacher.assign_script @script
     original_user_script = teacher.user_scripts.first
@@ -930,7 +930,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "update: name is ignored if empty or all whitespace" do
     UnitGroup.stubs(:course_assignable?).returns(true)
 
-    section = create :section, name: 'Old section name'
+    section = create(:section, name: 'Old section name')
     sign_in section.teacher
 
     post :update, params: {
@@ -946,7 +946,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'update: add coteacher' do
     coteacher = create(:teacher)
 
-    section = create :section
+    section = create(:section)
     sign_in section.teacher
 
     assert_equal 1, section.section_instructors.size
@@ -1156,8 +1156,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'teacher can delete own section' do
-    teacher = create :teacher
-    section = create :section, user: teacher, login_type: 'word'
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
     sign_in teacher
     refute section.deleted_at
 
@@ -1301,7 +1301,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "membership: returns section names and ids for teacher" do
     new_section = create(:section, user: @teacher, login_type: 'word')
-    new_teacher = create :teacher
+    new_teacher = create(:teacher)
     new_section.students << new_teacher
 
     sign_in new_teacher
@@ -1466,14 +1466,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'valid_course_offerings includes units of published courses' do
-    @beta_unit_1 = create :unit, original_unit_group: @beta_unit_group
-    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_1, position: 1
-    @beta_unit_2 = create :unit, original_unit_group: @beta_unit_group
-    create :unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_2, position: 2
+    @beta_unit_1 = create(:unit, original_unit_group: @beta_unit_group)
+    create(:unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_1, position: 1)
+    @beta_unit_2 = create(:unit, original_unit_group: @beta_unit_group)
+    create(:unit_group_unit, unit_group: @beta_unit_group, script: @beta_unit_2, position: 2)
 
-    modular_course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_1, position: 1
-    create :unit_group_unit, unit_group: modular_course, script: @beta_unit_2, position: 2
+    modular_course = create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    create(:unit_group_unit, unit_group: modular_course, script: @beta_unit_1, position: 1)
+    create(:unit_group_unit, unit_group: modular_course, script: @beta_unit_2, position: 2)
     CourseOffering.add_course_offering(modular_course)
 
     sign_in @teacher
@@ -1502,11 +1502,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
 
     # Create 2 code review groups
-    @group1 = create :code_review_group, section: @code_review_group_section
-    @group2 = create :code_review_group, section: @code_review_group_section
+    @group1 = create(:code_review_group, section: @code_review_group_section)
+    @group2 = create(:code_review_group, section: @code_review_group_section)
     # put student 0 and 1 in group 1, and student 2 in group 2
-    create :code_review_group_member, follower: @followers[0], code_review_group: @group1
-    create :code_review_group_member, follower: @followers[1], code_review_group: @group1
-    create :code_review_group_member, follower: @followers[2], code_review_group: @group2
+    create(:code_review_group_member, follower: @followers[0], code_review_group: @group1)
+    create(:code_review_group_member, follower: @followers[1], code_review_group: @group1)
+    create(:code_review_group_member, follower: @followers[2], code_review_group: @group2)
   end
 end

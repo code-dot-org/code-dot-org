@@ -11,6 +11,8 @@ function getOneTrustDomainIdByBrand(brand: Brand) {
       return '27cca70a-7db3-4852-9ef0-a6660fd0977d';
     case Brand.HOUR_OF_CODE:
       return '7c79c547-a2fc-4998-9b21-0c7a5e67e345';
+    case Brand.CS_FOR_ALL:
+      return '01988b25-e2ce-7cd6-89f3-e806bc7be5e5';
     default:
       return undefined;
   }

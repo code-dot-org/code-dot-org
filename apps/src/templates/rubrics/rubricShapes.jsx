@@ -36,7 +36,7 @@ export const reportingDataShape = PropTypes.shape({
 
 export const studentLevelInfoShape = PropTypes.shape({
   name: PropTypes.string,
-  timeSpentMinutes: PropTypes.number,
+  timeSpent: PropTypes.number,
   attempts: PropTypes.number,
   lastAttempt: PropTypes.string,
   user_id: PropTypes.number,

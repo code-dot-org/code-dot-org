@@ -12,6 +12,7 @@ Feature: Student pairing
     And I verify the user menu shows "Thing_One" and "Thing_Two" are in a pairing group
     # complete the level
     And I wait until element "#runButton" is visible
+    And I debug milestone callback
     And I submit this level
     And I wait for the lab page to fully load
     And check that the URL contains "/courses/allthethingscourse/units/1/lessons/18/levels/8"

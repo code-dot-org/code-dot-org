@@ -2,32 +2,37 @@ require 'test_helper'
 
 class Services::MarkdownPreprocessorTest < ActiveSupport::TestCase
   setup do
-    course_offering = create :course_offering, key: 'test-course'
-    course_version = create :course_version,
+    course_offering = create(:course_offering, key: 'test-course')
+    course_version = create(:course_version,
       course_offering: course_offering,
       key: '1999'
+)
 
-    create :resource,
+    create(:resource,
       key: 'first-resource',
       name: "First Resource",
       url: "example.com/first",
       course_version: course_version
-    create :resource,
+)
+    create(:resource,
       key: 'second-resource',
       name: "Second Resource",
       url: "example.com/second",
       course_version: course_version
+)
 
-    create :vocabulary,
+    create(:vocabulary,
       key: 'first_vocab',
       word: "First Vocabulary",
       definition: "The first of the vocabulary entries.",
       course_version: course_version
-    create :vocabulary,
+)
+    create(:vocabulary,
       key: 'second_vocab',
       word: "Second Vocabulary",
       definition: "The second of the vocabulary entries.",
       course_version: course_version
+)
   end
 
   test 'process method invokes both resource and vocab substitutions' do

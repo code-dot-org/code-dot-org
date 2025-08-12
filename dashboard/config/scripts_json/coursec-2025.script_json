@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-06-13 18:38:31 UTC",
+    "serialized_at": "2025-07-31 23:25:47 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -9652,6 +9652,18 @@
       }
     },
     {
+      "name": "CSF Course Syllabus 205-26",
+      "url": "https://docs.google.com/document/d/1nRA2acwuTBPVTqNc3NU7r_ATJLwfYPpGa4TxWthUETk/template/preview",
+      "key": "csf_course_syllabus_205-26",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus_205-26"
+      }
+    },
+    {
       "name": "CSF State Standards for CS - Master Crosswalk List",
       "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
       "key": "csf_state_standards_for_cs_-_master_crosswalk_list",
@@ -9662,19 +9674,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list"
-      }
-    },
-    {
-      "name": "CSF Syllabus 2024-25",
-      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preview",
-      "key": "csf_syllabus_2024-25",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -10469,13 +10468,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list",
+        "resource.key": "csf_course_syllabus_205-26",
         "script.name": "coursec-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csf_syllabus_2024-25",
+        "resource.key": "csf_state_standards_for_cs_-_master_crosswalk_list",
         "script.name": "coursec-2025"
       }
     },

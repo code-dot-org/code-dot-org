@@ -226,7 +226,11 @@ class Pd::Enrollment < ApplicationRecord
   # Convenience method for combining first and last name into a full name
   # @return [String] Combined first_name last_name
   def full_name
-    "#{first_name} #{last_name}".strip
+    if user&.given_name && user&.family_name
+      "#{user.given_name} #{user.family_name}"
+    else
+      "#{first_name} #{last_name}".strip
+    end
   end
 
   # Convenience method for setting first and last names from a full name
@@ -237,14 +241,6 @@ class Pd::Enrollment < ApplicationRecord
     first_name, last_name = value.split(' ', 2)
     write_attribute :first_name, first_name
     write_attribute :last_name, last_name || ''
-  end
-
-  # Maps enrollments to safe names
-  # @return [Array<Array<String, Pd::Enrollment>>] Array of tuples
-  #   representing the safe name and associated enrollment
-  def self.get_safe_names
-    # Use full name
-    all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
   # TODO: Migrate existing school entries into schoolInfo and delete school column

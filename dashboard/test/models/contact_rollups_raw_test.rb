@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ContactRollupsRawTest < ActiveSupport::TestCase
   test 'extract_email_preferences creates records as we would expect' do
-    email_preference = create :email_preference
+    email_preference = create(:email_preference)
     ContactRollupsRaw.extract_email_preferences
 
     # Actual value stored in database is 1/0 instead of true/false
@@ -16,13 +16,13 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'extract_email_preferences can import many email preferences' do
-    3.times {|i| create :email_preference, email: "contact_#{i}@rollups.com"}
+    3.times {|i| create(:email_preference, email: "contact_#{i}@rollups.com")}
     ContactRollupsRaw.extract_email_preferences
     assert 3, ContactRollupsRaw.count
   end
 
   test 'extract_parent_email creates records as we would expect' do
-    student = create :student, parent_email: 'caring@parent.com'
+    student = create(:student, parent_email: 'caring@parent.com')
     ContactRollupsRaw.extract_parent_emails
 
     result = ContactRollupsRaw.find_by(
@@ -34,12 +34,12 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'extract_pd_enrollments teacher with multiple enrollments' do
-    teacher = create :teacher
-    csf_workshop = build :workshop, course: Pd::Workshop::COURSE_CSF
+    teacher = create(:teacher)
+    csf_workshop = build(:workshop, course: Pd::Workshop::COURSE_CSF)
     csf_workshop.save(validate: false)
-    csd_workshop = create :workshop, course: Pd::Workshop::COURSE_CSD
-    create :pd_enrollment, email: teacher.email, workshop: csf_workshop
-    create :pd_enrollment, email: teacher.email, workshop: csd_workshop
+    csd_workshop = create(:workshop, course: Pd::Workshop::COURSE_CSD)
+    create(:pd_enrollment, email: teacher.email, workshop: csf_workshop)
+    create(:pd_enrollment, email: teacher.email, workshop: csd_workshop)
 
     refute ContactRollupsRaw.find_by_email(teacher.email)
     ContactRollupsRaw.extract_pd_enrollments
@@ -51,7 +51,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'get_extraction_query can import when no data column is given' do
-    email_preference = create :email_preference
+    email_preference = create(:email_preference)
 
     select_query = 'SELECT email, updated_at from email_preferences'
     query = ContactRollupsRaw.get_extraction_query('dashboard.email_preferences', select_query)
@@ -61,8 +61,8 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
   end
 
   test 'get_extraction_query can import when source is a subquery' do
-    first_child = create :student, parent_email: 'caring@parent.com'
-    second_child = create :student, parent_email: 'caring@parent.com'
+    first_child = create(:student, parent_email: 'caring@parent.com')
+    second_child = create(:student, parent_email: 'caring@parent.com')
 
     # we're not actually interested in user IDs in contact rollups
     # just a simple example of something we could extract in a subquery

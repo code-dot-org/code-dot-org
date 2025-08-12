@@ -4,9 +4,9 @@ module Pd
   class WorkshopSurveyFoormSubmissionTest < ActiveSupport::TestCase
     self.use_transactional_test_case = true
     setup_all do
-      @user = create :user
-      @pd_summer_workshop = create :csp_summer_workshop
-      @foorm_form = create :foorm_form
+      @user = create(:user)
+      @pd_summer_workshop = create(:csp_summer_workshop)
+      @foorm_form = create(:foorm_form)
     end
 
     test 'save workshop with submission' do
@@ -41,7 +41,7 @@ module Pd
     end
 
     test 'allow a day 6 survey for a 6 day workshop' do
-      long_summer_workshop = create :csp_summer_workshop, num_sessions: 6
+      long_summer_workshop = create(:csp_summer_workshop, num_sessions: 6)
       workshop_survey = Pd::WorkshopSurveyFoormSubmission.new(
         user_id: @user.id,
         pd_workshop_id: long_summer_workshop.id,
@@ -62,16 +62,16 @@ module Pd
     end
 
     test 'facilitator_specific? returns true if submission is facilitator specific' do
-      workshop = build :csf_101_workshop
+      workshop = build(:csf_101_workshop)
       workshop.save(validate: false)
-      facilitator_form_submission_metadata = create :csf_intro_post_facilitator_workshop_submission, :answers_low, pd_workshop: workshop
+      facilitator_form_submission_metadata = create(:csf_intro_post_facilitator_workshop_submission, :answers_low, pd_workshop: workshop)
       assert facilitator_form_submission_metadata.facilitator_specific?
     end
 
     test 'facilitator_specific? returns false if submission is not facilitator specific' do
-      workshop = build :csf_101_workshop
+      workshop = build(:csf_101_workshop)
       workshop.save(validate: false)
-      facilitator_form_submission_metadata = create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop
+      facilitator_form_submission_metadata = create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: workshop)
       refute facilitator_form_submission_metadata.facilitator_specific?
     end
   end

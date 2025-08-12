@@ -132,6 +132,7 @@ export interface ProjectFile {
   active?: boolean;
   folderId: string;
   type?: ProjectFileType;
+  url?: string;
 }
 
 /**
@@ -221,6 +222,7 @@ export interface LevelProperties {
   progressionType?: string;
   type?: string;
   starterAssets?: {[key: string]: string};
+  showRubric?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
