@@ -1,13 +1,13 @@
 import React from 'react';
 
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import type {PanelsLevelData} from '../types';
 
 import PanelsView from './PanelsView';
 
 export interface PanelsLevelProps {
-  levelData: LevelData<PanelsLevelData>;
+  levelData: Level<PanelsLevelData>;
 }
 
 const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({levelData}) => {

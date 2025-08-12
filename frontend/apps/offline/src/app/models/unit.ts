@@ -2,459 +2,15 @@ import fs from 'fs/promises';
 import path from 'path';
 import YAML from 'yaml';
 
-import {loadLevel, LevelData} from './level';
+import type {ActivitySection} from '@code-dot-org/models/activitySections';
+import {LessonLevel} from '@code-dot-org/models/lessonLevels';
+import {LessonDefinition} from '@code-dot-org/models/lessons';
+import {LevelKind} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
+import type {ScriptLevelDefinition} from '@code-dot-org/models/scriptLevels';
+import type {Unit, UnitDefinition} from '@code-dot-org/models/units';
 
-/** Defines a lesson in the raw, internal data */
-interface LessonDefinition {
-  key: string;
-  name: string;
-  lockable: boolean;
-  has_lesson_plan: boolean;
-  absolute_position: number;
-  relative_position: number;
-  properties: {
-    creative_commons_license: 'Creative Commons BY-NC-SA' | string;
-    overview: string;
-    preparation: string;
-    purpose: string;
-    student_overview: string;
-  };
-  seeding_key?: {
-    ['lesson.key']?: string;
-    ['lesson_group.key']?: string;
-    ['script.name']?: string;
-  };
-}
-
-/** Defines a lesson group in the raw, internal data */
-interface LessonGroupDefinition {
-  key: string;
-  user_facing: boolean;
-  position: number;
-  properties: {
-    display_name: string;
-  };
-  seeding_key: {
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-  };
-}
-
-/** Defines a lesson activity in the internal unit data */
-interface LessonActivityDefinition {
-  key: string;
-  position: number;
-  properties: {
-    duration: number;
-    name: string;
-  };
-  seeding_key: {
-    ['lesson_activity.key']: string;
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-  };
-}
-
-/** Defines an activity section in internal unit data */
-interface ActivitySectionDefinition {
-  key: string;
-  position: number;
-  properties: {
-    description: string;
-    name?: string;
-    progression_name?: string;
-  };
-  seeding_key: {
-    ['activity_section.key']: string;
-    ['lesson_activity.key']: string;
-  };
-}
-
-/** Defines a script/level association in internal unit data */
-interface ScriptLevelDefinition {
-  chapter: number;
-  position: number;
-  activity_section_position: number;
-  assessment: boolean;
-  bonus: boolean;
-  level_keys: string[];
-  properties: {
-    level_keys: string[];
-    progression: string;
-  };
-  seeding_key: {
-    ['script_level.level_keys']: string[];
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-    ['activity_section.key']: string;
-  };
-}
-
-/** Defines a level/script-level association in internal unit data */
-interface LevelScriptLevelDefinition {
-  seeding_key: {
-    ['level.key']: string;
-    ['script_level.level_keys']: string[];
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-    ['activity_section.key']: string;
-  };
-}
-
-/** Defines a resource in internal unit data */
-interface ResourceDefinition {
-  name: string;
-  url: string;
-  key: string;
-  properties: {
-    is_rollup?: boolean;
-    audience?: 'Student' | 'Teacher' | 'Verified Teacher';
-    type?: string;
-    include_in_pdf?: boolean;
-    download_url?: string;
-  };
-  seeding_key: {
-    ['resource.key']: string;
-  };
-}
-
-/** Defines a lesson resource in internal unit data */
-interface LessonsResourceDefinition {
-  seeding_key: {
-    ['lesson.key']: string;
-    ['resource.key']: string;
-  };
-}
-
-/** Defines a script (unit) resource in internal unit data */
-interface ScriptsResourceDefinition {
-  seeding_key: {
-    ['script.name']: string;
-    ['resource.key']: string;
-  };
-}
-
-/** Defines a vocabulary definition in internal unit data */
-interface VocabularyDefinition {
-  key: string;
-  word: string;
-  definition: string;
-  seeding_key: {
-    ['vocabulary.key']: string;
-  };
-}
-
-/** Defines a lesson vocabulary definition in internal unit data */
-interface LessonsVocabularyDefinition {
-  seeding_key: {
-    ['lesson.key']: string;
-    ['vocabulary.key']: string;
-  };
-}
-
-/** Defines a lesson programming expression in internal unit data */
-interface LessonsProgrammingExpressionDefinition {
-  seeding_key: {
-    ['lesson.key']: string;
-    ['programming_environment.name']: string;
-    ['programming_expression.key']: string;
-  };
-}
-
-/** Defines a teaching objective in internal unit data */
-interface ObjectiveDefinition {
-  key: string;
-  properties: {
-    description: string;
-  };
-  seeding_key: {
-    ['lesson.key']: string;
-    ['objective.key']: string;
-  };
-}
-
-/** Defines a education standard in internal unit data */
-interface LessonsStandardDefinition {
-  seeding_key: {
-    ['lesson.key']: string;
-    ['framework.shortcode']: string;
-    ['standard.shortcode']: string;
-  };
-}
-
-/** Defines a opportunity standard in internal unit data */
-interface LessonsOpportunityStandardDefinition {
-  seeding_key: {
-    ['lesson.key']: string;
-    ['framework.shortcode']: string;
-    ['opportunity_standard.shortcode']: string;
-  };
-}
-
-/** Defines a rubric association in internal unit data */
-interface RubricDefinition {
-  level_name: string;
-  seeding_key: {
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-  };
-}
-
-/** Defines a rubric entry (learning goal) in internal unit data */
-interface LearningGoalDefinition {
-  key: string;
-  position: number;
-  learning_goal: string;
-  ai_enabled: boolean;
-  tips: string | null;
-  seeding_key: {
-    ['learning_goal.key']: string;
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-  };
-}
-
-/** Defines a rubric entry (learning goal) assessment criteria in internal unit data */
-interface LearningGoalEvidenceLevelDefinition {
-  understanding: number;
-  teacher_description: string;
-  ai_prompt: string;
-  seeding_key: {
-    understanding: number;
-    ['learning_goal.key']: string;
-    ['lesson.key']: string;
-    ['lesson_group.key']: string;
-    ['script.name']: string;
-  };
-}
-
-/** Describes a unit in the raw, internal data */
-interface UnitDefinition {
-  locale_data?: {
-    title: string;
-    description_short: string;
-    description_student: string;
-    description_teacher: string;
-    version_title: string;
-  };
-  script: {
-    name: string;
-    wrapup_video_id: string | null;
-    login_required: boolean;
-    properties: {
-      content_area: string;
-      curriculum_umbrella: string;
-      has_lesson_plan: boolean;
-      hideable_lessons: boolean;
-      is_migrated: boolean;
-      lesson_extras_available: boolean;
-      project_widget_types: string[];
-      project_widget_visible: boolean;
-      show_calendar: boolean;
-      tts: boolean;
-      weekly_instructional_minutes: number;
-    };
-    new_name: string | null;
-    family_name: string | null;
-    serialized_at: string;
-    published_state: 'in_development' | 'deprecated' | 'beta' | null;
-    instruction_type: 'teacher_led' | 'self_paced' | null;
-    instructor_audience:
-      | 'teacher'
-      | 'plc_reviewer'
-      | 'facilitator'
-      | 'universal_instructor'
-      | null;
-    seeding_key: {
-      ['script.name']: string;
-    };
-  };
-  lesson_groups: LessonGroupDefinition[];
-  lessons: LessonDefinition[];
-  lesson_activities: LessonActivityDefinition[];
-  activity_sections: ActivitySectionDefinition[];
-  script_levels: ScriptLevelDefinition[];
-  levels_script_levels: LevelScriptLevelDefinition[];
-  resources: ResourceDefinition[];
-  lessons_resources: LessonsResourceDefinition[];
-  scripts_resources: ScriptsResourceDefinition[];
-  scripts_student_resources: [];
-  vocabularies: VocabularyDefinition[];
-  lessons_vocabularies: LessonsVocabularyDefinition[];
-  lessons_programming_expressions: LessonsProgrammingExpressionDefinition[];
-  objectives: ObjectiveDefinition[];
-  lessons_standards: LessonsStandardDefinition[];
-  lessons_opportunity_standards: LessonsOpportunityStandardDefinition[];
-  rubrics: RubricDefinition[];
-  learning_goals: LearningGoalDefinition[];
-  learning_goal_evidence_levels: LearningGoalEvidenceLevelDefinition[];
-}
-
-/** Describes an activity section, which is a group of levels within a lesson */
-export interface ActivitySectionData {
-  /** The unique key that will identify this activity section. */
-  key: string;
-  /** The human-readable title for this activity section */
-  title: string;
-  /** The position of this activity section within the lesson */
-  position: number;
-  /** The markdown description for this activity section */
-  description: string;
-  /** The inclusive starting level index for this activity section */
-  from: number;
-  /** The inclusive ending level index for this activity section */
-  to: number;
-}
-
-/** Describes a reference to a level within a lesson. */
-export interface LessonLevelData {
-  /** The chapter number for this lesson level. */
-  chapter: number;
-  /** The position of this level within the lesson. */
-  position: number;
-  /** The position of this level within the activity section */
-  activitySectionPosition: number;
-  /**
-   * The index for the activity section this level belongs to withi
-   * the lesson's activitySection array.
-   */
-  activitySectionIndex: number;
-  /** Whether or not this is an assessment level (graded by instructor) */
-  assessment: boolean;
-  /** Whether or not this is a bonus or challenge level. */
-  bonus: boolean;
-  /** The level keys that point to level data for this lesson level. */
-  levelKeys: string[];
-  /**
-   * The name of the progression this level belongs to.
-   *
-   * The activity section is the better source of truth for this.
-   */
-  progression: string;
-  /** The realized level data, when known. */
-  data?: LevelData;
-}
-
-/** Describes a lesson */
-export interface LessonData {
-  /** The unique key for this lesson */
-  key: string;
-  /** The human-readable title for this lesson */
-  title: string;
-  /** Whether or not this lesson can be locked */
-  lockable: boolean;
-  /** Whether or not this lesson has an associated lesson plan */
-  hasLessonPlan: boolean;
-  /** The position of this lesson within the unit as a whole */
-  absolutePosition: number;
-  /** The position of this lesson within the lesson group */
-  relativePosition: number;
-  /** The index of the lesson in the Unit's lesson array. */
-  index: number;
-  /** The index of the lesson group in the Unit's lessonGroup array this lesson belongs to */
-  lessonGroupIndex?: number;
-  /** Other properties that are useful metadata for the lesson */
-  properties: {
-    /** The content license for this lesson, typically a Creative Commons license */
-    license: string;
-    /** An overview description for this lesson targetting educators. */
-    overview: string;
-    /** A description of the preparation expected for educations with respect to this lesson */
-    preparation: string;
-    /** A description of the intent of the lesson for educators */
-    purpose: string;
-    /** A description that serves as an overview for students */
-    studentOverview: string;
-  };
-  /** The activity sections within this lesson, which contain levels. */
-  activitySections: ActivitySectionData[];
-  /** The levels within the lesson. */
-  levels: LessonLevelData[];
-}
-
-/** Describes a lesson group, which is a set of related lessons */
-export interface LessonGroupData {
-  /** The unique key for this lesson group */
-  key: string;
-  /** The human-readable title for the lesson group */
-  title: string;
-  /** The position of this group within the unit as a whole */
-  position: number;
-  /** Whether or not this group is student facing */
-  userFacing: boolean;
-  /** The set of lessons for the lesson group */
-  lessons: LessonData[];
-}
-
-/** Describes a course (unit) */
-export interface UnitData {
-  /** The unique key for the unit */
-  key: string;
-  /** The human-readable title of the course/unit */
-  title: string;
-  /** The local path for the unit data */
-  path?: string;
-  /** The version identifier */
-  version: string;
-  /** The updated name for the unit (a rare field) */
-  newName?: string;
-  /** The course family this unit belongs to, if any */
-  familyName?: string;
-  /** The time this course was last written */
-  serializedAt: string;
-  /** The development state of this unit */
-  publishedState: 'in_development' | 'deprecated' | 'beta' | null;
-  /** The expected instruction style this course expects */
-  instructionType: 'teacher_led' | 'self_paced' | null;
-  /** The expected type of instructor for this course */
-  instructorAudience:
-    | 'teacher'
-    | 'plc_reviewer'
-    | 'facilitator'
-    | 'universal_instructor'
-    | null;
-  /** Description metadata that introduces the course to different audiences */
-  description: {
-    /** A general description for the unit. */
-    short: string;
-    /** A student description for the unit. */
-    student: string;
-    /** A teacher description for the unit. */
-    teacher: string;
-  };
-  /** Other unit metadata */
-  properties: {
-    /** Whether or not you are required to be logged in to access the course */
-    loginRequired: boolean;
-    /** The type of content this unit focuses on */
-    contentArea: string;
-    /** The curriculum this unit centers upon */
-    curriculumUmbrella: string;
-    /** Whether or not lessons in this unit are hideable */
-    hideableLessons: boolean;
-    /** Whether or not this unit was migrated */
-    isMigrated: boolean;
-    /** Whether or not there are extra levels */
-    lessonExtrasAvailable: boolean;
-    /** The types of widgets this unit makes use of */
-    projectWidgetTypes: string[];
-    projectWidgetVisible: boolean;
-    showCalendar: boolean;
-    /** Whether or not pre-generated text-to-speech is available */
-    tts: boolean;
-    /** The expected amount of time per week for instruction */
-    weeklyInstructionalMinutes: number;
-  };
-  /** The lesson groups within the unit */
-  lessonGroups: LessonGroupData[];
-  /** The lessons within the unit that are not otherwise within lesson groups */
-  lessons: LessonData[];
-}
+import {loadLevel} from './level';
 
 export interface UnitLoadInfo {
   path: string;
@@ -555,8 +111,8 @@ export const loadUnitDefinition: (
 export const parseUnitData: (
   data: UnitDefinition,
   unitPath?: string,
-) => Promise<UnitData> = async (data: UnitDefinition, unitPath?: string) => {
-  const ret: UnitData = {
+) => Promise<Unit> = async (data: UnitDefinition, unitPath?: string) => {
+  const ret: Unit = {
     key: data.script.name,
     title: data.locale_data?.title || 'Unknown',
     path: unitPath,
@@ -600,6 +156,8 @@ export const parseUnitData: (
     key: lesson.key,
     title: lesson.name,
     lockable: lesson.lockable,
+    hidden: false,
+    numberedLesson: true,
     hasLessonPlan: lesson.has_lesson_plan,
     absolutePosition: lesson.absolute_position,
     relativePosition: lesson.relative_position,
@@ -660,7 +218,7 @@ export const parseUnitData: (
 
   ret.lessons.forEach(lesson => {
     // Patch together the Activity Sections (Progressions) for each lesson
-    let lastActivitySection: ActivitySectionData = {
+    let lastActivitySection: ActivitySection = {
       key: '',
       title: '',
       position: -1,
@@ -731,15 +289,15 @@ export const parseUnitData: (
     }));
 
   // Load all level datas asynchronously
-  const levelLoader: (level: LessonLevelData) => Promise<void> = async (
-    level: LessonLevelData,
+  const levelLoader: (level: LessonLevel) => Promise<void> = async (
+    level: LessonLevel,
   ) => {
     if (level.levelKeys.length === 0) {
       return;
     }
 
     const key = level.levelKeys[0];
-    let levelData: LevelData | undefined;
+    let levelData: Level | undefined;
     try {
       levelData = await loadLevel(key);
     } catch (_) {
@@ -749,11 +307,13 @@ export const parseUnitData: (
     console.log('LEVEL', levelData);
     level.data = {
       key: levelData?.key || key,
+      url: '',
+      kind: LevelKind.activity,
       type: levelData?.type || 'Unknown',
       isConcept: levelData?.isConcept || false,
     };
   };
-  const levelLoadPromises = ([] as LessonLevelData[])
+  const levelLoadPromises = ([] as LessonLevel[])
     .concat(...ret.lessons.map(lesson => lesson.levels))
     .map(level => levelLoader(level));
 
@@ -764,7 +324,7 @@ export const parseUnitData: (
   return ret;
 };
 
-export const loadUnit: (slug: string) => Promise<UnitData> = async (
+export const loadUnit: (slug: string) => Promise<Unit> = async (
   slug: string,
 ) => {
   // Look for a normalized file already there.
@@ -779,7 +339,7 @@ export const loadUnit: (slug: string) => Promise<UnitData> = async (
 
   // Try to load the unit from unit definitions
   const {path: unitPath, data: unit} = await loadUnitDefinition(slug);
-  const ret: UnitData = await parseUnitData(unit, unitPath);
+  const ret: Unit = await parseUnitData(unit, unitPath);
 
   // Preserve the cached data
   await fs.writeFile(cachePath, JSON.stringify(ret), 'utf8');
@@ -787,3 +347,5 @@ export const loadUnit: (slug: string) => Promise<UnitData> = async (
   // Return the unit data
   return ret;
 };
+
+export type {Unit};

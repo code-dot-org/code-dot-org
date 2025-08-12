@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation';
 import {ReactNode} from 'react';
 
-import {loadLevel, LevelData} from '@/app/models/level';
-import {loadUnit, UnitData} from '@/app/models/unit';
+import {loadLevel, Level} from '@/app/models/level';
+import {loadUnit, Unit} from '@/app/models/unit';
 import LevelProvider from '@/providers/LevelProvider';
 
 export default async function LevelLayout({
@@ -15,7 +15,7 @@ export default async function LevelLayout({
   const {slug, lessonIndex, levelIndex} = await params;
 
   // Load unit data
-  let unit: UnitData | undefined;
+  let unit: Unit | undefined;
   try {
     unit = await loadUnit(slug);
   } catch (_) {
@@ -30,7 +30,7 @@ export default async function LevelLayout({
   const levelKey = levelShim.levelKeys[0];
 
   // Load level data
-  let level: LevelData | undefined;
+  let level: Level | undefined;
   try {
     level = await loadLevel(levelKey);
   } catch (_) {

@@ -1,9 +1,9 @@
 import {createContext} from 'react';
 
-import {LevelData} from '@/app/models/level';
+import {Level} from '@code-dot-org/models/levels';
 
 export interface LevelContent {
-  level?: LevelData;
+  level?: Level;
   lessonIndex?: number;
   levelIndex?: number;
   hintsShown: number;

@@ -20,7 +20,7 @@ import BlocklyLevel, {
   BlocklyLevelProps,
 } from '@code-dot-org/lab-blockly';
 import {LevelContext} from '@code-dot-org/lab-blockly/contexts';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import blocks from '@lab-maze/blocks';
 import Visualization from '@lab-maze/components/Visualization';
@@ -42,7 +42,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface MazeLevelProps extends BlocklyLevelProps<MazeData> {
-  levelData: LevelData<MazeData>;
+  levelData: Level<MazeData>;
   skins?: SkinsData;
   api?: API;
   customBlocks?: BlockDefinition[];

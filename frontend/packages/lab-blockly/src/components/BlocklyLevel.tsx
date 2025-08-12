@@ -15,7 +15,7 @@ import {getToolboxWidth} from '@code-dot-org/blockly-workspace/utils';
 import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Heading6} from '@code-dot-org/component-library/typography';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import Workspace from '@lab-blockly/components/workspace';
 import Instructions from '@lab-blockly/components/workspace/information/instructions';
@@ -42,7 +42,7 @@ export type BlocklyLevelProps<
   T extends BlocklyData = BlocklyData,
   U extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
 > = {
-  levelData: LevelData<T>;
+  levelData: Level<T>;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: BlocklySerialization;
   /** A set of blocks to load into a hidden workspace */

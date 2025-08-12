@@ -2,10 +2,10 @@
 
 import React, {PropsWithChildren, useState, createContext} from 'react';
 
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 export interface LevelContent {
-  level?: LevelData;
+  level?: Level;
   lessonIndex?: number;
   levelIndex?: number;
   hintsShown: number;
@@ -18,7 +18,7 @@ const LevelContext = createContext<LevelContent>({
 });
 
 export interface LevelProviderProps extends PropsWithChildren {
-  level?: LevelData;
+  level?: Level;
   levelIndex?: number;
   lessonIndex?: number;
 }

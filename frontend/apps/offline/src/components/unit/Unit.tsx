@@ -5,8 +5,7 @@ import {
   Heading2,
   BodyOneText,
 } from '@code-dot-org/component-library/typography';
-
-import type {UnitData} from '@/app/models/unit';
+import type {Unit as UnitData} from '@code-dot-org/models/units';
 
 import Lesson from './Lesson';
 import LessonGroup from './LessonGroup';

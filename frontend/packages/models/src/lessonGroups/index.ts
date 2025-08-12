@@ -1,4 +1,4 @@
-import {LessonData} from '@models/lessons';
+import {Lesson} from '@models/lessons';
 
 /** Defines a lesson group in the raw, internal data */
 export interface LessonGroupDefinition {
@@ -15,7 +15,7 @@ export interface LessonGroupDefinition {
 }
 
 /** Describes a lesson group, which is a set of related lessons */
-export interface LessonGroupData {
+export interface LessonGroup {
   /** The unique key for this lesson group */
   key: string;
   /** The human-readable title for the lesson group */
@@ -25,5 +25,5 @@ export interface LessonGroupData {
   /** Whether or not this group is student facing */
   userFacing: boolean;
   /** The set of lessons for the lesson group */
-  lessons: LessonData[];
+  lessons: Lesson[];
 }

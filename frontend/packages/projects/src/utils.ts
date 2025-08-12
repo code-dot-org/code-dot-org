@@ -1,4 +1,5 @@
-import {START_SOURCES} from '@lab-base/constants';
+import {START_SOURCES} from './constants';
+import {MultiFileSource, ProjectFile, ProjectFileType} from './types';
 
 function currentLocale(): string {
   return 'en';
@@ -18,8 +19,6 @@ function getScriptData(name: string): object {
 function hasScriptData(name: string): boolean {
   return !!document.querySelector(name);
 }
-
-import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
@@ -171,4 +170,25 @@ export function getActiveFileForSource(source: MultiFileSource) {
  */
 export function getCurrentLocale(): string {
   return currentLocale();
+}
+
+/**
+ * Takes a simple object and returns it represented as a chain of url query
+ * params, including ? and & as necessary. Does not perform escaping. Examples:
+ * {} -> ''
+ * {a: 1} -> '?a=1'
+ * {a: 1, b: 'c'} -> '?a=1&b=c'
+ *
+ * @param params - Object to stringify.
+ * @return A query parameter string.
+ */
+export const stringifyQueryParams: (params?: Record<string, string>) => string = params => {
+  if (!params) {
+    return '';
+  }
+  const keys = Object.keys(params) as string[];
+  if (!keys.length) {
+    return '';
+  }
+  return '?' + keys.map(key => `${key}=${params[key]}`).join('&');
 }

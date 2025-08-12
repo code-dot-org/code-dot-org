@@ -27,10 +27,10 @@ const ALWAYS_SEND = false;
  * For legacy client-side reporting see {@link firehose} for AWS
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
-class MetricsReporter {
+export class MetricsReporter {
   private lastCheckCanReportTime: number;
 
-  constructor(private readonly metricsApi: MetricsApi) {
+  constructor(private readonly metricsApi: MetricsApi = new DashboardMetricsApi()) {
     this.metricsApi = metricsApi;
     this.lastCheckCanReportTime =
       parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
@@ -61,7 +61,7 @@ class MetricsReporter {
   /**
    * Publish an error log message. Can be a string or a structured object
    */
-  logError(message: string | object) {
+  logError(message: string | object, _error?: Error, _details?: object) {
     if (!this.shouldReport()) {
       console.error(message);
       return;
@@ -216,4 +216,4 @@ class MetricsReporter {
   }
 }
 
-export default new MetricsReporter(new DashboardMetricsApi());
+export default new MetricsReporter();

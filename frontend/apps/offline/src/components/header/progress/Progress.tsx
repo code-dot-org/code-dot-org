@@ -9,7 +9,7 @@ import Link from '@code-dot-org/component-library/link';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {Heading6} from '@code-dot-org/component-library/typography';
 
-import type {UnitData} from '@/app/models/unit';
+import type {Unit as UnitData} from '@/app/models/unit';
 import Unit from '@/components/unit';
 
 import moduleStyles from './progress.module.scss';

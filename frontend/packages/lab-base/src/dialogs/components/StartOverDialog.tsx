@@ -1,8 +1,9 @@
 import React from 'react';
 
+import {AppName} from '@code-dot-org/projects';
+
 import {TEXT_BASED_LABS} from '@lab-base/constants';
 import {useApp} from '@lab-base/contexts';
-import {AppName} from '@lab-base/types';
 
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 

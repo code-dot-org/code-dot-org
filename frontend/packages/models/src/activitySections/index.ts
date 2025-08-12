@@ -14,7 +14,7 @@ export interface ActivitySectionDefinition {
 }
 
 /** Describes an activity section, which is a group of levels within a lesson */
-export interface ActivitySectionData {
+export interface ActivitySection {
   /** The unique key that will identify this activity section. */
   key: string;
   /** The human-readable title for this activity section */

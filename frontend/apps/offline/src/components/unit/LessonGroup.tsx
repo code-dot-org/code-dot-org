@@ -1,8 +1,7 @@
 import React from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
-
-import type {LessonGroupData} from '@/app/models/unit';
+import type {LessonGroup as LessonGroupData} from '@code-dot-org/models/lessonGroups';
 
 import Lesson from './Lesson';
 

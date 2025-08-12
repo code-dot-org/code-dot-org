@@ -2,12 +2,13 @@
 
 import React from 'react';
 
-import type {LevelData} from '@/app/models/level';
-import type {ActivitySectionData} from '@/app/models/unit';
+import type {ActivitySection} from '@code-dot-org/models/activitySections';
+import type {Level as LevelData} from '@code-dot-org/models/levels';
+
 import Level from '@/levels';
 
 export interface UnitLevelProps {
-  activitySection?: ActivitySectionData;
+  activitySection?: ActivitySection;
   level: LevelData;
 }
 

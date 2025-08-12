@@ -10,11 +10,11 @@ import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
 import {GoogleAnalytics, analyticsReporter, EVENTS, DCDO} from '@code-dot-org/metrics';
+import type {ProjectType} from '@code-dot-org/projects';
 import {useUser} from '@code-dot-org/user/contexts';
 
 import {TEACHER_FEEDBACK_LINK, STUDENT_FEEDBACK_LINK, ProjectSubmissionStatus} from '@lab-base/constants';
 import {useShare} from '@lab-base/contexts';
-import {ProjectType} from '@lab-base/types';
 
 import moduleStyles from './share-dialog.module.scss';
 

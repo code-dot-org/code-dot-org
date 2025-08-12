@@ -14,11 +14,12 @@ interface ReportingProperties {
 /**
  * Metrics reporter for labs.
  */
-class LabMetricsReporter {
+class LabMetricsReporter extends MetricsReporter {
   // Common fields that are added to every log payload.
   private commonProperties: ReportingProperties = {};
 
   constructor(initialProperties?: ReportingProperties) {
+    super();
     this.commonProperties = initialProperties || {};
   }
 
@@ -32,11 +33,11 @@ class LabMetricsReporter {
   }
 
   public logInfo(message: string | object) {
-    MetricsReporter.logInfo(this.decorateMessage(message));
+    super.logInfo(this.decorateMessage(message));
   }
 
   public logWarning(message: string | object) {
-    MetricsReporter.logWarning(this.decorateMessage(message));
+    super.logWarning(this.decorateMessage(message));
   }
 
   public logError(errorMessage: string, error?: Error, details?: object) {
@@ -45,7 +46,7 @@ class LabMetricsReporter {
       error: error?.stack || error?.message,
       details,
     };
-    MetricsReporter.logError(this.decorateMessage(message));
+    super.logError(this.decorateMessage(message));
   }
 
   public reportLoadTime(
@@ -53,7 +54,7 @@ class LabMetricsReporter {
     loadTimeMs: number,
     dimensions: MetricDimension[] = []
   ) {
-    MetricsReporter.publishMetric(metricName, loadTimeMs, 'Milliseconds', [
+    super.publishMetric(metricName, loadTimeMs, 'Milliseconds', [
       ...dimensions,
       ...this.getCommonDimensions(),
     ]);
@@ -65,7 +66,7 @@ class LabMetricsReporter {
     unit: MetricUnit,
     dimensions: MetricDimension[] = []
   ) {
-    MetricsReporter.publishMetric(name, value, unit, [
+    super.publishMetric(name, value, unit, [
       ...dimensions,
       ...this.getCommonDimensions(),
     ]);
@@ -75,14 +76,14 @@ class LabMetricsReporter {
     metricName: string,
     dimensions: MetricDimension[] = []
   ) {
-    MetricsReporter.incrementCounter(metricName, [
+    super.incrementCounter(metricName, [
       ...dimensions,
       ...this.getCommonDimensions(),
     ]);
   }
 
   public reportSevereError(dimensions: MetricDimension[] = []) {
-    MetricsReporter.incrementCounter('SevereError', [
+    super.incrementCounter('SevereError', [
       ...dimensions,
       ...this.getCommonDimensions(),
     ]);

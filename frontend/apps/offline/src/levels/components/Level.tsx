@@ -3,8 +3,8 @@
 import dynamic from 'next/dynamic';
 import React, {useMemo} from 'react';
 
-import type {ActivitySectionData} from '@code-dot-org/models/activitySections';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {ActivitySection} from '@code-dot-org/models/activitySections';
+import type {Level as LevelData} from '@code-dot-org/models/levels';
 
 import Spinner from './Spinner';
 
@@ -38,7 +38,7 @@ const levelMap: {
 import moduleStyles from './level.module.scss';
 
 export interface LevelProps {
-  activitySection?: ActivitySectionData;
+  activitySection?: ActivitySection;
   level: LevelData;
 }
 

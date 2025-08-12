@@ -32,28 +32,61 @@ export interface VideoData {
   locale: string;
 }
 
+export enum LevelKind {
+  assessment = 'assessment',
+  activity = 'activity',
+}
+
 /** Describes a level's properties */
-export interface LevelData<T extends object = object> {
+export interface Level<T extends object = object> {
+  /** Unique incremental id for this level */
+  id?: number;
+  /** Unique incremental id for the parent level */
+  parentLevelId?: number;
+  /** Unique incremental id for the script level */
+  scriptLevelId?: number;
   /** Unique key for this level */
   key: string;
   /** The type of level (Maze, etc) */
   type: string;
+  /** The level kind attribute */
+  kind: LevelKind;
+  /** The filepath of the level definition, if available */
+  path?: string;
+  /** Whether or not the level is a concept level */
+  isConcept?: boolean;
+  /** The URL path for the level */
+  url: string;
+  /** The name for the level */
+  name?: string;
+  /** The page the level is on, if any */
+  pageNumber?: number;
   /** Potentially long description of what to do in the level or what the goal is. */
   longInstructions?: string;
   /** Shorter description of what to do or what the level covers. */
   shortInstructions?: string;
+  /** The level keys for contained levels */
+  containedLevelNames?: string[];
   /** Whether or not we should highlight the instructions before the student can continue */
   instructionsImportant?: boolean;
   /** Hints to help folks progress within levels. */
   hints?: HintData[];
+  /** Whether or not the level can have feedback */
+  canHaveFeedback?: boolean;
+  /** Whether or not the level is validated */
+  isValidated?: boolean;
+  /** Whether or not the level is a 'bonus' level*/
+  bonus?: boolean;
   /** The shared level template defining a potential 'workspace' */
-  template?: LevelData<T>;
+  template?: Level<T>;
   /** Multiple choice question data. */
   multipleChoice?: MultipleChoiceData;
   /** An optional video that is associated with the level. */
   videoKey?: string;
   /** The metadata about the associated video. */
   videoData?: VideoData;
+  /** Sub-levels */
+  sublevels?: Level[];
   /** Specific level data. */
   subData?: T;
 }

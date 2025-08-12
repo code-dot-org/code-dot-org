@@ -3,8 +3,8 @@ import React from 'react';
 import Accordion from '@code-dot-org/component-library/accordion';
 import {LinkButton} from '@code-dot-org/component-library/button';
 import {Heading5} from '@code-dot-org/component-library/typography';
+import type {Lesson} from '@code-dot-org/models/lessons';
 
-import type {LessonData} from '@/app/models/unit';
 import JointIcon from '@/icons/JointIcon';
 import WireEndIcon from '@/icons/WireEndIcon';
 import WireIcon from '@/icons/WireIcon';
@@ -13,7 +13,7 @@ import moduleStyles from './unit.module.scss';
 
 interface LessonOverviewProps {
   unitKey: string;
-  lesson: LessonData;
+  lesson: Lesson;
 }
 
 const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
@@ -97,7 +97,7 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
 };
 
 export interface LessonProps {
-  lesson: LessonData;
+  lesson: Lesson;
   unitKey: string;
   open: boolean;
 }

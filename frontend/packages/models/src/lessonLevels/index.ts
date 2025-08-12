@@ -1,7 +1,7 @@
-import {LevelData} from '@models/levels';
+import {Level} from '@models/levels';
 
 /** Describes a reference to a level within a lesson. */
-export interface LessonLevelData {
+export interface LessonLevel {
   /** The chapter number for this lesson level. */
   chapter: number;
   /** The position of this level within the lesson. */
@@ -26,5 +26,5 @@ export interface LessonLevelData {
    */
   progression: string;
   /** The realized level data, when known. */
-  data?: LevelData;
+  data?: Level;
 }

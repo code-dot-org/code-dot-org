@@ -98,6 +98,84 @@ const beeLevelData: LevelData<MazeData> = {
   },
 };
 
+const farmerLevelData: LevelData<MazeData> = {
+  key: 'farmer-level',
+  type: 'Karel',
+  longInstructions: "*\"Move to the pile of dirt and tell me how many shovelfuls to remove.\"*\r\n\r\nUse as few blocks as possible to solve this puzzle.",
+  shortInstructions: 'Use as few blocks as possible to solve this puzzle.',
+  subData: {
+    startBlocks: {
+      blocks: {
+        blocks: [
+          {
+            type: "when_run",
+            deletable: false, 
+            movable: false,
+          },
+        ],
+      },
+    },
+    toolboxBlocks: {
+      kind: 'flyoutToolbox',
+      contents: [
+        {
+          type: 'maze_moveForward',
+          kind: 'block',
+        },
+        {
+          type: 'maze_turn',
+          fields: {
+            DIR: 'turnRight',
+          },
+          kind: 'block',
+        },
+        {
+          type: 'maze_turn',
+          fields: {
+            DIR: 'turnLeft  ',
+          },
+          kind: 'block',
+        },
+        {
+          type: 'maze_dig',
+          kind: 'block',
+        },
+        {
+          type: 'maze_fill',
+          kind: 'block',
+        },
+        {
+          type: 'controls_repeat',
+          fields: {
+            TIMES: 5,
+          },
+          inputs: {
+            DO: {
+              block: {
+                type: 'maze_dig',
+              },
+            },
+          },
+          kind: 'block',
+        },
+      ],
+    },
+    skinId: 'farmer',
+    startDirection: 2,
+    flowerType: 'redWithNectar',
+    serializedMaze: [
+      [{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":1},{"tileType":1},{"tileType":1},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":2},{"tileType":1},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":1},{"tileType":1,"value":10,"range":10},{"tileType":1},{"tileType":0}],
+      [{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+      [{"tileType":1},{"tileType":1},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0},{"tileType":0}],
+    ],
+  },
+};
+
 const defaultBlocks: BlockDefinition[] = [
   {
     type: 'when_run',
@@ -182,6 +260,23 @@ export const BeeMarkdownInstructions = Template.bind({});
 BeeMarkdownInstructions.args = {
   levelData: {
     ...beeLevelData,
+    longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
+  },
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const FarmerBase = Template.bind({});
+FarmerBase.args = {
+  levelData: farmerLevelData,
+  renderer: Thrasos,
+  customBlocks: defaultBlocks,
+};
+
+export const FarmerMarkdownInstructions = Template.bind({});
+FarmerMarkdownInstructions.args = {
+  levelData: {
+    ...farmerLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },
   renderer: Thrasos,

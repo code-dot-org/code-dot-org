@@ -2,8 +2,8 @@ import {ActivitySectionDefinition} from '@models/activitySections';
 import {LearningGoalEvidenceLevelDefinition} from '@models/learningGoalEvidenceLevels';
 import {LearningGoalDefinition} from '@models/learningGoals';
 import {LessonActivityDefinition} from '@models/lessonActivities';
-import {LessonGroupDefinition, LessonGroupData} from '@models/lessonGroups';
-import {LessonDefinition, LessonData} from '@models/lessons';
+import {LessonGroupDefinition, LessonGroup} from '@models/lessonGroups';
+import {LessonDefinition, Lesson} from '@models/lessons';
 import {LessonsOpportunityStandardDefinition} from '@models/lessonsOpportunityStandards';
 import {LessonsProgrammingExpressionDefinition} from '@models/lessonsProgrammingExpressions';
 import {LessonsResourceDefinition} from '@models/lessonsResources';
@@ -80,7 +80,7 @@ export interface UnitDefinition {
 }
 
 /** Describes a course (unit) */
-export interface UnitData {
+export interface Unit {
   /** The unique key for the unit */
   key: string;
   /** The human-readable title of the course/unit */
@@ -139,7 +139,7 @@ export interface UnitData {
     weeklyInstructionalMinutes: number;
   };
   /** The lesson groups within the unit */
-  lessonGroups: LessonGroupData[];
+  lessonGroups: LessonGroup[];
   /** The lessons within the unit that are not otherwise within lesson groups */
-  lessons: LessonData[];
+  lessons: Lesson[];
 }

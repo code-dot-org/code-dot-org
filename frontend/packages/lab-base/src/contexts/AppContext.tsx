@@ -1,6 +1,11 @@
-import React, {PropsWithChildren, useState, createContext, useContext} from 'react';
+import React, {PropsWithChildren, useState, createContext, useContext, useMemo} from 'react';
 
-import type {LabProps, LevelProperties, ProjectSources} from '@lab-base/types';
+import type {ProjectSources, ProjectManager} from '@code-dot-org/projects';
+
+import type {LabProps, LevelProperties} from '@lab-base/types';
+
+import LabMetricsReporter from '../LabMetricsReporter';
+import LifecycleNotifier from '../LifecycleNotifier';
 
 /**
  * Describes the current lab application we are viewing.
@@ -11,6 +16,10 @@ export interface AppContent<
 > {
   lab?: LabProps<T, U>;
   setLab: (value?: LabProps<T, U>) => void;
+  projectManager?: ProjectManager;
+  setProjectManager: (value?: ProjectManager) => void;
+  metricsReporter?: LabMetricsReporter;
+  lifecycleNotifier?: LifecycleNotifier;
 }
 
 /**
@@ -18,6 +27,7 @@ export interface AppContent<
  */
 const AppContext = createContext<AppContent>({
   setLab: (_) => {},
+  setProjectManager: (_) => {},
 });
 
 /**
@@ -34,12 +44,23 @@ export const useApp = <
 export const AppProvider: React.FunctionComponent<PropsWithChildren> = ({
   children,
 }) => {
-  const [state, setState] = useState<LabProps | undefined>(undefined);
+  const [lab, setLab] = useState<LabProps | undefined>(undefined);
+  const [projectManager, setProjectManager] = useState<ProjectManager | undefined>(undefined);
+
+  // Create a metrics reporter
+  const metricsReporter = useMemo(() => new LabMetricsReporter(), []);
+
+  // Create a lifecycle notifier
+  const lifecycleNotifier = useMemo(() => new LifecycleNotifier(), []);
 
   return (
     <AppContext.Provider value={{
-      lab: state,
-      setLab: setState,
+      lab,
+      setLab,
+      projectManager,
+      setProjectManager,
+      metricsReporter,
+      lifecycleNotifier,
     }}>
       {children}
     </AppContext.Provider>

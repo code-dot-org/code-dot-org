@@ -1,8 +1,9 @@
-import {ActivitySectionData} from '@models/activitySections';
-import {LessonLevelData} from '@models/lessonLevels';
+import {ActivitySection} from '@models/activitySections';
+import {LessonLevel} from '@models/lessonLevels';
 
 /** Defines a lesson in the raw, internal data */
 export interface LessonDefinition {
+  id?: number;
   key: string;
   name: string;
   lockable: boolean;
@@ -24,19 +25,27 @@ export interface LessonDefinition {
 }
 
 /** Describes a lesson */
-export interface LessonData {
+export interface Lesson {
+  /** The unique incremental id for the lesson */
+  id?: number;
   /** The unique key for this lesson */
   key: string;
   /** The human-readable title for this lesson */
   title: string;
   /** Whether or not this lesson can be locked */
   lockable: boolean;
+  /** Whether or not this lesson is hidden */
+  hidden: boolean;
   /** Whether or not this lesson has an associated lesson plan */
   hasLessonPlan: boolean;
   /** The position of this lesson within the unit as a whole */
   absolutePosition: number;
   /** The position of this lesson within the lesson group */
   relativePosition: number;
+  /** Whether or not this lesson is visually numbered */
+  numberedLesson: boolean;
+  /** The visual numbering for the numbered lesson */
+  lessonNumber?: number;
   /** The index of the lesson in the Unit's lesson array. */
   index: number;
   /** The index of the lesson group in the Unit's lessonGroup array this lesson belongs to */
@@ -55,7 +64,7 @@ export interface LessonData {
     studentOverview: string;
   };
   /** The activity sections within this lesson, which contain levels. */
-  activitySections: ActivitySectionData[];
+  activitySections: ActivitySection[];
   /** The levels within the lesson. */
-  levels: LessonLevelData[];
+  levels: LessonLevel[];
 }

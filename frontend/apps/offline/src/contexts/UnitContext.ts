@@ -1,9 +1,9 @@
 import {createContext} from 'react';
 
-import {UnitData} from '@/app/models/unit';
+import {Unit} from '@code-dot-org/models/units';
 
 export interface UnitContent {
-  unit?: UnitData;
+  unit?: Unit;
 }
 
 const UnitContext = createContext<UnitContent>({});

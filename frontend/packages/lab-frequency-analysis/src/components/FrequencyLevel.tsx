@@ -5,7 +5,7 @@ import {SplitPane} from '@rexxars/react-split-pane';
 import React, {useRef, useEffect, useState, useCallback} from 'react';
 
 import {Heading1} from '@code-dot-org/component-library/typography';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import DATA from '../data';
 import FrequencyLevelProvider from '../providers/FrequencyLevelProvider';
@@ -19,7 +19,7 @@ import MessagePanel from './MessagePanel';
 import moduleStyles from './frequencyLevel.module.scss';
 
 export interface FrequencyLevelProps {
-  levelData: LevelData<FrequencyLevelData>;
+  levelData: Level<FrequencyLevelData>;
 }
 
 /**

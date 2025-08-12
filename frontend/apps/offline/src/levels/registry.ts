@@ -1,9 +1,9 @@
 import artistLoader from '@code-dot-org/lab-artist/parser';
 import craftLoader from '@code-dot-org/lab-craft/parser';
-import panelsLoader from '@code-dot-org/lab-panels/parser';
 import frequencyAnalysisLoader from '@code-dot-org/lab-frequency-analysis/parser';
 import karelLoader from '@code-dot-org/lab-karel/parser';
 import mazeLoader from '@code-dot-org/lab-maze/parser';
+import panelsLoader from '@code-dot-org/lab-panels/parser';
 
 export interface LevelProps<T extends object = object> {
   levelData?: T;

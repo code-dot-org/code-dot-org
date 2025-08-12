@@ -3,8 +3,41 @@ import {JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
-
 import type {Skin} from '@code-dot-org/lab-maze';
+
+/**
+ * Blocks used for 'farmer' levels.
+ */
+const farmerBlocks: (skin: Skin) => BlockDefinition[] = (_skin: Skin) => [
+  {
+    type: 'maze_dig',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/PickUp',
+    tooltip: 'remove 1 unit of dirt',
+    style: 'default',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'remove 1',
+    generator: {
+      javascript(block: Blockly.Block) {
+        return `Maze.dig('block_id_${block.id}');\n`;
+      },
+    },
+  },
+  {
+    type: 'maze_fill',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/PutDown',
+    tooltip: 'place 1 unit of dirt',
+    style: 'default',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'fill 1',
+    generator: {
+      javascript(block: Blockly.Block) {
+        return `Maze.fill('block_id_${block.id}');\n`;
+      },
+    },
+  },
+];
 
 /**
  * Blocks used for 'bee' levels.
@@ -57,6 +90,7 @@ const blocks: (skin: Skin) => BlockDefinition[] = (skin: Skin) => [
     },
   },
   ...(skin.id === 'bee' ? beeBlocks(skin) : []),
+  ...(skin.id === 'farmer' ? farmerBlocks(skin) : []),
 ];
 
 export default blocks;

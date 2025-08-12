@@ -5,6 +5,9 @@ import {JSDOM} from 'jsdom';
 import path from 'path';
 import URL from 'url';
 
+import type {Level} from '@code-dot-org/models/levels';
+import {LevelKind} from '@code-dot-org/models/levels';
+
 import {levelRegistry2} from '@/levels/registry';
 
 /** Describes a single level hint. */
@@ -39,38 +42,6 @@ export interface VideoData {
   download: string;
   youTubeId: string;
   locale: string;
-}
-
-/** Describes a level */
-export interface LevelData<T = object> {
-  /** Unique key for this level */
-  key: string;
-  /** The type of level (Maze, etc) */
-  type: string;
-  /** Whether or not this is a concept level */
-  isConcept: boolean;
-  /** Potentially long description of what to do in the level or what the goal is. */
-  longInstructions?: string;
-  /** Shorter description of what to do or what the level covers. */
-  shortInstructions?: string;
-  /** Whether or not we should highlight the instructions before the student can continue */
-  instructionsImportant?: boolean;
-  /** Hints to help folks progress within levels. */
-  hints?: HintData[];
-  /** The path to the level data, if it is locally sourced. */
-  path?: string;
-  /** An optional video that is associated with the level. */
-  videoKey?: string;
-  /** The metadata about the associated video. */
-  videoData?: VideoData;
-  /** Other embedded levels, such as multiple choice or bubble levels */
-  containedLevelNames?: string[];
-  /** Multiple choice question data. */
-  multipleChoice?: MultipleChoiceData;
-  /** The shared level template defining a potential 'workspace' */
-  template?: LevelData;
-  /** Other level specific data */
-  subData?: T;
 }
 
 export interface SpriteLabAnimationConfiguration {
@@ -365,7 +336,7 @@ export const parseLevelData: (
   key: string,
   xmlString: string,
   levelPath?: string,
-) => Promise<LevelData> = async (
+) => Promise<Level> = async (
   key: string,
   xmlString: string,
   levelPath?: string,
@@ -377,8 +348,10 @@ export const parseLevelData: (
   ) as LevelConfiguration;
 
   // Gather the general data from the level file
-  const ret: LevelData = {
+  const ret: Level = {
     key: key,
+    url: '',
+    kind: LevelKind.activity,
     type: xml.querySelector(':root')?.tagName || 'Maze',
     longInstructions:
       config.properties?.long_instructions ||
@@ -483,7 +456,7 @@ export const parseLevelData: (
 export const loadLevel: (
   key: string,
   extension?: string,
-) => Promise<LevelData> = async (key: string, extension?: string) => {
+) => Promise<Level> = async (key: string, extension?: string) => {
   // Look for a normalized file already there.
   const cachePath = path.join(process.cwd(), 'cache', 'levels', `${key}.json`);
 
@@ -499,7 +472,7 @@ export const loadLevel: (
     key,
     extension,
   );
-  const ret: LevelData = await parseLevelData(key, level, levelPath);
+  const ret: Level = await parseLevelData(key, level, levelPath);
 
   // Preserve the cached data
   await fs.writeFile(cachePath, JSON.stringify(ret), 'utf8');
@@ -507,3 +480,5 @@ export const loadLevel: (
   // Return the level data
   return ret;
 };
+
+export {Level};

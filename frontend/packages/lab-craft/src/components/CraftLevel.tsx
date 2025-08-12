@@ -15,7 +15,7 @@ import BlocklyLevel, {
   BlocklyLevelEnvironment,
   BlocklyLevelProps,
 } from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import blocks from '../blocks';
 import Craft from '../Craft';
@@ -45,7 +45,7 @@ const defaultSkins: Skins = {
 };
 
 export interface CraftLevelProps extends BlocklyLevelProps {
-  levelData: LevelData<CraftData>;
+  levelData: Level<CraftData>;
   skins?: {
     [key: string]: Skin;
   };

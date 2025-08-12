@@ -14,7 +14,7 @@ import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
 import {getCodeFromBlockJsonSource, getAllGeneratedCode} from '@code-dot-org/blockly-workspace/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/models/levels';
+import type {Level} from '@code-dot-org/models/levels';
 
 import * as defaultAPI from '../api';
 import Artist from '../Artist';
@@ -36,7 +36,7 @@ const DefaultStartBlocks: BlocklySerialization = {
 };
 
 export interface ArtistLevelProps extends BlocklyLevelProps {
-  levelData: LevelData<ArtistData>;
+  levelData: Level<ArtistData>;
   api?: object;
   customBlocks?: BlockDefinition[];
   /** A class to apply to the existing visualization container */

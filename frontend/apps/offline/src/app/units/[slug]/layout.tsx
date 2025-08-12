@@ -1,7 +1,7 @@
 import {notFound} from 'next/navigation';
 import {ReactNode} from 'react';
 
-import {loadUnit, UnitData} from '@/app/models/unit';
+import {loadUnit, Unit} from '@/app/models/unit';
 import UnitProvider from '@/providers/UnitProvider';
 
 export default async function UnitLayout({
@@ -14,7 +14,7 @@ export default async function UnitLayout({
   const {slug} = await params;
 
   // Load unit data
-  let unit: UnitData | undefined;
+  let unit: Unit | undefined;
   try {
     unit = await loadUnit(slug);
   } catch (_) {
