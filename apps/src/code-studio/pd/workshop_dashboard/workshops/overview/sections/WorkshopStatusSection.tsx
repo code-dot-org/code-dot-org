@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
@@ -56,19 +57,28 @@ const dialogs = [
   },
 ];
 
+export type WorkshopActions = 'start' | 'end' | 'unstart' | 'reopen';
+
 export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   workshop,
   isWorkshopAdmin,
   onWorkshopUpdate,
 }) => {
-  const [activeDialog, setActiveDialog] = useState<
-    'start' | 'end' | 'unstart' | 'reopen' | null
-  >(null);
+  const [activeDialog, setActiveDialog] = useState<WorkshopActions | null>(
+    null
+  );
   const [isUpdating, setIsUpdating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleClick = (stateKey: WorkshopActions) => {
+    setError(null);
+    setActiveDialog(stateKey);
+  };
 
   const generateHandler = useCallback(
-    (action: string) => async () => {
+    (action: WorkshopActions) => async () => {
       setIsUpdating(true);
+      setError(null); // Clear any previous errors
       try {
         const response = await fetch(
           `/api/v1/pd/workshops/${workshop.id}/${action}`,
@@ -84,10 +94,30 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
         if (response.ok) {
           onWorkshopUpdate();
         } else {
-          throw new Error();
+          let errorMessage = `Failed to ${action} workshop. Please try again.`;
+          const errorData = await response.json();
+          if (errorData.error) {
+            errorMessage = errorData.error;
+          } else if (
+            errorData.errors &&
+            Array.isArray(errorData.errors) &&
+            errorData.errors.length > 0
+          ) {
+            errorMessage = errorData.errors.join(', ');
+          }
+
+          if (response.status === 403) {
+            errorMessage = 'You do not have permission to perform this action.';
+          } else if (response.status === 404) {
+            errorMessage = 'Workshop not found.';
+          } else if (response.status >= 500) {
+            errorMessage = 'Server error occurred. Please try again later.';
+          }
+
+          setError(errorMessage);
         }
-      } catch (error) {
-        console.error(`Error on ${action} workshop:`, error);
+      } catch (unknownError) {
+        setError('An unknown error occurred. Please try again.');
       } finally {
         setIsUpdating(false);
         setActiveDialog(null);
@@ -129,7 +159,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                   size="xs"
                   type="secondary"
                   color={buttonColors.gray}
-                  onClick={() => setActiveDialog('unstart')}
+                  onClick={() => handleClick('unstart')}
                 />
               )}
               {isWorkshopAdmin && ended && (
@@ -138,7 +168,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                   size="xs"
                   type="secondary"
                   color={buttonColors.gray}
-                  onClick={() => setActiveDialog('reopen')}
+                  onClick={() => handleClick('reopen')}
                 />
               )}
             </Box>
@@ -249,7 +279,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     the account.
                   </BodyFourText>
                   <BodyFourText noMargin>
-                    If they still can’t find the email, have them email{' '}
+                    If they still can't find the email, have them email{' '}
                     <Link size="xs" href="mailto:support@code.org">
                       support@code.org
                     </Link>{' '}
@@ -258,12 +288,22 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                 </>
               )}
 
+              {error && (
+                <Alert
+                  text={error}
+                  type={alertTypes.danger}
+                  onClose={() => setError(null)}
+                  closeLabel="Dismiss error"
+                  size="s"
+                />
+              )}
+
               <Box>
                 {notStarted && (
                   <Button
                     size="s"
                     text="Start Workshop"
-                    onClick={() => setActiveDialog('start')}
+                    onClick={() => handleClick('start')}
                     disabled={isUpdating}
                   />
                 )}
@@ -274,7 +314,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     text="End workshop"
                     type="secondary"
                     color={buttonColors.destructive}
-                    onClick={() => setActiveDialog('end')}
+                    onClick={() => handleClick('end')}
                     disabled={isUpdating}
                   />
                 )}

@@ -20,7 +20,7 @@ describe('WorkshopStatusSection', () => {
 
   beforeEach(() => {
     mockFetch.mockClear();
-    window.fetch = mockFetch;
+    jest.spyOn(window, 'fetch').mockImplementation(mockFetch);
     mockOnWorkshopUpdate.mockClear();
     mockGetAuthenticityToken.mockResolvedValue('fake-csrf-token');
   });
@@ -403,6 +403,275 @@ describe('WorkshopStatusSection', () => {
           'Content-Type': 'application/json',
           'X-CSRF-Token': 'fake-csrf-token',
         },
+      });
+    });
+  });
+
+  describe('error handling', () => {
+    it('displays error alert when API request fails with 403', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 403,
+        statusText: 'Forbidden',
+        json: jest.fn().mockResolvedValue({}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('You do not have permission to perform this action.')
+        ).toBeInTheDocument();
+      });
+
+      expect(mockOnWorkshopUpdate).not.toHaveBeenCalled();
+    });
+
+    it('displays error alert when API request fails with 404', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 404,
+        statusText: 'Not Found',
+        json: jest.fn().mockResolvedValue({}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(screen.getByText('Workshop not found.')).toBeInTheDocument();
+      });
+    });
+
+    it('displays error alert when API request fails with 500', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 500,
+        statusText: 'Internal Server Error',
+        json: jest.fn().mockResolvedValue({}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('Server error occurred. Please try again later.')
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('displays custom error message from API response', async () => {
+      const customErrorMessage = 'Custom error from server';
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 400,
+        statusText: 'Bad Request',
+        json: jest.fn().mockResolvedValue({error: customErrorMessage}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(screen.getByText(customErrorMessage)).toBeInTheDocument();
+      });
+    });
+
+    it('displays joined error messages from errors array in API response', async () => {
+      const errorMessages = ['First error message', 'Second error message'];
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 400,
+        statusText: 'Bad Request',
+        json: jest.fn().mockResolvedValue({errors: errorMessages}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('First error message, Second error message')
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('displays unknown error when fetch throws', async () => {
+      mockFetch.mockRejectedValueOnce(new Error('Network error'));
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('An unknown error occurred. Please try again.')
+        ).toBeInTheDocument();
+      });
+    });
+
+    it('allows user to dismiss error alert', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 403,
+        statusText: 'Forbidden',
+        json: jest.fn().mockResolvedValue({}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('You do not have permission to perform this action.')
+        ).toBeInTheDocument();
+      });
+
+      const dismissButton = screen.getByLabelText('Dismiss error');
+      await user.click(dismissButton);
+
+      expect(
+        screen.queryByText('You do not have permission to perform this action.')
+      ).not.toBeInTheDocument();
+    });
+
+    it('clears error when opening a new dialog', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 403,
+        statusText: 'Forbidden',
+        json: jest.fn().mockResolvedValue({}),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      // First, trigger an error
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('You do not have permission to perform this action.')
+        ).toBeInTheDocument();
+      });
+
+      // Now click the start button again to open a new dialog
+      const startButtonAgain = screen.getByText('Start Workshop');
+      await user.click(startButtonAgain);
+
+      // Error should be cleared
+      expect(
+        screen.queryByText('You do not have permission to perform this action.')
+      ).not.toBeInTheDocument();
+
+      // Dialog should be open
+      expect(screen.getByText('Start Workshop?')).toBeInTheDocument();
+    });
+
+    it('displays default error message when response parsing fails', async () => {
+      mockFetch.mockResolvedValueOnce({
+        ok: false,
+        status: 400,
+        statusText: 'Bad Request',
+        json: jest.fn().mockRejectedValue(new Error('JSON parse error')),
+      } as unknown as Response);
+
+      renderDefault(createTestWorkshop({state: 'Not Started'}));
+
+      const startButton = screen.getByText('Start Workshop');
+      await user.click(startButton);
+
+      const confirmButton = screen.getAllByRole('button', {
+        name: 'Start Workshop',
+      })[1];
+
+      await act(async () => {
+        await user.click(confirmButton);
+      });
+
+      await waitFor(() => {
+        expect(
+          screen.getByText('An unknown error occurred. Please try again.')
+        ).toBeInTheDocument();
       });
     });
   });
