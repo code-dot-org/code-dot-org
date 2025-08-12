@@ -16,7 +16,7 @@ const PredictQuestionRunPrompt: React.FunctionComponent = () => {
   const hasSelected = useAppSelector(state => !!state.predictLevel.response);
   const isLocked = useAppSelector(isPredictAnswerLocked);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  if (appName === 'weblab2') {
+  if (appName === 'weblab2' && !isLocked) {
     return null;
   }
   if (hasSelected && !isLocked) {

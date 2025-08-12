@@ -22,7 +22,8 @@
       "multipleChoiceOptions": [
         "No change will occur.",
         "'Hello World!' will be displayed.",
-        "'Good night!' will be displayed."
+        "'Good night!' will be displayed.",
+        "An image will apear."
       ],
       "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
@@ -54,6 +55,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-08-11T21:32:13.890+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 7\\\"\"],\"cloned_from\":\"Allthethings Weblab2 7\"},{\"changed_at\":\"2025-08-11 21:33:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:35:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:37:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:12:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:19:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-08-11T21:32:13.890+00:00\",\"changed\":[\"cloned from \\\"Allthethings Weblab2 7\\\"\"],\"cloned_from\":\"Allthethings Weblab2 7\"},{\"changed_at\":\"2025-08-11 21:33:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:35:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 21:37:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:12:56 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-11 22:19:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-08-12 02:48:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
