@@ -95,6 +95,8 @@ const AccuracyCheck: React.FC<{
     setEvaluationPending(false);
   };
 
+  // TODO: This function will need to updated to determine
+  // whether we're asking for a skill-based evaluation or not.
   const evaluateStudentWork = async (example: ExampleAnswer) => {
     const aiResponse = await evaluationFromOpenAI(
       example.studentWork,

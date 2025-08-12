@@ -12,10 +12,10 @@ import {UserLevelSkillEvaluation} from './types';
 export interface StudentAnswer {
   studentId: number;
   studentDisplayName: string;
-  studentWork: string | Record<string, string>;
+  studentWork: string;
+  updatedAt?: string;
   codeVersion?: string;
   projectId?: string;
-  updatedAt?: string;
 }
 
 export interface AIResponse {
@@ -37,7 +37,28 @@ export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {
   id: number;
 }
 
-export async function evaluateStudentWorkOverall(
+export async function evaluateFreeResponse(
+  studentAnswer: StudentAnswer,
+  levelId: number,
+  unitId: number
+): Promise<AIResponse> {
+  return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
+}
+
+export async function evaluateStudentCode(
+  studentAnswer: StudentAnswer,
+  levelId: number,
+  unitId: number,
+  evaluateSkills?: boolean
+): Promise<AIResponse> {
+  if (evaluateSkills) {
+    return evaluateStudentWorkSkills(studentAnswer, levelId, unitId);
+  } else {
+    return evaluateStudentWorkOverall(studentAnswer, levelId, unitId);
+  }
+}
+
+async function evaluateStudentWorkOverall(
   studentWorkSample: StudentAnswer,
   levelId: number,
   unitId: number
@@ -62,8 +83,7 @@ export async function evaluateStudentWorkOverall(
   return parsedResponse;
 }
 
-export async function evaluateStudentWorkSkills(
-  skillEvaluations: UserLevelSkillEvaluation[],
+async function evaluateStudentWorkSkills(
   studentWorkSample: StudentAnswer,
   levelId: number,
   unitId: number
@@ -77,6 +97,8 @@ export async function evaluateStudentWorkSkills(
   let parsedResponse;
   if (response?.content) {
     parsedResponse = JSON.parse(response?.content);
+    const skillEvaluations: UserLevelSkillEvaluation[] =
+      parsedResponse.skillEvaluations || [];
     await logUserLevelSkillEvaluations(
       skillEvaluations,
       studentWorkSample,
@@ -111,6 +133,8 @@ export async function summarizeEvaluations(
 }
 
 const EVALUATE_URL = '/openai/evaluate';
+// TODO: We'll need to write code to handle this end point
+// which will return a skill-based evaluation.
 const EVALUATE_SKILL_URL = '/openai/evaluate_skill';
 
 type ValueOf<T> = T[keyof T];
