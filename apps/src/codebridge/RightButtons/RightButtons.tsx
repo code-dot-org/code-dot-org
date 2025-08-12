@@ -3,6 +3,7 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
+import ConsoleManager from '@codebridge/Console/ConsoleManager';
 import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import React, {useEffect, useState} from 'react';
 
@@ -14,13 +15,11 @@ import commonI18n from '@cdo/locale';
 import {useCodebridgeContext} from '../codebridgeContext';
 import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
-import ConsoleManager from './ConsoleManager';
-
 import moduleStyles from './right-buttons.module.scss';
 
 interface RightButtonsProps {
-  clearOutput: () => void;
-  consoleManager: ConsoleManager | null;
+  clearOutput?: () => void;
+  consoleManager?: ConsoleManager | null;
 }
 
 const tooltipProps: TooltipProps = {
@@ -35,6 +34,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   consoleManager,
 }) => {
   const {levelProperties} = useCodebridgeContext();
+  const {appName} = levelProperties;
   const isWidgetView = levelProperties.widgetView;
   const widgetViewAllowShowCode = levelProperties.widgetViewAllowShowCode;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
@@ -82,18 +82,20 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           onClick={onViewCodeToggle}
         />
       )}
-      <WithTooltip tooltipProps={tooltipProps}>
-        <Button
-          isIconOnly
-          icon={{iconStyle: 'solid', iconName: 'eraser'}}
-          ariaLabel={codebridgeI18n.clearConsole()}
-          onClick={clearOutput}
-          size={'xs'}
-          type={'tertiary'}
-          disabled={isClearButtonDisabled}
-          color={'black'}
-        />
-      </WithTooltip>
+      {appName === 'pythonlab' && (
+        <WithTooltip tooltipProps={tooltipProps}>
+          <Button
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: 'eraser'}}
+            ariaLabel={codebridgeI18n.clearConsole()}
+            onClick={clearOutput}
+            size={'xs'}
+            type={'tertiary'}
+            disabled={isClearButtonDisabled}
+            color={'black'}
+          />
+        </WithTooltip>
+      )}
       {isWidgetView && !widgetViewShowCode && (
         <SettingsButton settings={settings} />
       )}

@@ -8,6 +8,7 @@ module Api::V1::Pd
       @summer_post_survey = create(:foorm_form_summer_post_survey)
       @summer_pre_survey = create(:foorm_form_summer_pre_survey)
       @csf_intro_post_survey = create(:foorm_form_csf_intro_post_survey)
+      @build_your_own_workshop_post_survey = create(:foorm_form_build_your_own_workshop_post_survey)
     end
 
     setup do
@@ -19,6 +20,7 @@ module Api::V1::Pd
       @summer_post_survey.delete
       @summer_pre_survey.delete
       @csf_intro_post_survey.delete
+      @build_your_own_workshop_post_survey.delete
     end
 
     test 'get generic survey report correctly' do
@@ -335,6 +337,198 @@ module Api::V1::Pd
         pd_workshop_id: @workshop.id,
         foorm_submission_id: submission.id
 )
+    end
+
+    # Tests for the new workshop_survey_summary endpoint
+    test 'get workshop survey summary correctly' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Verify top-level structure
+      assert response.key?(:course_name), "Missing course_name"
+      assert response.key?(:facilitators), "Missing facilitators"
+      assert response.key?(:total_responses), "Missing total_responses"
+      assert response.key?(:categories), "Missing categories"
+
+      # Verify categorized structure
+      categories = response[:categories]
+      expected_categories = [:implementation, :engagement, :logistics, :facilitators, :other]
+      expected_categories.each do |category|
+        assert categories.key?(category), "Missing category: #{category}"
+      end
+
+      # Verify questions are categorized properly
+      refute_empty categories[:engagement][:questions], "Engagement category should have questions"
+
+      # Verify response structure for likert questions
+      likert_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'likert'}
+      assert likert_question.key?(:question_name)
+      assert likert_question.key?(:question_text)
+      assert likert_question.key?(:question_type)
+      assert likert_question.key?(:responses)
+      assert likert_question[:responses][:weighted_score].is_a?(Integer)
+      assert likert_question[:responses][:agreement_percentage].is_a?(Integer)
+      assert likert_question[:responses][:total_responses].is_a?(Integer)
+      assert likert_question[:responses].key?(:breakdown)
+
+      # Verify response structure for promoter questions
+      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'promoter'}
+      assert promoter_question.key?(:question_name)
+      assert promoter_question.key?(:question_text)
+      assert promoter_question.key?(:question_type)
+      assert promoter_question.key?(:responses)
+      assert promoter_question[:responses][:promoter_percentage].is_a?(Integer)
+      assert promoter_question[:responses][:total_responses].is_a?(Integer)
+      assert promoter_question[:responses].key?(:breakdown)
+
+      # Verify response structure for multi select questions
+      multi_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'multiSelect'}
+      assert multi_select_question.key?(:question_name)
+      assert multi_select_question.key?(:question_text)
+      assert multi_select_question.key?(:question_type)
+      assert multi_select_question.key?(:responses)
+      assert multi_select_question[:responses][:total_respondents].is_a?(Integer)
+      assert multi_select_question[:responses].key?(:breakdown)
+
+      # Verify response structure for single select questions that are not likert
+      single_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'singleSelect' && !q[:responses].key?(:weighted_score)}
+      assert single_select_question.key?(:question_name)
+      assert single_select_question.key?(:question_text)
+      assert single_select_question.key?(:question_type)
+      assert single_select_question.key?(:responses)
+      assert single_select_question[:responses][:total_responses].is_a?(Integer)
+      assert single_select_question[:responses].key?(:breakdown)
+
+      # Verify response structure for text questions
+      text_question = categories[:other][:questions].find {|q| q[:question_type] == 'text'}
+      assert text_question.key?(:question_name)
+      assert text_question.key?(:question_text)
+      assert text_question.key?(:question_type)
+      assert text_question.key?(:responses)
+      assert text_question[:responses][:total_responses].is_a?(Integer)
+      assert text_question[:responses][:responses].is_a?(Array)
+      assert text_question[:responses][:responses].all?(String)
+    end
+
+    test 'workshop survey summary returns unauthorized for unauthorized users' do
+      generic_teacher = create(:teacher)
+      other_facilitator = create(:facilitator)
+      program_manager = create(:program_manager)
+      workshop_organizer = create(:workshop_organizer)
+      byo_workshop = create(:byo_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      )
+      this_facilitator = byo_workshop.facilitators[0]
+
+      expected_authorization = [
+        {user: this_facilitator, expected_response: :success, type: "facilitator for this workshop"},
+        {user: program_manager, expected_response: :success, type: "program manager"},
+        {user: workshop_organizer, expected_response: :success, type: "workshop organizer"},
+        {user: @workshop_admin, expected_response: :success, type: "workshop admin"},
+        {user: generic_teacher, expected_response: :unauthorized, type: "teacher"},
+        {user: other_facilitator, expected_response: :unauthorized, type: "other facilitator"}
+      ]
+
+      expected_authorization.each do |data|
+        sign_in data[:user]
+        get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+        assert_response data[:expected_response], "#{data[:type]} had an unexpected result"
+        sign_out data[:user]
+      end
+    end
+
+    test 'workshop survey summary filters facilitator data if facilitator is signed in' do
+      csf_workshop = build(:csf_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator), create(:facilitator)]
+      )
+      csf_workshop.save(validate: false)
+      facilitator_1 = csf_workshop.facilitators[0]
+      facilitator_2 = csf_workshop.facilitators[1]
+      create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
+
+      # csf_workshop has two facilitators, sign in as facilitator_1
+      sign_in facilitator_1
+      get :workshop_survey_summary, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      facilitator_1_id = facilitator_1.id.to_s
+      facilitator_2_id = facilitator_2.id.to_s
+
+      # Verify facilitator category structure in categories
+      categories = response[:categories]
+      assert categories[:facilitators].key?(facilitator_1_id.to_sym), "Should have data for facilitator 1"
+      refute categories[:facilitators].key?(facilitator_2_id.to_sym), "Should not have data for facilitator 2"
+
+      # Verify facilitator 1 has questions
+      refute_empty categories[:facilitators][facilitator_1_id.to_sym][:questions], "Facilitator 1 should have questions"
+      assert_equal facilitator_1.name, categories[:facilitators][facilitator_1_id.to_sym][:name]
+    end
+
+    test 'workshop survey summary handles matrix questions by category' do
+      sign_in @workshop_admin
+      # Create a workshop with matrix questions that should be split by category
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Matrix questions should be split into individual questions by category
+      # Verify that we have questions in implementation and engagement categories
+      categories = response[:categories]
+      implementation_questions = categories[:implementation][:questions]
+      engagement_questions = categories[:engagement][:questions]
+      refute_empty implementation_questions, "Should have implementation questions from matrix rows"
+      refute_empty engagement_questions, "Should have engagement questions from matrix rows"
+
+      # Verify matrix row questions have proper structure
+      implementation_matrix_question = implementation_questions.find {|q| q[:responses].key?(:weighted_score)}
+      assert implementation_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert implementation_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+
+      engagement_matrix_question = engagement_questions.find {|q| q[:responses].key?(:weighted_score)}
+      assert engagement_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert engagement_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+    end
+
+    test 'workshop survey summary handles workshop without survey responses' do
+      sign_in @workshop_admin
+      empty_workshop = create(:byo_workshop)
+
+      get :workshop_survey_summary, params: {workshop_id: empty_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Should still have category structure even with no data
+      categories = response[:categories]
+      # When there's no survey data, only core categories should be present
+      expected_categories = [:facilitators, :other]
+      expected_categories.each do |category|
+        assert categories.key?(category), "Missing category: #{category}"
+        if category == :facilitators
+          assert_equal({}, categories[category], "Facilitators should be empty hash when no facilitators assigned")
+        else
+          assert_equal([], categories[category][:questions], "#{category} should have empty questions array")
+        end
+      end
+
+      categories.keys.each do |category|
+        assert expected_categories.include?(category), "Unexpected category: #{category}"
+      end
     end
   end
 end

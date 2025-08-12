@@ -87,21 +87,27 @@ opt_parser = OptionParser.new do |opts|
 
   opts.on(
     '--production_domain_name DOMAIN',
-    String,
     "Fully qualified production domain name for this site",
     "(e.g. 'hourofcode.org' for production deployments)",
     "Only used when environment_type is 'production'"
   ) do |domain|
-    options[:production_domain_name] = domain
+    # To simplify the bash logic, GitHub Actions always attempts to send this argument, even when the GitHub Environment
+    # `PRODUCTION_DOMAIN_NAME` does not exist or is empty. OptionsParser with String type interprets an empty string
+    # value as an invalid argument, so we remove the String type constraint and set this to `nil` when the supplied
+    # argument was an empty string.
+    options[:production_domain_name] = (domain.nil? || domain.empty?) ? nil : domain
   end
 
   opts.on(
     '--production_hosted_zone_id ID',
-    String,
     "AWS Route 53 Hosted Zone ID for the production domain",
     "Required when production_domain_name is specified"
   ) do |id|
-    options[:production_hosted_zone_id] = id
+    # To simplify the bash logic, GitHub Actions always attempts to send this argument, even when the GitHub Environment
+    # Secret `PRODUCTION_HOSTED_ZONE_ID` does not exist or is empty. OptionsParser with String type interprets an empty
+    # string value as an invalid argument, so we remove the String type constraint and set this to `nil` when the
+    # supplied argument was an empty string.
+    options[:production_hosted_zone_id] = (id.nil? || id.empty?) ? nil : id
   end
 
   opts.on(

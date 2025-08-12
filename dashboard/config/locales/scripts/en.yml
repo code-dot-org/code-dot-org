@@ -25049,3 +25049,26 @@ en:
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           student_description: Learn how chatbots and large-language models work behind the scenes!
+        ai-powered-threats-and-defenses-pilot-2025:
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: End of Unit Assessment
+            lesson-3:
+              name: End of Unit Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment and Survey
+          name: ai-powered-threats-and-defenses-pilot-2025
+          title: "[PILOT] AI-Powered Threats and Defenses"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

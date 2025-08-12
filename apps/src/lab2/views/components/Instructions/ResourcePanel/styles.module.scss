@@ -50,9 +50,12 @@
   opacity: 1;
   flex-direction: column;
   flex: 1;
-  // Space for absolutely positioned footer.
-  // Remove when footer buttons are moved to sidebar.
-  margin-bottom: 45px;
+
+  &.footerSpacing {
+    // Space for absolutely positioned footer.
+    // Remove when footer buttons are moved to sidebar.
+    margin-bottom: 45px;
+  }
 }
 
 .panelContent {

@@ -28,9 +28,13 @@ const theme = createTheme({
     divider: COLORS.black,
     common: {
       black: COLORS.black,
+      white: COLORS.white,
     },
     background: {
       default: COLORS.backgroundPrimary,
+    },
+    grey: {
+      200: COLORS.grey200,
     },
   },
   components: STYLE_OVERRIDES,
