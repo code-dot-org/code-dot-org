@@ -97,7 +97,7 @@ class CourseVersion < ApplicationRecord
       course_version.published_state = content_root.published_state
     else
       # If content_root is not a UnitGroup, then we cannot create a CourseVersion.
-      return nil
+      raise "cannot create CourseVersion for content root #{content_root.name} that is not a UnitGroup"
     end
 
     # Check if we should prevent saving the new course version:
