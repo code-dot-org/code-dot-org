@@ -13,7 +13,7 @@ name: unit
 clone:
   disable: true
 
-services:
+services: &ci-tests-redis
   - name: ci-tests-redis
     image: redis
     ports:
@@ -121,11 +121,7 @@ name: ui
 clone:
   disable: true
 
-services:
-  - name: ci-tests-redis
-    image: redis
-    ports:
-      - 6379
+services: *ci-tests-redis
 
 steps:
   - name: bin/drone/shell
