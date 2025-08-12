@@ -202,7 +202,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                       size="xs"
                       openInNewTab
                       aria-label="Open studio page in new tab"
-                      href={window.origin}
+                      href={'/'}
                     >
                       {window.origin}
                     </Link>
@@ -221,7 +221,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                       size="xs"
                       openInNewTab
                       aria-label="Open enrollment page in new tab"
-                      href={`${window.origin}/professional-learning/workshops/${workshop.id}`}
+                      href={`/professional-learning/workshops/${workshop.id}`}
                     >
                       {`${window.origin}/professional-learning/workshops/${workshop.id}`}
                     </Link>
@@ -241,7 +241,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                       size="xs"
                       openInNewTab
                       aria-label="Open enrollment page in new tab"
-                      href={`${window.origin}/professional-learning/workshops/${workshop.id}`}
+                      href={`/professional-learning/workshops/${workshop.id}`}
                     >
                       {`${window.origin}/professional-learning/workshops/${workshop.id}`}
                     </Link>
