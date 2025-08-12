@@ -13,8 +13,3 @@ require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 # environments like staging/prod/testing raise concerns with clearing
 # the tmp/cache folder.
 require 'bootsnap/setup' if Gem.loaded_specs.key? 'bootsnap'
-
-# Set the default test pattern for Rails test tasks to run the main app and engine tests by default.
-# This is used by `rake test` and `rails test` commands.
-# @see https://github.com/rails/rails/blob/v6.1.7.7/railties/lib/rails/test_unit/runner.rb#L81
-ENV['DEFAULT_TEST'] = "{test,engines/*/test}/**/*_test.rb"

@@ -213,6 +213,24 @@ namespace :test do
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
+  timed_task_with_logging :dashboard_hoc_legacy_engine_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  timed_task_with_logging :dashboard_marketing_engine_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
+    TestRunUtils.run_dashboard_marketing_engine_tests
+    ENV.delete 'TEST_ENV_NUMBER'
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
   timed_task_with_logging :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
@@ -254,6 +272,8 @@ namespace :test do
     :pegasus_ci,
     :dashboard_ci,
     :dashboard_legacy_ci,
+    :dashboard_hoc_legacy_engine_ci,
+    :dashboard_marketing_engine_ci,
     :lib_ci,
     :bin_ci,
     :ui_live
