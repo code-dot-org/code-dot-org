@@ -3,7 +3,7 @@
 HocLegacy::Engine.routes.draw do
   resources :tutorials, path: :hour, param: :short_code, only: %i[show]
 
-  scope '/api/hour', controller: :tutorials do
+  scope HocLegacy::API_ROOT_PATH, controller: :tutorials do
     get '/begin/:code', action: :begin
     get '/begin_:code.png', action: :begin_pixel
 

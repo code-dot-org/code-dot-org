@@ -24,8 +24,7 @@ module Rack
         # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
         ::OmniAuth.config.path_prefix, # e.g. `/users/auth`
         # Exclude HoC legacy API routes from Global Edition scope.
-        '/hour/',
-        '/api/hour/',
+        *(defined?(HocLegacy::Engine) ? [HocLegacy::A_ROOT_PATH, '/hour/'] : []),
       ].compact.freeze
 
       attr_reader :app, :env

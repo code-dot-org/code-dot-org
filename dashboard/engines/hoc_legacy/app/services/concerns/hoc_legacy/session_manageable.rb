@@ -29,7 +29,7 @@ module HocLegacy
         {
           value: row[:session],
           domain: HOC_COOKIES_DOMAIN,
-          path: File.join(request.script_name, HOC_COOKIES_PATH),
+          path: File.join(request.script_name, API_ROOT_PATH),
         }
       )
     end

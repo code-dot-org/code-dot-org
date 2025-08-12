@@ -339,7 +339,7 @@ class HttpCache
         dashboard: {
           behaviors: [
             {
-              path: '/api/hour/*',
+              path: "#{HocLegacy::API_ROOT_PATH}*",
               headers: ALLOWLISTED_HEADERS,
               # Allow the company cookie to be read and set to track company users for tutorials.
               cookies: allowlisted_cookies + ['company']
