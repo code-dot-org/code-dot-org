@@ -1094,7 +1094,7 @@ ActiveRecord::Schema.define(version: 2025_08_06_211348) do
     t.string "notification_type"
     t.datetime "read_at"
     t.boolean "is_dismissed", default: false, null: false
-    t.string "link_url"
+    t.json "href_links"
     t.json "ai_prompts"
     t.string "icon_name"
     t.datetime "expires_at"

@@ -21,8 +21,6 @@ class NotificationsController < ApplicationController
     end
 
     notifications = current_user.notifications.where(id: notification_ids)
-    found_ids = notifications.pluck(:id)
-    missing_ids = notification_ids.map(&:to_i) - found_ids
 
     notifications.where(read_at: nil).update_all(read_at: Time.current)
 
@@ -31,11 +29,6 @@ class NotificationsController < ApplicationController
       message: "#{notifications.count} notification(s) marked as read",
       marked_count: notifications.count,
     }
-
-    if missing_ids.any?
-      response_data[:missing_ids] = missing_ids
-      response_data[:message] += ", (#{missing_ids.length} not found)"
-    end
 
     render json: response_data, status: :ok
   end

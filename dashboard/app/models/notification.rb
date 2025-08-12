@@ -10,7 +10,7 @@
 #  notification_type :string(255)
 #  read_at           :datetime
 #  is_dismissed      :boolean          default(FALSE), not null
-#  link_url          :string(255)
+#  href_links        :json
 #  ai_prompts        :json
 #  icon_name         :string(255)
 #  expires_at        :datetime
