@@ -13,15 +13,14 @@ name: unit
 clone:
   disable: true
 
-services: &services
+services:
   - name: ci-tests-redis
     image: redis
     ports:
       - 6379
 
 steps:
-  - &bin-drone-shell
-    name: bin/drone/shell
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
       - set +x
@@ -33,7 +32,7 @@ steps:
 
         Running on hostname: $hostname
         
-        To "ssh" into this drone instance, wait until the relevant '*-tests' step starts and run:
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
         bin/drone/shell $hostname
 
         You can also open a VSCode tunnel into drone to edit live:
@@ -41,8 +40,7 @@ steps:
         EOF
 
   # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
-  - &get-cached-staging-build
-    name: get-cached-staging-build
+  - name: get-cached-staging-build
     image: plugins/s3-cache
     volumes:
       # Even files cached with absolute paths will be restored into the
@@ -56,8 +54,7 @@ steps:
       debug: true
       pull: true
 
-  - &checkout
-    name: checkout
+  - name: checkout
     image: bitnami/git
     commands:
       - git lfs install --skip-repo
@@ -107,7 +104,7 @@ volumes:
   - name: rbenv
     temp: {}
 
-trigger: &trigger
+trigger:
   branch:
     exclude:
       - "production"
@@ -124,17 +121,68 @@ name: ui
 clone:
   disable: true
 
-services: *services
+services:
+  - name: ci-tests-redis
+    image: redis
+    ports:
+      - 6379
 
 steps:
-  - *bin-drone-shell
-  - <<: *get-cached-staging-build
+  - name: bin/drone/shell
+    image: curlimages/curl
+    commands:
+      - set +x
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
+
+  # We cache a clone of staging in the `cache-staging-build-artifacts` pipeline
+  - name: get-cached-staging-build
+    image: plugins/s3-cache
     volumes:
+      # Even files cached with absolute paths will be restored into the
+      # workdir; so for this step, we mount the relevant volumes there, too.
       - name: rbenv
         path: /drone/src/home/ci/.rbenv
       - name: mysql
         path: /drone/src/var/lib/mysql
-  - *checkout
+    settings:
+      filename: cache-staging-ci-build.tar.gz
+      endpoint: s3://cdo-drone
+      restore: true
+      debug: true
+      pull: true
+
+  - name: checkout
+    image: bitnami/git
+    commands:
+      - git lfs install --skip-repo
+      # We should be in a cached git repo, but clone if the cache failed
+      - "[ -d .git ] || (echo 'get-cached-staging-build failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
+      # Checkout our source branch (the PR's branch).
+      - git fetch origin $DRONE_SOURCE_BRANCH
+      - git checkout $DRONE_SOURCE_BRANCH
+      - git pull
+      - git reset --hard $DRONE_COMMIT
+      # Also fetch the target branch (usually staging for pull requests). We
+      # need this for determining which tests to run based on changed files.
+      - git remote set-branches --add origin $DRONE_TARGET_BRANCH
+      - git fetch --depth 100 origin $DRONE_TARGET_BRANCH
+      # Merge so we're up-to-date with the target before running tests.
+      - git config user.name "Drone"
+      - git config user.email "drone-fake-user@code.org"
+      - git merge origin/$DRONE_TARGET_BRANCH
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -180,7 +228,14 @@ volumes:
   - name: mysql
     temp: {}
 
-trigger: *trigger
+trigger:
+  branch:
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
+  event:
+    - pull_request
 
 ---
 # On every push to staging, run a build which will prepare the environment to
