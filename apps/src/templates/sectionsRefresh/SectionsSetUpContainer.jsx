@@ -364,6 +364,7 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO-AITUTOR: can we allow this for any course that has a unit with Unit.has_ai_tutor_level?
   // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
   // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
   const aiTutorAllowedForCourse = section =>

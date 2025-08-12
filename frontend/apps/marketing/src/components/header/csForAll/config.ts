@@ -23,7 +23,7 @@ const SHARED_LINKS = {
     label: 'Donate',
   },
   GET_INVOLVED: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Get Involved',
   },
   HOME: {
@@ -67,7 +67,7 @@ const SHARED_LINKS = {
     label: 'Unlock8',
   },
   UNLOCK8_PETITION: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Unlock8 Petition',
   },
 } as const;
@@ -121,10 +121,7 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
 
 // Main Menu News & Resources Dropdown Links
 export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [
-    createLinkItem(SHARED_LINKS.ABOUT),
-    createLinkItem(SHARED_LINKS.NEWS),
-  ],
+  linkList: [createLinkItem(SHARED_LINKS.NEWS)],
 };
 
 // Main Menu Desktop Configuration

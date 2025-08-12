@@ -2,27 +2,27 @@ require 'test_helper'
 
 class ProgrammingExpressionTest < ActiveSupport::TestCase
   test "can create programming expression" do
-    programming_expression = create :programming_expression
+    programming_expression = create(:programming_expression)
     assert programming_expression.name
     assert programming_expression.key
   end
 
   test "programming expression can be added to a lesson" do
-    lesson = create :lesson
-    programming_expression = create :programming_expression, lessons: [lesson]
+    lesson = create(:lesson)
+    programming_expression = create(:programming_expression, lessons: [lesson])
     assert_equal 1, programming_expression.lessons.length
     assert_equal 1, lesson.programming_expressions.length
   end
 
   test 'programming expression in lesson cannot be destroyed' do
-    lesson = create :lesson
-    programming_expression = create :programming_expression, lessons: [lesson]
+    lesson = create(:lesson)
+    programming_expression = create(:programming_expression, lessons: [lesson])
     refute programming_expression.destroy
   end
 
   class KeyConstraintTests < ActiveSupport::TestCase
     setup do
-      @programming_environment = create :programming_environment
+      @programming_environment = create(:programming_environment)
     end
 
     test "programming expression key cannot be blank" do
@@ -50,7 +50,7 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
     end
 
     test "programming expression key uniqueness ignores casing" do
-      create :programming_expression, key: 'myBlock', programming_environment: @programming_environment
+      create(:programming_expression, key: 'myBlock', programming_environment: @programming_environment)
       assert_raises ActiveRecord::RecordInvalid do
         ProgrammingExpression.create!(key: 'myblock', name: 'invalid block', programming_environment_id: @programming_environment.id)
       end
@@ -58,9 +58,9 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed programming expression" do
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
-    exp = create :programming_expression, key: 'myExp', category: 'World', examples: 'myexamples', palette_params: 'some parameters', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF')
+    exp = create(:programming_expression, key: 'myExp', category: 'World', examples: 'myexamples', palette_params: 'some parameters', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id)
     serialization = exp.serialize
     previous_exp = exp.freeze
     exp.destroy!
@@ -74,11 +74,11 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
   end
 
   test "seed_all adds, updates, and removes programming expressions" do
-    programming_environment = create :programming_environment
-    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
-    create :programming_expression, key: 'to_delete', programming_environment: programming_environment, programming_environment_category: category
-    to_update = create :programming_expression, key: 'to_update', name: 'Old Name', programming_environment: programming_environment, programming_environment_category: category
-    to_create = build :programming_expression, key: 'to_create', programming_environment: programming_environment, programming_environment_category: category
+    programming_environment = create(:programming_environment)
+    category = create(:programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF')
+    create(:programming_expression, key: 'to_delete', programming_environment: programming_environment, programming_environment_category: category)
+    to_update = create(:programming_expression, key: 'to_update', name: 'Old Name', programming_environment: programming_environment, programming_environment_category: category)
+    to_create = build(:programming_expression, key: 'to_create', programming_environment: programming_environment, programming_environment_category: category)
 
     Dir.stubs(:glob).returns(["#{programming_environment.name}/#{to_update.key}.json", "#{programming_environment.name}/#{to_create.key}.json"])
 
@@ -104,11 +104,11 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
   end
 
   test 'can clone expression to another programming environment' do
-    original_env = create :programming_environment
-    original_cat = create :programming_environment_category, programming_environment: original_env, name: 'World'
-    original_exp = create :programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips'
-    new_env = create :programming_environment
-    new_cat = create :programming_environment_category, programming_environment: new_env, name: 'World'
+    original_env = create(:programming_environment)
+    original_cat = create(:programming_environment_category, programming_environment: original_env, name: 'World')
+    original_exp = create(:programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips')
+    new_env = create(:programming_environment)
+    new_cat = create(:programming_environment_category, programming_environment: new_env, name: 'World')
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.stubs(:write).once
@@ -121,12 +121,12 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
   end
 
   test 'can clone expression to another programming environment and specify category' do
-    original_env = create :programming_environment
-    original_cat = create :programming_environment_category, programming_environment: original_env, name: 'World'
-    original_exp = create :programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips'
-    new_env = create :programming_environment
-    create :programming_environment_category, programming_environment: new_env, name: 'World'
-    new_cat = create :programming_environment_category, programming_environment: new_env, name: 'Sprites'
+    original_env = create(:programming_environment)
+    original_cat = create(:programming_environment_category, programming_environment: original_env, name: 'World')
+    original_exp = create(:programming_expression, programming_environment: original_env, programming_environment_category: original_cat, content: 'some well written content', tips: 'a long list of tips')
+    new_env = create(:programming_environment)
+    create(:programming_environment_category, programming_environment: new_env, name: 'World')
+    new_cat = create(:programming_environment_category, programming_environment: new_env, name: 'Sprites')
 
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     File.stubs(:write).once

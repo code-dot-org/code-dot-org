@@ -7,16 +7,16 @@ module Pd::Foorm
     self.use_transactional_test_case = true
 
     test 'get_survey_key gets correct survey key' do
-      ws_submission_day_0 = create :pd_workshop_foorm_submission, day: 0
-      ws_submission_day_0_module = create :pd_workshop_foorm_submission, day: 0, workshop_agenda: 'module1'
-      ws_submission_day_0_in_person = create :pd_workshop_foorm_submission, day: 0, workshop_agenda: 'in_person'
+      ws_submission_day_0 = create(:pd_workshop_foorm_submission, day: 0)
+      ws_submission_day_0_module = create(:pd_workshop_foorm_submission, day: 0, workshop_agenda: 'module1')
+      ws_submission_day_0_in_person = create(:pd_workshop_foorm_submission, day: 0, workshop_agenda: 'in_person')
 
-      ws_submission_day_1 = create :pd_workshop_foorm_submission, day: 1
+      ws_submission_day_1 = create(:pd_workshop_foorm_submission, day: 1)
 
-      ws_submission_post = create :pd_workshop_foorm_submission
-      ws_submission_post_module = create :pd_workshop_foorm_submission, workshop_agenda: 'module1_2'
+      ws_submission_post = create(:pd_workshop_foorm_submission)
+      ws_submission_post_module = create(:pd_workshop_foorm_submission, workshop_agenda: 'module1_2')
 
-      ws_submission_in_person = create :pd_workshop_foorm_submission, workshop_agenda: 'in_person'
+      ws_submission_in_person = create(:pd_workshop_foorm_submission, workshop_agenda: 'in_person')
 
       submissions_to_keys = [
         {ws_submission: ws_submission_day_0, expected_key: 'Pre Workshop'},

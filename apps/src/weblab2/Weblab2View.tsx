@@ -30,6 +30,7 @@ const defaultConfig: ConfigType = {
   layoutComponents: {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
+    widget: VerticalLayout,
   },
 };
 

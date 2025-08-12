@@ -33,7 +33,7 @@ export const Primary: Story = {
   },
   play: async ({canvas}) => {
     const separator = canvas.getByRole('separator');
-    expect(separator).toBeInTheDocument();
+    await expect(separator).toBeInTheDocument();
   },
 };
 
@@ -44,13 +44,13 @@ export const Strong: Story = {
   },
   play: async ({canvas}) => {
     const separator = canvas.getByRole('separator');
-    expect(separator).toBeInTheDocument();
+    await expect(separator).toBeInTheDocument();
   },
 };
 
 export const White: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   args: {
     color: 'white',
@@ -58,6 +58,6 @@ export const White: Story = {
   },
   play: async ({canvas}) => {
     const separator = canvas.getByRole('separator');
-    expect(separator).toBeInTheDocument();
+    await expect(separator).toBeInTheDocument();
   },
 };

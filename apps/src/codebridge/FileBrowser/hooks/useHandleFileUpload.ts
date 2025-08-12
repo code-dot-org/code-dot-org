@@ -6,7 +6,10 @@ import {useCallback} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {createNewFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
+import {
+  createNewFileThunk,
+  createNewExternalFileThunk,
+} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -21,7 +24,12 @@ export const useHandleFileUpload = (
 
   const dialogControl = useDialogControl();
   return useCallback(
-    (fileName: string, contents: string, folderIdArg: unknown) => {
+    (
+      fileName: string,
+      contents: string,
+      url?: string,
+      folderIdArg?: unknown
+    ) => {
       const folderId = folderIdArg as FolderId;
 
       const validationError = validateFileName({
@@ -44,7 +52,11 @@ export const useHandleFileUpload = (
         return;
       }
 
-      dispatch(createNewFileThunk({fileName, folderId, contents}));
+      if (url) {
+        dispatch(createNewExternalFileThunk({fileName, folderId, url}));
+      } else {
+        dispatch(createNewFileThunk({fileName, folderId, contents}));
+      }
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FILE, appName, {
         fileName,
       });

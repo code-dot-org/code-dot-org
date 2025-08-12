@@ -918,6 +918,7 @@ class Pd::Workshop < ApplicationRecord
       sessions: sessions,
       location_name: location_name,
       location_address: location_address,
+      time_zone: time_zone,
       on_map: on_map,
       funded: funded,
       virtual: virtual?,

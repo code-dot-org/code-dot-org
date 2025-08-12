@@ -24,7 +24,7 @@ class PasswordsControllerTest < ActionController::TestCase
   end
 
   test "create with valid email says it works" do
-    create :user, email: 'anemail@email.xx'
+    create(:user, email: 'anemail@email.xx')
     post :create, params: {user: {email: 'anemail@email.xx'}}
 
     assert_redirected_to '/users/sign_in'
@@ -36,7 +36,7 @@ class PasswordsControllerTest < ActionController::TestCase
     sign_in create(:admin)
     @request.host = CDO.dashboard_hostname
 
-    create :user, email: 'anemail@email.xx'
+    create(:user, email: 'anemail@email.xx')
     post :create, params: {user: {email: 'anemail@email.xx'}}
 
     assert_redirected_to '/users/password/new'
@@ -49,7 +49,7 @@ class PasswordsControllerTest < ActionController::TestCase
     sign_in create(:admin)
     @request.host = CDO.dashboard_hostname
 
-    user = create :user
+    user = create(:user)
     user.update(username: "test_username")
     user.save
     post :create, params: {user: {username: "test_username"}}
@@ -68,7 +68,7 @@ class PasswordsControllerTest < ActionController::TestCase
     assert_redirected_to '/users/password/new'
     assert_includes(flash[:alert], 'User does not have an email authentication option or does not exist')
 
-    lti_user = create :teacher, :with_lti_auth
+    lti_user = create(:teacher, :with_lti_auth)
     post :create, params: {user: {email: lti_user.email}}
     assert_redirected_to '/users/password/new'
     assert_includes(flash[:alert], 'User does not have an email authentication option or does not exist')

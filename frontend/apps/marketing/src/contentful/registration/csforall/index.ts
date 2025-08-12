@@ -7,6 +7,9 @@ import FullWidthActionBlock, {
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
+import Card, {
+  CardContentfulComponentDefinition,
+} from '@/components/contentful/card';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -109,6 +112,13 @@ const contentfulRegistration = {
     {
       component: PeopleCollection,
       definition: PeopleCollectionContentfulComponentDefinition,
+    },
+    {
+      component: Card,
+      definition: CardContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Divider,

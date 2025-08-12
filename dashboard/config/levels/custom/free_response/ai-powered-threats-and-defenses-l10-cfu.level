@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-08-06T23:30:16.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "display_name": "Check For Understanding",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "long_instructions": "<br/>\r\n\r\n**Do This:** Read through the solution options in the table below. Choose one AI-powered solution you think your school's encrypted messaging app should use. Then, defend your choice using at least one potential benefit and one tradeoff from the chart.\r\n\r\n<br/>\r\n\r\n| **AI-Powered Solution**                                | **Potential Benefits**                                                                    | **Possible Tradeoffs / Risks**                                                            |\r\n| -------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |\r\n| **1. Use AI to flag harmful behavior using metadata**    | - Detects threats early<br>- Helps schools prevent harm<br>- Doesn’t require reading content <br/><br/>| - Could flag innocent conversations<br>- May rely on biased patterns<br>- Lacks full context |\r\n| **2. Let students opt-in or out of metadata scanning**   | - Respects user choice<br>- Builds trust in the system                                       | - Less effective for full protection<br>- Could make policy confusing                        |\r\n| **3. Train AI on local (school-specific) examples**      | - More relevant results<br>- May reduce false flags                                          | - Could reinforce local bias<br>- Still lacks full message content                           |\r\n| **4. Block metadata collection entirely**                | - Maximizes privacy<br>- Reduces misuse risks                                                | - Makes it harder to detect harmful patterns<br>- Could limit school safety tools            |\r\n| **5. Allow AI to flag, but always require human review** | - Adds human judgment<br>- Reduces false alarms                                              | - Slows response time<br>- Requires more staff time/training                                 |\r\n\r\n<br/><br/>"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-08-06 23:51:29 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-06 23:58:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-06 23:58:46 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-08-07 00:00:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

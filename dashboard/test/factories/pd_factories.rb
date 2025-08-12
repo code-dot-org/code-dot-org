@@ -76,7 +76,7 @@ FactoryBot.define do
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
-        survey_hash = build :pd_teachercon_survey_hash
+        survey_hash = build(:pd_teachercon_survey_hash)
 
         Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -166,7 +166,7 @@ FactoryBot.define do
     code {SecureRandom.hex(10)}
 
     trait :from_user do
-      user {create :teacher}
+      user {create(:teacher)}
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
@@ -211,7 +211,7 @@ FactoryBot.define do
       if evaluator.attended
         attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
         attended_sessions.each do |session|
-          create :pd_attendance, session: session, teacher: teacher
+          create(:pd_attendance, session: session, teacher: teacher)
         end
       end
 
@@ -416,7 +416,7 @@ FactoryBot.define do
     association :user, factory: [:teacher, :with_school_info], strategy: :create
     course {'csp'}
     transient do
-      form_data_hash {build :pd_teacher_application_hash_common, course.to_sym}
+      form_data_hash {build(:pd_teacher_application_hash_common, course.to_sym)}
     end
     form_data {form_data_hash.to_json}
 

@@ -90,7 +90,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         data-testid="draggable-test-id"
         id="draggable-id"
         className={
-          showSidebar ? style.aiDiffContainerWide : style.aiDiffContainer
+          showSidebar &&
+          !(!hasCompletedAiDifferentiationWelcome && showWelcomeExperience) //don't use wide container for welcome
+            ? style.aiDiffContainerWide
+            : style.aiDiffContainer
         }
         style={open ? undefined : {display: 'none'}}
       >

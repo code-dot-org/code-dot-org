@@ -39,21 +39,21 @@ export const Playground: Story = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function testLinkMatrix(canvas: any, size: string, color: string) {
+async function testLinkMatrix(canvas: any, size: string, color: string) {
   for (const isLinkExternal of isLinkExternals) {
     for (const removeMarginBottom of removeMarginBottoms) {
       const linkText = `Link | size: ${size} | color: ${color} | external: ${isLinkExternal} | removeMarginBottom: ${removeMarginBottom}`;
       const link = canvas.getByRole('link', {name: linkText});
-      expect(link).toBeInTheDocument();
-      expect(link).toHaveAttribute('href', 'about:blank');
+      await expect(link).toBeInTheDocument();
+      await expect(link).toHaveAttribute('href', 'about:blank');
       if (isLinkExternal) {
-        expect(link).toHaveAttribute('target', '_blank');
-        expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-        expect(link.querySelector('svg')).toBeInTheDocument();
+        await expect(link).toHaveAttribute('target', '_blank');
+        await expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+        await expect(link.querySelector('svg')).toBeInTheDocument();
       } else {
-        expect(link).not.toHaveAttribute('target');
-        expect(link).not.toHaveAttribute('rel');
-        expect(link.querySelector('svg')).not.toBeInTheDocument();
+        await expect(link).not.toHaveAttribute('target');
+        await expect(link).not.toHaveAttribute('rel');
+        await expect(link.querySelector('svg')).not.toBeInTheDocument();
       }
     }
   }
@@ -81,13 +81,13 @@ export const LinkXSPrimary: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'xs', 'primary');
+    await testLinkMatrix(canvas, 'xs', 'primary');
   },
 };
 
 export const LinkXSWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -110,7 +110,7 @@ export const LinkXSWhite: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'xs', 'white');
+    await testLinkMatrix(canvas, 'xs', 'white');
   },
 };
 
@@ -136,13 +136,13 @@ export const LinkSPrimary: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 's', 'primary');
+    await testLinkMatrix(canvas, 's', 'primary');
   },
 };
 
 export const LinkSWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -165,7 +165,7 @@ export const LinkSWhite: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 's', 'white');
+    await testLinkMatrix(canvas, 's', 'white');
   },
 };
 
@@ -191,13 +191,13 @@ export const LinkMPrimary: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'm', 'primary');
+    await testLinkMatrix(canvas, 'm', 'primary');
   },
 };
 
 export const LinkMWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -220,7 +220,7 @@ export const LinkMWhite: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'm', 'white');
+    await testLinkMatrix(canvas, 'm', 'white');
   },
 };
 
@@ -246,13 +246,13 @@ export const LinkLPrimary: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'l', 'primary');
+    await testLinkMatrix(canvas, 'l', 'primary');
   },
 };
 
 export const LinkLWhite: Story = {
   globals: {
-    backgrounds: {value: 'dark'},
+    sectionBackground: 'dark',
   },
   render: () => (
     <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
@@ -275,6 +275,6 @@ export const LinkLWhite: Story = {
     </div>
   ),
   play: async ({canvas}) => {
-    testLinkMatrix(canvas, 'l', 'white');
+    await testLinkMatrix(canvas, 'l', 'white');
   },
 };

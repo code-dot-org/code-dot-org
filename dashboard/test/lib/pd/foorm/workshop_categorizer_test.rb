@@ -120,7 +120,7 @@ module Pd::Foorm
       assert_equal 5, result[:responses][:total_responses]
     end
 
-    test 'create_processed_question handles NPS scale questions' do
+    test 'create_processed_question handles promoter scale questions' do
       question_name = 'promoter_percentage_question'
       question_data = {
         title: 'How likely are you to recommend?',
@@ -134,7 +134,7 @@ module Pd::Foorm
 
       result = WorkshopCategorizer.create_processed_question(question_name, question_data, question_summary)
 
-      assert_equal 'scale', result[:question_type]
+      assert_equal 'promoter', result[:question_type]
       assert result[:responses].key?(:promoter_percentage)
       assert_equal 100, result[:responses][:promoter_percentage] # All responses >= 7
     end
@@ -152,7 +152,7 @@ module Pd::Foorm
 
       result = WorkshopCategorizer.create_processed_question(question_name, question_data, question_summary)
 
-      assert_equal 'scale', result[:question_type]
+      assert_equal 'likert', result[:question_type]
       assert result[:responses].key?(:weighted_score)
       assert result[:responses].key?(:agreement_percentage)
       # All responses are >= 5, so 100% agreement
