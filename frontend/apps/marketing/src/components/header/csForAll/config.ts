@@ -67,7 +67,7 @@ const SHARED_LINKS = {
     label: 'Unlock8',
   },
   UNLOCK8_PETITION: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Unlock8 Petition',
   },
 } as const;
