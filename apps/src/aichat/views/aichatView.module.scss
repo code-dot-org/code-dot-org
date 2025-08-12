@@ -21,7 +21,7 @@ $column-min-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  background: $light_gray_50;
+  background: var(--background-neutral-primary);
 
   .instructionsArea {
     width: 30%;
@@ -58,14 +58,14 @@ $column-min-width: 200px;
 }
 
 .panelContainer {
-  border: 1px $light_gray_200 solid;
+  border: 1px solid var(--borders-neutral-primary);
   border-radius: $border-radius;
   box-sizing: border-box;
-  background: $white;
 }
 
 .panelHeader {
   border-radius: $border-radius $border-radius 0 0;
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .instructions {

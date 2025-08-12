@@ -2,8 +2,8 @@ require 'test_helper'
 
 class BubbleChoiceDslTest < ActiveSupport::TestCase
   setup do
-    create :level, name: 'bubble choice level 1'
-    create :level, name: 'bubble choice level 2'
+    create(:level, name: 'bubble choice level 1')
+    create(:level, name: 'bubble choice level 2')
   end
 
   test 'create then serialize simple level returns original DSL' do

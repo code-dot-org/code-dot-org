@@ -21,6 +21,7 @@ import {
   setProjectSource,
   setViewingOldVersion,
   createNewFile,
+  createNewExternalFile,
   renameFile,
   saveFile,
   setFileType,
@@ -161,6 +162,9 @@ function makeFileOperationThunk<P>(
 }
 // Generate all thunks in one line each
 export const createNewFileThunk = makeFileOperationThunk(createNewFile);
+export const createNewExternalFileThunk = makeFileOperationThunk(
+  createNewExternalFile
+);
 export const renameFileThunk = makeFileOperationThunk(renameFile);
 export const saveFileThunk = makeFileOperationThunk(saveFile);
 export const setFileTypeThunk = makeFileOperationThunk(setFileType);

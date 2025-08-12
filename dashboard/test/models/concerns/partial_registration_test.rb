@@ -9,7 +9,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes does not push empty attributes into the cache' do
-    user = build :user
+    user = build(:user)
     assert user.attributes.values.any?(&:nil?)
 
     PartialRegistration.persist_attributes @session, user
@@ -20,7 +20,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes pushes less than 0.5KB into the cache for a sample user' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     PartialRegistration.persist_attributes @session, user
 
     cache_key = PartialRegistration.cache_key(user)
@@ -39,7 +39,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'in_progress? becomes false if attributes are lost from the cache' do
-    user = build :user
+    user = build(:user)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.delete(PartialRegistration.cache_key(user))
     refute PartialRegistration.in_progress? @session
@@ -80,7 +80,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'new_from_partial_registration raises on a missing cache entry' do
-    user = build :student
+    user = build(:student)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.delete(PartialRegistration.cache_key(user))
 
@@ -91,7 +91,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'new_from_partial_registration raises on a malformed cache entry' do
-    user = build :student
+    user = build(:student)
     PartialRegistration.persist_attributes @session, user
     CDO.shared_cache.write(PartialRegistration.cache_key(user), '{malformed_json:')
 
@@ -128,7 +128,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'round-trip preserves important attributes (email)' do
-    user = build :student
+    user = build(:student)
     refute_nil user.email
     refute_nil user.encrypted_password
     PartialRegistration.persist_attributes @session, user
@@ -145,7 +145,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'persist_attributes expires after TTL' do
-    user = build :student
+    user = build(:student)
     refute_nil user.email
     refute_nil user.encrypted_password
     PartialRegistration.persist_attributes @session, user
@@ -158,7 +158,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'round-trip preserves important attributes (sso)' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     refute_nil user.provider
     refute_nil user.uid
     refute_nil user.oauth_token
@@ -181,7 +181,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'delete removes the partial registration from the session and cache' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     cache_key = PartialRegistration.cache_key user
 
     PartialRegistration.persist_attributes @session, user
@@ -213,7 +213,7 @@ class PartialRegistrationTest < ActiveSupport::TestCase
   end
 
   test 'get_provider returns the provider name when an sso registration is in progress' do
-    user = build :user, :google_sso_provider
+    user = build(:user, :google_sso_provider)
     PartialRegistration.persist_attributes @session, user
     assert_equal user.provider, PartialRegistration.get_provider(@session)
   end

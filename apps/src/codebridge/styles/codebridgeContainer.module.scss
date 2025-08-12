@@ -18,4 +18,11 @@
   ::-webkit-scrollbar-corner {
     background: var(--background-neutral-secondary);
   }
+
+  span, p {
+    // We set this to auto so it will inherit the user-select value from the parent.
+    // When we are resizing, we set user-select to none so that the user does not accidentally
+    // select text while resizing.
+    user-select: auto;
+  }
 }

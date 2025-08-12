@@ -74,6 +74,7 @@ const AIDIFF_CHAT_COMPLETION = 'chat_completion';
 
 interface AiDiffChatProps {
   context: Context;
+  threadMessages?: ChatItem[];
   scriptName?: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
@@ -81,10 +82,12 @@ interface AiDiffChatProps {
   disableEndButtons?: boolean;
   curriculumCourses?: string[];
   threadFetchCallback?: () => void;
+  threadId?: number;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
   context,
+  threadMessages = [],
   scriptName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
@@ -94,6 +97,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   disableEndButtons = false,
   curriculumCourses = [],
   threadFetchCallback = () => {},
+  threadId = 0,
 }) => {
   const reportingData = React.useMemo(() => {
     return {
@@ -106,7 +110,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 
   const [suggestionPage, setSuggestionPage] = useState(0);
 
-  const [threadId, setThreadId] = useState(null);
+  const [localThreadId, setLocalThreadId] = useState(threadId);
 
   const viewAsUserId = useAppSelector(
     state => state.progress?.viewAsUserId || undefined
@@ -120,14 +124,18 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     additionalPrompts.push(DEBUG_THIS_CODE, IMPROVE_THIS_CODE);
   }
 
-  const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
-    {
-      role: Role.ASSISTANT,
-      chatMessageText: initialChatMessage,
-      status: Status.OK,
-    },
-    suggestedPrompts.concat(additionalPrompts),
-  ]);
+  const [messageHistory, setMessageHistory] = useState<ChatItem[]>(
+    threadMessages.length > 0
+      ? threadMessages
+      : [
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialChatMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts.concat(additionalPrompts),
+        ]
+  );
 
   const onMessageSend = (message: string) => {
     const newUserMessage = {
@@ -198,20 +206,20 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     (prompt: string, isPreset: boolean, presetChipText: string | null) => {
       setIsWaitingForResponse(true);
 
-      if (threadId !== null) {
-        sendChatEvent(Role.USER, prompt, isPreset, threadId);
+      if (localThreadId !== 0) {
+        sendChatEvent(Role.USER, prompt, isPreset, localThreadId);
       }
 
       const endpoint =
-        threadId === null
+        localThreadId === 0
           ? `${AIDIFF_THREADS_ENDPOINT}`
-          : `${AIDIFF_THREADS_ENDPOINT}/${threadId}/${AIDIFF_CHAT_COMPLETION}`;
+          : `${AIDIFF_THREADS_ENDPOINT}/${localThreadId}/${AIDIFF_CHAT_COMPLETION}`;
 
       const body = JSON.stringify({
         inputText: prompt,
         isPreset,
         presetChipText,
-        ...(threadId === null ? {context} : {}),
+        ...(localThreadId === 0 ? {context} : {}),
         ...(context.type === AiDiffContext.LEVEL ? {viewAsUserId} : {}),
       });
 
@@ -227,9 +235,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             id: json.message_id,
           };
 
-          // logging here because on the first user message the threadID is null
+          // logging here because on the first user message the threadID is 0
           // we only get a threadID initialized in the response
-          if (threadId === null) {
+          if (localThreadId === 0) {
             threadFetchCallback();
             sendChatEvent(Role.USER, prompt, isPreset, json.thread_id);
           }
@@ -241,7 +249,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             json.thread_id
           );
           if (json.thread_id) {
-            setThreadId(json.thread_id);
+            setLocalThreadId(json.thread_id);
           }
           setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
         })
@@ -252,12 +260,13 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         });
     },
     [
+      localThreadId,
       context,
-      threadId,
       viewAsUserId,
-      chatResponseCallback,
       sendChatEvent,
       threadFetchCallback,
+      setLocalThreadId,
+      chatResponseCallback,
     ]
   );
 

@@ -34,7 +34,7 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, method: :put, user: nil, params: -> {@test_params}, response: :success
 
     test 'Updates user and application_guid upon submit' do
-      principal = create :teacher
+      principal = create(:teacher)
       sign_in principal
 
       assert_creates(PRINCIPAL_APPROVAL_APPLICATION_CLASS) do

@@ -7,19 +7,19 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'returns course offerings by grade level' do
-    elementary_course_version = create :course_version
+    elementary_course_version = create(:course_version)
     elementary_course_version.content_root.update!(published_state: 'stable')
     elementary_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test')
 
-    middle_course_version = create :course_version
+    middle_course_version = create(:course_version)
     middle_course_version.content_root.update!(published_state: 'stable')
     middle_course_version.course_offering.update!(grade_levels: '7,8', curriculum_type: 'Course', header: 'Test')
 
-    high_course_version = create :course_version
+    high_course_version = create(:course_version)
     high_course_version.content_root.update!(published_state: 'stable')
     high_course_version.course_offering.update!(grade_levels: '11', curriculum_type: 'Course', header: 'Test')
 
-    teacher = create :teacher
+    teacher = create(:teacher)
     course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'student')
 
     refute course_offerings[:elementary].blank?
@@ -28,15 +28,15 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'returns HoC course offerings' do
-    elementary_course_version = create :course_version
+    elementary_course_version = create(:course_version)
     elementary_course_version.content_root.update!(published_state: 'stable')
     elementary_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test')
 
-    hoc_course_version = create :course_version
+    hoc_course_version = create(:course_version)
     hoc_course_version.content_root.update!(published_state: 'stable')
     hoc_course_version.course_offering.update!(marketing_initiative: 'HOC', header: 'HoC Test')
 
-    teacher = create :teacher
+    teacher = create(:teacher)
     course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'student')
 
     refute course_offerings[:elementary].blank?
@@ -46,23 +46,23 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'returns PL course offerings when participant type is teacher' do
-    elementary_course_version = create :course_version
+    elementary_course_version = create(:course_version)
     elementary_course_version.content_root.update!(published_state: 'stable')
     elementary_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test')
 
-    hoc_course_version = create :course_version
+    hoc_course_version = create(:course_version)
     hoc_course_version.content_root.update!(published_state: 'stable')
     hoc_course_version.course_offering.update!(marketing_initiative: 'HOC', header: 'HoC Test')
 
-    pl_for_teachers_course_version = create :course_version
+    pl_for_teachers_course_version = create(:course_version)
     pl_for_teachers_course_version.content_root.update!(published_state: 'stable', instructor_audience: 'facilitator', participant_audience: 'teacher')
     pl_for_teachers_course_version.course_offering.update!(header: 'PL Test')
 
-    pl_for_facilitators_course_version = create :course_version
+    pl_for_facilitators_course_version = create(:course_version)
     pl_for_facilitators_course_version.content_root.update!(published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'facilitator')
     pl_for_facilitators_course_version.course_offering.update!(header: 'PL Test')
 
-    teacher = create :facilitator
+    teacher = create(:facilitator)
     course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'teacher')
 
     refute course_offerings[:elementary].blank?
@@ -74,23 +74,23 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'returns PL course offerings when participant type is facilitator' do
-    elementary_course_version = create :course_version
+    elementary_course_version = create(:course_version)
     elementary_course_version.content_root.update!(published_state: 'stable')
     elementary_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test')
 
-    hoc_course_version = create :course_version
+    hoc_course_version = create(:course_version)
     hoc_course_version.content_root.update!(published_state: 'stable')
     hoc_course_version.course_offering.update!(marketing_initiative: 'HOC', header: 'HoC Test')
 
-    pl_for_teachers_course_version = create :course_version
+    pl_for_teachers_course_version = create(:course_version)
     pl_for_teachers_course_version.content_root.update!(published_state: 'stable', instructor_audience: 'facilitator', participant_audience: 'teacher')
     pl_for_teachers_course_version.course_offering.update!(header: 'PL Test')
 
-    pl_for_facilitators_course_version = create :course_version
+    pl_for_facilitators_course_version = create(:course_version)
     pl_for_facilitators_course_version.content_root.update!(published_state: 'stable', instructor_audience: 'universal_instructor', participant_audience: 'facilitator')
     pl_for_facilitators_course_version.course_offering.update!(header: 'PL Test')
 
-    teacher = create :universal_instructor
+    teacher = create(:universal_instructor)
     course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'facilitator')
 
     refute course_offerings[:elementary].blank?
@@ -102,15 +102,15 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'only returns assignable course offerings' do
-    assignable_course_version = create :course_version
+    assignable_course_version = create(:course_version)
     assignable_course_version.content_root.update!(published_state: 'stable')
     assignable_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test')
 
-    unassignable_course_version = create :course_version
+    unassignable_course_version = create(:course_version)
     unassignable_course_version.content_root.update!(published_state: 'stable')
     unassignable_course_version.course_offering.update!(grade_levels: 'K,1,2', curriculum_type: 'Course', header: 'Test', assignable: false)
 
-    teacher = create :teacher
+    teacher = create(:teacher)
     course_offerings = QuickAssignHelper.course_offerings(teacher, I18n.default_locale, 'student')
 
     refute course_offerings[:elementary].blank?
@@ -118,14 +118,14 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'grade level offerings are grouped by curriculum type and header' do
-    course_offering1 = create :course_offering, curriculum_type: 'Course', header: 'Header 2'
-    course_offering2 = create :course_offering, curriculum_type: 'Course', header: 'Header 1'
-    course_offering3 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 1'
+    course_offering1 = create(:course_offering, curriculum_type: 'Course', header: 'Header 2')
+    course_offering2 = create(:course_offering, curriculum_type: 'Course', header: 'Header 1')
+    course_offering3 = create(:course_offering, curriculum_type: 'Standalone Unit', header: 'Header 1')
     # course_offering4 and course_offering5 should be grouped together, with course_offering5 being first in the resulting list.
-    course_offering4 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'Z'
-    course_offering5 = create :course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'B'
+    course_offering4 = create(:course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'Z')
+    course_offering5 = create(:course_offering, curriculum_type: 'Standalone Unit', header: 'Header 2', display_name: 'B')
 
-    teacher = create :teacher
+    teacher = create(:teacher)
     grouped_offerings = QuickAssignHelper.group_grade_level_offerings([course_offering1, course_offering2, course_offering3, course_offering4, course_offering5], teacher, I18n.default_locale)
 
     assert_equal 1, grouped_offerings['Course']['Header 2'].length
@@ -142,12 +142,12 @@ class QuickAssignHelperTest < ActionController::TestCase
   end
 
   test 'HoC course offerings are grouped by header' do
-    course_offering1 = create :course_offering, marketing_initiative: 'HOC', header: 'A Header'
-    course_offering2 = create :course_offering, marketing_initiative: 'HOC', header: 'B Header', display_name: 'Z'
-    course_offering3 = create :course_offering, marketing_initiative: 'HOC', header: 'B Header', display_name: 'A'
-    favorite_course_offering = create :course_offering, marketing_initiative: 'HOC', header: 'Favorites'
+    course_offering1 = create(:course_offering, marketing_initiative: 'HOC', header: 'A Header')
+    course_offering2 = create(:course_offering, marketing_initiative: 'HOC', header: 'B Header', display_name: 'Z')
+    course_offering3 = create(:course_offering, marketing_initiative: 'HOC', header: 'B Header', display_name: 'A')
+    favorite_course_offering = create(:course_offering, marketing_initiative: 'HOC', header: 'Favorites')
 
-    teacher = create :teacher
+    teacher = create(:teacher)
     grouped_offerings = QuickAssignHelper.group_hoc_and_pl_offerings([course_offering1, course_offering2, course_offering3, favorite_course_offering], teacher, I18n.default_locale)
 
     assert_equal 1, grouped_offerings['A Header'].length

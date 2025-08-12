@@ -187,7 +187,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     @file_obj.expects(:upload_file).returns(true)
 
     sign_in create(:levelbuilder)
-    level = create :applab
+    level = create(:applab)
     post :upload, params: {level_name: level.name, files: [@file]}
 
     level.reload
@@ -203,7 +203,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
     sign_in create(:levelbuilder)
-    level = create :applab
+    level = create(:applab)
 
     single_quote_filename = "my-'file'.jpg"
     FileUtils.touch(single_quote_filename)
@@ -241,7 +241,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'destroy: returns no_content if starter asset successfully deleted' do
-    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
 
     sign_in create(:levelbuilder)
     delete :destroy, params: {level_name: level.name, filename: 'my-file', format: 'png'}
@@ -251,7 +251,7 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 
   test 'destroy: returns no_content if starter asset does not exist' do
-    level = create :applab, starter_assets: {'my-file.png' => '123-abc.png'}
+    level = create(:applab, starter_assets: {'my-file.png' => '123-abc.png'})
 
     sign_in create(:levelbuilder)
     delete :destroy, params: {level_name: level.name, filename: 'my-other-file', format: 'png'}
