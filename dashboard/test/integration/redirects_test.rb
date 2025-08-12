@@ -4,8 +4,8 @@ class RedirectsTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
 
   setup_all do
-    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
-    @multi_lesson_unit_group = create :single_unit_course, :stable, unit: @multi_lesson_unit
+    @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    @multi_lesson_unit_group = create(:single_unit_course, :stable, unit: @multi_lesson_unit)
   end
 
   test 'redirect beta' do

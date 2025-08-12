@@ -166,8 +166,8 @@ class CertificateImageTest < ActiveSupport::TestCase
   end
 
   private def create_csf_unit(name)
-    unit = create :unit, name: name
-    unit_group = create :single_unit_course, :stable, unit: unit, name: name
+    unit = create(:unit, name: name)
+    unit_group = create(:single_unit_course, :stable, unit: unit, name: name)
     CourseOffering.add_course_offering(unit_group)
     unit
   end

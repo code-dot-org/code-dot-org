@@ -6,7 +6,7 @@ class FollowersControllerTest < ActionController::TestCase
     @laurel = create(:teacher)
     @laurel_section_1 = create(:section, user: @laurel)
     @laurel_section_2 = create(:section, user: @laurel)
-    unit_group = create :single_unit_course, :stable
+    unit_group = create(:single_unit_course, :stable)
     unit = unit_group.first_unit
     @laurel_section_script = create(:section, user: @laurel, script: unit)
 

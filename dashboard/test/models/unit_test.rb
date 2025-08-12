@@ -190,7 +190,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_script_level uses cache' do
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     script_level = unit.script_levels.first
 
     populate_cache_and_disconnect_db
@@ -228,7 +228,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'level uses cache' do
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     script_level = unit.script_levels.first
     expected_level = script_level.level
 
@@ -239,7 +239,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'lesson hierarchy uses cache' do
-    unit = create :unit, :with_levels
+    unit = create(:unit, :with_levels)
     lesson = unit.lessons.first
     expected_script_level = lesson.script_levels.first
     expected_level = lesson.script_levels.first.levels.first
@@ -717,8 +717,8 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'banner image' do
     assert_nil Unit.find_by_name('flappy').banner_image
-    course1_unit = create :script, name: 'course1', family_name: 'course1'
-    course2_unit = create :script, name: 'course2', family_name: 'course2'
+    course1_unit = create(:script, name: 'course1', family_name: 'course1')
+    course2_unit = create(:script, name: 'course2', family_name: 'course2')
     assert_equal 'banner_course1.jpg', course1_unit.banner_image
     assert_equal 'banner_course2.jpg', course2_unit.banner_image
     assert_nil Unit.find_by_name('csf1').banner_image
