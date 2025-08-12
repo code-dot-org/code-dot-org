@@ -28,5 +28,10 @@ class InactiveUserPurgeMailerTest < ActionMailer::TestCase
       _(body).must_include 'Your account is scheduled for deletion in 30 days due to 3 years of inactivity'
       _(body).must_include 'How to keep your account:'
     end
+
+    it 'includes Sign into button linking to the login page' do
+      _(links_are_complete_urls?(mail)).must_equal true
+      _(body).must_include SharedConstants::EMAIL_LINKS.CDO_SIGN_IN_URL
+    end
   end
 end
