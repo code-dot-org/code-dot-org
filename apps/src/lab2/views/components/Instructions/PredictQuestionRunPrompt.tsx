@@ -15,6 +15,10 @@ import moduleStyles from './predict.module.scss';
 const PredictQuestionRunPrompt: React.FunctionComponent = () => {
   const hasSelected = useAppSelector(state => !!state.predictLevel.response);
   const isLocked = useAppSelector(isPredictAnswerLocked);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  if (appName === 'weblab2') {
+    return null;
+  }
   if (hasSelected && !isLocked) {
     return (
       <div

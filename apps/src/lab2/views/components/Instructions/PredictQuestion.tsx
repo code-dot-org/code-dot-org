@@ -64,6 +64,12 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     }
   };
 
+  const isFreeResponse =
+    predictSettings.questionType === PredictQuestionType.FreeResponse;
+  const hasAnswer = isFreeResponse
+    ? predictResponse.trim().length > 0
+    : predictResponse.length > 0;
+
   return (
     <div className={className}>
       <div className={moduleStyles.predictQuestionContainer}>
@@ -151,7 +157,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           text={commonI18n.submitAnswer()}
           size="s"
           className={moduleStyles.submitButton}
-          disabled={predictAnswerLocked}
+          disabled={predictAnswerLocked || !hasAnswer}
         />
       )}
       <PredictResetButton />
