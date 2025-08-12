@@ -6,6 +6,7 @@
 #  key                :string(255)      not null
 #  display_name       :string(255)      not null
 #  properties         :text(65535)
+#  content_root_type  :string(255)      not null
 #  content_root_id    :integer          not null
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
@@ -14,9 +15,9 @@
 #
 # Indexes
 #
-#  index_course_versions_on_content_root_id      (content_root_id)
-#  index_course_versions_on_course_offering_id   (course_offering_id)
-#  index_course_versions_on_offering_id_and_key  (course_offering_id,key)
+#  index_course_versions_on_content_root_type_and_content_root_id  (content_root_type,content_root_id)
+#  index_course_versions_on_course_offering_id                     (course_offering_id)
+#  index_course_versions_on_offering_id_and_key_and_type           (course_offering_id,key,content_root_type) UNIQUE
 #
 
 class CourseVersion < ApplicationRecord
@@ -27,6 +28,7 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
+  attr_readonly :content_root_type
   attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
@@ -43,12 +45,7 @@ class CourseVersion < ApplicationRecord
     content_root.default_units
   end
 
-  # "Interface" for content_root:
-  #
-  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
-  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
-  #   False for the CSP1-2019 Unit.
-  belongs_to :content_root, class_name: "UnitGroup", optional: true
+  belongs_to :content_root, polymorphic: true, optional: true
 
   alias_attribute :version_year, :key
 
