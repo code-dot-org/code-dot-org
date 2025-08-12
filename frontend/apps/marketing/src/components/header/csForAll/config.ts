@@ -30,10 +30,11 @@ const SHARED_LINKS = {
     href: '/',
     label: 'Home',
   },
-  HOUR_OF_AI: {
-    href: '/hour-of-ai',
-    label: 'Hour of AI',
-  },
+  // TODO - Put back later https://codedotorg.atlassian.net/browse/CMS-998
+  // HOUR_OF_AI: {
+  //   href: '/hour-of-ai',
+  //   label: 'Hour of AI',
+  // },
   ISSUES: {
     href: '/issues',
     label: 'Issues',
@@ -96,7 +97,8 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
   linkList: [
     createLinkItem(SHARED_LINKS.ISSUES, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.TAKE_ACTION, {typography: 'h4'}),
-    createLinkItem(SHARED_LINKS.HOUR_OF_AI, {typography: 'h4'}),
+    // TODO - Put back later https://codedotorg.atlassian.net/browse/CMS-998
+    // createLinkItem(SHARED_LINKS.HOUR_OF_AI, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.DONATE, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.NEWS_AND_RESOURCES, {typography: 'h4'}),
   ],
@@ -128,7 +130,7 @@ export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
 };
 
 // Main Menu Desktop Configuration
-const [issuesLink, takeActionLink, hourOfAiLink, donateLink, newsLink] =
+const [issuesLink, takeActionLink, donateLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
 
 export const MAIN_MENU_DESKTOP_ITEMS = [
@@ -142,10 +144,11 @@ export const MAIN_MENU_DESKTOP_ITEMS = [
     topLevelLink: takeActionLink,
     dropdownConfig: TAKE_ACTION_LINKS,
   },
-  {
-    type: 'button' as const,
-    topLevelLink: hourOfAiLink,
-  },
+  // TODO - Put back later https://codedotorg.atlassian.net/browse/CMS-998
+  // {
+  //   type: 'button' as const,
+  //   topLevelLink: hourOfAiLink,
+  // },
   {
     type: 'button' as const,
     topLevelLink: donateLink,

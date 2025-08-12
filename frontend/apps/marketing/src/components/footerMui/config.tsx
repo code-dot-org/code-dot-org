@@ -8,7 +8,8 @@ export const COPYRIGHT_TEXT = 'All rights reserved';
 export const SITE_LINKS = [
   {key: 'issues', label: 'Issues', href: '/issues'},
   {key: 'take-action', label: 'Take Action', href: '/take-action'},
-  {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
+  // TODO - Put back later https://codedotorg.atlassian.net/browse/CMS-998
+  // {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
   {
     key: 'donate',
     label: 'Donate',
