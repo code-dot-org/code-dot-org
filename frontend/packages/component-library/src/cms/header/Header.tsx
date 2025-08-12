@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {HTMLAttributes, useEffect, useState} from 'react';
+import {HTMLAttributes, useEffect, useState, PropsWithChildren} from 'react';
 
 import {Image, ImageProps} from '@/image';
 
@@ -103,7 +103,8 @@ const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
  * Design System: Header Component.
  * Acts as the main page header navigation.
  */
-const Header: React.FC<HeaderProps> = ({
+const Header: React.FC<HeaderProps & PropsWithChildren> = ({
+  children,
   studioBaseUrl,
   homeLink,
   logo,
@@ -174,6 +175,8 @@ const Header: React.FC<HeaderProps> = ({
         </a>
         <MainLinks mainLinksLabel={mainLinksLabel} mainLinks={mainLinks} />
       </nav>
+
+      {children}
 
       <nav
         className={moduleStyles.buttonLinks}
