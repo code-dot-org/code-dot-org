@@ -34,7 +34,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     icon: 'chalkboard-teacher',
   },
   [Tabs.StudentRubric]: {
-    title: 'Rubric',
+    title: commonI18n.rubric(),
     icon: 'clipboard-list',
   },
 };
