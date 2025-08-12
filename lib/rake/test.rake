@@ -374,6 +374,42 @@ namespace :test do
       end
     end
 
+    desc 'Runs dashboard hoc_legacy engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_hoc_legacy_engine do
+      run_tests_if_changed(
+        'dashboard hoc_legacy engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_hoc_legacy_engine_tests
+      end
+    end
+
+    desc 'Runs dashboard marketing engine tests if dashboard might have changed from staging.'
+    timed_task_with_logging :dashboard_marketing_engine do
+      run_tests_if_changed(
+        'dashboard marketing engine',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'dashboard/**/*',
+          'lib/**/*',
+          'shared/**/*'
+        ],
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
+      ) do
+        TestRunUtils.run_dashboard_marketing_engine_tests
+      end
+    end
+
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     timed_task_with_logging :pegasus do
       run_tests_if_changed(
@@ -467,6 +503,8 @@ namespace :test do
       # :interpreter,
       :dashboard,
       :dashboard_legacy,
+      :dashboard_hoc_legacy_engine,
+      :dashboard_marketing_engine,
       :pegasus,
       :shared,
       :lib,
@@ -481,7 +519,18 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:frontend, :apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [
+    :frontend,
+    :apps,
+    :dashboard,
+    :dashboard_legacy,
+    :dashboard_hoc_legacy_engine,
+    :dashboard_marketing_engine,
+    :pegasus,
+    :shared,
+    :lib,
+    :bin,
+  ]
 end
 timed_task_with_logging test: ['test:changed']
 
