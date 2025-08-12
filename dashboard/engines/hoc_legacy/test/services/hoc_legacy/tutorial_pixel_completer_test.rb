@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class HocLegacy::TutorialPixelCompleterTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   let(:described_instance) {described_class.new(controller:, tutorial:)}
 
   let(:request) {ActionDispatch::TestRequest.create}

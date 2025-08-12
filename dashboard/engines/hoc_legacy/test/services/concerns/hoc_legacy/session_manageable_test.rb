@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   let(:described_class) do
     Class.new do
       include HocLegacy::SessionManageable

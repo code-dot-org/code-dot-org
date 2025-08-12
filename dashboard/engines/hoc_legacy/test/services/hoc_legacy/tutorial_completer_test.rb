@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   let(:instance_arguments) {{controller:, tutorial:}}
   let(:described_instance) {described_class.new(**instance_arguments)}
 

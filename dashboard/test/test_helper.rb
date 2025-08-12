@@ -62,8 +62,6 @@ require 'testing/rspec_mocks'
 require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
-  include Minitest::RSpecMocks
-
   ActiveRecord::Migration.check_pending!
 
   setup do

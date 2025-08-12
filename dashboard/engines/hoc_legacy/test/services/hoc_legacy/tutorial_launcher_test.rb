@@ -3,6 +3,8 @@
 require 'test_helper'
 
 class HocLegacy::TutorialLauncherTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
+
   let(:described_instance) {described_class.new(controller:, tutorial:, company:, track_learn:)}
 
   let(:request) {ActionDispatch::TestRequest.create}
