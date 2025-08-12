@@ -121,10 +121,7 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
 
 // Main Menu News & Resources Dropdown Links
 export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [
-    createLinkItem(SHARED_LINKS.ABOUT),
-    createLinkItem(SHARED_LINKS.NEWS),
-  ],
+  linkList: [createLinkItem(SHARED_LINKS.NEWS)],
 };
 
 // Main Menu Desktop Configuration
