@@ -259,7 +259,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         .finally(() => {
           setIsWaitingForResponse(false);
           chatResponseCallback();
-          userMessageEditorRef.current?.focus();
+          if (userMessageEditorRef && userMessageEditorRef.current) {
+            userMessageEditorRef.current?.focus();
+          }
         });
     },
     [
