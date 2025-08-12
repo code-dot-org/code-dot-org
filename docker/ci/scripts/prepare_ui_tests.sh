@@ -23,6 +23,7 @@ cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
 dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_workers: 5
+optimize_rails_assets: false
 disable_all_eyes_running: true
 ignore_eyes_mismatches: true
 localize_apps: true
