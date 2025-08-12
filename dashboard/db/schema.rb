@@ -972,7 +972,7 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
-  create_table "levels_skills", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "level_id", null: false
     t.bigint "skill_id", null: false
     t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
@@ -2160,7 +2160,7 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
-  create_table "skills", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "description", null: false
     t.text "evaluation_criteria"
     t.string "concept"
@@ -2337,7 +2337,7 @@ ActiveRecord::Schema.define(version: 2025_08_21_182723) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at"
     t.datetime "anonymized_at"
