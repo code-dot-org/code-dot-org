@@ -14,3 +14,5 @@ Table below is horizontally scrollable, even if github's markdown renderer doesn
 ## What about my adhoc server?
 
 Output from the adhoc setup process can be found on the new machine at `/var/log/chef-bootstrap.log`.
+
+If an adhoc is protected by Edge Auth (simple Basic Auth at CloudFront), authentication happens before the request reaches the instance. Auth failures will not appear in app logs; ask for the current password in #infrastructure Slack if you're unexpectedly seeing prompts.
