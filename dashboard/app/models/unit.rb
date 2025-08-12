@@ -1744,6 +1744,7 @@ class Unit < ApplicationRecord
       show_sign_in_callout: csf? || csc?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
       course_name: unit_group_unit&.unit_group&.name,
+      course_id: unit_group_unit&.unit_group&.id,
       unit_position: unit_group_unit&.position,
     }
   end

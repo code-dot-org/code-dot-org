@@ -2048,7 +2048,11 @@ class UserTest < ActiveSupport::TestCase
     assert user_proficiency.basic_proficiency_at.nil?
   end
 
-  def track_progress(user_id, script_level, result, pairings: nil)
+  def track_progress(user_id, script_level, result, pairings: nil, unit_group: nil)
+    unless unit_group
+      unit_group = create(:unit_group)
+      create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+    end
     User.track_level_progress(
       user_id: user_id,
       level_id: script_level.level_id,
@@ -2056,7 +2060,8 @@ class UserTest < ActiveSupport::TestCase
       new_result: result,
       submitted: false,
       level_source_id: nil,
-      pairing_user_ids: pairings
+      pairing_user_ids: pairings,
+      unit_group: unit_group
     )
   end
 
@@ -2170,6 +2175,8 @@ class UserTest < ActiveSupport::TestCase
     student = create :student
     level_source = create :level_source, data: 'sample answer'
 
+    unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
     User.track_level_progress(
       user_id: student.id,
       level_id: script_level.level_id,
@@ -2177,7 +2184,8 @@ class UserTest < ActiveSupport::TestCase
       new_result: 30,
       submitted: false,
       level_source_id: level_source.id,
-      pairing_user_ids: nil
+      pairing_user_ids: nil,
+      unit_group: unit_group
     )
 
     ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
@@ -2191,7 +2199,8 @@ class UserTest < ActiveSupport::TestCase
       new_result: 100,
       submitted: false,
       level_source_id: level_source.id,
-      pairing_user_ids: [student.id]
+      pairing_user_ids: [student.id],
+      unit_group: unit_group
     )
 
     ul = UserLevel.find_by(user: student, script: script_level.script, level: script_level.level)
@@ -2209,13 +2218,16 @@ class UserTest < ActiveSupport::TestCase
       level_id: script_level.level_id,
       level_source_id: level_source.id
 
+    unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
     User.track_level_progress(
       user_id: user.id,
       script_id: script_level.script_id,
       level_id: script_level.level_id,
       level_source_id: nil,
       new_result: 100,
-      submitted: false
+      submitted: false,
+      unit_group: unit_group
     )
 
     assert_equal level_source.id, UserLevel.find_by(
@@ -2239,20 +2251,47 @@ class UserTest < ActiveSupport::TestCase
       submitted: false,
     }
 
-    User.track_level_progress(**level_progress_params)
+    unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: @csf_script_level.script, position: 1)
+    User.track_level_progress(**level_progress_params, unit_group: unit_group)
     refute_nil user_level = UserLevel.find_by(user_level_params)
     assert_nil user_level.locale
     assert_nil user_level.locale_supported
 
     current_locale = 'uk-UA'
-    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale, unit_group: unit_group))
     assert_equal current_locale, user_level.reload.locale
     assert_equal false, user_level.locale_supported
 
     @csf_script_level.script.update!(supported_locales: [current_locale])
-    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale, unit_group: unit_group))
     assert_equal current_locale, user_level.reload.locale
     assert_equal true, user_level.locale_supported
+  end
+
+  test 'track_level_progress stores unit_group_id when unit_group is provided' do
+    user = create :user
+    unit_group = create(:unit_group)
+    script_level = create :script_level
+    create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+
+    User.track_level_progress(
+      user_id: user.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id,
+      new_result: 100,
+      submitted: false,
+      level_source_id: nil,
+      unit_group: unit_group
+    )
+
+    user_level = UserLevel.find_by(
+      user_id: user.id,
+      level_id: script_level.level_id,
+      script_id: script_level.script_id
+    )
+
+    assert_equal unit_group.id, user_level.unit_group_id
   end
 
   test 'student and teacher relationships' do
@@ -2671,6 +2710,7 @@ class UserTest < ActiveSupport::TestCase
       user_script = @student.assign_script(Unit.first)
       assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
+      assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
     end
   end
 
@@ -2682,6 +2722,7 @@ class UserTest < ActiveSupport::TestCase
       user_script = @student.assign_script(Unit.first)
       assert_equal Unit.first.id, user_script.script_id
       refute_nil user_script.assigned_at
+      assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
     end
   end
 
@@ -2695,6 +2736,7 @@ class UserTest < ActiveSupport::TestCase
         user_script = @student.assign_script(Unit.first)
         assert_equal Unit.first.id, user_script.script_id
         assert_equal '2018-03-04 12:00:00 UTC', user_script.assigned_at.to_s
+        assert_equal Unit.first.unit_group&.id, user_script.unit_group_id
       end
     end
   end

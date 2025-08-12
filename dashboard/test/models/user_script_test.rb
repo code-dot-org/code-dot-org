@@ -16,8 +16,12 @@ class UserScriptTest < ActiveSupport::TestCase
     @user_script = create :user_script, user: @user, script: @script
   end
 
-  def complete_level(script_level, result = 100)
-    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id)
+  def complete_level(script_level, result = 100, unit_group: nil)
+    unless unit_group
+      unit_group = create(:unit_group)
+      create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
+    end
+    User.track_level_progress(user_id: @user.id, script_id: script_level.script.id, new_result: result, submitted: false, level_source_id: nil, level_id: script_level.oldest_active_level.id, unit_group: unit_group)
   end
 
   def complete_all_levels
@@ -85,5 +89,10 @@ class UserScriptTest < ActiveSupport::TestCase
 
   test "lookup hash" do
     assert_equal ({'foo' => false, @script.name => true}), UserScript.lookup_hash(@user, ['foo', @script.name])
+  end
+
+  test "unit_group_id is set when creating user_script" do
+    refute_nil @user_script.unit_group_id
+    assert_equal @script.unit_group.id, @user_script.unit_group_id
   end
 end

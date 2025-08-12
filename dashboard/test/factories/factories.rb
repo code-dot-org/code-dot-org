@@ -1535,6 +1535,7 @@ FactoryBot.define do
   factory :user_script do
     user {create :student}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}
+    unit_group_id {script.unit_group&.id}
   end
 
   factory :user_school_info do

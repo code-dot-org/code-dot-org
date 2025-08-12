@@ -51,6 +51,8 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
   end
 
   private def track_progress_for_level(level, result)
+    unit_group = create(:unit_group)
+    create(:unit_group_unit, unit_group: unit_group, script: @course_unit.script, position: 1)
     User.track_level_progress(
       user_id: @user.id,
       level_id: level.id,
@@ -58,7 +60,8 @@ class Plc::EnrollmentModuleAssignmentTest < ActiveSupport::TestCase
       new_result: result,
       submitted: true,
       level_source_id: create(:level_source, level: level).id,
-      pairing_user_ids: nil
+      pairing_user_ids: nil,
+      unit_group: unit_group
     )
   end
 end
