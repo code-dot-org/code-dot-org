@@ -8,8 +8,10 @@ import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
+  submitPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import commonI18n from '@cdo/locale';
 
 import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../../constants';
 
@@ -55,6 +57,12 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const disabledAndNotSelected = (index: number) =>
     predictAnswerLocked &&
     !Boolean(predictResponse?.split(',').includes(index.toString()));
+
+  const onSubmitAnswer = () => {
+    if (isWeblab2) {
+      dispatch(submitPredictResponse({appType: appName}));
+    }
+  };
 
   return (
     <div className={className}>
@@ -139,10 +147,11 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       </div>
       {isWeblab2 && (
         <Button
-          onClick={() => console.log('clicked submit')}
-          text="Submit answer"
+          onClick={onSubmitAnswer}
+          text={commonI18n.submitAnswer()}
           size="s"
           className={moduleStyles.submitButton}
+          disabled={predictAnswerLocked}
         />
       )}
       <PredictResetButton />

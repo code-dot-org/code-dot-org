@@ -1,6 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFolderPath} from '@codebridge/utils';
-import React, {useCallback, useEffect, useMemo, useRef} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
@@ -21,6 +21,7 @@ const InnerHTMLPreview = () => {
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
+  const [allowScripts, setAllowScripts] = useState(false);
 
   const parentOrigin = useMemo(() => {
     const regex = /preview\.([^.]+)\.codeprojects\.org/;
@@ -69,6 +70,8 @@ const InnerHTMLPreview = () => {
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
         // We don't need to update the parent, because they initiated this change.
+      } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
+        setAllowScripts(!!data.allow);
       }
     },
     [parentOrigin]
@@ -217,10 +220,11 @@ const InnerHTMLPreview = () => {
       return (
         <iframe
           ref={iframeRef}
-          sandbox="allow-scripts allow-same-origin"
+          sandbox={`${allowScripts ? 'allow-scripts ' : ''}allow-same-origin`}
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
+          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
           src={blobUrl}
           className={moduleStyles.fileIframe}
         />
@@ -228,7 +232,7 @@ const InnerHTMLPreview = () => {
     } else {
       return <div>Loading...</div>;
     }
-  }, [blobUrl]);
+  }, [blobUrl, allowScripts]);
 
   return getPreview();
 };
