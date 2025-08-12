@@ -32,6 +32,25 @@ interface AiDiffContainerProps {
   curriculumCourses?: string[];
 }
 
+const MIN_VISIBLE = 40;
+const boxWidth = parseInt(style.containerWidth);
+const originX = parseInt(style.fabOriginX);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
+const maxX = isNaN(originX)
+  ? 1000
+  : document.documentElement.clientWidth - originX - MIN_VISIBLE;
+
+const boxHeight = parseInt(style.containerHeight);
+const originY = parseInt(style.fabOriginY);
+// These isNaN checks are for testing as the SCSS variables don't come
+// through properly in the test environment.
+const minY = isNaN(originY)
+  ? 0
+  : originY - document.documentElement.clientHeight + boxHeight;
+const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
+
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   context,
@@ -53,26 +72,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
-  const MIN_VISIBLE = 40;
-
-  const boxWidth = parseInt(style.containerWidth);
-  const originX = parseInt(style.fabOriginX);
-  // These isNaN checks are for testing as the SCSS variables don't come
-  // through properly in the test environment.
-  const minX = isNaN(originX) ? 0 : MIN_VISIBLE - originX - boxWidth;
-  const maxX = isNaN(originX)
-    ? 1000
-    : document.documentElement.clientWidth - originX - MIN_VISIBLE;
-
-  const boxHeight = parseInt(style.containerHeight);
-  const originY = parseInt(style.fabOriginY);
-  // These isNaN checks are for testing as the SCSS variables don't come
-  // through properly in the test environment.
-  const minY = isNaN(originY)
-    ? 0
-    : originY - document.documentElement.clientHeight + boxHeight;
-  const maxY = isNaN(originY) ? 1000 : originY + boxHeight - MIN_VISIBLE;
-
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
       if (positionX < minX) {
@@ -87,7 +86,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     return () => {
       window.removeEventListener('resize', ensureDraggableIsVisible);
     };
-  }, [positionX, minX, maxX]);
+  }, [positionX]);
 
   useEffect(() => {
     const ensureDraggableIsVisible = () => {
@@ -103,7 +102,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     return () => {
       window.removeEventListener('resize', ensureDraggableIsVisible);
     };
-  }, [positionY, minY, maxY]);
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
