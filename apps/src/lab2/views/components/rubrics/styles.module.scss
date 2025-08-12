@@ -1,0 +1,140 @@
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/colors';
+@import '../../../../mixins.scss';
+
+.rubricContainer {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  background-color: var(--background-neutral-primary);
+  overflow: hidden;
+}
+
+.loadingSpinner {
+  margin: auto;
+  > i {
+    font-size: 30px;
+  }
+}
+
+.scrollContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-left: 8px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+
+.goalSwitcher {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.progressRing {
+  fill: var(--text-neutral-primary);
+}
+
+.goalSwitcherButton {
+  @include remove-button-styles;
+  color: var(--text-neutral-primary);
+
+  i {
+    color: var(--text-neutral-primary);
+  }
+}
+
+.learningGoalHeader {
+  margin: 0;
+  text-align: center;
+}
+
+.feedbackContainer {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherFeedback {
+  border: 1px solid var(--text-neutral-quaternary);
+  border-radius: 4px;
+  padding: 16px;
+  background-color: var(--background-neutral-secondary);
+  p {
+    margin: 0;
+  }
+}
+
+.feedbackHeader {
+  text-align: center;
+}
+
+.evidenceLevelsContainer {
+  margin-top: 16px;
+}
+
+.evidenceLevelContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border: 1px solid var(--text-neutral-quaternary);
+
+  &Selected {
+    border-color: var(--borders-brand-teal-primary);
+    background-color: var(--background-brand-teal-extra-light);
+  }
+
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .header {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .bubble {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 1px solid var(--text-neutral-quaternary);
+
+      &Selected {
+        border-color: var(--borders-brand-teal-primary);
+        background-color: var(--background-brand-teal-primary);
+      }
+    }
+  }
+
+  .descriptionContainer {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    max-height: 500px;
+    opacity: 1;
+
+    &Collapsed {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    .description {
+      margin-top: 8px;
+    }
+  }
+}
