@@ -30,11 +30,10 @@ const SHARED_LINKS = {
     href: '/',
     label: 'Home',
   },
-  // TODO - Put back later https://codedotorg.atlassian.net/browse/CMS-998
-  // HOUR_OF_AI: {
-  //   href: '/hour-of-ai',
-  //   label: 'Hour of AI',
-  // },
+  HOUR_OF_AI: {
+    href: '/hour-of-ai',
+    label: 'Hour of AI',
+  },
   ISSUES: {
     href: '/issues',
     label: 'Issues',
