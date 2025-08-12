@@ -498,7 +498,7 @@ Resources:
   require_relative '../../pegasus/helpers/pegasus_languages'
   tags = PegasusLanguages.table.select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase)
 %>
-        function handler(event) {
+        async function handler(event) {
           var cf = require('cloudfront');
           var request = event.request;
           var headers = request.headers || {};
@@ -524,8 +524,8 @@ Resources:
 
           // Read expected tokens from KeyValueStore
           var kvs = cf.kvs();
-          var expected1 = kvs.get('currentAuthB64') || '';
-          var expected2 = kvs.get('previousAuthB64') || '';
+          var expected1 = (await kvs.get('currentAuthB64')) || '';
+          var expected2 = (await kvs.get('previousAuthB64')) || '';
 
           var provided = (headers.authorization && headers.authorization.value) || '';
           if (provided === expected1 || (expected2 && provided === expected2)) {
