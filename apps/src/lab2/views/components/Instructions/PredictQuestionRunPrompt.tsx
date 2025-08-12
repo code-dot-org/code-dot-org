@@ -1,4 +1,3 @@
-import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -16,7 +15,7 @@ const PredictQuestionRunPrompt: React.FunctionComponent = () => {
   const hasSelected = useAppSelector(state => !!state.predictLevel.response);
   const isLocked = useAppSelector(isPredictAnswerLocked);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  if (appName === 'weblab2' && !isLocked) {
+  if (appName === 'weblab2') {
     return null;
   }
   if (hasSelected && !isLocked) {
@@ -32,15 +31,6 @@ const PredictQuestionRunPrompt: React.FunctionComponent = () => {
           className={moduleStyles.runPrompt}
         />
       </div>
-    );
-  } else if (isLocked) {
-    return (
-      <Alert
-        text="Submitted"
-        type="success"
-        size="s"
-        className={moduleStyles.successAlert}
-      />
     );
   } else {
     return null;
