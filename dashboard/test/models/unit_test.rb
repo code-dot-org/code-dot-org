@@ -2350,8 +2350,8 @@ class UnitTest < ActiveSupport::TestCase
       create(:script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1)
       create(:script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2)
 
-      single_unit_course_2022 = create :unit_group, name: 'single-unit-course-2022'
-      create :course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022"
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
 
       cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022')
       assert_equal [level1, level2], cloned_unit.levels
@@ -2368,8 +2368,8 @@ class UnitTest < ActiveSupport::TestCase
       create(:script_level, levels: [level1], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1)
       create(:script_level, levels: [level2], script: @single_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2)
 
-      single_unit_course_2022 = create :unit_group, name: 'single-unit-course-2022'
-      create :course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022"
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
 
       cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022', new_level_suffix: '2022')
       refute_equal [level1, level2], cloned_unit.levels
@@ -2378,8 +2378,8 @@ class UnitTest < ActiveSupport::TestCase
     test 'can copy teacher and student resources' do
       @single_unit.resources = [create(:resource)]
       @single_unit.student_resources = [create(:resource)]
-      single_unit_course_2022 = create :unit_group, name: 'single-unit-course-2022'
-      create :course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022"
+      single_unit_course_2022 = create(:unit_group, name: 'single-unit-course-2022')
+      create(:course_version, course_offering: @single_unit_course_offering, content_root: single_unit_course_2022, key: "2022", display_name: "2022")
 
       cloned_unit = @single_unit.clone_migrated_unit('single-unit-2022', destination_unit_group_name: 'single-unit-course-2022')
       assert_equal 1, cloned_unit.resources.count
