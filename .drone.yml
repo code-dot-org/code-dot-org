@@ -238,10 +238,16 @@ trigger:
     - pull_request
 
 ---
-# On a push to staging, cache several build artifacts to drone's S3 bucket:
-# - A fresh git clone of staging, to reduce git bandwidth
-# - A copy of the MySQL databases, to reduce seed time
-# - A copy of the ~/.rbenv directory, to reduce bundle install time
+# On every push to staging, run a build which will prepare the environment to
+# run CI tests and cache all of the relevant results. We then use that cache on
+# subsequent feature branch CI tests as the initial state for the environment.
+#
+# Specifically, we cache:
+# - The entire project directory, including the repository and all generated
+#   build artifacts (minus a few select directories), to reduce the time
+#   needed for the initial git clone and the first build.
+# - A copy of the MySQL databases, to reduce seed time.
+# - A copy of the ~/.rbenv directory, to reduce bundle install time.
 kind: pipeline
 type: docker
 name: cache-staging-build-artifacts
@@ -256,17 +262,6 @@ steps:
       - git lfs install
       # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
       - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL . 
-
-  # - name: cache-staging-clone
-  #   image: plugins/s3-cache
-  #   settings:
-  #     filename: cache-staging-clone.tar.gz
-  #     endpoint: s3://cdo-drone
-  #     rebuild: true
-  #     debug: true
-  #     pull: true
-  #     mount:
-  #       - .
 
   # Do all the work necessary to run UI tests so we can capture a complete
   # snapshot of rbenv and the database, but don't actually run the tests.
@@ -286,24 +281,18 @@ steps:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ci_tests.sh
 
-  - name: prepare-cache
+  # Optional optimization to reduce the size of the cache file we're about to
+  # generate. We manually delete a few large directories created by the build
+  # process which are not necessary to actually run the tests; local caches,
+  # logs, node_modules, etc.
+  - name: sanitize-cache
     image: codedotorg/code-dot-org:1.16
     commands:
       - rm -r ./.venv/ # 214M
       - rm -r ./apps/.yarn/ # 358M
-      - rm -r ./apps/build/locales/ # 78M
-      - rm -r ./bin/i18n/node_modules/ # 5.3M
       - rm -r ./dashboard/tmp/ # 494M
-      - rm -r ./frontend/.turbo/ # 42M
-      - rm -r ./frontend/.yarn/ # 2.4M
-      - rm -r ./frontend/apps/design-system-storybook/node_modules/ # 12M
-      - rm -r ./frontend/apps/marketing-storybook/node_modules/ # 12M
-      - rm -r ./frontend/apps/marketing/node_modules/ # 46 M
-      - rm -r ./frontend/node_modules/ # 1.9G (!!!!!)
-      - rm -r ./frontend/packages/component-library/dist/ # 24M
-      - rm -r ./frontend/packages/component-library/node_modules/ # 39M
-      - rm -r ./frontend/packages/fonts/dist/ # 23M
-      - rm -r ./frontend/packages/fonts/node_modules/ # 5.9M
+      - rm -r ./frontend/node_modules/ # 1.9G (!!!)
+      - rm -r ./frontend/*/*/node_modules/ # ~115M
 
   - name: cache-staging-ci-build
     image: plugins/s3-cache
