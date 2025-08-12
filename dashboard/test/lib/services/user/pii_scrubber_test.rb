@@ -26,24 +26,49 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
     let(:soft_deleted_user) {true}
 
     before do
-      delete_accounts_helper_stub.stubs(:remove_census_submissions)
-      delete_accounts_helper_stub.stubs(:clean_pegasus_forms_for_user)
+      delete_accounts_helper_stub.stubs(:anonymize_regional_partner_contacts)
+      delete_accounts_helper_stub.stubs(:anonymize_legacy_pd_tables)
+      delete_accounts_helper_stub.stubs(:anonymize_peer_reviews)
+      delete_accounts_helper_stub.stubs(:anonymize_pd_applications)
+      delete_accounts_helper_stub.stubs(:anonymize_workshop_surveys)
       delete_accounts_helper_stub.stubs(:remove_poste_data)
-      delete_accounts_helper_stub.stubs(:clean_and_destroy_pd_content)
       delete_accounts_helper_stub.stubs(:purge_contact_rollups)
       DeleteAccountsHelper.stubs(:new).with(bypass_safety_constraints: true).returns(delete_accounts_helper_stub)
 
       user.destroy if soft_deleted_user
     end
 
-    it 'removes data from deprecated tables' do
-      expect(delete_accounts_helper_stub).to receive(:remove_census_submissions).with(email)
-      expect(delete_accounts_helper_stub).to receive(:clean_pegasus_forms_for_user).with(user)
+    it 'removes data using helper methods' do
+      expect(delete_accounts_helper_stub).to receive(:anonymize_legacy_pd_tables)
+      expect(delete_accounts_helper_stub).to receive(:anonymize_regional_partner_contacts).with(user.id)
+      expect(delete_accounts_helper_stub).to receive(:anonymize_peer_reviews).with(user.id)
+      expect(delete_accounts_helper_stub).to receive(:anonymize_pd_applications).with(user.id, email)
+      expect(delete_accounts_helper_stub).to receive(:anonymize_workshop_surveys)
       expect(delete_accounts_helper_stub).to receive(:remove_poste_data).with(email)
-      expect(delete_accounts_helper_stub).to receive(:clean_and_destroy_pd_content).with(user.id, email)
       expect(delete_accounts_helper_stub).to receive(:purge_contact_rollups).with(email)
+      scrub_pii
+    end
+
+    it 'removes data from external sources' do
       expect(described_instance).to receive(:scrub_external_data)
       scrub_pii
+    end
+
+    context 'when user has PD data with PII' do
+      before do
+        let(:foorm_submission) {create(:foorm_submission, user: user, answers: {foo: email}.to_json)}
+        let(:misc_survey) {create(:misc_survey, user: user, answers: {foo: email}.to_json)}
+      end
+
+      it 'removes email from foorm submissions' do
+        scrub_pii
+        _(foorm_submission.reload.answers).wont_match(/#{email}/)
+      end
+
+      it 'removes answers from misc surveys' do
+        scrub_pii
+        _(misc_survey.reload.answers).must_be_nil
+      end
     end
 
     context 'when user is not soft-deleted' do

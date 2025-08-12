@@ -137,6 +137,7 @@ class DeleteAccountsHelper
     delete_survey_submissions(user_id)
     anonymize_pd_applications(user_id, user_email)
     anonymize_workshop_surveys(pd_enrollment_ids)
+    anonymize_pd_enrollments(pd_enrollment_ids)
   end
 
   # Anonymizes the user's PD attendance records. Includes attendance where either teacher_id or
