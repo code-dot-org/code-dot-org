@@ -1389,10 +1389,5 @@ Dashboard::Application.routes.draw do
         delete :clear_all_data
       end
     end
-
-    # Mounting an engine at "/" makes it act as a catch-all for all unmatched paths.
-    # If placed before other routes (e.g., Devise), it will intercept their requests.
-    # Always mount such engines last to avoid swallowing host application routes.
-    mount HocLegacy::Engine => '/'
   end
 end
