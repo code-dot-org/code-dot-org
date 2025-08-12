@@ -374,9 +374,19 @@ module I18n
               end
               script_strings.delete_if {|_, value| value.blank?}
 
-              name = "#{unit.name}.json"
-              i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, get_unit_subdirectory(unit), name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, i18n_source_file_path)
+              # We want to make sure to categorize HoC scripts as HoC scripts even if
+              # they have a version year, so this ordering is important
+              script_i18n_directory =
+                if script.in_initiative?('HOC')
+                  File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
+                elsif script.get_course_version.blank? || script.get_course_version.key == CourseVersion::UNVERSIONED
+                  File.join(I18N_SOURCE_DIR_PATH, 'other')
+                else
+                  File.join(I18N_SOURCE_DIR_PATH, script.get_course_version.key)
+                end
+
+              source_file_path = File.join(script_i18n_directory, "#{script.name}.json")
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, source_file_path)
 
               I18nScriptUtils.write_json_file(source_file_path, script_strings)
               redact_json_file(source_file_path)
@@ -452,26 +462,6 @@ module I18n
 
             redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
             I18nScriptUtils.write_json_file(source_path, source_data.deep_merge(redacted_data))
-          end
-
-          # Helper method to get the desired destination subdirectory of the given
-          # unit for the sync in. Note this may be a nested directory like "2021/csf"
-          # We want to make sure to categorize HoC scripts as HoC scripts even if
-          # they have a version year, so this ordering is important
-          private def get_unit_subdirectory(unit)
-            # special-case Hour of Code units.
-            return 'Hour of Code' if unit.in_initiative?('HOC')
-
-            # catchall for units without courses
-            return 'other' if unit.get_course_version.blank?
-
-            # special-case CSF and CSC; we want to group all CSF courses together and all CSC courses together,
-            # even though they all have different course offerings.
-            return File.join(unit.get_course_version.key, 'csf') if unit.csf?
-            return File.join(unit.get_course_version.key, 'csc') if unit.csc?
-
-            # base case
-            File.join(unit.get_course_version.key, unit.get_course_version.course_offering.key)
           end
         end
       end
