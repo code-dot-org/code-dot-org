@@ -492,6 +492,12 @@ Resources:
         KeyValueStoreAssociations:
           - KeyValueStoreARN: { 'Fn::ImportValue': EdgeAuth-KVSArn }
       FunctionCode: |
+        <%= indent(File.read(aws_dir('cloudformation/partials/accept_language_normalizer.js')), 8) %>
+<%
+  require 'cdo/languages'
+  require_relative '../../pegasus/helpers/pegasus_languages'
+  tags = PegasusLanguages.table.select(:locale_s, :code_s).map {|x| x.values.values}.flatten.uniq.map(&:downcase)
+%>
         function handler(event) {
           var cf = require('cloudfront');
           var request = event.request;
@@ -528,7 +534,7 @@ Resources:
 
             // Normalize Accept-Language for cache key stability
             try {
-              var normalized = normalizeAcceptLanguage(request);
+              var normalized = normalizeAcceptLanguage(request, <%= tags.to_json %>);
               if (normalized) {
                 headers['accept-language'] = { value: normalized };
               }
