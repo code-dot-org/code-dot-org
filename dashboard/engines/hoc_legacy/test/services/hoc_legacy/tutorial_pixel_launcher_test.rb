@@ -43,7 +43,6 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
 
     before do
       allow(CDO).to receive(:read_only).and_return(false)
-      allow(described_instance).to receive(:unsampled_session?).and_return(false)
 
       allow(request).to receive(:host_with_port).and_return(request_host_with_port)
       allow(request).to receive(:ip).and_return(request_ip)

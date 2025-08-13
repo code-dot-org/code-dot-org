@@ -18,7 +18,7 @@ module HocLegacy
     def call
       return if CDO.read_only
 
-      session_row = create_session_row(
+      create_session_row(
         {
           referer: request.referer_site_with_port,
           tutorial: tutorial[:code],
@@ -27,18 +27,6 @@ module HocLegacy
           started_ip: request.ip,
         }
       )
-
-      # TODO(elijah): this pathway (formerly used by /api/hour/begin_learn)
-      #               is currently unused. Either reenable the pathway in a more-scalable way or remove this block.
-      if track_learn
-        PEGASUS_DB[:hoc_learn_activity].insert(
-          referer: request.referer_site_with_port,
-          weight: DCDO.get('hoc_learn_activity_sample_weight', 1).to_i,
-          hoc_activity_id: session_row[:id],
-          tutorial: tutorial[:code],
-          created_at: DateTime.now,
-        )
-      end
     end
 
     private delegate :request, :response, to: :controller

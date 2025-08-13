@@ -20,10 +20,6 @@ module HocLegacy
       end
     end
 
-    private def unsampled_session?
-      request.cookies[HOC_COOKIE_KEY] == UNSAMPLED_SESSION_ID
-    end
-
     private def set_hour_of_code_cookie_for_row(row)
       response.set_cookie(
         HOC_COOKIE_KEY,
