@@ -255,6 +255,7 @@ div.card {
 
 .enrollmentList {
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
 
   li.enrollmentListItem {
     margin: 0;
@@ -262,7 +263,13 @@ div.card {
 }
 
 .workshopIdField {
+  margin-top: 0.5rem;
+
   input {
     width: 100%;
   }
+}
+
+.dialogErrorMessage {
+  margin-top: 1.5rem;
 }

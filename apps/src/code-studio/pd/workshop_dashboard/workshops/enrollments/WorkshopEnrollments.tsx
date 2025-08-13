@@ -30,9 +30,11 @@ import React, {
   useRef,
   useEffect,
   useMemo,
+  useCallback,
 } from 'react';
 import {useOutletContext} from 'react-router-dom';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {EnrollmentData} from '../../WorkshopFormTemplate/types';
@@ -66,20 +68,43 @@ export const WorkshopEnrollments: FC = () => {
   const [selected, setSelected] = useState<EnrollmentData[]>([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [removeDialogOpen, setRemoveDialogOpen] = useState(false);
   const [moveDialogOpen, setMoveDialogOpen] = useState(false);
   const [moveToWorkshopId, setMoveToWorkshopId] = useState('');
   const [animateRefreshButton, setAnimateRefreshButton] = useState(false);
+  const [removeEnrollmentError, setRemoveEnrollmentError] = useState('');
+  const [moveEnrollmentError, setMoveEnrollmentsError] = useState('');
 
   const s = useMemo(() => pluralize(selected.length), [selected]);
 
-  const isSelected = (id: number) =>
-    selected.findIndex(en => en.id === id) !== -1;
+  const [selectedAlreadyAttended, selectedNotAttended] = useMemo(
+    () =>
+      selected.reduce(
+        (
+          acc: [EnrollmentData[], EnrollmentData[]],
+          enrollment: EnrollmentData
+        ) => {
+          if (enrollment.attendances > 0) {
+            acc[0].push(enrollment);
+          } else {
+            acc[1].push(enrollment);
+          }
+          return acc;
+        },
+        [[], []]
+      ),
+    [selected]
+  );
+
+  const isSelected = useCallback(
+    (id: number) => selected.findIndex(en => en.id === id) !== -1,
+    [selected]
+  );
 
   const renderCellValue = (row: EnrollmentData, key: keyof EnrollmentData) => {
     const value = row[key];
     if (key === 'role') {
-      return EducatorRoles.find(edRole => edRole.value === value)?.label ?? '';
+      return EducatorRoles.find(role => role.value === value)?.label ?? '';
     }
     if (key === 'attendances') {
       return `${value}/${workshop?.sessions.length ?? '0'}`;
@@ -137,6 +162,79 @@ export const WorkshopEnrollments: FC = () => {
     }, 1000);
   };
 
+  const handleDownload = () => {
+    if (!workshop?.id) return;
+    window.open(`/api/v1/pd/workshops/${workshop.id}/enrollments.csv`);
+  };
+
+  const handleRemoveEnrollments = async () => {
+    setRemoveEnrollmentError('');
+    try {
+      if (!workshop || !selectedNotAttended.length) return;
+      const authToken = await getAuthenticityToken();
+      const deletePromises = selectedNotAttended.map(({id}) =>
+        fetch(`/api/v1/pd/workshops/${workshop.id}/enrollments/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': authToken,
+          },
+        })
+      );
+
+      const results = await Promise.all(deletePromises);
+
+      if (results.every(({ok}) => ok)) {
+        setRemoveDialogOpen(false);
+        setSelected([]);
+      } else {
+        setRemoveEnrollmentError(
+          `There was an error while removing enrollments. Please try again.`
+        );
+      }
+      refetchEnrollments();
+    } catch (unknownError) {
+      setRemoveEnrollmentError('An unknown error occurred. Please try again.');
+    }
+  };
+
+  const handleMoveEnrollments = async () => {
+    setMoveEnrollmentsError('');
+    try {
+      if (!selected.length) return;
+
+      const urlParams = new URLSearchParams();
+      urlParams.append('destination_workshop_id', moveToWorkshopId);
+      selected.forEach(({id}) =>
+        urlParams.append('enrollment_ids[]', String(id))
+      );
+
+      const response = await fetch(
+        `/api/v1/pd/enrollments/move?${urlParams.toString()}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+        }
+      );
+
+      if (response.ok) {
+        setMoveDialogOpen(false);
+        setMoveToWorkshopId('');
+        setSelected([]);
+      } else {
+        setMoveEnrollmentsError(
+          `There was an error while moving enrollments. Please try again.`
+        );
+      }
+      refetchEnrollments();
+    } catch (unknownError) {
+      setMoveEnrollmentsError('An unknown error occurred. Please try again.');
+    }
+  };
+
   useEffect(
     // cleanup function used to clear timeout
     () => () => {
@@ -161,6 +259,16 @@ export const WorkshopEnrollments: FC = () => {
     );
   }
 
+  if (!enrollments.length) {
+    return (
+      <Alert
+        size="m"
+        text="No enrollments found for this workshop"
+        type="warning"
+      />
+    );
+  }
+
   return (
     <>
       <Box className={styles.bulkActionRow}>
@@ -180,7 +288,7 @@ export const WorkshopEnrollments: FC = () => {
           iconLeft={{
             iconName: 'download',
           }}
-          onClick={() => {}}
+          onClick={handleDownload}
           size="s"
           type="secondary"
           color={buttonColors.gray}
@@ -206,7 +314,7 @@ export const WorkshopEnrollments: FC = () => {
             />
             <Button
               ariaLabel={`Remove selected enrollment${s}`}
-              onClick={() => setDeleteDialogOpen(true)}
+              onClick={() => setRemoveDialogOpen(true)}
               size="s"
               type="secondary"
               color={buttonColors.destructive}
@@ -294,28 +402,66 @@ export const WorkshopEnrollments: FC = () => {
         />
       </Card>
 
-      {deleteDialogOpen && (
+      {removeDialogOpen && (
         <Dialog
           id="remove-enrollments-dialog"
-          onClose={() => setDeleteDialogOpen(false)}
+          onClose={() => {
+            setRemoveDialogOpen(false);
+            setRemoveEnrollmentError('');
+          }}
           title={`Remove Enrollment${s}?`}
           customContent={
-            <Typography noMargin semanticTag="div" visualAppearance="body-two">
-              {`Are you sure you want to remove the enrollment${s} for:`}
-              <ul className={styles.enrollmentList}>
-                {selected.map(({id, givenName, familyName, email}) => (
-                  <li
-                    key={id}
-                    className={styles.enrollmentListItem}
-                  >{`${givenName} ${familyName} (${email})`}</li>
-                ))}
-              </ul>
-            </Typography>
+            <Box>
+              <Typography semanticTag="div" visualAppearance="body-two">
+                {`Are you sure you want to remove the enrollment${s} for:`}
+                <ul className={styles.enrollmentList}>
+                  {selectedNotAttended.map(
+                    ({id, givenName, familyName, email}) => (
+                      <li
+                        key={id}
+                        className={styles.enrollmentListItem}
+                      >{`${givenName} ${familyName} (${email})`}</li>
+                    )
+                  )}
+                </ul>
+              </Typography>
+              {selectedAlreadyAttended.length > 0 && (
+                <>
+                  <Alert
+                    type="warning"
+                    text={`The following users have already attended a session and cannot be removed.`}
+                  />
+                  <Typography
+                    noMargin
+                    semanticTag="div"
+                    visualAppearance="body-two"
+                  >
+                    <ul className={styles.enrollmentList}>
+                      {selectedAlreadyAttended.map(
+                        ({id, givenName, familyName, email}) => (
+                          <li
+                            key={id}
+                            className={styles.enrollmentListItem}
+                          >{`${givenName} ${familyName} (${email})`}</li>
+                        )
+                      )}
+                    </ul>
+                  </Typography>
+                </>
+              )}
+              {removeEnrollmentError && (
+                <Alert
+                  className={styles.dialogErrorMessage}
+                  type="danger"
+                  text={removeEnrollmentError}
+                />
+              )}
+            </Box>
           }
           primaryButtonProps={{
             text: `Remove enrollment${s}`,
             size: 's',
-            onClick: () => {},
+            onClick: handleRemoveEnrollments,
             color: buttonColors.destructive,
           }}
           secondaryButtonProps={{
@@ -323,7 +469,10 @@ export const WorkshopEnrollments: FC = () => {
             text: 'Cancel',
             type: 'secondary',
             color: buttonColors.gray,
-            onClick: () => setDeleteDialogOpen(false),
+            onClick: () => {
+              setRemoveDialogOpen(false);
+              setRemoveEnrollmentError('');
+            },
           }}
         />
       )}
@@ -337,12 +486,8 @@ export const WorkshopEnrollments: FC = () => {
           }}
           title={`Move Enrollment${s}?`}
           customContent={
-            <>
-              <Typography
-                noMargin
-                semanticTag="div"
-                visualAppearance="body-two"
-              >
+            <Box>
+              <Typography semanticTag="div" visualAppearance="body-two">
                 {`You are moving the following enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
                   {selected.map(({id, givenName, familyName, email}) => (
@@ -355,7 +500,9 @@ export const WorkshopEnrollments: FC = () => {
               </Typography>
               <Alert
                 type="warning"
-                text={`Warning: moving enrollment${s} will delete any associated attendance data!`}
+                text={`Warning: moving ${
+                  s ? '' : 'this'
+                } enrollment${s} will delete any associated attendance data!`}
               />
               <TextField
                 className={styles.workshopIdField}
@@ -366,12 +513,19 @@ export const WorkshopEnrollments: FC = () => {
                 onChange={handleWorkshopIdChange}
                 value={moveToWorkshopId}
               />
-            </>
+              {moveEnrollmentError && (
+                <Alert
+                  className={styles.dialogErrorMessage}
+                  type="danger"
+                  text={moveEnrollmentError}
+                />
+              )}
+            </Box>
           }
           primaryButtonProps={{
             text: `Move enrollment${s}`,
             size: 's',
-            onClick: () => {},
+            onClick: handleMoveEnrollments,
             disabled: !moveToWorkshopId,
           }}
           secondaryButtonProps={{
