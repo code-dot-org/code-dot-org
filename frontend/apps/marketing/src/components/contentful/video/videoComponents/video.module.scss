@@ -75,8 +75,9 @@
     margin-bottom: 0;
   }
 
-  .download {
+  a.download:global(.MuiButtonBase-root) {
     margin-top: 0.25rem;
+    padding-block: 2px;
 
     @media (max-width: 640px) {
       display: none;

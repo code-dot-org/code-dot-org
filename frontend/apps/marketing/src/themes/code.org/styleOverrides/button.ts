@@ -46,14 +46,31 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         '&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall':
           {
             fontSize: '0.875rem',
-            padding: localTheme.spacing(0.75, 1.5),
+            fontWeight: 600,
+            lineHeight: '148%',
+            fontStyle: 'normal',
+            padding: localTheme.spacing(0.625, 1.5),
+            svg: {
+              fontSize: '1.125rem',
+              lineHeight: '1.25',
+            },
           },
         '&.MuiButton-contained.MuiButton-sizeMedium, &.MuiButton-outlined.MuiButton-sizeMedium':
           {
             fontSize: '1rem',
+            fontWeight: 600,
+            lineHeight: '148%',
+            fontStyle: 'normal',
             padding: localTheme.spacing(0.75, 2),
             borderRadius: 4,
           },
+        '&.MuiButton-outlined.button--color-secondary': {
+          color: 'var(--text-neutral-primary)',
+          borderColor: 'var(--border-neutral-primary)',
+          '&:hover': {
+            backgroundColor: 'var(--background-neutral-tertiary)',
+          },
+        },
         '&.video-play-button': {
           height: '64px',
           width: '64px',
@@ -69,10 +86,6 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           0 3px 4px 0 rgb(255 255 255 / 0.23) inset, 
           0 -4px 4px 0 rgb(0 0 0 / 0.07) inset,
           0 3px 6px 0 rgb(0 0 0 / 0.2)`,
-          // '&:focus-visible': {
-          // outline: '2px solid ' + theme.palette.primary.main,
-          // outlineOffset: '2px',
-          // },
           svg: {
             fontSize: '52px',
             color: 'var(--brand-purple-50)',
