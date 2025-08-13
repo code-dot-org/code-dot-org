@@ -4,11 +4,16 @@ class NotificationsController < ApplicationController
   # Index does not use pagination, returns all active notifications for the current user
   # Consider adding pagination if the number of notifications grows large
   def index
-    rails_notifications = current_user.external_notifications.not_dismissed.order(created_at: :desc).all
+    locale = params[:locale] || I18n.default_locale
+
+    contentful_entries = Marketing::ContentfulClient.entries(locale, 'dashboard-notification')
+
+    rails_external_notifications = current_user.external_notifications.not_dismissed.order(created_at: :desc).all
 
     # TODO(lfm): call contentful and add contentful notifications to the list
 
-    render json: rails_notifications.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}
+    render json: {rails: rails_external_notifications.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}},
+     contentful: contentful_entries}, status: :ok
   end
 
   def mark_as_read
