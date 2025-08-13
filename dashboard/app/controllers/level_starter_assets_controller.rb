@@ -1,6 +1,6 @@
 class LevelStarterAssetsController < ApplicationController
-  authorize_resource class: false, except: [:show, :file]
-  before_action :require_levelbuilder_mode, except: [:show, :file]
+  authorize_resource class: false, except: [:show, :file, :file_by_uuid]
+  before_action :require_levelbuilder_mode, except: [:show, :file, :file_by_uuid]
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
@@ -30,6 +30,15 @@ class LevelStarterAssetsController < ApplicationController
     content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
 
     expires_in 1.hour, public: true
+    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
+  end
+
+  def file_by_uuid
+    uuid_name = "#{params[:uuid]}.#{params[:format]}"
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
+
+    # expires_in 1.hour, public: true
     send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
@@ -65,6 +74,32 @@ class LevelStarterAssetsController < ApplicationController
     success = file_obj&.upload_file(upload_tempfile.path)
 
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
+      render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
+    else
+      return head :unprocessable_entity
+    end
+  end
+
+  def upload_by_uuid
+    if params[:files].length > 1
+      raise "One file upload expected. Actual: #{params[:files].length}"
+    end
+
+    upload = params[:files]&.first
+    upload_tempfile = upload.tempfile
+    friendly_name = upload.original_filename
+    file_ext = File.extname(friendly_name)
+
+    uuid_name = params[:uuid] + file_ext
+
+    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+      return head :unprocessable_entity
+    end
+
+    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
+    success = file_obj&.upload_file(upload_tempfile.path)
+
+    if success
       render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     else
       return head :unprocessable_entity

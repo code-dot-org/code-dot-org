@@ -1,8 +1,6 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -19,7 +17,7 @@ export type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
-  channelId: string;
+  uploadExternalFile: (file: File) => Promise<string>;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
@@ -92,7 +90,7 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
-  channelId,
+  uploadExternalFile,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
@@ -160,13 +158,12 @@ export const useFileUploader = ({
         };
       } else {
         try {
-          if (!channelId) {
-            throw new Error('channelId required for file upload.');
-          }
+          const url = await uploadExternalFile(file);
 
-          const fileType = file.name.split('.')[1];
-          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
-          await HttpClient.put(url, file);
+          // const fileType = file.name.split('.')[1];
+          // // const url = `${uploadBaseUrl}/${createUuid()}.${fileType}`;
+          // const url = `${uploadBaseUrl}`;
+          // await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,
@@ -185,7 +182,7 @@ export const useFileUploader = ({
     sendAnalyticsEvent,
     errorCallback,
     callback,
-    channelId,
+    uploadExternalFile,
   ]);
 
   return useMemo(
