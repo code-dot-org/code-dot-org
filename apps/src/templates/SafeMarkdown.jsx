@@ -29,9 +29,20 @@ class SafeMarkdown extends React.Component {
     unwrapped: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string,
-    // If we upgrade to prop-types >= 15.7.0 we should use `PropTypes.elementType`
-    // which looks for a react component function or class rather than any function/class.
-    // https://github.com/facebook/prop-types/blob/main/CHANGELOG.md#1570
+    /*
+     * A rehype component map used to map between tagNames and react components you wish to
+     * swap for elements with that tagName.
+     * see: https://github.com/marekweb/rehype-components/blob/main/readme.md#rehype-components
+     *
+     * Note: Our implementation can cache the processor for each rehypeMap for better performance
+     * but it is the consumer's responsibility to create the rehypeMap outside of the component
+     * function (or render method in class based components) or to define the mapping in an ES
+     * module and import it, if used in multiple components. See `markdownProcessorCache` below.
+     *
+     * Note: If we upgrade to prop-types >= 15.7.0 we should use `PropTypes.elementType`
+     * which looks for a react component function or class rather than any function/class.
+     * https://github.com/facebook/prop-types/blob/main/CHANGELOG.md#1570
+     **/
     rehypeMap: PropTypes.objectOf(PropTypes.func),
   };
 
@@ -41,8 +52,8 @@ class SafeMarkdown extends React.Component {
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
     const processor = this.props.openExternalLinksInNewTab
-      ? markdownToReactExternalLinks(this.props)
-      : markdownToReact(this.props);
+      ? markdownToReactExternalLinks(this.props.rehypeMap)
+      : markdownToReact(this.props.rehypeMap);
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
@@ -135,41 +146,92 @@ const localizationComponentWrappers = {
   },
 };
 
-const markdownToReact = props =>
-  unified()
-    .use(Processor.getParser())
-    // include custom plugins
-    .use([
-      clickableText,
-      expandableImages,
-      visualCodeBlock,
-      xmlAsTopLevelBlock,
-      details,
-    ])
-    // convert markdown to an HTML Abstract Syntax Tree (HAST)
-    .use(remarkRehype, {
-      // include any raw HTML in the markdown as raw HTML nodes in the HAST
-      allowDangerousHtml: true,
-    })
-    // parse the raw HTML nodes in the HAST to actual HAST nodes
-    .use(rehypeRaw)
-    // sanitize the HAST
-    .use(rehypeSanitize, schema)
-    // convert the HAST to React
-    .use(rehypeReact, {
-      createElement: React.createElement,
-      // Use React component wrappers for Blockly XML elements to prevent
-      // React from warning us about invalid components.
-      components: {
-        ...blocklyComponentWrappers,
-        ...localizationComponentWrappers,
-        ...props.rehypeMap,
-      },
-    });
+/*
+ * WeakMap compatiple key to swap for `undefined`.  Currently uses an object
+ * but could use a symbol if our minimum supported browsers implement the spec
+ * or if our transpilers (babel/tsc) can add a polyfill implementation .
+ * See: https://github.com/tc39/ecma262/pull/2777
+ **/
+const undefinedRehypeMap = {};
 
-const markdownToReactExternalLinks = props =>
-  markdownToReact(props).use(externalLinks, {
-    links: 'all',
-  });
+/*
+ * Get a cache key that works with cache's WeakMap implementation.  I.e. if
+ * key (rehypeMap) is undefined, we'll use `undefinedRehypeMap` as the key
+ * which is an object (non-primative) and thus allowed as WeakMap key.
+ **/
+const getCacheKey = rehypeMap => (rehypeMap ? rehypeMap : undefinedRehypeMap);
+
+/* Map to cache markdown processors based on the rehypeMap as key. */
+const markdownProcessorCache = new WeakMap();
+
+/*
+ * Create a markdown to react processor cached based on the value of rehypeMap. This ensures
+ * multiple `SafeMarkdown` components and instances will reuse the same processor when the
+ * rehypeMap is the same. Caching is based on the identity of the `rehypeMap` object not the
+ * contents within it (e.g. two different rehypeMap objects with the same tagName/reacComponent
+ * mapping will result in two different processors). It is the consumer's responsibility to
+ * create the rehypeMap outside of the component function (or render method in class based
+ * components) or to define the mapping in an ES module and import it if used in multiple
+ * components.
+ *
+ */
+const markdownToReact = rehypeMap => {
+  const rehypeMapCacheKey = getCacheKey(rehypeMap);
+  if (!markdownProcessorCache.has(rehypeMapCacheKey)) {
+    const processor = unified()
+      .use(Processor.getParser())
+      // include custom plugins
+      .use([
+        clickableText,
+        expandableImages,
+        visualCodeBlock,
+        xmlAsTopLevelBlock,
+        details,
+      ])
+      // convert markdown to an HTML Abstract Syntax Tree (HAST)
+      .use(remarkRehype, {
+        // include any raw HTML in the markdown as raw HTML nodes in the HAST
+        allowDangerousHtml: true,
+      })
+      // parse the raw HTML nodes in the HAST to actual HAST nodes
+      .use(rehypeRaw)
+      // sanitize the HAST
+      .use(rehypeSanitize, schema)
+      // convert the HAST to React
+      .use(rehypeReact, {
+        createElement: React.createElement,
+        // Use React component wrappers for Blockly XML elements to prevent
+        // React from warning us about invalid components.
+        components: {
+          ...blocklyComponentWrappers,
+          ...localizationComponentWrappers,
+          ...rehypeMap,
+        },
+      });
+    markdownProcessorCache.set(rehypeMapCacheKey, processor);
+  }
+  return markdownProcessorCache.get(rehypeMapCacheKey);
+};
+
+/* Map to cache markdown to react processors w/ externalLinks plugin. */
+const markdownProcessorExternalLinksCache = new WeakMap();
+
+/*
+ * Create a markdown to react processor that adds the externalLinks plugin
+ * and that is cached based on the value of rehypeMap.
+ */
+const markdownToReactExternalLinks = rehypeMap => {
+  const rehypeMapCacheKey = getCacheKey(rehypeMap);
+  if (!markdownProcessorExternalLinksCache.has(rehypeMapCacheKey)) {
+    // We use `()` to get a new unfrozen "copy" of the processor created
+    // (or returned from cache) by `markdownToReact(rehypeMapCacheKey)`.
+    // See: https://github.com/unifiedjs/unified?tab=readme-ov-file#processor
+    const processor = markdownToReact(rehypeMapCacheKey)().use(externalLinks, {
+      links: 'all',
+    });
+    markdownProcessorExternalLinksCache.set(rehypeMapCacheKey, processor);
+  }
+  return markdownProcessorExternalLinksCache.get(rehypeMapCacheKey);
+};
 
 export default SafeMarkdown;
