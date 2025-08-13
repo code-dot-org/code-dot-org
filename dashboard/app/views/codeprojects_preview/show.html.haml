@@ -1,2 +1,11 @@
-%div
-  Hello from codeprojects preview
+<!DOCTYPE html>
+%html
+  %head
+    = javascript_include_tag 'application', 'data-ot-ignore' => ''
+
+  %body
+    #codeprojects-preview-container
+    -# webpack-runtime.js must appear exactly once on any page containing webpack entries
+    %script{src: webpack_asset_path('js/webpack-runtime.js'), 'data-ot-ignore' => ''}
+
+    %script{src: webpack_asset_path("js/codeprojects_preview/show.js")}

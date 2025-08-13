@@ -289,6 +289,19 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                   )}
                   title={undefined}
                   icon="circle"
+                  tabIndex={0}
+                  aria-label={
+                    commonI18n.panel() +
+                    (index + 1) +
+                    (index === currentPanelIndex ? commonI18n.selected() : '')
+                  }
+                  onKeyDown={(event: React.KeyboardEvent) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      handleBubbleClick(index);
+                      event.preventDefault();
+                    }
+                  }}
+                  role="button"
                   onClick={() => handleBubbleClick(index)}
                 />
               );

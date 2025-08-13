@@ -1807,6 +1807,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       uid: args[:uid] || '1111',
       provider: args[:provider] || 'facebook',
       info: {
+        given_name: args[:given_name] || 'Firstname',
+        family_name: args[:family_name] || 'Lastname',
         name: args[:name] || 'someone',
         email: args[:email] || 'new@example.com',
         user_type: args[:user_type] || 'teacher',

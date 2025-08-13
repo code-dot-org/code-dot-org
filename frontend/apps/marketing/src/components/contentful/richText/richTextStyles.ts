@@ -19,3 +19,9 @@ export const richTextParagraphStyles = {
 export const richTextTableStyles = {
   ...commonRichTextSpacingStyles,
 };
+
+export const richTextListStyles = {
+  // Using inline-flex to ensure list items text aligns with other inline
+  // elements
+  display: 'inline-flex',
+};

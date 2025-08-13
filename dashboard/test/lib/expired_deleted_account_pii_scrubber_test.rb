@@ -64,6 +64,13 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
         scrub_pii
       end
     end
+
+    context 'when the number of accounts exceeds limit' do
+      let(:limit) {0}
+      it 'raises a SafetyConstraintViolation' do
+        _(proc {scrub_pii}).must_raise described_class::SafetyConstraintViolation
+      end
+    end
   end
 
   describe '#accounts_to_scrub' do
@@ -82,11 +89,9 @@ class ExpiredDeletedAccountPiiScrubberTest < ActiveSupport::TestCase
       _(accounts_to_scrub).wont_include user
     end
 
-    context 'when the number of accounts exceeds limit' do
-      let(:limit) {0}
-      it 'raises a SafetyConstraintViolation' do
-        _(proc {accounts_to_scrub}).must_raise described_class::SafetyConstraintViolation
-      end
+    it 'does not include accounts from processed_user_ids' do
+      described_instance.processed_user_ids << user.id
+      _(accounts_to_scrub).wont_include user
     end
   end
 end

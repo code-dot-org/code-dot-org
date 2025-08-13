@@ -33,6 +33,10 @@ inputs:
   PR_HEAD_REF:
     description: "The head ref of the pull request."
     required: false
+  SITE_TYPE:
+    description: "The type of site being tested. Defaults to 'corporate'."
+    default: "corporate"
+    required: false
 
 runs:
   using: composite
@@ -50,6 +54,7 @@ runs:
         APPLICATION_BASE_ADDRESS=${{ inputs.APPLICATION_BASE_ADDRESS }}
         BRANCHED_TESTING_ENABLED=${{ inputs.BRANCHED_TESTING_ENABLED }}
         PR_HEAD_REF=${{ inputs.PR_HEAD_REF }}
+        SITE_TYPE=${{ inputs.SITE_TYPE }}
         " >> .env
 
     - name: UI Tests

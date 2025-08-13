@@ -1565,9 +1565,14 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
-    user.family_name = auth.info.family_name if auth.info.family_name.present?
-    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = params['user_type'] || params[:user_type] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    if user.user_type == User::TYPE_TEACHER
+      Teacher.set_teacher_names_from_auth(user, auth)
+    else
+      user.family_name = auth.info.family_name if auth.info.family_name.present?
+    end
 
     # Store emails, except when using an authentication provider whose emails
     # we don't trust

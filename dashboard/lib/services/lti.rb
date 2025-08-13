@@ -107,13 +107,14 @@ module Services
       user.provider = ::User::PROVIDER_MIGRATED
       user.roster_synced = true
       user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
+      user.family_name = get_claim(nrps_member_message, :family_name)
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
+        user.given_name = get_claim(nrps_member_message, :given_name)
         user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
-        user.family_name = get_claim(nrps_member_message, :family_name)
       end
 
       id_token = {
@@ -340,11 +341,12 @@ module Services
 
     def self.assign_user_name(user, nrps_member)
       if user.teacher?
+        user.given_name = get_claim(nrps_member, :given_name)
         user.name = get_claim_from_list(nrps_member, Policies::Lti::TEACHER_NAME_KEYS)
       else
         user.name = get_claim_from_list(nrps_member, Policies::Lti::STUDENT_NAME_KEYS)
-        user.family_name = get_claim(nrps_member, :family_name)
       end
+      user.family_name = get_claim(nrps_member, :family_name)
     end
   end
 end

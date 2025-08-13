@@ -1,27 +1,27 @@
 export enum SupportedLocale {
   'en-US' = 'en-US',
-  es = 'es',
   ar = 'ar',
+  cs = 'cs',
   de = 'de',
+  'es-ES' = 'es-ES',
+  'es-LA' = 'es-LA', // Latin America Spanish
   fa = 'fa',
   fr = 'fr',
   hi = 'hi',
   id = 'id',
   it = 'it',
-  ja = 'ja',
   ko = 'ko',
+  kn = 'kn',
   mr = 'mr',
   pl = 'pl',
   'pt-BR' = 'pt-BR',
   sk = 'sk',
+  ta = 'ta',
+  te = 'te',
   th = 'th',
   tr = 'tr',
-  uk = 'uk',
-  vi = 'vi',
+  'zh-CN' = 'zh-CN',
   'zh-TW' = 'zh-TW',
-  sq = 'sq',
-  tl = 'tl',
-  he = 'he',
 }
 
 type LocalizeJsConfig = {
@@ -33,82 +33,82 @@ type LocalizeJsConfig = {
 // The following are LocalizeJS language codes and map 1:1. They are replicated here to ensure compatability in SSR.
 export const LOCALIZE_JS_CONFIG_MAP: LocalizeJsConfig[] = [
   {value: SupportedLocale['en-US'], text: 'English', isRTL: false},
-  {value: SupportedLocale['es'], text: 'Español', isRTL: false},
+  {value: SupportedLocale['es-LA'], text: 'Español (LATAM)', isRTL: false},
+  {value: SupportedLocale['es-ES'], text: 'Español (España)', isRTL: false},
   {value: SupportedLocale['ar'], text: 'العربية', isRTL: true},
+  {value: SupportedLocale['cs'], text: 'Čeština', isRTL: false},
   {value: SupportedLocale['de'], text: 'Deutsch', isRTL: false},
   {value: SupportedLocale['fa'], text: 'فارسی', isRTL: true},
   {value: SupportedLocale['fr'], text: 'Français', isRTL: false},
   {value: SupportedLocale['hi'], text: 'हिन्दी', isRTL: false},
   {value: SupportedLocale['id'], text: 'Bahasa Indonesia', isRTL: false},
   {value: SupportedLocale['it'], text: 'Italiano', isRTL: false},
-  {value: SupportedLocale['ja'], text: '日本語', isRTL: false},
+  {value: SupportedLocale['kn'], text: 'ಕನ್ನಡ', isRTL: false},
   {value: SupportedLocale['ko'], text: '한국어', isRTL: false},
   {value: SupportedLocale['mr'], text: 'मराठी', isRTL: false},
   {value: SupportedLocale['pl'], text: 'Polski', isRTL: false},
   {value: SupportedLocale['pt-BR'], text: 'Português (Brasil)', isRTL: false},
   {value: SupportedLocale['sk'], text: 'Slovenčina', isRTL: false},
+  {value: SupportedLocale['ta'], text: 'தமிழ்', isRTL: false},
+  {value: SupportedLocale['te'], text: 'తెలుగు', isRTL: false},
   {value: SupportedLocale['th'], text: 'ภาษาไทย', isRTL: false},
   {value: SupportedLocale['tr'], text: 'Türkçe', isRTL: false},
-  {value: SupportedLocale['uk'], text: 'Українська', isRTL: false},
-  {value: SupportedLocale['vi'], text: 'Tiếng Việt', isRTL: false},
+  {value: SupportedLocale['zh-CN'], text: '简体字', isRTL: false},
   {value: SupportedLocale['zh-TW'], text: '繁體字', isRTL: false},
-  {value: SupportedLocale['sq'], text: 'Shqip', isRTL: false},
-  {value: SupportedLocale['tl'], text: 'Tagalog', isRTL: false},
-  {value: SupportedLocale['he'], text: 'עברית', isRTL: true},
 ];
 
 // Map of supported BCP 47 locale codes to LocalizeJS locale codes
 const LOCALIZEJS_LOCALE: {[locale in SupportedLocale]: string} = {
   'en-US': 'en',
-  es: 'es',
   ar: 'ar',
+  cs: 'cs',
   de: 'de',
+  'es-ES': 'es-ES',
+  'es-LA': 'es-MX',
   fa: 'fa',
   fr: 'fr',
   hi: 'hi',
   id: 'id',
   it: 'it',
-  ja: 'ja',
+  kn: 'kn',
   ko: 'ko',
   mr: 'mr',
   pl: 'pl',
   'pt-BR': 'pt-BR',
   sk: 'sk',
+  ta: 'ta',
+  te: 'te',
   th: 'th',
   tr: 'tr',
-  uk: 'uk',
-  vi: 'vi',
+  'zh-CN': 'zh-CN',
   'zh-TW': 'zh-TW',
-  sq: 'sq',
-  tl: 'tl',
-  he: 'he',
 };
 
 // Map of LocalizeJS locale codes to Dashboard (studio.code.org) locale codes
-const DASHBOARD_LOCALE_MAP: Record<string, string | undefined> = {
+const DASHBOARD_LOCALE_MAP: Record<SupportedLocale, string | undefined> = {
   'en-US': 'en-US',
-  es: 'es-MX',
   ar: 'ar-SA',
+  cs: 'cs-CZ',
   de: 'de-DE',
+  'es-ES': 'es-ES',
+  'es-LA': 'es-MX',
   fa: 'fa-IR',
   fr: 'fr-FR',
   hi: 'hi-IN',
   id: 'id-ID',
   it: 'it-IT',
-  ja: 'ja-JP',
+  kn: 'kn-IN',
   ko: 'ko-KR',
   mr: 'mr-IN',
   pl: 'pl-PL',
   'pt-BR': 'pt-BR',
   sk: 'sk-SK',
+  ta: 'ta-IN',
+  te: 'te-IN',
   th: 'th-TH',
   tr: 'tr-TR',
-  uk: 'uk-UA',
-  vi: 'vi-VN',
+  'zh-CN': 'zh-CN',
   'zh-TW': 'zh-TW',
-  sq: 'sq-AL',
-  tl: 'fil-PH',
-  he: 'he-IL',
 };
 
 const LOCALIZEJS_LOCALE_MAP: Record<string, SupportedLocale | undefined> =
@@ -137,7 +137,7 @@ export function getLocalizeJsLocaleFromBCP47(bcp47Code: string) {
  * Returns the Dashboard (studio.code.org) locale code for a given LocalizeJS locale code.
  * @param localizeJsLocale - The LocalizeJS locale code to convert.
  */
-export function getDashboardLocale(localizeJsLocale: string): string {
+export function getDashboardLocale(localizeJsLocale: SupportedLocale): string {
   return DASHBOARD_LOCALE_MAP[localizeJsLocale] || 'en-US';
 }
 
