@@ -42,10 +42,15 @@ class CourseVersion < ApplicationRecord
   UNVERSIONED = 'unversioned'.freeze
 
   def units
-    content_root.default_units
+    content_root_type == 'UnitGroup' ? content_root.default_units : [content_root]
   end
 
-  belongs_to :content_root, class_name: "UnitGroup", optional: true
+  # "Interface" for content_root:
+  #
+  # is_course? - used during seeding to determine whether this object represents the content root for a CourseVersion.
+  #   For example, this should return True for the CourseA-2019 Unit and the CSP-2019 UnitGroup. This should return
+  #   False for the CSP1-2019 Unit.
+  belongs_to :content_root, polymorphic: true, optional: true
 
   alias_attribute :version_year, :key
 
@@ -78,14 +83,18 @@ class CourseVersion < ApplicationRecord
   end
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
-  # potential content root, i.e. a UnitGroup.
+  # potential content root, i.e. a Unit or UnitGroup.
   #
   # Examples:
+  #
+  # coursea-2019.script represents the content root for Course A, Version 2019.
+  # Therefore, it should contain "is_course true", which will cause this method to create the
+  # corresponding CourseVersion object.
   #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
   # Therefore, it does not contain "is_course true". so this method will not create a CourseVersion object for it.
   def self.add_course_version(course_offering, content_root)
-    if content_root.is_a?(UnitGroup)
+    if content_root.is_course?
       raise "version_year must be set, since is_course is true, for: #{content_root.name}" if content_root.version_year.nil_or_empty?
 
       course_version = CourseVersion.find_or_initialize_by(
@@ -93,12 +102,10 @@ class CourseVersion < ApplicationRecord
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
-        content_root_type: content_root.class.name
       )
       course_version.published_state = content_root.published_state
     else
-      # If content_root is not a UnitGroup, then we cannot create a CourseVersion.
-      raise "cannot create CourseVersion for content root #{content_root.name} that is not a UnitGroup"
+      course_version = nil
     end
 
     # Check if we should prevent saving the new course version:
@@ -133,16 +140,16 @@ class CourseVersion < ApplicationRecord
   end
 
   def all_standards_url
-    standards_course_path(content_root)
+    content_root_type == 'UnitGroup' ? standards_course_path(content_root) : standards_script_path(content_root)
   end
 
   def self.should_cache?
     Unit.should_cache?
   end
 
-  def self.course_offering_keys
-    Rails.cache.fetch("course_version/course_offering_keys", force: !should_cache?) do
-      CourseVersion.includes(:course_offering).filter_map {|cv| cv.course_offering&.key}.uniq.sort
+  def self.course_offering_keys(content_root_type)
+    Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
+      CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).filter_map {|cv| cv.course_offering&.key}.uniq.sort
     end
   end
 
@@ -181,9 +188,11 @@ class CourseVersion < ApplicationRecord
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids, user)
-    Unit.joins(unit_groups: :course_version).where(id: unit_ids).
-        flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.
-        map(&:summarize_for_unit_selector).uniq.sort_by {|c| c[:display_name]}
+    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.compact.uniq
+
+    unit_groups =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.select {|cv| cv.course_assignable?(user)}.map(&:summarize_for_unit_selector).uniq
+
+    standalone_units.concat(unit_groups).sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -192,10 +201,11 @@ class CourseVersion < ApplicationRecord
       {
         id: id,
         key: key,
-        version_year: content_root.localized_version_title,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
         name: content_root.localized_title,
         path: content_root.link,
+        type: content_root_type,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
         locales: content_root.supported_locale_names,

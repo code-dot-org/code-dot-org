@@ -553,7 +553,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'concise_summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
-    CourseOffering.add_course_offering(script.original_unit_group)
+    CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section)
@@ -993,7 +993,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a coteacher' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
-    CourseOffering.add_course_offering(script.original_unit_group)
+    CourseOffering.add_course_offering(script)
 
     Timecop.freeze(Time.zone.now) do
       section = create(:section)
