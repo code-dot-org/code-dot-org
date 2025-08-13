@@ -54,6 +54,30 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             padding: localTheme.spacing(0.75, 2),
             borderRadius: 4,
           },
+        '&.video-play-button': {
+          height: '64px',
+          width: '64px',
+          border: 0,
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          position: 'absolute',
+          borderRadius: '100px',
+          background: 'var(--neutral-base-white)',
+          boxShadow: `
+          0 3px 4px 0 rgb(255 255 255 / 0.23) inset, 
+          0 -4px 4px 0 rgb(0 0 0 / 0.07) inset,
+          0 3px 6px 0 rgb(0 0 0 / 0.2)`,
+          // '&:focus-visible': {
+          // outline: '2px solid ' + theme.palette.primary.main,
+          // outlineOffset: '2px',
+          // },
+          svg: {
+            fontSize: '52px',
+            color: 'var(--brand-purple-50)',
+          },
+        },
       };
     },
   },

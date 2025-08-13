@@ -1,16 +1,17 @@
-import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import PlayArrow from '@mui/icons-material/PlayArrow';
+import MuiButton from '@mui/material/Button';
 
 import moduleStyles from './video.module.scss';
 
 const PlayButton = ({label, onClick}: {label: string; onClick: () => void}) => {
   return (
-    <button
+    <MuiButton
       aria-label={label}
-      className={moduleStyles.playButtonBackground}
+      className="video-play-button"
       onClick={onClick}
     >
-      <PlayCircleIcon className={moduleStyles.playButton} />
-    </button>
+      <PlayArrow className={moduleStyles.playButton} />
+    </MuiButton>
   );
 };
 
