@@ -70,6 +70,11 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const [isUpdating, setIsUpdating] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const notStarted = workshop.state === 'Not Started';
+  const inProgress = workshop.state === 'In Progress';
+  const ended = workshop.state === 'Ended';
+  const cannotEndWorkshop = !workshop.readyToClose;
+
   const handleClick = (stateKey: WorkshopActions) => {
     setError(null);
     setActiveDialog(stateKey);
@@ -78,7 +83,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const generateHandler = useCallback(
     (action: WorkshopActions) => async () => {
       setIsUpdating(true);
-      setError(null); // Clear any previous errors
+      setError(null);
       try {
         const response = await fetch(
           `/api/v1/pd/workshops/${workshop.id}/${action}`,
@@ -125,11 +130,6 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
     },
     [onWorkshopUpdate, workshop.id]
   );
-
-  const notStarted = workshop.state === 'Not Started';
-  const inProgress = workshop.state === 'In Progress';
-  const ended = workshop.state === 'Ended';
-  const cannotEndWorkshop = !workshop.readyToClose;
 
   return (
     <>
