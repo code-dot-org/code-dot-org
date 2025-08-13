@@ -63,13 +63,6 @@ export const HTMLPreview = () => {
           {type: IframeMessageType.CHANGE_FILE_URL_BAR, fileName: currentFile},
           previewUrl
         );
-        iframeRef.current?.contentWindow?.postMessage(
-          {
-            type: IframeMessageType.SET_ALLOW_SCRIPTS,
-            allow: allowUserScripts,
-          },
-          previewUrl
-        );
       } else if (
         event.data.type === IframeMessageType.FILE_UPDATED &&
         event.origin === previewUrl
