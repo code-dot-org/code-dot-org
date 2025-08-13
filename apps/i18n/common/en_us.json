@@ -2983,6 +2983,8 @@
   "studentResources": "Student Resources",
   "studentResponses": "Student Responses",
   "studentResponse": "Student Response",
+  "studentRubricNoFeedback": "No feedback yet!",
+  "studentRubricTeacherFeedback": "Your teacher wrote:",
   "studentTableTeacherDemo": "Me",
   "studentUsStateUpdatesModal_title": "Set state for all students",
   "studentUsStateUpdatesModal_desc": "Please be sure to choose the correct state. For certain states, we may be required to obtain parental consent for student accounts. [**Learn more about parental consent**]({docURL})",

@@ -1,6 +1,7 @@
 import moment from 'moment-timezone';
 
 import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
+import {WorkshopData} from '../workshops/types';
 
 import {isOption, Option} from './components/MultiSelectInput';
 import {
@@ -182,3 +183,40 @@ export const emptyValue = (
       return true;
   }
 };
+
+export const workshopDataToOverviewProps = (
+  apiData: Workshop
+): WorkshopData => ({
+  id: apiData.id,
+  state: apiData.state,
+  timeZone: apiData.time_zone,
+  name: apiData.name,
+  course: apiData.course,
+  subject: apiData.subject,
+  courseOfferingNames: apiData.course_offering_names,
+  sessions: apiData.sessions.map(session => ({
+    id: session.id,
+    start: session.start,
+    end: session.end,
+    sessionFormat: session.session_format,
+    locationName: session.location_name,
+    locationAddress: session.location_address,
+    meetingLink: session.meeting_link,
+    code: session.code,
+    showLink: session['show_link?'] ?? false,
+    attendanceCount: session.attendance_count,
+  })),
+  facilitators: apiData.facilitators.map(facilitator => ({
+    id: facilitator.id,
+    name: facilitator.name,
+    email: facilitator.email,
+  })),
+  regionalPartnerName: apiData.regional_partner_name,
+  accountRequiredForAttendance:
+    apiData['account_required_for_attendance?'] ?? false,
+  readyToClose: apiData['ready_to_close?'] ?? false,
+  registrationLink: apiData.registration_link,
+  createdAt: apiData.created_at,
+  enrolledTeacherCount: apiData.enrolled_teacher_count,
+  hidden: apiData.hidden,
+});

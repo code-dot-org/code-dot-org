@@ -23,7 +23,7 @@ const SHARED_LINKS = {
     label: 'Donate',
   },
   GET_INVOLVED: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Get Involved',
   },
   HOME: {

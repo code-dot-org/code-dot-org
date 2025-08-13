@@ -1,5 +1,6 @@
 'use client';
 
+import {useSearchParams} from 'next/navigation';
 import {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Map, {
   FullscreenControl,
@@ -30,7 +31,7 @@ import './adoptionMap.scss';
 import styles from './adoptionMap.module.scss';
 
 // This constant is updated each year to the new census year tileset after its data is
-// confirmed using the update_census_mapbox script.
+// confirmed using the update_census_mapbox script and `tileset` URL parameter.
 const MAP_TILESET_ID = 'censustiles';
 
 const MAP_POINT_LAYER_ID = 'census';
@@ -53,6 +54,8 @@ const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
   onTakeSurveyClick,
 }) => {
   const mapRef = useRef<MapRef>(null);
+  const tilesetUrlParam = useSearchParams()?.get('tileset');
+  const mapTileset = tilesetUrlParam ?? MAP_TILESET_ID;
 
   const [mapLoaded, setMapLoaded] = useState(false);
   const [popupData, setPopupData] = useState<{
@@ -97,7 +100,7 @@ const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
       mapInstance.once('moveend', () => {
         let newPopupData;
 
-        const schoolPoint = mapInstance.querySourceFeatures(MAP_TILESET_ID, {
+        const schoolPoint = mapInstance.querySourceFeatures(mapTileset, {
           sourceLayer: MAP_POINT_LAYER_ID,
           filter: ['all', ['==', 'school_id', school.nces_id]],
         })[0];
@@ -217,13 +220,13 @@ const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
         <NavigationControl position="bottom-right" showCompass={false} />
 
         <Source
-          id={MAP_TILESET_ID}
+          id={mapTileset}
           type="vector"
-          url={`mapbox://codeorg.${MAP_TILESET_ID}`}
+          url={`mapbox://codeorg.${mapTileset}`}
         >
           <Layer
             id={NO_CS_SCHOOLS_LAYER_ID}
-            source={MAP_TILESET_ID}
+            source={mapTileset}
             source-layer={MAP_POINT_LAYER_ID}
             layout={{visibility: 'visible'}}
             type="circle"
@@ -250,7 +253,7 @@ const AdoptionMap: React.FC<AdoptionMapMapProps> = ({
           />
           <Layer
             id={CS_SCHOOLS_LAYER_ID}
-            source={MAP_TILESET_ID}
+            source={mapTileset}
             source-layer={MAP_POINT_LAYER_ID}
             layout={{visibility: 'visible'}}
             type="circle"
