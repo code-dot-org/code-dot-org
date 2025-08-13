@@ -5,17 +5,10 @@ require 'cdo/tutorials'
 
 module HocLegacy
   class TutorialsController < ApplicationController
-    before_action :assign_tutorial_by_short_code, only: %i[show]
-    before_action :assign_tutorial_by_code, only: %i[begin begin_pixel finish finish_pixel]
+    before_action :assign_tutorial, only: %i[begin begin_pixel finish finish_pixel]
     before_action :require_tutorial, only: %i[show begin begin_pixel finish finish_pixel]
 
     after_action :disable_caching, only: %i[begin begin_pixel finish_current finish finish_pixel]
-
-    # GET /hour/:short_code
-    def show
-      TutorialLauncher.call(controller: self, tutorial: @tutorial, company: params[:company]) if db_write_enabled?
-      redirect_to @tutorial[:url], status: :found
-    end
 
     # GET /api/hour/begin/:code
     def begin
@@ -84,15 +77,7 @@ module HocLegacy
       DCDO.get('hoc_apis_in_dashboard', false)
     end
 
-    private def assign_tutorial_by_short_code
-      short_code = params[:short_code]
-      short_code = 'mchoc' if short_code == 'MC'
-      @tutorial = Tutorials.new(:tutorials).find_with_short_code(short_code)
-    rescue Sequel::DatabaseError
-      @tutorial = nil
-    end
-
-    private def assign_tutorial_by_code
+    private def assign_tutorial
       @tutorial = Tutorials.new(:tutorials).find_with_code(params[:code]) ||
         Tutorials.new(:tutorials_more).find_with_code(params[:code])
     end

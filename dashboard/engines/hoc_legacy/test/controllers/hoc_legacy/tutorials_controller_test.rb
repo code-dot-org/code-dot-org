@@ -13,61 +13,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     _(false).must_equal true
   end
 
-  describe 'GET /hour/:short_code' do
-    subject(:show_tutorial_request) {get "/hour/#{tutorial_short_code}?company=#{param_company}"}
-
-    let(:tutorial_short_code) {'tutorial_short_code'}
-    let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
-    let(:tutorial) {OpenStruct.new(short_code: tutorial_short_code, url: tutorial_url)}
-    let(:param_company) {'param_company'}
-
-    before do
-      allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
-      allow_any_instance_of(Tutorials).to receive(:find_with_short_code).with(tutorial_short_code).and_return(tutorial)
-      allow(HocLegacy::TutorialLauncher).to receive(:call)
-    end
-
-    it 'launches tutorial for company from params' do
-      show_tutorial_request
-      expect(HocLegacy::TutorialLauncher).to have_received(:call).
-        with(controller:, tutorial:, company: param_company).once
-    end
-
-    it 'redirects to tutorial URL' do
-      show_tutorial_request
-      must_respond_with :found
-      must_redirect_to tutorial_url
-    end
-
-    context 'when no tutorial is found' do
-      let(:tutorial) {nil}
-
-      it 'returns error 404' do
-        show_tutorial_request
-        must_respond_with :not_found
-        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
-      end
-    end
-
-    context 'when DCDO hoc_apis_in_dashboard is false' do
-      before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-      end
-
-      it 'does not launch tutorial' do
-        show_tutorial_request
-        expect(HocLegacy::TutorialLauncher).not_to have_received(:call)
-      end
-
-      it 'redirects to tutorial URL' do
-        show_tutorial_request
-        must_respond_with :found
-        must_redirect_to tutorial_url
-      end
-    end
-  end
-
   describe 'GET /api/hour/begin/:code' do
     subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}?company=#{params_company}"}
 
