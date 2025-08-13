@@ -1,5 +1,7 @@
 # AnalyticsReporter Usage Documentation
 
+## Frontend Metrics
+
 The `AnalyticsReporter` is a Statsig-based analytics service that provides event tracking, user management, and A/B testing capabilities for the Code.org platform.
 
 ## Overview
@@ -197,7 +199,7 @@ analyticsReporter.sendEvent('peer_help_requested', {
 - Experiments are configured server-side in Statsig
 - In local development, events are logged to console for debugging
 
-## Debugging
+## Send Events From Development
 
 In development mode, you'll see console logs like:
 ```
@@ -208,3 +210,94 @@ To force sending events in local mode:
 
 1. Set `statsig_api_client_key: <non-prod-statsig-api-client-key>` in your `locals.yml` file. This API key can be obtained from the Statsig dashboard. NOTE: You shouldn't need to do this often, as you can see the logs in the dev tools console when developing locally.
 2. Toggle `ALWAYS_SEND = true;` constant at the top of the file.
+
+## Server-side Metrics
+
+The `Metrics::Events` module provides a wrapper for the Statsig SDK to log events with environment-specific handling.
+
+## Overview
+
+This module automatically routes events to different handlers based on the current environment:
+- **Development**: Logs events to stdout for debugging
+- **Production/Test**: Logs events to Statsig
+- **Other environments**: Silently ignores events
+
+## Usage
+
+### Basic Event Logging
+
+```ruby
+# Log a simple event
+Metrics::Events.log_event(event_name: 'button_click')
+
+# Log event with metadata
+metadata = {
+  page: 'dashboard',
+  button_type: 'primary'
+}
+Metrics::Events.log_event(
+  event_name: 'button_click',
+  metadata: metadata
+)
+```
+
+### User-Associated Events
+
+```ruby
+# Log event for a specific user
+Metrics::Events.log_event(
+  user: current_user,
+  event_name: 'lesson_completed',
+  event_value: 'lesson_1'
+)
+
+# Include session to include statsig_stable_id for signed-out user scenarios
+Metrics::Events.log_event(
+  user: current_user,
+  event_name: 'page_view',
+  session: session
+)
+```
+
+### Advanced Options
+
+```ruby
+# Include user's enabled experiments
+Metrics::Events.log_event(
+  user: current_user,
+  event_name: 'feature_used',
+  get_enabled_experiments: true
+)
+```
+
+## Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `user` | User object | No | The logged-in user instance |
+| `event_name` | String | **Yes** | Name of the event to log |
+| `event_value` | String | No | Value associated with the event (defaults to `event_name`) |
+| `metadata` | Hash | No | Additional event data (default: `{}`) |
+| `get_enabled_experiments` | Boolean | No | Include user's enabled experiments (default: `false`) |
+| `session` | Hash | No | Session data containing `statsig_stable_id` |
+
+## Environment Behavior
+
+### Development Environment
+- Events are logged to stdout as JSON for easy debugging
+- Errors are printed to console
+- No data is sent to external services
+
+### Production/Test Environment
+- Events are sent to Statsig for analytics
+- User information is automatically included if available
+- Stable IDs from session are preserved
+
+### Other Environments
+- Events are silently ignored
+- No logging or external calls are made
+
+## Send Events From Development
+
+1. Set `statsig_server_secret_key: <non-prod-statsig-server-secret-key>` in your `locals.yml` file. This API key can be obtained from the Statsig dashboard. NOTE: You shouldn't need to do this often, as you can see the logs in the dev tools console when developing locally.
+2. In `dashboard/lib/cdo/statsig.rb`, set `local_mode` to false (defaults to `true` in non-prod/non-test server environments).

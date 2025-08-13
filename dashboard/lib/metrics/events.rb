@@ -12,9 +12,9 @@ require 'cdo/statsig'
 # }
 #
 # Metrics::Events.log_event(event_name: 'some_event_name')
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata, request: request)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata, request: request)
-# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true, request: request)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', metadata: metadata, session: session)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', event_value: 'some_event_value', metadata: metadata, session: session)
+# Metrics::Events.log_event(user: current_user, event_name: 'some_event_name', get_enabled_experiments: true, session: session)
 
 module Metrics
   module Events
@@ -27,7 +27,7 @@ module Metrics
       # @event_value - the value of the event (optional)
       # @metadata - a metadata hash with relevant data (optional)
       # @get_enabled_experiments - include list of experiements the user is enrolled in (optional)
-      # @request - the request hash (optional)
+      # @session - the session hash (optional)
       def log_event(user: nil, event_name:, event_value: nil, metadata: {}, get_enabled_experiments: false, session: nil)
         event_value = event_name if event_value.nil?
         enabled_experiments = get_enabled_experiments && user.present? ? Queries::User::EnabledExperiments.call(user) : nil
