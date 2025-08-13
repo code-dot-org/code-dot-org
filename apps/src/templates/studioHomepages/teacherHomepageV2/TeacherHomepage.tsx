@@ -17,7 +17,7 @@ import CoteacherInviteNotification from '../CoteacherInviteNotification';
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
 import {SectionList} from './SectionList';
-import TeacherHomepageDrawer from './TeacherHomepageDrawer';
+import TeacherHomepagePopups from './TeacherHomepagePopups';
 import TeacherPromotions from './TeacherPromotions';
 
 import styles from './teacherHomepage.module.scss';
@@ -121,7 +121,7 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
           <TeacherPromotions />
         </div>
       </div>
-      <TeacherHomepageDrawer />
+      <TeacherHomepagePopups />
     </div>
   );
 };

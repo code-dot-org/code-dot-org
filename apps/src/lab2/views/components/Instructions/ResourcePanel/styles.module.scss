@@ -1,0 +1,64 @@
+@import 'color.scss';
+@import '../../../../../mixins.scss';
+
+.resourcePanel {
+  display: flex;
+  background-color: var(--background-neutral-secondary);
+  height: 100%;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .tabs {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabButton {
+    @include remove-button-styles;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 5px;
+    border: 1px solid var(--borders-neutral-primary);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    background-color: var(--background-neutral-secondary);
+
+    // Overwrite default button styles.
+    &:active {
+      border: 1px solid var(--borders-neutral-primary) !important;
+      border-right: none !important;
+    }
+
+    &.selected {
+      background-color: var(--background-neutral-primary);
+    }
+
+    i {
+      color: var(--text-neutral-secondary);
+      font-size: 14px;
+    }
+  }
+}
+
+.panels {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+  flex: 1;
+
+  &.footerSpacing {
+    // Space for absolutely positioned footer.
+    // Remove when footer buttons are moved to sidebar.
+    margin-bottom: 45px;
+  }
+}
+
+.panelContent {
+  background-color: var(--background-neutral-primary);
+  height: 100%;
+}

@@ -713,9 +713,6 @@ module SharedConstants
       SHAPE: 100,
     },
   }.freeze
-  CENSUS_CONSTANTS = OpenStruct.new(
-    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
-  )
 
   CAP_LINKS = OpenStruct.new(
     PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',

@@ -211,7 +211,14 @@ const routeConfigs = [
         })
       ),
     },
-    childRoutes: workshopChildRouteConfigs,
+    childRoutes: [
+      ...workshopChildRouteConfigs,
+      {
+        path: 'edit',
+        breadcrumbs: 'Workshops,Workshop,Temp,Edit',
+        component: WorkshopFormTemplate,
+      },
+    ],
   },
   {
     path: 'workshops/:workshopId/edit',

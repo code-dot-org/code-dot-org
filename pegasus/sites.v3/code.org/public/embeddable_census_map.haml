@@ -11,11 +11,12 @@ theme: responsive
     display: none;
   }
 
+- census_tileset = "censustiles"
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %link{rel: "stylesheet", href: "https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css"}
 %link{rel: "stylesheet", type: "text/css", href: "/css/census-map.css"}
-%script{src: webpack_asset_path('js/code.org/public/embeddable_census_map.js'), data: {tileset: CDO.mapbox_access_tileset.to_json}}
+%script{src: webpack_asset_path('js/code.org/public/embeddable_census_map.js'), data: {tileset: census_tileset.to_json}}
 
 #census-map
 

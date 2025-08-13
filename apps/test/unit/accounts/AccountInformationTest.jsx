@@ -119,6 +119,130 @@ describe('AccountInformation', () => {
     ).toBeInTheDocument();
   });
 
+  it('only passes available student fields into update call for students', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(
+      <AccountInformation
+        {...defaultProps}
+        userDisplayName="Student Name"
+        userType="student"
+        isStudent={true}
+        userUsername="StudentUsername"
+        showGenderInput={true}
+      />
+    );
+
+    fireEvent.change(screen.getByLabelText(/age/i), {
+      target: {value: '14'},
+    });
+    fireEvent.change(screen.getByLabelText(/state/i), {
+      target: {value: 'CA'},
+    });
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Student Name',
+        username: 'StudentUsername',
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '14',
+        gender_student_input: '',
+        us_state: 'CA',
+      },
+    });
+  });
+
+  it('only passes available teacher fields into update call for teachers', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    render(<AccountInformation {...defaultProps} />);
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'johndoe',
+        given_name: '',
+        family_name: '',
+        educator_role: undefined,
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+      },
+    });
+  });
+
+  it('only passes available facilitator fields into update call for facilitators', async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: true,
+    });
+
+    const userFacilitatorBio =
+      'This is a facilitator bio with a long enough description.';
+    render(
+      <AccountInformation
+        {...defaultProps}
+        isFacilitator={true}
+        userFacilitatorBio={userFacilitatorBio}
+      />
+    );
+
+    fireEvent.click(
+      screen.getByRole('button', {name: /update account information/i})
+    );
+
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith('/users', expect.any(Object));
+      expect(
+        screen.getByText(/account information successfully updated/i)
+      ).toBeInTheDocument();
+    });
+
+    const fetchArgs = mockFetch.mock.calls[0][1];
+    expect(JSON.parse(fetchArgs.body)).toEqual({
+      user: {
+        name: 'Mr. Doe',
+        username: 'johndoe',
+        given_name: '',
+        family_name: '',
+        password: '',
+        password_confirmation: '',
+        current_password: '',
+        age: '21+',
+        facilitator_info_attributes: {bio: userFacilitatorBio},
+      },
+    });
+  });
+
   it('submits form with updated information and displays success alert', async () => {
     mockFetch.mockResolvedValueOnce({
       ok: true,

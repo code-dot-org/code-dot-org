@@ -12,7 +12,6 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {updateSchoolInfo} from '@cdo/apps/schoolInfo/utils/updateSchoolInfo';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -25,50 +24,26 @@ import styles from './teacherHomepage.module.scss';
 
 const NON_SCHOOL_OPTIONS = ['selectASchool', 'clickToAdd', 'noSchoolSetting'];
 
-interface DrawerData {
-  showSchoolInfoInterstitial: boolean;
-  showSchoolInfoConfirmation: boolean;
-  existingSchoolInfo: SchoolInfo;
+interface TeacherHomepageDrawerProps {
+  existingSchoolInfo?: SchoolInfo;
+  schoolInfoInterstitialOpenInitially: boolean;
+  schoolInfoConfirmationOpenInitially: boolean;
+  onCloseCallback: () => void;
 }
 
-export const TeacherHomepageDrawer: React.FC = () => {
+export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
+  existingSchoolInfo,
+  schoolInfoInterstitialOpenInitially,
+  schoolInfoConfirmationOpenInitially,
+  onCloseCallback,
+}) => {
   const [schoolInfoInterstitialOpen, setSchoolInfoInterstitialOpen] =
-    React.useState(false);
+    React.useState(schoolInfoInterstitialOpenInitially);
   const [schoolInfoConfirmationOpen, setSchoolInfoConfirmationOpen] =
-    React.useState(false);
+    React.useState(schoolInfoConfirmationOpenInitially);
   const [success, setSuccess] = React.useState(false);
   const [showSchoolInfoUnknownError, setShowSchoolInfoUnknownError] =
     React.useState(false);
-  const [existingSchoolInfo, setExistingSchoolInfo] = React.useState<
-    SchoolInfo | undefined
-  >(undefined);
-
-  // Load school data and set the drawer state based on the response.
-  React.useEffect(() => {
-    HttpClient.fetchJson<DrawerData>(
-      '/teacher_dashboard/get_school_info_interstitial_data'
-    )
-      .then(data => {
-        setExistingSchoolInfo(data.value.existingSchoolInfo);
-        setSchoolInfoInterstitialOpen(data.value.showSchoolInfoInterstitial);
-        setSchoolInfoConfirmationOpen(data.value.showSchoolInfoConfirmation);
-
-        // If the URL has a query param to show the interstitial or confirmation,
-        // we want to set that state to true to open the drawer.
-        const searchParams = new URLSearchParams(window.location.search);
-        if (searchParams.get('showSchoolInfoInterstitial') === 'true') {
-          setSchoolInfoInterstitialOpen(true);
-          // We don't want to set both to true at the same time
-        } else if (searchParams.get('showSchoolInfoConfirmation') === 'true') {
-          setSchoolInfoConfirmationOpen(true);
-        }
-      })
-      .catch(error => console.log(error));
-  }, [
-    setExistingSchoolInfo,
-    setSchoolInfoInterstitialOpen,
-    setSchoolInfoConfirmationOpen,
-  ]);
 
   const inUSA = useAppSelector(state => state.currentUser.inUSA);
   const schoolInfo = useSchoolInfo({
@@ -169,6 +144,7 @@ export const TeacherHomepageDrawer: React.FC = () => {
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
     setSuccess(false);
+    onCloseCallback();
   };
 
   return (

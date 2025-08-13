@@ -36,10 +36,10 @@ $default-spacing: 4px;
   flex: 1;
   overflow: hidden;
   flex-direction: column;
-  background: $light_white;
+  background: var(--background-neutral-primary);
 
   .tabsContainer {
-    background-color: #eaebeb;
+    background-color: var(--background-neutral-tertiary);
     padding: $default-spacing $default-spacing 0 $default-spacing;
   }
 

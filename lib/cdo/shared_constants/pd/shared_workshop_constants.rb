@@ -21,6 +21,8 @@ module Pd
 
     COURSES = ACTIVE_COURSES + ARCHIVED_COURSES
 
+    ACTIVE_PERMISSION_COURSES = [*ACTIVE_COURSES, COURSE_CSF].freeze
+
     STATES = [
       STATE_NOT_STARTED = 'Not Started'.freeze,
       STATE_IN_PROGRESS = 'In Progress'.freeze,
@@ -304,7 +306,8 @@ module Pd
       'Regional',
       'National',
       'Facilitator',
-      'Train the trainer'
+      'Train the trainer',
+      'Admin/Counselor'
     ].freeze
 
     WORKSHOP_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12).freeze

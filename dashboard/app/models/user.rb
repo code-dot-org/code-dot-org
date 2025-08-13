@@ -108,6 +108,7 @@ class User < ApplicationRecord
   include PartialRegistration
   include Purgeable
   include Facilitator
+  include TermsOfService
   include Rails.application.routes.url_helpers
 
   self.inheritance_column = :user_type
@@ -149,6 +150,7 @@ class User < ApplicationRecord
   #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
+  #   signup_sources_tracking: Array of user selections for what brought them to sign up for Code.org.
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
 
@@ -160,12 +162,6 @@ class User < ApplicationRecord
   # constants for resetting user secret words/picture
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
-
-  # When adding a new version, append to the end of the array
-  # using the next increasing natural number.
-  TERMS_OF_SERVICE_VERSIONS = [
-    1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
 
   serialized_attrs %w(
     ops_first_name
@@ -223,6 +219,7 @@ class User < ApplicationRecord
     seen_ta_scores_map
     roster_synced
     educator_role
+    signup_sources_tracking
   )
 
   attr_accessor(
@@ -1164,24 +1161,6 @@ class User < ApplicationRecord
     teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
   end
 
-  # Returns whether the user has accepted the latest major version of the Terms of Service
-  def accepted_latest_terms?
-    terms_of_service_version == TERMS_OF_SERVICE_VERSIONS.last
-  end
-
-  # Returns the latest major version of the Terms of Service
-  def latest_terms_version
-    TERMS_OF_SERVICE_VERSIONS.last
-  end
-
-  # Updates user's most recently accepted Terms of Service version to the latest version
-  def update_user_tos_version_accept
-    terms_of_service_version = latest_terms_version
-    self.terms_of_service_version = terms_of_service_version
-
-    save!
-  end
-
   # Ideally this would just be called school, but school is already a column
   # on the user table representing the school name
   def school_info_school
@@ -1586,9 +1565,14 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
-    user.family_name = auth.info.family_name if auth.info.family_name.present?
-    user.user_type = params['user_type'] || auth.info.user_type
+    user.user_type = params['user_type'] || params[:user_type] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
+
+    if user.user_type == User::TYPE_TEACHER
+      Teacher.set_teacher_names_from_auth(user, auth)
+    else
+      user.family_name = auth.info.family_name if auth.info.family_name.present?
+    end
 
     # Store emails, except when using an authentication provider whose emails
     # we don't trust
