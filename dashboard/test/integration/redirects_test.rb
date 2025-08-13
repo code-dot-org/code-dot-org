@@ -1,6 +1,13 @@
 require 'test_helper'
 
 class RedirectsTest < ActionDispatch::IntegrationTest
+  self.use_transactional_test_case = true
+
+  setup_all do
+    @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    @multi_lesson_unit_group = create(:single_unit_course, :stable, unit: @multi_lesson_unit)
+  end
+
   test 'redirect beta' do
     get '/beta'
     assert_redirected_to '/'
@@ -67,10 +74,10 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/s/frozen?lang=es'
     assert_equal 'es-ES', cookies[:language_]
 
-    get '/s/course1/lessons/1/levels/1/lang/es'
-    assert_redirected_to '/s/course1/lessons/1/levels/1?set_locale=es&lang=es'
+    get "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1/lang/es"
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?set_locale=es&lang=es"
     follow_redirect!
-    assert_redirected_to '/s/course1/lessons/1/levels/1?lang=es'
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/1/levels/1?lang=es"
     assert_equal 'es-ES', cookies[:language_]
   end
 
@@ -78,17 +85,17 @@ class RedirectsTest < ActionDispatch::IntegrationTest
     get '/s/allthethings/stage/1/puzzle/1'
     assert_redirected_to '/s/allthethings/lessons/1/levels/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/1/levels/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/1/levels/1'
 
     get '/s/allthethings/stage/40/puzzle/1/sublevel/1'
     assert_redirected_to '/s/allthethings/lessons/40/levels/1/sublevel/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/40/levels/1/sublevel/1'
 
     get '/s/allthethings/stage/33/puzzle/1/page/1'
     assert_redirected_to '/s/allthethings/lessons/33/levels/1/page/1'
     follow_redirect!
-    assert_redirected_to '/courses/allthethingscourse/units/1/lessons/33/levels/1/page/1'
+    assert_redirected_to '/courses/original-allthethings-course/units/1/lessons/33/levels/1/page/1'
 
     # ideally we would just return a 404, but it is easier to implement a
     # redirect to a url which 404s.

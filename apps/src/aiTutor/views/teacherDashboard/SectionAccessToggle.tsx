@@ -9,7 +9,7 @@ import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import style from '@cdo/apps/aiTutor/views/teacherDashboard/access-controls.module.scss';
+import style from '@cdo/apps/aiTutor/views/teacherDashboard/ai-tutor-access-controls.module.scss';
 
 interface SectionAccessToggleProps {
   sectionId: number;

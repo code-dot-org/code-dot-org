@@ -312,7 +312,10 @@ Resources:
               - GET
               - HEAD
               - OPTIONS
-            CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
+            CachePolicyId: !If
+              - IsCorporateSite
+              - 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingDisabled (Disabled until this distribution becomes the main one instead of daisy chained)
+              - 658327ea-f89d-4fab-a63d-7e88639e58f6 # Managed-CachingOptimized
             Compress: true
             PathPattern: /_next/*
             TargetOriginId: marketing-sites-static-assets-origin

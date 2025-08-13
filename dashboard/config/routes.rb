@@ -820,6 +820,7 @@ Dashboard::Application.routes.draw do
           get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
           get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+          get 'foorm/workshop_survey_summary', action: :workshop_survey_summary, controller: 'workshop_survey_foorm_report'
           get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
           get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
         end

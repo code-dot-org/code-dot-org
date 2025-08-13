@@ -47,9 +47,9 @@ export const Emphasized: Story = {
   },
   play: async ({canvas}) => {
     const btn = canvas.getByRole('link', {name: 'Emphasized'});
-    expect(btn).toBeInTheDocument();
-    expect(btn).not.toHaveAttribute('target');
-    expect(btn.querySelector('svg')).not.toBeInTheDocument();
+    await expect(btn).toBeInTheDocument();
+    await expect(btn).not.toHaveAttribute('target');
+    await expect(btn.querySelector('svg')).not.toBeInTheDocument();
   },
 };
 
@@ -63,9 +63,9 @@ export const Primary: Story = {
   },
   play: async ({canvas}) => {
     const btn = canvas.getByRole('link', {name: 'Primary'});
-    expect(btn).toBeInTheDocument();
-    expect(btn).not.toHaveAttribute('target');
-    expect(btn.querySelector('svg')).not.toBeInTheDocument();
+    await expect(btn).toBeInTheDocument();
+    await expect(btn).not.toHaveAttribute('target');
+    await expect(btn.querySelector('svg')).not.toBeInTheDocument();
   },
 };
 
@@ -79,9 +79,9 @@ export const Secondary: Story = {
   },
   play: async ({canvas}) => {
     const btn = canvas.getByRole('link', {name: 'Secondary'});
-    expect(btn).toBeInTheDocument();
-    expect(btn).not.toHaveAttribute('target');
-    expect(btn.querySelector('svg')).not.toBeInTheDocument();
+    await expect(btn).toBeInTheDocument();
+    await expect(btn).not.toHaveAttribute('target');
+    await expect(btn.querySelector('svg')).not.toBeInTheDocument();
   },
 };
 
@@ -95,9 +95,9 @@ export const White: Story = {
   },
   play: async ({canvas}) => {
     const btn = canvas.getByRole('link', {name: 'White'});
-    expect(btn).toBeInTheDocument();
-    expect(btn).not.toHaveAttribute('target');
-    expect(btn.querySelector('svg')).not.toBeInTheDocument();
+    await expect(btn).toBeInTheDocument();
+    await expect(btn).not.toHaveAttribute('target');
+    await expect(btn.querySelector('svg')).not.toBeInTheDocument();
   },
 };
 
@@ -111,10 +111,10 @@ export const ExternalLink: Story = {
   },
   play: async ({canvas}) => {
     const btn = canvas.getByRole('link', {name: 'External Link'});
-    expect(btn).toBeInTheDocument();
-    expect(btn).toHaveAttribute('target', '_blank');
-    expect(btn).toHaveAttribute('rel', 'noopener noreferrer');
-    expect(btn.querySelector('svg')).toBeInTheDocument();
+    await expect(btn).toBeInTheDocument();
+    await expect(btn).toHaveAttribute('target', '_blank');
+    await expect(btn).toHaveAttribute('rel', 'noopener noreferrer');
+    await expect(btn.querySelector('svg')).toBeInTheDocument();
     btn.click();
   },
 };

@@ -12,7 +12,6 @@ import {
 } from 'react-router-dom';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -34,7 +33,7 @@ import styles from './teacher-navigation.module.scss';
 
 const TeacherNavigationBar: React.FC<{
   showAITutorTab: boolean;
-}> = showAITutorTab => {
+}> = ({showAITutorTab}) => {
   const {sections, sectionOrder} = useAppSelector(
     state => state.teacherSections
   );
@@ -109,21 +108,11 @@ const TeacherNavigationBar: React.FC<{
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    showAITutorTab &&
-    (selectedSection?.courseVersionName?.includes('csa') ||
-      selectedSection?.courseVersionName?.includes(
-        'programming-fundamentals-aitutor-2024'
-      )) &&
-    DCDO.get('ai-tutor-teacher-nav-v2', false)
-      ? [
-          'progress',
-          'assessments',
-          'projects',
-          'stats',
-          'textResponses',
-          'aiTutorChatMessages',
-        ]
-      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  if (showAITutorTab) {
+    performanceContentKeys.splice(1, 0, 'aiTutor');
+  }
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =

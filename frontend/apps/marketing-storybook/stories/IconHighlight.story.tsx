@@ -34,16 +34,16 @@ export const FilledOut: Story = {
     const heading = canvas.getByRole('heading', {
       name: /Icon Highlight Heading/i,
     });
-    expect(heading).toBeInTheDocument();
+    await expect(heading).toBeInTheDocument();
 
     // Check text
     const text = canvas.getByText(/Icon Highlight\s*Multiline Text/i);
-    expect(text).toBeInTheDocument();
+    await expect(text).toBeInTheDocument();
 
     // Check link
     const link = canvas.getByRole('link', {name: /Editorial Card Link/i});
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/editorial-card-test');
-    expect(link).toHaveAttribute('target', '_blank');
+    await expect(link).toBeInTheDocument();
+    await expect(link).toHaveAttribute('href', '/editorial-card-test');
+    await expect(link).toHaveAttribute('target', '_blank');
   },
 };

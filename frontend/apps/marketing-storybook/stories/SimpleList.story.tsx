@@ -20,9 +20,9 @@ export const Basic: StoryObj<SimpleListContentfulProps> = {
   play: async ({canvas}) => {
     // Check that all list items are rendered
     const items = await canvas.findAllByText(/List Item/);
-    expect(items.length).toBeGreaterThan(0);
+    await expect(items.length).toBeGreaterThan(0);
     // Check that the first item text is present
-    expect(await canvas.findByText('List Item 1')).toBeInTheDocument();
+    await expect(await canvas.findByText('List Item 1')).toBeInTheDocument();
   },
 };
 
@@ -41,9 +41,9 @@ export const Smile: StoryObj<SimpleListContentfulProps> = {
     const foundSmile = smileIcons.some(icon =>
       (icon as HTMLElement).classList.contains('fa-smile'),
     );
-    expect(foundSmile).toBe(true);
+    await expect(foundSmile).toBe(true);
     // Check that all list items are rendered
     const items = await canvas.findAllByText(/List Item/);
-    expect(items.length).toBeGreaterThan(0);
+    await expect(items.length).toBeGreaterThan(0);
   },
 };

@@ -4,6 +4,7 @@ import {STALE_WHILE_REVALIDATE_ONE_HOUR} from '@/cache/constants';
 import {RedirectEntryResponse} from '@/cache/redirects/types';
 import {getBrandFromHostname} from '@/config/brand';
 import {getLocalhostAddress} from '@/config/host';
+import {getBrandRedirects} from '@/middleware/redirects';
 
 import {MiddlewareFactory} from './types';
 
@@ -18,6 +19,12 @@ export const withRedirects: MiddlewareFactory = next => {
 
     const hostname = request.headers.get('host');
     const brand = getBrandFromHostname(hostname);
+
+    const brandRedirects = getBrandRedirects(brand, request);
+
+    if (brandRedirects) {
+      return brandRedirects;
+    }
 
     const redirectConfigUrl = new URL(
       `${getLocalhostAddress()}/api/private/redirects/${encodeURIComponent(brand)}/${encodeURIComponent(pathname)}`,
