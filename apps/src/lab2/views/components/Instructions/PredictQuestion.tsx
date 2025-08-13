@@ -2,7 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {
@@ -35,6 +35,12 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
   const dispatch = useAppDispatch();
 
+  const onSubmitAnswer = useCallback(() => {
+    if (appName) {
+      dispatch(submitPredictResponse({appType: appName}));
+    }
+  }, [dispatch, appName]);
+
   if (!predictSettings?.isPredictLevel) {
     return null;
   }
@@ -57,10 +63,6 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   const disabledAndNotSelected = (index: number) =>
     predictAnswerLocked &&
     !Boolean(predictResponse?.split(',').includes(index.toString()));
-
-  const onSubmitAnswer = () => {
-    dispatch(submitPredictResponse({appType: 'weblab2'}));
-  };
 
   const isFreeResponse =
     predictSettings.questionType === PredictQuestionType.FreeResponse;
