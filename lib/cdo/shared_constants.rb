@@ -675,6 +675,7 @@ module SharedConstants
       STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
       COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
       CDO_SUPPORT_MAILTO: "mailto:support@code.org",
+      CDO_SIGN_IN_URL: "https://code.org/users/sign_in",
     }
   ).freeze
 
