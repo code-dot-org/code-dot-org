@@ -7,6 +7,7 @@ import React, {ReactNode} from 'react';
 import {
   ComponentSize,
   RemoveMarginBottomProps,
+  TypographyColor,
 } from '@/components/common/types';
 
 export type LinkProps = RemoveMarginBottomProps & {
@@ -14,8 +15,10 @@ export type LinkProps = RemoveMarginBottomProps & {
   children: ReactNode;
   /** Link URL */
   href: string;
+  /** Link color */
+  color?: Exclude<TypographyColor, 'secondary'>;
   /** Link size */
-  size: ComponentSize;
+  size?: ComponentSize;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
   isLinkExternal: boolean;
   /** Aria label for the link */
@@ -38,14 +41,19 @@ const styles = {
 const Link: React.FunctionComponent<LinkProps> = ({
   children,
   href,
-  size,
+  color = 'primary',
+  size = 'm',
   isLinkExternal,
   removeMarginBottom,
   ariaLabel,
   className,
 }) => (
   <MuiLink
-    className={classNames(`link--size-${size}`, className)}
+    className={classNames(
+      `link--size-${size}`,
+      `link--color-${color}`,
+      className,
+    )}
     href={href}
     aria-label={ariaLabel}
     target={isLinkExternal ? '_blank' : undefined}

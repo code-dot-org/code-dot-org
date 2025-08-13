@@ -7,6 +7,9 @@ import FullWidthActionBlock, {
 import Button, {
   ButtonMuiContentfulComponentDefinition,
 } from '@/components/contentful/button';
+import Card, {
+  CardContentfulComponentDefinition,
+} from '@/components/contentful/card';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/contentful/carousels/actionBlockCarousel';
@@ -25,6 +28,9 @@ import LogoCollection, {
 import PeopleCollection, {
   PeopleCollectionContentfulComponentDefinition,
 } from '@/components/contentful/collections/peopleCollection';
+import AdoptionMap, {
+  AdoptionMapContentfulComponentDefinition,
+} from '@/components/contentful/corporateSite/adoptionMap';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/contentful/divider';
@@ -37,9 +43,6 @@ import FAQAccordion, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/contentful/heading';
-import HeroBanner, {
-  HeroBannerContentfulComponentDefinition,
-} from '@/components/contentful/heroBanner';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/contentful/iconHighlight';
@@ -47,7 +50,7 @@ import Iframe, {
   IframeContentfulComponentDefinition,
 } from '@/components/contentful/iframe';
 import Image, {
-  ImageContentfulComponentDefinition,
+  ImageCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/image';
 import Link, {
   LinkContentfulComponentDefinition,
@@ -64,18 +67,12 @@ import RichText, {
 import Section, {
   SectionCSforAllContentfulComponentDefinition,
 } from '@/components/contentful/section';
-import SkinnyBanner, {
-  SkinnyBannerContentfulComponentDefinition,
-} from '@/components/contentful/skinnyBanner';
 import Spacer, {
   SpacerContentfulComponentDefinition,
 } from '@/components/contentful/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/contentful/tabGroup';
-import Testimonial, {
-  TestimonialContentfulComponentDefinition,
-} from '@/components/contentful/testimonial';
 import Video, {
   VideoContentfulComponentDefinition,
 } from '@/components/contentful/video';
@@ -94,6 +91,13 @@ const contentfulRegistration = {
       definition: ActionBlockCarouselContentfulComponentDefinition,
     },
     {
+      component: AdoptionMap,
+      definition: AdoptionMapContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: Button,
       definition: ButtonMuiContentfulComponentDefinition,
     },
@@ -108,6 +112,13 @@ const contentfulRegistration = {
     {
       component: PeopleCollection,
       definition: PeopleCollectionContentfulComponentDefinition,
+    },
+    {
+      component: Card,
+      definition: CardContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Divider,
@@ -136,13 +147,6 @@ const contentfulRegistration = {
       definition: HeadingContentfulComponentDefinition,
     },
     {
-      component: HeroBanner,
-      definition: HeroBannerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
       component: IconHighlight,
       definition: IconHighlightContentfulComponentDefinition,
     },
@@ -155,7 +159,7 @@ const contentfulRegistration = {
     },
     {
       component: Image,
-      definition: ImageContentfulComponentDefinition,
+      definition: ImageCSforAllContentfulComponentDefinition,
     },
     {
       component: ImageCarousel,
@@ -182,24 +186,10 @@ const contentfulRegistration = {
       },
     },
     {
-      component: SkinnyBanner,
-      definition: SkinnyBannerContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
-    {
       component: Spacer,
       definition: SpacerContentfulComponentDefinition,
     },
     {component: TabGroup, definition: TabGroupContentfulComponentDefinition},
-    {
-      component: Testimonial,
-      definition: TestimonialContentfulComponentDefinition,
-      options: {
-        wrapContainerWidth: '100%',
-      },
-    },
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,

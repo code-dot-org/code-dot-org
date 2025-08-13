@@ -25,4 +25,27 @@ class AidiffThread < ApplicationRecord
   has_many :aidiff_messages
 
   validates :context_type, inclusion: {in: SharedConstants::AI_DIFF_CONTEXT.values}
+
+  def summarize
+    {
+      id: id,
+      title: generate_title,
+      updated_at: updated_at,
+      context_type: context_type,
+    }
+  end
+
+  def summarize_with_messages
+    summarize.merge(
+      {
+        messages: aidiff_messages&.map(&:summarize)
+      }
+    )
+  end
+
+  def generate_title
+    msg = aidiff_messages.first
+    msg_title = msg&.is_preset && msg&.preset_chip_text ? msg&.preset_chip_text : msg&.content
+    msg_title
+  end
 end

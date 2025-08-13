@@ -267,6 +267,42 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  # Quick pass/fail tests for the Content-Disposition header sanitization
+  def test_content_disposition_header_injection
+    # Upload a file with CR/LF in the filename to test header injection sanitization
+    malicious = "evil\r\nname.txt"
+    post_file_data(@api, malicious, 'data', 'text/plain')
+    # List files to get the actual stored filename (sanitized by storage logic)
+    files = @api.list_objects["files"]
+    expected_name = malicious.gsub(/[^\w.\-]/, '-')
+    stored_name = files.find {|f| f["filename"] == expected_name}["filename"]
+    # Fetch the file using the sanitized filename
+    @api.get_object(stored_name)
+    assert successful?
+    header = last_response['Content-Disposition']
+    # Header should not contain CR or LF
+    refute_match(/[\r\n]/, header, "Header contains CR or LF: #{header.inspect}")
+    # Header should match the sanitized filename
+    assert_equal "attachment; filename=\"#{stored_name}\"", header, "Header was: #{header.inspect}"
+    delete_all_manifest_versions
+  end
+
+  def test_content_disposition_header_escaping_spaces
+    # Upload a file with spaces in the filename to test space escaping
+    name = @api.randomize_filename('file name.txt')
+    post_file_data(@api, name, 'data', 'text/plain')
+    # List files to get the actual stored filename (spaces replaced with dashes)
+    files = @api.list_objects["files"]
+    stored_name = files.find {|f| f["filename"] == name.tr(' ', '-')}["filename"]
+    # Fetch the file using the sanitized filename
+    @api.get_object(stored_name)
+    assert successful?
+    header = last_response['Content-Disposition']
+    # Header should match the sanitized filename
+    assert_equal "attachment; filename=\"#{stored_name}\"", header, "Header was: #{header.inspect}"
+    delete_all_manifest_versions
+  end
+
   def test_codeprojects_get_deleted_project
     post_file_data(@api, 'index.html', '<div></div>', 'text/html')
     @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})

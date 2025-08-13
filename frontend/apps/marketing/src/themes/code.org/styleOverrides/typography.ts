@@ -19,12 +19,19 @@ export const TYPOGRAPHY_OVERRIDES: Components<Theme>['MuiTypography'] = {
         {
           color: 'var(--text-neutral-secondary)',
         },
+      '&.MuiTypography-body1.paragraph--color-white, &.MuiTypography-body2.paragraph--color-white, &.MuiTypography-body3.paragraph--color-white, &.MuiTypography-body4.paragraph--color-white':
+        {
+          color: 'var(--neutral-base-white)',
+        },
       // Overline styles
       '&.MuiTypography-overline.overline--color-primary': {
         color: 'var(--text-brand-teal-primary)',
       },
       '&.MuiTypography-overline.overline--color-secondary': {
         color: 'var(--text-neutral-quaternary)',
+      },
+      '&.MuiTypography-overline.overline--color-white': {
+        color: 'var(--neutral-base-white)',
       },
       '&.MuiTypography-overline.overline--size-s': {
         fontSize: '0.625rem', // 10px

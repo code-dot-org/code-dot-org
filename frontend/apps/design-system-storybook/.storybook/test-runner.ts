@@ -1,7 +1,7 @@
-import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import type {TestRunnerConfig} from '@storybook/test-runner';
 import {getStoryContext} from '@storybook/test-runner';
 import {injectAxe, checkA11y} from 'axe-playwright';
+import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from 'storybook/viewport';
 
 const DEFAULT_VIEWPORT_SIZE = {width: 1280, height: 720};
 

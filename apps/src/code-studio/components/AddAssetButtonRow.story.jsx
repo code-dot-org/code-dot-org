@@ -29,6 +29,7 @@ const Template = args => (
     onUploadDone={action('onUploadDone')}
     onUploadError={action('onUploadError')}
     onSelectRecord={action('onSelectRecord')}
+    projectType="applab"
     {...args}
   />
 );

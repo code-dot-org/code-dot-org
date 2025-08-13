@@ -4,12 +4,13 @@ import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {javascript} from '@codemirror/lang-javascript';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
+import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
-import {useAppSelector} from '../util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '../util/reduxHooks';
 
 import HorizontalLayout from './layout/HorizontalLayout';
 import VerticalLayout from './layout/VerticalLayout';
@@ -29,81 +30,29 @@ const defaultConfig: ConfigType = {
   layoutComponents: {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
+    widget: VerticalLayout,
   },
 };
 
 const defaultSource: MultiFileSource = {
-  folders: {
-    '1': {id: '1', name: 'foo', parentId: '0'},
-    '2': {id: '2', name: 'bar', parentId: '1'},
-    '3': {id: '3', name: 'baz', parentId: '0'},
-    '4': {id: '4', name: 'f1', parentId: '1'},
-    '5': {id: '5', name: 'f2', parentId: '1'},
-    '6': {id: '6', name: 'b1', parentId: '2'},
-  },
-
+  folders: {},
   files: {
     '1': {
       id: '1',
       name: 'index.html',
       language: 'html',
-      contents: `<!DOCTYPE html><html>
-  <link rel="stylesheet" href="styles.css"/>
+      contents: `<!DOCTYPE html>
+<html>
   <body>
     Content goes here!
-    <div class="foo">[DEFAULT] Foo class!</div>
   </body>
 </html>
-`,
-      open: true,
+  `,
       active: true,
       folderId: '0',
     },
-    '2': {
-      id: '2',
-      name: 'styles.css',
-      language: 'css',
-      contents: '.foo { color : red}',
-      open: true,
-      folderId: '0',
-    },
-    '3': {
-      id: '3',
-      name: 'page.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a separate html page</body></html>',
-      open: false,
-      folderId: '0',
-    },
-    '4': {
-      id: '4',
-      name: 'test4.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '2',
-    },
-    '5': {
-      id: '5',
-      name: 'test5.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '4',
-    },
-    '6': {
-      id: '6',
-      name: 'test6-1.html',
-      language: 'html',
-      contents:
-        '<!DOCTYPE html><html><body>This is a sub folder html page</body></html>',
-      open: false,
-      folderId: '1',
-    },
   },
+  openFiles: ['1'],
 };
 
 const defaultProject: ProjectSources = {source: defaultSource};
@@ -121,6 +70,18 @@ const Weblab2View: React.FC<
   const hasSource = useAppSelector(
     state => !!state.lab2Project.projectSources?.source
   );
+
+  // Since there's no run button in Weblab2, set it to true by default
+  // to enable the Submit button on edit on submittable levels.
+  // Set back to false on unmount in case we switch to a different level type.
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setHasRun(true));
+
+    return () => {
+      dispatch(setHasRun(false));
+    };
+  }, [dispatch]);
 
   return (
     <div className={moduleStyles.weblab2Container}>

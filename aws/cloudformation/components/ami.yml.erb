@@ -48,16 +48,19 @@ frontend_device_name ||= '/dev/sda1'
                 Resource: !Sub "arn:aws:autoscaling:${AWS::Region}:${AWS::AccountId}:autoScalingGroup:*:autoScalingGroupName/Frontends-${AWS::StackName}"
       ManagedPolicyArns: <%=frontend_policies.to_json%>
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+
   FrontendInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref FrontendRole]}
-  # Signal when the instance is fully provisioned and ready for AMI creation.
+  
+    # Signal when the instance is fully provisioned and ready for AMI creation.
   AMICreate<%=commit_hash%>:
     Type: AWS::CloudFormation::WaitCondition
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=ami_timeout%>
         Count: 1
+
   WebServerAMI:
     Type: AWS::EC2::Instance
     Properties:
@@ -271,7 +274,7 @@ frontend_device_name ||= '/dev/sda1'
         instances. Further investigation is required to identify the cause.
       ActionsEnabled: true
       AlarmActions:
-          - !Ref <% rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
+          - !Ref <%=rack_env?(:production) ? "InfraUrgent" : "InfraWorkdayUrgent" %>
       MetricName: mem_used_percent
       Namespace: CWAgent
       Statistic: Maximum

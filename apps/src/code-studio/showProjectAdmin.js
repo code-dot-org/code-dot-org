@@ -109,18 +109,4 @@ export default project => {
       $('.blocked-reasons').hide();
     }
   }
-
-  $('#disable-auto-moderation').click(async function () {
-    await project.disableAutoContentModeration();
-    $('#disable-auto-moderation').hide();
-    $('#moderation-explanation').hide();
-    $('#enable-auto-moderation').show();
-  });
-
-  $('#enable-auto-moderation').click(async function () {
-    await project.enableAutoContentModeration();
-    $('#disable-auto-moderation').show();
-    $('#moderation-explanation').show();
-    $('#enable-auto-moderation').hide();
-  });
 };

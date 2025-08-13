@@ -1,3 +1,4 @@
+import {useInMemoryEntities} from '@contentful/experiences-sdk-react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
@@ -9,7 +10,7 @@ import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
-import placeholderImage from '@public/images/person-placeholder.png';
+import placeholderImage from '@public/images/person-placeholder.webp';
 
 import {CollectionProps} from '../types';
 
@@ -74,9 +75,18 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
     );
   }
 
+  const inMemoryEntities = useInMemoryEntities();
+
   const peopleData = useMemo(() => {
     const data = people.filter(Boolean).map(({fields}) => {
       const {name, image, title, bio, personalLink} = fields;
+
+      const resolvedImage = inMemoryEntities.maybeResolveLink(
+        image,
+      ) as ExperienceAsset;
+      const resolvedPersonalLink = inMemoryEntities.maybeResolveLink(
+        personalLink,
+      ) as LinkEntry;
 
       return {
         id: name,
@@ -86,7 +96,10 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
               <Box component="figure" sx={styles.image}>
                 <img
                   src={
-                    getAbsoluteImageUrl(image, 'fit=fill&w=128&h=128&r=max') ||
+                    getAbsoluteImageUrl(
+                      resolvedImage,
+                      'fit=fill&w=128&h=128&r=max',
+                    ) ||
                     (typeof placeholderImage === 'string'
                       ? placeholderImage
                       : placeholderImage.src)
@@ -115,11 +128,11 @@ const PeopleCollection: React.FC<PeopleCollectionProps> = ({
                 {bio}
               </Typography>
             )}
-            {personalLink && (
+            {resolvedPersonalLink && (
               <Box sx={styles.personalLink}>
                 <Link
                   size="s"
-                  href={personalLink?.fields?.primaryTarget}
+                  href={resolvedPersonalLink?.fields?.primaryTarget}
                   isLinkExternal
                   removeMarginBottom
                 >

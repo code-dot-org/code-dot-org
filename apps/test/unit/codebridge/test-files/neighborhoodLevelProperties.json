@@ -9,7 +9,6 @@
         "contents": "print('Hello from a neighborhood level!')",
         "folderId": "0",
         "active": false,
-        "open": true,
         "type": "locked_starter"
       }
     },

@@ -27,7 +27,7 @@ class MultiLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_lesson_show sets questionText if it exists' do
-    level = create :multi
+    level = create(:multi)
     level.properties = {questions: [{text: 'Question text'}]}
     level.save!
 
@@ -36,7 +36,7 @@ class MultiLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize_for_lesson_show does not set questionText if it does not exist' do
-    level = create :multi
+    level = create(:multi)
     level.properties = {}
     level.save!
 

@@ -17,12 +17,12 @@ class Api::V1::Pd::CourseFacilitatorsControllerTest < ActionController::TestCase
   end
 
   test 'index returns unique and sorted list of facilitators' do
-    facilitator1 = create :facilitator, name: 'B'
-    facilitator2 = create :facilitator, name: 'A'
+    facilitator1 = create(:facilitator, name: 'B')
+    facilitator2 = create(:facilitator, name: 'A')
 
-    create :pd_course_facilitator, facilitator: facilitator1, course: Pd::Workshop::COURSE_CSF
-    create :pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSF
-    create :pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSD
+    create(:pd_course_facilitator, facilitator: facilitator1, course: Pd::Workshop::COURSE_CSF)
+    create(:pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSF)
+    create(:pd_course_facilitator, facilitator: facilitator2, course: Pd::Workshop::COURSE_CSD)
 
     sign_in create(:workshop_organizer)
     get :index

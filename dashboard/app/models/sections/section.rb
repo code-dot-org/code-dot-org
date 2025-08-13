@@ -678,10 +678,12 @@ class Section < ApplicationRecord
     return code_review_expires_at > Time.now.utc
   end
 
-  # Returns true if any student in the section has ever made progress on a unit
-  # that the instructor of the section can be an instructor for.
+  # Returns true if any student in the section has ever made progress on any unit
+  # in any course that the instructor of the section can be an instructor for.
   def any_student_has_progress?
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
+    units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
+    unit_groups = units.map(&:unit_groups).flatten.uniq
+    unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
@@ -736,8 +738,19 @@ class Section < ApplicationRecord
 
     # Note that as of May 2025, script-specific assignment without course assignment
     # is not possible, so the first condition here is not necessary.
-    (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
-      (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+    if (gen_ai_scripts + csaif_scripts).include?(script&.name) ||
+        (csaif_courses + gen_ai_courses + other_courses).include?(unit_group&.name)
+      return true
+    end
+
+    # In case we overlook a course that should have access,
+    # allow levelbuilders to dynamically allow access to AI Chat via DCDO.
+    # Note that levelbuilders should specify UNIT slugs (eg, aif1-2025),
+    # not COURSE slugs (eg, problem-solving-with-ai-2025)
+    dcdo_scripts = DCDO.get('aichat_access_units', [])
+    dcdo_scripts.flat_map do |name|
+      Unit.find_by(name: name)&.unit_groups || []
+    end.map(&:name).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

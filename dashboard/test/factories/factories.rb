@@ -86,7 +86,7 @@ FactoryBot.define do
 
       after(:create) do |unit_group, evaluator|
         unit = evaluator.unit || create(:unit)
-        create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
         unit.reload
       end
 
@@ -125,7 +125,7 @@ FactoryBot.define do
 
       after(:create) do |unit_group, evaluator|
         unit = evaluator.unit || create(:unit)
-        create :unit_group_unit, unit_group: unit_group, script: unit, position: 1
+        create(:unit_group_unit, unit_group: unit_group, script: unit, position: 1)
         unit_group.reload
       end
     end
@@ -136,7 +136,7 @@ FactoryBot.define do
       end
       after(:create) do |unit_group, evaluator|
         evaluator.units.each_with_index do |unit, index|
-          create :unit_group_unit, unit_group: unit_group, script: unit, position: index + 1
+          create(:unit_group_unit, unit_group: unit_group, script: unit, position: index + 1)
         end
         unit_group.reload
       end
@@ -306,17 +306,17 @@ FactoryBot.define do
 
         trait :as_regional_partner_program_manager do
           after(:create) do |workshop_organizer|
-            create :regional_partner_program_manager, program_manager: workshop_organizer
+            create(:regional_partner_program_manager, program_manager: workshop_organizer)
           end
         end
       end
 
       factory :program_manager do
         transient do
-          regional_partner {build :regional_partner}
+          regional_partner {build(:regional_partner)}
         end
         after(:create) do |user, evaluator|
-          create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
+          create(:regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner)
         end
       end
 
@@ -454,35 +454,35 @@ FactoryBot.define do
 
       trait :in_email_section do
         after(:create) do |user|
-          section = create :section, login_type: Section::LOGIN_TYPE_EMAIL
-          create :follower, student_user: user, section: section
+          section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL)
+          create(:follower, student_user: user, section: section)
           user.reload
         end
       end
 
       trait :in_google_section do
         after(:create) do |user|
-          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
+          section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
           section.add_student user
         end
       end
 
       factory :student_with_ai_tutor_access do
         after(:create) do |user|
-          teacher = create :teacher
-          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
-          section = create :section, ai_tutor_enabled: true, user: teacher
-          create :follower, student_user: user, section: section
+          teacher = create(:teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
+          section = create(:section, ai_tutor_enabled: true, user: teacher)
+          create(:follower, student_user: user, section: section)
           user.reload
         end
       end
 
       factory :student_without_ai_tutor_access do
         after(:create) do |user|
-          teacher = create :teacher
-          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
-          section = create :section, ai_tutor_enabled: false, user: teacher
-          create :follower, student_user: user, section: section
+          teacher = create(:teacher)
+          create(:single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor')
+          section = create(:section, ai_tutor_enabled: false, user: teacher)
+          create(:follower, student_user: user, section: section)
           user.reload
         end
       end
@@ -491,8 +491,8 @@ FactoryBot.define do
         google_sso_provider
         without_email
         after(:create) do |user|
-          section = create :section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM
-          create :follower, student_user: user, section: section
+          section = create(:section, login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM)
+          create(:follower, student_user: user, section: section)
           user.reload
         end
       end
@@ -501,8 +501,8 @@ FactoryBot.define do
         clever_sso_provider
         without_email
         after(:create) do |user|
-          section = create :section, login_type: Section::LOGIN_TYPE_CLEVER
-          create :follower, student_user: user, section: section
+          section = create(:section, login_type: Section::LOGIN_TYPE_CLEVER)
+          create(:follower, student_user: user, section: section)
           user.reload
         end
       end
@@ -667,7 +667,8 @@ FactoryBot.define do
 
     trait :with_facebook_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -684,7 +685,8 @@ FactoryBot.define do
 
     trait :with_google_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -702,7 +704,8 @@ FactoryBot.define do
 
     trait :with_microsoft_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -720,7 +723,8 @@ FactoryBot.define do
 
     trait :with_clever_authentication_option do
       after(:create) do |user|
-        create(:authentication_option,
+        create(
+          :authentication_option,
           user: user,
           email: user.email,
           hashed_email: user.hashed_email,
@@ -747,7 +751,7 @@ FactoryBot.define do
       end
       after(:create) do |user, evaluator|
         evaluator.num_puzzles.times do
-          create :user_level, user: user, best_result: evaluator.puzzle_result
+          create(:user_level, user: user, best_result: evaluator.puzzle_result)
         end
       end
     end
@@ -761,13 +765,13 @@ FactoryBot.define do
 
     trait :within_united_states do
       after(:create) do |user|
-        create :user_geo, :seattle, user: user
+        create(:user_geo, :seattle, user: user)
       end
     end
 
     trait :outside_united_states do
       after(:create) do |user|
-        create :user_geo, :sydney, user: user
+        create(:user_geo, :sydney, user: user)
       end
     end
   end
@@ -810,7 +814,7 @@ FactoryBot.define do
 
   factory :section do
     sequence(:name) {|n| "Section #{n}"}
-    user {create :teacher}
+    user {create(:teacher)}
     login_type {'email'}
     participant_type {'student'}
 
@@ -1125,7 +1129,7 @@ FactoryBot.define do
     trait :with_image do
       level {create(:level, game: Game.find_by_app(Game::ARTIST))}
       after :create do |level_source, _|
-        create :level_source_image, level_source: level_source
+        create(:level_source_image, level_source: level_source)
       end
     end
   end
@@ -1138,7 +1142,7 @@ FactoryBot.define do
     user
     script
     level
-    level_source {create :level_source, level: level}
+    level_source {create(:level_source, level: level)}
   end
 
   factory :skill do
@@ -1174,9 +1178,9 @@ FactoryBot.define do
       end
 
       after(:create) do |script, evaluator|
-        lesson_group = create :lesson_group, script: script
+        lesson_group = create(:lesson_group, script: script)
         evaluator.lessons_count.times do
-          create :lesson, :with_activity_section, lesson_group: lesson_group, script: script, has_lesson_plan: true
+          create(:lesson, :with_activity_section, lesson_group: lesson_group, script: script, has_lesson_plan: true)
         end
       end
     end
@@ -1188,12 +1192,12 @@ FactoryBot.define do
       end
 
       after(:create) do |script, evaluator|
-        lesson_group = create :lesson_group, script: script
+        lesson_group = create(:lesson_group, script: script)
         evaluator.lessons_count.times do
-          lesson = create :lesson, :with_activity_section, lesson_group: lesson_group
+          lesson = create(:lesson, :with_activity_section, lesson_group: lesson_group)
           evaluator.levels_count.times do
             level = create(:level)
-            create :script_level, levels: [level], activity_section: lesson.activity_sections.first
+            create(:script_level, levels: [level], activity_section: lesson.activity_sections.first)
           end
         end
       end
@@ -1250,13 +1254,13 @@ FactoryBot.define do
   # See: https://codedotorg.atlassian.net/browse/TEACH-230
   factory :project do
     transient do
-      owner {create :user}
+      owner {create(:user)}
     end
 
     updated_ip {'127.0.0.1'}
 
     after(:build) do |project, evaluator|
-      project_storage = create :project_storage, user_id: evaluator.owner.id
+      project_storage = create(:project_storage, user_id: evaluator.owner.id)
       project.storage_id = project_storage.id
     end
   end
@@ -1388,8 +1392,8 @@ FactoryBot.define do
 
     trait :with_activity_section do
       after(:create) do |lesson|
-        activity = create :lesson_activity, lesson: lesson
-        create :activity_section, lesson_activity: activity
+        activity = create(:lesson_activity, lesson: lesson)
+        create(:activity_section, lesson_activity: activity)
       end
     end
 
@@ -1468,7 +1472,7 @@ FactoryBot.define do
   factory :activity do
     level
     user
-    level_source {create :level_source, level: level}
+    level_source {create(:level_source, level: level)}
   end
 
   factory :framework do
@@ -1528,35 +1532,35 @@ FactoryBot.define do
   end
 
   factory :user_level do
-    user {create :student}
-    level {create :applab}
+    user {create(:student)}
+    level {create(:applab)}
   end
 
   factory :user_script do
-    user {create :student}
+    user {create(:student)}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}
   end
 
   factory :user_school_info do
-    user {create :teacher}
+    user {create(:teacher)}
     start_date {DateTime.now}
     last_confirmation_date {DateTime.now}
     association :school_info
   end
 
   factory :peer_review do
-    submitter {create :teacher}
+    submitter {create(:teacher)}
     from_instructor {false}
-    script {create :script}
-    level {create :level}
-    level_source {create :level_source}
+    script {create(:script)}
+    level {create(:level)}
+    level_source {create(:level_source)}
     data {"MyText"}
     before :create do |peer_review|
-      create :user_level, user: peer_review.submitter, level: peer_review.level
+      create(:user_level, user: peer_review.submitter, level: peer_review.level)
     end
 
     trait :reviewed do
-      reviewer {create :teacher}
+      reviewer {create(:teacher)}
     end
   end
 
@@ -1612,33 +1616,33 @@ FactoryBot.define do
   end
 
   factory :survey_result do
-    user {create :teacher}
+    user {create(:teacher)}
     kind {'Diversity2016'}
     properties {{diversity_asian: "1", diversity_farm: "3"}}
   end
 
   factory :hint_view_request do
-    user {create :student}
-    script {create :script}
-    level {create :level}
+    user {create(:student)}
+    script {create(:script)}
+    level {create(:level)}
   end
 
   factory :authored_hint_view_request do
-    user {create :student}
-    script {create :script}
-    level {create :level}
+    user {create(:student)}
+    script {create(:script)}
+    level {create(:level)}
     prev_level_source_id {create(:level_source).id}
     next_level_source_id {create(:level_source).id}
     final_level_source_id {create(:level_source).id}
   end
 
   factory :level_concept_difficulty do
-    level {create :level}
+    level {create(:level)}
     repeat_loops {2}
   end
 
   factory :user_proficiency do
-    user {create :student}
+    user {create(:student)}
     sequencing_d1_count {1}
     repeat_loops_d2_count {2}
     repeat_loops_d4_count {3}
@@ -1686,7 +1690,7 @@ FactoryBot.define do
       # Use state and school_type from the parent school_info. Also make sure
       # that we create rather than just building the school, to accommodate the
       # custom School#id logic
-      school {create :public_school, state: state, school_type: school_type}
+      school {create(:public_school, state: state, school_type: school_type)}
     end
   end
 
@@ -1765,7 +1769,7 @@ FactoryBot.define do
   factory :school_stats_by_year do
     grade_10_offered {true}
     school_year {"2016-2017"}
-    school {build :school}
+    school {build(:school)}
 
     trait :is_high_school do
       grade_09_offered {true}
@@ -1812,13 +1816,13 @@ FactoryBot.define do
 
     trait :is_high_school do
       after(:create) do |school|
-        create :school_stats_by_year, :is_high_school, school: school
+        create(:school_stats_by_year, :is_high_school, school: school)
       end
     end
 
     trait :is_k8_school do
       after(:create) do |school|
-        build :school_stats_by_year, :is_k8_school, school: school
+        build(:school_stats_by_year, :is_k8_school, school: school)
       end
     end
   end
@@ -1890,8 +1894,8 @@ FactoryBot.define do
   end
 
   factory :regional_partner_program_manager do
-    regional_partner {create :regional_partner}
-    program_manager {create :teacher}
+    regional_partner {create(:regional_partner)}
+    program_manager {create(:teacher)}
   end
 
   factory :regional_partners_school_district do
@@ -1953,7 +1957,7 @@ FactoryBot.define do
 
     trait :with_script_level do
       after(:build) do |tf|
-        create :script_level, script: tf.script, levels: [tf.level]
+        create(:script_level, script: tf.script, levels: [tf.level])
       end
     end
   end
@@ -2048,18 +2052,18 @@ FactoryBot.define do
 
   factory :lti_user_identity do
     subject {"subject"}
-    lti_integration {create :lti_integration}
-    user {create :student}
+    lti_integration {create(:lti_integration)}
+    user {create(:student)}
   end
 
   factory :lti_deployment do
     deployment_id {"deployment"}
-    lti_integration {create :lti_integration}
+    lti_integration {create(:lti_integration)}
   end
 
   factory :lti_course do
-    lti_integration {create :lti_integration}
-    lti_deployment {create :lti_deployment, lti_integration: lti_integration}
+    lti_integration {create(:lti_integration)}
+    lti_deployment {create(:lti_deployment, lti_integration: lti_integration)}
     context_id {SecureRandom.uuid}
     course_id {SecureRandom.uuid}
     nrps_url {"http://test.org/api/names_and_roles"}
@@ -2067,8 +2071,8 @@ FactoryBot.define do
   end
 
   factory :lti_section do
-    lti_course {create :lti_course}
-    section {create :section}
+    lti_course {create(:lti_course)}
+    section {create(:section)}
     lms_section_id {SecureRandom.uuid}
   end
 
@@ -2080,7 +2084,7 @@ FactoryBot.define do
   end
 
   factory :parental_permission_request do
-    user {create :young_student, :without_parent_permission}
+    user {create(:young_student, :without_parent_permission)}
     parent_email {"contact@example.domain"}
     resends_sent {0}
 
@@ -2092,7 +2096,7 @@ FactoryBot.define do
     end
 
     trait :granted do
-      user {create :young_student, :with_parent_permission}
+      user {create(:young_student, :with_parent_permission)}
     end
   end
 
@@ -2107,7 +2111,7 @@ FactoryBot.define do
 
       after(:create) do |rubric, evaluator|
         evaluator.num_learning_goals.times do
-          create :learning_goal, rubric: rubric
+          create(:learning_goal, rubric: rubric)
         end
       end
     end
@@ -2116,8 +2120,8 @@ FactoryBot.define do
       transient do
         num_learning_goals {1}
         num_evaluations_per_goal {1}
-        teacher {create :teacher}
-        student {create :student}
+        teacher {create(:teacher)}
+        student {create(:student)}
       end
 
       after(:create) do |rubric, evaluator|
@@ -2144,8 +2148,8 @@ FactoryBot.define do
     trait :with_teacher_evaluations do
       transient do
         num_evaluations {1}
-        teacher {create :teacher}
-        student {create :student}
+        teacher {create(:teacher)}
+        student {create(:student)}
       end
 
       after(:create) do |learning_goal, evaluator|
@@ -2176,7 +2180,7 @@ FactoryBot.define do
 
   factory :rubric_ai_evaluation do
     transient do
-      student {create :student}
+      student {create(:student)}
     end
 
     user {student}
@@ -2250,9 +2254,9 @@ FactoryBot.define do
 
   factory :aichat_request do
     association :user
-    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}.to_json}
-    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
-    stored_messages {[].to_json}
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: "test"}}
+    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}}
+    stored_messages {[]}
     level_id {1}
     script_id {1}
     project_id {1}
@@ -2276,15 +2280,15 @@ FactoryBot.define do
   factory :modular_course_context, class: Hash do
     skip_create
     initialize_with do
-      original_unit_group = create :unit_group, :stable
-      new_unit_group = create :unit_group, :stable
-      unit_a = create :unit, :with_levels
-      unit_b = create :unit, :with_levels
+      original_unit_group = create(:unit_group, :stable)
+      new_unit_group = create(:unit_group, :stable)
+      unit_a = create(:unit, :with_levels)
+      unit_b = create(:unit, :with_levels)
 
       [original_unit_group, new_unit_group].each do |unit_group|
-        create :course_version, content_root: unit_group
+        create(:course_version, content_root: unit_group)
         [unit_a, unit_b].each_with_index do |unit, index|
-          create :unit_group_unit, unit_group: unit_group, script: unit, position: index + 1
+          create(:unit_group_unit, unit_group: unit_group, script: unit, position: index + 1)
         end
       end
 

@@ -98,6 +98,10 @@ $default-spacing: 2px;
   margin-bottom: 2px;
 }
 
+.headerWithBorder {
+  border-bottom: 1px solid var(--borders-neutral-primary);
+}
+
 .advancedControlsContainer {
   position: absolute;
   right: 10px;

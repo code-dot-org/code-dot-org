@@ -214,7 +214,7 @@ class SectionsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, params: {loginType: 'picture', participantType: 'student'}, user: :admin, response: :success
 
   test "new redirects to home if loginType and participantType are not present" do
-    user = create :admin
+    user = create(:admin)
     sign_in user
 
     get :new
@@ -239,7 +239,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   test 'returns forbidden if requested edit section does not belong to teacher' do
     sign_in @teacher
-    other_teacher_section = create :section
+    other_teacher_section = create(:section)
     get :edit, params: {id: other_teacher_section.id}
     assert_response :forbidden
   end
@@ -262,7 +262,7 @@ class SectionsControllerTest < ActionController::TestCase
     section_owner = create(:teacher)
 
     coteacher_section = create(:section, user: section_owner, login_type: 'picture')
-    create :section_instructor, section: coteacher_section, instructor: @teacher, status: :active
+    create(:section_instructor, section: coteacher_section, instructor: @teacher, status: :active)
 
     post :archive_all
 
@@ -287,13 +287,13 @@ class SectionsControllerTest < ActionController::TestCase
   end
 
   describe '#retrieve_lessons_for_dropdown' do
-    let(:teacher) {create :teacher}
-    let(:unit_group) {create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
-    let(:unit) {create :unit, :with_levels}
+    let(:teacher) {create(:teacher)}
+    let(:unit_group) {create(:unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)}
+    let(:unit) {create(:unit, :with_levels)}
     let(:unit_position) {1}
-    let!(:unit_group_unit) {create :unit_group_unit, unit_group: unit_group, script: unit, position: unit_position}
+    let!(:unit_group_unit) {create(:unit_group_unit, unit_group: unit_group, script: unit, position: unit_position)}
     let(:lesson) {unit.lessons.first}
-    let(:section) {create :section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email'}
+    let(:section) {create(:section, user: teacher, script: unit, unit_group: unit_group, login_type: 'email')}
     let(:response) {JSON.parse(@response.body, symbolize_names: true)}
     let(:response_unit) {response.first}
     let(:response_lesson) {response.second}

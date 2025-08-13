@@ -2,7 +2,10 @@ import Typography from '@mui/material/Typography';
 import classNames from 'classnames';
 import {ReactNode} from 'react';
 
-import {RemoveMarginBottomProps} from '@/components/common/types';
+import {
+  RemoveMarginBottomProps,
+  TypographyColor,
+} from '@/components/common/types';
 
 type ParagraphSemanticTag = 'body1' | 'body2' | 'body3' | 'body4';
 
@@ -18,13 +21,15 @@ type ParagraphProps = RemoveMarginBottomProps & {
   /** Paragraph content */
   children: ReactNode;
   /** Paragraph visual appearance */
-  visualAppearance: ParagraphVisualAppearance;
+  visualAppearance?: ParagraphVisualAppearance;
   /** Whether the paragraph text is strong */
-  isStrong: boolean;
+  isStrong?: boolean;
   /** Paragraph color */
-  color: 'primary' | 'secondary';
+  color?: TypographyColor;
   /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
   className?: string;
+  /** Custom styles */
+  sx?: React.CSSProperties;
 };
 
 // Maps Contentful Paragraph visualAppearance values with
@@ -40,18 +45,19 @@ const visualAppearanceToMuiTagMap: Record<
 };
 
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
-  visualAppearance,
-  isStrong,
-  color,
+  visualAppearance = 'body-two',
+  isStrong = false,
+  color = 'primary',
   children,
-  removeMarginBottom,
+  removeMarginBottom = false,
   className,
+  sx,
 }) => (
   <Typography
     className={classNames(`paragraph--color-${color}`, className)}
     variant={visualAppearanceToMuiTagMap[visualAppearance]}
     gutterBottom={!removeMarginBottom}
-    sx={{fontWeight: isStrong ? 600 : 400}}
+    sx={{...{fontWeight: isStrong ? 600 : 400}, ...sx}}
   >
     {children}
   </Typography>

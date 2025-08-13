@@ -1,62 +1,59 @@
 require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
-  setup_all do
-    seed_deprecated_unit_fixtures
-  end
-
   def setup
+    @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    @multi_lesson_unit_group = create(:single_unit_course, unit: @multi_lesson_unit)
+
+    @other_hoc_unit = create(:unit, :with_levels, levels_count: 10)
+    @other_hoc_course = create(:hoc_course, unit: @other_hoc_unit)
+
     setup_script_cache
   end
 
   test "should get /hoc/1" do
-    assert_cached_queries(0) do
+    create_hourofcode_unit_and_levels
+    setup_script_cache
+
+    assert_cached_queries(1) do
       get '/hoc/1'
     end
     assert_response :success
   end
 
-  test "should get /courses/frozen/units/1" do
-    assert_cached_queries(0) do
-      get '/courses/frozen/units/1'
+  test "should get other hoc course unit overview" do
+    assert_cached_queries(1) do
+      get "/courses/#{@other_hoc_course.name}/units/1"
     end
     assert_response :success
   end
 
-  test "should get show of frozen level 1" do
+  test "should get show of other hoc course level 1" do
     assert_cached_queries(0) do
-      get '/courses/frozen/units/1/lessons/1/levels/1'
+      get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/1"
     end
     assert_response :success
   end
 
-  test "should get show of frozen level 10 twice" do
+  test "should get show of other hoc course level 10 twice" do
     assert_cached_queries(0) do
-      get '/courses/frozen/units/1/lessons/1/levels/10'
+      get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/10"
     end
     assert_response :success
   end
 
-  test "should get show of frozen level 20 twice" do
+  test "should get show of other hoc course level 1 and then level 10" do
+    get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/1"
+    assert_response :success
+
     assert_cached_queries(0) do
-      get '/courses/frozen/units/1/lessons/1/levels/20'
+      get "/courses/#{@other_hoc_course.name}/units/1/lessons/1/levels/10"
     end
     assert_response :success
   end
 
-  test "should get show of frozen level 1 and then level 10" do
-    skip 'not working'
-    get '/courses/frozen/units/1/lessons/1/levels/1'
-    assert_response :success
-
-    assert_cached_queries(0) do
-      get '/courses/frozen/units/1/lessons/1/levels/10'
-    end
-    assert_response :success
-  end
-
-  test "post milestone to frozen passing" do
-    sl = Unit.find_by_name('frozen').script_levels[2]
+  test "post milestone to other hoc unit passing" do
+    sl = Unit.find_by_name(@other_hoc_unit.name).script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     assert_cached_queries(0) do
@@ -81,23 +78,23 @@ class CachingTest < ActionDispatch::IntegrationTest
   #   assert_response 200
   # end
 
-  test "should get show of course1 level 1 twice" do
+  test "should get show of lesson 3 level 1 twice" do
     assert_cached_queries(0) do
-      get '/courses/course1/units/1/lessons/3/levels/1'
+      get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
     end
     assert_response :success
   end
 
-  test "should get show of course1 level 1 and then level 10" do
-    skip 'not working'
+  test "should get show of lesson 3 level 1 and then level 10" do
     assert_cached_queries(0) do
-      get '/courses/course1/units/1/lessons/3/levels/10'
+      get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/10"
     end
     assert_response :success
   end
 
-  test "post milestone to course1 passing" do
-    sl = Unit.find_by_name('course1').script_levels[2]
+  test "post milestone to multi-lesson course passing" do
+    unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    sl = unit.script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     assert_cached_queries(0) do

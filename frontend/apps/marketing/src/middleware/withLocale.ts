@@ -1,6 +1,7 @@
 import Negotiator from 'negotiator';
 import {NextFetchEvent, NextRequest} from 'next/server';
 
+import {Brand, getBrandFromHostname} from '@/config/brand';
 import {
   getLocalizeJsLocaleFromDashboardLocale,
   getDashboardLocale,
@@ -52,24 +53,28 @@ export const withLocale: MiddlewareFactory = next => {
 
     const maybeLocale = pathParts[0] as SupportedLocale;
     const stage = getStage();
-
-    if (SUPPORTED_LOCALES_SET.has(maybeLocale)) {
-      // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
-      const response = await next(request, event);
-
-      response.cookies.set('language_', getDashboardLocale(maybeLocale), {
-        path: '/',
-        domain: stage === 'production' ? '.code.org' : undefined,
-      });
-
-      return response;
-    }
+    const hostname = request.headers.get('host');
+    const brand = getBrandFromHostname(hostname);
 
     // If pathParts is empty, then it is a request to / which should resolve to the / slug
     // It is an empty string here because when a call is made to Contentful, `/` is automatically prepended
     const isRootRoute = pathParts.length === 0;
 
-    if (isRootRoute) {
+    if (SUPPORTED_LOCALES_SET.has(maybeLocale)) {
+      // If the first part of the path is a supported locale or there are no subpaths, we don't need to redirect
+      const response = await next(request, event);
+
+      if (brand === Brand.CODE_DOT_ORG) {
+        response.cookies.set('language_', getDashboardLocale(maybeLocale), {
+          path: '/',
+          domain: stage === 'production' ? '.code.org' : undefined,
+        });
+      }
+
+      return response;
+    }
+
+    if (brand === Brand.CODE_DOT_ORG && isRootRoute) {
       // If the _user_type cookie is set, then Dashboard successfully logged in the user which is an early indicator
       // that the user is logged in right now. Therefore, send the user to Code Studio
       // See: https://github.com/code-dot-org/code-dot-org/blob/3fad8bce055846378ae3da343da93a32acd4df8c/dashboard/config/initializers/devise.rb#L331
@@ -99,11 +104,13 @@ export const withLocale: MiddlewareFactory = next => {
     const redirectUrl = new URL(localizedPath, request.url);
     const response = getCachedRedirectResponse(redirectUrl);
 
-    // Set the language cookie if discovered via Accept-Language header
-    response.cookies.set('language_', getDashboardLocale(locale), {
-      path: '/',
-      domain: getStage() === 'production' ? '.code.org' : undefined,
-    });
+    if (brand === Brand.CODE_DOT_ORG) {
+      // Set the language cookie if discovered via Accept-Language header
+      response.cookies.set('language_', getDashboardLocale(locale), {
+        path: '/',
+        domain: getStage() === 'production' ? '.code.org' : undefined,
+      });
+    }
 
     return response;
   };

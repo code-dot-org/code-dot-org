@@ -169,12 +169,6 @@ class Level < ApplicationRecord
     !unplugged?
   end
 
-  # This does not include DSL levels which also use teacher markdown
-  # but access it in a different way
-  def include_teacher_only_markdown_editor?
-    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
-  end
-
   def enable_scrolling?
     is_a?(Blockly)
   end
@@ -499,7 +493,7 @@ class Level < ApplicationRecord
   # Programming levels are levels where students write code.
   # These are the lab types that support programming used in 6-12th grade curriculum.
   def upper_grades_programming_level?
-    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+    %w(Applab Gamelab Javalab Pythonlab Weblab Music).include?(type)
   end
 
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
@@ -943,6 +937,18 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+
+    # If there is a rubric for this lesson, show the rubric if it is evaluated on this level, or if the evaluation level shares the same
+    # project template level as this level.
+    rubric_level_id = script_level&.lesson&.rubric&.level_id
+    if rubric_level_id
+      if rubric_level_id == id
+        properties_camelized[:showRubric] = true
+      else
+        rubric_template_level = Level.find(rubric_level_id)&.try(:project_template_level)
+        properties_camelized[:showRubric] = rubric_template_level && rubric_template_level == try(:project_template_level)
+      end
+    end
     properties_camelized
   end
 
@@ -1007,9 +1013,21 @@ class Level < ApplicationRecord
     {
       level_id: id,
       level_name: name,
-      unit_names: script_levels.map {|sl| sl.script.name}.uniq.sort,
+      unit_names: unit_names,
       skills: skill_identifiers,
     }.deep_transform_keys {|key| key.to_s.camelize(:lower)}
+  end
+
+  # This method returns the names of all units that this level is part of.
+  # For contained levels, we also include the names of the units that
+  # the parent levels are part of.
+  # This is used to filter levels by unit for display on /skills.
+  def unit_names
+    unit_names = script_levels.map {|sl| sl.script.name}
+    parent_levels.each do |parent_level|
+      unit_names += parent_level.script_levels.map {|sl| sl.script.name}
+    end
+    unit_names.uniq.sort
   end
 
   def skill_identifiers

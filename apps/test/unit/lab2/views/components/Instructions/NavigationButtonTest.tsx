@@ -136,6 +136,7 @@ describe('NavigationButton', () => {
     peerReviewLessonInfo: null,
     isFullProgress: false,
     currentPageNumber: 0,
+    courseName: null,
   };
 
   beforeEach(() => {

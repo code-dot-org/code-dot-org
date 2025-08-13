@@ -59,6 +59,11 @@ SKIP_EYES = 'skip eyes'.freeze
 # For more information, see: https://github.com/code-dot-org/code-dot-org/pull/65825
 SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 
+# By default, to conserve our SauceLabs credits we run our UI and Eyes tests
+# against a local webdriver first, and only use SauceLabs to rerun any tests
+# that fail. This flag ensures all tests will use SauceLabs for all runs.
+SKIP_LOCAL_WEBDRIVER = 'skip local webdriver'.freeze
+
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
   timed_task_with_logging :run_tests do
@@ -127,7 +132,7 @@ namespace :ci do
           "--parallel #{use_saucelabs ? 16 : 8} " \
           "--abort_when_failures_exceed 10 " \
           "--retry_count 2 " \
-          "--first_run_local " \
+          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
           "--output-synopsis " \
           "--with-status-page " \
           "--html"
@@ -140,7 +145,7 @@ namespace :ci do
             "--ci " \
             "--parallel 10 " \
             "--retry_count 1 " \
-            "--first_run_local " \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end

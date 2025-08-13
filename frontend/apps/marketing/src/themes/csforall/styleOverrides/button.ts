@@ -1,4 +1,4 @@
-import {Components, Theme} from '@mui/material/styles';
+import {alpha, Components, Theme} from '@mui/material/styles';
 
 const ROBOTO_MONO_FONT = 'Roboto Mono';
 
@@ -6,12 +6,24 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
   styleOverrides: {
     root: ({theme}) => ({
       fontFamily: ROBOTO_MONO_FONT,
+      display: 'inline-flex',
+      alignItems: 'center',
+      gap: theme.spacing(0.75),
+      'html[dir="rtl"] & svg': {
+        transform: 'scaleX(-1)',
+      },
+      '& .MuiButton-icon': {
+        marginRight: 0,
+        marginLeft: 0,
+      },
       '&:focus-visible': {
         outline: '2px solid ' + theme.palette.primary.main,
         outlineOffset: '2px',
       },
       textTransform: 'none',
-      border: '1px solid transparent',
+      '&.MuiButton-contained': {
+        border: '1px solid transparent',
+      },
       '&.MuiButton-contained.button--color-emphasized': {
         backgroundColor: theme.palette.secondary.main,
         '&:hover': {
@@ -29,6 +41,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         borderColor: theme.palette.common.black,
         '&:hover': {
           backgroundColor: theme.palette.grey[100],
+        },
+      },
+      '&.MuiButton-contained.button--color-white': {
+        backgroundColor: theme.palette.common.white,
+        color: theme.palette.common.black,
+        '&:hover': {
+          backgroundColor: alpha(theme.palette.common.white, 0.9),
+        },
+        '&:focus-visible': {
+          outlineColor: alpha(theme.palette.common.white, 0.8),
         },
       },
       '&.MuiButton-contained.MuiButton-sizeSmall, &.MuiButton-outlined.MuiButton-sizeSmall':

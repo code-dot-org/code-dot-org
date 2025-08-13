@@ -28,12 +28,19 @@ const theme = createTheme({
     divider: COLORS.black,
     common: {
       black: COLORS.black,
+      white: COLORS.white,
     },
     background: {
       default: COLORS.backgroundPrimary,
     },
+    grey: {
+      200: COLORS.grey200,
+    },
   },
   components: STYLE_OVERRIDES,
+  shape: {
+    borderRadius: 32,
+  },
   typography: {
     fontFamily: createFontStack(ROBOTO_MONO_FONT, NOTO_FONT),
     h1: {

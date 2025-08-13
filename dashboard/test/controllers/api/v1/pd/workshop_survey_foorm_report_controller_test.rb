@@ -5,26 +5,28 @@ module Api::V1::Pd
     self.use_transactional_test_case = true
 
     setup_all do
-      @summer_post_survey = create :foorm_form_summer_post_survey
-      @summer_pre_survey = create :foorm_form_summer_pre_survey
-      @csf_intro_post_survey = create :foorm_form_csf_intro_post_survey
+      @summer_post_survey = create(:foorm_form_summer_post_survey)
+      @summer_pre_survey = create(:foorm_form_summer_pre_survey)
+      @csf_intro_post_survey = create(:foorm_form_csf_intro_post_survey)
+      @build_your_own_workshop_post_survey = create(:foorm_form_build_your_own_workshop_post_survey)
     end
 
     setup do
-      @workshop = create :csd_summer_workshop
-      @workshop_admin = create :workshop_admin
+      @workshop = create(:csd_summer_workshop)
+      @workshop_admin = create(:workshop_admin)
     end
 
     teardown_all do
       @summer_post_survey.delete
       @summer_pre_survey.delete
       @csf_intro_post_survey.delete
+      @build_your_own_workshop_post_survey.delete
     end
 
     test 'get generic survey report correctly' do
       sign_in @workshop_admin
-      create :day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id
-      create_list :day_5_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop.id
+      create(:day_5_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id)
+      create_list(:day_5_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: @workshop.id)
 
       get :generic_survey_report, params: {workshop_id: @workshop.id}
       assert_response :success
@@ -74,8 +76,8 @@ module Api::V1::Pd
 
     test 'rollup does not fail if there are no rollup responses' do
       sign_in @workshop_admin
-      create :day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id
-      create_list :day_0_workshop_foorm_submission, 5, :answers_high, pd_workshop_id: @workshop.id
+      create(:day_0_workshop_foorm_submission, :answers_low, pd_workshop_id: @workshop.id)
+      create_list(:day_0_workshop_foorm_submission, 5, :answers_high, pd_workshop_id: @workshop.id)
 
       get :generic_survey_report, params: {workshop_id: @workshop.id}
       assert_response :success
@@ -88,10 +90,11 @@ module Api::V1::Pd
 
     test 'successfully create rollup with facilitator data' do
       sign_in @workshop_admin
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       facilitator_ids = csf_workshop.facilitators.pluck(:id)
       create_surveys_for_csf_workshop(csf_workshop, facilitator_ids, 3, 2)
@@ -121,14 +124,15 @@ module Api::V1::Pd
 
     test 'if there are no facilitator surveys still create csf rollup' do
       sign_in @workshop_admin
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       facilitator_id = csf_workshop.facilitators.pick(:id)
-      create_list :csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id
-      create_list :csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id
+      create_list(:csf_intro_post_workshop_submission, 1, :answers_low, pd_workshop_id: csf_workshop.id)
+      create_list(:csf_intro_post_workshop_submission, 5, :answers_high, pd_workshop_id: csf_workshop.id)
 
       get :generic_survey_report, params: {workshop_id: csf_workshop.id}
       assert_response :success
@@ -147,15 +151,17 @@ module Api::V1::Pd
 
     test 'calculates averages across multiple workshops correctly' do
       sign_in @workshop_admin
-      csf_workshop_1 = build :csf_workshop,
+      csf_workshop_1 = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+)
       csf_workshop_1.save(validate: false)
-      csf_workshop_2 = build :csf_workshop,
+      csf_workshop_2 = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+)
       csf_workshop_2.save(validate: false)
       create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_1.facilitators.pluck(:id), 3, 2)
       create_surveys_for_csf_workshop(csf_workshop_1, csf_workshop_2.facilitators.pluck(:id), 5, 1)
@@ -170,14 +176,15 @@ module Api::V1::Pd
     end
 
     test 'return unauthorized for unauthorized users' do
-      generic_teacher = create :teacher
-      other_facilitator = create :facilitator
-      program_manager = create :program_manager
-      workshop_organizer = create :workshop_organizer
-      csf_workshop = build :csf_workshop,
+      generic_teacher = create(:teacher)
+      other_facilitator = create(:facilitator)
+      program_manager = create(:program_manager)
+      workshop_organizer = create(:workshop_organizer)
+      csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       this_facilitator = csf_workshop.facilitators[0]
 
@@ -199,19 +206,20 @@ module Api::V1::Pd
     end
 
     test 'omits surveys submitted by facilitators' do
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
                             facilitators: [create(:facilitator), create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
 
       # included in report
-      create :pd_pre_workshop_foorm_submission, pd_workshop: csf_workshop
-      create :csf_intro_post_workshop_submission, :answers_low, pd_workshop: csf_workshop
+      create(:pd_pre_workshop_foorm_submission, pd_workshop: csf_workshop)
+      create(:csf_intro_post_workshop_submission, :answers_low, pd_workshop: csf_workshop)
 
       # not included in report
-      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+      create(:facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop)
 
       sign_in @workshop_admin
       get :generic_survey_report, params: {workshop_id: csf_workshop.id}
@@ -226,10 +234,11 @@ module Api::V1::Pd
     end
 
     test 'filters facilitator data if facilitator is signed in' do
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
         started_at:  Time.now.utc - 1.day,
         ended_at: Time.now.utc - 1.hour,
         facilitators: [create(:facilitator), create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       facilitator_1 = csf_workshop.facilitators[0]
       facilitator_2 = csf_workshop.facilitators[1]
@@ -263,15 +272,16 @@ module Api::V1::Pd
     end
 
     test 'participant and facilitator post surveys are available for download' do
-      csf_workshop = build :csf_workshop,
+      csf_workshop = build(:csf_workshop,
                             started_at:  Time.now.utc - 1.day,
                             ended_at: Time.now.utc - 1.hour,
                             facilitators: [create(:facilitator), create(:facilitator)]
+)
       csf_workshop.save(validate: false)
       facilitator = csf_workshop.facilitators[0]
       csf_workshop.facilitators[1]
       create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
-      create :facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop
+      create(:facilitator_post_survey_workshop_submission, user: facilitator, pd_workshop: csf_workshop)
 
       get :forms_for_workshop, params: {workshop_id: csf_workshop.id}
       assert_response :success
@@ -300,19 +310,21 @@ module Api::V1::Pd
     # @param low_count Number of submissions with low score responses (minimum score for each response)
     def create_surveys_for_csf_workshop(csf_workshop, facilitator_ids, high_count, low_count)
       facilitator_ids.each do |facilitator_id|
-        create_list :csf_intro_post_facilitator_workshop_submission,
+        create_list(:csf_intro_post_facilitator_workshop_submission,
           low_count,
           :answers_low,
           pd_workshop_id: csf_workshop.id,
           facilitator_id: facilitator_id
-        create_list :csf_intro_post_facilitator_workshop_submission,
+)
+        create_list(:csf_intro_post_facilitator_workshop_submission,
           high_count,
           :answers_high,
           pd_workshop_id: csf_workshop.id,
           facilitator_id: facilitator_id
+)
       end
-      create_list :csf_intro_post_workshop_submission, low_count, :answers_low, pd_workshop_id: csf_workshop.id
-      create_list :csf_intro_post_workshop_submission, high_count, :answers_high, pd_workshop_id: csf_workshop.id
+      create_list(:csf_intro_post_workshop_submission, low_count, :answers_low, pd_workshop_id: csf_workshop.id)
+      create_list(:csf_intro_post_workshop_submission, high_count, :answers_high, pd_workshop_id: csf_workshop.id)
     end
 
     def create_survey_submission(survey_response)
@@ -321,9 +333,202 @@ module Api::V1::Pd
         form_version: 0,
         answers: survey_response
       )
-      create :day_0_workshop_foorm_submission,
+      create(:day_0_workshop_foorm_submission,
         pd_workshop_id: @workshop.id,
         foorm_submission_id: submission.id
+)
+    end
+
+    # Tests for the new workshop_survey_summary endpoint
+    test 'get workshop survey summary correctly' do
+      sign_in @workshop_admin
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Verify top-level structure
+      assert response.key?(:course_name), "Missing course_name"
+      assert response.key?(:facilitators), "Missing facilitators"
+      assert response.key?(:total_responses), "Missing total_responses"
+      assert response.key?(:categories), "Missing categories"
+
+      # Verify categorized structure
+      categories = response[:categories]
+      expected_categories = [:implementation, :engagement, :logistics, :facilitators, :other]
+      expected_categories.each do |category|
+        assert categories.key?(category), "Missing category: #{category}"
+      end
+
+      # Verify questions are categorized properly
+      refute_empty categories[:engagement][:questions], "Engagement category should have questions"
+
+      # Verify response structure for likert questions
+      likert_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'likert'}
+      assert likert_question.key?(:question_name)
+      assert likert_question.key?(:question_text)
+      assert likert_question.key?(:question_type)
+      assert likert_question.key?(:responses)
+      assert likert_question[:responses][:weighted_score].is_a?(Integer)
+      assert likert_question[:responses][:agreement_percentage].is_a?(Integer)
+      assert likert_question[:responses][:total_responses].is_a?(Integer)
+      assert likert_question[:responses].key?(:breakdown)
+
+      # Verify response structure for promoter questions
+      promoter_question = categories[:engagement][:questions].find {|q| q[:question_type] == 'promoter'}
+      assert promoter_question.key?(:question_name)
+      assert promoter_question.key?(:question_text)
+      assert promoter_question.key?(:question_type)
+      assert promoter_question.key?(:responses)
+      assert promoter_question[:responses][:promoter_percentage].is_a?(Integer)
+      assert promoter_question[:responses][:total_responses].is_a?(Integer)
+      assert promoter_question[:responses].key?(:breakdown)
+
+      # Verify response structure for multi select questions
+      multi_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'multiSelect'}
+      assert multi_select_question.key?(:question_name)
+      assert multi_select_question.key?(:question_text)
+      assert multi_select_question.key?(:question_type)
+      assert multi_select_question.key?(:responses)
+      assert multi_select_question[:responses][:total_respondents].is_a?(Integer)
+      assert multi_select_question[:responses].key?(:breakdown)
+
+      # Verify response structure for single select questions that are not likert
+      single_select_question = categories[:implementation][:questions].find {|q| q[:question_type] == 'singleSelect' && !q[:responses].key?(:weighted_score)}
+      assert single_select_question.key?(:question_name)
+      assert single_select_question.key?(:question_text)
+      assert single_select_question.key?(:question_type)
+      assert single_select_question.key?(:responses)
+      assert single_select_question[:responses][:total_responses].is_a?(Integer)
+      assert single_select_question[:responses].key?(:breakdown)
+
+      # Verify response structure for text questions
+      text_question = categories[:other][:questions].find {|q| q[:question_type] == 'text'}
+      assert text_question.key?(:question_name)
+      assert text_question.key?(:question_text)
+      assert text_question.key?(:question_type)
+      assert text_question.key?(:responses)
+      assert text_question[:responses][:total_responses].is_a?(Integer)
+      assert text_question[:responses][:responses].is_a?(Array)
+      assert text_question[:responses][:responses].all?(String)
+    end
+
+    test 'workshop survey summary returns unauthorized for unauthorized users' do
+      generic_teacher = create(:teacher)
+      other_facilitator = create(:facilitator)
+      program_manager = create(:program_manager)
+      workshop_organizer = create(:workshop_organizer)
+      byo_workshop = create(:byo_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator)]
+      )
+      this_facilitator = byo_workshop.facilitators[0]
+
+      expected_authorization = [
+        {user: this_facilitator, expected_response: :success, type: "facilitator for this workshop"},
+        {user: program_manager, expected_response: :success, type: "program manager"},
+        {user: workshop_organizer, expected_response: :success, type: "workshop organizer"},
+        {user: @workshop_admin, expected_response: :success, type: "workshop admin"},
+        {user: generic_teacher, expected_response: :unauthorized, type: "teacher"},
+        {user: other_facilitator, expected_response: :unauthorized, type: "other facilitator"}
+      ]
+
+      expected_authorization.each do |data|
+        sign_in data[:user]
+        get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+        assert_response data[:expected_response], "#{data[:type]} had an unexpected result"
+        sign_out data[:user]
+      end
+    end
+
+    test 'workshop survey summary filters facilitator data if facilitator is signed in' do
+      csf_workshop = build(:csf_workshop,
+        started_at:  Time.now.utc - 1.day,
+        ended_at: Time.now.utc - 1.hour,
+        facilitators: [create(:facilitator), create(:facilitator)]
+      )
+      csf_workshop.save(validate: false)
+      facilitator_1 = csf_workshop.facilitators[0]
+      facilitator_2 = csf_workshop.facilitators[1]
+      create_surveys_for_csf_workshop(csf_workshop, csf_workshop.facilitators.pluck(:id), 5, 2)
+
+      # csf_workshop has two facilitators, sign in as facilitator_1
+      sign_in facilitator_1
+      get :workshop_survey_summary, params: {workshop_id: csf_workshop.id}
+      assert_response :success
+
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      facilitator_1_id = facilitator_1.id.to_s
+      facilitator_2_id = facilitator_2.id.to_s
+
+      # Verify facilitator category structure in categories
+      categories = response[:categories]
+      assert categories[:facilitators].key?(facilitator_1_id.to_sym), "Should have data for facilitator 1"
+      refute categories[:facilitators].key?(facilitator_2_id.to_sym), "Should not have data for facilitator 2"
+
+      # Verify facilitator 1 has questions
+      refute_empty categories[:facilitators][facilitator_1_id.to_sym][:questions], "Facilitator 1 should have questions"
+      assert_equal facilitator_1.name, categories[:facilitators][facilitator_1_id.to_sym][:name]
+    end
+
+    test 'workshop survey summary handles matrix questions by category' do
+      sign_in @workshop_admin
+      # Create a workshop with matrix questions that should be split by category
+      byo_workshop = create(:byo_workshop)
+      create(:build_your_own_workshop_foorm_submission, :answers_low, pd_workshop_id: byo_workshop.id)
+      create_list(:build_your_own_workshop_foorm_submission, 3, :answers_high, pd_workshop_id: byo_workshop.id)
+
+      get :workshop_survey_summary, params: {workshop_id: byo_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Matrix questions should be split into individual questions by category
+      # Verify that we have questions in implementation and engagement categories
+      categories = response[:categories]
+      implementation_questions = categories[:implementation][:questions]
+      engagement_questions = categories[:engagement][:questions]
+      refute_empty implementation_questions, "Should have implementation questions from matrix rows"
+      refute_empty engagement_questions, "Should have engagement questions from matrix rows"
+
+      # Verify matrix row questions have proper structure
+      implementation_matrix_question = implementation_questions.find {|q| q[:responses].key?(:weighted_score)}
+      assert implementation_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert implementation_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+
+      engagement_matrix_question = engagement_questions.find {|q| q[:responses].key?(:weighted_score)}
+      assert engagement_matrix_question[:responses].key?(:weighted_score), "Matrix questions should have weighted scores"
+      assert engagement_matrix_question[:responses].key?(:agreement_percentage), "Matrix questions should have agreement percentages"
+    end
+
+    test 'workshop survey summary handles workshop without survey responses' do
+      sign_in @workshop_admin
+      empty_workshop = create(:byo_workshop)
+
+      get :workshop_survey_summary, params: {workshop_id: empty_workshop.id}
+      assert_response :success
+      response = JSON.parse(@response.body, symbolize_names: true)
+
+      # Should still have category structure even with no data
+      categories = response[:categories]
+      # When there's no survey data, only core categories should be present
+      expected_categories = [:facilitators, :other]
+      expected_categories.each do |category|
+        assert categories.key?(category), "Missing category: #{category}"
+        if category == :facilitators
+          assert_equal({}, categories[category], "Facilitators should be empty hash when no facilitators assigned")
+        else
+          assert_equal([], categories[category][:questions], "#{category} should have empty questions array")
+        end
+      end
+
+      categories.keys.each do |category|
+        assert expected_categories.include?(category), "Unexpected category: #{category}"
+      end
     end
   end
 end

@@ -7,12 +7,12 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # non-US
 
   test 'non-US with name succeeds' do
-    school_info = build :school_info_non_us
+    school_info = build(:school_info_non_us)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'non-US without name fails' do
-    school_info = build :school_info_non_us, school_name: nil
+    school_info = build(:school_info_non_us, school_name: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
@@ -26,7 +26,7 @@ class SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test "US with invalid school type fails" do
-    school_info = build :school_info_us, school_type: 'fake type'
+    school_info = build(:school_info_us, school_type: 'fake type')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School type is invalid', school_info.errors.full_messages.first
   end
@@ -34,12 +34,12 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US non-nces school
 
   test 'US non-nces school succeeds' do
-    school_info = build :school_info_us_non_nces
+    school_info = build(:school_info_us_non_nces)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test "US non-nces school without zip fails" do
-    school_info = build :school_info_us_non_nces, zip: nil
+    school_info = build(:school_info_us_non_nces, zip: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
@@ -47,12 +47,12 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US non-school setting
 
   test 'US non-school setting succeeds' do
-    school_info = build :school_info_us_non_school_setting
+    school_info = build(:school_info_us_non_school_setting)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test "US non-school setting without zip fails" do
-    school_info = build :school_info_us_non_school_setting, zip: nil
+    school_info = build(:school_info_us_non_school_setting, zip: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
@@ -60,36 +60,36 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US, private
 
   test 'US private with school succeeds' do
-    school_info = build :school_info_with_private_school_only
+    school_info = build(:school_info_with_private_school_only)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US private with zip and school name succeeds' do
-    school_info = build :school_info_us_private
+    school_info = build(:school_info_us_private)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US private without state fails' do
-    school_info = build :school_info_us_private, state: nil
+    school_info = build(:school_info_us_private, state: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US private without zip fails' do
-    school_info = build :school_info_us_private, zip: nil
+    school_info = build(:school_info_us_private, zip: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   # make sure empty strings are converted to nil
   test 'US private with empty zip fails' do
-    school_info = build :school_info_us_private, zip: ''
+    school_info = build(:school_info_us_private, zip: '')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US private without school name fails' do
-    school_info = build :school_info_us_private, school_name: nil
+    school_info = build(:school_info_us_private, school_name: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
@@ -97,24 +97,24 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US, other
 
   test 'US other with zip and school name succeeds' do
-    school_info = build :school_info_us_other
+    school_info = build(:school_info_us_other)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US other without state fails' do
-    school_info = build :school_info_us_other, state: nil
+    school_info = build(:school_info_us_other, state: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US other without zip fails' do
-    school_info = build :school_info_us_other, zip: nil
+    school_info = build(:school_info_us_other, zip: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US other without school name fails' do
-    school_info = build :school_info_us_other, school_name: nil
+    school_info = build(:school_info_us_other, school_name: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
@@ -122,7 +122,7 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US, public
 
   test 'US public with school succeeds' do
-    school_info = build :school_info_with_public_school_only
+    school_info = build(:school_info_with_public_school_only)
     assert school_info.valid?, school_info.errors.full_messages
     assert_equal school_info.school_district, school_info.school.school_district
     assert_equal school_info.school_type, school_info.school.school_type
@@ -133,75 +133,75 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   test 'consitant school data does not notify' do
     Honeybadger.expects(:notify).never
-    school_info = build :school_info_with_public_school_only, country: 'US'
+    school_info = build(:school_info_with_public_school_only, country: 'US')
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'auto upgrade validation type without other overwritting does not notify' do
     Honeybadger.expects(:notify).never
-    school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    school_info = build(:school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_COMPLETE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US public with district and school succeeds' do
-    school_info = build :school_info_us_public, :with_district, :with_school
+    school_info = build(:school_info_us_public, :with_district, :with_school)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US public without state fails' do
-    school_info = build :school_info_us_public, :with_district, state: nil
+    school_info = build(:school_info_us_public, :with_district, state: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US public without district fails' do
-    school_info = build :school_info_us_public
+    school_info = build(:school_info_us_public)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   test 'US public with district but no school fails' do
-    school_info = build :school_info_us_public, :with_district
+    school_info = build(:school_info_us_public, :with_district)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School is required', school_info.errors.full_messages.first
   end
 
   test 'US public with other district succeeds' do
-    school_info = build :school_info_us_public, school_district_other: true, school_district_name: 'Another District', zip: 12345, school_name: 'Another School'
+    school_info = build(:school_info_us_public, school_district_other: true, school_district_name: 'Another District', zip: 12345, school_name: 'Another School')
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US public with other district but no zip fails' do
-    school_info = build :school_info_us_public, school_district_other: true, school_district_name: 'Another District', school_name: 'Another School'
+    school_info = build(:school_info_us_public, school_district_other: true, school_district_name: 'Another District', school_name: 'Another School')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US public with other district but no district name fails' do
-    school_info = build :school_info_us_public, school_district_other: true, zip: 12345, school_name: 'Another School'
+    school_info = build(:school_info_us_public, school_district_other: true, zip: 12345, school_name: 'Another School')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district name is required', school_info.errors.full_messages.first
   end
 
   test 'US public with other district but no school name fails' do
-    school_info = build :school_info_us_public, school_district_other: true, school_district_name: 'Another District', zip: 12345
+    school_info = build(:school_info_us_public, school_district_other: true, school_district_name: 'Another District', zip: 12345)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
 
   test 'US public with other school succeeds' do
-    school_info = build :school_info_us_public, :with_district, school_other: true, zip: 12345, school_name: "Another School"
+    school_info = build(:school_info_us_public, :with_district, school_other: true, zip: 12345, school_name: "Another School")
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US public with other school but no zip fails' do
-    school_info = build :school_info_us_public, :with_district, school_other: true, school_name: "Another School"
+    school_info = build(:school_info_us_public, :with_district, school_other: true, school_name: "Another School")
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US public with other school but no school name fails' do
-    school_info = build :school_info_us_public, :with_district, school_other: true, zip: 12345
+    school_info = build(:school_info_us_public, :with_district, school_other: true, zip: 12345)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
@@ -243,69 +243,69 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US, charter
 
   test 'US charter with school succeeds' do
-    school_info = build :school_info_with_charter_school_only
+    school_info = build(:school_info_with_charter_school_only)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US charter with district and school succeeds' do
-    school_info = build :school_info_us_charter, :with_district, :with_school
+    school_info = build(:school_info_us_charter, :with_district, :with_school)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US charter without state fails' do
-    school_info = build :school_info_us_charter, :with_district, state: nil
+    school_info = build(:school_info_us_charter, :with_district, state: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'State is required', school_info.errors.full_messages.first
   end
 
   test 'US charter without district fails' do
-    school_info = build :school_info_us_charter
+    school_info = build(:school_info_us_charter)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with district but no school fails' do
-    school_info = build :school_info_us_charter, :with_district
+    school_info = build(:school_info_us_charter, :with_district)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with other district succeeds' do
-    school_info = build :school_info_us_charter, school_district_other: true, school_district_name: 'Another District', zip: 12345, school_name: 'Another School'
+    school_info = build(:school_info_us_charter, school_district_other: true, school_district_name: 'Another District', zip: 12345, school_name: 'Another School')
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US charter with other district but no zip fails' do
-    school_info = build :school_info_us_charter, school_district_other: true, school_district_name: 'Another District', school_name: 'Another School'
+    school_info = build(:school_info_us_charter, school_district_other: true, school_district_name: 'Another District', school_name: 'Another School')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with other district but no district name fails' do
-    school_info = build :school_info_us_charter, school_district_other: true, zip: 12345, school_name: 'Another School'
+    school_info = build(:school_info_us_charter, school_district_other: true, zip: 12345, school_name: 'Another School')
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district name is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with other district but no school name fails' do
-    school_info = build :school_info_us_charter, school_district_other: true, school_district_name: 'Another District', zip: 12345
+    school_info = build(:school_info_us_charter, school_district_other: true, school_district_name: 'Another District', zip: 12345)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with other school succeeds' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: 12345, school_name: "Another School"
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, zip: 12345, school_name: "Another School")
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US charter with other school but no zip fails' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, school_name: "Another School"
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, school_name: "Another School")
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'Zip is required', school_info.errors.full_messages.first
   end
 
   test 'US charter with other school but no school name fails' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: 12345
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, zip: 12345)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School name is required', school_info.errors.full_messages.first
   end
@@ -316,47 +316,47 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # US homeschool
 
   test 'US homeschool succeeds' do
-    school_info = build :school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    school_info = build(:school_info_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # US after school
 
   test 'US after school succeeds' do
-    school_info = build :school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    school_info = build(:school_info_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Non-US homeschool
 
   test 'Non-US homeschool succeeds' do
-    school_info = build :school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    school_info = build(:school_info_non_us_homeschool, validation_type: SchoolInfo::VALIDATION_COMPLETE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Non-US after school
 
   test 'Non-US after school succeeds' do
-    school_info = build :school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE
+    school_info = build(:school_info_non_us_after_school, validation_type: SchoolInfo::VALIDATION_COMPLETE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   # Zip code validation
 
   test 'US charter with non-numeric zip code fails' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: 'abcde', school_name: "Another School"
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, zip: 'abcde', school_name: "Another School")
     refute school_info.valid?
     assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
   end
 
   test 'US charter with over 5 digit zip code fails' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: 136_177_321_812, school_name: "Another School"
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, zip: 136_177_321_812, school_name: "Another School")
     refute school_info.valid?
     assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
   end
 
   test 'US charter with negative zip code fails' do
-    school_info = build :school_info_us_charter, :with_district, school_other: true, zip: -98144, school_name: "Another School"
+    school_info = build(:school_info_us_charter, :with_district, school_other: true, zip: -98144, school_name: "Another School")
     refute school_info.valid?
     assert_equal 'Zip Invalid zip code', school_info.errors.full_messages.first
   end
@@ -375,76 +375,76 @@ class SchoolInfoTest < ActiveSupport::TestCase
 
   # charter + zip  --  success
   test 'district by type charter and zip, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: 98144, school_state: nil, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: 98144, school_state: nil, school_district_id: nil)
     assert school_info.valid?
   end
 
   # private + zip  --  success
   test 'district by type private and zip, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE, school_zip: 98144, school_state: nil, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE, school_zip: 98144, school_state: nil, school_district_id: nil)
     assert school_info.valid?
   end
 
   # public + state "other"  --  success
   test 'district by type public and state other, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: SchoolInfo::SCHOOL_STATE_OTHER, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: SchoolInfo::SCHOOL_STATE_OTHER, school_district_id: nil)
     assert school_info.valid?
   end
 
   # public + state + district  --  success
   test 'district by type public and state and district, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: create(:school_district).id
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: create(:school_district).id)
     assert school_info.valid?
   end
 
   # public + state + district "other"  --  success
   test 'district by type public and state and district other, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_other: true, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_other: true, school_district_id: nil)
     assert school_info.valid?
   end
 
   # other + state "other"  --  success
   test 'district by type other and state other, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: SchoolInfo::SCHOOL_STATE_OTHER, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: SchoolInfo::SCHOOL_STATE_OTHER, school_district_id: nil)
     assert school_info.valid?
   end
 
   # other + state + district  --  success
   test 'district by type other and state and district, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: create(:school_district).id
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: create(:school_district).id)
     assert school_info.valid?
   end
 
   # other + state + district "other"  --  success
   test 'district by type other and state and district other, validation succeeds' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_other: true, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_other: true, school_district_id: nil)
     assert school_info.valid?
   end
 
   # charter + no zip  --  fail
   test 'district by type charter and no zip, validation fails' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: nil, school_district_id: nil, school_district_other: nil, school_state: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_CHARTER, school_zip: nil, school_district_id: nil, school_district_other: nil, school_state: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # private + no zip  --  fail
   test 'district by type private and no zip, validation fails' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE, school_zip: nil, school_state: nil, school_district_id: nil
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PRIVATE, school_zip: nil, school_state: nil, school_district_id: nil)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # public + state "not other" + no district + no district "other"  --  fail
   test 'district by type public and state but no district, validation fails' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: nil, school_district_other: false
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC, school_state: "WA", school_district_id: nil, school_district_other: false)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
 
   # other + state "not other" + no district + no district "other"  --  fail
   test 'district by type other and state but no district, validation fails' do
-    school_info = build :school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: nil, school_district_other: false
+    school_info = build(:school_info_without_country, school_type: SchoolInfo::SCHOOL_TYPE_OTHER, school_state: "WA", school_district_id: nil, school_district_other: false)
     refute school_info.valid?  # Run the validations and set errors
     assert_equal 'School district is required', school_info.errors.full_messages.first
   end
@@ -453,43 +453,43 @@ class SchoolInfoTest < ActiveSupport::TestCase
   # fields optional while we A/B test the presence of that field on the signup form
 
   test 'non-US without name succeeds when validation is suppressed' do
-    school_info = build :school_info_non_us, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build(:school_info_non_us, school_name: nil, validation_type: SchoolInfo::VALIDATION_NONE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'non-US without address succeeds when validation is suppressed' do
-    school_info = build :school_info_non_us, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build(:school_info_non_us, full_address: nil, validation_type: SchoolInfo::VALIDATION_NONE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US private without state succeeds when validation is suppressed' do
-    school_info = build :school_info_us_private, state: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build(:school_info_us_private, state: nil, validation_type: SchoolInfo::VALIDATION_NONE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'US private without zip succeeds when validation is suppressed' do
-    school_info = build :school_info_us_private, zip: nil, validation_type: SchoolInfo::VALIDATION_NONE
+    school_info = build(:school_info_us_private, zip: nil, validation_type: SchoolInfo::VALIDATION_NONE)
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'By default, validation type is set to full' do
-    school_info = build :school_info_us_public
+    school_info = build(:school_info_us_public)
     assert school_info.validation_type == SchoolInfo::VALIDATION_FULL, school_info.validation_type
   end
 
   test 'effective_school_district_name' do
-    school_district = build :school_district, name: 'Standard District'
-    school_info_standard_district = build :school_info_us_public, school_district: school_district
-    school_info_custom_district = build :school_info_us_public, school_district_other: true, school_district_name: 'Custom District'
+    school_district = build(:school_district, name: 'Standard District')
+    school_info_standard_district = build(:school_info_us_public, school_district: school_district)
+    school_info_custom_district = build(:school_info_us_public, school_district_other: true, school_district_name: 'Custom District')
 
     assert_equal 'Standard District', school_info_standard_district.effective_school_district_name
     assert_equal 'Custom District', school_info_custom_district.effective_school_district_name
   end
 
   test 'effective_school_name' do
-    school = build :public_school, name: 'Standard School'
-    school_info_standard_school = build :school_info_us_public, school: school
-    school_info_custom_school = build :school_info_us_public, school_other: true, school_name: 'Custom School'
+    school = build(:public_school, name: 'Standard School')
+    school_info_standard_school = build(:school_info_us_public, school: school)
+    school_info_custom_school = build(:school_info_us_public, school_other: true, school_name: 'Custom School')
 
     assert_equal 'Standard School', school_info_standard_school.effective_school_name
     assert_equal 'Custom School', school_info_custom_school.effective_school_name
