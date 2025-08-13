@@ -82,7 +82,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         position: 'absolute',
         borderRadius: '100px',
         background: theme.palette.secondary.main,
-        boxShadow: 'box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.20)',
+        boxShadow: '0 3px 6px 0 rgba(0, 0, 0, 0.20)',
         svg: {
           fontSize: '52px',
           color: theme.palette.common.white,
