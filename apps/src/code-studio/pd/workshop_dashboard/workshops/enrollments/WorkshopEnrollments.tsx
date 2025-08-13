@@ -2,6 +2,7 @@ import Alert from '@code-dot-org/component-library/alert';
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
 import Typography, {
   BodyTwoText,
@@ -21,111 +22,70 @@ import {
   Divider,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {FC, useMemo, useState, MouseEvent, ChangeEvent} from 'react';
+import React, {
+  FC,
+  useState,
+  MouseEvent,
+  ChangeEvent,
+  useRef,
+  useEffect,
+  useMemo,
+} from 'react';
+import {useOutletContext} from 'react-router-dom';
+
+import {EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
+
+import {EnrollmentData} from '../../WorkshopFormTemplate/types';
+import {WorkshopContextValue} from '../types';
 
 import styles from '../workshop.module.scss';
-
-interface EnrollmentData {
-  id: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  district: string;
-  school: string;
-  role: string;
-  totalAttendance: string;
-  enrolledDate: string;
-}
-
-const enrollments: EnrollmentData[] = [
-  {
-    id: '1',
-    firstName: 'John',
-    lastName: 'Smith',
-    email: 'firstnamelast@school.edu',
-    district: 'CHILTON COUNTY',
-    school: 'ISABELLA HIGH SCHOOL',
-    role: 'Classroom Teacher',
-    totalAttendance: '1/4',
-    enrolledDate: '2019-06-24',
-  },
-  {
-    id: '2',
-    firstName: 'Franklin',
-    lastName: 'Elephante',
-    email: 'firstnamelast@school.edu',
-    district: 'ISABELLA SCHOOL',
-    school: 'BARACK H. OBAMA SCHOOL O...',
-    role: 'Librarian/Media Specialist',
-    totalAttendance: '1/4',
-    enrolledDate: '2019-06-24',
-  },
-  {
-    id: '3',
-    firstName: 'Lorena',
-    lastName: 'Johnson',
-    email: 'firstnamelast@school.edu',
-    district: 'FULTON COUNTY',
-    school: 'RED LEVEL HIGH SCHOOL',
-    role: 'Classroom Teacher',
-    totalAttendance: '4/4',
-    enrolledDate: '2019-06-24',
-  },
-  {
-    id: '4',
-    firstName: 'Thelma',
-    lastName: 'Ronson',
-    email: 'firstnamelast@school.edu',
-    district: 'DEKALB COUNTY',
-    school: 'SHADES VALLEY HIGH SCHOOL',
-    role: 'Classroom Teacher',
-    totalAttendance: '2/4',
-    enrolledDate: '2019-06-24',
-  },
-  {
-    id: '5',
-    firstName: 'Isaac',
-    lastName: 'Goldstein',
-    email: 'firstnamelast@school.edu',
-    district: 'MACON COUNTY',
-    school: 'LEE HIGH SCHOOL',
-    role: 'Classroom Teacher',
-    totalAttendance: '3/4',
-    enrolledDate: '2019-06-24',
-  },
-  {
-    id: '6',
-    firstName: 'Gene',
-    lastName: 'Hackman',
-    email: 'firstnamelast@school.edu',
-    district: 'MACON COUNTY',
-    school: 'LEE HIGH SCHOOL',
-    role: 'Classroom Teacher',
-    totalAttendance: '3/4',
-    enrolledDate: '2019-06-24',
-  },
-];
 
 const pluralize = (length: number): string => (length > 1 ? 's' : '');
 
 const columns: {key: keyof EnrollmentData; label: string}[] = [
-  {key: 'firstName', label: 'First name'},
-  {key: 'lastName', label: 'Last name'},
+  {key: 'givenName', label: 'First name'},
+  {key: 'familyName', label: 'Last name'},
   {key: 'email', label: 'Email'},
-  {key: 'district', label: 'District'},
-  {key: 'school', label: 'School'},
+  {key: 'districtName', label: 'District'},
+  {key: 'schoolName', label: 'School'},
   {key: 'role', label: 'Role'},
-  {key: 'totalAttendance', label: 'Total attendance'},
+  {key: 'attendances', label: 'Total attendance'},
   {key: 'enrolledDate', label: 'Enrolled date'},
 ];
 
 export const WorkshopEnrollments: FC = () => {
+  const {
+    enrollments,
+    workshop,
+    refetchEnrollments,
+    enrollmentsLoading,
+    enrollmentsError,
+  } = useOutletContext<WorkshopContextValue>();
+
+  const refreshTimeout = useRef<NodeJS.Timeout | null>(null);
   const [selected, setSelected] = useState<EnrollmentData[]>([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [moveDialogOpen, setMoveDialogOpen] = useState(false);
   const [moveToWorkshopId, setMoveToWorkshopId] = useState('');
+  const [animateRefreshButton, setAnimateRefreshButton] = useState(false);
+
+  const s = useMemo(() => pluralize(selected.length), [selected]);
+
+  const isSelected = (id: number) =>
+    selected.findIndex(en => en.id === id) !== -1;
+
+  const renderCellValue = (row: EnrollmentData, key: keyof EnrollmentData) => {
+    const value = row[key];
+    if (key === 'role') {
+      return EducatorRoles.find(edRole => edRole.value === value)?.label ?? '';
+    }
+    if (key === 'attendances') {
+      return `${value}/${workshop?.sessions.length ?? '0'}`;
+    }
+    return value;
+  };
 
   const handleSelectAllClick = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.checked) {
@@ -167,10 +127,39 @@ export const WorkshopEnrollments: FC = () => {
     setMoveToWorkshopId(numericValue);
   };
 
-  const s = useMemo(() => pluralize(selected.length), [selected]);
+  const handleRefreshClick = () => {
+    setAnimateRefreshButton(true);
+    refetchEnrollments();
 
-  const isSelected = (id: string) =>
-    selected.findIndex(en => en.id === id) !== -1;
+    refreshTimeout.current = setTimeout(() => {
+      setAnimateRefreshButton(false);
+      refreshTimeout.current = null;
+    }, 1000);
+  };
+
+  useEffect(
+    // cleanup function used to clear timeout
+    () => () => {
+      if (refreshTimeout.current) {
+        clearTimeout(refreshTimeout.current);
+      }
+    },
+    []
+  );
+
+  if (!enrollments.length && enrollmentsLoading) {
+    return <FontAwesomeV6Icon iconName="spinner" animationType="spin" />;
+  }
+
+  if (enrollmentsError) {
+    return (
+      <Alert
+        size="m"
+        text="There was an error fetching enrollments. Please try again."
+        type="danger"
+      />
+    );
+  }
 
   return (
     <>
@@ -179,9 +168,11 @@ export const WorkshopEnrollments: FC = () => {
           ariaLabel="Refresh enrollment table data"
           icon={{
             iconName: 'refresh',
+            animationType:
+              animateRefreshButton || enrollmentsLoading ? 'spin' : undefined,
           }}
           isIconOnly
-          onClick={() => {}}
+          onClick={handleRefreshClick}
           size="s"
         />
         <Button
@@ -280,7 +271,9 @@ export const WorkshopEnrollments: FC = () => {
                       </TableCell>
                       {columns.map(({key}) => (
                         <TableCell key={key}>
-                          <BodyTwoText noMargin>{row[key]}</BodyTwoText>
+                          <BodyTwoText noMargin>
+                            {renderCellValue(row, key)}
+                          </BodyTwoText>
                         </TableCell>
                       ))}
                     </TableRow>
@@ -303,17 +296,18 @@ export const WorkshopEnrollments: FC = () => {
 
       {deleteDialogOpen && (
         <Dialog
+          id="remove-enrollments-dialog"
           onClose={() => setDeleteDialogOpen(false)}
           title={`Remove Enrollment${s}?`}
           customContent={
             <Typography noMargin semanticTag="div" visualAppearance="body-two">
               {`Are you sure you want to remove the enrollment${s} for:`}
               <ul className={styles.enrollmentList}>
-                {selected.map(({id, firstName, lastName, email}) => (
+                {selected.map(({id, givenName, familyName, email}) => (
                   <li
                     key={id}
                     className={styles.enrollmentListItem}
-                  >{`${firstName} ${lastName} (${email})`}</li>
+                  >{`${givenName} ${familyName} (${email})`}</li>
                 ))}
               </ul>
             </Typography>
@@ -336,6 +330,7 @@ export const WorkshopEnrollments: FC = () => {
 
       {moveDialogOpen && (
         <Dialog
+          id="move-enrollments-dialog"
           onClose={() => {
             setMoveDialogOpen(false);
             setMoveToWorkshopId('');
@@ -350,11 +345,11 @@ export const WorkshopEnrollments: FC = () => {
               >
                 {`You are moving the following enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
-                  {selected.map(({id, firstName, lastName, email}) => (
+                  {selected.map(({id, givenName, familyName, email}) => (
                     <li
                       key={id}
                       className={styles.enrollmentListItem}
-                    >{`${firstName} ${lastName} (${email})`}</li>
+                    >{`${givenName} ${familyName} (${email})`}</li>
                   ))}
                 </ul>
               </Typography>
