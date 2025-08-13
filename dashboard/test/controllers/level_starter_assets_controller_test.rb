@@ -231,6 +231,21 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 123, summary['size']
   end
 
+  test 'upload_by_uuid: returns summary if file uploads' do
+    LevelStarterAssetsHelper.expects(:get_object).returns(@file_obj)
+    @file_obj.expects(:upload_file).returns(true)
+
+    sign_in create(:levelbuilder)
+    level = create(:weblab2)
+    post :upload_by_uuid, params: {level_name: level.name, uuid: @uuid, files: [@file]}
+
+    assert_response :success
+    summary = JSON.parse(response.body)
+    assert_equal @filename, summary['filename']
+    assert_equal 'image', summary['category']
+    assert_equal 123, summary['size']
+  end
+
   test 'upload: can successfully upload files with single- and double- quotes in filenames' do
     LevelStarterAssetsHelper.expects(:get_object).twice.returns(@file_obj)
     @file_obj.expects(:upload_file).twice.returns(true)
