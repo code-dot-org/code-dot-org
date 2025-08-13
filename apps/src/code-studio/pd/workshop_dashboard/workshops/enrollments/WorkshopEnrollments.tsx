@@ -203,14 +203,16 @@ export const WorkshopEnrollments: FC = () => {
     try {
       if (!selected.length) return;
 
-      const urlParams = new URLSearchParams();
-      urlParams.append('destination_workshop_id', moveToWorkshopId);
-      selected.forEach(({id}) =>
-        urlParams.append('enrollment_ids[]', String(id))
-      );
+      // Build query string manually to avoid URL encoding the brackets
+      const enrollmentIds = selected
+        .map(({id}) => `enrollment_ids[]=${encodeURIComponent(id)}`)
+        .join('&');
+      const queryString = `destination_workshop_id=${encodeURIComponent(
+        moveToWorkshopId
+      )}&${enrollmentIds}`;
 
       const response = await fetch(
-        `/api/v1/pd/enrollments/move?${urlParams.toString()}`,
+        `/api/v1/pd/enrollments/move?${queryString}`,
         {
           method: 'POST',
           headers: {
