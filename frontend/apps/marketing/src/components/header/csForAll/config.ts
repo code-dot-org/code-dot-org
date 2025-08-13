@@ -23,7 +23,7 @@ const SHARED_LINKS = {
     label: 'Donate',
   },
   GET_INVOLVED: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Get Involved',
   },
   HOME: {
@@ -67,7 +67,7 @@ const SHARED_LINKS = {
     label: 'Unlock8',
   },
   UNLOCK8_PETITION: {
-    href: '/open-letter-unlock-8',
+    href: '/unlock8/open-letter',
     label: 'Unlock8 Petition',
   },
 } as const;
@@ -97,7 +97,8 @@ export const TOP_LEVEL_LINKS: {linkList: LinkItemProps[]} = {
     createLinkItem(SHARED_LINKS.ISSUES, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.TAKE_ACTION, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.HOUR_OF_AI, {typography: 'h4'}),
-    createLinkItem(SHARED_LINKS.DONATE, {typography: 'h4'}),
+    // Marketing does not have permission to collect donations yet
+    //createLinkItem(SHARED_LINKS.DONATE, {typography: 'h4'}),
     createLinkItem(SHARED_LINKS.NEWS_AND_RESOURCES, {typography: 'h4'}),
   ],
 };
@@ -121,14 +122,11 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
 
 // Main Menu News & Resources Dropdown Links
 export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [
-    createLinkItem(SHARED_LINKS.ABOUT),
-    createLinkItem(SHARED_LINKS.NEWS),
-  ],
+  linkList: [createLinkItem(SHARED_LINKS.NEWS)],
 };
 
 // Main Menu Desktop Configuration
-const [issuesLink, takeActionLink, hourOfAiLink, donateLink, newsLink] =
+const [issuesLink, takeActionLink, hourOfAiLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
 
 export const MAIN_MENU_DESKTOP_ITEMS = [
@@ -146,10 +144,11 @@ export const MAIN_MENU_DESKTOP_ITEMS = [
     type: 'button' as const,
     topLevelLink: hourOfAiLink,
   },
-  {
-    type: 'button' as const,
-    topLevelLink: donateLink,
-  },
+  // Marketing does not have permission to collect donations yet
+  //{
+  //type: 'button' as const,
+  //topLevelLink: donateLink,
+  //},
   {
     type: 'dropdown' as const,
     topLevelLink: newsLink,

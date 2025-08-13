@@ -9,11 +9,8 @@ export const SITE_LINKS = [
   {key: 'issues', label: 'Issues', href: '/issues'},
   {key: 'take-action', label: 'Take Action', href: '/take-action'},
   {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
-  {
-    key: 'donate',
-    label: 'Donate',
-    href: 'https://donate.code.org/campaign/708610/donate',
-  },
+  // Marketing does not have permission to collect donations yet
+  //{ key: 'donate', label: 'Donate', href: 'https://donate.code.org/campaign/708610/donate',},
   {
     key: 'news-and-resources',
     label: 'News & Resources',

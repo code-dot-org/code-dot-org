@@ -10,6 +10,8 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  GIVEN_NAME_SESSION_KEY,
+  FAMILY_NAME_SESSION_KEY,
   MAX_DISPLAY_NAME_LENGTH,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_NAME_SESSION_KEY,
@@ -53,6 +55,7 @@ const FINISH_SIGN_UP_PARAMS = {
     },
     country_code: 'US',
     educator_role: 'classroom_teacher',
+    signup_sources_tracking: ['search'],
   },
 };
 
@@ -91,7 +94,8 @@ describe('FinishTeacherAccount', () => {
 
   function fillInFormFields(
     fillInNameFields: boolean = true,
-    fillInRoleField: boolean = true
+    fillInRoleField: boolean = true,
+    fillInSourceField: boolean = true
   ) {
     if (fillInNameFields) {
       fireEvent.change(screen.getByLabelText(locale.first_name()), {
@@ -109,6 +113,10 @@ describe('FinishTeacherAccount', () => {
       fireEvent.change(screen.getByLabelText(locale.what_is_your_role()), {
         target: {value: FINISH_SIGN_UP_PARAMS.user.educator_role},
       });
+    }
+    if (fillInSourceField) {
+      fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+      fireEvent.click(screen.getByText(locale.found_on_search()));
     }
     fireEvent.change(screen.getByLabelText(i18n.whatCountry()), {
       target: {
@@ -155,6 +163,17 @@ describe('FinishTeacherAccount', () => {
     expect(navigateToHrefMock).toHaveBeenCalledWith(
       `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
     );
+  });
+
+  it('prepopulates first and last names from sessionStorage if available from SSO or LTI provider', async () => {
+    const givenName = 'FakeGivenName';
+    const familyName = 'FakeFamilyName';
+    sessionStorage.setItem(GIVEN_NAME_SESSION_KEY, givenName);
+    sessionStorage.setItem(FAMILY_NAME_SESSION_KEY, familyName);
+    await waitFor(renderDefault);
+
+    screen.getByDisplayValue(givenName);
+    screen.getByDisplayValue(familyName);
   });
 
   it('renders finish teacher account page with school zip when usIp is true', async () => {
@@ -392,6 +411,83 @@ describe('FinishTeacherAccount', () => {
     fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
 
     expect(finishSignUpButton).toBeEnabled();
+  });
+
+  it('requires signup sources', async () => {
+    await waitFor(renderDefault);
+
+    fillInFormFields(true, true, false);
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+
+    fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+    fireEvent.click(
+      screen.getByText(locale.recommended_by_colleague_or_school())
+    );
+    fireEvent.click(
+      screen.getByText(locale.learned_via_state_district_curriculum())
+    );
+
+    expect(finishSignUpButton).toBeEnabled();
+  });
+
+  it('alphabetizes signup sources', async () => {
+    fetchStub.callsFake(url => {
+      if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+        } as Response);
+      } else {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({success: true}),
+        } as Response);
+      }
+    });
+
+    await waitFor(renderDefault);
+
+    fillInFormFields();
+
+    // Check 3 new options in non-alphabetical order
+    fireEvent.click(screen.getByText(locale.select_all_that_apply()));
+    fireEvent.click(
+      screen.getByText(locale.learned_via_state_district_curriculum())
+    );
+    fireEvent.click(screen.getByText(locale.heard_at_conference()));
+    fireEvent.click(screen.getByText(locale.attended_pl()));
+
+    // Uncheck selected option
+    fireEvent.click(screen.getByText(locale.found_on_search()));
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      })
+    );
+
+    const expectedSelectedSources = [
+      'attended_pl',
+      'conference',
+      'via_state_district_curriculum',
+    ];
+    const expectedParams = {
+      user: {
+        ...FINISH_SIGN_UP_PARAMS.user,
+        signup_sources_tracking: expectedSelectedSources,
+      },
+    };
+    await waitFor(() => {
+      expect(fetchStub.getCall(1).args[1]?.body).toEqual(
+        JSON.stringify(expectedParams)
+      );
+    });
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {

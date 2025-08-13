@@ -143,7 +143,7 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
   end
 
   def facilitator_post_workshop_csp_summer
-    regional_partner = build :regional_partner, name: 'We Teach Code'
+    regional_partner = build(:regional_partner, name: 'We Teach Code')
 
     mail :facilitator_post_workshop,
       Pd::Workshop::COURSE_CSP,
@@ -236,8 +236,8 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       subject = DEFAULT_SUBJECT
     end
 
-    facilitator = build :facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net'
-    organizer = build :workshop_organizer, name: 'Oscar Organizer', email: 'oscar_organizer@example.net'
+    facilitator = build(:facilitator, name: 'Fiona Facilitator', email: 'fiona_facilitator@example.net')
+    organizer = build(:workshop_organizer, name: 'Oscar Organizer', email: 'oscar_organizer@example.net')
     default_workshop_params = {
       organizer: organizer,
       num_sessions: 2,
@@ -247,14 +247,15 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       location_address: '1501 4th Ave, Suite 900, Seattle, WA',
       facilitators: [facilitator]
     }
-    workshop = build :workshop, default_workshop_params.merge(workshop_params)
+    workshop = build(:workshop, default_workshop_params.merge(workshop_params))
 
-    teacher = build :teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net'
+    teacher = build(:teacher, name: 'Tracy Teacher', email: 'tracy_teacher@example.net')
 
-    school_info = build :school_info
+    school_info = build(:school_info)
 
-    enrollment = build :pd_enrollment, workshop: workshop, full_name: teacher.name, email: teacher.email, user: teacher,
+    enrollment = build(:pd_enrollment, workshop: workshop, full_name: teacher.name, email: teacher.email, user: teacher,
       school_info: school_info
+)
 
     enrollment.assign_code
 

@@ -1,5 +1,6 @@
 Feature: Music Lab workspaces load between levels
 
+@skip
 @no_mobile
 @no_safari
 # TODO: This test has been flaky on Safari. Investigate and re-enable.

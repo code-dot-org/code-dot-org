@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-01 15:19:21 UTC",
+    "serialized_at": "2025-08-05 21:26:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -9162,18 +9162,6 @@
       }
     },
     {
-      "name": "[EXEMPLAR] Unit 1 Guide",
-      "url": "https://docs.google.com/document/d/1WZnHVMvSLXphwZM0eb0EjZwZ72IQEBtxm2TL_zb8c-4/edit?usp=share_link",
-      "key": "_exemplar_unit_1_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_unit_1_guide"
-      }
-    },
-    {
       "name": "[EXEMPLAR] Writing Methods Guided Notes",
       "url": "https://docs.google.com/document/d/1z_iTz7rVAOu-LuHSfySbtFWJJrfLfZjULlNoLhF11cw/edit?usp=drive_link",
       "key": "_exemplar_writing_methods_guided_notes",
@@ -10330,12 +10318,9 @@
     },
     {
       "name": "Unit 1 Guide",
-      "url": "https://docs.google.com/document/d/1r9rtYXoPbNtm4JVGDW_e6nq3xfL_YdS-HMSqUjxdxuk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/15ZXw5PhyuyMVCWAVZxE8mFZUqHtGhqxyIYc-JeT4AwY/edit?usp=sharing",
       "key": "unit_1_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_1_guide"
@@ -10354,12 +10339,21 @@
       }
     },
     {
+      "name": "Unit 1 Guide [EXEMPLAR]",
+      "url": "https://docs.google.com/document/d/17OjkIkM0K3CIBflKJSXQLGoEArzqI1kCRk7Qvps1YhQ/edit?usp=drive_link",
+      "key": "unit_1_guide_exemplar_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 1 Overview",
-      "url": "https://docs.google.com/document/d/12Bv7iyFuRhcjmbra20xxxXcPh8OJ69OfDT2nCIBIVJU/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/10jOnQ4H1o9L2SSJDb2QTb9hmcSZRFcdvHy5loXHUMbk/edit?usp=drive_link",
       "key": "unit_1_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_1_overview"
@@ -10367,12 +10361,9 @@
     },
     {
       "name": "Unit 1 Study Guide",
-      "url": "https://docs.google.com/document/d/1zu0zO0eRx602yY0-cTZK-cP0vEv6iXs9lcLkAGknNpQ/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1qK4CbBgpSXrjPy96iMJpeyBtAGCikptcoTGNE6779TI/edit?usp=drive_link",
       "key": "unit_1_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_1_study_guide"
@@ -11283,12 +11274,6 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "_exemplar_unit_1_guide",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "all_resources_9",
         "script.name": "csa1-2025"
       }
@@ -11332,6 +11317,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_1_guide",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_guide_exemplar_",
         "script.name": "csa1-2025"
       }
     },

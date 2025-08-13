@@ -6,6 +6,7 @@ const linkList = [
   {label: 'Home', href: '/home'},
   {label: 'About', href: '/about'},
   {label: 'Contact', href: '/contact'},
+  {label: 'External', href: 'https://example.com', external: true},
 ];
 
 const defaultProps: MenuListProps = {
@@ -45,11 +46,13 @@ describe('DropdownMenu', () => {
     });
   });
 
-  it('calls handleClose when menu item is clicked', () => {
+  it('renders external link with correct target and rel', () => {
     render(<DropdownMenu {...defaultProps} />);
     fireEvent.click(screen.getByRole('button', {name: /menu/i}));
-    fireEvent.click(screen.getByText('Home'));
-    expect(screen.queryByRole('menu')).not.toBeInTheDocument();
+    const externalLink = screen.getByRole('menuitem', {name: /external/i});
+    expect(externalLink).toHaveAttribute('href', 'https://example.com');
+    expect(externalLink).toHaveAttribute('target', '_blank');
+    expect(externalLink).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
   it('does not render menu items if linkList is empty', () => {
@@ -62,5 +65,20 @@ describe('DropdownMenu', () => {
     render(<DropdownMenu id="no-list-menu" buttonLabel="NoList" />);
     fireEvent.click(screen.getByRole('button', {name: /nolist/i}));
     expect(screen.queryAllByRole('menuitem')).toHaveLength(0);
+  });
+
+  it('navigates between menu items with arrow keys', () => {
+    render(<DropdownMenu {...defaultProps} />);
+    fireEvent.click(screen.getByRole('button', {name: /menu/i}));
+
+    const homeItem = screen.getByText('Home');
+    const aboutItem = screen.getByText('About');
+
+    homeItem.focus();
+    fireEvent.keyDown(homeItem, {key: 'ArrowDown', code: 'ArrowDown'});
+    expect(aboutItem).toHaveFocus();
+
+    fireEvent.keyDown(aboutItem, {key: 'ArrowUp', code: 'ArrowUp'});
+    expect(homeItem).toHaveFocus();
   });
 });

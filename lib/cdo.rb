@@ -110,17 +110,19 @@ module Cdo
     end
 
     def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
+      return 'codeprojects.org' if rack_env?(:production)
+      return "localhost.codeprojects.org" if rack_env?(:development) || ci_webserver?
+      return "#{stack_name}.codeprojects.org"
+    end
+
+    def preview_codeprojects_hostname
+      "preview.#{codeprojects_hostname}"
     end
 
     def hostedzone_id(domain)
       hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
       raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
       return hosted_zone.id.delete_prefix("/hostedzone/")
-    end
-
-    def codeprojects_hostedzone_id
-      hostedzone_id('codeprojects.org')
     end
 
     def site_host(domain)

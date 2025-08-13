@@ -746,7 +746,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
     let(:get_i18n_strings) {described_instance.send(:get_i18n_strings, level)}
 
     context 'when level has Categories' do
-      let(:level) {FactoryBot.build :level, toolbox_blocks: toolbox_blocks}
+      let(:level) {FactoryBot.build(:level, toolbox_blocks: toolbox_blocks)}
 
       let(:toolbox_blocks) do
         <<~XML.strip

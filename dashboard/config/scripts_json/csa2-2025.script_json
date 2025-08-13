@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:18:27 UTC",
+    "serialized_at": "2025-08-05 22:00:43 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8785,11 +8785,9 @@
     },
     {
       "name": "[EXEMPLAR] Unit 2 Guide",
-      "url": "https://docs.google.com/document/d/1TXYNiTnbkFzpuEvReolnu7mrtd8LU6hE1iqx91mNUno/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1bzdCMX84e5GB0wAbqSRpIQber3pgbE4KT44ttx0ziPk/edit?usp=drive_link",
       "key": "_exemplar_unit_2_guide",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "_exemplar_unit_2_guide"
@@ -9719,12 +9717,9 @@
     },
     {
       "name": "Unit 2 Guide",
-      "url": "https://docs.google.com/document/d/1-S72OY0oA4-p2c4jwqdYl4pGX7j-lf5g86toG9gqxdI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1SNfkjeoR_OBs81KduIcl5Q8pv-jvhweRx-UaIP6C25A/edit?usp=drive_link",
       "key": "unit_2_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_2_guide"
@@ -9732,11 +9727,9 @@
     },
     {
       "name": "Unit 2 Overview",
-      "url": "https://docs.google.com/document/d/1I9s_qs8Foxg2df3YzgeCLDFzBTpYECERm7_iRiUkLMc/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1M6kxvorrMd4ANEsNqdfTZskeGG3kcHiBpARdjBei9Mc/edit?usp=drive_link",
       "key": "unit_2_overview",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_2_overview"
@@ -9744,12 +9737,9 @@
     },
     {
       "name": "Unit 2 Study Guide",
-      "url": "https://docs.google.com/document/d/1k2hoP7Zjy0Z1LYYqjNTM4_MIYXAeeVlw-abhc93B72g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1od6k6IJUwRbC-f4Lr2RqP3m9vhf_W262PJ3sfS7xkxg/edit?usp=drive_link",
       "key": "unit_2_study_guide",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_2_study_guide"

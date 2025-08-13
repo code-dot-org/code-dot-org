@@ -5,8 +5,6 @@ import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useMemo} from 'react';
 
-import {ParticipantGroupTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-
 import {AdditionalInfoProps} from '../types';
 
 import commonStyles from '../styles.module.scss';
@@ -22,12 +20,14 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
   const participantGroupTypeOptions = useMemo(() => {
     return [
       {value: '', text: 'Select a cohort type'},
-      ...ParticipantGroupTypes.map(value => ({
-        value,
-        text: value,
-      })),
+      ...(fields.participant_group_type?.options ?? []).map(
+        ({value, label}) => ({
+          value,
+          text: label,
+        })
+      ),
     ];
-  }, []);
+  }, [fields.participant_group_type?.options]);
 
   const handleChange = (
     event: ChangeEvent<

@@ -22,7 +22,7 @@ import {
 } from '../redux/musicRedux';
 
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
-import {TimelineElementId} from './TimelineElement';
+import {TimelineElementClass} from './TimelineElement';
 import TimelineSampleEvents from './TimelineSampleEvents';
 import TimelineSimple2Events from './TimelineSimple2Events';
 import {useMusicSelector} from './types';
@@ -114,7 +114,7 @@ const Timeline: React.FunctionComponent<TimelineProps> = ({
   }, []);
 
   const timelineElements = Array.from(
-    document.querySelectorAll<HTMLElement>(`#${TimelineElementId}`)
+    document.querySelectorAll<HTMLElement>(`.${TimelineElementClass}`)
   );
 
   const onKeyDown = useCallback(

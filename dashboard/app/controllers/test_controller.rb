@@ -433,6 +433,8 @@ class TestController < ApplicationController
       :email,
       :password,
       :password_confirmation,
+      :given_name,
+      :family_name,
       :name,
       :age,
       :username,
@@ -460,7 +462,7 @@ class TestController < ApplicationController
     )
     if user_params[:sso]
       user = User.new(**user_opts)
-      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name]}}), user_params)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name], given_name: user_params[:given_name], family_name: user_params[:family_name]}}), user_params)
       user.save!
     else
       user = User.create!(**user_opts)

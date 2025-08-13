@@ -23,7 +23,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
       }
     }
 
-    @user = create :user
+    @user = create(:user)
     @user.authentication_options.create(
       authentication_id: Services::Lti::AuthIdGenerator.new(@id_token).call,
       credential_type: AuthenticationOption::LTI_V1,
@@ -48,10 +48,10 @@ class Policies::LtiTest < ActiveSupport::TestCase
     # false if student
     refute Policies::Lti.unverified_teacher?(@user)
     # true if unverified teacher
-    teacher = create :teacher
+    teacher = create(:teacher)
     assert Policies::Lti.unverified_teacher?(teacher)
     # false if verified teacher
-    teacher = create :authorized_teacher
+    teacher = create(:authorized_teacher)
     refute Policies::Lti.unverified_teacher?(teacher)
   end
 
@@ -77,12 +77,12 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
-    user = create :teacher, :with_lti_auth
+    user = create(:teacher, :with_lti_auth)
     assert_equal user.email, Policies::Lti.lti_provided_email(user)
   end
 
   test 'lti_provided_email should NOT return an email given a non-LTI user' do
-    user = create :teacher
+    user = create(:teacher)
     assert_nil Policies::Lti.lti_provided_email(user)
   end
 
@@ -99,7 +99,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
   end
 
   def create_opted_out_user
-    user = create :student, :with_lti_auth
+    user = create(:student, :with_lti_auth)
     user.lms_landing_opted_out = false
     user.save
 
@@ -195,8 +195,8 @@ class Policies::LtiTest < ActiveSupport::TestCase
   class InProgressRegistrationTest < ActiveSupport::TestCase
     test 'returns true for a partial LTI registration' do
       session = {}
-      partial_lti_teacher = create :teacher
-      lti_integration = create :lti_integration
+      partial_lti_teacher = create(:teacher)
+      lti_integration = create(:lti_integration)
       fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
       auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
       ao = AuthenticationOption.new(
@@ -212,7 +212,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
     test 'returns false for a partial non-LTI registration' do
       session = {}
-      partial_teacher = create :teacher, :with_google_authentication_option
+      partial_teacher = create(:teacher, :with_google_authentication_option)
       ::PartialRegistration.persist_attributes session, partial_teacher
 
       refute Policies::Lti.lti_registration_in_progress?(session)

@@ -2,11 +2,11 @@ require 'test_helper'
 
 class CachingTest < ActionDispatch::IntegrationTest
   def setup
-    @multi_lesson_unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
-    @multi_lesson_unit_group = create :single_unit_course, unit: @multi_lesson_unit
+    @multi_lesson_unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
+    @multi_lesson_unit_group = create(:single_unit_course, unit: @multi_lesson_unit)
 
-    @other_hoc_unit = create :unit, :with_levels, levels_count: 10
-    @other_hoc_course = create :hoc_course, unit: @other_hoc_unit
+    @other_hoc_unit = create(:unit, :with_levels, levels_count: 10)
+    @other_hoc_course = create(:hoc_course, unit: @other_hoc_unit)
 
     setup_script_cache
   end
@@ -93,7 +93,7 @@ class CachingTest < ActionDispatch::IntegrationTest
   end
 
   test "post milestone to multi-lesson course passing" do
-    unit = create :unit, :with_levels, lessons_count: 3, levels_count: 10
+    unit = create(:unit, :with_levels, lessons_count: 3, levels_count: 10)
     sl = unit.script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
@@ -106,17 +106,17 @@ class CachingTest < ActionDispatch::IntegrationTest
   test 'should cache script after initialization' do
     Unit.unit_cache_to_cache
     assert_queries(0, ignore_filters: [], capture_filters: [/script\.rb.*get_from_cache/]) do
-      get '/courses/course1/units/1/lessons/3/levels/1'
+      get "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
     end
   end
 
   test 'redirects old stage url without hitting database' do
     assert_queries(0, ignore_filters: [], capture_filters: []) do
-      get '/s/course1/stage/3/puzzle/1'
+      get "/s/#{@multi_lesson_unit.name}/stage/3/puzzle/1"
     end
     assert_response :redirect
-    assert_redirected_to '/s/course1/lessons/3/levels/1'
+    assert_redirected_to "/s/#{@multi_lesson_unit.name}/lessons/3/levels/1"
     follow_redirect!
-    assert_redirected_to '/courses/course1/units/1/lessons/3/levels/1'
+    assert_redirected_to "/courses/#{@multi_lesson_unit_group.name}/units/1/lessons/3/levels/1"
   end
 end

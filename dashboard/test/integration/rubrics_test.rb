@@ -4,15 +4,15 @@ class RubricsTest < ActionDispatch::IntegrationTest
   include LevelsHelper # for build_script_level_path
 
   setup do
-    @teacher = create :authorized_teacher
+    @teacher = create(:authorized_teacher)
     sign_in @teacher
 
-    @unit = create :script, :with_levels, lessons_count: 4, name: 'test-unit'
+    @unit = create(:script, :with_levels, lessons_count: 4, name: 'test-unit')
     create(:single_unit_course, unit: @unit)
     @first_script_level = @unit.script_levels.first
-    @rubric = create :rubric, :with_learning_goals, lesson: @first_script_level.lesson, level: @first_script_level.levels.first
+    @rubric = create(:rubric, :with_learning_goals, lesson: @first_script_level.lesson, level: @first_script_level.levels.first)
     @last_script_level = @unit.script_levels.last
-    create :rubric, lesson: @last_script_level.lesson, level: @last_script_level.levels.first
+    create(:rubric, lesson: @last_script_level.lesson, level: @last_script_level.levels.first)
   end
 
   test 'canShowTaScoresAlert is true by default' do
@@ -23,7 +23,7 @@ class RubricsTest < ActionDispatch::IntegrationTest
   end
 
   test 'canShowTaScoresAlert is false after teacher submits feedback' do
-    learning_goal = create :learning_goal_teacher_evaluation, learning_goal: @rubric.learning_goals.first, teacher: @teacher, understanding: nil
+    learning_goal = create(:learning_goal_teacher_evaluation, learning_goal: @rubric.learning_goals.first, teacher: @teacher, understanding: nil)
 
     # ignore learning goal without understanding
     get build_script_level_path(@last_script_level, unit_group_unit: @unit.unit_group_units.first)
@@ -76,10 +76,10 @@ class RubricsTest < ActionDispatch::IntegrationTest
     refute rubric_data['canShowTaScoresAlert']
 
     # cannot show alert for lessons in other unit
-    unit = create :script, :with_levels, name: 'test-unit-2'
+    unit = create(:script, :with_levels, name: 'test-unit-2')
     create(:single_unit_course, unit: unit)
     script_level = unit.script_levels.first
-    create :rubric, lesson: script_level.lesson, level: script_level.levels.first
+    create(:rubric, lesson: script_level.lesson, level: script_level.levels.first)
     get build_script_level_path(script_level, unit_group_unit: unit.unit_group_units.first)
     assert_response :success
     rubric_data = JSON.parse(css_select('script[data-rubricdata]').first.attribute('data-rubricdata').to_s)

@@ -1,6 +1,8 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -13,9 +15,11 @@ export type FileUploaderProps = {
   callback: (
     filename: string,
     contents: string,
+    uploadUrl?: string,
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  channelId: string;
   validateFileName?: (fileName: string) => string | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
@@ -61,7 +65,7 @@ const isValidMimeType = (
 
 /**
  * A custom hook that provides functionality for file uploads,
- * including validation, reading, and handling callbacks.
+ * including validation, reading, uploading to S3 for non-text files, and handling callbacks.
  *
  * @param props An object containing configuration options for the hook.
  *
@@ -70,10 +74,12 @@ const isValidMimeType = (
  * @property props.errorCallback - A function to be called with an error message if the upload fails.
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
+ * @property props.channelId - Required so that we can upload non-text files to S3.
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
                                         If the function is not provided, then no analytics will be tracked
+ * @property props.multiple - Optionally disable multiple file uploads. Defaults to true.
  *
  * @returns An object containing the following properties:
  *
@@ -86,6 +92,7 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  channelId,
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
@@ -94,7 +101,14 @@ export const useFileUploader = ({
   const callbackArgs = useRef<unknown>();
 
   const changeHandler = useCallback(() => {
-    Array.from(inputRef.current?.files || []).forEach(file => {
+    const handleError = (error: Error) => {
+      sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
+        error: error.message,
+      });
+      errorCallback(error.message, callbackArgs.current);
+    };
+
+    Array.from(inputRef.current?.files || []).forEach(async file => {
       const fileNameErrorMessage = validateFileName(file.name);
       if (fileNameErrorMessage) {
         errorCallback(fileNameErrorMessage, callbackArgs.current);
@@ -114,36 +128,56 @@ export const useFileUploader = ({
         return;
       }
 
-      const reader = new FileReader();
       if (file.type.match(/^text/)) {
+        const reader = new FileReader();
         reader.readAsText(file);
-      } else {
-        reader.readAsArrayBuffer(file);
-      }
 
-      reader.onload = () => {
-        if (!reader.result) {
-          callback(file.name, '', callbackArgs.current);
-        } else {
-          const result =
-            typeof reader.result === 'string'
-              ? reader.result
-              : bufferToString(reader.result);
+        reader.onload = () => {
+          if (!reader.result) {
+            callback(file.name, '', undefined, callbackArgs.current);
+          } else {
+            const result =
+              typeof reader.result === 'string'
+                ? reader.result
+                : bufferToString(reader.result);
+            sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+              name: file.name,
+              type: file.type,
+            });
+            callback(
+              file.name,
+              result as string,
+              undefined,
+              callbackArgs.current
+            );
+          }
+        };
+
+        reader.onerror = () => {
+          if (reader.error) {
+            handleError(reader.error);
+          }
+        };
+      } else {
+        try {
+          if (!channelId) {
+            throw new Error('channelId required for file upload.');
+          }
+
+          const fileType = file.name.split('.')[1];
+          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+          await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,
           });
-          callback(file.name, result as string, callbackArgs.current);
+          callback(file.name, '', url, callbackArgs.current);
+        } catch (error) {
+          if (error instanceof Error) {
+            handleError(error);
+          }
         }
-      };
-      reader.onerror = () => {
-        if (reader.error) {
-          sendAnalyticsEvent(analyticsEvents.UPLOAD_FAILED, {
-            error: reader.error.message,
-          });
-          errorCallback(reader.error.message, callbackArgs.current);
-        }
-      };
+      }
     });
   }, [
     validMimeTypes,
@@ -151,6 +185,7 @@ export const useFileUploader = ({
     sendAnalyticsEvent,
     errorCallback,
     callback,
+    channelId,
   ]);
 
   return useMemo(

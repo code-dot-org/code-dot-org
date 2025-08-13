@@ -337,7 +337,9 @@
         - error
         - slowquery
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
+<%    unless rack_env?(:adhoc) -%>
       BackupRetentionPeriod: !Ref DBBackupRetention
+<%    end -%>
 <%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance

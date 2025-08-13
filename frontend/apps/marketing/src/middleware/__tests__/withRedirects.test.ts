@@ -6,6 +6,7 @@ import {getBrandFromHostname} from '@/config/brand';
 import {withRedirects} from '../withRedirects';
 
 jest.mock('@/config/brand', () => ({
+  ...jest.requireActual('@/config/brand'),
   getBrandFromHostname: jest.fn(() => 'Code.org'),
 }));
 jest.mock('@/config/host', () => ({

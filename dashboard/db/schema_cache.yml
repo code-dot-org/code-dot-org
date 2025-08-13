@@ -7283,6 +7283,7 @@ columns:
     comment: 
   - *29
   - *49
+  - *144
   user_ml_models:
   - *9
   - *19
@@ -14517,7 +14518,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250729223547
+version: 20250812140655
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

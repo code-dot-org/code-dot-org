@@ -49,6 +49,14 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for Hour Of Code site.
+  CodeprojectsBaseDomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? 'codeprojects.org' : "#{stack_name}.codeprojects.org" %>
+    Description: Base domain name for Codeprojects (i.e. codeprojects.org, staging.codeprojects.org).
+  CodeprojectsHostedZoneId:
+    Type: String
+    Default: <%=CDO.hostedzone_id('codeprojects.org') %>
+    Description: Route 53 Hosted Zone ID for Codeprojects base domain name.
   InstanceType:
     Type: String
     Default: <%=rack_env?(:production) ? 'm7i.12xlarge' : 't3.2xlarge'%>
@@ -62,10 +70,12 @@ Parameters:
     MaxLength: 16
   DBInstanceType:
     Type: String
-    Default: db.r5.2xlarge
+    # `t4g.large` is the largest `t` family database instance type that supports Aurora 3 / MySQL 8.
+    # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.SupportAurora.html
+    Default: <%= rack_env?(:adhoc) ? 'db.t4g.large' : 'db.r7i.xlarge' %>
   DBBackupRetention:
     Type: Number
-    Default: 5
+    Default: <%= rack_env?(:adhoc) ? 0 : 5 %>
 <% end -%>
 <% if frontends -%>
   DaemonInstanceType:
@@ -515,6 +525,17 @@ Resources:
                   - 'cloudfront:CreateInvalidation'
                   - 'cloudfront:GetInvalidation'
                 Resource: '*'
+<% if frontends -%>
+              # Permissions required to trigger an Autoscaling Group Instance Refresh, a sure-fire way to flush all instance caches
+              - Effect: Allow
+                Action:
+                  - 'autoscaling:DescribeAutoScalingGroups'
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - 'autoscaling:StartInstanceRefresh'
+                Resource: !GetAtt Frontends.AutoScalingGroupARN
+<% end -%>
               # Lookup Route53 Hosted Zones to get Hosted Zone ID when rendering updated CloudFormation templates during ci_build process.
               - Effect: Allow
                 Action:

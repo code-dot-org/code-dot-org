@@ -3,7 +3,7 @@ require 'test_helper'
 class UserGeoTest < ActiveSupport::TestCase
   test 'clear_user_geo clears data' do
     user_geo = UserGeo.create(
-      user_id: (create :user).id,
+      user_id: (create(:user)).id,
       ip_address: '127.0.0.1',
       city: 'Seattle',
       state: 'Washington',
