@@ -32,14 +32,6 @@
       "import": "./dist/esm/index.mjs",
       "require": "./dist/cjs/index.js"
     },
-    "./progress": {
-      "types": {
-        "import": "./dist/esm/progress/index.d.ts",
-        "require": "./dist/cjs/progress/index.d.js"
-      },
-      "import": "./dist/esm/progress/index.mjs",
-      "require": "./dist/cjs/progress/index.js"
-    },
     "./dialogs": {
       "types": {
         "import": "./dist/esm/dialogs/index.d.ts",

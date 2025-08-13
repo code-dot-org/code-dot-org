@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import type {PayloadAction, ThunkDispatch, ThunkAction, AnyAction} from "@reduxjs/toolkit";
 import _ from 'lodash';
 
@@ -76,7 +76,7 @@ export const resultFromStatus: (status: LevelStatus) => TestResults = status => 
   return TestResults.NO_TESTS_RUN;
 };
 
-export const getLevelResult = (serverProgress: UnitProgressDefinition) => {
+export const getLevelResult: (serverProgress: UnitProgressDefinition) => TestResults = serverProgress => {
   return serverProgress.result || resultFromStatus(serverProgress.status);
 };
 
@@ -673,8 +673,6 @@ export function navigateToLevelId(levelId: number): ProgressThunkAction {
       return;
     }
 
-    const currentLevel = getCurrentLevel(getState());
-
     // If the requested level is the same as the current level, don't do anything.
     if (state.currentLevelId === levelId) {
       return;
@@ -691,6 +689,123 @@ export function sendSuccessReport(appType: string): AsyncProgressThunkAction {
     return sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
   };
 }
+
+export const sendPredictLevelReport = createAsyncThunk<
+  void,
+  {appType: string; predictResponse: string},
+  {
+    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    state: RootState;
+  }
+>('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    program: payload.predictResponse,
+  };
+  sendReportHelper(
+    payload.appType,
+    TestResults.CONTAINED_LEVEL_RESULT,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    extraPayload
+  );
+});
+
+/**
+ * Requests user progress from the server and dispatches other redux actions
+ * based on the server's response data.
+ */
+const userProgressFromServer = (
+  state: ProgressState,
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  userId: string | null = null,
+  mergeProgress: boolean
+) => {
+  if (!state.scriptName) {
+    const message = `Could not request progress for user ID ${userId} from server: scriptName must be present in progress redux.`;
+    throw new Error(message);
+  }
+
+  // If we have a userId, we can clear any progress in redux and request all progress
+  // from the server.
+  if (userId) {
+    dispatch(clearResults());
+  }
+
+  return new Promise((resolve, reject) => {
+    (async () => {
+      const response = await fetch(`/api/user_progress/${state.scriptName}`, {
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        reject();
+        return;
+      }
+
+      const data = await response.json();
+
+      if (!data || _.isEmpty(data)) {
+        return;
+      }
+
+      // We are on an overview page if currentLevelId is undefined.
+      const onOverviewPage = !state.currentLevelId;
+      // Show lesson plan links and other teacher info if instructor and on unit overview page.
+      if (
+        (data.isInstructor || data.teacherViewingStudent) &&
+        !data.deeperLearningCourse &&
+        onOverviewPage
+      ) {
+        // Default to summary view if teacher is viewing their student, otherwise default to detail view.
+        dispatch(setIsSummaryView(data.teacherViewingStudent));
+      }
+
+      if (data.focusAreaLessonIds) {
+        dispatch(
+          updateFocusArea(data.changeFocusAreaPath, data.focusAreaLessonIds)
+        );
+      }
+
+      if (data.completed) {
+        dispatch(setScriptCompleted());
+      }
+
+      // Merge progress from server
+      if (data.progress) {
+        dispatch(setScriptProgress(data.progress));
+
+        if (mergeProgress) {
+          // Note that we set the full progress object above in redux but also set
+          // a map containing just level results. This is the legacy code path and
+          // the goal is to eventually update all code paths to use unitProgress
+          // instead of levelResults.
+          const levelResults: LevelResults = _.mapValues(data.progress, getLevelResult) as unknown as LevelResults;
+          dispatch(mergeResults(levelResults));
+        }
+
+        if (data.peerReviewsPerformed) {
+          dispatch(mergePeerReviewProgress(data.peerReviewsPerformed));
+        }
+
+        if (data.current_lesson) {
+          dispatch(setCurrentLessonId(data.current_lesson));
+        }
+      }
+    })();
+  });
+};
+
+export const queryUserProgress =
+  (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
+  (dispatch, getState) => {
+    const state = getState().progress;
+    return userProgressFromServer(state, dispatch, userId, mergeProgress);
+  };
 
 export const {
   initProgress,
