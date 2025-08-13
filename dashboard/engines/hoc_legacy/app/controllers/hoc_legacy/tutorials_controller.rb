@@ -52,16 +52,11 @@ module HocLegacy
     # POST /v2/certificate
     def certificate
       session_params = params.permit(:session_s, :name_s)
+      session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first || {}
 
-      session_row = PEGASUS_DB[:hoc_activity].where(session: session_params[:session_s]).first
-      session_row ||= {session: session_params[:session_s]}
-
-      if session_row[:name].blank?
+      if session_row[:id] && session_row[:name].blank?
         session_row[:name] = session_params[:name_s]&.strip&.presence
-
-        if session_row[:id] && session_row[:name]
-          PEGASUS_DB[:hoc_activity].where(id: session_row[:id]).update(name: session_row[:name])
-        end
+        PEGASUS_DB[:hoc_activity].where(id: session_row[:id]).update(name: session_row[:name]) if session_row[:name]
       end
 
       render json: {

@@ -535,15 +535,15 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
 
           _(parsed_response).must_equal(
             {
-              'session' => param_session_id,
+              'session' => nil,
               'tutorial' => nil,
               'company' => nil,
               'started' => false,
               'pixel_started' => false,
               'pixel_finished' => false,
               'finished' => false,
-              'name' => param_name,
-              'certificate_sent' => true,
+              'name' => nil,
+              'certificate_sent' => false,
             }
           )
         end
