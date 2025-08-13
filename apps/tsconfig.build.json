@@ -11,6 +11,7 @@
     "./test/**/*.tsx"
   ],
   "compilerOptions": {
+    "traceResolution": true,
     "jsx": "react",
     "target": "es5",
     "lib": ["ES2022", "DOM"],
