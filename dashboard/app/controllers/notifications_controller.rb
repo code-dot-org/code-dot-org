@@ -1,11 +1,11 @@
 class NotificationsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource only: [:index, :create, :update, :destroy]
+  load_and_authorize_resource only: [:index]
 
   # Index does not use pagination, returns all active notifications for the current user
   # Consider adding pagination if the number of notifications grows large
   def index
-    rails_notifications = current_user.notifications.active.order(created_at: :desc).all
+    rails_notifications = current_user.external_notifications.not_dismissed.order(created_at: :desc).all
 
     # TODO(lfm): call contentful and add contentful notifications to the list
 
@@ -20,14 +20,14 @@ class NotificationsController < ApplicationController
       return
     end
 
-    notifications = current_user.notifications.where(id: notification_ids)
+    external_notifications = current_user.external_notifications.where(id: notification_ids)
 
-    notifications.where(read_at: nil).update_all(read_at: Time.current)
+    external_notifications.where(read_at: nil).update_all(read_at: Time.current)
 
     response_data = {
       status: 'success',
-      message: "#{notifications.count} notification(s) marked as read",
-      marked_count: notifications.count,
+      message: "#{external_notifications.count} notification(s) marked as read",
+      marked_count: external_notifications.count,
     }
 
     render json: response_data, status: :ok

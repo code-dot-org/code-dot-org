@@ -308,7 +308,7 @@ class User < ApplicationRecord
 
   has_many :lti_user_identities, dependent: :destroy
 
-  has_many :notifications, dependent: :destroy
+  has_many :external_notifications, dependent: :destroy
 
   has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
