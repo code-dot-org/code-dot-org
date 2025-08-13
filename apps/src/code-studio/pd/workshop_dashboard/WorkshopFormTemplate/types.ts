@@ -159,6 +159,41 @@ export interface WorkshopRequest
   organizer_id: number | null;
 }
 
+export interface Enrollment {
+  id: number;
+  first_name: string | null;
+  last_name: string | null;
+  email: string | null;
+  district_name: string | null;
+  school: string | null;
+  role: string | null;
+  user_id: number | null;
+  user_info: {
+    given_name: string | null;
+    family_name: string | null;
+    email: string;
+    school_name: string | null;
+    district_name: string | null;
+    role: string | null;
+  };
+  attended: boolean;
+  attendances: number;
+  enrolled_date: string;
+}
+
+export interface EnrollmentData {
+  id: number;
+  givenName: string;
+  familyName: string;
+  email: string;
+  schoolName: string;
+  districtName: string;
+  role: string;
+  userId: number | null;
+  attendances: number;
+  enrolledDate: string;
+}
+
 export interface CourseOffering {
   id: number;
   display_name: string;
