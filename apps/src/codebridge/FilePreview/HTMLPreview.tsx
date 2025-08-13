@@ -73,7 +73,7 @@ export const HTMLPreview = () => {
 
     window.addEventListener('message', handleMessage);
     return () => window.removeEventListener('message', handleMessage);
-  }, [previewUrl, currentFile, allowUserScripts]);
+  }, [previewUrl, currentFile]);
 
   useEffect(() => {
     const debouncedUpdate = setTimeout(() => {
