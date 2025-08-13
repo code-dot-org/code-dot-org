@@ -45,6 +45,13 @@ export const CONTAINER_OVERRIDES: Components<Theme>['MuiContainer'] = {
       '.section-background-brandLightTertiary:has(&.MuiContainer-root)': {
         backgroundColor: alpha(theme.palette.tertiary.main, 0.1),
       },
+      '&.video-error-container': {
+        backgroundColor: theme.palette.common.black,
+        padding: 0,
+        '.MuiTypography-root, svg': {
+          color: theme.palette.common.white,
+        },
+      },
     }),
   },
 };

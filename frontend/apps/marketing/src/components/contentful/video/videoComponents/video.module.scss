@@ -38,7 +38,6 @@
 
 // Error placeholder styles
 .errorPlaceholder {
-  background: var(--background-neutral-tertiary);
   box-sizing: border-box;
   padding: 1rem;
   display: flex;
@@ -47,9 +46,8 @@
   align-items: center;
   z-index: 1;
 
-  i {
+  svg {
     font-size: 3rem;
-    color: var(--text-neutral-quaternary);
     margin-bottom: 1rem;
 
     // Hide the icon on small screens to leave more space
@@ -103,39 +101,6 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-}
-
-// Video play button
-$play-button-icon-size: 64px;
-
-.playButtonBackground {
-  height: $play-button-icon-size;
-  width: $play-button-icon-size;
-  border: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 100px;
-  background: var(--neutral-base-white);
-  box-shadow:
-    0 3px 4px 0 rgb(255 255 255 / 0.23) inset,
-    0 -4px 4px 0 rgb(0 0 0 / 0.07) inset,
-    0 3px 6px 0 rgb(0 0 0 / 0.2);
-
-  &:focus-visible {
-    @include mixins.focus-styles;
-  }
-
-  .playButton {
-    font-size: 2rem;
-    color: var(--brand-purple-50);
-    // Since the play button is the same in RTL, use margin-left
-    // instead of margin-inline-start which changes based on direction.
-    // This keeps the play button visually centered.
-    margin-left: 4px;
-  }
 }
 
 // Facade Styles
