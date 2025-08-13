@@ -45,7 +45,7 @@ class CourseVersion < ApplicationRecord
     content_root.default_units
   end
 
-  belongs_to :content_root, polymorphic: true, optional: true
+  belongs_to :content_root, class_name: "UnitGroup", optional: true
 
   alias_attribute :version_year, :key
 
@@ -93,6 +93,7 @@ class CourseVersion < ApplicationRecord
         key: content_root.version_year,
         display_name: content_root.version_year,
         content_root: content_root,
+        content_root_type: content_root.class.name
       )
       course_version.published_state = content_root.published_state
     else
