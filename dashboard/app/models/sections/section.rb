@@ -678,10 +678,12 @@ class Section < ApplicationRecord
     return code_review_expires_at > Time.now.utc
   end
 
-  # Returns true if any student in the section has ever made progress on a unit
-  # that the instructor of the section can be an instructor for.
+  # Returns true if any student in the section has ever made progress on any unit
+  # in any course that the instructor of the section can be an instructor for.
   def any_student_has_progress?
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
+    units = Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)})
+    unit_groups = units.map(&:unit_groups).flatten.uniq
+    unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

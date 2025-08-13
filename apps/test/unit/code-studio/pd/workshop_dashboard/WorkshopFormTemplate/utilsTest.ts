@@ -23,8 +23,12 @@ describe('sessionDataToState', () => {
         end: '2024-01-02T00:00:00.000Z',
         location_address: '123 Main St',
         location_name: 'Test Location',
+        meeting_link: null,
         session_format: 'in_person',
         code: 'abc',
+        'show_link?': null,
+        attendance_count: null,
+        is_local: null,
       },
     ];
     const timeZone = 'America/Denver';
@@ -52,8 +56,12 @@ describe('sessionDataToState', () => {
         end: '2024-01-01T17:00:00.000Z',
         location_address: '123 Main St',
         location_name: 'Test Location',
+        meeting_link: null,
         session_format: 'in_person',
         code: 'abc',
+        'show_link?': null,
+        attendance_count: null,
+        is_local: null,
       },
     ];
     const timeZone = null;
@@ -107,6 +115,13 @@ describe('workshopDataToState', () => {
       course_offerings: [1, 2],
       participant_group_type: 'Test Group',
       time_zone: 'America/Denver',
+      state: 'Not Started',
+      enrolled_teacher_count: 0,
+      'ready_to_close?': null,
+      'account_required_for_attendance?': null,
+      regional_partner_name: null,
+      course_offering_names: null,
+      created_at: 'timestamp',
       sessions: [],
     };
     const expectedState = {
@@ -293,16 +308,25 @@ describe('sessionStateToApi', () => {
         start: '2024-03-15T16:00:00.000Z',
         end: '2024-03-15T19:00:00.000Z',
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
         code: 'abc',
+        'show_link?': null,
+        attendance_count: null,
+        is_local: null,
       },
       {
         id: 2,
         session_format: 'in_person',
         start: '2024-03-16T17:00:00.000Z',
         end: '2024-03-16T20:00:00.000Z',
+        meeting_link: null,
         location_address: '456 Old St',
         location_name: 'Old Location',
         code: 'abc',
+        'show_link?': null,
+        attendance_count: null,
+        is_local: null,
       },
     ];
 

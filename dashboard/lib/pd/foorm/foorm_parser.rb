@@ -165,5 +165,153 @@ module Pd::Foorm
       end
       choices_obj
     end
+
+    # Parse forms preserving categories
+    def self.parse_forms_preserving_categories(forms)
+      parsed_forms = {general: {}, facilitator: {}}
+
+      forms.each do |form|
+        form_key = get_form_key(form.name, form.version)
+        form_data = JSON.parse(form.questions)
+        filled_form_data = ::Foorm::Form.fill_in_library_items(form_data)
+
+        general_questions, facilitator_questions = parse_form_elements_with_categories(filled_form_data['pages'])
+
+        parsed_forms[:general][form_key] = general_questions
+        parsed_forms[:facilitator][form_key] = facilitator_questions unless facilitator_questions.empty?
+      end
+
+      parsed_forms
+    end
+
+    def self.parse_form_elements_with_categories(pages)
+      general_questions = {}
+      facilitator_questions = {}
+
+      return [general_questions, facilitator_questions] unless pages
+
+      pages.each do |page|
+        next unless page['elements']
+
+        page['elements'].each do |element|
+          parsed_element = parse_element_with_categories(element, false)
+          general_questions.merge!(parsed_element[:general])
+          facilitator_questions.merge!(parsed_element[:facilitator])
+        end
+      end
+
+      [general_questions, facilitator_questions]
+    end
+
+    def self.parse_element_with_categories(element, is_facilitator_context)
+      result = {general: {}, facilitator: {}}
+      element_type = element['type']
+
+      # Handle panels
+      if PANEL_TYPES.include?(element_type)
+        is_facilitator = is_facilitator_context || element['name'] == 'facilitators'
+        panel_elements = element['elements'] || element['templateElements'] || []
+
+        panel_elements.each do |panel_element|
+          parsed_panel_element = parse_element_with_categories(panel_element, is_facilitator)
+          result[:general].merge!(parsed_panel_element[:general])
+          result[:facilitator].merge!(parsed_panel_element[:facilitator])
+        end
+
+        return result
+      end
+
+      # Skip non-question elements
+      return result unless QUESTION_TYPES.include?(element_type)
+
+      question_name = element['name']
+      parsed_question = parse_question_with_categories(element)
+
+      if is_facilitator_context
+        result[:facilitator][question_name] = parsed_question
+      else
+        result[:general][question_name] = parsed_question
+      end
+
+      result
+    end
+
+    def self.parse_question_with_categories(element)
+      question_data = {
+        name: element['name'],
+        title: element['title'],
+        short_text: element['shortText'],
+        sub_text: element['subText'],
+        type: QUESTION_TO_ANSWER_TYPES[element['type']],
+        category: element['category'],
+        original_type: element['type']
+      }
+
+      case element['type']
+      when 'checkbox', 'radiogroup', 'dropdown'
+        question_data[:choices] = flatten_choices_preserving_data(element['choices'])
+        question_data[:has_other] = element['hasOther']
+        question_data[:other_text] = element['otherPlaceHolder'] || 'other' if element['hasOther']
+      when 'rating'
+        question_data[:choices] = get_rating_choices_with_labels(element)
+        question_data[:rate_min] = element['rateMin'] || DEFAULT_RATE_MIN
+        question_data[:rate_max] = element['rateMax'] || DEFAULT_RATE_MAX
+        question_data[:min_rate_description] = element['minRateDescription']
+        question_data[:max_rate_description] = element['maxRateDescription']
+      when 'matrix'
+        question_data[:columns] = flatten_choices_preserving_data(element['columns'])
+        question_data[:rows] = flatten_choices_preserving_data(element['rows'])
+
+        # Preserve individual row categories for matrix questions
+        question_data[:matrix_rows] = {}
+        (element['rows'] || []).each do |row|
+          if row.is_a?(Hash) && row['value']
+            question_data[:matrix_rows][row['value']] = {
+              text: row['text'],
+              short_text: row['shortText'],
+              sub_text: row['subText'],
+              category: row['category'] || element['category']
+            }
+          end
+        end
+      end
+
+      question_data
+    end
+
+    def self.flatten_choices_preserving_data(choices)
+      return {} unless choices
+
+      choices_obj = {}
+      choices.each do |choice|
+        if choice.is_a?(Hash) && choice['value']
+          choices_obj[choice['value']] = choice['text'] || choice['value']
+        elsif choice.is_a?(String)
+          choices_obj[choice] = choice
+        end
+      end
+      choices_obj
+    end
+
+    def self.get_rating_choices_with_labels(element)
+      choices = {}
+      min_rate = element['rateMin'] || DEFAULT_RATE_MIN
+      max_rate = element['rateMax'] || DEFAULT_RATE_MAX
+
+      min_description = element['minRateDescription']
+      max_description = element['maxRateDescription']
+
+      (min_rate..max_rate).each do |n|
+        label = n.to_s
+        if n == min_rate && min_description
+          label = "#{n} - #{min_description}"
+        elsif n == max_rate && max_description
+          label = "#{n} - #{max_description}"
+        end
+        choices[n.to_s] = label
+      end
+
+      choices
+    end
   end
 end

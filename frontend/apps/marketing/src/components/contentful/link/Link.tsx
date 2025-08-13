@@ -18,7 +18,7 @@ export type LinkProps = RemoveMarginBottomProps & {
   /** Link color */
   color?: Exclude<TypographyColor, 'secondary'>;
   /** Link size */
-  size: ComponentSize;
+  size?: ComponentSize;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
   isLinkExternal: boolean;
   /** Aria label for the link */
@@ -42,7 +42,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   children,
   href,
   color = 'primary',
-  size,
+  size = 'm',
   isLinkExternal,
   removeMarginBottom,
   ariaLabel,

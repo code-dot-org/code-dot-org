@@ -57,7 +57,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'sets purged_at' do
-    user = create :student
+    user = create(:student)
     assert_nil user.purged_at
 
     purge_user user
@@ -66,7 +66,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'skips previously purged user' do
-    user = create :student, purged_at: Time.now
+    user = create(:student, purged_at: Time.now)
     refute_nil user.purged_at
 
     user.expects(:destroy).never
@@ -81,9 +81,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # our database that share emails.
   test 'purges all accounts associated with email' do
     email = 'fakeuser@example.com'
-    account1 = create :student
-    account2 = create :teacher
-    account3 = create :student
+    account1 = create(:student)
+    account2 = create(:teacher)
+    account3 = create(:student)
 
     [account1, account2, account3].each do |account|
       account.primary_contact_info.email = email
@@ -114,7 +114,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user.name' do
-    user = create :student
+    user = create(:student)
     refute_nil user.name
 
     purge_user user
@@ -123,7 +123,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'anonymizes user.username' do
-    user = create :student
+    user = create(:student)
     refute_nil user.username
     refute_match /^sys_deleted_\w{8}$/, user.username
 
@@ -133,9 +133,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user.*_sign_in_ip' do
-    user = create :student,
+    user = create(:student,
       current_sign_in_ip: '192.168.0.1',
       last_sign_in_ip: '10.0.0.1'
+)
     refute_nil user.current_sign_in_ip
     refute_nil user.last_sign_in_ip
 
@@ -146,8 +147,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user email fields' do
-    user = create :teacher,
+    user = create(:teacher,
       parent_email: 'fake-parent-email@example.com'
+)
     refute_empty user.email
     refute_empty user.hashed_email
     refute_nil user.parent_email
@@ -160,8 +162,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears password fields' do
-    user = create :student,
+    user = create(:student,
       reset_password_token: 'fake-reset-password-token'
+)
     refute_nil user.encrypted_password
     refute_nil user.reset_password_token
 
@@ -186,9 +189,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears primary_contact_info but not provider type' do
-    user = create :student,
+    user = create(:student,
       provider: 'clever',
       uid: 'fake-clever-uid'
+)
     assert_equal 'migrated', user.provider
     refute_nil user.primary_contact_info
     assert_equal 'fake-clever-uid', user.primary_contact_info.authentication_id
@@ -201,10 +205,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears school information' do
-    user = create :teacher,
+    user = create(:teacher,
       full_address: 'fake-full-address',
       school: 'fake-school-info',
       school_info: create(:school_info)
+)
     refute_nil user.full_address
     refute_nil user.school
     refute_nil user.school_info_id
@@ -217,7 +222,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears user properties' do
-    user = create :teacher,
+    user = create(:teacher,
       ops_first_name: 'test-value',
       ops_last_name: 'test-value',
       district_id: 'test-value',
@@ -230,6 +235,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       oauth_token_expiration: 'test-value',
       sharing_disabled: 'test-value',
       next_census_display: 'test-value'
+)
     refute_equal({}, user.properties)
 
     purge_user user
@@ -238,7 +244,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'leaves urm and races for US users' do
-    user = create :student, :within_united_states, races: 'white,hispanic'
+    user = create(:student, :within_united_states, races: 'white,hispanic')
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -249,7 +255,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears urm and races for non-US users' do
-    user = create :student, :outside_united_states, races: 'white,hispanic'
+    user = create(:student, :outside_united_states, races: 'white,hispanic')
     assert_equal true, user.urm
     assert_equal 'white,hispanic', user.races
 
@@ -260,7 +266,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'removes StudioPerson if it was only tied to this user' do
-    user = create :teacher
+    user = create(:teacher)
     studio_person = user.studio_person
     refute_nil user.studio_person_id
 
@@ -271,10 +277,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "only removes association with StudioPerson if it's tied to other users" do
-    user = create :teacher
+    user = create(:teacher)
     studio_person = user.studio_person
     refute_nil user.studio_person_id
-    other_user = create :teacher, studio_person: studio_person
+    other_user = create(:teacher, studio_person: studio_person)
     assert_equal user.studio_person_id, other_user.studio_person_id
 
     purge_user user
@@ -285,7 +291,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'clears sensitive user location data' do
-    user = create :student, :within_united_states
+    user = create(:student, :within_united_states)
     user_geo = user.user_geos.first
     refute_nil user_geo.ip_address
     refute_nil user_geo.city
@@ -309,7 +315,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'does not purge dependent students of a teacher' do
-    student = create :student_in_picture_section
+    student = create(:student_in_picture_section)
     teacher = student.teachers.first
     assert_includes teacher.dependent_students.pluck(:id), student.id
 
@@ -324,7 +330,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'purged student still passes validations' do
-    user = create :student
+    user = create(:student)
     assert user.valid?
 
     purge_user user
@@ -333,7 +339,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'purged teacher still passes validations' do
-    user = create :teacher
+    user = create(:teacher)
     assert user.valid?
 
     purge_user user
@@ -352,7 +358,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       UserPermission::PROGRAM_MANAGER
     ]
 
-    user = create :teacher
+    user = create(:teacher)
     safe_permissions.each {|perm| user.permission = perm}
     safe_permissions.each {|perm| assert user.permission? perm}
     refute_empty UserPermission.where(user_id: user.id)
@@ -366,7 +372,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'revokes any and all permissions if bypassing safety constraints' do
     all_permissions = UserPermission::VALID_PERMISSIONS
 
-    user = create :teacher
+    user = create(:teacher)
     all_permissions.each {|perm| user.permission = perm}
     all_permissions.each {|perm| assert user.permission? perm}
     refute_empty UserPermission.where(user_id: user.id)
@@ -378,7 +384,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "revokes the user's admin status" do
-    user = create :admin
+    user = create(:admin)
 
     assert user.admin?
 
@@ -392,9 +398,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a user's owned sections" do
-    user = create :teacher
-    section_a = create :section, user: user
-    section_b = create :section, user: user
+    user = create(:teacher)
+    section_a = create(:section, user: user)
+    section_b = create(:section, user: user)
     section_a.destroy
 
     assert section_a.deleted?
@@ -409,9 +415,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes name from all of a user's owned sections" do
-    user = create :teacher
-    section_a = create :section, user: user
-    section_b = create :section, user: user
+    user = create(:teacher)
+    section_a = create(:section, user: user)
+    section_b = create(:section, user: user)
     section_a.destroy
 
     refute_nil section_a.name
@@ -426,9 +432,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes code from all of a user's owned sections" do
-    user = create :teacher
-    section_a = create :section, user: user
-    section_b = create :section, user: user
+    user = create(:teacher)
+    section_a = create(:section, user: user)
+    section_b = create(:section, user: user)
     section_a.destroy
 
     refute_nil section_a.code
@@ -447,8 +453,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "hard-deletes all of a hard-deleted student's follower rows" do
-    user = create :student
-    section = create :section
+    user = create(:student)
+    section = create(:section)
     section.students << user
 
     assert_includes user.sections_as_student, section
@@ -470,7 +476,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears activities.level_source_id for all of user's activity" do
-    activity = create :activity
+    activity = create(:activity)
     user = activity.user
 
     assert Activity.where(user: user).any?(&:level_source),
@@ -488,8 +494,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # difficult to test.
 
   test 'disconnects assessment activities from level sources' do
-    user = create :student
-    assessment_activity = create :assessment_activity, user: user
+    user = create(:student)
+    assessment_activity = create(:assessment_activity, user: user)
 
     refute_nil assessment_activity.level_source_id
 
@@ -506,7 +512,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "Disconnects user_levels from level_sources" do
-    user_level = create :user_level, level_source: create(:level_source)
+    user_level = create(:user_level, level_source: create(:level_source))
 
     refute_nil user_level.level_source_id
 
@@ -519,7 +525,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "Disconnects soft-deleted user_levels from level_sources" do
-    user_level = create :user_level, level_source: create(:level_source)
+    user_level = create(:user_level, level_source: create(:level_source))
 
     refute_nil user_level.level_source_id
 
@@ -550,8 +556,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # Regardless of how this happened, we should handle it gracefully and clear the
     # association between the user and the authentication_option, without deleting it
     # since we another user may be depending on it.
-    other_user = create :user, :with_google_authentication_option
-    user = create :user
+    other_user = create(:user, :with_google_authentication_option)
+    user = create(:user)
     user.provider = 'migrated'
     user.primary_contact_info = other_user.primary_contact_info
     user.save!(validate: false)
@@ -578,9 +584,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes all of user's authentication option rows" do
-    user = create :user,
+    user = create(:user,
       :with_clever_authentication_option,
       :with_google_authentication_option
+)
     ids = user.authentication_options.map(&:id)
 
     assert_equal 3, user.authentication_options.with_deleted.count,
@@ -597,7 +604,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "even removes soft-deleted authentication option rows" do
-    user = create :user
+    user = create(:user)
     ids = user.authentication_options.map(&:id)
     user.authentication_options.first.destroy
 
@@ -613,14 +620,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "purges user with duplicate authentication option" do
     # Create an user with an Google authentication option,
     # then destroy (soft-delete) the authentication option.
-    user = create :user
+    user = create(:user)
     auth_id = SecureRandom.uuid
-    google_auth = create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    google_auth = create(:google_authentication_option, user: user, email: user.email, authentication_id: auth_id)
     google_auth.destroy
 
     # Recreate the same Google authentication option.
     # Now the user has duplicate authentication options, one active, one soft-deleted.
-    create :google_authentication_option, user: user, email: user.email, authentication_id: auth_id
+    create(:google_authentication_option, user: user, email: user.email, authentication_id: auth_id)
     user.reload
 
     assert_nothing_raised do
@@ -629,7 +636,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes lti user identities rows" do
-    lti_user_identity = create :lti_user_identity
+    lti_user_identity = create(:lti_user_identity)
     user = lti_user_identity.user
 
     assert_equal 1, user.lti_user_identities.with_deleted.count,
@@ -646,8 +653,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears prev_level_source_id from authored_hint_view_requests" do
-    user = create :user
-    create :authored_hint_view_request, user: user
+    user = create(:user)
+    create(:authored_hint_view_request, user: user)
 
     assert AuthoredHintViewRequest.where(user: user).any?(&:prev_level_source_id),
       "Expected at least one of user's AuthoredHintViewRequests to have a prev_level_source_id"
@@ -661,8 +668,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears next_level_source_id from authored_hint_view_requests" do
-    user = create :user
-    create :authored_hint_view_request, user: user
+    user = create(:user)
+    create(:authored_hint_view_request, user: user)
 
     assert AuthoredHintViewRequest.where(user: user).any?(&:next_level_source_id),
       "Expected at least one of user's AuthoredHintViewRequests to have a next_level_source_id"
@@ -674,8 +681,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears final_level_source_id from authored_hint_view_requests" do
-    user = create :user
-    create :authored_hint_view_request, user: user
+    user = create(:user)
+    create(:authored_hint_view_request, user: user)
 
     assert AuthoredHintViewRequest.where(user: user).any?(&:final_level_source_id),
       "Expected at least one of user's AuthoredHintViewRequests to have a final_level_source_id"
@@ -693,9 +700,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "deletes census_submissions associated with user email" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
-    submission = create :census_your_school2017v0, submitter_email_address: email
+    submission = create(:census_your_school2017v0, submitter_email_address: email)
     id = submission.id
 
     refute_empty Census::CensusSubmission.where(submitter_email_address: email),
@@ -712,10 +719,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "deletes census_submission_form_maps associated census_submissions associated with user email" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
-    submission = create :census_your_school2017v0, submitter_email_address: email
-    census_submission_form_map = create :census_submission_form_map, :with_form, census_submission: submission
+    submission = create(:census_your_school2017v0, submitter_email_address: email)
+    census_submission_form_map = create(:census_submission_form_map, :with_form, census_submission: submission)
     id = census_submission_form_map.id
 
     refute_empty Census::CensusSubmissionFormMap.where(id: id),
@@ -730,9 +737,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "leaves no SchoolInfos referring to the deleted CensusSubmissions" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
-    submission = create :census_your_school2017v0, submitter_email_address: email
+    submission = create(:census_your_school2017v0, submitter_email_address: email)
     ids = submission.school_infos.map(&:id)
 
     refute_empty SchoolInfo.where(id: ids).map(&:census_submissions).flatten,
@@ -745,7 +752,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "Never remove census submissions if user has blank email" do
-    student = create :student
+    student = create(:student)
     assert_equal '', student.email
 
     Census::CensusSubmission.expects(:where).never
@@ -759,9 +766,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "removes email preference rows for the purged user's email address" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
-    create :email_preference, email: email
+    create(:email_preference, email: email)
 
     refute_empty EmailPreference.where(email: email)
 
@@ -773,7 +780,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "Never remove email preferences if user has blank email" do
-    student = create :student
+    student = create(:student)
     assert_equal '', student.email
 
     EmailPreference.expects(:where).never
@@ -786,7 +793,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "removes StudioPerson if it only belongs to this one account" do
-    user = create :teacher
+    user = create(:teacher)
     studio_person_id = user.studio_person_id
 
     refute_nil user.studio_person_id
@@ -799,8 +806,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "leaves StudioPerson if it is linked to more than one account" do
-    user = create :teacher
-    user2 = create :teacher, studio_person: user.studio_person
+    user = create(:teacher)
+    user2 = create(:teacher, studio_person: user.studio_person)
     studio_person_id = user.studio_person_id
 
     refute_nil user.studio_person_id
@@ -819,7 +826,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "purges feedback written by purged teacher" do
-    feedback = create :teacher_feedback
+    feedback = create(:teacher_feedback)
     assert TeacherFeedback.with_deleted.exists? id: feedback.id
 
     purge_user feedback.teacher
@@ -830,13 +837,13 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes and disassociates feedback written to purged student" do
-    student = create :student
+    student = create(:student)
 
-    feedback = create :teacher_feedback, student: student
+    feedback = create(:teacher_feedback, student: student)
     refute feedback.deleted?
     refute_nil feedback.student_id
 
-    deleted_feedback = create :teacher_feedback, student: student, deleted_at: Time.now
+    deleted_feedback = create(:teacher_feedback, student: student, deleted_at: Time.now)
     assert deleted_feedback.deleted?
     refute_nil deleted_feedback.student_id
 
@@ -858,10 +865,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Table: dashboard.code_review_comments
   #
   test "deletes comment text and soft deletes comments for purged user" do
-    student = create :student
-    review = create :code_review, user_id: student.id
-    student_2 = create :student
-    comment = create :code_review_comment, commenter: student_2, code_review: review
+    student = create(:student)
+    review = create(:code_review, user_id: student.id)
+    student_2 = create(:student)
+    comment = create(:code_review_comment, commenter: student_2, code_review: review)
     assert_nil review.deleted_at
     assert_nil comment.deleted_at
     refute_nil comment.comment
@@ -878,8 +885,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "anonymizes and deletes code review comments written by user" do
-    student = create :student
-    comment = create :code_review_comment, commenter: student
+    student = create(:student)
+    comment = create(:code_review_comment, commenter: student)
     refute_nil comment.commenter
     refute_nil comment.comment
     assert_nil comment.deleted_at
@@ -892,8 +899,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft deletes empty code review" do
-    student = create :student
-    review = create :code_review, user_id: student.id
+    student = create(:student)
+    review = create(:code_review, user_id: student.id)
     assert_nil review.deleted_at
 
     purge_user student
@@ -908,7 +915,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "soft-deletes pd_applications for user" do
     # The user soft-delete actually does this.
-    application = create :pd_teacher_application
+    application = create(:pd_teacher_application)
     refute application.deleted?
 
     purge_user application.user
@@ -918,7 +925,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears form_data from pd_applications for user" do
-    application = create :pd_teacher_application
+    application = create(:pd_teacher_application)
     refute_equal '{}', application.form_data
 
     purge_user application.user
@@ -928,7 +935,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears notes from pd_applications for user" do
-    application = create :pd_teacher_application, notes: 'Test notes'
+    application = create(:pd_teacher_application, notes: 'Test notes')
     refute_nil application.notes
 
     purge_user application.user
@@ -942,7 +949,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_facilitator_program_registrations" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_facilitator_program_registrations` (user_id, form_data, created_at, updated_at)
@@ -965,7 +972,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_fit_weekend1819_registrations" do
-    application = create :pd_teacher_application
+    application = create(:pd_teacher_application)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_fit_weekend1819_registrations` (pd_application_id, form_data, created_at, updated_at)
@@ -988,7 +995,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_fit_weekend_registrations" do
-    application = create :pd_teacher_application
+    application = create(:pd_teacher_application)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_fit_weekend_registrations` (pd_application_id, registration_year, form_data, created_at, updated_at)
@@ -1013,10 +1020,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "clears form_data from pd_pre_workshop_surveys" do
     Pd::Workshop.any_instance.stubs(:pre_survey_units_and_lessons).returns([])
 
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_pre_workshop_survey,
+    enrollment = create(:pd_enrollment, :from_user)
+    survey = create(:pd_pre_workshop_survey,
       pd_enrollment: enrollment,
       form_data_hash: {unit: Pd::PreWorkshopSurvey::UNIT_NOT_STARTED}
+)
     refute_equal '{}', survey.form_data
 
     purge_user survey.pd_enrollment.user
@@ -1030,8 +1038,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_regional_partner_contacts" do
-    teacher = create :teacher
-    contact = create :pd_regional_partner_contact, user: teacher
+    teacher = create(:teacher)
+    contact = create(:pd_regional_partner_contact, user: teacher)
     refute_equal '{}', contact.form_data
 
     purge_user contact.user
@@ -1046,11 +1054,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   test "clears form_data from pd_regional_partner_mini_contacts" do
     zip = "90210"
-    rp = create :regional_partner
+    rp = create(:regional_partner)
     rp.mappings.find_or_create_by!(zip_code: zip)
 
-    teacher = create :teacher
-    mini_contact = create :pd_regional_partner_mini_contact, user: teacher, form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => zip).to_json, regional_partner: rp
+    teacher = create(:teacher)
+    mini_contact = create(:pd_regional_partner_mini_contact, user: teacher, form_data: build(:pd_regional_partner_mini_contact_hash).merge("zip" => zip).to_json, regional_partner: rp)
     refute_equal '{}', mini_contact.form_data
 
     purge_user mini_contact.user
@@ -1064,7 +1072,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_regional_partner_program_registrations" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
@@ -1082,7 +1090,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets invalid teachercon from pd_regional_partner_program_registrations" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
@@ -1104,7 +1112,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_teachercon1819_registrations" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_teachercon1819_registrations` (user_id, form_data, created_at, updated_at)
@@ -1126,9 +1134,10 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_teachercon_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_teachercon_survey,
+    enrollment = create(:pd_enrollment, :from_user)
+    survey = create(:pd_teachercon_survey,
       pd_enrollment: enrollment
+)
     refute_equal '{}', survey.form_data
 
     purge_user survey.pd_enrollment.user
@@ -1142,7 +1151,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears primary_email from pd_teacher_applications" do
-    user = create :teacher
+    user = create(:teacher)
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
@@ -1162,7 +1171,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears secondary_email from pd_teacher_applications" do
-    user = create :teacher
+    user = create(:teacher)
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
@@ -1182,7 +1191,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears application from pd_teacher_applications" do
-    user = create :teacher
+    user = create(:teacher)
     secondary_email = 'secondary@email.com'
 
     ActiveRecord::Base.connection.exec_query(
@@ -1207,7 +1216,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears submitter_id from peer_reviews if submitter is purged" do
-    peer_review = create :peer_review
+    peer_review = create(:peer_review)
     refute_nil peer_review.submitter_id
 
     purge_user peer_review.submitter
@@ -1217,7 +1226,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears audit_trail from peer_reviews if submitter is purged" do
-    peer_review = create :peer_review, audit_trail: 'fake audit trail'
+    peer_review = create(:peer_review, audit_trail: 'fake audit trail')
     refute_nil peer_review.audit_trail
 
     purge_user peer_review.submitter
@@ -1227,7 +1236,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears reviewer_id from peer_reviews if reviewer is purged" do
-    peer_review = create :peer_review, :reviewed
+    peer_review = create(:peer_review, :reviewed)
     refute_nil peer_review.reviewer_id
 
     purge_user peer_review.reviewer
@@ -1237,7 +1246,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears data from peer_reviews if reviewer is purged" do
-    peer_review = create :peer_review, :reviewed
+    peer_review = create(:peer_review, :reviewed)
     refute_nil peer_review.data
 
     purge_user peer_review.reviewer
@@ -1247,7 +1256,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears audit_trail from peer_reviews if reviewer is purged" do
-    peer_review = create :peer_review, :reviewed
+    peer_review = create(:peer_review, :reviewed)
     refute_nil peer_review.audit_trail
 
     purge_user peer_review.reviewer
@@ -1261,7 +1270,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes pd_attendances when teacher is purged" do
-    attendance = create :pd_attendance
+    attendance = create(:pd_attendance)
     refute attendance.deleted?
 
     purge_user attendance.teacher
@@ -1271,7 +1280,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears teacher_id from pd_attendances when teacher is purged" do
-    attendance = create :pd_attendance
+    attendance = create(:pd_attendance)
     refute_nil attendance.teacher_id
 
     purge_user attendance.teacher
@@ -1281,8 +1290,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete pd_attendances when marked_by_user is purged" do
-    marked_by_user = create :teacher
-    attendance = create :pd_attendance
+    marked_by_user = create(:teacher)
+    attendance = create(:pd_attendance)
     attendance.update!(marked_by_user: marked_by_user)
     refute attendance.deleted?
 
@@ -1293,8 +1302,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears marked_by_user_id from pd_attendances when marked_by_user is purged" do
-    marked_by_user = create :teacher
-    attendance = create :pd_attendance
+    marked_by_user = create(:teacher)
+    attendance = create(:pd_attendance)
     attendance.update!(marked_by_user: marked_by_user)
     refute_nil attendance.marked_by_user_id
 
@@ -1309,7 +1318,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears name from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
     enrollment.write_attribute :name, 'test-name'
     enrollment.save! validate: false
 
@@ -1322,7 +1331,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears first_name from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user, first_name: 'test-name'
+    enrollment = create(:pd_enrollment, :from_user, first_name: 'test-name')
 
     refute_nil enrollment.first_name
 
@@ -1333,7 +1342,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears last_name from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
 
     refute_nil enrollment.last_name
 
@@ -1344,7 +1353,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears email from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
 
     refute_empty enrollment.email
 
@@ -1355,7 +1364,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears school from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
     enrollment.write_attribute :school, 'test-school'
     enrollment.save! validate: false
 
@@ -1368,7 +1377,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears user_id from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
 
     refute_nil enrollment.user_id
 
@@ -1379,7 +1388,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears school_info_id from pd_enrollments" do
-    enrollment = create :pd_enrollment, :from_user
+    enrollment = create(:pd_enrollment, :from_user)
 
     refute_nil enrollment.school_info_id
 
@@ -1394,11 +1403,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "removes all rows for user from survey_results" do
-    teacher_a = create :teacher
-    teacher_b = create :teacher
-    survey_result_a = create :survey_result, user: teacher_a
-    survey_result_b = create :survey_result, user: teacher_a
-    survey_result_c = create :survey_result, user: teacher_b
+    teacher_a = create(:teacher)
+    teacher_b = create(:teacher)
+    survey_result_a = create(:survey_result, user: teacher_a)
+    survey_result_b = create(:survey_result, user: teacher_a)
+    survey_result_c = create(:survey_result, user: teacher_b)
 
     assert_equal 2, SurveyResult.where(user_id: teacher_a.id).count
     assert_equal 1, SurveyResult.where(user_id: teacher_b.id).count
@@ -1419,7 +1428,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "removes contacts rows for email" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
     Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
 
@@ -1446,7 +1455,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes poste_deliveries for user" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
     recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
     Poste2.send_message('dashboard', recipient)
@@ -1471,7 +1480,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "removes poste_opens for user" do
-    user = create :teacher
+    user = create(:teacher)
     email = user.email
     recipient = Poste2.create_recipient(user.email, name: user.name, ip_address: '127.0.0.1')
     id = Poste2.send_message('dashboard', recipient)
@@ -1502,7 +1511,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "Never removes poste data if user has empty email address" do
-    student = create :student
+    student = create(:student)
     assert_equal '', student.email
 
     DeleteAccountsHelper.any_instance.expects(:remove_poste_data).never
@@ -1530,7 +1539,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "cleans forms matched by user_id" do
-    user = create :teacher
+    user = create(:teacher)
     with_form(user: user) do |_|
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).pluck(:id)
 
@@ -1600,9 +1609,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "deletes all of a purged user's ai tutor interactions (chat messages)" do
-    student = create :student_with_ai_tutor_access
+    student = create(:student_with_ai_tutor_access)
     num_ai_tutor_interactions = 3
-    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+    create_list(:ai_tutor_interaction, num_ai_tutor_interactions, user: student)
 
     assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
       purge_user student
@@ -1617,11 +1626,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "deletes all of a purged user's ai evaluations and teacher evaluations as student" do
-    student = create :student
-    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: student
-    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
-    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
-    create :learning_goal_teacher_evaluation, user: student
+    student = create(:student)
+    rubric_ai_evaluation = create(:rubric_ai_evaluation, user: student, requester: student)
+    learning_goal_ai_evaluation = create(:learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation)
+    create(:learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation)
+    create(:learning_goal_teacher_evaluation, user: student)
 
     assert_changes -> {RubricAiEvaluation.where(user: student).count}, from: 1, to: 0 do
       assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
@@ -1635,12 +1644,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "deletes all of a purged user's ai evaluations and teacher evaluations as teacher" do
-    student = create :student
-    teacher = create :teacher
-    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: teacher
-    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
-    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
-    create :learning_goal_teacher_evaluation, user: student, teacher: teacher
+    student = create(:student)
+    teacher = create(:teacher)
+    rubric_ai_evaluation = create(:rubric_ai_evaluation, user: student, requester: teacher)
+    learning_goal_ai_evaluation = create(:learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation)
+    create(:learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation)
+    create(:learning_goal_teacher_evaluation, user: student, teacher: teacher)
 
     assert_changes -> {RubricAiEvaluation.where(requester_id: teacher).count}, from: 1, to: 0 do
       assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
@@ -1658,7 +1667,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "soft-deletes all of a soft-deleted user's projects" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
       projects_table.where(storage_id: storage_id).each do |app|
@@ -1675,7 +1684,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-deletes all of a purged user's projects" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id, storage_id|
       assert_equal 'active', projects_table.where(id: project_id).first[:state]
       projects_table.where(storage_id: storage_id).each do |app|
@@ -1694,8 +1703,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not soft-delete anyone else's projects" do
-    student_a = create :student
-    student_b = create :student
+    student_a = create(:student)
+    student_b = create(:student)
     with_channel_for student_a do |project_id_a|
       with_channel_for student_b do |project_id_b|
         assert_equal 'active', projects_table.where(id: project_id_a).first[:state]
@@ -1710,7 +1719,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "sets updated_at when soft-deleting projects" do
-    student = create :student
+    student = create(:student)
     Timecop.freeze do
       with_channel_for student do |project_id|
         assert_equal 'active', projects_table.where(id: project_id).first[:state]
@@ -1728,7 +1737,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "soft-delete does not set updated_at on already soft-deleted projects" do
-    student = create :student
+    student = create(:student)
     Timecop.freeze do
       with_channel_for student do |project_id|
         projects_table.where(id: project_id).update(state: 'deleted', updated_at: Time.now)
@@ -1748,7 +1757,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "user purge does set updated_at on already soft-deleted projects" do
-    student = create :student
+    student = create(:student)
     Timecop.freeze do
       with_channel_for student do |project_id|
         projects_table.where(id: project_id).update(state: 'deleted', updated_at: Time.now)
@@ -1768,7 +1777,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'value' for all of a purged user's projects" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id, storage_id|
       refute_nil projects_table.where(id: project_id).first[:value]
       projects_table.where(storage_id: storage_id).each do |app|
@@ -1785,7 +1794,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "clears 'updated_ip' for all of a purged user's projects" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id, storage_id|
       refute_empty projects_table.where(id: project_id).first[:updated_ip]
       projects_table.where(storage_id: storage_id).each do |app|
@@ -1806,7 +1815,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears 'comment' on any version of all of a purged user's projects" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id|
       comment_text = 'a comment'
       ProjectCommit.create(
@@ -1826,8 +1835,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not clear 'comment' on any version of anyone else's projects" do
-    student_to_purge = create :student
-    other_student = create :student
+    student_to_purge = create(:student)
+    other_student = create(:student)
     with_channel_for student_to_purge do |project_id_to_purge|
       with_channel_for other_student do |project_id_other|
         comment_text = 'a comment'
@@ -1862,11 +1871,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "unfeatures any featured projects owned by soft-deleted user" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id|
-      featured_project = create :featured_project,
+      featured_project = create(:featured_project,
         project_id: project_id,
         featured_at: Time.now
+)
 
       assert featured_project.active?
 
@@ -1878,11 +1888,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "unfeatures any featured projects owned by purged user" do
-    student = create :student
+    student = create(:student)
     with_channel_for student do |project_id|
-      featured_project = create :featured_project,
+      featured_project = create(:featured_project,
         project_id: project_id,
         featured_at: Time.now
+)
 
       assert featured_project.active?
 
@@ -1894,14 +1905,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "does not change unfeature time on previously unfeatured projects" do
-    student = create :student
+    student = create(:student)
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
     with_channel_for student do |project_id|
-      featured_project = create :featured_project,
+      featured_project = create(:featured_project,
         project_id: project_id,
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
+)
 
       refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
@@ -1947,7 +1959,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # ask the bucket to delete its contents.  To avoid interacting with S3
     # in this test, we depend on the unit tests for the particular buckets to
     # verify correct hard-delete behavior for that bucket.
-    student = create :student
+    student = create(:student)
     helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, storage_id|
@@ -1971,7 +1983,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Table: dashboard.datablock_storage_tables, dashboard.datablock_storage_records
   test "Datablock Storage: hard-deletes all of user's project tables" do
-    student = create :student
+    student = create(:student)
     helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
@@ -1998,7 +2010,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
   # Table: dashboard.datablock_storage_kvps
   test "Datablock Storage: hard-deletes all of user's project kvps" do
-    student = create :student
+    student = create(:student)
     helper = DeleteAccountsHelper.new(log: @log)
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
@@ -2021,7 +2033,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "account deletion stages email for removal from pardot via purge_user" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     teacher_email = teacher.email
     purge_user teacher
 
@@ -2029,7 +2041,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test "account deletion stages email for removal from pardot via purge_all_accounts_with_email" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     teacher_email = teacher.email
     purge_all_accounts_with_email teacher_email
 
@@ -2041,7 +2053,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'with_channel_for owns channel' do
-    student = create :student
+    student = create(:student)
 
     with_storage_id_for student do |storage_id|
       assert_empty projects_table.where(storage_id: storage_id)
@@ -2055,7 +2067,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'with_storage_id_for owns id if it does not exist' do
-    student = create :student
+    student = create(:student)
 
     assert_nil storage_id_for_user_id(student.id)
 
@@ -2067,7 +2079,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'with_storage_id_for does not own id if it does exist' do
-    student = create :student
+    student = create(:student)
     assert_nil storage_id_for_user_id(student.id)
 
     create_storage_id_for_user(student.id)
@@ -2089,7 +2101,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test 'refuses to delete facilitator accounts in normal conditions' do
-    facilitator = create :facilitator
+    facilitator = create(:facilitator)
     assert facilitator.permission? UserPermission::FACILITATOR
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2107,7 +2119,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'can delete facilitator account if bypassing safety constraints' do
-    facilitator = create :facilitator
+    facilitator = create(:facilitator)
 
     unsafe_purge_user facilitator
 
@@ -2115,7 +2127,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'refuses to delete workshop organizer accounts in normal conditions' do
-    workshop_organizer = create :workshop_organizer
+    workshop_organizer = create(:workshop_organizer)
     assert workshop_organizer.permission? UserPermission::WORKSHOP_ORGANIZER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2133,7 +2145,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'can delete workshop organizer account if bypassing safety constraints' do
-    workshop_organizer = create :workshop_organizer
+    workshop_organizer = create(:workshop_organizer)
 
     unsafe_purge_user workshop_organizer
 
@@ -2141,7 +2153,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'refuses to delete program manager accounts in normal conditions' do
-    program_manager = create :program_manager
+    program_manager = create(:program_manager)
     assert program_manager.permission? UserPermission::PROGRAM_MANAGER
 
     err = assert_raises DeleteAccountsHelper::SafetyConstraintViolation do
@@ -2159,7 +2171,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'can delete program manager account if bypassing safety constraints' do
-    program_manager = create :program_manager
+    program_manager = create(:program_manager)
 
     unsafe_purge_user program_manager
 
@@ -2167,7 +2179,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'refuses to delete a RegionalPartner.program_managers account in normal conditions' do
-    program_manager = create :program_manager
+    program_manager = create(:program_manager)
 
     # Revoke the REGIONAL_PARTNER permission to show we catch this association
     # even if the user doesn't have the related permission.
@@ -2191,7 +2203,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'can delete a RegionalPartner.program_managers account if bypassing safety constraints' do
-    program_manager = create :program_manager
+    program_manager = create(:program_manager)
 
     # Revoke the REGIONAL_PARTNER permission to show we catch this association
     # even if the user doesn't have the related permission.
@@ -2208,15 +2220,15 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test 'does not delete email centric data if there is a live account with the same email' do
     # This behaviour is desired so we don't accidentally delete data related to a live account.
     # teacher created an account and has responded to one of our census surveys.
-    teacher_old = create :teacher
+    teacher_old = create(:teacher)
     teacher_name = teacher_old.name
     teacher_email = teacher_old.email
 
     # create the email related data
-    create :census_your_school2017v0, submitter_email_address: teacher_email
+    create(:census_your_school2017v0, submitter_email_address: teacher_email)
     refute_empty Census::CensusSubmission.where(submitter_email_address:  teacher_email),
       "Expected at least one CensusSubmission under this email"
-    create :email_preference, email: teacher_email
+    create(:email_preference, email: teacher_email)
     refute_empty EmailPreference.where(email: teacher_email)
     Poste2.create_recipient(teacher_email, name: teacher_name, ip_address: '127.0.0.1')
     refute_empty PEGASUS_DB[:contacts].where(email: teacher_email)
@@ -2226,7 +2238,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     # teacher deletes their old account because they no longer teach CS
     teacher_old.destroy!
     # teacher creates a new account because they started teaching CS again.
-    create :teacher, email: teacher_email
+    create(:teacher, email: teacher_email)
     # the old teacher account which was soft deleted is now purged by our automated systems.
     purge_user teacher_old
 
@@ -2241,9 +2253,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'deletes contact rollups final data' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     teacher_email = teacher.email
-    create :contact_rollups_final, email: teacher_email
+    create(:contact_rollups_final, email: teacher_email)
 
     assert ContactRollupsFinal.find_by_email(teacher_email)
     purge_user teacher
@@ -2251,9 +2263,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   test 'marks contact rollups pardot memory for deletion' do
-    teacher = create :teacher
+    teacher = create(:teacher)
     teacher_email = teacher.email
-    create :contact_rollups_pardot_memory, email: teacher_email
+    create(:contact_rollups_pardot_memory, email: teacher_email)
 
     assert_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
     purge_user teacher
@@ -2295,7 +2307,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   private def assert_removes_field_from_forms(field, expect: :nil)
-    user = create :teacher
+    user = create(:teacher)
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
       initial_expectation_msg = "Expected initial #{field} not to be #{expect}"
@@ -2324,7 +2336,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   private def assert_removes_field_from_form_geos(field)
-    user = create :teacher
+    user = create(:teacher)
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
       refute_nil initial_value,

@@ -88,9 +88,11 @@ describe('TeacherHomepage', () => {
   let fetchSpy: jest.SpyInstance;
   let sendEventSpy: jest.SpyInstance;
   let jquerySpy: jest.SpyInstance;
+  let postSpy: jest.SpyInstance;
 
   beforeEach(() => {
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
+    postSpy = jest.spyOn(HttpClient, 'post');
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
     jquerySpy = jest.spyOn($, 'getJSON');
     stubRedux();
@@ -104,8 +106,28 @@ describe('TeacherHomepage', () => {
         url === '/marketing/teacher/promotions/55R4y1NlZ0qJG9O0qgyq0Q'
       ) {
         return Promise.resolve({value: [], response: new Response()});
+      } else if (
+        url === '/teacher_dashboard/get_school_info_interstitial_data'
+      ) {
+        return Promise.resolve({
+          value: {
+            showSchoolInfoInterstitial: false,
+            showSchoolInfoConfirmation: false,
+            existingSchoolInfo: {},
+          },
+          response: new Response(),
+        });
       }
       return Promise.resolve({value: {}, response: new Response()});
+    });
+
+    postSpy.mockImplementation((url: string) => {
+      if (url === '/aidiff_threads/curriculum_courses') {
+        return Promise.resolve({
+          json: () => Promise.resolve({courses: []}),
+        });
+      }
+      return Promise.resolve({json: () => Promise.resolve({})});
     });
 
     const mockDone = jest.fn();

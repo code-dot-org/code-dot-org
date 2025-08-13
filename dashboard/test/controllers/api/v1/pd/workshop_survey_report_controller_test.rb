@@ -6,10 +6,10 @@ module Api::V1::Pd
 
     self.use_transactional_test_case = true
     setup_all do
-      @facilitator = create :facilitator
-      @program_manager = create :program_manager
+      @facilitator = create(:facilitator)
+      @program_manager = create(:program_manager)
       @workshop = create(:workshop, organizer: @program_manager, facilitators: [@facilitator])
-      @admin = create :workshop_admin
+      @admin = create(:workshop_admin)
     end
 
     setup do
@@ -18,7 +18,7 @@ module Api::V1::Pd
     end
 
     test 'facilitators cannot see results for other types of workshops' do
-      workshop = build :csf_intro_workshop, facilitators: [@facilitator]
+      workshop = build(:csf_intro_workshop, facilitators: [@facilitator])
       workshop.save(validate: false)
       sign_in @facilitator
 
@@ -33,7 +33,7 @@ module Api::V1::Pd
     end
 
     test 'generic_survey_report: return empty result for workshop without responds' do
-      ayw_ws = create :csp_academic_year_workshop
+      ayw_ws = create(:csp_academic_year_workshop)
 
       expected_result = {
         "course_name" => nil,

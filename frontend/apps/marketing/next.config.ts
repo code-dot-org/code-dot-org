@@ -11,6 +11,12 @@ const nextConfig: NextConfig = {
     process.env.NODE_ENV === 'production'
       ? require.resolve('./cache-handler.mjs')
       : undefined,
+  transpilePackages: [
+    '@contentful/experiences-sdk-react',
+    '@contentful/experiences-components-react',
+    '@contentful/experiences-core',
+    'lodash-es',
+  ],
 };
 
 export default nextConfig;

@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 import {
   AIResponse,
-  evaluateStudentWork,
+  evaluateStudentCode,
   StudentAnswer,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 
@@ -32,7 +32,22 @@ const StudentCodeDatasetMaker: React.FC = () => {
   >([]);
 
   const downloadCSV = () => {
-    const csv = Papa.unparse(evaluatedSamples);
+    const processedSamples = evaluatedSamples.map(sample => {
+      let studentWorkString = sample.studentWork;
+      if (
+        typeof sample.studentWork === 'object' &&
+        sample.studentWork !== null
+      ) {
+        studentWorkString = Object.entries(sample.studentWork)
+          .map(([filename, contents]) => `${filename}:\n${contents}`)
+          .join('\n\n');
+      }
+      return {
+        ...sample,
+        studentWork: studentWorkString,
+      };
+    });
+    const csv = Papa.unparse(processedSamples);
     const csvData = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
@@ -76,10 +91,13 @@ const StudentCodeDatasetMaker: React.FC = () => {
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
-    const aiResponse = await evaluateStudentWork(
+    const aiResponse = await evaluateStudentCode(
       studentAnswer,
       parseInt(levelId),
       parseInt(unitId)
+      // TODO: Pass evaluateSkills as true if you want to evaluate skills
+      // which means we need to know earlier in the process if the level has skills
+      // or not.
     );
     const evaluation: EvaluatedCodeSample = {
       ...studentAnswer,

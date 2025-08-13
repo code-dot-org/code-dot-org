@@ -3,13 +3,13 @@ import {
   TooltipProps,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
-import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import SettingsButton from '@cdo/apps/lab2/views/components/Settings/SettingsButton';
 import VersionHistoryButton from '@cdo/apps/lab2/views/components/versionHistory/VersionHistoryButton';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
@@ -19,6 +19,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
+import {useCodebridgeSettings} from '../hooks/useCodebridgeSettings';
 
 import moduleStyles from './workspace.module.scss';
 
@@ -27,20 +28,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     useCodebridgeContext();
   const {appName, enableMicroBit, skipUrl} = levelProperties;
   const isWidgetView = levelProperties.widgetView;
-
+  const settings = useCodebridgeSettings();
   const dialogControl = useDialogControl();
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
-
-  const feedbackTooltipProps: TooltipProps = {
-    text: commonI18n.feedback(),
-    direction: 'onBottom',
-    tooltipId: 'feedback-tooltip',
-    size: 'xs',
-    hideTail: true,
-  };
 
   const documentationTooltipProps: TooltipProps = {
     text: commonI18n.documentation(),
@@ -96,7 +89,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           color={'black'}
         />
       )}
-      <SettingsButton />
+      <SettingsButton settings={settings} />
       {enableMicroBit && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right-from-arc'}}
@@ -109,20 +102,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       )}
       {!isWidgetView && (
         <VersionHistoryButton startSources={startSources} appName={appName} />
-      )}
-      {appName === 'pythonlab' && (
-        <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <LinkButton
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
-            ariaLabel={commonI18n.feedback()}
-            size={'xs'}
-            type={'tertiary'}
-            color={'black'}
-            target="_blank"
-          />
-        </WithTooltip>
       )}
       {/* For now, only python lab supports documentation */}
       {appName === 'pythonlab' && (

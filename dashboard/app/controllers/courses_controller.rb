@@ -42,13 +42,14 @@ class CoursesController < ApplicationController
       redirect_path = Policies::Courses.modularity_enabled? ?
                         course_unit_path(@unit_group, 1) :
                         script_path(@unit_group.first_unit)
-      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path
+      redirect_to request.query_string.present? ? "#{redirect_path}?#{request.query_string}" : redirect_path, status: :moved_permanently
       return
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
-    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+    redirect_unit_group = redirect_unit_group(@unit_group)
+    if !override_redirect && redirect_unit_group
       redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
       return
     end
@@ -60,6 +61,14 @@ class CoursesController < ApplicationController
         return
       end
     end
+
+    # For deprecated courses, show deprecated course page
+    # if we haven't already redirected to a newer version of the course or the teacher dashboard.
+    units = @unit_group.default_units
+    if !units.empty? && units.all?(&:is_deprecated)
+      return render 'errors/deprecated_course'
+    end
+
     if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return

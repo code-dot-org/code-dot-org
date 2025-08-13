@@ -64,7 +64,7 @@
   min-height: 0;
 
   h1, h2, h3, h4 {
-    color: var(--text-brand-teal-primary);
+    color: var(--text-neutral-primary);
   }
 
   &:not(:last-of-type) {
@@ -77,6 +77,13 @@
     &:hover {
       color: var(--text-brand-purple-secondary);
     }
+  }
+
+  blockquote {
+    border-left: 5px solid var(--borders-neutral-primary);
+    // The styles below are to ensure levelbuilder styling matches our actual styling.
+    background-color: inherit;
+    border-radius: 0;
   }
 }
 
@@ -104,7 +111,7 @@
 
 .markdownText {
   line-height: 0;
-  user-select: text;
+  user-select: auto;
   word-break: break-word;
 
   h1,

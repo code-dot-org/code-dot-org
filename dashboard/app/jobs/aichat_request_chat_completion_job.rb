@@ -51,11 +51,14 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   # Determine if one of the models handled by  `aichat_ai_client.rb`.
   private def openai_or_gemini?(model_id)
-    [SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
-     SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
-     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
-     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
-     SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO]].include? model_id
+    [
+      SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT],
+      SharedConstants::AI_CHAT_MODEL_IDS[:LEARNLM],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_0_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
+      SharedConstants::AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_LITE],
+    ].include? model_id
   end
 
   private def get_execution_status_and_response(request, locale)

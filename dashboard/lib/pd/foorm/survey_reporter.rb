@@ -6,6 +6,44 @@ module Pd::Foorm
     include Pd::WorkshopSurveyFoormConstants
     extend Helper
 
+    def self.get_workshop_survey_summary(workshop_id, facilitator_id_filter = nil)
+      return unless workshop_id
+      ws_data = Pd::Workshop.find(workshop_id)
+
+      # Get raw data
+      ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id, facilitator_id_filter)
+      facilitators = get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter)
+
+      # Legacy parser that does not preserve question categories but works with WorkshopSummarizer
+      parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
+
+      summarized_answers = Pd::Foorm::WorkshopSummarizer.summarize_answers_by_survey(
+        form_submissions,
+        parsed_forms,
+        ws_submissions
+      )
+
+      # Count only general workshop participants (not facilitator-specific submissions)
+      general_participant_count = ws_submissions.where(facilitator_id: nil).count
+
+      # Parse forms with categories
+      parsed_forms_with_categories = Pd::Foorm::FoormParser.parse_forms_preserving_categories(forms)
+
+      # Process data by category
+      categorized_report = Pd::Foorm::WorkshopCategorizer.categorize_survey_data(
+        parsed_forms_with_categories,
+        summarized_answers,
+        facilitators
+      )
+
+      {
+        course_name: ws_data.course,
+        facilitators: facilitators,
+        total_responses: general_participant_count,
+        categories: categorized_report
+      }
+    end
+
     # Calculates report for a given workshop id.
     # @param [Integer] workshop_id
     # @param [Integer] facilitator_id_filter. The user id

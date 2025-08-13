@@ -29,10 +29,24 @@
   align-items: stretch;
 }
 
+// Used to accomodate the sidebar in the AI Differentiation workspace.
+.aiDiffContainerWide {
+  position: fixed;
+  left: 10px;
+  bottom: 106px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 712px;
+}
+
 .chatContainer {
   display: flex;
   flex-direction: column;
   height: 100%;
+  flex: 1 1 0;
 }
 
 .hiddenAiDiffPanel {
@@ -268,4 +282,78 @@
 
 .waitingForResponse {
   width: 50px;
+}
+
+// Sidebar styles
+.aiDiffWorkspace {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.sidebarContainer {
+  width: 242px;
+  flex: 0 0 242px;
+  background-color: var(--background-neutral-secondary);
+  height: auto;
+  display: flex;
+}
+
+.sidebarBox {
+  width: inherit;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarContent {
+  display: flex;
+  overflow-y: scroll;
+  width: inherit;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+
+.sidebarSectionTitle {
+  margin: 0;
+  padding: 8px 16px;
+  color: $neutral_dark80;
+}
+
+.sidebarChatItem {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.sidebarChatItemPrimary {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarChatItemSecondary {
+  color: $neutral_dark90;
+  font-family: Figtree, sans-serif;
+  font-size: smaller;
+  font-weight: 200;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebarButton {
+  width: 224px; /* drawerWidth - 16 */
+  margin-top: 15px !important;
+  margin-left: 8px !important;
+  border: 1px solid black !important;
+  border-radius: 4px;
+}
+
+.sidebarManageLink {
+  margin-left: 8px;
 }
