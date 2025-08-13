@@ -6,9 +6,8 @@ module HocLegacy
   module SessionManageable
     extend ActiveSupport::Concern
 
+    DEFAULT_SESSION_WEIGHT = 1
     SESSION_ROW_CREATION_RETRIES = 3
-    DEFAULT_HOC_ACTIVITY_WEIGHT = 1
-    DEFAULT_SESSION_WEIGHT = 1.0
 
     included do
       private def request
@@ -39,7 +38,7 @@ module HocLegacy
         # Create a session id that also encodes the weight of the session.
         # We should actually use a separate column for the weight, but need to defer adding
         # that column until after the hour of code. (hoc_activity currently has ~100M rows).
-        row[:session] = "_#{weight}_#{SecureRandom.hex}"
+        row[:session] = "_#{weight.to_i}_#{SecureRandom.hex}"
 
         row[:id] = PEGASUS_DB[:hoc_activity].insert(row)
         break unless row[:id] == 0 && (retries -= 1) > 0
