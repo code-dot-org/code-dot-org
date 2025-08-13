@@ -1000,6 +1000,7 @@ class Pd::Workshop < ApplicationRecord
         user_name,
         vars: {
           email_to: user_email,
+          name: user_name,
           cancel_registration_link: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code),
           pre_survey_link: enrollment.pre_workshop_survey_url,
           facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
