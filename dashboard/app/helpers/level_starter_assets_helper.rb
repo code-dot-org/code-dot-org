@@ -41,10 +41,6 @@ module LevelStarterAssetsHelper
     bucket.object(path)
   end
 
-  def self.delete_object(s3_filename)
-    get_object(s3_filename).delete
-  end
-
   def self.file_mime_type(extension)
     type = MIME::Types.type_for(extension)&.first
     if type == MIME::Types['application/pdf']
