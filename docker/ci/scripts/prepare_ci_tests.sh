@@ -51,6 +51,8 @@ ignore_eyes_mismatches: true
 localize_apps: true
 use_my_apps: true
 skip_seed_all: true
+optimize_rails_assets: false
+optimize_webpack_assets: false
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
 dashboard_port: 3000
