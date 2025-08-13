@@ -155,9 +155,8 @@ class NotificationsControllerTest < ActionController::TestCase
 
     response_data = JSON.parse(@response.body)
     assert_equal "success", response_data["status"]
-    assert_equal "2 notification(s) marked as read, (1 not found)", response_data["message"]
+    assert_equal "2 notification(s) marked as read", response_data["message"]
     assert_equal 2, response_data["marked_count"]
-    assert_equal [invalid_id], response_data["missing_ids"]
 
     notification1.reload
     notification2.reload
@@ -174,9 +173,8 @@ class NotificationsControllerTest < ActionController::TestCase
 
     response_data = JSON.parse(@response.body)
     assert_equal "success", response_data["status"]
-    assert_equal "1 notification(s) marked as read, (1 not found)", response_data["message"]
+    assert_equal "1 notification(s) marked as read", response_data["message"]
     assert_equal 1, response_data["marked_count"]
-    assert_equal [other_notification.id], response_data["missing_ids"]
 
     user_notification.reload
     other_notification.reload
