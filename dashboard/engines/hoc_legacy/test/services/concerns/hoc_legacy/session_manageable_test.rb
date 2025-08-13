@@ -83,7 +83,7 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
       _ {create_session_row}.must_differ 'PEGASUS_DB[:hoc_activity].count', 1
 
       _(create_session_row[:id]).must_be_instance_of Integer
-      _(create_session_row[:session]).must_equal "_#{weight}_#{secure_random_hex}"
+      _(create_session_row[:session]).must_equal "_#{weight.to_i}_#{secure_random_hex}"
 
       _(create_session_row[:referer]).must_equal row_referer
       _(create_session_row[:tutorial]).must_equal row_tutorial
@@ -98,7 +98,7 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
       let(:session_row_params) {{}}
 
       it 'uses default weight in session id' do
-        _(create_session_row[:session]).must_equal "_1.0_#{secure_random_hex}"
+        _(create_session_row[:session]).must_equal "_1_#{secure_random_hex}"
       end
     end
 
