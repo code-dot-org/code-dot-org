@@ -70,6 +70,8 @@ Parameters:
     MaxLength: 16
   DBInstanceType:
     Type: String
+    # `t4g.large` is the largest `t` family database instance type that supports Aurora 3 / MySQL 8.
+    # https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Concepts.DBInstanceClass.SupportAurora.html
     Default: <%= rack_env?(:adhoc) ? 'db.t4g.large' : 'db.r7i.xlarge' %>
   DBBackupRetention:
     Type: Number
