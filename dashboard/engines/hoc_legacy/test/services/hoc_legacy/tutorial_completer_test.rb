@@ -28,7 +28,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
     subject(:complete_tutorial) {described_instance.call}
 
     let(:current_time) {DateTime.parse('1970-01-01 00:00:00')}
-    let(:session_id) {Faker::Internet.unique.uuid}
+    let(:cookie_session_id) {Faker::Internet.unique.uuid}
     let(:request_ip) {Faker::Internet.unique.ip_v4_address}
     let(:request_host_with_port) {Faker::Internet.unique.domain_name}
     let(:encoded_tutorial_code) {CGI.escape(Base64.urlsafe_encode64(tutorial[:code]))}
@@ -46,7 +46,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
 
       allow(request).to receive(:host_with_port).and_return(request_host_with_port)
       allow(request).to receive(:ip).and_return(request_ip)
-      allow(described_instance).to receive(:session_id).and_return(session_id)
+      allow(described_instance).to receive(:cookie_session_id).and_return(cookie_session_id)
 
       allow(described_instance).to receive(:create_session_row)
     end
@@ -82,7 +82,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
     context 'when session row exists' do
       let(:session_row) do
         {
-          session: session_id,
+          session: cookie_session_id,
           company: session_company,
         }
       end
@@ -101,7 +101,7 @@ class HocLegacy::TutorialCompleterTest < ActiveSupport::TestCase
       it 'returns updated session row' do
         _complete_tutorial.must_be_instance_of Hash
         _(complete_tutorial[:id]).must_equal session_row_id
-        _(complete_tutorial[:session]).must_equal session_id
+        _(complete_tutorial[:session]).must_equal cookie_session_id
         _(complete_tutorial[:company]).must_equal session_company
         _(complete_tutorial[:finished_ip]).must_equal request_ip
         _(complete_tutorial[:finished_at]).must_equal current_time

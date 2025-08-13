@@ -47,20 +47,12 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
     end
   end
 
-  describe '#session_id' do
-    subject(:session_id) {described_instance.send(:session_id)}
-
-    let!(:hoc_cookie_value) {request.cookies[HocLegacy::HOC_COOKIE_KEY] = Faker::Internet.password}
-
-    it 'returns session id from hour_of_code cookie' do
-      _session_id.must_equal hoc_cookie_value
-    end
-  end
-
   describe '#create_session_row' do
-    subject(:create_session_row) {described_instance.send(:create_session_row, session_row, weight:)}
+    subject(:create_session_row) {described_instance.send(:create_session_row, session_row, **session_row_params)}
 
-    let(:weight) {nil}
+    let(:session_row_params) {{weight:}}
+
+    let(:weight) {2.0}
     let(:row_referer) {'expected_referer'}
     let(:row_tutorial) {'expected_tutorial_code'}
     let(:row_company) {'expected_company'}
@@ -91,7 +83,7 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
       _ {create_session_row}.must_differ 'PEGASUS_DB[:hoc_activity].count', 1
 
       _(create_session_row[:id]).must_be_instance_of Integer
-      _(create_session_row[:session]).must_equal "_1.0_#{secure_random_hex}"
+      _(create_session_row[:session]).must_equal "_#{weight}_#{secure_random_hex}"
 
       _(create_session_row[:referer]).must_equal row_referer
       _(create_session_row[:tutorial]).must_equal row_tutorial
@@ -102,11 +94,11 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
       expect(described_instance).to have_received(:set_hour_of_code_cookie_for_row).with(create_session_row).once
     end
 
-    context 'when :weight argument is provided' do
-      let(:weight) {99.9}
+    context 'when :weight argument is not provided' do
+      let(:session_row_params) {{}}
 
-      it 'uses value in session id' do
-        _(create_session_row[:session]).must_equal "_#{weight}_#{secure_random_hex}"
+      it 'uses default weight in session id' do
+        _(create_session_row[:session]).must_equal "_1.0_#{secure_random_hex}"
       end
     end
 
@@ -134,10 +126,20 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
     end
   end
 
+  describe '#cookie_session_id' do
+    subject(:cookie_session_id) {described_instance.send(:cookie_session_id)}
+
+    let!(:hoc_cookie_value) {request.cookies[HocLegacy::HOC_COOKIE_KEY] = Faker::Internet.password}
+
+    it 'returns session id from hour_of_code cookie' do
+      _cookie_session_id.must_equal hoc_cookie_value
+    end
+  end
+
   describe '#session_row_query' do
     subject(:session_row_query) {described_instance.send(:session_row_query)}
 
-    let(:session_id) {Faker::Internet.unique.uuid}
+    let(:cookie_session_id) {Faker::Internet.unique.uuid}
     let(:tutorial) {'expected_tutorial_code'}
 
     around do |test|
@@ -145,16 +147,16 @@ class HocLegacy::SessionManageableTest < ActiveSupport::TestCase
     end
 
     before do
-      allow(described_instance).to receive(:session_id).and_return(session_id)
+      allow(described_instance).to receive(:cookie_session_id).and_return(cookie_session_id)
 
-      PEGASUS_DB[:hoc_activity].insert(session: session_id, tutorial: tutorial)
+      PEGASUS_DB[:hoc_activity].insert(session: cookie_session_id, tutorial: tutorial)
     end
 
     it 'returns session row query for current session id' do
       session_row = session_row_query.first
       _(session_row).must_be_instance_of Hash
       _(session_row[:id]).must_be_instance_of Integer
-      _(session_row[:session]).must_equal session_id
+      _(session_row[:session]).must_equal cookie_session_id
       _(session_row[:tutorial]).must_equal tutorial
     end
   end

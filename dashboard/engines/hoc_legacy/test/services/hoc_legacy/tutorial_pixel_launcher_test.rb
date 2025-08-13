@@ -31,7 +31,7 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
     let(:current_time) {DateTime.parse('1970-01-01 00:00:00')}
     let(:request_host_with_port) {'https://test.code.org:3000/test/host'}
     let(:request_ip) {Faker::Internet.unique.ip_v4_address}
-    let(:session_id) {Faker::Internet.unique.uuid}
+    let(:cookie_session_id) {Faker::Internet.unique.uuid}
 
     around do |test|
       Timecop.freeze(current_time) {test.call}
@@ -46,7 +46,7 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
 
       allow(request).to receive(:host_with_port).and_return(request_host_with_port)
       allow(request).to receive(:ip).and_return(request_ip)
-      allow(described_instance).to receive(:session_id).and_return(session_id)
+      allow(described_instance).to receive(:cookie_session_id).and_return(cookie_session_id)
 
       allow(described_instance).to receive(:create_session_row)
     end
@@ -77,7 +77,7 @@ class HocLegacy::TutorialPixelLauncherTest < ActiveSupport::TestCase
     context 'when session row is already exists' do
       let!(:session_row_id) do
         PEGASUS_DB[:hoc_activity].insert(
-          session: session_id,
+          session: cookie_session_id,
           tutorial: tutorial_code,
           company: company,
           referer: request_host_with_port,

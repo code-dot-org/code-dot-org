@@ -31,14 +31,8 @@ module HocLegacy
       )
     end
 
-    # Returns the session id for the current session if sampled, or nil if unset or unsampled.
-    private def session_id
-      request.cookies[HOC_COOKIE_KEY]
-    end
-
     # Creates a session row with the given weight and sets the hour of code cookie to contain the session id.
-    private def create_session_row(row, weight: nil)
-      weight ||= DEFAULT_SESSION_WEIGHT
+    private def create_session_row(row, weight: DEFAULT_SESSION_WEIGHT)
       retries = SESSION_ROW_CREATION_RETRIES
 
       loop do
@@ -58,8 +52,13 @@ module HocLegacy
       row
     end
 
+    # Returns the session id for the current session if sampled, or nil if unset or unsampled.
+    private def cookie_session_id
+      request.cookies[HOC_COOKIE_KEY]
+    end
+
     private def session_row_query
-      PEGASUS_DB[:hoc_activity].where(session: session_id)
+      PEGASUS_DB[:hoc_activity].where(session: cookie_session_id)
     end
   end
 end
