@@ -375,6 +375,7 @@ class CourseEditor extends Component {
               this.props.initialVersionYear !== '' ||
               this.props.initialFamilyName !== ''
             }
+            isCourse
             courseOfferingEditorLink={this.props.courseOfferingEditorLink}
           />
         </CollapsibleEditorSection>

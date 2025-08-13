@@ -17,7 +17,6 @@
 #  time_spent       :integer
 #  deleted_at       :datetime
 #  properties       :text(65535)
-#  unit_group_id    :integer
 #
 # Indexes
 #

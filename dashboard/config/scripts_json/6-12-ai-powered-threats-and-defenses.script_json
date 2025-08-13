@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-05 20:05:50 UTC",
+    "serialized_at": "2025-07-30 21:20:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -80,7 +80,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Phishing with AI",
+      "name": "Lesson 4",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -125,7 +125,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Authentication, Authorization, and Accounting",
+      "name": "Lesson 7",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +140,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "AAA and AI",
+      "name": "Lesson 8",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -170,7 +170,7 @@
     },
     {
       "key": "lesson-10",
-      "name": "AI in Encryption",
+      "name": "Lesson 10",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -185,7 +185,7 @@
     },
     {
       "key": "lesson-11",
-      "name": "Security vs. Usability",
+      "name": "Lesson 11",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -315,18 +315,6 @@
       }
     },
     {
-      "key": "1fea0dcf-e9e1-46c0-87d1-b67fb8d971e2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1fea0dcf-e9e1-46c0-87d1-b67fb8d971e2",
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
       "key": "1e889995-f692-400c-b3da-e52c46e15b98",
       "position": 1,
       "properties": {
@@ -351,30 +339,6 @@
       }
     },
     {
-      "key": "9b936e35-476c-4972-b194-488e57d4e867",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9b936e35-476c-4972-b194-488e57d4e867",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
-      "key": "051cdb38-20cd-4624-bb2c-61b7653bf289",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "051cdb38-20cd-4624-bb2c-61b7653bf289",
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
       "key": "7b4ac3b2-221d-4cc9-ae63-1fbc6a3988e2",
       "position": 1,
       "properties": {
@@ -382,42 +346,6 @@
       "seeding_key": {
         "lesson_activity.key": "7b4ac3b2-221d-4cc9-ae63-1fbc6a3988e2",
         "lesson.key": "lesson-10",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
-      "key": "773238e0-9128-4196-a6de-987cc555d157",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "773238e0-9128-4196-a6de-987cc555d157",
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
-      "key": "6eb319de-45f6-462e-99ed-ed132fffeb83",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6eb319de-45f6-462e-99ed-ed132fffeb83",
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses"
-      }
-    },
-    {
-      "key": "c5d898a8-e496-4568-bd4b-cadddb2f39b3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c5d898a8-e496-4568-bd4b-cadddb2f39b3",
-        "lesson.key": "lesson-12",
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses"
       }
@@ -599,16 +527,6 @@
       }
     },
     {
-      "key": "ff4d5e2b-8851-4fbb-9536-cb78881269be",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ff4d5e2b-8851-4fbb-9536-cb78881269be",
-        "lesson_activity.key": "1fea0dcf-e9e1-46c0-87d1-b67fb8d971e2"
-      }
-    },
-    {
       "key": "ce9f5419-981a-4b9b-9d0f-d86febc03351",
       "position": 1,
       "properties": {
@@ -642,75 +560,11 @@
       "key": "7a5ad6be-54c7-4b38-bccf-6c34c704d5ea",
       "position": 2,
       "properties": {
-        "progression_name": "Fraud Detection"
+        "progression_name": "AI Fraud Detection"
       },
       "seeding_key": {
         "activity_section.key": "7a5ad6be-54c7-4b38-bccf-6c34c704d5ea",
         "lesson_activity.key": "eb9669ba-eb83-42cf-be2e-48c0198ef723"
-      }
-    },
-    {
-      "key": "6a15708e-9fa4-4730-a958-00e8602b663a",
-      "position": 3,
-      "properties": {
-        "progression_name": "AI Risk Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "6a15708e-9fa4-4730-a958-00e8602b663a",
-        "lesson_activity.key": "eb9669ba-eb83-42cf-be2e-48c0198ef723"
-      }
-    },
-    {
-      "key": "3dbaedf0-773f-4869-8daf-d459fd2108d9",
-      "position": 4,
-      "properties": {
-        "progression_name": "Adaptive Access Controls"
-      },
-      "seeding_key": {
-        "activity_section.key": "3dbaedf0-773f-4869-8daf-d459fd2108d9",
-        "lesson_activity.key": "eb9669ba-eb83-42cf-be2e-48c0198ef723"
-      }
-    },
-    {
-      "key": "0ae8f5df-01d1-462b-84e7-07e25b9da4ac",
-      "position": 5,
-      "properties": {
-        "progression_name": "Check Your Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "0ae8f5df-01d1-462b-84e7-07e25b9da4ac",
-        "lesson_activity.key": "eb9669ba-eb83-42cf-be2e-48c0198ef723"
-      }
-    },
-    {
-      "key": "419612e5-282a-4224-ae3c-5b8bf8038eaa",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "419612e5-282a-4224-ae3c-5b8bf8038eaa",
-        "lesson_activity.key": "9b936e35-476c-4972-b194-488e57d4e867"
-      }
-    },
-    {
-      "key": "f19c8c93-062d-40f2-99d4-564476c61b1a",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "f19c8c93-062d-40f2-99d4-564476c61b1a",
-        "lesson_activity.key": "051cdb38-20cd-4624-bb2c-61b7653bf289"
-      }
-    },
-    {
-      "key": "b0a3b5d4-7d46-4335-9326-442320b7df2e",
-      "position": 2,
-      "properties": {
-        "progression_name": "Check Your Understanding: My Encryption"
-      },
-      "seeding_key": {
-        "activity_section.key": "b0a3b5d4-7d46-4335-9326-442320b7df2e",
-        "lesson_activity.key": "051cdb38-20cd-4624-bb2c-61b7653bf289"
       }
     },
     {
@@ -728,65 +582,11 @@
       "key": "785d1797-0bee-436c-821b-6eda4d27c221",
       "position": 2,
       "properties": {
-        "progression_name": "Messaging Metadata"
+        "progression_name": "Side-Channel Attack"
       },
       "seeding_key": {
         "activity_section.key": "785d1797-0bee-436c-821b-6eda4d27c221",
         "lesson_activity.key": "7b4ac3b2-221d-4cc9-ae63-1fbc6a3988e2"
-      }
-    },
-    {
-      "key": "576e1684-75f5-4a5f-9125-a8287b5c9797",
-      "position": 3,
-      "properties": {
-        "progression_name": "AI-Generated Strong Keys"
-      },
-      "seeding_key": {
-        "activity_section.key": "576e1684-75f5-4a5f-9125-a8287b5c9797",
-        "lesson_activity.key": "7b4ac3b2-221d-4cc9-ae63-1fbc6a3988e2"
-      }
-    },
-    {
-      "key": "73da3c02-58f1-47fb-b994-073223093a41",
-      "position": 4,
-      "properties": {
-        "progression_name": "Code Review with AI"
-      },
-      "seeding_key": {
-        "activity_section.key": "73da3c02-58f1-47fb-b994-073223093a41",
-        "lesson_activity.key": "7b4ac3b2-221d-4cc9-ae63-1fbc6a3988e2"
-      }
-    },
-    {
-      "key": "7413e2f2-9276-49f9-aea8-3f28cc700be1",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7413e2f2-9276-49f9-aea8-3f28cc700be1",
-        "lesson_activity.key": "773238e0-9128-4196-a6de-987cc555d157"
-      }
-    },
-    {
-      "key": "5dbfa394-560e-4caf-8a88-db1d01976889",
-      "position": 1,
-      "properties": {
-        "progression_name": "Persona Choices"
-      },
-      "seeding_key": {
-        "activity_section.key": "5dbfa394-560e-4caf-8a88-db1d01976889",
-        "lesson_activity.key": "6eb319de-45f6-462e-99ed-ed132fffeb83"
-      }
-    },
-    {
-      "key": "31fff750-6578-4f08-ac27-d9de538d0b28",
-      "position": 1,
-      "properties": {
-        "progression_name": "Explore & Map System Events and Vulnerabilities"
-      },
-      "seeding_key": {
-        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28",
-        "lesson_activity.key": "c5d898a8-e496-4568-bd4b-cadddb2f39b3"
       }
     },
     {
@@ -1257,9 +1057,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson4-level5"
-        ],
         "progression": "Create a Deep Fake Script"
       },
       "bonus": false,
@@ -1432,10 +1229,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson-level1choice"
-        ],
-        "progression": "Fraud Detection"
+        "progression": "AI Fraud Detection"
       },
       "bonus": false,
       "seeding_key": {
@@ -1457,15 +1251,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level2-2"
-        ],
-        "progression": "Fraud Detection"
+        "progression": "AI Fraud Detection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level2-2"
+          "test-ai-powered-threats-defenses-lesson8-level2"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
@@ -1473,86 +1264,11 @@
         "activity_section.key": "7a5ad6be-54c7-4b38-bccf-6c34c704d5ea"
       },
       "level_keys": [
-        "test-ai-powered-threats-defenses-lesson8-level2-2"
+        "test-ai-powered-threats-defenses-lesson8-level2"
       ]
     },
     {
       "chapter": 28,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level3-2"
-        ],
-        "progression": "AI Risk Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level3-2"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "6a15708e-9fa4-4730-a958-00e8602b663a"
-      },
-      "level_keys": [
-        "test-ai-powered-threats-defenses-lesson8-level3-2"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level5"
-        ],
-        "progression": "AI Risk Assessment"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level5"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "6a15708e-9fa4-4730-a958-00e8602b663a"
-      },
-      "level_keys": [
-        "test-ai-powered-threats-defenses-lesson8-level5"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "test-ai-powered-threats-defenses-lesson9-level1lvlgrp"
-        ],
-        "progression": "Check Your Understanding: My Encryption"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson9-level1lvlgrp"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "b0a3b5d4-7d46-4335-9326-442320b7df2e"
-      },
-      "level_keys": [
-        "test-ai-powered-threats-defenses-lesson9-level1lvlgrp"
-      ]
-    },
-    {
-      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1562,7 +1278,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson10-level1-2"
+          "test-ai-powered-threats-defenses-lesson10-level1"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "",
@@ -1570,21 +1286,21 @@
         "activity_section.key": "934a7452-d69e-4ee9-b491-a14883f8b8de"
       },
       "level_keys": [
-        "test-ai-powered-threats-defenses-lesson10-level1-2"
+        "test-ai-powered-threats-defenses-lesson10-level1"
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Messaging Metadata"
+        "progression": "Side-Channel Attack"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson10-level2-2"
+          "ai-powered-threats-defenses-lesson10-side-channel-attack"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "",
@@ -1592,51 +1308,29 @@
         "activity_section.key": "785d1797-0bee-436c-821b-6eda4d27c221"
       },
       "level_keys": [
-        "test-ai-powered-threats-defenses-lesson10-level2-2"
+        "ai-powered-threats-defenses-lesson10-side-channel-attack"
       ]
     },
     {
-      "chapter": 33,
-      "position": 1,
-      "activity_section_position": 1,
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Persona Choices"
+        "progression": "Side-Channel Attack"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson11-level1choice"
+          "ai-powered-threats-defenses-lesson10-side-channel-attack-chat"
         ],
-        "lesson.key": "lesson-11",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "5dbfa394-560e-4caf-8a88-db1d01976889"
+        "activity_section.key": "785d1797-0bee-436c-821b-6eda4d27c221"
       },
       "level_keys": [
-        "test-ai-powered-threats-defenses-lesson11-level1choice"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Explore & Map System Events and Vulnerabilities"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson12-level1"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
-      },
-      "level_keys": [
-        "test-ai-powered-threats-defenses-lesson12-level1"
+        "ai-powered-threats-defenses-lesson10-side-channel-attack-chat"
       ]
     }
   ],
@@ -1955,9 +1649,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson8-level2-2",
+        "level.key": "test-ai-powered-threats-defenses-lesson8-level2",
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level2-2"
+          "test-ai-powered-threats-defenses-lesson8-level2"
         ],
         "lesson.key": "lesson-8",
         "lesson_group.key": "",
@@ -1967,45 +1661,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson8-level3-2",
+        "level.key": "test-ai-powered-threats-defenses-lesson10-level1",
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level3-2"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "6a15708e-9fa4-4730-a958-00e8602b663a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson8-level5",
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson8-level5"
-        ],
-        "lesson.key": "lesson-8",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "6a15708e-9fa4-4730-a958-00e8602b663a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson9-level1lvlgrp",
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson9-level1lvlgrp"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "b0a3b5d4-7d46-4335-9326-442320b7df2e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson10-level1-2",
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson10-level1-2"
+          "test-ai-powered-threats-defenses-lesson10-level1"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "",
@@ -2015,9 +1673,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson10-level2-2",
+        "level.key": "ai-powered-threats-defenses-lesson10-side-channel-attack",
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson10-level2-2"
+          "ai-powered-threats-defenses-lesson10-side-channel-attack"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "",
@@ -2027,26 +1685,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson11-level1choice",
+        "level.key": "ai-powered-threats-defenses-lesson10-side-channel-attack-chat",
         "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson11-level1choice"
+          "ai-powered-threats-defenses-lesson10-side-channel-attack-chat"
         ],
-        "lesson.key": "lesson-11",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "5dbfa394-560e-4caf-8a88-db1d01976889"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-ai-powered-threats-defenses-lesson12-level1",
-        "script_level.level_keys": [
-          "test-ai-powered-threats-defenses-lesson12-level1"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "",
-        "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "31fff750-6578-4f08-ac27-d9de538d0b28"
+        "activity_section.key": "785d1797-0bee-436c-821b-6eda4d27c221"
       }
     }
   ],

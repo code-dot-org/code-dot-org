@@ -2,7 +2,7 @@
   "key": "facilitator-training",
   "display_name": "facilitator-training",
   "is_featured": false,
-  "assignable": false,
+  "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
@@ -11,13 +11,11 @@
   "cs_topic": null,
   "school_subject": null,
   "device_compatibility": null,
-  "description": "This placeholder course represents facilitator training sessions outside of onboarding and enables selection in the PL Topics drop-down. It does not contain content; details about specific workshops will be shared separately.",
+  "description": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": "2025-08-05 04:00:00 UTC",
+  "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
-  "facilitator_course_permissions": [
-    "Facilitator"
-  ]
+  "facilitator_course_permissions": null
 }

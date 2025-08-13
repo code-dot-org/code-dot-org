@@ -28,6 +28,7 @@ class Panels < Level
   serialized_attrs %w(
     hide_share_and_remix
     is_project_level
+    submittable
     background
     level_data
     panels

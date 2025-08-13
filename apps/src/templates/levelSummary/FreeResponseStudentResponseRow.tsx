@@ -161,9 +161,7 @@ const FreeResponseStudentResponseRow: React.FC<
         <strong>{studentWorkEvaluation?.studentDisplayName}</strong>
       </BodyThreeText>
       <BodyThreeText className={styles.aiAnalysisResponseColumn}>
-        {typeof studentWorkEvaluation?.studentWork === 'string'
-          ? studentWorkEvaluation.studentWork
-          : ''}
+        {studentWorkEvaluation?.studentWork}
       </BodyThreeText>
       <div className={styles.aiAnalysisTagColumn}>{analysisTag()}</div>
       <BodyThreeText className={styles.aiAnalysisReasoningColumn}>

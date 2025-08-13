@@ -1192,14 +1192,6 @@ Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a se
   )
 end
 
-Given(/^I assign my section in row (\d+) to course "([^"]*)" unit (\d+)$/) do |section_position, course_name, unit_position|
-  browser_request(
-    url: '/api/test/assign_section_to_course_and_unit',
-    method: 'POST',
-    body: {section_position: section_position, course_name: course_name, unit_position: unit_position}
-  )
-end
-
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end
@@ -1583,14 +1575,6 @@ Then /^page text does (not )?contain "([^"]*)"$/ do |negation, text|
   expect(body_text.include?(text)).to eq(negation.nil?)
 end
 
-Then /^response json key "([^"]*)" has value "(.*)"$/ do |key, value|
-  # Click the raw data tab to see the JSON response in Firefox
-  @browser.find_elements(:css, '#rawdata-tab').first&.click
-
-  response_json = @browser.find_element(:css, 'pre').text
-  expect(response_json).to include(%Q["#{key}":#{value}])
-end
-
 Then /^I click selector "([^"]*)" (\d+(?:\.\d*)?) times?$/ do |selector, times|
   step_list = []
   times.to_i.times do
@@ -1683,16 +1667,4 @@ end
 
 And(/^I clean up my records$/) do
   clean_up_records
-end
-
-And(/^I debug milestone callback$/) do
-  mode = @browser.execute_script("return appOptions.postMilestoneMode;")
-  puts "postMilestoneMode: #{mode.inspect}"
-  callback = @browser.execute_script("return appOptions.dialog.callback;")
-  puts "callback: #{callback.inspect}"
-  fallback = @browser.execute_script("return appOptions.dialog.fallbackResponse;")
-  success = JSON.parse(fallback || '{}')['success']
-  return unless success
-  puts "fallback success level_path: #{success['level_path'].inspect}"
-  puts "fallback success redirect: #{success['redirect'].inspect}"
 end

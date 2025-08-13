@@ -7,8 +7,9 @@ import * as GoogleBlockly from 'blockly/core';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import LegacyDialog from '../../code-studio/LegacyDialog';
-import {MenuOptionStates, BLOCK_TYPES} from '../constants';
+import {Themes, MenuOptionStates, BLOCK_TYPES} from '../constants';
 import {ExtendedBlockSvg} from '../types';
+import {getBaseName, setWorkspaceTheme} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -393,6 +394,75 @@ const registerAllBlocksUnmovable = function (weight: number) {
   );
 };
 
+const themes = [
+  {
+    name: Themes.MODERN,
+    label: commonI18n.blocklyModernTheme(),
+  },
+  {
+    name: Themes.HIGH_CONTRAST,
+    label: commonI18n.blocklyHighContrastTheme(),
+  },
+  {
+    name: Themes.PROTANOPIA,
+    label: commonI18n.blocklyProtanopiaTheme(),
+  },
+  {
+    name: Themes.DEUTERANOPIA,
+    label: commonI18n.blocklyDeuteranopiaTheme(),
+  },
+  {
+    name: Themes.TRITANOPIA,
+    label: commonI18n.blocklyTritanopiaTheme(),
+  },
+];
+/**
+ * Change workspace theme to specified theme
+ */
+const registerTheme = function (name: Themes, label: string, weight: number) {
+  const themeOption = {
+    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      return (
+        (isCurrentTheme(name, scope.workspace)
+          ? '✓ '
+          : `${commonI18n.enable()} `) + label
+      );
+    },
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (Blockly.isJigsaw) {
+        // Jigsaw uses its own custom theme with an extra large font size.
+        // Blocks use hard-coded colors instead of styles, so switching
+        // palettes is not possible.
+        return MenuOptionStates.HIDDEN;
+      }
+      if (isCurrentTheme(name, scope.workspace)) {
+        return MenuOptionStates.DISABLED;
+      } else {
+        return MenuOptionStates.ENABLED;
+      }
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (!scope.workspace) {
+        return;
+      }
+      setWorkspaceTheme(scope.workspace, name);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: name + 'ThemeOption',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(themeOption);
+};
+
+function registerThemes(
+  weight: number,
+  themes: {name: Themes; label: string}[]
+) {
+  themes.forEach(theme => {
+    registerTheme(theme.name, theme.label, weight);
+  });
+}
+
 /**
  * Option to open help for a block.
  */
@@ -481,6 +551,15 @@ function clearShadowState(block: GoogleBlockly.Block) {
   });
 }
 
+function isCurrentTheme(
+  theme: Themes,
+  workspace: GoogleBlockly.WorkspaceSvg | undefined
+) {
+  return (
+    getBaseName(workspace?.getTheme().name as Themes) === getBaseName(theme)
+  );
+}
+
 /**
  * Unregister some default options. We do this either because the options are needlessly
  * advanced for our target users or because the options have undesired impacts.
@@ -547,6 +626,7 @@ function registerCustomWorkspaceOptions() {
 
   // Custom workspace options. We increment the weight for each so they are automatically
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
+  registerThemes(nextWeight++, themes);
   registerAllBlocksUndeletable(nextWeight++);
   registerAllBlocksUneditable(nextWeight++);
   registerAllBlocksUnmovable(nextWeight++);

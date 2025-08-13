@@ -235,14 +235,6 @@ class CodeWorkspace extends React.Component {
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
-            <PaneButton
-              id="settings-header"
-              headerHasFocus={hasFocus}
-              iconClass="fa fa-cog"
-              label={'Settings'}
-              isRtl={isRtl}
-              isMinecraft={props.isMinecraft}
-            />
             <PaneSection id="workspace-header">
               {props.showProjectTemplateWorkspaceIcon && (
                 <ProjectTemplateWorkspaceIcon />

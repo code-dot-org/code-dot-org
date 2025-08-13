@@ -81,13 +81,8 @@ const SET_STUDENT_ID = 'sectionAssessments/SET_STUDENT_ID';
 const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 
 // Action creators
-export const setAssessmentResponses = (
-  courseVersionId,
-  scriptId,
-  assessments
-) => ({
+export const setAssessmentResponses = (scriptId, assessments) => ({
   type: SET_ASSESSMENT_RESPONSES,
-  courseVersionId,
   scriptId,
   assessments,
 });
@@ -129,13 +124,13 @@ export const setSurveys = (scriptId, surveys) => ({
   surveys,
 });
 
-export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
+export const asyncLoadAssessments = (sectionId, scriptId) => {
   return (dispatch, getState) => {
     const state = getState().sectionAssessments;
 
     // Don't load data if it's already stored or if there is no script or no section selected.
     if (
-      state.assessmentResponsesByScript[courseVersionId]?.[scriptId] ||
+      state.assessmentResponsesByScript[scriptId] ||
       !scriptId ||
       !sectionId
     ) {
@@ -146,8 +141,7 @@ export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
 
     const loadResponses = loadAssessmentResponsesFromServer(
       sectionId,
-      scriptId,
-      courseVersionId
+      scriptId
     );
     const loadQuestions = loadAssessmentQuestionsFromServer(scriptId);
     const loadSurveys = loadSurveysFromServer(sectionId, scriptId);
@@ -155,9 +149,7 @@ export const asyncLoadAssessments = (sectionId, scriptId, courseVersionId) => {
 
     Promise.all([loadResponses, loadQuestions, loadSurveys, loadFeedback])
       .then(arrayOfValues => {
-        dispatch(
-          setAssessmentResponses(courseVersionId, scriptId, arrayOfValues[0])
-        );
+        dispatch(setAssessmentResponses(scriptId, arrayOfValues[0]));
         dispatch(setAssessmentQuestions(scriptId, arrayOfValues[1]));
         dispatch(setFeedback(scriptId, arrayOfValues[3]));
         dispatch(setSurveys(scriptId, arrayOfValues[2]));
@@ -211,10 +203,7 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       assessmentResponsesByScript: {
         ...state.assessmentResponsesByScript,
-        [action.courseVersionId]: {
-          ...state.assessmentResponsesByScript[action.courseVersionId],
-          [action.scriptId]: action.assessments,
-        },
+        [action.scriptId]: action.assessments,
       },
     };
   }
@@ -283,11 +272,11 @@ export const getCurrentScriptAssessmentList = state => {
 };
 
 // Get the student responses for assessments in the current script and current assessment
-export const getAssessmentResponsesForCurrentCourseAndScript = state => {
+export const getAssessmentResponsesForCurrentScript = state => {
   return (
     state.sectionAssessments.assessmentResponsesByScript[
-      state.unitSelection.courseVersionId
-    ]?.[state.unitSelection.scriptId] || {}
+      state.unitSelection.scriptId
+    ] || {}
   );
 };
 
@@ -407,8 +396,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = state => {
  * currently selected assessment.
  */
 export const getStudentMCResponsesForCurrentAssessment = state => {
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return {};
   }
@@ -473,8 +461,7 @@ export const getMatchStructureForCurrentAssessment = state => {
  * Get the match questions responses in the current assessment
  */
 export const getStudentMatchResponsesForCurrentAssessment = state => {
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return {};
   }
@@ -511,8 +498,7 @@ export const getStudentMatchResponsesForCurrentAssessment = state => {
 // Get an array of objects indicating what each student answered for the current
 // question in view.
 export const getStudentAnswersForCurrentQuestion = state => {
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses || isCurrentAssessmentSurvey(state)) {
     return [];
   }
@@ -567,8 +553,7 @@ export const getAssessmentsFreeResponseResults = state => {
       responses: [],
     }));
 
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
   let currentStudentsIds = Object.keys(studentResponses);
   // Filter by current selected student.
@@ -714,8 +699,7 @@ export const isCurrentAssessmentSurvey = state => {
  * the assessment.
  */
 export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
   }
@@ -839,8 +823,7 @@ export const getMultipleChoiceSectionSummary = state => {
 
   // Calculate the number of students who answered each option and fill
   // in the initialized results structure above.
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
   }
@@ -909,8 +892,7 @@ export const getMatchSectionSummary = state => {
 
   // Calculate the number of students who answered each option and fill
   // in the initialized results structure above.
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
   if (!studentResponses) {
     return [];
   }
@@ -963,8 +945,7 @@ export const countSubmissionsForCurrentAssessment = state => {
     }
     return currentSurvey.levelgroup_results[0].results.length;
   } else {
-    const studentResponses =
-      getAssessmentResponsesForCurrentCourseAndScript(state);
+    const studentResponses = getAssessmentResponsesForCurrentScript(state);
     let totalSubmissions = 0;
     Object.values(studentResponses).forEach(student => {
       if (
@@ -1047,8 +1028,7 @@ export const getExportableSurveyData = state => {
 export const getExportableAssessmentData = state => {
   let responses = [];
   const currentAssessmentId = state.sectionAssessments.assessmentId;
-  const studentResponses =
-    getAssessmentResponsesForCurrentCourseAndScript(state);
+  const studentResponses = getAssessmentResponsesForCurrentScript(state);
 
   Object.keys(studentResponses).forEach(studentId => {
     studentId = parseInt(studentId, 10);
@@ -1109,7 +1089,7 @@ export const isCurrentScriptCSD = state => {
  */
 export const currentStudentHasResponses = state => {
   return !!Object.prototype.hasOwnProperty.call(
-    getAssessmentResponsesForCurrentCourseAndScript(state),
+    getAssessmentResponsesForCurrentScript(state),
     state.sectionAssessments.studentId
   );
 };
@@ -1180,17 +1160,10 @@ const computeScriptAssessmentList = (state, scriptId) => {
 // Requests to the server for assessment data
 
 // Loads the assessment responses.
-const loadAssessmentResponsesFromServer = (
-  sectionId,
-  scriptId,
-  courseVersionId
-) => {
+const loadAssessmentResponsesFromServer = (sectionId, scriptId) => {
   let payload = {section_id: sectionId};
   if (scriptId) {
     payload.script_id = scriptId;
-  }
-  if (courseVersionId) {
-    payload.course_version_id = courseVersionId;
   }
   return $.ajax({
     url: `/dashboardapi/assessments/section_responses`,

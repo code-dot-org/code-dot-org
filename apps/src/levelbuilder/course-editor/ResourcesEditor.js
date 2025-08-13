@@ -30,7 +30,9 @@ export default class ResourcesEditor extends Component {
     if (!this.props.courseVersionId) {
       return (
         <strong>
-          A unit must belong to a course in order to add resources.
+          Cannot add resources to migrated unit without course version. A unit
+          must belong to a course or have 'Is a Standalone Unit' checked to have
+          a course version.
         </strong>
       );
     }

@@ -50,12 +50,16 @@ export function useMusicSettings(): Setting[] {
     setSelectedTheme(name);
   };
 
+  if (selectedTheme === null) {
+    return []; // still loading
+  }
+
   return [
     {
       id: 'blocklyTheme',
       label: commonI18n.blocklyTheme(),
       options: blockThemeOptions,
-      selectedValue: selectedTheme || undefined,
+      selectedValue: selectedTheme,
       onChange: handleBlocklyThemeChange,
     },
   ];

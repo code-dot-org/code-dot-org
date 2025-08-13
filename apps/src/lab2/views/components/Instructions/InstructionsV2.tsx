@@ -1,16 +1,21 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
+import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {isPredictResponseSubmitted} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import MainInstructionsContent from '@cdo/apps/lab2/views/components/Instructions/MainInstructionsContent';
 import ValidationResults from '@cdo/apps/lab2/views/components/Instructions/ValidationResults';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import NavigationArea from './NavigationArea';
+import NavigationButton from './NavigationButton';
 import PredictQuestion from './PredictQuestion';
 import PredictQuestionRunPrompt from './PredictQuestionRunPrompt';
 import PredictSummary from './PredictSummary';
@@ -18,8 +23,8 @@ import ValidationButton from './ValidationButton';
 
 import moduleStyles from './instructions.module.scss';
 
-export interface InstructionsProps {
-  levelProperties: LevelProperties;
+interface InstructionsProps {
+  levelProperties: LevelProperties | undefined;
   /** Whether the lab is currently running (different labs may define this differently). */
   isRunning: boolean;
   /** Whether the lab's code has been executed/run on this level. */
@@ -65,6 +70,9 @@ interface ValidationSettings {
  */
 const Instructions: React.FunctionComponent<InstructionsProps> = ({
   levelProperties,
+  isRunning,
+  hasRun,
+  hasEdited,
   layout = 'vertical',
   handleInstructionsTextClick,
   className,
@@ -73,23 +81,95 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   fixedDarkBackground,
   AiTutor2ResponseView,
   overrideTheme,
-  ...feedbackProps
+  requireRun,
 }) => {
+  const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
+  const hasValidationConditions = useAppSelector(
+    state => state.lab.validationState?.hasConditions
+  );
+  const validationMessage = useAppSelector(
+    state => state.lab.validationState?.message
+  );
+  const validationIndex = useAppSelector(
+    state => state.lab.validationState?.index
+  );
+  const validationSatisfied = useAppSelector(
+    state => state.lab.validationState?.satisfied
+  );
   const validationResults = useAppSelector(
     state => state.lab.validationState?.validationResults
   );
-  const {longInstructions, predictSettings, offerBrowserTts} = levelProperties;
-  const isPredictLevel = predictSettings?.isPredictLevel;
-  const showTts = offerBrowserTts || queryParams('show-tts') === 'true';
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const predictResponseSubmitted = useAppSelector(isPredictResponseSubmitted);
+
+  const offerBrowserTts =
+    useAppSelector(state => state.lab.levelProperties?.offerBrowserTts) ||
+    queryParams('show-tts') === 'true';
+
+  const useSecondaryFinishButton =
+    useAppSelector(
+      state => state.lab.levelProperties?.useSecondaryFinishButton
+    ) || queryParams('use-secondary-finish-button') === 'true';
+
   const defaultTheme = useTheme();
   const theme = overrideTheme || defaultTheme;
 
+  const feedbackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Focus on the feedback message when it first becomes present and the program is not running.
+    // This ensures it will be read by screen readers.
+    // It's ok to focus after each run switch, as the message will also reappear when the user re-runs
+    // the program.
+    if (validationMessage && !isRunning) {
+      feedbackRef.current?.focus();
+    }
+  }, [validationMessage, isRunning]);
+
+  const canShowNextButton = useMemo(() => {
+    if (levelProperties?.submittable) {
+      return true;
+    } else if (isPredictLevel) {
+      return predictResponseSubmitted;
+    } else if (hasValidationConditions) {
+      return validationSatisfied;
+    } else {
+      return !requireRun || hasRun;
+    }
+  }, [
+    levelProperties?.submittable,
+    isPredictLevel,
+    hasValidationConditions,
+    predictResponseSubmitted,
+    validationSatisfied,
+    requireRun,
+    hasRun,
+  ]);
+
   // Don't render anything if we don't have any instructions.
-  if (longInstructions === undefined) {
+  if (
+    levelProperties === undefined ||
+    levelProperties.longInstructions === undefined
+  ) {
     return null;
   }
 
   const vertical = layout === 'vertical';
+  const showSecondaryFinishButton = useSecondaryFinishButton && !hasNextLevel;
+
+  const useMessage =
+    showSecondaryFinishButton &&
+    queryParams('show-secondary-finish-button-question') === 'true'
+      ? commonI18n.finishMessage()
+      : validationMessage;
+
+  // The secondary finish button avoids a reappearance animation by not using
+  // the unique index.
+  const useMessageIndex = useSecondaryFinishButton
+    ? undefined
+    : validationIndex;
   return (
     <div
       id="instructions"
@@ -113,20 +193,20 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
         )}
       >
         <div
-          key={longInstructions}
+          key={levelProperties.longInstructions}
           id="instructions-text"
           className={classNames(moduleStyles.bubble, moduleStyles.textContent)}
         >
           <div className={moduleStyles.scrollingContent}>
             <MainInstructionsContent
-              instructionsText={longInstructions}
+              instructionsText={levelProperties.longInstructions}
               handleInstructionsTextClick={handleInstructionsTextClick}
             />
             <PredictQuestion className={moduleStyles.predictQuestion} />
           </div>
-          {showTts && (
+          {offerBrowserTts && (
             <div className={moduleStyles.ttsContainer}>
-              <TextToSpeech text={longInstructions} />
+              <TextToSpeech text={levelProperties.longInstructions} />
             </div>
           )}
           {validationSettings && (
@@ -168,11 +248,43 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
             <PredictQuestionRunPrompt />
           </>
         )}
-        <NavigationArea
-          {...feedbackProps}
-          levelProperties={levelProperties}
-          handleInstructionsTextClick={handleInstructionsTextClick}
-        />
+        {(useMessage || canShowNextButton) && (
+          <div
+            key={useMessageIndex + ' - ' + useMessage}
+            id="instructions-feedback"
+            className={classNames(
+              moduleStyles.feedback,
+              showSecondaryFinishButton && moduleStyles.feedbackBottom
+            )}
+          >
+            <div
+              id="instructions-feedback-message"
+              className={moduleStyles.bubble}
+            >
+              {useMessage && (
+                <div ref={feedbackRef} tabIndex={-1}>
+                  <EnhancedSafeMarkdown
+                    markdown={useMessage}
+                    className={moduleStyles.markdownText}
+                    handleInstructionsTextClick={handleInstructionsTextClick}
+                  />
+                </div>
+              )}
+              <NavigationButton
+                levelProperties={levelProperties}
+                hasRun={hasRun}
+                hasEdited={hasEdited}
+                className={moduleStyles.buttonInstruction}
+                size={'s'}
+              />
+              {offerBrowserTts && useMessage && !canShowNextButton && (
+                <div className={moduleStyles.ttsContainer}>
+                  <TextToSpeech text={useMessage} />
+                </div>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -29,7 +29,7 @@ class AidiffThread < ApplicationRecord
   def summarize
     {
       id: id,
-      title: generate_title,
+      title: title,
       updated_at: updated_at,
       context_type: context_type,
     }
@@ -41,11 +41,5 @@ class AidiffThread < ApplicationRecord
         messages: aidiff_messages&.map(&:summarize)
       }
     )
-  end
-
-  def generate_title
-    msg = aidiff_messages.first
-    msg_title = msg&.is_preset && msg&.preset_chip_text ? msg&.preset_chip_text : msg&.content
-    msg_title
   end
 end

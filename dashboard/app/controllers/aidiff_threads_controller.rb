@@ -15,7 +15,7 @@ class AidiffThreadsController < ApplicationController
 
     get_curriculum_contexts(context[:levelId], context[:lessonId], context[:unitId], context[:courseId], context[:type])
 
-    response_body = get_response_body(nil, context[:type], params[:inputText])
+    response_body = get_response_body(nil, context[:type])
 
     # Create thread and log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
@@ -28,8 +28,7 @@ class AidiffThreadsController < ApplicationController
           level_id: @level&.id,
           course_id: @unit_group&.id,
           lesson_id: @lesson&.id,
-          context_type: params[:context][:type],
-          session_created: DateTime.now
+          context_type: params[:context][:type]
         )
         # Add user message to thread
         log_messages(response_body)
@@ -87,16 +86,14 @@ class AidiffThreadsController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    if @aidiff_thread.session_created.nil? || @aidiff_thread.session_created < 1.day.ago
-      session_id = nil
-      input = AiDiffBedrockHelper.populate_new_session_messages(@aidiff_thread.aidiff_messages, params[:inputText])
-    else
-      session_id = @aidiff_thread.external_id
-      input = params[:inputText]
-    end
+    #TODO
+    #check if session is valid
+    #if session valid set session_id
+    #if session invalid, concatenate prior messages
 
+    session_id = @aidiff_thread.external_id
     get_curriculum_contexts(@aidiff_thread.level_id, @aidiff_thread.lesson_id, @aidiff_thread.unit_id, @aidiff_thread.course_id, @aidiff_thread.context_type)
-    response_body = get_response_body(session_id, @aidiff_thread.context_type, input)
+    response_body = get_response_body(session_id, @aidiff_thread.context_type)
 
     # Log messages if the response was successful and not flagged for PII.
     if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
@@ -105,9 +102,6 @@ class AidiffThreadsController < ApplicationController
         log_messages(response_body)
         response_body[:message_id] = @assistant_message.id
         response_body[:thread_id] = @aidiff_thread.id
-        if session_id.nil?
-          @aidiff_thread.update!(external_id: response_body[:session_id], session_created: DateTime.now)
-        end
       rescue StandardError => exception
         return render status: :bad_request, json: {error: exception.message}
       end
@@ -151,7 +145,7 @@ class AidiffThreadsController < ApplicationController
     max_score > 0.9
   end
 
-  private def get_response_body(session_id, context_type, input)
+  private def get_response_body(session_id, context_type)
     if contains_pii?
       return {
         role: "assistant",
@@ -186,7 +180,7 @@ class AidiffThreadsController < ApplicationController
       student_code
     )
 
-    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {

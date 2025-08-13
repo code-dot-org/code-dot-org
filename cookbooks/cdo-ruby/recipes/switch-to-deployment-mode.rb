@@ -7,8 +7,6 @@
 root_dir = File.join(node[:home], node.chef_environment)
 ['', 'dashboard', 'cookbooks'].each do |subdir|
   project_dir = File.join(root_dir, subdir)
-  next unless Dir.exist?(project_dir)
-
   bundle_dir = File.join(project_dir, '.bundle')
   vendor_dir = File.join(project_dir, 'vendor/bundle')
 
