@@ -1,6 +1,8 @@
 import {FileId, FolderId} from '@codebridge/types';
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   LabConfig,
   MultiFileSource,
@@ -98,17 +100,19 @@ const projectSlice = createSlice({
       }>
     ) {
       if (state.projectSources?.source) {
+        const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
         const source = state.projectSources.source as MultiFileSource;
-        const newFileId = createNewFileHelper(
+        const newSource = createNewFileHelper(
           source,
           action.payload.fileName,
           action.payload.folderId,
           undefined,
-          action.payload.url
+          action.payload.url,
+          isStartMode
         );
         state.projectSources = {
           ...state.projectSources,
-          source: newFileId,
+          source: newSource,
         };
         state.hasEdited = true;
       }

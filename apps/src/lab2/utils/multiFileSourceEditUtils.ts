@@ -7,6 +7,7 @@ import {
   FolderId,
   MultiFileSource,
   ProjectFile,
+  ProjectFileType,
 } from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
@@ -27,7 +28,8 @@ export const createNewFileHelper = (
   fileName: string,
   folderId: FolderId = DEFAULT_FOLDER_ID,
   contents: string = '',
-  url?: string
+  url?: string,
+  isStartMode?: boolean
 ): MultiFileSource => {
   const fileId = getNextFileId(Object.values(source.files));
   const newSource = {...source, files: {...source.files}};
@@ -44,6 +46,10 @@ export const createNewFileHelper = (
 
   if (url) {
     file.url = url;
+  }
+
+  if (isStartMode) {
+    file.type = ProjectFileType.STARTER;
   }
 
   newSource.files[fileId] = file;
@@ -139,7 +145,12 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
-  if (fileToBeDeleted.url) {
+  if (
+    fileToBeDeleted.url &&
+    !Object.values(ProjectFileType).includes(
+      fileToBeDeleted?.type as ProjectFileType
+    )
+  ) {
     try {
       // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
       // In the case of a failure, we just end up with an orphaned file in S3.
@@ -222,7 +233,10 @@ export const deleteFolderHelper = (
       .filter(f => files.has(f.id))
       .forEach(f => {
         delete newSource.files[f.id];
-        if (f.url) {
+        if (
+          f.url &&
+          !Object.values(ProjectFileType).includes(f?.type as ProjectFileType)
+        ) {
           try {
             // We don't wait for the deletion to complete because a user's project doesn't depend on the completion of the operation.
             // In the case of a failure, we just end up with an orphaned file in S3.

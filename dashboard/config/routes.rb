@@ -417,7 +417,8 @@ Dashboard::Application.routes.draw do
         delete '/:filename', to: 'level_starter_assets#destroy', format: true
 
         get '/uuid/:uuid', to: 'level_starter_assets#file_by_uuid', format: true
-        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid', format: true
+        post '/uuid/:uuid', to: 'level_starter_assets#upload_by_uuid'
+        delete '/uuid/:uuid', to: 'level_starter_assets#destroy_by_uuid', format: true
       end
     end
 

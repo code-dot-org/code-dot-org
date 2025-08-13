@@ -2,7 +2,7 @@ class LevelStarterAssetsController < ApplicationController
   authorize_resource class: false, except: [:show, :file, :file_by_uuid]
   before_action :require_levelbuilder_mode, except: [:show, :file, :file_by_uuid]
   before_action :set_level
-  skip_before_action :verify_authenticity_token, only: [:destroy]
+  skip_before_action :verify_authenticity_token, only: [:destroy, :destroy_by_uuid]
 
   VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
 
@@ -38,7 +38,7 @@ class LevelStarterAssetsController < ApplicationController
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
     content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
 
-    # expires_in 1.hour, public: true
+    expires_in 1.hour, public: true
     send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
@@ -116,6 +116,12 @@ class LevelStarterAssetsController < ApplicationController
     else
       return head :unprocessable_entity
     end
+  end
+
+  def destroy_by_uuid
+    uuid_name = "#{params[:uuid]}.#{params[:format]}"
+    LevelStarterAssetsHelper.delete_object(uuid_name)
+    head :no_content
   end
 
   private def set_level

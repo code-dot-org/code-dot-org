@@ -36,28 +36,27 @@ export const useFileUploader = (
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
-  const uploadExternalFile = async (file: File) => {
-    if (isStartMode) {
-      const uuid = createUuid();
+  const uploadExternalFile = useCallback(
+    async (file: File) => {
+      if (isStartMode) {
+        const uuid = createUuid();
 
-      const bodyData = new FormData();
-      bodyData.append('files[]', file);
+        const bodyData = new FormData();
+        bodyData.append('files[]', file);
 
-      const fileType = file.name.split('.')[1];
-      const url = `/level_starter_assets/${name}/uuid/${uuid}.${fileType}`;
-      await HttpClient.post(url, bodyData, true);
-      return url;
-    } else {
-      const fileType = file.name.split('.')[1];
-      const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
-      await HttpClient.put(url, file);
-      return url;
-    }
-  };
-
-  // const uploadBaseUrl = isStartMode
-  //   ? `/level_starter_assets/${name}`
-  //   : `/v3/assets/${channelId}`;
+        const fileType = file.name.split('.')[1];
+        const url = `/level_starter_assets/${name}/uuid/${uuid}.${fileType}`;
+        await HttpClient.post(url, bodyData, true);
+        return url;
+      } else {
+        const fileType = file.name.split('.')[1];
+        const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+        await HttpClient.put(url, file);
+        return url;
+      }
+    },
+    [channelId, isStartMode, name]
+  );
 
   const sendAnalyticsEvent = useCallback(
     (eventName: string, payload: Record<string, string>) => {
