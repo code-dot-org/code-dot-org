@@ -14,5 +14,17 @@
   align-items: center;
   font-size: 20px;
   color: white;
-  background: linear-gradient(49deg, rgba(72, 2, 170, 1) 0%, rgba(176, 14, 229, 1) 52%, rgba(77, 202, 239, 1) 100%);
+  background: linear-gradient(49deg, rgba(72 2 170 / 1) 0%, rgba(176 14 229 / 1) 52%, rgba(77 202 239 / 1) 100%);
+}
+
+.text {
+  margin: 20px;
+}
+
+.actions {
+  font-size: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }

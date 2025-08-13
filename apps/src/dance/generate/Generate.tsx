@@ -1,12 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import React, {
-  useCallback,
-  useEffect,
-  useState,
-  useRef,
-  useContext,
-} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import askAi from './askAi';
 import generateBlocklyJson from './generateBlocklyJson';
@@ -60,9 +54,6 @@ Don't include any additional comments.  Return the psuedocode only.
 `;
 
 const Generate: React.FunctionComponent<GenerateProps> = ({psuedoCode}) => {
-  const [text, setText] = useState(
-    'Please generate a fun dance.  Between 10-15 measures is enough duration.'
-  );
   const [generateState, setGenerateState] = useState<
     'none' | 'generating' | 'done'
   >('none');
@@ -100,16 +91,20 @@ const Generate: React.FunctionComponent<GenerateProps> = ({psuedoCode}) => {
   return (
     <CustomDialog className={styles.generateDialog}>
       <div id="jumbo-ui" className={styles.jumboUi}>
-        <div>Now, let's generate a dance sequence to go with your song!</div>
-        <div>
-          {generateState === 'generating' ? 'Generating a dance...' : ''}
+        <div className={styles.text}>
+          Now, let's generate a dance sequence to go with your song!
+        </div>
+        <div className={styles.actions}>
+          {generateState === 'generating' && (
+            <div className={styles.text}>Generating a dance...</div>
+          )}
           {generateState === 'none' && (
             <Button
               ariaLabel={'Generate dance'}
               text={'Generate dance'}
               type="primary"
-              color="purple"
-              size="s"
+              color="white"
+              size="m"
               onClick={generateDance}
             />
           )}
