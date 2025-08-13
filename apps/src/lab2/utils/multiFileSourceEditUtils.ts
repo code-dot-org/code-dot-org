@@ -145,6 +145,7 @@ export const deleteFileHelper = (
   const fileToBeDeleted = newSource.files[fileId];
   delete newSource.files[fileId];
 
+  // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
   if (
     fileToBeDeleted.url &&
     !Object.values(ProjectFileType).includes(
@@ -233,6 +234,8 @@ export const deleteFolderHelper = (
       .filter(f => files.has(f.id))
       .forEach(f => {
         delete newSource.files[f.id];
+
+        // Only attempt delete from S3 if the file is owned by a student (ie, not a level starter asset).
         if (
           f.url &&
           !Object.values(ProjectFileType).includes(f?.type as ProjectFileType)

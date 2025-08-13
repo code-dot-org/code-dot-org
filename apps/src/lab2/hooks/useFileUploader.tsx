@@ -72,7 +72,7 @@ const isValidMimeType = (
  * @property props.errorCallback - A function to be called with an error message if the upload fails.
  * @property props.validMimeTypes - An optional array of strings representing the allowed MIME types for uploaded files.
  *                                  If not provided, the hook will validate against the internal defaultMimeTypes array
- * @property props.channelId - Required so that we can upload non-text files to S3.
+ * @property props.uploadExternalFile - Required so that we can upload non-text files to S3.
  * @property props.sendAnalyticsEvent - An optional function that will be called with analytics data. It will generated analytics events for
                                         analyticsEvents.UPLOAD_UNACCEPTED_FILE, analyticsEvents.UPLOAD_FAILED, and analyticsEvents.UPLOAD_SUCCEEDED.
                                         Map them to your own analytics events. The second argument will be a record with more info, as Record<string, string>
@@ -159,11 +159,6 @@ export const useFileUploader = ({
       } else {
         try {
           const url = await uploadExternalFile(file);
-
-          // const fileType = file.name.split('.')[1];
-          // // const url = `${uploadBaseUrl}/${createUuid()}.${fileType}`;
-          // const url = `${uploadBaseUrl}`;
-          // await HttpClient.put(url, file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
             type: file.type,

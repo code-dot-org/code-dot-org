@@ -38,19 +38,18 @@ export const useFileUploader = (
 
   const uploadExternalFile = useCallback(
     async (file: File) => {
-      if (isStartMode) {
-        const uuid = createUuid();
+      const uuid = createUuid();
+      const fileType = file.name.split('.')[1];
 
+      if (isStartMode) {
         const bodyData = new FormData();
         bodyData.append('files[]', file);
 
-        const fileType = file.name.split('.')[1];
         const url = `/level_starter_assets/${name}/uuid/${uuid}.${fileType}`;
         await HttpClient.post(url, bodyData, true);
         return url;
       } else {
-        const fileType = file.name.split('.')[1];
-        const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+        const url = `/v3/assets/${channelId}/${uuid}.${fileType}`;
         await HttpClient.put(url, file);
         return url;
       }
