@@ -49,7 +49,7 @@ module TestRunUtils
   def self.run_dashboard_hoc_legacy_engine_tests
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard hoc_legacy engine tests') do
-        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', HocLegacy::Engine.root.join('test').to_s
+        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', 'engines/hoc_legacy/test'
       end
     end
   end
@@ -57,7 +57,7 @@ module TestRunUtils
   def self.run_dashboard_marketing_engine_tests
     Dir.chdir(dashboard_dir) do
       ChatClient.wrap('dashboard marketing engine tests') do
-        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', Marketing::Engine.root.join('test').to_s
+        RakeUtils.system_stream_output "RAILS_ENV=#{rack_env}", "RACK_ENV=#{rack_env}", 'bundle', 'exec', 'rails', 'test', 'engines/marketing/test'
       end
     end
   end
