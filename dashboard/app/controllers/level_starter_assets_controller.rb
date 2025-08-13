@@ -37,7 +37,10 @@ class LevelStarterAssetsController < ApplicationController
 
   # POST /level_starter_assets/:level_name
   def upload
+    # upload_data sets an appropriate header and returns nil in error cases.
     upload_data = validate_upload
+    return if !upload_data && performed?
+
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + upload_data[:extension]
 
@@ -45,7 +48,10 @@ class LevelStarterAssetsController < ApplicationController
   end
 
   def upload_by_uuid
+    # upload_data sets an appropriate header and returns nil in error cases.
     upload_data = validate_upload
+    return unless upload_data
+
     uuid_name = params[:uuid] + upload_data[:extension]
 
     upload_and_respond(uuid_name, upload_data)
@@ -79,7 +85,8 @@ class LevelStarterAssetsController < ApplicationController
     file_ext = File.extname(friendly_name)
 
     unless VALID_FILE_EXTENSIONS.include?(file_ext)
-      return head :unprocessable_entity
+      head :unprocessable_entity
+      return nil
     end
 
     # For AI Chat levels, we attempt to resize assets that are greater than 5 MB
@@ -89,7 +96,8 @@ class LevelStarterAssetsController < ApplicationController
         upload_tempfile = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext, MAX_DIMENSION_PIXELS_AI_CHAT)
       end
 
-      return head :payload_too_large if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+      head :payload_too_large if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+      return nil
     end
 
     {
