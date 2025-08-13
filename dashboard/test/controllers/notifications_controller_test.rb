@@ -15,7 +15,7 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test "index returns empty array when user has no notifications" do
+  test "index returns empty array when user has no external notifications" do
     get :index
     assert_response :success
 
@@ -23,12 +23,12 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_equal [], response_data
   end
 
-  test "index returns user notifications in descending order by created_at" do
-    create_notification(@user, title: "First notification", created_at: 2.days.ago)
-    create_notification(@user, title: "Second notification", created_at: 1.day.ago)
-    create_notification(@user, title: "Third notification", created_at: Time.current)
+  test "index returns user external notifications in descending order by created_at" do
+    create_external_notification(@user, external_id: "111", created_at: 2.days.ago)
+    create_external_notification(@user, external_id: "222", created_at: 1.day.ago)
+    create_external_notification(@user, external_id: "333", created_at: Time.current)
 
-    create_notification(@other_user, title: "Other user notification")
+    create_external_notification(@other_user, external_id: "999")
 
     get :index
     assert_response :success
@@ -36,44 +36,42 @@ class NotificationsControllerTest < ActionController::TestCase
     response_data = JSON.parse(@response.body)
     assert_equal 3, response_data.length
 
-    assert_equal "Third notification", response_data[0]["title"]
-    assert_equal "Second notification", response_data[1]["title"]
-    assert_equal "First notification", response_data[2]["title"]
+    assert_equal "333", response_data[0]["externalId"]
+    assert_equal "222", response_data[1]["externalId"]
+    assert_equal "111", response_data[2]["externalId"]
   end
 
-  test "index only returns active notifications" do
-    create_notification(@user, title: "Active notification")
+  test "index only returns active external notifications" do
+    create_external_notification(@user, external_id: "111")
 
-    create_notification(@user, title: "Dismissed notification", is_dismissed: true)
-
-    create_notification(@user, title: "Expired notification", expires_at: 1.day.ago)
+    create_external_notification(@user, external_id: "222", is_dismissed: true)
 
     get :index
     assert_response :success
 
     response_data = JSON.parse(@response.body)
     assert_equal 1, response_data.length
-    assert_equal "Active notification", response_data[0]["title"]
+    assert_equal "111", response_data[0]["externalId"]
   end
 
   test "mark_as_read requires authentication" do
-    notification = create_notification(@user)
+    external_notification = create_external_notification(@user)
     sign_out(@user)
 
-    patch :mark_as_read, params: {notification_ids: [notification.id]}
+    patch :mark_as_read, params: {notification_ids: [external_notification.id]}
     assert_redirected_to_sign_in
   end
 
-  test "mark_as_read successfully marks multiple notifications as read" do
-    notification1 = create_notification(@user, title: "First")
-    notification2 = create_notification(@user, title: "Second")
-    notification3 = create_notification(@user, title: "Third")
+  test "mark_as_read successfully marks multiple external notifications as read" do
+    external_notification1 = create_external_notification(@user, external_id: "111")
+    external_notification2 = create_external_notification(@user, external_id: "222")
+    external_notification3 = create_external_notification(@user, external_id: "333")
 
-    assert_nil notification1.read_at
-    assert_nil notification2.read_at
-    assert_nil notification3.read_at
+    assert_nil external_notification1.read_at
+    assert_nil external_notification2.read_at
+    assert_nil external_notification3.read_at
 
-    patch :mark_as_read, params: {notification_ids: [notification1.id, notification2.id]}
+    patch :mark_as_read, params: {notification_ids: [external_notification1.id, external_notification2.id]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
@@ -81,20 +79,20 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_equal "2 notification(s) marked as read", response_data["message"]
     assert_equal 2, response_data["marked_count"]
 
-    notification1.reload
-    notification2.reload
-    notification3.reload
+    external_notification1.reload
+    external_notification2.reload
+    external_notification3.reload
 
-    refute_nil notification1.read_at
-    refute_nil notification2.read_at
-    assert_nil notification3.read_at
+    refute_nil external_notification1.read_at
+    refute_nil external_notification2.read_at
+    assert_nil external_notification3.read_at
   end
 
-  test "mark_as_read with single notification" do
-    notification = create_notification(@user)
-    assert_nil notification.read_at
+  test "mark_as_read with single external notification" do
+    external_notification = create_external_notification(@user)
+    assert_nil external_notification.read_at
 
-    patch :mark_as_read, params: {notification_ids: [notification.id]}
+    patch :mark_as_read, params: {notification_ids: [external_notification.id]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
@@ -102,29 +100,29 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_equal "1 notification(s) marked as read", response_data["message"]
     assert_equal 1, response_data["marked_count"]
 
-    notification.reload
-    refute_nil notification.read_at
+    external_notification.reload
+    refute_nil external_notification.read_at
   end
 
-  test "mark_as_read does not update already read notifications" do
-    notification1 = create_notification(@user)
-    notification2 = create_notification(@user)
+  test "mark_as_read does not update already read external notifications" do
+    external_notification1 = create_external_notification(@user)
+    external_notification2 = create_external_notification(@user)
 
     original_read_time = 1.hour.ago
-    notification1.update!(read_at: original_read_time)
+    external_notification1.update!(read_at: original_read_time)
 
-    patch :mark_as_read, params: {notification_ids: [notification1.id, notification2.id]}
+    patch :mark_as_read, params: {notification_ids: [external_notification1.id, external_notification2.id]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
     assert_equal "success", response_data["status"]
     assert_equal 2, response_data["marked_count"]
 
-    notification1.reload
-    notification2.reload
+    external_notification1.reload
+    external_notification2.reload
 
-    assert_equal original_read_time.to_i, notification1.read_at.to_i
-    refute_nil notification2.read_at
+    assert_equal original_read_time.to_i, external_notification1.read_at.to_i
+    refute_nil external_notification2.read_at
   end
 
   test "mark_as_read returns error for empty notification_ids" do
@@ -146,11 +144,11 @@ class NotificationsControllerTest < ActionController::TestCase
   end
 
   test "mark_as_read handles mix of valid and invalid notification IDs" do
-    notification1 = create_notification(@user)
-    notification2 = create_notification(@user)
+    external_notification1 = create_external_notification(@user)
+    external_notification2 = create_external_notification(@user)
     invalid_id = 999999
 
-    patch :mark_as_read, params: {notification_ids: [notification1.id, invalid_id, notification2.id]}
+    patch :mark_as_read, params: {notification_ids: [external_notification1.id, invalid_id, external_notification2.id]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
@@ -158,17 +156,17 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_equal "2 notification(s) marked as read", response_data["message"]
     assert_equal 2, response_data["marked_count"]
 
-    notification1.reload
-    notification2.reload
-    refute_nil notification1.read_at
-    refute_nil notification2.read_at
+    external_notification1.reload
+    external_notification2.reload
+    refute_nil external_notification1.read_at
+    refute_nil external_notification2.read_at
   end
 
-  test "mark_as_read ignores other user's notifications" do
-    user_notification = create_notification(@user)
-    other_notification = create_notification(@other_user)
+  test "mark_as_read ignores other user's external notifications" do
+    user_external_notification = create_external_notification(@user)
+    other_external_notification = create_external_notification(@other_user)
 
-    patch :mark_as_read, params: {notification_ids: [user_notification.id, other_notification.id]}
+    patch :mark_as_read, params: {notification_ids: [user_external_notification.id, other_external_notification.id]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
@@ -176,17 +174,15 @@ class NotificationsControllerTest < ActionController::TestCase
     assert_equal "1 notification(s) marked as read", response_data["message"]
     assert_equal 1, response_data["marked_count"]
 
-    user_notification.reload
-    other_notification.reload
-    refute_nil user_notification.read_at
-    assert_nil other_notification.read_at
+    user_external_notification.reload
+    other_external_notification.reload
+    refute_nil user_external_notification.read_at
+    assert_nil other_external_notification.read_at
   end
 
-  test "authorization prevents access to other user notifications through cancan" do
-    # This test ensures that the load_and_authorize_resource works correctly
-    create_notification(@other_user)
+  test "authorization prevents access to other user external notifications through cancan" do
+    create_external_notification(@other_user)
 
-    # Try to access index - should only return current user's notifications
     get :index
     assert_response :success
 
@@ -195,31 +191,44 @@ class NotificationsControllerTest < ActionController::TestCase
   end
 
   test "mark_as_read with string IDs converts to integers properly" do
-    notification1 = create_notification(@user)
-    notification2 = create_notification(@user)
+    external_notification1 = create_external_notification(@user)
+    external_notification2 = create_external_notification(@user)
 
-    # Pass string IDs (as would come from a web form)
-    patch :mark_as_read, params: {notification_ids: [notification1.id.to_s, notification2.id.to_s]}
+    patch :mark_as_read, params: {notification_ids: [external_notification1.id.to_s, external_notification2.id.to_s]}
     assert_response :ok
 
     response_data = JSON.parse(@response.body)
     assert_equal "success", response_data["status"]
     assert_equal 2, response_data["marked_count"]
 
-    notification1.reload
-    notification2.reload
-    refute_nil notification1.read_at
-    refute_nil notification2.read_at
+    external_notification1.reload
+    external_notification2.reload
+    refute_nil external_notification1.read_at
+    refute_nil external_notification2.read_at
   end
 
-  private def create_notification(user, attributes = {})
+  test "external notification has correct external_id" do
+    external_notification = create_external_notification(@user, external_id: "123")
+    assert_equal "123", external_notification.external_id
+  end
+
+  test "external notification is_dismissed defaults to false" do
+    external_notification = create_external_notification(@user)
+    assert_equal false, external_notification.is_dismissed
+  end
+
+  test "external notification can be dismissed" do
+    external_notification = create_external_notification(@user, is_dismissed: true)
+    assert_equal true, external_notification.is_dismissed
+  end
+
+  private def create_external_notification(user, attributes = {})
     default_attributes = {
       user: user,
-      title: "Test notification",
-      priority: 0,
+      external_id: "test_external_id_#{SecureRandom.hex(4)}",
       is_dismissed: false
     }
 
-    Notification.create!(default_attributes.merge(attributes))
+    ExternalNotification.create!(default_attributes.merge(attributes))
   end
 end
