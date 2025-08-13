@@ -1,12 +1,16 @@
 import {Button} from '@code-dot-org/component-library/button';
-import React, {FC} from 'react';
-import {Outlet, useLocation} from 'react-router-dom';
+import React, {FC, useMemo} from 'react';
+import {Outlet, useLocation, useParams} from 'react-router-dom';
+
+import {useFetch} from '@cdo/apps/util/useFetch';
+
+import {Workshop} from '../WorkshopFormTemplate/types';
+import {workshopDataToOverviewProps} from '../WorkshopFormTemplate/utils';
 
 import {FacilitatorSelection} from './components/FacilitatorSelection';
 import {SurveyCategorySelection} from './components/SurveyCategorySelection';
 import {SurveyTypeSelection} from './components/SurveyTypeSelection';
 import {WorkshopTabs} from './components/WorkshopTabs';
-import {WorkshopProvider} from './context/WorkshopContext';
 import {WorkshopLayoutProps} from './types';
 
 import styles from './workshop.module.scss';
@@ -17,6 +21,16 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   questionCategoryButtons,
 }) => {
   const {pathname} = useLocation();
+  const {workshopId} = useParams<{workshopId: string}>();
+
+  const {data, loading, error, refetch} = useFetch<Workshop | null>(
+    workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
+  );
+
+  const workshop = useMemo(
+    () => (data ? workshopDataToOverviewProps(data) : null),
+    [data]
+  );
 
   const showTabs = !pathname.includes('/edit');
   const showSurveyElements = pathname.includes('/surveys');
@@ -29,7 +43,7 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
   const handleDownload = () => {};
 
   return (
-    <WorkshopProvider>
+    <>
       <nav aria-label="Workshop sections" className={styles.navContainer}>
         {showTabs && <WorkshopTabs tabList={tabList} />}
         <div className={styles.navRow}>
@@ -57,8 +71,8 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
         {showFacilitatorSelection && <FacilitatorSelection />}
       </nav>
       <main>
-        <Outlet />
+        <Outlet context={{workshop, loading, error, refetch}} />
       </main>
-    </WorkshopProvider>
+    </>
   );
 };

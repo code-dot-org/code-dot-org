@@ -6,8 +6,9 @@ import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
 import {type Section} from './pom/all-the-things';
 import {MarketingPage} from './pom/marketing';
+import {getSiteType} from './utils/getSiteType';
 
-test.describe('All the things UI e2e test', () => {
+test.describe(`[${getSiteType()}] All the things`, () => {
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
       const allTheThingsPage = new AllTheThingsPage(page, {locale: 'en-US'});
@@ -166,7 +167,7 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toMatch(
-      /https:\/\/contentful-images\.code\.org\/90t6bu6vlf76\/4hXiOPiRlCXpmtypRNOZqc\/(.*)\/engineering-only-opengraph-default\.png\?fm=webp/,
+      /https:\/\/contentful-images\.code\.org\/(.*)\/4hXiOPiRlCXpmtypRNOZqc\/(.*)\/engineering-only-opengraph-default\.png\?fm=webp/,
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });

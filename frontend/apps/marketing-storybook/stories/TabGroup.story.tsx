@@ -20,14 +20,11 @@ export const FilledOut: StoryObj<typeof TabGroup> = {
   },
   args: TabGroupMock as any,
   play: async ({canvas}) => {
-    // Check that all tab labels are rendered
     const tabLabels = await canvas.findAllByRole('tab');
-    expect(tabLabels.length).toBeGreaterThan(0);
-    // Click each tab and check its content
+    await expect(tabLabels.length).toBeGreaterThan(0);
     for (const tab of tabLabels) {
       tab.click();
       const labelText = tab.textContent;
-      // Helper to filter out elements under <details>
       const getVisibleText = async (text: string) => {
         const all = await canvas.findAllByText(text);
         return all.find(el => {
@@ -40,22 +37,22 @@ export const FilledOut: StoryObj<typeof TabGroup> = {
         });
       };
       if (labelText === 'Test Item Image and Button') {
-        expect(
+        await expect(
           await getVisibleText('With image and button'),
         ).toBeInTheDocument();
       } else if (labelText === 'Test Item Text Only') {
-        expect(await getVisibleText('Text Only')).toBeInTheDocument();
-        expect(
+        await expect(await getVisibleText('Text Only')).toBeInTheDocument();
+        await expect(
           await getVisibleText('Without image, without button'),
         ).toBeInTheDocument();
       } else if (labelText === 'Test Item Button') {
-        expect(await getVisibleText('With Button')).toBeInTheDocument();
-        expect(
+        await expect(await getVisibleText('With Button')).toBeInTheDocument();
+        await expect(
           await getVisibleText('Without image, with button'),
         ).toBeInTheDocument();
       } else if (labelText === 'Test Item Image') {
-        expect(await getVisibleText('With Image')).toBeInTheDocument();
-        expect(
+        await expect(await getVisibleText('With Image')).toBeInTheDocument();
+        await expect(
           await getVisibleText('With image, without button'),
         ).toBeInTheDocument();
       }

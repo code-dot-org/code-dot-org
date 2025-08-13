@@ -28,6 +28,7 @@ import Paragraph from '@/components/contentful/paragraph';
 
 import {
   richTextContainerStyles,
+  richTextListStyles,
   richTextParagraphStyles,
   richTextTableStyles,
 } from './richTextStyles';
@@ -107,7 +108,10 @@ const richTextRenderOptions: Options = {
     },
     [BLOCKS.UL_LIST]: (listNode: Block | Inline) => (
       <>
-        <MuiList component="ul" sx={{listStyleType: 'disc'}}>
+        <MuiList
+          component="ul"
+          sx={{...richTextListStyles, listStyleType: 'disc'}}
+        >
           {listNode.content.map((itemNode: RichTextNode, index) => (
             <MuiListItem key={index}>
               <Paragraph removeMarginBottom>
@@ -121,7 +125,10 @@ const richTextRenderOptions: Options = {
     ),
     [BLOCKS.OL_LIST]: (listNode: Block | Inline) => (
       <>
-        <MuiList component="ol" sx={{listStyleType: 'decimal'}}>
+        <MuiList
+          component="ol"
+          sx={{...richTextListStyles, listStyleType: 'decimal'}}
+        >
           {listNode.content.map((itemNode: RichTextNode, index) => (
             <MuiListItem key={index} sx={{display: 'list-item'}}>
               <Paragraph removeMarginBottom sx={richTextParagraphStyles}>
