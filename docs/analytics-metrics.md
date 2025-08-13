@@ -1,4 +1,4 @@
-# AnalyticsReporter Usage Documentation
+# Analytics Reporter Usage Documentation
 
 ## Frontend Metrics
 
@@ -108,96 +108,20 @@ await analyticsReporter.runAutoCapture();
 The reporter behaves differently based on environment:
 
 - **Production**: All events are sent to Statsig
-- **Development/Local**: Events are logged to console only (unless `STATSIG_LOCAL_MODE_OFF` is set)
+- **Development/Local**: Events are logged to console only (unless `ALWAYS_SEND` is toggled to `true`)
 - **Managed Test Environment**: Events are sent to Statsig
-
-## Event Examples
-
-### Learning Progress Events
-
-```javascript
-// Lesson start
-analyticsReporter.sendEvent('lesson_started', {
-  lessonId: 'hour-of-code-1',
-  courseId: 'cs-fundamentals',
-  unitId: 'unit-1'
-});
-
-// Puzzle completion
-analyticsReporter.sendEvent('puzzle_completed', {
-  puzzleId: 'maze_2_3',
-  attempts: 3,
-  hintsUsed: 1,
-  timeSpent: 120,
-  success: true
-});
-
-// Course completion
-analyticsReporter.sendEvent('course_completed', {
-  courseId: 'cs-principles',
-  totalLessons: 20,
-  completionRate: 0.95,
-  finalGrade: 'A'
-});
-```
-
-### User Interface Events
-
-```javascript
-// Navigation
-analyticsReporter.sendEvent('page_viewed', {
-  page: 'student_dashboard',
-  referrer: 'course_catalog',
-  loadTime: 850
-});
-
-// Feature usage
-analyticsReporter.sendEvent('feature_used', {
-  feature: 'code_sharing',
-  action: 'share_project',
-  projectId: 'abc123'
-});
-
-// Error tracking
-analyticsReporter.sendEvent('error_encountered', {
-  errorType: 'runtime_error',
-  errorMessage: 'Cannot read property of undefined',
-  component: 'blockly_workspace',
-  userId: 12345
-});
-```
-
-### Social/Collaboration Events
-
-```javascript
-// Project sharing
-analyticsReporter.sendEvent('project_shared', {
-  projectId: 'xyz789',
-  shareMethod: 'social_media',
-  platform: 'twitter'
-});
-
-// Peer interaction
-analyticsReporter.sendEvent('peer_help_requested', {
-  helpType: 'code_review',
-  subject: 'javascript_functions',
-  responseTime: 300
-});
-```
 
 ## Best Practices
 
-1. **Event Naming**: Use snake_case for event names and be descriptive
-2. **Payload Structure**: Keep payloads flat and include relevant context
-3. **User Privacy**: Avoid sending personally identifiable information in payloads
-4. **Error Handling**: The reporter handles errors internally, but ensure event names are provided
+1. **Payload Structure**: Keep payloads flat and include relevant context
+2. **User Privacy**: Avoid sending personally identifiable information in payloads
 
 ## Integration Notes
 
 - The reporter automatically initializes on import
 - User properties are typically set during login/authentication flows
 - Experiments are configured server-side in Statsig
-- In local development, events are logged to console for debugging
+- In local development, events are logged to dev tools console for debugging
 
 ## Send Events From Development
 
