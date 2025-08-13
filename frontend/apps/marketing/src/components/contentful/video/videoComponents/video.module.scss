@@ -1,0 +1,154 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+
+// Video common styles
+.videoComponentContainer {
+  width: 100%;
+  margin: 0;
+
+  .videoWrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9; // Default aspect ratio for videos
+    border: 1px solid var(--background-neutral-tertiary);
+    border-radius: variables.$regular-border-radius;
+    box-sizing: border-box;
+    display: block;
+
+    iframe,
+    video,
+    .errorPlaceholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .cookieConsentButton {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+// Error placeholder styles
+.errorPlaceholder {
+  background: var(--background-neutral-tertiary);
+  box-sizing: border-box;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+  i {
+    font-size: 3rem;
+    color: var(--text-neutral-quaternary);
+    margin-bottom: 1rem;
+
+    // Hide the icon on small screens to leave more space
+    // for the text if it has a long translation.
+    @media (max-width: 320px) {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 0.25rem auto;
+    text-align: center;
+  }
+}
+
+// Footer styles
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+
+  figcaption {
+    margin-bottom: 0;
+  }
+
+  .download {
+    margin-top: 0.25rem;
+
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+
+  // Align the download button to the right
+  // when there is no caption shown.
+  &:not(:has(figcaption)) {
+    justify-content: flex-end;
+  }
+}
+
+// Poster image styles
+:global(.react-player__preview) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.posterImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// Video play button
+$play-button-icon-size: 64px;
+
+.playButtonBackground {
+  height: $play-button-icon-size;
+  width: $play-button-icon-size;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border-radius: 100px;
+  background: var(--neutral-base-white);
+  box-shadow:
+    0 3px 4px 0 rgb(255 255 255 / 0.23) inset,
+    0 -4px 4px 0 rgb(0 0 0 / 0.07) inset,
+    0 3px 6px 0 rgb(0 0 0 / 0.2);
+
+  &:focus-visible {
+    @include mixins.focus-styles;
+  }
+
+  .playButton {
+    font-size: 2rem;
+    color: var(--brand-purple-50);
+    // Since the play button is the same in RTL, use margin-left
+    // instead of margin-inline-start which changes based on direction.
+    // This keeps the play button visually centered.
+    margin-left: 4px;
+  }
+}
+
+// Facade Styles
+.facade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
