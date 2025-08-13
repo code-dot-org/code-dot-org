@@ -59,7 +59,7 @@ module HocLegacy
       if session_row[:name].blank?
         session_row[:name] = session_params[:name_s]&.strip&.presence
 
-        if db_write_enabled? && session_row[:id] && session_row[:name]
+        if session_row[:id] && session_row[:name]
           PEGASUS_DB[:hoc_activity].where(id: session_row[:id]).update(name: session_row[:name])
         end
       end

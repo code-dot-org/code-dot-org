@@ -432,8 +432,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
       end
 
       before do
-        allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(true)
-
         PEGASUS_DB[:hoc_activity].insert(
           session: session_id,
           name: session_name,
@@ -544,37 +542,6 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
               'pixel_started' => false,
               'pixel_finished' => false,
               'finished' => false,
-              'name' => param_name,
-              'certificate_sent' => true,
-            }
-          )
-        end
-      end
-
-      context 'when DCDO hoc_apis_in_dashboard is false' do
-        before do
-          allow(DCDO).to receive(:get).with('hoc_apis_in_dashboard', anything).and_return(false)
-        end
-
-        it 'does not update session row with name from params' do
-          _ {post_certificate_request}.wont_change -> {session_row_query.first[:name]}
-        end
-
-        it 'returns JSON response with session status with updated session name' do
-          post_certificate_request
-
-          must_respond_with :success
-          _(response.content_type).must_include 'application/json'
-
-          _(parsed_response).must_equal(
-            {
-              'session' => session_id,
-              'tutorial' => session_tutorial,
-              'company' => session_company,
-              'started' => true,
-              'pixel_started' => true,
-              'pixel_finished' => true,
-              'finished' => true,
               'name' => param_name,
               'certificate_sent' => true,
             }
