@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class InactiveUserPurgeMailerTest < ActionMailer::TestCase
-  let(:teacher) {create :teacher}
+  let(:teacher) {create(:teacher)}
 
   describe '#teacher_inactivity_soft_delete_warning_email' do
     subject(:mail) {described_class.teacher_inactivity_soft_delete_warning_email(teacher)}

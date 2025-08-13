@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-08 18:39:23 UTC",
+    "serialized_at": "2025-08-12 18:38:00 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -858,6 +858,7 @@
       "key": "195a7ad2-0017-4e4d-8727-2a3e893fb60e",
       "position": 1,
       "properties": {
+        "progression_name": "Choose an App"
       },
       "seeding_key": {
         "activity_section.key": "195a7ad2-0017-4e4d-8727-2a3e893fb60e",
@@ -868,9 +869,21 @@
       "key": "a1b79d2b-e57f-474a-b6ac-b09bf7d86163",
       "position": 2,
       "properties": {
+        "progression_name": "Explore Issues and Defenses"
       },
       "seeding_key": {
         "activity_section.key": "a1b79d2b-e57f-474a-b6ac-b09bf7d86163",
+        "lesson_activity.key": "a03cb713-63da-4a6c-acd8-0a85277425cd"
+      }
+    },
+    {
+      "key": "7b6b6e23-9e83-410c-9753-599ae5e8b91b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Planning Your Creative Artifact"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b6b6e23-9e83-410c-9753-599ae5e8b91b",
         "lesson_activity.key": "a03cb713-63da-4a6c-acd8-0a85277425cd"
       }
     }
@@ -1807,6 +1820,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson13-level1"
+        ],
+        "progression": "Choose an App"
       },
       "bonus": false,
       "seeding_key": {
@@ -1828,6 +1845,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-ai-powered-threats-defenses-lesson13-level2"
+        ],
+        "progression": "Explore Issues and Defenses"
       },
       "bonus": false,
       "seeding_key": {
@@ -1846,9 +1867,10 @@
     {
       "chapter": 40,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Planning Your Creative Artifact"
       },
       "bonus": false,
       "seeding_key": {
@@ -1858,7 +1880,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "a1b79d2b-e57f-474a-b6ac-b09bf7d86163"
+        "activity_section.key": "7b6b6e23-9e83-410c-9753-599ae5e8b91b"
       },
       "level_keys": [
         "test-ai-powered-threats-defenses-lesson13-level3"
@@ -2343,7 +2365,7 @@
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-ai-powered-threats-and-defenses",
-        "activity_section.key": "a1b79d2b-e57f-474a-b6ac-b09bf7d86163"
+        "activity_section.key": "7b6b6e23-9e83-410c-9753-599ae5e8b91b"
       }
     }
   ],
