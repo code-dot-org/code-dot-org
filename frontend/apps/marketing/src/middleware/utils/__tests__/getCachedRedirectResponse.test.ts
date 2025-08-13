@@ -19,7 +19,7 @@ describe('getCachedRedirectResponse', () => {
     const url = 'https://code.marketing-sites.localhost';
     const response = getCachedRedirectResponse(url);
 
-    expect(NextResponse.redirect).toHaveBeenCalledWith(url);
+    expect(NextResponse.redirect).toHaveBeenCalledWith(url, undefined);
     expect(response.headers.set).toHaveBeenCalledWith(
       'Cache-Control',
       STALE_WHILE_REVALIDATE_ONE_HOUR,
@@ -30,7 +30,7 @@ describe('getCachedRedirectResponse', () => {
     const url = new URL('https://code.marketing-sites.localhost');
     const response = getCachedRedirectResponse(url);
 
-    expect(NextResponse.redirect).toHaveBeenCalledWith(url);
+    expect(NextResponse.redirect).toHaveBeenCalledWith(url, undefined);
     expect(response.headers.set).toHaveBeenCalledWith(
       'Cache-Control',
       STALE_WHILE_REVALIDATE_ONE_HOUR,
@@ -39,9 +39,16 @@ describe('getCachedRedirectResponse', () => {
 
   it('should return a response object', () => {
     const url = 'https://code.marketing-sites.localhost';
-    const response = getCachedRedirectResponse(url);
+    const response = getCachedRedirectResponse(url, undefined);
 
     expect(response).toBeDefined();
     expect(typeof response).toBe('object');
+  });
+
+  it('should pass the init status code to NextResponse.redirect', () => {
+    const url = 'https://code.marketing-sites.localhost';
+    const init = {status: 301};
+    getCachedRedirectResponse(url, init);
+    expect(NextResponse.redirect).toHaveBeenCalledWith(url, init);
   });
 });
