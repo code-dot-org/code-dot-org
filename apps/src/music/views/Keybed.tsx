@@ -6,7 +6,7 @@ import {getNoteName, isBlackKey} from '../utils/Notes';
 
 import moduleStyles from './keybed.module.scss';
 
-const keyId = 'keyId';
+const keyClass = 'keyClass';
 
 interface KeybedProps {
   numOctaves: number;
@@ -98,7 +98,7 @@ const Key: React.FunctionComponent<KeyProps> = ({
 }: KeyProps) => {
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
     const keyElements = Array.from(
-      document.querySelectorAll<HTMLElement>(`#${keyId}`)
+      document.querySelectorAll<HTMLElement>(`.${keyClass}`)
     );
     const currentIndex = keyElements.indexOf(event.currentTarget);
     if (event.key === 'ArrowRight') {
@@ -132,8 +132,8 @@ const Key: React.FunctionComponent<KeyProps> = ({
 
   return (
     <div
-      id={keyId}
       className={classNames(
+        keyClass,
         moduleStyles.key,
         isDisabled && moduleStyles.disabled,
         isSelected && moduleStyles.selected,

@@ -13,7 +13,7 @@ import SoundStyle from '../utils/SoundStyle';
 
 import moduleStyles from './timeline.module.scss';
 
-export const TimelineElementId = 'timeline-element';
+export const TimelineElementClass = 'timeline-element';
 
 interface TimelineElementProps {
   eventData: PlaybackEvent;
@@ -68,12 +68,12 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
 
   return (
     <button
-      id={TimelineElementId}
       tabIndex={-1}
       type="button"
       onKeyDown={onKeyDown}
       aria-label={friendlyLabel}
       className={classNames(
+        TimelineElementClass,
         moduleStyles.timelineElement,
         SoundStyle[soundType]?.classNameBackground,
         SoundStyle[soundType]?.classNameBorder,

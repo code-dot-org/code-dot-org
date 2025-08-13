@@ -42,7 +42,7 @@ class UnitGroup < ApplicationRecord
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
-  has_one :course_version, as: :content_root, dependent: :destroy
+  has_one :course_version, foreign_key: 'content_root_id', dependent: :destroy
 
   scope(
     :with_associated_models, lambda do
@@ -238,7 +238,6 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
         unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
-        unit.course_version&.destroy
 
         unit.reload
         unit.write_script_json
@@ -282,7 +281,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def self.family_names
-    CourseVersion.course_offering_keys('UnitGroup')
+    CourseVersion.course_offering_keys
   end
 
   # A course that the general public can assign. Has been soft or

@@ -7,9 +7,12 @@ import React, {useMemo, useState} from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
@@ -20,6 +23,7 @@ enum Tabs {
   Instructions = 'instructions',
   AiTutor = 'aiTutor',
   TeachersOnly = 'teachersOnly',
+  StudentRubric = 'studentRubric',
 }
 
 const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
@@ -28,6 +32,10 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
   [Tabs.TeachersOnly]: {
     title: commonI18n.forTeachersOnly(),
     icon: 'chalkboard-teacher',
+  },
+  [Tabs.StudentRubric]: {
+    title: commonI18n.rubric(),
+    icon: 'clipboard-list',
   },
 };
 
@@ -51,6 +59,10 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   ...instructionsProps
 }) => {
   const {theme} = useTheme();
+  const {showRubric} = useRubric();
+  const isParticipant = useAppSelector(
+    state => state.currentUser.userType === 'student'
+  );
   const [currentTab, setCurrentTab] = useState<Tabs>(Tabs.Instructions);
 
   // Build available tabs based on level information.
@@ -84,8 +96,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       tabMap[Tabs.AiTutor] = <AiTutor2Chat hiddenContext={aiTutor2Context} />;
     }
 
+    if (isParticipant && showRubric) {
+      tabMap[Tabs.StudentRubric] = <StudentRubricView />;
+    }
+
     return tabMap;
-  }, [instructionsProps, aiTutor2Context]);
+  }, [instructionsProps, aiTutor2Context, isParticipant, showRubric]);
 
   return (
     <div className={classNames(styles.resourcePanel, className)}>

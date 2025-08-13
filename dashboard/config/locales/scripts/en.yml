@@ -25057,6 +25057,32 @@ en:
               name: End of Unit Assessment
             lesson-3:
               name: End of Unit Survey
+            lesson-4:
+              name: 'Lesson 1: Introduction to Cybersecurity'
+            lesson-5:
+              name: 'Lesson 2: Cybersecurity Threats'
+            lesson-6:
+              name: 'Lesson 3: Phishing and Password Cracking'
+            lesson-7:
+              name: 'Lesson 4: Phishing with AI'
+            lesson-8:
+              name: 'Lesson 5: Successful Cybersecurity Stories'
+            lesson-9:
+              name: 'Lesson 6: Confidentiality, Integrity, and Availability'
+            lesson-10:
+              name: 'Lesson 7: Authentication, Authorization, and Accounting'
+            lesson-11:
+              name: 'Lesson 8: AAA and AI'
+            lesson-12:
+              name: 'Lesson 9: Encryption'
+            lesson-13:
+              name: 'Lesson 10: AI in Encryption'
+            lesson-14:
+              name: 'Lesson 11: Security vs Usability'
+            lesson-15:
+              name: 'Lesson 12: Layered Defenses'
+            lesson-16:
+              name: 'Lesson 13: Designing Secure Systems Project'
           lesson_groups:
             lessonGroup-2:
               display_name: Pre-Assessment
