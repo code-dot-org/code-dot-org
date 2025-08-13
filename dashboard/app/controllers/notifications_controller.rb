@@ -1,6 +1,5 @@
 class NotificationsController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource only: [:index]
 
   # Index does not use pagination, returns all active notifications for the current user
   # Consider adding pagination if the number of notifications grows large

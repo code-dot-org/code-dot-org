@@ -18,8 +18,6 @@
 class ExternalNotification < ApplicationRecord
   belongs_to :user
 
-  validates :priority, presence: true, numericality: {greater_than_or_equal_to: 0}
-
   scope :not_dismissed, -> {where(is_dismissed: false)}
 
   def read?
