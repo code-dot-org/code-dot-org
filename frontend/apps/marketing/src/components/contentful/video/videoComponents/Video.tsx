@@ -1,14 +1,13 @@
 import DownloadIcon from '@mui/icons-material/Download';
 import ErrorIcon from '@mui/icons-material/Error';
 import MuiButton from '@mui/material/Button';
+import MuiContainer from '@mui/material/Container';
 import MuiTypography from '@mui/material/Typography';
 import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player/file';
 import {JsonLd} from 'react-schemaorg';
 import type {VideoObject} from 'schema-dts';
-
-import Paragraph from '@/components/contentful/paragraph';
 
 import Facade from './Facade';
 import NativeVideo from './NativeVideo';
@@ -117,37 +116,50 @@ const Video: React.FC<VideoProps> = ({
         );
       case 'error':
         return (
-          <div className={classNames(moduleStyles.errorPlaceholder)}>
+          <MuiContainer
+            className={classNames(
+              moduleStyles.errorPlaceholder,
+              'video-error-container',
+            )}
+          >
             <ErrorIcon />
-            <Paragraph visualAppearance="body-two" removeMarginBottom>
+            <MuiTypography variant="body2">
               <strong>{errorHeading || 'Video unavailable'}</strong>
-            </Paragraph>
-            <Paragraph visualAppearance="body-three" removeMarginBottom>
+            </MuiTypography>
+            <MuiTypography variant="body3">
               {errorBody || 'This video is blocked on your network.'}
-            </Paragraph>
-          </div>
+            </MuiTypography>
+          </MuiContainer>
         );
       case 'cookie-blocked':
         return (
-          <div className={classNames(moduleStyles.errorPlaceholder)}>
+          <MuiContainer
+            className={classNames(
+              moduleStyles.errorPlaceholder,
+              'video-error-container',
+            )}
+          >
             <ErrorIcon />
-            <Paragraph visualAppearance="body-two" removeMarginBottom>
+            <MuiTypography variant="body2">
               <strong>{errorHeading || 'Cookie consent required'}</strong>
-            </Paragraph>
-            <Paragraph visualAppearance="body-two" removeMarginBottom>
+            </MuiTypography>
+            <MuiTypography variant="body2">
               {errorBody ||
                 'Please enable "Functional Cookies" and refresh the page to play this video.'}
-            </Paragraph>
+            </MuiTypography>
             <MuiButton
-              className={moduleStyles.cookieConsentButton}
+              className="button--color-emphasized"
+              variant="contained"
+              size="small"
               onClick={() => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (window as any).OneTrust.ToggleInfoDisplay();
               }}
+              disableElevation
             >
               Cookie Settings
             </MuiButton>
-          </div>
+          </MuiContainer>
         );
     }
   };
@@ -164,11 +176,16 @@ const Video: React.FC<VideoProps> = ({
         )}
         {videoFallback && (
           <MuiButton
-            className={moduleStyles.download}
+            className={classNames(
+              'button--color-secondary',
+              moduleStyles.download,
+            )}
+            size="small"
+            variant="outlined"
             href={videoFallback}
-            type="secondary"
             target="_blank"
             rel="noopener noreferrer"
+            disableElevation
           >
             <DownloadIcon />
             {downloadLabel || 'Download'}
