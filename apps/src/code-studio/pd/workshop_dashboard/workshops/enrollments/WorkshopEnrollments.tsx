@@ -413,7 +413,7 @@ export const WorkshopEnrollments: FC = () => {
           }}
           title={`Remove Enrollment${s}?`}
           customContent={
-            <Box>
+            <Box id="dsco-dialog-description">
               <Typography semanticTag="div" visualAppearance="body-two">
                 {`Are you sure you want to remove the enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
@@ -488,7 +488,7 @@ export const WorkshopEnrollments: FC = () => {
           }}
           title={`Move Enrollment${s}?`}
           customContent={
-            <Box>
+            <Box id="dsco-dialog-description">
               <Typography semanticTag="div" visualAppearance="body-two">
                 {`You are moving the following enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
