@@ -2278,9 +2278,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'track_level_progress stores unit_group_id when unit_group is provided' do
-    user = create :user
+    user = create(:user)
     unit_group = create(:unit_group)
-    script_level = create :script_level
+    script_level = create(:script_level)
     create(:unit_group_unit, unit_group: unit_group, script: script_level.script, position: 1)
 
     User.track_level_progress(
