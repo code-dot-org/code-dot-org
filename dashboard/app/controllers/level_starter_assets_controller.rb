@@ -25,25 +25,49 @@ class LevelStarterAssetsController < ApplicationController
     friendly_name = "#{params[:filename]}.#{params[:format]}"
     starter_assets = @level&.project_template_level&.starter_assets || @level&.starter_assets
     return head :not_found if starter_assets.nil_or_empty?
-    uuid_name = starter_assets[friendly_name]
-    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
 
-    expires_in 1.hour, public: true
-    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
+    uuid_name = starter_assets[friendly_name]
+    get_file_and_send(uuid_name)
   end
 
   def file_by_uuid
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
-    file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
-
-    expires_in 1.hour, public: true
-    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
+    get_file_and_send(uuid_name)
   end
 
   # POST /level_starter_assets/:level_name
   def upload
+    upload_data = validate_upload
+    # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
+    uuid_name = SecureRandom.uuid + upload_data[:extension]
+
+    upload_and_respond(uuid_name, upload_data)
+  end
+
+  def upload_by_uuid
+    upload_data = validate_upload
+    uuid_name = params[:uuid] + upload_data[:extension]
+
+    upload_and_respond(uuid_name, upload_data)
+  end
+
+  # DELETE /level_starter_assets/:level_name/:filename
+  # *NOTE:* This deletes the image asset from the .level definition,
+  # but does not delete the asset from S3 as other levels may still be
+  # using it.
+  def destroy
+    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
+      return head :no_content
+    else
+      return head :unprocessable_entity
+    end
+  end
+
+  private def set_level
+    @level = Level.cache_find(params[:level_name])
+  end
+
+  private def validate_upload
     # Client expects a single file upload, so raise an error if params[:files] contains more than one file.
     if params[:files].length > 1
       raise "One file upload expected. Actual: #{params[:files].length}"
@@ -68,57 +92,29 @@ class LevelStarterAssetsController < ApplicationController
       return head :payload_too_large if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
     end
 
-    # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
-    uuid_name = SecureRandom.uuid + file_ext
+    {
+      friendly_name: friendly_name,
+      extension: file_ext,
+      tempfile: upload_tempfile
+    }
+  end
+
+  private def get_file_and_send(uuid_name)
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    success = file_obj&.upload_file(upload_tempfile.path)
+    content_type = LevelStarterAssetsHelper.file_content_type(File.extname(uuid_name))
 
-    if success && @level.add_starter_asset!(friendly_name, uuid_name)
-      render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
-    else
-      return head :unprocessable_entity
-    end
+    expires_in 1.hour, public: true
+    send_data LevelStarterAssetsHelper.read_file(file_obj), type: content_type, disposition: 'inline'
   end
 
-  def upload_by_uuid
-    if params[:files].length > 1
-      raise "One file upload expected. Actual: #{params[:files].length}"
-    end
-
-    upload = params[:files]&.first
-    upload_tempfile = upload.tempfile
-    friendly_name = upload.original_filename
-    file_ext = File.extname(friendly_name)
-
-    uuid_name = params[:uuid] + file_ext
-
-    unless VALID_FILE_EXTENSIONS.include?(file_ext)
-      return head :unprocessable_entity
-    end
-
+  private def upload_and_respond(uuid_name, upload_data)
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    success = file_obj&.upload_file(upload_tempfile.path)
+    success = file_obj&.upload_file(upload_data[:tempfile].path)
 
-    if success
-      render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
+    if success && @level.add_starter_asset!(upload_data[:friendly_name], uuid_name)
+      render json: LevelStarterAssetsHelper.summarize(file_obj, upload_data[:friendly_name], uuid_name)
     else
       return head :unprocessable_entity
     end
-  end
-
-  # DELETE /level_starter_assets/:level_name/:filename
-  # *NOTE:* This deletes the image asset from the .level definition,
-  # but does not delete the asset from S3 as other levels may still be
-  # using it.
-  def destroy
-    if @level.remove_starter_asset!("#{params[:filename]}.#{params[:format]}")
-      return head :no_content
-    else
-      return head :unprocessable_entity
-    end
-  end
-
-  private def set_level
-    @level = Level.cache_find(params[:level_name])
   end
 end
