@@ -59,9 +59,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     !Boolean(predictResponse?.split(',').includes(index.toString()));
 
   const onSubmitAnswer = () => {
-    if (isWeblab2) {
-      dispatch(submitPredictResponse({appType: appName}));
-    }
+    dispatch(submitPredictResponse({appType: 'weblab2'}));
   };
 
   const isFreeResponse =
@@ -151,6 +149,8 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           })
         )}
       </div>
+      {/* Because weblab2 does not have a 'Run' button to indicate that they have submitted their answer,
+        we display a 'Submit answer button. */}
       {isWeblab2 && (
         <Button
           onClick={onSubmitAnswer}
