@@ -712,7 +712,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder).times(3)
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
@@ -732,14 +732,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     mock_mail = stub
     mock_mail.stubs(:deliver_now)
 
-    teacher = create(:teacher)
-    workshop = create(:summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD)
-    application = create(:pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted')
-    enrollment = create(:pd_enrollment, application_id: application.id, user: teacher, workshop: workshop)
+    teacher = create :teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted'
+    create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
 
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).with(enrollment, options: {:days_before => 1}).returns(mock_mail)
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).with(enrollment, options: {:days_before => 1}, to_email: teacher.alternate_email).returns(mock_mail)
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder, teacher.email)
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder, teacher.alternate_email)
 
     Pd::Workshop.send_reminder_for_upcoming_in_days(1)
   end
@@ -747,7 +747,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email')
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder).times(3)
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
 
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
@@ -767,7 +767,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil)
-    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder).times(3)
     Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 

@@ -42,6 +42,7 @@
 #
 
 require_relative '../../../../lib/cdo/mailjet'
+require_relative '../../../../lib/cdo/shared_constants/mailjet_constants'
 
 class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
@@ -541,6 +542,8 @@ class Pd::Workshop < ApplicationRecord
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
     scheduled_start_in_days(days).each do |workshop|
+      next if workshop.suppress_reminders?
+
       workshop.enrollments.each do |enrollment|
         user = enrollment.user
         send_teacher_workshop_reminder_email(enrollment, user, false, days)
@@ -989,7 +992,7 @@ class Pd::Workshop < ApplicationRecord
 
     Retryable.retryable(
       on: RestClient::TooManyRequests,
-      tries: 5,
+      tries: MAILJET_RETRY_LIMIT,
       sleep: ->(n) {2 ** n}
     ) do
       MailJet.send_email(
