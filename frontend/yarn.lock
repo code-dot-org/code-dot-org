@@ -1495,12 +1495,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/lab-base@workspace:packages/lab-base"
   dependencies:
+    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/blockly-workspace": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
+    "@code-dot-org/lab-maze": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
+    "@code-dot-org/markdown": "workspace:*"
     "@code-dot-org/metrics": "workspace:*"
+    "@code-dot-org/models": "workspace:*"
     "@code-dot-org/projects": "workspace:*"
     "@code-dot-org/redux": "workspace:*"
     "@code-dot-org/user": "workspace:*"
@@ -2500,6 +2504,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/progress@workspace:packages/progress"
   dependencies:
+    "@code-dot-org/api": "workspace:*"
     "@code-dot-org/changelogs": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/projects": "workspace:*"
