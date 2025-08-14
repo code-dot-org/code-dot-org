@@ -25,7 +25,8 @@ const Generate: React.FunctionComponent<GenerateProps> = () => {
 
   const sounds = library
     ?.getFolderForFolderId(packId || 'indie')
-    ?.sounds.map(sound => {
+    ?.sounds.filter(sound => sound.length === 2)
+    .map(sound => {
       if (sound.type !== 'preview') {
         return sound.src;
       }
@@ -48,6 +49,8 @@ when_run
 Indenting is important.  In this example, when the code is run, it plays "hiphop/drum_beat_808" and then "electro/drum_beat_hyper".  Then it plays "electro_beat_808" and "electro/drum_beat_hyper" at the same time.  Then it plays the same thing three times: "hiphop/drum_beat_808" followed by "electro/drum_beat_hyper".
 
 Don't include any comments in the generated psuedocode.
+
+Note that each sound is actually 2 measures long.
 
 The valid sounds to use are: "${sounds}".  You can use any of these sounds in your psuedocode.  Each sound name gets the "${packId}/" prefix, so for example, "indie/drum_beat_808".
 `;
