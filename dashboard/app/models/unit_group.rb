@@ -71,7 +71,7 @@ class UnitGroup < ApplicationRecord
 
   def validate_family_name_and_version_year
     unless plc_course || (family_name.present? && version_year.present?)
-      errors.add('non-plc course must have family_name and version_year set')
+      errors.add(:base, 'non-plc course must have family_name and version_year set')
     end
   end
 
