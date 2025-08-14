@@ -3,6 +3,7 @@ export const COLORS = {
   white: '#FFF',
   brandPrimary: '#2C079F',
   brandSecondary: '#CA01E4',
+  brandPurpleStrong: '#9A00A9',
   brandTertiary: '#00CFFF',
   backgroundPrimary: '#F4F3F2',
   grey200: '#CFCCD1',
