@@ -44,6 +44,17 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
     workshopId ? `/api/v1/pd/workshops/${workshopId}/enrollments` : ''
   );
 
+  const {
+    data: surveysData,
+    loading: surveysLoading,
+    error: surveysError,
+    refetch: refetchSurveys,
+  } = useFetch<unknown | null>(
+    workshopId
+      ? `/api/v1/pd/workshops/${workshopId}/foorm/workshop_survey_summary`
+      : ''
+  );
+
   const workshop = useMemo(
     () => (workshopData ? workshopDataToProps(workshopData) : null),
     [workshopData]
@@ -103,6 +114,10 @@ export const WorkshopLayout: FC<WorkshopLayoutProps> = ({
             enrollmentsLoading,
             enrollmentsError,
             refetchEnrollments,
+            surveysData,
+            surveysLoading,
+            surveysError,
+            refetchSurveys,
           }}
         />
       </main>
