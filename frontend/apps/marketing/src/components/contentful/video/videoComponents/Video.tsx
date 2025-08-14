@@ -156,6 +156,7 @@ const Video: React.FC<VideoProps> = ({
                 (window as any).OneTrust.ToggleInfoDisplay();
               }}
               disableElevation
+              disableRipple
             >
               Cookie Settings
             </MuiButton>
@@ -179,6 +180,7 @@ const Video: React.FC<VideoProps> = ({
             className={classNames(
               'button--color-secondary',
               moduleStyles.download,
+              'video-download-button',
             )}
             size="small"
             variant="outlined"
@@ -186,8 +188,9 @@ const Video: React.FC<VideoProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             disableElevation
+            disableRipple
           >
-            <DownloadIcon />
+            <DownloadIcon fontSize="small" />
             {downloadLabel || 'Download'}
           </MuiButton>
         )}

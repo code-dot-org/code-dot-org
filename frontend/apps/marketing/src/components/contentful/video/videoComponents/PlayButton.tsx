@@ -9,6 +9,8 @@ const PlayButton = ({label, onClick}: {label: string; onClick: () => void}) => {
       aria-label={label}
       className="video-play-button"
       onClick={onClick}
+      disableElevation
+      disableRipple
     >
       <PlayArrow className={moduleStyles.playButton} />
     </MuiButton>

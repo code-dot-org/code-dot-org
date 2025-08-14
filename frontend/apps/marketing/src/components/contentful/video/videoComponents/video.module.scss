@@ -5,6 +5,12 @@
   width: 100%;
   margin: 0;
 
+  .footer {
+    figcaption {
+      margin: 0;
+    }
+  }
+
   .videoWrapper {
     position: relative;
     overflow: hidden;
@@ -66,17 +72,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   gap: 1rem;
-
-  figcaption {
-    margin-bottom: 0;
-  }
+  margin-top: 6px;
 
   a.download:global(.MuiButtonBase-root) {
-    margin-top: 0.25rem;
-    padding-block: 2px;
-
     @media (max-width: 640px) {
       display: none;
     }
