@@ -75,20 +75,20 @@ class CourseOffering < ApplicationRecord
     'Rubric'
   ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
-  # potential content root, i.e. a Unit or UnitGroup.
+  # potential content root, i.e. a UnitGroup.
   #
   # Examples:
   #
-  # coursea-2019.script represents the content root for Course A, Version 2019.
-  # Therefore, it should contain "is_course true", which will cause this method to create the
-  # corresponding CourseOffering and CourseVersion objects.
-  #
   # csp1-2019.script does not represent a content root (the root for CSP, Version 2019 is a UnitGroup).
-  # Therefore, it does not contain "is_course true". so this method will not create any new objects.
+  # Therefore, this method will not create any new objects.
   #
   # This method will also delete CourseOfferings and/or CourseVersions that were previously associated with
   # the content_root, if appropriate. See CourseVersion#add_course_version for details.
   def self.add_course_offering(content_root)
+    unless content_root.is_a?(UnitGroup)
+      raise "cannot create CourseOffering for content root #{content_root.name} that is not a UnitGroup"
+    end
+
     if content_root.is_course?
       raise "family_name must be set, since is_course is true, for: #{content_root.name}" if content_root.family_name.nil_or_empty?
 
