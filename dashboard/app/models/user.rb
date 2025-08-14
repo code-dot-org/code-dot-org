@@ -953,8 +953,13 @@ class User < ApplicationRecord
   # @param script [Unit] The script to assign.
   # @param unit_group [UnitGroup] The UnitGroup to assign.
   # @return [UserScript] The UserScript, new or existing, with assigned_at set.
-  def assign_script(script, unit_group)
+  def assign_script(script, unit_group = nil)
+    raise "script is required" unless script
     unit_group ||= script&.original_unit_group
+    if unit_group&.default_units&.exclude?(script)
+      raise "unit group #{unit_group.name} does not contain unit #{script.name}"
+    end
+
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_script = UserScript.where(user: self, script: script, unit_group: unit_group).first_or_create
       user_script.update!(assigned_at: Time.now)
