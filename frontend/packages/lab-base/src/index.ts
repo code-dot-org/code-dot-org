@@ -9,3 +9,4 @@ export * as dialogs from './dialogs';
 export {default as LifecycleNotifier} from './LifecycleNotifier';
 export * from './components';
 export {default as LabMetricsReporter} from './LabMetricsReporter';
+export {default as store} from './store';

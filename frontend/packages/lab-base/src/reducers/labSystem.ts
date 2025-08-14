@@ -57,4 +57,4 @@ export const {
   setHasError,
 } = systemSlice.actions;
 
-export default systemSlice.reducer;
+export default systemSlice;

@@ -1,2 +1,2 @@
 export * as progressActions from './progress';
-export {default as progressReducer} from './progress';
+export {default as progressSlice} from './progress';

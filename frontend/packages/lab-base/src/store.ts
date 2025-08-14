@@ -4,16 +4,23 @@
 
 import {useDispatch, useSelector} from 'react-redux';
 
-import store from '@code-dot-org/redux';
-import {currentUserReducer} from '@code-dot-org/user/reducers';
+import {progressSlice} from '@code-dot-org/progress/reducers';
+import {injectSlices} from '@code-dot-org/redux';
+import {currentUserSlice} from '@code-dot-org/user/reducers';
 
-import {labSystemReducer, labProjectReducer} from './reducers';
+import {labSystemSlice, labProjectSlice, predictLevelSlice} from './reducers';
 
-store.injectReducer(currentUserReducer);
-store.injectReducer(labProjectReducer);
-store.injectReducer(labSystemReducer);
+const store = injectSlices([
+  currentUserSlice,
+  labSystemSlice,
+  labProjectSlice,
+  predictLevelSlice,
+  progressSlice,
+]);
 
 export type RootState = ReturnType<typeof store['getState']>;
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();
+
+export default store;

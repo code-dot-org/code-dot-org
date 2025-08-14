@@ -589,4 +589,4 @@ export const {
   setPermissions,
   setChannel,
 } = slice.actions;
-export default slice.reducer;
+export default slice;

@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {useDispatch} from 'react-redux';
 
-import labReducer from "../reducers/lab";
+import labSlice from "../reducers/lab";
 
 const store = configureStore({
   reducer: {
-    lab: labReducer,
+    lab: labSlice.reducer,
   },
 });
 

@@ -5,9 +5,12 @@ import _ from 'lodash';
 import type {Lesson} from '@code-dot-org/models/lessons';
 import type {Level} from '@code-dot-org/models/levels';
 import {LevelKind} from '@code-dot-org/models/levels';
+import type {RootStateFor, AppDispatchFor} from '@code-dot-org/redux';
+
+type RootState = RootStateFor<[typeof progressSlice]>;
+type AppDispatch = AppDispatchFor<[typeof progressSlice]>;
 
 import {PUZZLE_PAGE_NONE, LevelStatus, TestResults, MINIMUM_PASS_RESULT, MINIMUM_OPTIMAL_RESULT} from '../constants';
-import type {RootState, AppDispatch} from '../stores/progress';
 import {LevelResults, PeerReviewLevelInfo, ProgressState, UnitProgress, UnitProgressDefinition, InitProgressPayload, ViewType, MilestoneReport, OptionalMilestoneData, ProgressLevelType, NumberedLevel} from '../types';
 
 /**
@@ -828,4 +831,4 @@ export const {
   setViewAsUserId,
   setViewType,
 } = progressSlice.actions;
-export default progressSlice.reducer;
+export default progressSlice;

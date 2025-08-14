@@ -1,11 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {useDispatch} from 'react-redux';
 
-import predictLevelReducer from "../reducers/predictLevel";
+import predictLevelSlice from "../reducers/predictLevel";
 
 const store = configureStore({
   reducer: {
-    predictLevel: predictLevelReducer,
+    predictLevel: predictLevelSlice.reducer,
   },
 });
 

@@ -184,4 +184,4 @@ export const {
   setProjectTooLarge,
 } = projectSlice.actions;
 
-export default projectSlice.reducer;
+export default projectSlice;

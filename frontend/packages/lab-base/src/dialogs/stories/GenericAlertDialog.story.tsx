@@ -7,7 +7,7 @@ import Markdown from '@code-dot-org/markdown';
 
 
 export default {
-  title: 'Lab2/Base/Dialogs/GenericAlertDialog',
+  title: 'Labs/Base/Dialogs/GenericAlertDialog',
   component: GenericAlertDialog,
   parameters: {},
 } as Meta;

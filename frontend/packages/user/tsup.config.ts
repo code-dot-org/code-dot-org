@@ -29,6 +29,7 @@ function createConfig(format: 'cjs' | 'esm'): Options {
       const tsc = spawnSync('tsc', [
         '--emitDeclarationOnly',
         '--declaration',
+        '--declarationMap',
         '--project',
         'src',
         '--outDir',

@@ -229,4 +229,4 @@ export const isSignedIn: (currentUserState: CurrentUserState) => boolean = curre
   return currentUserState.signInState === SignInState.SignedIn;
 };
 
-export default currentUserSlice.reducer;
+export default currentUserSlice;

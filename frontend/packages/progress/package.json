@@ -39,22 +39,6 @@
       },
       "import": "./dist/esm/reducers/index.mjs",
       "require": "./dist/cjs/reducers/index.js"
-    },
-    "./stores": {
-      "types": {
-        "import": "./dist/esm/stores/index.d.ts",
-        "require": "./dist/cjs/stores/index.d.js"
-      },
-      "import": "./dist/esm/stores/index.mjs",
-      "require": "./dist/cjs/stores/index.js"
-    },
-    "./providers": {
-      "types": {
-        "import": "./dist/esm/providers/index.d.ts",
-        "require": "./dist/cjs/providers/index.d.js"
-      },
-      "import": "./dist/esm/providers/index.mjs",
-      "require": "./dist/cjs/providers/index.js"
     }
   },
   "scripts": {

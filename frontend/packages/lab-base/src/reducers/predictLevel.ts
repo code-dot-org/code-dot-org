@@ -7,13 +7,8 @@ import {
 
 import * as userLevelsApi from '@code-dot-org/api/userLevels';
 import {progressActions} from '@code-dot-org/progress/reducers';
-import type {ProgressDispatch} from '@code-dot-org/progress/stores';
 
-import type {AppDispatch as LabDispatch, RootState as LabRootState} from '../stores/lab';
-import type {AppDispatch as PredictLevelDispatch, RootState as PredictLevelRootState} from '../stores/predictLevel';
-
-type AppDispatch = PredictLevelDispatch & ProgressDispatch;
-type RootState = PredictLevelRootState & LabRootState;
+import type {RootState, AppDispatch} from '../store';
 
 import {setLoadedPredictResponse} from './lab';
 
@@ -44,7 +39,8 @@ export const resetPredictProgress = createAsyncThunk<
       payload.scriptId
     );
     if (response.ok) {
-      thunkAPI.dispatch(progressActions.queryUserProgress(payload.userId.toString()));
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      thunkAPI.dispatch<any>(progressActions.queryUserProgress(payload.userId.toString()));
     }
   } catch (error) {
     return thunkAPI.rejectWithValue(error);
@@ -62,7 +58,8 @@ export const submitPredictResponse =
 
     if (isPredictLevel && !predictAnswerLocked) {
       const predictResponse = state.predictLevel.response;
-      dispatch(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      dispatch<any>(
         progressActions.sendPredictLevelReport({
           appType,
           predictResponse,
@@ -128,4 +125,4 @@ const predictSlice = createSlice({
 export const {setPredictResponse, setHasSubmittedResponse} =
   predictSlice.actions;
 
-export default predictSlice.reducer;
+export default predictSlice;
