@@ -76,16 +76,19 @@ Scenario: Viewing student metadata
 @properties_encryption_key
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
 
   When I sign in as "Teacher_Sally" and go home
+  And I assign my section in row 1 to course "allthethingscourse" unit 1
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Teacher can open lesson to view level data
   And I wait until element "#ui-test-lesson-header-2" is visible
   And I click selector "#ui-test-lesson-header-2"
-  And I wait until element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
+  And I wait until element "#ui-test-expanded-progress-column-header-2" is visible
+  # give more specific information in the most likely failure case
+  And element "#ui-test-courses-original-allthethings-course-units-1-lessons-2-levels-1-cell-data" is not visible
+  And element "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" is visible
 
   # Teacher can close lesson so level data is no longer visible
   And I click selector "#ui-test-expanded-progress-column-header-2"
@@ -94,9 +97,9 @@ Scenario: Teacher can open and close lessons and see level data cells
 @properties_encryption_key
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
 
   When I sign in as "Teacher_Sally" and go home
+  And I assign my section in row 1 to course "allthethingscourse" unit 1
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
 
@@ -158,7 +161,6 @@ Scenario: Teacher can view lesson progress for when students have completed a le
 Scenario: Teacher can view student work, ask student to keep working, on rubric level
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
-  Given I am assigned to course "allthethingscourse" unit 1
 
   # Student submits project
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1?noautoplay=true"
@@ -169,6 +171,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
 
   # Teacher sees "needs feedback" in the table
   When I sign in as "Teacher_Sally" and go home
+  And I assign my section in row 1 to course "allthethingscourse" unit 1
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
 

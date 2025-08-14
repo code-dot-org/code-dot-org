@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:21:00.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
     "start_blocks": "onEvent(\"blueButton\", \"click\", function( ) {\r\n  setProperty(\"redButton\", \"font-family\", \"Comic\");\r\n  setProperty(\"redButton\", \"width\", 250);\r\n  setProperty(\"redButton\", \"height\", 150);\r\n});\r\n\r\nonEvent(\"redButton\", \"click\", function( ) {\r\n  setProperty(\"blueButton\", \"font-family\", \"Comic\");\r\n  setProperty(\"blueButton\", \"width\", 250);\r\n  setProperty(\"blueButton\", \"height\", 150);\r\n});\r\n\r\n",
     "never_autoplay_video": "false",
     "slider_speed": "0.1",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "free_play": "true",
@@ -47,11 +48,13 @@
     "contained_level_names": [
       "CSP Debugging Predict Question_2025"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:00.139+00:00\",\"changed\":[\"cloned from \\\"U3 Debugging Predict_2024\\\"\"],\"cloned_from\":\"U3 Debugging Predict_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:21:00.139+00:00\",\"changed\":[\"cloned from \\\"U3 Debugging Predict_2024\\\"\"],\"cloned_from\":\"U3 Debugging Predict_2024\"},{\"changed_at\":\"2025-08-04 21:29:19 +0000\",\"changed\":[\"code_functions\",\"hide_share_and_remix\",\"preload_asset_list\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

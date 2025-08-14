@@ -8,8 +8,6 @@ class ScriptLevelTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
-    seed_deprecated_unit_fixtures
-
     @script_level = create(:script_level)
     @script_level2 = create(:script_level)
     @lesson = create(:lesson)
@@ -243,6 +241,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'summarize with custom route' do
+    create_hourofcode_unit_and_levels
     summary = Unit.hoc_2014_unit.script_levels.first.summarize
     assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]

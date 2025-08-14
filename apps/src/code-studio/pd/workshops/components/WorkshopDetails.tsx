@@ -75,14 +75,12 @@ const WorkshopDetails: React.FC<WorkshopDetailsProps> = ({
         <WorkshopSessionsList sessions={sessions} />
       </section>
 
-      {description && (
-        <section className={moduleStyles.workshopDetailsItem}>
-          <Heading3 visualAppearance={'heading-xs'}>Description:</Heading3>
-          <Typography semanticTag="div" visualAppearance="body-two">
-            <SafeMarkdown unwrapped markdown={description} />
-          </Typography>
-        </section>
-      )}
+      <section className={moduleStyles.workshopDetailsItem}>
+        <Heading3 visualAppearance={'heading-xs'}>Description:</Heading3>
+        <Typography semanticTag="div" visualAppearance="body-two">
+          <SafeMarkdown unwrapped markdown={description} />
+        </Typography>
+      </section>
 
       {notes && (
         <section className={moduleStyles.workshopDetailsItem}>

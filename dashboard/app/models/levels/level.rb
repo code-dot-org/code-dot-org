@@ -493,7 +493,7 @@ class Level < ApplicationRecord
   # Programming levels are levels where students write code.
   # These are the lab types that support programming used in 6-12th grade curriculum.
   def upper_grades_programming_level?
-    %w(Applab Gamelab Javalab Pythonlab Weblab).include?(type)
+    %w(Applab Gamelab Javalab Pythonlab Weblab Music).include?(type)
   end
 
   # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
