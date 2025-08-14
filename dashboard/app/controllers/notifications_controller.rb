@@ -1,12 +1,14 @@
 class NotificationsController < ApplicationController
   before_action :authenticate_user!
 
+  NOTIFICATION_CONTENTFUL_CONTENT_TYPE = 'dashboard-notification'
+
   # Index does not use pagination, returns all active notifications for the current user
   # Consider adding pagination if the number of notifications grows large
   def index
     locale = params[:locale] || I18n.default_locale
 
-    contentful_entries = Marketing::ContentfulClient.entries(locale, 'dashboard-notification')
+    contentful_entries = Marketing::ContentfulClient.entries(locale.to_s, NOTIFICATION_CONTENTFUL_CONTENT_TYPE)
     contentful_result = contentful_entries.filter_map do |notification|
       format_contentful_notification(notification)
     end
@@ -20,10 +22,10 @@ class NotificationsController < ApplicationController
 
       next nil if rails_notification&.is_dismissed
 
-      read_at = rails_notification&.read_at || nil
+      read_at = rails_notification&.read_at&.iso8601 || nil
       notification.merge(
         read_at: read_at
-)
+      )
     end
 
     render json: results.as_json.map {|notification| notification.deep_transform_keys {|key| key.to_s.camelize(:lower)}}, status: :ok
@@ -84,7 +86,7 @@ class NotificationsController < ApplicationController
 
     # Ensure data types are correct
     formatted_notification[:priority] = formatted_notification[:priority].to_i
-    formatted_notification[:expires_at] = formatted_notification[:expires_at].is_a?(Time) ? formatted_notification[:expires_at] : nil
+    formatted_notification[:expires_at] = formatted_notification[:expires_at].is_a?(Time) ? formatted_notification[:expires_at].iso8601 : nil
     formatted_notification[:href_links] = formatted_notification[:href_links].filter_map do |link|
       !!link['url'] && !!link['text'] ? {url: link['url'], text: link['text']} : nil
     end
