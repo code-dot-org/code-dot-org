@@ -653,16 +653,16 @@ class Pd::Workshop < ApplicationRecord
         next unless attending_teachers.include?(user)
       end
 
-      send_teacher_post_workshop_survey_email(enrollment, user, false)
+      Pd::Workshop.send_teacher_post_workshop_survey_email(enrollment, user, false)
 
       # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
       if enrollment.workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
-        send_teacher_post_workshop_survey_email(enrollment, user, true)
+        Pd::Workshop.send_teacher_post_workshop_survey_email(enrollment, user, true)
       end
 
       enrollment.update!(survey_sent_at: Time.zone.now)
     rescue => exception
-      errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+      raise "teacher enrollment #{enrollment.id} - #{exception.message}"
     end
   end
 
