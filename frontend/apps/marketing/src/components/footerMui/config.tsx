@@ -14,7 +14,7 @@ export const SITE_LINKS = [
   {
     key: 'news-and-resources',
     label: 'News & Resources',
-    href: '/news-and-resources',
+    href: '/news',
   },
   {key: 'privacy-policy', label: 'Privacy Policy', href: '/privacy-policy'},
 ];

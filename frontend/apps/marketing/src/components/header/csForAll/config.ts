@@ -38,12 +38,8 @@ const SHARED_LINKS = {
     href: '/issues',
     label: 'Issues',
   },
-  NEWS: {
-    href: '/news',
-    label: 'News',
-  },
   NEWS_AND_RESOURCES: {
-    href: '/news-and-resources',
+    href: '/news',
     label: 'News & Resources',
   },
   PRIVACY_POLICY: {
@@ -120,11 +116,6 @@ export const TAKE_ACTION_LINKS: {linkList: LinkItemProps[]} = {
   ],
 };
 
-// Main Menu News & Resources Dropdown Links
-export const NEWS_AND_RESOURCES_LINKS: {linkList: LinkItemProps[]} = {
-  linkList: [createLinkItem(SHARED_LINKS.NEWS)],
-};
-
 // Main Menu Desktop Configuration
 const [issuesLink, takeActionLink, hourOfAiLink, newsLink] =
   TOP_LEVEL_LINKS.linkList;
@@ -150,8 +141,7 @@ export const MAIN_MENU_DESKTOP_ITEMS = [
   //topLevelLink: donateLink,
   //},
   {
-    type: 'dropdown' as const,
+    type: 'button' as const,
     topLevelLink: newsLink,
-    dropdownConfig: NEWS_AND_RESOURCES_LINKS,
   },
 ];
