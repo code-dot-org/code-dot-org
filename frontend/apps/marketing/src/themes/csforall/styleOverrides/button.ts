@@ -21,7 +21,9 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
         outlineOffset: '2px',
       },
       textTransform: 'none',
-      border: '1px solid transparent',
+      '&.MuiButton-contained': {
+        border: '1px solid transparent',
+      },
       '&.MuiButton-contained.button--color-emphasized': {
         backgroundColor: theme.palette.secondary.main,
         '&:hover': {

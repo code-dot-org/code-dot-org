@@ -14,7 +14,7 @@ module Pd
     test 'daily summer workshop survey returns 404 for days outside of range 0-4' do
       setup_summer_workshop
       sign_in @enrolled_summer_teacher
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
       get '/pd/workshop_survey/day/-1'
       assert_response :not_found
 
@@ -28,7 +28,7 @@ module Pd
       get '/pd/workshop_daily_survey/day/0'
       assert_response :not_found
 
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
       get '/pd/workshop_daily_survey/day/5'
       assert_response :not_found
     end
@@ -49,13 +49,15 @@ module Pd
 
     test 'pre-workshop foorm survey shows thanks when a response exists' do
       setup_summer_workshop
-      existing_survey = create :daily_workshop_day_0_foorm_submission,
+      existing_survey = create(:daily_workshop_day_0_foorm_submission,
         :answers_high,
         form_name: "surveys/pd/summer_workshop_pre_survey"
-      create :day_0_workshop_foorm_submission,
+)
+      create(:day_0_workshop_foorm_submission,
         foorm_submission: existing_survey,
         pd_workshop: @summer_workshop,
         user: @enrolled_summer_teacher
+)
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_pre_survey'
@@ -75,7 +77,7 @@ module Pd
       setup_summer_workshop
 
       sign_in @enrolled_summer_teacher
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
       get "/pd/workshop_survey/post/#{@summer_enrollment.code}"
       assert_template :new_general_foorm
       assert_response :success
@@ -85,7 +87,7 @@ module Pd
       setup_build_your_own_ended_workshop
 
       sign_in @enrolled_byo_teacher
-      create :pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment
+      create(:pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment)
       get "/pd/workshop_survey/post/#{@byo_enrollment.code}"
       assert_template :new_general_foorm
       assert_response :success
@@ -109,7 +111,7 @@ module Pd
     test 'daily workshop survey displays closed message when session attendance is closed' do
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(false)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
@@ -138,7 +140,7 @@ module Pd
       Session.any_instance.expects(:open_for_attendance?).returns(false)
 
       sign_in @enrolled_summer_teacher
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
       get '/pd/workshop_daily_survey/day/1'
       assert_response :success
       assert_closed
@@ -156,7 +158,7 @@ module Pd
     test 'daily summer workshop survey with open session attendance displays foorm' do
       setup_summer_workshop
       Session.any_instance.expects(:open_for_attendance?).returns(true)
-      create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
+      create(:pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment)
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/1'
@@ -165,10 +167,11 @@ module Pd
 
     test 'enrollment code override is used when fetching the workshop for a user' do
       setup_summer_workshop
-      other_summer_workshop = create :summer_workshop,
+      other_summer_workshop = create(:summer_workshop,
         regional_partner: @regional_partner, facilitators: @facilitators, sessions_from: Time.zone.today + 1.month
-      other_enrollment = create :pd_enrollment, :from_user, workshop: other_summer_workshop, user: @enrolled_summer_teacher
-      create :pd_attendance, session: other_summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: other_enrollment
+)
+      other_enrollment = create(:pd_enrollment, :from_user, workshop: other_summer_workshop, user: @enrolled_summer_teacher)
+      create(:pd_attendance, session: other_summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: other_enrollment)
 
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/day/0?enrollmentCode=#{other_enrollment.code}"
@@ -195,7 +198,7 @@ module Pd
 
     test 'pre workshop survey with a valid enrollment code but wrong user renders invalid enrollment code' do
       setup_summer_workshop
-      summer_enrollment2 = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      summer_enrollment2 = create(:pd_enrollment, :from_user, workshop: @summer_workshop)
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/day/0?enrollmentCode=#{summer_enrollment2.code}"
       assert_template :invalid_enrollment_code
@@ -210,7 +213,7 @@ module Pd
 
     test 'foorm post workshop survey with a valid enrollment code but wrong user renders invalid enrollment code' do
       setup_summer_workshop
-      summer_enrollment2 = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      summer_enrollment2 = create(:pd_enrollment, :from_user, workshop: @summer_workshop)
       sign_in @enrolled_summer_teacher
       get "/pd/workshop_survey/post/#{summer_enrollment2.code}"
       assert_template :invalid_enrollment_code
@@ -220,7 +223,7 @@ module Pd
       setup_csf101_workshop
       sign_in @enrolled_csf101_teacher
 
-      create :pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment
+      create(:pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment)
 
       get '/pd/workshop_survey/csf/post101'
       assert_response :success
@@ -248,7 +251,7 @@ module Pd
     test 'csf101 workshop with valid enrollment code sees survey' do
       setup_csf101_workshop
       sign_in @enrolled_csf101_teacher
-      create :pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment
+      create(:pd_attendance, session: @csf101_workshop.sessions[0], teacher: @enrolled_csf101_teacher, enrollment: @csf101_enrollment)
 
       get "/pd/workshop_survey/csf/post101/#{@csf101_enrollment.code}"
       assert_response :success
@@ -280,8 +283,8 @@ module Pd
 
     test 'csf pre201 survey: enrolled teacher in ended workshop gets too-late msg' do
       setup_csf201_ended_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_ended_workshop
+      teacher = create(:teacher)
+      create(:pd_enrollment, user: teacher, workshop: @csf201_ended_workshop)
 
       sign_in teacher
       get '/pd/workshop_survey/csf/pre201'
@@ -292,8 +295,8 @@ module Pd
 
     test 'csf pre201 survey: enrolled teacher in unended workshop gets survey' do
       setup_csf201_not_started_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+      teacher = create(:teacher)
+      create(:pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop)
 
       sign_in teacher
       get '/pd/workshop_survey/csf/pre201'
@@ -307,8 +310,8 @@ module Pd
 
     test 'csf pre201 survey: teacher already submitted survey does not gets survey again' do
       setup_csf201_not_started_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+      teacher = create(:teacher)
+      create(:pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop)
 
       _, latest_version = ::Foorm::Form.get_questions_and_latest_version_for_name(PRE_SURVEY_CONFIG_PATHS[SUBJECT_CSF_201])
       ::Foorm::Submission.create(
@@ -347,8 +350,8 @@ module Pd
 
     test 'csf post201 survey: show no-attendance page if teacher did not attend' do
       setup_csf201_not_started_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop
+      teacher = create(:teacher)
+      create(:pd_enrollment, user: teacher, workshop: @csf201_not_started_workshop)
 
       sign_in teacher
       get '/pd/workshop_survey/csf/post201'
@@ -359,9 +362,9 @@ module Pd
 
     test 'csf post201 survey: show invalid enrollment code page if enrollment code is invalid' do
       setup_csf201_in_progress_workshop
-      teacher = create :teacher
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher
+      teacher = create(:teacher)
+      create(:pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop)
+      create(:pd_attendance, session: @csf201_in_progress_workshop.sessions.first, teacher: teacher)
 
       invalid_enrollment_code = "HAS1DIGIT"  # has a digit and length less than 10
       sign_in teacher
@@ -372,10 +375,10 @@ module Pd
 
     test 'csf post201 survey: show survey if attended teacher has valid enrollment code' do
       setup_csf201_in_progress_workshop
-      teacher = create :teacher
+      teacher = create(:teacher)
       session = @csf201_in_progress_workshop.sessions.first
-      enrollment = create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: session, teacher: teacher
+      enrollment = create(:pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop)
+      create(:pd_attendance, session: session, teacher: teacher)
 
       sign_in teacher
       get "/pd/workshop_survey/csf/post201/#{enrollment.code}"
@@ -388,10 +391,10 @@ module Pd
 
     test 'csf post201 survey: show survey if attended teacher does not have enrollment code' do
       setup_csf201_in_progress_workshop
-      teacher = create :teacher
+      teacher = create(:teacher)
       session = @csf201_in_progress_workshop.sessions.first
-      create :pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop
-      create :pd_attendance, session: session, teacher: teacher
+      create(:pd_enrollment, user: teacher, workshop: @csf201_in_progress_workshop)
+      create(:pd_attendance, session: session, teacher: teacher)
 
       sign_in teacher
       get '/pd/workshop_survey/csf/post201'
@@ -425,10 +428,11 @@ module Pd
     test 'AYW1 post-survey link shows foorm survey for attended teacher' do
       setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
-      create :pd_attendance,
+      create(:pd_attendance,
         session: @academic_year_workshop.sessions[0],
         teacher: @enrolled_academic_year_teacher,
         enrollment: @academic_year_enrollment
+)
 
       post_survey_links = %w(/pd/AYW1/post/in_person /pd/AYW1/post/module/1 /pd/AYW1/post/module/2 /pd/AYW1/post/module/1_2)
       post_survey_links.each do |link|
@@ -463,10 +467,11 @@ module Pd
       setup_two_day_academic_year_workshop
       sign_in @enrolled_two_day_academic_year_teacher
 
-      create :pd_attendance,
+      create(:pd_attendance,
         session: @two_day_academic_year_workshop.sessions[0],
         teacher: @enrolled_two_day_academic_year_teacher,
         enrollment: @two_day_academic_year_enrollment
+)
       get '/pd/AYW1_2/post/in_person'
       assert_response :success
       assert_template :new_general_foorm
@@ -482,82 +487,89 @@ module Pd
     end
 
     private def setup_summer_workshop
-      @regional_partner = create :regional_partner
-      @summer_workshop = create :summer_workshop, regional_partner: @regional_partner
-      @summer_enrollment = create :pd_enrollment, :from_user, workshop: @summer_workshop
+      @regional_partner = create(:regional_partner)
+      @summer_workshop = create(:summer_workshop, regional_partner: @regional_partner)
+      @summer_enrollment = create(:pd_enrollment, :from_user, workshop: @summer_workshop)
       @enrolled_summer_teacher = @summer_enrollment.user
       @facilitators = @summer_workshop.facilitators.order(:name, :id)
     end
 
     private def setup_academic_year_workshop
-      @regional_partner = create :regional_partner
-      @academic_year_workshop = create :csp_academic_year_workshop, regional_partner: @regional_partner
-      @academic_year_enrollment = create :pd_enrollment, :from_user, workshop: @academic_year_workshop
+      @regional_partner = create(:regional_partner)
+      @academic_year_workshop = create(:csp_academic_year_workshop, regional_partner: @regional_partner)
+      @academic_year_enrollment = create(:pd_enrollment, :from_user, workshop: @academic_year_workshop)
       @enrolled_academic_year_teacher = @academic_year_enrollment.user
       @facilitators = @academic_year_workshop.facilitators.order(:name, :id)
     end
 
     private def setup_two_day_academic_year_workshop
-      @regional_partner = create :regional_partner
-      @two_day_academic_year_workshop = create :csp_academic_year_workshop, :two_day,
+      @regional_partner = create(:regional_partner)
+      @two_day_academic_year_workshop = create(:csp_academic_year_workshop, :two_day,
         regional_partner: @regional_partner
-      @two_day_academic_year_enrollment = create :pd_enrollment, :from_user,
+)
+      @two_day_academic_year_enrollment = create(:pd_enrollment, :from_user,
         workshop: @two_day_academic_year_workshop
+)
       @enrolled_two_day_academic_year_teacher = @two_day_academic_year_enrollment.user
       @facilitators = @two_day_academic_year_workshop.facilitators.order(:name, :id)
     end
 
     private def setup_csf201_not_started_workshop
-      @regional_partner = create :regional_partner
-      @csf201_not_started_workshop = build :csf_deep_dive_workshop,
+      @regional_partner = create(:regional_partner)
+      @csf201_not_started_workshop = build(:csf_deep_dive_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
+)
       @csf201_not_started_workshop.save(validate: false)
     end
 
     private def setup_csf201_in_progress_workshop
-      @regional_partner = create :regional_partner
-      @csf201_in_progress_workshop = build :csf_deep_dive_workshop,
+      @regional_partner = create(:regional_partner)
+      @csf201_in_progress_workshop = build(:csf_deep_dive_workshop,
         :in_progress,
         regional_partner: @regional_partner,
         num_facilitators: 2
+)
       @csf201_in_progress_workshop.save(validate: false)
     end
 
     private def setup_csf201_ended_workshop
-      @regional_partner = create :regional_partner
-      @csf201_ended_workshop = build :csf_deep_dive_workshop,
+      @regional_partner = create(:regional_partner)
+      @csf201_ended_workshop = build(:csf_deep_dive_workshop,
         :ended,
         regional_partner: @regional_partner,
         num_facilitators: 2
+)
       @csf201_ended_workshop.save(validate: false)
     end
 
     private def setup_csf101_workshop
-      @regional_partner = create :regional_partner
-      @csf101_workshop = build :csf_intro_workshop,
+      @regional_partner = create(:regional_partner)
+      @csf101_workshop = build(:csf_intro_workshop,
         regional_partner: @regional_partner,
         num_facilitators: 2
+)
       @csf101_workshop.save(validate: false)
 
-      @csf101_enrollment = create :pd_enrollment, :from_user, workshop: @csf101_workshop
+      @csf101_enrollment = create(:pd_enrollment, :from_user, workshop: @csf101_workshop)
       @enrolled_csf101_teacher = @csf101_enrollment.user
       @facilitators = @csf101_workshop.facilitators.order(:name, :id)
     end
 
     private def setup_build_your_own_ended_workshop
-      @regional_partner = create :regional_partner
-      @byo_workshop = create :byo_workshop,
+      @regional_partner = create(:regional_partner)
+      @byo_workshop = create(:byo_workshop,
         :ended,
         num_facilitators: 1
+)
 
-      @byo_enrollment = create :pd_enrollment, :from_user, workshop: @byo_workshop
+      @byo_enrollment = create(:pd_enrollment, :from_user, workshop: @byo_workshop)
       @enrolled_byo_teacher = @byo_enrollment.user
       @facilitator = @byo_workshop.facilitators.first
     end
 
     private def unenrolled_teacher
-      create :teacher
+      create(:teacher)
     end
 
     private def prop(name)

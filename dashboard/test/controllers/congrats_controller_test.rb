@@ -15,7 +15,7 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "shows congrats page for single-unit course if unit allows congrats page" do
-    single_unit_course = create :single_unit_course
+    single_unit_course = create(:single_unit_course)
     Policies::ScriptActivity.stubs(:can_view_congrats_page?).returns(true)
     get :index, params: {s: Base64.urlsafe_encode64(single_unit_course.name)}
     assert_response :success
@@ -51,13 +51,13 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "shows congrats page for PL unit with completion" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
     pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
     pl_unit = pl_course.default_units.first
     CourseOffering.add_course_offering(pl_course)
-    create :user_script, user: teacher, script: pl_unit, completed_at: Time.now
+    create(:user_script, user: teacher, script: pl_unit, completed_at: Time.now)
 
     get :index, params: {s: Base64.urlsafe_encode64(pl_unit.name)}
     assert_response :success
@@ -71,7 +71,7 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "no certificate for PL unit without completion" do
-    teacher = create :teacher
+    teacher = create(:teacher)
     sign_in teacher
 
     pl_course = create(:single_unit_course, participant_audience: "teacher", instructor_audience: "facilitator")
@@ -90,21 +90,21 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "shows multiple certificates for unit group with partial completion" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    course_version = create :course_version, :with_unit_group
+    course_version = create(:course_version, :with_unit_group)
     unit_group = course_version.content_root
 
-    unit1 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
-    unit2 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
-    unit3 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit3, position: 3
+    unit1 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit1, position: 1)
+    unit2 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit2, position: 2)
+    unit3 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit3, position: 3)
 
-    create :user_script, user: student, script: unit1, completed_at: Time.now
-    create :user_script, user: student, script: unit2, completed_at: Time.now
+    create(:user_script, user: student, script: unit1, completed_at: Time.now)
+    create(:user_script, user: student, script: unit2, completed_at: Time.now)
     assert_nil UserScript.find_by(user: student, script: unit3)
 
     get :index, params: {s: Base64.urlsafe_encode64(unit_group.name)}
@@ -117,22 +117,22 @@ class CongratsControllerTest < ActionController::TestCase
   end
 
   test "shows one certificate for fully completed unit group" do
-    student = create :student
+    student = create(:student)
     sign_in student
 
-    course_version = create :course_version, :with_unit_group
+    course_version = create(:course_version, :with_unit_group)
     unit_group = course_version.content_root
 
-    unit1 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
-    unit2 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
-    unit3 = create :unit
-    create :unit_group_unit, unit_group: unit_group, script: unit3, position: 3
+    unit1 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit1, position: 1)
+    unit2 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit2, position: 2)
+    unit3 = create(:unit)
+    create(:unit_group_unit, unit_group: unit_group, script: unit3, position: 3)
 
-    create :user_script, user: student, script: unit1, completed_at: Time.now
-    create :user_script, user: student, script: unit2, completed_at: Time.now
-    create :user_script, user: student, script: unit3, completed_at: Time.now
+    create(:user_script, user: student, script: unit1, completed_at: Time.now)
+    create(:user_script, user: student, script: unit2, completed_at: Time.now)
+    create(:user_script, user: student, script: unit3, completed_at: Time.now)
 
     get :index, params: {s: Base64.urlsafe_encode64(unit_group.name)}
     assert_response :success

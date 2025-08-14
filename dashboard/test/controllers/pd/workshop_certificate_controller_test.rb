@@ -2,14 +2,14 @@ require 'test_helper'
 
 class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   setup do
-    @user = create :teacher
+    @user = create(:teacher)
     sign_in(@user)
-    @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP
+    @workshop = create(:workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP)
     @workshop.update_columns(name: nil)
-    @enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
+    @enrollment = create(:pd_enrollment, :with_attendance, workshop: @workshop)
 
-    facilitator_1 = create :facilitator, name: 'Facilitator 1'
-    facilitator_2 = create :facilitator, name: 'Facilitator 2'
+    facilitator_1 = create(:facilitator, name: 'Facilitator 1')
+    facilitator_2 = create(:facilitator, name: 'Facilitator 2')
     [facilitator_1, facilitator_2].each do |f|
       create(:pd_course_facilitator, facilitator: f, course: Pd::Workshop::COURSE_CSD)
     end
@@ -32,7 +32,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates no certificates if teacher did not attend workshop' do
-    @enrollment = create :pd_enrollment, workshop: @workshop
+    @enrollment = create(:pd_enrollment, workshop: @workshop)
 
     get :generate_certificate, params: {enrollment_code: @enrollment.code}
     assert_response :missing
@@ -42,10 +42,10 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   # rubocop:disable Lint/UnderscorePrefixedVariableName
 
   test 'Generates certificate for CSF 101 workshop' do
-    workshop = build :csf_intro_workshop
+    workshop = build(:csf_intro_workshop)
     workshop.save(validate: false)
     workshop.update_columns(name: nil)
-    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
+    enrollment = create(:pd_enrollment, :with_attendance, workshop: workshop)
 
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)
@@ -63,7 +63,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for regular CSD event' do
-    enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
+    enrollment = create(:pd_enrollment, :with_attendance, workshop: @workshop)
     assert_equal Pd::Workshop::COURSE_CSD, @workshop.course
 
     mock_image = expect_renders_certificate
@@ -82,14 +82,15 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSD teachercon' do
-    workshop = build :workshop,
+    workshop = build(:workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
       name: nil
+)
     # workshop subject is deprecated so validation must be skipped
     workshop.save(validate: false)
-    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
+    enrollment = create(:pd_enrollment, :with_attendance, workshop: workshop)
 
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)
@@ -107,14 +108,15 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSP teachercon' do
-    workshop = build :workshop,
+    workshop = build(:workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSP,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
       name: nil
+)
     # workshop subject is deprecated so validation must be skipped
     workshop.save(validate: false)
-    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
+    enrollment = create(:pd_enrollment, :with_attendance, workshop: workshop)
 
     mock_image = expect_renders_certificate
     expect_renders_text(mock_image, enrollment.full_name)

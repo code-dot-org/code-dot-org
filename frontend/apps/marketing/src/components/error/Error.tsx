@@ -1,18 +1,17 @@
 'use client';
 
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import {useEffect, useState} from 'react';
 import {v4 as uuid} from 'uuid';
 
-import Button, {LinkButton} from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
-import Typography from '@code-dot-org/component-library/typography';
 
 import Overline from '@/components/contentful/overline';
 import {handleError} from '@/otel/errorHandler';
 import sadBee404 from '@public/images/error/404.webp';
 import sadBee500 from '@public/images/error/500.webp';
-
-import errorStyles from './error.module.scss';
 
 type ErrorProps = Error404Props | Error500Props;
 
@@ -27,6 +26,34 @@ interface Error500Props {
   /** Next.js function to reset the error boundary */
   resetAction: () => void;
 }
+
+const styles = {
+  section: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    paddingBlock: 12,
+    paddingInline: 4,
+    textAlign: 'center',
+  },
+  image: {
+    display: 'inline-block',
+    height: 'auto',
+    width: '7.125rem',
+  },
+  callToAction: {
+    marginTop: 2,
+    display: 'flex',
+    gap: 2,
+  },
+  callToActionWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 2,
+    marginBottom: 3,
+  },
+};
 
 export default function Error(props: ErrorProps) {
   const [showError, setShowError] = useState(false);
@@ -75,24 +102,47 @@ export default function Error(props: ErrorProps) {
   const getCallToAction = () => {
     switch (props.statusCode) {
       case 404:
-        return <LinkButton href={'/'} text={'Go to homepage'} />;
+        return (
+          <Button
+            href={'/'}
+            variant="contained"
+            color="primary"
+            size="medium"
+            disableElevation
+            disableRipple
+          >
+            Go to homepage
+          </Button>
+        );
       case 500:
         return (
-          <>
+          <Box sx={styles.callToActionWrapper}>
             <Button
+              variant="contained"
+              color="primary"
+              size="medium"
+              disableElevation
+              disableRipple
               onClick={
                 // Attempt to recover by trying to re-render the segment
                 () => props.resetAction()
               }
-              text={'Reload this page'}
-            />
-            <LinkButton
-              href={'https://status.code.org/'}
-              type={'secondary'}
-              color={'black'}
-              text={'Check status page'}
-            />
-          </>
+            >
+              Reload this page
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="medium"
+              disableElevation
+              disableRipple
+              href="https://status.code.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check status page
+            </Button>
+          </Box>
         );
     }
   };
@@ -100,55 +150,51 @@ export default function Error(props: ErrorProps) {
   const sadBeeImage = getSadBeeImage();
 
   return (
-    <section className={errorStyles.errorContainer}>
+    <Box component="section" sx={styles.section}>
       {sadBeeImage && (
-        <Image
-          className={errorStyles.sadBeeContainer}
-          src={sadBeeImage.src}
-          alt=""
-          style={{width: '7.125rem'}}
-        />
+        <Image src={sadBeeImage.src} alt="" style={styles.image} />
       )}
-      <Overline removeMarginBottom={false} size={'l'} color={'primary'}>
+
+      <Overline
+        removeMarginBottom={false}
+        size={'l'}
+        color={'primary'}
+        sx={{marginTop: 2}}
+      >
         ERROR {props.statusCode}
       </Overline>
 
-      <Typography
-        visualAppearance={'heading-xxl'}
-        semanticTag={'h1'}
-        className={errorStyles.errorHeading}
-      >
+      <Typography component="h1" variant="h1" gutterBottom>
         {getHeadingText()}
       </Typography>
 
-      <Typography
-        visualAppearance={'body-two'}
-        semanticTag={'p'}
-        className={errorStyles.errorBody}
-      >
+      <Typography component="p" variant="body2" gutterBottom>
         {getDescriptionText()}
       </Typography>
 
-      <div className={errorStyles.callToActionContainer}>
-        {getCallToAction()}
-      </div>
+      <Box sx={styles.callToAction}>{getCallToAction()}</Box>
 
       {props.statusCode === 500 && (
         <>
           <Typography
-            visualAppearance={'body-two'}
-            semanticTag={'p'}
+            component="p"
+            variant="body2"
+            gutterBottom
           >{`Error Trace ID: ${traceId}`}</Typography>
           <Button
-            size={'xs'}
-            color={'destructive'}
+            variant="contained"
+            color="error"
+            size="small"
             onClick={() => setShowError(!showError)}
-            text={'Toggle error'}
-          />
+            disableElevation
+            disableRipple
+          >
+            Toggle error
+          </Button>
 
           {showError && <pre>{props.error?.stack}</pre>}
         </>
       )}
-    </section>
+    </Box>
   );
 }

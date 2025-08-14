@@ -48,6 +48,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :notifications, only: [:index] do
+      collection do
+        post '/mark_as_read', controller: :notifications, action: :mark_as_read
+      end
+    end
+
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
@@ -820,6 +826,7 @@ Dashboard::Application.routes.draw do
           get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
 
           get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report'
+          get 'foorm/workshop_survey_summary', action: :workshop_survey_summary, controller: 'workshop_survey_foorm_report'
           get 'foorm/csv_survey_report', action: :csv_survey_report, controller: 'workshop_survey_foorm_report'
           get 'foorm/forms_for_workshop', action: :forms_for_workshop, controller: 'workshop_survey_foorm_report'
         end

@@ -4,10 +4,10 @@ class UnitGroupUnitTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
   describe '.get_with_position_from_cache' do
     let(:script_name) {'test-script'}
-    let!(:unit) {create :unit, name: script_name}
-    let(:course) {create :unit_group}
+    let!(:unit) {create(:unit, name: script_name)}
+    let(:course) {create(:unit_group)}
     let(:unit_position) {123}
-    let!(:unit_group_unit) {create :unit_group_unit, course_id: course.id, position: unit_position, script_id: unit.id}
+    let!(:unit_group_unit) {create(:unit_group_unit, course_id: course.id, position: unit_position, script_id: unit.id)}
     let(:should_cache) {false}
     let(:query_count) {1}
 

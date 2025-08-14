@@ -11,7 +11,7 @@ import styles from './ai-differentiation.module.scss';
 interface AiDiffSidebarProps {
   threads?: ChatThread[];
   selectedThreadId?: number;
-  threadSelectCallback?: () => void;
+  threadSelectCallback?: (thread: number) => void;
 }
 
 const now = new Date();
@@ -51,11 +51,10 @@ const ThreadItem: React.FC<{
 const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
   threads = [],
   selectedThreadId,
-  threadSelectCallback,
+  threadSelectCallback = () => {},
 }) => {
-  const [selectedChat, setSelectedChat] = React.useState<number>(0);
   const handleListItemClick = (chatId: number) => {
-    setSelectedChat(chatId);
+    threadSelectCallback(chatId);
   };
 
   const todayChats = threads.filter(thread => {
@@ -89,7 +88,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
           size="m"
           type="primary"
           iconLeft={{iconName: 'plus'}}
-          onClick={() => console.log('Add new chat thread')}
+          onClick={() => threadSelectCallback(0)}
           text={commonI18n.aiDifferentiation_new_chat()}
           className={styles.sidebarButton}
         />
@@ -102,7 +101,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedChat}
+                    selected={chat.id === selectedThreadId}
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -115,7 +114,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedChat}
+                    selected={chat.id === selectedThreadId}
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -128,7 +127,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedChat}
+                    selected={chat.id === selectedThreadId}
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}
@@ -141,7 +140,7 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
                   <ThreadItem
                     key={chat.id}
                     chat={chat}
-                    selected={chat.id === selectedChat}
+                    selected={chat.id === selectedThreadId}
                     onClick={() => handleListItemClick(chat.id)}
                   />
                 ))}

@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AidiffThreadTest < ActiveSupport::TestCase
   setup_all do
-    @user = create :user
+    @user = create(:user)
   end
 
   test 'thread and message create' do

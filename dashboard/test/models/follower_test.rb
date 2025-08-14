@@ -4,7 +4,7 @@ class FollowerTest < ActiveSupport::TestCase
   setup do
     @laurel = create(:teacher)
     @laurel_section = create(:section, user: @laurel)
-    @follower = create :follower
+    @follower = create(:follower)
   end
 
   test 'student_user is required' do
@@ -22,7 +22,7 @@ class FollowerTest < ActiveSupport::TestCase
   test 'admins cannot be student followers' do
     assert_does_not_create(Follower) do
       assert_raises do
-        create :follower, student_user: (create :admin)
+        create(:follower, student_user: (create(:admin)))
       end
     end
   end
@@ -31,7 +31,7 @@ class FollowerTest < ActiveSupport::TestCase
   # validated for non-deleted followers. As this situation cannot happen without manipulating the DB
   # (dependent callbacks), we do not worry about testing it.
   test 'student_user and section not required for deleted followers' do
-    follower = create :follower
+    follower = create(:follower)
     follower.destroy
     follower.student_user = nil
     follower.section = nil
@@ -69,8 +69,8 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'deleting a follower deletes the associated code review group member' do
-    code_review_group = create :code_review_group, section: @laurel_section
-    create :code_review_group_member, follower: @follower, code_review_group: code_review_group
+    code_review_group = create(:code_review_group, section: @laurel_section)
+    create(:code_review_group_member, follower: @follower, code_review_group: code_review_group)
     @follower.destroy
     refute CodeReviewGroupMember.exists?(follower_id: @follower.id, code_review_group_id: code_review_group.id)
   end

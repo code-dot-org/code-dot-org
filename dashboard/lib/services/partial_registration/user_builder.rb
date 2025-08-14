@@ -82,7 +82,8 @@ module Services
           :data_transfer_agreement_source,
           :data_transfer_agreement_kind,
           :data_transfer_agreement_at,
-          :terms_of_service_version
+          :terms_of_service_version,
+          {:signup_sources_tracking => []}
         ]
       end
     end

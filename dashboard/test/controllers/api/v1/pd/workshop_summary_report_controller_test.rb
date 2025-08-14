@@ -34,22 +34,22 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
   self.use_transactional_test_case = true
   setup do
-    @workshop_admin = create :workshop_admin
-    @organizer = create :workshop_organizer
-    @program_manager = create :program_manager
+    @workshop_admin = create(:workshop_admin)
+    @organizer = create(:workshop_organizer)
+    @program_manager = create(:program_manager)
 
     # CSF workshop for this regional partner
-    @workshop = build :workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF
+    @workshop = build(:workshop, :ended, organizer: @program_manager, course: Pd::Workshop::COURSE_CSF)
     @workshop.save(validate: false)
-    create :pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true
+    create(:pd_workshop_participant, workshop: @workshop, enrolled: true, attended: true)
 
     # CSF workshop for this organizer.
-    @organizer_workshop = build :workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF
+    @organizer_workshop = build(:workshop, :ended, organizer: @organizer, course: Pd::Workshop::COURSE_CSF)
     @organizer_workshop.save(validate: false)
-    create :pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true
+    create(:pd_workshop_participant, workshop: @organizer_workshop, enrolled: true, attended: true)
 
     # Non-CSF workshop from a different organizer
-    @other_workshop = create :byo_workshop, :ended
+    @other_workshop = create(:byo_workshop, :ended)
   end
 
   [:admin, :workshop_organizer, :program_manager].each do |user_type|
@@ -122,7 +122,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
 
   test 'returns only workshops that have ended' do
     # New workshop, not ended, should not be returned.
-    create :workshop
+    create(:workshop)
 
     sign_in @workshop_admin
     get :index
@@ -136,11 +136,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
+    workshop_in_range = create(:workshop, :ended, sessions_from: start_date + 2.weeks)
 
     # Noise
-    create :workshop, :ended, sessions_from: start_date - 1.day
-    create :workshop, :ended, sessions_from: end_date + 1.day
+    create(:workshop, :ended, sessions_from: start_date - 1.day)
+    create(:workshop, :ended, sessions_from: end_date + 1.day)
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'schedule'}
@@ -155,11 +155,11 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
-    workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
+    workshop_in_range = create(:workshop, :ended, ended_at: start_date + 2.weeks)
 
     # Noise
-    create :workshop, :ended, ended_at: start_date - 1.day
-    create :workshop, :ended, ended_at: end_date + 1.day
+    create(:workshop, :ended, ended_at: start_date - 1.day)
+    create(:workshop, :ended, ended_at: end_date + 1.day)
 
     sign_in @workshop_admin
     get :index, params: {start: start_date, end: end_date, query_by: 'end'}
