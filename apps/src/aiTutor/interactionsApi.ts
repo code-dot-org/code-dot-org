@@ -1,5 +1,5 @@
 /** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
- *  TODO-AITUTOR: Remove along with server side code
+ *  TODO-AITUTOR: Remove along with the ruby controller it's calling
  **/
 
 import {MetricEvent} from '@cdo/apps/metrics/events';

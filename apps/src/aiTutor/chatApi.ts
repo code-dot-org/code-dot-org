@@ -1,10 +1,6 @@
-/** TODO-AITUTOR: Clean up and remove deprecated code
- *    - New Tutor is using aiChatApi.ts to handle chat completion requests.
- *    - Investigate aiEvaluations dependency before cleanup. May need to refactor into aiEvaluations
+/** DEPRECATED - See /apps/src/lab2/views/components/aiTutor2/useAiTutor2.tsx for the new AI Tutor
+ * TODO-AITUTOR: Remove along with the ruby controller it's calling
  *
- *  references: aiEvaluationApi.ts *** this is a different feature dependency
- *              aiTutorRedux.ts
- *              AITutorTester.tsx
  **/
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
