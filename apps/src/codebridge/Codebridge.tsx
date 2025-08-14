@@ -10,11 +10,9 @@ import {
   ProjectPickerSettings,
 } from '@codebridge/types';
 import classNames from 'classnames';
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
-import {setShowFlaggedImageModal} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
-import {analyticsEvents} from '@cdo/apps/lab2/hooks/useFileUploader';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -22,9 +20,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import FlaggedImageModal from '@cdo/apps/p5lab/AnimationPicker/FlaggedImageModal';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -146,43 +142,39 @@ export const Codebridge = React.memo(
     useZoomTracker(appName);
 
     const dispatch = useAppDispatch();
-    const showFlaggedImageModal = useAppSelector(
-      state => state.codebridgeWorkspace.showFlaggedImageModal
-    );
-    const flaggedImageData = useAppSelector(
-      state => state.codebridgeWorkspace.flaggedImageData
-    );
+    const [flaggedImageData, setFlaggedImageData] = useState<{
+      file: File;
+      fileType: string;
+      uploadFunction: () => Promise<void>;
+    } | null>(null);
 
     // Set view code to false if level is switched for any levels in widget view.
     useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
       dispatch(setWidgetViewShowCode(false));
     });
 
+    const onImageFlagged = (
+      file: File,
+      fileType: string,
+      uploadFunction: () => Promise<void>
+    ) => {
+      setFlaggedImageData({file, fileType, uploadFunction});
+    };
+
     const handleAcceptFlaggedImage = async () => {
       if (!flaggedImageData) return;
 
       try {
-        const {
-          file,
-          fileType,
-          channelId,
-          fileName,
-          callback,
-          callbackArgs,
-          sendAnalyticsEvent,
-        } = flaggedImageData;
-        const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
-        await HttpClient.put(url, file);
-        sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-          name: fileName,
-          type: file.type,
-        });
-        callback(fileName, '', url, callbackArgs);
-        dispatch(setShowFlaggedImageModal(false));
+        await flaggedImageData.uploadFunction();
+        setFlaggedImageData(null);
       } catch (error) {
         console.error('Error uploading flagged image:', error);
-        dispatch(setShowFlaggedImageModal(false));
+        setFlaggedImageData(null);
       }
+    };
+
+    const handleCancelFlaggedImage = () => {
+      setFlaggedImageData(null);
     };
 
     return (
@@ -198,17 +190,16 @@ export const Codebridge = React.memo(
           projectPickerSettings,
           AiTutor2ResponseView,
           aiTutor2Context,
+          onImageFlagged,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            {showFlaggedImageModal && (
+            {flaggedImageData && (
               <FlaggedImageModal
                 isOpen
                 onAccept={handleAcceptFlaggedImage}
-                onCancel={() => {
-                  dispatch(setShowFlaggedImageModal(false));
-                }}
+                onCancel={handleCancelFlaggedImage}
               />
             )}
             <InnerLayout

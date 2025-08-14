@@ -1,9 +1,7 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {setFlaggedImageData} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
 
 export const enum analyticsEvents {
@@ -30,6 +28,11 @@ export type FileUploaderProps = {
     payload: Record<string, string>
   ) => void;
   appName?: string;
+  onImageFlagged?: (
+    file: File,
+    fileType: string,
+    uploadFunction: () => Promise<void>
+  ) => void;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -100,10 +103,10 @@ export const useFileUploader = ({
   sendAnalyticsEvent = () => {},
   multiple = true,
   appName,
+  onImageFlagged,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
-  const dispatch = useAppDispatch();
 
   const changeHandler = useCallback(() => {
     const handleError = (error: Error) => {
@@ -186,19 +189,20 @@ export const useFileUploader = ({
               const json = await response.json();
               console.log('response.rating', json.rating);
               if (json.rating !== 'everyone' && json.rating !== 'unknown') {
-                // Store file data in Redux for the modal to access
-                dispatch(
-                  setFlaggedImageData({
-                    file,
-                    fileType,
-                    channelId,
-                    fileName: file.name,
-                    callback,
-                    callbackArgs: callbackArgs.current,
-                    sendAnalyticsEvent,
-                  })
-                );
-                return; // User will see flagged image modal and either accept or reject the image.
+                // Image is flagged, call callback if provided
+                if (onImageFlagged) {
+                  const uploadFunction = async () => {
+                    const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+                    await HttpClient.put(url, file);
+                    sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                      name: file.name,
+                      type: file.type,
+                    });
+                    callback(file.name, '', url, callbackArgs.current);
+                  };
+                  onImageFlagged(file, fileType, uploadFunction);
+                  return; // Don't continue with upload, wait for callback handling
+                }
               }
             } else {
               throw new Error('Error with image moderation.');
@@ -226,8 +230,8 @@ export const useFileUploader = ({
     validMimeTypes,
     callback,
     channelId,
-    dispatch,
     appName,
+    onImageFlagged,
   ]);
 
   return useMemo(
