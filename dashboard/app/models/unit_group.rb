@@ -67,6 +67,13 @@ class UnitGroup < ApplicationRecord
 
   validates :link, presence: true
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validate :validate_family_name_and_version_year
+
+  def validate_family_name_and_version_year
+    unless plc_course || (family_name.present? && version_year.present?)
+      errors.add('non-plc course must have family_name and version_year set')
+    end
+  end
 
   def skip_name_format_validation
     !!plc_course
@@ -625,7 +632,7 @@ class UnitGroup < ApplicationRecord
 
   # rubocop:disable Naming/PredicateName
   def is_course?
-    return !!family_name && !!version_year
+    return family_name.present? && version_year.present?
   end
   # rubocop:enable Naming/PredicateName
 
