@@ -6,7 +6,7 @@ export const COPYRIGHT_TEXT = 'All rights reserved';
 
 // Main site links
 export const SITE_LINKS = [
-  {key: 'issues', label: 'Issues', href: '/issues'},
+  {key: 'initiatives', label: 'Initiatives', href: '/initiatives'},
   {key: 'take-action', label: 'Take Action', href: '/take-action'},
   {key: 'hour-of-ai', label: 'Hour of AI', href: '/hour-of-ai'},
   // Marketing does not have permission to collect donations yet
@@ -24,13 +24,13 @@ export const SOCIAL_LINKS = [
   {
     key: 'x-twitter',
     label: 'X',
-    href: 'https://x.com/codeorg',
+    href: 'https://x.com/csforall',
     icon: <XIcon />,
   },
   {
     key: 'linkedin',
     label: 'LinkedIn',
-    href: 'https://linkedin.com/company/code-org',
+    href: 'https://www.linkedin.com/company/csforall',
     icon: <Linkedin />,
   },
 ];
