@@ -325,3 +325,103 @@ export type WorkshopAction =
   | {type: 'REMOVE_COURSE_OFFERING'; payload: string}
   | {type: 'SET_COURSE_OFFERINGS'; payload: string[]}
   | {type: 'SET_WORKSHOP'; payload: WorkshopFormState};
+
+// Survey summary API response types
+export interface SurveySummary {
+  course: string;
+  name: string;
+  facilitators: Record<string, string>;
+  surveys: Record<string, SurveyTypeSummary>;
+}
+
+export interface SurveyTypeSummary {
+  total_responses: number;
+  categories: SurveyCategories;
+}
+
+export interface SurveyCategories {
+  [key: string]:
+    | SurveyCategory
+    | Record<string, FacilitatorCategory>
+    | undefined;
+}
+
+export interface SurveyCategory {
+  questions: SurveyQuestion[];
+}
+
+export interface FacilitatorCategory {
+  name: string;
+  questions: SurveyQuestion[];
+}
+
+export interface SurveyQuestion {
+  question_name: string;
+  question_text: string;
+  question_short_text: string | null;
+  question_sub_text: string | null;
+  question_type: string;
+  category: string | null;
+  responses: SurveyQuestionResponses;
+}
+
+export type SurveyQuestionResponses =
+  | LikertResponses
+  | PromoterResponses
+  | TextResponses
+  | SingleSelectResponses
+  | MultiSelectResponses;
+
+export interface LikertResponses {
+  total_responses: number;
+  weighted_score: number;
+  agreement_percentage: number;
+  breakdown: Record<string, LikertBreakdown>;
+}
+
+export interface LikertBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+  weighted_value: number;
+}
+
+export interface PromoterResponses {
+  total_responses: number;
+  promoter_percentage: number;
+  breakdown: Record<string, PromoterBreakdown>;
+}
+
+export interface PromoterBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}
+
+export interface TextResponses {
+  total_responses: number;
+  responses: string[];
+}
+
+export interface SingleSelectResponses {
+  total_responses: number;
+  breakdown: Record<string, SingleSelectBreakdown>;
+  other_answers?: string[];
+}
+
+export interface SingleSelectBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}
+
+export interface MultiSelectResponses {
+  total_respondents: number;
+  breakdown: Record<string, MultiSelectBreakdown>;
+}
+
+export interface MultiSelectBreakdown {
+  count: number;
+  percentage: number;
+  label: string;
+}
