@@ -13,7 +13,7 @@ import {
   ExtraLinksProjectData,
   ParentLevelPathLink,
   ScriptLevelPathLink,
-} from '../types';
+} from '../../types';
 
 import moduleStyles from './extra-links.module.scss';
 
