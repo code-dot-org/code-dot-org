@@ -159,6 +159,13 @@ module.exports = function (grunt) {
             return path.join(dest, outputPath);
           },
         },
+        // Copy preview assets to the correct location for the asset pipeline
+        {
+          expand: true,
+          cwd: 'build/preview',
+          src: ['**'],
+          dest: 'build/package/js/preview',
+        },
         // minifying ace code requires some advanced configuration:
         // https://github.com/ajaxorg/ace/blob/b808ac14ec6d6afa74b36ff5c03452a2832b32a4/Makefile.dryice.js#L620-L638
         // instead of replicating that configuration here, we keep minified
@@ -366,6 +373,9 @@ module.exports = function (grunt) {
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
     buildFrontendDependencies: './script/build-frontend-dependencies.sh',
+    buildPreviewWebpack: envConstants.DEV
+      ? 'yarn build:preview:dev'
+      : 'yarn build:preview:prod',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -551,6 +561,12 @@ module.exports = function (grunt) {
     'ejs',
     'detect-production-webpack-chunks',
     'exec:buildFrontendDependencies',
+  ]);
+
+  grunt.registerTask('buildPreview', [
+    'exec:generateSharedConstants',
+    'exec:generateRegionConfigurations',
+    'exec:buildPreviewWebpack',
   ]);
 
   grunt.registerTask('check-entry-points', function () {

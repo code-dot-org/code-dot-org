@@ -5,7 +5,5 @@
 
   %body
     #codeprojects-preview-container
-    -# webpack-runtime.js must appear exactly once on any page containing webpack entries
-    %script{src: webpack_asset_path('js/webpack-runtime.js'), 'data-ot-ignore' => ''}
-
-    %script{src: webpack_asset_path("js/codeprojects_preview/show.js")}
+    -# Single preview bundle with React and all dependencies included
+    %script{src: webpack_asset_path('preview/preview.js'), 'data-ot-ignore' => ''}

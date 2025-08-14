@@ -7,8 +7,16 @@ class AssetHelper
     "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
+  def preview_manifest_path
+    "#{CDO.root_dir}/dashboard/public/blockly/preview/manifest.json"
+  end
+
   def webpack_manifest
     @webpack_manifest ||= JSON.parse(File.read(webpack_manifest_path))
+  end
+
+  def preview_manifest
+    @preview_manifest ||= File.exist?(preview_manifest_path) ? JSON.parse(File.read(preview_manifest_path)) : {}
   end
 
   #
@@ -35,6 +43,16 @@ class AssetHelper
   def webpack_asset_path(asset)
     using_prebuilt_apps = !CDO.use_my_apps
     use_manifest = CDO.optimize_webpack_assets || using_prebuilt_apps
+
+    # Handle preview assets
+    if asset.start_with?('preview/')
+      return "/assets/#{asset}" unless use_manifest
+      path = preview_manifest[asset]
+      raise "Invalid preview webpack asset name: '#{asset}'" unless path
+      return path
+    end
+
+    # Handle regular assets
     return "/assets/#{asset}" unless use_manifest
     path = webpack_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
