@@ -52,8 +52,8 @@ class NotificationsController < ApplicationController
 
     response_data = {
       status: 'success',
-      message: "#{found_external_notifications.count + notifications_to_create.count} notification(s) marked as read",
-      marked_count: found_external_notifications.count + notifications_to_create.count,
+      message: "#{found_ids.count + notifications_to_create.count} notification(s) marked as read",
+      marked_count: found_ids.count + notifications_to_create.count,
     }
 
     render json: response_data, status: :ok

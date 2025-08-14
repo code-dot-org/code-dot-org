@@ -150,8 +150,27 @@ class NotificationsControllerTest < ActionController::TestCase
       refute_nil ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: @user)&.read_at
     end
 
+    test "mark_as_read creates and updates multiple notifications" do
+      yesterday = 1.day.ago
+      external_notification1 = create_external_notification(@user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
+
+      patch :mark_as_read, params: {external_notifications: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
+      assert_response :ok
+
+      response_data = JSON.parse(@response.body)
+      assert_equal "success", response_data["status"]
+      assert_equal "2 notification(s) marked as read", response_data["message"]
+      assert_equal 2, response_data["marked_count"]
+
+      external_notification1.reload
+      refute_nil ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_1', user: @user)&.read_at
+      assert_equal yesterday.to_i, external_notification1.read_at.to_i
+      refute_nil ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: @user)&.read_at
+    end
+
     test "mark_as_read does not update already read external notifications" do
-      external_notification1 = create_external_notification(@user, external_id: 'TEST_ENTRY_ID_1', read_at: 1.day.ago)
+      yesterday = 1.day.ago
+      external_notification1 = create_external_notification(@user, external_id: 'TEST_ENTRY_ID_1', read_at: yesterday)
 
       patch :mark_as_read, params: {external_notifications: ['TEST_ENTRY_ID_1', 'TEST_ENTRY_ID_2']}
       assert_response :ok
@@ -162,7 +181,7 @@ class NotificationsControllerTest < ActionController::TestCase
 
       external_notification1.reload
 
-      assert_equal 1.day.ago.to_i, external_notification1.read_at.to_i
+      assert_equal yesterday.to_i, external_notification1.read_at.to_i
       refute_nil ExternalNotification.find_by(external_id: 'TEST_ENTRY_ID_2', user: @user)&.read_at
     end
 
