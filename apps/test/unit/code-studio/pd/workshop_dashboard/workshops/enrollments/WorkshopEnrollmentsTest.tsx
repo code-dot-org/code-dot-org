@@ -722,7 +722,7 @@ describe('WorkshopEnrollments', () => {
 
   describe('pagination', () => {
     it('shows pagination controls', () => {
-      const enrollments = Array.from({length: 10}, (_, i) =>
+      const enrollments = Array.from({length: 15}, (_, i) =>
         createTestEnrollment({
           id: i + 1,
           givenName: `User${i + 1}`,
@@ -732,11 +732,11 @@ describe('WorkshopEnrollments', () => {
       renderWithContext({enrollments});
 
       expect(screen.getByText('Rows per page:')).toBeInTheDocument();
-      expect(screen.getByText('1–5 of 10')).toBeInTheDocument();
+      expect(screen.getByText('1–10 of 15')).toBeInTheDocument();
     });
 
     it('changes rows per page', async () => {
-      const enrollments = Array.from({length: 10}, (_, i) =>
+      const enrollments = Array.from({length: 15}, (_, i) =>
         createTestEnrollment({
           id: i + 1,
           givenName: `User${i + 1}`,
@@ -751,13 +751,13 @@ describe('WorkshopEnrollments', () => {
         await user.click(rowsPerPageSelect);
       });
 
-      // Find and click the "10" option
-      const option10 = await screen.findByRole('option', {name: '10'});
+      // Find and click the "5" option
+      const option5 = await screen.findByRole('option', {name: '5'});
       await act(async () => {
-        await user.click(option10);
+        await user.click(option5);
       });
 
-      expect(screen.getByText('1–10 of 10')).toBeInTheDocument();
+      expect(screen.getByText('1–5 of 15')).toBeInTheDocument();
     });
   });
 

@@ -67,9 +67,10 @@ export const WorkshopEnrollments: FC = () => {
   const refreshTimeout = useRef<NodeJS.Timeout | null>(null);
   const [selected, setSelected] = useState<EnrollmentData[]>([]);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
-  const [removeDialogOpen, setRemoveDialogOpen] = useState(false);
-  const [moveDialogOpen, setMoveDialogOpen] = useState(false);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [activeDialog, setActiveDialog] = useState<'move' | 'remove' | null>(
+    null
+  );
   const [moveToWorkshopId, setMoveToWorkshopId] = useState('');
   const [animateRefreshButton, setAnimateRefreshButton] = useState(false);
   const [removeEnrollmentError, setRemoveEnrollmentError] = useState('');
@@ -84,11 +85,7 @@ export const WorkshopEnrollments: FC = () => {
           acc: [EnrollmentData[], EnrollmentData[]],
           enrollment: EnrollmentData
         ) => {
-          if (enrollment.attendances > 0) {
-            acc[0].push(enrollment);
-          } else {
-            acc[1].push(enrollment);
-          }
+          acc[enrollment.attendances > 0 ? 0 : 1].push(enrollment);
           return acc;
         },
         [[], []]
@@ -110,6 +107,12 @@ export const WorkshopEnrollments: FC = () => {
       return `${value}/${workshop?.sessions.length ?? '0'}`;
     }
     return value;
+  };
+
+  const resetStateAfterBulkAction = () => {
+    setActiveDialog(null);
+    setSelected([]);
+    setPage(0);
   };
 
   const handleSelectAllClick = (event: ChangeEvent<HTMLInputElement>) => {
@@ -185,8 +188,7 @@ export const WorkshopEnrollments: FC = () => {
       const results = await Promise.all(deletePromises);
 
       if (results.every(({ok}) => ok)) {
-        setRemoveDialogOpen(false);
-        setSelected([]);
+        resetStateAfterBulkAction();
       } else {
         setRemoveEnrollmentError(
           `There was an error while removing enrollments. Please try again.`
@@ -223,9 +225,8 @@ export const WorkshopEnrollments: FC = () => {
       );
 
       if (response.ok) {
-        setMoveDialogOpen(false);
+        resetStateAfterBulkAction();
         setMoveToWorkshopId('');
-        setSelected([]);
       } else {
         setMoveEnrollmentsError(
           `There was an error while moving enrollments. Please try again.`
@@ -308,7 +309,7 @@ export const WorkshopEnrollments: FC = () => {
             </OverlineTwoText>
             <Button
               ariaLabel={`Move selected enrollment${s}`}
-              onClick={() => setMoveDialogOpen(true)}
+              onClick={() => setActiveDialog('move')}
               size="s"
               type="secondary"
               color={buttonColors.gray}
@@ -316,7 +317,7 @@ export const WorkshopEnrollments: FC = () => {
             />
             <Button
               ariaLabel={`Remove selected enrollment${s}`}
-              onClick={() => setRemoveDialogOpen(true)}
+              onClick={() => setActiveDialog('remove')}
               size="s"
               type="secondary"
               color={buttonColors.destructive}
@@ -404,11 +405,11 @@ export const WorkshopEnrollments: FC = () => {
         />
       </Card>
 
-      {removeDialogOpen && (
+      {activeDialog === 'remove' && (
         <Dialog
           id="remove-enrollments-dialog"
           onClose={() => {
-            setRemoveDialogOpen(false);
+            setActiveDialog(null);
             setRemoveEnrollmentError('');
           }}
           title={`Remove Enrollment${s}?`}
@@ -472,18 +473,18 @@ export const WorkshopEnrollments: FC = () => {
             type: 'secondary',
             color: buttonColors.gray,
             onClick: () => {
-              setRemoveDialogOpen(false);
+              setActiveDialog(null);
               setRemoveEnrollmentError('');
             },
           }}
         />
       )}
 
-      {moveDialogOpen && (
+      {activeDialog === 'move' && (
         <Dialog
           id="move-enrollments-dialog"
           onClose={() => {
-            setMoveDialogOpen(false);
+            setActiveDialog(null);
             setMoveToWorkshopId('');
           }}
           title={`Move Enrollment${s}?`}
@@ -536,7 +537,7 @@ export const WorkshopEnrollments: FC = () => {
             type: 'secondary',
             color: buttonColors.gray,
             onClick: () => {
-              setMoveDialogOpen(false);
+              setActiveDialog(null);
               setMoveToWorkshopId('');
             },
           }}
