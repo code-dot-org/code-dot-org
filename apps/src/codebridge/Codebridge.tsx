@@ -152,7 +152,6 @@ export const Codebridge = React.memo(
     const flaggedImageData = useAppSelector(
       state => state.codebridgeWorkspace.flaggedImageData
     );
-    console.log('showFlaggedImageModal', showFlaggedImageModal);
 
     // Set view code to false if level is switched for any levels in widget view.
     useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
