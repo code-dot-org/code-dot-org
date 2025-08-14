@@ -50,8 +50,8 @@ class NotificationsController < ApplicationController
 
     response_data = {
       status: 'success',
-      message: "#{found_external_notifications.count} notification(s) marked as read",
-      marked_count: found_external_notifications.count,
+      message: "#{found_external_notifications.count + notifications_to_create.count} notification(s) marked as read",
+      marked_count: found_external_notifications.count + notifications_to_create.count,
     }
 
     render json: response_data, status: :ok
@@ -75,10 +75,10 @@ class NotificationsController < ApplicationController
         'Unable to format Contentful notification',
         context: {
           contentful_id: notification.id,
-          has_id: formatted_notification[:external_id].blank?,
-          has_title: formatted_notification[:title].blank?,
-          has_description: formatted_notification[:description].blank?,
-          has_icon_name: formatted_notification[:icon_name].blank?
+          has_id: formatted_notification[:external_id].present?,
+          has_title: formatted_notification[:title].present?,
+          has_description: formatted_notification[:description].present?,
+          has_icon_name: formatted_notification[:icon_name].present?
         }
       )
       return nil
@@ -95,7 +95,7 @@ class NotificationsController < ApplicationController
     end
 
     formatted_notification
-  rescue
+  rescue StandardError
     Honeybadger.notify(
       'Error trying to format Contentful notification',
         context: {
