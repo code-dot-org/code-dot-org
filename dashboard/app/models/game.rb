@@ -255,7 +255,7 @@ class Game < ApplicationRecord
   end
 
   def no_footer?
-    false
+    [WEBLAB2].include? app
   end
 
   # True if the app takes responsibility for showing footer info
