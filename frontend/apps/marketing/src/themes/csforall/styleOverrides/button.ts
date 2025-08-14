@@ -87,6 +87,15 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           fontSize: '52px',
           color: theme.palette.common.white,
         },
+        '&:hover': {
+          backgroundColor: theme.palette.secondary.dark,
+        },
+      },
+      '&.video-download-button.MuiButtonBase-root': {
+        lineHeight: 1.57,
+        alignItems: 'center',
+        paddingBlock: '1px',
+        margin: 0,
       },
     }),
   },

@@ -30,7 +30,7 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
           marginLeft: 0,
         },
         '&:focus-visible': {
-          outline: '2px solid ' + localTheme.palette.secondary.main,
+          outline: '2px solid var(--borders-brand-teal-primary)',
           outlineOffset: '2px',
         },
         '&.MuiButton-contained': {
@@ -90,6 +90,16 @@ export const BUTTON_OVERRIDES: Components<Theme>['MuiButton'] = {
             fontSize: '52px',
             color: 'var(--brand-purple-50)',
           },
+          '&:hover': {
+            backgroundColor: 'var(--background-neutral-tertiary)',
+          },
+        },
+        '&.video-download-button.MuiButtonBase-root': {
+          lineHeight: 1.57,
+          alignItems: 'center',
+          paddingBlock: 0,
+          margin: 0,
+          borderColor: 'var(--borders-neutral-strong)',
         },
       };
     },
