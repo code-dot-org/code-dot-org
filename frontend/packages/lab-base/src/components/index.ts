@@ -7,3 +7,4 @@ export * from './projectBlockedUI';
 export {default as ProjectBlockedUI} from './projectBlockedUI';
 export * from './errorFallbackPage';
 export {default as ErrorFallbackPage} from './errorFallbackPage';
+export {default as ErrorBoundary} from './ErrorBoundary';
