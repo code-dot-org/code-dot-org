@@ -351,13 +351,24 @@ module Api::V1::Pd
       response = JSON.parse(@response.body, symbolize_names: true)
 
       # Verify top-level structure
-      assert response.key?(:course_name), "Missing course_name"
+      assert response.key?(:course), "Missing course"
+      assert response.key?(:name), "Missing name"
       assert response.key?(:facilitators), "Missing facilitators"
-      assert response.key?(:total_responses), "Missing total_responses"
-      assert response.key?(:categories), "Missing categories"
+      assert response.key?(:surveys), "Missing surveys"
+
+      # Verify surveys structure
+      surveys = response[:surveys]
+      refute_empty surveys, "Should have at least one survey"
+
+      # Get the first survey (should be Post Workshop for BYO)
+      survey_key = surveys.keys.first
+      survey_data = surveys[survey_key]
+
+      assert survey_data.key?(:total_responses), "Missing total_responses for survey"
+      assert survey_data.key?(:categories), "Missing categories for survey"
 
       # Verify categorized structure
-      categories = response[:categories]
+      categories = survey_data[:categories]
       expected_categories = [:implementation, :engagement, :logistics, :facilitators, :other]
       expected_categories.each do |category|
         assert categories.key?(category), "Missing category: #{category}"
@@ -466,8 +477,12 @@ module Api::V1::Pd
       facilitator_1_id = facilitator_1.id.to_s
       facilitator_2_id = facilitator_2.id.to_s
 
+      # Get the survey data (should be Post Workshop for CSF)
+      surveys = response[:surveys]
+      survey_key = surveys.keys.first
+      categories = surveys[survey_key][:categories]
+
       # Verify facilitator category structure in categories
-      categories = response[:categories]
       assert categories[:facilitators].key?(facilitator_1_id.to_sym), "Should have data for facilitator 1"
       refute categories[:facilitators].key?(facilitator_2_id.to_sym), "Should not have data for facilitator 2"
 
@@ -487,9 +502,13 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body, symbolize_names: true)
 
+      # Get the survey data (should be Post Workshop for BYO)
+      surveys = response[:surveys]
+      survey_key = surveys.keys.first
+      categories = surveys[survey_key][:categories]
+
       # Matrix questions should be split into individual questions by category
       # Verify that we have questions in implementation and engagement categories
-      categories = response[:categories]
       implementation_questions = categories[:implementation][:questions]
       engagement_questions = categories[:engagement][:questions]
       refute_empty implementation_questions, "Should have implementation questions from matrix rows"
@@ -513,22 +532,15 @@ module Api::V1::Pd
       assert_response :success
       response = JSON.parse(@response.body, symbolize_names: true)
 
-      # Should still have category structure even with no data
-      categories = response[:categories]
-      # When there's no survey data, only core categories should be present
-      expected_categories = [:facilitators, :other]
-      expected_categories.each do |category|
-        assert categories.key?(category), "Missing category: #{category}"
-        if category == :facilitators
-          assert_equal({}, categories[category], "Facilitators should be empty hash when no facilitators assigned")
-        else
-          assert_equal([], categories[category][:questions], "#{category} should have empty questions array")
-        end
-      end
+      # Verify top-level structure
+      assert response.key?(:course), "Missing course"
+      assert response.key?(:name), "Missing name"
+      assert response.key?(:facilitators), "Missing facilitators"
+      assert response.key?(:surveys), "Missing surveys"
 
-      categories.keys.each do |category|
-        assert expected_categories.include?(category), "Unexpected category: #{category}"
-      end
+      # When there's no survey data, surveys should be empty
+      surveys = response[:surveys]
+      assert_equal({}, surveys, "Surveys should be empty hash when no survey responses")
     end
   end
 end
