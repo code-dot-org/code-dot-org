@@ -873,10 +873,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true)
+    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
     stub_file_writes(unit.name)
 
-    course_version = create(:course_version, content_root: unit)
+    course_version = create(:course_version, content_root: unit.original_unit_group)
     teacher_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version),
@@ -899,10 +899,10 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta, is_migrated: true)
+    unit = create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta).first_unit
     stub_file_writes(unit.name)
 
-    course_version = create(:course_version, content_root: unit)
+    course_version = create(:course_version, content_root: unit.original_unit_group)
     student_resources = [
       create(:resource, course_version: course_version),
       create(:resource, course_version: course_version)
@@ -1001,7 +1001,6 @@ class ScriptsControllerTest < ActionController::TestCase
       instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
       tts: 'on',
       project_sharing: 'on',
-      is_course: 'on',
       peer_reviews_to_complete: 1,
       curriculum_path: 'fake_curriculum_path',
       family_name: 'fake-family-z',
