@@ -2,7 +2,7 @@
  * API for managing files via the code.org dashboard, which saves to S3.
  */
 
-import {retrieveToken} from '@code-dot-org/user';
+import HttpClient from '../HttpClient';
 
 const rootUrl = (channelId: string) => `/v3/files/${channelId}/`;
 
@@ -15,12 +15,12 @@ export async function updateProjectThumbnail(
   file: Blob
 ): Promise<Response> {
   const url = `${rootUrl(channelId)}.metadata/thumbnail.png`;
-  return fetch(url, {
-    method: 'PUT',
-    body: file,
-    headers: {
+  return HttpClient.put(
+    url,
+    file,
+    true, // useAuthenticityToken
+    {
       'Content-Type': 'image/png',
-      'X-CSRF-TOKEN': await retrieveToken(),
-    },
-  });
+    }
+  );
 }

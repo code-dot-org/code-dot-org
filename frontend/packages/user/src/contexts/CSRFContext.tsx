@@ -1,6 +1,6 @@
 import React, {PropsWithChildren, useEffect, useCallback, useState, createContext, useContext} from 'react';
 
-import {retrieveToken, refreshToken} from '@user/authenticityTokenStore';
+import {retrieveToken, refreshToken} from '@code-dot-org/api';
 
 /**
  * Describes the state of the user.

@@ -39,6 +39,30 @@
       },
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
+    },
+    "./reducers": {
+      "types": {
+        "import": "./dist/esm/reducers/index.d.ts",
+        "require": "./dist/cjs/reducers/index.d.js"
+      },
+      "import": "./dist/esm/reducers/index.mjs",
+      "require": "./dist/cjs/reducers/index.js"
+    },
+    "./stores": {
+      "types": {
+        "import": "./dist/esm/stores/index.d.ts",
+        "require": "./dist/cjs/stores/index.d.js"
+      },
+      "import": "./dist/esm/stores/index.mjs",
+      "require": "./dist/cjs/stores/index.js"
+    },
+    "./providers": {
+      "types": {
+        "import": "./dist/esm/providers/index.d.ts",
+        "require": "./dist/cjs/providers/index.d.js"
+      },
+      "import": "./dist/esm/providers/index.mjs",
+      "require": "./dist/cjs/providers/index.js"
     }
   },
   "scripts": {
@@ -61,6 +85,12 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "dependencies": {
+    "@code-dot-org/api": "workspace:*",
+    "@code-dot-org/metrics": "workspace:*",
+    "@reduxjs/toolkit": "^2.8.2",
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",

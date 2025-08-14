@@ -22,6 +22,41 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": {
+        "import": "./dist/esm/index.d.ts",
+        "require": "./dist/cjs/index.d.js"
+      },
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js"
+    },
+    "./reducers": {
+      "types": {
+        "import": "./dist/esm/reducers/index.d.ts",
+        "require": "./dist/cjs/reducers/index.d.js"
+      },
+      "import": "./dist/esm/reducers/index.mjs",
+      "require": "./dist/cjs/reducers/index.js"
+    },
+    "./stores": {
+      "types": {
+        "import": "./dist/esm/stores/index.d.ts",
+        "require": "./dist/cjs/stores/index.d.js"
+      },
+      "import": "./dist/esm/stores/index.mjs",
+      "require": "./dist/cjs/stores/index.js"
+    },
+    "./providers": {
+      "types": {
+        "import": "./dist/esm/providers/index.d.ts",
+        "require": "./dist/cjs/providers/index.d.js"
+      },
+      "import": "./dist/esm/providers/index.mjs",
+      "require": "./dist/cjs/providers/index.js"
+    }
+  },
   "scripts": {
     "build": "tsup --clean",
     "clean": "rimraf dist .turbo",
@@ -86,6 +121,9 @@
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "@code-dot-org/api": "workspace:*"
   },
   "peerDependencies": {
     "classnames": "^2.5.1",

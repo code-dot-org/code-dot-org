@@ -47,6 +47,30 @@
       },
       "import": "./dist/esm/contexts/index.mjs",
       "require": "./dist/cjs/contexts/index.js"
+    },
+    "./reducers": {
+      "types": {
+        "import": "./dist/esm/reducers/index.d.ts",
+        "require": "./dist/cjs/reducers/index.d.js"
+      },
+      "import": "./dist/esm/reducers/index.mjs",
+      "require": "./dist/cjs/reducers/index.js"
+    },
+    "./stores": {
+      "types": {
+        "import": "./dist/esm/stores/index.d.ts",
+        "require": "./dist/cjs/stores/index.d.js"
+      },
+      "import": "./dist/esm/stores/index.mjs",
+      "require": "./dist/cjs/stores/index.js"
+    },
+    "./providers": {
+      "types": {
+        "import": "./dist/esm/providers/index.d.ts",
+        "require": "./dist/cjs/providers/index.d.js"
+      },
+      "import": "./dist/esm/providers/index.mjs",
+      "require": "./dist/cjs/providers/index.js"
     }
   },
   "scripts": {
@@ -79,6 +103,7 @@
     "@code-dot-org/fonts": "workspace:*",
     "@code-dot-org/metrics": "workspace:*",
     "@code-dot-org/projects": "workspace:*",
+    "@code-dot-org/redux": "workspace:*",
     "@code-dot-org/user": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "focus-trap-react": "^11.0.4",

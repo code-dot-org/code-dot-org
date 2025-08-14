@@ -3,53 +3,54 @@
  * metadata about a project.
  */
 
+import HttpClient from '../HttpClient';
+
 import {Channel} from './types';
 
 const rootUrl = '/v3/channels';
 
 export async function get(channelId: string): Promise<Channel> {
-  const response = await fetch(`${rootUrl}/${channelId}`);
-  const json = await response.json();
-  const {value} = json;
+  const {value} = await HttpClient.fetchJson<Channel>(
+    `${rootUrl}/${channelId}`
+  );
   return value;
 }
 
 export async function update(channel: Channel): Promise<Response> {
-  return fetch(`${rootUrl}/${channel.id}`, {
-    method: 'POST',
-    body: JSON.stringify(channel),
-    headers: {
+  return HttpClient.post(
+    `${rootUrl}/${channel.id}`,
+    JSON.stringify(channel),
+    false,
+    {
       'Content-Type': 'application/json; charset=UTF-8',
-    },
-  });
+    }
+  );
 }
 
 export async function publish(channel: Channel): Promise<Response> {
-  return fetch(`${rootUrl}/${channel.id}/publish/${channel.projectType}`, {
-    method: 'POST',
-    body: '',
-  });
+  return HttpClient.post(
+    `${rootUrl}/${channel.id}/publish/${channel.projectType}`,
+    '',
+    false
+  );
 }
 
 export async function unpublish(channel: Channel): Promise<Response> {
-  return fetch(`${rootUrl}/${channel.id}/unpublish`, {
-    method: 'POST',
-    body: '',
-  });
+  return HttpClient.post(`${rootUrl}/${channel.id}/unpublish`, '', false);
 }
 
 export async function fetchAbuseScore(channelId: string): Promise<number> {
-  const response = await fetch(`${rootUrl}/${channelId}/abuse`);
-  const json = await response.json();
-  const value: {abuse_score: number} = json;
+  const {value} = await HttpClient.fetchJson<{abuse_score: number}>(
+    `${rootUrl}/${channelId}/abuse`
+  );
   return value.abuse_score;
 }
 
 export async function fetchSharingDisabled(
   channelId: string
 ): Promise<boolean> {
-  const response = await fetch(`${rootUrl}/${channelId}/sharing_disabled`);
-  const json = await response.json();
-  const value: {sharing_disabled: boolean} = json;
+  const {value} = await HttpClient.fetchJson<{sharing_disabled: boolean}>(
+    `${rootUrl}/${channelId}/sharing_disabled`
+  );
   return value.sharing_disabled;
 }

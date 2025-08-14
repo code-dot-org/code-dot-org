@@ -1,4 +1,4 @@
-import {retrieveToken} from '@code-dot-org/user';
+import {retrieveToken} from '@code-dot-org/api';
 
 import {MetricsApi} from './MetricsApi';
 import type {MetricDatum} from './types';

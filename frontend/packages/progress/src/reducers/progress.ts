@@ -1,5 +1,5 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
-import type {PayloadAction, ThunkDispatch, ThunkAction, AnyAction} from "@reduxjs/toolkit";
+import type {PayloadAction, ThunkAction, AnyAction} from "@reduxjs/toolkit";
 import _ from 'lodash';
 
 import type {Lesson} from '@code-dot-org/models/lessons';
@@ -7,7 +7,7 @@ import type {Level} from '@code-dot-org/models/levels';
 import {LevelKind} from '@code-dot-org/models/levels';
 
 import {PUZZLE_PAGE_NONE, LevelStatus, TestResults, MINIMUM_PASS_RESULT, MINIMUM_OPTIMAL_RESULT} from '../constants';
-import type {RootState} from '../stores/progress';
+import type {RootState, AppDispatch} from '../stores/progress';
 import {LevelResults, PeerReviewLevelInfo, ProgressState, UnitProgress, UnitProgressDefinition, InitProgressPayload, ViewType, MilestoneReport, OptionalMilestoneData, ProgressLevelType, NumberedLevel} from '../types';
 
 /**
@@ -208,7 +208,7 @@ const initialState: ProgressState = {
 };
 
 const progressSlice = createSlice({
-  name: "counter",
+  name: "progress",
   initialState,
   reducers: {
     initProgress(state, action: PayloadAction<InitProgressPayload>) {
@@ -387,7 +387,7 @@ export const levelById: (state: RootState['progress'], lessonId: number | undefi
 function sendReportHelper(
   appType: string,
   result: number,
-  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  dispatch: AppDispatch,
   getState: () => RootState,
   extraData?: OptionalMilestoneData
 ) {
@@ -694,7 +694,7 @@ export const sendPredictLevelReport = createAsyncThunk<
   void,
   {appType: string; predictResponse: string},
   {
-    dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+    dispatch: AppDispatch;
     state: RootState;
   }
 >('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
@@ -716,7 +716,7 @@ export const sendPredictLevelReport = createAsyncThunk<
  */
 const userProgressFromServer = (
   state: ProgressState,
-  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  dispatch: AppDispatch,
   userId: string | null = null,
   mergeProgress: boolean
 ) => {

@@ -14,6 +14,7 @@ export type NumberedLevel = Level & {
   levelNumber: number;
   isCurrentLevel: boolean;
   sublevels?: NumberedLevel[];
+  status?: LevelStatus;
 };
 
 export const ReviewStates = {

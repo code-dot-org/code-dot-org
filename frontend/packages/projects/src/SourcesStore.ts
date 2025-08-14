@@ -1,13 +1,14 @@
-import {getTabId} from '@code-dot-org/user';
-
-import * as sourcesApi from './sourcesApi';
+import {
+  AppName,
+  ProjectType,
+} from '@code-dot-org/api/projects';
 import {
   ProjectSources,
-  ProjectType,
   SaveSourceOptions,
   UpdateSourceOptions,
-} from './types';
-
+} from '@code-dot-org/api/sources';
+import * as sourcesApi from '@code-dot-org/api/sources';
+import {getTabId} from '@code-dot-org/user';
 
 /**
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
@@ -18,8 +19,8 @@ export class SourcesStore {
   private firstSaveTime: string | null = null;
   private lastNewVersionTime: number | null = null;
 
-  async load(channelId: string, versionId?: string) {
-    const {response, value} = await sourcesApi.get(channelId, versionId);
+  async load(appName: AppName, channelId: string, versionId?: string) {
+    const {response, value} = await sourcesApi.get(appName, channelId, versionId);
 
     if (response.ok && !versionId) {
       // Only store the current version id if we are loading the latest version.

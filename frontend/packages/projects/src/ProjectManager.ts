@@ -10,13 +10,15 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
+import {ValidationError} from '@code-dot-org/api';
+import type {Channel, ProjectAndSources} from '@code-dot-org/api/channels';
+import {getProjectThumbnailUrl, updateProjectThumbnail} from '@code-dot-org/api/files';
+import type {AppName} from '@code-dot-org/api/projects';
+import type {ProjectSources} from '@code-dot-org/api/sources';
 import {MetricsReporter} from '@code-dot-org/metrics';
 
 import {ChannelsStore} from './ChannelsStore';
-import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
-import {ValidationError} from './responseValidators';
 import {SourcesStore} from './SourcesStore';
-import {Channel, ProjectAndSources, ProjectSources} from './types';
 
 export default class ProjectManager {
   private readonly channelId: string;
@@ -84,11 +86,11 @@ export default class ProjectManager {
   // Load the project from the sources and channels store.
   // If resetSource is true we return undefined for sources, otherwise we load the sources.
   // The lab itself handles undefined sources, generally by using the start sources instead.
-  async load(resetSource?: boolean): Promise<ProjectAndSources> {
+  async load(appName: AppName, resetSource?: boolean): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = resetSource ? undefined : await this.loadAndStoreSources();
+    const sources = resetSource ? undefined : await this.loadAndStoreSources(appName);
 
     let channel: Channel;
     try {
@@ -107,7 +109,7 @@ export default class ProjectManager {
 
   // Restore the given version of the project. This will call restore on the sources store
   // and then load and return the updated sources.
-  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
+  async restoreSources(appName: AppName, versionId: string): Promise<ProjectSources | undefined> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('restore');
     }
@@ -120,20 +122,21 @@ export default class ProjectManager {
     }
     // Now that we've restored to the previous version, loading sources
     // will load the newly-restored version.
-    const sources = await this.loadAndStoreSources();
+    const sources = await this.loadAndStoreSources(appName);
     return sources;
   }
 
   /**
    * Load the sources for this project. If a versionId is provided, load that version, otherwise
    * load the latest version. The sources are not stored by the Project Manager.
+   * @param appName The lab name which will be used to validate the stored data.
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
    * @returns sources for the project.
    */
-  async loadSources(versionId?: string) {
+  async loadSources(appName: AppName, versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(this.channelId, versionId);
+      sources = await this.sourcesStore.load(appName, this.channelId, versionId);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
@@ -608,11 +611,12 @@ export default class ProjectManager {
    * Load the sources for the given version id, or the latest version if no version id is provided.
    * These sources are stored as lastSource, so any future changes to the sources will be compared
    * to these sources.
+   * @param appName The lab name to validate the loaded source data.
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
    * @returns sources for the project.
    */
-  private async loadAndStoreSources(versionId?: string) {
-    const sources = await this.loadSources(versionId);
+  private async loadAndStoreSources(appName: AppName, versionId?: string) {
+    const sources = await this.loadSources(appName, versionId);
     this.lastSource = JSON.stringify(sources);
     return sources;
   }

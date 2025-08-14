@@ -16,7 +16,6 @@ import type {AppName, MultiFileSource, Source, ProjectFile, ProjectSources, Chan
 
 import type {LevelPredictSettings} from '@lab-base/levelEditors';
 
-
 export {Theme};
 
 /// ------ USER APP OPTIONS ------ ///

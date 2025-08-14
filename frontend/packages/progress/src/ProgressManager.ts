@@ -1,7 +1,7 @@
 // This file contains a generic ProgressManager which any lab can include,
 // if it wants to make progress without reloading the page.
 
-import {getAppOptionsEditingExemplar} from '@code-dot-org/projects';
+import {getAppOptionsEditingExemplar} from '@code-dot-org/api';
 
 import {ExemplarSettings, Validation, Validator, ValidationState} from './types';
 

@@ -1,8 +1,8 @@
-export type ResponseValidator<ResponseType> = (
-  bodyJson: Record<string, unknown> | unknown[]
-) => ResponseType;
-
-export class ValidationError extends Error {
+/**
+ * This API error occurs when the response is not of the correct
+ * form as decided by a ResponseValidator function.
+ */
+class ValidationError extends Error {
   constructor(message: string) {
     super(message);
     this.name = 'ValidationError';
@@ -12,3 +12,5 @@ export class ValidationError extends Error {
     Object.setPrototypeOf(this, ValidationError.prototype);
   }
 }
+
+export default ValidationError;

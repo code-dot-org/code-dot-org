@@ -1,4 +1,1 @@
-export const START_SOURCES = 'start_sources';
-
-/** Default source file name */
-export const SOURCE_FILE = 'main.json';
+export {START_SOURCES, SOURCE_FILE} from '@code-dot-org/api/sources';

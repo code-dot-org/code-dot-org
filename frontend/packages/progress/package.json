@@ -137,6 +137,7 @@
   "clean-package": "./clean-package.config.cjs",
   "dependencies": {
     "@code-dot-org/projects": "workspace:*",
+    "@code-dot-org/api": "workspace:*",
     "@reduxjs/toolkit": "^2.8.2",
     "lodash": "^4.17.21",
     "query-string": "^9.2.2",
