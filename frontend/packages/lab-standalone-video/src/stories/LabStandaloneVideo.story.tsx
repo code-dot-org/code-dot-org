@@ -1,10 +1,10 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import StandaloneVideoLevel, {StandaloneVideoLevelProps} from '@code-dot-org/lab-standalone-video';
+import LabStandaloneVideo, {LabStandaloneVideoProps} from '@code-dot-org/lab-standalone-video';
 
 export default {
   title: 'Labs/StandaloneVideo',
-  component: StandaloneVideoLevel,
+  component: LabStandaloneVideo,
   parameters: {
     layout: 'fullscreen',
   },
@@ -13,8 +13,8 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<StandaloneVideoLevelProps> = args => (
-  <StandaloneVideoLevel
+const SingleTemplate: StoryFn<LabStandaloneVideoProps> = args => (
+  <LabStandaloneVideo
     {...args}
   />
 );

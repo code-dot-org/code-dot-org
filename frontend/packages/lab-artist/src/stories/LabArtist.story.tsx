@@ -3,12 +3,13 @@ import * as Blockly from 'blockly/core';
 
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
-import BlocklyLevel, {BlocklyLevelProps} from '@code-dot-org/lab-blockly';
-import type {LevelData} from '@code-dot-org/lab-blockly';
+import LabArtist, {LabArtistProps} from '@code-dot-org/lab-artist';
+import type {ArtistData} from '@code-dot-org/lab-artist';
+import type {LevelData} from '@code-dot-org/models/levels';
 
 export default {
-  title: 'Labs/Blockly',
-  component: BlocklyLevel,
+  title: 'Labs/Artist',
+  component: LabArtist,
   parameters: {
     layout: 'fullscreen',
   },
@@ -17,20 +18,20 @@ export default {
 //
 // TEMPLATE
 //
-const Template: StoryFn<BlocklyLevelProps> = args => (
+const Template: StoryFn<LabArtistProps> = args => (
   <div style={{width: '100vw', height: '100vh'}}>
-    <BlocklyLevel
+    <LabArtist
       {...args}
     />
   </div>
 );
 
-const defaultLevelData: LevelData = {
+const defaultLevelData: LevelData<ArtistData> = {
   key: 'default-level',
-  type: 'Blockly',
+  type: 'Artist',
   longInstructions: 'These are the instructions for this level in **Markdown**',
   shortInstructions: 'These are shorter instructions',
-  blocklyData: {
+  subData: {
     startBlocks: {
       blocks: {
         blocks: [
@@ -49,6 +50,11 @@ const defaultLevelData: LevelData = {
         ],
       },
     },
+    skinId: 'artist',
+    startDirection: 90,
+    images: [],
+    initialX: 200,
+    initialY: 200,
   },
 };
 
@@ -59,7 +65,9 @@ const defaultBlocks: BlockDefinition[] = [
     tooltip: '',
     helpUrl: '',
     message0: 'when run',
-    generator: () => '\n',
+    generator: {
+      javascript: () => '\n',
+    },
     nextStatement: true,
   },
   {
@@ -71,8 +79,10 @@ const defaultBlocks: BlockDefinition[] = [
     previousStatement: true,
     nextStatement: true,
     message0: 'move forward',
-    generator: (block: Blockly.Block) => {
-      return `Maze.moveForward('block_id_${block.id}');\n`;
+    generator: {
+      javascript(block: Blockly.Block) {
+        return `Artist.moveForward('block_id_${block.id}');\n`;
+      },
     },
   },
   {
@@ -94,29 +104,29 @@ const defaultBlocks: BlockDefinition[] = [
         ],
       },
     ],
-    generator: (block: Blockly.Block) => {
-      // Generate JavaScript for moving forward/backward
-      const dir = block.getFieldValue('DIR');
-      return 'Maze.' + dir + "('block_id_" + block.id + "');\n";
+    generator: {
+      javascript(block: Blockly.Block) {
+        // Generate JavaScript for moving forward/backward
+        const dir = block.getFieldValue('DIR');
+        return 'Artist.' + dir + "('block_id_" + block.id + "');\n";
+      },
     },
   },
 ];
 
-export const BlocklyBase = Template.bind({});
-BlocklyBase.args = {
+export const ArtistBase = Template.bind({});
+ArtistBase.args = {
   levelData: defaultLevelData,
   renderer: Thrasos,
-  visualization: <div><canvas width="400" height="400" style={{ width: '100%', height: '100%', background: 'black' }} /></div>,
   customBlocks: defaultBlocks,
 };
 
-export const BlocklyMarkdownInstructions = Template.bind({});
-BlocklyMarkdownInstructions.args = {
+export const ArtistMarkdownInstructions = Template.bind({});
+ArtistMarkdownInstructions.args = {
   levelData: {
     ...defaultLevelData,
     longInstructions: 'Hello <xml><block type="maze_moveForward"/></xml> world.',
   },
   renderer: Thrasos,
-  visualization: <div><canvas width="400" height="400" style={{ width: '100%', height: '100%', background: 'black' }} /></div>,
   customBlocks: defaultBlocks,
 };

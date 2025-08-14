@@ -12,7 +12,7 @@ import Draggable from 'react-draggable';
 
 import Typography from '@code-dot-org/component-library/typography';
 
-import FrequencyLevelContext from '../contexts/FrequencyLevelContext';
+import LabFrequencyAnalysisContext from '../contexts/LabFrequencyAnalysisContext';
 import {FrequencyData} from '../types';
 
 import Spinner from './Spinner';
@@ -64,7 +64,7 @@ const Letter: React.FunctionComponent<LetterProps> = ({
 }) => {
   const nodeRef = useRef<HTMLElement | null>(null);
   const {selected, setSelected, mapLetter, swapMapping, clearMapping} =
-    useContext(FrequencyLevelContext);
+    useContext(LabFrequencyAnalysisContext);
 
   const handleClick = useCallback(() => {
     if (selected) {
@@ -206,7 +206,7 @@ const Letters: React.FunctionComponent<LettersProps> = ({
   const itemPositions = useRef<{[key: string]: number}>({});
   const itemSourcePositions = useRef<{[key: string]: number}>({});
   const itemSourceVisibility = useRef<{[key: string]: boolean}>({});
-  const {selected, setSelected} = useContext(FrequencyLevelContext);
+  const {selected, setSelected} = useContext(LabFrequencyAnalysisContext);
   const [visible, setVisible] = useState<boolean>(false);
 
   const handleUpdate = useCallback(() => {

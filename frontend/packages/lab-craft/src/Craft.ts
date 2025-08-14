@@ -1,6 +1,6 @@
 import {SoundBoard} from '@code-dot-org/audio';
 import type {MusicTrackDefinition} from '@code-dot-org/audio';
-import type {BlocklyLevelEnvironment} from '@code-dot-org/lab-blockly';
+import type {LabBlocklyEnvironment} from '@code-dot-org/lab-blockly';
 
 import characters from './characters';
 import GameController, {AudioPlayer} from './GameController';
@@ -65,7 +65,7 @@ class Craft extends EventTarget {
   constructor(config: {
     container: HTMLDivElement;
     levelData: CraftData;
-    environment: BlocklyLevelEnvironment;
+    environment: LabBlocklyEnvironment;
   }) {
     super();
 

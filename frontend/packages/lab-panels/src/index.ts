@@ -1,4 +1,4 @@
 // Auto-import SASS generated CSS
 import './index.css';
 
-export {default} from './components/PanelsLevel';
+export {default} from './components/LabPanels';

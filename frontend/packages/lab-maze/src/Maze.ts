@@ -2,7 +2,7 @@ import * as Blockly from 'blockly/core';
 
 import {SoundBoard, PlaybackOptions} from '@code-dot-org/audio';
 import {getAllGeneratedCode} from '@code-dot-org/blockly-workspace/utils';
-import type {BlocklyLevelEnvironment} from '@code-dot-org/lab-blockly';
+import type {LabBlocklyEnvironment} from '@code-dot-org/lab-blockly';
 
 import * as defaultAPI from './api';
 import Bee from './Bee';
@@ -46,7 +46,7 @@ class Maze extends EventTarget {
   /* The test status */
   private testStatus?: Status;
   /* The Blockly environment data */
-  private environment: BlocklyLevelEnvironment;
+  private environment: LabBlocklyEnvironment;
   /* The validator to decide if the level goal has been met. */
   private validatorClass: new (maze: MazeController, skin: Skin) => Validator;
   /* The instantiated validator */
@@ -58,7 +58,7 @@ class Maze extends EventTarget {
   constructor(
     workspace: Blockly.Workspace,
     mazeData: MazeData,
-    environment: BlocklyLevelEnvironment,
+    environment: LabBlocklyEnvironment,
     skin: Skin,
     api: API,
     svg: SVGSVGElement,

@@ -7,9 +7,9 @@ import React, {useRef, useEffect, useState, useCallback} from 'react';
 import {Heading1} from '@code-dot-org/component-library/typography';
 import type {Level} from '@code-dot-org/models/levels';
 
+import {LabFrequencyAnalysisProvider} from '../contexts/LabFrequencyAnalysisContext';
 import DATA from '../data';
-import FrequencyLevelProvider from '../providers/FrequencyLevelProvider';
-import {FrequencyLevelData, FrequencyData} from '../types';
+import {LabFrequencyAnalysisData, FrequencyData} from '../types';
 
 import Controls from './Controls';
 import Graph from './Graph';
@@ -18,8 +18,8 @@ import MessagePanel from './MessagePanel';
 
 import moduleStyles from './frequencyLevel.module.scss';
 
-export interface FrequencyLevelProps {
-  levelData: Level<FrequencyLevelData>;
+export interface LabFrequencyAnalysisProps {
+  levelData: Level<LabFrequencyAnalysisData>;
 }
 
 /**
@@ -28,7 +28,7 @@ export interface FrequencyLevelProps {
  * The frequency level investigates substitution ciphers to demonstrate
  * symmetric encryption and the inherent weaknesses of such an approach.
  */
-const FrequencyLevel: React.FunctionComponent<FrequencyLevelProps> = ({
+const LabFrequencyAnalysis: React.FunctionComponent<LabFrequencyAnalysisProps> = ({
   levelData,
 }) => {
   const locale = 'es';
@@ -249,7 +249,7 @@ const FrequencyLevel: React.FunctionComponent<FrequencyLevelProps> = ({
 
   return (
     <div className={moduleStyles.frequencyLevel}>
-      <FrequencyLevelProvider
+      <LabFrequencyAnalysisProvider
         mapLetter={mapLetter}
         swapMapping={swapMapping}
         clearMapping={clearMapping}
@@ -352,9 +352,9 @@ const FrequencyLevel: React.FunctionComponent<FrequencyLevelProps> = ({
             <Controls frequencyData={frequencyData} onUpdate={updateCipher} />
           </div>
         </SplitPane>
-      </FrequencyLevelProvider>
+      </LabFrequencyAnalysisProvider>
     </div>
   );
 };
 
-export default FrequencyLevel;
+export default LabFrequencyAnalysis;

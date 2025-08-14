@@ -22,12 +22,12 @@ import Instructions from '@lab-blockly/components/workspace/information/instruct
 import MultipleChoice from '@lab-blockly/components/workspace/information/multipleChoice';
 import type {BlocklyData} from '@lab-blockly/types';
 
-import moduleStyles from './blocklyLevel.module.scss';
+import moduleStyles from './labBlockly.module.scss';
 
 /**
  * Specific environmental information for all blockly environments.
  */
-export interface BlocklyLevelEnvironment extends Environment {
+export interface LabBlocklyEnvironment extends Environment {
   /** The main workspace reference, when available. */
   mainWorkspace?: Blockly.Workspace;
   /** The hidden workspace reference, when provided. */
@@ -38,9 +38,9 @@ export interface BlocklyLevelEnvironment extends Environment {
   idealBlockCount?: number;
 }
 
-export type BlocklyLevelProps<
+export type LabBlocklyProps<
   T extends BlocklyData = BlocklyData,
-  U extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
+  U extends LabBlocklyEnvironment = LabBlocklyEnvironment,
 > = {
   levelData: Level<T>;
   /** A set of blocks to load as the starting point for the workspace */
@@ -93,9 +93,9 @@ const countBlocks = (workspace: Blockly.Workspace, uncounted: string[]) =>
     return true;
   }).length;
 
-function BlocklyLevel<
+function LabBlockly<
   T extends BlocklyData = BlocklyData,
-  U extends BlocklyLevelEnvironment = BlocklyLevelEnvironment,
+  U extends LabBlocklyEnvironment = LabBlocklyEnvironment,
 >({
   levelData,
   startBlocks,
@@ -111,7 +111,7 @@ function BlocklyLevel<
   plugins,
   uncountedBlockTypes,
   environment,
-}: BlocklyLevelProps<T, U>): React.ReactElement {
+}: LabBlocklyProps<T, U>): React.ReactElement {
   const workspaceRef = useRef<Blockly.Workspace | null>(null);
   const hiddenWorkspaceRef = useRef<Blockly.Workspace | null>(null);
   const toolboxHeaderRef = useRef<HTMLDivElement | null>(null);
@@ -169,7 +169,7 @@ function BlocklyLevel<
           },
         ]}
       >
-        <div className={moduleStyles.blocklyLevel}>
+        <div className={moduleStyles.labBlockly}>
           <div className={moduleStyles.header}>
             <div ref={toolboxHeaderRef} className={moduleStyles.toolboxHeader}>
               {!!toolboxBlocks && (
@@ -332,4 +332,4 @@ function BlocklyLevel<
   );
 }
 
-export default BlocklyLevel;
+export default LabBlockly;

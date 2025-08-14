@@ -30,7 +30,7 @@ export interface FrequencyData {
   cipher: Map<string, string>;
 }
 
-export interface FrequencyLevelData {
+export interface LabFrequencyAnalysisData {
   /** Which cipher type to show */
   mode: 'caesar' | 'substitution';
   /** The different messages to choose from to display */

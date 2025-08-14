@@ -1,5 +1,5 @@
 export type * from './types';
-export * from './components/MazeLevel';
+export * from './components/LabMaze';
 export * as api from './api';
 import Visualization from './components/Visualization';
 export {Visualization};
@@ -26,4 +26,4 @@ export {key}
 
 const name = 'maze';
 export {name};
-export {default} from './components/MazeLevel';
+export {default} from './components/LabMaze';

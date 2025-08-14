@@ -17,6 +17,6 @@ export interface PanelData {
   fadeInOverPrevious?: boolean;
 }
 
-export interface PanelsLevelData {
+export interface LabPanelsData {
   panels: PanelData[];
 }

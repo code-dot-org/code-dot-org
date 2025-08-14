@@ -4,12 +4,12 @@ import * as Blockly from 'blockly/core';
 import type {BlockDefinition} from '@code-dot-org/blockly-workspace';
 import Thrasos from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import type {LevelData} from '@code-dot-org/lab-blockly';
-import MazeLevel, {MazeLevelProps} from '@code-dot-org/lab-maze';
+import LabMaze, {LabMazeProps} from '@code-dot-org/lab-maze';
 import type {MazeData} from '@code-dot-org/lab-maze';
 
 export default {
   title: 'Labs/Maze',
-  component: MazeLevel,
+  component: LabMaze,
   parameters: {
     layout: 'fullscreen',
   },
@@ -18,9 +18,9 @@ export default {
 //
 // TEMPLATE
 //
-const Template: StoryFn<MazeLevelProps> = args => (
+const Template: StoryFn<LabMazeProps> = args => (
   <div style={{width: '100vw', height: '100vh'}}>
-    <MazeLevel
+    <LabMaze
       {...args}
     />
   </div>

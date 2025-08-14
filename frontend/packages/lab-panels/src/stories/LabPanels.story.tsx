@@ -1,11 +1,11 @@
 
 import {Meta, StoryFn} from '@storybook/react';
 
-import PanelsLevel, {PanelsLevelProps} from '@code-dot-org/lab-panels';
+import LabPanels, {LabPanelsProps} from '@code-dot-org/lab-panels';
 
 export default {
   title: 'Labs/Panels',
-  component: PanelsLevel,
+  component: LabPanels,
   parameters: {
     layout: 'fullscreen',
   },
@@ -14,9 +14,9 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<PanelsLevelProps> = args => (
+const SingleTemplate: StoryFn<LabPanelsProps> = args => (
   <div style={{width: '100vw', height: '100vh'}}>
-    <PanelsLevel
+    <LabPanels
       {...args}
     />
   </div>

@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic';
 import React, {useMemo} from 'react';
 
+import {ErrorFallbackPage} from '@code-dot-org/lab-base';
 import type {ActivitySection} from '@code-dot-org/models/activitySections';
 import type {Level as LevelData} from '@code-dot-org/models/levels';
 
@@ -57,9 +58,7 @@ const Level: React.FunctionComponent<LevelProps> = ({level}) => {
         />
       )}
       {level && !(level.type in levelMap) && (
-        <div>
-          No level renderer registered for '<code>{level.type}</code>'.
-        </div>
+        <ErrorFallbackPage message={`No level renderer registered for '${level.type}'`} />
       )}
     </div>
   );

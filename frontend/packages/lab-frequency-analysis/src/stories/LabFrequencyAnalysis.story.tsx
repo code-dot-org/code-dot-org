@@ -1,10 +1,10 @@
 import {Meta, StoryFn} from '@storybook/react';
 
-import FrequencyLevel, {FrequencyLevelProps} from '@code-dot-org/lab-frequency-analysis';
+import LabFrequencyAnalysis, {LabFrequencyAnalysisProps} from '@code-dot-org/lab-frequency-analysis';
 
 export default {
   title: 'Labs/FrequencyAnalysis',
-  component: FrequencyLevel,
+  component: LabFrequencyAnalysis,
   parameters: {
     layout: 'fullscreen',
   },
@@ -13,8 +13,8 @@ export default {
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<FrequencyLevelProps> = args => (
-  <FrequencyLevel
+const SingleTemplate: StoryFn<LabFrequencyAnalysisProps> = args => (
+  <LabFrequencyAnalysis
     {...args}
   />
 );

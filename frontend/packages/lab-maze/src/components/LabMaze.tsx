@@ -15,9 +15,9 @@ import BlockLimitsPlugin from '@code-dot-org/blockly-workspace/plugins/blockLimi
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
-import BlocklyLevel, {
-  BlocklyLevelEnvironment,
-  BlocklyLevelProps,
+import LabBlockly, {
+  LabBlocklyEnvironment,
+  LabBlocklyProps,
 } from '@code-dot-org/lab-blockly';
 import {LevelContext} from '@code-dot-org/lab-blockly/contexts';
 import type {Level} from '@code-dot-org/models/levels';
@@ -41,7 +41,7 @@ const DefaultStartBlocks: BlocklySerialization = {
   },
 };
 
-export interface MazeLevelProps extends BlocklyLevelProps<MazeData> {
+export interface LabMazeProps extends LabBlocklyProps<MazeData> {
   levelData: Level<MazeData>;
   skins?: SkinsData;
   api?: API;
@@ -50,7 +50,7 @@ export interface MazeLevelProps extends BlocklyLevelProps<MazeData> {
   visualizationClassName?: string;
 }
 
-const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
+const LabMaze: React.FunctionComponent<LabMazeProps> = ({
   levelData,
   customBlocks,
   skins,
@@ -65,7 +65,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 }) => {
   const svg = useRef<SVGSVGElement | null>(null);
   const maze = useRef<Maze | null>(null);
-  const environment = useRef<BlocklyLevelEnvironment>({});
+  const environment = useRef<LabBlocklyEnvironment>({});
 
   const {hintsShown} = useContext(LevelContext);
 
@@ -177,7 +177,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   }, [levelData]);
 
   return (
-    <BlocklyLevel<MazeData>
+    <LabBlockly<MazeData>
       levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
@@ -213,4 +213,4 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   );
 };
 
-export default MazeLevel;
+export default LabMaze;

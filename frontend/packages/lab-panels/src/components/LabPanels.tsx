@@ -2,15 +2,15 @@ import React from 'react';
 
 import type {Level} from '@code-dot-org/models/levels';
 
-import type {PanelsLevelData} from '../types';
+import type {LabPanelsData} from '../types';
 
 import PanelsView from './PanelsView';
 
-export interface PanelsLevelProps {
-  levelData: Level<PanelsLevelData>;
+export interface LabPanelsProps {
+  levelData: Level<LabPanelsData>;
 }
 
-const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({levelData}) => {
+const LabPanels: React.FunctionComponent<LabPanelsProps> = ({levelData}) => {
   return (
     <PanelsView
       panels={levelData.subData?.panels || []}
@@ -22,4 +22,4 @@ const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({levelData}) => 
   );
 };
 
-export default PanelsLevel;
+export default LabPanels;

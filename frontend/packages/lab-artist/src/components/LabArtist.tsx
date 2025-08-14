@@ -13,7 +13,7 @@ import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolb
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
 import {getCodeFromBlockJsonSource, getAllGeneratedCode} from '@code-dot-org/blockly-workspace/utils';
-import BlocklyLevel, {BlocklyLevelProps} from '@code-dot-org/lab-blockly';
+import LabBlockly, {LabBlocklyProps} from '@code-dot-org/lab-blockly';
 import type {Level} from '@code-dot-org/models/levels';
 
 import * as defaultAPI from '../api';
@@ -35,7 +35,7 @@ const DefaultStartBlocks: BlocklySerialization = {
   },
 };
 
-export interface ArtistLevelProps extends BlocklyLevelProps {
+export interface LabArtistProps extends LabBlocklyProps {
   levelData: Level<ArtistData>;
   api?: object;
   customBlocks?: BlockDefinition[];
@@ -46,7 +46,7 @@ export interface ArtistLevelProps extends BlocklyLevelProps {
 /**
  * Wraps a Blockly-based Artist level.
  */
-const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
+const LabArtist: React.FunctionComponent<LabArtistProps> = ({
   levelData,
   customBlocks,
   theme,
@@ -162,7 +162,7 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
   }, [levelData]);
 
   return (
-    <BlocklyLevel<ArtistData>
+    <LabBlockly<ArtistData>
       levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
@@ -196,4 +196,4 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
   );
 };
 
-export default ArtistLevel;
+export default LabArtist;

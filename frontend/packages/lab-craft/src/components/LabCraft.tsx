@@ -11,9 +11,9 @@ import BlockLimitsPlugin from '@code-dot-org/blockly-workspace/plugins/blockLimi
 import ToolboxTrashcanPlugin from '@code-dot-org/blockly-workspace/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
-import BlocklyLevel, {
-  BlocklyLevelEnvironment,
-  BlocklyLevelProps,
+import LabBlockly, {
+  LabBlocklyEnvironment,
+  LabBlocklyProps,
 } from '@code-dot-org/lab-blockly';
 import type {Level} from '@code-dot-org/models/levels';
 
@@ -44,7 +44,7 @@ const defaultSkins: Skins = {
   },
 };
 
-export interface CraftLevelProps extends BlocklyLevelProps {
+export interface LabCraftProps extends LabBlocklyProps {
   levelData: Level<CraftData>;
   skins?: {
     [key: string]: Skin;
@@ -54,7 +54,7 @@ export interface CraftLevelProps extends BlocklyLevelProps {
   visualizationClassName?: string;
 }
 
-const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
+const LabCraft: React.FunctionComponent<LabCraftProps> = ({
   levelData,
   customBlocks,
   skins,
@@ -68,7 +68,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
 }) => {
   const container = useRef<HTMLDivElement | null>(null);
   const craft = useRef<Craft | null>(null);
-  const environment = useRef<BlocklyLevelEnvironment>({});
+  const environment = useRef<LabBlocklyEnvironment>({});
 
   const [currentAvatar, setCurrentAvatar] = useState<string>(avatar || '');
   const [running, setRunning] = useState<boolean>(false);
@@ -160,7 +160,7 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
   }, [levelData]);
 
   return (
-    <BlocklyLevel
+    <LabBlockly
       levelData={levelData}
       startBlocks={startBlocks}
       theme={theme || DefaultTheme}
@@ -196,4 +196,4 @@ const CraftLevel: React.FunctionComponent<CraftLevelProps> = ({
   );
 };
 
-export default CraftLevel;
+export default LabCraft;

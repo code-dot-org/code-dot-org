@@ -10,6 +10,6 @@ export {key}
 const name = 'frequency';
 export {name};
 
-export * from './components/FrequencyLevel';
+export * from './components/LabFrequencyAnalysis';
 export * from './types';
-export {default} from './components/FrequencyLevel';
+export {default} from './components/LabFrequencyAnalysis';

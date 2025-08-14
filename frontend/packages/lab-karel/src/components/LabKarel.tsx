@@ -2,17 +2,17 @@ import React, {useMemo} from 'react';
 
 import ThrasosRenderer from '@code-dot-org/blockly-workspace/renderers/thrasos';
 import DefaultTheme from '@code-dot-org/blockly-workspace/themes/default';
-import MazeLevel, {MazeLevelProps, skinFor} from '@code-dot-org/lab-maze';
+import LabMaze, {LabMazeProps, skinFor} from '@code-dot-org/lab-maze';
 
 import * as api from '../api';
 import blocks from '../blocks';
 import skins from '../skins';
 
-import moduleStyles from './karelLevel.module.scss';
+import moduleStyles from './labKarel.module.scss';
 
-export type KarelLevelProps = MazeLevelProps;
+export type LabKarelProps = LabMazeProps;
 
-const KarelLevel: React.FunctionComponent<KarelLevelProps> = ({
+const LabKarel: React.FunctionComponent<LabKarelProps> = ({
   levelData,
   customBlocks,
 }) => {
@@ -23,7 +23,7 @@ const KarelLevel: React.FunctionComponent<KarelLevelProps> = ({
   );
 
   return (
-    <MazeLevel
+    <LabMaze
       levelData={levelData}
       theme={DefaultTheme}
       renderer={ThrasosRenderer}
@@ -35,4 +35,4 @@ const KarelLevel: React.FunctionComponent<KarelLevelProps> = ({
   );
 };
 
-export default KarelLevel;
+export default LabKarel;

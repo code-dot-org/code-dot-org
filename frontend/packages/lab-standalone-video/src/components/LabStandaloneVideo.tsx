@@ -4,17 +4,17 @@ import Video from '@code-dot-org/component-library/video';
 import type {ActivitySection} from '@code-dot-org/models/activitySections';
 import type {Level} from '@code-dot-org/models/levels';
 
-import moduleStyles from './standaloneVideoLevel.module.scss';
+import moduleStyles from './labStandaloneVideo.module.scss';
 
-export interface StandaloneVideoLevelProps {
+export interface LabStandaloneVideoProps {
   activitySection?: ActivitySection;
   levelData: Level;
 }
 
-const StandaloneVideoLevel: React.FunctionComponent<
-  StandaloneVideoLevelProps
+const LabStandaloneVideo: React.FunctionComponent<
+  LabStandaloneVideoProps
 > = ({activitySection, levelData}) => (
-  <div className={moduleStyles.standaloneVideoLevel}>
+  <div className={moduleStyles.labStandaloneVideo}>
     <div>
       <Video
         youTubeId={levelData.videoData?.youTubeId}
@@ -27,4 +27,4 @@ const StandaloneVideoLevel: React.FunctionComponent<
   </div>
 );
 
-export default StandaloneVideoLevel;
+export default LabStandaloneVideo;

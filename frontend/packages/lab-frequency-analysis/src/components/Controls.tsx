@@ -5,7 +5,7 @@ import Tabs from '@code-dot-org/component-library/tabs';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 
-import FrequencyLevelContext from '../contexts/FrequencyLevelContext';
+import LabFrequencyAnalysisContext from '../contexts/LabFrequencyAnalysisContext';
 import {FrequencyData} from '../types';
 
 import moduleStyles from './frequencyLevel.module.scss';
@@ -21,7 +21,7 @@ const CaesarControls: React.FunctionComponent<ControlsProps> = ({
   onUpdate,
 }) => {
   const [shift, setShift] = useState<number>(0);
-  const {mapLetter} = useContext(FrequencyLevelContext);
+  const {mapLetter} = useContext(LabFrequencyAnalysisContext);
 
   // Pull all assigned cipher letters back
   const reset = useCallback(() => {
@@ -122,7 +122,7 @@ const RandomControls: React.FunctionComponent<ControlsProps> = ({
   frequencyData,
   onUpdate,
 }) => {
-  const {mapLetter, isMapped} = useContext(FrequencyLevelContext);
+  const {mapLetter, isMapped} = useContext(LabFrequencyAnalysisContext);
 
   // Assign all unassigned cipher letters
   const assign = useCallback(() => {
