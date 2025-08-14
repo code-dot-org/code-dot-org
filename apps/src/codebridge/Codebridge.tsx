@@ -12,11 +12,13 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
+import {setShowFlaggedImageModal} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import FlaggedImageModal from '@cdo/apps/p5lab/AnimationPicker/FlaggedImageModal';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -141,6 +143,10 @@ export const Codebridge = React.memo(
     useZoomTracker(appName);
 
     const dispatch = useAppDispatch();
+    const showFlaggedImageModal = useAppSelector(
+      state => state.codebridgeWorkspace.showFlaggedImageModal
+    );
+    console.log('showFlaggedImageModal', showFlaggedImageModal);
 
     // Set view code to false if level is switched for any levels in widget view.
     useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
@@ -164,6 +170,17 @@ export const Codebridge = React.memo(
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
+            {showFlaggedImageModal && (
+              <FlaggedImageModal
+                isOpen
+                onAccept={() => {
+                  dispatch(setShowFlaggedImageModal(false));
+                }}
+                onCancel={() => {
+                  dispatch(setShowFlaggedImageModal(false));
+                }}
+              />
+            )}
             <InnerLayout
               isProjectLevel={levelProperties.isProjectLevel}
               isWidgetView={levelProperties.widgetView}
