@@ -543,14 +543,11 @@ class Pd::Workshop < ApplicationRecord
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
         user = enrollment.user
-        send_teacher_workshop_reminder_email(enrollment, user.friendly_name, user.email, days)
+        send_teacher_workshop_reminder_email(enrollment, user, false, days)
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
-        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          alt_summer_email = user&.alternate_email
-          if alt_summer_email.present?
-            send_teacher_workshop_reminder_email(enrollment, user.friendly_name, alt_summer_email, days)
-          end
+        if workshop.subject == SUBJECT_SUMMER_WORKSHOP && user.alternate_email.present?
+          send_teacher_workshop_reminder_email(enrollment, user, true, days)
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
@@ -984,10 +981,11 @@ class Pd::Workshop < ApplicationRecord
     }
   end
 
-  def self.send_teacher_workshop_reminder_email(enrollment, user_name, user_email, days)
+  def self.send_teacher_workshop_reminder_email(enrollment, user, use_alternate_email, days)
     workshop = enrollment.workshop
     organizer = workshop.organizer
     regional_partner = workshop.regional_partner
+    email = use_alternate_email ? user.alternate_email : user.email
 
     Retryable.retryable(
       on: RestClient::TooManyRequests,
@@ -996,11 +994,11 @@ class Pd::Workshop < ApplicationRecord
     ) do
       MailJet.send_email(
         :teacher_workshop_reminder,
-        user_email,
-        user_name,
+        email,
+        user.friendly_name,
         vars: {
-          email_to: user_email,
-          name: user_name,
+          email_to: email,
+          name: user.given_name || user.name,
           cancel_registration_link: CDO.studio_url("pd/workshop_enrollment/#{enrollment.code}/cancel"),
           pre_survey_link: enrollment.pre_workshop_survey_url,
           facilitator_name: workshop.facilitators&.map(&:name)&.join(', '),
