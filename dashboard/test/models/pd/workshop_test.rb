@@ -728,6 +728,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes(e.message, 'bad email')
   end
 
+  test 'does not send teacher_enrollment_reminder if suppress_reminders? is true' do
+    MailJet.expects(:send_email).with(:teacher_workshop_reminder).times(0)
+
+    workshop = create :workshop, suppress_email: true
+    create :pd_enrollment, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+  end
+
   test 'sends teacher_enrollment_reminder email to both the users email and alternate email if available and for a summer workshop' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now)
