@@ -149,7 +149,7 @@ class TestController < ApplicationController
     section.students << user
     section.save!
 
-    user.assign_script(unit) if unit
+    user.assign_script(unit, course) if unit
 
     head :ok
   end
@@ -167,7 +167,7 @@ class TestController < ApplicationController
     section = teacher.sections[params.require(:section_position).to_i - 1]
     section.update!(unit_group: unit_group, script: unit)
     section.students.each do |student|
-      student.assign_script(unit)
+      student.assign_script(unit, unit_group)
     end
 
     head :ok
