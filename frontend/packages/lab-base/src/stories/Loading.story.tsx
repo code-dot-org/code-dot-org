@@ -1,8 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
 import {ThemeProvider, useTheme} from '@code-dot-org/component-library/common/contexts';
-
-import Loading from '@code-dot-org/lab-base';
+import {Loading} from '@code-dot-org/lab-base';
 
 export default {
   title: 'Labs/Base/Loading',

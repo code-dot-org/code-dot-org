@@ -2,7 +2,7 @@ import {Meta, StoryFn} from '@storybook/react';
 
 import {ThemeProvider, useTheme} from '@code-dot-org/component-library/common/contexts';
 
-import ExtraLinksModal from '@code-dot-org/lab-base';
+import {ExtraLinksModal} from '@code-dot-org/lab-base';
 
 export default {
   title: 'Labs/Base/ExtraLinksModal',
