@@ -1,7 +1,7 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {setShowFlaggedImageModal} from '@cdo/apps/codebridge/redux/workspaceRedux';
+import {setFlaggedImageData} from '@cdo/apps/codebridge/redux/workspaceRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -29,6 +29,7 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
+  appName?: string;
 };
 
 const bufferToString = (buffer: ArrayBuffer) => {
@@ -98,6 +99,7 @@ export const useFileUploader = ({
   validateFileName = () => undefined,
   sendAnalyticsEvent = () => {},
   multiple = true,
+  appName,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
@@ -169,7 +171,10 @@ export const useFileUploader = ({
 
           const fileType = file.name.split('.')[1];
           console.log('fileType', fileType);
-          if (['png', 'jpg', 'jpeg'].includes(fileType)) {
+          if (
+            ['png', 'jpg', 'jpeg'].includes(fileType) &&
+            appName === 'weblab2'
+          ) {
             const response = await HttpClient.post(
               `/v3/images/moderate`,
               file,
@@ -182,19 +187,42 @@ export const useFileUploader = ({
               const json = await response.json();
               console.log('response.rating', json.rating);
               if (json.rating !== 'everyone' && json.rating !== 'unknown') {
-                dispatch(setShowFlaggedImageModal(true));
+                // Store file data in Redux for the modal to access
+                dispatch(
+                  setFlaggedImageData({
+                    file,
+                    fileType,
+                    channelId,
+                    fileName: file.name,
+                    callback,
+                    callbackArgs: callbackArgs.current,
+                    sendAnalyticsEvent,
+                  })
+                );
+                return; // Don't continue with upload, wait for modal acceptance
+              } else {
+                // Image is safe, proceed with upload
+                const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+                await HttpClient.put(url, file);
+                sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+                  name: file.name,
+                  type: file.type,
+                });
+                callback(file.name, '', url, callbackArgs.current);
               }
             } else {
               throw new Error('Error with image moderation.');
             }
+          } else {
+            // For non-image files, upload directly
+            const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
+            await HttpClient.put(url, file);
+            sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
+              name: file.name,
+              type: file.type,
+            });
+            callback(file.name, '', url, callbackArgs.current);
           }
-          const url = `/v3/assets/${channelId}/${createUuid()}.${fileType}`;
-          await HttpClient.put(url, file);
-          sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-            name: file.name,
-            type: file.type,
-          });
-          callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
           if (error instanceof Error) {
             handleError(error);
@@ -210,6 +238,7 @@ export const useFileUploader = ({
     callback,
     channelId,
     dispatch,
+    appName,
   ]);
 
   return useMemo(

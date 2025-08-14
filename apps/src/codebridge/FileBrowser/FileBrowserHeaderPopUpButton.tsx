@@ -40,6 +40,7 @@ export const FileBrowserHeaderPopUpButton = () => {
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader(
     {
+      appName,
       callback: handleFileUpload,
       errorCallback: uploadErrorCallback,
       validMimeTypes,

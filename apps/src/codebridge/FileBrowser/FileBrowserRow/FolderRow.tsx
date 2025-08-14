@@ -34,14 +34,17 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
 }) => {
   const {
     config: {validMimeTypes},
+    levelProperties,
   } = useCodebridgeContext();
   const files = useAppSelector(
     state => (state.lab2Project.projectSources?.source as MultiFileSource).files
   );
+  const appName = levelProperties.appName;
   const handleFileUpload = useHandleFileUpload(files);
   const fileUploadErrorCallback = useFileUploadErrorCallback();
   const {startFileUpload, FileUploaderComponent} = useFileUploader(
     {
+      appName,
       callback: handleFileUpload,
       errorCallback: fileUploadErrorCallback,
       validMimeTypes,
